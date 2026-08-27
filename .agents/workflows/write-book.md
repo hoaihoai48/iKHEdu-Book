@@ -12,11 +12,11 @@ Chạy quy trình có kiểm soát để tạo hoặc sửa một sách, giáo t
 
 1. Xác định `document_type`, độc giả, trình độ, mục tiêu, phạm vi, ngôn ngữ, độ dài, chuẩn đầu ra, citation style, license và reviewer. Ghi giả định bằng mã `ASM-...`.
 2. Kiểm tra source-of-truth và lập/ cập nhật `source-index.md`. Đọc just-in-time các source liên quan; không nạp toàn bộ corpus nếu không cần.
-3. Lập kiến trúc: mục lục, chapter/module map, prerequisite map và danh sách thuật ngữ. Với học liệu, làm backward design: outcomes -> evidence/assessment -> activities/content.
+3. Chọn profile đầu ra trước khi viết: `lesson-package` nếu mục tiêu là dạy khái niệm/buổi học; `problem-package` nếu mục tiêu là bài toán chấm tự động. Nếu package thuộc một nhóm có nhiều buổi/bài, đọc `@../skills/academic-book-authoring/references/group-index-template.md` và lập/cập nhật README/index cấp nhóm. Đọc template profile tương ứng. Lập kiến trúc: mục lục, chapter/module map, prerequisite map và danh sách thuật ngữ. Với học liệu, làm backward design: outcomes -> evidence/assessment -> activities/content.
 4. Tạo ma trận alignment. Bảo đảm mỗi learning outcome có assessment/evidence và mỗi phần nội dung có mục đích.
-5. Viết hoặc sửa từng chapter/section theo `@../skills/academic-book-authoring/references/chapter-template.md`. Đánh dấu claim bằng `CLAIM-...`; cập nhật evidence ledger ngay khi dùng source.
+5. Tạo hoặc sửa artifact theo profile đã chọn. Với `lesson-package`, dùng `@../skills/academic-book-authoring/references/lesson-package-template.md`, tách README/index cấp nhóm, `Ly_Thuyet.md`, `Bai_Tap.md` và code. Với `problem-package`, dùng `@../skills/academic-book-authoring/references/problem-package-template.md`, tách `De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp` và `test/`. Với chapter/module tổng quát, dùng `@../skills/academic-book-authoring/references/chapter-template.md`. Đánh dấu claim bằng `CLAIM-...`; cập nhật evidence ledger ngay khi dùng source.
 6. Chạy review nhiều lớp: source/fact; chuyên môn; logic; pedagogy/alignment; terminology; language; accessibility; copyright/license. Ghi lỗi theo severity và không gọi output là final khi còn blocker/major.
-7. Đọc và hoàn thành `@../skills/academic-book-authoring/references/qa-checklist.md`. Đối chiếu glossary, cross-reference, bảng/hình, câu hỏi và đáp án.
+7. Đọc và hoàn thành `@../skills/academic-book-authoring/references/qa-checklist.md`. Đối chiếu glossary, cross-reference, bảng/hình, câu hỏi và đáp án. Với lesson package, kiểm tra README -> lesson -> exercise -> code; với problem package, kiểm tra statement -> teacher guide -> solution -> tests.
 8. Cập nhật `decision-log.md`, `open-questions.md`, evidence ledger và changelog/status. Ghi rõ phần chưa xác minh, conflict, cần human review và bước tiếp theo.
 9. Bàn giao theo hợp đồng: `Status`, `Scope`, `Assumptions`, `Sources consulted`, `What changed`, `Evidence/citations`, `Unresolved issues`, `QA gates`, `Next action`.
 

@@ -16,6 +16,12 @@ Khi các nguồn xung đột, không tự hòa giải. Ghi conflict vào evidenc
 | `SRC-002` | P0 | Foundation framework report | iKHEDU project | `ikhEdu_foundation_framework_report.md` | Current / 2026-08-27 | Project-owned; read-only | Curriculum framing and foundation/Level 1 design decisions | `registered-read-only` |
 | `SRC-004` | P0 | Bảng B Level 1 roadmap image | iKHEDU project | `Lo_trinh_hoc_tap_bangB_level1.jpg` | Current / 2026-08-27 | Project-owned; read-only | Visual topic map of 21 Level 1 subjects | `registered-read-only` |
 
+## External structural references
+
+| Reference ID | Priority | Title / description | Author / org | Path or URL | Permitted use | Status |
+|---|---:|---|---|---|---|---|
+| `REF-001` | P3 | ebook-ikh repository — structure reference | DKTECHVN | https://github.com/DKTECHVN/ebook-ikh | Tham khảo cách tổ chức README/group, `Ly_Thuyet.md`, `Bai_Tap.md`, `De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp` và `test/`; không sao chép nội dung hoặc xem là source-of-truth | `reference-only` |
+
 ## Project files
 
 | File ID | Path | Role | Read-only? | Last checked | Notes |

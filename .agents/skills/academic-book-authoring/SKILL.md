@@ -100,8 +100,28 @@ Mỗi lần bàn giao phải có các phần: `Status`; `Scope`; `Assumptions`; 
 
 Dừng và hỏi người dùng khi mục tiêu hoặc độc giả mâu thuẫn; source-of-truth thiếu hoặc xung đột nghiêm trọng; yêu cầu vượt quyền sử dụng; một thay đổi có thể đảo ngược luận điểm; hoặc quyết định phát hành đòi hỏi phê duyệt con người. Không che giấu khoảng trống bằng văn phong tự tin.
 
+## Hồ sơ đầu ra theo khuôn iKHEDU
+
+Phân biệt hai loại artifact thay vì ép mọi nội dung vào một template:
+
+| Hồ sơ | Khi dùng | Thành phần canonical |
+|---|---|---|
+| `lesson-package` | Bài học/chuyên đề lý thuyết cho người học | `README.md` cấp nhóm/chương, `Ly_Thuyet.md`, `Bai_Tap.md`, code tham chiếu và `test/` nếu có |
+| `problem-package` | Bài toán chấm tự động | `De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp`, `test/` |
+
+Khi một nhóm có nhiều buổi học, tạo README/index ở cấp nhóm để liên kết buổi, chủ đề, learning outcomes, file lý thuyết, bài tập, code/test và trạng thái. README là lớp điều hướng, không phải bản sao của nội dung chi tiết.
+
+Với lesson package, tách phần giải thích khái niệm khỏi bài tập. `Ly_Thuyet.md` đi theo thứ tự ý nghĩa -> cú pháp/mô hình -> ví dụ -> code -> lỗi/tự kiểm tra; `Bai_Tap.md` đi từ thao tác trực tiếp đến bài biến thể và có expected output hoặc input/output rõ ràng.
+
+Với problem package, giữ statement học sinh tách khỏi teacher guide. `De_Bai.md` gồm bối cảnh, nhiệm vụ, Input, Output, giới hạn, subtasks, samples và phần mở rộng nếu có. `Huong_Dan_Giang_Day.md` gồm mục tiêu, phân tích đề, câu hỏi dẫn dắt, trực giác, invariant/correctness, complexity, misconception, code và bài transfer. `solution.cpp` và `test/` phải được kiểm tra chéo với statement.
+
+Nếu có cả `.docx` và `.md`, chỉ định một bản canonical trong `source-index.md`; không chỉnh hai bản độc lập. Nếu tham khảo repository `DKTECHVN/ebook-ikh`, xem đó là **mẫu cấu trúc bên ngoài** (`REF-001`), không phải source-of-truth của `ikhEdu_lessons`; chỉ áp dụng các quy ước đã được chủ dự án chấp thuận.
+
 ## Tài nguyên tham chiếu
 
-- Đọc `references/chapter-template.md` khi tạo chapter/module mới.
+- Đọc `references/chapter-template.md` khi tạo chapter/module tổng quát.
+- Đọc `references/group-index-template.md` khi một nhóm/chương có nhiều buổi hoặc nhiều package.
+- Đọc `references/lesson-package-template.md` khi tạo nhóm bài học có lý thuyết và bài tập tách riêng.
+- Đọc `references/problem-package-template.md` khi tạo problem package có chấm tự động.
 - Đọc `references/qa-checklist.md` trước review hoặc release.
 - Đọc `../../context/*.md` trước mọi tác vụ dự án.

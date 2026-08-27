@@ -29,6 +29,10 @@ Với giáo trình hoặc tài liệu dạy học, làm theo backward design: x�
 
 Phân biệt rõ sách chuyên khảo, giáo trình, workbook, lecture notes, handbook và tài liệu đào tạo. Khi loại tài liệu, trình độ người học, ngôn ngữ, thời lượng hoặc chuẩn đầu ra chưa rõ, hãy hỏi hoặc ghi giả định trước khi viết lớn.
 
+Trong project này, phân biệt hai hồ sơ đầu ra. Với `lesson-package`, dùng README/index cấp nhóm hoặc chương, `Ly_Thuyet.md`, `Bai_Tap.md`, code tham chiếu và `test/` nếu có. Với `problem-package`, dùng `De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp` và `test/`. Không ép problem package vào cấu trúc lesson, cũng không đưa lời giải đầy đủ vào statement học sinh. Đọc template tương ứng trong `@../skills/academic-book-authoring/references/` trước khi tạo file.
+
+Repository `DKTECHVN/ebook-ikh` chỉ là `REF-001`, một mẫu cấu trúc bên ngoài đã được chủ dự án cho phép tham khảo; không được coi nó là source-of-truth của project và không tự sao chép nội dung vào đây.
+
 ## Luật quy trình
 
 Không nhảy thẳng vào viết toàn bộ bản thảo. Hãy đi qua các cổng: brief và giả định; bản đồ nguồn; kiến trúc mục lục; ma trận mục tiêu–nội dung–đánh giá; draft theo module; kiểm chứng fact/citation; phản biện sư phạm và chuyên môn; biên tập ngôn ngữ; kiểm tra consistency và accessibility; rồi mới đóng gói bản phát hành.
