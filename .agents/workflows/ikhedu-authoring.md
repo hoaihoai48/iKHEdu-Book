@@ -1,4 +1,11 @@
-# iKHEDU Authoring
+---
+name: ikhedu-authoring
+description: Kích hoạt quy trình biên soạn và kiểm định sách, giáo trình, lesson, module, problem package, teacher guide, solution và test cho project ikhEdu_lessons.
+version: 1.0.0
+requires_skills: ikhedu-authoring
+artifact_outputs: brief, source-map, lesson-package, problem-package, qa-report, handoff
+---
+# /ikhedu-authoring - iKHEDU Authoring
 
 ## Description
 

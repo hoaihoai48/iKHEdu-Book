@@ -1,3 +1,9 @@
+---
+name: academic-authoring-always-on
+version: 1.0.0
+priority: P0
+trigger: always_on
+---
 # Academic Authoring — Always On
 
 Bạn đang làm việc trong một dự án viết sách, giáo trình, khóa học, tài liệu học thuật hoặc tài liệu đào tạo. Hãy coi đây là một dự án biên soạn có kiểm soát, không phải một lần sinh văn bản độc lập.
@@ -29,7 +35,7 @@ Với giáo trình hoặc tài liệu dạy học, làm theo backward design: x�
 
 Phân biệt rõ sách chuyên khảo, giáo trình, workbook, lecture notes, handbook và tài liệu đào tạo. Khi loại tài liệu, trình độ người học, ngôn ngữ, thời lượng hoặc chuẩn đầu ra chưa rõ, hãy hỏi hoặc ghi giả định trước khi viết lớn.
 
-Trong project này, phân biệt hai hồ sơ đầu ra. Với `lesson-package`, dùng README/index cấp nhóm hoặc chương, `Ly_Thuyet.md`, `Bai_Tap.md`, code tham chiếu và `test/` nếu có. Với `problem-package`, dùng `De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp` và `test/`. Không ép problem package vào cấu trúc lesson, cũng không đưa lời giải đầy đủ vào statement học sinh. Đọc template tương ứng trong `@../skills/academic-book-authoring/references/` trước khi tạo file.
+Trong project này, phân biệt hai hồ sơ đầu ra. Với `lesson-package`, dùng README/index cấp nhóm hoặc chương, `Ly_Thuyet.md`, `Bai_Tap.md`, code tham chiếu và `test/` nếu có. Với `problem-package`, dùng `De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp` và `test/`. Không ép problem package vào cấu trúc lesson, cũng không đưa lời giải đầy đủ vào statement học sinh. Đọc template tương ứng trong `@../skills/ikhedu-authoring/references/` trước khi tạo file.
 
 Repository `DKTECHVN/ebook-ikh` chỉ là `REF-001`, một mẫu cấu trúc bên ngoài đã được chủ dự án cho phép tham khảo; không được coi nó là source-of-truth của project và không tự sao chép nội dung vào đây.
 
@@ -43,8 +49,8 @@ Mỗi đầu ra quan trọng phải nêu: mục tiêu, phạm vi đã làm, ngu�
 
 Không dùng văn phong khẳng định vượt quá bằng chứng. Nêu bất đồng học thuật, giới hạn phương pháp, thời điểm của dữ liệu và giả định liên quan. Kiểm tra thiên lệch, tính bao trùm, ví dụ văn hóa, accessibility và rủi ro đạo văn/copyright. Chỉ sử dụng nội dung được phép hoặc trích dẫn theo quy định; ghi attribution/license khi cần.
 
-Trước khi hoàn tất, chạy hoặc thực hiện checklist trong `@../skills/academic-book-authoring/references/qa-checklist.md`. Nếu chưa đạt, không gọi là “final”; dùng trạng thái `draft`, `review-needed` hoặc `blocked`.
+Trước khi hoàn tất, chạy hoặc thực hiện checklist trong `@../skills/ikhedu-authoring/references/qa-checklist.md`. Nếu chưa đạt, không gọi là “final”; dùng trạng thái `draft`, `review-needed` hoặc `blocked`.
 
 ## Kích hoạt skill
 
-Khi tác vụ liên quan đến viết, lập kế hoạch, nghiên cứu, biên tập, trích dẫn, thiết kế chương, giáo trình, lesson/module, assessment hoặc kiểm định học liệu, hãy kích hoạt skill `academic-book-authoring` và dùng workflow `/write-book` khi người dùng muốn đi qua quy trình đầy đủ.
+Khi tác vụ liên quan đến viết, lập kế hoạch, nghiên cứu, biên tập, trích dẫn, thiết kế chương, giáo trình, lesson/module, assessment hoặc kiểm định học liệu, hãy kích hoạt skill `ikhedu-authoring` và dùng workflow `/ikhedu-authoring` hoặc `/write-book` khi người dùng muốn đi qua quy trình đầy đủ.

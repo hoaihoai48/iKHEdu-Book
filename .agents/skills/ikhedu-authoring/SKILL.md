@@ -2,6 +2,9 @@
 name: ikhedu-authoring
 description: Biên soạn và kiểm định nội dung iKHEDU gồm sách, giáo trình, lesson, module, README nhóm, bài tập, problem statement, teacher guide, solution và test. Dùng khi người dùng yêu cầu tạo, sửa, nghiên cứu, dịch, lập curriculum, viết giáo án, thiết kế bài toán hoặc phát hành học liệu trong project ikhEdu_lessons; luôn đọc context/source trước khi viết.
 license: Proprietary project skill; use with project owner approval
+when_to_use: "Khi tạo, sửa, nghiên cứu, dịch, review hoặc phát hành sách, giáo trình, lesson, module, README nhóm, problem statement, teacher guide, solution hoặc test trong project ikhEdu_lessons."
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+version: 1.0.0
 metadata:
   version: "1.0.0"
   domain: "ikhedu-educational-authoring"
