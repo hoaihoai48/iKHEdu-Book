@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Sử dụng thành thạo các phương thức cơ bản của `std::string` (`size()`, `push_back()`, `substr()`, `find()`) — `LO-01`.
-2. Chuyển đổi linh hoạt giữa ký tự và mã ASCII (`c - 'a'`, `c - '0'`, `toupper()`, `tolower()`) — `LO-02`.
-3. Cài đặt thuật toán kiểm tra xâu đối xứng (Palindrome) trong $\mathcal{O}(N)$ — `LO-03`.
-4. Ứng dụng mảng đếm tần suất 26 ký tự để kiểm tra xâu đảo chữ (Anagram) và chuẩn hóa văn bản — `LO-04`.
+1. Sử dụng thành thạo các phương thức cơ bản của `std::string` (`size()`, `push_back()`, `substr()`, `find()`).
+2. Chuyển đổi linh hoạt giữa ký tự và mã ASCII (`c - 'a'`, `c - '0'`, `toupper()`, `tolower()`).
+3. Cài đặt thuật toán kiểm tra xâu đối xứng (Palindrome) trong $\mathcal{O}(N)$.
+4. Ứng dụng mảng đếm tần suất 26 ký tự để kiểm tra xâu đảo chữ (Anagram) và chuẩn hóa văn bản.
 
 ### Câu hỏi trung tâm của chương
 
@@ -27,9 +27,9 @@ Sau chương này, em có thể:
 ### Bài 8.1 — Bản chất của kiểu `string` và Bảng mã ASCII
 
 #### 1. Khái niệm & Bảng mã ASCII
-- Mỗi ký tự `char` thực chất là một số nguyên 8-bit ($0..255$).
-- `'a'` đến `'z'` có mã $97..122$. Để chuyển sang chỉ số $0..25: 	ext{index} = c - 	ext{'a'}$.
-- `'0'` đến `'9'` có mã $48..57$. Để lấy giá trị số: $	ext{val} = c - 	ext{'0'}$.
+- Mỗi ký tự `char` thực chất là một số nguyên 8-bit ($0.255$).
+- `'a'` đến `'z'` có mã $97.122$. Để chuyển sang chỉ số $0.25: 	ext{index} = c - 	ext{'a'}$.
+- `'0'` đến `'9'` có mã $48.57$. Để lấy giá trị số: $	ext{val} = c - 	ext{'0'}$.
 
 ---
 

@@ -31,16 +31,16 @@ Tham lam không được trình bày như quy tắc “luôn chọn số lớn n
 
 Sau chương này, em có thể:
 
-1. Giải thích thuật toán tham lam bằng một ví dụ cụ thể — `LO-01`.
-2. Phân biệt lựa chọn cục bộ với mục tiêu tối ưu toàn cục — `LO-02`.
-3. Nhận biết bài toán chọn nhiều hoạt động không giao nhau — `LO-03`.
-4. Sắp xếp hoạt động theo thời điểm kết thúc và duyệt để chọn hoạt động hợp lệ — `LO-04`.
-5. Mô phỏng trạng thái sau từng lựa chọn — `LO-05`.
-6. Trình bày vì sao chọn hoạt động kết thúc sớm là an toàn — `LO-06`.
-7. Dùng phản ví dụ để kiểm tra một quy tắc tham lam đáng ngờ — `LO-07`.
-8. Phân biệt bài dùng được tham lam với bài cần phân tích thêm hoặc cân nhắc quy hoạch động, tìm kiếm — `LO-08`.
-9. Phân tích độ phức tạp `O(N log N)` của lời giải chọn hoạt động — `LO-09`.
-10. Giải thích sau khi chọn một phương án thì phần còn lại của bài toán thay đổi như thế nào — `LO-10`.
+1. Giải thích thuật toán tham lam bằng một ví dụ cụ thể.
+2. Phân biệt lựa chọn cục bộ với mục tiêu tối ưu toàn cục.
+3. Nhận biết bài toán chọn nhiều hoạt động không giao nhau.
+4. Sắp xếp hoạt động theo thời điểm kết thúc và duyệt để chọn hoạt động hợp lệ.
+5. Mô phỏng trạng thái sau từng lựa chọn.
+6. Trình bày vì sao chọn hoạt động kết thúc sớm là an toàn.
+7. Dùng phản ví dụ để kiểm tra một quy tắc tham lam đáng ngờ.
+8. Phân biệt bài dùng được tham lam với bài cần phân tích thêm hoặc cân nhắc quy hoạch động, tìm kiếm.
+9. Phân tích độ phức tạp `O(N log N)` của lời giải chọn hoạt động.
+10. Giải thích sau khi chọn một phương án thì phần còn lại của bài toán thay đổi như thế nào.
 
 ### Câu hỏi trung tâm của chương
 
@@ -583,7 +583,7 @@ Cho các mệnh giá và số tiền cần đổi, với mục tiêu dùng **ít
 
 ##### Bài 2.6.11 — Chọn việc theo thời hạn
 
-Mỗi công việc cần đúng một đơn vị thời gian và có thời hạn hoàn thành. Trong mỗi thời điểm `1, 2, ..., D`, ta chỉ làm được một công việc; công việc có deadline `d` phải được thực hiện không muộn hơn thời điểm `d`. Hãy thử xây dựng chiến lược tham lam để thực hiện nhiều công việc nhất.
+Mỗi công việc cần đúng một đơn vị thời gian và có thời hạn hoàn thành. Trong mỗi thời điểm `1, 2, .., D`, ta chỉ làm được một công việc; công việc có deadline `d` phải được thực hiện không muộn hơn thời điểm `d`. Hãy thử xây dựng chiến lược tham lam để thực hiện nhiều công việc nhất.
 
 - **Dữ liệu mẫu:** Có năm công việc với deadline `1, 1, 2, 2, 3`.
 - **Expected evidence:** Em giải thích được vì sao tối đa có thể làm `3` công việc trong ba vị trí thời gian, đồng thời nêu tiêu chí sắp xếp hoặc câu hỏi cần kiểm tra trước khi code.
@@ -737,12 +737,12 @@ Các chủ đề như lập lịch công việc có thời hạn, ba lô phân s
 
 | Outcome | Evidence chính | Tiêu chí đạt |
 |---|---|---|
-| `LO-01`, `LO-02` — Giải thích Greedy và phân biệt cục bộ/toàn cục | Bài 2.1, Bài 2.6.12 | Nêu được mục tiêu, lựa chọn và lý do không chọn tùy tiện |
-| `LO-03`, `LO-05` — Nhận biết interval scheduling và mô phỏng trạng thái | Bài 2.2, Bài 2.6.1, 2.6.5, 2.6.6 | Mô hình hóa đúng khoảng, điều kiện nối tiếp và `lastFinish` |
-| `LO-04` — Viết lời giải chọn hoạt động | Bài 2.3, Bài 2.6.3–2.6.7 | Sort theo `finish`, kiểm tra `start >= lastFinish`, cập nhật trạng thái |
-| `LO-06`, `LO-10` — Giải thích tính đúng đắn và phần bài toán còn lại | Bài 2.4, rubric chương | Trình bày được lập luận đổi chỗ và bất biến (invariant) |
-| `LO-07` — Tìm giới hạn/phản ví dụ | Bài 2.1, Bài 2.5, Bài 2.6.8–2.6.10 | Tạo hoặc phân tích được phản ví dụ có mục tiêu rõ |
-| `LO-09` — Phân tích độ phức tạp | Bài 2.3, rubric chương | Tách được chi phí sort và chi phí duyệt |
-| `LO-08` — Chuyển giao sang bài biến thể | Bài 2.6.9–2.6.12 | Nhận ra khi mục tiêu/điều kiện đổi thì tiêu chí Greedy phải được kiểm tra lại |
+| ,  — Giải thích Greedy và phân biệt cục bộ/toàn cục | Bài 2.1, Bài 2.6.12 | Nêu được mục tiêu, lựa chọn và lý do không chọn tùy tiện |
+| ,  — Nhận biết interval scheduling và mô phỏng trạng thái | Bài 2.2, Bài 2.6.1, 2.6.5, 2.6.6 | Mô hình hóa đúng khoảng, điều kiện nối tiếp và `lastFinish` |
+|  — Viết lời giải chọn hoạt động | Bài 2.3, Bài 2.6.3–2.6.7 | Sort theo `finish`, kiểm tra `start >= lastFinish`, cập nhật trạng thái |
+| ,  — Giải thích tính đúng đắn và phần bài toán còn lại | Bài 2.4, rubric chương | Trình bày được lập luận đổi chỗ và bất biến (invariant) |
+|  — Tìm giới hạn/phản ví dụ | Bài 2.1, Bài 2.5, Bài 2.6.8–2.6.10 | Tạo hoặc phân tích được phản ví dụ có mục tiêu rõ |
+|  — Phân tích độ phức tạp | Bài 2.3, rubric chương | Tách được chi phí sort và chi phí duyệt |
+|  — Chuyển giao sang bài biến thể | Bài 2.6.9–2.6.12 | Nhận ra khi mục tiêu/điều kiện đổi thì tiêu chí Greedy phải được kiểm tra lại |
 
 Ma trận này là ghi chú biên soạn, không đồng bộ vào bản in học sinh.

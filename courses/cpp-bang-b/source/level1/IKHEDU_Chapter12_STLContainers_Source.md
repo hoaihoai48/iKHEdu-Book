@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Sử dụng `set` và `multiset` để duy trì tập hợp tự động sắp xếp và loại bỏ trùng lặp trong $\mathcal{O}(\log N)$ — `LO-01`.
-2. Sử dụng `map` và `unordered_map` làm mảng tần suất với khóa bất kỳ (chuỗi ký tự, số âm, số lớn $10^9$) — `LO-02`.
-3. Phân biệt được độ phức tạp và nguy cơ bị hack TLE của `unordered_map` ($\mathcal{O}(1)$ average vs $\mathcal{O}(N)$ worst-case) so với `map` ($\mathcal{O}(\log N)$ guaranteed) — `LO-03`.
-4. Cài đặt kỹ thuật Nén tọa độ rời rạc hóa mảng giá trị lớn thành chỉ số $0..K-1$ trong $\mathcal{O}(N \log N)$ — `LO-04`.
+1. Sử dụng `set` và `multiset` để duy trì tập hợp tự động sắp xếp và loại bỏ trùng lặp trong $\mathcal{O}(\log N)$.
+2. Sử dụng `map` và `unordered_map` làm mảng tần suất với khóa bất kỳ (chuỗi ký tự, số âm, số lớn $10^9$).
+3. Phân biệt được độ phức tạp và nguy cơ bị hack TLE của `unordered_map` ($\mathcal{O}(1)$ average vs $\mathcal{O}(N)$ worst-case) so với `map` ($\mathcal{O}(\log N)$ guaranteed).
+4. Cài đặt kỹ thuật Nén tọa độ rời rạc hóa mảng giá trị lớn thành chỉ số $0.K-1$ trong $\mathcal{O}(N \log N)$.
 
 ### Câu hỏi trung tâm của chương
 

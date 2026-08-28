@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Áp dụng chính xác các công thức đồng dư cho phép cộng, trừ, nhân Modulo không bao giờ bị tràn số hay số âm — `LO-01`.
-2. Cài đặt lũy thừa Modulo $A^B \pmod M$ trong $\mathcal{O}(\log B)$ — `LO-02`.
-3. Tìm nghịch đảo Modulo $A^{-1} \pmod P$ bằng Định lý Fermat nhỏ và thực hiện phép chia Modulo $(A / B) \pmod P$ — `LO-03`.
-4. Nhận diện và áp dụng chu kỳ số dư Pisano Period để tính các số Fibonacci rất lớn — `LO-04`.
+1. Áp dụng chính xác các công thức đồng dư cho phép cộng, trừ, nhân Modulo không bao giờ bị tràn số hay số âm.
+2. Cài đặt lũy thừa Modulo $A^B \pmod M$ trong $\mathcal{O}(\log B)$.
+3. Tìm nghịch đảo Modulo $A^{-1} \pmod P$ bằng Định lý Fermat nhỏ và thực hiện phép chia Modulo $(A / B) \pmod P$.
+4. Nhận diện và áp dụng chu kỳ số dư Pisano Period để tính các số Fibonacci rất lớn.
 
 ### Câu hỏi trung tâm của chương
 

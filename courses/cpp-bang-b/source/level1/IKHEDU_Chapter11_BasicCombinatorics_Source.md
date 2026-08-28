@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Phân biệt và áp dụng đúng quy tắc cộng (các trường hợp rời nhau), quy tắc nhân (các bước liên tiếp) và nguyên lý bù trừ — `LO-01`.
-2. Xây dựng Tam giác Pascal bằng quy hoạch động $\mathcal{O}(N^2)$ để tính $C_N^K$ khi không có nghịch đảo modulo — `LO-02`.
-3. Áp dụng công thức Tổ hợp giải bài toán đếm đường đi trên lưới ô vuông — `LO-03`.
-4. Vận dụng kỹ thuật "Đặt vách ngăn" (Stars and Bars) giải bài toán chia kẹo Euler phân phối đồ vật — `LO-04`.
+1. Phân biệt và áp dụng đúng quy tắc cộng (các trường hợp rời nhau), quy tắc nhân (các bước liên tiếp) và nguyên lý bù trừ.
+2. Xây dựng Tam giác Pascal bằng quy hoạch động $\mathcal{O}(N^2)$ để tính $C_N^K$ khi không có nghịch đảo modulo.
+3. Áp dụng công thức Tổ hợp giải bài toán đếm đường đi trên lưới ô vuông.
+4. Vận dụng kỹ thuật "Đặt vách ngăn" (Stars and Bars) giải bài toán chia kẹo Euler phân phối đồ vật.
 
 ### Câu hỏi trung tâm của chương
 

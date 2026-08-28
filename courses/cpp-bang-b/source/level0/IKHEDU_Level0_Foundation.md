@@ -1,7 +1,7 @@
-# iKHEDU – LEVEL 0
-# SỔ TAY TRA CỨU NHANH C++ VÀ TƯ DUY GIẢI BÀI
+# iKHEDU C++ BẢNG B
+# C++ CƠ BẢN — TỜ GHI NHỚ & TRA CỨU NHANH
 
-> Tài liệu này là bản tóm tắt để học sinh tra cứu trong quá trình học Level 1. Không cần học thuộc toàn bộ trong một lần. Hãy dùng tài liệu để nhớ lại **ý nghĩa, mẫu tư duy, cách dùng và lỗi thường gặp**.
+> Tài liệu này là bản tóm tắt để học sinh tra cứu trong quá trình học các chuyên đề thuật toán. Không cần học thuộc toàn bộ trong một lần. Hãy dùng tài liệu để nhớ lại **ý nghĩa, mẫu tư duy, cách dùng và lỗi thường gặp**.
 
 > **Nguyên tắc cốt lõi:** Cú pháp cần nhớ; ý nghĩa cần hiểu; cách chọn thuật toán cần tự suy luận.
 
@@ -33,7 +33,7 @@ Trước khi viết code, hãy viết bằng lời hoặc pseudocode:
 4. In kết quả.
 ```
 
-### Chuỗi ghi nhớ Level 0
+### Chuỗi ghi nhớ nền tảng
 
 > **BIẾN → TÍNH → ĐIỀU KIỆN → LẶP → TÍCH LŨY → MẢNG → HÀM → DEBUG**
 
@@ -326,7 +326,7 @@ while (condition) {
 
 Nếu điều kiện không bao giờ sai, chương trình có thể lặp vô hạn.
 
-### `do...while`: thực hiện ít nhất một lần
+### `do..while`: thực hiện ít nhất một lần
 
 ```cpp
 do {
@@ -334,7 +334,7 @@ do {
 } while (condition);
 ```
 
-Ở Level 0, `for` và `while` là hai dạng cần dùng thành thạo nhất.
+Trong phần C++ cơ bản, `for` và `while` là hai dạng cần dùng thành thạo nhất.
 
 ### Vòng lặp lồng nhau
 
@@ -397,7 +397,7 @@ for (int x : a) {
 ### Mảng và chỉ số
 
 ```text
-a[0], a[1], a[2], ..., a[n - 1]
+a[0], a[1], a[2], .., a[n - 1]
 ```
 
 > **C++ đánh chỉ số từ 0.** Với `n` phần tử, chỉ số cuối là `n - 1`.
@@ -564,7 +564,7 @@ Mỗi bài nên thử:
 |---|---|---|
 | Tính toán | `result = formula;` | Kết quả được mô tả bằng công thức |
 | Kiểm tra | `if (condition)` | Cần quyết định đúng/sai |
-| Lặp | `for (...)` | Cần xử lý nhiều lần |
+| Lặp | `for (..)` | Cần xử lý nhiều lần |
 | Đếm | `count++` | Cần đếm số đối tượng thỏa điều kiện |
 | Cộng dồn | `sum += x` | Cần giữ tổng hoặc giá trị tích lũy |
 | Max/Min | `mx = max(mx, x)` | Cần giữ đáp án tốt nhất hiện tại |
@@ -574,7 +574,7 @@ Mỗi bài nên thử:
 
 ---
 
-## 15. CẦU NỐI TỪ LEVEL 0 SANG LEVEL 1
+## 15. DẤU HIỆU NHẬN BIẾT THUẬT TOÁN
 
 Khi gặp bài mới, không chọn thuật toán chỉ vì nhìn thấy tên quen thuộc. Hãy quan sát dấu hiệu của bài toán.
 
@@ -598,7 +598,7 @@ Trước khi chọn thuật toán, hãy trả lời:
 2. Dữ liệu có cấu trúc gì?
 3. Cách làm trực tiếp là gì?
 4. Cách trực tiếp có đủ nhanh không?
-5. Có mẫu Level 1 nào phù hợp không?
+5. Có chuyên đề thuật toán nào phù hợp không?
 ```
 
 ---
@@ -661,7 +661,7 @@ DEBUG
   Input, biến, công thức, điều kiện, vòng lặp và kết quả trung gian có đúng không?
 ```
 
-> **Mục tiêu của Level 0:** Không phải nhớ thật nhiều câu lệnh, mà là nhìn một bài toán đơn giản và biết biến nó thành các bước có thể lập trình được.
+> **Mục tiêu của C++ Cơ bản:** Không phải nhớ thật nhiều câu lệnh, mà là nhìn một bài toán đơn giản và biết biến nó thành các bước có thể lập trình được.
 
 ---
 

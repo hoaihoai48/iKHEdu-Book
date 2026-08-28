@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Nhận biết tính chất đơn điệu để áp dụng kỹ thuật Hai con trỏ thay vì vét cạn 2 vòng lặp — `LO-01`.
-2. Cài đặt thành thạo Hai con trỏ ngược chiều giải bài toán 2-SUM trong thời gian $\mathcal{O}(N)$ — `LO-02`.
-3. Cài đặt Cửa sổ trượt linh hoạt (nới rộng và thu hẹp) để tìm đoạn con tối ưu — `LO-03`.
-4. Duy trì trạng thái cửa sổ trượt bằng mảng đếm tần suất 26 chữ cái hoặc bảng băm — `LO-04`.
+1. Nhận biết tính chất đơn điệu để áp dụng kỹ thuật Hai con trỏ thay vì vét cạn 2 vòng lặp.
+2. Cài đặt thành thạo Hai con trỏ ngược chiều giải bài toán 2-SUM trong thời gian $\mathcal{O}(N)$.
+3. Cài đặt Cửa sổ trượt linh hoạt (nới rộng và thu hẹp) để tìm đoạn con tối ưu.
+4. Duy trì trạng thái cửa sổ trượt bằng mảng đếm tần suất 26 chữ cái hoặc bảng băm.
 
 ### Câu hỏi trung tâm của chương
 

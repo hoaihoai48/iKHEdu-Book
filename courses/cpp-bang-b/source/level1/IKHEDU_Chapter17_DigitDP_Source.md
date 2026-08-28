@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Chuyển đổi bài toán đếm trong đoạn $[L, R]$ thành `count(R) - count(L - 1)` — `LO-01`.
-2. Thiết kế hàm đệ quy có nhớ với trạng thái cơ bản `(index, tight, leading_zero, sum, rem)` — `LO-02`.
-3. Xử lý chính xác biến cờ `tight` để không vượt quá cận trên của số $N$ — `LO-03`.
-4. Áp dụng Digit DP giải các bài toán đếm số chia hết, số không chứa chữ số 4/13, và số Palindrome trong $\mathcal{O}(\log_{10} N \times \text{states})$ — `LO-04`.
+1. Chuyển đổi bài toán đếm trong đoạn $[L, R]$ thành `count(R) - count(L - 1)`.
+2. Thiết kế hàm đệ quy có nhớ với trạng thái cơ bản `(index, tight, leading_zero, sum, rem)`.
+3. Xử lý chính xác biến cờ `tight` để không vượt quá cận trên của số $N$.
+4. Áp dụng Digit DP giải các bài toán đếm số chia hết, số không chứa chữ số 4/13, và số Palindrome trong $\mathcal{O}(\log_{10} N \times \text{states})$.
 
 ### Câu hỏi trung tâm của chương
 
@@ -161,11 +161,11 @@ int main() {
 
 ##### Bài 17.2.1 — Đếm Số Có Tổng Chữ Số Chia Hết Cho K
 - **Bối cảnh:** Đếm số lượng số trong đoạn $[1, N]$ ($N \le 10^{18}$) có tổng các chữ số chia hết cho $K$ ($1 \le K \le 50$).
-- **Input:** `30 5` $\implies$ **Output:** `6` (các số: 5, 14, 19, 23, 28...).
+- **Input:** `30 5` $\implies$ **Output:** `6` (các số: 5, 14, 19, 23, 28..).
 
 ##### Bài 17.2.2 — Đếm Số Có Tổng Chữ Số Là Số Chẵn
 - **Bối cảnh:** Đếm số trong $[L, R]$ có tổng các chữ số là số chẵn ($R \le 10^{18}$).
-- **Input:** `1 10` $\implies$ **Output:** `5` (2, 4, 6, 8, 11... -> 2, 4, 6, 8)
+- **Input:** `1 10` $\implies$ **Output:** `5` (2, 4, 6, 8, 11.. -> 2, 4, 6, 8)
 
 ---
 
@@ -180,7 +180,7 @@ int main() {
 
 > **Bài toán mẫu 17.3: Đếm Số Lượng Chữ Số 0 Xuất Hiện Trong Dãy**  
 > **Bối cảnh:** Đếm tổng số chữ số `0` có nghĩa xuất hiện khi viết tất cả các số từ $1$ đến $N$ ($N \le 10^{18}$).  
-> **Input:** `10` $\implies$ **Output:** `1` (số 10 có một chữ số 0, các số từ 1..9 không tính số 0 vô nghĩa).
+> **Input:** `10` $\implies$ **Output:** `1` (số 10 có một chữ số 0, các số từ 1.9 không tính số 0 vô nghĩa).
 
 #### Cài đặt C++
 ```cpp
@@ -251,7 +251,7 @@ int main() {
 
 > **Bài toán mẫu 17.4: Đếm Số Đối Xứng (Palindrome) Đến N**  
 > **Bối cảnh:** Đếm số lượng số nguyên dương đối xứng trong đoạn $[1, N]$ với $N \le 10^{18}$.  
-> **Input:** `100` $\implies$ **Output:** `18` (1..9 và 11, 22, 33, 44, 55, 66, 77, 88, 99).
+> **Input:** `100` $\implies$ **Output:** `18` (1.9 và 11, 22, 33, 44, 55, 66, 77, 88, 99).
 
 #### Cài đặt C++
 ```cpp
@@ -310,7 +310,7 @@ int main() {
 
 ##### Bài 17.4.1 — Đếm Số Palindrome Trong Đoạn $[L, R]$
 - **Bối cảnh:** Cho hai số $L, R \le 10^{18}$. Đếm số lượng số Palindrome trong đoạn $[L, R]$.
-- **Input:** `10 100` $\implies$ **Output:** `9` (11, 22, ..., 99).
+- **Input:** `10 100` $\implies$ **Output:** `9` (11, 22, .., 99).
 
 ##### Bài 17.4.2 — Tìm Số Palindrome Nhỏ Nhất Lớn Hơn N
 - **Bối cảnh:** Cho số nguyên $N \le 10^{18}$. Tìm số Palindrome nhỏ nhất lớn hơn $N$.

@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Thao tác thành thạo các toán tử bit: Bật bit `(x | (1 << k))`, Tắt bit `(x & ~(1 << k))`, Kiểm tra bit `((x >> k) & 1)` — `LO-01`.
-2. Sử dụng các hàm bit tối ưu phần cứng `__builtin_popcountll` đếm số bit 1 trong $\mathcal{O}(1)$ — `LO-02`.
-3. Duyệt toàn bộ $2^N$ tập con của tập hợp $N$ phần tử bằng vòng lặp Bitmask từ $0$ đến $2^N - 1$ — `LO-03`.
-4. Cài đặt Quy hoạch động Bitmask giải bài toán Người du lịch (TSP) trong $\mathcal{O}(2^N \times N^2)$ — `LO-04`.
+1. Thao tác thành thạo các toán tử bit: Bật bit `(x | (1 << k))`, Tắt bit `(x & ~(1 << k))`, Kiểm tra bit `((x >> k) & 1)`.
+2. Sử dụng các hàm bit tối ưu phần cứng `__builtin_popcountll` đếm số bit 1 trong $\mathcal{O}(1)$.
+3. Duyệt toàn bộ $2^N$ tập con của tập hợp $N$ phần tử bằng vòng lặp Bitmask từ $0$ đến $2^N - 1$.
+4. Cài đặt Quy hoạch động Bitmask giải bài toán Người du lịch (TSP) trong $\mathcal{O}(2^N \times N^2)$.
 
 ### Câu hỏi trung tâm của chương
 

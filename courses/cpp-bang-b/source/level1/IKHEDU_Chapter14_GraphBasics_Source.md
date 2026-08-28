@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Biểu diễn đồ thị vô hướng/có hướng $N$ đỉnh $M$ cạnh bằng danh sách kề `vector<vector<int>> adj` tối ưu bộ nhớ $\mathcal{O}(N + M)$ — `LO-01`.
-2. Cài đặt DFS để duyệt và đếm số lượng thành phần liên thông của đồ thị — `LO-02`.
-3. Cài đặt BFS bằng `queue` để tìm đường đi ngắn nhất (số cạnh ít nhất) giữa hai đỉnh trong $\mathcal{O}(N + M)$ — `LO-03`.
-4. Áp dụng thuật toán Flood Fill giải các bài toán loang diện tích trên ma trận ô vuông — `LO-04`.
+1. Biểu diễn đồ thị vô hướng/có hướng $N$ đỉnh $M$ cạnh bằng danh sách kề `vector<vector<int>> adj` tối ưu bộ nhớ $\mathcal{O}(N + M)$.
+2. Cài đặt DFS để duyệt và đếm số lượng thành phần liên thông của đồ thị.
+3. Cài đặt BFS bằng `queue` để tìm đường đi ngắn nhất (số cạnh ít nhất) giữa hai đỉnh trong $\mathcal{O}(N + M)$.
+4. Áp dụng thuật toán Flood Fill giải các bài toán loang diện tích trên ma trận ô vuông.
 
 ### Câu hỏi trung tâm của chương
 
@@ -36,7 +36,7 @@ Sau chương này, em có thể:
 > **Bài toán mẫu 14.1: Mạng Lưới Tuyến Xe Být Thủ Đô Hà Nội**  
 > **Bối cảnh:** Sở Giao thông Vận tải Hà Nội quản lý $N$ trạm trung chuyển và $M$ tuyến đường hai chiều kết nối trực tiếp giữa các trạm.  
 > **Nhiệm vụ:** Hãy in ra bậc kết nối và danh sách các trạm kề của từng trạm trung chuyển.  
-> **Input:** `3 2` \ `1 2` \ `2 3` $\implies$ **Output:** `Dinh 1: bac 1, ke voi 2`...
+> **Input:** `3 2` \ `1 2` \ `2 3` $\implies$ **Output:** `Dinh 1: bac 1, ke voi 2`..
 
 #### Cài đặt C++
 ```cpp
@@ -235,7 +235,7 @@ int main() {
 
 > **Bài toán mẫu 14.4: Đếm Số Quần Đảo Trên Bản Đồ Hải Dương Học**  
 > **Bối cảnh:** Bản đồ vệ tinh $N \times M$ ô, `#` là đảo nổi, `.` là mặt biển. Hai ô đất kề cạnh nhau thuộc cùng một quần đảo. Đếm số lượng quần đảo độc lập.  
-> **Input:** `3 3` \ `##.` \ `..#` \ `..#` $\implies$ **Output:** `2`.
+> **Input:** `3 3` \ `##.` \ `.#` \ `.#` $\implies$ **Output:** `2`.
 
 #### Cài đặt C++
 ```cpp
@@ -288,7 +288,7 @@ int main() {
 
 ##### Bài 14.4.1 — Diện Tích Quần Đảo Lớn Nhất
 - **Bối cảnh:** Tìm số lượng ô đất `#` thuộc về quần đảo có diện tích lớn nhất trên bản đồ.
-- **Input:** `3 3` \ `##.` \ `..#` \ `..#` $\implies$ **Output:** `2`
+- **Input:** `3 3` \ `##.` \ `.#` \ `.#` $\implies$ **Output:** `2`
 
 ##### Bài 14.4.2 — Đếm Số Vùng Kín Được Bao Bọc Bởi Tường
 - **Bối cảnh:** Đếm số ô `0` không chạm vào viền ngoài của ma trận bằng Flood Fill loang từ viền.

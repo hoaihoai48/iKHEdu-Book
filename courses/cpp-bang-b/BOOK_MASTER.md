@@ -14,27 +14,22 @@
 
 - [Lời nói đầu](#lời-nói-đầu)
 - [Cách sử dụng sách](#cách-sử-dụng-sách)
-- [Mở đầu — Cách học và tư duy giải bài](#mở-đầu--cách-học-và-tư-duy-giải-bài)
-- [Phần I — Nền tảng lập trình](#phần-i--nền-tảng-lập-trình)
-  - [Tổng quan Phần I](#tổng-quan-phần-i)
-  - [I.1. Làm quen với chương trình](#i1-làm-quen-với-chương-trình)
+- [Phần mở đầu — Làm quen & Tư duy giải bài](#phần-mở-đầu--làm-quen--tư-duy-giải-bài)
+- [C++ Cơ bản — Tờ ghi nhớ (CẦN NHỚ — Tra cứu)](#c-cơ-bản--tờ-ghi-nhớ-cần-nhớ--tra-cứu)
+  - [Tổng quan Tra cứu](#tổng-quan-tra-cứu)
+  - [I.1. Khung chương trình chuẩn & I-P-O](#i1-khung-chương-trình-chuẩn--i-p-o)
   - [I.2. Dữ liệu, biến và phép tính](#i2-dữ-liệu-biến-và-phép-tính)
   - [I.3. Điều kiện và vòng lặp](#i3-điều-kiện-và-vòng-lặp)
   - [I.4. Những viên gạch xử lý dữ liệu](#i4-những-viên-gạch-xử-lý-dữ-liệu)
   - [I.5. Hàm, debug và độ phức tạp](#i5-hàm-debug-và-độ-phức-tạp)
   - [I.6. Bảng tra cứu nhanh](#i6-bảng-tra-cứu-nhanh)
-- [Phần II — Thuật toán nền tảng](#phần-ii--thuật-toán-nền-tảng)
+- [Phần II — Chuyên đề thuật toán](#phần-ii--chuyên-đề-thuật-toán)
   - [Bản đồ thuật toán](#bản-đồ-thuật-toán)
   - [Chương 1 — Sắp xếp](#chương-1--sắp-xếp)
-    - [Bài 1.1 — Vì sao cần sắp xếp và sắp xếp bằng tay](#bài-11--vì-sao-cần-sắp-xếp-và-sắp-xếp-bằng-tay)
-    - [Bài 1.2 — Selection Sort: ý tưởng, mô phỏng và `swap`](#bài-12--selection-sort-ý-tưởng-mô-phỏng-và-swap)
-    - [Bài 1.3 — Sử dụng `sort` để sắp xếp tăng dần và giảm dần](#bài-13--sử-dụng-sort-để-sắp-xếp-tăng-dần-và-giảm-dần)
-    - [Bài 1.4 — Comparator trên dãy số nguyên](#bài-14--comparator-trên-dãy-số-nguyên)
-    - [Bài 1.5 — Sắp xếp như một bước tiền xử lý](#bài-15--sắp-xếp-như-một-bước-tiền-xử-lý)
-    - [Bài 1.6 — Độ phức tạp và quy trình giải bài](#bài-16--độ-phức-tạp-và-quy-trình-giải-bài)
-    - [Bài 1.7 — Ôn tập, kiểm tra và bài chuyển giao](#bài-17--ôn-tập-kiểm-tra-và-bài-chuyển-giao)
-    - [Tổng kết chương](#tổng-kết-chương)
-    - [Code tham chiếu](#code-tham-chiếu)
+    - [Bài 1.1 — Bản chất của Sắp xếp & Thuật toán Selection Sort](#bài-11--bản-chất-của-sắp-xếp--thuật-toán-selection-sort)
+    - [Bài 1.2 — Sắp xếp tối ưu với std::sort & Hàm so sánh (Comparator)](#bài-12--sắp-xếp-tối-ưu-với-stdsort--hàm-so-sánh-comparator)
+    - [Bài 1.3 — Các dạng bài toán ứng dụng Trật tự sắp xếp](#bài-13--các-dạng-bài-toán-ứng-dụng-trật-tự-sắp-xếp)
+    - [Bài 1.4 — Tổng kết chương & Bộ đề luyện tập phân tầng](#bài-14--tổng-kết-chương--bộ-đề-luyện-tập-phân-tầng)
   - [Chương 2 — Tham lam](#chương-2--tham-lam)
     - [Bài 2.1 — Tham lam là gì?](#bài-21--tham-lam-là-gì)
     - [Bài 2.2 — Chọn nhiều hoạt động không giao nhau](#bài-22--chọn-nhiều-hoạt-động-không-giao-nhau)
@@ -43,9 +38,25 @@
     - [Bài 2.5 — Khi nào tham lam thất bại?](#bài-25--khi-nào-tham-lam-thất-bại)
     - [Bài 2.6 — Ôn tập và bài chuyển giao](#bài-26--ôn-tập-và-bài-chuyển-giao)
     - [Tổng kết chương](#tổng-kết-chương-1)
-    - [Code tham chiếu](#code-tham-chiếu-1)
   - [Chương 3 — Số học](#chương-3--số-học)
+    - [Bài 3.1 — Ước, bội và quy luật đối xứng cặp ước $\mathcal{O}(\sqrt{N})$](#bài-31--ước-bội-và-quy-luật-đối-xứng-cặp-ước-mathcalosqrtn)
+    - [Bài 3.2 — Ước chung lớn nhất (GCD) và Thuật toán Euclid](#bài-32--ước-chung-lớn-nhất-gcd-và-thuật-toán-euclid)
+    - [Bài 3.3 — Bội chung nhỏ nhất (LCM) và Kỹ thuật chống tràn số](#bài-33--bội-chung-nhỏ-nhất-lcm-và-kỹ-thuật-chống-tràn-số)
+    - [Bài 3.4 — Số nguyên tố và Kỹ thuật kiểm tra tối ưu $\mathcal{O}(\sqrt{N})$](#bài-34--số-nguyên-tố-và-kỹ-thuật-kiểm-tra-tối-ưu-mathcalosqrtn)
+    - [Bài 3.5 — Phân tích thừa số nguyên tố](#bài-35--phân-tích-thừa-số-nguyên-tố)
+    - [Bài 3.6 — Sàng số nguyên tố Eratosthenes](#bài-36--sàng-số-nguyên-tố-eratosthenes)
+    - [Bài 3.7 — Ôn tập, kiểm tra và bài chuyển giao](#bài-37--ôn-tập-kiểm-tra-và-bài-chuyển-giao)
+    - [Tổng kết chương](#tổng-kết-chương-2)
+    - [Code tham chiếu](#code-tham-chiếu-2)
   - [Chương 4 — Đếm phân phối](#chương-4--đếm-phân-phối)
+    - [Bài 4.1 — Mảng tần suất trực tiếp và Tư duy chuyển giá trị thành chỉ số](#bài-41--mảng-tần-suất-trực-tiếp-và-tư-duy-chuyển-giá-trị-thành-chỉ-số)
+    - [Bài 4.2 — Thống kê tần suất: Tìm Mode, Min-Max và Phần tử đa số](#bài-42--thống-kê-tần-suất-tìm-mode-min-max-và-phần-tử-đa-số)
+    - [Bài 4.3 — Mảng tần suất trên bảng chữ cái và Kiểm tra chuỗi Anagram](#bài-43--mảng-tần-suất-trên-bảng-chữ-cái-và-kiểm-tra-chuỗi-anagram)
+    - [Bài 4.4 — Kỹ thuật đếm cặp $\mathcal{O}(N)$ bằng Bảng tần suất](#bài-44--kỹ-thuật-đếm-cặp-mathcalon-bằng-bảng-tần-suất)
+    - [Bài 4.5 — Nguyên lý Dirichlet trong Tin học](#bài-45--nguyên-lý-dirichlet-trong-tin-học)
+    - [Bài 4.6 — Ôn tập, kiểm tra và bài chuyển giao](#bài-46--ôn-tập-kiểm-tra-và-bài-chuyển-giao)
+    - [Tổng kết chương](#tổng-kết-chương-3)
+    - [Code tham chiếu](#code-tham-chiếu-3)
   - [Chương 5 — Tìm kiếm nhị phân](#chương-5--tìm-kiếm-nhị-phân)
   - [Chương 6 — Mảng tiền tố](#chương-6--mảng-tiền-tố)
   - [Chương 7 — Hai con trỏ](#chương-7--hai-con-trỏ)
@@ -113,20 +124,26 @@ Khi quên cú pháp, học sinh có thể xem lại các mục tương ứng tro
 
 Các bài học trong sách không mặc định yêu cầu học sinh phải biết toàn bộ công cụ C++ nâng cao. Mỗi chương cần nêu rõ prerequisite và tránh đưa nhiều khái niệm mới vào cùng một ví dụ.
 
-# Mở đầu — Cách học và tư duy giải bài
+# Phần mở đầu — Làm quen & Tư duy giải bài
+
+## Lập trình là gì?
+
+Lập trình là cách chúng ta hướng dẫn máy tính giải quyết một công việc cụ thể thông qua các câu lệnh rõ ràng, chính xác. Máy tính xử lý rất nhanh, nhưng nó chỉ làm đúng những gì được lập trình.
+
+Trong lập trình thi đấu, nhiệm vụ của em là: **Đọc một đề bài → Hiểu yêu cầu và dữ liệu → Tìm ra phương pháp giải tối ưu → Viết chương trình C++ để máy tính tự động giải quyết bài toán đó.**
 
 ## Quy trình sáu câu hỏi
 
-Trước khi viết code, hãy trả lời:
+Trước khi viết code, hãy luôn trả lời:
 
-1. Đề bài cho dữ liệu gì?
-2. Cần in hoặc tìm kết quả gì?
+1. Đề bài cho dữ liệu gì? (Input)
+2. Cần in hoặc tìm kết quả gì? (Output)
 3. Dữ liệu sẽ được lưu ở biến, mảng hay `vector` nào phù hợp?
 4. Có công thức hoặc quy tắc nào cần viết ra trước không?
-5. Các bước xử lý được thực hiện một lần hay lặp lại nhiều lần?
-6. Làm thế nào để kiểm tra kết quả trên test nhỏ và test biên?
+5. Các bước xử lý được thực hiện một lần hay lặp lại nhiều lần? (Process)
+6. Làm thế nào để kiểm tra kết quả trên test nhỏ và test biên? (Debug & Verify)
 
-Mô hình chung là:
+Mô hình chung xuyên suốt mọi bài toán:
 
 ```text
 Input → Process → Output
@@ -136,51 +153,44 @@ Một lời giải tốt phải giải thích được cả ba phần, không ch
 
 ## Công thức trước code
 
-Với bài toán tính tổng, hãy viết `sum = a + b` trước khi chuyển thành C++. Với bài toán có nhiều bước, hãy viết các bước bằng lời hoặc pseudocode. Việc này giúp tách lỗi toán học, lỗi thuật toán và lỗi cú pháp.
+Với bài toán tính tổng, hãy viết `sum = a + b` trước khi chuyển thành C++. Với bài toán có nhiều bước, hãy viết các bước bằng lời hoặc pseudocode. Việc này giúp tách bạch lỗi toán học, lỗi thuật toán và lỗi cú pháp.
 
 ## Debug là một phần của lời giải
 
-Khi chương trình sai, không đoán ngẫu nhiên. Hãy kiểm tra một test rất nhỏ, in giá trị trung gian nếu cần, kiểm tra số lần lặp, chỉ số, điều kiện dừng và kiểu dữ liệu. Sau khi sửa, phải chạy lại test cũ và thêm một test mới.
+Khi chương trình chạy sai hoặc nhận kết quả Wrong Answer, tuyệt đối không đoán ngẫu nhiên. Hãy kiểm tra một test rất nhỏ bằng tay, in giá trị trung gian nếu cần, kiểm tra số lần lặp, chỉ số `0.n-1`, điều kiện dừng và kiểu dữ liệu có bị tràn số (`long long`) hay không.
 
-# Phần I — Nền tảng lập trình
+---
 
-Phần này cung cấp lớp kiến thức nền được dùng xuyên suốt các chương thuật toán. Học sinh không nhất thiết phải học thuộc toàn bộ trong một lần; các em cần biết cách quay lại đúng mục khi quên.
+# C++ Cơ bản — Tờ ghi nhớ (CẦN NHỚ — Tra cứu)
 
-## Tổng quan Phần I
+Tờ ghi nhớ này tổng hợp những **công cụ C++ nền tảng** dùng xuyên suốt cuốn sách. Em không cần học thuộc toàn bộ ngay từ đầu; hãy mở phần này ra **tra cứu tức thì** mỗi khi quên cú pháp hoặc cần kiểm tra bẫy lỗi.
 
-Phần I cung cấp những kiến thức tối thiểu để học sinh có thể đọc đề, viết chương trình, xử lý dữ liệu đơn giản và tự kiểm tra lời giải. Các mục dưới đây là bản đồ tra cứu; những kiến thức này sẽ được nhắc lại đúng lúc trong các chương thuật toán, không yêu cầu học sinh ghi nhớ tất cả ngay từ đầu.
+## Tổng quan Tra cứu
 
-| Nhóm | Kiến thức cốt lõi | Năng lực cần đạt |
+| Nhóm công cụ | Cú pháp cốt lõi | Dùng khi nào? |
 |---|---|---|
-| Chương trình đầu tiên | `main`, biên dịch, chạy chương trình | Viết và chạy được chương trình tối giản |
-| Input/Output | `cin`, `cout`, dữ liệu đầu vào/đầu ra | Đọc đúng dữ liệu và in đúng format |
-| Biến và kiểu dữ liệu | `int`, `long long`, `double`, `char`, `string` | Chọn kiểu phù hợp với dữ liệu |
-| Toán tử | số học, so sánh, logic, `%` | Viết được biểu thức và điều kiện |
-| Điều kiện | `if`, `else`, điều kiện ghép | Ra quyết định trong chương trình |
-| Vòng lặp | `for`, `while` | Lặp một hành động đúng số lần |
-| Tích lũy | `sum`, `count`, `max`, `min` | Xử lý dãy dữ liệu bằng một lượt duyệt |
-| Mảng và vector | chỉ số, duyệt, cập nhật | Lưu và xử lý nhiều giá trị |
-| Hàm | tham số, giá trị trả về | Chia bài toán thành nhiệm vụ nhỏ |
-| Debug và kiểm thử | test nhỏ, test biên, giá trị trung gian | Tự tìm và sửa lỗi |
-| Độ phức tạp | `O(1)`, `O(N)`, `O(N²)`, `O(N log N)` | Nhận biết lời giải có thể chạy đủ nhanh hay không |
+| Khung chương trình | `main()`, `cin`, `cout`, fast I/O | Bắt đầu mọi bài toán |
+| Biến & Kiểu dữ liệu | `int`, `long long`, `double`, `char`, `string`, `bool` | Lưu trữ dữ liệu phù hợp |
+| Toán tử & Điều kiện | `+ - * / %`, `== != < >`, `&& || !`, `if/else` | Tính toán & Ra quyết định |
+| Vòng lặp & Tích lũy | `for`, `while`, `sum`, `count`, `max`, `min` | Lặp & Xử lý dãy dữ liệu |
+| Mảng động vector | `vector<int> a(n)`, `push_back`, `size()` | Lưu danh sách dữ liệu |
+| Hàm & Debug | `return_type name()`, test biên, `cerr` | Chia nhỏ bài & Tìm lỗi |
+| Độ phức tạp | `O(1)`, `O(N)`, `O(N log N)`, `O(N²)` | Ước lượng thời gian chạy |
 
-## I.1. Làm quen với chương trình
-
-Chương này giúp học sinh hiểu một chương trình bắt đầu từ đâu, nhận dữ liệu như thế nào, xử lý ra sao và in kết quả ở đâu.
-
-### Cấu trúc chương trình tối giản
+## I.1. Khung chương trình chuẩn & I-P-O
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
+    // 1. Tối ưu vào ra (Fast I/O)
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    // Đọc dữ liệu.
-    // Xử lý dữ liệu.
-    // In kết quả.
+    // 2. Đọc dữ liệu (Input)
+    // 3. Xử lý bài toán (Process)
+    // 4. In kết quả (Output)
 
     return 0;
 }
@@ -253,178 +263,77 @@ Học sinh cần tập thói quen hỏi: “Nếu dữ liệu lớn gấp đôi 
 | Đổi chỗ | Dùng `swap(a[i], a[j])` |
 | Sắp xếp tăng | `sort(a.begin(), a.end())` |
 | Sắp xếp giảm | Dùng comparator rõ ràng sau khi đã hiểu thứ tự cần thiết |
-| Kiểm tra mảng | Chú ý chỉ số `0..n-1` và điều kiện biên |
+| Kiểm tra mảng | Chú ý chỉ số `0.n-1` và điều kiện biên |
 | Debug | Test nhỏ → test biên → kiểm tra trung gian → test lại |
 
 > Trong luồng nhập môn, chỉ dùng các công cụ học sinh đã được xây nền. `struct`, `pair` và cách lưu nhiều thuộc tính là nội dung mở rộng, không phải prerequisite của các bài Sorting cơ bản.
 
-# Phần II — Thuật toán nền tảng
+# Phần II — Chuyên đề thuật toán
 
-## Chương 1 — Sắp xếp
+## Chương 1 — Sắp xếp (Sorting)
 
 ### Bản đồ chương
 
 | Trường | Nội dung |
 |---|---|
-| Mục tiêu | Hiểu sắp xếp là cách tạo trật tự để bước tiếp theo của bài toán dễ hơn |
-| Kiến thức cần có | Biến, `int`, `vector<int>`, vòng lặp `for`, so sánh, `max/min`, `swap` và cách đọc chỉ số |
-| Phạm vi | Sắp xếp bằng tay, Selection Sort, `sort`, comparator trên số nguyên và ứng dụng của thứ tự |
-| Số bài | 7 bài học, kết hợp lý thuyết, luyện tập và kiểm tra |
+| Mục tiêu | Hiểu sắp xếp là bước tiền xử lý tạo trật tự dữ liệu, làm chủ thuật toán Selection Sort và hàm `std::sort`, viết được hàm so sánh tùy biến và ứng dụng giải quyết các bài toán gom nhóm, khoảng cách |
+| Kiến thức cần có | Cú pháp C++ cơ bản (`int`, `vector<int>`, vòng lặp `for`, câu lệnh `if`, hoán vị `swap`) |
+| Phạm vi | Bản chất sắp xếp, Selection Sort $\mathcal{O}(N^2)$, `std::sort` $\mathcal{O}(N \log N)$, Comparator `bool cmp()`, bài toán gom nhóm và cặp kề nhau |
+| Cấu trúc chương | 3 Bài học lý thuyết & thực hành + 1 Bài tổng kết & luyện tập phân tầng |
 
 ### Learning outcomes
 
 Sau chương này, em có thể:
-
-- giải thích sắp xếp là gì và vì sao thay đổi thứ tự có thể làm bài toán đơn giản hơn;
-- đọc, duyệt và xử lý một `vector<int>`;
-- mô phỏng Selection Sort bằng tay và viết được phiên bản cơ bản;
-- sử dụng `sort` để sắp xếp tăng dần và giảm dần;
-- viết comparator cho dãy số nguyên theo một hoặc hai quy tắc;
-- nhận biết khi nào sắp xếp làm thay đổi vị trí ban đầu;
-- phân biệt một bài cần sắp xếp với một bài chỉ cần duyệt bằng `max/min`;
-- giải thích trực giác sự khác nhau giữa `O(N²)` và `O(N log N)`;
-- nói rõ sau khi sắp xếp thì bước nào của bài toán trở nên dễ hơn.
+1. Giải thích vì sao trật tự dữ liệu giúp các bước tìm kiếm, đếm và gom nhóm trở nên đơn giản hơn.
+2. Mô phỏng bằng tay và cài đặt được thuật toán Selection Sort $\mathcal{O}(N^2)$ với thao tác `swap`.
+3. Sử dụng thành thạo hàm `sort()` của thư viện C++ để sắp xếp tăng dần, giảm dần trong thời gian $\mathcal{O}(N \log N)$.
+4. Tự viết hàm so sánh tùy biến (Custom Comparator) theo các quy tắc đặc thù (chẵn/lẻ, trị tuyệt đối).
+5. Nhận diện và áp dụng trật tự sắp xếp để đếm số giá trị phân biệt và tìm cặp phần tử gần nhau nhất.
+6. Hoàn thành bộ bài tập phân tầng từ củng cố cú pháp đến vận dụng thi đấu.
 
 ---
 
-### Bài 1.1 — Vì sao cần sắp xếp và sắp xếp bằng tay
+### Bài 1.1 — Bản chất của Sắp xếp & Thuật toán Selection Sort
 
-#### Mục tiêu bài
+#### 1. Mục tiêu bài
 
-Sau Bài 1.1, em có thể nhận biết một dãy đã có trật tự hay chưa, mô tả được kết quả cần đạt và tự sắp xếp một dãy nhỏ bằng tay.
+Sau Bài 1.1, em hiểu rõ tại sao cần sắp xếp, mô phỏng được quá trình chọn phần tử nhỏ nhất bằng tay và tự tay viết được thuật toán Selection Sort $\mathcal{O}(N^2)$.
 
-#### Khởi động
+#### 2. Khởi động: Vì sao cần sắp xếp?
 
-Cho dãy số:
-
-```text
-8 3 6 1 5
-```
-
-Nếu chỉ cần tìm số lớn nhất, em có thể duyệt từ trái sang phải và giữ lại giá trị lớn nhất đã gặp. Nhưng nếu cần in **toàn bộ dãy theo thứ tự tăng dần**, việc tìm một giá trị lớn nhất có đủ không?
-
-Câu trả lời là không. Ta cần đưa nhiều phần tử về một trật tự chung.
-
-#### Sắp xếp là gì?
-
-**Sắp xếp** là đưa các phần tử về thứ tự được yêu cầu. Thứ tự đó có thể là:
-
-- tăng dần: từ nhỏ đến lớn;
-- giảm dần: từ lớn đến nhỏ;
-- hoặc một thứ tự do đề bài quy định.
-
-Ví dụ:
+Cho dãy số nguyên chưa có thứ tự:
 
 ```text
-Ban đầu:  8 3 6 1 5
-Tăng dần: 1 3 5 6 8
-Giảm dần: 8 6 5 3 1
+8  3  6  1  5
 ```
 
-Trong phần cơ bản, ta đang sắp xếp **các giá trị nguyên**. Sắp xếp chủ yếu thay đổi vị trí của các phần tử, không tự tạo ra một giá trị mới.
-
-#### Vì sao thứ tự có ích?
-
-Khi dữ liệu còn lộn xộn, ta khó nhìn thấy các mối quan hệ giữa các phần tử. Sau khi sắp xếp, ta có thể:
-
-- đưa giá trị nhỏ nhất về đầu hoặc giá trị lớn nhất về cuối;
-- nhận ra các giá trị bằng nhau vì chúng đứng cạnh nhau;
-- chỉ cần xét các phần tử kề nhau khi tìm hai giá trị gần nhau;
-- ghép hai dãy theo thứ tự;
-- chuẩn bị cho tìm kiếm nhị phân, hai con trỏ hoặc tham lam.
-
-> **Sắp xếp thường là bước chuẩn bị. Nó tạo ra trật tự để bước tiếp theo của lời giải trở nên dễ hơn.**
-
-#### Sắp xếp bằng tay
-
-Hãy sắp xếp dãy `8 3 6 1 5` tăng dần bằng cách luôn tìm số nhỏ nhất trong phần còn lại.
+- Nếu muốn tìm số lớn nhất, em chỉ cần duyệt một lượt từ trái sang phải và giữ lại số lớn nhất đã gặp.
+- Nhưng nếu cần **tìm khoảng cách nhỏ nhất giữa hai số bất kỳ**, hoặc **đếm xem có bao nhiêu số khác nhau**, việc dữ liệu nằm lộn xộn sẽ khiến em phải so sánh từng cặp một ($\mathcal{O}(N^2)$).
+- Nếu dãy số đã được xếp tăng dần:
 
 ```text
-Ban đầu: 8 3 6 1 5
+1  3  5  6  8
 ```
 
-Số nhỏ nhất của cả dãy là `1`. Đưa `1` về đầu:
+Mọi thứ trở nên cực kỳ rõ ràng: hai số gần nhau nhất chắc chắn phải đứng cạnh nhau, các số giống nhau sẽ tự động nằm liền kề nhau!
 
-```text
-Lượt 1: 1 3 6 8 5
-```
+> **Sắp xếp không tạo ra dữ liệu mới. Sắp xếp là bước tạo trật tự để các bước xử lý tiếp theo trở nên dễ dàng và nhanh chóng hơn.**
 
-Bây giờ phần đầu `1` đã đúng vị trí. Trong phần còn lại `3 6 8 5`, số nhỏ nhất là `3`, nên vị trí thứ hai đã đúng. Tiếp tục:
+#### 3. Ý tưởng thuật toán Selection Sort (Sắp xếp chọn)
 
-```text
-Lượt 2: 1 3 6 8 5
-Lượt 3: 1 3 5 8 6
-Lượt 4: 1 3 5 6 8
-```
+Ý tưởng cốt lõi của Selection Sort gói gọn trong một câu:
+> **Ở mỗi vị trí $i$ từ đầu đến cuối mảng, tìm phần tử nhỏ nhất trong phần chưa sắp xếp rồi đổi chỗ (`swap`) nó về vị trí $i$.**
 
-Sau mỗi lượt, một vị trí ở bên trái được xác nhận là đúng. Phần đã đúng không cần sắp xếp lại.
+##### Mô phỏng từng bước cho dãy `8 3 6 1 5` ($N = 5$):
 
-#### Tự kiểm tra
+| Lượt $i$ | Vị trí đang xét | Phần chưa sắp xếp | Phần tử nhỏ nhất tìm được | Thao tác đổi chỗ | Dãy số sau lượt đó |
+|:---:|:---:|:---:|:---:|:---:|---|
+| **Lượt 1** | $i = 0$ | `[8, 3, 6, 1, 5]` | Số `1` tại vị trí 3 | `swap(a[0], a[3])` | `[1, 3, 6, 8, 5]` *(Số 1 đã đúng vị trí)* |
+| **Lượt 2** | $i = 1$ | `[3, 6, 8, 5]` | Số `3` tại vị trí 1 | `swap(a[1], a[1])` | `[1, 3, 6, 8, 5]` *(Số 3 đã đúng vị trí)* |
+| **Lượt 3** | $i = 2$ | `[6, 8, 5]` | Số `5` tại vị trí 4 | `swap(a[2], a[4])` | `[1, 3, 5, 8, 6]` *(Số 5 đã đúng vị trí)* |
+| **Lượt 4** | $i = 3$ | `[8, 6]` | Số `6` tại vị trí 4 | `swap(a[3], a[4])` | `[1, 3, 5, 6, 8]` *(Toàn bộ dãy đã tăng dần)* |
 
-1. Dãy `4 2 9 2` sau khi sắp xếp tăng dần là gì?
-2. Khi sắp xếp, giá trị của các phần tử có thay đổi không?
-3. Vì sao sau khi đã đặt đúng phần tử nhỏ nhất ở vị trí đầu, ta có thể bỏ qua vị trí đó?
-4. Hãy nói bằng lời: “Sau khi sắp xếp, em được lợi gì?”
-
-#### Luyện tập ngắn
-
-- Viết ra từng bước khi sắp xếp dãy `7 4 1 6` tăng dần bằng cách chọn phần tử nhỏ nhất.
-- Cho dãy `2 2 5 1 3`. Hãy viết kết quả tăng dần và giảm dần.
-- Tự tạo một dãy năm số, sau đó giải thích vì sao thứ tự mới giúp em nhìn dãy rõ hơn.
-
-#### Tóm tắt bài
-
-Sắp xếp là đưa dữ liệu về một trật tự phù hợp. Trước khi viết code, em cần biết **sắp xếp theo tiêu chí nào** và **bước sau sẽ dễ hơn ở điểm nào**.
-
----
-
-### Bài 1.2 — Selection Sort: ý tưởng, mô phỏng và `swap`
-
-#### Mục tiêu bài
-
-Sau Bài 1.2, em có thể mô phỏng Selection Sort, hiểu vai trò của hai vòng lặp và viết code sắp xếp tăng dần bằng cách chọn phần tử nhỏ nhất.
-
-#### Ý tưởng Selection Sort
-
-Selection Sort có thể hiểu bằng câu nói:
-
-> Ở mỗi vị trí, tìm phần tử nhỏ nhất trong phần chưa sắp xếp rồi đưa phần tử đó về vị trí đang xét.
-
-Với dãy:
-
-```text
-8 3 6 1 5
-```
-
-Ở lượt đầu, ta tìm số nhỏ nhất trong toàn bộ dãy là `1`, sau đó đưa `1` về vị trí `0`.
-
-Ở lượt tiếp theo, vị trí `0` đã đúng nên chỉ tìm trong đoạn từ vị trí `1` đến cuối. Cứ như vậy, phần bên trái ngày càng dài và luôn được sắp xếp đúng.
-
-#### Mô phỏng từng lượt
-
-| Lượt | Vị trí đang đặt | Phần tử nhỏ nhất còn lại | Dãy sau lượt đó |
-|---:|---:|---:|---|
-| 1 | `0` | `1` | `1 3 6 8 5` |
-| 2 | `1` | `3` | `1 3 6 8 5` |
-| 3 | `2` | `5` | `1 3 5 8 6` |
-| 4 | `3` | `6` | `1 3 5 6 8` |
-
-Trong bảng trên, có lượt phần tử nhỏ nhất đã nằm đúng vị trí nên dãy nhìn như không thay đổi. Điều đó hoàn toàn bình thường.
-
-#### Pseudocode
-
-```text
-for i từ 0 đến n - 2:
-    pos = i
-    for j từ i + 1 đến n - 1:
-        nếu a[j] < a[pos]:
-            pos = j
-    đổi chỗ a[i] và a[pos]
-```
-
-Biến `i` chỉ vị trí đang cần đặt. Biến `j` dùng để tìm trong phần còn lại. Biến `pos` ghi nhớ vị trí của phần tử nhỏ nhất đã tìm thấy.
-
-#### Code C++
+#### 4. Cài đặt C++
 
 ```cpp
 #include <bits/stdc++.h>
@@ -442,22 +351,20 @@ int main() {
         cin >> a[i];
     }
 
+    // Thuat toan Selection Sort O(N^2)
     for (int i = 0; i < n - 1; i++) {
-        int pos = i;
-
+        int min_idx = i;
         for (int j = i + 1; j < n; j++) {
-            if (a[j] < a[pos]) {
-                pos = j;
+            if (a[j] < a[min_idx]) {
+                min_idx = j;
             }
         }
-
-        swap(a[i], a[pos]);
+        swap(a[i], a[min_idx]);
     }
 
+    // In ket qua
     for (int i = 0; i < n; i++) {
-        if (i > 0) {
-            cout << ' ';
-        }
+        if (i > 0) cout << ' ';
         cout << a[i];
     }
     cout << '\n';
@@ -466,742 +373,553 @@ int main() {
 }
 ```
 
-`swap(a[i], a[pos])` đổi chỗ hai phần tử. Nếu `pos` bằng `i`, lệnh này không làm thay đổi dãy và vẫn an toàn.
+#### 5. Bảng theo dõi biến khi Debug
 
-#### Điều cần theo dõi khi debug
-
-Khi code sai, em hãy in hoặc ghi ra giấy ba giá trị:
-
-- `i`: vị trí đang được đặt;
-- `j`: vị trí đang được kiểm tra;
-- `pos`: vị trí nhỏ nhất hiện tại.
-
-Một lỗi phổ biến là viết `j <= n`. Chỉ số cuối cùng của dãy có `n` phần tử là `n - 1`, vì vậy điều kiện đúng là `j < n`.
-
-#### Tự kiểm tra
-
-1. Vì sao vòng ngoài chỉ cần chạy đến `n - 2`?
-2. `pos` có ý nghĩa gì?
-3. Sau khi kết thúc lượt `i`, phần nào của dãy đã chắc chắn đúng?
-4. Với dãy `5 2 4`, hãy ghi giá trị của `pos` ở lượt đầu.
-5. Nếu `n = 1`, chương trình có truy cập ngoài mảng không?
-
-#### Luyện tập ngắn
-
-- Mô phỏng Selection Sort cho dãy `6 1 4 2`.
-- Sửa code để sắp xếp giảm dần bằng cách tìm phần tử lớn nhất trong phần chưa xử lý.
-- Viết một câu giải thích cho nhận xét: “Selection Sort phù hợp để học ý tưởng, nhưng không phải lựa chọn tốt cho dữ liệu rất lớn.”
-
-#### Tóm tắt bài
-
-Selection Sort lặp lại thao tác **tìm phần tử phù hợp nhất rồi đưa về vị trí hiện tại**. Hai vòng lặp giúp ta tìm phần tử đó, còn `swap` giúp đưa nó về đúng chỗ.
-
----
-
-### Bài 1.3 — Sử dụng `sort` để sắp xếp tăng dần và giảm dần
-
-#### Mục tiêu bài
-
-Sau Bài 1.3, em có thể dùng `sort` trên `vector<int>`, hiểu khoảng `[begin, end)` và sắp xếp tăng dần hoặc giảm dần.
-
-#### Từ thuật toán tự viết đến công cụ thư viện
-
-Selection Sort giúp em hiểu bản chất. Khi giải bài thật, ta thường dùng công cụ có sẵn để code ngắn, rõ và hiệu quả hơn:
-
-```cpp
-sort(a.begin(), a.end());
-```
-
-Lệnh này sắp xếp toàn bộ `vector<int> a` theo thứ tự tăng dần.
-
-- `a.begin()` biểu diễn vị trí bắt đầu của `a`;
-- `a.end()` biểu diễn vị trí ngay sau phần tử cuối;
-- khoảng `[a.begin(), a.end())` gồm điểm đầu nhưng không gồm điểm cuối.
-
-Cách viết “không gồm điểm cuối” giúp các thuật toán xử lý khoảng dữ liệu đồng nhất.
-
-#### Ví dụ đầy đủ
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-
-    sort(a.begin(), a.end());
-
-    for (int i = 0; i < n; i++) {
-        if (i > 0) {
-            cout << ' ';
-        }
-        cout << a[i];
-    }
-    cout << '\n';
-
-    return 0;
-}
-```
-
-Với input:
-
-```text
-5
-8 3 6 1 5
-```
-
-output là:
-
-```text
-1 3 5 6 8
-```
-
-#### Sắp xếp giảm dần
-
-Có thể viết một comparator đơn giản:
-
-```cpp
-bool greaterValue(int x, int y) {
-    return x > y;
-}
-```
-
-Sau đó truyền comparator vào `sort`:
-
-```cpp
-sort(a.begin(), a.end(), greaterValue);
-```
-
-Ở đây, hàm trả về `true` khi `x` nên đứng trước `y`. Vì số lớn hơn phải đứng trước, dãy được sắp xếp giảm dần.
-
-#### Đừng nhầm `end()` với phần tử cuối
-
-Nếu `a` có `n` phần tử, phần tử cuối là `a[n - 1]`. `a.end()` không phải là một phần tử để truy cập; đó là vị trí ngay sau phần tử cuối.
-
-Vì vậy, ta viết:
-
-```cpp
-sort(a.begin(), a.end());
-```
-
-chứ không viết:
-
-```cpp
-sort(a.begin(), a.end() - 1);
-```
-
-Cách viết thứ hai bỏ qua phần tử cuối và thường không cho kết quả mong muốn.
-
-#### Tự kiểm tra
-
-Hoàn thành câu lệnh sau:
-
-```cpp
-sort(______, ______);
-```
-
-Sau đó trả lời:
-
-1. Đối số thứ nhất biểu diễn vị trí nào?
-2. Đối số thứ hai biểu diễn vị trí nào?
-3. Muốn giảm dần, comparator phải trả lời thế nào cho hai số `x`, `y`?
-4. Với `n = 1`, `sort` có gây lỗi không?
-
-#### Luyện tập ngắn
-
-- Đọc `N` số nguyên và in tăng dần.
-- Đọc `N` số nguyên và in giảm dần.
-- Viết chương trình kiểm tra kết quả sau khi sắp xếp tăng dần có đúng với dãy đã cho hay không, bằng cách xét từng cặp kề nhau.
-
-#### Tóm tắt bài
-
-`sort` nhận một khoảng dữ liệu. Với toàn bộ `vector`, khoảng đúng là `[a.begin(), a.end())`. Hãy hiểu ý nghĩa của khoảng trước khi học thuộc câu lệnh.
-
----
-
-### Bài 1.4 — Comparator trên dãy số nguyên
-
-#### Mục tiêu bài
-
-Sau Bài 1.4, em có thể biến một quy tắc bằng lời thành comparator trên `int` và kiểm tra comparator bằng các cặp giá trị cụ thể.
-
-#### Comparator trả lời câu hỏi nào?
-
-Comparator trả lời câu hỏi:
-
-> **Trong hai giá trị `x` và `y`, giá trị nào nên đứng trước?**
-
-Ví dụ, sắp xếp giảm dần nghĩa là số lớn hơn đứng trước:
-
-```cpp
-bool cmp(int x, int y) {
-    return x > y;
-}
-```
-
-Không nên bắt đầu bằng việc viết điều kiện ngẫu nhiên. Hãy viết quy tắc bằng lời trước, sau đó chuyển từng quy tắc thành code.
-
-#### Ví dụ: số chẵn trước, số lẻ sau
-
-Quy tắc:
-
-1. Mọi số chẵn đứng trước mọi số lẻ.
-2. Trong nhóm số chẵn, số nhỏ hơn đứng trước.
-3. Trong nhóm số lẻ, số nhỏ hơn đứng trước.
-
-Code:
-
-```cpp
-bool evenFirst(int x, int y) {
-    bool xIsEven = (x % 2 == 0);
-    bool yIsEven = (y % 2 == 0);
-
-    if (xIsEven != yIsEven) {
-        return xIsEven;
-    }
-
-    return x < y;
-}
-```
-
-Sử dụng:
-
-```cpp
-sort(a.begin(), a.end(), evenFirst);
-```
-
-Với dãy:
-
-```text
-5 2 8 1 4 7 3
-```
-
-kết quả là:
-
-```text
-2 4 8 1 3 5 7
-```
-
-Ta đã xử lý tiêu chí chính là nhóm chẵn/lẻ trước, rồi mới xử lý tiêu chí phụ là giá trị tăng dần.
-
-#### Comparator phải nhất quán
-
-Một comparator tốt cần giữ cùng một quy tắc trong mọi lần so sánh. Nếu hai phần tử cùng nhóm, phải luôn dùng cùng tiêu chí phụ. Không được lúc thì cho `x` đứng trước `y`, lúc khác lại cho `y` đứng trước `x` trong cùng điều kiện.
-
-Với mỗi cặp `x`, `y`, hãy tự hỏi:
-
-1. Hai số có thuộc cùng nhóm không?
-2. Nếu khác nhóm, nhóm nào đứng trước?
-3. Nếu cùng nhóm, tiêu chí phụ là gì?
-
-#### Một ví dụ comparator khác
-
-Sắp xếp theo trị tuyệt đối tăng dần; nếu trị tuyệt đối bằng nhau, số nhỏ hơn đứng trước:
-
-```cpp
-bool byAbsoluteValue(int x, int y) {
-    long long ax = x;
-    long long ay = y;
-    if (ax < 0) {
-        ax = -ax;
-    }
-    if (ay < 0) {
-        ay = -ay;
-    }
-
-    if (ax != ay) {
-        return ax < ay;
-    }
-
-    return x < y;
-}
-```
-
-Trong các bài có giới hạn số rất lớn, cần đọc kỹ giới hạn trước khi tính trị tuyệt đối để chọn kiểu dữ liệu phù hợp. Với luồng nhập môn, em hãy tập trung vào cách tách **tiêu chí chính** và **tiêu chí phụ**.
-
-#### Giới hạn của phần cơ bản
-
-Các ví dụ bắt buộc trong chương này chỉ dùng `int` và `vector<int>`. Dữ liệu có nhiều thuộc tính hoặc yêu cầu giữ vị trí ban đầu là nội dung mở rộng, chưa cần đưa vào bài đầu tiên về comparator.
-
-#### Tự kiểm tra
-
-1. Comparator tăng dần trả về `true` trong trường hợp nào?
-2. Vì sao ví dụ chẵn trước lẻ cần hai bước kiểm tra?
-3. Với `x = 2`, `y = 5`, comparator `evenFirst(x, y)` trả về gì?
-4. Nếu tất cả số đều là số lẻ, quy tắc phụ được dùng như thế nào?
-5. Hãy viết bằng lời một thứ tự có hai tiêu chí trước khi viết code.
-
-#### Luyện tập ngắn
-
-- Sắp xếp dãy số nguyên giảm dần bằng comparator riêng.
-- Sắp xếp số âm và số dương theo trị tuyệt đối tăng dần.
-- Sắp xếp theo chữ số hàng đơn vị tăng dần; nếu bằng nhau, số nhỏ hơn đứng trước.
-
-#### Tóm tắt bài
-
-Comparator không phải là một mẹo viết code. Đó là bản dịch của câu trả lời **“ai đứng trước ai?”**. Quy tắc nhiều tiêu chí phải được viết theo thứ tự ưu tiên.
-
----
-
-### Bài 1.5 — Sắp xếp như một bước tiền xử lý
-
-#### Mục tiêu bài
-
-Sau Bài 1.5, em có thể nhận ra những tình huống mà sắp xếp giúp giảm số trường hợp cần xét và biết khi nào không cần sắp xếp.
-
-#### Tiền xử lý là gì?
-
-**Tiền xử lý** là bước chuẩn bị dữ liệu trước khi thực hiện thao tác chính. Sắp xếp là một bước tiền xử lý phổ biến vì nó làm cho dữ liệu có cấu trúc dễ quan sát hơn.
-
-| Dấu hiệu trong đề | Sau khi sắp xếp có thể làm gì? |
-|---|---|
-| Tìm hai giá trị gần nhau nhất | Chỉ xét các phần tử kề nhau |
-| Kiểm tra giá trị trùng nhau | Các giá trị bằng nhau đứng cạnh nhau |
-| Ghép hai danh sách | Di chuyển qua hai dãy theo thứ tự |
-| Tìm kiếm nhiều lần | Chuẩn bị cho Binary Search |
-| Chọn theo thứ tự ưu tiên | Chuẩn bị cho tư duy Greedy |
-
-#### Bài mẫu: khoảng cách nhỏ nhất
-
-Cho dãy vị trí:
-
-```text
-8 3 6 1 5
-```
-
-Cần tìm khoảng cách nhỏ nhất giữa hai vị trí khác nhau.
-
-**Cách trực tiếp:** xét mọi cặp, tính hiệu giữa hai vị trí và giữ lại hiệu nhỏ nhất. Cách này có thể cần rất nhiều cặp.
-
-**Câu hỏi tối ưu:** nếu sắp xếp dãy tăng dần, hai vị trí gần nhau nhất có thể nằm cách nhau bởi một phần tử khác không?
-
-Không. Nếu một phần tử nằm giữa hai vị trí, nó sẽ tạo ra một khoảng cách không lớn hơn khoảng cách của hai vị trí ở hai bên. Vì vậy, sau khi sắp xếp, chỉ cần xét các cặp kề nhau.
-
-```text
-Dãy sau khi sắp xếp: 1 3 5 6 8
-Khoảng cách kề nhau: 2, 2, 1, 2
-Đáp án: 1
-```
-
-Quy trình:
-
-```text
-1. Sắp xếp dãy tăng dần.
-2. Với mỗi i từ 1 đến n - 1, tính a[i] - a[i - 1].
-3. Giữ lại khoảng cách nhỏ nhất.
-```
-
-Code minh họa:
-
-```cpp
-sort(a.begin(), a.end());
-
-long long answer = 1LL * a[1] - a[0];
-for (int i = 2; i < n; i++) {
-    answer = min(answer, 1LL * a[i] - a[i - 1]);
-}
-
-cout << answer << '\n';
-```
-
-Khi `n` có thể nhỏ hơn `2`, cần đọc giới hạn đề bài và xử lý trường hợp đặc biệt trước khi dùng `a[1]`.
-
-#### Khi nào không cần sắp xếp?
-
-Nếu chỉ cần tìm giá trị lớn nhất một lần, sắp xếp cả dãy là công việc dư thừa:
-
-```cpp
-int mx = a[0];
-for (int i = 1; i < n; i++) {
-    mx = max(mx, a[i]);
-}
-```
-
-Hãy phân biệt:
-
-| Nhu cầu | Hướng thường nghĩ đến |
-|---|---|
-| Chỉ cần một giá trị lớn nhất/nhỏ nhất | Duyệt và dùng `max/min` |
-| Cần toàn bộ dữ liệu theo thứ tự | Sắp xếp |
-| Cần tìm hai giá trị gần nhau | Sắp xếp rồi xét kề nhau |
-| Cần ghép các phần tử gần nhau | Sắp xếp kết hợp hai con trỏ |
-| Cần tìm nhanh nhiều lần | Sắp xếp kết hợp tìm kiếm nhị phân |
-
-> **Không chọn thuật toán chỉ vì nhớ tên lệnh. Hãy chọn vì nó giải quyết đúng nhu cầu của bài toán.**
-
-#### Tự kiểm tra
-
-1. Vì sao sau khi sắp xếp chỉ cần xét các cặp kề nhau trong bài khoảng cách nhỏ nhất?
-2. Sau khi sắp xếp, các giá trị trùng nhau có đặc điểm gì?
-3. Bài tìm `max` một lần có cần `sort` không? Vì sao?
-4. Hãy nêu một bài mà sắp xếp là bước chuẩn bị, chưa phải đáp án cuối cùng.
-
-#### Luyện tập ngắn
-
-- Đếm số giá trị khác nhau sau khi sắp xếp.
-- Tìm khoảng cách nhỏ nhất trong một dãy vị trí.
-- Cho hai dãy số, giải thích vì sao sắp xếp cả hai dãy có thể dẫn tới kỹ thuật hai con trỏ.
-
-#### Tóm tắt bài
-
-Sắp xếp đáng giá nhất khi nó làm giảm số trường hợp phải xét hoặc làm lộ ra cấu trúc của dữ liệu. Trước khi gọi `sort`, hãy trả lời: **sắp xếp xong thì bước nào dễ hơn?**
-
----
-
-### Bài 1.6 — Độ phức tạp và quy trình giải bài
-
-#### Mục tiêu bài
-
-Sau Bài 1.6, em có thể ước lượng độ phức tạp cơ bản, kiểm tra lỗi thường gặp và trình bày một lời giải Sorting theo từng bước.
-
-#### So sánh tốc độ tăng
-
-Độ phức tạp mô tả số thao tác tăng lên như thế nào khi kích thước dữ liệu `N` tăng. Đây không phải là số giây cố định trên mọi máy.
-
-| Cách làm | Ý tưởng | Độ phức tạp thường gặp |
-|---|---|---:|
-| Duyệt một lần | Xử lý từng phần tử | `O(N)` |
-| Selection Sort | Nhiều lần tìm phần tử phù hợp | `O(N²)` |
-| `std::sort` | Sắp xếp bằng thư viện chuẩn | `O(N log N)` |
-
-Nếu `N` tăng, `N²` tăng nhanh hơn nhiều so với `N log N`. Vì vậy Selection Sort rất phù hợp để học ý tưởng, còn `std::sort` thường phù hợp hơn khi dữ liệu lớn.
-
-Khi một chương trình vừa sắp xếp vừa duyệt một lần, phần sắp xếp thường quyết định độ phức tạp tổng thể:
-
-```text
-O(N log N) + O(N) = O(N log N)
-```
-
-#### Quy trình giải một bài Sorting
-
-Em có thể dùng quy trình sau:
-
-```text
-Đọc đề
-→ xác định Input và Output
-→ hỏi sắp xếp có làm bước sau dễ hơn không
-→ viết quy tắc thứ tự bằng lời
-→ thử một ví dụ nhỏ bằng tay
-→ viết pseudocode
-→ viết code
-→ thử test nhỏ và test biên
-→ phân tích độ phức tạp
-→ giải thích lại lời giải bằng lời
-```
-
-Không nên bắt đầu bằng việc chép ngay `sort`. Lệnh đúng nhưng dùng sai mục đích vẫn có thể dẫn tới một lời giải không phù hợp.
-
-#### Kiểm tra lỗi bằng test nhỏ
-
-Với chương trình Sorting, hãy thử ít nhất các trường hợp:
-
-- chỉ có một phần tử;
-- dãy đã tăng dần;
-- dãy đã giảm dần;
-- tất cả phần tử bằng nhau;
-- có nhiều phần tử trùng nhau;
-- có số âm nếu đề cho phép;
-- giá trị nhỏ nhất hoặc lớn nhất theo giới hạn đề bài.
-
-Khi chương trình sai, kiểm tra theo thứ tự: số phần tử đọc vào, chỉ số vòng lặp, khoảng truyền cho `sort`, quy tắc comparator và định dạng output.
-
-#### Vị trí ban đầu và nội dung mở rộng
-
-Sắp xếp có thể làm thay đổi vị trí ban đầu của phần tử. Nếu đề chỉ yêu cầu in các giá trị sau khi sắp xếp, ta chưa cần lưu vị trí cũ. Nếu đề hỏi “giá trị này ban đầu ở đâu”, ta phải lưu thêm thông tin cho mỗi phần tử. Đây là nội dung mở rộng, không đưa vào luồng nhập môn dùng `int` và `vector<int>`.
-
-#### Tự kiểm tra
-
-1. Một vòng lặp qua `N` phần tử thường có dạng độ phức tạp nào?
-2. Hai vòng lặp lồng nhau thường dẫn tới dạng nào?
-3. Vì sao `O(N log N) + O(N)` vẫn được viết là `O(N log N)`?
-4. Hãy nêu ba test biên cho bài sắp xếp.
-5. Khi nào cần quan tâm đến vị trí ban đầu?
-
-#### Luyện tập ngắn
-
-- Viết độ phức tạp dự kiến của các đoạn code có một vòng lặp, hai vòng lặp lồng nhau và một lệnh `sort`.
-- Tạo ba input khiến một chương trình Sorting dễ lộ lỗi chỉ số.
-- Viết năm câu mô tả quy trình giải một bài Sorting từ đọc đề đến kiểm thử.
-
-#### Tóm tắt bài
-
-Một lời giải tốt không chỉ có output đúng. Em cần biết dữ liệu được xử lý ra sao, vì sao chọn Sorting, chương trình chạy nhanh đến đâu và đã kiểm tra những trường hợp nào.
-
----
-
-### Bài 1.7 — Ôn tập, kiểm tra và bài chuyển giao
-
-#### Mục tiêu bài
-
-Bài này giúp em kiểm tra xem mình đã hiểu ý tưởng hay mới chỉ nhớ cú pháp. Hãy làm theo thứ tự từ Tầng A đến Tầng C; không cần làm tất cả trong một lần nếu giáo viên đã giao phạm vi cụ thể.
-
-Mỗi bài lập trình cần được hoàn thành theo chuỗi:
-
-```text
-Đọc đề → xác định Input/Output → viết ý tưởng bằng lời
-       → code → test nhỏ → kiểm tra độ phức tạp → tự giải thích
-```
-
-#### Tầng A — Củng cố cú pháp
-
-##### Bài 1.7.1 — Dãy số tăng dần
-
-Đọc `N` số nguyên và in các số theo thứ tự không giảm.
-
-- **Input:** Dòng đầu chứa `N`; dòng sau chứa `N` số nguyên.
-- **Output:** Dãy sau khi sắp xếp tăng dần, các số cách nhau bởi một dấu cách.
-- **Ví dụ:** Input `5` và dãy `8 3 6 1 5` cho output `1 3 5 6 8`.
-
-Em cần kiểm tra đã đọc đủ `N` phần tử và không truy cập chỉ số ngoài `0..N-1`.
-
-##### Bài 1.7.2 — Dãy số giảm dần
-
-Đọc `N` số nguyên và in theo thứ tự không tăng.
-
-- **Input:** `N` và một dãy `N` số nguyên.
-- **Output:** Dãy sau khi sắp xếp giảm dần.
-- **Ví dụ:** Với dãy `4 9 1 9 3 2`, output là `9 9 4 3 2 1`.
-
-Hãy thử thêm trường hợp tất cả phần tử bằng nhau và trường hợp dãy đã giảm dần.
-
-##### Bài 1.7.3 — Kiểm tra dãy đã có thứ tự chưa
-
-Cho `N` số nguyên. In `YES` nếu dãy đã sắp xếp không giảm; ngược lại in `NO`.
-
-- **Input:** `N` và một dãy `N` số nguyên.
-- **Output:** Một từ `YES` hoặc `NO`.
-- **Ví dụ:** `1 2 2 5 9` cho `YES`; `1 4 3 8` cho `NO`.
-
-Bài này không cần gọi `sort`. Duyệt từ `i = 1` và kiểm tra xem có lần nào `a[i] < a[i - 1]` hay không.
-
-##### Bài 1.7.4 — Đếm giá trị khác nhau
-
-Cho `N` số nguyên. Hãy đếm số giá trị khác nhau trong dãy.
-
-- **Input:** `N` và một dãy `N` số nguyên.
-- **Output:** Số lượng giá trị khác nhau.
-- **Ví dụ:** Dãy `4 2 4 1 2 2 9 1` có kết quả `4`.
-
-Gợi ý: sắp xếp trước, sau đó đếm phần tử đầu tiên và mỗi phần tử khác phần tử đứng ngay trước nó. Hãy thử riêng trường hợp mọi phần tử giống nhau và mọi phần tử khác nhau.
-
-#### Tầng B — Vận dụng mẫu
-
-##### Bài 1.7.5 — Số chẵn đứng trước
-
-Cho `N` số nguyên. Sắp xếp sao cho số chẵn đứng trước số lẻ. Trong mỗi nhóm, các số được sắp xếp tăng dần.
-
-- **Input:** `N` và một dãy `N` số nguyên.
-- **Output:** Dãy sau khi sắp xếp theo hai quy tắc.
-- **Ví dụ:** Dãy `5 2 8 1 4 7 3` cho output `2 4 8 1 3 5 7`.
-
-Hãy viết quy tắc bằng lời trước: kiểm tra nhóm chẵn/lẻ, rồi mới so sánh giá trị.
-
-##### Bài 1.7.6 — Sắp xếp theo trị tuyệt đối
-
-Cho `N` số nguyên. Sắp xếp theo trị tuyệt đối tăng dần. Nếu hai số có cùng trị tuyệt đối, số nhỏ hơn đứng trước.
-
-- **Input:** `N` và một dãy `N` số nguyên.
-- **Output:** Dãy đã sắp xếp theo quy tắc trên.
-- **Ví dụ:** Dãy `-5 2 -1 4 -2 3` cho output `-1 -2 2 3 4 -5`.
-
-Em cần kiểm tra cả số âm, số dương và trường hợp `x = -2`, `y = 2`.
-
-##### Bài 1.7.7 — Khoảng cách nhỏ nhất
-
-Cho `N` vị trí nguyên trên một tuyến đường, với `N ≥ 2`. Tìm khoảng cách nhỏ nhất giữa hai vị trí khác nhau.
-
-- **Input:** `N` và một dãy `N` vị trí nguyên.
-- **Output:** Khoảng cách nhỏ nhất.
-- **Ví dụ:** Dãy `8 3 6 1 5` cho kết quả `1`.
-
-Sau khi sắp xếp, chỉ cần xét `a[i] - a[i - 1]` với `i` từ `1` đến `N - 1`. Hãy giải thích vì sao không cần xét mọi cặp.
-
-##### Bài 1.7.8 — Giá trị gần mục tiêu nhất
-
-Cho `N` số nguyên và số nguyên `X`. Tìm giá trị có khoảng cách tuyệt đối tới `X` nhỏ nhất. Nếu có nhiều giá trị cùng khoảng cách, chọn giá trị nhỏ hơn.
-
-- **Input:** Dòng đầu chứa `N` và `X`; dòng sau chứa `N` số nguyên.
-- **Output:** Giá trị được chọn.
-- **Ví dụ:** Với `N = 6`, `X = 10` và dãy `4 13 8 12 20 7`, output là `8`.
-
-Thử các trường hợp `X` nhỏ hơn mọi phần tử, lớn hơn mọi phần tử và nằm giữa hai phần tử.
-
-##### Bài 1.7.9 — Gom nhóm giá trị
-
-Cho `N` số nguyên. In mỗi giá trị khác nhau cùng số lần xuất hiện, theo thứ tự tăng dần của giá trị.
-
-- **Input:** `N` và một dãy `N` số nguyên.
-- **Output:** Mỗi dòng gồm một giá trị và tần suất của nó.
-- **Ví dụ:** Dãy `5 2 5 3 2 2 8` cho:
-
-```text
-2 3
-3 1
-5 2
-8 1
-```
-
-Sau khi sắp xếp, hãy duyệt từng đoạn các phần tử bằng nhau và nhớ xử lý cả đoạn cuối.
-
-#### Tầng C — Chuyển giao
-
-##### Bài 1.7.10 — Ghép hai danh sách gần nhau
-
-Có `N` giá trị trong danh sách A và `M` giá trị trong danh sách B. Tìm độ chênh lệch tuyệt đối nhỏ nhất giữa một phần tử của A và một phần tử của B.
-
-- **Input:** Dòng đầu chứa `N`, `M`; dòng thứ hai chứa A; dòng thứ ba chứa B.
-- **Output:** Độ chênh lệch nhỏ nhất.
-- **Ví dụ:** A = `10 20 30`, B = `15 24` cho kết quả `4`.
-
-Hãy sắp xếp cả hai danh sách, sau đó nghĩ về việc di chuyển con trỏ đang đứng ở giá trị nhỏ hơn. Phân tích riêng chi phí sắp xếp và chi phí di chuyển hai con trỏ.
-
-##### Bài 1.7.11 — Sắp xếp theo chữ số hàng đơn vị
-
-Cho `N` số nguyên không âm. Sắp xếp theo chữ số hàng đơn vị tăng dần. Nếu hai số có cùng chữ số hàng đơn vị, số nhỏ hơn đứng trước.
-
-- **Input:** `N` và một dãy `N` số nguyên không âm.
-- **Output:** Dãy đã sắp xếp theo quy tắc trên.
-- **Ví dụ:** Dãy `23 41 18 35 12 29` cho output `41 12 23 35 18 29`.
-
-Chữ số hàng đơn vị của `x` là `x % 10`. Hãy chuyển quy tắc chính và quy tắc phụ thành comparator.
-
-##### Bài 1.7.12 — Có cần sắp xếp không?
-
-Với mỗi yêu cầu sau, ghi `CÓ` hoặc `KHÔNG` cần sắp xếp, rồi giải thích bằng một hoặc hai câu:
-
-1. Tìm điểm cao nhất trong một danh sách.
-2. In toàn bộ danh sách theo thứ tự tăng dần.
-3. Đếm số phần tử chẵn.
-4. Tìm hai phần tử gần nhau nhất.
-5. Kiểm tra một giá trị có xuất hiện hay không bằng một lần duyệt.
-6. Ghép hai danh sách sao cho chênh lệch nhỏ nhất.
-
-Câu trả lời phải nêu được kết quả cần tìm, lợi ích của Sorting nếu có, và một hướng khác nếu không cần sắp xếp.
-
-#### Phiếu tự đánh giá
-
-| Năng lực | Chưa chắc | Làm khi có gợi ý | Tự làm được |
-|---|:---:|:---:|:---:|
-| Sắp xếp tăng/giảm bằng `sort` |  |  |  |
-| Mô phỏng Selection Sort |  |  |  |
-| Viết comparator trên số nguyên |  |  |  |
-| Viết comparator có hai tiêu chí |  |  |  |
-| Nhận biết vị trí ban đầu có thể thay đổi |  |  |  |
-| Giải thích lợi ích của Sorting |  |  |  |
-| Phân tích `O(N²)` và `O(N log N)` |  |  |  |
-| Tự tạo test biên |  |  |  |
-
-#### Tiêu chí hoàn thành chương
-
-Em có thể xem mình đã nắm chương khi có thể nói rõ, trước khi viết code:
-
-> **Em sắp xếp theo tiêu chí nào? Sau khi sắp xếp, bước tiếp theo của bài toán dễ hơn ở điểm nào?**
-
-Ngoài ra, em cần biên dịch được chương trình, chạy đúng các ví dụ, thử ít nhất ba test tự tạo và giải thích được vì sao code của mình không truy cập ngoài mảng.
-
----
-
-### Tổng kết chương
-
-> **Sắp xếp không chỉ là đổi vị trí các phần tử. Sắp xếp là cách tạo ra trật tự để nhìn thấy cấu trúc của bài toán.**
-
-| Cần nhớ | Nội dung |
-|---|---|
-| Khái niệm | Đưa dữ liệu về một trật tự phù hợp |
-| Selection Sort | Mỗi lượt chọn phần tử phù hợp nhất trong phần chưa xử lý |
-| Tăng dần | `sort(a.begin(), a.end())` |
-| Giảm dần | Dùng comparator mô tả số lớn đứng trước |
-| Comparator | Quy tắc trả lời phần tử nào đứng trước |
-| Mục đích | Tạo trật tự để tìm, ghép, chọn hoặc kiểm tra |
-| Hiệu quả | So sánh trực giác `O(N²)` với `O(N log N)` |
-| Cẩn thận | Chỉ số, khoảng xử lý, thứ tự, kiểu dữ liệu và test biên |
-| Câu hỏi chính | Sắp xếp xong thì bước tiếp theo dễ hơn ở điểm nào? |
-
-#### Những lỗi thường gặp
-
-| Lỗi | Cách tự kiểm tra |
-|---|---|
-| Dùng `i <= n` | Chỉ số hợp lệ cuối cùng là `n - 1` |
-| Nhầm tăng và giảm | Viết bằng lời “ai đứng trước ai?” |
-| Dùng sai khoảng `sort` | Nhớ khoảng có đầu và không có cuối |
-| Comparator thiếu tiêu chí phụ | Xét trường hợp hai phần tử bằng tiêu chí chính |
-| Sắp xếp dù không cần | Xác định lợi ích của bước Sorting |
-| Quên test dãy có một phần tử | Thử `n = 1` và kiểm tra mọi truy cập |
-| Chỉ chép code | Tự giải thích vai trò của từng bước |
-
----
-
-### Code tham chiếu
-
-Đoạn code dưới đây chỉ minh họa mục tiêu tối giản: đọc một dãy số nguyên, sắp xếp tăng dần và in kết quả. Em nên thử dự đoán output trước khi chạy.
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-
-    sort(a.begin(), a.end());
-
-    for (int i = 0; i < n; i++) {
-        if (i > 0) {
-            cout << ' ';
-        }
-        cout << a[i];
-    }
-    cout << '\n';
-
-    return 0;
-}
-```
-
-Với input:
-
-```text
-5
-8 3 6 1 5
-```
-
-output là:
-
-```text
-1 3 5 6 8
-```
-
-## Bản đồ thuật toán
-
-Bản đồ thuật toán gồm các nhóm thuật toán và cấu trúc dữ liệu từ nền tảng đến cầu nối nâng cao.
- Danh sách dưới đây là bản đồ phạm vi; giáo viên có thể thay đổi thứ tự dạy khi trình độ lớp học hoặc mục tiêu kỳ thi yêu cầu.
-
-| Cụm | Chương | Quan hệ prerequisite chính |
+| Biến | Ý nghĩa | Lưu ý quan trọng |
 |---|---|---|
-| Nền tảng xử lý dãy | 1–7 | phần nền tảng, mảng, vòng lặp, tích lũy, sắp xếp |
-| Xâu và tư duy chia nhỏ | 8–9 | vòng lặp, hàm, `string`, complexity |
-| Số học và đếm | 3, 10–11 | toán tử, modulo, tích lũy, đệ quy |
-| Công cụ dữ liệu | 12, 15 | `vector`, tư duy thứ tự truy cập |
-| Mô hình hóa trạng thái | 13–14 | mảng, hàm, queue, graph traversal |
-| Cầu nối nâng cao | 16–21 | đệ quy, prefix/query, complexity và các cấu trúc dữ liệu phù hợp |
+| `i` | Vị trí đang cần đặt phần tử đúng | Vòng lặp ngoài chỉ cần chạy đến `n - 2` vì khi $n-1$ phần tử đầu đã đúng, phần tử cuối cùng tự động đúng. |
+| `j` | Vị trí đang duyệt tìm phần tử nhỏ nhất | Luôn bắt đầu từ `i + 1` đến `n - 1`. Điều kiện dừng là `j < n`, không viết `j <= n`. |
+| `min_idx` | Chỉ số của phần tử nhỏ nhất tìm được | Khởi tạo bằng `i` trước khi chạy vòng lặp `j`. |
 
-Teaching sequence khuyến nghị cho lớp bắt đầu từ số 0 là: **Đếm và thống kê → Sắp xếp → Mảng tiền tố → Hai con trỏ → Tham lam → Tìm kiếm nhị phân → Xử lý xâu → Stack/Queue → Số học/Modulo → Đệ quy → Tổ hợp → Quy hoạch động → Đồ thị → Bitmask → STL nâng cao**. Segment Tree, Digit DP, String Hashing, số nguyên lớn và Fenwick Tree nên được dạy như các chương cầu nối sau khi học sinh đã vững các phần trước.
+#### 6. Quiz Trắc nghiệm nhanh
+
+**Câu 1:** Thao tác sắp xếp một mảng số nguyên làm thay đổi điều gì?  
+- A. Làm thay đổi giá trị của các phần tử trong mảng.  
+- B. Làm thay đổi số lượng phần tử trong mảng.  
+- C. Làm thay đổi vị trí (thứ tự) của các phần tử trong mảng.  
+- D. Tự động xóa bỏ các phần tử có giá trị trùng nhau.  
+👉 **Đáp án:** **C**. Sắp xếp chỉ hoán đổi vị trí của các phần tử để tạo trật tự, bảo toàn 100% giá trị và số lượng ban đầu.
+
+**Câu 2:** Với dãy $N$ phần tử, thuật toán Selection Sort thực hiện bao nhiêu lượt duyệt ở vòng lặp ngoài?  
+- A. Đúng $N$ lượt.  
+- B. $N - 1$ lượt.  
+- C. $N / 2$ lượt.  
+- D. $N^2$ lượt.  
+👉 **Đáp án:** **B**. Khi $N - 1$ phần tử đã được đưa về đúng vị trí ở bên trái, phần tử cuối cùng chắc chắn là phần tử lớn nhất và đã tự nằm đúng chỗ.
+
+**Câu 3:** Cho dãy số `5 2 4 1`. Sau lượt đầu tiên ($i = 0$) của Selection Sort, trạng thái dãy số là gì?  
+- A. `2 5 4 1`  
+- B. `1 2 4 5`  
+- C. `1 5 4 2`  
+- D. `1 2 5 4`  
+👉 **Đáp án:** **C**. Phần tử nhỏ nhất là `1` tại chỉ số 3, đổi chỗ với phần tử đầu tiên `5` $\implies$ dãy thành `1 5 4 2`.
+
+#### 7. Bài tập thực hành nộp code tại chỗ
+
+##### Bài thực hành 1.1A — Kiểm tra dãy đã tăng dần chưa
+- **Mục tiêu:** Rèn luyện kỹ năng duyệt mảng kiểm tra điều kiện thứ tự kề nhau.
+- **Đề bài:** Cho mảng gồm $N$ số nguyên $A_1, A_2, \dots, A_N$. Kiểm tra xem mảng đã được sắp xếp theo thứ tự không giảm ($A_i \le A_{i+1}$ với mọi $1 \le i < N$) hay chưa.
+- **Input:** 
+  - Dòng 1 ghi số nguyên dương $N$ ($1 \le N \le 10^5$).
+  - Dòng 2 ghi $N$ số nguyên $A_i$ ($|A_i| \le 10^9$).
+- **Output:** In `YES` nếu dãy đã tăng dần, ngược lại in `NO`.
+- **Sample:**
+  ```text
+  Input:
+  4
+  1 3 5 8
+  Output:
+  YES
+  ```
+
+##### Bài thực hành 1.1B — Cài đặt Selection Sort
+- **Mục tiêu:** Cài đặt chính xác thuật toán Selection Sort để hiểu bản chất đổi chỗ.
+- **Đề bài:** Cho mảng $N$ số nguyên ($1 \le N \le 1000$). Hãy sắp xếp mảng theo thứ tự tăng dần bằng thuật toán Selection Sort và in ra kết quả.
+- **Sample:**
+  ```text
+  Input:
+  5
+  8 3 6 1 5
+  Output:
+  1 3 5 6 8
+  ```
+
+#### 8. Tóm tắt bài
+
+- Sắp xếp là bước tiền xử lý giúp tạo trật tự cho dữ liệu.
+- Selection Sort lặp lại việc chọn phần tử nhỏ nhất và đưa về vị trí hiện tại bằng `swap`.
+- Độ phức tạp thời gian của Selection Sort là $\mathcal{O}(N^2)$, phù hợp khi $N \le 1000$.
+
+---
+
+### Bài 1.2 — Sắp xếp tối ưu với `std::sort` & Hàm so sánh (Comparator)
+
+#### 1. Mục tiêu bài
+
+Sau Bài 1.2, em biết cách sử dụng hàm `std::sort()` có sẵn trong thư viện C++ để sắp xếp cực nhanh với $\mathcal{O}(N \log N)$, biết cách đảo ngược thứ tự và tự viết hàm so sánh (Comparator) theo luật riêng.
+
+#### 2. Hàm `std::sort()` trong C++
+
+Trong thi đấu lập trình, khi $N = 10^5$, thuật toán $\mathcal{O}(N^2)$ mất $10^{10}$ phép tính (chạy mất $\approx 10$ giây $\implies$ quá thời gian TLE).  
+C++ cung cấp sẵn hàm `std::sort()` trong thư viện `<algorithm>` (đã có sẵn trong `#include <bits/stdc++.h>`).
+
+- **Cú pháp sắp xếp tăng dần:**
+  ```cpp
+  sort(a.begin(), a.end());
+  ```
+- **Cú pháp sắp xếp giảm dần:**
+  ```cpp
+  sort(a.begin(), a.end(), greater<int>());
+  ```
+- **Độ phức tạp:** $\mathcal{O}(N \log N)$. Với $N = 10^5$, số phép tính chỉ khoảng $1.7 \times 10^6$ thao tác, chạy trong chưa tới **0.02 giây**!
+
+#### 3. Tùy biến thứ tự với Hàm so sánh (Custom Comparator)
+
+Khi đề bài yêu cầu thứ tự đặc thù (ví dụ: số chẵn đứng trước số lẻ, sắp xếp theo giá trị tuyệt đối...), ta tự định nghĩa một hàm so sánh:
+
+```cpp
+bool cmp(int u, int v) {
+    // Tra ve true neu muon 'u' dung truoc 'v' trong day ket qua
+    // Tra ve false neu nguoc lai
+}
+```
+
+##### Ví dụ 1: Sắp xếp theo giá trị tuyệt đối tăng dần
+Nếu hai số có trị tuyệt đối bằng nhau thì số nhỏ hơn đứng trước:
+
+```cpp
+bool cmpAbs(int u, int v) {
+    if (abs(u) != abs(v)) {
+        return abs(u) < abs(v); // Tri tuyet doi nho hon dung truoc
+    }
+    return u < v; // Neu tri tuyet doi bang nhau, so nho hon dung truoc
+}
+```
+
+##### Ví dụ 2: Số chẵn đứng trước, số lẻ đứng sau
+Trong cùng nhóm chẵn hoặc nhóm lẻ, số nào nhỏ hơn đứng trước:
+
+```cpp
+bool cmpEvenOdd(int u, int v) {
+    if (u % 2 != v % 2) {
+        return (u % 2 == 0); // So chan (u % 2 == 0) dung truoc so le
+    }
+    return u < v; // Cung tinh chan le: xep tang dan
+}
+```
+
+> **Nguyên tắc sống còn (Strict Weak Ordering):** Trong hàm `cmp`, chỉ dùng toán tử `<` hoặc `>`, **tuyệt đối KHÔNG dùng `<=` hoặc `>=`**. Nếu hai phần tử bằng nhau (`u == v`), hàm `cmp` **bắt buộc phải trả về `false`** để tránh lỗi bộ nhớ (Runtime Error).
+
+#### 4. Cài đặt C++ mẫu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// Sap xep: Chan dung truoc tang dan, Le dung sau giam dan
+bool customCmp(int u, int v) {
+    bool u_even = (abs(u) % 2 == 0);
+    bool v_even = (abs(v) % 2 == 0);
+
+    if (u_even != v_even) {
+        return u_even; // Chan dung truoc Le
+    }
+    if (u_even) {
+        return u < v;  // Ca hai deu chan: tang dan
+    }
+    return u > v;      // Ca hai deu le: giam dan
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    sort(a.begin(), a.end(), customCmp);
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) cout << ' ';
+        cout << a[i];
+    }
+    cout << '\n';
+
+    return 0;
+}
+```
+
+#### 5. Quiz Trắc nghiệm nhanh
+
+**Câu 1:** Độ phức tạp thời gian của hàm `std::sort()` trong C++ trên mảng $N$ phần tử là bao nhiêu?  
+- A. $\mathcal{O}(N)$  
+- B. $\mathcal{O}(N \log N)$  
+- C. $\mathcal{O}(N^2)$  
+- D. $\mathcal{O}(\log N)$  
+👉 **Đáp án:** **B**. `std::sort` sử dụng thuật toán lai IntroSort kết hợp QuickSort, HeapSort và InsertionSort, đảm bảo $\mathcal{O}(N \log N)$ trong mọi trường hợp.
+
+**Câu 2:** Khi viết hàm so sánh `bool cmp(int a, int b)`, nếu $a$ và $b$ bằng nhau ($a == b$), hàm phải trả về kết quả gì?  
+- A. Luôn trả về `true`.  
+- B. Luôn trả về `false`.  
+- C. Trả về `1`.  
+- D. Tùy ý trả về `true` hay `false`.  
+👉 **Đáp án:** **B**. C++ yêu cầu tính chất Strict Weak Ordering, khi $a == b$ thì $a$ không thể đứng trước $b$ và ngược lại, bắt buộc trả về `false`.
+
+**Câu 3:** Lệnh nào sau đây sắp xếp `vector<int> a` theo thứ tự giảm dần?  
+- A. `sort(a.begin(), a.end());`  
+- B. `sort(a.rbegin(), a.rend());`  
+- C. `sort(a.begin(), a.end(), greater<int>());`  
+- D. Cả B và C đều đúng.  
+👉 **Đáp án:** **D**. Cả hai cách dùng `rbegin()/rend()` hoặc `greater<int>()` đều cho kết quả sắp xếp giảm dần chính xác.
+
+#### 6. Bài tập thực hành nộp code tại chỗ
+
+##### Bài thực hành 1.2A — Sắp xếp theo trị tuyệt đối
+- **Đề bài:** Cho mảng $N$ số nguyên ($N \le 10^5, |A_i| \le 10^9$). Hãy sắp xếp mảng theo giá trị tuyệt đối tăng dần. Nếu hai số có cùng trị tuyệt đối, số âm đứng trước số dương.
+- **Sample:**
+  ```text
+  Input:
+  5
+  -3 2 -1 3 1
+  Output:
+  -1 1 2 -3 3
+  ```
+
+##### Bài thực hành 1.2B — Số lớn nhất ghép từ hai số
+- **Đề bài:** Cho hai số nguyên dương $A$ và $B$. Ghép $A$ và $B$ lại theo thứ tự nào để tạo thành số lớn hơn ($AB$ hay $BA$)?
+- **Gợi ý:** Dùng so sánh xâu `to_string(a) + to_string(b) > to_string(b) + to_string(a)`.
+
+#### 7. Tóm tắt bài
+
+- Dùng `sort(a.begin(), a.end())` để đạt tốc độ tối đa $\mathcal{O}(N \log N)$.
+- Dùng `greater<int>()` để sắp xếp giảm dần.
+- Tự viết hàm `bool cmp()` khi cần quy tắc sắp xếp tùy biến, luôn tuân thủ nguyên tắc trả về `false` khi hai phần tử bằng nhau.
+
+---
+
+### Bài 1.3 — Các dạng bài toán ứng dụng Trật tự sắp xếp
+
+#### 1. Mục tiêu bài
+
+Sau Bài 1.3, em biết cách biến đổi bài toán thực tế bằng bước tiền xử lý sắp xếp, nhận diện được 2 dạng bài toán kinh điển: gom nhóm phần tử trùng lặp và tìm cặp kề nhau tối ưu.
+
+#### 2. Dạng 1: Gom nhóm & Đếm số giá trị phân biệt
+
+##### Bài toán
+Cho dãy $N$ số nguyên ($N \le 10^5$). Đếm xem trong dãy có bao nhiêu số **khác nhau** (phân biệt)?
+
+##### Nhận xét trực quan
+- Nếu dãy chưa sắp xếp `[3, 1, 3, 2, 1]`, các số giống nhau nằm rải rác.
+- Sau khi sắp xếp: `[1, 1, 2, 3, 3]`.
+- **Tính chất vàng:** Các phần tử giống nhau sẽ tự động dồn lại thành từng khối đứng cạnh nhau!
+- **Thuật toán:** Phần tử đầu tiên luôn là 1 giá trị mới. Từ phần tử thứ 2 trở đi, nếu $A[i] \ne A[i-1]$ thì ta vừa gặp thêm một giá trị phân biệt mới!
+
+```cpp
+sort(a.begin(), a.end());
+int distinct_count = 1;
+for (int i = 1; i < n; i++) {
+    if (a[i] != a[i - 1]) {
+        distinct_count++;
+    }
+}
+```
+
+#### 3. Dạng 2: Tìm khoảng cách nhỏ nhất giữa hai phần tử bất kỳ
+
+##### Bài toán
+Cho dãy $N$ số nguyên ($N \le 10^5$). Tìm độ chênh lệch nhỏ nhất $|A[i] - A[j]|$ giữa hai phần tử bất kỳ ($i \ne j$).
+
+##### Nhận xét trực quan
+- So sánh mọi cặp mất $\mathcal{O}(N^2)$ $\implies$ Quá thời gian.
+- **Định lý khoảng cách:** Sau khi sắp xếp tăng dần $A_1 \le A_2 \le \dots \le A_N$, hai số có khoảng cách nhỏ nhất **bắt buộc phải là hai số đứng liền kề nhau** ($A_i$ và $A_{i+1}$).
+- **Thuật toán:** Chỉ cần sắp xếp trong $\mathcal{O}(N \log N)$, sau đó duyệt 1 vòng lặp từ $0$ đến $N-2$ để tìm $\min(A_{i+1} - A_i)$ trong $\mathcal{O}(N)$!
+
+```cpp
+sort(a.begin(), a.end());
+int min_diff = a[1] - a[0];
+for (int i = 1; i < n - 1; i++) {
+    min_diff = min(min_diff, a[i + 1] - a[i]);
+}
+```
+
+#### 4. Cài đặt C++ mẫu (Tìm cặp số gần nhau nhất)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n) || n < 2) return 0;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    sort(a.begin(), a.end());
+
+    int min_diff = a[1] - a[0];
+    for (int i = 1; i < n - 1; i++) {
+        min_diff = min(min_diff, a[i + 1] - a[i]);
+    }
+
+    cout << min_diff << '\n';
+
+    return 0;
+}
+```
+
+#### 5. Quiz Trắc nghiệm nhanh
+
+**Câu 1:** Sau khi sắp xếp một mảng số nguyên tăng dần, các phần tử có giá trị bằng nhau sẽ nằm ở đâu?  
+- A. Nằm ở đầu mảng.  
+- B. Nằm ở cuối mảng.  
+- C. Nằm liền kề nhau liên tục thành một đoạn.  
+- D. Nằm rải rác ngẫu nhiên.  
+👉 **Đáp án:** **C**. Sắp xếp đưa các giá trị bằng nhau về đứng cạnh nhau.
+
+**Câu 2:** Để tìm độ chênh lệch nhỏ nhất giữa hai phần tử bất kỳ trong mảng đã sắp xếp tăng dần, ta cần kiểm tra những cặp phần tử nào?  
+- A. Tất cả các cặp $(i, j)$ với $i < j$.  
+- B. Chỉ cần kiểm tra các cặp phần tử đứng liền kề nhau $(A_i, A_{i+1})$.  
+- C. Phần tử đầu tiên và phần tử cuối cùng.  
+- D. Phần tử nhỏ nhất và phần tử lớn nhất.  
+👉 **Đáp án:** **B**. Khoảng cách giữa hai số bất kỳ luôn lớn hơn hoặc bằng khoảng cách giữa hai số đứng liền kề ở giữa chúng.
+
+#### 6. Bài tập thực hành nộp code tại chỗ
+
+##### Bài thực hành 1.3A — Đếm số giá trị phân biệt
+- **Đề bài:** Cho mảng $N$ số nguyên ($N \le 10^5, |A_i| \le 10^9$). Đếm số lượng giá trị khác nhau trong mảng.
+- **Sample:**
+  ```text
+  Input:
+  6
+  3 1 4 1 5 9
+  Output:
+  5
+  ```
+
+##### Bài thực hành 1.3B — Tìm phần tử nhỏ thứ K
+- **Đề bài:** Cho mảng $N$ số nguyên ($N \le 10^5$). In ra giá trị của phần tử nhỏ thứ $K$ sau khi sắp xếp tăng dần (chỉ số tính từ 1).
+- **Sample:**
+  ```text
+  Input:
+  5 3
+  7 10 4 3 20
+  Output:
+  7
+  ```
+
+#### 7. Tóm tắt bài
+
+- Sắp xếp biến bài toán so sánh mọi cặp ($\mathcal{O}(N^2)$) thành bài toán chỉ cần duyệt các cặp kề nhau ($\mathcal{O}(N)$).
+- Ứng dụng tiêu biểu: Đếm số giá trị phân biệt, tìm khoảng cách nhỏ nhất, tìm phần tử thứ $K$.
+
+---
+
+### Bài 1.4 — Tổng kết chương & Bộ đề luyện tập phân tầng
+
+#### 1. Bảng tóm tắt kiến thức cốt lõi
+
+| Khái niệm | Ý nghĩa | Độ phức tạp | Cú pháp C++ |
+|---|---|:---:|---|
+| **Selection Sort** | Tìm phần tử nhỏ nhất và swap về vị trí đúng | $\mathcal{O}(N^2)$ | 2 vòng for lồng nhau + `swap(a[i], a[min_idx])` |
+| **`std::sort`** | Hàm sắp xếp tối ưu của C++ | $\mathcal{O}(N \log N)$ | `sort(a.begin(), a.end())` |
+| **Sắp xếp giảm dần** | Sắp xếp từ lớn đến bé | $\mathcal{O}(N \log N)$ | `sort(a.begin(), a.end(), greater<int>())` |
+| **Custom Comparator** | Tùy biến quy tắc so sánh | $\mathcal{O}(N \log N)$ | `sort(a.begin(), a.end(), cmp)` |
+| **Gom nhóm** | Gom các số bằng nhau lại cạnh nhau | $\mathcal{O}(N \log N)$ | `sort` rồi kiểm tra `a[i] != a[i-1]` |
+| **Khoảng cách nhỏ nhất** | Tìm hiệu nhỏ nhất giữa 2 phần tử | $\mathcal{O}(N \log N)$ | `sort` rồi lấy $\min(a[i+1] - a[i])$ |
+
+#### 2. Những bẫy lỗi thường gặp
+
+| Lỗi thường gặp | Hậu quả | Cách phòng tránh |
+|---|---|---|
+| Dùng toán tử `<=` hoặc `>=` trong hàm `cmp` | Gây lỗi tràn bộ nhớ (Runtime Error) do vi phạm Strict Weak Ordering | Chỉ dùng `<` hoặc `>`, khi $a == b$ luôn trả về `false` |
+| Quên dùng `#include <bits/stdc++.h>` | Báo lỗi hàm `sort()` chưa được khai báo | Luôn có `#include <bits/stdc++.h>` ở đầu chương trình |
+| Truy cập ngoài mảng khi duyệt cặp kề nhau | Báo lỗi Out of Bound (`a[i+1]` khi $i = n-1$) | Vòng lặp duyệt cặp kề nhau chỉ chạy đến `i < n - 1` |
+
+#### 3. Phiếu tự đánh giá năng lực
+
+| Năng lực mục tiêu | Chưa chắc chắn | Làm được khi có gợi ý | Tự làm thành thạo |
+|---|:---:|:---:|:---:|
+| Mô phỏng và cài đặt Selection Sort bằng tay |  |  |  |
+| Sử dụng thành thạo `std::sort` tăng/giảm |  |  |  |
+| Tự viết hàm so sánh `bool cmp()` không bị lỗi |  |  |  |
+| Đếm số giá trị phân biệt bằng `sort` trong $\mathcal{O}(N \log N)$ |  |  |  |
+| Tìm cặp phần tử kề nhau tối ưu |  |  |  |
+
+---
+
+### Bộ đề luyện tập phân tầng (Problem Set)
+
+#### TẦNG A — CỦNG CỐ CÚ PHÁP & NỀN TẢNG
+
+##### Bài 1.4.1 — Dãy số tăng dần
+- **Đề bài:** Đọc vào $N$ số nguyên và in các số theo thứ tự tăng dần.
+- **Input:** Dòng 1 ghi số nguyên dương $N$ ($1 \le N \le 10^5$). Dòng 2 ghi $N$ số nguyên $A_i$ ($|A_i| \le 10^9$).
+- **Output:** Dãy số sau khi sắp xếp tăng dần, cách nhau bởi dấu cách.
+- **Sample:**
+  ```text
+  Input:
+  5
+  8 3 6 1 5
+  Output:
+  1 3 5 6 8
+  ```
+
+##### Bài 1.4.2 — Dãy số giảm dần
+- **Đề bài:** Đọc vào $N$ số nguyên và in các số theo thứ tự giảm dần.
+- **Input:** $N$ và dãy $N$ số nguyên ($N \le 10^5$).
+- **Output:** Dãy số sau khi sắp xếp giảm dần.
+- **Sample:**
+  ```text
+  Input:
+  6
+  4 9 1 9 3 2
+  Output:
+  9 9 4 3 2 1
+  ```
+
+##### Bài 1.4.3 — Tìm phần tử lớn thứ K
+- **Đề bài:** Cho mảng $N$ số nguyên ($1 \le K \le N \le 10^5$). Tìm phần tử lớn thứ $K$ trong mảng.
+- **Sample:**
+  ```text
+  Input:
+  5 2
+  10 30 20 50 40
+  Output:
+  40
+  ```
+
+---
+
+#### TẦNG B — VẬN DỤNG MẪU & KỸ THUẬT
+
+##### Bài 1.4.4 — Sắp xếp chẵn trước lẻ sau
+- **Đề bài:** Cho dãy $N$ số nguyên. Hãy sắp xếp sao cho các số chẵn đứng trước (tăng dần), các số lẻ đứng sau (tăng dần).
+- **Sample:**
+  ```text
+  Input:
+  6
+  5 2 8 7 1 4
+  Output:
+  2 4 8 1 5 7
+  ```
+
+##### Bài 1.4.5 — Cặp đôi hoàn hảo
+- **Đề bài:** Cho dãy $N$ số nguyên ($N \le 10^5$). Tìm hai phần tử có độ chênh lệch $|A_i - A_j|$ nhỏ nhất ($i \ne j$). In ra độ chênh lệch nhỏ nhất đó.
+- **Sample:**
+  ```text
+  Input:
+  4
+  1 9 5 3
+  Output:
+  2
+  ```
+  *(Giải thích: Cặp $(1, 3)$ và $(3, 5)$ đều có hiệu là 2).*
+
+##### Bài 1.4.6 — Đếm phần tử duy nhất
+- **Đề bài:** Cho mảng $N$ số nguyên. Đếm xem có bao nhiêu phần tử chỉ xuất hiện **đúng 1 lần** trong mảng.
+- **Sample:**
+  ```text
+  Input:
+  6
+  2 3 2 5 3 7
+  Output:
+  2
+  ```
+  *(Giải thích: Có 2 số chỉ xuất hiện 1 lần là số 5 và số 7).*
+
+---
+
+#### TẦNG C — NÂNG CAO & VẬN DỤNG THỰC TẾ
+
+##### Bài 1.4.7 — Ghép số lớn nhất
+- **Đề bài:** Cho $N$ số nguyên không âm ($N \le 10^5, A_i \le 10^9$). Hãy sắp xếp và ghép tất cả các số lại với nhau để tạo thành số có giá trị lớn nhất.
+- **Gợi ý:** Dùng comparator xâu `bool cmp(string a, string b) { return a + b > b + a; }`.
+- **Sample:**
+  ```text
+  Input:
+  4
+  3 30 34 5 9
+  Output:
+  9534330
+  ```
+
+##### Bài 1.4.8 — Thu gom rác tối ưu
+- **Đề bài:** Trên một trục đường thẳng có $N$ thùng rác tại các tọa độ $X_1, X_2, \dots, X_N$. Một xe chở rác có thể chở tối đa 2 thùng mỗi chuyến. Tìm số chuyến xe ít nhất để thu gom hết các thùng rác nếu mỗi chuyến tổng khoảng cách từ gốc không vượt quá $D$.
+- **Gợi ý:** Sắp xếp tọa độ tăng dần và dùng kỹ thuật tham lam kết hợp hai đầu mút.
+
+---
+
+### Code tham chiếu tổng hợp toàn chương
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// 1. Thuat toan Selection Sort O(N^2)
+void selectionSort(vector<int> &a) {
+    int n = a.size();
+    for (int i = 0; i < n - 1; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < n; j++) {
+            if (a[j] < a[min_idx]) {
+                min_idx = j;
+            }
+        }
+        swap(a[i], a[min_idx]);
+    }
+}
+
+// 2. Custom Comparator: Chan truoc (tang dan), Le sau (tang dan)
+bool customComparator(int u, int v) {
+    bool u_even = (abs(u) % 2 == 0);
+    bool v_even = (abs(v) % 2 == 0);
+    if (u_even != v_even) {
+        return u_even;
+    }
+    return u < v;
+}
+
+// 3. Dem so gia tri phan biet O(N log N)
+int countDistinct(vector<int> a) {
+    if (a.empty()) return 0;
+    sort(a.begin(), a.end());
+    int cnt = 1;
+    for (size_t i = 1; i < a.size(); i++) {
+        if (a[i] != a[i - 1]) cnt++;
+    }
+    return cnt;
+}
+
+// 4. Tim khoang cach nho nhat O(N log N)
+int minDifference(vector<int> a) {
+    if (a.size() < 2) return 0;
+    sort(a.begin(), a.end());
+    int min_diff = a[1] - a[0];
+    for (size_t i = 1; i < a.size() - 1; i++) {
+        min_diff = min(min_diff, a[i + 1] - a[i]);
+    }
+    return min_diff;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+
+    cout << "Distinct elements: " << countDistinct(a) << "\n";
+    cout << "Min difference: " << minDifference(a) << "\n";
+
+    return 0;
+}
+```
+
+---
 
 ## Chương 2 — Tham lam
 
@@ -1220,16 +938,16 @@ Teaching sequence khuyến nghị cho lớp bắt đầu từ số 0 là: **Đ�
 
 Sau chương này, em có thể:
 
-1. Giải thích thuật toán tham lam bằng một ví dụ cụ thể — `LO-01`.
-2. Phân biệt lựa chọn cục bộ với mục tiêu tối ưu toàn cục — `LO-02`.
-3. Nhận biết bài toán chọn nhiều hoạt động không giao nhau — `LO-03`.
-4. Sắp xếp hoạt động theo thời điểm kết thúc và duyệt để chọn hoạt động hợp lệ — `LO-04`.
-5. Mô phỏng trạng thái sau từng lựa chọn — `LO-05`.
-6. Trình bày vì sao chọn hoạt động kết thúc sớm là an toàn — `LO-06`.
-7. Dùng phản ví dụ để kiểm tra một quy tắc tham lam đáng ngờ — `LO-07`.
-8. Phân biệt bài dùng được tham lam với bài cần phân tích thêm hoặc cân nhắc quy hoạch động, tìm kiếm — `LO-08`.
-9. Phân tích độ phức tạp `O(N log N)` của lời giải chọn hoạt động — `LO-09`.
-10. Giải thích sau khi chọn một phương án thì phần còn lại của bài toán thay đổi như thế nào — `LO-10`.
+1. Giải thích thuật toán tham lam bằng một ví dụ cụ thể.
+2. Phân biệt lựa chọn cục bộ với mục tiêu tối ưu toàn cục.
+3. Nhận biết bài toán chọn nhiều hoạt động không giao nhau.
+4. Sắp xếp hoạt động theo thời điểm kết thúc và duyệt để chọn hoạt động hợp lệ.
+5. Mô phỏng trạng thái sau từng lựa chọn.
+6. Trình bày vì sao chọn hoạt động kết thúc sớm là an toàn.
+7. Dùng phản ví dụ để kiểm tra một quy tắc tham lam đáng ngờ.
+8. Phân biệt bài dùng được tham lam với bài cần phân tích thêm hoặc cân nhắc quy hoạch động, tìm kiếm.
+9. Phân tích độ phức tạp `O(N log N)` của lời giải chọn hoạt động.
+10. Giải thích sau khi chọn một phương án thì phần còn lại của bài toán thay đổi như thế nào.
 
 ### Câu hỏi trung tâm của chương
 
@@ -1772,7 +1490,7 @@ Cho các mệnh giá và số tiền cần đổi, với mục tiêu dùng **ít
 
 ##### Bài 2.6.11 — Chọn việc theo thời hạn
 
-Mỗi công việc cần đúng một đơn vị thời gian và có thời hạn hoàn thành. Trong mỗi thời điểm `1, 2, ..., D`, ta chỉ làm được một công việc; công việc có deadline `d` phải được thực hiện không muộn hơn thời điểm `d`. Hãy thử xây dựng chiến lược tham lam để thực hiện nhiều công việc nhất.
+Mỗi công việc cần đúng một đơn vị thời gian và có thời hạn hoàn thành. Trong mỗi thời điểm `1, 2, ., D`, ta chỉ làm được một công việc; công việc có deadline `d` phải được thực hiện không muộn hơn thời điểm `d`. Hãy thử xây dựng chiến lược tham lam để thực hiện nhiều công việc nhất.
 
 - **Dữ liệu mẫu:** Có năm công việc với deadline `1, 1, 2, 2, 3`.
 - **Expected evidence:** Em giải thích được vì sao tối đa có thể làm `3` công việc trong ba vị trí thời gian, đồng thời nêu tiêu chí sắp xếp hoặc câu hỏi cần kiểm tra trước khi code.
@@ -1918,52 +1636,1564 @@ output là:
 
 ---
 
+## Ghi chú mở rộng cho giáo viên
+
+Các chủ đề như lập lịch công việc có thời hạn, ba lô phân số, Kruskal hoặc chia tải bằng hàng đợi ưu tiên đều có thể dùng Greedy, nhưng không nên đưa tất cả vào bài đầu tiên. Trước hết, học sinh cần nắm vững bốn năng lực: nhận ra mục tiêu tối ưu, viết tiêu chí lựa chọn, mô phỏng trạng thái và bảo vệ lựa chọn bằng lập luận hoặc kiểm tra phản ví dụ.
+
+## Ma trận alignment nội bộ
+
+| Outcome | Evidence chính | Tiêu chí đạt |
+|---|---|---|
+| `LO-01`, `LO-02` — Giải thích Greedy và phân biệt cục bộ/toàn cục | Bài 2.1, Bài 2.6.12 | Nêu được mục tiêu, lựa chọn và lý do không chọn tùy tiện |
+| `LO-03`, `LO-05` — Nhận biết interval scheduling và mô phỏng trạng thái | Bài 2.2, Bài 2.6.1, 2.6.5, 2.6.6 | Mô hình hóa đúng khoảng, điều kiện nối tiếp và `lastFinish` |
+| `LO-04` — Viết lời giải chọn hoạt động | Bài 2.3, Bài 2.6.3–2.6.7 | Sort theo `finish`, kiểm tra `start >= lastFinish`, cập nhật trạng thái |
+| `LO-06`, `LO-10` — Giải thích tính đúng đắn và phần bài toán còn lại | Bài 2.4, rubric chương | Trình bày được lập luận đổi chỗ và bất biến (invariant) |
+| `LO-07` — Tìm giới hạn/phản ví dụ | Bài 2.1, Bài 2.5, Bài 2.6.8–2.6.10 | Tạo hoặc phân tích được phản ví dụ có mục tiêu rõ |
+| `LO-09` — Phân tích độ phức tạp | Bài 2.3, rubric chương | Tách được chi phí sort và chi phí duyệt |
+| `LO-08` — Chuyển giao sang bài biến thể | Bài 2.6.9–2.6.12 | Nhận ra khi mục tiêu/điều kiện đổi thì tiêu chí Greedy phải được kiểm tra lại |
+
+Ma trận này là ghi chú biên soạn, không đồng bộ vào bản in học sinh.
+
+---
+
 ## Chương 3 — Số học
 
-### Mục tiêu và ôn nhanh
+### Bản đồ chương
 
-Học sinh sử dụng được ước, bội, số nguyên tố, GCD và LCM trong các bài đơn giản. Ôn vòng lặp, `%`, hàm và `long long`.
+| Trường | Nội dung |
+|---|---|
+| Mục tiêu | Hiểu bản chất các quy luật số học để giảm số phép tính từ hàng tỷ bước xuống vài chục thao tác |
+| Kiến thức cần có | Vòng lặp `for`/`while`, câu lệnh `if-else`, toán tử chia dư `%`, mảng/vector, kiểu dữ liệu `long long` |
+| Phạm vi | Ước và bội, thuật toán Euclid tìm GCD, tính LCM an toàn, kiểm tra số nguyên tố $\mathcal{O}(\sqrt{N})$, phân tích thừa số và Sàng Eratosthenes |
+| Số bài | 6 bài học lý thuyết & thực hành + 1 bài tổng kết và bài tập phân tầng |
 
-### Ý tưởng cốt lõi
+### Learning outcomes
 
-GCD có thể tính hiệu quả bằng thuật toán Euclid:
+Sau chương này, em có thể:
+1. Giải thích quy luật đối xứng của các cặp ước và tìm toàn bộ ước trong $\mathcal{O}(\sqrt{N})$.
+2. Mô phỏng và cài đặt thuật toán Euclid tìm ước chung lớn nhất (GCD) trong $\mathcal{O}(\log(\min(A, B)))$.
+3. Tính bội chung nhỏ nhất (LCM) an toàn bằng quy tắc "chia trước khi nhân" chống tràn số nguyên 64-bit.
+4. Kiểm tra một số nguyên có phải số nguyên tố trong $\mathcal{O}(\sqrt{N})$ với bước nhảy $6k \pm 1$.
+5. Phân tích một số nguyên dương thành tích các thừa số nguyên tố bằng thuật toán chia dần.
+6. Cài đặt và sử dụng Sàng Eratosthenes $\mathcal{O}(N \log \log N)$ để trả lời nhanh các truy vấn số nguyên tố.
+7. Xử lý chính xác các trường hợp biên: $N = 0, 1$, số âm và số lớn vượt kiểu `int` ($10^9 \to 10^{18}$).
+
+### Câu hỏi trung tâm của chương
+
+> **Làm thế nào để kiểm tra, đếm và phân tích tính chất chia hết của một số nguyên lớn mà không làm chương trình bị quá thời gian hay tràn bộ nhớ?**
+
+---
+
+### Bài 3.1 — Ước, bội và quy luật đối xứng cặp ước
+
+#### Mục tiêu bài
+
+Sau Bài 3.1, em có thể giải thích định nghĩa ước - bội, nhận biết quy luật đối xứng qua $\sqrt{N}$ và viết được chương trình tìm toàn bộ ước của số nguyên $N \le 10^{12}$ trong thời gian dưới $0.01$ giây.
+
+#### Khởi động
+
+Giả sử em có $N = 36$ chiếc kẹo và muốn chia đều vào các túi, mỗi túi có đúng $d$ chiếc.
+- Nếu mỗi túi có $d = 2$ chiếc $\implies$ cần $36 / 2 = 18$ túi. Cặp số $(2, 18)$ cùng xuất hiện từ một phép chia hết!
+- Liệu em có cần thử duyệt từ $1$ đến tận $36$ để tìm tất cả các cách chia không?
+
+#### Ước, bội và quy luật đối xứng
+
+- Số nguyên dương $d$ là **ước** của $N$ nếu phép chia $N$ cho $d$ có phần dư bằng $0$ (`N % d == 0`). Khi đó $N$ là **bội** của $d$.
+- Nếu $d$ là một ước của $N$ thì thương số $N / d$ cũng chắc chắn là một ước của $N$:
+  $$d \times \frac{N}{d} = N$$
+- Trong mỗi cặp ước $(d, N/d)$, số nhỏ hơn không bao giờ vượt quá $\sqrt{N}$. Vì nếu cả hai số đều lớn hơn $\sqrt{N}$ thì tích của chúng sẽ lớn hơn $\sqrt{N} \times \sqrt{N} = N$ (vô lý).
+
+> **Chỉ cần duyệt $d$ từ $1$ đến $\lfloor\sqrt{N}\rfloor$ ($d \times d \le N$). Với mỗi ước $d$ tìm thấy, ta lấy thêm ước đối xứng $N/d$.**
+
+#### Mô phỏng từng lượt tìm ước của $N = 36$ ($\sqrt{36} = 6$)
+
+| Lượt duyệt $d$ | $36 \% d == 0$? | Cặp ước thu được $(d, 36/d)$ | Ghi chú |
+|:---:|:---:|:---:|---|
+| $1$ | Có | $(1, 36)$ | Lấy cả 1 và 36 |
+| $2$ | Có | $(2, 18)$ | Lấy cả 2 và 18 |
+| $3$ | Có | $(3, 12)$ | Lấy cả 3 và 12 |
+| $4$ | Có | $(4, 9)$ | Lấy cả 4 và 9 |
+| $5$ | Không | Bỏ qua | 36 không chia hết cho 5 |
+| $6$ | Có | $(6, 6)$ | $d = N/d \implies$ chỉ lấy một số 6 |
+
+#### Pseudocode
 
 ```text
-gcd(a, b) = gcd(b, a % b)
+divisors = danh sách rỗng
+for d từ 1 đến khi d * d > n:
+    nếu n % d == 0:
+        thêm d vào divisors
+        nếu d != n / d:
+            thêm (n / d) vào divisors
+sắp xếp divisors tăng dần
+in số lượng và danh sách ước
 ```
 
-Lặp đến khi `b = 0`; khi đó kết quả là `a`. LCM thường liên hệ với GCD:
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> divisors;
+    for (long long d = 1; d * d <= n; d++) {
+        if (n % d == 0) {
+            divisors.push_back(d);
+            if (d * d != n) {
+                divisors.push_back(n / d);
+            }
+        }
+    }
+
+    sort(divisors.begin(), divisors.end());
+
+    cout << divisors.size() << '\n';
+    for (int i = 0; i < (int)divisors.size(); i++) {
+        if (i > 0) cout << ' ';
+        cout << divisors[i];
+    }
+    cout << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Biến | Câu hỏi kiểm tra |
+|---|---|
+| `d` | Đã khai báo kiểu `long long` chưa? (Nếu khai báo `int d`, khi $N = 10^{12}$ thì `d * d` sẽ tràn số gây lặp vô hạn). |
+| `d * d != n` | Có bị trùng ước khi $N$ là số chính phương ($36 = 6 \times 6$) không? |
+| `d * d <= n` | Đã dùng phép nhân nguyên thay vì gọi hàm `sqrt(n)` chưa? |
+
+#### Tự kiểm tra
+
+1. Vì sao trong mỗi cặp ước $(d, N/d)$ luôn có ít nhất một số $\le \sqrt{N}$?
+2. Số nguyên dương $N$ có số lượng ước là số lẻ khi và chỉ khi $N$ là số gì?
+3. Với $N = 10^{12}$, vòng lặp `for` chạy tối đa bao nhiêu lần?
+
+#### Luyện tập ngắn
+
+- **LT 3.1A:** Viết chương trình tính tổng tất cả các ước của $N$ ($N \le 10^9$) trong $\mathcal{O}(\sqrt{N})$.
+- **LT 3.1B:** Kiểm tra xem số $N$ có phải là số hoàn hảo không (số hoàn hảo bằng tổng các ước thực sự nhỏ hơn nó, ví dụ $6 = 1 + 2 + 3$).
+
+#### Tóm tắt bài
+
+Ước số luôn đi theo từng cặp $(d, N/d)$. Duyệt $d$ từ $1$ đến $\sqrt{N}$ giúp giảm độ phức tạp từ $\mathcal{O}(N)$ xuống $\mathcal{O}(\sqrt{N})$, giải quyết nhẹ nhàng bài toán $N \le 10^{12}$.
+
+---
+
+### Bài 3.2 — Ước chung lớn nhất (GCD) và Thuật toán Euclid
+
+#### Mục tiêu bài
+
+Sau Bài 3.2, em hiểu bản chất của ước chung lớn nhất, nắm vững thuật toán Euclid $\mathcal{O}(\log(\min(A, B)))$ và tự tin cài đặt hàm `gcd` để rút gọn phân số hoặc tìm chu kỳ chung.
+
+#### Khởi động
+
+Em có một mảnh sân hình chữ nhật dài $105\text{ cm}$, rộng $45\text{ cm}$. Em muốn lát kín sân bằng các viên gạch vuông có kích thước lớn nhất mà không phải cắt gọt viên nào.
+- Cạnh viên gạch phải là ước chung của cả $105$ và $45$.
+- Viên gạch lớn nhất có cạnh bằng **Ước chung lớn nhất** $\gcd(105, 45)$.
+
+#### Thuật toán Euclid
+
+- **Ước chung lớn nhất ($\gcd(a, b)$):** Là số nguyên dương lớn nhất chia hết cả $a$ và $b$. Nếu $\gcd(a, b) = 1$, ta gọi $a$ và $b$ là hai số **nguyên tố cùng nhau**.
+- **Định lý Euclid:** Ước chung lớn nhất của hai số không thay đổi khi thay số lớn bằng số dư của phép chia số lớn cho số nhỏ:
+  $$\gcd(a, b) = \gcd(b, a \% b)$$
+  Quá trình dừng lại khi số dư bằng $0$, khi đó số còn lại chính là $\gcd$.
+
+#### Mô phỏng từng bước cho cặp $(a = 105, b = 45)$
+
+| Bước | $a$ | $b$ | Phép chia dư $a \% b$ | Cập nhật tiếp theo |
+|:---:|:---:|:---:|:---:|---|
+| 1 | $105$ | $45$ | $105 \% 45 = 15$ | $a = 45, b = 15$ |
+| 2 | $45$ | $15$ | $45 \% 15 = 0$ | $a = 15, b = 0$ |
+| 3 | $15$ | $0$ | Dừng vì $b = 0$ | **Kết quả: $\gcd = 15$** |
+
+Sau mỗi bước, số dư giảm đi ít nhất một nửa. Thuật toán chạy với độ phức tạp $\mathcal{O}(\log(\min(A, B)))$, với hai số $10^{18}$ chỉ mất chưa tới 60 phép chia dư!
+
+#### Pseudocode
 
 ```text
-lcm(a, b) = a / gcd(a, b) * b
+hàm gcd(a, b):
+    trong khi b != 0:
+        r = a % b
+        a = b
+        b = r
+    trả về a
 ```
 
-Cần chia trước khi nhân để giảm nguy cơ tràn số. Kiểm tra số nguyên tố chỉ cần thử các ước đến khi bình phương vượt quá số đang xét.
+#### Code C++
 
-### Bài tập và lỗi thường gặp
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
-Luyện GCD nhiều số, đếm ước, kiểm tra nguyên tố và phân tích thừa số nhỏ. Cần chú ý số âm, số 0, `1`, thứ tự phép nhân/chia và giới hạn `long long`. Kiến thức này là nền cho Modulo, Tổ hợp và các bài số học nâng cao.
+long long gcd(long long a, long long b) {
+    while (b != 0) {
+        long long r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    long long g = gcd(a, b);
+    cout << a / g << " " << b / g << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Biến | Câu hỏi kiểm tra |
+|---|---|
+| `b != 0` | Vòng lặp dừng khi $b = 0$, kết quả trả về là $a$. |
+| $a < b$ | Nếu truyền vào $a = 45, b = 105$, bước đầu tiên $45 \% 105 = 45 \implies$ thuật toán tự động đảo lại thành $a = 105, b = 45$. |
+
+#### Tự kiểm tra
+
+1. Điều kiện dừng của thuật toán Euclid là gì?
+2. Hai số nguyên dương được gọi là nguyên tố cùng nhau khi $\gcd(a, b)$ bằng bao nhiêu?
+3. Muốn tìm $\gcd$ của 3 số $a, b, c$, ta làm thế nào?
+
+#### Luyện tập ngắn
+
+- **LT 3.2A:** Nhập vào dãy $N$ số nguyên ($N \le 10^5, A_i \le 10^9$). Tìm ước chung lớn nhất của cả dãy.
+- **LT 3.2B:** Rút gọn phân số $\frac{A}{B}$ về dạng tối giản $\frac{P}{Q}$.
+
+#### Tóm tắt bài
+
+Thuật toán Euclid $\gcd(a, b) = \gcd(b, a \% b)$ chạy với tốc độ logarithmic $\mathcal{O}(\log(\min(A, B)))$, là công cụ nhanh nhất để tìm ước chung và rút gọn phân số.
+
+---
+
+### Bài 3.3 — Bội chung nhỏ nhất (LCM) và Kỹ thuật chống tràn số
+
+#### Mục tiêu bài
+
+Sau Bài 3.3, em hiểu mối liên hệ giữa GCD và LCM, nắm vững quy tắc **"Chia trước khi Nhân"** để tính LCM của các số lớn mà không bao giờ bị tràn số.
+
+#### Khởi động
+
+Hai chiếc xe cùng xuất phát từ bến lúc 6h sáng. Xe A cứ $12$ phút quay lại bến một lần, xe B cứ $18$ phút quay lại bến một lần. Sau bao lâu hai xe lại cùng lúc về bến?
+- Khoảng thời gian đó chính là **Bội chung nhỏ nhất** $\text{lcm}(12, 18) = 36$ phút.
+
+#### Mối liên hệ và Bẫy tràn số
+
+- **Bội chung nhỏ nhất ($\text{lcm}(a, b)$):** Số nguyên dương nhỏ nhất chia hết cho cả $a$ và $b$.
+- **Công thức liên hệ:**
+  $$a \times b = \gcd(a, b) \times \text{lcm}(a, b) \implies \text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$$
+- **Bẫy tràn số:** Nếu tính `(a * b) / gcd(a, b)` khi $a, b = 10^9$, tích $a \times b = 10^{18}$ sẽ tràn số `int` ngay lập tức.
+- **Quy tắc an toàn:** Vì $a$ luôn chia hết cho $\gcd(a, b)$, ta chia trước rồi mới nhân:
+  $$\text{lcm}(a, b) = \left( \frac{a}{\gcd(a, b)} \right) \times b$$
+
+#### Pseudocode
+
+```text
+hàm lcm(a, b):
+    nếu a == 0 hoặc b == 0: trả về 0
+    trả về (a / gcd(a, b)) * b
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long gcd(long long a, long long b) {
+    while (b != 0) {
+        long long r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+long long lcm(long long a, long long b) {
+    if (a == 0 || b == 0) return 0;
+    return (a / gcd(a, b)) * b;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << lcm(a, b) << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Thao tác | Đánh giá |
+|---|---|
+| `(a * b) / gcd(a, b)` | ❌ Nguy hiểm, dễ tràn số trung gian. |
+| `(a / gcd(a, b)) * b` |  An toàn, luôn là phép chia hết. |
+
+#### Tự kiểm tra
+
+1. Tại sao phép chia `a / gcd(a, b)` không bao giờ có dư?
+2. Nếu $a$ và $b$ nguyên tố cùng nhau thì $\text{lcm}(a, b)$ bằng bao nhiêu?
+
+#### Luyện tập ngắn
+
+- **LT 3.3A:** Nhập vào 3 số $A, B, C \le 10^6$. Tính $\text{lcm}(A, B, C)$.
+- **LT 3.3B:** Tìm số nguyên dương nhỏ nhất chia cho cả 4, 5, 6 đều dư 1.
+
+#### Tóm tắt bài
+
+$\text{lcm}(a, b) = (a / \gcd(a, b)) \times b$. Luôn **chia trước khi nhân** để bảo vệ chương trình khỏi bẫy tràn số 64-bit.
+
+---
+
+### Bài 3.4 — Số nguyên tố và Kỹ thuật kiểm tra tối ưu $\mathcal{O}(\sqrt{N})$
+
+#### Mục tiêu bài
+
+Sau Bài 3.4, em hiểu định nghĩa số nguyên tố, cài đặt được hàm kiểm tra nguyên tố $\mathcal{O}(\sqrt{N})$ và nắm được kỹ thuật tăng tốc bước nhảy $6k \pm 1$.
+
+#### Khởi động
+
+Số nguyên tố giống như các "viên gạch nguyên tử" của thế giới số tự nhiên — chúng không thể phân tách thành tích của các số nhỏ hơn. Mọi thuật toán mã hóa ngân hàng và bảo mật ngày nay đều dựa trên tính chất này.
+
+#### Khái niệm & Thuật toán kiểm tra
+
+- **Số nguyên tố:** Là số nguyên $> 1$ chỉ có đúng 2 ước nguyên dương phân biệt là $1$ và chính nó ($2, 3, 5, 7, 11, 13, \dots$).
+- Số $0$ và $1$ **không phải** là số nguyên tố.
+- **Quy tắc $\mathcal{O}(\sqrt{N})$:** Nếu $N > 1$ là hợp số, nó luôn có ít nhất một ước nguyên tố $d \le \sqrt{N}$. Do đó, chỉ cần kiểm tra xem $N$ có chia hết cho số nào từ $2$ đến $\sqrt{N}$ không.
+- **Tối ưu bước nhảy $6k \pm 1$:** Mọi số nguyên tố $> 3$ đều có dạng $6k - 1$ hoặc $6k + 1$. Sau khi kiểm tra chia hết cho 2 và 3, ta chỉ cần thử các số $i$ và $i + 2$ với bước nhảy $i += 6$, giúp giảm bớt $2/3$ số phép chia.
+
+#### Mô phỏng kiểm tra $N = 29$ ($\sqrt{29} \approx 5.38$)
+
+| Bước | Số thử chia | $29 \% i == 0$? | Kết luận |
+|:---:|:---:|:---:|---|
+| 1 | $2$ | Không | 29 là số lẻ |
+| 2 | $3$ | Không | 29 không chia hết cho 3 |
+| 3 | $5$ ($i = 5$) | Không | $5 \times 5 = 25 \le 29$, không chia hết |
+| 4 | $7$ ($i + 2 = 7$) | Bỏ qua | $7 \times 7 = 49 > 29$, dừng vòng lặp |
+
+👉 **Kết luận:** 29 là số nguyên tố.
+
+#### Pseudocode
+
+```text
+hàm isPrime(n):
+    nếu n < 2: trả về false
+    nếu n == 2 hoặc n == 3: trả về true
+    nếu n % 2 == 0 hoặc n % 3 == 0: trả về false
+    i = 5
+    trong khi i * i <= n:
+        nếu n % i == 0 hoặc n % (i + 2) == 0:
+            trả về false
+        i = i + 6
+    trả về true
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPrime(long long n) {
+    if (n < 2) return false;
+    if (n == 2 || n == 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (long long i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    if (isPrime(n)) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Giá trị biên | Kết quả đúng | Lỗi thường gặp |
+|---|---|---|
+| $N = 0, 1$ | `false` | Quên chặn điều kiện $N < 2$. |
+| $N = 2, 3$ | `true` | Bị loại nhầm bởi các điều kiện chia hết. |
+| $N = 10^{12}$ | Chạy dưới $0.001$s | Dùng `int i` gây tràn số ở `i * i`. |
+
+#### Tự kiểm tra
+
+1. Số nguyên tố chẵn duy nhất là số nào?
+2. Vì sao một hợp số $N$ luôn có ước nguyên tố $\le \sqrt{N}$?
+
+#### Luyện tập ngắn
+
+- **LT 3.4A:** Tìm số nguyên tố nhỏ nhất lớn hơn số nguyên dương $N$ ($N \le 10^9$).
+- **LT 3.4B:** Đếm số lượng số nguyên tố trong đoạn $[L, R]$ với $R - L \le 10^5, R \le 10^{12}$.
+
+#### Tóm tắt bài
+
+Kiểm tra số nguyên tố chỉ cần duyệt đến $\sqrt{N}$. Kết hợp bước nhảy $6k \pm 1$ giúp hàm `isPrime()` đạt tốc độ tối đa cho mọi $N \le 10^{12}$.
+
+---
+
+### Bài 3.5 — Phân tích thừa số nguyên tố
+
+#### Mục tiêu bài
+
+Sau Bài 3.5, em biết cách phân rã một số nguyên dương thành tích các thừa số nguyên tố bằng thuật toán chia dần $\mathcal{O}(\sqrt{N})$ và ứng dụng để đếm số lượng ước.
+
+#### Khởi động
+
+Số $60$ có thể viết thành $2 \times 2 \times 3 \times 5 = 2^2 \times 3^1 \times 5^1$. Mọi số nguyên $> 1$ đều có duy nhất một cách phân tích như vậy.
+
+#### Thuật toán chia dần
+
+1. Cho $p$ chạy từ $2$ đến khi $p \times p > N$.
+2. Nếu $N \% p == 0$, ta đếm số mũ của $p$ bằng cách chia $N$ liên tục cho $p$ trong khi $N \% p == 0$.
+3. Sau vòng lặp, nếu giá trị $N$ còn lại $> 1$ thì giá trị đó chính là thừa số nguyên tố cuối cùng (với số mũ 1).
+
+#### Mô phỏng từng bước phân tích $N = 60$
+
+| Bước | $N$ hiện tại | $p$ đang xét | Thao tác chia rút gọn | Thừa số thu được | $N$ sau khi chia |
+|:---:|:---:|:---:|---|:---:|:---:|
+| 1 | $60$ | $p = 2$ | $60 \% 2 == 0 \implies 60 / 2 = 30 \implies 30 / 2 = 15$ | $2^2$ | $15$ |
+| 2 | $15$ | $p = 3$ | $15 \% 3 == 0 \implies 15 / 3 = 5$ | $3^1$ | $5$ |
+| 3 | $5$ | $p = 4$ | $4 \times 4 = 16 > 5 \implies$ dừng vòng lặp | - | $5$ |
+| 4 | $5 > 1$ | - | Thừa số nguyên tố cuối cùng là $5^1$ | $5^1$ | $1$ |
+
+👉 **Kết quả:** $60 = 2^2 \times 3^1 \times 5^1$.
+
+#### Pseudocode
+
+```text
+for p từ 2 đến khi p * p > n:
+    nếu n % p == 0:
+        exp = 0
+        trong khi n % p == 0:
+            exp tăng 1
+            n = n / p
+        in p và exp
+nếu n > 1:
+    in n và exp = 1
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    bool first = true;
+    for (long long p = 2; p * p <= n; p++) {
+        if (n % p == 0) {
+            int exp = 0;
+            while (n % p == 0) {
+                exp++;
+                n /= p;
+            }
+            if (!first) cout << " * ";
+            cout << p << "^" << exp;
+            first = false;
+        }
+    }
+
+    if (n > 1) {
+        if (!first) cout << " * ";
+        cout << n << "^1";
+    }
+    cout << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Tình huống | Hiện tượng | Cách xử lý đúng |
+|---|---|---|
+| Số nguyên tố $N = 13$ | Vòng lặp dừng ngay ở $p = 2$ | Khối lệnh `if (n > 1)` sẽ in ra $13^1$. |
+| Hợp số $p = 4, 6$ | Có bị in nhầm làm thừa số không? | Không, vì các thừa số nguyên tố nhỏ hơn ($2, 3$) đã chia rút gọn hết $N$ từ trước. |
+
+#### Tự kiểm tra
+
+1. Vì sao không cần kiểm tra $p$ có phải số nguyên tố trước khi chia?
+2. Nếu $N = 2^3 \times 3^2 \times 5^1$, số lượng ước của $N$ tính bằng công thức nào? (Đáp án: $(3+1)(2+1)(1+1) = 24$ ước).
+
+#### Luyện tập ngắn
+
+- **LT 3.5A:** Nhập vào số nguyên dương $N \le 10^{12}$. Tìm ước nguyên tố lớn nhất của $N$.
+- **LT 3.5B:** Đếm số lượng ước nguyên dương của $N$ ($N \le 10^{12}$) dựa vào phân tích thừa số nguyên tố.
+
+#### Tóm tắt bài
+
+Thuật toán chia dần $\mathcal{O}(\sqrt{N})$ tự động lọc ra các thừa số nguyên tố. Đây là chìa khóa tính nhanh số lượng ước và tổng ước của số cực lớn.
+
+---
+
+### Bài 3.6 — Sàng số nguyên tố Eratosthenes
+
+#### Mục tiêu bài
+
+Sau Bài 3.6, em hiểu nguyên lý sàng lọc bội số, cài đặt thành thạo Sàng Eratosthenes $\mathcal{O}(N \log \log N)$ và biết cách trả lời tức thì $\mathcal{O}(1)$ các truy vấn kiểm tra nguyên tố cho hàng triệu số.
+
+#### Khởi động
+
+Nếu cần kiểm tra số nguyên tố cho $Q = 10^6$ truy vấn, mỗi truy vấn $x \le 10^7$:
+- Dùng `isPrime(x)` tốn $10^6 \times \sqrt{10^7} \approx 3 \times 10^9$ phép tính $\implies$ Mất 30 giây (TLE).
+- **Giải pháp:** Tiền xử lý một lần duy nhất bằng **Sàng Eratosthenes** trong $0.1$ giây, sau đó mỗi truy vấn chỉ mất $\mathcal{O}(1)$ để tra cứu!
+
+#### Cơ chế Sàng lọc
+
+1. Ban đầu giả sử tất cả các số từ $2$ đến $N$ đều là số nguyên tố (`is_prime[i] = true`).
+2. Xét từ số nguyên tố đầu tiên $p = 2$: Giữ lại số 2, gạch bỏ các bội số của 2 ($4, 6, 8, \dots$).
+3. Tìm số tiếp theo chưa bị gạch là $p = 3$: Giữ lại số 3, gạch bỏ các bội của 3 ($9, 12, 15, \dots$, bắt đầu từ $p \times p = 9$).
+4. Tiếp tục đến $p \le \sqrt{N}$. Tất cả các số chưa bị gạch còn lại chính là **toàn bộ số nguyên tố trong đoạn $[2, N]$**.
+
+#### Mô phỏng sàng từ 2 đến 20
+
+```text
+Ban đầu:     2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+Gạch bội 2:  2  3  .  5  .  7  .  9  . 11  . 13  . 15  . 17  . 19  .
+Gạch bội 3:  2  3  .  5  .  7  .  .  . 11  . 13  .  .  . 17  . 19  .
+Còn lại:     2, 3, 5, 7, 11, 13, 17, 19
+```
+
+#### Pseudocode
+
+```text
+is_prime[0] = is_prime[1] = false
+mọi vị trí từ 2 đến N gán bằng true
+
+for p từ 2 đến khi p * p > N:
+    nếu is_prime[p] == true:
+        for i từ p * p đến N, mỗi bước tăng p:
+            is_prime[i] = false
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX_N = 10000000;
+vector<bool> is_prime(MAX_N + 1, true);
+
+void sieve() {
+    is_prime[0] = is_prime[1] = false;
+    for (int p = 2; p * p <= MAX_N; p++) {
+        if (is_prime[p]) {
+            for (int i = p * p; i <= MAX_N; i += p) {
+                is_prime[i] = false;
+            }
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    sieve();
+
+    int q;
+    if (!(cin >> q)) return 0;
+
+    while (q--) {
+        int x;
+        cin >> x;
+        if (is_prime[x]) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
+    }
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Chi tiết | Lý do |
+|---|---|
+| `i = p * p` | Các bội nhỏ hơn ($2p, 3p$) đã bị các số $2, 3$ gạch từ trước, bắt đầu từ $p \times p$ giúp tiết kiệm thời gian. |
+| `vector<bool>` | Mỗi phần tử chỉ tốn 1 bit, $10^7$ phần tử chỉ tốn $\approx 1.2\text{ MB}$ RAM. |
+
+#### Tự kiểm tra
+
+1. Vì sao vòng lặp ngoài chỉ cần chạy đến $p \times p \le N$?
+2. Sàng Eratosthenes cho $N = 10^7$ mất bao lâu để hoàn thành? (Đáp án: $\approx 0.08$ giây).
+
+#### Luyện tập ngắn
+
+- **LT 3.6A:** In ra toàn bộ số nguyên tố trong đoạn $[1, N]$ với $N \le 10^6$.
+- **LT 3.6B:** Đếm số lượng số nguyên tố trong đoạn $[L, R]$ với $1 \le L \le R \le 10^6$.
+
+#### Tóm tắt bài
+
+Sàng Eratosthenes là thuật toán tiền xử lý số nguyên tố kinh điển $\mathcal{O}(N \log \log N)$. Sau khi sàng, việc kiểm tra nguyên tố chỉ tốn $\mathcal{O}(1)$.
+
+---
+
+### Bài 3.7 — Ôn tập, kiểm tra và bài chuyển giao
+
+#### Mục tiêu bài
+
+Bài này giúp em củng cố toàn bộ kỹ năng số học từ cơ bản đến nâng cao. Mỗi bài tập tập trung vào việc áp dụng đúng công thức và xử lý số lớn an toàn.
+
+#### Tầng A — Củng cố nền tảng
+
+##### Bài 3.7.1 — Tính tổng các ước
+Đọc số nguyên dương $N$ ($1 \le N \le 10^9$). Tính tổng tất cả các ước nguyên dương của $N$.
+- **Input:** Một số nguyên $N$.
+- **Output:** Tổng các ước nguyên dương của $N$.
+- **Ví dụ:** `12` $\implies$ Output: `28` (vì $1 + 2 + 3 + 4 + 6 + 12 = 28$).
+
+##### Bài 3.7.2 — Ước chung lớn nhất của hai số lớn
+Cho hai số nguyên dương $A$ và $B$ ($1 \le A, B \le 10^{18}$). Tìm $\gcd(A, B)$.
+- **Input:** Hai số nguyên $A$ và $B$.
+- **Output:** Giá trị $\gcd(A, B)$.
+- **Ví dụ:** `1000000000000 250000000000` $\implies$ Output: `250000000000`.
+
+##### Bài 3.7.3 — Kiểm tra nhiều số nguyên tố
+Cho $T$ số nguyên dương $N$ ($T \le 100, N \le 10^{12}$). Với mỗi số, kiểm tra xem có phải số nguyên tố không.
+- **Input:** Dòng đầu ghi $T$. $T$ dòng sau, mỗi dòng ghi một số $N$.
+- **Output:** In `YES` nếu là số nguyên tố, ngược lại in `NO`.
+- **Ví dụ:** `17` cho `YES`; `1` cho `NO`.
+
+##### Bài 3.7.4 — Tổng chữ số nguyên tố
+Cho số nguyên dương $N$ ($1 \le N \le 10^{18}$). Kiểm tra xem tổng các chữ số của $N$ có phải là số nguyên tố hay không.
+- **Input:** Số nguyên $N$.
+- **Output:** In `YES` hoặc `NO`.
+- **Ví dụ:** `124` $\implies$ Output: `YES` (vì $1 + 2 + 4 = 7$).
+
+---
+
+#### Tầng B — Vận dụng mẫu
+
+##### Bài 3.7.5 — Số bán nguyên tố (Semi-Prime)
+Số bán nguyên tố là số bằng tích của đúng hai số nguyên tố (ví dụ $4 = 2 \times 2, 6 = 2 \times 3$). Kiểm tra xem $N$ ($1 \le N \le 10^9$) có phải là số bán nguyên tố không.
+- **Input:** Số nguyên $N$.
+- **Output:** In `YES` hoặc `NO`.
+- **Ví dụ:** `6` cho `YES`; `8` cho `NO` (vì $8 = 2^3$, có 3 thừa số).
+
+##### Bài 3.7.6 — Rút gọn dãy phân số
+Cho $N$ cặp số nguyên dương $A_i, B_i$ ($N \le 10^5, A_i, B_i \le 10^9$). Rút gọn từng phân số $\frac{A_i}{B_i}$ về dạng tối giản $\frac{P_i}{Q_i}$.
+- **Input:** Dòng đầu ghi $N$. $N$ dòng sau, mỗi dòng ghi $A_i, B_i$.
+- **Output:** Ghi $N$ dòng, mỗi dòng chứa hai số $P_i, Q_i$.
+
+##### Bài 3.7.7 — Đếm cặp nguyên tố cùng nhau
+Cho dãy $N$ số nguyên ($N \le 2000, A_i \le 10^9$). Đếm số cặp $(i, j)$ với $1 \le i < j \le N$ thỏa mãn $\gcd(A_i, A_j) = 1$.
+- **Input:** Dòng 1 ghi $N$. Dòng 2 ghi $N$ số $A_i$.
+- **Output:** Số lượng cặp nguyên tố cùng nhau.
+
+##### Bài 3.7.8 — Tìm số nhỏ nhất có đúng K ước
+Cho số nguyên $K$ ($1 \le K \le 30$). Tìm số nguyên dương $N$ nhỏ nhất có đúng $K$ ước số nguyên dương.
+- **Input:** Số nguyên $K$.
+- **Output:** Số $N$ nhỏ nhất tìm được.
+- **Ví dụ:** `3` $\implies$ Output: `4` (ước là 1, 2, 4).
+
+---
+
+#### Tầng C — Chuyển giao
+
+##### Bài 3.7.9 — Bội chung nhỏ nhất của dãy số
+Cho $N$ số nguyên $A_1, A_2, \dots, A_N$ ($N \le 100, A_i \le 1000$). Tính $\text{lcm}(A_1, \dots, A_N) \pmod{10^9+7}$.
+- **Gợi ý:** Phân tích từng số ra thừa số nguyên tố, lấy số mũ lớn nhất của mỗi thừa số trên toàn dãy.
+
+##### Bài 3.7.10 — Đếm số chữ số 0 tận cùng của N!
+Cho số nguyên dương $N$ ($1 \le N \le 10^{18}$). Đếm số chữ số 0 liên tiếp ở tận cùng của $N!$.
+- **Gợi ý:** Áp dụng định lý Legendre tính số mũ của thừa số 5 trong $N!$: $\lfloor N/5 \rfloor + \lfloor N/25 \rfloor + \dots$
+- **Ví dụ:** `10` $\implies$ Output: `2`.
+
+##### Bài 3.7.11 — Khôi phục hai số từ GCD và LCM
+Cho $G = \gcd(A, B)$ và $L = \text{lcm}(A, B)$ ($G, L \le 10^{12}$). Tìm hai số nguyên dương $A \le B$ sao cho $A + B$ nhỏ nhất. Nếu không tồn tại, in `-1`.
+- **Ví dụ:** `2 60` $\implies$ Output: `10 12`.
+
+##### Bài 3.7.12 — Sàng nguyên tố hàng loạt
+Cài đặt Sàng Eratosthenes cho $10^7$ số và trả lời $Q$ truy vấn kiểm tra số nguyên tố ($Q \le 10^6$).
+- **Input:** Dòng đầu ghi $Q$. $Q$ dòng sau, mỗi dòng ghi một số $x \le 10^7$.
+- **Output:** Với mỗi truy vấn, in `1` nếu là số nguyên tố, ngược lại in `0`.
+
+---
+
+#### Phiếu tự đánh giá
+
+| Năng lực | Chưa chắc | Làm khi có gợi ý | Tự làm được |
+|---|:---:|:---:|:---:|
+| Tìm ước trong $\mathcal{O}(\sqrt{N})$ |  |  |  |
+| Cài đặt thuật toán Euclid tìm GCD |  |  |  |
+| Tính LCM an toàn (chia trước nhân) |  |  |  |
+| Kiểm tra số nguyên tố tối ưu $6k \pm 1$ |  |  |  |
+| Phân tích thừa số nguyên tố bằng chia dần |  |  |  |
+| Cài đặt Sàng Eratosthenes $\mathcal{O}(N \log \log N)$ |  |  |  |
+| Xử lý số lớn $10^{18}$ với `long long` |  |  |  |
+
+#### Tiêu chí hoàn thành chương
+
+Em có thể xem mình đã nắm chắc chương khi:
+1. Giải thích được vì sao chỉ cần duyệt đến $\sqrt{N}$ để tìm ước và kiểm tra nguyên tố.
+2. Viết được hàm `gcd` và `lcm` an toàn không quá 5 dòng code.
+3. Cài đặt được Sàng Eratosthenes từ trí nhớ trong 2 phút.
+4. Không mắc bẫy tràn số khi làm việc với số nguyên $10^9 \to 10^{18}$.
+
+---
+
+### Tổng kết chương
+
+> **Số học là nền tảng của các thuật toán tối ưu. Nắm vững tính chất đối xứng $\sqrt{N}$, thuật toán Euclid và Sàng Eratosthenes giúp em biến những bài toán duyệt hàng triệu số phức tạp thành những câu lệnh chớp nhoáng.**
+
+| Cần nhớ | Nội dung |
+|---|---|
+| Tập ước số | Duyệt $d \times d \le N$, mỗi lần lấy cặp $(d, N/d)$ với $\mathcal{O}(\sqrt{N})$ |
+| Thuật toán Euclid | $\gcd(a, b) = \gcd(b, a \% b)$ với $\mathcal{O}(\log(\min(A, B)))$ |
+| Quy tắc an toàn LCM | $\text{lcm}(a, b) = (a / \gcd(a, b)) \times b$ (chia trước khi nhân) |
+| Số nguyên tố | Số $> 1$ chỉ có 2 ước; kiểm tra chia hết từ $2$ đến $\sqrt{N}$ bước nhảy $6k \pm 1$ |
+| Thừa số nguyên tố | Chia dần cho $p$ từ $2$ đến $\sqrt{N}$; nếu sau cùng $N > 1$ thì $N$ là thừa số cuối |
+| Sàng Eratosthenes | Gạch bội số bắt đầu từ $p \times p$ với $\mathcal{O}(N \log \log N)$ |
+
+#### Những lỗi thường gặp
+
+| Lỗi | Cách tự kiểm tra |
+|---|---|
+| Tràn số khi tính tích trong LCM | Luôn lấy `(a / gcd(a, b)) * b` |
+| Quên trường hợp $N = 0, 1$ khi kiểm tra nguyên tố | Luôn chặn `if (n < 2) return false;` đầu tiên |
+| Bỏ sót ước nguyên tố cuối cùng sau vòng lặp $\sqrt{N}$ | Luôn kiểm tra `if (n > 1)` sau vòng lặp |
+| Dùng `int` cho biến lặp `d * d <= n` | Khi $N = 10^{12}$, biến lặp $d$ phải là `long long` |
+| Tràn mảng trong Sàng Eratosthenes | Khai báo kích thước mảng là `MAX_N + 1` |
+
+---
+
+### Code tham chiếu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// 1. Uoc chung lon nhat (Euclid)
+long long gcd(long long a, long long b) {
+    while (b != 0) {
+        long long r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+// 2. Boi chung nho nhat an toan (Chia truoc khi nhan)
+long long lcm(long long a, long long b) {
+    if (a == 0 || b == 0) return 0;
+    return (a / gcd(a, b)) * b;
+}
+
+// 3. Kiem tra so nguyen to toi uu O(sqrt(N)) buoc nhay 6k +- 1
+bool isPrime(long long n) {
+    if (n < 2) return false;
+    if (n == 2 || n == 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (long long i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// 4. Sang so nguyen to Eratosthenes O(N log log N)
+const int MAX_VAL = 1000000;
+vector<bool> is_prime_sieve(MAX_VAL + 1, true);
+
+void sieve() {
+    is_prime_sieve[0] = is_prime_sieve[1] = false;
+    for (int p = 2; p * p <= MAX_VAL; p++) {
+        if (is_prime_sieve[p]) {
+            for (int i = p * p; i <= MAX_VAL; i += p) {
+                is_prime_sieve[i] = false;
+            }
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    sieve();
+
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << "GCD: " << gcd(a, b) << "\n";
+    cout << "LCM: " << lcm(a, b) << "\n";
+    cout << "a is Prime: " << (isPrime(a) ? "YES" : "NO") << "\n";
+    cout << "b is Prime: " << (isPrime(b) ? "YES" : "NO") << "\n";
+
+    return 0;
+}
+```
+
+---
 
 ## Chương 4 — Đếm phân phối
 
-### Mục tiêu và ôn nhanh
+### Bản đồ chương
 
-Học sinh biết đếm tần suất, phân phối dữ liệu vào các nhóm và dùng nguyên lý Dirichlet ở mức trực giác. Ôn `count`, mảng, `vector` và điều kiện.
+| Trường | Nội dung |
+|---|---|
+| Mục tiêu | Nắm vững kỹ thuật dùng giá trị làm chỉ số mảng để thống kê, đếm cặp và phân tích dữ liệu trong $\mathcal{O}(N)$ |
+| Kiến thức cần có | Mảng 1 chiều (`vector<int>`), chỉ số mảng, vòng lặp, chuỗi ký tự (`string`), kiểu `long long` |
+| Phạm vi | Mảng tần suất trực tiếp, tìm Mode/Min-Max tần suất, mảng chữ cái 26 ký tự, kỹ thuật đếm cặp trong $\mathcal{O}(N)$ và nguyên lý Dirichlet |
+| Số bài | 5 bài học lý thuyết & thực hành + 1 bài tổng kết và bài tập phân tầng |
 
-### Ý tưởng cốt lõi
+### Learning outcomes
 
-Thay vì so sánh mọi cặp, ta lưu số lần xuất hiện của mỗi giá trị hoặc mỗi nhóm. Khi số nhóm ít, một mảng tần suất thường đủ nhanh. Nguyên lý Dirichlet nhắc rằng nếu phân phối nhiều vật vào ít hộp, chắc chắn có hộp nhận từ hai vật trở lên.
+Sau chương này, em có thể:
+1. Xây dựng và cập nhật bảng đếm tần suất các giá trị trong thời gian $\mathcal{O}(N)$ bằng kỹ thuật chuyển giá trị thành chỉ số mảng.
+2. Tìm phần tử xuất hiện nhiều nhất, ít nhất hoặc kiểm tra phần tử đa số tuyệt đối trong một dãy số.
+3. Ánh xạ các ký tự chữ cái thường `'a'..'z'` thành chỉ số `0..25` để kiểm tra chuỗi Anagram trong thời gian tuyến tính.
+4. Đếm số lượng cặp phần tử thỏa mãn điều kiện bằng nhau hoặc có tổng bằng $S$ trong $\mathcal{O}(N)$ mà không dùng hai vòng lặp lồng nhau.
+5. Vận dụng nguyên lý Dirichlet để tìm kiếm đoạn con liên tiếp có tổng chia hết cho $N$.
+6. Tránh bẫy tràn số khi đếm số lượng cặp phần tử vượt ngưỡng 32-bit ($2 \times 10^9$).
+
+### Câu hỏi trung tâm của chương
+
+> **Làm thế nào để đếm tần suất, tìm phần tử xuất hiện nhiều nhất và đếm hàng tỷ cặp phần tử chỉ qua MỘT lần duyệt mảng duy nhất mà không bị quá thời gian?**
+
+---
+
+### Bài 4.1 — Mảng tần suất trực tiếp: biến giá trị thành chỉ số
+
+#### Mục tiêu bài
+
+Sau Bài 4.1, em hiểu bản chất của mảng tần suất, biết cách dùng chính giá trị của phần tử làm chỉ số mảng để đếm số lần xuất hiện của các phần tử trong $\mathcal{O}(N)$.
+
+#### Khởi động
+
+Khi kiểm phiếu bầu cử lớp trưởng cho 3 ứng viên mang số báo danh 1, 2, 3:
+- Thay vì mỗi lần đọc một phiếu lại phải lật lại toàn bộ danh sách phiếu trước đó để đếm, thư ký vẽ 3 ô số 1, 2, 3 lên bảng.
+- Mỗi khi đọc một phiếu ghi số nào, thư ký chỉ cần gạch thêm một vạch vào đúng ô số đó.
+- Sau khi đọc xong $N$ phiếu, số vạch trong từng ô chính là số phiếu của từng ứng viên!
+- Chiếc bảng chia ô đó trong lập trình chính là **Mảng tần suất (Frequency Array)**.
+
+#### Ý tưởng mảng tần suất
+
+- **Cách làm ngây thơ ($\mathcal{O}(N^2)$):** Với mỗi phần tử $A[i]$, duyệt lại toàn bộ mảng từ đầu đến cuối để đếm. Với $N = 10^5$, hai vòng lặp lồng nhau mất $10^{10}$ phép tính $\implies$ Quá thời gian (TLE).
+- **Mảng tần suất ($\mathcal{O}(N)$):**
+  1. Khởi tạo một mảng đếm `cnt` kích thước đủ lớn, ban đầu tất cả bằng `0`.
+  2. Khi đọc phần tử giá trị `x`, ta tăng biến đếm tại chỉ số `x` lên 1:
+     $$\text{cnt}[x] = \text{cnt}[x] + 1 \quad (\text{hoặc } \text{cnt}[x]\text{++})$$
+  3. Sau khi đọc xong, `cnt[v]` lưu trữ chính xác số lần xuất hiện của giá trị `v`.
+
+#### Mô phỏng ghi nhận tần suất cho dãy $A = [3, 1, 3, 2, 1, 3]$
+
+| Bước | Đọc giá trị $x$ | Thao tác | Trạng thái mảng `cnt` (`cnt[0..3]`) |
+|:---:|:---:|:---:|:---:|
+| Khởi tạo | - | `cnt = {0, 0, 0, 0}` | `[0: 0, 1: 0, 2: 0, 3: 0]` |
+| 1 | $3$ | `cnt[3]++` | `[0: 0, 1: 0, 2: 0, 3: 1]` |
+| 2 | $1$ | `cnt[1]++` | `[0: 0, 1: 1, 2: 0, 3: 1]` |
+| 3 | $3$ | `cnt[3]++` | `[0: 0, 1: 1, 2: 0, 3: 2]` |
+| 4 | $2$ | `cnt[2]++` | `[0: 0, 1: 1, 2: 1, 3: 2]` |
+| 5 | $1$ | `cnt[1]++` | `[0: 0, 1: 2, 2: 1, 3: 2]` |
+| 6 | $3$ | `cnt[3]++` | `[0: 0, 1: 2, 2: 1, 3: 3]` |
+
+👉 **Kết quả:** Số 1 xuất hiện 2 lần, số 2 xuất hiện 1 lần, số 3 xuất hiện 3 lần.
+
+#### Pseudocode
 
 ```text
-Khởi tạo bảng tần suất
-→ duyệt từng dữ liệu
-→ tăng nhóm tương ứng
-→ đọc kết quả từ bảng đếm
+cnt = mảng kích thước MAX_VAL + 1, khởi tạo bằng 0
+for x trong dãy A:
+    cnt[x] = cnt[x] + 1
+
+distinctCount = 0
+for v từ 0 đến MAX_VAL:
+    nếu cnt[v] > 0:
+        distinctCount tăng 1
+
+in distinctCount
+for v từ 0 đến MAX_VAL:
+    nếu cnt[v] > 0:
+        in v và cnt[v]
 ```
 
-### Bài tập và lỗi thường gặp
+#### Code C++
 
-Luyện đếm giá trị trùng, tìm nhóm đông nhất, kiểm tra phân phối và đếm cặp bằng tần suất. Lỗi thường gặp là chọn kích thước bảng sai, quên khởi tạo về 0 và nhầm giá trị với chỉ số. Chương này nối tự nhiên sang Prefix Sum, Map và các bài đếm tổ hợp.
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX_VAL = 100000;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<int> cnt(MAX_VAL + 1, 0);
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        cnt[x]++;
+    }
+
+    int distinctCount = 0;
+    for (int v = 0; v <= MAX_VAL; v++) {
+        if (cnt[v] > 0) {
+            distinctCount++;
+        }
+    }
+
+    cout << distinctCount << '\n';
+    for (int v = 0; v <= MAX_VAL; v++) {
+        if (cnt[v] > 0) {
+            cout << v << " xuat hien " << cnt[v] << " lan\n";
+        }
+    }
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Chi tiết | Lưu ý |
+|---|---|
+| Kích thước mảng | Luôn khai báo `MAX_VAL + 1` để truy cập được chỉ số `MAX_VAL`. |
+| Giá trị $A_i$ âm | Nếu có số âm, cần tịnh tiến chỉ số: `cnt[x + OFFSET]++`. |
+
+#### Tự kiểm tra
+
+1. Mảng tần suất trực tiếp áp dụng tốt nhất khi giá trị các phần tử nằm trong khoảng nào?
+2. Vì sao mảng tần suất giúp giảm độ phức tạp từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N)$?
+
+#### Luyện tập ngắn
+
+- **LT 4.1A:** Nhập dãy $N$ số nguyên ($N \le 10^5, 0 \le A_i \le 10^5$). In ra các giá trị chỉ xuất hiện đúng 1 lần theo thứ tự tăng dần.
+- **LT 4.1B:** Cho dãy $N$ số nguyên trong đoạn $[-1000, 1000]$. Dùng mảng tần suất tịnh tiến để đếm số lần xuất hiện của từng số.
+
+#### Tóm tắt bài
+
+Mảng tần suất biến **giá trị thành chỉ số** giúp tra cứu và cập nhật số lần xuất hiện trong $\mathcal{O}(1)$.
+
+---
+
+### Bài 4.2 — Thống kê tần suất: Tìm Mode, Min-Max và Phần tử đa số
+
+#### Mục tiêu bài
+
+Sau Bài 4.2, em biết cách tìm phần tử xuất hiện nhiều nhất (Mode) và xác định phần tử đa số tuyệt đối (xuất hiện $> N/2$ lần) bằng một lần duyệt mảng tần suất.
+
+#### Khởi động
+
+Trong cuộc bỏ phiếu bầu lớp trưởng với $N = 7$ phiếu, ứng viên chỉ trúng cử nếu nhận được quá bán (nhiều hơn $7/2 = 3.5 \implies$ ít nhất 4 phiếu). Giá trị xuất hiện $> N/2$ lần này được gọi là **Phần tử đa số (Majority Element)**.
+
+#### Ý tưởng thống kê
+
+1. **Tìm phần tử xuất hiện nhiều nhất (Mode):**  
+   Duyệt `v` từ `0` đến `MAX_VAL`. Duy trì biến `maxFreq` và `bestVal`. Nếu `cnt[v] > maxFreq`, cập nhật `maxFreq = cnt[v]` và `bestVal = v`.
+2. **Tìm phần tử đa số tuyệt đối:**  
+   Kiểm tra xem có giá trị `v` nào thỏa mãn `cnt[v] > n / 2` không. Trong mảng $N$ phần tử, **tối đa chỉ có thể có duy nhất một phần tử đa số tuyệt đối**.
+
+#### Mô phỏng tìm phần tử đa số cho $A = [3, 3, 4, 2, 3, 3, 5]$ ($N = 7$, ngưỡng $> 3$)
+
+| Giá trị $v$ | Tần suất `cnt[v]` | Điều kiện `cnt[v] > 3` | Kết luận |
+|:---:|:---:|:---:|---|
+| 2 | 1 | Sai | Không phải đa số |
+| 3 | 4 | Đúng ($4 > 3$) | **Là phần tử đa số tuyệt đối!** |
+| 4 | 1 | Sai | Không phải đa số |
+| 5 | 1 | Sai | Không phải đa số |
+
+#### Pseudocode
+
+```text
+majority = -1
+for v từ 0 đến MAX_VAL:
+    nếu cnt[v] > n / 2:
+        majority = v
+        dừng vòng lặp
+in majority
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX_VAL = 100000;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<int> cnt(MAX_VAL + 1, 0);
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        cnt[x]++;
+    }
+
+    int majority = -1;
+    for (int v = 0; v <= MAX_VAL; v++) {
+        if (cnt[v] > n / 2) {
+            majority = v;
+            break;
+        }
+    }
+
+    cout << majority << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Tình huống | Kiểm tra |
+|---|---|
+| Không có ai đa số | Biến `majority` giữ nguyên giá trị `-1`. |
+| Nhiều số cùng tần suất lớn nhất | Dùng `cnt[v] > maxFreq` khi duyệt từ nhỏ đến lớn sẽ tự động giữ lại giá trị nhỏ nhất. |
+
+#### Tự kiểm tra
+
+1. Một mảng có độ dài $N = 10$ có thể có 2 phần tử cùng xuất hiện 6 lần không? Vì sao?
+2. Vì sao phần tử đa số tuyệt đối nếu tồn tại thì luôn là duy nhất?
+
+#### Luyện tập ngắn
+
+- **LT 4.2A:** Tìm giá trị xuất hiện nhiều lần nhất trong mảng $N$ số. Nếu có nhiều giá trị, in giá trị nhỏ nhất.
+- **LT 4.2B:** Tìm giá trị xuất hiện ít nhất một lần nhưng có số lần xuất hiện nhỏ nhất trong mảng.
+
+#### Tóm tắt bài
+
+Duyệt mảng tần suất $\mathcal{O}(\text{MAX\_VAL})$ cho phép dễ dàng tìm Mode và xác định phần tử đa số tuyệt đối trong chớp mắt.
+
+---
+
+### Bài 4.3 — Mảng tần suất trên bảng chữ cái và Kiểm tra chuỗi Anagram
+
+#### Mục tiêu bài
+
+Sau Bài 4.3, em biết cách ánh xạ các chữ cái `'a'..'z'` thành chỉ số `0..25` để đếm tần suất ký tự và kiểm tra hai chuỗi Anagram trong thời gian $\mathcal{O}(N)$.
+
+#### Khởi động
+
+Hai từ tiếng Anh **"listen"** và **"silent"** tuy viết khác nhau nhưng gồm đúng cùng một bộ chữ cái: 1 chữ 'e', 1 chữ 'i', 1 chữ 'l', 1 chữ 'n', 1 chữ 's', 1 chữ 't'. Hai từ như vậy gọi là **Anagram** (từ đảo mã).
+
+#### Ánh xạ chữ cái thành chỉ số mảng
+
+- Bảng chữ cái tiếng Anh in thường có 26 ký tự từ `'a'` đến `'z'`.
+- Công thức ánh xạ: Trừ đi ký tự gốc `'a'`:
+  $$\text{Index} = c - \text{'a'}$$
+  - `'a' - 'a' = 0`
+  - `'b' - 'a' = 1`
+  - `'z' - 'a' = 25`
+- Chỉ cần mảng `vector<int> cnt(26, 0)` để đếm tần suất mọi ký tự.
+
+> **Hai chuỗi $S$ và $T$ là Anagram của nhau khi và chỉ khi chúng có cùng độ dài và mảng tần suất 26 chữ cái của chúng hoàn toàn giống nhau.**
+
+#### Pseudocode
+
+```text
+nếu độ dài S != độ dài T: trả về false
+cntS = mảng 26 số 0
+cntT = mảng 26 số 0
+
+for c trong S: cntS[c - 'a']++
+for c trong T: cntT[c - 'a']++
+
+for i từ 0 đến 25:
+    nếu cntS[i] != cntT[i]: trả về false
+trả về true
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string s, t;
+    if (!(cin >> s >> t)) return 0;
+
+    if (s.length() != t.length()) {
+        cout << "NO\n";
+        return 0;
+    }
+
+    vector<int> cntS(26, 0);
+    vector<int> cntT(26, 0);
+
+    for (char c : s) cntS[c - 'a']++;
+    for (char c : t) cntT[c - 'a']++;
+
+    bool isAnagram = true;
+    for (int i = 0; i < 26; i++) {
+        if (cntS[i] != cntT[i]) {
+            isAnagram = false;
+            break;
+        }
+    }
+
+    if (isAnagram) cout << "YES\n";
+    else cout << "NO\n";
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Chi tiết | Kiểm tra |
+|---|---|
+| `c - 'a'` | Đảm bảo ký tự `c` là chữ cái in thường (`'a' <= c <= 'z'`). |
+| So sánh độ dài | Luôn kiểm tra `s.length() != t.length()` đầu tiên để thoát sớm. |
+
+#### Tự kiểm tra
+
+1. Phép trừ `c - 'a'` cho kết quả là kiểu dữ liệu gì?
+2. Làm thế nào để kiểm tra một xâu có thể sắp xếp lại thành xâu đối xứng (Palindrome) không? (Gợi ý: Có tối đa 1 ký tự có số lần xuất hiện lẻ).
+
+#### Luyện tập ngắn
+
+- **LT 4.3A:** Tìm chữ cái xuất hiện nhiều lần nhất trong xâu $S$ ($|S| \le 10^5$).
+- **LT 4.3B:** Kiểm tra xâu $S$ có thể đổi chỗ các ký tự để tạo thành xâu đối xứng không.
+
+#### Tóm tắt bài
+
+Ánh xạ `c - 'a'` biến bảng chữ cái thành mảng 26 phần tử, là công cụ tối ưu $\mathcal{O}(N)$ cho các bài toán xử lý xâu ký tự.
+
+---
+
+### Bài 4.4 — Kỹ thuật đếm cặp $\mathcal{O}(N)$ bằng Bảng tần suất
+
+#### Mục tiêu bài
+
+Sau Bài 4.4, em làm chủ kỹ thuật đếm số lượng cặp $(i, j)$ ($i < j$) có tổng bằng $S$ hoặc bằng nhau trong $\mathcal{O}(N)$ và biết cách phòng tránh bẫy tràn số.
+
+#### Khởi động
+
+Một bãi xe cần ghép từng cặp 2 xe sao cho tổng trọng tải đúng bằng $S = 6$ tấn.
+- Thay vì với mỗi xe lại đi tìm trong toàn bộ bãi ($\mathcal{O}(N^2)$), bác tài xế vừa kéo xe tải trọng $x$ vào, vừa nhìn sổ xem trước đó đã có bao nhiêu xe tải trọng bù $6 - x$.
+- Có bao nhiêu xe bù có sẵn $\implies$ tạo được bấy nhiêu cặp mới ngay lập tức!
+
+#### Kỹ thuật "Vừa duyệt vừa đếm"
+
+- Khi xét phần tử đứng sau tại vị trí $j$ có giá trị $x = A[j]$, phần tử đứng trước $A[i]$ ($i < j$) muốn ghép đôi để có tổng bằng $S$ phải có giá trị:
+  $$\text{comp} = S - x$$
+- Số phần tử đứng trước thỏa mãn chính là số lần `comp` đã xuất hiện trong mảng `cnt` tính đến trước bước $j$.
+- **Thứ tự thực hiện:**
+  1. `totalPairs += cnt[comp]` (cộng số cặp tạo được với các phần tử đứng trước).
+  2. `cnt[x]++` (ghi nhận phần tử hiện tại vào mảng đếm).
+
+> **Bẫy tràn số:** Với $N = 10^5$, số lượng cặp có thể đạt tới $\frac{N(N-1)}{2} \approx 5 \times 10^9 > 2 \times 10^9 \implies$ Bắt buộc dùng kiểu `long long` cho biến đếm kết quả.
+
+#### Mô phỏng đếm cặp tổng $S = 6$ cho $A = [1, 5, 3, 3, 5]$
+
+| Bước $j$ | Giá trị $x = A[j]$ | Giá trị bù $\text{comp} = 6 - x$ | `cnt[comp]` hiện có | Cộng dồn `totalPairs` | Cập nhật `cnt` |
+|:---:|:---:|:---:|:---:|:---:|---|
+| 0 | $1$ | $5$ | $0$ | $0$ | `cnt[1] = 1` |
+| 1 | $5$ | $1$ | $1$ | $0 + 1 = 1$ | `cnt[5] = 1` |
+| 2 | $3$ | $3$ | $0$ | $1$ | `cnt[3] = 1` |
+| 3 | $3$ | $3$ | $1$ | $1 + 1 = 2$ | `cnt[3] = 2` |
+| 4 | $5$ | $1$ | $1$ | $2 + 1 = 3$ | `cnt[5] = 2` |
+
+👉 **Tổng số cặp: 3 cặp** (chính xác 100%).
+
+#### Pseudocode
+
+```text
+totalPairs = 0 (kiểu long long)
+cnt = mảng MAX_VAL + 1 số 0
+
+for x trong dãy A:
+    comp = S - x
+    nếu comp nằm trong khoảng [0, MAX_VAL]:
+        totalPairs = totalPairs + cnt[comp]
+    cnt[x] = cnt[x] + 1
+
+in totalPairs
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX_VAL = 200000;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<int> cnt(MAX_VAL + 1, 0);
+    long long totalPairs = 0;
+
+    for (int j = 0; j < n; j++) {
+        int x;
+        cin >> x;
+
+        int comp = s - x;
+        if (comp >= 0 && comp <= MAX_VAL) {
+            totalPairs += cnt[comp];
+        }
+
+        if (x >= 0 && x <= MAX_VAL) {
+            cnt[x]++;
+        }
+    }
+
+    cout << totalPairs << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Thao tác | Đánh giá |
+|---|---|
+| Cộng `cnt[comp]` trước rồi mới `cnt[x]++` |  Đúng, tự động bảo đảm chỉ ghép với phần tử đứng trước ($i < j$). |
+| Khai báo `long long totalPairs` |  Đúng, chống tràn số khi số cặp vượt $2 \times 10^9$. |
+
+#### Tự kiểm tra
+
+1. Nếu đổi thứ tự thực hiện `cnt[x]++` trước rồi mới cộng `totalPairs += cnt[comp]`, điều gì sẽ xảy ra khi $x + x = S$?
+2. Muốn đếm số cặp bằng nhau ($A_i = A_j$), giá trị `comp` bằng bao nhiêu?
+
+#### Luyện tập ngắn
+
+- **LT 4.4A:** Đếm số cặp $(i, j)$ với $i < j$ thỏa mãn $A_i = A_j$ trong mảng $N$ phần tử ($N \le 10^5$).
+- **LT 4.4B:** Đếm số cặp $(i, j)$ với $i < j$ thỏa mãn $A_i - A_j = D$ ($D \ge 0$).
+
+#### Tóm tắt bài
+
+Kỹ thuật "vừa duyệt vừa đếm" kết hợp mảng tần suất giúp đếm cặp trong $\mathcal{O}(N)$. Luôn dùng `long long` cho biến đếm kết quả.
+
+---
+
+### Bài 4.5 — Nguyên lý Dirichlet trong Tin học
+
+#### Mục tiêu bài
+
+Sau Bài 4.5, em hiểu nguyên lý Dirichlet (nguyên lý chuồng bồ câu) và biết cách áp dụng mảng số dư tiền tố để tìm đoạn con liên tiếp có tổng chia hết cho $N$.
+
+#### Khởi động
+
+Nếu có **4 chiếc áo** và chỉ có **3 chiếc móc treo**, khi treo hết 4 chiếc áo chắc chắn sẽ có **ít nhất một chiếc móc treo từ 2 chiếc áo trở lên**.
+
+#### Nguyên lý Dirichlet và Đoạn con chia hết
+
+- **Nguyên lý cơ bản:** Nhốt $N + 1$ đồ vật vào $N$ chiếc hộp $\implies$ tồn tại ít nhất một hộp chứa từ 2 đồ vật trở lên.
+- **Ứng dụng tìm đoạn con chia hết cho $N$:**  
+  Xét $N$ tổng tiền tố $S_1, S_2, \dots, S_N$. Lấy số dư khi chia cho $N$: $R_i = S_i \pmod N$.
+  - Nếu có $S_k \pmod N == 0 \implies$ đoạn $[1, k]$ chia hết cho $N$.
+  - Nếu không, $N$ số dư chỉ nhận $N - 1$ giá trị từ $1$ đến $N - 1$. Theo Dirichlet, chắc chắn có hai vị trí $u < v$ sao cho $S_u \equiv S_v \pmod N \implies$ tổng đoạn từ $u + 1$ đến $v$ là $S_v - S_u$ chia hết cho $N$!
+
+#### Mô phỏng cho dãy $N = 5$: $A = [2, 3, 7, 1, 4]$
+
+| $i$ | $A_i$ | Tổng tiền tố $S_i$ | Số dư $R_i = S_i \pmod 5$ | Ghi nhận vị trí đầu tiên của số dư |
+|:---:|:---:|:---:|:---:|---|
+| $0$ | - | $S_0 = 0$ | $0$ | `firstPos[0] = 0` |
+| $1$ | $2$ | $S_1 = 2$ | $2$ | `firstPos[2] = 1` |
+| $2$ | $3$ | $S_2 = 5$ | $0$ | Trùng số dư 0 $\implies$ **Đoạn $[1, 2]$ tổng bằng 5 chia hết cho 5!** |
+
+#### Pseudocode
+
+```text
+firstPos = mảng kích thước n, gán toàn bộ bằng -1
+firstPos[0] = 0
+prefix = 0
+
+for i từ 1 đến n:
+    prefix = prefix + a[i]
+    rem = (prefix % n + n) % n
+    nếu firstPos[rem] != -1:
+        in (firstPos[rem] + 1) và i
+        dừng
+    firstPos[rem] = i
+```
+
+#### Code C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<int> firstPos(n, -1);
+    firstPos[0] = 0;
+
+    long long currentPrefix = 0;
+    int ansL = -1, ansR = -1;
+
+    for (int i = 1; i <= n; i++) {
+        long long x;
+        cin >> x;
+        currentPrefix += x;
+        int rem = (currentPrefix % n + n) % n;
+
+        if (firstPos[rem] != -1) {
+            ansL = firstPos[rem] + 1;
+            ansR = i;
+            break;
+        } else {
+            firstPos[rem] = i;
+        }
+    }
+
+    cout << ansL << " " << ansR << '\n';
+
+    return 0;
+}
+```
+
+#### Điều cần theo dõi khi debug
+
+| Biến | Lưu ý |
+|---|---|
+| `firstPos[0] = 0` | Mốc số dư 0 ở trước mảng (tổng rỗng). |
+| `(prefix % n + n) % n` | Công thức an toàn đảm bảo số dư không âm. |
+
+#### Tự kiểm tra
+
+1. Vì sao mảng $N$ phần tử luôn tìm được ít nhất một đoạn con có tổng chia hết cho $N$?
+2. Công thức `ansL = firstPos[rem] + 1` vì sao phải cộng thêm 1?
+
+#### Luyện tập ngắn
+
+- **LT 4.5A:** Đếm tổng số đoạn con liên tiếp có tổng chia hết cho $K$ ($K \le 10^5$) bằng mảng tần suất số dư tiền tố.
+- **LT 4.5B:** Cho $N + 1$ số nguyên thuộc $[1, 2N]$. Chứng minh luôn có 2 số mà số này là bội của số kia.
+
+#### Tóm tắt bài
+
+Nguyên lý Dirichlet kết hợp mảng lưu vị trí số dư tiền tố giải quyết bài toán tìm đoạn con chia hết trong $\mathcal{O}(N)$.
+
+---
+
+### Bài 4.6 — Ôn tập, kiểm tra và bài chuyển giao
+
+#### Mục tiêu bài
+
+Bài này giúp em củng cố các kỹ thuật thống kê tần suất, đếm cặp và đoạn con chia hết.
+
+#### Tầng A — Củng cố nền tảng
+
+##### Bài 4.6.1 — Phổ điểm kỳ thi
+Cho điểm thi của $N$ thí sinh từ $0$ đến $10$ ($N \le 10^5, 0 \le A_i \le 10$). In số thí sinh đạt từng mức điểm từ 0 đến 10.
+- **Input:** $N$ và dãy $N$ điểm số.
+- **Output:** 11 số nguyên tương ứng số lượng thí sinh đạt điểm $0..10$.
+- **Ví dụ:** `5` và `8 9 8 10 8` $\implies$ Output: `0 0 0 0 0 0 0 0 3 1 1`.
+
+##### Bài 4.6.2 — Phần tử độc nhất
+Cho dãy $N$ số nguyên ($N \le 10^5, 1 \le A_i \le 10^5$). Tìm giá trị nhỏ nhất chỉ xuất hiện đúng 1 lần. Nếu không có, in `-1`.
+- **Ví dụ:** `6` và `4 2 7 2 4 9` $\implies$ Output: `7`.
+
+##### Bài 4.6.3 — Ký tự hiếm nhất
+Cho xâu $S$ gồm các chữ cái in thường ($|S| \le 10^5$). Tìm chữ cái xuất hiện ít nhất một lần nhưng có số lần xuất hiện nhỏ nhất.
+- **Ví dụ:** `banana` $\implies$ Output: `b`.
+
+##### Bài 4.6.4 — Thống kê độ tuổi
+Cho độ tuổi của $N$ người và $Q$ truy vấn $[L, R]$. Đếm số người có độ tuổi trong đoạn $[L, R]$ ($N, Q \le 10^5, 18 \le L \le R \le 60$).
+
+---
+
+#### Tầng B — Vận dụng mẫu
+
+##### Bài 4.6.5 — Đếm cặp có tổng bằng K
+Cho dãy $N$ số nguyên ($N \le 10^5, 0 \le A_i \le 10^5$). Đếm số cặp $(i, j)$ với $i < j$ thỏa mãn $A_i + A_j = K$.
+- **Ví dụ:** `4 10` và `3 7 5 7` $\implies$ Output: `2`.
+
+##### Bài 4.6.6 — Đếm cặp có hiệu bằng D
+Cho dãy $N$ số nguyên ($N \le 10^5, 0 \le A_i \le 10^5$). Đếm số cặp $(i, j)$ với $i < j$ thỏa mãn $|A_i - A_j| = D$.
+
+##### Bài 4.6.7 — Phần tử xuất hiện nhiều hơn N/3 lần
+Cho dãy $N$ số nguyên. Tìm tất cả các giá trị xuất hiện nhiều hơn $\lfloor N / 3 \rfloor$ lần theo thứ tự tăng dần. Nếu không có, in `-1`.
+
+##### Bài 4.6.8 — Ghép đôi hoàn hảo
+Cho $2N$ số nguyên. Kiểm tra xem có thể ghép $2N$ số thành $N$ cặp số bằng nhau hay không. In `YES` hoặc `NO`.
+- **Ví dụ:** `4` số `41 42 41 42` $\implies$ Output: `YES`.
+
+---
+
+#### Tầng C — Chuyển giao
+
+##### Bài 4.6.9 — Đếm bộ ba có tổng bằng S
+Cho dãy $N$ số nguyên ($N \le 2000, 0 \le A_i \le 10^5$). Đếm số bộ ba $(i, j, k)$ với $i < j < k$ thỏa mãn $A_i + A_j + A_k = S$.
+- **Gợi ý:** Cố định phần tử ở giữa $j$, dùng mảng tần suất đếm các phần tử $i < j$.
+
+##### Bài 4.6.10 — Đếm đoạn con có tổng chia hết cho K
+Cho dãy $N$ số nguyên ($N \le 10^5, A_i \le 10^9$). Đếm số đoạn con liên tiếp có tổng chia hết cho $K$ ($K \le 10^5$).
+- **Ví dụ:** `4 3` và `1 2 3 3` $\implies$ Output: `4`.
+
+##### Bài 4.6.11 — Ghép đôi cùng điểm số
+Cho dãy $A$ gồm $N$ số và dãy $B$ gồm $M$ số ($N, M \le 10^5, 0 \le A_i, B_j \le 10^5$). Đếm số cách chọn một số từ $A$ và một số từ $B$ bằng nhau.
+- **Công thức:** $\sum \text{cntA}[v] \times \text{cntB}[v]$.
+
+##### Bài 4.6.12 — Đếm cặp chuỗi Anagram
+Cho $N$ chuỗi ký tự ngắn ($N \le 10^5, |S_i| \le 10$). Đếm số cặp chuỗi $(i, j)$ với $i < j$ là Anagram của nhau.
+
+---
+
+#### Phiếu tự đánh giá
+
+| Năng lực | Chưa chắc | Làm khi có gợi ý | Tự làm được |
+|---|:---:|:---:|:---:|
+| Xây dựng mảng tần suất $\mathcal{O}(N)$ |  |  |  |
+| Tìm Mode và Phần tử đa số tuyệt đối |  |  |  |
+| Ánh xạ chữ cái `'a'..'z'` kiểm tra Anagram |  |  |  |
+| Đếm cặp có tổng bằng $S$ trong $\mathcal{O}(N)$ |  |  |  |
+| Khai báo `long long` chống tràn số khi đếm cặp |  |  |  |
+| Tìm đoạn con chia hết cho $N$ bằng Dirichlet |  |  |  |
+
+#### Tiêu chí hoàn thành chương
+
+Em có thể xem mình đã nắm chắc chương khi:
+1. Giải thích được tại sao mảng tần suất giúp giảm độ phức tạp từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N)$.
+2. Viết được hàm đếm cặp tổng bằng $S$ không dùng 2 vòng lặp lồng nhau.
+3. Biết cách ánh xạ chữ cái bằng phép trừ `c - 'a'`.
+4. Không mắc bẫy tràn số khi đếm số lượng cặp.
+
+---
+
+### Tổng kết chương
+
+> **Mảng tần suất là bước đột phá từ tư duy so sánh tuần tự sang tư duy định vị trực tiếp. Bằng cách biến giá trị thành chỉ số, ta giải quyết bài toán thống kê và đếm cặp trong thời gian tuyến tính $\mathcal{O}(N)$.**
+
+| Cần nhớ | Nội dung |
+|---|---|
+| Mảng tần suất | `cnt[x]++` với $0 \le x \le \text{MAX\_VAL}$, thời gian $\mathcal{O}(N)$, bộ nhớ $\mathcal{O}(\text{MAX\_VAL})$ |
+| Bảng chữ cái | Mảng kích thước 26 phần tử với chỉ số `c - 'a'` |
+| Đếm cặp tổng $S$ | Cộng `cnt[S - x]` trước rồi mới `cnt[x]++` |
+| Đếm cặp bằng nhau | Cộng dồn `cnt[x]` khi duyệt hoặc tính $\sum \frac{C(C-1)}{2}$ |
+| Chống tràn số | Biến đếm cặp bắt buộc dùng kiểu `long long` |
+| Dirichlet | $N$ tổng tiền tố chia cho $N$ luôn có 2 tổng cùng số dư $\implies$ đoạn con chia hết |
+
+#### Những lỗi thường gặp
+
+| Lỗi | Cách tự kiểm tra |
+|---|---|
+| Kích thước mảng `cnt` nhỏ hơn $\max(A_i)$ | Luôn khai báo `MAX_VAL >= max(A_i)` |
+| Tràn số khi đếm số lượng cặp | Biến đếm số cặp phải là `long long` |
+| Quên trường hợp $A_i$ âm | Tịnh tiến chỉ số `cnt[x + OFFSET]` |
+| Số dư bị âm khi tính `prefix % N` | Dùng công thức an toàn `(prefix % N + N) % N` |
+
+---
+
+### Code tham chiếu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAX_VAL = 100000;
+
+// 1. Dem so cap co tong bang S trong O(N)
+long long countPairsWithSum(const vector<int> &a, int s) {
+    vector<int> cnt(MAX_VAL + 1, 0);
+    long long totalPairs = 0;
+
+    for (int x : a) {
+        int comp = s - x;
+        if (comp >= 0 && comp <= MAX_VAL) {
+            totalPairs += cnt[comp];
+        }
+        if (x >= 0 && x <= MAX_VAL) {
+            cnt[x]++;
+        }
+    }
+    return totalPairs;
+}
+
+// 2. Kiem tra hai chuoi Anagram O(N)
+bool isAnagram(const string &s, const string &t) {
+    if (s.length() != t.length()) return false;
+    vector<int> cnt(26, 0);
+    for (char c : s) cnt[c - 'a']++;
+    for (char c : t) cnt[c - 'a']--;
+    for (int i = 0; i < 26; i++) {
+        if (cnt[i] != 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+
+    cout << "Pairs with sum " << s << ": " << countPairsWithSum(a, s) << "\n";
+
+    return 0;
+}
+```
+
+---
 
 ## Chương 5 — Tìm kiếm nhị phân
 

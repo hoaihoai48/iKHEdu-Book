@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Nhận diện 2 dấu hiệu của bài toán DP: Bài toán con gối nhau (Overlapping Subproblems) và Cấu trúc con tối ưu (Optimal Substructure) — `LO-01`.
-2. Trình bày đầy đủ 3 bước thiết kế DP: Trạng thái (State), Công thức chuyển (Transition) và Điều kiện cơ sở (Base Case) — `LO-02`.
-3. Cài đặt thành thạo thuật toán LIS $\mathcal{O}(N^2)$ và bài toán Cái túi 0/1 (Knapsack) kèm tối ưu mảng 1D — `LO-03`.
-4. Giải các bài toán tìm đường đi tối ưu và đếm số cách đi trên lưới ô vuông (Grid DP) — `LO-04`.
+1. Nhận diện 2 dấu hiệu của bài toán DP: Bài toán con gối nhau (Overlapping Subproblems) và Cấu trúc con tối ưu (Optimal Substructure).
+2. Trình bày đầy đủ 3 bước thiết kế DP: Trạng thái (State), Công thức chuyển (Transition) và Điều kiện cơ sở (Base Case).
+3. Cài đặt thành thạo thuật toán LIS $\mathcal{O}(N^2)$ và bài toán Cái túi 0/1 (Knapsack) kèm tối ưu mảng 1D.
+4. Giải các bài toán tìm đường đi tối ưu và đếm số cách đi trên lưới ô vuông (Grid DP).
 
 ### Câu hỏi trung tâm của chương
 
@@ -186,7 +186,7 @@ int main() {
 #### 3. Bài tập thực hành Bài 13.3
 
 ##### Bài 13.3.1 — Chia Đôi Tài Sản Cân Bằng Nhất
-- **Bối cảnh:** Cho $N$ món đồ với giá trị $A_1..A_N$. Chia thành 2 phần sao cho chênh lệch tổng giá trị giữa 2 phần là nhỏ nhất có thể.
+- **Bối cảnh:** Cho $N$ món đồ với giá trị $A_1.A_N$. Chia thành 2 phần sao cho chênh lệch tổng giá trị giữa 2 phần là nhỏ nhất có thể.
 - **Input:** `4` \ `1 2 3 4` $\implies$ **Output:** `0` (chia {1, 4} và {2, 3}).
 
 ##### Bài 13.3.2 — Cái Túi Chọn Đúng K Món Đồ
@@ -248,7 +248,7 @@ int main() {
 
 ##### Bài 13.4.2 — Đếm Số Đường Đi Tránh Ô Vật Cản Trên Lưới
 - **Bối cảnh:** Đếm số đường đi từ $(1, 1)$ đến $(N, M)$ trên lưới có các ô cấm `#` modulo $10^9+7$.
-- **Input:** `3 3` \ `...` \ `.#.` \ `...` $\implies$ **Output:** `2`
+- **Input:** `3 3` \ `..` \ `.#.` \ `..` $\implies$ **Output:** `2`
 
 ---
 

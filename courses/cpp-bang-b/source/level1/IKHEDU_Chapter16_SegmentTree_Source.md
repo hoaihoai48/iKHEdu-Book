@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Cài đặt hàm `build`, `update` điểm và `query` đoạn của Segment Tree trong $\mathcal{O}(\log N)$ — `LO-01`.
-2. Khai báo mảng cây $4N$ phần tử không bao giờ bị tràn bộ nhớ — `LO-02`.
-3. Cài đặt kỹ thuật Lazy Propagation cập nhật cộng/gán trên đoạn $[L, R]$ trong $\mathcal{O}(\log N)$ — `LO-03`.
-4. Tìm vị trí phần tử đầu tiên $\ge X$ trong đoạn $[L, R]$ bằng cách đi bộ trên cây (Walk on Segment Tree) trong $\mathcal{O}(\log N)$ — `LO-04`.
+1. Cài đặt hàm `build`, `update` điểm và `query` đoạn của Segment Tree trong $\mathcal{O}(\log N)$.
+2. Khai báo mảng cây $4N$ phần tử không bao giờ bị tràn bộ nhớ.
+3. Cài đặt kỹ thuật Lazy Propagation cập nhật cộng/gán trên đoạn $[L, R]$ trong $\mathcal{O}(\log N)$.
+4. Tìm vị trí phần tử đầu tiên $\ge X$ trong đoạn $[L, R]$ bằng cách đi bộ trên cây (Walk on Segment Tree) trong $\mathcal{O}(\log N)$.
 
 ### Câu hỏi trung tâm của chương
 
@@ -131,7 +131,7 @@ int main() {
 #### 2. Bài toán mẫu có hướng dẫn
 
 > **Bài toán mẫu 16.2: Tìm Giá Trị Lớn Nhất Trên Đoạn Sau Cập Nhật**  
-> **Bối cảnh:** Tìm giá trị $\max(A[L..R])$ với các truy vấn sửa đổi giá trị tại một vị trí.  
+> **Bối cảnh:** Tìm giá trị $\max(A[L.R])$ với các truy vấn sửa đổi giá trị tại một vị trí.  
 > **Input:** `4 2` \ `1 5 2 8` \ `2 1 3` \ `1 2 10` $\implies$ **Output:** `5` (trước update).
 
 #### Cài đặt C++
@@ -207,7 +207,7 @@ int main() {
 #### 3. Bài tập thực hành Bài 16.2
 
 ##### Bài 16.2.1 — Tìm Giá Trị Nhỏ Nhất (RMQ) Đoạn Cập Nhật Điểm
-- **Bối cảnh:** Tìm giá trị $\min(A[L..R])$ với các thao tác thay đổi giá trị $A[P] = V$.
+- **Bối cảnh:** Tìm giá trị $\min(A[L.R])$ với các thao tác thay đổi giá trị $A[P] = V$.
 - **Input:** `3 1` \ `4 1 7` \ `2 1 3` $\implies$ **Output:** `1`
 
 ##### Bài 16.2.2 — Tìm Ước Chung Lớn Nhất Đoạn (Range GCD)
@@ -321,7 +321,7 @@ int main() {
 - **Input:** `3 2` \ `1 1 1` \ `1 1 2 3` \ `2 1 3` $\implies$ **Output:** `9`
 
 ##### Bài 16.3.2 — Gán Đoạn Tính Giá Trị Lớn Nhất
-- **Bối cảnh:** Thao tác 1: Gán mọi phần tử trong đoạn $[L, R]$ bằng $X$. Thao tác 2: Tìm $\max(A[L..R])$.
+- **Bối cảnh:** Thao tác 1: Gán mọi phần tử trong đoạn $[L, R]$ bằng $X$. Thao tác 2: Tìm $\max(A[L.R])$.
 - **Input:** `3 2` \ `5 5 5` \ `1 1 2 10` \ `2 2 3` $\implies$ **Output:** `10`
 
 ---

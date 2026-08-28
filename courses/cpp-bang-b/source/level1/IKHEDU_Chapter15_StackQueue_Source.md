@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Sử dụng `stack` để kiểm tra tính hợp lệ của biểu thức chứa nhiều loại dấu ngoặc — `LO-01`.
-2. Sử dụng `queue` và `deque` quản lý luồng dữ liệu FIFO và hai đầu — `LO-02`.
-3. Cài đặt Ngăn xếp đơn điệu (Monotonic Stack) tìm phần tử lớn hơn/nhỏ hơn đầu tiên bên phải trong $\mathcal{O}(N)$ — `LO-03`.
-4. Giải bài toán kinh điển Hình chữ nhật lớn nhất trong Histogram trong $\mathcal{O}(N)$ — `LO-04`.
+1. Sử dụng `stack` để kiểm tra tính hợp lệ của biểu thức chứa nhiều loại dấu ngoặc.
+2. Sử dụng `queue` và `deque` quản lý luồng dữ liệu FIFO và hai đầu.
+3. Cài đặt Ngăn xếp đơn điệu (Monotonic Stack) tìm phần tử lớn hơn/nhỏ hơn đầu tiên bên phải trong $\mathcal{O}(N)$.
+4. Giải bài toán kinh điển Hình chữ nhật lớn nhất trong Histogram trong $\mathcal{O}(N)$.
 
 ### Câu hỏi trung tâm của chương
 
@@ -316,7 +316,7 @@ int main() {
 #### Tầng C — Chuyển giao & Nâng cao (Rating 1500 - 1800)
 
 ##### Bài 15.5.9 — Tổng Mức Tiêu Thụ Điện Tối Thiểu Mọi Khoảng Thời Gian
-- **Bối cảnh:** Tính tổng $\sum_{1 \le i \le j \le N} \min(A[i..j])$ trong thời gian $\mathcal{O}(N)$ bằng Monotonic Stack.
+- **Bối cảnh:** Tính tổng $\sum_{1 \le i \le j \le N} \min(A[i.j])$ trong thời gian $\mathcal{O}(N)$ bằng Monotonic Stack.
 
 ##### Bài 15.5.10 — Hàng Đợi Trượt Giám Sát Min/Max Bằng Deque
 - **Bối cảnh:** Tìm giá trị nhỏ nhất và lớn nhất trong mọi cửa sổ trượt độ dài $K$ bằng Deque trong $\mathcal{O}(N)$.

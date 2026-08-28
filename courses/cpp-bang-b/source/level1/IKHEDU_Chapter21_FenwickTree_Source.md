@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Giải thích ý nghĩa của phép toán `lowbit(i) = i & (-i)` và cấu trúc lưu trữ của cây Fenwick — `LO-01`.
-2. Cài đặt 2 hàm cơ bản `update` và `getPrefixSum` trong chưa tới 10 dòng code C++ — `LO-02`.
-3. Áp dụng cây Fenwick kết hợp nén tọa độ để đếm số cặp nghịch thế trong thời gian $\mathcal{O}(N \log N)$ và bộ nhớ $\mathcal{O}(N)$ cực kỳ tối ưu — `LO-03`.
-4. Phân biệt chính xác khi nào nên chọn Fenwick Tree (ngắn gọn, nhanh gấp 2–3 lần) và khi nào bắt buộc dùng Segment Tree (cần Lazy propagation, RMQ phức tạp) — `LO-04`.
+1. Giải thích ý nghĩa của phép toán `lowbit(i) = i & (-i)` và cấu trúc lưu trữ của cây Fenwick.
+2. Cài đặt 2 hàm cơ bản `update` và `getPrefixSum` trong chưa tới 10 dòng code C++.
+3. Áp dụng cây Fenwick kết hợp nén tọa độ để đếm số cặp nghịch thế trong thời gian $\mathcal{O}(N \log N)$ và bộ nhớ $\mathcal{O}(N)$ cực kỳ tối ưu.
+4. Phân biệt chính xác khi nào nên chọn Fenwick Tree (ngắn gọn, nhanh gấp 2–3 lần) và khi nào bắt buộc dùng Segment Tree (cần Lazy propagation, RMQ phức tạp).
 
 ### Câu hỏi trung tâm của chương
 
@@ -179,7 +179,7 @@ int main() {
 ### Bài 21.3 — Ứng dụng kinh điển: Đếm số cặp nghịch thế (Inversions)
 
 #### 1. Khái niệm & Thuật toán
-- Nén tọa độ mảng về $1..N$.
+- Nén tọa độ mảng về $1.N$.
 - Duyệt từ $N$ về 1: `invCount += getPrefixSum(rank - 1)`, sau đó `update(rank, 1)`.
 
 ---
@@ -245,8 +245,8 @@ int main() {
 
 #### 3. Bài tập thực hành Bài 21.3
 
-##### Bài 21.3.1 — Đếm Số Cặp Nghịch Thế Cho Hoán Vị $1..N$
-- **Bối cảnh:** Cho hoán vị $1..N$ ($N \le 10^5$). Đếm số cặp nghịch thế trong $\mathcal{O}(N \log N)$ (không cần nén tọa độ).
+##### Bài 21.3.1 — Đếm Số Cặp Nghịch Thế Cho Hoán Vị $1.N$
+- **Bối cảnh:** Cho hoán vị $1.N$ ($N \le 10^5$). Đếm số cặp nghịch thế trong $\mathcal{O}(N \log N)$ (không cần nén tọa độ).
 - **Input:** `3` \ `3 1 2` $\implies$ **Output:** `2` (cặp (3,1) và (3,2)).
 
 ##### Bài 21.3.2 — Đếm Số Phần Tử Lớn Hơn Đứng Trước Mỗi Vị Trí
@@ -263,7 +263,7 @@ int main() {
 | **Độ dài code** | Cực ngắn (5–10 dòng) | Dài (30–60 dòng) |
 | **Hằng số thời gian** | Nhanh gấp 2–3 lần | Chậm hơn do đệ quy |
 | **Bộ nhớ** | $\mathcal{O}(N)$ mảng | $\mathcal{O}(4N)$ mảng |
-| **Phạm vi áp dụng** | Tổng tiền tố, phép toán nghịch đảo | Mọi phép toán (Min, Max, GCD, Gán đoạn...) |
+| **Phạm vi áp dụng** | Tổng tiền tố, phép toán nghịch đảo | Mọi phép toán (Min, Max, GCD, Gán đoạn..) |
 
 ---
 
@@ -342,7 +342,7 @@ int main() {
 - **Bối cảnh:** $Q$ truy vấn cộng điểm cho học sinh tại vị trí $P$ và tính tổng điểm đoạn $[L, R]$.
 
 ##### Bài 21.5.2 — Đếm Cặp Nghịch Thế Bằng BIT Cho Hoán Vị
-- **Bối cảnh:** Đếm số cặp nghịch thế trong hoán vị $1..N$ bằng cây Fenwick.
+- **Bối cảnh:** Đếm số cặp nghịch thế trong hoán vị $1.N$ bằng cây Fenwick.
 
 ##### Bài 21.5.3 — Cập Nhật Đoạn Truy Vấn Điểm Bằng BIT Hiệu
 - **Bối cảnh:** Range Update Point Query bằng mảng hiệu trên Fenwick Tree.

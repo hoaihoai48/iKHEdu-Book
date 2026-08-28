@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Xây dựng mảng tiền tố 1D trong $\mathcal{O}(N)$ và tính tổng đoạn bất kỳ $[L, R]$ trong $\mathcal{O}(1)$ — `LO-01`.
-2. Áp dụng Prefix XOR để kiểm tra và trả lời truy vấn XOR đoạn trong $\mathcal{O}(1)$ — `LO-02`.
-3. Cài đặt mảng hiệu 1D thực hiện $Q$ thao tác cộng đoạn $[L, R]$ trong $\mathcal{O}(1)$ mỗi thao tác — `LO-03`.
-4. Xây dựng mảng tiền tố 2D tính tổng hình chữ nhật con bất kỳ trên ma trận trong $\mathcal{O}(1)$ — `LO-04`.
+1. Xây dựng mảng tiền tố 1D trong $\mathcal{O}(N)$ và tính tổng đoạn bất kỳ $[L, R]$ trong $\mathcal{O}(1)$.
+2. Áp dụng Prefix XOR để kiểm tra và trả lời truy vấn XOR đoạn trong $\mathcal{O}(1)$.
+3. Cài đặt mảng hiệu 1D thực hiện $Q$ thao tác cộng đoạn $[L, R]$ trong $\mathcal{O}(1)$ mỗi thao tác.
+4. Xây dựng mảng tiền tố 2D tính tổng hình chữ nhật con bất kỳ trên ma trận trong $\mathcal{O}(1)$.
 
 ### Câu hỏi trung tâm của chương
 
@@ -104,7 +104,7 @@ int main() {
 #### 4. Bài tập thực hành Bài 6.1
 
 ##### Bài 6.1.1 — Đếm Lượng Điện Tiêu Thụ Vượt Ngưỡng Khu Dân Cư
-- **Bối cảnh:** Cho $N$ hộ gia đình với lượng điện tiêu thụ $A_1..A_N$. Đếm số hộ dùng điện vượt mức trung bình trong đoạn $[L, R]$ bằng cách chuyển đổi mảng sang nhị phân và tính Prefix Sum.
+- **Bối cảnh:** Cho $N$ hộ gia đình với lượng điện tiêu thụ $A_1.A_N$. Đếm số hộ dùng điện vượt mức trung bình trong đoạn $[L, R]$ bằng cách chuyển đổi mảng sang nhị phân và tính Prefix Sum.
 - **Input:** `5 2` \ `1 2 4 5 6` \ `1 3` \ `2 4` $\implies$ **Output:** `2` \ `2`
 
 ##### Bài 6.1.2 — Đoạn Phố Thương Mại Sầm Uất Nhất Độ Dài K
@@ -326,7 +326,7 @@ int main() {
 ##### Bài 6.5.9 — Đếm Vùng Đất Có Năng Suất Đúng Bằng K
 - **Bối cảnh:** Đếm số ma trận con có tổng đúng bằng $K$ ($N, M \le 400$).
 ##### Bài 6.5.10 — Kiểm Tra Mật Mã Đối Xứng Trong Đoạn Con
-- **Bối cảnh:** $Q$ truy vấn kiểm tra ký tự $S[L..R]$ có thể đảo thành Palindrome không bằng 26 mảng tiền tố ký tự.
+- **Bối cảnh:** $Q$ truy vấn kiểm tra ký tự $S[L.R]$ có thể đảo thành Palindrome không bằng 26 mảng tiền tố ký tự.
 ##### Bài 6.5.11 — Quét Đoạn Tuyến Giao Thông Line Sweep
 - **Bối cảnh:** Tính tổng chiều dài phần đường được sửa chữa từ $N$ đoạn đường thi công.
 ##### Bài 6.5.12 — Quảng Trường Hình Vuông Lát Đá Hoa Cương Lớn Nhất

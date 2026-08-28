@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Giải thích nguyên lý chia đôi và cài đặt tìm kiếm nhị phân $\mathcal{O}(\log N)$ không bao giờ bị lặp vô hạn — `LO-01`.
-2. Tìm vị trí xuất hiện đầu tiên và cuối cùng của phần tử trùng nhau (Lower/Upper Bound) — `LO-02`.
-3. Nhận diện tính chất đơn điệu của bài toán tối ưu và thiết kế hàm kiểm tra `bool check(mid)` — `LO-03`.
-4. Cài đặt thuật toán Chặt nhị phân kết quả tìm nghiệm tối ưu trong thời gian $\mathcal{O}(N \log(\text{range}))$ — `LO-04`.
+1. Giải thích nguyên lý chia đôi và cài đặt tìm kiếm nhị phân $\mathcal{O}(\log N)$ không bao giờ bị lặp vô hạn.
+2. Tìm vị trí xuất hiện đầu tiên và cuối cùng của phần tử trùng nhau (Lower/Upper Bound).
+3. Nhận diện tính chất đơn điệu của bài toán tối ưu và thiết kế hàm kiểm tra `bool check(mid)`.
+4. Cài đặt thuật toán Chặt nhị phân kết quả tìm nghiệm tối ưu trong thời gian $\mathcal{O}(N \log(\text{range}))$.
 
 ### Câu hỏi trung tâm của chương
 
@@ -259,7 +259,7 @@ int main() {
 ### Bài 5.4 — Chặt nhị phân kết quả (Binary Search on Answer)
 
 #### 1. Dấu hiệu nhận biết & Thiết kế hàm `check(mid)`
-- **Dấu hiệu:** Đề bài hỏi *"Tìm giá trị nhỏ nhất sao cho..."* hoặc *"Tìm giá trị lớn nhất thỏa mãn..."*.
+- **Dấu hiệu:** Đề bài hỏi *"Tìm giá trị nhỏ nhất sao cho.."* hoặc *"Tìm giá trị lớn nhất thỏa mãn.."*.
 - **Tính đơn điệu:** Nếu nghiệm $M$ thỏa mãn thì mọi $M' > M$ cũng thỏa mãn (hoặc ngược lại).
 
 ---

@@ -69,7 +69,7 @@ Hãy xác định hai iterator biểu diễn đoạn chứa toàn bộ `vector`.
 ### Tiêu chí tự kiểm tra
 
 - Có đọc đủ `N` phần tử.
-- Không truy cập chỉ số ngoài `0..N-1`.
+- Không truy cập chỉ số ngoài `0.N-1`.
 - Output không có chữ giải thích thừa.
 - Chạy đúng khi `N = 1`.
 

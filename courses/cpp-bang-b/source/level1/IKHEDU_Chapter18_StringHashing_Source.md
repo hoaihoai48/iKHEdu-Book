@@ -4,19 +4,19 @@
 
 | Trường | Nội dung |
 |---|---|
-| Mục tiêu | Nắm vững kỹ thuật Băm xâu đa thức (Polynomial Rolling Hash) để so sánh 2 xâu con bất kỳ $S[L..R]$ và $T[L'..R']$ trong thời gian $\mathcal{O}(1)$; làm chủ kỹ thuật Băm đôi (Double Hashing) triệt tiêu hoàn toàn va chạm mã băm; kết hợp Hashing với Tìm kiếm nhị phân |
+| Mục tiêu | Nắm vững kỹ thuật Băm xâu đa thức (Polynomial Rolling Hash) để so sánh 2 xâu con bất kỳ $S[L.R]$ và $T[L'.R']$ trong thời gian $\mathcal{O}(1)$; làm chủ kỹ thuật Băm đôi (Double Hashing) triệt tiêu hoàn toàn va chạm mã băm; kết hợp Hashing với Tìm kiếm nhị phân |
 | Kiến thức cần có | Xử lý xâu, mảng tiền tố (Prefix Sum), số học Modulo, lũy thừa nhanh |
-| Phạm vi | Hàm băm đa thức, Mảng tiền tố Hash $H[i]$, Lấy mã băm đoạn con $S[L..R]$ trong $\mathcal{O}(1)$, Kỹ thuật Băm đôi (Double Hashing), Tìm xâu con chung dài nhất bằng Hashing + Binary Search $\mathcal{O}(N \log N)$ |
+| Phạm vi | Hàm băm đa thức, Mảng tiền tố Hash $H[i]$, Lấy mã băm đoạn con $S[L.R]$ trong $\mathcal{O}(1)$, Kỹ thuật Băm đôi (Double Hashing), Tìm xâu con chung dài nhất bằng Hashing + Binary Search $\mathcal{O}(N \log N)$ |
 | Số bài | 4 bài học lý thuyết & ví dụ mẫu + 1 bài luyện tập phân tầng |
 | Tổng bài tập | 12 bài tập tự chứa (Tầng A: 4 bài, Tầng B: 4 bài, Tầng C: 4 bài) |
 
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Xây dựng mảng tiền tố mã băm $H[i]$ và mảng lũy thừa cơ số $P^i$ trong thời gian $\mathcal{O}(N)$ — `LO-01`.
-2. Lấy giá trị mã băm của đoạn con $S[L..R]$ bất kỳ trong thời gian $\mathcal{O}(1)$ bằng công thức đồng dư — `LO-02`.
-3. Cài đặt Băm đôi (Double Hashing) với 2 modulo độc lập (ví dụ $10^9+7$ và $10^9+9$) để chống tràn và triệt tiêu va chạm — `LO-03`.
-4. Kết hợp Hashing với Tìm kiếm nhị phân để tìm xâu đối xứng dài nhất hoặc tiền tố chung dài nhất (LCP) trong $\mathcal{O}(N \log N)$ — `LO-04`.
+1. Xây dựng mảng tiền tố mã băm $H[i]$ và mảng lũy thừa cơ số $P^i$ trong thời gian $\mathcal{O}(N)$.
+2. Lấy giá trị mã băm của đoạn con $S[L.R]$ bất kỳ trong thời gian $\mathcal{O}(1)$ bằng công thức đồng dư.
+3. Cài đặt Băm đôi (Double Hashing) với 2 modulo độc lập (ví dụ $10^9+7$ và $10^9+9$) để chống tràn và triệt tiêu va chạm.
+4. Kết hợp Hashing với Tìm kiếm nhị phân để tìm xâu đối xứng dài nhất hoặc tiền tố chung dài nhất (LCP) trong $\mathcal{O}(N \log N)$.
 
 ### Câu hỏi trung tâm của chương
 
@@ -30,7 +30,7 @@ Sau chương này, em có thể:
 - **Công thức mã băm đa thức:**
   $$H[i] = (H[i - 1] \times \text{BASE} + S[i]) \pmod M$$
   (với $\text{BASE} = 311$, $M = 10^9+7$).
-- **Mã băm của đoạn con $S[L..R]$:**
+- **Mã băm của đoạn con $S[L.R]$:**
   $$\text{getHash}(L, R) = (H[R] - H[L - 1] \times \text{BASE}^{R - L + 1} + M \times M) \pmod M$$
 
 ---
@@ -97,7 +97,7 @@ int main() {
 
 ---
 
-### Bài 18.2 — Lấy mã băm đoạn con $S[L..R]$ trong $\mathcal{O}(1)$
+### Bài 18.2 — Lấy mã băm đoạn con $S[L.R]$ trong $\mathcal{O}(1)$
 
 #### 1. Khái niệm & Thuật toán
 - Sử dụng mảng tiền tố `h` và mảng lũy thừa `power` lấy mã băm trong $\mathcal{O}(1)$.
@@ -107,7 +107,7 @@ int main() {
 #### 2. Bài toán mẫu có hướng dẫn
 
 > **Bài toán mẫu 18.2: So Sánh Hai Đoạn Văn Bản Trong $\mathcal{O}(1)$**  
-> **Bối cảnh:** Nhập xâu $S$. Thực hiện $Q$ truy vấn kiểm tra xem đoạn con $S[a..b]$ có giống hệt đoạn con $S[c..d]$ hay không.  
+> **Bối cảnh:** Nhập xâu $S$. Thực hiện $Q$ truy vấn kiểm tra xem đoạn con $S[a.b]$ có giống hệt đoạn con $S[c.d]$ hay không.  
 > **Input:** `abacaba` \ `2` \ `1 3 5 7` \ `1 2 4 5` $\implies$ **Output:** `YES` \ `NO`.
 
 #### Cài đặt C++
@@ -158,11 +158,11 @@ int main() {
 #### 3. Bài tập thực hành Bài 18.2
 
 ##### Bài 18.2.1 — Kiểm Tra Xâu Đối Xứng Palindrome Trong $\mathcal{O}(1)$
-- **Bối cảnh:** Dựng 2 mảng Hash xuôi và ngược. Trả lời $Q$ truy vấn kiểm tra xem đoạn $S[L..R]$ có phải Palindrome không.
+- **Bối cảnh:** Dựng 2 mảng Hash xuôi và ngược. Trả lời $Q$ truy vấn kiểm tra xem đoạn $S[L.R]$ có phải Palindrome không.
 - **Input:** `abacaba 1` \ `1 7` $\implies$ **Output:** `YES`
 
 ##### Bài 18.2.2 — So Sánh Hai Đoạn Xâu Con Độ Dài Khác Nhau
-- **Bối cảnh:** $Q$ truy vấn kiểm tra xem $S[a..b]$ có bằng $S[c..d]$ không.
+- **Bối cảnh:** $Q$ truy vấn kiểm tra xem $S[a.b]$ có bằng $S[c.d]$ không.
 - **Input:** `abcabc 1` \ `1 3 4 6` $\implies$ **Output:** `YES`
 
 ---
@@ -312,13 +312,13 @@ int main() {
 #### Tầng A — Củng cố nền tảng (Rating 1000 - 1200)
 
 ##### Bài 18.5.1 — So Sánh Hai Đoạn Xâu Con Trong $\mathcal{O}(1)$
-- **Bối cảnh:** $Q$ truy vấn so sánh xem $S[a..b]$ có bằng $S[c..d]$ không.
+- **Bối cảnh:** $Q$ truy vấn so sánh xem $S[a.b]$ có bằng $S[c.d]$ không.
 
 ##### Bài 18.5.2 — Tìm Kiếm Mẫu Xâu Con Đơn Giản (String Matching)
 - **Bối cảnh:** Tìm tất cả vị trí xuất hiện của xâu mẫu $P$ trong văn bản $T$.
 
 ##### Bài 18.5.3 — Kiểm Tra Đoạn Con Đối Xứng Bằng Hashing
-- **Bối cảnh:** Xây dựng Hash xuôi và Hash ngược để kiểm tra $S[L..R]$ có phải Palindrome không trong $\mathcal{O}(1)$.
+- **Bối cảnh:** Xây dựng Hash xuôi và Hash ngược để kiểm tra $S[L.R]$ có phải Palindrome không trong $\mathcal{O}(1)$.
 
 ##### Bài 18.5.4 — Đếm Số Đoạn Con Bằng Nhau
 - **Bối cảnh:** Đếm số lượng đoạn con độ dài $K$ giống nhau trong văn bản.

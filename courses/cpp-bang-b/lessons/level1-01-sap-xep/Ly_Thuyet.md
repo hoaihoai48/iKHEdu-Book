@@ -59,7 +59,7 @@ for (int i = 0; i < n; i++) {
 Với `n` phần tử, chỉ số hợp lệ là:
 
 ```text
-0, 1, 2, ..., n - 1
+0, 1, 2, .., n - 1
 ```
 
 > **Cần chú ý:** `a[n]` là vị trí nằm ngoài mảng. Khi duyệt mảng, điều kiện thường là `i < n`, không phải `i <= n`.
@@ -337,7 +337,7 @@ Nếu một bài toán sau này yêu cầu trả lời “giá trị này đứn
 Nếu dãy đã sắp xếp tăng dần, hai giá trị gần nhau nhất phải nằm ở hai vị trí kề nhau. Vì vậy thay vì xét mọi cặp, ta chỉ cần xét:
 
 ```text
-(a[0], a[1]), (a[1], a[2]), ..., (a[n-2], a[n-1])
+(a[0], a[1]), (a[1], a[2]), .., (a[n-2], a[n-1])
 ```
 
 Sắp xếp biến bài toán từ “xét mọi cặp” thành “xét các cặp kề nhau”.

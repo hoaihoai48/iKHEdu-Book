@@ -47,8 +47,8 @@ README.md → Ly_Thuyet.md → Bai_Tap.md → code/test
 | Bài tập thực hành | [`Bai_Tap.md`](Bai_Tap.md) | `draft` – đã tạo, chờ review |
 | Code tham chiếu | [`code_reference.cpp`](code_reference.cpp) | `draft` – đã compile smoke test, chờ teacher review |
 | Test/fixture | Chưa chốt | Chưa tạo; cần quyết định sau review |
-| Tài liệu gốc Chương 1 | [`../../source/level1/IKHEDU_Chapter01_Sorting_Source.md`](../../source/level1/IKHEDU_Chapter01_Sorting_Source.md) | `draft` |
-| Level 0 tham chiếu | [`../../source/level0/IKHEDU_Level0_Foundation.md`](../../source/level0/IKHEDU_Level0_Foundation.md) | `draft` |
+| Tài liệu gốc Chương 1 | [`././source/level1/IKHEDU_Chapter01_Sorting_Source.md`](././source/level1/IKHEDU_Chapter01_Sorting_Source.md) | `draft` |
+| Level 0 tham chiếu | [`././source/level0/IKHEDU_Level0_Foundation.md`](././source/level0/IKHEDU_Level0_Foundation.md) | `draft` |
 
 ## Cấu trúc buổi học dự kiến
 

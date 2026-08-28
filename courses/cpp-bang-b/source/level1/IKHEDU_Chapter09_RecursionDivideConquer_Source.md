@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Viết đúng hàm đệ quy có điều kiện dừng (Base Case) rõ ràng và bước đệ quy tiến về điểm dừng — `LO-01`.
-2. Cài đặt thuật toán Lũy thừa nhị phân tính $A^B$ trong thời gian $\mathcal{O}(\log B)$ — `LO-02`.
-3. Trình bày và cài đặt hoàn chỉnh thuật toán sắp xếp Merge Sort $\mathcal{O}(N \log N)$ — `LO-03`.
-4. Ứng dụng kỹ thuật trộn của Merge Sort để đếm số cặp nghịch thế trong $\mathcal{O}(N \log N)$ — `LO-04`.
+1. Viết đúng hàm đệ quy có điều kiện dừng (Base Case) rõ ràng và bước đệ quy tiến về điểm dừng.
+2. Cài đặt thuật toán Lũy thừa nhị phân tính $A^B$ trong thời gian $\mathcal{O}(\log B)$.
+3. Trình bày và cài đặt hoàn chỉnh thuật toán sắp xếp Merge Sort $\mathcal{O}(N \log N)$.
+4. Ứng dụng kỹ thuật trộn của Merge Sort để đếm số cặp nghịch thế trong $\mathcal{O}(N \log N)$.
 
 ### Câu hỏi trung tâm của chương
 

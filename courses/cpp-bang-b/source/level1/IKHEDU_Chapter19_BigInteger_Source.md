@@ -13,10 +13,10 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Đọc và biểu diễn số nguyên lớn hàng nghìn chữ số bằng `string` hoặc `vector<int>` đảo ngược — `LO-01`.
-2. Cài đặt hàm so sánh 2 số nguyên lớn dựa trên độ dài và thứ tự từ điển — `LO-02`.
-3. Cài đặt chính xác phép Cộng và phép Trừ số lớn (kèm kỹ thuật xử lý biến nhớ `carry`) — `LO-03`.
-4. Cài đặt phép Nhân số lớn với số lớn và phép Chia/Modulo số lớn cho số nguyên thường trong $\mathcal{O}(N)$ — `LO-04`.
+1. Đọc và biểu diễn số nguyên lớn hàng nghìn chữ số bằng `string` hoặc `vector<int>` đảo ngược.
+2. Cài đặt hàm so sánh 2 số nguyên lớn dựa trên độ dài và thứ tự từ điển.
+3. Cài đặt chính xác phép Cộng và phép Trừ số lớn (kèm kỹ thuật xử lý biến nhớ `carry`).
+4. Cài đặt phép Nhân số lớn với số lớn và phép Chia/Modulo số lớn cho số nguyên thường trong $\mathcal{O}(N)$.
 
 ### Câu hỏi trung tâm của chương
 
