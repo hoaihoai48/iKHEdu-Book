@@ -11,7 +11,7 @@
 | **Đối tượng** | Học sinh đang xây nền tảng C++ và bắt đầu học thuật toán |
 | **Ngôn ngữ** | Tiếng Việt; thuật ngữ và code dùng quy ước C++/English khi cần |
 | **Mục tiêu tổng quát** | Biết nhận dạng, giải thích và vận dụng các thuật toán/cấu trúc dữ liệu cơ bản trong các bài toán phù hợp |
-| **Prerequisites** | Level 0 – Nền tảng C++ & Tư duy lập trình; xem tài liệu tra cứu nhanh trong `curriculum/level0/` |
+| **Prerequisites** | Level 0 – Nền tảng C++ & Tư duy lập trình; xem tài liệu tra cứu nhanh trong `source/level0/` |
 | **Số chủ đề roadmap** | 21 chủ đề |
 | **BOOK_MASTER** | [`BOOK_MASTER.md`](BOOK_MASTER.md) — bản thảo canonical, trạng thái `draft`, đã có coverage 21 chương |
 | **Module MVP đầu tiên** | Module 01 – Sắp xếp |
@@ -21,7 +21,7 @@
 
 ## BOOK_MASTER — Bản thảo canonical
 
-Bản thảo sách tổng hợp được quản lý tại [`BOOK_MASTER.md`](BOOK_MASTER.md). Đây là file canonical để chuẩn bị bản in/bản digital; các lesson trong `lessons/` là artifact chi tiết phục vụ biên soạn và thực hành.
+Bản thảo sách tổng hợp được quản lý tại [`BOOK_MASTER.md`](BOOK_MASTER.md). Đây là file canonical để chuẩn bị bản in/bản digital; các lesson trong `lessons/` là artifact chi tiết phục vụ biên soạn và thực hành. Quy trình bắt buộc là: cập nhật tài liệu gốc trong `source/` → review nội dung → đồng bộ phần đã chốt vào `BOOK_MASTER.md`. Không viết ngược trực tiếp vào BOOK_MASTER rồi mới tạo source.
 
 ## 1. Mục tiêu khóa học
 
@@ -46,8 +46,8 @@ Thứ tự dưới đây là **teaching sequence tạm thời** để xây dựn
 
 | Thứ tự | Module/chủ đề | Kỹ năng chính | Prerequisite chính | Learning outcome | Tài liệu hiện có | Status |
 |---:|---|---|---|---|---|---|
-| 0 | Phần 0 – Cách học và tư duy giải bài | Input–Process–Output, đọc đề, pseudocode, test, debug, complexity | Không | Biết biến đề bài thành các bước xử lý có thể lập trình | [Level 0 Foundation](curriculum/level0/IKHEDU_Level0_Foundation.md) | draft |
-| 1 | **Sắp xếp** | `sort`, comparator, nhiều tiêu chí, tiền xử lý | Mảng, `vector`, vòng lặp, so sánh, swap | Biết dùng thứ tự để làm bài toán đơn giản hơn | [Level 1 Textbook outline](curriculum/level1/IKHEDU_Level1_Textbook_Outline.md) | **MVP – draft** |
+| 0 | Phần 0 – Cách học và tư duy giải bài | Input–Process–Output, đọc đề, pseudocode, test, debug, complexity | Không | Biết biến đề bài thành các bước xử lý có thể lập trình | [Level 0 Foundation](source/level0/IKHEDU_Level0_Foundation.md) | draft |
+| 1 | **Sắp xếp** | `sort`, comparator, nhiều tiêu chí, tiền xử lý | Mảng, `vector`, vòng lặp, so sánh, swap | Biết dùng thứ tự để làm bài toán đơn giản hơn | [Tài liệu gốc Chương 1 — Sắp xếp](source/level1/IKHEDU_Chapter01_Sorting_Source.md) | **MVP – draft** |
 | 2 | Tham lam | Quyết định cục bộ, chứng minh lựa chọn | Sắp xếp, so sánh, invariant | Nhận diện và kiểm tra chiến lược tham lam | BOOK_MASTER — nội dung cốt lõi | draft-map |
 | 3 | Số học | Ước, bội, GCD/LCM, số nguyên tố | Vòng lặp, modulo, hàm | Vận dụng tính chất số học cơ bản | BOOK_MASTER — nội dung cốt lõi | draft-map |
 | 4 | Đếm phân phối | Nguyên lý Dirichlet, bao hàm–loại trừ | Đếm, mảng, tần suất | Chọn phương pháp đếm phù hợp | BOOK_MASTER — nội dung cốt lõi | draft-map |
@@ -95,7 +95,7 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 
 | Artifact | Vị trí dự kiến | Trạng thái |
 |---|---|---|
-| Outline chương | `curriculum/level1/IKHEDU_Level1_Textbook_Outline.md` | Có, draft |
+| Tài liệu gốc Chương 1 | `source/level1/IKHEDU_Chapter01_Sorting_Source.md` | Có, draft |
 | Lesson package | [`lessons/level1-01-sap-xep/`](lessons/level1-01-sap-xep/README.md) | `draft` – đã tạo |
 | Lý thuyết | `lessons/level1-01-sap-xep/Ly_Thuyet.md` | `draft` – đã tạo |
 | Bài tập | `lessons/level1-01-sap-xep/Bai_Tap.md` | `draft` – đã tạo |
@@ -109,8 +109,8 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 |---|---|---:|---|
 | Course index | `README.md` | yes | Trang chủ khóa học, learning path và assessment map |
 | Book master | [`BOOK_MASTER.md`](BOOK_MASTER.md) | yes | Bản thảo canonical tổng hợp để chuẩn bị bản in/digital |
-| Level 0 reference | `curriculum/level0/IKHEDU_Level0_Foundation.md` | draft | Tài liệu nền tảng và tra cứu nhanh hiện có |
-| Level 1 textbook outline | `curriculum/level1/IKHEDU_Level1_Textbook_Outline.md` | draft | Phác thảo giáo trình và Chương 1 – Sắp xếp |
+| Level 0 reference | `source/level0/IKHEDU_Level0_Foundation.md` | draft | Tài liệu nền tảng và tra cứu nhanh hiện có |
+| Tài liệu gốc Chương 1 — Sắp xếp | `source/level1/IKHEDU_Chapter01_Sorting_Source.md` | draft | Nội dung gốc đã viết cho Chương 1 – Sắp xếp |
 | Lesson packages | `lessons/` | planned | Các gói bài học theo chuẩn `README → Ly_Thuyet → Bai_Tap → code/test` |
 | Problem packages | `problems/` | planned | Các gói bài toán theo chuẩn `De_Bai → Huong_Dan_Giang_Day → solution → test` |
 | Assessments | `assessments/` | planned | Placement test, formative check, module test và certification |

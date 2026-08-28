@@ -32,7 +32,8 @@ Khi các nguồn xung đột, không tự hòa giải. Ghi conflict vào evidenc
 | `FILE-005` | `.agents/context/project-context.md` | project context | controlled | 2026-08-27 | Context contract for agent |
 | `FILE-006` | `.agents/context/evidence-ledger.md` | claims/citations | controlled | 2026-08-27 | Provenance registry |
 | `FILE-007` | `.agents/context/decision-log.md` | decisions/handoff | controlled | 2026-08-27 | Record material decisions |
-| `FILE-008` | `courses/cpp-bang-b/BOOK_MASTER.md` | canonical book manuscript | no | 2026-08-28 | Canonical draft for print/digital integration; lesson files are supporting artifacts |
+| `FILE-008` | `courses/cpp-bang-b/BOOK_MASTER.md` | canonical book manuscript | no | 2026-08-28 | Canonical draft for print/digital integration; synchronized from reviewed source documents |
+| `FILE-009` | `courses/cpp-bang-b/source/level1/IKHEDU_Chapter01_Sorting_Source.md` | chapter source manuscript | no | 2026-08-28 | Source document for Chapter 1; update and review here before syncing to BOOK_MASTER |
 
 ## Retrieval rules
 

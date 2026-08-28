@@ -10,8 +10,8 @@
 | Chủ biên / owner | Chủ dự án iKHEDU |
 | Người duyệt cuối | TBD — cần chủ dự án xác nhận |
 | Repository / workspace | `ikhEdu_lessons` |
-| Context version | 1.0.0 |
-| Last updated | 2026-08-27 |
+| Context version | 1.1.0 |
+| Last updated | 2026-08-28 |
 
 ## Product definition
 
@@ -61,8 +61,8 @@
 
 ## Current state
 
-- Đã hoàn thành: knowledge base lớn, báo cáo thiết kế nền tảng, quick reference Level 0 và roadmap Level 1; đã tích hợp `.agents`; đã tạo course registry, cấu trúc khóa `cpp-bang-b`, outline curriculum, lesson package draft cho Module 01 – Sắp xếp và BOOK_MASTER canonical với coverage 21 chương Level 1.
-- Đang làm: tiếp tục hoàn thiện BOOK_MASTER theo cấu trúc sách mới; Phần I dùng mục I.1–I.6, Phần II đánh số thuật toán từ Chương 1 — Sắp xếp; Chương 1 đã được approve và chia thành Bài 1.1–1.7.
-- Blockers: người duyệt cuối, citation style, license/attribution policy, thời lượng từng module và cấu trúc thư mục bài toán mới cần xác nhận.
-- Việc tiếp theo: review và viết sâu các Bài 1.1–1.7 trong Chương 1, sau đó dùng cấu trúc đã approve làm mẫu cho các chương tiếp theo; không tạo master riêng hoặc file rời nếu chưa cần.
-- Lần handoff gần nhất: 2026-08-27 — tích hợp bộ `.agents` vào project.
+- Đã hoàn thành: Khóa kiến trúc sách (Architecture Locked) cho `BOOK_MASTER.md` với tựa đề `iKHEDU C++ Bảng B: Từ nền tảng lập trình đến thuật toán`; cấu trúc 2 tầng gồm Phần I (I.1–I.6) và Phần II (Chương 1–21); Chương 1 (Sắp xếp) đã được hoàn thiện 7 bài chi tiết làm chuẩn mực logic; tích hợp toàn diện bộ `.agents`.
+- Đang làm: Biên soạn theo quy trình source-first; tài liệu gốc nằm trong `courses/cpp-bang-b/source/`, sau khi review mới đồng bộ sang BOOK_MASTER; tiếp tục làm sâu Phần I và các chương thuật toán.
+- Blockers: Không có blocker về mặt thiết kế cấu trúc.
+- Việc tiếp theo: Chủ dự án review tài liệu gốc Chương 1 trong `source/level1/`; chỉ sau khi chốt mới đồng bộ thay đổi tiếp theo vào BOOK_MASTER; sau đó dùng quy trình này cho chương kế tiếp.
+- Lần handoff gần nhất: 2026-08-28 — Khóa kiến trúc và chuẩn hóa phương pháp sư phạm cho giáo trình `cpp-bang-b`.

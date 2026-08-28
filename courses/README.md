@@ -15,7 +15,7 @@ Mỗi khóa học nên có cấu trúc tối thiểu:
 ```text
 courses/<course-slug>/
 ├── README.md
-├── curriculum/
+├── source/
 │   ├── level0/
 │   └── level1/
 ├── lessons/
