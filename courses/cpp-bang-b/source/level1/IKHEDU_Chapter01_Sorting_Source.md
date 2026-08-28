@@ -693,40 +693,152 @@ Một lời giải tốt không chỉ có output đúng. Em cần biết dữ li
 
 ### Bài 1.7 — Ôn tập, kiểm tra và bài chuyển giao
 
+#### Mục tiêu bài
+
 Bài này giúp em kiểm tra xem mình đã hiểu ý tưởng hay mới chỉ nhớ cú pháp. Hãy làm theo thứ tự từ Tầng A đến Tầng C; không cần làm tất cả trong một lần nếu giáo viên đã giao phạm vi cụ thể.
+
+Mỗi bài lập trình cần được hoàn thành theo chuỗi:
+
+```text
+Đọc đề → xác định Input/Output → viết ý tưởng bằng lời
+       → code → test nhỏ → kiểm tra độ phức tạp → tự giải thích
+```
 
 #### Tầng A — Củng cố cú pháp
 
-1. Đọc `N` số nguyên và in theo thứ tự tăng dần.
-2. Đọc `N` số nguyên và in theo thứ tự giảm dần.
-3. In `YES` nếu dãy đã tăng dần không giảm, ngược lại in `NO`. Bài này không cần gọi `sort`.
-4. Đếm số giá trị khác nhau sau khi sắp xếp.
+##### Bài 1.7.1 — Dãy số tăng dần
 
-Với mỗi bài, em cần kiểm tra: đọc đủ dữ liệu, không truy cập ngoài mảng, xử lý được `N = 1` và không in lời giải thích thừa.
+Đọc `N` số nguyên và in các số theo thứ tự không giảm.
+
+- **Input:** Dòng đầu chứa `N`; dòng sau chứa `N` số nguyên.
+- **Output:** Dãy sau khi sắp xếp tăng dần, các số cách nhau bởi một dấu cách.
+- **Ví dụ:** Input `5` và dãy `8 3 6 1 5` cho output `1 3 5 6 8`.
+
+Em cần kiểm tra đã đọc đủ `N` phần tử và không truy cập chỉ số ngoài `0..N-1`.
+
+##### Bài 1.7.2 — Dãy số giảm dần
+
+Đọc `N` số nguyên và in theo thứ tự không tăng.
+
+- **Input:** `N` và một dãy `N` số nguyên.
+- **Output:** Dãy sau khi sắp xếp giảm dần.
+- **Ví dụ:** Với dãy `4 9 1 9 3 2`, output là `9 9 4 3 2 1`.
+
+Hãy thử thêm trường hợp tất cả phần tử bằng nhau và trường hợp dãy đã giảm dần.
+
+##### Bài 1.7.3 — Kiểm tra dãy đã có thứ tự chưa
+
+Cho `N` số nguyên. In `YES` nếu dãy đã sắp xếp không giảm; ngược lại in `NO`.
+
+- **Input:** `N` và một dãy `N` số nguyên.
+- **Output:** Một từ `YES` hoặc `NO`.
+- **Ví dụ:** `1 2 2 5 9` cho `YES`; `1 4 3 8` cho `NO`.
+
+Bài này không cần gọi `sort`. Duyệt từ `i = 1` và kiểm tra xem có lần nào `a[i] < a[i - 1]` hay không.
+
+##### Bài 1.7.4 — Đếm giá trị khác nhau
+
+Cho `N` số nguyên. Hãy đếm số giá trị khác nhau trong dãy.
+
+- **Input:** `N` và một dãy `N` số nguyên.
+- **Output:** Số lượng giá trị khác nhau.
+- **Ví dụ:** Dãy `4 2 4 1 2 2 9 1` có kết quả `4`.
+
+Gợi ý: sắp xếp trước, sau đó đếm phần tử đầu tiên và mỗi phần tử khác phần tử đứng ngay trước nó. Hãy thử riêng trường hợp mọi phần tử giống nhau và mọi phần tử khác nhau.
 
 #### Tầng B — Vận dụng mẫu
 
-5. Sắp xếp sao cho số chẵn đứng trước số lẻ; trong mỗi nhóm, số nhỏ hơn đứng trước.
-6. Sắp xếp theo trị tuyệt đối tăng dần; nếu bằng nhau, số nhỏ hơn đứng trước.
-7. Tìm khoảng cách nhỏ nhất giữa hai vị trí khác nhau.
-8. Tìm giá trị gần `X` nhất; nếu có nhiều giá trị cùng khoảng cách, chọn giá trị nhỏ hơn.
-9. In mỗi giá trị khác nhau cùng số lần xuất hiện theo thứ tự tăng dần.
+##### Bài 1.7.5 — Số chẵn đứng trước
 
-Sau khi làm xong, em phải trả lời được: comparator có những tiêu chí nào và Sorting giúp bước nào trong lời giải.
+Cho `N` số nguyên. Sắp xếp sao cho số chẵn đứng trước số lẻ. Trong mỗi nhóm, các số được sắp xếp tăng dần.
+
+- **Input:** `N` và một dãy `N` số nguyên.
+- **Output:** Dãy sau khi sắp xếp theo hai quy tắc.
+- **Ví dụ:** Dãy `5 2 8 1 4 7 3` cho output `2 4 8 1 3 5 7`.
+
+Hãy viết quy tắc bằng lời trước: kiểm tra nhóm chẵn/lẻ, rồi mới so sánh giá trị.
+
+##### Bài 1.7.6 — Sắp xếp theo trị tuyệt đối
+
+Cho `N` số nguyên. Sắp xếp theo trị tuyệt đối tăng dần. Nếu hai số có cùng trị tuyệt đối, số nhỏ hơn đứng trước.
+
+- **Input:** `N` và một dãy `N` số nguyên.
+- **Output:** Dãy đã sắp xếp theo quy tắc trên.
+- **Ví dụ:** Dãy `-5 2 -1 4 -2 3` cho output `-1 -2 2 3 4 -5`.
+
+Em cần kiểm tra cả số âm, số dương và trường hợp `x = -2`, `y = 2`.
+
+##### Bài 1.7.7 — Khoảng cách nhỏ nhất
+
+Cho `N` vị trí nguyên trên một tuyến đường, với `N ≥ 2`. Tìm khoảng cách nhỏ nhất giữa hai vị trí khác nhau.
+
+- **Input:** `N` và một dãy `N` vị trí nguyên.
+- **Output:** Khoảng cách nhỏ nhất.
+- **Ví dụ:** Dãy `8 3 6 1 5` cho kết quả `1`.
+
+Sau khi sắp xếp, chỉ cần xét `a[i] - a[i - 1]` với `i` từ `1` đến `N - 1`. Hãy giải thích vì sao không cần xét mọi cặp.
+
+##### Bài 1.7.8 — Giá trị gần mục tiêu nhất
+
+Cho `N` số nguyên và số nguyên `X`. Tìm giá trị có khoảng cách tuyệt đối tới `X` nhỏ nhất. Nếu có nhiều giá trị cùng khoảng cách, chọn giá trị nhỏ hơn.
+
+- **Input:** Dòng đầu chứa `N` và `X`; dòng sau chứa `N` số nguyên.
+- **Output:** Giá trị được chọn.
+- **Ví dụ:** Với `N = 6`, `X = 10` và dãy `4 13 8 12 20 7`, output là `8`.
+
+Thử các trường hợp `X` nhỏ hơn mọi phần tử, lớn hơn mọi phần tử và nằm giữa hai phần tử.
+
+##### Bài 1.7.9 — Gom nhóm giá trị
+
+Cho `N` số nguyên. In mỗi giá trị khác nhau cùng số lần xuất hiện, theo thứ tự tăng dần của giá trị.
+
+- **Input:** `N` và một dãy `N` số nguyên.
+- **Output:** Mỗi dòng gồm một giá trị và tần suất của nó.
+- **Ví dụ:** Dãy `5 2 5 3 2 2 8` cho:
+
+```text
+2 3
+3 1
+5 2
+8 1
+```
+
+Sau khi sắp xếp, hãy duyệt từng đoạn các phần tử bằng nhau và nhớ xử lý cả đoạn cuối.
 
 #### Tầng C — Chuyển giao
 
-10. Cho hai danh sách số nguyên, tìm độ chênh lệch nhỏ nhất giữa một phần tử của danh sách thứ nhất và một phần tử của danh sách thứ hai. Hãy nghĩ về việc sắp xếp kết hợp hai con trỏ.
-11. Sắp xếp các số không âm theo chữ số hàng đơn vị tăng dần; nếu bằng nhau, số nhỏ hơn đứng trước.
-12. Với các yêu cầu sau, ghi `CÓ` hoặc `KHÔNG` cần sắp xếp và giải thích trong một hoặc hai câu:
-    - tìm điểm cao nhất một lần;
-    - in cả danh sách theo thứ tự tăng dần;
-    - đếm số phần tử chẵn;
-    - tìm hai phần tử gần nhau nhất;
-    - kiểm tra một giá trị có xuất hiện hay không bằng một lần duyệt;
-    - ghép hai danh sách sao cho chênh lệch nhỏ nhất.
+##### Bài 1.7.10 — Ghép hai danh sách gần nhau
 
-Mục tiêu của Tầng C không phải là nhớ thêm nhiều cú pháp. Mục tiêu là biết chọn Sorting khi nó thật sự tạo ra lợi ích.
+Có `N` giá trị trong danh sách A và `M` giá trị trong danh sách B. Tìm độ chênh lệch tuyệt đối nhỏ nhất giữa một phần tử của A và một phần tử của B.
+
+- **Input:** Dòng đầu chứa `N`, `M`; dòng thứ hai chứa A; dòng thứ ba chứa B.
+- **Output:** Độ chênh lệch nhỏ nhất.
+- **Ví dụ:** A = `10 20 30`, B = `15 24` cho kết quả `4`.
+
+Hãy sắp xếp cả hai danh sách, sau đó nghĩ về việc di chuyển con trỏ đang đứng ở giá trị nhỏ hơn. Phân tích riêng chi phí sắp xếp và chi phí di chuyển hai con trỏ.
+
+##### Bài 1.7.11 — Sắp xếp theo chữ số hàng đơn vị
+
+Cho `N` số nguyên không âm. Sắp xếp theo chữ số hàng đơn vị tăng dần. Nếu hai số có cùng chữ số hàng đơn vị, số nhỏ hơn đứng trước.
+
+- **Input:** `N` và một dãy `N` số nguyên không âm.
+- **Output:** Dãy đã sắp xếp theo quy tắc trên.
+- **Ví dụ:** Dãy `23 41 18 35 12 29` cho output `41 12 23 35 18 29`.
+
+Chữ số hàng đơn vị của `x` là `x % 10`. Hãy chuyển quy tắc chính và quy tắc phụ thành comparator.
+
+##### Bài 1.7.12 — Có cần sắp xếp không?
+
+Với mỗi yêu cầu sau, ghi `CÓ` hoặc `KHÔNG` cần sắp xếp, rồi giải thích bằng một hoặc hai câu:
+
+1. Tìm điểm cao nhất trong một danh sách.
+2. In toàn bộ danh sách theo thứ tự tăng dần.
+3. Đếm số phần tử chẵn.
+4. Tìm hai phần tử gần nhau nhất.
+5. Kiểm tra một giá trị có xuất hiện hay không bằng một lần duyệt.
+6. Ghép hai danh sách sao cho chênh lệch nhỏ nhất.
+
+Câu trả lời phải nêu được kết quả cần tìm, lợi ích của Sorting nếu có, và một hướng khác nếu không cần sắp xếp.
 
 #### Phiếu tự đánh giá
 

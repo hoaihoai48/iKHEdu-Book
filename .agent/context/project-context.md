@@ -61,8 +61,8 @@
 
 ## Current state
 
-- Đã hoàn thành: Khóa kiến trúc sách (Architecture Locked) cho `BOOK_MASTER.md` với tựa đề `iKHEDU C++ Bảng B: Từ nền tảng lập trình đến thuật toán`; cấu trúc 2 tầng gồm Phần I (I.1–I.6) và Phần II (Chương 1–21); Chương 1 (Sắp xếp) đã được hoàn thiện 7 bài chi tiết làm chuẩn mực logic; tích hợp toàn diện bộ `.agents`.
+- Đã hoàn thành: Khóa kiến trúc sách (Architecture Locked) cho `BOOK_MASTER.md` với tựa đề `iKHEDU C++ Bảng B: Từ nền tảng lập trình đến thuật toán`; cấu trúc 2 tầng gồm Phần I (I.1–I.6) và Phần II (Chương 1–21); Chương 1 (Sắp xếp) đã được review source-first, bổ sung 12 bài tập tự chứa trong Bài 1.7 và đồng bộ làm chuẩn mực logic; tích hợp toàn diện bộ `.agents`.
 - Đang làm: Biên soạn theo quy trình source-first; tài liệu gốc nằm trong `courses/cpp-bang-b/source/`, sau khi review mới đồng bộ sang BOOK_MASTER; tiếp tục làm sâu Phần I và các chương thuật toán.
 - Blockers: Không có blocker về mặt thiết kế cấu trúc.
-- Việc tiếp theo: Chủ dự án review tài liệu gốc Chương 1 trong `source/level1/`; chỉ sau khi chốt mới đồng bộ thay đổi tiếp theo vào BOOK_MASTER; sau đó dùng quy trình này cho chương kế tiếp.
+- Việc tiếp theo: Chủ dự án review source Chương 1 sau vòng bổ sung bài tập; nếu chốt, bắt đầu biên soạn source Chương 2 theo cùng khung rồi mới đồng bộ sang BOOK_MASTER.
 - Lần handoff gần nhất: 2026-08-28 — Khóa kiến trúc và chuẩn hóa phương pháp sư phạm cho giáo trình `cpp-bang-b`.

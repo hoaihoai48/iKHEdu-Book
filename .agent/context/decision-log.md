@@ -24,6 +24,7 @@
 | `DEC-016` | 2026-08-28 | Chuẩn hóa Khung logic sư phạm của Chương thuật toán và DNA cốt lõi của sách: Khung logic (Mục tiêu → Ôn nhanh → Ý tưởng/Mô phỏng tay → Code chuẩn → Preprocessing → Complexity → Bài tập phân tầng A/B/C → Lỗi bẫy → Tổng kết & Code tham chiếu). DNA: (1) Input–Process–Output, (2) Công thức trước code, (3) Debug và test biên là một phần của lời giải. | adopted | Đảm bảo mọi chương đều rèn luyện tư duy nhận thức thực chất thay vì học thuộc cú pháp hay chép template. | Trình bày lý thuyết suông rồi đưa code mẫu | Toàn bộ các chương trong `BOOK_MASTER.md` | Chủ dự án phê duyệt |
 | `DEC-017` | 2026-08-28 | Chuyển trạng thái dự án từ "Thiết kế cấu trúc" sang "Biên soạn nội dung chi tiết": Giữ nguyên khung sách, tập trung làm sâu Phần I (bổ sung biến thể điều kiện/vòng lặp/bẫy tràn số và Checklist cổng năng lực) và mở rộng lần lượt các chương thuật toán. | adopted | Khung đã hoàn thiện và được đánh giá cao; không đập đi xây lại cấu trúc mà tập trung vào chiều sâu bài giảng. | Tiếp tục sửa đổi khung cấu trúc | Toàn bộ workspace `courses/cpp-bang-b/` | Chủ dự án phê duyệt |
 | `DEC-018` | 2026-08-28 | Tài liệu gốc phải được cập nhật và review trước, sau đó mới đồng bộ vào BOOK_MASTER; đổi thư mục `curriculum/` thành `source/` và đặt source Chương 1 tại `source/level1/IKHEDU_Chapter01_Sorting_Source.md` | adopted | Phân biệt rõ nguồn nội dung với bản in tổng hợp, tránh quy trình viết ngược và giúp truy nguyên nội dung | Chỉnh trực tiếp BOOK_MASTER rồi mới cập nhật source; giữ tên curriculum gây nhầm vai trò | `courses/cpp-bang-b/source/`, `courses/cpp-bang-b/BOOK_MASTER.md`, course README và lesson README | Chủ dự án xác nhận |
+| `DEC-019` | 2026-08-28 | Review source Chương 1 và bổ sung đề bài tự chứa cho 12 bài tập Tầng A–C; sau đó đồng bộ bản đã review sang BOOK_MASTER | provisional | Học sinh có thể đọc và làm bài ngay trong bản sách mà không phải dựa vào file lesson nội bộ; giữ source-first và tránh metadata quản trị trong bản in | Chỉ liệt kê tên bài tập ngắn trong BOOK_MASTER | `courses/cpp-bang-b/source/level1/IKHEDU_Chapter01_Sorting_Source.md`, `courses/cpp-bang-b/BOOK_MASTER.md` | Chủ dự án review |
 
 ## Working assumptions
 
@@ -37,7 +38,7 @@
 - Đã quyết định: Khóa kiến trúc `BOOK_MASTER.md` gồm Phần I (I.1–I.6) và Phần II (Chương 1–21); cập nhật và review tài liệu gốc trong `source/` trước rồi mới đồng bộ BOOK_MASTER; áp dụng Chương 1 làm khuôn mẫu logic chuẩn; giữ vững DNA (Input–Process–Output, Công thức trước code, Debug là một phần lời giải); phân tầng bài tập 3 mức (Củng cố, Vận dụng, Chuyển giao).
 - Chưa quyết định: Người duyệt chuyên môn cuối cùng, chuẩn citation/license xuất bản.
 - Blockers: Không có blocker về kiến trúc.
-- Hành động tiếp theo: Chủ dự án review tài liệu gốc Chương 1 trong `source/level1/`; sau khi chốt mới đồng bộ các thay đổi tiếp theo vào BOOK_MASTER, rồi dùng quy trình source-first cho chương kế tiếp.
+- Hành động tiếp theo: Chủ dự án review source Chương 1 sau vòng bổ sung bài tập; nếu chốt, bắt đầu biên soạn source Chương 2 theo cùng khung rồi mới đồng bộ sang BOOK_MASTER.
 
 ## Change history
 
