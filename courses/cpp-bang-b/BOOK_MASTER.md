@@ -1,9 +1,8 @@
 # BOOK_MASTER — iKHEDU C++ Bảng B – Level 1
 
-> **Trạng thái bản thảo:** `draft`  
-> Đây là bản thảo canonical của cuốn sách. Các file lesson là artifact chi tiết để biên soạn và kiểm tra; nội dung phát hành cần được đồng bộ vào file này sau mỗi vòng review.
+> **Trạng thái bản thảo:** `draft`
 
-## Publication metadata
+## Thông tin xuất bản
 
 | Trường | Giá trị |
 |---|---|
@@ -14,8 +13,6 @@
 | Audience/level | Học sinh bắt đầu từ số 0 hoặc đang xây nền tảng C++; tuyến Bảng B – Level 1 |
 | Language | Tiếng Việt; giữ thuật ngữ C++/English khi cần |
 | Output target | `print` / `digital` |
-| Book root | `courses/cpp-bang-b/` |
-| Source IDs | `SRC-001`, `SRC-002`, `SRC-004` |
 | Status | `draft` |
 
 ## Mục lục
@@ -31,7 +28,7 @@
   - [Chương 1 — Sắp xếp](#chương-1--sắp-xếp)
 - [Thuật ngữ](#thuật-ngữ)
 - [Tài liệu tham khảo](#tài-liệu-tham-khảo)
-- [Phụ lục: Artifact hỗ trợ và quy tắc cập nhật](#phụ-lục-artifact-hỗ-trợ-và-quy-tắc-cập-nhật)
+- [Phụ lục: Bảng tra cứu cuối sách](#phụ-lục-bảng-tra-cứu-cuối-sách)
 
 # Lời nói đầu
 
@@ -73,7 +70,7 @@ Trước khi viết code, hãy trả lời:
 
 1. Đề bài cho dữ liệu gì?
 2. Cần in hoặc tìm kết quả gì?
-3. Dữ liệu sẽ được lưu ở biến, mảng, `vector` hay cấu trúc nào?
+3. Dữ liệu sẽ được lưu ở biến, mảng hay `vector` nào phù hợp?
 4. Có công thức hoặc quy tắc nào cần viết ra trước không?
 5. Các bước xử lý được thực hiện một lần hay lặp lại nhiều lần?
 6. Làm thế nào để kiểm tra kết quả trên test nhỏ và test biên?
@@ -400,7 +397,7 @@ Bài tập được chia thành ba tầng để học sinh đi từ thao tác tr
 | B — Vận dụng mẫu | Dùng comparator và nhận ra tác dụng của thứ tự | Số chẵn trước số lẻ, sắp xếp theo trị tuyệt đối, khoảng cách nhỏ nhất, gom nhóm |
 | C — Chuyển giao | Kết hợp Sorting với ý tưởng khác | Ghép hai danh sách, hai con trỏ, Greedy và bài hỏi có cần sắp xếp không |
 
-Bộ bài tập đầy đủ nằm ở [`lessons/level1-01-sap-xep/Bai_Tap.md`](lessons/level1-01-sap-xep/Bai_Tap.md). Trong bản in, các bài sẽ được đồng bộ vào phần bài tập của chương sau khi giáo viên review.
+Bộ bài tập cuối chương được trình bày theo ba tầng: củng cố cú pháp, vận dụng mẫu và chuyển giao. Giáo viên có thể chọn số lượng bài phù hợp với thời lượng lớp học.
 
 ### 13. Code tham chiếu
 
@@ -432,7 +429,7 @@ int main() {
 }
 ```
 
-Bản code này chỉ minh họa một mục tiêu: đọc một dãy số nguyên, sắp xếp tăng dần và in kết quả. File tham chiếu đầy đủ nằm ở [`lessons/level1-01-sap-xep/code_reference.cpp`](lessons/level1-01-sap-xep/code_reference.cpp).
+Đoạn code này chỉ minh họa một mục tiêu: đọc một dãy số nguyên, sắp xếp tăng dần và in kết quả. Học sinh nên thử thay đổi dữ liệu đầu vào và dự đoán kết quả trước khi chạy chương trình.
 
 ## Thuật ngữ
 
@@ -450,32 +447,43 @@ Bản code này chỉ minh họa một mục tiêu: đọc một dãy số nguy�
 
 ## Tài liệu tham khảo
 
-Các nguồn dưới đây là nguồn tham chiếu nội bộ của project và được giữ nguyên read-only:
+Nội dung cuốn sách được biên soạn theo chương trình iKHEDU C++ Bảng B – Level 1 và các nguyên tắc sư phạm của chương trình. Phần tài liệu tham chiếu chuyên môn được quản lý trong hồ sơ biên soạn riêng; bản in dành cho học sinh chỉ giữ lại những nội dung cần thiết để học và tra cứu.
 
-1. `SRC-001` — [`IKHEDU_Knowledge_Base.md`](../../IKHEDU_Knowledge_Base.md), nguồn tham chiếu problem catalog, editorial, code và quy ước liên quan.
-2. `SRC-002` — [`ikhEdu_foundation_framework_report.md`](../../ikhEdu_foundation_framework_report.md), nguồn định hướng thiết kế nền tảng và Level 1.
-3. `SRC-004` — [`Lo_trinh_hoc_tap_bangB_level1.jpg`](../../Lo_trinh_hoc_tap_bangB_level1.jpg), roadmap chủ đề Bảng B – Level 1.
-4. `REF-001` — cấu trúc artifact của ebook-ikh, chỉ được dùng làm reference cho cách tổ chức file, không dùng làm source nội dung chuyên môn.
+## Phụ lục: Bảng tra cứu cuối sách
 
-## Phụ lục: Artifact hỗ trợ và quy tắc cập nhật
+### Câu hỏi trước khi viết code
 
-### Artifact của khóa học
-
-| Artifact | Vai trò |
+| Câu hỏi | Mục đích |
 |---|---|
-| `curriculum/level0/IKHEDU_Level0_Foundation.md` | Bản nền tảng chi tiết để tham chiếu |
-| `curriculum/level1/IKHEDU_Level1_Textbook_Outline.md` | Outline tổng quát của tuyến Level 1 |
-| `lessons/level1-01-sap-xep/README.md` | Điều hướng Module 01 |
-| `lessons/level1-01-sap-xep/Ly_Thuyet.md` | Lesson source chi tiết |
-| `lessons/level1-01-sap-xep/Bai_Tap.md` | Bộ bài tập chi tiết |
-| `lessons/level1-01-sap-xep/code_reference.cpp` | Code tham chiếu |
+| Đề bài cho dữ liệu gì? | Xác định input và cách lưu dữ liệu |
+| Cần tìm hoặc in gì? | Xác định output |
+| Có công thức hay quy tắc nào? | Viết ý tưởng trước khi viết code |
+| Có cần duyệt dữ liệu không? | Chọn vòng lặp phù hợp |
+| Có cần đếm, cộng dồn hoặc giữ max/min không? | Nhận ra pattern nền tảng |
+| Sắp xếp có làm bước sau dễ hơn không? | Nhận ra cơ hội dùng Sorting |
+| Dữ liệu lớn đến mức nào? | Ước lượng độ phức tạp |
+| Trường hợp nhỏ nhất và lớn nhất là gì? | Tạo test biên |
 
-### Master maintenance rules
+### Checklist trước khi nộp bài
 
-Mỗi chương/bài chỉ có một phiên bản nội dung xuất bản trong `BOOK_MASTER.md`. Các file lesson là artifact biên soạn và kiểm tra; khi nội dung lesson được chốt, phần tương ứng trong master phải được cập nhật trong cùng tác vụ.
+```text
+Đọc lại đề
+→ kiểm tra Input/Output
+→ thử test nhỏ
+→ thử test biên
+→ kiểm tra chỉ số
+→ kiểm tra kiểu dữ liệu
+→ kiểm tra điều kiện dừng
+→ kiểm tra output không có chữ thừa
+→ tự giải thích ý tưởng bằng lời
+```
 
-Không tạo `BOOK_MASTER_2.md`, master riêng cho từng chương hoặc một bản Word/PDF độc lập làm nguồn mới. Word/PDF là artifact dẫn xuất từ master. Trạng thái `print-ready` chỉ được dùng sau khi nội dung đã qua review chuyên môn, kiểm tra bản in và chốt các câu hỏi mở về reviewer, thời lượng, assessment và bản quyền.
+### Nguyên tắc ghi nhớ
 
-### Trạng thái bản thảo
+> **Hiểu ý tưởng trước, viết code sau; làm được bài quen thuộc rồi mới chuyển sang bài biến thể.**
 
-BOOK_MASTER hiện là **bản tích hợp đầu tiên**, gồm phần Level 0 cô đọng và phần Chương 1 – Sắp xếp đã được đơn giản hóa cho học sinh mới. Các chương Level 1 còn lại mới có trong roadmap/outline và sẽ được bổ sung từng chương, không tạo thêm master riêng.
+> **Không dùng một công cụ chỉ vì đã biết cú pháp của nó. Hãy luôn trả lời: công cụ này giúp bước nào của bài toán trở nên dễ hơn?**
+
+## Ghi chú biên tập
+
+Đây là bản thảo sách đang được hoàn thiện. Các chương tiếp theo sẽ tiếp tục theo cùng cấu trúc: mục tiêu, kiến thức nền, ví dụ, cách làm, bài tập, tự kiểm tra và tóm tắt. Trước khi in chính thức, toàn bộ nội dung cần được giáo viên đọc thử và kiểm tra lại với học sinh.
