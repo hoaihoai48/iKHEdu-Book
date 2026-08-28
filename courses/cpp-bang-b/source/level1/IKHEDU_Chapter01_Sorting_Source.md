@@ -181,14 +181,15 @@ Biến `i` chỉ vị trí đang cần đặt. Biến `j` dùng để tìm trong
 #### Code C++
 
 ```cpp
-#include <iostream>
-#include <utility>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n;
-    cin >> n;
+    if (!(cin >> n)) return 0;
 
     vector<int> a(n);
     for (int i = 0; i < n; i++) {
@@ -276,15 +277,15 @@ Cách viết “không gồm điểm cuối” giúp các thuật toán xử lý
 #### Ví dụ đầy đủ
 
 ```cpp
-#include <algorithm>
-#include <iostream>
-#include <utility>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n;
-    cin >> n;
+    if (!(cin >> n)) return 0;
 
     vector<int> a(n);
     for (int i = 0; i < n; i++) {
@@ -898,9 +899,7 @@ Ngoài ra, em cần biên dịch được chương trình, chạy đúng các v�
 Đoạn code dưới đây chỉ minh họa mục tiêu tối giản: đọc một dãy số nguyên, sắp xếp tăng dần và in kết quả. Em nên thử dự đoán output trước khi chạy.
 
 ```cpp
-#include <algorithm>
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -908,7 +907,7 @@ int main() {
     cin.tie(nullptr);
 
     int n;
-    cin >> n;
+    if (!(cin >> n)) return 0;
 
     vector<int> a(n);
     for (int i = 0; i < n; i++) {

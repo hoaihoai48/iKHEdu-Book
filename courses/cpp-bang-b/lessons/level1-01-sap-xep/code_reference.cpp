@@ -6,7 +6,7 @@ int main() {
     cin.tie(nullptr);
 
     int n;
-    cin >> n;
+    if (!(cin >> n)) return 0;
 
     vector<int> a(n);
     for (int i = 0; i < n; i++) {

@@ -23,6 +23,17 @@ Trước khi tạo output, xác định `output_target: digital|print|both` và 
 
 Mỗi cuốn sách/giáo trình phải có **một và chỉ một** bản thảo tổng hợp canonical là `BOOK_MASTER.md` ở book root. Mọi nội dung dành để xuất bản phải được đưa vào master theo đúng thứ tự phần–chương–bài; README, lesson, teacher guide, solution và testcase chỉ là artifact hỗ trợ, không tạo thêm bản thảo song song. Nếu đã có master thì cập nhật nó, không tạo master thứ hai.
 
+**Quy chuẩn code C++ (Boilerplate chuẩn thi đấu iKHEDU):** Mọi đoạn code C++ mẫu, code tham chiếu, solution, editorial và testcase generator trong toàn bộ dự án **BẮT BUỘC** tuân thủ 100% cấu trúc chuẩn sau:
+1. Header duy nhất: `#include <bits/stdc++.h>` và `using namespace std;` (tuyệt đối không dùng các header riêng lẻ như `<iostream>`, `<algorithm>`, `<vector>`, `<utility>`, `<string>`...).
+2. Fast I/O ở đầu hàm `main()`:
+   ```cpp
+   ios::sync_with_stdio(false);
+   cin.tie(nullptr);
+   ```
+3. Đọc dữ liệu an toàn (Safe Input / Graceful Exit): Sử dụng mẫu `if (!(cin >> n >> ...)) return 0;` khi đọc các tham số đầu vào chính để chống crash khi EOF / input rỗng.
+
+**Quy chuẩn kiến trúc dữ liệu tối giản (Không nhồi nhét cú pháp):** Trong Phần I và các chương nền tảng đầu, **tuyệt đối KHÔNG dùng `struct` hoặc `class`**, đồng thời **HẠN CHẾ TỐI ĐA việc dùng `pair`**. Ưu tiên tuyệt đối các bài toán và thao tác trên kiểu dữ liệu nguyên bản (`int`, `long long`, `double`, `char`, `string`, `vector<int>`). Chỉ sử dụng `pair` hoặc các cấu trúc nâng cao trong trường hợp bất khả kháng khi thuật toán hoặc bài toán bắt buộc (như đồ thị, BFS trạng thái đôi) sau khi học sinh đã được học chuyên đề công cụ dữ liệu.
+
 Với `problem-package`, luôn đọc `@../skills/ikhedu-authoring/references/testcase-generation-standard.md` và tạo theo chuỗi `De_Bai.md → Huong_Dan_Giang_Day.md → solution.cpp → test/`. Test phải có test matrix, generator deterministic, seed cố định, oracle độc lập, `manifest.json`, `.inp/.out`, timeout, coverage và test report. Không dùng solution đang kiểm thử làm oracle duy nhất.
 
 Với `print|both`, đọc `@../skills/ikhedu-authoring/references/print-production-spec-template.md`, chốt khổ sách/lề/gutter/font/caption/header/footer, giữ một bản canonical, render proof và không gọi là `print-ready` khi chưa kiểm tra dàn trang và có human proof review.
