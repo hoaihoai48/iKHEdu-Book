@@ -61,8 +61,8 @@
 
 ## Current state
 
-- Đã hoàn thành: knowledge base lớn, báo cáo thiết kế nền tảng, quick reference Level 0 và roadmap Level 1; đã tích hợp `.agents`; đã tạo course registry, cấu trúc khóa `cpp-bang-b`, outline curriculum, lesson package draft cho Module 01 – Sắp xếp và BOOK_MASTER canonical draft.
-- Đang làm: review BOOK_MASTER cùng lesson package Module 01 – Sắp xếp, chuẩn hóa nội dung giáo trình và duy trì context cho agent.
+- Đã hoàn thành: knowledge base lớn, báo cáo thiết kế nền tảng, quick reference Level 0 và roadmap Level 1; đã tích hợp `.agents`; đã tạo course registry, cấu trúc khóa `cpp-bang-b`, outline curriculum, lesson package draft cho Module 01 – Sắp xếp và BOOK_MASTER canonical với coverage 21 chương Level 1.
+- Đang làm: tiếp tục hoàn thiện BOOK_MASTER theo cấu trúc sách mới; Phần I dùng mục I.1–I.6, Phần II đánh số thuật toán từ Chương 1 — Sắp xếp; Chương 1 đã được approve và chia thành Bài 1.1–1.7.
 - Blockers: người duyệt cuối, citation style, license/attribution policy, thời lượng từng module và cấu trúc thư mục bài toán mới cần xác nhận.
-- Việc tiếp theo: review `BOOK_MASTER.md` cùng `Ly_Thuyet.md`, `Bai_Tap.md` và code tham chiếu; sau đó bổ sung từng chương Level 1 vào cùng master, không tạo master riêng.
+- Việc tiếp theo: review và viết sâu các Bài 1.1–1.7 trong Chương 1, sau đó dùng cấu trúc đã approve làm mẫu cho các chương tiếp theo; không tạo master riêng hoặc file rời nếu chưa cần.
 - Lần handoff gần nhất: 2026-08-27 — tích hợp bộ `.agents` vào project.

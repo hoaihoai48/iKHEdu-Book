@@ -13,7 +13,7 @@
 | **Mục tiêu tổng quát** | Biết nhận dạng, giải thích và vận dụng các thuật toán/cấu trúc dữ liệu cơ bản trong các bài toán phù hợp |
 | **Prerequisites** | Level 0 – Nền tảng C++ & Tư duy lập trình; xem tài liệu tra cứu nhanh trong `curriculum/level0/` |
 | **Số chủ đề roadmap** | 21 chủ đề |
-| **BOOK_MASTER** | [`BOOK_MASTER.md`](BOOK_MASTER.md) — bản thảo canonical, trạng thái `draft` |
+| **BOOK_MASTER** | [`BOOK_MASTER.md`](BOOK_MASTER.md) — bản thảo canonical, trạng thái `draft`, đã có coverage 21 chương |
 | **Module MVP đầu tiên** | Module 01 – Sắp xếp |
 | **Status** | `draft` |
 | **Version** | `0.1.0` |
@@ -48,28 +48,32 @@ Thứ tự dưới đây là **teaching sequence tạm thời** để xây dựn
 |---:|---|---|---|---|---|---|
 | 0 | Phần 0 – Cách học và tư duy giải bài | Input–Process–Output, đọc đề, pseudocode, test, debug, complexity | Không | Biết biến đề bài thành các bước xử lý có thể lập trình | [Level 0 Foundation](curriculum/level0/IKHEDU_Level0_Foundation.md) | draft |
 | 1 | **Sắp xếp** | `sort`, comparator, nhiều tiêu chí, tiền xử lý | Mảng, `vector`, vòng lặp, so sánh, swap | Biết dùng thứ tự để làm bài toán đơn giản hơn | [Level 1 Textbook outline](curriculum/level1/IKHEDU_Level1_Textbook_Outline.md) | **MVP – draft** |
-| 2 | Tham lam | Quyết định cục bộ, chứng minh lựa chọn | Sắp xếp, so sánh, invariant | Nhận diện và kiểm tra chiến lược tham lam | Chưa tạo | planned |
-| 3 | Số học | Ước, bội, GCD/LCM, số nguyên tố | Vòng lặp, modulo, hàm | Vận dụng tính chất số học cơ bản | Chưa tạo | planned |
-| 4 | Đếm phân phối | Nguyên lý Dirichlet, bao hàm–loại trừ | Đếm, mảng, tần suất | Chọn phương pháp đếm phù hợp | Chưa tạo | planned |
-| 5 | Tìm kiếm nhị phân | Tìm kiếm trên miền dữ liệu/đáp án | Sắp xếp, so sánh, hàm `check`, complexity | Nhận diện tính đơn điệu và viết kiểm tra | Chưa tạo | planned |
-| 6 | Mảng tiền tố | Prefix Sum, Prefix XOR, truy vấn đoạn | Mảng, vòng lặp, tích lũy | Trả lời truy vấn tổng nhanh hơn | Chưa tạo | planned |
-| 7 | Hai con trỏ | Two Pointers, Sliding Window | Mảng, sắp xếp, điều kiện đơn điệu | Duy trì một đoạn dữ liệu hiệu quả | Chưa tạo | planned |
-| 8 | Xử lý xâu cơ bản | Duyệt, đếm, substring, palindrome | `string`, vòng lặp, điều kiện | Xử lý xâu theo mẫu cơ bản | Chưa tạo | planned |
-| 9 | Đệ quy, chia để trị, MITM | Hàm, trạng thái, chia bài toán | Hàm, vòng lặp, complexity | Mô tả bài toán bằng các bài toán con | Chưa tạo | planned |
-| 10 | Modulo | Phép chia dư, lũy thừa nhanh | Toán tử, số học, kiểu dữ liệu | Tính toán an toàn với số lớn | Chưa tạo | planned |
-| 11 | Tổ hợp | Hoán vị, tổ hợp, Pascal, Catalan | Tích lũy, modulo, đệ quy | Đếm cấu hình trong bài toán | Chưa tạo | planned |
-| 12 | STL C++ | `vector`, `set`, `map`, `pair`, `stack`, `queue` | C++ Level 0 | Chọn công cụ dữ liệu phù hợp | Chưa tạo | planned |
-| 13 | Quy hoạch động cơ bản | Trạng thái, chuyển trạng thái, thứ tự tính | Mảng, vòng lặp, max/min, complexity | Mô hình hóa kết quả của bài toán con | Chưa tạo | planned |
-| 14 | Đồ thị | Biểu diễn, BFS, DFS, degree | `vector`, `pair`, vòng lặp, hàm | Mô hình hóa quan hệ và duyệt đồ thị | Chưa tạo | planned |
-| 15 | Stack và Queue | Thứ tự truy cập dữ liệu | STL nhập môn | Chọn cấu trúc theo quy tắc xử lý | Chưa tạo | planned |
-| 16 | Segment Tree | Truy vấn/cập nhật đoạn | Mảng, đệ quy, hàm, complexity | Hiểu cấu trúc dữ liệu truy vấn đoạn | Chưa tạo | planned |
-| 17 | Digit DP | Trạng thái theo chữ số và giới hạn | DP cơ bản, modulo, đệ quy | Mô hình hóa bài đếm theo chữ số | Chưa tạo | planned |
-| 18 | String Hashing | Hash, so sánh đoạn xâu | String, modulo, mảng tiền tố | So sánh xâu/đoạn xâu nhanh | Chưa tạo | planned |
-| 19 | Số nguyên lớn | Biểu diễn số bằng xâu/mảng | Mảng, string, phép toán | Xử lý số vượt kiểu dữ liệu chuẩn | Chưa tạo | planned |
-| 20 | Phép toán trên bit | AND, OR, XOR, bitmask, popcount | Số nguyên, điều kiện, tập con | Biểu diễn trạng thái bằng bit | Chưa tạo | planned |
-| 21 | Fenwick Tree | Cập nhật và truy vấn prefix | Mảng tiền tố, bit, complexity | Xử lý cập nhật/truy vấn hiệu quả | Chưa tạo | planned |
+| 2 | Tham lam | Quyết định cục bộ, chứng minh lựa chọn | Sắp xếp, so sánh, invariant | Nhận diện và kiểm tra chiến lược tham lam | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 3 | Số học | Ước, bội, GCD/LCM, số nguyên tố | Vòng lặp, modulo, hàm | Vận dụng tính chất số học cơ bản | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 4 | Đếm phân phối | Nguyên lý Dirichlet, bao hàm–loại trừ | Đếm, mảng, tần suất | Chọn phương pháp đếm phù hợp | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 5 | Tìm kiếm nhị phân | Tìm kiếm trên miền dữ liệu/đáp án | Sắp xếp, so sánh, hàm `check`, complexity | Nhận diện tính đơn điệu và viết kiểm tra | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 6 | Mảng tiền tố | Prefix Sum, Prefix XOR, truy vấn đoạn | Mảng, vòng lặp, tích lũy | Trả lời truy vấn tổng nhanh hơn | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 7 | Hai con trỏ | Two Pointers, Sliding Window | Mảng, sắp xếp, điều kiện đơn điệu | Duy trì một đoạn dữ liệu hiệu quả | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 8 | Xử lý xâu cơ bản | Duyệt, đếm, substring, palindrome | `string`, vòng lặp, điều kiện | Xử lý xâu theo mẫu cơ bản | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 9 | Đệ quy, chia để trị, MITM | Hàm, trạng thái, chia bài toán | Hàm, vòng lặp, complexity | Mô tả bài toán bằng các bài toán con | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 10 | Modulo | Phép chia dư, lũy thừa nhanh | Toán tử, số học, kiểu dữ liệu | Tính toán an toàn với số lớn | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 11 | Tổ hợp | Hoán vị, tổ hợp, Pascal, Catalan | Tích lũy, modulo, đệ quy | Đếm cấu hình trong bài toán | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 12 | STL C++ | `vector`, `set`, `map`, `pair`, `stack`, `queue` | C++ Level 0 | Chọn công cụ dữ liệu phù hợp | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 13 | Quy hoạch động cơ bản | Trạng thái, chuyển trạng thái, thứ tự tính | Mảng, vòng lặp, max/min, complexity | Mô hình hóa kết quả của bài toán con | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 14 | Đồ thị | Biểu diễn, BFS, DFS, degree | `vector`, `pair`, vòng lặp, hàm | Mô hình hóa quan hệ và duyệt đồ thị | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 15 | Stack và Queue | Thứ tự truy cập dữ liệu | STL nhập môn | Chọn cấu trúc theo quy tắc xử lý | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 16 | Segment Tree | Truy vấn/cập nhật đoạn | Mảng, đệ quy, hàm, complexity | Hiểu cấu trúc dữ liệu truy vấn đoạn | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 17 | Digit DP | Trạng thái theo chữ số và giới hạn | DP cơ bản, modulo, đệ quy | Mô hình hóa bài đếm theo chữ số | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 18 | String Hashing | Hash, so sánh đoạn xâu | String, modulo, mảng tiền tố | So sánh xâu/đoạn xâu nhanh | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 19 | Số nguyên lớn | Biểu diễn số bằng xâu/mảng | Mảng, string, phép toán | Xử lý số vượt kiểu dữ liệu chuẩn | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 20 | Phép toán trên bit | AND, OR, XOR, bitmask, popcount | Số nguyên, điều kiện, tập con | Biểu diễn trạng thái bằng bit | BOOK_MASTER — nội dung cốt lõi | draft-map |
+| 21 | Fenwick Tree | Cập nhật và truy vấn prefix | Mảng tiền tố, bit, complexity | Xử lý cập nhật/truy vấn hiệu quả | BOOK_MASTER — nội dung cốt lõi | draft-map |
 
-## 4. Module MVP: Sắp xếp
+## 4. Trạng thái bản thảo Level 1
+
+`BOOK_MASTER.md` hiện đã có coverage của toàn bộ 21 chương Level 1. Chương 1 – Sắp xếp được viết chi tiết hơn; các chương còn lại đã có mục tiêu, prerequisite, ý tưởng cốt lõi, bài tập gợi ý và lỗi thường gặp ở mức bản thảo khung. Cần mở rộng từng chương theo ưu tiên giảng dạy trước khi gọi là bản in hoàn chỉnh.
+
+## 5. Module MVP: Sắp xếp
 
 ### Lý do chọn
 
@@ -99,7 +103,7 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 | Problem package | `problems/` | Chưa tạo |
 | Assessment | `assessments/level1-01-sap-xep/` | Chưa tạo |
 
-## 5. File map
+## 6. File map
 
 | Loại | Path | Canonical? | Mô tả |
 |---|---|---:|---|
@@ -112,7 +116,7 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 | Assessments | `assessments/` | planned | Placement test, formative check, module test và certification |
 | Assets | `assets/` | planned | Hình ảnh, sơ đồ và asset được phép sử dụng |
 
-## 6. Assessment map cấp khóa học
+## 7. Assessment map cấp khóa học
 
 | Assessment ID | Phạm vi | Outcome được đo | Hình thức | Evidence dự kiến | Status |
 |---|---|---|---|---|---|
@@ -121,7 +125,7 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 | `ASSESS-02` | Sau nhóm module cơ bản | Kết hợp các pattern và thuật toán | Problem set | Lời giải độc lập và bài transfer | planned |
 | `ASSESS-03` | Cuối Level 1 | Tổng hợp các chủ đề đã học | Contest/review | Bài giải, phân tích, kiểm thử và tự đánh giá | planned |
 
-## 7. Quy ước liên kết nội dung
+## 8. Quy ước liên kết nội dung
 
 Mỗi chương hoặc lesson Level 1 cần giữ các mục sau ở đầu hoặc gần đầu tài liệu:
 
@@ -148,7 +152,7 @@ De_Bai.md → Huong_Dan_Giang_Day.md → solution.cpp → test/
 
 README này chỉ làm nhiệm vụ điều hướng và quản lý trạng thái; không sao chép toàn bộ nội dung lý thuyết từ các file canonical.
 
-## 8. Nguồn và chính sách bảo toàn
+## 9. Nguồn và chính sách bảo toàn
 
 | Source ID | Nguồn | Cách sử dụng |
 |---|---|---|
@@ -159,7 +163,7 @@ README này chỉ làm nhiệm vụ điều hướng và quản lý trạng thá
 
 Không đưa thông tin vận hành nhạy cảm từ knowledge base vào README, lesson, bài tập hoặc output công khai.
 
-## 9. Những điểm còn cần xác nhận
+## 10. Những điểm còn cần xác nhận
 
 - Người duyệt chuyên môn và người duyệt release.
 - Thời lượng chính thức của từng module.
@@ -168,11 +172,11 @@ Không đưa thông tin vận hành nhạy cảm từ knowledge base vào README
 - Citation style, license và attribution policy.
 - Có bổ sung teacher guide, problem package và assessment chi tiết cho Module 01 sau vòng review đầu tiên.
 
-## 10. Release notes
+## 11. Release notes
 
 - **Version:** `0.1.0`
 - **Last updated:** 2026-08-28
-- **Changed:** Tạo course index, BOOK_MASTER canonical, learning path 21 chủ đề, module MVP đầu tiên và file map.
-- **Known gaps:** Chưa có problem package, assessment thực thi và reviewer được chỉ định; lesson package hiện vẫn ở trạng thái draft.
+- **Changed:** Tạo course index, BOOK_MASTER canonical và bổ sung coverage cốt lõi cho toàn bộ 21 chủ đề Level 1.
+- **Known gaps:** Các chương 2–21 hiện là bản thảo khung ngắn hơn Chương 1; chưa có problem package, assessment thực thi và reviewer được chỉ định.
 - **Status:** `draft`
 - **Reviewer:** TBD

@@ -16,6 +16,9 @@
 | `DEC-008` | 2026-08-27 | Tạo lesson package draft đầu tiên cho Module 01 – Sắp xếp gồm `Ly_Thuyet.md`, `Bai_Tap.md`, `code_reference.cpp` và `QA_Review.md` | provisional | Kiểm chứng cấu trúc sách qua một module nhỏ trước khi nhân rộng; chưa gọi `final` vì còn human review, assessment và test fixture | Viết toàn bộ textbook trước khi thử lesson package | `courses/cpp-bang-b/lessons/level1-01-sap-xep/` | Chủ dự án review |
 | `DEC-009` | 2026-08-28 | `courses/cpp-bang-b/BOOK_MASTER.md` là bản thảo canonical duy nhất của sách C++ Bảng B – Level 1; lesson files là artifact hỗ trợ | provisional | Cần có một bản thảo tổng hợp để chuẩn bị bản in/digital, nhưng chưa gọi `print-ready` trước human review | Chỉ giữ nội dung rời ở từng lesson; tạo nhiều master theo chương | `courses/cpp-bang-b/BOOK_MASTER.md`, course README | Chủ dự án review |
 | `DEC-010` | 2026-08-28 | BOOK_MASTER là bản thảo sách độc lập dành cho học sinh/in ấn; không chứa path local, source ID, link lesson hoặc quy tắc quản trị nội bộ | adopted | Tách rõ nội dung xuất bản khỏi hồ sơ biên soạn và điều hướng repository | Trộn manifest nội bộ vào bản sách | `courses/cpp-bang-b/BOOK_MASTER.md` | Chủ dự án yêu cầu |
+| `DEC-011` | 2026-08-28 | Hoàn thiện coverage bản thảo Level 1 trong cùng BOOK_MASTER với 21 chương theo roadmap; Chương 1 có nội dung chi tiết, các chương còn lại có khung lý thuyết cốt lõi và prerequisite | provisional | Hoàn thành bản đồ và nội dung nền cho toàn tuyến trước khi mở rộng từng chương; không tạo master hoặc file quản trị riêng | Chỉ viết từng chương rời mà chưa có toàn cảnh | `courses/cpp-bang-b/BOOK_MASTER.md` | Chủ dự án review |
+| `DEC-012` | 2026-08-28 | Trong bản in, Phần I dùng các mục I.1–I.6 cho nền tảng; Phần II đánh số lại từ Chương 1 — Sắp xếp | adopted | Tách cấu trúc nền tảng khỏi numbering của tuyến thuật toán, giúp học sinh đọc sách tự nhiên hơn | Đánh số liên tục khiến Sắp xếp thành Chương 7 và gây nhầm với module thuật toán đầu tiên | `courses/cpp-bang-b/BOOK_MASTER.md` | Chủ dự án yêu cầu |
+| `DEC-013` | 2026-08-28 | Approved cấu trúc Chương 1 — Sắp xếp thành bảy Bài 1.1–1.7 trong BOOK_MASTER; không tách thêm file lesson | adopted | Làm rõ đơn vị kiến thức cho học sinh nhưng vẫn giữ bản in gọn, tránh tạo file rác và không đồng nhất cứng Bài với một buổi học | Tách mỗi Bài thành file riêng hoặc giữ các mục đánh số cũ | `courses/cpp-bang-b/BOOK_MASTER.md` | Chủ dự án xác nhận |
 
 ## Working assumptions
 
@@ -29,7 +32,7 @@
 - Đã quyết định: dùng `.agents` với Rule Always On, skill academic authoring, context ledger và workflow `/write-book`; giữ ba source project read-only; áp dụng hai hồ sơ lesson/problem và README/index cấp nhóm; tổ chức output theo `courses/<course-slug>/`.
 - Chưa quyết định: người duyệt cuối, citation style, license/attribution policy, thời lượng module và cấu trúc bài mới.
 - Blockers: cần chủ dự án xác nhận các mục chưa quyết định trước release tài liệu lớn.
-- Hành động tiếp theo: review `BOOK_MASTER.md` cùng Module 01 – Sắp xếp; sau khi được duyệt, bổ sung các chương Level 1 còn lại từng chương một, không tạo thêm master riêng.
+- Hành động tiếp theo: review toàn bộ coverage Level 1 trong `BOOK_MASTER.md`; sau đó mở rộng từng chương theo ưu tiên lớp học, bắt đầu từ các chương nền tảng như Đếm, Prefix Sum, Hai con trỏ và Tham lam.
 
 ## Change history
 
