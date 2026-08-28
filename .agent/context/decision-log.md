@@ -14,6 +14,7 @@
 | `DEC-006` | 2026-08-27 | Chọn Module 01 – Sắp xếp làm MVP đầu tiên của khóa C++ Bảng B – Level 1 | provisional | Chủ đề bám roadmap, liên kết trực tiếp với mảng/vector, vòng lặp, so sánh, swap và complexity; đã có outline để bắt đầu | Bắt đầu bằng chủ đề nâng cao hơn hoặc viết toàn bộ Level 0 trước | `courses/cpp-bang-b/lessons/level1-01-sap-xep/` | Chủ dự án review |
 | `DEC-007` | 2026-08-27 | Đổi tên curriculum draft thành `IKHEDU_Level0_Foundation.md` và `IKHEDU_Level1_Textbook_Outline.md`; dành tên `IKHEDU_Quick_Reference.md` cho phụ lục tra cứu siêu nhanh sau này | adopted | Phân biệt rõ nền tảng, outline giáo trình và quick reference; tránh gọi bản outline là textbook hoàn chỉnh | Giữ tên cũ gây nhầm vai trò | `courses/cpp-bang-b/curriculum/` và các README liên quan | Chủ dự án yêu cầu |
 | `DEC-008` | 2026-08-27 | Tạo lesson package draft đầu tiên cho Module 01 – Sắp xếp gồm `Ly_Thuyet.md`, `Bai_Tap.md`, `code_reference.cpp` và `QA_Review.md` | provisional | Kiểm chứng cấu trúc sách qua một module nhỏ trước khi nhân rộng; chưa gọi `final` vì còn human review, assessment và test fixture | Viết toàn bộ textbook trước khi thử lesson package | `courses/cpp-bang-b/lessons/level1-01-sap-xep/` | Chủ dự án review |
+| `DEC-009` | 2026-08-28 | `courses/cpp-bang-b/BOOK_MASTER.md` là bản thảo canonical duy nhất của sách C++ Bảng B – Level 1; lesson files là artifact hỗ trợ | provisional | Cần có một bản thảo tổng hợp để chuẩn bị bản in/digital, nhưng chưa gọi `print-ready` trước human review | Chỉ giữ nội dung rời ở từng lesson; tạo nhiều master theo chương | `courses/cpp-bang-b/BOOK_MASTER.md`, course README | Chủ dự án review |
 
 ## Working assumptions
 
@@ -27,7 +28,7 @@
 - Đã quyết định: dùng `.agents` với Rule Always On, skill academic authoring, context ledger và workflow `/write-book`; giữ ba source project read-only; áp dụng hai hồ sơ lesson/problem và README/index cấp nhóm; tổ chức output theo `courses/<course-slug>/`.
 - Chưa quyết định: người duyệt cuối, citation style, license/attribution policy, thời lượng module và cấu trúc bài mới.
 - Blockers: cần chủ dự án xác nhận các mục chưa quyết định trước release tài liệu lớn.
-- Hành động tiếp theo: review lesson package Module 01 – Sắp xếp; sau khi được duyệt, bổ sung assessment/problem package/test fixture nếu cần và chạy QA gates lần tiếp theo.
+- Hành động tiếp theo: review `BOOK_MASTER.md` cùng Module 01 – Sắp xếp; sau khi được duyệt, bổ sung các chương Level 1 còn lại từng chương một, không tạo thêm master riêng.
 
 ## Change history
 

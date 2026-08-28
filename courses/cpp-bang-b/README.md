@@ -13,10 +13,15 @@
 | **Mục tiêu tổng quát** | Biết nhận dạng, giải thích và vận dụng các thuật toán/cấu trúc dữ liệu cơ bản trong các bài toán phù hợp |
 | **Prerequisites** | Level 0 – Nền tảng C++ & Tư duy lập trình; xem tài liệu tra cứu nhanh trong `curriculum/level0/` |
 | **Số chủ đề roadmap** | 21 chủ đề |
+| **BOOK_MASTER** | [`BOOK_MASTER.md`](BOOK_MASTER.md) — bản thảo canonical, trạng thái `draft` |
 | **Module MVP đầu tiên** | Module 01 – Sắp xếp |
 | **Status** | `draft` |
 | **Version** | `0.1.0` |
 | **Reviewer** | TBD – chủ dự án xác nhận |
+
+## BOOK_MASTER — Bản thảo canonical
+
+Bản thảo sách tổng hợp được quản lý tại [`BOOK_MASTER.md`](BOOK_MASTER.md). Đây là file canonical để chuẩn bị bản in/bản digital; các lesson trong `lessons/` là artifact chi tiết phục vụ biên soạn và thực hành.
 
 ## 1. Mục tiêu khóa học
 
@@ -99,6 +104,7 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 | Loại | Path | Canonical? | Mô tả |
 |---|---|---:|---|
 | Course index | `README.md` | yes | Trang chủ khóa học, learning path và assessment map |
+| Book master | [`BOOK_MASTER.md`](BOOK_MASTER.md) | yes | Bản thảo canonical tổng hợp để chuẩn bị bản in/digital |
 | Level 0 reference | `curriculum/level0/IKHEDU_Level0_Foundation.md` | draft | Tài liệu nền tảng và tra cứu nhanh hiện có |
 | Level 1 textbook outline | `curriculum/level1/IKHEDU_Level1_Textbook_Outline.md` | draft | Phác thảo giáo trình và Chương 1 – Sắp xếp |
 | Lesson packages | `lessons/` | planned | Các gói bài học theo chuẩn `README → Ly_Thuyet → Bai_Tap → code/test` |
@@ -165,8 +171,8 @@ Không đưa thông tin vận hành nhạy cảm từ knowledge base vào README
 ## 10. Release notes
 
 - **Version:** `0.1.0`
-- **Last updated:** 2026-08-27
-- **Changed:** Tạo cấu trúc course index, learning path 21 chủ đề, module MVP đầu tiên và file map.
+- **Last updated:** 2026-08-28
+- **Changed:** Tạo course index, BOOK_MASTER canonical, learning path 21 chủ đề, module MVP đầu tiên và file map.
 - **Known gaps:** Chưa có problem package, assessment thực thi và reviewer được chỉ định; lesson package hiện vẫn ở trạng thái draft.
 - **Status:** `draft`
 - **Reviewer:** TBD
