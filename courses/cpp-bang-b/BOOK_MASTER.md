@@ -1449,19 +1449,17 @@ In answer
 
 Mỗi lần chọn, ta cập nhật `lastFinish`. Các hoạt động bắt đầu trước `lastFinish` chắc chắn giao với hoạt động vừa chọn nên bị bỏ qua.
 
-#### Gom hai mốc thời gian bằng `pair<int, int>`
+#### Gom hai mốc thời gian bằng vector lồng nhau (`vector<vector<int>>`)
 
-Mỗi hoạt động gồm hai thông tin đi liền nhau: thời điểm bắt đầu (`start`) và thời điểm kết thúc (`finish`). Trong lập trình thi đấu, ta dùng kiểu `pair<int, int>` có sẵn của C++ để lưu một cặp hai số nguyên mà không cần định nghĩa `struct`:
+Mỗi hoạt động gồm hai thông tin đi liền nhau: thời điểm bắt đầu (`start`) và thời điểm kết thúc (`finish`). Học sinh đã quen với mảng 2 chiều; trong C++, ta lưu danh sách hoạt động dưới dạng một `vector<vector<int>>`, trong đó mỗi phần tử là một vector 2 số nguyên `{finish, start}`:
 
 ```cpp
-pair<int, int> activity = {finish, start};
+vector<int> activity = {finish, start};
 ```
 
-Khi đặt `finish` vào vị trí `first` và `start` vào vị trí `second`, hàm `sort()` mặc định của C++ sẽ **tự động sắp xếp tăng dần theo thời điểm kết thúc (`finish`)**; nếu hai hoạt động kết thúc cùng lúc, `sort()` sẽ tự động so sánh tiếp theo `start`.
+Khi đặt `finish` ở vị trí `0` và `start` ở vị trí `1`, hàm `sort()` mặc định của C++ sẽ **tự động sắp xếp tăng dần theo cột 0 (`finish`)**; nếu hai hoạt động có cùng thời điểm kết thúc, `sort()` sẽ tự động so sánh tiếp cột 1 (`start`).
 
-> **Ngoại lệ về `pair`:** Bài này dùng `pair<int, int>` vì mỗi hoạt động bắt buộc phải giữ hai mốc `start` và `finish` đi cùng nhau, đồng thời cách sắp xếp theo `finish` cần được thể hiện ngắn gọn. Đây là cách lưu dữ liệu của ví dụ, không phải bản chất của Greedy. Em không cần học thuộc rằng mọi bài Greedy đều phải dùng `pair`.
-
-Trong các bài nền tảng trước đó, nếu chưa học `pair`, giáo viên có thể cho học sinh làm việc với hai dãy `start` và `finish` song song hoặc chỉ mô phỏng ý tưởng. Điều cần hiểu trước tiên vẫn là tiêu chí **kết thúc sớm nhất**.
+Cách làm này hoàn toàn dựa trên kiểu dữ liệu `vector` quen thuộc, không cần học thêm cú pháp mới.
 
 #### Code đầy đủ
 
@@ -1476,23 +1474,23 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    // Lưu từng hoạt động dưới dạng {finish, start}
-    vector<pair<int, int>> activities(n);
+    // Lưu từng hoạt động dưới dạng vector 2 phần tử: {finish, start}
+    vector<vector<int>> activities(n, vector<int>(2));
     for (int i = 0; i < n; i++) {
         int start, finish;
         cin >> start >> finish;
         activities[i] = {finish, start};
     }
 
-    // sort() mặc định sẽ sắp xếp tăng dần theo finish (phần tử first)
+    // sort() mặc định tự động sắp xếp tăng dần theo cột 0 (finish)
     sort(activities.begin(), activities.end());
 
     int answer = 0;
     int lastFinish = -1;
 
     for (int i = 0; i < n; i++) {
-        int finish = activities[i].first;
-        int start = activities[i].second;
+        int finish = activities[i][0];
+        int start = activities[i][1];
 
         if (start >= lastFinish) {
             answer++;
@@ -1523,8 +1521,8 @@ Với mỗi hoạt động, em có thể kiểm tra ba thông tin:
 
 | Biến | Câu hỏi cần trả lời |
 |---|---|
-| `start` (`activities[i].second`) | Hoạt động này bắt đầu lúc nào? |
-| `finish` (`activities[i].first`) | Hoạt động này kết thúc lúc nào? |
+| `start` (`activities[i][1]`) | Hoạt động này bắt đầu lúc nào? |
+| `finish` (`activities[i][0]`) | Hoạt động này kết thúc lúc nào? |
 | `lastFinish` | Lựa chọn gần nhất kết thúc lúc nào? |
 
 Nếu chương trình chọn hai hoạt động giao nhau, hãy kiểm tra điều kiện `start >= lastFinish`. Nếu số lượng thấp bất thường, hãy kiểm tra comparator có thật sự sắp xếp theo `finish` hay không.
@@ -1873,23 +1871,23 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    // Lưu từng hoạt động dưới dạng {finish, start}
-    vector<pair<int, int>> activities(n);
+    // Lưu từng hoạt động dưới dạng vector 2 phần tử: {finish, start}
+    vector<vector<int>> activities(n, vector<int>(2));
     for (int i = 0; i < n; i++) {
         int start, finish;
         cin >> start >> finish;
         activities[i] = {finish, start};
     }
 
-    // sort() mặc định sẽ sắp xếp tăng dần theo finish (phần tử first)
+    // sort() mặc định tự động sắp xếp tăng dần theo cột 0 (finish)
     sort(activities.begin(), activities.end());
 
     int answer = 0;
     int lastFinish = -1;
 
     for (int i = 0; i < n; i++) {
-        int finish = activities[i].first;
-        int start = activities[i].second;
+        int finish = activities[i][0];
+        int start = activities[i][1];
 
         if (start >= lastFinish) {
             answer++;
