@@ -103,19 +103,12 @@ README.md → Ly_Thuyet.md → Bai_Tap.md → code/test
 | `SORT-F03` | Coding | Comparator trên số nguyên | Comparator nhất quán, output đúng | planned |
 | `SORT-T01` | Bài chuyển giao | Nhận ra vai trò của sorting | Giải thích được “sắp xếp để làm gì” trước khi code | planned |
 
-## QA và review
+## Quy ước review nội dung
 
-| Artifact | Path | Status |
-|---|---|---|
-| QA record | [`QA_Review.md`](QA_Review.md) | `draft` / `needs-human-review` |
+Các file trong package hiện ở trạng thái `draft`, nghĩa là nội dung đang được giáo viên xem xét và có thể tiếp tục điều chỉnh. Việc kiểm tra nội bộ được thực hiện trong quá trình biên soạn; không tạo thêm file quản trị trong lesson package nếu không thật sự cần thiết.
 
-
-- **Source/provenance:** sử dụng các source ID đã đăng ký; không đưa thông tin vận hành nhạy cảm vào output.
-- **Pedagogy:** kiểm tra prerequisite, learning outcomes, hoạt động và assessment có alignment.
-- **Code:** chỉ gọi là verified sau khi có code khớp lý thuyết và được kiểm thử.
-- **Release status:** tài liệu hiện là `draft`, chưa phải bản phát hành.
-- **Reviewer:** TBD – chủ dự án xác nhận.
+Nguồn tham chiếu được khai báo ở metadata của package. `IKHEDU_Knowledge_Base.md` là nguồn read-only và không được chỉnh sửa.
 
 ## Next action
 
-Bước tiếp theo là review `Ly_Thuyet.md`, `Bai_Tap.md`, `QA_Review.md`, chốt thời lượng thực tế, tạo test/assessment nếu cần và chỉ sau đó mới cân nhắc chuyển package sang `review-needed` hoặc `final`.
+Bước tiếp theo là giáo viên review trực tiếp `Ly_Thuyet.md`, `Bai_Tap.md` và `code_reference.cpp`; sau đó mới quyết định có cần tạo test hoặc problem package riêng hay không.

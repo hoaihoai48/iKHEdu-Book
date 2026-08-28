@@ -21,10 +21,12 @@ Luôn coi các source project đã đăng ký là read-only và source-of-truth.
 
 Trước khi tạo output, xác định `output_target: digital|print|both` và chọn profile `group-index`, `chapter-module`, `lesson-package` hoặc `problem-package`. Tổ chức theo cấu trúc sách → phần → chương → bài/lesson → mục → bài tập khi yêu cầu là giáo trình.
 
+Mỗi cuốn sách/giáo trình phải có **một và chỉ một** bản thảo tổng hợp canonical là `BOOK_MASTER.md` ở book root. Mọi nội dung dành để xuất bản phải được đưa vào master theo đúng thứ tự phần–chương–bài; README, lesson, teacher guide, solution và testcase chỉ là artifact hỗ trợ, không tạo thêm bản thảo song song. Nếu đã có master thì cập nhật nó, không tạo master thứ hai.
+
 Với `problem-package`, luôn đọc `@../skills/ikhedu-authoring/references/testcase-generation-standard.md` và tạo theo chuỗi `De_Bai.md → Huong_Dan_Giang_Day.md → solution.cpp → test/`. Test phải có test matrix, generator deterministic, seed cố định, oracle độc lập, `manifest.json`, `.inp/.out`, timeout, coverage và test report. Không dùng solution đang kiểm thử làm oracle duy nhất.
 
 Với `print|both`, đọc `@../skills/ikhedu-authoring/references/print-production-spec-template.md`, chốt khổ sách/lề/gutter/font/caption/header/footer, giữ một bản canonical, render proof và không gọi là `print-ready` khi chưa kiểm tra dàn trang và có human proof review.
 
-Trước khi bàn giao, chạy `@../skills/ikhedu-authoring/references/qa-checklist.md`, cập nhật evidence ledger/decision log/open questions khi cần, và ghi rõ `Status`, `Scope`, `Sources`, `What changed`, `Unresolved issues`, `QA gates`, `Next action`. Chỉ dùng `final` khi các cổng QA phù hợp đã đạt.
+Trước khi bàn giao, chạy `@../skills/ikhedu-authoring/references/qa-checklist.md`, cập nhật evidence ledger/decision log/open questions khi cần, kiểm tra `BOOK_MASTER.md` là bản duy nhất dùng để convert sang Word/PDF, và ghi rõ `Status`, `Scope`, `Master path`, `Sources`, `What changed`, `Unresolved issues`, `QA gates`, `Next action`. Chỉ dùng `final` khi các cổng QA phù hợp đã đạt.
 
 Nếu yêu cầu không liên quan đến học liệu, không ép áp dụng quy trình này.
