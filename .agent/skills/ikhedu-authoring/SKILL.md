@@ -48,6 +48,7 @@ Không ép problem package vào lesson template. Không đưa lời giải đầ
 
 Đọc reference tương ứng trước khi tạo file:
 
+- `references/book-master-template.md` khi bắt đầu hoặc tiếp tục một cuốn sách/giáo trình.
 - `references/group-index-template.md`
 - `references/lesson-package-template.md`
 - `references/problem-package-template.md`
@@ -62,7 +63,11 @@ Không ép problem package vào lesson template. Không đưa lời giải đầ
 
 Xác định `document_type`, `output_target` (`digital|print|both`), khổ thành phẩm nếu in, đối tượng, level, prerequisite, learning outcomes, thời lượng, ngôn ngữ, giọng điệu, phạm vi, format, license, reviewer và trạng thái. Tách yêu cầu đã xác nhận khỏi giả định bằng mã `ASM-...`. Nếu người dùng chỉ muốn sửa nhỏ, giữ nguyên ý định và không redesign ngoài phạm vi.
 
-### Bước B — Source map và evidence
+### Bước B — Master manuscript và source map
+
+Tìm `BOOK_MASTER.md` ở book root trước khi tạo nội dung. Nếu đã có, cập nhật đúng file đó; nếu chưa có và đây là một cuốn sách mới, tạo một file duy nhất theo `references/book-master-template.md`. Không tạo master riêng cho từng chương. Mọi nội dung dành để xuất bản phải được đồng bộ vào master theo thứ tự phần–chương–bài. README, lesson, teacher guide, solution và testcase là artifact hỗ trợ, không phải bản thảo xuất bản song song.
+
+Word/PDF/LaTeX/InDesign là artifact dẫn xuất từ `BOOK_MASTER.md`, không trở thành source mới. Khi artifact hỗ trợ thay đổi làm ảnh hưởng nội dung sách, cập nhật master trong cùng tác vụ. Nếu chưa xác định được book root hoặc master hiện hành, dừng và hỏi thay vì tạo thêm file.
 
 Đọc source index trước. Với mỗi claim quan trọng, ghi `claim_id`, `source_id`, path/URL, vị trí, paraphrase, loại claim, status `verified|partial|unverified|conflict`, giới hạn và nơi sử dụng vào evidence ledger. Không bịa citation, số liệu, DOI, trích dẫn hoặc vị trí. Claim chưa xác minh phải ghi `[CHƯA XÁC MINH]` hoặc không đưa vào phát hành.
 
@@ -99,7 +104,7 @@ Chỉ dùng `final` khi không còn blocker/major chưa được chấp nhận, 
 
 ### Bước F — Handoff
 
-Mỗi lần bàn giao phải nêu: `Status`, `Scope`, `Assumptions`, `Sources consulted`, `What changed`, `Evidence/citations`, `Unresolved issues`, `QA gates`, `Next action`. Sau mốc lớn, cập nhật `decision-log.md`, `open-questions.md`, `evidence-ledger.md` và trạng thái trong `project-context.md` khi phù hợp.
+Mỗi lần bàn giao phải nêu: `Status`, `Scope`, `Master path`, `Assumptions`, `Sources consulted`, `What changed`, `Evidence/citations`, `Unresolved issues`, `QA gates`, `Next action`. Sau mốc lớn, cập nhật `decision-log.md`, `open-questions.md`, `evidence-ledger.md` và trạng thái trong `project-context.md` khi phù hợp.
 
 ## 4. Các lệnh làm việc có thể yêu cầu
 
