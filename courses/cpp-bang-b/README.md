@@ -48,7 +48,7 @@ Thứ tự dưới đây là **teaching sequence tạm thời** để xây dựn
 |---:|---|---|---|---|---|---|
 | 0 | Phần 0 – Cách học và tư duy giải bài | Input–Process–Output, đọc đề, pseudocode, test, debug, complexity | Không | Biết biến đề bài thành các bước xử lý có thể lập trình | [Level 0 Foundation](source/level0/IKHEDU_Level0_Foundation.md) | draft |
 | 1 | **Sắp xếp** | `sort`, comparator, nhiều tiêu chí, tiền xử lý | Mảng, `vector`, vòng lặp, so sánh, swap | Biết dùng thứ tự để làm bài toán đơn giản hơn | [Tài liệu gốc Chương 1 — Sắp xếp](source/level1/IKHEDU_Chapter01_Sorting_Source.md) | **MVP – draft** |
-| 2 | **Tham lam** | Quyết định cục bộ, chứng minh lựa chọn | Sắp xếp, so sánh, `vector`, comparator | Nhận diện, triển khai và kiểm tra chiến lược tham lam | [Tài liệu gốc Chương 2 — Tham lam](source/level1/IKHEDU_Chapter02_Greedy_Source.md) | **draft – source review** |
+| 2 | **Tham lam** | Quyết định cục bộ, chứng minh lựa chọn | Sắp xếp, so sánh, `vector`, comparator | Nhận diện, triển khai và kiểm tra chiến lược tham lam | [Tài liệu gốc Chương 2 — Tham lam](source/level1/IKHEDU_Chapter02_Greedy_Source.md) | **approved – content; human proof pending** |
 | 3 | Số học | Ước, bội, GCD/LCM, số nguyên tố | Vòng lặp, modulo, hàm | Vận dụng tính chất số học cơ bản | BOOK_MASTER — nội dung cốt lõi | draft-map |
 | 4 | Đếm phân phối | Nguyên lý Dirichlet, bao hàm–loại trừ | Đếm, mảng, tần suất | Chọn phương pháp đếm phù hợp | BOOK_MASTER — nội dung cốt lõi | draft-map |
 | 5 | Tìm kiếm nhị phân | Tìm kiếm trên miền dữ liệu/đáp án | Sắp xếp, so sánh, hàm `check`, complexity | Nhận diện tính đơn điệu và viết kiểm tra | BOOK_MASTER — nội dung cốt lõi | draft-map |

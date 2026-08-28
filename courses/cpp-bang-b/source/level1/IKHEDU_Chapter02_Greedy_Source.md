@@ -25,20 +25,22 @@ Tham lam không được trình bày như quy tắc “luôn chọn số lớn n
 | Phạm vi | Khái niệm tham lam, chọn hoạt động, chứng minh đổi chỗ, phản ví dụ và các biến thể cơ bản |
 | Số bài | 6 bài học, kết hợp mô phỏng, code, lập luận và bài chuyển giao |
 
+**Vị trí trong lộ trình:** Sách trình bày Chương 2 ngay sau Chương 1 để tạo mạch đọc liền nhau từ Sorting sang Greedy. Giáo viên có thể điều chỉnh thứ tự dạy theo mức độ lớp học và teaching sequence của trung tâm, miễn là học sinh đã có prerequisite về sắp xếp, vòng lặp và so sánh.
+
 ### Learning outcomes
 
 Sau chương này, em có thể:
 
-- giải thích được thuật toán tham lam là gì bằng một ví dụ cụ thể;
-- phân biệt lựa chọn cục bộ với mục tiêu tối ưu toàn cục;
-- nhận biết bài toán chọn nhiều hoạt động không giao nhau;
-- sắp xếp hoạt động theo thời điểm kết thúc và duyệt để chọn hoạt động hợp lệ;
-- mô phỏng được trạng thái sau từng lựa chọn;
-- trình bày được ý tưởng vì sao chọn hoạt động kết thúc sớm là an toàn;
-- dùng phản ví dụ để kiểm tra một quy tắc tham lam đáng ngờ;
-- phân biệt bài dùng được tham lam với bài cần cân nhắc quy hoạch động hoặc tìm kiếm;
-- phân tích được độ phức tạp `O(N log N)` của lời giải chọn hoạt động;
-- giải thích sau khi chọn một phương án thì phần còn lại của bài toán thay đổi như thế nào.
+1. Giải thích thuật toán tham lam bằng một ví dụ cụ thể — `LO-01`.
+2. Phân biệt lựa chọn cục bộ với mục tiêu tối ưu toàn cục — `LO-02`.
+3. Nhận biết bài toán chọn nhiều hoạt động không giao nhau — `LO-03`.
+4. Sắp xếp hoạt động theo thời điểm kết thúc và duyệt để chọn hoạt động hợp lệ — `LO-04`.
+5. Mô phỏng trạng thái sau từng lựa chọn — `LO-05`.
+6. Trình bày vì sao chọn hoạt động kết thúc sớm là an toàn — `LO-06`.
+7. Dùng phản ví dụ để kiểm tra một quy tắc tham lam đáng ngờ — `LO-07`.
+8. Phân biệt bài dùng được tham lam với bài cần phân tích thêm hoặc cân nhắc quy hoạch động, tìm kiếm — `LO-08`.
+9. Phân tích độ phức tạp `O(N log N)` của lời giải chọn hoạt động — `LO-09`.
+10. Giải thích sau khi chọn một phương án thì phần còn lại của bài toán thay đổi như thế nào — `LO-10`.
 
 ### Câu hỏi trung tâm của chương
 
@@ -268,6 +270,10 @@ pair<int, int> activity = {finish, start};
 
 Khi đặt `finish` vào vị trí `first` và `start` vào vị trí `second`, hàm `sort()` mặc định của C++ sẽ **tự động sắp xếp tăng dần theo thời điểm kết thúc (`finish`)**; nếu hai hoạt động kết thúc cùng lúc, `sort()` sẽ tự động so sánh tiếp theo `start`.
 
+> **Ngoại lệ về `pair`:** Bài này dùng `pair<int, int>` vì mỗi hoạt động bắt buộc phải giữ hai mốc `start` và `finish` đi cùng nhau, đồng thời cách sắp xếp theo `finish` cần được thể hiện ngắn gọn. Đây là cách lưu dữ liệu của ví dụ, không phải bản chất của Greedy. Em không cần học thuộc rằng mọi bài Greedy đều phải dùng `pair`.
+
+Trong các bài nền tảng trước đó, nếu chưa học `pair`, giáo viên có thể cho học sinh làm việc với hai dãy `start` và `finish` song song hoặc chỉ mô phỏng ý tưởng. Điều cần hiểu trước tiên vẫn là tiêu chí **kết thúc sớm nhất**.
+
 #### Code đầy đủ
 
 ```cpp
@@ -338,7 +344,7 @@ Nếu chương trình chọn hai hoạt động giao nhau, hãy kiểm tra đi�
 
 1. Vì sao phải sắp xếp trước khi duyệt?
 2. `lastFinish` được cập nhật vào lúc nào?
-3. Nếu dùng `activity.start > lastFinish` thay vì `>=`, chương trình sẽ sai ở trường hợp nào?
+3. Nếu dùng `start > lastFinish` thay vì `>=`, chương trình sẽ sai ở trường hợp nào?
 4. Vì sao comparator không được sắp xếp theo `start` trong bài này?
 5. Với `n = 0`, chương trình in gì? Nếu đề bảo đảm `n >= 1`, điều này có ảnh hưởng không?
 
@@ -384,7 +390,7 @@ Sau khi chọn `A`, bài toán còn lại có cùng dạng nhưng chỉ xét cá
 
 #### Invariant khi duyệt
 
-Trong lúc chương trình chạy, ta giữ invariant:
+Trong lúc chương trình chạy, ta giữ **bất biến (invariant)**, tức là điều luôn đúng sau mỗi bước:
 
 > Sau khi xử lý một đoạn đầu của danh sách đã sắp xếp, `lastFinish` là thời điểm kết thúc của hoạt động cuối cùng trong lời giải tham lam; các hoạt động đã chọn không giao nhau.
 
@@ -453,7 +459,7 @@ Nếu chọn bắt đầu sớm nhất, ta chọn `A` và chỉ được `1` ho�
 
 #### Khi cần cân nhắc DP hoặc tìm kiếm
 
-Nếu một lựa chọn hiện tại có nhiều trạng thái tương lai khác nhau và không thể chứng minh việc chọn sớm là an toàn, Greedy có thể không phù hợp. Khi đó, em có thể cần:
+Nếu một lựa chọn hiện tại có nhiều trạng thái tương lai khác nhau và chưa thể chứng minh việc chọn sớm là an toàn, ta **chưa đủ cơ sở để dùng Greedy**. Khi đó cần phân tích thêm mục tiêu, trạng thái và các lựa chọn; có thể cân nhắc:
 
 - **quy hoạch động**, nếu bài toán có các bài toán con lặp lại;
 - **quay lui hoặc tìm kiếm**, nếu cần thử các lựa chọn trong phạm vi nhỏ;
@@ -499,15 +505,19 @@ Bài này kiểm tra em có thể nhận dạng chiến lược tham lam, triể
 
 Cho các khoảng thời gian. Sắp xếp chúng theo thời điểm kết thúc tăng dần, sau đó ghi lại các khoảng được chọn.
 
-- **Input:** Không bắt buộc viết chương trình; giáo viên cung cấp một bảng hoạt động.
+- **Input:** Năm hoạt động `[1,4]`, `[3,5]`, `[0,6]`, `[5,7]`, `[8,9]`.
 - **Output:** Danh sách hoạt động được chọn và số lượng hoạt động.
-- **Ví dụ:** Với `[1,4]`, `[3,5]`, `[0,6]`, `[5,7]`, `[8,9]`, một đáp án tối ưu là `[1,4]`, `[5,7]`, `[8,9]`.
+- **Ví dụ:** Một đáp án tối ưu là `[1,4]`, `[5,7]`, `[8,9]`, nên số lượng là `3`.
+- **Expected evidence:** Bảng sắp xếp theo `finish`, các hoạt động được chọn theo thứ tự và lý do mỗi hoạt động bị bỏ qua.
 
 ##### Bài 2.6.2 — Kiểm tra hai hoạt động
 
 Cho hai hoạt động `[s1, f1]` và `[s2, f2]`. In `YES` nếu có thể chọn cả hai theo đúng thứ tự đã cho, tức là hoạt động thứ hai bắt đầu không sớm hơn thời điểm kết thúc của hoạt động thứ nhất; ngược lại in `NO`.
 
+- **Input:** Một dòng gồm `s1 f1 s2 f2`, với `0 <= s1 < f1` và `0 <= s2 < f2`.
+- **Output:** In `YES` hoặc `NO`.
 - **Ví dụ:** `[2,5]` rồi `[5,8]` cho `YES`; `[2,5]` rồi `[4,8]` cho `NO`.
+- **Expected evidence:** Dùng đúng điều kiện `s2 >= f1`, đặc biệt không loại trường hợp hai hoạt động nối tiếp tại cùng một mốc.
 
 ##### Bài 2.6.3 — Chọn hoạt động từ danh sách đã sắp xếp
 
@@ -545,45 +555,55 @@ Có `N` chuyến bay sử dụng một đường băng duy nhất. Giả sử c�
 
 Từ bài chọn hoạt động, không chỉ in số lượng mà còn in các hoạt động được chọn theo thứ tự thời gian.
 
-Hãy bảo đảm các hoạt động được in ra không giao nhau và giữ nguyên cặp `start finish` của từng hoạt động.
+- **Input:** `N` và `N` cặp `start finish`, với `0 <= start < finish`.
+- **Output:** Dòng đầu là số hoạt động được chọn; dòng sau in các cặp `start finish` theo thứ tự đã chọn.
+- **Yêu cầu:** Các hoạt động được in ra không giao nhau và giữ nguyên dữ liệu của từng hoạt động.
+- **Expected evidence:** Có sort theo `finish`, điều kiện chọn đúng và danh sách in ra có thể kiểm tra được bằng mắt.
 
 ##### Bài 2.6.8 — Tìm phản ví dụ
 
 Viết một input có ít nhất bốn hoạt động để chứng minh quy tắc “chọn hoạt động bắt đầu sớm nhất” không luôn cho số lượng lớn nhất.
 
-Bài làm cần có ba phần: input, kết quả của quy tắc sai và một lời giải tốt hơn.
+Bài làm cần có ba phần: input, kết quả của quy tắc sai và một lời giải tốt hơn. **Expected evidence:** Em chỉ ra được số lượng của hai cách và giải thích vì sao input đó đủ để bác bỏ quy tắc sai.
 
 #### Tầng C — Chuyển giao
 
 ##### Bài 2.6.9 — Lập lịch có điểm thưởng
 
-Mỗi hoạt động có thêm một điểm thưởng. Mục tiêu là chọn các hoạt động không giao nhau để tổng điểm lớn nhất.
+Mỗi hoạt động có thêm một điểm thưởng. Mục tiêu là chọn các hoạt động không giao nhau để tổng điểm lớn nhất. Đây là **bài thảo luận có hướng dẫn**, chưa yêu cầu viết lời giải tối ưu hoàn chỉnh.
 
-Không được mặc định dùng tiêu chí kết thúc sớm nhất. Hãy thử tạo phản ví dụ cho việc đó và viết nhận xét về thông tin mới của bài toán.
+- **Dữ liệu mẫu:** `A = [1,4]` có điểm `5`, `B = [4,7]` có điểm `5`, `C = [1,7]` có điểm `12`.
+- **Nhiệm vụ:** So sánh lựa chọn theo thời điểm kết thúc sớm với lựa chọn có tổng điểm lớn hơn.
+- **Expected evidence:** Em chỉ ra được rằng `A + B` có tổng điểm `10`, còn `C` có điểm `12`, từ đó giải thích vì sao tiêu chí của bài chọn nhiều hoạt động không thể áp dụng nguyên xi.
 
 ##### Bài 2.6.10 — Đổi tiền và phản ví dụ
 
-Cho các mệnh giá và số tiền cần đổi. Kiểm tra chiến lược chọn mệnh giá lớn nhất trước. Nếu chiến lược sai, in ra một cách đổi tốt hơn cho input đã cho.
+Cho các mệnh giá và số tiền cần đổi, với mục tiêu dùng **ít đồng nhất cho input đang xét**. Kiểm tra chiến lược chọn mệnh giá lớn nhất trước. Nếu chiến lược sai trên input đó, đưa ra một cách đổi tốt hơn và giải thích vì sao đây là phản ví dụ; không kết luận về mọi hệ mệnh giá từ một input duy nhất.
 
 - **Ví dụ:** Mệnh giá `1, 3, 4`, số tiền `6`: Greedy cho `4+1+1`, nhưng đáp án tốt hơn là `3+3`.
+- **Expected evidence:** Nêu rõ mục tiêu, dãy lựa chọn của Greedy, cách đổi tốt hơn và số đồng của mỗi cách.
 
 ##### Bài 2.6.11 — Chọn việc theo thời hạn
 
-Mỗi công việc cần đúng một đơn vị thời gian và có thời hạn hoàn thành. Hãy thử xây dựng chiến lược tham lam để thực hiện nhiều công việc nhất.
+Mỗi công việc cần đúng một đơn vị thời gian và có thời hạn hoàn thành. Trong mỗi thời điểm `1, 2, ..., D`, ta chỉ làm được một công việc; công việc có deadline `d` phải được thực hiện không muộn hơn thời điểm `d`. Hãy thử xây dựng chiến lược tham lam để thực hiện nhiều công việc nhất.
 
-Bài này cần giáo viên hướng dẫn thêm về cách sắp xếp theo thời hạn và cách kiểm tra phản ví dụ. Mục tiêu chính là so sánh với bài chọn hoạt động, không yêu cầu học thuộc một công thức mới.
+- **Dữ liệu mẫu:** Có năm công việc với deadline `1, 1, 2, 2, 3`.
+- **Expected evidence:** Em giải thích được vì sao tối đa có thể làm `3` công việc trong ba vị trí thời gian, đồng thời nêu tiêu chí sắp xếp hoặc câu hỏi cần kiểm tra trước khi code.
+- **Giới hạn:** Đây là bài mở rộng có hướng dẫn; chưa yêu cầu học thuộc một công thức mới hay triển khai priority queue.
 
 ##### Bài 2.6.12 — Nói rõ vì sao
 
 Với mỗi mô tả, hãy trả lời `DÙNG GREEDY`, `CẦN KIỂM TRA THÊM` hoặc `KHÔNG ĐỦ THÔNG TIN`, rồi giải thích:
 
 1. Chọn nhiều hoạt động không giao nhau nhất.
-2. Đổi tiền với mọi mệnh giá đều là bội phù hợp.
+2. Đổi tiền bằng các mệnh giá `1, 3, 4`, số tiền `6`, với mục tiêu dùng ít đồng nhất.
 3. Chọn dãy có tổng điểm lớn nhất nhưng các phần tử có thể xung đột.
 4. Chọn các đoạn không giao nhau nhưng muốn tổng độ dài lớn nhất.
 5. Chọn một số lượng lớn nhất trong một lần duyệt.
 
 Điểm quan trọng là em phải nêu mục tiêu và lý do, không chỉ ghi tên thuật toán.
+
+**Rubric cho Bài 2.6.12:** Mỗi câu được xem là đạt khi em nêu được mục tiêu của bài, chỉ ra tiêu chí hoặc thông tin còn thiếu, và đưa ra lý do/ phản ví dụ phù hợp. Một câu chỉ ghi tên thuật toán mà không có giải thích chưa được tính là hoàn thành.
 
 #### Phiếu tự đánh giá
 
@@ -607,6 +627,17 @@ Em có thể xem mình đã nắm chương khi có thể trả lời rõ:
 > **Tiêu chí tham lam của em là gì, vì sao lựa chọn đó an toàn, và có phản ví dụ nào làm nó thất bại không?**
 
 Ngoài ra, em cần biên dịch được chương trình chọn hoạt động, chạy đúng ví dụ, thử ít nhất ba test tự tạo và giải thích được ý nghĩa của `lastFinish`.
+
+#### Rubric hoàn thành chương
+
+| Bằng chứng | Đạt khi |
+|---|---|
+| Mô phỏng | Chọn đúng các hoạt động hợp lệ và cập nhật đúng `lastFinish` |
+| Code | Sort theo `finish`, dùng điều kiện `start >= lastFinish`, không chọn hai hoạt động giao nhau |
+| Chứng minh | Nêu được ý nghĩa của `finish(A) <= finish(B)` trong lập luận đổi chỗ |
+| Phản ví dụ | Tạo được input làm một tiêu chí sai cho kết quả kém hơn |
+| Phân tích | Tách được chi phí sort `O(N log N)` và duyệt `O(N)` |
+| Chuyển giao | Nhận ra khi mục tiêu đổi từ số lượng sang tổng giá trị thì cần phân tích lại |
 
 ---
 
@@ -703,3 +734,17 @@ output là:
 ## Ghi chú mở rộng cho giáo viên
 
 Các chủ đề như lập lịch công việc có thời hạn, ba lô phân số, Kruskal hoặc chia tải bằng hàng đợi ưu tiên đều có thể dùng Greedy, nhưng không nên đưa tất cả vào bài đầu tiên. Trước hết, học sinh cần nắm vững bốn năng lực: nhận ra mục tiêu tối ưu, viết tiêu chí lựa chọn, mô phỏng trạng thái và bảo vệ lựa chọn bằng lập luận hoặc kiểm tra phản ví dụ.
+
+## Ma trận alignment nội bộ
+
+| Outcome | Evidence chính | Tiêu chí đạt |
+|---|---|---|
+| `LO-01`, `LO-02` — Giải thích Greedy và phân biệt cục bộ/toàn cục | Bài 2.1, Bài 2.6.12 | Nêu được mục tiêu, lựa chọn và lý do không chọn tùy tiện |
+| `LO-03`, `LO-05` — Nhận biết interval scheduling và mô phỏng trạng thái | Bài 2.2, Bài 2.6.1, 2.6.5, 2.6.6 | Mô hình hóa đúng khoảng, điều kiện nối tiếp và `lastFinish` |
+| `LO-04` — Viết lời giải chọn hoạt động | Bài 2.3, Bài 2.6.3–2.6.7 | Sort theo `finish`, kiểm tra `start >= lastFinish`, cập nhật trạng thái |
+| `LO-06`, `LO-10` — Giải thích tính đúng đắn và phần bài toán còn lại | Bài 2.4, rubric chương | Trình bày được lập luận đổi chỗ và bất biến (invariant) |
+| `LO-07` — Tìm giới hạn/phản ví dụ | Bài 2.1, Bài 2.5, Bài 2.6.8–2.6.10 | Tạo hoặc phân tích được phản ví dụ có mục tiêu rõ |
+| `LO-09` — Phân tích độ phức tạp | Bài 2.3, rubric chương | Tách được chi phí sort và chi phí duyệt |
+| `LO-08` — Chuyển giao sang bài biến thể | Bài 2.6.9–2.6.12 | Nhận ra khi mục tiêu/điều kiện đổi thì tiêu chí Greedy phải được kiểm tra lại |
+
+Ma trận này là ghi chú biên soạn, không đồng bộ vào bản in học sinh.
