@@ -2,11 +2,10 @@
 name: ikhedu-authoring
 description: Biên soạn và kiểm định nội dung iKHEDU gồm sách, giáo trình, lesson, module, README nhóm, bài tập, problem statement, teacher guide, solution và test. Dùng khi người dùng yêu cầu tạo, sửa, nghiên cứu, dịch, lập curriculum, viết giáo án, thiết kế bài toán hoặc phát hành học liệu trong project ikhEdu_lessons; luôn đọc context/source trước khi viết.
 license: Proprietary project skill; use with project owner approval
-when_to_use: "Khi tạo, sửa, nghiên cứu, dịch, review hoặc phát hành sách, giáo trình, lesson, module, README nhóm, problem statement, teacher guide, solution hoặc test trong project ikhEdu_lessons."
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
-version: 1.0.0
 metadata:
   version: "1.0.0"
+  when_to_use: "Khi tạo, sửa, nghiên cứu, dịch, review hoặc phát hành sách, giáo trình, lesson, module, README nhóm, problem statement, teacher guide, solution hoặc test trong project ikhEdu_lessons."
   domain: "ikhedu-educational-authoring"
   language: "vi"
 ---
@@ -54,12 +53,13 @@ Không ép problem package vào lesson template. Không đưa lời giải đầ
 - `references/problem-package-template.md`
 - `references/chapter-template.md`
 - `references/qa-checklist.md`
+- `references/print-production-spec-template.md` khi `output_target` là `print` hoặc `both`.
 
 ## 3. Quy trình chuẩn
 
 ### Bước A — Brief
 
-Xác định `document_type`, đối tượng, level, prerequisite, learning outcomes, thời lượng, ngôn ngữ, giọng điệu, phạm vi, format, license, reviewer và trạng thái. Tách yêu cầu đã xác nhận khỏi giả định bằng mã `ASM-...`. Nếu người dùng chỉ muốn sửa nhỏ, giữ nguyên ý định và không redesign ngoài phạm vi.
+Xác định `document_type`, `output_target` (`digital|print|both`), khổ thành phẩm nếu in, đối tượng, level, prerequisite, learning outcomes, thời lượng, ngôn ngữ, giọng điệu, phạm vi, format, license, reviewer và trạng thái. Tách yêu cầu đã xác nhận khỏi giả định bằng mã `ASM-...`. Nếu người dùng chỉ muốn sửa nhỏ, giữ nguyên ý định và không redesign ngoài phạm vi.
 
 ### Bước B — Source map và evidence
 
@@ -77,7 +77,15 @@ Làm theo thứ tự: learning outcomes đo được → evidence/assessment →
 
 `problem-package`: `De_Bai.md` gồm bối cảnh, nhiệm vụ, Input, Output, giới hạn, subtasks, samples và giải thích sample. `Huong_Dan_Giang_Day.md` gồm mục tiêu, prerequisite, phân tích đề, câu hỏi dẫn dắt, trực giác, invariant/correctness, complexity, misconception, code và bài transfer. `solution.cpp` phải khớp statement, xử lý boundary case, đúng complexity và không debug output. `test/` phải có mục đích test và manifest/coverage nếu project yêu cầu.
 
-### Bước E — Review gates
+### Bước E — Print-ready gate
+
+Nếu `output_target` là `print` hoặc `both`, coi bản in là một deliverable thật, không phải việc chuyển đổi sau cùng. Chốt trước khổ thành phẩm, hướng trang, lề trong/lề ngoài và gutter theo gáy, bleed nếu có, hệ màu, font được phép nhúng, quy tắc header/footer, đánh số trang, style heading, caption, bảng, code và ngắt chương. Không dùng khoảng trắng hoặc xuống dòng thủ công để dàn trang.
+
+Giữ một bản nội dung canonical có cấu trúc; xem PDF/Word/LaTeX/InDesign là artifact dẫn xuất và ghi quan hệ đó trong source index. Chuẩn bị front matter (bìa, thông tin xuất bản, lời nói đầu nếu có, mục lục), body matter (chương/lesson/problem) và back matter (glossary, tài liệu tham khảo, đáp án/phụ lục nếu phạm vi cho phép). Mỗi hình/bảng phải có caption, số thứ tự, nguồn và vị trí tham chiếu; code và bảng không được tràn lề hoặc bị cắt khi xuất.
+
+Trước khi gọi là `print-ready`, render bản proof và kiểm tra: mục lục/số trang; font nhúng; heading và cross-reference; không có trang trắng ngoài chủ ý; không có widow/orphan hoặc tiêu đề bị treo; hình/bảng/công thức/code không bị cắt; tương phản khi in xám; lề gáy; hyperlink/URL quan trọng; lỗi chính tả sau dàn trang. Kiểm tra trực quan các trang đầu, trang có bảng/hình/code dài, trang chuyển chương, trang chẵn/lẻ và trang cuối. Nếu có thể, in thử một tập mẫu và ghi kết quả proof vào báo cáo QA. Chỉ phát hành PDF sau khi có người duyệt proof.
+
+### Bước F — Review gates
 
 Kiểm tra theo thứ tự: source/provenance; fact và logic; correctness/code; alignment sư phạm; độ khó/scaffolding; thuật ngữ/ký hiệu; ngôn ngữ; accessibility; license/attribution; cross-artifact consistency. Ghi lỗi theo `blocker|major|minor|polish` với vị trí, bằng chứng và trạng thái sửa.
 
@@ -98,7 +106,7 @@ Mỗi lần bàn giao phải nêu: `Status`, `Scope`, `Assumptions`, `Sources co
 - “Dùng `ikhedu-authoring` để tạo lesson package …” → chọn `lesson-package` và đọc template liên quan.
 - “Dùng `ikhedu-authoring` để tạo bài toán IKH-XXXX …” → chọn `problem-package` và tạo đủ statement/teacher guide/solution/test plan.
 - “Dùng `ikhedu-authoring` để review …” → không viết lại ngay; lập review report có severity và provenance.
-- “Dùng `ikhedu-authoring` để release …” → chạy QA gates, cập nhật status/changelog và dừng nếu còn blocker.
+- “Dùng `ikhedu-authoring` để release …” → chạy QA gates, print-ready gate nếu `output_target` là `print|both`, cập nhật status/changelog và dừng nếu còn blocker.
 
 ## 5. Tiêu chí dừng
 

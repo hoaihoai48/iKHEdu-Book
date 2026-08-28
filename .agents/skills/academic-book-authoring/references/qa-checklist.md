@@ -68,7 +68,25 @@
 | Text, ảnh, bảng, code và dữ liệu có quyền sử dụng/attribution phù hợp | pending | |
 | Nội dung được phép tái sử dụng theo license của dự án | pending | |
 
-## G. Release gate
+## G. Print-ready / book production gate
+
+> Chỉ áp dụng khi `output_target` là `print` hoặc `both`. Nếu không áp dụng, ghi `na` kèm lý do.
+
+| Check | Result | Evidence / note |
+|---|---|---|
+| Khổ thành phẩm, hướng trang, lề trong/lề ngoài, gutter, bleed và hệ màu đã chốt | pending | |
+| Front matter, body matter và back matter đã có cấu trúc rõ | pending | |
+| Mục lục, heading, caption, số hình/bảng, cross-reference và số trang khớp | pending | |
+| Font được phép sử dụng và được nhúng/đóng gói đúng khi xuất | pending | |
+| Hình, bảng, công thức và code không tràn lề, không bị cắt hoặc giảm độ đọc | pending | |
+| Ngắt chương, trang trắng, widow/orphan và header/footer đã được kiểm tra | pending | |
+| Độ tương phản và khả năng đọc khi in xám/đen trắng đạt yêu cầu | pending | |
+| PDF proof đã render và đã kiểm tra trực quan các trang rủi ro | pending | |
+| Đã kiểm tra chính tả/thuật ngữ sau dàn trang, không chỉ trên source canonical | pending | |
+| Đã ghi rõ source canonical, artifact dẫn xuất và phiên bản phát hành | pending | |
+| Proof đã được người duyệt xác nhận hoặc trạng thái được đặt là `review-needed` | pending | |
+
+## H. Release gate
 
 | Check | Result | Evidence / note |
 |---|---|---|

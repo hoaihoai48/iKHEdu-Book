@@ -61,8 +61,8 @@
 
 ## Current state
 
-- Đã hoàn thành: knowledge base lớn, báo cáo thiết kế nền tảng, quick reference Level 0 và roadmap Level 1; đã tích hợp `.agents`.
-- Đang làm: chuẩn hóa quy trình viết lesson/giáo trình và duy trì context cho agent.
+- Đã hoàn thành: knowledge base lớn, báo cáo thiết kế nền tảng, quick reference Level 0 và roadmap Level 1; đã tích hợp `.agents`; đã tạo course registry, cấu trúc khóa `cpp-bang-b`, outline curriculum và lesson package draft cho Module 01 – Sắp xếp.
+- Đang làm: review lesson package Module 01 – Sắp xếp, chuẩn hóa nội dung giáo trình và duy trì context cho agent.
 - Blockers: người duyệt cuối, citation style, license/attribution policy, thời lượng từng module và cấu trúc thư mục bài toán mới cần xác nhận.
-- Việc tiếp theo: lập source index chi tiết, chọn module MVP, tạo chapter/module map và bắt đầu với một bài mẫu có QA đầy đủ.
+- Việc tiếp theo: review `Ly_Thuyet.md`, `Bai_Tap.md`, `QA_Review.md` và code tham chiếu; sau đó chốt assessment/test fixture và tạo problem package nếu cần.
 - Lần handoff gần nhất: 2026-08-27 — tích hợp bộ `.agents` vào project.
