@@ -28,7 +28,7 @@ Rule Always On cũng ghi rõ `ebook-ikh` là `REF-001`, chỉ dùng làm **refer
 2. `ikhEdu_foundation_framework_report.md`.
 3. `/Users/vu/Developer/ikhEdu_lessons/Lo_trinh_hoc_tap_bangB_level1.jpg`.
 
-`IKHEDU_Level0_Quick_Reference.md` không được thêm lại vào source registry.
+`IKHEDU_Level0_Foundation.md` không được thêm lại vào source registry.
 
 ## Giới hạn và lưu ý
 

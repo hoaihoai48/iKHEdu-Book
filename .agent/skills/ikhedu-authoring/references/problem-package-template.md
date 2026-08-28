@@ -23,15 +23,9 @@ IKH-XXXX - [Tên bài]/
 ├── Huong_Dan_Giang_Day.md
 ├── solution.cpp
 └── test/
-    ├── README.md
-    ├── manifest.json
-    ├── generators/
-    │   └── generate.py
-    ├── oracle/
-    │   └── reference.cpp|.py
-    ├── test01/
-    │   ├── problem.inp
-    │   └── problem.out
+    ├── manifest.md hoặc init.yml
+    ├── test01.in
+    ├── test01.out
     └── ...
 ```
 
@@ -75,9 +69,9 @@ Solution phải khớp hoàn toàn với statement, dùng kiểu dữ liệu ph�
 
 ## `test/` — Test contract
 
-Đọc `testcase-generation-standard.md` trước khi sinh test. Mỗi test phải có mục đích: sample, minimum, maximum/near-maximum, boundary, degenerate, duplicate, adversarial hoặc random. `manifest.json` phải mô tả quy ước tên, generator version, oracle, seed, category, subtask, expected output và phạm vi coverage. Không khẳng định verified nếu solution chưa được compile/run trên toàn bộ test đã công bố.
+Mỗi test phải có mục đích: sample, minimum, maximum/near-maximum, boundary, degenerate, duplicate, adversarial hoặc random. `manifest.md`/`init.yml` phải mô tả quy ước tên, generator nếu có, expected output và phạm vi coverage. Không khẳng định verified nếu solution chưa được compile/run trên toàn bộ test đã công bố.
 
-Generator phải tái lập được và validate input theo statement. Output phải được sinh bởi oracle độc lập hoặc nguồn đáp án được reviewer xác nhận; không dùng duy nhất solution đang cần kiểm thử để làm oracle. Chạy với timeout, kiểm tra exit code/stderr và ghi kết quả vào `test/README.md`. Nếu project yêu cầu bộ test cố định, ghi số lượng thực tế và command/reproduction steps trong review record. Các test chứa dữ liệu bí mật phải được bảo vệ và không đưa vào tài liệu public.
+Nếu project yêu cầu bộ test cố định, ghi rõ số lượng thực tế và command/reproduction steps trong review record thay vì giả định. Các test chứa dữ liệu bí mật phải được bảo vệ và không đưa vào tài liệu public.
 
 ## Release checklist
 
@@ -86,7 +80,7 @@ Generator phải tái lập được và validate input theo statement. Output p
 | Statement | Input/output/constraints/sample khớp solution |
 | Teaching guide | Có prerequisite, dẫn dắt, correctness, complexity và misconception |
 | Solution | Compile sạch, đúng chuẩn ngôn ngữ và không debug output |
-| Tests | Có test matrix, generator tái lập, oracle độc lập, manifest, coverage và expected output được kiểm tra |
+| Tests | Có coverage theo mục đích, expected output được kiểm tra |
 | Cross-artifact | ID, title, thuật ngữ, notation và version khớp |
 | Provenance | Claim/ý tưởng lấy từ source nào được ghi trong ledger |
 | Status | Chỉ gắn `verified` sau khi có bằng chứng kiểm thử/review |
