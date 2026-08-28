@@ -35,6 +35,7 @@ Khi các nguồn xung đột, không tự hòa giải. Ghi conflict vào evidenc
 | `FILE-008` | `courses/cpp-bang-b/BOOK_MASTER.md` | canonical book manuscript | no | 2026-08-28 | Canonical draft for print/digital integration; synchronized from reviewed source documents |
 | `FILE-009` | `courses/cpp-bang-b/source/level1/IKHEDU_Chapter01_Sorting_Source.md` | chapter source manuscript | no | 2026-08-28 | Source document for Chapter 1; update and review here before syncing to BOOK_MASTER |
 | `FILE-010` | `courses/cpp-bang-b/source/level1/IKHEDU_Chapter02_Greedy_Source.md` | chapter source manuscript | no | 2026-08-28 | Source document for Chapter 2; update and review here before syncing to BOOK_MASTER |
+| `FILE-011` | `courses/cpp-bang-b/source/level1/IKHEDU_Algorithm_Framework_Source.md` | whole-book algorithm framework source | no | 2026-08-28 | Outline source for Chapters 1–21; review framework here before writing deep chapter sources |
 
 ## Retrieval rules
 
