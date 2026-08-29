@@ -19,7 +19,7 @@ $$A_i + A_j \le S$$
 ```
 ### Output
 ```text
-8
+9
 ```
 
 ## Ràng buộc

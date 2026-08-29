@@ -18,7 +18,7 @@ Cho một dãy gồm $N$ số nguyên dương $A_1, A_2, \dots, A_N$. Hãy đế
 ```
 ### Output
 ```text
-5
+3
 ```
 *(Giải thích: Các cặp: $(1, 3) \to 4=2^2$, $(1, 7) \to 8=2^3$, $(1, 15) \to 16=2^4$, $(3, 7) \to 10$, $(3, 15) \to 18$, $(7, 15) \to 22$... và các cặp tương ứng).*
 

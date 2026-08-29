@@ -18,7 +18,7 @@ Cho mảng số nguyên gồm $N$ phần tử và một số nguyên dương $K$
 ```
 ### Output
 ```text
-7
+6
 ```
 
 ## Ràng buộc

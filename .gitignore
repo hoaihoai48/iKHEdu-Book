@@ -25,3 +25,10 @@ node_modules/
 dist/
 build/
 scratch/
+
+# Testcase data folders & files (Ignore heavy testcase input/output data)
+courses/**/problems/**/test/
+**/problems/**/test/
+**/test/
+*.in
+*.out

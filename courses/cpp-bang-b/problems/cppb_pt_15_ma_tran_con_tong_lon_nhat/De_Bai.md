@@ -20,7 +20,7 @@ Cho ma trận số nguyên $A$ kích thước $N \times M$. Hãy tìm một ma t
 ```
 ### Output
 ```text
-14
+11
 ```
 *(Giải thích: Ma trận con $[4, 7]$ và $[5]$... hoặc hình chữ nhật gồm hàng 2..3 cột 2..3: $-2 + 5 + 7 + (-2) = 8$; Ma trận con ở 2 hàng cuối: $(4+7-2) + (-8-2+5) = 9+ (-5) = 4$; Ma trận con 1 hàng $[4, 7] = 11$, $[4, 7, -2] + [-8, -2, 5]...$ đạt tổng lớn nhất là 14 từ $[-2, 5]$ và $[4, 7, -2]...$)*
 

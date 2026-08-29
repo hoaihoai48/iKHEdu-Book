@@ -18,7 +18,7 @@ Cho mảng gồm $N$ số nguyên và số nguyên không âm $K$. Hãy tìm đ�
 ```
 ### Output
 ```text
-3
+2
 ```
 ### Giải thích
 Đoạn $[2, 4, 3]$ hoặc $[4, 7, 3]$ có chênh lệch $\max - \min \le 3$ với độ dài 3.

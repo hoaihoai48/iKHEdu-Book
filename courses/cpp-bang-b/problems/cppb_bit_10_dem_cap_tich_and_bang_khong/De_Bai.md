@@ -18,7 +18,7 @@ Cho một dãy gồm $N$ số nguyên không âm $A_1, A_2, \dots, A_N$. Hãy đ
 ```
 ### Output
 ```text
-3
+4
 ```
 *(Giải thích: Các cặp: $(1, 2) \implies 1 \& 2 = 0$, $(1, 4) \implies 1 \& 4 = 0$, $(2, 4) \implies 2 \& 4 = 0$).*
 

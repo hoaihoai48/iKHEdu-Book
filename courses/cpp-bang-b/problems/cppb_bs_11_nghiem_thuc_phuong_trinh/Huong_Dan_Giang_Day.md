@@ -1,6 +1,105 @@
-# Hướng Dẫn Giảng Dạy: Chặt Nhị Phân Số Thực
-- Hàm $f(x)$ đồng biến nghiêm ngặt với $x > 0$.
-- Không gian nghiệm: $low = 0.0, high = 1000.0$.
-- Lặp 100 lần chia đôi khoảng cách.
-- In với `fixed << setprecision(6)`.
-- Độ phức tạp: $\mathcal{O}(100) = \mathcal{O}(1)$.
+# Hướng Dẫn Giảng Dạy: Tìm Nghiệm Thực Của Phương Trình Đơn Điệu
+Chuyên đề: **Thuật Toán Tìm Kiếm Nhị Phân (Binary Search)**
+
+---
+
+## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Thuật Toán Tìm Kiếm Nhị Phân (Binary Search).
+* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
+* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+
+---
+
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học
+* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
+* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
+* **Trường hợp biên (Edge Cases):**
+  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
+  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
+  * Truy vấn nằm ở sát biên của mảng.
+
+---
+
+## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
+1. Hàm mục tiêu có tính chất đơn điệu (tăng/giảm một chiều) khi biến đổi giá trị nghiệm giả định không?
+2. Khi `check(mid) == true`, đáp án tối ưu hơn có thể nằm ở nửa trái hay nửa phải?
+3. Giá trị nhỏ nhất và lớn nhất khả dĩ của nghiệm ($low, high$) là bao nhiêu?
+
+---
+
+## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+### 4.1. Chiến lược thực thi:
+- Nhận diện tính chất đơn điệu của không gian tìm kiếm hoặc hàm kiểm tra `check(mid)`.
+- Thiết lập không gian tìm kiếm $[low, high]$.
+- Tại mỗi bước lặp, tính $mid = low + (high - low) / 2$, gọi `check(mid)` và thu hẹp $50\%$ không gian tìm kiếm.
+
+### 4.2. Bất biến toán học (Invariant):
+> Nghiệm tối ưu luôn được bảo toàn nằm trọn vẹn trong khoảng $[low, high]$ sau mỗi bước thu hẹp.
+
+---
+
+## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
+### Dữ liệu Sample:
+* **Input:**
+```text
+13
+```
+* **Output:**
+```text
+1.000000
+```
+* **Phân tích quá trình thực thi:**
+  Thuật toán tiến hành khởi tạo cấu trúc dữ liệu, duyệt tuyến tính qua từng phần tử và cập nhật kết quả tối ưu theo đúng nguyên lý thiết kế.
+
+---
+
+## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
+- **Thời gian (Time Complexity):** $\mathcal{O}(\log(\text{Range}) \times \text{Cost}(\text{check}))$. Với Range $= 10^{18}$, chỉ mất tối đa $\approx 60$ lần lặp chia đôi không gian.
+- **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ phụ thuộc vào cấu trúc dữ liệu của hàm `check`.
+
+---
+
+## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
+1. Tràn số khi tính `mid = (low + high) / 2` với $low, high \ge 2 \cdot 10^9$ (phải dùng `low + (high - low) / 2`).
+2. Vòng lặp vô tận khi không gian còn 2 phần tử do làm tròn số hoặc cập nhật sai biên ($low = mid$ thay vì $low = mid + 1$).
+3. Đặt biên $high$ quá nhỏ dẫn đến bỏ sót nghiệm tối ưu, hoặc $low = 0$ gây chia cho 0 trong hàm `check`.
+
+---
+
+## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+double f(double x) {
+    return x * x * x + 2.0 * x * x + 10.0 * x;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    double c;
+    if (!(cin >> c)) return 0;
+
+    double low = 0.0, high = 1000.0;
+    for (int iter = 0; iter < 100; ++iter) {
+        double mid = low + (high - low) / 2.0;
+        if (f(mid) >= c) {
+            high = mid;
+        } else {
+            low = mid;
+        }
+    }
+
+    cout << fixed << setprecision(6) << low << "\n";
+    return 0;
+}
+```
+
+---
+
+## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
+* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
+* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
+* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

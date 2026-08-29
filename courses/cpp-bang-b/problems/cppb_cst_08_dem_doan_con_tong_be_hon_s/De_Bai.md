@@ -18,7 +18,7 @@ Cho mảng gồm $N$ số nguyên **không âm** $A_1, A_2, \dots, A_N$ và số
 ```
 ### Output
 ```text
-8
+7
 ```
 ### Giải thích
 Các đoạn con có tổng $\le 5$: $[1], [3], [2], [1], [1, 3], [3, 2], [2, 1], [1, 3, 2]$... Tổng cộng có 8 đoạn.

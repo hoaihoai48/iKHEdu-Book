@@ -18,7 +18,7 @@ Trên tuyến đường cao tốc có $N$ vị trí gắn camera. Trạng thái 
 ```
 ### Output
 ```text
-0
+1
 ```
 ### Giải thích
 Đoạn từ vị trí 3 đến 5 là $[1, 1, 1]$ (sau khi xét các cửa sổ độ dài 3, đoạn $[1, 1, 0]$ có 1 hỏng, đoạn $[1, 1, 1]$... trong ví dụ là $[1, 0, 1, 1, 0, 0, 1]$ thì đoạn con $[1, 1, 0]$ có 1 hỏng, đoạn $[1, 0, 1]$ có 1 hỏng...).

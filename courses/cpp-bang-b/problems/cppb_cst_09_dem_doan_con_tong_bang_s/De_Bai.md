@@ -18,7 +18,7 @@ Cho mảng gồm $N$ số nguyên **dương** $A_1, A_2, \dots, A_N$ ($A_i > 0$)
 ```
 ### Output
 ```text
-2
+3
 ```
 ### Giải thích
 Các đoạn con có tổng bằng 7 là: $[2, 4, 1]$ và $[7]$.

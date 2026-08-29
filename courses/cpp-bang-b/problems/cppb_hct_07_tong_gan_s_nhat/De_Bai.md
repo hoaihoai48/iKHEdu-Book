@@ -18,7 +18,7 @@ Cho mảng gồm $N$ số nguyên và một số nguyên $S$. Hãy tìm một c�
 ```
 ### Output
 ```text
-4 13
+8 13
 ```
 ### Giải thích
 Sắp xếp: $[2, 4, 8, 13, 25]$. Cặp $(4, 13)$ có tổng là 17 (chênh lệch với 20 là 3, nhỏ nhất).

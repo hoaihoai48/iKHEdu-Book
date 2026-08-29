@@ -18,7 +18,7 @@ Cho mảng gồm $N$ số nguyên dương và số nguyên $S$. Hãy tìm số l
 ```
 ### Output
 ```text
-6
+5
 ```
 ### Giải thích
 Các đoạn con có tổng $\in [3, 6]$: $[1, 2]$ (3), $[3]$ (3), $[4]$ (4), $[1, 2, 3]$ (6), $[2, 3]$ (5), $[2, 4]$ không liên tiếp (chỉ tính liên tiếp), $[3]$... Tổng cộng 6 đoạn con.
