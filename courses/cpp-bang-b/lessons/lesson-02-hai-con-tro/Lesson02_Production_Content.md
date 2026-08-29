@@ -44,6 +44,23 @@ Tại mỗi bước, thuật toán tính toán một hàm mục tiêu trên cặ
 * **Quy tắc di chuyển:**
   $$\begin{cases} L \leftarrow L + 1 & \text{khi } A_L + A_R < S \\ R \leftarrow R - 1 & \text{khi } A_L + A_R > S \\ \text{Dừng thuật toán} & \text{khi } A_L + A_R = S \end{cases}$$
 
+#### 💡 Ví Dụ Minh Họa 1: Tìm cặp số có tổng $S = 14$
+Cho mảng $N = 6$ phần tử đã sắp xếp: $A = [2, 3, 5, 8, 11, 15]$ (0-based indexing).
+
+| Chỉ số ($i$) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Giá trị $A_i$** | $2$ | $3$ | $5$ | $8$ | $11$ | $15$ |
+
+**Bảng mô phỏng từng bước lặp Hai con trỏ:**
+
+| Bước | $L$ | $R$ | $A[L]$ | $A[R]$ | Tổng $A[L] + A[R]$ | So sánh với $S = 14$ | Quyết định di chuyển |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
+| **1** | $0$ | $5$ | $2$ | $15$ | $2 + 15 = 17$ | $17 > 14$ | Tổng quá lớn $\implies$ Giảm con trỏ phải: $R = 4$ |
+| **2** | $0$ | $4$ | $2$ | $11$ | $2 + 11 = 13$ | $13 < 14$ | Tổng quá nhỏ $\implies$ Tăng con trỏ trái: $L = 1$ |
+| **3** | $1$ | $4$ | $3$ | $11$ | $3 + 11 = \mathbf{14}$ | $14 == 14$ | **Tìm thấy cặp nghiệm $(A_1, A_4) = (3, 11)$!** |
+
+---
+
 ### 3.2. Mô hình 2: Đếm số cặp có tổng thỏa mãn bất đẳng thức $A_i + A_j \le S$
 * **Mục tiêu:** Đếm số lượng cặp $(i, j)$ với $i < j$ thỏa mãn $A_i + A_j \le S$.
 * **Khai thác tổ hợp:**  
@@ -51,6 +68,18 @@ Tại mỗi bước, thuật toán tính toán một hàm mục tiêu trên cặ
   $$A_L + A_k \le A_L + A_R \le S$$
   Do đó, có đúng **$R - L$ cặp hợp lệ** xuất phát từ $L$: $(L, L+1), (L, L+2), \dots, (L, R)$.
 * **Thao tác:** Cộng $(R - L)$ vào kết quả đếm, sau đó tăng $L \leftarrow L + 1$. Ngược lại, nếu $A_L + A_R > S$, giảm $R \leftarrow R - 1$.
+
+#### 💡 Ví Dụ Minh Họa 2: Đếm số cặp có tổng $\le 10$ trên mảng $A = [1, 2, 4, 7, 9]$
+
+| Bước | $L$ | $R$ | $A[L] + A[R]$ | Điều kiện $\le 10$ | Số cặp hợp lệ cộng thêm ($R - L$) | Các cặp được đếm | Thao tác kế tiếp |
+|:---:|:---:|:---:|:---:|:---:|:---:|---|---|
+| **1** | $0$ ($1$) | $4$ ($9$) | $1 + 9 = 10$ | `Thỏa mãn` | $+ (4 - 0) = \mathbf{4}$ | $(1,2), (1,4), (1,7), (1,9)$ | $L = 1$ |
+| **2** | $1$ ($2$) | $4$ ($9$) | $2 + 9 = 11$ | `Vi phạm (> 10)` | $0$ | Không có | $R = 3$ |
+| **3** | $1$ ($2$) | $3$ ($7$) | $2 + 7 = 9$ | `Thỏa mãn` | $+ (3 - 1) = \mathbf{2}$ | $(2,4), (2,7)$ | $L = 2$ |
+| **4** | $2$ ($4$) | $3$ ($7$) | $4 + 7 = 11$ | `Vi phạm (> 10)` | $0$ | Không có | $R = 2$ |
+| **Dừng** | $2$ | $2$ | — | $L \ge R$ | — | **Tổng số cặp thỏa mãn = $4 + 2 = \mathbf{6}$ cặp** | Kết thúc |
+
+---
 
 ### 3.3. Mô hình 3: Ghép cặp cực trị tham lam (Bài toán Thuyền cứu hộ / Xe chở hàng)
 * **Bài toán:** Mỗi xe chở tối đa 2 kiện hàng có tổng trọng lượng $\le C$. Tìm số xe ít nhất để chở hết $N$ kiện hàng.
@@ -161,14 +190,14 @@ Cho mảng đã sắp xếp $A = [3, 7, 11, 15, 20]$ và mục tiêu $S = 22$. T
 Trong bài toán đếm số cặp có $A_i + A_j \le S$ trên mảng tăng dần, khi $A[L] + A[R] \le S$, tại sao ta có thể khẳng định ngay có đúng $R - L$ cặp hợp lệ kết thúc tại $R$?
 * A. Vì $R - L$ là độ dài của mảng ban đầu.
 * B. **(Đáp án đúng)** Vì mảng tăng dần nên với mọi $k$ thỏa mãn $L < k \le R$, ta luôn có $A_L + A_k \le A_L + A_R \le S$.
-* C. Vì hàm `std::sort` tự động nhóm các cặp này lại với nhau.
+* C. Vì hàm `sort` tự động nhóm các cặp này lại với nhau.
 * D. Vì số lượng cặp luôn bằng hiệu hai con trỏ trong mọi bài toán.
 > *Giải thích:* Do $A[L]$ đã thỏa mãn khi cộng với $A[R]$, tất cả các phần tử từ $L+1$ đến $R$ khi ghép với $A[L]$ đều có tổng $\le S$. Có đúng $R - L$ cặp như vậy xuất phát từ $L$.
 
 ---
 
 #### Câu 4 (Chuyển giao — Transfer):
-Độ phức tạp thời gian tổng thể của bài toán Two Sum gồm 2 bước: Sắp xếp mảng $N$ phần tử bằng `std::sort` rồi duyệt bằng Two Pointers là bao nhiêu?
+Độ phức tạp thời gian tổng thể của bài toán Two Sum gồm 2 bước: Sắp xếp mảng $N$ phần tử bằng `sort` rồi duyệt bằng Two Pointers là bao nhiêu?
 * A. $\mathcal{O}(N^2)$
 * B. $\mathcal{O}(N)$
 * C. **(Đáp án đúng)** $\mathcal{O}(N \log N)$ (trong đó sắp xếp mất $\mathcal{O}(N \log N)$ và duyệt Two Pointers mất $\mathcal{O}(N)$).

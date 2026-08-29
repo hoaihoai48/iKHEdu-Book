@@ -4,7 +4,7 @@
 
 | Trường | Nội dung |
 |---|---|
-| Mục tiêu | Nắm vững kỹ thuật xử lý xâu ký tự trong C++ (`std::string`); làm chủ bảng mã ASCII, xâu đối xứng (Palindrome), đếm tần suất ký tự và tách từ |
+| Mục tiêu | Nắm vững kỹ thuật xử lý xâu ký tự trong C++ (`string`); làm chủ bảng mã ASCII, xâu đối xứng (Palindrome), đếm tần suất ký tự và tách từ |
 | Kiến thức cần có | Biến, kiểu dữ liệu `char`, mảng một chiều, vòng lặp `for` |
 | Phạm vi | Thao tác trên `string`, Bảng mã ASCII, Xâu Palindrome $\mathcal{O}(N)$, Đếm tần suất 26 chữ cái, Tách từ `stringstream` |
 | Số bài | 4 bài học lý thuyết & ví dụ mẫu + 1 bài luyện tập phân tầng |
@@ -13,7 +13,7 @@
 ### Learning outcomes
 
 Sau chương này, em có thể:
-1. Sử dụng thành thạo các phương thức cơ bản của `std::string` (`size()`, `push_back()`, `substr()`, `find()`).
+1. Sử dụng thành thạo các phương thức cơ bản của `string` (`size()`, `push_back()`, `substr()`, `find()`).
 2. Chuyển đổi linh hoạt giữa ký tự và mã ASCII (`c - 'a'`, `c - '0'`, `toupper()`, `tolower()`).
 3. Cài đặt thuật toán kiểm tra xâu đối xứng (Palindrome) trong $\mathcal{O}(N)$.
 4. Ứng dụng mảng đếm tần suất 26 ký tự để kiểm tra xâu đảo chữ (Anagram) và chuẩn hóa văn bản.

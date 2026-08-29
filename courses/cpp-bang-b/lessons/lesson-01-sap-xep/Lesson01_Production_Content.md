@@ -1,5 +1,5 @@
 # THUẬT TOÁN SẮP XẾP
-## Tối Ưu Hóa Dữ Liệu Với std::sort & Custom Comparator Trong C++
+## Tối Ưu Hóa Dữ Liệu Với sort & Custom Comparator Trong C++
 
 ---
 
@@ -30,6 +30,23 @@ $$A_j - A_i \ge A_{i+1} - A_i$$
 
 **Hệ quả:** Mọi cặp phần tử không kề nhau đều có khoảng cách lớn hơn hoặc bằng khoảng cách của cặp kề nhau $(A_i, A_{i+1})$. Do đó, để tìm khoảng cách nhỏ nhất, ta chỉ cần duyệt qua $N - 1$ cặp kề nhau sau khi sắp xếp.
 
+#### 💡 Ví Dụ Minh Họa 1: Tìm khoảng cách nhỏ nhất giữa hai phần tử
+Cho mảng gồm 6 phần tử chưa sắp xếp: $A = [15, 3, 9, 22, 4, 11]$
+
+1. **Bước 1: Sắp xếp tăng dần $\mathcal{O}(N \log N)$:**
+   $$A = [3, 4, 9, 11, 15, 22]$$
+2. **Bước 2: Quét $N - 1 = 5$ cặp kề nhau $\mathcal{O}(N)$:**
+
+| Cặp Kề Nhau $(A_i, A_{i+1})$ | Tính Hiệu Số $A_{i+1} - A_i$ | Hiệu Nhỏ Nhất Tạm Thời ($\min$) |
+|:---:|:---:|:---:|
+| $(3, 4)$ | $4 - 3 = \mathbf{1}$ | $\mathbf{1}$ |
+| $(4, 9)$ | $9 - 4 = 5$ | $1$ |
+| $(9, 11)$ | $11 - 9 = 2$ | $1$ |
+| $(11, 15)$ | $15 - 11 = 4$ | $1$ |
+| $(15, 22)$ | $22 - 15 = 7$ | $1$ |
+
+$$\implies \text{Kết quả: Khoảng cách nhỏ nhất là } \mathbf{1} \text{ (giữa cặp 3 và 4), tìm ra trong đúng 5 phép trừ!}$$
+
 ---
 
 ## 3. Các Ứng Dụng Thuật Toán Kinh Điển Của Sắp Xếp
@@ -43,29 +60,25 @@ $$A_j - A_i \ge A_{i+1} - A_i$$
 
 ---
 
-## 4. Hàm `std::sort` & Nguyên Lý Strict Weak Ordering
+## 4. Hàm `sort` & Nguyên Lý Strict Weak Ordering
 
 ### 4.1. Cú pháp chuẩn trong C++
-Thư viện `<algorithm>` cung cấp hai hàm sắp xếp chính:
-* `std::sort(first, last)`: Sử dụng thuật toán **IntroSort** (kết hợp giữa QuickSort, HeapSort và InsertionSort), đạt độ phức tạp thời gian $\mathcal{O}(N \log N)$ trong mọi trường hợp (trung bình và xấu nhất). Không bảo toàn thứ tự ban đầu của các phần tử bằng nhau.
-* `std::stable_sort(first, last)`: Sử dụng thuật toán **MergeSort**, độ phức tạp $\mathcal{O}(N \log N)$, đảm bảo bảo toàn nguyên vẹn thứ tự xuất hiện ban đầu của các phần tử có giá trị bằng nhau.
+C++ cung cấp hai hàm sắp xếp có sẵn:
+* `sort(first, last)`: Sử dụng thuật toán **IntroSort** (kết hợp giữa QuickSort, HeapSort và InsertionSort), đạt độ phức tạp thời gian $\mathcal{O}(N \log N)$ trong mọi trường hợp (trung bình và xấu nhất). Không bảo toàn thứ tự ban đầu của các phần tử bằng nhau.
+* `stable_sort(first, last)`: Sử dụng thuật toán **MergeSort**, độ phức tạp $\mathcal{O}(N \log N)$, đảm bảo bảo toàn nguyên vẹn thứ tự xuất hiện ban đầu của các phần tử có giá trị bằng nhau.
 
 ### 4.2. Nguyên lý Strict Weak Ordering (Toán tử so sánh nghiêm ngặt)
-Một hàm so sánh `cmp(a, b)` truyền vào `std::sort` **bắt buộc** phải thỏa mãn 3 tiên đề toán học:
+Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải thỏa mãn 3 tiên đề toán học:
 1. **Tính bất phản xạ (Irreflexivity):** `cmp(a, a)` luôn trả về `false`.
 2. **Tính bất đối xứng (Asymmetry):** Nếu `cmp(a, b)` là `true` thì `cmp(b, a)` bắt buộc phải là `false`.
 3. **Tính bắc cầu (Transitivity):** Nếu `cmp(a, b)` là `true` và `cmp(b, c)` là `true` thì `cmp(a, c)` phải là `true`.
 
-```text
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ ⚠️ TỬ HUYỆT LẬP TRÌNH: BẪY DẤU <= TRONG COMPARATOR                           │
-│ Nếu viết `return a <= b;`, khi a == b thì cmp(a, b) và cmp(b, a) đều bằng   │
-│ true ⟹ Vi phạm tiên đề Bất phản xạ và Bất đối xứng ⟹ std::sort truy cập     │
-│ vùng nhớ ngoài biên mảng ⟹ RUNTIME ERROR / CRASH CHƯƠNG TRÌNH.               │
-│                                                                             │
-│ QUY TẮC: Luôn dùng toán tử nghiêm ngặt (< hoặc >). Khi a == b, trả về false! │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+> [!CAUTION]
+> **TỬ HUYỆT LẬP TRÌNH: BẪY DẤU `<= ` TRONG COMPARATOR**
+> 
+> Nếu viết `return a <= b;`, khi `a == b` thì cả `cmp(a, b)` và `cmp(b, a)` đều trả về `true` $\implies$ Vi phạm tiên đề Bất phản xạ và Bất đối xứng $\implies$ `sort` sẽ tiếp tục truy cập vùng nhớ ngoài biên của mảng $\implies$ **RUNTIME ERROR / CRASH CHƯƠNG TRÌNH**.
+> 
+> **QUY TẮC BẮT BUỘC:** Luôn dùng toán tử so sánh nghiêm ngặt (`<` hoặc `>`). Khi hai phần tử bằng nhau (`a == b`), hàm so sánh bắt buộc phải trả về `false`!
 
 ---
 
@@ -85,6 +98,17 @@ bool cmpInterval(const vector<int> &a, const vector<int> &b) {
 }
 ```
 
+#### 💡 Ví Dụ Minh Họa 2: Sắp xếp danh sách 4 đoạn thẳng
+Cho 4 đoạn thẳng: $\{ [1, 5], [2, 3], [3, 6], [1, 3] \}$
+
+* **Trước khi sắp xếp:** $[1, 5], [2, 3], [3, 6], [1, 3]$
+* **Tiêu chí 1 (Điểm kết thúc tăng dần):** Các đoạn kết thúc tại $3$ đứng trước, sau đó đến $5$, rồi đến $6$.
+* **Tiêu chí 2 (Cùng điểm kết thúc $\implies$ bắt đầu giảm dần):** Giữa $[2, 3]$ và $[1, 3]$, đoạn $[2, 3]$ có điểm bắt đầu $2 > 1$ nên được xếp trước.
+
+> **Kết quả sau sắp xếp:** $[[2, 3], [1, 3], [1, 5], [3, 6]]$
+
+---
+
 ### 5.2. Sắp xếp lưu chỉ số ban đầu (Index Tracking)
 Khi bài toán yêu cầu in ra vị trí gốc của các phần tử sau khi sắp xếp, sử dụng **vector 2 chiều `vector<vector<long long>>`** lưu cặp `{giá_trị, chỉ_số_gốc}`:
 
@@ -96,7 +120,7 @@ for (int i = 0; i < n; ++i) {
     a[i][1] = i + 1;  // Chỉ số ban đầu (1-based)
 }
 
-// std::sort mặc định so sánh cột 0 (giá trị), nếu bằng nhau so sánh tiếp cột 1 (chỉ số gốc)
+// sort mặc định so sánh cột 0 (giá trị), nếu bằng nhau so sánh tiếp cột 1 (chỉ số gốc)
 sort(a.begin(), a.end());
 ```
 
@@ -181,8 +205,8 @@ Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trì
 * A. Chương trình vẫn chạy đúng và sắp xếp ổn định.
 * B. Mảng sẽ được sắp xếp theo thứ tự giảm dần.
 * C. **(Đáp án đúng)** Chương trình có thể bị dừng đột ngột (Runtime Error) do vi phạm nguyên lý Strict Weak Ordering khi $a = b$.
-* D. Hàm `std::sort` tự động chuyển sang `std::stable_sort` để xử lý.
-> *Giải thích:* Khi $a = b$, `cmp(a, b)` và `cmp(b, a)` đều trả về `true`, vi phạm tính bất đối xứng nghiêm ngặt khiến thuật toán `std::sort` truy cập vùng nhớ ngoài biên dẫn đến Crash.
+* D. Hàm `sort` tự động chuyển sang `stable_sort` để xử lý.
+> *Giải thích:* Khi $a = b$, `cmp(a, b)` và `cmp(b, a)` đều trả về `true`, vi phạm tính bất đối xứng nghiêm ngặt khiến thuật toán `sort` truy cập vùng nhớ ngoài biên dẫn đến Crash.
 
 ---
 
@@ -207,12 +231,12 @@ Cách nào sau đây là chuẩn mực và an toàn nhất trong C++ để sắp
 ---
 
 #### Câu 6 (Phân biệt cấu trúc — Compare):
-Sự khác biệt cốt lõi giữa `std::sort` và `std::stable_sort` trong thư viện chuẩn C++ là gì?
-* A. `std::sort` có độ phức tạp $\mathcal{O}(N^2)$, còn `std::stable_sort` là $\mathcal{O}(N \log N)$.
-* B. **(Đáp án đúng)** `std::stable_sort` đảm bảo giữ nguyên thứ tự xuất hiện ban đầu của các phần tử có giá trị tương đương nhau, còn `std::sort` thì không đảm bảo điều này.
-* C. `std::sort` chỉ sắp xếp được số nguyên, còn `std::stable_sort` sắp xếp được chuỗi.
-* D. `std::stable_sort` không tốn thêm bất kỳ bộ nhớ phụ trợ nào ($\mathcal{O}(1)$).
-> *Giải thích:* Tính ổn định (Stability) nghĩa là nếu $A_i = A_j$ và $i < j$, sau khi sort thì $A_i$ vẫn đứng trước $A_j$. `std::stable_sort` đảm bảo tính chất này (dùng MergeSort).
+Sự khác biệt cốt lõi giữa `sort` và `stable_sort` trong thư viện chuẩn C++ là gì?
+* A. `sort` có độ phức tạp $\mathcal{O}(N^2)$, còn `stable_sort` là $\mathcal{O}(N \log N)$.
+* B. **(Đáp án đúng)** `stable_sort` đảm bảo giữ nguyên thứ tự xuất hiện ban đầu của các phần tử có giá trị tương đương nhau, còn `sort` thì không đảm bảo điều này.
+* C. `sort` chỉ sắp xếp được số nguyên, còn `stable_sort` sắp xếp được chuỗi.
+* D. `stable_sort` không tốn thêm bất kỳ bộ nhớ phụ trợ nào ($\mathcal{O}(1)$).
+> *Giải thích:* Tính ổn định (Stability) nghĩa là nếu $A_i = A_j$ và $i < j$, sau khi sort thì $A_i$ vẫn đứng trước $A_j$. `stable_sort` đảm bảo tính chất này (dùng MergeSort).
 
 ---
 
@@ -248,9 +272,9 @@ Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: *�
 
 #### Câu 10 (Xử lý kiểu dữ liệu & Tràn số — Robustness):
 Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ điểm trên trục tọa độ, với tọa độ $X_i \in [-10^{18}, 10^{18}]$. Sai lầm nguy hiểm nhất khi duyệt cặp kề nhau $(X_i, X_{i+1})$ là gì?
-* A. Sử dụng `std::sort` thay vì tự viết QuickSort.
+* A. Sử dụng `sort` thay vì tự viết QuickSort.
 * B. **(Đáp án đúng)** Lưu biến kết quả bằng kiểu `int` hoặc `long` (32-bit), gây tràn số âm khi tính hiệu $X_{i+1} - X_i$.
-* C. Đọc dữ liệu bằng `std::cin` có Fast I/O.
+* C. Đọc dữ liệu bằng `cin` có Fast I/O.
 * D. Duyệt vòng lặp từ $i = 0$ đến $N - 2$.
 > *Giải thích:* Với $X_i$ lên tới $10^{18}$, khoảng cách giữa 2 điểm có thể đạt tới $2 \cdot 10^{18}$, vượt xa giới hạn $2 \cdot 10^9$ của kiểu `int`. Bắt buộc phải dùng kiểu `long long` (64-bit) cho toàn bộ mảng và biến tính khoảng cách.
 
@@ -260,7 +284,7 @@ Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ đi�
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-SX-01` | **Xếp Hàng Điểm Danh** | `P0` | $N \le 1000, A_i \le 10^6$ | Cú pháp `std::sort` cơ bản |
+| 01 | `CPPB-SX-01` | **Xếp Hàng Điểm Danh** | `P0` | $N \le 1000, A_i \le 10^6$ | Cú pháp `sort` cơ bản |
 | 02 | `CPPB-SX-02` | **Khoảng Cách Nhỏ Nhất** | `P1` | $N \le 10^5, A_i \le 10^9$ | Sắp xếp duyệt cặp kề |
 | 03 | `CPPB-SX-03` | **Sắp Xếp Theo Trị Tuyệt Đối** | `P1` | $N \le 10^5, \vert A_i \vert \le 10^9$ | Custom comparator cơ bản |
 | 04 | `CPPB-SX-04` | **Đếm Giá Trị Phân Biệt** | `P2` | $N \le 2 \cdot 10^5, \vert A_i \vert \le 10^9$ | Gom nhóm sau sắp xếp |

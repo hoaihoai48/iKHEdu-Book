@@ -57,7 +57,7 @@
 | 20 | **`IKH-0020`** | [Tra Cứu Mã Vận Đơn](#ikh-0020---ikh-0020-tra-cứu-mã-vận-đơn) | Hash Map / STL Frequency Count. | 1400 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 21 | **`IKH-0021`** | [Hàng Cho Mới Nhất](#ikh-0021---ikh-0021-hàng-cho-mới-nhất) | Max Heap / STL Priority Queue. | 1420 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 22 | **`IKH-0022`** | [Lưới Cảm Biến IoT Smart City](#ikh-0022---ikh-0022-lưới-cảm-biến-iot-smart-city) | Sliding Window + STL Multiset / Deque. | 1440 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
-| 23 | **`IKH-0023`** | [Điểm Thu Phí Tự Động VETC](#ikh-0023---ikh-0023-điểm-thu-phí-tự-động-vetc) | Binary Search / `std::lower_bound`. | 1460 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
+| 23 | **`IKH-0023`** | [Điểm Thu Phí Tự Động VETC](#ikh-0023---ikh-0023-điểm-thu-phí-tự-động-vetc) | Binary Search / `lower_bound`. | 1460 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 24 | **`IKH-0024`** | [Phân Bổ Điện Năng Mặt Trời](#ikh-0024---ikh-0024-phân-bổ-điện-năng-mặt-trời) | Sorting / Quickselect / Binary Search. | 1480 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 25 | **`IKH-0025`** | [Tải Trọng Tối Đa Tàu Container](#ikh-0025---ikh-0025-tải-trọng-tối-đa-tàu-container) | Binary Search on Answer + Greedy. | 1500 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 26 | **`IKH-0026`** | [Chuỗi Cung Ứng Chuối Xuất Khẩu](#ikh-0026---ikh-0026-chuỗi-cung-ứng-chuối-xuất-khẩu) | Dynamic Programming / Thuật toán Kadane. | 1520 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
@@ -81,7 +81,7 @@
 | 44 | **`IKH-0044`** | [Thống Kê Doanh Thu Chuỗi Siêu Thị WinMart](#ikh-0044---ikh-0044-thống-kê-doanh-thu-chuỗi-siêu-thị-winmart) | 2D Prefix Sum ($O(1)$ query). | 1880 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 45 | **`IKH-0045`** | [Xếp Hạng Bảng Vàng Cuộc Thi Tin Học Trẻ](#ikh-0045---ikh-0045-xếp-hạng-bảng-vàng-cuộc-thi-tin-học-trẻ) | Fenwick Tree (Binary Indexed Tree - BIT). | 1900 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 46 | **`IKH-0046`** | [Giám Sát Lưu Lượng Mạng Cáp Quang Bắc](#ikh-0046---ikh-0046-giám-sát-lưu-lượng-mạng-cáp-quang-bắc-nam) | Segment Tree (Range Maximum Query - RMQ). | 1920 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
-| 47 | **`IKH-0047`** | [Bộ Lọc Từ Khóa Nhạy Cảm Zalo](#ikh-0047---ikh-0047-bộ-lọc-từ-khóa-nhạy-cảm-zalo) | String Sliding Window + `std::string_view` / String Hashing. | 1940 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
+| 47 | **`IKH-0047`** | [Bộ Lọc Từ Khóa Nhạy Cảm Zalo](#ikh-0047---ikh-0047-bộ-lọc-từ-khóa-nhạy-cảm-zalo) | String Sliding Window + `string_view` / String Hashing. | 1940 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 48 | **`IKH-0048`** | [Kiểm Tra Mã Vạch Hàng Hóa Tiki](#ikh-0048---ikh-0048-kiểm-tra-mã-vạch-hàng-hóa-tiki) | Polynomial Rolling Hash (Forward + Backward Hash). | 1960 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 49 | **`IKH-0049`** | [Tìm Kiếm Bản Đồ Địa Giới VNPost](#ikh-0049---ikh-0049-tìm-kiếm-bản-đồ-địa-giới-vnpost) | KMP Algorithm / Prefix Function. | 1980 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
 | 50 | **`IKH-0050`** | [Lộ Trình Thu Gom Rác Thải Đô Thị URENCO](#ikh-0050---ikh-0050-lộ-trình-thu-gom-rác-thải-đô-thị-urenco) | Bitmask Dynamic Programming ($O(2^N \cdot N^2)$). | 2000 | C++17, C++20 | 🟢 LIVE (20/20 AC) |
@@ -843,7 +843,7 @@ Yêu cầu: Với mỗi $k$ ($2 \le k \le N$), hãy đếm số dãy con (không
    * Do đó độ dài thực tế của cấp số nhân không quá 30!
 
 4. **Bước 4: Sử dụng Hash Map tối ưu bộ nhớ**
-   * Sử dụng `std::unordered_map<long long, vector<int>>` để lưu vết `dp[v][k]`.
+   * Sử dụng `unordered_map<long long, vector<int>>` để lưu vết `dp[v][k]`.
 
 5. **Bước 5: Độ phức tạp**
    * Mỗi phần tử chỉ cập nhật tối đa 30 trạng thái $\implies O(N \cdot \log_q(\max A_i))$.
@@ -2591,7 +2591,7 @@ Một số nguyên duy nhất là số lượng tàu tối đa được phục v
 * Duyệt từng khoảng: Nếu `Li >= last_end`, chấp nhận tàu này, tăng `count++` và cập nhật `last_end = Ri`.
 
 #### **Bước 4: Giải thích Ý nghĩa Biến & Kiểu dữ liệu**
-* Dùng `std::pair<long long, long long>` với `first = Ri`, `second = Li` để tiện dùng `std::sort`.
+* Dùng `pair<long long, long long>` với `first = Ri`, `second = Li` để tiện dùng `sort`.
 
 #### **Bước 5: Độ phức tạp**
 * Thời gian sắp xếp $O(N \log N) +$ Duyệt $O(N) = O(N \log N) \approx 3 	imes 10^6$ phép tính ($< 0.04$s).
@@ -2829,14 +2829,14 @@ Một số nguyên duy nhất là số tác vụ tối đa hoàn thành đúng h
 * Phân tích: Ưu tiên các tác vụ có hạn định Deadline `D_i` nhỏ hơn xếp trước. Do đó bước 1 là Sắp xếp mảng theo `D_i` tăng dần.
 
 #### **Bước 2: Xử lý khi gặp Tác vụ bị trễ hạn (Over-deadline)**
-* Khi duyệt đến tác vụ thứ $i$, ta cộng thời gian $T_i$ vào `total_time` và đưa $T_i$ vào Hàng đợi ưu tiên Max-Heap (`std::priority_queue`).
+* Khi duyệt đến tác vụ thứ $i$, ta cộng thời gian $T_i$ vào `total_time` và đưa $T_i$ vào Hàng đợi ưu tiên Max-Heap (`priority_queue`).
 * Nếu `total_time > D_i` (tác vụ bị quá hạn), ta Tham ăn loại bỏ tác vụ có **thời gian xử lý $T$ lớn nhất** đã chọn trước đó (chính là `pq.top()`), trừ `total_time` đi `pq.top()`.
 
 #### **Bước 3: Tính đúng đắn của Chiến lược Tham ăn loại bỏ T_max**
 * Loại bỏ tác vụ tốn nhiều thời gian nhất sẽ thu hồi lại nhiều thời gian nhất cho `total_time`, giúp các tác vụ phía sau dễ dàng đáp ứng Deadline hơn.
 
 #### **Bước 4: Cài đặt Hàng đợi ưu tiên Priority Queue**
-* Dùng `std::priority_queue<long long>` để quản lý các khoảng thời gian $T_i$ đã chọn.
+* Dùng `priority_queue<long long>` để quản lý các khoảng thời gian $T_i$ đã chọn.
 
 #### **Bước 5: Độ phức tạp**
 * Thời gian: Sắp xếp $O(N \log N) +$ Thao tác Heap $O(N \log N) = O(N \log N) \approx 4 \times 10^6$ phép tính ($< 0.05$s).
@@ -3291,10 +3291,6 @@ Hãy tìm **độ dài lớn nhất** (số lượng bóng đèn $R - L + 1$) c�
 
 ## 4. MÃ NGUỒN CHUẨN C++
 ```cpp
-#include <iostream>
-#include <vector>
-#include <deque>
-#include <algorithm>
 
 using namespace std;
 
@@ -3337,10 +3333,6 @@ int main() {
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <deque>
-#include <algorithm>
 
 using namespace std;
 
@@ -3478,9 +3470,6 @@ Hãy giúp trung tâm xác định **số lượng chuyến bay tối đa** có 
 
 ## 4. MÃ NGUỒN CHUẨN C++
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -3525,9 +3514,6 @@ int main() {
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -3641,9 +3627,6 @@ Hãy tìm **số lượng container nhiều nhất** có thể xếp thành **M�
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -3732,7 +3715,7 @@ VN102 VN888 VN555
 
 💡 **Bạn có biết?** Mã vận đơn (Tracking Number) của VNPost tuân theo chuẩn Liên minh Bưu chính Thế giới (UPU) với 13 ký tự tiêu chuẩn quốc tế giúp theo dõi định vị bưu gửi thời gian thực.
 
-🚀 **Thử thách:** Nếu $N, Q$ lên tới $10^6$, việc sử dụng `std::map` hay `std::unordered_map` kèm `cin.tie(NULL)` có sự khác biệt hiệu năng thế nào?
+🚀 **Thử thách:** Nếu $N, Q$ lên tới $10^6$, việc sử dụng `map` hay `unordered_map` kèm `cin.tie(NULL)` có sự khác biệt hiệu năng thế nào?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -3747,7 +3730,7 @@ VN102 VN888 VN555
 ## 2. PHƯƠNG PHÁP SUY LUẬN & DẪN DẮT HỌC SINH
 
 #### **Bước 1: Lựa chọn cấu trúc dữ liệu STL**
-* `std::unordered_map<string, int>` giúp tra cứu trung bình $O(1)$ mỗi truy vấn.
+* `unordered_map<string, int>` giúp tra cứu trung bình $O(1)$ mỗi truy vấn.
 * Sử dụng `freq.reserve(n * 2)` để tránh rehashing liên tục.
 
 #### **Bước 2: Tối ưu I/O**
@@ -3756,9 +3739,6 @@ VN102 VN888 VN555
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <string>
-#include <unordered_map>
 
 using namespace std;
 
@@ -3861,7 +3841,7 @@ Hãy thực thi chính xác tất cả $Q$ thao tác của hệ thống.
 
 💡 **Bạn có biết?** Dịch vụ TikiNOW 2h đưa Việt Nam trở thành một trong những quốc gia đi đầu khu vực về tốc độ xử lý hàng hóa thương mại điện tử nội đô nhờ thuật toán phân loại tự động tự động hóa kho hàng.
 
-🚀 **Thử thách:** Nếu bổ sung thao tác Loại 3 (`3`): Xuất kiện hàng có độ ưu tiên NHỎ NHẤT, cấu trúc dữ liệu nào trong C++ STL sẽ thay thế hoàn hảo cho `std::priority_queue`?
+🚀 **Thử thách:** Nếu bổ sung thao tác Loại 3 (`3`): Xuất kiện hàng có độ ưu tiên NHỎ NHẤT, cấu trúc dữ liệu nào trong C++ STL sẽ thay thế hoàn hảo cho `priority_queue`?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -3875,8 +3855,8 @@ Hãy thực thi chính xác tất cả $Q$ thao tác của hệ thống.
 
 ## 2. PHƯƠNG PHÁP SUY LUẬN & DẪN DẮT HỌC SINH
 
-#### **Bước 1: Lựa chọn cấu trúc dữ liệu `std::priority_queue`**
-* `std::priority_queue<long long>` mặc định trong C++ STL là Max-Heap.
+#### **Bước 1: Lựa chọn cấu trúc dữ liệu `priority_queue`**
+* `priority_queue<long long>` mặc định trong C++ STL là Max-Heap.
 * Thao tác `push(x)` có độ phức tạp $O(\log N)$.
 * Thao tác `top()` và `pop()` lấy phần tử lớn nhất có độ phức tạp $O(\log N)$.
 
@@ -3886,8 +3866,6 @@ Hãy thực thi chính xác tất cả $Q$ thao tác của hệ thống.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <queue>
 
 using namespace std;
 
@@ -3978,7 +3956,7 @@ Giá trị chênh lệch nhỏ nhất là 3.
 
 💡 **Bạn có biết?** Trung tâm IOC Đà Nẵng kết nối hơn 1.000 cảm biến môi trường IoT theo chuẩn LoRaWAN, giúp cập nhật chỉ số chất lượng không khí (AQI) tự động mỗi 5 phút.
 
-🚀 **Thử thách:** Bạn sẽ dùng `std::multiset` hay 2 Monotonic Deque để đạt độ phức tạp thời gian tối ưu $O(N)$?
+🚀 **Thử thách:** Bạn sẽ dùng `multiset` hay 2 Monotonic Deque để đạt độ phức tạp thời gian tối ưu $O(N)$?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -3995,8 +3973,8 @@ Giá trị chênh lệch nhỏ nhất là 3.
 #### **Bước 1: Duyệt Trâu (Brute Force)**
 * Duyệt mọi cửa sổ $i \dots i+K-1$, tìm max và min trong $O(K)$. Tổng thời gian $O(N \times K)$, ăn 30% số điểm ($N \le 1000$).
 
-#### **Bước 2: Sử dụng `std::multiset` trong C++ STL**
-* Duyệt cửa sổ trượt độ dài $K$. `std::multiset` cho phép chèn phần tử mới và xóa phần tử cũ trong $O(\log K)$.
+#### **Bước 2: Sử dụng `multiset` trong C++ STL**
+* Duyệt cửa sổ trượt độ dài $K$. `multiset` cho phép chèn phần tử mới và xóa phần tử cũ trong $O(\log K)$.
 * Giá trị nhỏ nhất là `*ms.begin()`, lớn nhất là `*ms.rbegin()`.
 
 #### **Bước 3: Đánh giá độ phức tạp**
@@ -4006,10 +3984,6 @@ Giá trị chênh lệch nhỏ nhất là 3.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <set>
-#include <algorithm>
 
 using namespace std;
 
@@ -4085,7 +4059,7 @@ Hãy giúp trạm thu phí xác định **chỉ số (1-indexed) của tài kho�
 
 💡 **Bạn me?** Hệ thống VETC tại Việt Nam xử lý trung bình hơn 2,5 triệu lượt phương tiện qua trạm thu phí tự động mỗi ngày với thời gian nhận diện biển số $< 0.2$ giây.
 
-🚀 **Thử thách:** Hàm `std::lower_bound` trong C++ STL hoạt động theo nguyên lý chặt nhị phân như thế nào?
+🚀 **Thử thách:** Hàm `lower_bound` trong C++ STL hoạt động theo nguyên lý chặt nhị phân như thế nào?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -4093,7 +4067,7 @@ Hãy giúp trạm thu phí xác định **chỉ số (1-indexed) của tài kho�
 
 ## 1. PHÂN TÍCH YÊU CẦU ĐỀ BÀI
 * **Tóm tắt:** Cho mảng $A$ đã sắp xếp. Với mỗi truy vấn $X$, tìm vị trí đầu tiên (1-indexed) $i$ sao cho $A[i] \ge X$. Nếu không có, in $N+1$.
-* **Dạng bài:** Binary Search / `std::lower_bound`.
+* **Dạng bài:** Binary Search / `lower_bound`.
 
 ---
 
@@ -4104,7 +4078,7 @@ Hãy giúp trạm thu phí xác định **chỉ số (1-indexed) của tài kho�
 
 #### **Bước 2: Tìm kiếm Nhị phân (Binary Search)**
 * Vì mảng $A$ đã sắp xếp tăng dần, dùng Tìm kiếm nhị phân để thu hẹp phạm vi trong $O(\log N)$.
-* C++ STL hỗ trợ sẵn `std::lower_bound(a.begin(), a.end(), x)`.
+* C++ STL hỗ trợ sẵn `lower_bound(a.begin(), a.end(), x)`.
 
 #### **Bước 3: Đánh giá độ phức tạp**
 * Thời gian: $O(Q \log N)$ cho $Q$ truy vấn.
@@ -4113,9 +4087,6 @@ Hãy giúp trạm thu phí xác định **chỉ số (1-indexed) của tài kho�
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -4221,9 +4192,6 @@ Hãy tìm **công suất tối thiểu $P$ LỚN NHẤT** sao cho có ít nhất
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -4318,10 +4286,6 @@ Tổng cộng dùng đúng 3 tàu. Nếu $C = 5$, cần ít nhất 4 tàu.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <numeric>
-#include <algorithm>
 
 using namespace std;
 
@@ -4453,9 +4417,6 @@ Hãy tìm tổng sản lượng chuối lớn nhất của một giai đoạn th
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -4533,7 +4494,7 @@ Hãy tìm **số lượng tháng nhiều nhất** (độ dài $k$ lớn nhất) 
 
 💡 **Bạn có biết?** TP. Hồ Chí Minh đón hơn 5 triệu lượt khách quốc tế mỗi năm, đóng góp gần 10% tổng GDP của thành phố nhờ các sản phẩm du lịch văn hóa và ẩm thực độc đáo.
 
-🚀 **Thử thách:** Thuật toán LIS Quy hoạch động kết hợp Tìm kiếm Nhị phân (`std::lower_bound`) giúp giải bài toán này trong độ phức tạp thời gian bao nhiêu?
+🚀 **Thử thách:** Thuật toán LIS Quy hoạch động kết hợp Tìm kiếm Nhị phân (`lower_bound`) giúp giải bài toán này trong độ phức tạp thời gian bao nhiêu?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -4562,9 +4523,6 @@ Hãy tìm **số lượng tháng nhiều nhất** (độ dài $k$ lớn nhất) 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -4664,9 +4622,6 @@ Hãy giúp Viettel chọn một tập hợp các thiết bị có **tổng chi p
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -4769,8 +4724,6 @@ Hãy in ra bậc của tất cả $N$ trạm dừng theo thứ tự từ trạm 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -4860,7 +4813,7 @@ Hãy tìm **số chuyến bay tối thiểu** để di chuyển từ đảo $S$ 
 #### **Bước 1: Tại sao chọn BFS thay vì DFS?**
 * Duyệt theo chiều rộng (BFS) duyệt theo các lớp khoảng cách $0, 1, 2, \dots$. Do đó đỉnh $T$ xuất hiện lần đầu tiên luôn đảm bảo khoảng cách là nhỏ nhất.
 
-#### **Bước 2: Cấu trúc dữ liệu hàng đợi `std::queue`**
+#### **Bước 2: Cấu trúc dữ liệu hàng đợi `queue`**
 * Mảng `dist` khởi tạo bằng -1 để đánh dấu chưa thăm. `dist[S] = 0`.
 * Đưa $S$ vào hàng đợi. Mỗi lần lấy đỉnh $u$ ra, duyệt các đỉnh kề $v$. Nếu `dist[v] == -1`, gán `dist[v] = dist[u] + 1` và đẩy $v$ vào `q`.
 
@@ -4871,9 +4824,6 @@ Hãy tìm **số chuyến bay tối thiểu** để di chuyển từ đảo $S$ 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
 
 using namespace std;
 
@@ -4973,7 +4923,7 @@ Hãy in ra thời gian di chuyển ngắn nhất từ kho 1 tới kho $u$ với 
 
 💡 **Bạn có biết?** Shopee Express ứng dụng thuật toán Dijkstra và Machine Learning để tối ưu hóa lộ trình giao hàng hàng triệu đơn mỗi ngày tại các đô thị lớn ở Việt Nam.
 
-🚀 **Thử thách:** Thuật toán Dijkstra dùng `std::priority_queue` Min-Heap đạt độ phức tạp thời gian $O((N + M) \log N)$ chuẩn như thế nào?
+🚀 **Thử thách:** Thuật toán Dijkstra dùng `priority_queue` Min-Heap đạt độ phức tạp thời gian $O((N + M) \log N)$ chuẩn như thế nào?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -4991,8 +4941,8 @@ Hãy in ra thời gian di chuyển ngắn nhất từ kho 1 tới kho $u$ với 
 * Đồ thị có trọng số không âm ($w&#95;i \ge 0$).
 * Ý tưởng: Luôn cố định khoảng cách ngắn nhất cho đỉnh có `dist` nhỏ nhất trong danh sách các đỉnh đang chờ xử lý.
 
-#### **Bước 2: Cấu trúc Min-Heap (`std::priority_queue`)**
-* Dùng `std::priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>>` để lấy đỉnh có `dist` nhỏ nhất trong $O(\log N)$.
+#### **Bước 2: Cấu trúc Min-Heap (`priority_queue`)**
+* Dùng `priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>>` để lấy đỉnh có `dist` nhỏ nhất trong $O(\log N)$.
 * Kiểm tra `if (d > dist[u]) continue;` để bỏ qua các bản ghi cũ khi cập nhật `dist`.
 
 #### **Bước 3: Đánh giá độ phức tạp**
@@ -5002,9 +4952,6 @@ Hãy in ra thời gian di chuyển ngắn nhất từ kho 1 tới kho $u$ với 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
 
 using namespace std;
 
@@ -5132,8 +5079,6 @@ Hệ thống muốn kiểm tra **sau mỗi lần nối tuyến cáp thứ $i$**,
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -5257,9 +5202,6 @@ Hãy giúp MAUR lựa chọn một tập hợp các đoạn tuyến đường h�
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -5369,7 +5311,7 @@ Kỹ sư trưởng muốn lập một **thứ tự thực hiện tất cả $N$ 
 
 💡 **Bạn me?** Tổ hợp nhà máy VinFast Hải Phòng đạt tỷ lệ tự động hóa lên đến 90% với hàng nghìn robot ABB hoạt động đồng bộ theo thuật toán điều phối thời gian thực.
 
-🚀 **Thử thách:** Thuật toán Kahn (Sắp xếp Topological Sort) dùng `std::priority_queue` Min-Heap giúp tìm thứ tự từ điển nhỏ nhất như thế nào?
+🚀 **Thử thách:** Thuật toán Kahn (Sắp xếp Topological Sort) dùng `priority_queue` Min-Heap giúp tìm thứ tự từ điển nhỏ nhất như thế nào?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -5388,7 +5330,7 @@ Kỹ sư trưởng muốn lập một **thứ tự thực hiện tất cả $N$ 
 * Đưa tất cả các đỉnh có `indegree == 0` vào hàng đợi ưu tiên Min-Heap.
 
 #### **Bước 2: Ưu tiên Thứ tự Từ điển**
-* Dùng `std::priority_queue<int, vector<int>, greater<int>>` để luôn lấy đỉnh có chỉ số nhỏ nhất ra xử lý trước.
+* Dùng `priority_queue<int, vector<int>, greater<int>>` để luôn lấy đỉnh có chỉ số nhỏ nhất ra xử lý trước.
 * Giảm `indegree` của các đỉnh kề. Nếu bằng 0 thì đẩy vào Min-Heap.
 
 #### **Bước 3: Đánh giá độ phức tạp**
@@ -5398,9 +5340,6 @@ Kỹ sư trưởng muốn lập một **thứ tự thực hiện tất cả $N$ 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
 
 using namespace std;
 
@@ -5528,8 +5467,6 @@ Hãy đếm số lượng trạm quan trắc nằm trong vùng phủ sóng của
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -5632,7 +5569,6 @@ Hãy đếm số lượng nông trường nằm hoàn toàn trong ranh giới qu
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
 
 using namespace std;
 
@@ -5745,9 +5681,6 @@ Hãy tính diện tích công viên và in ra dưới dạng **số thực làm 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <cmath>
 #include <iomanip>
 
 using namespace std;
@@ -5862,9 +5795,6 @@ Hãy tìm **thời điểm sớm nhất $t > 0$ (tính bằng giây)** mà tất
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <map>
 
 using namespace std;
 
@@ -5996,7 +5926,6 @@ Hãy giúp VietinBank đếm số lượng ước số của $N$.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
 
 using namespace std;
 
@@ -6099,7 +6028,6 @@ Cho ba số nguyên dương $A, B, M$. Hãy tính giá trị chữ ký số $S$.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
 
 using namespace std;
 
@@ -6197,7 +6125,6 @@ Hãy giúp Viettel IDC đếm **tổng số lượng bit 1** của tất cả $N
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
 
 using namespace std;
 
@@ -6299,8 +6226,6 @@ Hãy tính tổng XOR $S$ cho từng truy vấn để xác thực tính toàn v�
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -6405,8 +6330,6 @@ An
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -6508,8 +6431,6 @@ Hãy tính tổng doanh thu cho $Q$ truy vấn khu vực.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -6617,8 +6538,6 @@ Hãy in ra kết quả cho tất cả các sự kiện loại 2.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -6760,9 +6679,6 @@ Hãy in ra kết quả băng thông lớn nhất cho tất cả các thao tác l
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -6880,7 +6796,7 @@ abacaba
 
 ---
 
-💡 **Bạn có biết?** Zalo xử lý hơn 2 tỷ tin nhắn mỗi ngày. Việc băm chuỗi (String Hashing) kết hợp `std::unordered_set` giúp phát hiện từ khóa nhạy cảm trong thời gian thực.
+💡 **Bạn có biết?** Zalo xử lý hơn 2 tỷ tin nhắn mỗi ngày. Việc băm chuỗi (String Hashing) kết hợp `unordered_set` giúp phát hiện từ khóa nhạy cảm trong thời gian thực.
 
 🚀 **Thử thách:** Thuật toán Rolling Hash tính mã băm cho cửa sổ trượt độ dài $K$ trong $O(1)$ mỗi bước như thế nào?
 
@@ -6890,17 +6806,17 @@ abacaba
 
 ## 1. PHÂN TÍCH YÊU CẦU ĐỀ BÀI
 * **Tóm tắt:** Cho chuỗi $S$ và số $K$. Đếm số lượng xâu con phân biệt độ dài $K$.
-* **Dạng bài:** String Sliding Window + `std::string_view` / String Hashing.
+* **Dạng bài:** String Sliding Window + `string_view` / String Hashing.
 
 ---
 
 ## 2. PHƯƠNG PHÁP SUY LUẬN & DẪN DẮT HỌC SINH (5 BƯỚC)
 
-#### **Bước 1: Sử dụng `std::string_view` tránh Copy Xâu**
+#### **Bước 1: Sử dụng `string_view` tránh Copy Xâu**
 * Duyệt tất cả cửa sổ trượt từ $0$ đến $N-K$.
-* Dùng `std::string_view` để tham chiếu trực tiếp tới bộ nhớ của $S$, tránh việc cấp phát lại xâu mới tốn thời gian.
+* Dùng `string_view` để tham chiếu trực tiếp tới bộ nhớ của $S$, tránh việc cấp phát lại xâu mới tốn thời gian.
 
-#### **Bước 2: Tập hợp Đếm duy nhất `std::unordered_set`**
+#### **Bước 2: Tập hợp Đếm duy nhất `unordered_set`**
 * Đẩy các xâu con vào `unordered_set`. Kết quả là `st.size()`.
 
 #### **Bước 3: Đánh giá độ phức tạp**
@@ -6910,9 +6826,6 @@ abacaba
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <string>
-#include <unordered_set>
 
 using namespace std;
 
@@ -7021,9 +6934,6 @@ NO
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 
@@ -7155,9 +7065,6 @@ abacaba
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 
@@ -7262,9 +7169,6 @@ Hãy tìm tổng chi phí di chuyển nhỏ nhất của lộ trình thu gom rá
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -7392,9 +7296,6 @@ Tất cả 5 trạm đều được phủ sóng.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -7533,9 +7434,6 @@ Min là 52 (nếu chia [1, 2, 3] và [4]).
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -7652,9 +7550,6 @@ Tổng thời gian: $6 + 5 + 4 = 15$.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
 
 using namespace std;
 
@@ -7829,9 +7724,6 @@ Hãy giúp VNPT **đếm số lượng Đoạn Cáp Yếu (Cầu)** trong hệ t
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -7968,8 +7860,6 @@ Hãy in ra kết quả cho tất cả các thao tác loại 2.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -8135,9 +8025,6 @@ Hãy in ra kết quả khoảng cách cho $Q$ truy vấn.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <cmath>
 
 using namespace std;
 
@@ -8297,10 +8184,6 @@ Tổng luồng cực đại = $50 + 50 + 50 = 150$ Gbps.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <algorithm>
 
 using namespace std;
 
@@ -8469,10 +8352,6 @@ Hãy tính **chu vi nhỏ nhất của vành đai an ninh đa giác bao lồi** 
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <algorithm>
 #include <iomanip>
 
 using namespace std;
@@ -8617,9 +8496,6 @@ Hãy in ra kết quả cho tất cả $Q$ truy vấn lịch sử.
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -8755,7 +8631,7 @@ Hãy in ra kết quả độ dài ngắn nhất cho tất cả các truy vấn l
 
 💡 **Bạn có biết?** Bài toán Đồ thị Động (Dynamic Shortest Path) đòi hỏi sự kết hợp tinh tế giữa Thuật toán Dijkstra và cập nhật trọng số trong hệ thống logistics VinFast.
 
-🚀 **Thử thách:** Thuật toán Dijkstra hàng đợi ưu tiên `std::priority_queue` giải quyết truy vấn $O(M \log N)$ chuẩn ra sao?
+🚀 **Thử thách:** Thuật toán Dijkstra hàng đợi ưu tiên `priority_queue` giải quyết truy vấn $O(M \log N)$ chuẩn ra sao?
 
 ## 2. HƯỚNG DẪN GIẢNG DẠY & EDITORIAL
 
@@ -8769,7 +8645,7 @@ Hãy in ra kết quả độ dài ngắn nhất cho tất cả các truy vấn l
 
 ## 2. PHƯƠNG PHÁP SUY LUẬN & DẪN DẮT HỌC SINH (5 BƯỚC)
 
-#### **Bước 1: Quản lý Cạnh Động bằng `std::map`**
+#### **Bước 1: Quản lý Cạnh Động bằng `map`**
 * Sử dụng `vector<map<int, long long>> adj_map` để cập nhật trọng số cạnh giữa $u$ và $v$ trong $O(\log \text{deg})$.
 
 #### **Bước 2: Truy vấn Đường đi Ngắn nhất**
@@ -8782,10 +8658,6 @@ Hãy in ra kết quả độ dài ngắn nhất cho tất cả các truy vấn l
 ## 3. CODE GIẢI C++ CHUẨN (100% AC)
 
 ```cpp
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <map>
 
 using namespace std;
 
@@ -8936,7 +8808,7 @@ floor$. Nếu tổng số cọc $\ge K$ thì $L$ khả thi.
 * **Dạng bài:** Sliding Window Maximum, Monotonic Deque
 * **Độ khó:** Rating 1550 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0068 - He Thong Dem Luong Giao Thong Ham Thu Thiem](file:///Users/dkdeveloper/projects/testcase/IKH-0068%20-%20He%20Thong%20Dem%20Luong%20Giao%20Thong%20Ham%20Thu%20Thiem)
-* **Ý tưởng cốt lõi:** Duy trì một `std::deque` chứa chỉ số phần tử giảm dần về giá trị. Loại bỏ các phần tử nằm ngoài cửa sổ $K$ và các phần tử nhỏ hơn phần tử mới thêm vào. Đáp án cửa sổ tại mỗi bước là `a[dq.front()]`.
+* **Ý tưởng cốt lõi:** Duy trì một `deque` chứa chỉ số phần tử giảm dần về giá trị. Loại bỏ các phần tử nằm ngoài cửa sổ $K$ và các phần tử nhỏ hơn phần tử mới thêm vào. Đáp án cửa sổ tại mỗi bước là `a[dq.front()]`.
 
 ---
 
@@ -9018,7 +8890,7 @@ floor$. Nếu tổng số cọc $\ge K$ thì $L$ khả thi.
 * **Dạng bài:** Dijkstra Algorithm, Weighted Shortest Path
 * **Độ khó:** Rating 1650 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0078 - Toi Uu Hoa Tuyen Duong Giao Hang GHN](file:///Users/dkdeveloper/projects/testcase/IKH-0078%20-%20Toi%20Uu%20Hoa%20Tuyen%20Duong%20Giao%20Hang%20GHN)
-* **Ý tưởng cốt lõi:** Thuật toán Dijkstra với Hàng chờ ưu tiên `std::priority_queue`. Duyệt qua các đỉnh có khoảng cách nhỏ nhất chưa cố định, cập nhật khoảng cách $dist[v] = dist[u] + w$ trong $O((V + E) \log V)$.
+* **Ý tưởng cốt lõi:** Thuật toán Dijkstra với Hàng chờ ưu tiên `priority_queue`. Duyệt qua các đỉnh có khoảng cách nhỏ nhất chưa cố định, cập nhật khoảng cách $dist[v] = dist[u] + w$ trong $O((V + E) \log V)$.
 
 ---
 
@@ -9199,7 +9071,7 @@ floor$.
 * **Dạng bài:** Convex Hull Trick (CHT), Dynamic Programming Optimization
 * **Độ khó:** Rating 1900 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0100 - Quy Hoach Chi Phi Van Chuyen Container](file:///Users/dkdeveloper/projects/testcase/IKH-0100%20-%20Quy%20Hoach%20Chi%20Phi%20Van%20Chuyen%20Container)
-* **Ý tưởng cốt lõi:** Kỹ thuật Bao Lồi CHT (Convex Hull Trick). Biến đổi công thức $dp[i] = \min (dp[j] + A_i \cdot B_j)$ thành truy vấn điểm $x = A_i$ trên tập các đường thẳng $y = B_j \cdot x + dp[j]$. Duy trì bao lồi bằng `std::deque` giúp tối ưu độ phức tạp từ $O(N^2)$ xuống $O(N)$.
+* **Ý tưởng cốt lõi:** Kỹ thuật Bao Lồi CHT (Convex Hull Trick). Biến đổi công thức $dp[i] = \min (dp[j] + A_i \cdot B_j)$ thành truy vấn điểm $x = A_i$ trên tập các đường thẳng $y = B_j \cdot x + dp[j]$. Duy trì bao lồi bằng `deque` giúp tối ưu độ phức tạp từ $O(N^2)$ xuống $O(N)$.
 
 
 ---
@@ -9265,7 +9137,7 @@ floor$.
 * **Dạng bài:** Closest Pair of Points, Sweep-line Algorithm
 * **Độ khó:** Rating 1800 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0108 - Khoang Cach Toi Thieu Giua 2 Tram Ban Hang Circle K](file:///Users/dkdeveloper/projects/testcase/IKH-0108%20-%20Khoang%20Cach%20Toi%20Thieu%20Giua%202%20Tram%20Ban%20Hang%20Circle%20K)
-* **Ý tưởng cốt lõi:** Cặp điểm gần nhất bằng Đường Quét (Sweep-line). Sắp xếp điểm theo hoành độ $X$, duy trì mảng `std::set` theo tung độ $Y$ để giới hạn cửa sổ tìm kiếm trong dải $\sqrt{d}$ giúp tìm khoảng cách Euclid bình phương nhỏ nhất trong $O(N \log N)$.
+* **Ý tưởng cốt lõi:** Cặp điểm gần nhất bằng Đường Quét (Sweep-line). Sắp xếp điểm theo hoành độ $X$, duy trì mảng `set` theo tung độ $Y$ để giới hạn cửa sổ tìm kiếm trong dải $\sqrt{d}$ giúp tìm khoảng cách Euclid bình phương nhỏ nhất trong $O(N \log N)$.
 
 ---
 
@@ -9325,8 +9197,8 @@ floor$.
 * **Thư mục local:** [IKH-0114 - Gia Tri Lon Nhat Cua So Truot Buu Kien VNPost](file:///Users/dkdeveloper/projects/testcase/IKH-0114%20-%20Gia%20Tri%20Lon%20Nhat%20Cua%20So%20Truot%20Buu%20Kien%20VNPost)
 * **Phương pháp đa giải:**
   - *Cách 1 (Subtask 1):* Duyệt từng cửa sổ trượt $O(N \cdot K)$.
-  - *Cách 2 (Subtask 2):* Dùng `std::multiset` / Max-Heap $O(N \log K)$.
-  - *Cách 3 (100% AC):* Hàng đợi đơn điệu Monotonic `std::deque` $O(N)$.
+  - *Cách 2 (Subtask 2):* Dùng `multiset` / Max-Heap $O(N \log K)$.
+  - *Cách 3 (100% AC):* Hàng đợi đơn điệu Monotonic `deque` $O(N)$.
 
 ---
 
@@ -9537,7 +9409,7 @@ floor$.
 * **Độ khó:** Rating 1400 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0133 - Tim Phan Tu Nho Thu K Trong Cua So Truot Baemin](file:///Users/dkdeveloper/projects/testcase/IKH-0133%20-%20Tim%20Phan%20Tu%20Nho%20Thu%20K%20Trong%20Cua%20So%20Truot%20Baemin)
 * **Phương pháp đa giải:**
-  - *Cách 1 (Subtask 1):* Copy cửa sổ và `std::sort` $O(N \cdot W \log W)$.
+  - *Cách 1 (Subtask 1):* Copy cửa sổ và `sort` $O(N \cdot W \log W)$.
   - *Cách 2 (Subtask 2):* Dùng 2 Heaps (Max-Heap + Min-Heap) $O(N \log W)$.
   - *Cách 3 (100% AC):* Fenwick Tree BIT + Binary Lifting $O(N \log (\max A))$.
 
@@ -9595,7 +9467,7 @@ floor$.
 * **Phương pháp đa giải:**
   - *Cách 1 (Subtask 1):* Duyệt DFS thô $O(V!)$.
   - *Cách 2 (Subtask 2):* Thuật toán Dijkstra Min-Heap $O((V + E) \log V)$.
-  - *Cách 3 (100% AC):* Thuật toán 0-1 BFS `std::deque` $O(V + E)$.
+  - *Cách 3 (100% AC):* Thuật toán 0-1 BFS `deque` $O(V + E)$.
 
 ---
 
@@ -9672,7 +9544,7 @@ floor$.
 * **Thư mục local:** [IKH-0145 - Dem So Lan Xau Con Xuat Hien Bang Cay Trie MoMo](file:///Users/dkdeveloper/projects/testcase/IKH-0145%20-%20Dem%20So%20Lan%20Xau%20Con%20Xuat%20Hien%20Bang%20Cay%20Trie%20MoMo)
 * **Phương pháp đa giải:**
   - *Cách 1 (Subtask 1):* Vét cạn so sánh từng xâu $O(Q \cdot N \cdot |T|)$.
-  - *Cách 2 (Subtask 2):* Dùng `std::unordered_map` lưu mọi Prefix $O(\sum |S|^2 + Q \cdot |T|)$.
+  - *Cách 2 (Subtask 2):* Dùng `unordered_map` lưu mọi Prefix $O(\sum |S|^2 + Q \cdot |T|)$.
   - *Cách 3 (100% AC):* Cấu trúc dữ liệu Cây Tiền Tố Trie $O(\sum |S| + \sum |T|)$.
 
 
@@ -10394,7 +10266,7 @@ floor$.
 * **Dạng bài:** Longest Increasing Subsequence (LIS)
 * **Độ khó:** Rating 1350 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0231 - Toi Uu Day Tin Hieu Viettel Telecom](file:///Users/dkdeveloper/projects/testcase/IKH-0231%20-%20Toi%20Uu%20Day%20Tin%20Hieu%20Viettel%20Telecom)
-* **Phương pháp giải:** Dùng thuật toán Patience Sorting kết hợp chặt nhị phân `std::lower_bound` trên mảng `tails` tìm LIS trong $O(N \log N)$.
+* **Phương pháp giải:** Dùng thuật toán Patience Sorting kết hợp chặt nhị phân `lower_bound` trên mảng `tails` tìm LIS trong $O(N \log N)$.
 
 ---
 
@@ -10528,10 +10400,10 @@ floor$.
 ---
 
 ### **[IKH-0248] - Phân Phối Mã Giảm Giá MoMo Wallet**
-* **Dạng bài:** Subset Sum DP with `std::bitset` Optimization
+* **Dạng bài:** Subset Sum DP with `bitset` Optimization
 * **Độ khó:** Rating 1550 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0248 - Phan Phoi Ma Giam Gia MoMo Wallet](file:///Users/dkdeveloper/projects/testcase/IKH-0248%20-%20Phan%20Phoi%20Ma%20Giam%20Gia%20MoMo%20Wallet)
-* **Phương pháp giải:** Sử dụng Cấu trúc `std::bitset<100001> dp`: `dp |= (dp << A[i])` để tối ưu hóa thời gian tính toán gấp 64 lần trong $O(rac{N \cdot W}{64})$.
+* **Phương pháp giải:** Sử dụng Cấu trúc `bitset<100001> dp`: `dp |= (dp << A[i])` để tối ưu hóa thời gian tính toán gấp 64 lần trong $O(rac{N \cdot W}{64})$.
 
 
 ---
@@ -10832,7 +10704,7 @@ floor$.
 * **Dạng bài:** Dijkstra Shortest Path Min-Heap
 * **Độ khó:** Rating 1350 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0285 - Dinh Tuyen Xe Cuu Thuong Grab](file:///Users/dkdeveloper/projects/testcase/IKH-0285%20-%20Dinh%20Tuyen%20Xe%20Cuu%20Thuong%20Grab)
-* **Phương pháp giải:** Thuật toán Dijkstra sử dụng Hàng đợi ưu tiên `std::priority_queue` Min-Heap tìm đường đi ngắn nhất giữa hai đỉnh $S$ và $T$ trong $O((V + E) \log V)$.
+* **Phương pháp giải:** Thuật toán Dijkstra sử dụng Hàng đợi ưu tiên `priority_queue` Min-Heap tìm đường đi ngắn nhất giữa hai đỉnh $S$ và $T$ trong $O((V + E) \log V)$.
 
 ---
 
@@ -10840,7 +10712,7 @@ floor$.
 * **Dạng bài:** 0-1 BFS via Deque
 * **Độ khó:** Rating 1400 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0286 - Toi Uu Phi Thu Phi VETC](file:///Users/dkdeveloper/projects/testcase/IKH-0286%20-%20Toi%20Uu%20Phi%20Thu%20Phi%20VETC)
-* **Phương pháp giải:** Thuật toán 0-1 BFS sử dụng `std::deque` (cạnh trọng số 0 đẩy vào đầu `push_front`, cạnh trọng số 1 đẩy vào cuống `push_back`) tìm khoảng cách tối ưu trong $O(V + E)$.
+* **Phương pháp giải:** Thuật toán 0-1 BFS sử dụng `deque` (cạnh trọng số 0 đẩy vào đầu `push_front`, cạnh trọng số 1 đẩy vào cuống `push_back`) tìm khoảng cách tối ưu trong $O(V + E)$.
 
 ---
 
@@ -10937,7 +10809,7 @@ floor$.
 * **Dạng bài:** Lexicographically Smallest Topological Sort
 * **Độ khó:** Rating 1500 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0298 - Lap Lich San Xuat Xe Dien VinFast](file:///Users/dkdeveloper/projects/testcase/IKH-0298%20-%20Lap%20Lich%20San%20Xuat%20Xe%20Dien%20VinFast)
-* **Phương pháp giải:** Thuật toán Kahn kết hợp Hàng đợi ưu tiên Min-Heap `std::priority_queue<int, vector<int>, greater<int>>` chọn đỉnh có chỉ số nhỏ nhất ưu tiên xuất trước trong $O((V + E) \log V)$.
+* **Phương pháp giải:** Thuật toán Kahn kết hợp Hàng đợi ưu tiên Min-Heap `priority_queue<int, vector<int>, greater<int>>` chọn đỉnh có chỉ số nhỏ nhất ưu tiên xuất trước trong $O((V + E) \log V)$.
 
 ---
 
@@ -10961,7 +10833,7 @@ floor$.
 * **Dạng bài:** DAG Transitive Closure / Bitset DP
 * **Độ khó:** Rating 1550 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0301 - He Thong Goi Y Shopee Live](file:///Users/dkdeveloper/projects/testcase/IKH-0301%20-%20He%20Thong%20Goi%20Y%20Shopee%20Live)
-* **Phương pháp giải:** Quy hoạch động bao đóng bắc cầu (Transitive Closure) tối ưu bằng `std::bitset<100001>` tính số lượng đỉnh có thể đến được từ mỗi đỉnh trong $O(\frac{V \cdot E}{64})$.
+* **Phương pháp giải:** Quy hoạch động bao đóng bắc cầu (Transitive Closure) tối ưu bằng `bitset<100001>` tính số lượng đỉnh có thể đến được từ mỗi đỉnh trong $O(\frac{V \cdot E}{64})$.
 
 ---
 
@@ -11213,7 +11085,7 @@ floor$.
 * **Dạng bài:** Segment Tree Range GCD Query
 * **Độ khó:** Rating 1500 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0332 - Theo Doi Trang Thai Pin VinFast](file:///Users/dkdeveloper/projects/testcase/IKH-0332%20-%20Theo%20Doi%20Trang%20Thai%20Pin%20VinFast)
-* **Phương pháp giải:** Nút Segment Tree lưu `gcd` của đoạn. Hợp nhất `std::__gcd(left, right)` trong $O(\log(	ext{val}))$. Cập nhật điểm và truy vấn GCD đoạn trong $O(\log N \log(	ext{val}))$.
+* **Phương pháp giải:** Nút Segment Tree lưu `gcd` của đoạn. Hợp nhất `__gcd(left, right)` trong $O(\log(	ext{val}))$. Cập nhật điểm và truy vấn GCD đoạn trong $O(\log N \log(	ext{val}))$.
 
 ---
 
@@ -11270,7 +11142,7 @@ floor$.
 * **Dạng bài:** Lazy Segment Tree Range Assignment & Range GCD
 * **Độ khó:** Rating 1550 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0339 - Cap Nhat Chuoi Cung Ung Grab](file:///Users/dkdeveloper/projects/testcase/IKH-0339%20-%20Cap%20Nhat%20Chuoi%20Cung%20Ung%20Grab)
-* **Phương pháp giải:** Kết hợp Lazy Range Assignment và hợp nhất GCD hai nút con `std::__gcd(left, right)` trong $O(\log N \log(	ext{val}))$.
+* **Phương pháp giải:** Kết hợp Lazy Range Assignment và hợp nhất GCD hai nút con `__gcd(left, right)` trong $O(\log N \log(	ext{val}))$.
 
 ---
 
@@ -11947,7 +11819,7 @@ floor$.
 * **Dạng bài:** Bitset Memory Reduction $O(N^2 / 64)$
 * **Độ khó:** Rating 1350 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0422 - Tiet Kiem Bo Nho Bitset Zalo](file:///Users/dkdeveloper/projects/testcase/IKH-0422%20-%20Tiet%20Kiem%20Bo%20Nho%20Bitset%20Zalo)
-* **Phương pháp giải:** Sử dụng `std::bitset` thay thế mảng `bool` / `vector<bool>` nén bộ nhớ 64 lần, cho phép xử lý ma trận kề đồ thị $N = 50000$ vượt qua giới hạn bộ nhớ MLE.
+* **Phương pháp giải:** Sử dụng `bitset` thay thế mảng `bool` / `vector<bool>` nén bộ nhớ 64 lần, cho phép xử lý ma trận kề đồ thị $N = 50000$ vượt qua giới hạn bộ nhớ MLE.
 
 ---
 
@@ -11988,7 +11860,7 @@ floor$.
 * **Dạng bài:** Monotonic Deque Sliding Window Maximum
 * **Độ khó:** Rating 1400 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0427 - Toi Uu Cua So Truot Monotonic Deque Shopee](file:///Users/dkdeveloper/projects/testcase/IKH-0427%20-%20Toi%20Uu%20Cua%20So%20Truot%20Monotonic%20Deque%20Shopee)
-* **Phương pháp giải:** Sử dụng Hàng đợi đơn điệu (`std::deque`) duy trì các chỉ số mảng giảm dần, tìm Max trong từng cửa sổ trượt độ dài $K$ trong $O(N)$ thời gian thay vì $O(N \cdot K)$.
+* **Phương pháp giải:** Sử dụng Hàng đợi đơn điệu (`deque`) duy trì các chỉ số mảng giảm dần, tìm Max trong từng cửa sổ trượt độ dài $K$ trong $O(N)$ thời gian thay vì $O(N \cdot K)$.
 
 ---
 
@@ -12037,7 +11909,7 @@ floor$.
 * **Dạng bài:** Static Convex Hull Trick (CHT) $O(N)$
 * **Độ khó:** Rating 1550 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0433 - Toi Uu CHT Convex Hull Trick Shopee](file:///Users/dkdeveloper/projects/testcase/IKH-0433%20-%20Toi%20Uu%20CHT%20Convex%20Hull%20Trick%20Shopee)
-* **Phương pháp giải:** Sử dụng Bao lồi đường thẳng (Convex Hull Trick) duy trì bao lồi dưới bằng `std::deque` cho hệ thức $dp[i] = \min_{j < i} (dp[j] + A[j] \cdot B[i])$ trong $O(N)$ thời gian thay vì $O(N^2)$.
+* **Phương pháp giải:** Sử dụng Bao lồi đường thẳng (Convex Hull Trick) duy trì bao lồi dưới bằng `deque` cho hệ thức $dp[i] = \min_{j < i} (dp[j] + A[j] \cdot B[i])$ trong $O(N)$ thời gian thay vì $O(N^2)$.
 
 ---
 
@@ -12061,7 +11933,7 @@ floor$.
 * **Dạng bài:** Dynamic Convex Hull Trick / LineContainer
 * **Độ khó:** Rating 1650 | ⭐⭐⭐⭐☆
 * **Thư mục local:** [IKH-0436 - Toi Uu Bao Loi Dong Viettel](file:///Users/dkdeveloper/projects/testcase/IKH-0436%20-%20Toi%20Uu%20Bao%20Loi%20Dong%20Viettel)
-* **Phương pháp giải:** Sử dụng Cấu trúc Bao lồi đường thẳng động (`LineContainer` / `std::multiset`) hỗ trợ chèn đường thẳng $y = mx + c$ với hệ số góc không sắp xếp trong $O(N \log N)$.
+* **Phương pháp giải:** Sử dụng Cấu trúc Bao lồi đường thẳng động (`LineContainer` / `multiset`) hỗ trợ chèn đường thẳng $y = mx + c$ với hệ số góc không sắp xếp trong $O(N \log N)$.
 
 ---
 
@@ -12111,7 +11983,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Infinite Loop & Iterator Invalidation Debugging
 * **Độ khó:** Rating 1500 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0442 - Phat Hien Bug Vong Lap Vo Tan Zalo](file:///Users/dkdeveloper/projects/testcase/IKH-0442%20-%20Phat%20Hien%20Bug%20Vong%20Lap%20Vo%20Tan%20Zalo)
-* **Phương pháp giải:** Sửa lỗi treo vòng lặp `while` khi duyệt con trỏ/con chạy `std::vector` bị hỏng chỉ số (Iterator Invalidation), đảm bảo điều kiện dừng vòng lặp luôn đúng.
+* **Phương pháp giải:** Sửa lỗi treo vòng lặp `while` khi duyệt con trỏ/con chạy `vector` bị hỏng chỉ số (Iterator Invalidation), đảm bảo điều kiện dừng vòng lặp luôn đúng.
 
 ---
 
@@ -12144,7 +12016,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Memory Optimization MLE to AC (Dynamic Allocation / Flattening)
 * **Độ khó:** Rating 1600 | ⭐⭐⭐⭐☆
 * **Thư mục local:** [IKH-0446 - Khac Phuc Loi Bo Nho MLE VinFast](file:///Users/dkdeveloper/projects/testcase/IKH-0446%20-%20Khac%20Phuc%20Loi%20Bo%20Nho%20MLE%20VinFast)
-* **Phương pháp giải:** Tối ưu hóa bộ nhớ mảng 2D kích thước lớn $50000 \times 50000$ bị MLE thành `std::vector` động hoặc mảng cuộn (Rolling Array) $O(N)$ bộ nhớ.
+* **Phương pháp giải:** Tối ưu hóa bộ nhớ mảng 2D kích thước lớn $50000 \times 50000$ bị MLE thành `vector` động hoặc mảng cuộn (Rolling Array) $O(N)$ bộ nhớ.
 
 ---
 
@@ -12185,7 +12057,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Mock Contest 1 Task 1 (Prefix Sum + Binary Search $O((N + Q) \log N)$)
 * **Độ khó:** Rating 1350 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0451 - De Thi Thu 1 Bai 1 Tuyen Xe Dien VinFast](file:///Users/dkdeveloper/projects/testcase/IKH-0451%20-%20De%20Thi%20Thu%201%20Bai%201%20Tuyen%20Xe%20Dien%20VinFast)
-* **Phương pháp giải:** Mảng tổng tiền tố $S[i]$ tăng nghiêm ngặt, sử dụng `std::lower_bound` tìm vị trí trạm nhỏ nhất thỏa mãn tổng điện năng $\ge K$ trong $O(\log N)$.
+* **Phương pháp giải:** Mảng tổng tiền tố $S[i]$ tăng nghiêm ngặt, sử dụng `lower_bound` tìm vị trí trạm nhỏ nhất thỏa mãn tổng điện năng $\ge K$ trong $O(\log N)$.
 
 ---
 
@@ -12387,7 +12259,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Mock Contest 3 Task 6 (Merge Sort Tree $O(\log^2 N)$)
 * **Độ khó:** Rating 1600 | ⭐⭐⭐⭐☆
 * **Thư mục local:** [IKH-0476 - De Thi Thu 3 Bai 6 Merge Sort Tree Techcombank](file:///Users/dkdeveloper/projects/testcase/IKH-0476%20-%20De%20Thi%20Thu%203%20Bai%206%20Merge%20Sort%20Tree%20Techcombank)
-* **Phương pháp giải:** Xây dựng Cây Trộn Sắp Xếp (Merge Sort Tree) lưu mảng đã sắp xếp tại mỗi nút Segment Tree kết hợp `std::lower_bound` đếm số phần tử nhỏ hơn $K$ trong đoạn $[L, R]$ $O(\log^2 N)$.
+* **Phương pháp giải:** Xây dựng Cây Trộn Sắp Xếp (Merge Sort Tree) lưu mảng đã sắp xếp tại mỗi nút Segment Tree kết hợp `lower_bound` đếm số phần tử nhỏ hơn $K$ trong đoạn $[L, R]$ $O(\log^2 N)$.
 
 ---
 
@@ -12614,7 +12486,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Mock Contest 6 Task 4 (Dynamic CHT `LineContainer` $O(N \log N)$)
 * **Độ khó:** Rating 1650 | ⭐⭐⭐⭐☆
 * **Thư mục local:** [IKH-0504 - De Thi Thu 6 Bai 4 Dynamic CHT FPT](file:///Users/dkdeveloper/projects/testcase/IKH-0504%20-%20De%20Thi%20Thu%206%20Bai%204%20Dynamic%20CHT%20FPT)
-* **Phương pháp giải:** Sử dụng Cấu trúc dữ liệu Dynamic CHT (`std::set` `LineContainer` / Li Chao Tree) quản lý các đường thẳng có hệ số góc không đơn điệu trong $O(N \log N)$.
+* **Phương pháp giải:** Sử dụng Cấu trúc dữ liệu Dynamic CHT (`set` `LineContainer` / Li Chao Tree) quản lý các đường thẳng có hệ số góc không đơn điệu trong $O(N \log N)$.
 
 ---
 
@@ -12857,7 +12729,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 1 Task 4 (Prefix Sum + Hash Map / Two Pointers $O(N)$)
 * **Độ khó:** Rating 1300 | ⭐⭐☆☆☆
 * **Thư mục local:** [IKH-0534 - Luyen De 1 Bai 4 Tong Bang K FPT](file:///Users/dkdeveloper/projects/testcase/IKH-0534%20-%20Luyen%20De%201%20Bai%204%20Tong%20Bang%20K%20FPT)
-* **Phương pháp giải:** Kỹ thuật Tổng tiền tố (Prefix Sum) kết hợp `std::unordered_map` lưu vị trí đếm số lượng đoạn con liên tiếp có tổng đúng bằng $K$ trong $O(N)$.
+* **Phương pháp giải:** Kỹ thuật Tổng tiền tố (Prefix Sum) kết hợp `unordered_map` lưu vị trí đếm số lượng đoạn con liên tiếp có tổng đúng bằng $K$ trong $O(N)$.
 
 ---
 
@@ -12938,7 +12810,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 2 Task 4 (Longest Increasing Subsequence LIS $O(N \log N)$)
 * **Độ khó:** Rating 1400 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0544 - Luyen De 2 Bai 4 LIS BS FPT](file:///Users/dkdeveloper/projects/testcase/IKH-0544%20-%20Luyen%20De%202%20Bai%204%20LIS%20BS%20FPT)
-* **Phương pháp giải:** Kết hợp Quy hoạch động và Tìm kiếm nhị phân `std::lower_bound` tìm độ dài dãy con tăng dài nhất (LIS) trong $O(N \log N)$.
+* **Phương pháp giải:** Kết hợp Quy hoạch động và Tìm kiếm nhị phân `lower_bound` tìm độ dài dãy con tăng dài nhất (LIS) trong $O(N \log N)$.
 
 ---
 
@@ -13076,7 +12948,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 4 Task 1 (Two Pointers String Reversal $O(N)$)
 * **Độ khó:** Rating 1100 | ⭐★☆☆☆
 * **Thư mục local:** [IKH-0561 - Luyen De 4 Bai 1 Dao Nguoc VinFast](file:///Users/dkdeveloper/projects/testcase/IKH-0561%20-%20Luyen%20De%204%20Bai%201%20Dao%20Nguoc%20VinFast)
-* **Phương pháp giải:** Sử dụng kỹ thuật `std::reverse` hoặc Hai con trỏ đảo ngược vị trí ký tự trong chuỗi $S$ trong $O(N)$ thời gian và $O(1)$ bộ nhớ phụ.
+* **Phương pháp giải:** Sử dụng kỹ thuật `reverse` hoặc Hai con trỏ đảo ngược vị trí ký tự trong chuỗi $S$ trong $O(N)$ thời gian và $O(1)$ bộ nhớ phụ.
 
 ---
 
@@ -13221,7 +13093,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 5 Task 9 (Dynamic CHT `LineContainer` $O(N \log N)$)
 * **Độ khó:** Rating 1650 | ⭐⭐⭐⭐☆
 * **Thư mục local:** [IKH-0579 - Luyen De 5 Bai 9 Dynamic CHT Shopee](file:///Users/dkdeveloper/projects/testcase/IKH-0579%20-%20Luyen%20De%205%20Bai%209%20Dynamic%20CHT%20Shopee)
-* **Phương pháp giải:** Cấu trúc Dynamic Convex Hull Trick `std::multiset` hỗ trợ thêm đường thẳng hệ số góc bất kỳ và truy vấn giá trị cực đại tại $x$ trong $O(N \log N)$.
+* **Phương pháp giải:** Cấu trúc Dynamic Convex Hull Trick `multiset` hỗ trợ thêm đường thẳng hệ số góc bất kỳ và truy vấn giá trị cực đại tại $x$ trong $O(N \log N)$.
 
 ---
 
@@ -13343,7 +13215,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 7 Task 4 (Weighted Interval Scheduling DP $O(N \log N)$)
 * **Độ khó:** Rating 1400 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0594 - Luyen De 7 Bai 4 Weighted Interval DP FPT](file:///Users/dkdeveloper/projects/testcase/IKH-0594%20-%20Luyen%20De%207%20Bai%204%20Weighted%20Interval%20DP%20FPT)
-* **Phương pháp giải:** Quy hoạch động kết hợp Tìm kiếm nhị phân `std::lower_bound` tìm tổng trọng số/lợi nhuận lớn nhất của các khoảng thời gian chiếu không bị giao nhau $O(N \log N)$.
+* **Phương pháp giải:** Quy hoạch động kết hợp Tìm kiếm nhị phân `lower_bound` tìm tổng trọng số/lợi nhuận lớn nhất của các khoảng thời gian chiếu không bị giao nhau $O(N \log N)$.
 
 ---
 
@@ -13505,7 +13377,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 9 Task 4 (Prefix Sum + Map Min Length $O(N)$)
 * **Độ khó:** Rating 1400 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0614 - Luyen De 9 Bai 4 Prefix Sum Min Len FPT](file:///Users/dkdeveloper/projects/testcase/IKH-0614%20-%20Luyen%20De%209%20Bai%204%20Prefix%20Sum%20Min%20Len%20FPT)
-* **Phương pháp giải:** Tính Tổng tiền tố kết hợp `std::unordered_map` lưu vị trí xuất hiện gần nhất tìm đoạn con có tổng đúng bằng $K$ có độ dài nhỏ nhất trong $O(N)$.
+* **Phương pháp giải:** Tính Tổng tiền tố kết hợp `unordered_map` lưu vị trí xuất hiện gần nhất tìm đoạn con có tổng đúng bằng $K$ có độ dài nhỏ nhất trong $O(N)$.
 
 ---
 
@@ -13683,7 +13555,7 @@ e 0$, chia cho 0, chỉ số mảng vượt ngưỡng $N+1$ (RTE) cho các testc
 * **Dạng bài:** Luyện Đề 11 Task 6 (Geometry Pythagorean Triples $O(N \log N)$)
 * **Độ khó:** Rating 1500 | ⭐⭐⭐☆☆
 * **Thư mục local:** [IKH-0636 - Luyen De 11 Bai 6 Tam Giac Vuong Techcombank](file:///Users/dkdeveloper/projects/testcase/IKH-0636%20-%20Luyen%20De%2011%20Bai%206%20Tam%20Giac%20Vuong%20Techcombank)
-* **Phương pháp giải:** Sắp xếp mảng độ dài cạnh, áp dụng công thức $a^2 + b^2 = c^2$ kết hợp `std::binary_search` đếm bộ ba Pythagoras hợp lệ trong $O(N^2)$ hoặc $O(N \log N)$.
+* **Phương pháp giải:** Sắp xếp mảng độ dài cạnh, áp dụng công thức $a^2 + b^2 = c^2$ kết hợp `binary_search` đếm bộ ba Pythagoras hợp lệ trong $O(N^2)$ hoặc $O(N \log N)$.
 
 ---
 

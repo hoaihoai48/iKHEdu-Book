@@ -27,8 +27,8 @@ Sau chương này, em có thể:
 ### Bài 12.1 — Tập hợp tự sắp xếp: `set` và `multiset`
 
 #### 1. Khái niệm & Thuật toán
-- `std::set`: Cây đỏ đen, không trùng lặp, tự sắp xếp tăng dần, thao tác trong $\mathcal{O}(\log N)$.
-- `std::multiset`: Cho phép trùng lặp. Xóa 1 phần tử an toàn bằng `ms.erase(ms.find(x))`.
+- `set`: Cây đỏ đen, không trùng lặp, tự sắp xếp tăng dần, thao tác trong $\mathcal{O}(\log N)$.
+- `multiset`: Cho phép trùng lặp. Xóa 1 phần tử an toàn bằng `ms.erase(ms.find(x))`.
 
 ---
 
@@ -81,10 +81,10 @@ int main() {
 
 ---
 
-### Bài 12.2 — Ánh xạ khóa $\to$ giá trị: `std::map`
+### Bài 12.2 — Ánh xạ khóa $\to$ giá trị: `map`
 
 #### 1. Khái niệm & Thuật toán
-- `std::map<Key, Value>`: Ánh xạ từ khóa bất kỳ sang giá trị trong $\mathcal{O}(\log N)$.
+- `map<Key, Value>`: Ánh xạ từ khóa bất kỳ sang giá trị trong $\mathcal{O}(\log N)$.
 
 ---
 
@@ -259,7 +259,7 @@ int main() {
 #### Tầng A — Củng cố nền tảng (Rating 1000 - 1200)
 
 ##### Bài 12.5.1 — Đếm Số Loại Hàng Hóa Bằng Set
-- **Bối cảnh:** Đếm số loại mã hàng phân biệt trong $N$ lượt mua hàng bằng `std::set`.
+- **Bối cảnh:** Đếm số loại mã hàng phân biệt trong $N$ lượt mua hàng bằng `set`.
 
 ##### Bài 12.5.2 — Thống Kê Điểm Thi Thí Sinh Bằng Map
 - **Bối cảnh:** Đếm tần suất xuất hiện của từng họ tên thí sinh trong danh sách.

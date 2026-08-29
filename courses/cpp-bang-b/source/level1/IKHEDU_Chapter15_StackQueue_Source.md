@@ -5,7 +5,7 @@
 | Trường | Nội dung |
 |---|---|
 | Mục tiêu | Nắm vững cấu trúc Ngăn xếp (Stack - LIFO) và Hàng đợi (Queue - FIFO); làm chủ kỹ thuật Ngăn xếp đơn điệu (Monotonic Stack) giải bài toán tìm phần tử lớn hơn đầu tiên và Hình chữ nhật lớn nhất trong Histogram trong $\mathcal{O}(N)$ |
-| Kiến thức cần có | `std::stack`, `std::queue`, `std::deque`, mảng, vòng lặp |
+| Kiến thức cần có | `stack`, `queue`, `deque`, mảng, vòng lặp |
 | Phạm vi | Stack (LIFO), Kiểm tra dãy ngoặc đúng, Queue (FIFO), Deque hai đầu, Ngăn xếp đơn điệu (Monotonic Stack $\mathcal{O}(N)$), Hình chữ nhật lớn nhất trong biểu đồ Histogram |
 | Số bài | 4 bài học lý thuyết & ví dụ mẫu + 1 bài luyện tập phân tầng |
 | Tổng bài tập | 12 bài tập tự chứa (Tầng A: 4 bài, Tầng B: 4 bài, Tầng C: 4 bài) |

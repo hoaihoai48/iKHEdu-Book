@@ -40,14 +40,14 @@ Code: IKH-0051 (Mã toàn cục)     ID: QUIZ-0101
 
 Module 01 là **khởi đầu của tư duy cấu trúc thuật toán**. Module này định hình DNA nhận thức xuyên suốt:
 
-$$\text{Unordered Data} \xrightarrow[\text{Nhận diện}]{\text{Phân tích}} \text{Biến đổi Trật tự} \xrightarrow[\text{std::sort}]{\text{Sắp xếp}} \text{Cấu trúc Đơn điệu / Lân cận} \xrightarrow[\text{Two Pointers / Window}]{\text{Khai thác}} \text{Lời giải tối ưu } \mathcal{O}(N) / \mathcal{O}(N \log N)$$
+$$\text{Unordered Data} \xrightarrow[\text{Nhận diện}]{\text{Phân tích}} \text{Biến đổi Trật tự} \xrightarrow[\text{sort}]{\text{Sắp xếp}} \text{Cấu trúc Đơn điệu / Lân cận} \xrightarrow[\text{Two Pointers / Window}]{\text{Khai thác}} \text{Lời giải tối ưu } \mathcal{O}(N) / \mathcal{O}(N \log N)$$
 
 ### Bảng Giới Hạn Phạm Vi (Allowed vs. Not Yet Boundary)
 
 | Lớp Công Cụ | Được phép sử dụng trong Module 01 (Allowed) | TUYỆT ĐỐI CHƯA ĐƯỢC DÙNG (Not Yet) | Lý do sư phạm |
 |---|---|---|---|
-| **Cấu trúc dữ liệu** | `std::vector`, Mảng tĩnh 1D/2D, `vector<vector<int>>`, `std::pair` / `struct` (khi thật cần thiết) | `std::set`, `std::map`, `std::multiset`, `std::priority_queue`, `std::deque`, Cây Fenwick / Segment Tree | Tránh quá tải cú pháp; rèn tư duy xử lý mảng và trật tự thuần thục trước khi dùng STL nâng cao (Module 04/07). |
-| **Thuật toán cơ sở** | `std::sort`, `std::stable_sort`, Custom Comparator, Vòng lặp 2 con trỏ `while` / `for` | Đệ quy / Quay lui, Chia để trị, Quy hoạch động, Hash chuỗi | Rèn luyện phản xạ tuyến tính $\mathcal{O}(N)$ và $\mathcal{O}(N \log N)$ trước khi học phân rã bài toán phức tạp. |
+| **Cấu trúc dữ liệu** | `vector`, Mảng tĩnh 1D/2D, `vector<vector<int>>`, `pair` / `struct` (khi thật cần thiết) | `set`, `map`, `multiset`, `priority_queue`, `deque`, Cây Fenwick / Segment Tree | Tránh quá tải cú pháp; rèn tư duy xử lý mảng và trật tự thuần thục trước khi dùng STL nâng cao (Module 04/07). |
+| **Thuật toán cơ sở** | `sort`, `stable_sort`, Custom Comparator, Vòng lặp 2 con trỏ `while` / `for` | Đệ quy / Quay lui, Chia để trị, Quy hoạch động, Hash chuỗi | Rèn luyện phản xạ tuyến tính $\mathcal{O}(N)$ và $\mathcal{O}(N \log N)$ trước khi học phân rã bài toán phức tạp. |
 | **Toán học & Tiền xử lý** | Đếm, tính tổng, tìm min/max, kiểm tra tính đơn điệu | Modulo nghịch đảo, Phép nhân số lớn, Bitmask nâng cao | Tập trung 100% vào trật tự dữ liệu và hai con trỏ. |
 
 ---
@@ -68,7 +68,7 @@ Học sinh cần hoàn thành **C++ Foundation Layer** với các kỹ năng sau
 * Đọc/Ghi dữ liệu Fast I/O (`cin`, `cout`, `ios::sync_with_stdio(false)`, `cin.tie(nullptr)`).
 * Kiểu dữ liệu số nguyên `int`, `long long` và quy tắc ép kiểu chống tràn số 32-bit khi nhân/cộng.
 * Vòng lặp `for`, `while`, câu lệnh rẽ nhánh `if / else if / else`.
-* Khai báo và duyệt mảng động `std::vector<int>`, `std::vector<vector<int>>`.
+* Khai báo và duyệt mảng động `vector<int>`, `vector<vector<int>>`.
 * Viết hàm, truyền tham chiếu (`&`) và tham chiếu hằng (`const &`).
 * Ước lượng độ phức tạp thời gian cơ bản: $\mathcal{O}(1), \mathcal{O}(N), \mathcal{O}(N^2), \mathcal{O}(N \log N)$.
 
@@ -82,7 +82,7 @@ MODULE 01 THEORY TAXONOMY (3 MASTER PILLARS)
 ├── 01. THUẬT TOÁN SẮP XẾP (SORTING ALGORITHMS)
 │   ├── Khái niệm Thứ tự & Không gian tìm kiếm
 │   ├── Điều kiện biến đổi: Khi nào được phép sắp xếp? (Bảo toàn vs Phá vỡ vị trí)
-│   ├── std::sort & std::stable_sort trong C++
+│   ├── sort & stable_sort trong C++
 │   ├── Thứ tự mặc định: Tăng dần (Ascending) & Giảm dần (Descending)
 │   ├── Custom Comparator: Sắp xếp theo trị tuyệt đối, đa tiêu chí (vector lồng nhau / vector 2 chiều)
 │   ├── Comparator ghép chuỗi tạo số lớn nhất (a + b > b + a)
@@ -122,7 +122,7 @@ MODULE 01 THEORY TAXONOMY (3 MASTER PILLARS)
                                   ▼
                     ┌───────────────────────────┐
                     │    LESSON 01: SẮP XẾP     │
-                    │ (std::sort, Cmp, Lân cận) │
+                    │ (sort, Cmp, Lân cận) │
                     └─────────────┬─────────────┘
                                   │
          ┌────────────────────────┴────────────────────────┐
@@ -167,7 +167,7 @@ Mỗi Lesson trong Module 01 vận hành theo **Vòng lặp học tập 8 bướ
 
 ### A. Phản ví dụ Comparator (Bẫy vi phạm Strict Weak Ordering)
 * **Ý tưởng sai:** Dùng dấu `<=` trong comparator: `bool cmp(int a, int b) { return a <= b; }`.
-* **Hậu quả:** Khi $a = b$, `cmp(a, b)` trả về `true` và `cmp(b, a)` cũng trả về `true`. Điều này vi phạm tính bất đối xứng ($a < b \implies \text{not}(b < a)$) $\implies$ `std::sort` truy cập vùng nhớ ngoài biên $\implies$ **Runtime Error / Crash bộ nhớ**.
+* **Hậu quả:** Khi $a = b$, `cmp(a, b)` trả về `true` và `cmp(b, a)` cũng trả về `true`. Điều này vi phạm tính bất đối xứng ($a < b \implies \text{not}(b < a)$) $\implies$ `sort` truy cập vùng nhớ ngoài biên $\implies$ **Runtime Error / Crash bộ nhớ**.
 * **Quy tắc đúng:** Luôn dùng toán tử so sánh nghiêm ngặt `<`. Khi hai phần tử bằng nhau, comparator **bắt buộc phải trả về `false`**.
 
 ### B. Phản ví dụ Two Pointers Đối Đầu (Khi mảng chưa được sắp xếp)
@@ -186,7 +186,7 @@ Mỗi Lesson trong Module 01 vận hành theo **Vòng lặp học tập 8 bướ
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-SX-01` | **Xếp Hàng Điểm Danh** | `P0` | $N \le 1000, A_i \le 10^6$ | Cú pháp `std::sort` cơ bản |
+| 01 | `CPPB-SX-01` | **Xếp Hàng Điểm Danh** | `P0` | $N \le 1000, A_i \le 10^6$ | Cú pháp `sort` cơ bản |
 | 02 | `CPPB-SX-02` | **Khoảng Cách Nhỏ Nhất** | `P1` | $N \le 10^5, A_i \le 10^9$ | Sắp xếp duyệt cặp kề |
 | 03 | `CPPB-SX-03` | **Sắp Xếp Theo Trị Tuyệt Đối** | `P1` | $N \le 10^5, \vert A_i \vert \le 10^9$ | Custom comparator cơ bản |
 | 04 | `CPPB-SX-04` | **Đếm Giá Trị Phân Biệt** | `P2` | $N \le 2 \cdot 10^5, \vert A_i \vert \le 10^9$ | Gom nhóm sau sắp xếp |

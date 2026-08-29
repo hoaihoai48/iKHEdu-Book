@@ -37,17 +37,21 @@ Mọi đoạn code C++ mẫu, code tham chiếu, solution, editorial và testcas
    cin.tie(nullptr);
    ```
 3. Đọc dữ liệu an toàn (Safe Input / Graceful Exit): Sử dụng mẫu `if (!(cin >> n >> ...)) return 0;` khi đọc các tham số đầu vào chính để chống crash khi EOF / input rỗng.
+4. **Tuyệt đối không dùng tiền tố `` và không nhắc header riêng lẻ:** Vì đã có `#include <bits/stdc++.h>` và `using namespace std;`, cấm viết `sort`, `vector`, `lower_bound`, `upper_bound`, `min`, `cin`... và cấm nhắc đến `<algorithm>`, `<vector>`, `<iostream>`. Luôn gọi trực tiếp: `sort`, `vector`, `lower_bound`, `min`, `cin`... để tinh gọn cú pháp tối đa cho học sinh.
 
-## 4. Quy chuẩn kiến trúc dữ liệu tối giản (Không nhồi nhét cú pháp)
-Trong các chuyên đề nền tảng (Module 01: Sắp xếp, Hai con trỏ, Tham lam...):
-* **Ưu tiên tuyệt đối** các bài toán và thao tác trên kiểu dữ liệu nguyên bản (`int`, `long long`, `double`, `char`, `string`, `vector<int>`).
-* Khi bài toán bắt buộc phải lưu và sắp xếp nhiều thuộc tính đi cùng nhau (như mốc thời gian `start`, `finish`), **ƯU TIÊN DÙNG `vector<vector<int>>` (vector lồng nhau / mảng 2 chiều)** để học sinh tận dụng kiến thức mảng sẵn có và cơ chế so sánh mặc định của `std::sort`.
-* **Về `pair` và `struct`**: Vẫn giữ trong C++ Foundation nhưng **chỉ dùng khi bất đắc dĩ** (như khi cần sắp xếp đa trường có kiểu dữ liệu khác nhau hoặc hàm so sánh đặc thù `a + b > b + a`). Bình thường luôn ưu tiên vector lồng nhau để giảm gánh nặng cú pháp cho học sinh.
-* **Ranh giới công cụ (Not Yet Boundary)**: Trong Module 01, **TUYỆT ĐỐI CHƯA DÙNG** `set`, `map`, `deque`, `priority_queue`, `Segment Tree`, `Fenwick Tree`, Quy hoạch động.
+## 4. Quy chuẩn kiến trúc dữ liệu & trình bày Markdown/KaTeX
+* **Kiến trúc dữ liệu tối giản:** Ưu tiên tuyệt đối các kiểu dữ liệu nguyên bản (`int`, `long long`, `double`, `char`, `string`, `vector<int>`). Khi cần sắp xếp nhiều trường số, **ƯU TIÊN DÙNG `vector<vector<long long>>` (vector lồng nhau / mảng 2 chiều)** để học sinh tận dụng cơ chế so sánh mặc định của `sort`.
+* **Về `pair` và `struct`**: Vẫn giữ trong C++ Foundation nhưng **chỉ dùng khi bất đắc dĩ** (khi cần sắp xếp đa trường có kiểu dữ liệu khác nhau hoặc hàm so sánh đặc thù `a + b > b + a`).
+* **Ranh giới công cụ (Not Yet Boundary)**: Trong Module 01 và Module 02, **TUYỆT ĐỐI CHƯA DÙNG** `set`, `map`, `deque`, `priority_queue`, `Segment Tree`, `Fenwick Tree`, Quy hoạch động.
+* **Quy chuẩn hiển thị Markdown & KaTeX:** Tuyệt đối không vẽ sơ đồ bằng ký tự ASCII (`│`, `┌`, `└`, `text` block) gây vỡ giao diện Web LMS. Mọi minh họa dữ liệu bắt buộc dùng **Markdown Tables chuẩn kết hợp KaTeX math notation**. Các lưu ý/tử huyệt lập trình phải dùng **GitHub Alert Callouts (`> [!CAUTION]`, `> [!IMPORTANT]`)**.
 
 ## 5. Vòng lặp học tập trong bài (Lesson Learning Loop)
 Không nhồi lý thuyết suông. Mỗi Lesson phải vận hành theo chu trình khép kín:
 $$\text{Hook / Vấn đề} \to \text{Mô phỏng tay} \to \text{Lý thuyết & Invariant} \to \text{Code C++ & Bẫy lỗi} \to \text{Micro Practice P0} \to \text{Quiz} \to \text{Progressive Practice P1-P3} \to \text{Mastery P4/P5}$$
+
+## 6. Bản chất Đơn vị Kiến thức Lớn & Định mức Tối thiểu
+* **1 Lesson = 1 Đơn vị Kiến thức Lớn (Large Conceptual Unit)**: Không đồng nhất cứng 1 Lesson với 1 buổi học cơ học. Mỗi Lesson trên LMS là một khối tri thức hoàn chỉnh, giáo viên có thể linh hoạt chia thành 2–4 buổi giảng dạy trực tiếp tùy theo trình độ học sinh.
+* **Định mức Tối thiểu (Minimum Baseline)**: $\ge 10$ câu Concept Quiz và $\ge 14$ bài tập thực hành là **ngưỡng tối thiểu**, không phải giới hạn trần cố định. Tùy thuộc vào phạm vi và độ sâu của đơn vị kiến thức lớn, số lượng Quiz và Bài tập được mở rộng linh hoạt để bao quát toàn bộ các biến thể bài toán.
 
 Với `problem-package`, luôn đọc `@../skills/ikhedu-authoring/references/testcase-generation-standard.md` và tạo theo chuỗi `De_Bai.md → Huong_Dan_Giang_Day.md → solution.cpp → test/`. Test phải có test matrix, generator deterministic, seed cố định, oracle độc lập, `manifest.json`, `.inp/.out`, timeout, coverage và test report.
 

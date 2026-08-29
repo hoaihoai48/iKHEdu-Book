@@ -17,7 +17,7 @@ Học sinh hình thành phản xạ tư duy đầu tiên của một lập trìn
 * **`LO-01.1`**: Nhận biết điều kiện để sắp xếp: phân biệt được bài toán bảo toàn chỉ số gốc và bài toán được phép thay đổi thứ tự.
 * **`LO-01.2`**: Phát hiện tính chất mới xuất hiện sau khi sắp xếp (tính chất đơn điệu và tính chất lân cận).
 * **`LO-01.3`**: Tính toán và so sánh được sự chênh lệch thời gian giữa $\mathcal{O}(N^2)$ và $\mathcal{O}(N \log N)$ trên giới hạn $N = 10^5$.
-* **`LO-01.4`**: Tự viết được giải pháp hoàn chỉnh (C++ Fast I/O, `std::sort`, duyệt tuyến tính $\mathcal{O}(N)$) cho bài toán tìm kiếm tối ưu.
+* **`LO-01.4`**: Tự viết được giải pháp hoàn chỉnh (C++ Fast I/O, `sort`, duyệt tuyến tính $\mathcal{O}(N)$) cho bài toán tìm kiếm tối ưu.
 
 ### 3. Bẫy tư duy thường gặp (Misconceptions to Prevent)
 1. *Thấy mảng là nhắm mắt gọi `sort`* $\to$ Không hiểu lý do tại sao sort và làm mất thứ tự thời gian/vị trí ban đầu khi đề bài yêu cầu.
@@ -63,7 +63,7 @@ $$A_{\text{sorted}} = [3, 8, 12, 15, 28, 31]$$
                
 ┌────────────────────────────────┐       ┌────────────────────────────────┐
 │ 1. RECOGNIZE (Nhận diện)       │       │ 2. TRANSFORM (Biến đổi)        │
-│ • Đề bài có cần giữ vị trí gốc?│ ───►  │ • Gọi std::sort(a.begin(),...) │
+│ • Đề bài có cần giữ vị trí gốc?│ ───►  │ • Gọi sort(a.begin(),...) │
 │ • Không gian bài toán có rối?  │       │ • Tạo ra trật tự đơn điệu      │
 └────────────────────────────────┘       └───────────────┬────────────────┘
                                                          │
@@ -164,7 +164,7 @@ Với $N = 100.000$ phần tử, thuật toán duyệt mọi cặp $O(N^2)$ th�
 * B. Thuật toán bị tràn bộ nhớ (MLE).
 * C. **(Đáp án đúng)** Mảng bị xáo trộn vị trí, không còn biết phần tử đó ban đầu nằm ở vị trí nào để in ra.
 * D. Chương trình bị lỗi biên dịch.
-> *Giải thích:* `std::sort` di chuyển các giá trị sang vị trí mới. Để giữ được vị trí ban đầu, ta phải lưu cấu trúc lồng nhau như `vector<vector<int>>` chứa `[giá_trị, chỉ_số_gốc]`.
+> *Giải thích:* `sort` di chuyển các giá trị sang vị trí mới. Để giữ được vị trí ban đầu, ta phải lưu cấu trúc lồng nhau như `vector<vector<int>>` chứa `[giá_trị, chỉ_số_gốc]`.
 
 ---
 

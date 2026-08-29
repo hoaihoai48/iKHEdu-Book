@@ -47,14 +47,27 @@
   2. `IKHEDU_Knowledge_Base.md` (Master Problem Bank & 5-Step Editorial Guide).
   3. `Lo_trinh_hoc_tap_bangB_level1.jpg` (Bản đồ lộ trình 21 chủ đề gốc).
 
+- **8 Master Modules (Level 1 — Bảng B)**:
+  1. Module 01: Sorting / Two Pointers / Sliding Window (✅ 3 Lessons + 42 Problems Hoàn Tất)
+  2. Module 02: Prefix / Difference / Binary Search / Bit (✅ 3 Lessons + 42 Problems Hoàn Tất)
+  3. Module 03: Number Theory / Modulo / Big Integer (🎯 Kế hoạch tiếp theo)
+  4. Module 04: Frequency / Counting / Combinatorics
+  5. Module 05: String / Hashing
+  6. Module 06: Recursion / Backtracking / DP
+  7. Module 07: STL / Stack / Queue
+  8. Module 08: Graph / Tree / Range Query
+
 ## Current state
 
 - **Đã hoàn thành**:
-  - Khóa toàn diện **Curriculum Architecture v2** tại `docs/MASTER_MODULE_01_DESIGN.md`.
-  - Tách biệt C++ Foundation Layer và 8 Master Modules.
-  - Hoàn thiện Golden Specification cho **Module 01: Sorting → Two Pointers → Sliding Window → Greedy** gồm 7 Lessons, 7 Pattern (`PAT-00` đến `PAT-06`), DAG Dependency, Thang nhận thức P0–P5 và 43 Problem Activity Slots.
-  - Đồng bộ Platform DKOJ: Sửa hiển thị title trùng lặp, cập nhật mô tả khóa học, deploy uwsgi live.
+  - Khóa toàn diện **Curriculum Architecture v2** tại `docs/MASTER_MODULE_01_DESIGN.md` và `docs/MASTER_MODULE_02_DESIGN.md`.
+  - Master Roadmap 8 chuyên đề tại `docs/MASTER_CURRICULUM_ROADMAP.md`.
+  - Hoàn thiện trọn vẹn **Module 01: Sorting / Two Pointers / Sliding Window** (3 Lessons + 42 Problems).
+  - Hoàn thiện trọn vẹn **Module 02: Prefix / Difference / Binary Search / Bit** gồm:
+    - **Lesson 01 (Mảng Tiền Tố & Mảng Hiệu)**: `Lesson04_Production_Content.md` + 12 Quiz + 16 bài `CPPB-PT-01..16`.
+    - **Lesson 02 (Tìm Kiếm Nhị Phân)**: `Lesson05_Production_Content.md` + 14 Quiz + 18 bài `CPPB-BS-01..18`.
+    - **Lesson 03 (Phép Toán Bit & Mặt Nạ Bit)**: `Lesson06_Production_Content.md` + 12 Quiz + 16 bài `CPPB-BIT-01..16`.
+    - **100% 50 Problem Packages** đã được biên dịch cú pháp thử nghiệm qua `g++ -std=c++17` thành công $100\%$.
+    - **Tổng số Problem Packages trong thư viện toàn hệ thống:** **92 bài toán**.
 - **Đang làm**:
-  - Thiết kế Problem Blueprint & Lập danh mục chi tiết 43 Problem Activity Slots của Module 01 gắn mã `IKH-01xx`.
-  - Biên soạn Lesson Content cho 7 Lessons của Module 01 theo chu trình 8 bước.
-- **Việc tiếp theo**: Hoàn thiện Pilot Module 01 làm mẫu chuẩn mực (Golden Template), sau đó nhân rộng cho 7 Module còn lại.
+  - Chuẩn bị bước sang **Module 03: Number Theory / Modulo / Big Integer**.

@@ -39,6 +39,25 @@ Do đó, tổng số thao tác thêm/bớt phần tử trong toàn bộ chương
     $$\text{Current\_Sum} \leftarrow \text{Current\_Sum} + A_i - A_{i-K}$$
   * Cập nhật giá trị cực trị: $\text{Ans} = \max(\text{Ans}, \text{Current\_Sum})$.
 
+#### 💡 Ví Dụ Minh Họa 1: Tìm tổng đoạn con $K = 3$ lớn nhất trên dãy $A = [2, 1, 5, 1, 3, 2]$
+
+| Chỉ số ($i$) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Giá trị $A_i$** | $2$ | $1$ | $5$ | $1$ | $3$ | $2$ |
+
+**Bảng mô phỏng quá trình trượt cửa sổ:**
+
+| Vị Trí $i$ | Đoạn Con Đang Xét | Phần Tử Thêm Mới ($A_i$) | Phần Tử Bị Loại Bỏ ($A_{i-K}$) | Tổng Cửa Sổ Mới ($\text{Sum}$) | $\text{Max\_Sum}$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Khởi tạo ($i=2$)** | $[2, 1, 5]$ (chỉ số $0..2$) | — | — | $2 + 1 + 5 = \mathbf{8}$ | $\mathbf{8}$ |
+| **$i = 3$** | $[1, 5, 1]$ (chỉ số $1..3$) | $+ A_3 (1)$ | $- A_0 (2)$ | $8 + 1 - 2 = \mathbf{7}$ | $8$ |
+| **$i = 4$** | $[5, 1, 3]$ (chỉ số $2..4$) | $+ A_4 (3)$ | $- A_1 (1)$ | $7 + 3 - 1 = \mathbf{9}$ | $\mathbf{9}$ |
+| **$i = 5$** | $[1, 3, 2]$ (chỉ số $3..5$) | $+ A_5 (2)$ | $- A_2 (5)$ | $9 + 2 - 5 = \mathbf{6}$ | $9$ |
+
+$$\implies \text{Kết quả: Tổng lớn nhất của đoạn dài 3 là } \mathbf{9} \text{ (đoạn } [5, 1, 3]\text{), trượt trong đúng } \mathcal{O}(1) \text{ mỗi bước!}$$
+
+---
+
 ### 3.2. Dạng 2: Cửa Sổ Biến Thiên (Variable-Size Window)
 Áp dụng cho các bài toán tìm đoạn con liên tiếp dài nhất/ngắn nhất hoặc đếm số lượng đoạn con thỏa mãn điều kiện $f([L \dots R])$.
 
@@ -47,6 +66,19 @@ Do đó, tổng số thao tác thêm/bớt phần tử trong toàn bộ chương
 | **Đoạn con ngắn nhất có tổng $\ge S$** | Mở $R$ cho đến khi $\text{Sum} \ge S$, sau đó co $L$ tối đa để tìm $\min(R - L + 1)$ | $\text{Min\_Len} = \min(\text{Min\_Len}, R - L + 1)$ |
 | **Đoạn con dài nhất có tổng $\le S$** | Mở $R$, nếu $\text{Sum} > S$ thì co $L$ cho đến khi $\text{Sum} \le S$ | $\text{Max\_Len} = \max(\text{Max\_Len}, R - L + 1)$ |
 | **Đếm số lượng đoạn con có tổng $\le S$** | Mở $R$, co $L$ cho đến khi $\text{Sum} \le S$. Mọi đoạn con kết thúc tại $R$ bắt đầu từ $[L \dots R]$ đều thỏa mãn | $\text{Total} \leftarrow \text{Total} + (R - L + 1)$ |
+
+#### 💡 Ví Dụ Minh Họa 2: Tìm đoạn con ngắn nhất có tổng $\ge S = 7$ trên $A = [2, 3, 1, 2, 4, 3]$
+
+| Bước ($R$) | Nạp $A_R$ | Tổng Cửa Sổ | Điều Kiện $\ge 7$ | Thao Tác Co $L$ | Độ Dài Cửa Sổ | $\text{Min\_Len}$ |
+|:---:|:---:|:---:|:---:|---|:---:|:---:|
+| $R = 0$ | $A_0 = 2$ | $2$ | Chưa đủ | — | — | $\infty$ |
+| $R = 1$ | $A_1 = 3$ | $5$ | Chưa đủ | — | — | $\infty$ |
+| $R = 2$ | $A_2 = 1$ | $6$ | Chưa đủ | — | — | $\infty$ |
+| $R = 3$ | $A_3 = 2$ | $8$ | **Thỏa mãn ($\ge 7$)** | $L=0 \to 1$ (bỏ $A_0=2$, tổng còn $6 < 7$) | Đoạn $[3, 1, 2]$ dài $3$ | **$3$** |
+| $R = 4$ | $A_4 = 4$ | $10$ | **Thỏa mãn ($\ge 7$)** | $L=1 \to 2$ (bỏ $A_1=3$, tổng còn $7 \ge 7$ dài $3$) $\to L=3$ (bỏ $A_2=1$, tổng còn $6 < 7$) | Đoạn $[2, 4]$ dài $2$ | **$2$** |
+| $R = 5$ | $A_5 = 3$ | $9$ | **Thỏa mãn ($\ge 7$)** | $L=3 \to 4$ (bỏ $A_3=2$, tổng còn $7 \ge 7$ dài $2$) $\to L=5$ (bỏ $A_4=4$, tổng còn $3 < 7$) | Đoạn $[4, 3]$ dài $2$ | **$2$** |
+
+$$\implies \text{Kết quả: Độ dài ngắn nhất là } \mathbf{2} \text{ (đoạn } [2, 4] \text{ hoặc } [4, 3]\text{)!}$$
 
 ---
 
