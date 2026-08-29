@@ -8,61 +8,53 @@
 |---|---|
 | Project name | ikhEdu_lessons |
 | Chủ biên / owner | Chủ dự án iKHEDU |
-| Người duyệt cuối | TBD — cần chủ dự án xác nhận |
+| Người duyệt cuối | Chủ dự án iKHEDU |
 | Repository / workspace | `ikhEdu_lessons` |
-| Context version | 1.1.0 |
+| Context version | 2.0.0 |
 | Last updated | 2026-08-28 |
 
 ## Product definition
 
-- Loại tài liệu: hệ thống giáo trình, lesson, editorial, đề bài và tài liệu đào tạo lập trình thi đấu.
-- Mục đích sử dụng: dạy học sinh từ nền tảng Level 0 đến Level 1 và các tuyến nâng cao; hỗ trợ giáo viên dẫn dắt tư duy, luyện tập và kiểm tra.
-- Đầu ra cần bàn giao: lesson, đề bài, hướng dẫn giảng dạy, editorial C++, quick reference, roadmap, assessment và các tài liệu liên quan.
-- Phạm vi bao gồm: C++ cơ bản, tư duy giải bài, mô hình hóa, debug, kiểm thử, độ phức tạp và các mẫu thuật toán/cấu trúc dữ liệu theo roadmap.
-- Phạm vi không bao gồm: tự ý thay đổi source-of-truth, tự ý deploy/upload, hoặc phát hành nội dung khi chưa qua review cần thiết.
-- Tiêu chí thành công: học sinh hiểu ý tưởng và tự biến đổi lời giải, không chỉ sao chép code; nội dung có prerequisite, learning outcomes, ví dụ, bài tập, kiểm thử và provenance.
+- **Loại tài liệu**: Hệ thống giáo trình chuẩn quốc tế, bài giảng đa phương tiện, ngân hàng đề bài có kiểm thử tự động, editorial và tài liệu đào tạo lập trình thi đấu (Tin học trẻ Bảng B, HSG THCS, Level 1).
+- **Mục đích sử dụng**: Dạy học sinh từ nền tảng C++ Foundation đến 8 Master Modules chuyên sâu; đồng bộ xuất bản kép giữa **Sách in (Print/PDF)** và **Web DKOJ LMS Platform**.
+- **Đầu ra cần bàn giao**: 8 Master Modules, 7 Lessons/Module, Problem Packages chuẩn (`De_Bai.md`, `Huong_Dan_Giang_Day.md`, `solution.cpp`, `test/` với 20 testcases), Quick Reference, Quiz kiểm tra và Assessment.
+- **Phân cấp 5 tầng (5-Tier Hierarchy)**:
+  $$\text{PROGRAM (C++ Level 1)} \longrightarrow \text{MODULE (8 Chuyên đề)} \longrightarrow \text{LESSON (Bài học)} \longrightarrow \text{CONCEPT (Khái niệm)} \longrightarrow \text{ACTIVITY / PROBLEM (IKH-xxxx)}$$
+- **Định danh Problem độc lập**:
+  - `IKH-xxxx` là Global Unique Problem Code trong Problem Library.
+  - `LessonActivity` là Placement / Slot tham chiếu tới Problem, cho phép tái sử dụng bài toán mà không nhân bản dữ liệu.
 
 ## Learner and use context
 
-- Độc giả chính: học sinh bắt đầu từ số 0 hoặc đang xây nền tảng C++ và tư duy thuật toán.
-- Trình độ đầu vào: TBD; project hiện tập trung vào tuyến Bảng B — Level 1 theo roadmap hình, cần chủ dự án xác nhận placement cụ thể.
-- Kiến thức tiên quyết: tùy module; phải ghi rõ trong từng lesson/chapter.
-- Bối cảnh sử dụng: lớp học, tự học có hướng dẫn, luyện thi và đào tạo giáo viên.
-- Thời lượng hoặc khối lượng học: TBD theo module.
-- Ngôn ngữ và biến thể ngôn ngữ: tiếng Việt; code và thuật ngữ kỹ thuật giữ quy ước C++/English khi cần.
-- Ràng buộc accessibility: đoạn văn ngắn, cấu trúc rõ, ví dụ nhỏ, giải thích từng bước, tránh nhồi nhiều khái niệm mới trong một bài.
-
-## Pedagogical contract
-
-- Chuẩn chương trình / learning outcomes cấp cao: đọc đề, mô hình hóa, lập trình, kiểm thử, phân tích độ phức tạp, C++ cơ bản và tự giải bài tương tự.
-- Mức độ tư duy mong muốn: hiểu trực giác, làm theo hướng dẫn, giải thích, áp dụng và chuyển giao sang bài biến thể.
-- Loại đánh giá: bài kiểm tra đầu vào, formative checks, bài quen thuộc, bài biến thể và cổng năng lực.
-- Quy tắc alignment: Xem chapter template và QA checklist
-- Cách cung cấp đáp án/feedback: hướng dẫn từng bước, lỗi thường gặp, đáp án hoặc editorial theo đúng kênh người học/giáo viên.
+- **Độc giả chính**: Học sinh bắt đầu bước vào lập trình thi đấu (Tin học trẻ Bảng B, HSG).
+- **Trình độ đầu vào**: Hoàn thành lớp C++ Foundation (Fast I/O, biến, điều kiện, vòng lặp, vector 1D/2D, hàm).
+- **Ngôn ngữ**: Tiếng Việt sư phạm truyền cảm hứng; code C++17/20 chuẩn thi đấu iKHEDU.
+- **Ràng buộc sư phạm**: Vòng lặp học tập 8 bước (`Hook → Simulation → Invariant → Code → Micro Practice P0 → Quiz → Practice P1-P3 → Mastery P4/P5`). Không nhồi lý thuyết suông.
 
 ## Editorial contract
 
-- Giọng điệu: trang trọng, chuyên nghiệp, truyền cảm hứng, thực tiễn, phù hợp học sinh Việt Nam.
-- Quy ước thuật ngữ: giữ thuật ngữ C++/English khi cần, giải thích tiếng Việt ở lần xuất hiện đầu tiên.
-- Quy ước ký hiệu/đơn vị: tuân theo source tương ứng; dùng KaTeX/Markdown đúng quy ước project.
-- Style guide: quy tắc lời văn, cấu trúc đề bài và định dạng trong `IKHEDU_Knowledge_Base.md` chỉ dùng tham chiếu, không sửa source gốc.
-- Citation style: TBD; mọi claim ngoài source phải có provenance.
-- Định dạng xuất bản: Markdown và code; các định dạng khác chỉ tạo khi được yêu cầu.
-- Phiên bản và changelog: ghi trong decision log và từng output khi thay đổi có ảnh hưởng ý nghĩa.
+- **C++ Boilerplate chuẩn**:
+  - `#include <bits/stdc++.h>` và `using namespace std;`.
+  - Fast I/O: `ios::sync_with_stdio(false); cin.tie(nullptr);`.
+  - Safe input: `if (!(cin >> n >> ...)) return 0;`.
+- **Cấu trúc dữ liệu tối giản**: Ưu tiên kiểu nguyên thủy và `vector<vector<int>>` (vector lồng nhau / 2 chiều). `pair` và `struct` chỉ dùng khi bất đắc dĩ (sắp xếp đa trường hoặc hàm so sánh đặc thù).
+- **Ranh giới công cụ (Not Yet Boundary)**: Trong Module 01, cấm dùng `set`, `map`, `deque`, `priority_queue`, `Segment Tree`, `Fenwick Tree`, Quy hoạch động.
 
 ## Source policy
 
-- Thư mục source-of-truth: workspace root hiện tại.
-- Tệp/nguồn nền bắt buộc đọc: `IKHEDU_Knowledge_Base.md`, `ikhEdu_foundation_framework_report.md` và `/Users/vu/Developer/ikhEdu_lessons/Lo_trinh_hoc_tap_bangB_level1.jpg`; cả ba là read-only.
-- Quy tắc ưu tiên khi nguồn xung đột: ba source được chủ dự án chỉ định là nguồn tham chiếu; quyết định của chủ dự án ghi trong decision log được ưu tiên khi diễn giải; phải ghi conflict, không tự hòa giải.
-- Nguồn ngoài được phép sử dụng: chỉ khi cần và phải ghi URL/DOI, ngày truy cập, phạm vi sử dụng và trạng thái xác minh.
-- Quy tắc bản quyền/license/attribution: TBD; phải hỏi chủ dự án khi dùng nguồn ngoài, ảnh, bảng, code hoặc văn bản không rõ quyền.
-- Ngày cắt dữ liệu: 2026-08-27 cho lần tích hợp này; cập nhật khi dùng dữ liệu thời gian-sensitive.
+- **Source-of-truth chuẩn kiến trúc**:
+  1. `docs/MASTER_MODULE_01_DESIGN.md` (Golden Specification — 🔒 FROZEN).
+  2. `IKHEDU_Knowledge_Base.md` (Master Problem Bank & 5-Step Editorial Guide).
+  3. `Lo_trinh_hoc_tap_bangB_level1.jpg` (Bản đồ lộ trình 21 chủ đề gốc).
 
 ## Current state
 
-- Đã hoàn thành: Khóa kiến trúc sách (Architecture Locked) cho `BOOK_MASTER.md` với tựa đề `iKHEDU C++ Bảng B: Từ nền tảng lập trình đến thuật toán`; cấu trúc 2 tầng gồm Phần I (I.1–I.6) và Phần II (Chương 1–21); Chương 1 đã được review source-first làm chuẩn mực logic; Chương 2 (Tham lam) đã được tự review, xử lý alignment/assessment/scaffolding, chốt `pair` là ngoại lệ representation có lý do, và đồng bộ sang BOOK_MASTER; tích hợp toàn diện bộ `.agents`.
-- Đang làm: Đã dựng outline thống nhất cho toàn bộ 21 chương trong `source/level1/IKHEDU_Algorithm_Framework_Source.md` và đồng bộ khung học sinh vào `BOOK_MASTER.md`; đang chờ chủ dự án review khung tổng thể. Chưa viết sâu chương mới cho đến khi khung được chốt; sau đó tài liệu gốc từng chương sẽ được viết/review trong `courses/cpp-bang-b/source/` rồi mới đồng bộ sang BOOK_MASTER.
-- Blockers: Không có blocker về mặt thiết kế cấu trúc.
-- Việc tiếp theo: Chủ dự án review framework source và khung 21 chương, đặc biệt teaching sequence, prerequisite và mức độ phù hợp của từng chương. Sau khi chốt khung mới bắt đầu viết sâu từng chương theo thứ tự ưu tiên. Human proof/release review vẫn áp dụng cho bản in toàn sách.
-- Lần handoff gần nhất: 2026-08-28 — Khóa kiến trúc và chuẩn hóa phương pháp sư phạm cho giáo trình `cpp-bang-b`.
+- **Đã hoàn thành**:
+  - Khóa toàn diện **Curriculum Architecture v2** tại `docs/MASTER_MODULE_01_DESIGN.md`.
+  - Tách biệt C++ Foundation Layer và 8 Master Modules.
+  - Hoàn thiện Golden Specification cho **Module 01: Sorting → Two Pointers → Sliding Window → Greedy** gồm 7 Lessons, 7 Pattern (`PAT-00` đến `PAT-06`), DAG Dependency, Thang nhận thức P0–P5 và 43 Problem Activity Slots.
+  - Đồng bộ Platform DKOJ: Sửa hiển thị title trùng lặp, cập nhật mô tả khóa học, deploy uwsgi live.
+- **Đang làm**:
+  - Thiết kế Problem Blueprint & Lập danh mục chi tiết 43 Problem Activity Slots của Module 01 gắn mã `IKH-01xx`.
+  - Biên soạn Lesson Content cho 7 Lessons của Module 01 theo chu trình 8 bước.
+- **Việc tiếp theo**: Hoàn thiện Pilot Module 01 làm mẫu chuẩn mực (Golden Template), sau đó nhân rộng cho 7 Module còn lại.

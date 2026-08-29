@@ -15,6 +15,7 @@ Khi các nguồn xung đột, không tự hòa giải. Ghi conflict vào evidenc
 | `SRC-001` | P0 | IKHEDU Knowledge Base | iKHEDU project | `IKHEDU_Knowledge_Base.md` | Current / 2026-08-27 | Project-owned; read-only | Problem catalog, editorial, code, testing/deploy conventions | `registered-read-only` |
 | `SRC-002` | P0 | Foundation framework report | iKHEDU project | `ikhEdu_foundation_framework_report.md` | Current / 2026-08-27 | Project-owned; read-only | Curriculum framing and foundation/Level 1 design decisions | `registered-read-only` |
 | `SRC-004` | P0 | Bảng B Level 1 roadmap image | iKHEDU project | `Lo_trinh_hoc_tap_bangB_level1.jpg` | Current / 2026-08-27 | Project-owned; read-only | Visual topic map of 21 Level 1 subjects | `registered-read-only` |
+| `SRC-005` | P0 | Master Module 01 Design Specification (Architecture v2) | iKHEDU project | `docs/MASTER_MODULE_01_DESIGN.md` | Frozen / 2026-08-28 | Project-owned; Golden Spec | 5-Tier hierarchy, 7 Lessons, DAG dependencies, P0-P5, 43 Activity slots, identity separation | `registered-read-only` |
 
 ## External structural references
 
@@ -29,13 +30,10 @@ Khi các nguồn xung đột, không tự hòa giải. Ghi conflict vào evidenc
 | `FILE-001` | `IKHEDU_Knowledge_Base.md` | source-of-truth/reference | yes | 2026-08-27 | Do not copy secrets or operational credentials into context/output |
 | `FILE-002` | `ikhEdu_foundation_framework_report.md` | curriculum/framework reference | yes | 2026-08-27 | Project-owned report; do not treat as permission to edit source content |
 | `FILE-004` | `Lo_trinh_hoc_tap_bangB_level1.jpg` | roadmap visual | yes | 2026-08-27 | Topic map, not a complete teaching sequence |
-| `FILE-005` | `.agents/context/project-context.md` | project context | controlled | 2026-08-27 | Context contract for agent |
-| `FILE-006` | `.agents/context/evidence-ledger.md` | claims/citations | controlled | 2026-08-27 | Provenance registry |
-| `FILE-007` | `.agents/context/decision-log.md` | decisions/handoff | controlled | 2026-08-27 | Record material decisions |
-| `FILE-008` | `courses/cpp-bang-b/BOOK_MASTER.md` | canonical book manuscript | no | 2026-08-28 | Canonical draft for print/digital integration; synchronized from reviewed source documents |
-| `FILE-009` | `courses/cpp-bang-b/source/level1/IKHEDU_Chapter01_Sorting_Source.md` | chapter source manuscript | no | 2026-08-28 | Source document for Chapter 1; update and review here before syncing to BOOK_MASTER |
-| `FILE-010` | `courses/cpp-bang-b/source/level1/IKHEDU_Chapter02_Greedy_Source.md` | chapter source manuscript | no | 2026-08-28 | Source document for Chapter 2; update and review here before syncing to BOOK_MASTER |
-| `FILE-011` | `courses/cpp-bang-b/source/level1/IKHEDU_Algorithm_Framework_Source.md` | whole-book algorithm framework source | no | 2026-08-28 | Outline source for Chapters 1–21; review framework here before writing deep chapter sources |
+| `FILE-005` | `.agent/context/project-context.md` | project context | controlled | 2026-08-28 | Context contract for agent |
+| `FILE-006` | `.agent/context/evidence-ledger.md` | claims/citations | controlled | 2026-08-27 | Provenance registry |
+| `FILE-007` | `.agent/context/decision-log.md` | decisions/handoff | controlled | 2026-08-28 | Record material decisions |
+| `FILE-012` | `docs/MASTER_MODULE_01_DESIGN.md` | Golden Architectural Specification | yes | 2026-08-28 | Master specification for Module 01 and template for Modules 02-08 |
 
 ## Retrieval rules
 
@@ -46,3 +44,4 @@ Khi các nguồn xung đột, không tự hòa giải. Ghi conflict vào evidenc
 | Date | Change | Reason | Approved by |
 |---|---|---|---|
 | 2026-08-27 | Registered current project sources and context files | Agent integration | Chủ dự án xác nhận cần thiết |
+| 2026-08-28 | Registered MASTER_MODULE_01_DESIGN.md as P0 source | Curriculum Architecture v2 Freeze | Chủ dự án phê duyệt |
