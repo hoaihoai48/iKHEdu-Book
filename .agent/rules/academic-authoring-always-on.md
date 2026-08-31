@@ -53,6 +53,21 @@ $$\text{Hook / Vấn đề} \to \text{Mô phỏng tay} \to \text{Lý thuyết & 
 * **1 Lesson = 1 Đơn vị Kiến thức Lớn (Large Conceptual Unit)**: Không đồng nhất cứng 1 Lesson với 1 buổi học cơ học. Mỗi Lesson trên LMS là một khối tri thức hoàn chỉnh, giáo viên có thể linh hoạt chia thành 2–4 buổi giảng dạy trực tiếp tùy theo trình độ học sinh.
 * **Định mức Tối thiểu (Minimum Baseline)**: $\ge 10$ câu Concept Quiz và $\ge 14$ bài tập thực hành là **ngưỡng tối thiểu**, không phải giới hạn trần cố định. Tùy thuộc vào phạm vi và độ sâu của đơn vị kiến thức lớn, số lượng Quiz và Bài tập được mở rộng linh hoạt để bao quát toàn bộ các biến thể bài toán.
 
-Với `problem-package`, luôn đọc `@../skills/ikhedu-authoring/references/testcase-generation-standard.md` và tạo theo chuỗi `De_Bai.md → Huong_Dan_Giang_Day.md → solution.cpp → test/`. Test phải có test matrix, generator deterministic, seed cố định, oracle độc lập, `manifest.json`, `.inp/.out`, timeout, coverage và test report.
+## 7. Quy chuẩn Problem Package theo chuẩn cp-solve & Teacher Guide 9 Phần
+Mọi Problem Package (`IKH-xxxx` / `CPPB-xx-xx`) bắt buộc phải tuân thủ nghiêm ngặt quy trình workflow `cp-solve` và tạo đủ 4 thành phần:
+1. **`De_Bai.md`**: Statement hoàn chỉnh (Tiêu đề, Bối cảnh, Nhiệm vụ, Input, Output, Sample 1, Giải thích sample, Ràng buộc thời gian $1.0\text{s}$ và bộ nhớ $256\text{MB}$).
+2. **`Huong_Dan_Giang_Day.md` (Bắt buộc đủ 9 phần sư phạm chuyên sâu)**:
+   * (1) Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+   * (2) Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+   * (3) Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+   * (4) Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+   * (5) Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+   * (6) Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+   * (7) Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
+   * (8) Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu (Boilerplate sạch 0 `std::`)
+   * (9) Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
+3. **`solution.cpp`**: Reference Solution chuẩn thi đấu (Fast I/O, Safe Input, biên dịch sạch `g++ -O3 -std=c++17` không lỗi, không cảnh báo).
+4. **`test/`**: Chứa `manifest.json` và trọn bộ **20 testcases** (`test01` $\to$ `test20` kèm file `.in` và `.out`) phân bổ theo ma trận 6 tầng (Sample, Min boundary, Small, Edge cases, Medium, Max scale stress test $N = 10^5$).
 
 Trước khi bàn giao, chạy `@../skills/ikhedu-authoring/references/qa-checklist.md`, cập nhật evidence ledger/decision log khi cần.
+
