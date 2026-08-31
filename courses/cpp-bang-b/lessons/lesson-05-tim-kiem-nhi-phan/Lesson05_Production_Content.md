@@ -288,12 +288,12 @@ int main() {
 # CÂU HỎI TRẮC NGHIỆM ĐO LƯỜNG TƯ DUY (CONCEPT QUIZ)
 
 #### Câu 1 (Bản chất — Complexity):
-Tại sao thuật toán tìm kiếm nhị phân trên không gian kích thước $N = 10^9$ chỉ cần tối đa khoảng 30 bước lặp?
+Tại sao thuật toán tìm kiếm nhị phân trên không gian kích thước `N = 10^9` chỉ cần tối đa khoảng 30 bước lặp?
 * A. Vì mỗi bước chia không gian thành 10 phần.
-* B. **(Đáp án đúng)** Vì mỗi bước loại bỏ chính xác $50\%$ không gian tìm kiếm, và $2^{30} \approx 1.07 \times 10^9 > 10^9$.
+* B. **(Đáp án đúng)** Vì mỗi bước loại bỏ chính xác `50%` không gian tìm kiếm, và `2^30 ≈ 1.07 * 10^9 > 10^9`.
 * C. Vì mảng số nguyên trong C++ chỉ chứa tối đa 30 phần tử âm.
 * D. Do trình biên dịch C++ tối ưu hóa vòng lặp thành lệnh SIMD.
-> *Giải thích:* Sau $k$ bước lặp, không gian còn lại là $N / 2^k$. Với $N = 10^9$, $2^{30} > 10^9 \implies k \approx 30$ bước là không gian thu hẹp về 1 phần tử.
+> *Giải thích:* Sau `k` bước lặp, không gian còn lại là `N / 2^k`. Với `N = 10^9`, `2^30 > 10^9 implies k ≈ 30` bước là không gian thu hẹp về 1 phần tử.
 
 ---
 
@@ -313,57 +313,57 @@ Biểu thức nào sau đây tính trung điểm `mid` an toàn nhất để ch�
 * B. **(Đáp án đúng)** `mid = low + (high - low) / 2;`
 * C. `mid = (low + high) >> 1;`
 * D. `mid = low + high / 2;`
-> *Giải thích:* Nếu $low = 1.5 \cdot 10^9$ và $high = 1.8 \cdot 10^9$, tổng $low + high = 3.3 \cdot 10^9$ vượt giới hạn $2.14 \cdot 10^9$ của `int`. Dùng `low + (high - low) / 2` phép trừ $(high - low)$ luôn không âm và nhỏ hơn $high$, không bao giờ tràn số.
+> *Giải thích:* Nếu `low = 1.5 * 10^9` và `high = 1.8 * 10^9`, tổng `low + high = 3.3 * 10^9` vượt giới hạn `2.14 * 10^9` của `int`. Dùng `low + (high - low) / 2` phép trừ `(high - low)` luôn không âm và nhỏ hơn `high`, không bao giờ tràn số.
 
 ---
 
 #### Câu 4 (Hàm STL — lower_bound):
-Cho mảng đã sắp xếp $A = [2, 4, 4, 4, 7, 9]$. Giá trị trả về của `lower_bound(A.begin(), A.end(), 4) - A.begin()` là gì?
+Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của `lower_bound(A.begin(), A.end(), 4) - A.begin()` là gì?
 * A. 0
 * B. **(Đáp án đúng)** 1 (chỉ số của số 4 đầu tiên).
 * C. 3 (chỉ số của số 4 cuối cùng).
 * D. 4 (chỉ số của số 7).
-> *Giải thích:* `lower_bound(..., X)` trả về con trỏ tới phần tử đầu tiên có giá trị $\ge X$. Số 4 đầu tiên nằm tại chỉ số 1 (0-based).
+> *Giải thích:* `lower_bound(..., X)` trả về con trỏ tới phần tử đầu tiên có giá trị `>= X`. Số 4 đầu tiên nằm tại chỉ số 1 (0-based).
 
 ---
 
 #### Câu 5 (Hàm STL — upper_bound):
-Cho mảng đã sắp xếp $A = [2, 4, 4, 4, 7, 9]$. Giá trị trả về của `upper_bound(A.begin(), A.end(), 4) - A.begin()` là gì?
+Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của `upper_bound(A.begin(), A.end(), 4) - A.begin()` là gì?
 * A. 1
 * B. 3
-* C. **(Đáp án đúng)** 4 (chỉ số của số 7, phần tử đầu tiên $> 4$).
+* C. **(Đáp án đúng)** 4 (chỉ số của số 7, phần tử đầu tiên `> 4`).
 * D. 5
-> *Giải thích:* `upper_bound(..., X)` trả về con trỏ tới phần tử đầu tiên có giá trị nghiêm ngặt $> X$. Phần tử đầu tiên $> 4$ là số 7 tại chỉ số 4.
+> *Giải thích:* `upper_bound(..., X)` trả về con trỏ tới phần tử đầu tiên có giá trị nghiêm ngặt `> X`. Phần tử đầu tiên `> 4` là số 7 tại chỉ số 4.
 
 ---
 
 #### Câu 6 (Đếm số lần xuất hiện — Counting):
-Để đếm số lần xuất hiện của giá trị $X$ trong một vector $A$ gồm $N$ phần tử đã sắp xếp tăng dần trong thời gian $\mathcal{O}(\log N)$, ta dùng biểu thức nào?
+Để đếm số lần xuất hiện của giá trị `X` trong một vector `A` gồm `N` phần tử đã sắp xếp tăng dần trong thời gian `O(log N)`, ta dùng biểu thức nào?
 * A. `upper_bound(A.begin(), A.end(), X) - A.begin()`
 * B. `count(A.begin(), A.end(), X)`
 * C. **(Đáp án đúng)** `upper_bound(A.begin(), A.end(), X) - lower_bound(A.begin(), A.end(), X)`
 * D. `lower_bound(A.begin(), A.end(), X) - A.begin()`
-> *Giải thích:* Hiệu vị trí của phần tử đầu tiên $> X$ và phần tử đầu tiên $\ge X$ chính là số lượng phần tử có giá trị đúng bằng $X$. Hàm `count` duyệt tuần tự $\mathcal{O}(N)$ sẽ bị TLE.
+> *Giải thích:* Hiệu vị trí của phần tử đầu tiên `> X` và phần tử đầu tiên `>= X` chính là số lượng phần tử có giá trị đúng bằng `X`. Hàm `count` duyệt tuần tự `O(N)` sẽ bị TLE.
 
 ---
 
 #### Câu 7 (Binary Search on Answer — Logic):
-Trong bài toán *"Tìm chiều cao cắt $H$ lớn nhất sao cho tổng lượng gỗ thu được $\ge M$"*, tính chất đơn điệu của hàm kiểm tra `check(H)` thể hiện như thế nào?
-* A. Chiều cao $H$ càng tăng thì lượng gỗ thu được càng tăng.
-* B. **(Đáp án đúng)** Chiều cao $H$ càng tăng thì lượng gỗ thu được càng giảm (hàm giảm đơn điệu).
-* C. Lượng gỗ thu được luôn không đổi với mọi chiều cao $H$.
-* D. Hàm lượng gỗ biến thiên ngẫu nhiên theo $H$.
-> *Giải thích:* Khi nâng máy cắt lên cao ($H$ tăng), phần ngọn cây bị cắt sẽ ngắn đi, do đó tổng lượng gỗ thu được chắc chắn giảm dần. Đây là hàm đơn điệu giảm.
+Trong bài toán *"Tìm chiều cao cắt `H` lớn nhất sao cho tổng lượng gỗ thu được `>= M`"*, tính chất đơn điệu của hàm kiểm tra `check(H)` thể hiện như thế nào?
+* A. Chiều cao `H` càng tăng thì lượng gỗ thu được càng tăng.
+* B. **(Đáp án đúng)** Chiều cao `H` càng tăng thì lượng gỗ thu được càng giảm (hàm giảm đơn điệu).
+* C. Lượng gỗ thu được luôn không đổi với mọi chiều cao `H`.
+* D. Hàm lượng gỗ biến thiên ngẫu nhiên theo `H`.
+> *Giải thích:* Khi nâng máy cắt lên cao (`H` tăng), phần ngọn cây bị cắt sẽ ngắn đi, do đó tổng lượng gỗ thu được chắc chắn giảm dần. Đây là hàm đơn điệu giảm.
 
 ---
 
 #### Câu 8 (Binary Search on Answer — Search Space):
-Nếu bài toán yêu cầu tìm giá trị $X$ nhỏ nhất thỏa mãn `check(X) == true`, sau khi kiểm tra tại `mid` thấy `check(mid) == true`, ta cần cập nhật bước tiếp theo như thế nào?
+Nếu bài toán yêu cầu tìm giá trị `X` nhỏ nhất thỏa mãn `check(X) == true`, sau khi kiểm tra tại `mid` thấy `check(mid) == true`, ta cần cập nhật bước tiếp theo như thế nào?
 * A. `low = mid + 1;`
 * B. **(Đáp án đúng)** `ans = mid; high = mid - 1;` (Ghi nhận `mid` là một đáp án hợp lệ và tiếp tục tìm giá trị nhỏ hơn ở nửa trái).
 * C. `ans = mid; return ans;`
 * D. `high = mid + 1;`
-> *Giải thích:* Vì đề bài yêu cầu tìm $X$ **nhỏ nhất**, một giá trị `mid` thỏa mãn có thể chưa phải là nhỏ nhất $\implies$ ghi nhận `ans = mid` rồi thu hẹp không gian tìm kiếm sang bên trái `high = mid - 1`.
+> *Giải thích:* Vì đề bài yêu cầu tìm `X` **nhỏ nhất**, một giá trị `mid` thỏa mãn có thể chưa phải là nhỏ nhất `implies` ghi nhận `ans = mid` rồi thu hẹp không gian tìm kiếm sang bên trái `high = mid - 1`.
 
 ---
 
@@ -373,57 +373,57 @@ Tại sao khi chặt nhị phân trên tập số thực, ta nên dùng vòng l�
 * B. **(Đáp án đúng)** Để tránh nguy cơ lặp vô tận do sai số làm tròn số thực (Floating-point round-off error) khiến hiệu `high - low` không bao giờ nhỏ hơn epsilon.
 * C. Vì số thực trong C++ chỉ biểu diễn được tối đa 100 chữ số thập phân.
 * D. Do tiêu chuẩn thi đấu Olympic cấm dùng vòng lặp `while`.
-> *Giải thích:* Với kiểu `double`, khi `high` và `low` rất gần nhau, phép trừ `high - low` có thể bị kẹt do giới hạn bit mantissa. Lặp 100 lần đảm bảo chia đôi khoảng cách $2^{100}$ lần, đạt độ chính xác cực cao mà không bao giờ bị kẹt vòng lặp.
+> *Giải thích:* Với kiểu `double`, khi `high` và `low` rất gần nhau, phép trừ `high - low` có thể bị kẹt do giới hạn bit mantissa. Lặp 100 lần đảm bảo chia đôi khoảng cách `2^100` lần, đạt độ chính xác cực cao mà không bao giờ bị kẹt vòng lặp.
 
 ---
 
 #### Câu 10 (Ranh giới thất bại — Failure Boundary):
 Trường hợp nào sau đây **KHÔNG THỂ** giải bằng thuật toán Tìm kiếm nhị phân một cách trực tiếp?
-* A. Tìm căn bậc hai của số nguyên lớn $N \le 10^{18}$.
-* B. Tìm phần tử nhỏ nhất lớn hơn $X$ trong mảng đã sắp xếp.
-* C. **(Đáp án đúng)** Tìm giá trị $X$ để hàm số đa thức bậc 4 có 3 điểm cực trị $f(X)$ đạt giá trị lớn nhất trên đoạn $[-1000, 1000]$.
-* D. Chia mảng thành $K$ đoạn con liên tiếp sao cho tổng đoạn lớn nhất là nhỏ nhất.
-> *Giải thích:* Hàm đa thức bậc 4 có 3 điểm cực trị không có tính chất đơn điệu trên toàn đoạn $[-1000, 1000]$ (đổi chiều tăng/giảm nhiều lần), do đó Binary Search không thể loại bỏ an toàn một nửa không gian. Lưu ý: Thuật toán Tìm kiếm Tam phân (Ternary Search) cũng chỉ áp dụng được cho hàm **đơn đỉnh (unimodal)** có đúng 1 cực trị duy nhất, không áp dụng trực tiếp cho hàm đa cực trị như đa thức bậc 4 này.
+* A. Tìm căn bậc hai của số nguyên lớn `N <= 10^18`.
+* B. Tìm phần tử nhỏ nhất lớn hơn `X` trong mảng đã sắp xếp.
+* C. **(Đáp án đúng)** Tìm giá trị `X` để hàm số đa thức bậc 4 có 3 điểm cực trị `f(X)` đạt giá trị lớn nhất trên đoạn `[-1000, 1000]`.
+* D. Chia mảng thành `K` đoạn con liên tiếp sao cho tổng đoạn lớn nhất là nhỏ nhất.
+> *Giải thích:* Hàm đa thức bậc 4 có 3 điểm cực trị không có tính chất đơn điệu trên toàn đoạn `[-1000, 1000]` (đổi chiều tăng/giảm nhiều lần), do đó Binary Search không thể loại bỏ an toàn một nửa không gian. Lưu ý: Thuật toán Tìm kiếm Tam phân (Ternary Search) cũng chỉ áp dụng được cho hàm **đơn đỉnh (unimodal)** có đúng 1 cực trị duy nhất, không áp dụng trực tiếp cho hàm đa cực trị như đa thức bậc 4 này.
 
 ---
 
 #### Câu 11 (Mảng xoay vòng — Rotated Array):
-Cho mảng gồm các phần tử đôi một phân biệt đã sắp xếp nhưng bị xoay vòng tại một vị trí $P$ (ví dụ: $[4, 5, 6, 7, 0, 1, 2]$). Khi xét phần tử trung điểm $A[mid]$, tính chất cốt lõi nào cho phép ta tiếp tục tìm kiếm nhị phân?
+Cho mảng gồm các phần tử đôi một phân biệt đã sắp xếp nhưng bị xoay vòng tại một vị trí `P` (ví dụ: `[4, 5, 6, 7, 0, 1, 2]`). Khi xét phần tử trung điểm `A[mid]`, tính chất cốt lõi nào cho phép ta tiếp tục tìm kiếm nhị phân?
 * A. Cả hai nửa trái và phải đều đã được sắp xếp tăng dần.
-* B. **(Đáp án đúng)** Ít nhất một trong hai nửa $[low \dots mid]$ hoặc $[mid \dots high]$ chắc chắn là một dãy tăng dần đơn điệu bình thường.
+* B. **(Đáp án đúng)** Ít nhất một trong hai nửa `[low ... mid]` hoặc `[mid ... high]` chắc chắn là một dãy tăng dần đơn điệu bình thường.
 * C. Phần tử nhỏ nhất luôn nằm ở chính giữa mảng.
 * D. Mảng luôn có số lượng phần tử là số lẻ.
-> *Giải thích:* Điểm gãy (Pivot) chỉ nằm ở 1 trong 2 nửa. Do đó, nửa còn lại luôn là một mảng tăng dần hoàn hảo, ta có thể kiểm tra xem $X$ có thuộc khoảng giá trị của nửa đó không để thu hẹp không gian. (Lưu ý: Nếu mảng chứa các **phần tử trùng lặp** thỏa $A[low] == A[mid] == A[high]$, ta không thể xác định nửa nào được sắp xếp, thuật toán buộc phải co $low++, high--$ và có thể suy biến về $\mathcal{O}(N)$).
+> *Giải thích:* Điểm gãy (Pivot) chỉ nằm ở 1 trong 2 nửa. Do đó, nửa còn lại luôn là một mảng tăng dần hoàn hảo, ta có thể kiểm tra xem `X` có thuộc khoảng giá trị của nửa đó không để thu hẹp không gian. (Lưu ý: Nếu mảng chứa các **phần tử trùng lặp** thỏa `A[low] == A[mid] == A[high]`, ta không thể xác định nửa nào được sắp xếp, thuật toán buộc phải co `low++, high--` và có thể suy biến về `O(N)`).
 
 ---
 
 #### Câu 12 (Ma trận 2D đã sắp xếp — 2D Matrix Binary Search):
-Cho ma trận $N \times M$ gồm các số nguyên tăng dần từ trái sang phải trên từng hàng và phần tử đầu mỗi hàng luôn lớn hơn phần tử cuối hàng trước. Để tìm kiếm phần tử $X$ trong $\mathcal{O}(\log(N \times M))$, ta ánh xạ chỉ số 1D $mid$ sang tọa độ ô $(r, c)$ bằng công thức nào?
-* A. $r = mid \bmod M, c = mid / M$
-* B. **(Đáp án đúng)** $r = mid / M, c = mid \bmod M$ (với chỉ số 0-based).
-* C. $r = mid / N, c = mid \bmod N$
-* D. $r = mid \times M, c = mid + M$
-> *Giải thích:* Coi ma trận $N \times M$ như một mảng 1D độ dài $N \times M$. Chỉ số dòng là $r = \lfloor mid / M \rfloor$ và chỉ số cột là $c = mid \bmod M$.
+Cho ma trận `N * M` gồm các số nguyên tăng dần từ trái sang phải trên từng hàng và phần tử đầu mỗi hàng luôn lớn hơn phần tử cuối hàng trước. Để tìm kiếm phần tử `X` trong `O(log(N * M))`, ta ánh xạ chỉ số 1D `mid` sang tọa độ ô `(r, c)` bằng công thức nào?
+* A. `r = mid bmod M, c = mid / M`
+* B. **(Đáp án đúng)** `r = mid / M, c = mid bmod M` (với chỉ số 0-based).
+* C. `r = mid / N, c = mid bmod N`
+* D. `r = mid * M, c = mid + M`
+> *Giải thích:* Coi ma trận `N * M` như một mảng 1D độ dài `N * M`. Chỉ số dòng là `r = floor(mid / M )` và chỉ số cột là `c = mid bmod M`.
 
 ---
 
 #### Câu 13 (Đỉnh dãy núi — Mountain Array Peak):
-Trong một mảng dạng đỉnh núi (tăng dần rồi giảm dần: $A_0 < A_1 < \dots < A_p > A_{p+1} > \dots > A_{N-1}$), điều kiện nào tại vị trí `mid` cho biết đỉnh núi nằm ở bên phải `mid`?
-* A. $A[mid] > A[mid + 1]$
-* B. **(Đáp án đúng)** $A[mid] < A[mid + 1]$ (đang ở sườn dốc đi lên, đỉnh núi chắc chắn nằm bên phải $\implies low = mid + 1$).
-* C. $A[mid] == A[mid + 1]$
-* D. $A[mid] < A[mid - 1]$
-> *Giải thích:* Nếu $A[mid] < A[mid+1]$, dãy đang có xu hướng tăng tại `mid`, do đó đỉnh núi chưa đạt được và nằm về phía bên phải.
+Trong một mảng dạng đỉnh núi (tăng dần rồi giảm dần: `A0 < A1 < ... < A_p > A[p+1] > ... > A[N-1]`), điều kiện nào tại vị trí `mid` cho biết đỉnh núi nằm ở bên phải `mid`?
+* A. `A[mid] > A[mid + 1]`
+* B. **(Đáp án đúng)** `A[mid] < A[mid + 1]` (đang ở sườn dốc đi lên, đỉnh núi chắc chắn nằm bên phải `implies low = mid + 1`).
+* C. `A[mid] == A[mid + 1]`
+* D. `A[mid] < A[mid - 1]`
+> *Giải thích:* Nếu `A[mid] < A[mid+1]`, dãy đang có xu hướng tăng tại `mid`, do đó đỉnh núi chưa đạt được và nằm về phía bên phải.
 
 ---
 
 #### Câu 14 (Trung vị hai mảng đã sắp xếp — Advanced Partition):
-Thuật toán tìm phần tử trung vị của hai mảng đã sắp xếp $A$ (kích thước $N$) và $B$ (kích thước $M$) trong thời gian tối ưu $\mathcal{O}(\log(\min(N, M)))$ dựa trên việc chặt nhị phân đối tượng nào?
-* A. Chặt nhị phân giá trị của phần tử trung vị từ $-10^9 \dots 10^9$.
+Thuật toán tìm phần tử trung vị của hai mảng đã sắp xếp `A` (kích thước `N`) và `B` (kích thước `M`) trong thời gian tối ưu `O(log(min(N, M)))` dựa trên việc chặt nhị phân đối tượng nào?
+* A. Chặt nhị phân giá trị của phần tử trung vị từ `-10^9 ... 10^9`.
 * B. **(Đáp án đúng)** Chặt nhị phân vị trí vách ngăn (cut partition) trên mảng có kích thước nhỏ hơn để chia tổng hai mảng thành 2 nửa bằng nhau.
-* C. Sắp xếp lại toàn bộ mảng gộp trong $\mathcal{O}((N+M)\log(N+M))$.
+* C. Sắp xếp lại toàn bộ mảng gộp trong `O((N+M)log(N+M))`.
 * D. Duyệt tuần tự 2 con trỏ qua cả 2 mảng.
-> *Giải thích:* Bằng cách chặt nhị phân số lượng phần tử lấy từ mảng nhỏ hơn $i \in [0, N]$, số lượng phần tử lấy từ mảng lớn hơn được cố định $j = (N + M + 1)/2 - i$. Ta kiểm tra điều kiện vách ngăn hợp lệ trong $\mathcal{O}(1) \implies$ Tổng thời gian $\mathcal{O}(\log(\min(N, M)))$.
+> *Giải thích:* Bằng cách chặt nhị phân số lượng phần tử lấy từ mảng nhỏ hơn `i in [0, N]`, số lượng phần tử lấy từ mảng lớn hơn được cố định `j = (N + M + 1)/2 - i`. Ta kiểm tra điều kiện vách ngăn hợp lệ trong `O(1) implies` Tổng thời gian `O(log(min(N, M)))`.
 
 ---
 
@@ -431,21 +431,21 @@ Thuật toán tìm phần tử trung vị của hai mảng đã sắp xếp $A$ 
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-BS-01` | **Tìm Kiếm Phần Tử Trên Mảng Đã Sắp Xếp** | `P0` | $N, Q \le 10^5$ | Cài đặt Binary Search cơ bản |
-| 02 | `CPPB-BS-02` | **Tìm Vị Trí Xuất Hiện Đầu Tiên & Cuối Cùng** | `P1` | $N, Q \le 10^5$ | Bản chất `lower_bound` / `upper_bound` |
-| 03 | `CPPB-BS-03` | **Đếm Số Phần Tử Trong Đoạn $[L, R]$** | `P1` | $N, Q \le 10^5$ | Hiệu hai con trỏ nhị phân `upper - lower` |
-| 04 | `CPPB-BS-04` | **Tìm Căn Bậc Hai Số Nguyên Lớn** | `P2` | $N \le 10^{18}$ | Binary Search trên tập số nguyên 64-bit |
-| 05 | `CPPB-BS-05` | **Tìm Phần Tử Nhỏ Nhất Lớn Hơn X** | `P2` | $N, Q \le 10^5$ | Chặn trên nghiêm ngặt |
-| 06 | `CPPB-BS-06` | **Chia Kẹo Cho Học Sinh Đạt Chuẩn** | `P3` | $N \le 10^5, K \le 10^{14}$ | Chặt nhị phân kết quả (Check chia đều) |
-| 07 | `CPPB-BS-07` | **Cắt Gỗ Xây Dựng (Woodcutting / EKO)** | `P2` | $N \le 10^5, M \le 10^{14}$ | Bài toán kinh điển tìm độ cao máy cắt |
-| 08 | `CPPB-BS-08` | **Đặt Trạm Phát Sóng Cách Nhau Xa Nhất (Aggressive Cows)** | `P3` | $N \le 10^5, C \le N$ | Tối đại hóa khoảng cách nhỏ nhất |
-| 09 | `CPPB-BS-09` | **Chia Mảng Thành K Đoạn Có Tổng Max Nhỏ Nhất** | `P3` | $N \le 10^5, K \le N$ | Tối thiểu hóa tổng đoạn con lớn nhất |
-| 10 | `CPPB-BS-10` | **Vận Chuyển Hàng Hóa Qua Phà Trong D Ngày** | `P3` | $N \le 10^5, D \le 10^5$ | Chặt nhị phân tải trọng thuyền |
-| 11 | `CPPB-BS-11` | **Tìm Nghiệm Thực Của Phương Trình Đơn Điệu** | `P4` | Sai số $10^{-7}$ | Chặt nhị phân số thực với số lần lặp cố định |
-| 12 | `CPPB-BS-12` | **Phần Tử Thứ K Của Hai Mảng Đã Sắp Xếp** | `P4` | $N, M \le 10^5$ | Chặt nhị phân số lượng phần tử $\le X$ |
-| 13 | `CPPB-BS-13` | **Tìm Đoạn Con Có Trung Bình Lớn Nhất Độ Dài $\ge K$** | `P5` | $N \le 10^5, K \le N$ | Chặt nhị phân trung bình + Mảng tiền tố |
-| 14 | `CPPB-BS-14` | **Tối Ưu Hóa Tuyến Đường Vận Tải Đa Điểm** | `P5` | $N \le 2 \cdot 10^5$ | Chặt nhị phân kết hợp cấu trúc đơn điệu |
-| 15 | `CPPB-BS-15` | **Tìm Kiếm Trên Mảng Sắp Xếp Bị Xoay Vòng (Rotated Array)** | `P3` | $N \le 10^5$ | Phân đoạn đơn điệu trong mảng xoay |
-| 16 | `CPPB-BS-16` | **Tìm Kiếm Trên Ma Trận 2D Đã Sắp Xếp (Matrix Search)** | `P2` | $N, M \le 1000$ | Chuyển tọa độ $1D \leftrightarrow 2D$ trong nhị phân |
-| 17 | `CPPB-BS-17` | **Tìm Đỉnh Của Dãy Núi (Peak in Mountain Array)** | `P3` | $N \le 10^5$ | Chặt nhị phân theo đạo hàm / độ dốc |
-| 18 | `CPPB-BS-18` | **Trung Vị Của Hai Mảng Đã Sắp Xếp (Median of Two Sorted)** | `P5` | $N, M \le 10^5$ | Phân chia vách ngăn nhị phân tối ưu $\mathcal{O}(\log(\min(N, M)))$ |
+| 01 | `CPPB-BS-01` | **Tìm Kiếm Phần Tử Trên Mảng Đã Sắp Xếp** | `P0` | `N, Q <= 10^5` | Cài đặt Binary Search cơ bản |
+| 02 | `CPPB-BS-02` | **Tìm Vị Trí Xuất Hiện Đầu Tiên & Cuối Cùng** | `P1` | `N, Q <= 10^5` | Bản chất `lower_bound` / `upper_bound` |
+| 03 | `CPPB-BS-03` | **Đếm Số Phần Tử Trong Đoạn `[L, R]`** | `P1` | `N, Q <= 10^5` | Hiệu hai con trỏ nhị phân `upper - lower` |
+| 04 | `CPPB-BS-04` | **Tìm Căn Bậc Hai Số Nguyên Lớn** | `P2` | `N <= 10^18` | Binary Search trên tập số nguyên 64-bit |
+| 05 | `CPPB-BS-05` | **Tìm Phần Tử Nhỏ Nhất Lớn Hơn X** | `P2` | `N, Q <= 10^5` | Chặn trên nghiêm ngặt |
+| 06 | `CPPB-BS-06` | **Chia Kẹo Cho Học Sinh Đạt Chuẩn** | `P3` | `N <= 10^5, K <= 10^14` | Chặt nhị phân kết quả (Check chia đều) |
+| 07 | `CPPB-BS-07` | **Cắt Gỗ Xây Dựng (Woodcutting / EKO)** | `P2` | `N <= 10^5, M <= 10^14` | Bài toán kinh điển tìm độ cao máy cắt |
+| 08 | `CPPB-BS-08` | **Đặt Trạm Phát Sóng Cách Nhau Xa Nhất (Aggressive Cows)** | `P3` | `N <= 10^5, C <= N` | Tối đại hóa khoảng cách nhỏ nhất |
+| 09 | `CPPB-BS-09` | **Chia Mảng Thành K Đoạn Có Tổng Max Nhỏ Nhất** | `P3` | `N <= 10^5, K <= N` | Tối thiểu hóa tổng đoạn con lớn nhất |
+| 10 | `CPPB-BS-10` | **Vận Chuyển Hàng Hóa Qua Phà Trong D Ngày** | `P3` | `N <= 10^5, D <= 10^5` | Chặt nhị phân tải trọng thuyền |
+| 11 | `CPPB-BS-11` | **Tìm Nghiệm Thực Của Phương Trình Đơn Điệu** | `P4` | Sai số `10^-7` | Chặt nhị phân số thực với số lần lặp cố định |
+| 12 | `CPPB-BS-12` | **Phần Tử Thứ K Của Hai Mảng Đã Sắp Xếp** | `P4` | `N, M <= 10^5` | Chặt nhị phân số lượng phần tử `<= X` |
+| 13 | `CPPB-BS-13` | **Tìm Đoạn Con Có Trung Bình Lớn Nhất Độ Dài `>= K`** | `P5` | `N <= 10^5, K <= N` | Chặt nhị phân trung bình + Mảng tiền tố |
+| 14 | `CPPB-BS-14` | **Tối Ưu Hóa Tuyến Đường Vận Tải Đa Điểm** | `P5` | `N <= 2 * 10^5` | Chặt nhị phân kết hợp cấu trúc đơn điệu |
+| 15 | `CPPB-BS-15` | **Tìm Kiếm Trên Mảng Sắp Xếp Bị Xoay Vòng (Rotated Array)** | `P3` | `N <= 10^5` | Phân đoạn đơn điệu trong mảng xoay |
+| 16 | `CPPB-BS-16` | **Tìm Kiếm Trên Ma Trận 2D Đã Sắp Xếp (Matrix Search)** | `P2` | `N, M <= 1000` | Chuyển tọa độ `1D <=ftrightarrow 2D` trong nhị phân |
+| 17 | `CPPB-BS-17` | **Tìm Đỉnh Của Dãy Núi (Peak in Mountain Array)** | `P3` | `N <= 10^5` | Chặt nhị phân theo đạo hàm / độ dốc |
+| 18 | `CPPB-BS-18` | **Trung Vị Của Hai Mảng Đã Sắp Xếp (Median of Two Sorted)** | `P5` | `N, M <= 10^5` | Phân chia vách ngăn nhị phân tối ưu `O(log(min(N, M)))` |

@@ -205,12 +205,12 @@ int main() {
 # CÂU HỎI TRẮC NGHIỆM ĐO LƯỜNG TƯ DUY (CONCEPT QUIZ)
 
 #### Câu 1 (Bản chất XOR — Identity):
-Giá trị của biểu thức $A \oplus B \oplus A$ trong C++ luôn bằng gì?
+Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì?
 * A. 0
-* B. $A$
-* C. **(Đáp án đúng)** $B$ (vì $A \oplus A = 0$ và $0 \oplus B = B$).
-* D. $2A + B$
-> *Giải thích:* Tính chất giao hoán và tự triệt tiêu của phép XOR: $A \oplus B \oplus A = (A \oplus A) \oplus B = 0 \oplus B = B$.
+* B. `A`
+* C. **(Đáp án đúng)** `B` (vì `A XOR A = 0` và `0 XOR B = B`).
+* D. `2A + B`
+> *Giải thích:* Tính chất giao hoán và tự triệt tiêu của phép XOR: `A XOR B XOR A = (A XOR A) XOR B = 0 XOR B = B`.
 
 ---
 
@@ -225,37 +225,37 @@ Giá trị của biểu thức $A \oplus B \oplus A$ trong C++ luôn bằng gì?
 ---
 
 #### Câu 3 (Kỹ thuật bật bit — Manipulation):
-Để bật bit thứ $k$ của biến số nguyên `mask` lên 1 mà không làm thay đổi các bit khác, ta dùng câu lệnh nào?
+Để bật bit thứ `k` của biến số nguyên `mask` lên 1 mà không làm thay đổi các bit khác, ta dùng câu lệnh nào?
 * A. `mask = mask & (1LL << k);`
 * B. **(Đáp án đúng)** `mask = mask | (1LL << k);`
 * C. `mask = mask ^ (1LL << k);`
 * D. `mask = mask + (1LL << k);`
-> *Giải thích:* Phép OR với số có bit thứ $k$ bằng 1 và các bit khác bằng 0 sẽ biến bit thứ $k$ thành 1 mà giữ nguyên các bit còn lại.
+> *Giải thích:* Phép OR với số có bit thứ `k` bằng 1 và các bit khác bằng 0 sẽ biến bit thứ `k` thành 1 mà giữ nguyên các bit còn lại.
 
 ---
 
 #### Câu 4 (Kỹ thuật tắt bit — Manipulation):
-Để tắt bit thứ $k$ của biến số nguyên `mask` về 0, ta dùng câu lệnh nào?
+Để tắt bit thứ `k` của biến số nguyên `mask` về 0, ta dùng câu lệnh nào?
 * A. `mask = mask | ~(1LL << k);`
 * B. `mask = mask - (1LL << k);`
 * C. **(Đáp án đúng)** `mask = mask & ~(1LL << k);`
 * D. `mask = mask ^ (1LL << k);`
-> *Giải thích:* `~(1LL << k)` tạo ra một mặt nạ chứa toàn bit 1 ngoại trừ bit $k$ bằng 0. Khi `&` với mask, bit thứ $k$ chắc chắn về 0.
+> *Giải thích:* `~(1LL << k)` tạo ra một mặt nạ chứa toàn bit 1 ngoại trừ bit `k` bằng 0. Khi `&` với mask, bit thứ `k` chắc chắn về 0.
 
 ---
 
 #### Câu 5 (Lũy thừa của 2 — Bit Trick):
 Biểu thức `n > 0 && (n & (n - 1)) == 0` trả về `true` khi và chỉ khi:
-* A. $n$ là một số nguyên chẵn.
-* B. **(Đáp án đúng)** $n$ là một lũy thừa của 2 ($n = 2^k$ với $k \ge 0$).
-* C. $n$ là một số nguyên tố.
-* D. $n$ chia hết cho 4.
-> *Giải thích:* Một lũy thừa của 2 có dạng $100\dots0_2$, khi trừ 1 sẽ thành $011\dots1_2$. Phép AND giữa hai số này bằng đúng 0.
+* A. `n` là một số nguyên chẵn.
+* B. **(Đáp án đúng)** `n` là một lũy thừa của 2 (`n = 2^k` với `k >= 0`).
+* C. `n` là một số nguyên tố.
+* D. `n` chia hết cho 4.
+> *Giải thích:* Một lũy thừa của 2 có dạng `100...0_2`, khi trừ 1 sẽ thành `011...1_2`. Phép AND giữa hai số này bằng đúng 0.
 
 ---
 
 #### Câu 6 (Đếm bit 1 — Builtin):
-Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian $\mathcal{O}(1)$, hàm nào sau đây là chuẩn xác nhất?
+Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian `O(1)`, hàm nào sau đây là chuẩn xác nhất?
 * A. `__builtin_popcount(x)`
 * B. **(Đáp án đúng)** `__builtin_popcountll(x)`
 * C. `__builtin_ctzll(x)`
@@ -265,22 +265,22 @@ Biểu thức `n > 0 && (n & (n - 1)) == 0` trả về `true` khi và chỉ khi:
 ---
 
 #### Câu 7 (Không gian tập con — Complexity):
-Một tập hợp có $N = 20$ phần tử. Số lượng tập con được sinh ra bởi mặt nạ bit là bao nhiêu và thời gian duyệt vét cạn có chạy kịp $1$ giây không?
-* A. $20^2 = 400$ tập con, chạy kịp.
-* B. **(Đáp án đúng)** $2^{20} = 1,048,576$ tập con, chạy mất khoảng $0.01$ giây, hoàn toàn kịp thời gian $1$ giây.
-* C. $20! \approx 2.4 \times 10^{18}$ tập con, bị quá thời gian.
-* D. $2^{20} \approx 10^9$ tập con, bị quá thời gian.
-> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) $\implies 2^{20} \approx 1.05 \times 10^6$ trạng thái. Vòng lặp $10^6$ chạy dưới $0.02$ giây trong C++.
+Một tập hợp có `N = 20` phần tử. Số lượng tập con được sinh ra bởi mặt nạ bit là bao nhiêu và thời gian duyệt vét cạn có chạy kịp `1` giây không?
+* A. `20^2 = 400` tập con, chạy kịp.
+* B. **(Đáp án đúng)** `2^20 = 1,048,576` tập con, chạy mất khoảng `0.01` giây, hoàn toàn kịp thời gian `1` giây.
+* C. `20! ≈ 2.4 * 10^18` tập con, bị quá thời gian.
+* D. `2^20 ≈ 10^9` tập con, bị quá thời gian.
+> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) `implies 2^20 ≈ 1.05 * 10^6` trạng thái. Vòng lặp `10^6` chạy dưới `0.02` giây trong C++.
 
 ---
 
 #### Câu 8 (Tìm phần tử đơn lẻ — XOR Application):
-Cho mảng gồm $2N + 1$ số nguyên, trong đó có đúng một số xuất hiện 1 lần, tất cả các số còn lại đều xuất hiện đúng 2 lần. Thuật toán tìm số xuất hiện 1 lần tối ưu nhất là gì?
-* A. Dùng 2 vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* B. Sắp xếp mảng mất $\mathcal{O}(N \log N)$.
-* C. **(Đáp án đúng)** Tính XOR tất cả các phần tử trong mảng trong $\mathcal{O}(N)$ thời gian và $\mathcal{O}(1)$ bộ nhớ.
+Cho mảng gồm `2N + 1` số nguyên, trong đó có đúng một số xuất hiện 1 lần, tất cả các số còn lại đều xuất hiện đúng 2 lần. Thuật toán tìm số xuất hiện 1 lần tối ưu nhất là gì?
+* A. Dùng 2 vòng lặp lồng nhau `O(N^2)`.
+* B. Sắp xếp mảng mất `O(N log N)`.
+* C. **(Đáp án đúng)** Tính XOR tất cả các phần tử trong mảng trong `O(N)` thời gian và `O(1)` bộ nhớ.
 * D. Dùng bảng băm đếm tần suất.
-> *Giải thích:* Các cặp số giống nhau khi XOR với nhau sẽ triệt tiêu về 0 ($x \oplus x = 0$). Kết quả XOR của toàn bộ mảng chính là số xuất hiện 1 lần duy nhất.
+> *Giải thích:* Các cặp số giống nhau khi XOR với nhau sẽ triệt tiêu về 0 (`x XOR x = 0`). Kết quả XOR của toàn bộ mảng chính là số xuất hiện 1 lần duy nhất.
 
 ---
 
@@ -300,27 +300,27 @@ Vòng lặp `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` dùng để 
 * B. **(Đáp án đúng)** Duyệt chính xác và đầy đủ tất cả các tập con thực sự (Submasks) của `mask` mà không duyệt thừa bất kỳ trạng thái nào khác.
 * C. Xóa tất cả các bit 1 của `mask`.
 * D. Đếm số lượng bit 0 của `mask`.
-> *Giải thích:* Đây là kỹ thuật kinh điển trong quy hoạch động Bitmask để sinh tất cả các tập con của một mặt nạ bit trong $\mathcal{O}(3^N)$ tổng thời gian cho toàn bộ các mask.
+> *Giải thích:* Đây là kỹ thuật kinh điển trong quy hoạch động Bitmask để sinh tất cả các tập con của một mặt nạ bit trong `O(3^N)` tổng thời gian cho toàn bộ các mask.
 
 ---
 
 #### Câu 11 (Cặp tổng lũy thừa của 2 — Power of 2 Pairs):
-Cho $A_i \le 10^9$. Để đếm số cặp $A_i + A_j = 2^k$, tại sao ta chỉ cần lặp tối đa $k$ từ $1$ đến $30$?
+Cho `A_i <= 10^9`. Để đếm số cặp `A_i + A_j = 2^k`, tại sao ta chỉ cần lặp tối đa `k` từ `1` đến `30`?
 * A. Vì kiểu `long long` trong C++ chỉ biểu diễn được 30 bit.
-* B. **(Đáp án đúng)** Vì giá trị tổng lớn nhất của hai số là $10^9 + 10^9 = 2 \cdot 10^9 < 2^{31}$, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
+* B. **(Đáp án đúng)** Vì giá trị tổng lớn nhất của hai số là `10^9 + 10^9 = 2 * 10^9 < 2^31`, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
 * C. Vì số 30 là số nguyên tố.
 * D. Do thuật toán chỉ kiểm tra các số chẵn.
-> *Giải thích:* $A_i + A_j \le 2 \cdot 10^9 < 2^{31} \approx 2.147 \cdot 10^9$. Do đó $k$ chỉ có thể nhận các giá trị từ $1 \dots 30$.
+> *Giải thích:* `A_i + A_j <= 2 * 10^9 < 2^31 ≈ 2.147 * 10^9`. Do đó `k` chỉ có thể nhận các giá trị từ `1 ... 30`.
 
 ---
 
 #### Câu 12 (Tập độc lập về bit — Bit Independence):
-Hai số nguyên dương $X$ và $Y$ được gọi là độc lập về bit khi biểu thức nào sau đây bằng 0?
-* A. $X \oplus Y == 0$.
-* B. **(Đáp án đúng)** $X \ \& \ Y == 0$ (hai số không có bất kỳ bit 1 nào nằm ở cùng vị trí).
-* C. $X \ | \ Y == 0$.
-* D. $X + Y == 0$.
-> *Giải thích:* Phép AND kiểm tra các bit trùng nhau. $X \ \& \ Y == 0 \iff$ không có vị trí bit nào mà cả $X$ và $Y$ cùng bằng 1.
+Hai số nguyên dương `X` và `Y` được gọi là độc lập về bit khi biểu thức nào sau đây bằng 0?
+* A. `X XOR Y == 0`.
+* B. **(Đáp án đúng)** `X & Y == 0` (hai số không có bất kỳ bit 1 nào nằm ở cùng vị trí).
+* C. `X | Y == 0`.
+* D. `X + Y == 0`.
+> *Giải thích:* Phép AND kiểm tra các bit trùng nhau. `X & Y == 0 iff` không có vị trí bit nào mà cả `X` và `Y` cùng bằng 1.
 
 ---
 
@@ -328,19 +328,19 @@ Hai số nguyên dương $X$ và $Y$ được gọi là độc lập về bit kh
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-BIT-01` | **Bật, Tắt Và Kiểm Tra Bit Thứ K** | `P0` | $N \le 10^{18}, K \le 60$ | Thao tác `(1LL << k)`, `&`, `|`, `^` |
-| 02 | `CPPB-BIT-02` | **Đếm Số Lượng Bit 1 (Popcount)** | `P1` | $N \le 10^{18}$ | `__builtin_popcountll` và thuật toán bit |
-| 03 | `CPPB-BIT-03` | **Kiểm Tra Số Có Phải Lũy Thừa Của 2** | `P1` | $N \le 10^{18}$ | Kỹ thuật `n > 0 && (n & (n - 1)) == 0` |
-| 04 | `CPPB-BIT-04` | **Tìm Phần Tử Xuất Hiện 1 Lần Duy Nhất** | `P2` | $N \le 2 \cdot 10^5$ | Tính chất tự triệt tiêu $A \oplus A = 0$ |
-| 05 | `CPPB-BIT-05` | **Tìm Hai Số Xuất Hiện 1 Lần Duy Nhất** | `P2` | $N \le 2 \cdot 10^5$ | Phân tách nhóm bằng bit khác biệt đầu tiên |
-| 06 | `CPPB-BIT-06` | **Đảo Bit Và Giá Trị Bù 1** | `P2` | $N \le 10^9$ | Phép toán NOT kết hợp mặt nạ |
-| 07 | `CPPB-BIT-07` | **Duyệt Toàn Bộ $2^N$ Tập Con Bằng Mặt Nạ Bit** | `P2` | $N \le 20$ | `for (int mask = 0; mask < (1 << n); ++mask)` |
-| 08 | `CPPB-BIT-08` | **Bài Toán Tổng Tập Con Bằng S (Subset Sum)** | `P3` | $N \le 20, S \le 10^9$ | Duyệt nhị phân vét cạn $2^N$ |
-| 09 | `CPPB-BIT-09` | **Chia Tập Hợp Thành 2 Phần Có Tổng Chênh Lệch Nhỏ Nhất** | `P3` | $N \le 20$ | Vét cạn bitmask tối ưu hiệu |
-| 10 | `CPPB-BIT-10` | **Đếm Cặp Có Tích Bit AND Bằng 0** | `P3` | $N \le 10^5, A_i < 2^{16}$ | Tần suất bit và kiểm tra tương thích |
-| 11 | `CPPB-BIT-11` | **Tìm Cặp Có XOR Lớn Nhất Trong Mảng** | `P4` | $N \le 10^5, A_i \le 10^9$ | Duyệt từng bit từ cao xuống thấp (Greedy Bit) |
-| 12 | `CPPB-BIT-12` | **Duyệt Tất Cả Các Tập Con Của Một Mặt Nạ Bit** | `P4` | $N \le 18$ | Kỹ thuật `submask = (submask - 1) & mask` |
-| 13 | `CPPB-BIT-13` | **Tìm Dãy Con Có Tổng XOR Bằng K** | `P4` | $N \le 22$ | Vét cạn nâng cao kết hợp bit |
-| 14 | `CPPB-BIT-14` | **Tối Ưu Hóa Gán Việc Cho N Người (N <= 20)** | `P5` | $N \le 20$ | Bitmask trạng thái và tối ưu hóa tổ hợp |
-| 15 | `CPPB-BIT-15` | **Đếm Số Cặp Có Tổng Bằng Lũy Thừa Của 2** | `P3` | $N \le 10^5, A_i \le 10^9$ | Kết hợp bitmask và hai con trỏ / chặt nhị phân |
-| 16 | `CPPB-BIT-16` | **Tập Hợp Độc Lập Về Bit Lớn Nhất** | `P4` | $N \le 24$ | Bitmask đồ thị độc lập cực đại |
+| 01 | `CPPB-BIT-01` | **Bật, Tắt Và Kiểm Tra Bit Thứ K** | `P0` | `N <= 10^18, K <= 60` | Thao tác `(1LL << k)`, `&`, `|`, `^` |
+| 02 | `CPPB-BIT-02` | **Đếm Số Lượng Bit 1 (Popcount)** | `P1` | `N <= 10^18` | `__builtin_popcountll` và thuật toán bit |
+| 03 | `CPPB-BIT-03` | **Kiểm Tra Số Có Phải Lũy Thừa Của 2** | `P1` | `N <= 10^18` | Kỹ thuật `n > 0 && (n & (n - 1)) == 0` |
+| 04 | `CPPB-BIT-04` | **Tìm Phần Tử Xuất Hiện 1 Lần Duy Nhất** | `P2` | `N <= 2 * 10^5` | Tính chất tự triệt tiêu `A XOR A = 0` |
+| 05 | `CPPB-BIT-05` | **Tìm Hai Số Xuất Hiện 1 Lần Duy Nhất** | `P2` | `N <= 2 * 10^5` | Phân tách nhóm bằng bit khác biệt đầu tiên |
+| 06 | `CPPB-BIT-06` | **Đảo Bit Và Giá Trị Bù 1** | `P2` | `N <= 10^9` | Phép toán NOT kết hợp mặt nạ |
+| 07 | `CPPB-BIT-07` | **Duyệt Toàn Bộ `2^N` Tập Con Bằng Mặt Nạ Bit** | `P2` | `N <= 20` | `for (int mask = 0; mask < (1 << n); ++mask)` |
+| 08 | `CPPB-BIT-08` | **Bài Toán Tổng Tập Con Bằng S (Subset Sum)** | `P3` | `N <= 20, S <= 10^9` | Duyệt nhị phân vét cạn `2^N` |
+| 09 | `CPPB-BIT-09` | **Chia Tập Hợp Thành 2 Phần Có Tổng Chênh Lệch Nhỏ Nhất** | `P3` | `N <= 20` | Vét cạn bitmask tối ưu hiệu |
+| 10 | `CPPB-BIT-10` | **Đếm Cặp Có Tích Bit AND Bằng 0** | `P3` | `N <= 10^5, A_i < 2^16` | Tần suất bit và kiểm tra tương thích |
+| 11 | `CPPB-BIT-11` | **Tìm Cặp Có XOR Lớn Nhất Trong Mảng** | `P4` | `N <= 10^5, A_i <= 10^9` | Duyệt từng bit từ cao xuống thấp (Greedy Bit) |
+| 12 | `CPPB-BIT-12` | **Duyệt Tất Cả Các Tập Con Của Một Mặt Nạ Bit** | `P4` | `N <= 18` | Kỹ thuật `submask = (submask - 1) & mask` |
+| 13 | `CPPB-BIT-13` | **Tìm Dãy Con Có Tổng XOR Bằng K** | `P4` | `N <= 22` | Vét cạn nâng cao kết hợp bit |
+| 14 | `CPPB-BIT-14` | **Tối Ưu Hóa Gán Việc Cho N Người (N <= 20)** | `P5` | `N <= 20` | Bitmask trạng thái và tối ưu hóa tổ hợp |
+| 15 | `CPPB-BIT-15` | **Đếm Số Cặp Có Tổng Bằng Lũy Thừa Của 2** | `P3` | `N <= 10^5, A_i <= 10^9` | Kết hợp bitmask và hai con trỏ / chặt nhị phân |
+| 16 | `CPPB-BIT-16` | **Tập Hợp Độc Lập Về Bit Lớn Nhất** | `P4` | `N <= 24` | Bitmask đồ thị độc lập cực đại |
