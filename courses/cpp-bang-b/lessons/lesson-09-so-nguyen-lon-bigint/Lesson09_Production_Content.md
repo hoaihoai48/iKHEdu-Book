@@ -1,16 +1,14 @@
-# CHUYÊN ĐỀ 09: XỬ LÝ SỐ NGUYÊN LỚN (BIG INTEGER ARITHMETIC)
+# Chuyên đề 09: Xử lý số nguyên lớn (BigInt)
 
----
-
-## 1. Bản Chất Vấn Đề & Trực Giác Thuật Toán (The Core Problem & Intuition)
+## 1. Bản chất vấn đề & trực giác thuật toán (the core problem & intuition)
 
 Trong ngôn ngữ lập trình C++, kiểu dữ liệu số nguyên có kích thước lớn nhất được hỗ trợ phần cứng là `unsigned long long` (64-bit, tối đa xấp xỉ $1.84 \times 10^{19}$) hoặc phần mở rộng GCC `__int128` (128-bit, tối đa xấp xỉ $3.4 \times 10^{38}$).
 
 Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (như tính $100!$, tính số Fibonacci thứ $1000$, hoặc tính $2^{10000}$ **mà không lấy dư modulo**), kết quả có thể dài hàng nghìn đến hàng chục nghìn chữ số. Vì C++ không có sẵn kiểu dữ liệu BigInteger như Python hay Java, lập trình viên thi đấu C++ bắt buộc phải **tự mô phỏng các phép tính số học đặt tính rồi tính như toán tiểu học** trên mảng ký tự (`string`) hoặc mảng số nguyên (`vector<int>`).
 
-### Big Integer Hay Modular Arithmetic: Chọn Vũ Khí Nào?
+### Big integer hay modular arithmetic: Chọn vũ khí nào?
 
-![Phân định lựa chọn giải thuật: Modulo vs Big Integer](assets/bigint_vs_modulo_vi.svg)
+![Phân định lựa chọn giải thuật: Modulo vs Big Integer](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-09-so-nguyen-lon-bigint/assets/bigint_vs_modulo_vi.svg)
 
 | Đề bài yêu cầu | Quy mô kết quả | Vũ khí tối ưu | Kỹ thuật cốt lõi |
 |---|:---:|:---:|---|
@@ -22,11 +20,9 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 | Tính chính xác số Fibonacci $F_{1000}$ | $209$ chữ số | **Big Integer** | Cộng BigInt + BigInt quy hoạch động |
 | Số có $10^5$ chữ số nhưng chỉ cần $\% M$ | $\le M$ | **Modulo** | Vòng lặp Horner: `cur = (cur * 10 + d) % M` |
 
----
+## 2. Mô phỏng từng bước (visual step-by-step simulation)
 
-## 2. Mô Phỏng Từng Bước (Visual Step-by-Step Simulation)
-
-### Ví Dụ 1: Mô phỏng phép cộng số lớn $A = 9876$ và $B = 543$
+### Ví dụ 1: Mô phỏng phép cộng số lớn $A = 9876$ và $B = 543$
 * **Quy tắc:** Đảo ngược chuỗi để chữ số hàng đơn vị nằm ở chỉ số `0`.
 * $A' = [6, 7, 8, 9]$, $B' = [3, 4, 5]$.
 
@@ -40,33 +36,27 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 
 * Kết quả đảo ngược: $[9, 1, 4, 0, 1] \implies \mathbf{10419}$.
 
----
-
-### Ví Dụ 2: Mô phỏng phép nhân số lớn $A = 48$ với số nhỏ $b = 7$
+### Ví dụ 2: Mô phỏng phép nhân số lớn $A = 48$ với số nhỏ $b = 7$
 * $A' = [8, 4]$.
 * **Bước 0 ($i = 0$):** $8 \times 7 + 0 = 56 \implies$ Ghi $6$, `carry` $= 5$.
 * **Bước 1 ($i = 1$):** $4 \times 7 + 5 = 33 \implies$ Ghi $3$, `carry` $= 3$.
 * **Dư cuối:** Ghi `carry` $= 3$.
 * Kết quả đảo ngược: $[6, 3, 3] \implies \mathbf{336}$.
 
----
+## 3. Lý thuyết cốt lõi & bất biến thuật toán (core invariants)
 
-## 3. Lý Thuyết Cốt Lõi & Bất Biến Thuật Toán (Core Invariants)
-
-### 3.1. Mô hình Biểu diễn Số Lớn & Little-Endian
+### 3.1. Mô hình biểu diễn số lớn & little-endian
 * **Biểu diễn Little-Endian:** Lưu các chữ số theo thứ tự từ hàng thấp đến hàng cao (chữ số hàng đơn vị nằm ở chỉ số `0`).
-  * **Ưu điểm cốt lõi:** Hàng đơn vị nằm ở `index = 0`, nên khi cộng, trừ hoặc nhân ta có thể xử lý trực tiếp từ hàng thấp lên hàng cao và truyền biến nhớ `carry/borrow` sang phần tử kế tiếp ($a[0] \to a[1] \to a[2] \dots$). Ngoài ra, chữ số mới ở cuối có thể được thêm bằng `push_back()` với chi phí amortized $\mathcal{O}(1)$.
+* **Ưu điểm cốt lõi:** Hàng đơn vị nằm ở `index = 0`, nên khi cộng, trừ hoặc nhân ta có thể xử lý trực tiếp từ hàng thấp lên hàng cao và truyền biến nhớ `carry/borrow` sang phần tử kế tiếp ($a[0] \to a[1] \to a[2] \dots$). Ngoài ra, chữ số mới ở cuối có thể được thêm bằng `push_back()` với chi phí amortized $\mathcal{O}(1)$.
 * **Biểu diễn Base 10 vs Base $10^9$:**
-  * **Base 10 (`string` / `vector<int>`):** Mỗi phần tử lưu 1 chữ số thập phân ($0 \dots 9$).
-  * **Base $10^9$ (`vector<int>` / `vector<long long>`):** Nhóm các cụm 9 chữ số từ phải sang trái.
-    * *Cấu trúc dữ liệu:* Mỗi chunk lưu kiểu `int` ($0 \dots 999,999,999$); phép nhân giữa 2 chunks lưu kiểu `long long` (vì $(10^9 - 1) \times (10^9 - 1) \approx 10^{18} < 2^{63}-1$).
-    * *Ví dụ:* Số $1234567890123456789$ được tách thành:
-      $$\text{chunks} = [23456789, 123456789, 1]$$
-      $$\text{Giá trị} = 23456789 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
+* **Base 10 (`string` / `vector<int>`):** Mỗi phần tử lưu 1 chữ số thập phân ($0 \dots 9$).
+* **Base $10^9$ (`vector<int>` / `vector<long long>`):** Nhóm các cụm 9 chữ số từ phải sang trái.
+* *Cấu trúc dữ liệu:* Mỗi chunk lưu kiểu `int` ($0 \dots 999,999,999$); phép nhân giữa 2 chunks lưu kiểu `long long` (vì $(10^9 - 1) \times (10^9 - 1) \approx 10^{18} < 2^{63}-1$).
+* *Ví dụ:* Số $1234567890123456789$ được tách thành:
+$$\text{chunks} = [23456789, 123456789, 1]$$
+$$\text{Giá trị} = 23456789 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
 
----
-
-### 3.2. Bảng Tổng Hợp Các Phép Toán Số Nguyên Lớn ($\mathcal{O}(L^2)$)
+### 3.2. Bảng tổng hợp các phép toán số nguyên lớn ($\mathcal{O}(L^2)$)
 
 | Phép toán | Bản chất thuật toán | Độ phức tạp thời gian | Lưu ý quan trọng |
 |---|---|:---:|---|
@@ -77,9 +67,7 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 | **Nhân lớn ($A \times B$)** | Tích lũy $C[i + j] += A[i] \times B[j]$ rồi normalize | $\mathcal{O}(L_A \times L_B)$ | Khởi tạo mảng $L_A + L_B$ (áp dụng cho $L \le 5000$) |
 | **Chia nhỏ ($A / b, A \% b$)** | Chia từ hàng cao nhất xuống hàng đơn vị | $\mathcal{O}(L_A)$ | Biến tích lũy `cur = cur * 10 + A[i]` |
 
----
-
-### 3.3. Thuật Toán Chia Số Lớn Cho Số Nhỏ & Bất Biến Horner
+### 3.3. Thuật toán chia số lớn cho số nhỏ & bất biến horner
 Khi chia số lớn $A$ cho số nguyên $b$ ($1 \le b \le 10^9$), ta duyệt từ chữ số hàng cao nhất xuống hàng đơn vị:
 ```cpp
 string divSmall(string a, long long b) {
@@ -98,31 +86,27 @@ string divSmall(string a, long long b) {
 }
 ```
 
-### Ghi Chú:
+### Ghi chú:
 **BẤT BIẾN TOÁN HỌC CỦA PHÉP CHIA TỪNG BƯỚC:**
+
 > Vì trước mỗi bước lặp ta luôn duy trì số dư $0 \le cur < b$, nên sau khi nhận thêm một chữ số mới $cur = cur \times 10 + \text{digit}$, giá trị luôn thỏa mãn $cur < 10b$. Do đó thương tại mỗi bước `digit = cur / b` **chắc chắn luôn nằm trong khoảng $[0, 9]$** (là một chữ số thập phân hợp lệ duy nhất).
 
----
-
-### 3.4. Tối Ưu Hóa Base $10^9$ (Chunking Optimization)
+### 3.4. Tối ưu hóa base $10^9$ (chunking optimization)
 * Thay vì thực hiện phép nhân trên từng chữ số đơn lẻ (Base 10 có $L$ chữ số), ta nén số lớn thành $\frac{L}{9}$ chunks trong Base $10^9$.
 * **Đánh giá hiệu năng:** Số lượng cặp chunk cần nhân giảm xấp xỉ $\left(\frac{L}{9}\right) \times \left(\frac{L}{9}\right) = \frac{L^2}{81}$ (giảm khoảng 81 lần về số lượng phép nhân chunk). Tốc độ thực tế tăng vọt từ hàng chục lần giúp vượt qua các bài toán $N \le 10^5$.
 
----
-
-## 4. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
+## 4. Các bẫy lỗi lập trình kinh điển (bug traps)
 
 1. **Quên xóa số 0 vô nghĩa ở đầu (Leading Zeros):**
-   * Sau phép trừ (ví dụ $1000 - 999 = 0001$), nếu không xóa số 0 thì chuỗi sẽ in ra `0001`.
-   * **Cách xử lý:** `while (res.size() > 1 && res.back() == '0') res.pop_back();`.
+* Sau phép trừ (ví dụ $1000 - 999 = 0001$), nếu không xóa số 0 thì chuỗi sẽ in ra `0001`.
+* **Cách xử lý:** `while (res.size() > 1 && res.back() == '0') res.pop_back();`.
+
 2. **Không xét trường hợp số $0$:**
-   * Phép nhân $A \times 0$ phải trả về `"0"`, không được trả về rỗng `""`.
+* Phép nhân $A \times 0$ phải trả về `"0"`, không được trả về rỗng `""`.
 3. **Biến `carry` trong phép nhân số nhỏ có thể rất lớn:**
-   * Trong phép nhân $A \times b$ với $b = 10^9$, `carry` sau mỗi bước có thể lên tới $10^9$, do đó kiểu dữ liệu của `carry` bắt buộc phải là `long long`.
+* Trong phép nhân $A \times b$ với $b = 10^9$, `carry` sau mỗi bước có thể lên tới $10^9$, do đó kiểu dữ liệu của `carry` bắt buộc phải là `long long`.
 
----
-
-## 5. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Templates)
+## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
 # include <bits/stdc++.h>
@@ -131,6 +115,7 @@ using namespace std;
 // Hàm xóa số 0 vô nghĩa ở đầu chuỗi đảo ngược
 void removeLeadingZeros(string &s) {
     while (s.size() > 1 && s.back() == '0') {
+
         s.pop_back();
     }
 }
@@ -204,6 +189,7 @@ string mulBig(string a, string b) {
     }
 
     while (c.size() > 1 && c.back() == 0) {
+
         c.pop_back();
     }
 
@@ -228,114 +214,153 @@ int main() {
 }
 ```
 
----
-
-## 6. Hệ Thống Câu Hỏi Kiểm Tra Khái Niệm (Concept Quiz)
+## Câu hỏi trắc nghiệm củng cố khái niệm
 
 #### Câu 1 (Lưu trữ dữ liệu Little-Endian):
-Tại sao khi cài đặt số nguyên lớn trong C++, ta thường đảo ngược chuỗi để chữ số hàng đơn vị nằm ở vị trí chỉ số `0` (Little-Endian)?
-* A. Để tiết kiệm bộ nhớ RAM.
-* B. **(Đáp án đúng)** Để thao tác thêm chữ số mới vào cuối mảng (`push_back`) đạt độ phức tạp amortized $\mathcal{O}(1)$ thay vì phải dịch chuyển toàn bộ mảng trong $\mathcal{O}(N)$.
-* C. Để chuyển đổi sang kiểu `int` nhanh hơn.
-* D. Bắt buộc theo chuẩn ngôn ngữ C++.
+
+Tại sao khi cài đặt số nguyên lớn trong C++, ta thường đảo ngược chuỗi để chữ số hàng đơn vị nằm ở vị trí chỉ số $0$ (Little-Endian)?
+
+- **A.** Để tiết kiệm bộ nhớ RAM.
+
+- **B.** **[Đáp án đúng]** Để thao tác thêm chữ số mới vào cuối mảng (`push_back`) đạt độ phức tạp amortized $\mathcal{O}(1)$ thay vì phải dịch chuyển toàn bộ mảng trong $\mathcal{O}(N)$.
+
+- **C.** Để chuyển đổi sang kiểu `int` nhanh hơn.
+
+- **D.** Bắt buộc theo chuẩn ngôn ngữ C++.
+
 > *Giải thích:* Trong `vector` hoặc `string`, thao tác `push_back()` vào cuối có chi phí trung bình amortized $\mathcal{O}(1)$, trong khi chèn vào đầu tốn $\mathcal{O}(N)$.
 
----
-
 #### Câu 2 (Độ phức tạp phép nhân):
-Phép nhân hai số nguyên lớn có độ dài lần lượt là `N` chữ số và `M` chữ số theo thuật toán đặt tính cơ bản có độ phức tạp thời gian là:
-* A. $\mathcal{O}(N + M)$
-* B. $\mathcal{O}(\max(N, M))$
-* C. **(Đáp án đúng)** $\mathcal{O}(N \times M)$
-* D. $\mathcal{O}((N + M) \log(N + M))$
+
+Phép nhân hai số nguyên lớn có độ dài lần lượt là $N$ chữ số và $M$ chữ số theo thuật toán đặt tính cơ bản có độ phức tạp thời gian là:
+
+- **A.** $\mathcal{O}(N + M)$
+
+- **B.** $\mathcal{O}(\max(N, M))$
+
+- **C.** **[Đáp án đúng]** $\mathcal{O}(N \times M)$
+
+- **D.** $\mathcal{O}((N + M) \log(N + M))$
+
 > *Giải thích:* Mỗi chữ số của số thứ nhất phải nhân với từng chữ số của số thứ hai qua hai vòng lặp lồng nhau, tạo ra $N \times M$ phép nhân chữ số.
 
----
-
 #### Câu 3 (Độ dài tối đa kết quả phép nhân):
-Tích của một số nguyên dương có `N` chữ số và một số nguyên dương có `M` chữ số có độ dài tối đa là bao nhiêu chữ số?
-* A. $N \times M$
-* B. $\max(N, M) + 1$
-* C. **(Đáp án đúng)** $N + M$
-* D. $N + M - 1$
+
+Tích của một số nguyên dương có $N$ chữ số và một số nguyên dương có $M$ chữ số có độ dài tối đa là bao nhiêu chữ số?
+
+- **A.** $N \times M$
+
+- **B.** $\max(N, M) + 1$
+
+- **C.** **[Đáp án đúng]** $N + M$
+
+- **D.** $N + M - 1$
+
 > *Giải thích:* Giá trị lớn nhất là $(10^N - 1)(10^M - 1) < 10^{N+M}$, do đó số chữ số tối đa luôn là $N + M$.
 
----
-
 #### Câu 4 (Xử lý số 0 vô nghĩa):
-Sau khi thực hiện phép trừ số lớn `10005 - 10000`, chuỗi kết quả thu được là `"00005"`. Thao tác nào sau đây xử lý đúng để kết quả trở thành `"5"`?
-* A. Gán chuỗi bằng `"5"`.
-* B. **(Đáp án đúng)** Xóa các ký tự `'0'` ở đầu cho đến khi gặp ký tự khác `'0'` hoặc chuỗi chỉ còn đúng 1 ký tự `'0'`.
-* C. Xóa toàn bộ ký tự `'0'` trong chuỗi.
-* D. Đảo ngược chuỗi 2 lần.
-> *Giải thích:* Ta phải giữ lại ít nhất 1 chữ số trong trường hợp kết quả phép trừ bằng `0` (ví dụ $5 - 5 = 0$).
 
----
+Sau khi thực hiện phép trừ số lớn $10005 - 10000$, chuỗi kết quả thu được là `"00005"`. Thao tác nào sau đây xử lý đúng để kết quả trở thành `"5"`?
+
+- **A.** Gán chuỗi bằng `"5"`.
+
+- **B.** **[Đáp án đúng]** Xóa các ký tự `'0'` ở đầu cho đến khi gặp ký tự khác `'0'` hoặc chuỗi chỉ còn đúng 1 ký tự `'0'`.
+
+- **C.** Xóa toàn bộ ký tự `'0'` trong chuỗi.
+
+- **D.** Đảo ngược chuỗi 2 lần.
+
+> *Giải thích:* Ta phải giữ lại ít nhất 1 chữ số trong trường hợp kết quả phép trừ bằng $0$ (ví dụ $5 - 5 = 0$).
 
 #### Câu 5 (Phép chia số lớn cho số nhỏ):
-Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một số nguyên `b` ($1 \le b \le 10^9$), ta duyệt các chữ số của `A` theo thứ tự nào?
-* A. Từ hàng đơn vị lên hàng cao nhất (từ phải sang trái).
-* B. **(Đáp án đúng)** Từ hàng cao nhất xuống hàng đơn vị (từ trái sang phải), duy trì số dư tích lũy `cur = cur * 10 + digit`.
-* C. Duyệt từ giữa chuỗi sang hai bên.
-* D. Thứ tự nào cũng cho kết quả như nhau.
+
+Khi thực hiện phép chia một số lớn $A$ (có $N$ chữ số) cho một số nguyên $b$ ($1 \le b \le 10^9$), ta duyệt các chữ số của $A$ theo thứ tự nào?
+
+- **A.** Từ hàng đơn vị lên hàng cao nhất (từ phải sang trái).
+
+- **B.** **[Đáp án đúng]** Từ hàng cao nhất xuống hàng đơn vị (từ trái sang phải), duy trì số dư tích lũy $cur = cur * 10 + digit$.
+
+- **C.** Duyệt từ giữa chuỗi sang hai bên.
+
+- **D.** Thứ tự nào cũng cho kết quả như nhau.
+
 > *Giải thích:* Phép chia mô phỏng đúng quy tắc đặt tính chia của toán học: chia từ hàng cao nhất xuống hàng thấp nhất.
 
----
-
 #### Câu 6 (Trường hợp phép trừ số âm):
+
 Nếu cần tính hiệu $A - B$ của hai số nguyên dương lớn nhưng chưa biết số nào lớn hơn, giải thuật chuẩn xác là gì?
-* A. Vẫn thực hiện phép trừ bình thường $A - B$.
-* B. **(Đáp án đúng)** So sánh `A` và `B`. Nếu $A \ge B$ thì tính $A - B$. Nếu $A < B$ thì tính $B - A$ rồi thêm dấu trừ `"-"` vào đầu kết quả.
-* C. Báo lỗi không tính được.
-* D. Lấy trị tuyệt đối của từng chữ số rồi trừ nhau.
+
+- **A.** Vẫn thực hiện phép trừ bình thường $A - B$.
+
+- **B.** **[Đáp án đúng]** So sánh $A$ và $B$. Nếu $A \ge B$ thì tính $A - B$. Nếu $A < B$ thì tính $B - A$ rồi thêm dấu trừ $"-"$ vào đầu kết quả.
+
+- **C.** Báo lỗi không tính được.
+
+- **D.** Lấy trị tuyệt đối của từng chữ số rồi trừ nhau.
+
 > *Giải thích:* Phép trừ số lớn trên mảng chỉ đúng khi số bị trừ lớn hơn hoặc bằng số trừ. Khi $A < B$, ta quy về $-(B - A)$.
 
----
-
 #### Câu 7 (Tối ưu Base $10^9$):
-Thay vì lưu mỗi phần tử trong mảng là `1` chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base $10^9$) mang lại lợi ích gì về mặt thuật toán?
-* A. Giảm dung lượng bộ nhớ mảng đi khoảng 9 lần.
-* B. Giảm số lượng phép tính của phép cộng/trừ đi khoảng 9 lần.
-* C. Với phép nhân đặt tính, số cặp chunk cần xử lý giảm xấp xỉ $9^2 = 81$ lần.
-* D. **(Đáp án đúng)** Cả A, B, C đều đúng.
+
+Thay vì lưu mỗi phần tử trong mảng là $1$ chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base $10^9$) mang lại lợi ích gì về mặt thuật toán?
+
+- **A.** Giảm dung lượng bộ nhớ mảng đi khoảng 9 lần.
+
+- **B.** Giảm số lượng phép tính của phép cộng/trừ đi khoảng 9 lần.
+
+- **C.** Với phép nhân đặt tính, số cặp chunk cần xử lý giảm xấp xỉ $9^2 = 81$ lần.
+
+- **D.** **[Đáp án đúng]** Cả A, B, C đều đúng.
+
 > *Giải thích:* Base $10^9$ nén dữ liệu giúp giảm cả dung lượng bộ nhớ và số lượng phép toán chunk, giúp code BigInt chạy nhanh hơn rất nhiều trong các bài toán $N \le 10^5$.
 
----
-
 #### Câu 8 (Giai thừa số lớn $1000!$):
+
 Để tính chính xác $1000!$ mà không bị tràn số trong C++, ta áp dụng phương pháp nào?
-* A. Dùng kiểu dữ liệu `double`.
-* B. Dùng kiểu dữ liệu `__int128`.
-* C. **(Đáp án đúng)** Khởi tạo `string ans = "1"`, sau đó thực hiện vòng lặp nhân lần lượt với các số từ `2` đến `1000` bằng hàm nhân số lớn với số nhỏ.
-* D. Dùng công thức xấp xỉ Stirling.
+
+- **A.** Dùng kiểu dữ liệu `double`.
+
+- **B.** Dùng kiểu dữ liệu `__int128`.
+
+- **C.** **[Đáp án đúng]** Khởi tạo `string ans = "1"`, sau đó thực hiện vòng lặp nhân lần lượt với các số từ $2$ đến $1000$ bằng hàm nhân số lớn với số nhỏ.
+
+- **D.** Dùng công thức xấp xỉ Stirling.
+
 > *Giải thích:* $1000!$ có 2568 chữ số, vượt xa kiểu `__int128` (khoảng 38 chữ số), bắt buộc phải dùng phép nhân số lớn.
 
----
-
 #### Câu 9 (Lũy thừa số lớn $A^B$):
+
 Khi cần tính $A^B$ với `A = 2` và `B = 10000` (kết quả chính xác không lấy dư), phương pháp tối ưu là:
-* A. Nhân 2 liên tiếp 10000 lần.
-* B. **(Đáp án đúng)** Kết hợp thuật toán Lũy thừa nhị phân $\mathcal{O}(\log B)$ với phép nhân 2 số nguyên lớn.
-* C. Dùng hàm `pow(2, 10000)` trong thư viện `<cmath>`.
-* D. Chuyển sang hệ nhị phân rồi in ra.
+
+- **A.** Nhân 2 liên tiếp 10000 lần.
+
+- **B.** **[Đáp án đúng]** Kết hợp thuật toán Lũy thừa nhị phân $\mathcal{O}(\log B)$ với phép nhân 2 số nguyên lớn.
+
+- **C.** Dùng hàm `pow(2, 10000)` trong thư viện `<cmath>`.
+
+- **D.** Chuyển sang hệ nhị phân rồi in ra.
+
 > *Giải thích:* Lũy thừa nhị phân chỉ cần thực hiện $\approx 14$ phép nhân số lớn thay vì 10000 phép nhân.
 
----
-
 #### Câu 10 (So sánh hai số lớn dạng chuỗi):
-Điều kiện nào sau đây quyết định chắc chắn số nguyên dương lớn `A` lớn hơn số nguyên dương lớn `B` (giả sử cả `A` và `B` không có số 0 vô nghĩa ở đầu)?
-* A. Ký tự đầu tiên của `A` lớn hơn ký tự đầu tiên của `B`.
-* B. **(Đáp án đúng)** Độ dài chuỗi $|A| > |B|$, hoặc nếu $|A| == |B|$ thì $A > B$ theo thứ tự từ điển.
-* C. Tổng các chữ số của `A` lớn hơn tổng các chữ số của `B`.
-* D. Chữ số tận cùng của `A` lớn hơn chữ số tận cùng của `B`.
+
+Điều kiện nào sau đây quyết định chắc chắn số nguyên dương lớn $A$ lớn hơn số nguyên dương lớn $B$ (giả sử cả $A$ và $B$ không có số 0 vô nghĩa ở đầu)?
+
+- **A.** Ký tự đầu tiên của $A$ lớn hơn ký tự đầu tiên của $B$.
+
+- **B.** **[Đáp án đúng]** Độ dài chuỗi $|A| > |B|$, hoặc nếu $|A| == |B|$ thì $A > B$ theo thứ tự từ điển.
+
+- **C.** Tổng các chữ số của $A$ lớn hơn tổng các chữ số của $B$.
+
+- **D.** Chữ số tận cùng của $A$ lớn hơn chữ số tận cùng của $B$.
+
 > *Giải thích:* Số có nhiều chữ số hơn luôn lớn hơn. Khi cùng số chữ số, so sánh từ điển từ trái sang phải phản ánh đúng thứ tự so sánh từ hàng cao nhất xuống hàng thấp nhất.
 
----
+## Ma trận bài tập thực hành (P0 → P5)
 
-## 7. Ma Trận Bài Tập Thực Hành (Practice Problems $P0 \to P5$)
-
-### Ghi Chú:
+### Ghi chú:
 **Phân tầng lộ trình học tập:**
+
 > * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-BIG-01` $\to$ `12`):** Mô hình biểu diễn, So sánh, 4 phép tính cơ bản (+, -, *, /), Giai thừa, Lũy thừa, Fibonacci và Tổng chữ số.
 > * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-BIG-13` $\to$ `16`):** Chia hai số lớn, Căn bậc hai số lớn, Binary GCD và Tổ hợp chính xác kết hợp phân tích nguyên tố.
 

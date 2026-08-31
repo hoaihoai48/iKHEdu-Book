@@ -1,12 +1,3 @@
-# C++ CƠ BẢN — TỜ GHI NHỚ & TRA CỨU NHANH
-* iKHEDU C++ Bảng B — Level 1*
-
-> Tài liệu tra cứu nhanh trong quá trình học chuyên đề thuật toán. Không cần học thuộc một lần — dùng để nhớ **ý nghĩa, cách dùng và lỗi thường gặp**.
-
-> **Nguyên tắc:** Nhớ cú pháp — Hiểu ý nghĩa — Tự suy luận cách chọn thuật toán.
-
----
-
 ## 1. KHUNG TƯ DUY CỦA MỌI BÀI LẬP TRÌNH
 
 Mọi bài toán đều bắt đầu bằng chuỗi câu hỏi:
