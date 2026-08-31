@@ -38,7 +38,7 @@ Cho mảng $N = 6$ phần tử: $A = [3, 1, 4, 1, 5, 9]$ (1-based indexing).
 
 * **Truy vấn 1:** Tính tổng đoạn từ $L = 2$ đến $R = 5$ (đoạn $[1, 4, 1, 5]$):
   $$\text{Sum}(2, 5) = P[5] - P[2 - 1] = P[5] - P[1] = 14 - 3 = \mathbf{11}$$
-  *(Kiểm tra trực tiếp: $1 + 4 + 1 + 5 = 11$ — Hoàn toàn chính xác trong $\mathcal{O}(1)$).*
+  (Kiểm tra trực tiếp: $1 + 4 + 1 + 5 = 11$ — Hoàn toàn chính xác trong $\mathcal{O}(1)$).
 * **Truy vấn 2:** Tính tổng toàn bộ mảng từ $L = 1$ đến $R = 6$:
   $$\text{Sum}(1, 6) = P[6] - P[0] = 23 - 0 = \mathbf{23}$$
 
@@ -53,7 +53,7 @@ $$P[i][j] = \sum_{r=1}^{i} \sum_{c=1}^{j} A[r][c]$$
 ### 2.2. Công thức xây dựng bảng tiền tố 2D trong $\mathcal{O}(N \times M)$
 Tại mỗi ô $(i, j)$:
 $$P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]$$
-*(Giải thích: Cộng vùng phía trên và vùng bên trái, trừ đi phần giao nhau bị cộng lặp $P[i-1][j-1]$, rồi cộng thêm giá trị ô hiện tại $A[i][j]$).*
+(Giải thích: Cộng vùng phía trên và vùng bên trái, trừ đi phần giao nhau bị cộng lặp $P[i-1][j-1]$, rồi cộng thêm giá trị ô hiện tại $A[i][j]$).
 
 ### 2.3. Công thức truy vấn tổng hình chữ nhật $(x_1, y_1) \to (x_2, y_2)$ trong $\mathcal{O}(1)$
 $$\text{Sum}((x_1, y_1), (x_2, y_2)) = P[x_2][y_2] - P[x_1-1][y_2] - P[x_2][y_1-1] + P[x_1-1][y_1-1]$$
@@ -67,7 +67,7 @@ $$\begin{aligned}
 \text{Sum} &= P[3][3] - P[1][3] - P[3][1] + P[1][1] \\
 &= 45 - 6 - 12 + 1 = \mathbf{28}
 \end{aligned}$$
-*(Kiểm tra trực tiếp: $5 + 6 + 8 + 9 = 28$ — Tính toán trong đúng 4 phép toán $\mathcal{O}(1)$).*
+(Kiểm tra trực tiếp: $5 + 6 + 8 + 9 = 28$ — Tính toán trong đúng 4 phép toán $\mathcal{O}(1)$).
 
 ---
 
@@ -249,12 +249,12 @@ Tại sao khi thao tác trên mảng hiệu `D` để cộng giá trị `V` vào
 ---
 
 #### Câu 4 (Chuyển giao — Transfer):
-Nếu có `Q = 10^5` thao tác cập nhật cộng đoạn trên mảng `N = 10^5` phần tử, việc sử dụng Mảng hiệu giúp giảm độ phức tạp thời gian từ bao nhiêu xuống bao nhiêu?
-* A. Từ `O(N log N)` xuống `O(N)`.
+Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^5$ phần tử, việc sử dụng Mảng hiệu giúp giảm độ phức tạp thời gian từ bao nhiêu xuống bao nhiêu?
+* A. Từ $\mathcal{O}(N \log N)$ xuống $\mathcal{O}(N)$.
 * B. **(Đáp án đúng)** Từ `O(Q * N) ≈ 10^10` phép tính xuống `O(Q + N) ≈ 2 * 10^5` phép tính.
-* C. Từ `O(N^2)` xuống `O(N log N)`.
-* D. Từ `O(1)` xuống `O(Q)`.
-> *Giải thích:* Mỗi thao tác cập nhật mất `O(1)` (tổng `Q` thao tác mất `O(Q)`), bước khôi phục mảng mất `O(N)`. Tổng thời gian là `O(Q + N)`, chạy dưới `0.05` giây.
+* C. Từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
+* D. Từ $\mathcal{O}(1)$ xuống `O(Q)`.
+> *Giải thích:* Mỗi thao tác cập nhật mất $\mathcal{O}(1)$ (tổng `Q` thao tác mất `O(Q)`), bước khôi phục mảng mất $\mathcal{O}(N)$. Tổng thời gian là $\mathcal{O}(Q + N)$, chạy dưới `0.05` giây.
 
 ---
 
@@ -289,9 +289,9 @@ Nếu tồn tại hai chỉ số `i < j` trong mảng tiền tố thỏa mãn `P
 ---
 
 #### Câu 8 (Đồng dư tiền tố — Prefix Modulo):
-Để đếm số lượng đoạn con có tổng chia hết cho `K`, ta tính mảng tiền tố lấy dư `M[i] = P[i] bmod K`. Đoạn con `[L ... R]` có tổng chia hết cho `K` khi và chỉ khi điều kiện nào thỏa mãn?
+Để đếm số lượng đoạn con có tổng chia hết cho $K$, ta tính mảng tiền tố lấy dư `M[i] = P[i] bmod K`. Đoạn con `[L ... R]` có tổng chia hết cho $K$ khi và chỉ khi điều kiện nào thỏa mãn?
 * A. `M[R] + M[L-1] == K`.
-* B. **(Đáp án đúng)** `M[R] == M[L-1]` (hai vị trí có cùng số dư khi chia cho `K`).
+* B. **(Đáp án đúng)** `M[R] == M[L-1]` (hai vị trí có cùng số dư khi chia cho $K$).
 * C. `M[R] - M[L-1] == 1`.
 * D. `M[R] * M[L-1] == 0`.
 > *Giải thích:* `(P[R] - P[L-1]) ≡ 0 mod K iff P[R] ≡ P[L-1] mod K iff M[R] == M[L-1]`.
@@ -309,22 +309,22 @@ Khi làm việc với mảng hiệu 1D cho dãy có `N` phần tử, tại sao m
 ---
 
 #### Câu 10 (Tràn số dữ liệu lớn — Data Types):
-Cho bài toán gồm `Q = 10^5` truy vấn tổng đoạn trên ma trận `N * M = 1000 * 1000`, mỗi phần tử `A[i][j] <= 10^9`. Bảng tiền tố `P[i][j]` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì?
-* A. `10^9`, dùng kiểu `int`.
-* B. `2 * 10^9`, dùng kiểu `int`.
+Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận `N * M = 1000 * 1000`, mỗi phần tử `A[i][j] <= 10^9`. Bảng tiền tố `P[i][j]` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì?
+* A. $10^9$, dùng kiểu `int`.
+* B. $2 \times 10^9$, dùng kiểu `int`.
 * C. **(Đáp án đúng)** `10^6 * 10^9 = 10^15`, bắt buộc phải khai báo bảng `P` bằng kiểu `long long`.
-* D. `10^18`, bắt buộc dùng kiểu `__int128`.
-> *Giải thích:* Tổng của toàn bộ `1000 * 1000 = 10^6` ô, mỗi ô có giá trị `10^9`, là `10^15`. Giá trị này vượt xa giới hạn `2.14 * 10^9` của kiểu `int` 32-bit, bắt buộc phải dùng `long long` 64-bit.
+* D. $10^{18}$, bắt buộc dùng kiểu `__int128`.
+> *Giải thích:* Tổng của toàn bộ `1000  1000 = 10^6` ô, mỗi ô có giá trị $10^9$, là `10^15`. Giá trị này vượt xa giới hạn `2.14  10^9` của kiểu `int` 32-bit, bắt buộc phải dùng `long long` 64-bit.
 
 ---
 
 #### Câu 11 (Nén chiều ma trận — 2D Submatrix Compression):
-Để tìm ma trận con hình chữ nhật có tổng lớn nhất trên ma trận `N * M`, kỹ thuật tối ưu kết hợp Mảng tiền tố và Thuật toán Kadane giảm độ phức tạp từ `O(N^2 M^2)` xuống bao nhiêu?
-* A. `O(N * M)`
+Để tìm ma trận con hình chữ nhật có tổng lớn nhất trên ma trận $N \times M$, kỹ thuật tối ưu kết hợp Mảng tiền tố và Thuật toán Kadane giảm độ phức tạp từ `O(N^2 M^2)` xuống bao nhiêu?
+* A. $\mathcal{O}(N \times M)$
 * B. **(Đáp án đúng)** `O(N^2 * M)` (Cố định 2 hàng `r1, r2`, dùng tiền tố cột nén thành mảng 1D rồi chạy Kadane).
 * C. `O(N^3 * M^3)`
 * D. `O((N + M) log(NM))`
-> *Giải thích:* Cố định 2 hàng `r1, r2` mất `O(N^2)`, tổng các cột giữa 2 hàng này được tính trong `O(1)` bằng tiền tố cột, sau đó chạy Kadane 1D mất `O(M) implies` Tổng thời gian `O(N^2 M)`.
+> *Giải thích:* Cố định 2 hàng `r1, r2` mất $\mathcal{O}(N^2)$, tổng các cột giữa 2 hàng này được tính trong $\mathcal{O}(1)$ bằng tiền tố cột, sau đó chạy Kadane 1D mất `O(M) implies` Tổng thời gian `O(N^2 M)`.
 
 ---
 
@@ -344,8 +344,8 @@ Cho bài toán gồm `Q = 10^5` truy vấn tổng đoạn trên ma trận `N * M
 |:---:|:---:|---|:---:|---|---|
 | 01 | `CPPB-PT-01` | **Truy Vấn Tổng Đoạn Con 1D** | `P0` | `N, Q <= 10^5` | Prefix sum cơ bản `P[R] - P[L-1]` |
 | 02 | `CPPB-PT-02` | **Đếm Số Lượng Số Chẵn Trong Đoạn** | `P1` | `N, Q <= 10^5` | Tiền tố trên mảng điều kiện logic |
-| 03 | `CPPB-PT-03` | **Tìm Vị Trí Cân Bằng Của Mảng** | `P1` | `N <= 2 * 10^5` | Tổng trái bằng tổng phải |
-| 04 | `CPPB-PT-04` | **Đoạn Con Có Tổng Bằng 0** | `P2` | `N <= 10^5` | Nhận diện `P[i] == P[j]` |
+| 03 | `CPPB-PT-03` | **Tìm Vị Trí Cân Bằng Của Mảng** | `P1` | $N \le 2 \times 10^5$ | Tổng trái bằng tổng phải |
+| 04 | `CPPB-PT-04` | **Đoạn Con Có Tổng Bằng 0** | `P2` | $N \le 10^5$ | Nhận diện `P[i] == P[j]` |
 | 05 | `CPPB-PT-05` | **Cập Nhật Cộng Đoạn Tuyến Tính (Mảng Hiệu)** | `P2` | `N, Q <= 2 * 10^5` | Difference Array 1D cơ bản |
 | 06 | `CPPB-PT-06` | **Trồng Cây Phủ Đoạn Tối Ưu** | `P3` | `N <= 10^5, Q <= 10^5` | Mảng hiệu kết hợp quét mảng |
 | 07 | `CPPB-PT-07` | **Truy Vấn Tổng Hình Chữ Nhật 2D** | `P1` | `N, M <= 1000, Q <= 10^5` | Prefix sum 2D nguyên bản |
@@ -353,8 +353,8 @@ Cho bài toán gồm `Q = 10^5` truy vấn tổng đoạn trên ma trận `N * M
 | 09 | `CPPB-PT-09` | **Cập Nhật Cộng Hình Chữ Nhật (Mảng Hiệu 2D)** | `P3` | `N, M <= 1000, Q <= 10^5` | Difference Array 2D (4 góc) |
 | 10 | `CPPB-PT-10` | **Đoạn Con Có Tổng Chia Hết Cho K** | `P3` | `N <= 2 * 10^5, K <= 10^5` | Mảng tiền tố kết hợp đồng dư |
 | 11 | `CPPB-PT-11` | **Mảng Tiền Tố XOR Đoạn Con** | `P3` | `N, Q <= 2 * 10^5` | Tính chất `A XOR A = 0` trên Prefix XOR |
-| 12 | `CPPB-PT-12` | **Đoạn Con Cân Bằng Số Lượng 0 và 1** | `P4` | `N <= 2 * 10^5` | Biến đổi `0 to -1` đưa về bài toán tổng 0 |
+| 12 | `CPPB-PT-12` | **Đoạn Con Cân Bằng Số Lượng 0 và 1** | `P4` | $N \le 2 \times 10^5$ | Biến đổi `0 to -1` đưa về bài toán tổng 0 |
 | 13 | `CPPB-PT-13` | **Truy Vấn Ma Trận Đa Vùng Cực Đại** | `P4` | `N, M <= 1500, Q <= 10^5` | Tối ưu hóa bộ nhớ và truy vấn 2D |
 | 14 | `CPPB-PT-14` | **Phân Phối Tài Nguyên Không Gian Tuyến Tính** | `P5` | `N, Q <= 2 * 10^5` | Mảng hiệu 2 tầng (Arithmetic Progression Update) |
 | 15 | `CPPB-PT-15` | **Tìm Ma Trận Con Có Tổng Lớn Nhất (Max Submatrix)** | `P4` | `N, M <= 400` | Nén 2D về 1D + Thuật toán Kadane kết hợp Prefix Sum |
-| 16 | `CPPB-PT-16` | **Cân Bằng Tiền Tố Đa Chiều** | `P5` | `N <= 10^5` | Cân bằng 3 trạng thái đồng thời |
+| 16 | `CPPB-PT-16` | **Cân Bằng Tiền Tố Đa Chiều** | `P5` | $N \le 10^5$ | Cân bằng 3 trạng thái đồng thời |

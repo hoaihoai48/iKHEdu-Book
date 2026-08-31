@@ -10,7 +10,7 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 
 ### Big Integer Hay Modular Arithmetic: Chọn Vũ Khí Nào?
 
-![Phân định lựa chọn giải thuật: Modulo vs Big Integer](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-09-so-nguyen-lon-bigint/assets/bigint_vs_modulo_vi.svg)
+![Phân định lựa chọn giải thuật: Modulo vs Big Integer](assets/bigint_vs_modulo_vi.svg)
 
 | Đề bài yêu cầu | Quy mô kết quả | Vũ khí tối ưu | Kỹ thuật cốt lõi |
 |---|:---:|:---:|---|
@@ -235,30 +235,30 @@ int main() {
 #### Câu 1 (Lưu trữ dữ liệu Little-Endian):
 Tại sao khi cài đặt số nguyên lớn trong C++, ta thường đảo ngược chuỗi để chữ số hàng đơn vị nằm ở vị trí chỉ số `0` (Little-Endian)?
 * A. Để tiết kiệm bộ nhớ RAM.
-* B. **(Đáp án đúng)** Để thao tác thêm chữ số mới vào cuối mảng (`push_back`) đạt độ phức tạp amortized `O(1)` thay vì phải dịch chuyển toàn bộ mảng trong `O(N)`.
+* B. **(Đáp án đúng)** Để thao tác thêm chữ số mới vào cuối mảng (`push_back`) đạt độ phức tạp amortized $\mathcal{O}(1)$ thay vì phải dịch chuyển toàn bộ mảng trong $\mathcal{O}(N)$.
 * C. Để chuyển đổi sang kiểu `int` nhanh hơn.
 * D. Bắt buộc theo chuẩn ngôn ngữ C++.
-> *Giải thích:* Trong `vector` hoặc `string`, thao tác `push_back()` vào cuối có chi phí trung bình amortized `O(1)`, trong khi chèn vào đầu tốn `O(N)`.
+> *Giải thích:* Trong `vector` hoặc `string`, thao tác `push_back()` vào cuối có chi phí trung bình amortized $\mathcal{O}(1)$, trong khi chèn vào đầu tốn $\mathcal{O}(N)$.
 
 ---
 
 #### Câu 2 (Độ phức tạp phép nhân):
 Phép nhân hai số nguyên lớn có độ dài lần lượt là `N` chữ số và `M` chữ số theo thuật toán đặt tính cơ bản có độ phức tạp thời gian là:
-* A. `O(N + M)`
-* B. `O(max(N, M))`
-* C. **(Đáp án đúng)** `O(N * M)`
-* D. `O((N + M) log(N + M))`
-> *Giải thích:* Mỗi chữ số của số thứ nhất phải nhân với từng chữ số của số thứ hai qua hai vòng lặp lồng nhau, tạo ra `N * M` phép nhân chữ số.
+* A. $\mathcal{O}(N + M)$
+* B. $\mathcal{O}(\max(N, M))$
+* C. **(Đáp án đúng)** $\mathcal{O}(N \times M)$
+* D. $\mathcal{O}((N + M) \log(N + M))$
+> *Giải thích:* Mỗi chữ số của số thứ nhất phải nhân với từng chữ số của số thứ hai qua hai vòng lặp lồng nhau, tạo ra $N \times M$ phép nhân chữ số.
 
 ---
 
 #### Câu 3 (Độ dài tối đa kết quả phép nhân):
 Tích của một số nguyên dương có `N` chữ số và một số nguyên dương có `M` chữ số có độ dài tối đa là bao nhiêu chữ số?
-* A. `N * M`
-* B. `max(N, M) + 1`
-* C. **(Đáp án đúng)** `N + M`
-* D. `N + M - 1`
-> *Giải thích:* Giá trị lớn nhất là `(10^N - 1)(10^M - 1) < 10^N+M`, do đó số chữ số tối đa luôn là `N + M`.
+* A. $N \times M$
+* B. $\max(N, M) + 1$
+* C. **(Đáp án đúng)** $N + M$
+* D. $N + M - 1$
+> *Giải thích:* Giá trị lớn nhất là $(10^N - 1)(10^M - 1) < 10^{N+M}$, do đó số chữ số tối đa luôn là $N + M$.
 
 ---
 
@@ -268,12 +268,12 @@ Sau khi thực hiện phép trừ số lớn `10005 - 10000`, chuỗi kết qu�
 * B. **(Đáp án đúng)** Xóa các ký tự `'0'` ở đầu cho đến khi gặp ký tự khác `'0'` hoặc chuỗi chỉ còn đúng 1 ký tự `'0'`.
 * C. Xóa toàn bộ ký tự `'0'` trong chuỗi.
 * D. Đảo ngược chuỗi 2 lần.
-> *Giải thích:* Ta phải giữ lại ít nhất 1 chữ số trong trường hợp kết quả phép trừ bằng `0` (ví dụ `5 - 5 = 0`).
+> *Giải thích:* Ta phải giữ lại ít nhất 1 chữ số trong trường hợp kết quả phép trừ bằng `0` (ví dụ $5 - 5 = 0$).
 
 ---
 
 #### Câu 5 (Phép chia số lớn cho số nhỏ):
-Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một số nguyên `b` (`1 <= b <= 10^9`), ta duyệt các chữ số của `A` theo thứ tự nào?
+Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một số nguyên `b` ($1 \le b \le 10^9$), ta duyệt các chữ số của `A` theo thứ tự nào?
 * A. Từ hàng đơn vị lên hàng cao nhất (từ phải sang trái).
 * B. **(Đáp án đúng)** Từ hàng cao nhất xuống hàng đơn vị (từ trái sang phải), duy trì số dư tích lũy `cur = cur * 10 + digit`.
 * C. Duyệt từ giữa chuỗi sang hai bên.
@@ -283,49 +283,49 @@ Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một
 ---
 
 #### Câu 6 (Trường hợp phép trừ số âm):
-Nếu cần tính hiệu `A - B` của hai số nguyên dương lớn nhưng chưa biết số nào lớn hơn, giải thuật chuẩn xác là gì?
-* A. Vẫn thực hiện phép trừ bình thường `A - B`.
-* B. **(Đáp án đúng)** So sánh `A` và `B`. Nếu `A >= B` thì tính `A - B`. Nếu `A < B` thì tính `B - A` rồi thêm dấu trừ `"-"` vào đầu kết quả.
+Nếu cần tính hiệu $A - B$ của hai số nguyên dương lớn nhưng chưa biết số nào lớn hơn, giải thuật chuẩn xác là gì?
+* A. Vẫn thực hiện phép trừ bình thường $A - B$.
+* B. **(Đáp án đúng)** So sánh `A` và `B`. Nếu $A \ge B$ thì tính $A - B$. Nếu $A < B$ thì tính $B - A$ rồi thêm dấu trừ `"-"` vào đầu kết quả.
 * C. Báo lỗi không tính được.
 * D. Lấy trị tuyệt đối của từng chữ số rồi trừ nhau.
-> *Giải thích:* Phép trừ số lớn trên mảng chỉ đúng khi số bị trừ lớn hơn hoặc bằng số trừ. Khi `A < B`, ta quy về `-(B - A)`.
+> *Giải thích:* Phép trừ số lớn trên mảng chỉ đúng khi số bị trừ lớn hơn hoặc bằng số trừ. Khi $A < B$, ta quy về $-(B - A)$.
 
 ---
 
-#### Câu 7 (Tối ưu Base `10^9`):
-Thay vì lưu mỗi phần tử trong mảng là `1` chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base `10^9`) mang lại lợi ích gì về mặt thuật toán?
+#### Câu 7 (Tối ưu Base $10^9$):
+Thay vì lưu mỗi phần tử trong mảng là `1` chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base $10^9$) mang lại lợi ích gì về mặt thuật toán?
 * A. Giảm dung lượng bộ nhớ mảng đi khoảng 9 lần.
 * B. Giảm số lượng phép tính của phép cộng/trừ đi khoảng 9 lần.
-* C. Với phép nhân đặt tính, số cặp chunk cần xử lý giảm xấp xỉ `9^2 = 81` lần.
+* C. Với phép nhân đặt tính, số cặp chunk cần xử lý giảm xấp xỉ $9^2 = 81$ lần.
 * D. **(Đáp án đúng)** Cả A, B, C đều đúng.
-> *Giải thích:* Base `10^9` nén dữ liệu giúp giảm cả dung lượng bộ nhớ và số lượng phép toán chunk, giúp code BigInt chạy nhanh hơn rất nhiều trong các bài toán `N <= 10^5`.
+> *Giải thích:* Base $10^9$ nén dữ liệu giúp giảm cả dung lượng bộ nhớ và số lượng phép toán chunk, giúp code BigInt chạy nhanh hơn rất nhiều trong các bài toán $N \le 10^5$.
 
 ---
 
-#### Câu 8 (Giai thừa số lớn `1000!`):
-Để tính chính xác `1000!` mà không bị tràn số trong C++, ta áp dụng phương pháp nào?
+#### Câu 8 (Giai thừa số lớn $1000!$):
+Để tính chính xác $1000!$ mà không bị tràn số trong C++, ta áp dụng phương pháp nào?
 * A. Dùng kiểu dữ liệu `double`.
 * B. Dùng kiểu dữ liệu `__int128`.
 * C. **(Đáp án đúng)** Khởi tạo `string ans = "1"`, sau đó thực hiện vòng lặp nhân lần lượt với các số từ `2` đến `1000` bằng hàm nhân số lớn với số nhỏ.
 * D. Dùng công thức xấp xỉ Stirling.
-> *Giải thích:* `1000!` có 2568 chữ số, vượt xa kiểu `__int128` (khoảng 38 chữ số), bắt buộc phải dùng phép nhân số lớn.
+> *Giải thích:* $1000!$ có 2568 chữ số, vượt xa kiểu `__int128` (khoảng 38 chữ số), bắt buộc phải dùng phép nhân số lớn.
 
 ---
 
-#### Câu 9 (Lũy thừa số lớn `A^B`):
-Khi cần tính `A^B` với `A = 2` và `B = 10000` (kết quả chính xác không lấy dư), phương pháp tối ưu là:
+#### Câu 9 (Lũy thừa số lớn $A^B$):
+Khi cần tính $A^B$ với `A = 2` và `B = 10000` (kết quả chính xác không lấy dư), phương pháp tối ưu là:
 * A. Nhân 2 liên tiếp 10000 lần.
-* B. **(Đáp án đúng)** Kết hợp thuật toán Lũy thừa nhị phân `O(log B)` với phép nhân 2 số nguyên lớn.
+* B. **(Đáp án đúng)** Kết hợp thuật toán Lũy thừa nhị phân $\mathcal{O}(\log B)$ với phép nhân 2 số nguyên lớn.
 * C. Dùng hàm `pow(2, 10000)` trong thư viện `<cmath>`.
 * D. Chuyển sang hệ nhị phân rồi in ra.
-> *Giải thích:* Lũy thừa nhị phân chỉ cần thực hiện `≈ 14` phép nhân số lớn thay vì 10000 phép nhân.
+> *Giải thích:* Lũy thừa nhị phân chỉ cần thực hiện $\approx 14$ phép nhân số lớn thay vì 10000 phép nhân.
 
 ---
 
 #### Câu 10 (So sánh hai số lớn dạng chuỗi):
 Điều kiện nào sau đây quyết định chắc chắn số nguyên dương lớn `A` lớn hơn số nguyên dương lớn `B` (giả sử cả `A` và `B` không có số 0 vô nghĩa ở đầu)?
 * A. Ký tự đầu tiên của `A` lớn hơn ký tự đầu tiên của `B`.
-* B. **(Đáp án đúng)** Độ dài chuỗi `|A| > |B|`, hoặc nếu `|A| == |B|` thì `A > B` theo thứ tự từ điển.
+* B. **(Đáp án đúng)** Độ dài chuỗi $|A| > |B|$, hoặc nếu $|A| == |B|$ thì $A > B$ theo thứ tự từ điển.
 * C. Tổng các chữ số của `A` lớn hơn tổng các chữ số của `B`.
 * D. Chữ số tận cùng của `A` lớn hơn chữ số tận cùng của `B`.
 > *Giải thích:* Số có nhiều chữ số hơn luôn lớn hơn. Khi cùng số chữ số, so sánh từ điển từ trái sang phải phản ánh đúng thứ tự so sánh từ hàng cao nhất xuống hàng thấp nhất.

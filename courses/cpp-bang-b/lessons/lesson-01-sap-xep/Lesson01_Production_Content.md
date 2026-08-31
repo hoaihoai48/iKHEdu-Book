@@ -181,7 +181,7 @@ int main() {
 # CÂU HỎI TRẮC NGHIỆM ĐO LƯỜNG TƯ DUY (CONCEPT QUIZ)
 
 #### Câu 1 (Nhận diện — Recognize):
-Một bài toán ghi nhận biến động giá vàng trong `N` ngày liên tiếp: `[28, 31, 30, 27, 29]`. Đề bài yêu cầu tìm **hai ngày liên tiếp nhau có mức chênh lệch giá nhỏ nhất**. Bạn có được phép dùng hàm `sort()` để sắp xếp lại mảng này trước khi xử lý không?
+Một bài toán ghi nhận biến động giá vàng trong $N$ ngày liên tiếp: `[28, 31, 30, 27, 29]`. Đề bài yêu cầu tìm **hai ngày liên tiếp nhau có mức chênh lệch giá nhỏ nhất**. Bạn có được phép dùng hàm `sort()` để sắp xếp lại mảng này trước khi xử lý không?
 * A. Được phép, vì sắp xếp luôn giúp tìm hiệu số nhỏ nhất nhanh hơn.
 * B. **(Đáp án đúng)** Không được phép, vì yêu cầu "hai ngày liên tiếp" gắn chặt với trục thời gian gốc; sắp xếp lại sẽ làm đảo lộn thứ tự thời gian và dẫn đến kết quả sai hoàn toàn.
 * C. Được phép, nhưng phải sắp xếp theo thứ tự giảm dần.
@@ -196,24 +196,24 @@ Cho dãy tọa độ chưa sắp xếp `A = [21, 5, 13, 8, 30, 14]`. Sau khi s�
 * B. **(Đáp án đúng)** `(5, 8), (8, 13), (13, 14), (14, 21), (21, 30)`
 * C. Bắt buộc phải kiểm tra tất cả 15 cặp có thể tạo ra từ 6 số.
 * D. Chỉ cần kiểm tra cặp đầu tiên `(5, 8)` và cặp cuối cùng `(21, 30)`.
-> *Giải thích:* Nhờ tính chất lân cận của dãy số tăng dần, khoảng cách nhỏ nhất toàn cục luôn nằm ở một trong `N - 1 = 5` cặp kề nhau.
+> *Giải thích:* Nhờ tính chất lân cận của dãy số tăng dần, khoảng cách nhỏ nhất toàn cục luôn nằm ở một trong $N - 1 = 5$ cặp kề nhau.
 
 ---
 
 #### Câu 3 (Bản chất — Explain):
-Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trình viên viết `return a <= b;` thì điều gì sẽ xảy ra khi mảng có các phần tử bằng nhau và `N` lớn?
+Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trình viên viết `return a <= b;` thì điều gì sẽ xảy ra khi mảng có các phần tử bằng nhau và $N$ lớn?
 * A. Chương trình vẫn chạy đúng và sắp xếp ổn định.
 * B. Mảng sẽ được sắp xếp theo thứ tự giảm dần.
-* C. **(Đáp án đúng)** Chương trình có thể bị dừng đột ngột (Runtime Error) do vi phạm nguyên lý Strict Weak Ordering khi `a = b`.
+* C. **(Đáp án đúng)** Chương trình có thể bị dừng đột ngột (Runtime Error) do vi phạm nguyên lý Strict Weak Ordering khi $a = b$.
 * D. Hàm `sort` tự động chuyển sang `stable_sort` để xử lý.
-> *Giải thích:* Khi `a = b`, `cmp(a, b)` và `cmp(b, a)` đều trả về `true`, vi phạm tính bất đối xứng nghiêm ngặt khiến thuật toán `sort` truy cập vùng nhớ ngoài biên dẫn đến Crash.
+> *Giải thích:* Khi $a = b$, `cmp(a, b)` và `cmp(b, a)` đều trả về `true`, vi phạm tính bất đối xứng nghiêm ngặt khiến thuật toán `sort` truy cập vùng nhớ ngoài biên dẫn đến Crash.
 
 ---
 
 #### Câu 4 (Chuyển giao — Transfer):
-Khi `N = 100.000`, vì sao phương pháp **Sắp xếp rồi duyệt kề nhau** `O(N log N + N)` lại vượt trội hơn hẳn phương pháp **Duyệt mọi cặp** `O(N^2)`?
+Khi $N = 100{,}000$, vì sao phương pháp **Sắp xếp rồi duyệt kề nhau** $\mathcal{O}(N \log N + N)$ lại vượt trội hơn hẳn phương pháp **Duyệt mọi cặp** $\mathcal{O}(N^2)$?
 * A. Vì hàm `sort()` làm giảm bớt số lượng phần tử cần lưu trữ trong bộ nhớ.
-* B. **(Đáp án đúng)** Vì việc sắp xếp tạo ra cấu trúc trật tự, giúp loại bỏ hàng tỷ cặp không có khả năng tối ưu mà chỉ cần xét `N-1` cặp kề nhau.
+* B. **(Đáp án đúng)** Vì việc sắp xếp tạo ra cấu trúc trật tự, giúp loại bỏ hàng tỷ cặp không có khả năng tối ưu mà chỉ cần xét $N-1$ cặp kề nhau.
 * C. Vì `sort()` được biên dịch sang mã máy đa luồng của CPU.
 * D. Vì số phép tính của 2 cách là như nhau nhưng `sort()` tốn ít bộ nhớ RAM hơn.
 > *Giải thích:* Bản chất của việc sắp xếp là biến đổi bài toán để giảm thiểu không gian tìm kiếm, giúp ta không phải kiểm tra những trường hợp chắc chắn không tối ưu.
@@ -232,26 +232,26 @@ Cách nào sau đây là chuẩn mực và an toàn nhất trong C++ để sắp
 
 #### Câu 6 (Phân biệt cấu trúc — Compare):
 Sự khác biệt cốt lõi giữa `sort` và `stable_sort` trong thư viện chuẩn C++ là gì?
-* A. `sort` có độ phức tạp `O(N^2)`, còn `stable_sort` là `O(N log N)`.
+* A. `sort` có độ phức tạp $\mathcal{O}(N^2)$, còn `stable_sort` là $\mathcal{O}(N \log N)$.
 * B. **(Đáp án đúng)** `stable_sort` đảm bảo giữ nguyên thứ tự xuất hiện ban đầu của các phần tử có giá trị tương đương nhau, còn `sort` thì không đảm bảo điều này.
 * C. `sort` chỉ sắp xếp được số nguyên, còn `stable_sort` sắp xếp được chuỗi.
-* D. `stable_sort` không tốn thêm bất kỳ bộ nhớ phụ trợ nào (`O(1)`).
-> *Giải thích:* Tính ổn định (Stability) nghĩa là nếu `A_i = A_j` và `i < j`, sau khi sort thì `A_i` vẫn đứng trước `A_j`. `stable_sort` đảm bảo tính chất này (dùng MergeSort).
+* D. `stable_sort` không tốn thêm bất kỳ bộ nhớ phụ trợ nào ($\\mathcal{O}(1)$).
+> *Giải thích:* Tính ổn định (Stability) nghĩa là nếu $A_i = A_j$ và $i < j$, sau khi sort thì $A_i$ vẫn đứng trước $A_j$. `stable_sort` đảm bảo tính chất này (dùng MergeSort).
 
 ---
 
 #### Câu 7 (Thuật toán lân cận — Technique):
-Sau khi sắp xếp một mảng `N` phần tử tăng dần, thuật toán đếm số lượng giá trị phân biệt (Distinct values) hoạt động trong thời gian bao lâu?
-* A. `O(N^2)` vì phải so sánh từng cặp.
-* B. `O(N log N)` vì phải dùng thêm cây nhị phân tìm kiếm.
-* C. **(Đáp án đúng)** `O(N)` vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi `A[i] ≠ A[i-1]`.
-* D. `O(1)` bằng công thức toán học.
-> *Giải thích:* Sau khi sort, toàn bộ các phần tử trùng lặp đều nằm liền kề. Duyệt qua mảng và tăng biến đếm mỗi khi gặp một giá trị khác với phần tử đứng trước nó chỉ tốn `O(N)`.
+Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đếm số lượng giá trị phân biệt (Distinct values) hoạt động trong thời gian bao lâu?
+* A. $\mathcal{O}(N^2)$ vì phải so sánh từng cặp.
+* B. $\mathcal{O}(N \log N)$ vì phải dùng thêm cây nhị phân tìm kiếm.
+* C. **(Đáp án đúng)** $\mathcal{O}(N)$ vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi $A[i] \ne A[i-1]$.
+* D. $\mathcal{O}(1)$ bằng công thức toán học.
+> *Giải thích:* Sau khi sort, toàn bộ các phần tử trùng lặp đều nằm liền kề. Duyệt qua mảng và tăng biến đếm mỗi khi gặp một giá trị khác với phần tử đứng trước nó chỉ tốn $\mathcal{O}(N)$.
 
 ---
 
 #### Câu 8 (Comparator hàm mục tiêu — Logic):
-Trong bài toán ghép `N` chuỗi số `S1, S2, ..., S_N` để tạo ra số nguyên lớn nhất, tại sao hàm so sánh `bool cmp(string a, string b)` lại được định nghĩa là `return a + b > b + a;`?
+Trong bài toán ghép $N$ chuỗi số $S_1, S_2, \dots, S_N$ để tạo ra số nguyên lớn nhất, tại sao hàm so sánh `bool cmp(string a, string b)` lại được định nghĩa là `return a + b > b + a;`?
 * A. Vì chuỗi có độ dài dài hơn luôn tạo ra số lớn hơn.
 * B. **(Đáp án đúng)** Vì thứ tự ghép trực tiếp `a + b` so với `b + a` phản ánh chính xác đóng góp vị trí chữ số của `a` và `b` vào số ghép tổng thể, đồng thời thỏa mãn tính chất bắc cầu.
 * C. Vì đây là quy ước bắt buộc của chuẩn ANSI C++.
@@ -261,7 +261,7 @@ Trong bài toán ghép `N` chuỗi số `S1, S2, ..., S_N` để tạo ra số n
 ---
 
 #### Câu 9 (Sắp xếp đa tiêu chí — Multi-criteria):
-Khi sắp xếp danh sách các đoạn thẳng `[L_i, R_i]` theo tiêu chí: *Điểm bắt đầu `L` tăng dần; nếu trùng `L` thì điểm kết thúc `R` giảm dần*, comparator nào sau đây viết đúng chuẩn Strict Weak Ordering?
+Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Điểm bắt đầu $L$ tăng dần; nếu trùng $L$ thì điểm kết thúc $R$ giảm dần, comparator nào sau đây viết đúng chuẩn Strict Weak Ordering?
 * A. `return (a[0] <= b[0]) && (a[1] >= b[1]);`
 * B. `if (a[0] < b[0]) return true; else return a[1] > b[1];`
 * C. **(Đáp án đúng)** `if (a[0] != b[0]) return a[0] < b[0]; return a[1] > b[1];`
@@ -271,12 +271,12 @@ Khi sắp xếp danh sách các đoạn thẳng `[L_i, R_i]` theo tiêu chí: *�
 ---
 
 #### Câu 10 (Xử lý kiểu dữ liệu & Tràn số — Robustness):
-Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong `N` điểm trên trục tọa độ, với tọa độ `X_i in [-10^18, 10^18]`. Sai lầm nguy hiểm nhất khi duyệt cặp kề nhau `(X_i, X[i+1])` là gì?
+Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ điểm trên trục tọa độ, với tọa độ $X_i \in [-10^{18}, 10^{18}]$. Sai lầm nguy hiểm nhất khi duyệt cặp kề nhau $(X_i, X_{i+1})$ là gì?
 * A. Sử dụng `sort` thay vì tự viết QuickSort.
-* B. **(Đáp án đúng)** Lưu biến kết quả bằng kiểu `int` hoặc `long` (32-bit), gây tràn số âm khi tính hiệu `X[i+1] - X_i`.
+* B. **(Đáp án đúng)** Lưu biến kết quả bằng kiểu `int` hoặc `long` (32-bit), gây tràn số âm khi tính hiệu $X_{i+1} - X_i$.
 * C. Đọc dữ liệu bằng `cin` có Fast I/O.
-* D. Duyệt vòng lặp từ `i = 0` đến `N - 2`.
-> *Giải thích:* Với `X_i` lên tới `10^18`, khoảng cách giữa 2 điểm có thể đạt tới `2 * 10^18`, vượt xa giới hạn `2 * 10^9` của kiểu `int`. Bắt buộc phải dùng kiểu `long long` (64-bit) cho toàn bộ mảng và biến tính khoảng cách.
+* D. Duyệt vòng lặp từ `i = 0` đến $N - 2$.
+> *Giải thích:* Với $X_i$ lên tới $10^{18}$, khoảng cách giữa 2 điểm có thể đạt tới $2 \times 10^{18}$, vượt xa giới hạn $2 \times 10^9$ của kiểu `int`. Bắt buộc phải dùng kiểu `long long` (64-bit) cho toàn bộ mảng và biến tính khoảng cách.
 
 ---
 
@@ -284,17 +284,17 @@ Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong `N` đi�
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-SX-01` | **Xếp Hàng Điểm Danh** | `P0` | `N <= 1000, A_i <= 10^6` | Cú pháp `sort` cơ bản |
-| 02 | `CPPB-SX-02` | **Khoảng Cách Nhỏ Nhất** | `P1` | `N <= 10^5, A_i <= 10^9` | Sắp xếp duyệt cặp kề |
-| 03 | `CPPB-SX-03` | **Sắp Xếp Theo Trị Tuyệt Đối** | `P1` | `N <= 10^5, vert A_i vert <= 10^9` | Custom comparator cơ bản |
-| 04 | `CPPB-SX-04` | **Đếm Giá Trị Phân Biệt** | `P2` | `N <= 2 * 10^5, vert A_i vert <= 10^9` | Gom nhóm sau sắp xếp |
-| 05 | `CPPB-SX-05` | **Hai Trạm Kiểm Soát Gần Nhau Nhất** | `P2` | `N <= 10^5, X_i <= 10^12` | Xử lý dữ liệu lớn `long long` |
-| 06 | `CPPB-SX-06` | **Khoảng Trống Lớn Nhất Trên Trục Tọa Độ** | `P3` | `N <= 10^5, vert A_i vert <= 10^18` | Khai thác trật tự tuyến tính |
-| 07 | `CPPB-SX-07` | **Sắp Xếp Theo Tổng Chữ Số** | `P1` | `N <= 10^5, A_i <= 10^9` | Hàm biến đổi phụ trong comparator |
-| 08 | `CPPB-SX-08` | **Gom Cụm Chênh Lệch Không Quá K** | `P2` | `N <= 2 * 10^5, A_i <= 10^9` | Tham lam tuyến tính trên mảng sắp xếp |
-| 09 | `CPPB-SX-09` | **Tìm Phần Tử Xuất Hiện Nhiều Nhất** | `P2` | `N <= 2 * 10^5, vert A_i vert <= 10^9` | Đếm tần suất khối liên tiếp |
-| 10 | `CPPB-SX-10` | **Sắp Xếp Lưu Vị Trí Ban Đầu** | `P3` | `N <= 10^5, vert A_i vert <= 10^9` | Theo dõi chỉ số gốc (Index Tracking) |
-| 11 | `CPPB-SX-11` | **Ghép Chuỗi Tạo Số Lớn Nhất** | `P3` | `N <= 10^4` | So sánh chuỗi bắc cầu (`a+b > b+a`) |
-| 12 | `CPPB-SX-12` | **Bảng Điểm Học Sinh Đa Trường** | `P4` | `N <= 10^5` | Sắp xếp đa khóa ưu tiên |
-| 13 | `CPPB-SX-13` | **Bảng Xếp Hạng Giải Đấu Thể Thao** | `P4` | `N <= 10^5` | Sắp xếp tổ hợp 4 tiêu chí |
-| 14 | `CPPB-SX-14` | **Sắp Xếp Đoạn Thẳng Không Giao Lỗi** | `P5` | `N <= 2 * 10^5` | Strict Weak Ordering & `stable_sort` |
+| 01 | `CPPB-SX-01` | **Xếp Hàng Điểm Danh** | `P0` | $N \le 1000, A_i \le 10^6$ | Cú pháp `sort` cơ bản |
+| 02 | `CPPB-SX-02` | **Khoảng Cách Nhỏ Nhất** | `P1` | $N \le 10^5, A_i \le 10^9$ | Sắp xếp duyệt cặp kề |
+| 03 | `CPPB-SX-03` | **Sắp Xếp Theo Trị Tuyệt Đối** | `P1` | $N \le 10^5, \vert A_i \vert \le 10^9$ | Custom comparator cơ bản |
+| 04 | `CPPB-SX-04` | **Đếm Giá Trị Phân Biệt** | `P2` | $N \le 2 \times 10^5, \vert A_i \vert \le 10^9$ | Gom nhóm sau sắp xếp |
+| 05 | `CPPB-SX-05` | **Hai Trạm Kiểm Soát Gần Nhau Nhất** | `P2` | $N \le 10^5, X_i \le 10^{12}$ | Xử lý dữ liệu lớn `long long` |
+| 06 | `CPPB-SX-06` | **Khoảng Trống Lớn Nhất Trên Trục Tọa Độ** | `P3` | $N \le 10^5, \vert A_i \vert \le 10^{18}$ | Khai thác trật tự tuyến tính |
+| 07 | `CPPB-SX-07` | **Sắp Xếp Theo Tổng Chữ Số** | `P1` | $N \le 10^5, A_i \le 10^9$ | Hàm biến đổi phụ trong comparator |
+| 08 | `CPPB-SX-08` | **Gom Cụm Chênh Lệch Không Quá K** | `P2` | $N \le 2 \times 10^5, A_i \le 10^9$ | Tham lam tuyến tính trên mảng sắp xếp |
+| 09 | `CPPB-SX-09` | **Tìm Phần Tử Xuất Hiện Nhiều Nhất** | `P2` | $N \le 2 \times 10^5, \vert A_i \vert \le 10^9$ | Đếm tần suất khối liên tiếp |
+| 10 | `CPPB-SX-10` | **Sắp Xếp Lưu Vị Trí Ban Đầu** | `P3` | $N \le 10^5, \vert A_i \vert \le 10^9$ | Theo dõi chỉ số gốc (Index Tracking) |
+| 11 | `CPPB-SX-11` | **Ghép Chuỗi Tạo Số Lớn Nhất** | `P3` | $N \le 10^4$ | So sánh chuỗi bắc cầu (`a+b > b+a`) |
+| 12 | `CPPB-SX-12` | **Bảng Điểm Học Sinh Đa Trường** | `P4` | $N \le 10^5$ | Sắp xếp đa khóa ưu tiên |
+| 13 | `CPPB-SX-13` | **Bảng Xếp Hạng Giải Đấu Thể Thao** | `P4` | $N \le 10^5$ | Sắp xếp tổ hợp 4 tiêu chí |
+| 14 | `CPPB-SX-14` | **Sắp Xếp Đoạn Thẳng Không Giao Lỗi** | `P5` | $N \le 2 \times 10^5$ | Strict Weak Ordering & `stable_sort` |

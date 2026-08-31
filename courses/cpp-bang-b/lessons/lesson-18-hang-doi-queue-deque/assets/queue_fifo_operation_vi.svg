@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <rect width="900" height="380" fill="#0f172a" rx="16"/>
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">CƠ CHẾ FIFO CỦA HÀNG ĐỢI (QUEUE) &amp; LAN TỎA BFS THEO TỪNG TẦNG</text>
+
+  <!-- Queue pipe -->
+  <g transform="translate(100, 80)">
+    <rect x="100" y="30" width="300" height="60" fill="#1e293b" stroke="#38bdf8" stroke-width="2" stroke-dasharray="300 0 0 300"/>
+    <text x="40" y="65" fill="#4ade80" font-weight="bold" font-size="14">POP (Đầu q.front())</text>
+    <text x="430" y="65" fill="#facc15" font-weight="bold" font-size="14">PUSH (Đuôi q.push())</text>
+
+    <!-- Elements -->
+    <rect x="120" y="38" width="50" height="44" fill="#065f46" rx="4"/>
+    <text x="145" y="65" fill="#f8fafc" font-weight="bold" text-anchor="middle">u1</text>
+    <rect x="180" y="38" width="50" height="44" fill="#1e1b4b" rx="4"/>
+    <text x="205" y="65" fill="#f8fafc" text-anchor="middle">u2</text>
+    <rect x="240" y="38" width="50" height="44" fill="#1e1b4b" rx="4"/>
+    <text x="265" y="65" fill="#f8fafc" text-anchor="middle">u3</text>
+    <rect x="300" y="38" width="50" height="44" fill="#854d0e" rx="4"/>
+    <text x="325" y="65" fill="#f8fafc" text-anchor="middle">u4</text>
+  </g>
+
+  <!-- Layered BFS graph -->
+  <g transform="translate(100, 180)">
+    <circle cx="100" cy="80" r="22" fill="#047857" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="86" fill="#f8fafc" font-weight="bold" text-anchor="middle">Gốc S</text>
+    <text x="100" y="125" fill="#4ade80" font-size="12" text-anchor="middle">Tầng 0 (d=0)</text>
+
+    <line x1="122" y1="70" x2="260" y2="40" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="122" y1="90" x2="260" y2="120" stroke="#94a3b8" stroke-width="2"/>
+
+    <circle cx="280" cy="40" r="18" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="280" y="45" fill="#f8fafc" text-anchor="middle">A</text>
+    <circle cx="280" cy="120" r="18" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="280" y="125" fill="#f8fafc" text-anchor="middle">B</text>
+    <text x="280" y="160" fill="#38bdf8" font-size="12" text-anchor="middle">Tầng 1 (d=1)</text>
+
+    <line x1="298" y1="40" x2="440" y2="40" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="298" y1="120" x2="440" y2="120" stroke="#94a3b8" stroke-width="2"/>
+
+    <circle cx="460" cy="40" r="18" fill="#1e1b4b" stroke="#c084fc" stroke-width="2"/>
+    <text x="460" y="45" fill="#f8fafc" text-anchor="middle">C</text>
+    <circle cx="460" cy="120" r="18" fill="#1e1b4b" stroke="#c084fc" stroke-width="2"/>
+    <text x="460" y="125" fill="#f8fafc" text-anchor="middle">D</text>
+    <text x="460" y="160" fill="#c084fc" font-size="12" text-anchor="middle">Tầng 2 (d=2)</text>
+  </g>
+</svg>

@@ -4,7 +4,7 @@
 
 ## 1. Bản Chất Vấn Đề & Trực Giác Thuật Toán (The Core Problem & Intuition)
 
-Trong các bài toán lập trình cơ bản, chúng ta quen thuộc với tư duy lặp tuần tự (`for`, `while`): xử lý từng phần tử lần lượt từ đầu đến cuối. Tuy nhiên, trong thế giới cấu trúc dữ liệu và giải thuật nâng cao, rất nhiều bài toán mang bản chất **tự đồng dạng (Self-Similarity)**: *Để giải một bài toán quy mô $N$, ta có thể giải bài toán tương tự nhưng ở quy mô nhỏ hơn $N-1$ hoặc $N/2$, sau đó kết hợp kết quả lại.*
+Trong các bài toán lập trình cơ bản, chúng ta quen thuộc với tư duy lặp tuần tự (`for`, `while`): xử lý từng phần tử lần lượt từ đầu đến cuối. Tuy nhiên, trong thế giới cấu trúc dữ liệu và giải thuật nâng cao, rất nhiều bài toán mang bản chất **tự đồng dạng (Self-Similarity)**: Để giải một bài toán quy mô $N$, ta có thể giải bài toán tương tự nhưng ở quy mô nhỏ hơn $N-1$ hoặc $N/2$, sau đó kết hợp kết quả lại.
 
 ### Khái Niệm Đệ Quy (Recursion):
 Đệ quy là kỹ thuật lập trình trong đó **một hàm tự gọi lại chính nó** (trực tiếp hoặc gián tiếp) với các tham số đại diện cho bài toán con nhỏ hơn.
@@ -13,7 +13,7 @@ Mỗi hàm đệ quy chuẩn mực bắt buộc phải có đủ 2 thành phần
 1. **Điểm Dừng (Base Case / Anchor):** Trường hợp bài toán đơn giản nhất đã biết trước đáp án mà không cần gọi tiếp đệ quy. Điểm dừng có nhiệm vụ **ngắt chuỗi lời gọi vô tận**.
 2. **Bước Đệ Quy (Recursive Case / Reduction Step):** Thu nhỏ quy mô bài toán bằng cách gọi lại chính hàm đó với tham số tiến dần về phía Base Case.
 
-![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_structure_vi.svg)
+![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](assets/recursion_structure_vi.svg)
 
 ---
 
@@ -92,14 +92,14 @@ Trong lý thuyết ngôn ngữ, *Đệ quy đuôi (Tail Recursion)* là hàm đ�
 
 ### 3.2. Hệ Thống Phân Loại Thuật Ngữ Đệ Quy (Recursion Taxonomy)
 
-![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_taxonomy_vi.svg)
+![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](assets/recursion_taxonomy_vi.svg)
 
 1. **Đệ quy Tuyến tính (Linear Recursion - 1 nhánh gọi / Frame):**
    * Trong mỗi Stack Frame chỉ thực hiện **đúng 1 lời gọi đệ quy con**. Cây gọi hàm là một đường thẳng đơn tuyến.
    * *Ví dụ:*
      * Giai thừa $N!$: Độ sâu $N$, thời gian $\Theta(N)$, Stack Space $\Theta(N)$.
      * Thuật toán Euclid $\gcd(A, B)$: Độ sâu $\Theta(\log(\min(A, B)))$, thời gian $\Theta(\log(\min(A, B)))$.
-     * Lũy thừa nhị phân `powerRec(A, B/2)` (khi lưu biến tạm `half`): Độ sâu $\Theta(\log B)$, thời gian $\Theta(\log B)$. *Lưu ý:* Mặc dù quy mô bài toán giảm theo cấp số nhân ($B \to B/2$), cấu trúc cây gọi hàm vẫn là đường thẳng 1 nhánh đơn tuyến.
+      Lũy thừa nhị phân `powerRec(A, B/2)` (khi lưu biến tạm `half`): Độ sâu $\Theta(\log B)$, thời gian $\Theta(\log B)$. Lưu ý:* Mặc dù quy mô bài toán giảm theo cấp số nhân ($B \to B/2$), cấu trúc cây gọi hàm vẫn là đường thẳng 1 nhánh đơn tuyến.
 
 2. **Đệ quy Phân nhánh (Branching / Tree Recursion - $\ge 2$ nhánh gọi / Frame):**
    * Trong mỗi Stack Frame xuất hiện **từ 2 lời gọi đệ quy con trở lên**, làm bùng nổ không gian trạng thái tạo thành cây nhị phân hoặc cây đa phân.
@@ -114,12 +114,12 @@ Trong lý thuyết ngôn ngữ, *Đệ quy đuôi (Tail Recursion)* là hàm đ�
 
 Xét cây gọi hàm khi tính $F(5)$ bằng đệ quy phân nhánh:
 
-![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/fibonacci_recursion_tree_vi.svg)
+![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](assets/fibonacci_recursion_tree_vi.svg)
 
 * **Phân tích độ phức tạp tiệm cận chính xác:**
   Số lời gọi hàm thỏa mãn hệ thức truy hồi $T(N) = T(N-1) + T(N-2) + 1$. Bằng phương trình đặc trưng $r^2 - r - 1 = 0$, ta chứng minh được số phép tính thực tế tăng theo **cấp số nhân chính xác**:
   $$\Theta(\varphi^N) \quad \text{với} \quad \varphi = \frac{1 + \sqrt{5}}{2} \approx 1.618 \text{ (Tỉ lệ vàng)}$$
-  *Chặn trên $O(2^N)$ là một cận trên lỏng (Upper Bound).*
+  Chặn trên $O(2^N)$ là một cận trên lỏng (Upper Bound).
 * **Hiện tượng Overlapping Subproblems:**
   Để tính $F(5)$, hàm $F(3)$ bị tính lại 2 lần, $F(2)$ bị tính lại 3 lần. Với $N = 40$, số lượng lời gọi đã lên tới hàng trăm triệu theo mô hình Fibonacci ($\Theta(\varphi^N)$), minh họa rõ hiện tượng bùng nổ thời gian.
 * **Bài học sư phạm:** Đệ quy thuần túy rất đẹp nhưng sẽ bị tê liệt khi không gian trạng thái có các bài toán con trùng lặp. Việc **lưu lại kết quả đã tính vào bảng nhớ (Memoization)** sẽ được học bài bản ở **Module 05: Quy Hoạch Động (Dynamic Programming)**.
@@ -246,11 +246,11 @@ int fib(int n) {
 }
 ```
 có độ phức tạp thời gian tiệm cận chính xác (Tight Bound) là bao nhiêu?
-* A. `O(N)`
-* B. `O(N^2)`
-* C. `O(log N)`
-* D. **(Đáp án đúng)** `Theta(phi^N)` với `phi = (1 + sqrt(5)) / 2 approx 1.618` (thường được chặn trên bởi `O(2^N)`).
-> *Giải thích:* Số lượng lời gọi hàm thỏa mãn hệ thức truy hồi Fibonacci, có nghiệm chính xác tỷ lệ với lũy thừa tỉ lệ vàng `phi^N approx 1.618^N`.
+* A. $\mathcal{O}(N)$
+* B. $\mathcal{O}(N^2)$
+* C. $\mathcal{O}(\log N)$
+* D. **(Đáp án đúng)** $\Theta(\varphi^N)$ với $\varphi = (1 + \sqrt{5})/2 \approx 1.618$ (thường được chặn trên bởi $\mathcal{O}(2^N)$).
+> *Giải thích:* Số lượng lời gọi hàm thỏa mãn hệ thức truy hồi Fibonacci, có nghiệm chính xác tỷ lệ với lũy thừa tỉ lệ vàng $\varphi^N \approx 1.618^N$.
 
 ---
 
@@ -265,20 +265,20 @@ Yếu tố nào sau đây quyết định trực tiếp việc một hàm đệ 
 ---
 
 #### Câu 6 (Bẫy gọi đệ quy lặp lại):
-Trong thuật toán lũy thừa nhị phân `A^B`, nếu viết:
+Trong thuật toán lũy thừa nhị phân $A^B$, nếu viết:
 `return power(a, b / 2) * power(a, b / 2);`
 thay vì lưu vào biến tạm `long long half = power(a, b / 2);`, độ phức tạp thời gian sẽ bị suy biến thành:
-* A. Vẫn giữ nguyên `O(log B)`.
+* A. Vẫn giữ nguyên $\mathcal{O}(\log B)$.
 * B. **(Đáp án đúng)** Bị suy biến thành `Theta(B)` (tương đương với vòng lặp nhân tuần tự).
-* C. `O(1)`.
-* D. `O(B^2)`.
-> *Giải thích:* Việc gọi lại 2 lần cùng một hàm con biến cây gọi hàm thành cây nhị phân đầy đủ có số lượng nút bằng `2^(log2 B) = B`, làm mất hoàn toàn ưu thế của chia để trị.
+* C. $\mathcal{O}(1)$.
+* D. $\mathcal{O}(B^2)$.
+> *Giải thích:* Việc gọi lại 2 lần cùng một hàm con biến cây gọi hàm thành cây nhị phân đầy đủ có số lượng nút bằng $2^{\log_2 B} = B$, làm mất hoàn toàn ưu thế của chia để trị.
 
 ---
 
 #### Câu 7 (Đặc điểm Tail Recursion trong C++):
 Nhận định nào sau đây là chính xác nhất về Đệ quy đuôi (Tail Recursion) trong ngôn ngữ C++ chuẩn thi đấu?
-* A. C++ luôn tự động tối ưu đệ quy đuôi thành vòng lặp với bộ nhớ `O(1)` trong mọi trường hợp.
+* A. C++ luôn tự động tối ưu đệ quy đuôi thành vòng lặp với bộ nhớ $\mathcal{O}(1)$ trong mọi trường hợp.
 * B. **(Đáp án đúng)** C++ không đảm bảo luôn tối ưu đệ quy đuôi; mức độ tối ưu phụ thuộc vào trình biên dịch, cờ tối ưu và kiến trúc CPU, do đó vẫn có nguy cơ tràn stack.
 * C. Đệ quy đuôi chạy chậm hơn đệ quy thông thường.
 * D. Đệ quy đuôi chỉ áp dụng được cho hàm trả về `void`.
@@ -288,21 +288,21 @@ Nhận định nào sau đây là chính xác nhất về Đệ quy đuôi (Tail
 
 #### Câu 8 (Số bước di chuyển Tháp Hà Nội):
 Với bài toán Tháp Hà Nội chuẩn gồm `N` đĩa, số bước di chuyển tối thiểu chính xác là:
-* A. `2 * N`
-* B. `N^2`
-* C. **(Đáp án đúng)** `2^N - 1` (đạt độ phức tạp thời gian `Theta(2^N)`).
-* D. `N!`
-> *Giải thích:* Hệ thức truy hồi số bước chuyển đĩa là `T(N) = 2 * T(N - 1) + 1` với `T(1) = 1`, giải hệ thức thu được nghiệm tổng quát `T(N) = 2^N - 1`.
+* A. $2N$
+* B. $N^2$
+* C. **(Đáp án đúng)** $2^N - 1$ (đạt độ phức tạp thời gian $\Theta(2^N)$).
+* D. $N!$
+> *Giải thích:* Hệ thức truy hồi số bước chuyển đĩa là $T(N) = 2T(N - 1) + 1$ với $T(1) = 1$, giải hệ thức thu được nghiệm tổng quát $T(N) = 2^N - 1$.
 
 ---
 
 #### Câu 9 (Bản chất đệ quy chia đôi tìm Min/Max):
-Khi tìm Min/Max của mảng `N` phần tử bằng hàm đệ quy chia đôi `getMin(l, r) = min(getMin(l, mid), getMin(mid + 1, r))`, độ phức tạp thời gian tiệm cận là:
-* A. `O(log N)` vì mảng luôn được chia đôi ở mỗi bước.
-* B. **(Đáp án đúng)** `Theta(N)` vì thuật toán bắt buộc phải thăm và so sánh toàn bộ `N` phần tử của cả hai nửa mảng.
-* C. `O(N log N)`.
-* D. `O(1)`.
-> *Giải thích:* Hệ thức thời gian là `T(N) = 2T(N/2) + O(1)`. Theo định lý thợ (Master Theorem), độ phức tạp là `Theta(N)`. "Chia đôi" không đồng nghĩa với `O(log N)` nếu phải duyệt cả hai nhánh.
+Khi tìm Min/Max của mảng `N` phần tử bằng hàm đệ quy chia đôi $\text{getMin}(l, r) = \min(\text{getMin}(l, mid), \text{getMin}(mid + 1, r))$, độ phức tạp thời gian tiệm cận là:
+* A. $\mathcal{O}(\log N)$ vì mảng luôn được chia đôi ở mỗi bước.
+* B. **(Đáp án đúng)** $\Theta(N)$ vì thuật toán bắt buộc phải thăm và so sánh toàn bộ `N` phần tử của cả hai nửa mảng.
+* C. $\mathcal{O}(N \log N)$.
+* D. $\mathcal{O}(1)$.
+> *Giải thích:* Hệ thức thời gian là $T(N) = 2T(N/2) + \mathcal{O}(1)$. Theo định lý thợ (Master Theorem), độ phức tạp là $\Theta(N)$. "Chia đôi" không đồng nghĩa với $\mathcal{O}(\log N)$ nếu phải duyệt cả hai nhánh.
 
 ---
 
@@ -312,7 +312,7 @@ Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị 
 * B. Kỹ thuật hai con trỏ (Two Pointers).
 * C. **(Đáp án đúng)** Quy hoạch động & Bảng nhớ (Dynamic Programming & Memoization).
 * D. Sắp xếp trộn (Merge Sort).
-> *Giải thích:* Khi một bài toán có tính chất bài toán con trùng lặp (Overlapping Subproblems), ta có thể lưu kết quả tính được lần đầu vào bảng nhớ để tái sử dụng ngay trong `O(1)` ở các lần gặp tiếp theo, chính là bản chất của Quy hoạch động.
+> *Giải thích:* Khi một bài toán có tính chất bài toán con trùng lặp (Overlapping Subproblems), ta có thể lưu kết quả tính được lần đầu vào bảng nhớ để tái sử dụng ngay trong $\mathcal{O}(1)$ ở các lần gặp tiếp theo, chính là bản chất của Quy hoạch động.
 
 ---
 

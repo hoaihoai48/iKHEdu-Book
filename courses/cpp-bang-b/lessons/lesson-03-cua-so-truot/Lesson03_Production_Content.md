@@ -151,7 +151,7 @@ int main() {
 
 ## 6. Kỹ Thuật Cửa Sổ Trượt Với Bảng Đếm Ký Tự / Trạng Thái
 
-Khi xử lý bài toán chuỗi ký tự (như *Đoạn con dài nhất chứa tối đa $K$ ký tự khác nhau*):
+Khi xử lý bài toán chuỗi ký tự (như Đoạn con dài nhất chứa tối đa $K$ ký tự khác nhau):
 * Sử dụng mảng đếm tần suất `int count[256]` hoặc `int count[26]` và biến `distinct_count` lưu số ký tự khác nhau hiện có trong cửa sổ.
 * Khi nạp ký tự $S[R]$: nếu `count[S[R]] == 0`, tăng `distinct_count`. Tăng `count[S[R]]++`.
 * Khi `distinct_count > K`: co con trỏ $L$, giảm `count[S[L]]--`; nếu `count[S[L]] == 0`, giảm `distinct_count`. Tăng `++L`.
@@ -184,17 +184,17 @@ Cho mảng `A = [1, 4, 2, 10, 2, 3, 1, 0, 20]` và cửa sổ cố định kích
 * B. **(Đáp án đúng)** Lấy tổng cũ trừ phần tử rời đi và cộng phần tử mới: `17 - 1 + 2 = 18`.
 * C. Nhân đôi tổng cũ rồi chia cho 4.
 * D. Lấy `17` cộng thêm `4`.
-> *Giải thích:* Quy tắc trượt cửa sổ cố định: `sum = sum - A[i-K] + A[i]` chỉ mất `O(1)` thời gian.
+> *Giải thích:* Quy tắc trượt cửa sổ cố định: `sum = sum - A[i-K] + A[i]` chỉ mất $\mathcal{O}(1)$ thời gian.
 
 ---
 
 #### Câu 3 (Bản chất — Explain):
-Mặc dù có vòng lặp `while` lồng bên trong vòng lặp `for`, tại sao thuật toán Cửa sổ trượt trên mảng `N` phần tử vẫn đạt độ phức tạp thời gian `O(N)`?
+Mặc dù có vòng lặp `while` lồng bên trong vòng lặp `for`, tại sao thuật toán Cửa sổ trượt trên mảng `N` phần tử vẫn đạt độ phức tạp thời gian $\mathcal{O}(N)$?
 * A. Vì vòng lặp `while` chỉ chạy đúng 1 lần duy nhất trong toàn bộ chương trình.
 * B. Vì trình biên dịch C++ tự động tối ưu hóa vòng lặp `while` thành câu lệnh `if`.
 * C. **(Đáp án đúng)** Vì con trỏ `L` chỉ dịch chuyển sang phải và mỗi phần tử chỉ bị loại bỏ khỏi cửa sổ tối đa đúng 1 lần.
 * D. Vì số phép tính của vòng `while` luôn bị giới hạn bởi hằng số 10.
-> *Giải thích:* `R` duyệt từ `0 to N-1` (`N` bước) và `L` duyệt từ `0 to N` (tối đa `N` bước). Tổng số bước di chuyển của cả 2 con trỏ không bao giờ vượt quá `2N`.
+> *Giải thích:* `R` duyệt từ `0 to N-1` (`N` bước) và `L` duyệt từ `0 to N` (tối đa `N` bước). Tổng số bước di chuyển của cả 2 con trỏ không bao giờ vượt quá $2N$.
 
 ---
 
@@ -222,19 +222,19 @@ Trong bài toán tìm **đoạn con dài nhất có tổng `<= S`** (`A_i >= 0`)
 Trong bài toán **Đếm số lượng đoạn con liên tiếp có tổng `<= S`** (`A_i >= 0`), sau khi co `L` để đảm bảo tổng đoạn `[L ... R] <= S`, số lượng đoạn con hợp lệ kết thúc tại `R` được tính bằng công thức nào?
 * A. `1`
 * B. `R - L`
-* C. **(Đáp án đúng)** `R - L + 1` (gồm các đoạn `[R ... R], [R-1 ... R], ..., [L ... R]`).
+* C. **(Đáp án đúng)** $R - L + 1$ (gồm các đoạn `[R ... R], [R-1 ... R], ..., [L ... R]`).
 * D. `((R - L + 1) * (R - L + 2))/(2)`
-> *Giải thích:* Vì đoạn dài nhất `[L ... R]` có tổng `<= S` và mảng không âm, nên mọi đoạn con kết thúc tại `R` bắt đầu từ bất kỳ vị trí nào từ `L` đến `R` đều có tổng `<= S`. Có đúng `R - L + 1` đoạn như vậy.
+> *Giải thích:* Vì đoạn dài nhất `[L ... R]` có tổng `<= S` và mảng không âm, nên mọi đoạn con kết thúc tại `R` bắt đầu từ bất kỳ vị trí nào từ `L` đến `R` đều có tổng `<= S`. Có đúng $R - L + 1$ đoạn như vậy.
 
 ---
 
 #### Câu 7 (Cửa sổ chuỗi ký tự — Frequency Map):
-Để tìm **đoạn con dài nhất chứa tối đa `K` ký tự phân biệt** trên chuỗi chỉ gồm chữ cái thường tiếng Anh, ta nên quản lý trạng thái cửa sổ như thế nào tối ưu nhất?
-* A. Quét lại toàn bộ cửa sổ để đếm số ký tự khác nhau trong mỗi bước (`O(K)`).
-* B. **(Đáp án đúng)** Sử dụng một mảng đếm tần suất `int count[26] = {0}` và một biến đếm `distinct_chars` (`O(1)` thời gian cho mỗi thao tác nạp/nhả).
+Để tìm **đoạn con dài nhất chứa tối đa $K$ ký tự phân biệt** trên chuỗi chỉ gồm chữ cái thường tiếng Anh, ta nên quản lý trạng thái cửa sổ như thế nào tối ưu nhất?
+* A. Quét lại toàn bộ cửa sổ để đếm số ký tự khác nhau trong mỗi bước ($\mathcal{O}(K)$).
+* B. **(Đáp án đúng)** Sử dụng một mảng đếm tần suất `int count[26] = {0}` và một biến đếm `distinct_chars` ($\mathcal{O}(1)$ thời gian cho mỗi thao tác nạp/nhả).
 * C. Khởi tạo mảng mới tại mỗi bước lặp.
 * D. Sắp xếp lại chuỗi ký tự trước khi chạy.
-> *Giải thích:* Bảng đếm tần suất kích thước cố định `26` cho phép cập nhật số lượng ký tự phân biệt trong `O(1)`, đảm bảo toàn bộ thuật toán chạy trong `O(N)` thời gian và `O(1)` bộ nhớ phụ trợ.
+> *Giải thích:* Bảng đếm tần suất kích thước cố định `26` cho phép cập nhật số lượng ký tự phân biệt trong $\mathcal{O}(1)$, đảm bảo toàn bộ thuật toán chạy trong $\mathcal{O}(N)$ thời gian và $\mathcal{O}(1)$ bộ nhớ phụ trợ.
 
 ---
 
@@ -249,22 +249,22 @@ Trong bài toán tìm **đoạn con ngắn nhất chứa đầy đủ tất cả
 ---
 
 #### Câu 9 (Xử lý giới hạn dữ liệu lớn — Large Constraints):
-Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mảng `N = 10^5` phần tử với `A_i <= 10^9`. Biến tính tổng cửa sổ `current_sum` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì?
-* A. `10^9`, dùng kiểu `int`.
-* B. `2 * 10^9`, dùng kiểu `int`.
-* C. **(Đáp án đúng)** `10^14`, bắt buộc dùng kiểu `long long` (64-bit).
-* D. `10^18`, bắt buộc dùng kiểu `__int128`.
-> *Giải thích:* Tổng của `10^5` phần tử có giá trị `10^9` là `10^5 * 10^9 = 10^14`, vượt xa giới hạn khoảng `2.14 * 10^9` của kiểu `int` 32-bit.
+Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mảng $N = 10^5$ phần tử với $A_i \le 10^9$. Biến tính tổng cửa sổ `current_sum` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì?
+* A. $10^9$, dùng kiểu `int`.
+* B. $2 \times 10^9$, dùng kiểu `int`.
+* C. **(Đáp án đúng)** $10^{14}$, bắt buộc dùng kiểu `long long` (64-bit).
+* D. $10^{18}$, bắt buộc dùng kiểu `__int128`.
+> Giải thích: Tổng của $10^5$ phần tử có giá trị $10^9$ là `10^5  10^9 = 10^14`, vượt xa giới hạn khoảng `2.14  10^9` của kiểu `int` 32-bit.
 
 ---
 
 #### Câu 10 (Kỹ thuật hiệu đếm đoạn con — Interval Counting Trick):
 Để đếm số lượng đoạn con liên tiếp có tổng nằm trong khoảng `[A, B]` (tức `A <= sum <= B`) trên mảng số nguyên dương, kỹ thuật chuẩn mực là gì?
 * A. Chạy 2 vòng lặp lồng nhau duyệt mọi đoạn con.
-* B. **(Đáp án đúng)** Gọi `F(X)` là số lượng đoạn con có tổng `<= X`. Kết quả cần tìm chính là `F(B) - F(A - 1)`, trong đó hàm `F(X)` được tính bằng Sliding Window trong `O(N)`.
+* B. **(Đáp án đúng)** Gọi `F(X)` là số lượng đoạn con có tổng `<= X`. Kết quả cần tìm chính là `F(B) - F(A - 1)`, trong đó hàm `F(X)` được tính bằng Sliding Window trong $\mathcal{O}(N)$.
 * C. Sử dụng cây Segment Tree với độ phức tạp `O(N log^2 N)`.
 * D. Nhân đôi mảng và áp dụng Two Pointers đối đầu.
-> *Giải thích:* Quy bài toán đếm đoạn trong khoảng `[A, B]` về hiệu của hai bài toán đếm tiền tố `<= X` giúp tận dụng trọn vẹn thuật toán Sliding Window tuyến tính `O(N)` mà không cần cấu trúc dữ liệu phức tạp.
+> *Giải thích:* Quy bài toán đếm đoạn trong khoảng `[A, B]` về hiệu của hai bài toán đếm tiền tố `<= X` giúp tận dụng trọn vẹn thuật toán Sliding Window tuyến tính $\mathcal{O}(N)$ mà không cần cấu trúc dữ liệu phức tạp.
 
 ---
 
@@ -272,17 +272,17 @@ Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mản
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-CST-01` | **Tổng Cửa Sổ Cố Định K** | `P0` | `N <= 10^5, K <= N` | Trượt cố định `O(1)` mỗi bước |
-| 02 | `CPPB-CST-02` | **Giá Trị Trung Bình Lớn Nhất Của Đoạn K** | `P1` | `N <= 10^5, K <= N` | Cửa sổ cố định với số thực |
+| 01 | `CPPB-CST-01` | **Tổng Cửa Sổ Cố Định K** | `P0` | `N <= 10^5, K $\le N$` | Trượt cố định $\mathcal{O}(1)$ mỗi bước |
+| 02 | `CPPB-CST-02` | **Giá Trị Trung Bình Lớn Nhất Của Đoạn K** | `P1` | `N <= 10^5, K $\le N$` | Cửa sổ cố định với số thực |
 | 03 | `CPPB-CST-03` | **Đoạn Con Ngắn Nhất Có Tổng Đạt S** | `P1` | `N <= 10^5, S <= 10^14` | Cửa sổ co giãn tìm `min` length |
 | 04 | `CPPB-CST-04` | **Đoạn Con Dài Nhất Có Tổng Không Quá S** | `P2` | `N <= 2 * 10^5, S <= 10^14` | Cửa sổ co giãn tìm `max` length |
-| 05 | `CPPB-CST-05` | **Đoạn Con Chứa Tối Đa K Số 0 (Lật Bit)** | `P3` | `N <= 10^5, K <= N` | Cửa sổ đếm trạng thái nhị phân |
-| 06 | `CPPB-CST-06` | **Giám Sát Camera Giao Thông Thông Minh** | `P4` | `N <= 10^5, K <= N` | Tối ưu hóa cửa sổ thực tế |
-| 07 | `CPPB-CST-07` | **Tìm Min Trong Mọi Cửa Sổ Độ Dài K** | `P1` | `N <= 10^4, K <= N` | Kiểm tra cửa sổ liên tiếp |
+| 05 | `CPPB-CST-05` | **Đoạn Con Chứa Tối Đa K Số 0 (Lật Bit)** | `P3` | `N <= 10^5, K $\le N$` | Cửa sổ đếm trạng thái nhị phân |
+| 06 | `CPPB-CST-06` | **Giám Sát Camera Giao Thông Thông Minh** | `P4` | `N <= 10^5, K $\le N$` | Tối ưu hóa cửa sổ thực tế |
+| 07 | `CPPB-CST-07` | **Tìm Min Trong Mọi Cửa Sổ Độ Dài K** | `P1` | `N <= 10^4, K $\le N$` | Kiểm tra cửa sổ liên tiếp |
 | 08 | `CPPB-CST-08` | **Đếm Số Lượng Đoạn Con Có Tổng Không Quá S** | `P2` | `N <= 2 * 10^5, S <= 10^14` | Cộng dồn `(R - L + 1)` đoạn con |
 | 09 | `CPPB-CST-09` | **Đếm Số Lượng Đoạn Con Có Tổng Đúng Bằng S** | `P2` | `N <= 2 * 10^5, A_i > 0` | Đếm đoạn trên mảng đơn điệu |
 | 10 | `CPPB-CST-10` | **Đoạn Con Dài Nhất Chứa Tối Đa K Ký Tự Khác Nhau** | `P3` | `N <= 10^5, K <= 26` | Cửa sổ ký tự với mảng đếm tần suất |
 | 11 | `CPPB-CST-11` | **Đoạn Con Ngắn Nhất Chứa Đủ Mọi Ký Tự Của Tập Hợp** | `P3` | `N <= 10^5, M <= 26` | Bài toán Minimum Window Substring |
 | 12 | `CPPB-CST-12` | **Phủ Sóng Trạm Phát Sóng Wifi Đô Thị** | `P4` | `N <= 10^5, X_i <= 10^14` | Hai con trỏ + Tham lam vị trí |
-| 13 | `CPPB-CST-13` | **Đoạn Con Có Độ Chênh Lệch Max - Min Không Quá K** | `P4` | `N <= 5000` | Khống chế biên độ trong cửa sổ |
+| 13 | `CPPB-CST-13` | **Đoạn Con Có Độ Chênh Lệch Max - Min Không Quá K** | `P4` | $N \le 5000$ | Khống chế biên độ trong cửa sổ |
 | 14 | `CPPB-CST-14` | **Tối Ưu Cửa Sổ Trượt Tuyến Tính Khi N = 2.10⁵** | `P5` | `N <= 2 * 10^5, A_i > 0` | Kỹ thuật hiệu `F(B) - F(A - 1)` |

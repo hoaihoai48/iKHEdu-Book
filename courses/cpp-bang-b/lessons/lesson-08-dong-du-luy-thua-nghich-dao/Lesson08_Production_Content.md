@@ -7,7 +7,7 @@
 Trong nhiều bài toán lập trình và thi đấu thuật toán, kết quả tính toán hoặc số cách đếm tổ hợp thường tăng rất nhanh và vượt quá giới hạn lưu trữ của kiểu số nguyên 64-bit (`long long`). Để tránh việc phải xử lý số lớn phức tạp, đề bài thường yêu cầu: **"In ra kết quả sau khi chia lấy dư cho $M$"** (thông thường $M = 10^9 + 7$ hoặc $998244353$ — là các số nguyên tố lớn).
 
 Từ yêu cầu thực tế này, bộ ba kỹ thuật nền tảng được hình thành:
-$$\text{Đồng Dư Cơ Bản (+, -, *)} \longrightarrow \text{Lũy Thừa Nhị Phân } \mathcal{O}(\log B) \longrightarrow \text{Nghịch Đảo Modulo } (B^{-1})$$
+$\text{Đồng Dư Cơ Bản (+, -, *)} \longrightarrow \text{Lũy Thừa Nhị Phân } \mathcal{O}(\log B) \longrightarrow \text{Nghịch Đảo Modulo } (B^{-1})$
 
 ### Vấn đề 1: Phép tính lũy thừa $A^B \pmod M$
 * **Cách ngây thơ:** Nhân $B$ lần liên tiếp: $A \times A \times \dots \times A \implies \mathcal{O}(B)$. Khi $B = 10^{18}$, cách này hoàn toàn bất khả thi.
@@ -228,62 +228,62 @@ int main() {
 ## 6. Hệ Thống Câu Hỏi Kiểm Tra Khái Niệm (Concept Quiz)
 
 #### Câu 1 (Độ phức tạp):
-Thuật toán Lũy thừa nhị phân (Binary Exponentiation) tính `A^B mod M` có độ phức tạp thời gian là:
-* A. `O(B)`
-* B. `O(sqrt(B))`
-* C. **(Đáp án đúng)** `O(log2 B)`
-* D. `O(1)`
-> *Giải thích:* Sau mỗi vòng lặp, số mũ `B` giảm đi một nửa (`B >=ts floor(B / 2 )`). Do đó số lần lặp tối đa là `floor(log2 B ) + 1`.
+Thuật toán Lũy thừa nhị phân (Binary Exponentiation) tính $A^B \bmod M$ có độ phức tạp thời gian là:
+* A. $\mathcal{O}(B)$
+* B. $\mathcal{O}(\sqrt{B})$
+* C. **(Đáp án đúng)** $\mathcal{O}(\log_2 B)$
+* D. $\mathcal{O}(1)$
+> *Giải thích:* Sau mỗi vòng lặp, số mũ $B$ giảm đi một nửa ($B \gets \lfloor B / 2 \rfloor$). Do đó số lần lặp tối đa là $\lfloor \log_2 B \rfloor + 1$.
 
 ---
 
 #### Câu 2 (Xử lý số âm):
-Trong C++, biểu thức `(-8) % 5` trả về kết quả là `-3`. Cách viết chuẩn mực nào để luôn nhận được số dư không âm trong khoảng `[0, M - 1]`?
+Trong C++, biểu thức $(-8) \bmod 5$ trả về kết quả là `-3`. Cách viết chuẩn mực nào để luôn nhận được số dư không âm trong khoảng $[0, M - 1]$?
 * A. `abs((-8) % 5)`
 * B. **(Đáp án đúng)** `((-8) % 5 + 5) % 5`
 * C. `(-8) % 5 + 5`
 * D. `5 - ((-8) % 5)`
-> *Giải thích:* Cộng thêm `M` rồi lấy dư lại lần nữa đảm bảo nếu số dư ban đầu là âm (thuộc `(-M, 0)`), nó sẽ được đưa về miền dương `[0, M-1]`, còn nếu ban đầu đã dương thì không đổi.
+> *Giải thích:* Cộng thêm $M$ rồi lấy dư lại lần nữa đảm bảo nếu số dư ban đầu là âm (thuộc $(-M, 0)$), nó sẽ được đưa về miền dương $[0, M - 1]$, còn nếu ban đầu đã dương thì không đổi.
 
 ---
 
 #### Câu 3 (Định lý Fermat nhỏ):
-Định lý Fermat nhỏ phát biểu rằng: Nếu `M` là số nguyên tố và `gcd(A, M) = 1`, thì `A^M-1 ≡ 1 mod M`. Từ đó suy ra nghịch đảo modulo `A^-1 mod M` bằng biểu thức nào?
-* A. `A^M mod M`
-* B. `A^M+1 mod M`
-* C. **(Đáp án đúng)** `A^M-2 mod M`
-* D. `A^M-1 - 1 mod M`
-> *Giải thích:* Nhân cả 2 vế của `A^M-1 ≡ 1 mod M` với `A^-1`, ta được `A^-1 ≡ A^M-2 mod M`.
+Định lý Fermat nhỏ phát biểu rằng: Nếu $M$ là số nguyên tố và $\gcd(A, M) = 1$, thì $A^{M-1} \equiv 1 \pmod M$. Từ đó suy ra nghịch đảo modulo $A^{-1} \pmod M$ bằng biểu thức nào?
+* A. $A^M \bmod M$
+* B. $A^{M+1} \bmod M$
+* C. **(Đáp án đúng)** $A^{M-2} \bmod M$
+* D. $A^{M-1} - 1 \bmod M$
+> *Giải thích:* Nhân cả 2 vế của $A^{M-1} \equiv 1 \pmod M$ với $A^{-1}$, ta được $A^{-1} \equiv A^{M-2} \pmod M$.
 
 ---
 
 #### Câu 4 (Phép chia Modulo):
-Khi cần tính giá trị biểu thức `(A)/(B) mod M` với `M = 10^9 + 7` (số nguyên tố) và `B not≡ 0 mod M`, ta thực hiện phép toán nào sau đây?
+Khi cần tính giá trị biểu thức $\frac{A}{B} \pmod M$ với $M = 10^9 + 7$ (số nguyên tố) và $B \not\equiv 0 \pmod M$, ta thực hiện phép toán nào sau đây?
 * A. `(A / B) % M`
 * B. `(A % M) / (B % M)`
 * C. **(Đáp án đúng)** `(A % M) * powerMod(B, M - 2, M) % M`
 * D. `(A % M) * powerMod(B, M - 1, M) % M`
-> *Giải thích:* Phép chia trên vành modulo bắt buộc phải nhân với nghịch đảo của mẫu số: `A * B^-1 mod M`.
+> *Giải thích:* Phép chia trên vành modulo bắt buộc phải nhân với nghịch đảo của mẫu số: $A \cdot B^{-1} \pmod M$.
 
 ---
 
 #### Câu 5 (Điều kiện tồn tại Nghịch đảo):
-Nghịch đảo modulo của số nguyên `A` theo modulo `M` (tức số `X` sao cho `A * X ≡ 1 mod M`) **chắc chắn tồn tại** khi và chỉ khi:
-* A. `A` và `M` đều là số lẻ.
+Nghịch đảo modulo của số nguyên $A$ theo modulo $M$ (tức số `X` sao cho $A \cdot X \equiv 1 \pmod M$) **chắc chắn tồn tại** khi và chỉ khi:
+* A. $A$ và $M$ đều là số lẻ.
 * B. `A < M`.
-* C. **(Đáp án đúng)** `gcd(A, M) = 1` (`A` và `M` nguyên tố cùng nhau).
-* D. `M` phải là số chẵn.
-> *Giải thích:* Theo định lý Bézout, phương trình `Ax + My = 1` chỉ có nghiệm nguyên khi và chỉ khi `gcd(A, M) = 1`.
+* C. **(Đáp án đúng)** `gcd(A, M) = 1` ($A$ và $M$ nguyên tố cùng nhau).
+* D. $M$ phải là số chẵn.
+> *Giải thích:* Theo định lý Bézout, phương trình $Ax + My = 1$ chỉ có nghiệm nguyên khi và chỉ khi `gcd(A, M) = 1`.
 
 ---
 
-#### Câu 6 (Tổ hợp Modulo `O(1)`):
-Để trả lời `10^5` truy vấn tính số tổ hợp `C(N, K) mod 10^9 + 7` với `N, K <= 10^6` trong tổng thời gian dưới `0.1s`, phương pháp tối ưu nhất là gì?
-* A. Tính trực tiếp `C(N, K)` bằng tam giác Pascal tại mỗi truy vấn.
-* B. Tính `N!`, `K!`, `(N-K)!` từ đầu tại mỗi truy vấn.
-* C. **(Đáp án đúng)** Tiền xử lý mảng Giai thừa `fact[]` và Nghịch đảo giai thừa `invFact[]` trong `O(N)`, sau đó trả lời mỗi truy vấn trong `O(1)`.
+#### Câu 6 (Tổ hợp Modulo $\mathcal{O}(1)$):
+Để trả lời $10^5$ truy vấn tính số tổ hợp $\binom{N}{K} \pmod{10^9 + 7}$ với $N, K \le 10^6$ trong tổng thời gian dưới `0.1s`, phương pháp tối ưu nhất là gì?
+* A. Tính trực tiếp $C(N, K)$ bằng tam giác Pascal tại mỗi truy vấn.
+* B. Tính $N!$, $K!$, $(N-K)!$ từ đầu tại mỗi truy vấn.
+* C. **(Đáp án đúng)** Tiền xử lý mảng Giai thừa `fact[]` và Nghịch đảo giai thừa `invFact[]` trong $\mathcal{O}(N)$, sau đó trả lời mỗi truy vấn trong $\mathcal{O}(1)$.
 * D. Dùng đệ quy quay lui có nhớ.
-> *Giải thích:* Tiền xử lý `O(N)` cho phép tính `C(N, K) = fact[N] * invFact[K] * invFact[N-K] mod M` trong đúng `O(1)` phép nhân.
+> Giải thích: Tiền xử lý $\mathcal{O}(N)$ cho phép tính $C(N, K) = \text{fact}[N] \cdot \text{invFact}[K] \cdot \text{invFact}[N-K] \pmod M$ trong đúng $\mathcal{O}(1)$ phép nhân.
 
 ---
 
@@ -293,37 +293,37 @@ Thay vì gọi hàm lũy thừa `N` lần để tính `invFact[i]`, ta có thể
 * B. **(Đáp án đúng)** `invFact[i - 1] = (invFact[i] * i) % MOD`
 * C. `invFact[i - 1] = (invFact[i] * (MOD - i)) % MOD`
 * D. `invFact[i] = invFact[i - 1] * (i + 1)`
-> *Giải thích:* Vì `(1)/((i-1)!) = (1)/(i!) * i`, do đó `invFact[i - 1] = (invFact[i] * i) % MOD`. Ta chỉ cần tính `invFact[N] = power(fact[N], MOD - 2)` rồi đi lùi về `0`.
+> *Giải thích:* Vì $\frac{1}{(i-1)!} = \frac{1}{i!} \cdot i$, do đó `invFact[i - 1] = (invFact[i] * i) % MOD`. Ta chỉ cần tính `invFact[N] = power(fact[N], MOD - 2)` rồi đi lùi về `0`.
 
 ---
 
 #### Câu 8 (Rút gọn số mũ lớn):
-Theo định lý Fermat nhỏ, với `M = 10^9 + 7` (số nguyên tố) và `gcd(A, M) = 1`, nếu số mũ `B` là một số khổng lồ gồm hàng chục nghìn chữ số, ta có thể rút gọn số mũ `B` trước khi tính lũy thừa bằng cách nào?
-* A. `B >=ts B mod M`
-* B. **(Đáp án đúng)** `B >=ts B mod (M - 1)`
-* C. `B >=ts B mod (M + 1)`
-* D. `B >=ts B mod sqrt(M)`
-> *Giải thích:* Vì `M` là số nguyên tố và `gcd(A, M) = 1`, theo Fermat nhỏ `A^M - 1 ≡ 1 mod M`. Do đó `A^B = A^q(M-1) + r = (A^M-1)^q * A^r ≡ 1^q * A^r = A^r mod M` với `r = B mod M - 1`.
+Theo định lý Fermat nhỏ, với $M = 10^9 + 7$ (số nguyên tố) và `gcd(A, M) = 1`, nếu số mũ $B$ là một số khổng lồ gồm hàng chục nghìn chữ số, ta có thể rút gọn số mũ $B$ trước khi tính lũy thừa bằng cách nào?
+* A. $B \gets B \bmod M$
+* B. **(Đáp án đúng)** $B \gets B \bmod (M - 1)$
+* C. $B \gets B \bmod (M + 1)$
+* D. $B \gets B \bmod \sqrt{M}$
+> *Giải thích:* Vì $M$ là số nguyên tố và `gcd(A, M) = 1`, theo Fermat nhỏ $A^{M-1} \equiv 1 \pmod M$. Do đó $A^B = A^{q(M-1)+r} = (A^{M-1})^q \cdot A^r \equiv 1^q \cdot A^r \equiv A^r \pmod M$ với $r = B \bmod (M - 1)$.
 
 ---
 
 #### Câu 9 (Nhân an toàn chống tràn số 64-bit):
-Khi nào phép nhân trực tiếp `(a * b) % m` có nguy cơ gây tràn số và bắt buộc phải áp dụng kỹ thuật nhân modulo an toàn (như Nhân Ấn Độ `O(log B)` hoặc kiểu dữ liệu `__int128`)?
-* A. Khi `A, B <= 10^9` và `M = 10^9 + 7`.
-* B. **(Đáp án đúng)** Khi `A, B <= 10^18` và `M <= 10^18` (tích `A * B` có thể lên tới `10^36`, vượt quá giới hạn 64-bit của `unsigned long long`).
-* C. Khi `M` là số chẵn.
-* D. Khi `B` là số âm.
-> *Giải thích:* Khi `A, B ≈ 10^18`, tích `A * B ≈ 10^36` vượt xa ngưỡng `2^64-1 ≈ 1.8 * 10^19`. Ta cần phân rã phép nhân thành các phép cộng có lấy dư (Nhân Ấn Độ) hoặc dùng kiểu số nguyên 128-bit.
+Khi nào phép nhân trực tiếp `(a * b) % m` có nguy cơ gây tràn số và bắt buộc phải áp dụng kỹ thuật nhân modulo an toàn (như Nhân Ấn Độ $\mathcal{O}(\log B)$ hoặc kiểu dữ liệu `__int128`)?
+* A. Khi `A, B <= 10^9` và $M = 10^9 + 7$.
+* B. **(Đáp án đúng)** Khi $A, B \le 10^{18}$ và $M \le 10^{18}$ (tích $A \times B$ có thể lên tới $10^{36}$, vượt quá giới hạn 64-bit của `unsigned long long`).
+* C. Khi $M$ là số chẵn.
+* D. Khi $B$ là số âm.
+> *Giải thích:* Khi $A, B \approx 10^{18}$, tích $A \times B \approx 10^{36}$ vượt xa ngưỡng $2^{64}-1 \approx 1.8 \times 10^{19}$. Ta cần phân rã phép nhân thành các phép cộng có lấy dư (Nhân Ấn Độ) hoặc dùng kiểu số nguyên 128-bit.
 
 ---
 
 #### Câu 10 (Phương trình Diophantine & Euclid mở rộng):
-Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phương trình `Ax + My = gcd(A, M)`. Nếu `gcd(A, M) = 1`, giá trị `x mod M` đại diện cho đại lượng nào?
-* A. Ước chung lớn nhất của `A` và `M`.
-* B. Phần dư của `A` chia cho `M`.
-* C. **(Đáp án đúng)** Nghịch đảo modulo của `A` theo modulo `M` (`A^-1 mod M`).
-* D. Bội chung nhỏ nhất của `A` và `M`.
-> *Giải thích:* Phương trình `Ax + My = 1 iff Ax ≡ 1 mod M`, nghĩa là `x` chính là nghịch đảo modulo của `A`.
+Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phương trình $Ax + My = \gcd(A, M)$. Nếu `gcd(A, M) = 1`, giá trị $x \bmod M$ đại diện cho đại lượng nào?
+* A. Ước chung lớn nhất của $A$ và $M$.
+* B. Phần dư của $A$ chia cho $M$.
+* C. **(Đáp án đúng)** Nghịch đảo modulo của $A$ theo modulo $M$ ($A^{-1} \pmod M$).
+* D. Bội chung nhỏ nhất của $A$ và $M$.
+> *Giải thích:* Phương trình $Ax + My = 1 \iff Ax \equiv 1 \pmod M$, nghĩa là `x` chính là nghịch đảo modulo của $A$.
 
 ---
 

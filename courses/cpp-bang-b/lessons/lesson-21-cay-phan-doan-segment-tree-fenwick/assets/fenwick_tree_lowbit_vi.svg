@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <rect width="900" height="380" fill="#0f172a" rx="16"/>
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">CÂY FENWICK (BINARY INDEXED TREE - BIT) &amp; PHÉP TOÁN LOWBIT</text>
+
+  <rect x="80" y="80" width="340" height="240" rx="12" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
+  <text x="250" y="115" fill="#c084fc" font-size="16" font-weight="bold" text-anchor="middle">Phép Toán Lowbit: x &amp; (-x)</text>
+  <text x="105" y="150" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(1) = 1 (b0001 → đoạn dài 1)</text>
+  <text x="105" y="180" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(2) = 2 (b0010 → đoạn dài 2)</text>
+  <text x="105" y="210" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(4) = 4 (b0100 → đoạn dài 4)</text>
+  <text x="105" y="240" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(6) = 2 (b0110 → đoạn dài 2)</text>
+  <text x="105" y="275" fill="#4ade80" font-family="monospace" font-size="14">bit[x] lưu tổng đoạn (x - lowbit(x), x]</text>
+
+  <rect x="460" y="80" width="360" height="240" rx="12" fill="#1e293b" stroke="#4ade80" stroke-width="2"/>
+  <text x="640" y="115" fill="#4ade80" font-size="16" font-weight="bold" text-anchor="middle">2 Thao Tác Cốt Lõi Siêu Ngắn</text>
+  <text x="485" y="150" fill="#facc15" font-family="monospace" font-size="13">void update(int x, int val) {</text>
+  <text x="505" y="175" fill="#f8fafc" font-family="monospace" font-size="13">  for (; x &lt;= n; x += x &amp; -x) bit[x] += val;</text>
+  <text x="485" y="200" fill="#facc15" font-family="monospace" font-size="13">}</text>
+  <text x="485" y="230" fill="#38bdf8" font-family="monospace" font-size="13">long long query(int x) {</text>
+  <text x="505" y="255" fill="#f8fafc" font-family="monospace" font-size="13">  long long s = 0;</text>
+  <text x="505" y="280" fill="#f8fafc" font-family="monospace" font-size="13">  for (; x &gt; 0; x -= x &amp; -x) s += bit[x];</text>
+  <text x="505" y="305" fill="#f8fafc" font-family="monospace" font-size="13">  return s;</text>
+  <text x="485" y="325" fill="#38bdf8" font-family="monospace" font-size="13">}</text>
+</svg>

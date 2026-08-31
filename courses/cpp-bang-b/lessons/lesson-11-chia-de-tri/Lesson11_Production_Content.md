@@ -6,7 +6,7 @@
 
 Ở Chuyên đề 10, chúng ta đã làm chủ kỹ thuật Đệ quy: giải bài toán quy mô $N$ bằng cách thu nhỏ dần bài toán. Từ cấu trúc code đệ quy, ta có thể thiết lập **Hệ thức truy hồi (Recurrence)** và phân tích qua **Cây đệ quy (Recursion Tree)** để tìm ra độ phức tạp chính xác:
 
-$$\text{Code Đệ Quy} \longrightarrow \text{Hệ Thức Truy Hồi (Recurrence)} \longrightarrow \text{Cây Đệ Quy (Recursion Tree)} \longrightarrow \text{Độ Phức Tạp (Complexity)}$$
+$\text{Code Đệ Quy} \longrightarrow \text{Hệ Thức Truy Hồi (Recurrence)} \longrightarrow \text{Cây Đệ Quy (Recursion Tree)} \longrightarrow \text{Độ Phức Tạp (Complexity)}$
 
 * **Đệ quy tuyến tính (Chuyên đề 10):**
   $$T(N) = T(N-1) + \mathcal{O}(1) \implies \text{Cây 1 nhánh thẳng, độ sâu } N \implies \Theta(N)$$
@@ -45,7 +45,7 @@ Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
    * Chia động dựa trên việc so sánh các phần tử với một giá trị chốt (`pivot`), kích thước 2 nửa có thể không đều nhau.
    * *Ví dụ:* QuickSelect phân hoạch `[7 2 9 1 5 3 8]` với `pivot = 5` thành `[2 1 3]` (nhỏ hơn 5), `[5]`, và `[7 9 8]` (lớn hơn 5).
 
-![Mô hình Thuật toán Chia để trị (Divide & Conquer)](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_model_vi.svg)
+![Mô hình Thuật toán Chia để trị (Divide & Conquer)](assets/dnc_model_vi.svg)
 
 ---
 
@@ -58,7 +58,7 @@ Trước bất kỳ bài toán nào nghi ngờ sử dụng Chia Để Trị, hã
 3. **Tôi cần giải bao nhiêu bài toán con?** (Chỉ 1 nhánh như Binary Search/QuickSelect hay cả 2 nhánh như Merge Sort?)
 4. **Tôi combine kết quả của các bài toán con như thế nào?** (Đây là bước quyết định độ phức tạp!)
 
-![Cây quyết định lựa chọn thuật toán Chia để trị](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_decision_tree_vi.svg)
+![Cây quyết định lựa chọn thuật toán Chia để trị](assets/dnc_decision_tree_vi.svg)
 
 ---
 
@@ -68,7 +68,7 @@ Xét mảng ban đầu: `A = [38, 27, 43, 3, 9, 82, 10]`.
 
 ### Sơ Đồ Cây Phân Rã & Gộp Mảng (Divide & Merge Tree):
 
-![Mô phỏng Cây phân rã và gộp Merge Sort](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/mergesort_tree_vi.svg)
+![Mô phỏng Cây phân rã và gộp Merge Sort](assets/mergesort_tree_vi.svg)
 
 ---
 
@@ -100,7 +100,7 @@ Trước khi dùng công thức tổng quát, hãy nắm vững **4 hệ thức 
 Với $T(N) = a \cdot T(N/b) + \Theta(N^d)$ ($a \ge 1, b > 1$):
 1. **$a < b^d$ ($\log_b a < d$):** Chi phí ngoài đệ quy thống trị $\implies T(N) = \Theta(N^d)$.
 2. **$a = b^d$ ($\log_b a = d$):** Chi phí phân bố đều trên $\log_b N$ tầng $\implies T(N) = \Theta(N^d \log N)$.
-3. **$a > b^d$ ($\log_b a > d$):** Số nút lá bùng nổ thống trị $\implies T(N) = \Theta(N^{\log_b a})$ *(ví dụ Karatsuba $a=3, b=2, d=1 \implies \Theta(N^{\log_2 3}) \approx \Theta(N^{1.585})$)*.
+3. **$a > b^d$ ($\log_b a > d$):** Số nút lá bùng nổ thống trị $\implies T(N) = \Theta(N^{\log_b a})$ (ví dụ Karatsuba $a=3, b=2, d=1 \implies \Theta(N^{\log_2 3}) \approx \Theta(N^{1.585})$).
 
 ---
 
@@ -123,11 +123,11 @@ Với $T(N) = a \cdot T(N/b) + \Theta(N^d)$ ($a \ge 1, b > 1$):
 
 Điểm đặc sắc nhất của chuyên đề là **chuỗi kế thừa thuật toán**:
 
-$$\text{Merge Step (2 con trỏ)} \longrightarrow \text{Merge Sort } \Theta(N \log N) \longrightarrow \text{Đếm Nghịch Thế (Inversion Count)}$$
+$\text{Merge Step (2 con trỏ)} \longrightarrow \text{Merge Sort } \Theta(N \log N) \longrightarrow \text{Đếm Nghịch Thế (Inversion Count)}$
 
 ### Ứng Dụng Đỉnh Cao: Đếm Cặp Nghịch Thế (Inversion Counting) $\mathcal{O}(N \log N)$
 * **Khái niệm:** Cặp nghịch thế là cặp chỉ số $(i, j)$ sao cho $i < j$ nhưng $A_i > A_j$.
-* **Bất biến gộp kỳ diệu:** Khi chia mảng thành `Left[l..mid]` và `Right[mid+1..r]` đã sắp xếp:
+* **Bất biến gộp kỳ diệu:** Khi chia mảng thành $\text{Left}[l..mid]$ và $\text{Right}[mid+1..r]$ đã sắp xếp:
   * Khi duyệt con trỏ `i` trên `Left` và `j` trên `Right`, nếu $L[i] > R[j]$, thì do $L$ đã sắp xếp tăng dần, **toàn bộ các phần tử từ $L[i]$ đến $L[mid]$ đều lớn hơn $R[j]$**!
   * Ta cộng ngay một lượng bằng $(mid - i + 1)$ vào biến đếm nghịch thế trong **$\mathcal{O}(1)$ thao tác cộng dồn**.
   * Bước `merge` vẫn tốn $\mathcal{O}(N)$ thời gian, giúp tổng thời gian đếm toàn bộ mảng đạt $\Theta(N \log N)$ chuẩn thi đấu thay vì $\mathcal{O}(N^2)$ vét cạn.
@@ -241,18 +241,18 @@ void process(int n) {
 }
 ```
 Hệ thức truy hồi (Recurrence) mô tả chính xác thời gian thực thi `T(n)` của hàm trên là:
-* A. `T(n) = T(n / 2) + O(n)`
-* B. **(Đáp án đúng)** `T(n) = 2 * T(n / 2) + O(n)`
-* C. `T(n) = T(n - 1) + O(n)`
-* D. `T(n) = 2 * T(n - 1) + O(1)`
-> *Giải thích:* Hàm tạo ra 2 lời gọi đệ quy kích thước `n / 2` và một vòng lặp `for` chạy `n` lần tốn chi phí ngoài đệ quy `f(n) = O(n)`. Theo Master Theorem, `T(n) = Theta(n log n)`.
+* A. $T(n) = T(n / 2) + \mathcal{O}(n)$
+* B. **(Đáp án đúng)** $T(n) = 2T(n / 2) + \mathcal{O}(n)$
+* C. $T(n) = T(n - 1) + \mathcal{O}(n)$
+* D. $T(n) = 2T(n - 1) + \mathcal{O}(1)$
+> *Giải thích:* Hàm tạo ra 2 lời gọi đệ quy kích thước `n / 2` và một vòng lặp `for` chạy `n` lần tốn chi phí ngoài đệ quy $f(n) = \mathcal{O}(n)$. Theo Master Theorem, $T(n) = \Theta(n \log n)$.
 
 ---
 
 #### Câu 3 (So sánh bản chất: Cùng chia đôi nhưng khác biệt độ phức tạp):
-Hai thuật toán A (`T(N) = T(N/2) + O(1)`) và B (`T(N) = 2T(N/2) + O(N)`) đều chia đôi mảng ở mỗi bước. Lý do cốt lõi khiến thuật toán A đạt `O(log N)` trong khi B tốn `O(N log N)` là gì?
+Hai thuật toán A ($T(N) = T(N/2) + \mathcal{O}(1)$) và B ($T(N) = 2T(N/2) + \mathcal{O}(N)$) đều chia đôi mảng ở mỗi bước. Lý do cốt lõi khiến thuật toán A đạt $\mathcal{O}(\log N)$ trong khi B tốn $\mathcal{O}(N \log N)$ là gì?
 * A. Thuật toán A không dùng ngôn ngữ C++.
-* B. **(Đáp án đúng)** Thuật toán A chỉ đi vào 1 nhánh duy nhất với chi phí mỗi tầng `O(1)`, trong khi thuật toán B bắt buộc phải giải cả 2 nhánh và tốn chi phí gộp `O(N)` trên mỗi tầng trong tổng số `log2 N` tầng.
+* B. **(Đáp án đúng)** Thuật toán A chỉ đi vào 1 nhánh duy nhất với chi phí mỗi tầng $\mathcal{O}(1)$, trong khi thuật toán B bắt buộc phải giải cả 2 nhánh và tốn chi phí gộp $\mathcal{O}(N)$ trên mỗi tầng trong tổng số $\log_2 N$ tầng.
 * C. Thuật toán B tiêu tốn nhiều bộ nhớ RAM hơn.
 * D. Thuật toán A chỉ chạy trên số nguyên dương.
 > *Giải thích:* Số lượng nhánh đệ quy được khám phá và chi phí gộp ngoài đệ quy quyết định toàn bộ sự khác biệt giữa $\mathcal{O}(\log N)$ và $\mathcal{O}(N \log N)$.
@@ -260,22 +260,22 @@ Hai thuật toán A (`T(N) = T(N/2) + O(1)`) và B (`T(N) = 2T(N/2) + O(N)`) đ�
 ---
 
 #### Câu 4 (Kiểu dữ liệu cho đếm cặp nghịch thế):
-Với mảng có `N = 10^5` phần tử, biến lưu trữ tổng số cặp nghịch thế bắt buộc phải có kiểu dữ liệu nào để chống tràn số?
+Với mảng có $N = 10^5$ phần tử, biến lưu trữ tổng số cặp nghịch thế bắt buộc phải có kiểu dữ liệu nào để chống tràn số?
 * A. `int`
 * B. `float`
-* C. **(Đáp án đúng)** `long long` (vì số cặp nghịch thế tối đa lên tới `N*(N-1)/2 approx 5*10^9`, vượt quá giới hạn 32-bit).
+* C. **(Đáp án đúng)** `long long` (vì số cặp nghịch thế tối đa lên tới $N(N-1)/2 \approx 5 \times 10^9$, vượt quá giới hạn 32-bit).
 * D. `bool`
-> *Giải thích:* Mảng giảm dần hoàn toàn có số cặp nghịch thế bằng `N*(N-1)/2`, vượt ngưỡng $2 \times 10^9$ của `int` 32-bit.
+> *Giải thích:* Mảng giảm dần hoàn toàn có số cặp nghịch thế bằng $N(N-1)/2$, vượt ngưỡng $2 \times 10^9$ của `int` 32-bit.
 
 ---
 
 #### Câu 5 (Cơ chế đếm cặp nghịch thế khi Merge):
-Trong thuật toán đếm số cặp nghịch thế bằng Merge Sort, khi con trỏ `i` trỏ vào nửa trái `Left[l..mid]` và con trỏ `j` trỏ vào nửa phải `Right[mid+1..r]`, nếu `Left[i] > Right[j]`, số lượng cặp nghịch thế được cộng thêm vào kết quả trong $\mathcal{O}(1)$ là bao nhiêu?
+Trong thuật toán đếm số cặp nghịch thế bằng Merge Sort, khi con trỏ `i` trỏ vào nửa trái $\text{Left}[l..mid]$ và con trỏ `j` trỏ vào nửa phải $\text{Right}[mid+1..r]$, nếu $\text{Left}[i] > \text{Right}[j]$, số lượng cặp nghịch thế được cộng thêm vào kết quả trong $\mathcal{O}(1)$ là bao nhiêu?
 * A. Đúng `1` cặp.
-* B. **(Đáp án đúng)** `mid - i + 1` cặp.
-* C. `j - mid` cặp.
-* D. `r - l + 1` cặp.
-> *Giải thích:* Vì mảng con `Left` đã được sắp xếp tăng dần, nên nếu `Left[i] > Right[j]` thì tất cả các phần tử từ chỉ số `i` đến `mid` trong mảng `Left` đều lớn hơn `Right[j]`.
+* B. **(Đáp án đúng)** $mid - i + 1$ cặp.
+* C. $j - mid$ cặp.
+* D. $r - l + 1$ cặp.
+> *Giải thích:* Vì mảng con `Left` đã được sắp xếp tăng dần, nên nếu $\text{Left}[i] > \text{Right}[j]$ thì tất cả các phần tử từ chỉ số `i` đến `mid` trong mảng `Left` đều lớn hơn `Right[j]`.
 
 ---
 
@@ -301,10 +301,10 @@ Khi tìm đoạn con có tổng lớn nhất bằng Chia để trị trên đo�
 
 #### Câu 8 (Tournament Tree tìm phần tử lớn thứ hai với $N = 2^k$):
 Trên mảng có kích thước $N = 2^k$ ($N$ là lũy thừa của $2$), bằng kỹ thuật Tournament Tree (cây thi đấu), số phép so sánh tối thiểu để tìm ra phần tử lớn thứ hai là:
-* A. `2 * N`
-* B. **(Đáp án đúng)** `N + log2(N) - 2` phép so sánh.
-* C. `N^2`
-* D. `N log N`
+* A. $2N$
+* B. **(Đáp án đúng)** $N + \log_2 N - 2$ phép so sánh.
+* C. $N^2$
+* D. $N \log N$
 > *Giải thích:* Tìm nhà vô địch tốn $N - 1$ phép so sánh. Phần tử lớn thứ hai bắt buộc phải là một trong những phần tử từng thua trực tiếp nhà vô địch trong cây thi đấu (đúng $\log_2 N$ phần tử). Tìm max trong nhóm này tốn thêm $\log_2 N - 1$ phép $\implies$ Tổng cộng đúng $(N - 1) + (\log_2 N - 1) = N + \log_2 N - 2$ phép.
 
 ---
@@ -312,7 +312,7 @@ Trên mảng có kích thước $N = 2^k$ ($N$ là lũy thừa của $2$), bằn
 #### Câu 9 (Đặc tính Stable Sort của Merge Sort):
 Merge Sort được gọi là thuật toán sắp xếp ổn định (Stable Sort) vì lý do nào sau đây?
 * A. Thuật toán chạy không bao giờ bị lỗi bộ nhớ.
-* B. **(Đáp án đúng)** Trong bước gộp `merge()`, khi hai phần tử có giá trị bằng nhau (`a[i] == a[j]`), thuật toán luôn ưu tiên chọn phần tử ở nửa trái (`i`) trước nhờ điều kiện `a[i] <= a[j]`, giữ nguyên thứ tự xuất hiện ban đầu.
+* B. **(Đáp án đúng)** Trong bước gộp `merge()`, khi hai phần tử có giá trị bằng nhau ($a[i] == a[j]$), thuật toán luôn ưu tiên chọn phần tử ở nửa trái (`i`) trước nhờ điều kiện $a[i] \le a[j]$, giữ nguyên thứ tự xuất hiện ban đầu.
 * C. Thuật toán có độ phức tạp như nhau trong mọi trường hợp.
 * D. Thuật toán không sử dụng phép nhân.
 > *Giải thích:* Bất biến chọn phần tử bên trái khi bằng nhau bảo toàn tính thứ tự tương đối của các phần tử có khóa bằng nhau.
@@ -321,10 +321,10 @@ Merge Sort được gọi là thuật toán sắp xếp ổn định (Stable Sor
 
 #### Câu 10 (Lũy thừa ma trận chia để trị):
 Tính lũy thừa ma trận vuông $A^N$ cấp $2 \times 2$ modulo $M$ bằng Chia để trị có độ phức tạp thời gian tiệm cận là:
-* A. `Theta(N)`
-* B. `Theta(N^2)`
+* A. $\Theta(N)$
+* B. $\Theta(N^2)$
 * C. **(Đáp án đúng)** `Theta(log N)` (mỗi phép nhân ma trận $2 \times 2$ tốn $\mathcal{O}(1)$ với 8 phép nhân số học).
-* D. `Theta(1)`
+* D. $\Theta(1)$
 > *Giải thích:* Thuật toán chia đôi số mũ $N \to N/2$ sau mỗi bước tương tự như lũy thừa nhị phân số học, độ sâu đệ quy là $\log_2 N$.
 
 ---

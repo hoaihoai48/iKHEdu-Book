@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <rect width="900" height="380" fill="#0f172a" rx="16"/>
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">BIỂU DIỄN ĐỒ THỊ: MA TRẬN KỀ VS DANH SÁCH KỀ (ADJACENCY LIST)</text>
+
+  <rect x="50" y="70" width="380" height="280" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+  <text x="240" y="105" fill="#f87171" font-size="16" font-weight="bold" text-anchor="middle">Ma Trận Kề: adj[N][N]</text>
+  <text x="75" y="140" fill="#94a3b8" font-family="monospace" font-size="13">int adj[1005][1005];</text>
+  <text x="75" y="170" fill="#f8fafc" font-size="13">• Kiểm tra cạnh (u, v): O(1)</text>
+  <text x="75" y="200" fill="#f87171" font-size="13">• Bộ nhớ: O(N^2) → Sập bộ nhớ khi N=10^5</text>
+  <text x="75" y="230" fill="#f87171" font-size="13">• Duyệt đỉnh kề: O(N)</text>
+  <text x="75" y="270" fill="#94a3b8" font-size="13">→ Chỉ dùng khi N ≤ 1000 hoặc đồ thị dày</text>
+
+  <rect x="470" y="70" width="380" height="280" rx="12" fill="#1e293b" stroke="#4ade80" stroke-width="2"/>
+  <text x="660" y="105" fill="#4ade80" font-size="16" font-weight="bold" text-anchor="middle">Danh Sách Kề: vector&lt;int&gt; adj[N]</text>
+  <text x="495" y="140" fill="#4ade80" font-family="monospace" font-size="13">vector&lt;int&gt; adj[100005];</text>
+  <text x="495" y="170" fill="#4ade80" font-size="13">• Bộ nhớ: O(N + M) tối ưu tuyệt đối</text>
+  <text x="495" y="200" fill="#4ade80" font-size="13">• Duyệt đỉnh kề: O(deg(u)) cực nhanh</text>
+  <text x="495" y="230" fill="#f8fafc" font-size="13">• Thêm cạnh: adj[u].push_back(v) trong O(1)</text>
+  <text x="495" y="270" fill="#facc15" font-size="13">→ Chuẩn mực thi đấu Olympic cho N, M ≤ 10^5</text>
+</svg>

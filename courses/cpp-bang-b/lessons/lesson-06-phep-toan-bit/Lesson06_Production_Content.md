@@ -255,7 +255,7 @@ Biểu thức `n > 0 && (n & (n - 1)) == 0` trả về `true` khi và chỉ khi:
 ---
 
 #### Câu 6 (Đếm bit 1 — Builtin):
-Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian `O(1)`, hàm nào sau đây là chuẩn xác nhất?
+Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian $\mathcal{O}(1)$, hàm nào sau đây là chuẩn xác nhất?
 * A. `__builtin_popcount(x)`
 * B. **(Đáp án đúng)** `__builtin_popcountll(x)`
 * C. `__builtin_ctzll(x)`
@@ -266,19 +266,19 @@ Biểu thức `n > 0 && (n & (n - 1)) == 0` trả về `true` khi và chỉ khi:
 
 #### Câu 7 (Không gian tập con — Complexity):
 Một tập hợp có `N = 20` phần tử. Số lượng tập con được sinh ra bởi mặt nạ bit là bao nhiêu và thời gian duyệt vét cạn có chạy kịp `1` giây không?
-* A. `20^2 = 400` tập con, chạy kịp.
-* B. **(Đáp án đúng)** `2^20 = 1,048,576` tập con, chạy mất khoảng `0.01` giây, hoàn toàn kịp thời gian `1` giây.
-* C. `20! ≈ 2.4 * 10^18` tập con, bị quá thời gian.
-* D. `2^20 ≈ 10^9` tập con, bị quá thời gian.
-> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) `implies 2^20 ≈ 1.05 * 10^6` trạng thái. Vòng lặp `10^6` chạy dưới `0.02` giây trong C++.
+* A. $20^2 = 400$ tập con, chạy kịp.
+* B. **(Đáp án đúng)** $2^{20} = 1{,}048{,}576$ tập con, chạy mất khoảng `0.01` giây, hoàn toàn kịp thời gian `1` giây.
+* C. $20! \approx 2.4 \times 10^{18}$ tập con, bị quá thời gian.
+* D. $2^{20} \approx 10^9$ tập con, bị quá thời gian.
+> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) `implies 2^20 ≈ 1.05 * 10^6` trạng thái. Vòng lặp $10^6$ chạy dưới `0.02` giây trong C++.
 
 ---
 
 #### Câu 8 (Tìm phần tử đơn lẻ — XOR Application):
 Cho mảng gồm `2N + 1` số nguyên, trong đó có đúng một số xuất hiện 1 lần, tất cả các số còn lại đều xuất hiện đúng 2 lần. Thuật toán tìm số xuất hiện 1 lần tối ưu nhất là gì?
-* A. Dùng 2 vòng lặp lồng nhau `O(N^2)`.
-* B. Sắp xếp mảng mất `O(N log N)`.
-* C. **(Đáp án đúng)** Tính XOR tất cả các phần tử trong mảng trong `O(N)` thời gian và `O(1)` bộ nhớ.
+* A. Dùng 2 vòng lặp lồng nhau $\mathcal{O}(N^2)$.
+* B. Sắp xếp mảng mất $\mathcal{O}(N \log N)$.
+* C. **(Đáp án đúng)** Tính XOR tất cả các phần tử trong mảng trong $\mathcal{O}(N)$ thời gian và $\mathcal{O}(1)$ bộ nhớ.
 * D. Dùng bảng băm đếm tần suất.
 > *Giải thích:* Các cặp số giống nhau khi XOR với nhau sẽ triệt tiêu về 0 (`x XOR x = 0`). Kết quả XOR của toàn bộ mảng chính là số xuất hiện 1 lần duy nhất.
 
@@ -305,7 +305,7 @@ Vòng lặp `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` dùng để 
 ---
 
 #### Câu 11 (Cặp tổng lũy thừa của 2 — Power of 2 Pairs):
-Cho `A_i <= 10^9`. Để đếm số cặp `A_i + A_j = 2^k`, tại sao ta chỉ cần lặp tối đa `k` từ `1` đến `30`?
+Cho $A_i \le 10^9$. Để đếm số cặp `A_i + A_j = 2^k`, tại sao ta chỉ cần lặp tối đa `k` từ `1` đến `30`?
 * A. Vì kiểu `long long` trong C++ chỉ biểu diễn được 30 bit.
 * B. **(Đáp án đúng)** Vì giá trị tổng lớn nhất của hai số là `10^9 + 10^9 = 2 * 10^9 < 2^31`, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
 * C. Vì số 30 là số nguyên tố.
@@ -328,19 +328,19 @@ Hai số nguyên dương `X` và `Y` được gọi là độc lập về bit kh
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-BIT-01` | **Bật, Tắt Và Kiểm Tra Bit Thứ K** | `P0` | `N <= 10^18, K <= 60` | Thao tác `(1LL << k)`, `&`, `|`, `^` |
-| 02 | `CPPB-BIT-02` | **Đếm Số Lượng Bit 1 (Popcount)** | `P1` | `N <= 10^18` | `__builtin_popcountll` và thuật toán bit |
-| 03 | `CPPB-BIT-03` | **Kiểm Tra Số Có Phải Lũy Thừa Của 2** | `P1` | `N <= 10^18` | Kỹ thuật `n > 0 && (n & (n - 1)) == 0` |
-| 04 | `CPPB-BIT-04` | **Tìm Phần Tử Xuất Hiện 1 Lần Duy Nhất** | `P2` | `N <= 2 * 10^5` | Tính chất tự triệt tiêu `A XOR A = 0` |
-| 05 | `CPPB-BIT-05` | **Tìm Hai Số Xuất Hiện 1 Lần Duy Nhất** | `P2` | `N <= 2 * 10^5` | Phân tách nhóm bằng bit khác biệt đầu tiên |
-| 06 | `CPPB-BIT-06` | **Đảo Bit Và Giá Trị Bù 1** | `P2` | `N <= 10^9` | Phép toán NOT kết hợp mặt nạ |
-| 07 | `CPPB-BIT-07` | **Duyệt Toàn Bộ `2^N` Tập Con Bằng Mặt Nạ Bit** | `P2` | `N <= 20` | `for (int mask = 0; mask < (1 << n); ++mask)` |
-| 08 | `CPPB-BIT-08` | **Bài Toán Tổng Tập Con Bằng S (Subset Sum)** | `P3` | `N <= 20, S <= 10^9` | Duyệt nhị phân vét cạn `2^N` |
-| 09 | `CPPB-BIT-09` | **Chia Tập Hợp Thành 2 Phần Có Tổng Chênh Lệch Nhỏ Nhất** | `P3` | `N <= 20` | Vét cạn bitmask tối ưu hiệu |
+| 01 | `CPPB-BIT-01` | **Bật, Tắt Và Kiểm Tra Bit Thứ K** | `P0` | `N <= 10^18, K <= 60` | Thao tác $(1\text{LL} \ll k)$, `&`, `|`, `^` |
+| 02 | `CPPB-BIT-02` | **Đếm Số Lượng Bit 1 (Popcount)** | `P1` | $N \le 10^{18}$ | `__builtin_popcountll` và thuật toán bit |
+| 03 | `CPPB-BIT-03` | **Kiểm Tra Số Có Phải Lũy Thừa Của 2** | `P1` | $N \le 10^{18}$ | Kỹ thuật `n > 0 && (n & (n - 1)) == 0` |
+| 04 | `CPPB-BIT-04` | **Tìm Phần Tử Xuất Hiện 1 Lần Duy Nhất** | `P2` | $N \le 2 \times 10^5$ | Tính chất tự triệt tiêu `A XOR A = 0` |
+| 05 | `CPPB-BIT-05` | **Tìm Hai Số Xuất Hiện 1 Lần Duy Nhất** | `P2` | $N \le 2 \times 10^5$ | Phân tách nhóm bằng bit khác biệt đầu tiên |
+| 06 | `CPPB-BIT-06` | **Đảo Bit Và Giá Trị Bù 1** | `P2` | $N \le 10^9$ | Phép toán NOT kết hợp mặt nạ |
+| 07 | `CPPB-BIT-07` | **Duyệt Toàn Bộ $2^N$ Tập Con Bằng Mặt Nạ Bit** | `P2` | $N \le 20$ | `for (int mask = 0; mask < (1 << n); ++mask)` |
+| 08 | `CPPB-BIT-08` | **Bài Toán Tổng Tập Con Bằng S (Subset Sum)** | `P3` | `N <= 20, S <= 10^9` | Duyệt nhị phân vét cạn $2^N$ |
+| 09 | `CPPB-BIT-09` | **Chia Tập Hợp Thành 2 Phần Có Tổng Chênh Lệch Nhỏ Nhất** | `P3` | $N \le 20$ | Vét cạn bitmask tối ưu hiệu |
 | 10 | `CPPB-BIT-10` | **Đếm Cặp Có Tích Bit AND Bằng 0** | `P3` | `N <= 10^5, A_i < 2^16` | Tần suất bit và kiểm tra tương thích |
-| 11 | `CPPB-BIT-11` | **Tìm Cặp Có XOR Lớn Nhất Trong Mảng** | `P4` | `N <= 10^5, A_i <= 10^9` | Duyệt từng bit từ cao xuống thấp (Greedy Bit) |
-| 12 | `CPPB-BIT-12` | **Duyệt Tất Cả Các Tập Con Của Một Mặt Nạ Bit** | `P4` | `N <= 18` | Kỹ thuật `submask = (submask - 1) & mask` |
+| 11 | `CPPB-BIT-11` | **Tìm Cặp Có XOR Lớn Nhất Trong Mảng** | `P4` | $N \le 10^5, A_i \le 10^9$ | Duyệt từng bit từ cao xuống thấp (Greedy Bit) |
+| 12 | `CPPB-BIT-12` | **Duyệt Tất Cả Các Tập Con Của Một Mặt Nạ Bit** | `P4` | `N <= 18` | Kỹ thuật $\text{submask} = (\text{submask} - 1) \ \& \ mask$ |
 | 13 | `CPPB-BIT-13` | **Tìm Dãy Con Có Tổng XOR Bằng K** | `P4` | `N <= 22` | Vét cạn nâng cao kết hợp bit |
-| 14 | `CPPB-BIT-14` | **Tối Ưu Hóa Gán Việc Cho N Người (N <= 20)** | `P5` | `N <= 20` | Bitmask trạng thái và tối ưu hóa tổ hợp |
-| 15 | `CPPB-BIT-15` | **Đếm Số Cặp Có Tổng Bằng Lũy Thừa Của 2** | `P3` | `N <= 10^5, A_i <= 10^9` | Kết hợp bitmask và hai con trỏ / chặt nhị phân |
+| 14 | `CPPB-BIT-14` | **Tối Ưu Hóa Gán Việc Cho N Người (N <= 20)** | `P5` | $N \le 20$ | Bitmask trạng thái và tối ưu hóa tổ hợp |
+| 15 | `CPPB-BIT-15` | **Đếm Số Cặp Có Tổng Bằng Lũy Thừa Của 2** | `P3` | $N \le 10^5, A_i \le 10^9$ | Kết hợp bitmask và hai con trỏ / chặt nhị phân |
 | 16 | `CPPB-BIT-16` | **Tập Hợp Độc Lập Về Bit Lớn Nhất** | `P4` | `N <= 24` | Bitmask đồ thị độc lập cực đại |

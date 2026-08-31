@@ -6,7 +6,7 @@
 
 Để có cái nhìn toàn cảnh về các phương pháp giải thuật lớn trong Lập trình thi đấu:
 
-![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/search_paradigms_bridge_vi.svg)
+![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](assets/search_paradigms_bridge_vi.svg)
 
 * **Divide & Conquer:** $\text{Bài toán lớn} \longrightarrow \text{Các bài toán con riêng biệt}$.
 * **Backtracking / State-Space Search:** $\text{Trạng thái hiện tại} \longrightarrow \text{Các nhánh quyết định thử nghiệm (Choices)}$.
@@ -68,7 +68,7 @@ void search(State state) {
 
 ## 4. Khung Tư Duy Mental Model: Hai Sơ Đồ Cốt Lõi Của Lesson 12
 
-![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_space_tree_vi.svg)
+![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](assets/state_space_tree_vi.svg)
 
 ### Quy Trình 1: Luồng Ra Quyết Định Quay Lui Thuần Túy (Backtracking)
 
@@ -80,7 +80,7 @@ void search(State state) {
 
 > **Quy luật cốt lõi:** `Choose-Explore-Unchoose` là một pattern cài đặt phổ biến. Bản chất kỹ thuật sâu sắc là **Bất biến Khôi phục Trạng Thái (State Restoration Invariant)**:
 >
-> $$\text{State}_{\text{before}} \xrightarrow{\text{Choose}} \text{State}_{\text{new}} \xrightarrow{\text{Explore}} \text{Subtree} \xrightarrow{\text{Unchoose}} \text{State}_{\text{before}}$$
+> $\text{State}_{\text{before}} \xrightarrow{\text{Choose}} \text{State}_{\text{new}} \xrightarrow{\text{Explore}} \text{Subtree} \xrightarrow{\text{Unchoose}} \text{State}_{\text{before}}$
 >
 > Sau khi khám phá xong một nhánh con và hàm con return, trạng thái phải được trả về **nguyên vẹn 100%** như trước khi bước vào nhánh đó, đảm bảo nhánh kế tiếp bắt đầu từ cùng một trạng thái cha.
 
@@ -126,7 +126,7 @@ void search(State state) {
 
 ## 8. Cầu Nối Sâu Sang DP: Từ Cây Tìm Kiếm (Search Tree) Đến Đồ Thị Trạng Thái (State DAG)
 
-![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_dag_overlapping_vi.svg)
+![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](assets/state_dag_overlapping_vi.svg)
 
 * **Duyệt cây thuần túy (Tree Search):** Phải tính toán lại trạng thái `E` nhiều lần ở các nhánh con khác nhau.
 * **Quan điểm Đồ thị (State DAG View):** `E` chỉ là một đỉnh duy nhất trong không gian trạng thái.
@@ -251,10 +251,10 @@ Sự khác biệt cốt lõi giữa Cắt tỉa tính khả thi (Feasibility Pru
 
 #### Câu 4 (Đánh dấu các họ đường chéo N-Queens):
 Trong bài toán xếp $N$ quân hậu trên bàn cờ $N \times N$ (1-based indexing), để tránh chỉ số mảng bị âm khi đánh dấu một họ đường chéo (hướng `\`) đi qua ô $(row, col)$, công thức chỉ số chuẩn xác là:
-* A. `row - col`
-* B. **(Đáp án đúng)** `row - col + N` (với $N$ là kích thước bàn cờ, chỉ số thuộc $[1, 2N-1]$).
-* C. `row * col`
-* D. `(row + col) % N`
+* A. $row - col$
+* B. **(Đáp án đúng)** $row - col + N$ (với $N$ là kích thước bàn cờ, chỉ số thuộc $[1, 2N-1]$).
+* C. $row \times col$
+* D. $(row + col) \bmod N$
 > *Giải thích:* Vì $row - col$ có thể nhận giá trị âm từ $-(N-1)$ đến $N-1$, cộng thêm $N$ đảm bảo chỉ số luôn nằm trong khoảng an toàn $[1, 2N-1]$.
 
 ---
@@ -281,10 +281,10 @@ Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt 
 
 #### Câu 7 (Độ phức tạp không gian: Exponential Tree $\ne$ Exponential Stack):
 Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \dots, N\}$ tiêu tốn bộ nhớ ngăn xếp (Call Stack Space) tối đa là bao nhiêu?
-* A. `Theta(N!)`
-* B. `Theta(N^2)`
-* C. **(Đáp án đúng)** `Theta(N)` (Search Space đo tổng số trạng thái lá $N!$, nhưng Call Stack chỉ đo độ sâu của một đường đi đang khám phá là $N$).
-* D. `Theta(1)`
+* A. $\Theta(N!)$
+* B. $\Theta(N^2)$
+* C. **(Đáp án đúng)** $\Theta(N)$ (Search Space đo tổng số trạng thái lá $N!$, nhưng Call Stack chỉ đo độ sâu của một đường đi đang khám phá là $N$).
+* D. $\Theta(1)$
 > *Giải thích:* Cây tìm kiếm khổng lồ không đồng nghĩa với Call Stack khổng lồ; độ sâu ngăn xếp chỉ tỷ lệ thuận với chiều dài nghiệm đang xây dựng.
 
 ---
@@ -292,19 +292,19 @@ Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \
 #### Câu 8 (Cắt tỉa kết hợp sắp xếp trong Subset Sum):
 Khi tìm các tập con của mảng các số nguyên dương ($A_i > 0$) có tổng bằng $S$, nếu mảng đã được sắp xếp tăng dần, điều kiện cắt tỉa tính khả thi hiệu quả nhất tại vòng lặp duyệt phần tử $A_i$ là gì?
 * A. Dừng lại khi mảng còn hơn 10 phần tử.
-* B. **(Đáp án đúng)** Dùng lệnh `break` dừng duyệt toàn bộ các phần tử còn lại ngay khi `current_sum + A[i] > S` (dựa trên tính đơn điệu Monotonicity: các phần tử sau $A_{i+1} \ge A_i$ chắc chắn cũng vượt $S$).
+* B. **(Đáp án đúng)** Dùng lệnh `break` dừng duyệt toàn bộ các phần tử còn lại ngay khi $\text{current\_sum} + A[i] > S$ (dựa trên tính đơn điệu Monotonicity: các phần tử sau $A_{i+1} \ge A_i$ chắc chắn cũng vượt $S$).
 * C. Dừng lại khi gặp số chẵn.
-* D. Dừng lại khi `current_sum == 0`.
+* D. Dừng lại khi $\text{current\_sum} == 0$.
 > *Giải thích:* Sắp xếp mảng trước kết hợp giả thiết $A_i > 0$ giúp chuyển điều kiện từ `continue` ở từng nhánh thành `break` triệt tiêu toàn bộ cây con phía sau.
 
 ---
 
 #### Câu 9 (Độ phức tạp tổng thể khi in toàn bộ xâu nhị phân):
 Chương trình sinh và in toàn bộ các xâu nhị phân độ dài $N$ ra màn hình có tổng thời gian thực thi (Time Complexity) là:
-* A. `Theta(2^N)`
-* B. **(Đáp án đúng)** `Theta(N * 2^N)` (có đúng $2^N$ xâu nghiệm, và mỗi xâu tốn $\mathcal{O}(N)$ thời gian để xuất ra màn hình).
-* C. `Theta(N!)`
-* D. `Theta(N)`
+* A. $\Theta(2^N)$
+* B. **(Đáp án đúng)** $\Theta(N \cdot 2^N)$ (có đúng $2^N$ xâu nghiệm, và mỗi xâu tốn $\mathcal{O}(N)$ thời gian để xuất ra màn hình).
+* C. $\Theta(N!)$
+* D. $\Theta(N)$
 > *Giải thích:* Cần phân biệt rõ giữa số lượng nghiệm lá ($\Theta(2^N)$) và tổng thời gian thực thi khi phải xuất toàn bộ nội dung từng nghiệm ($\Theta(N \cdot 2^N)$).
 
 ---
@@ -322,7 +322,7 @@ Khi một bài toán quay lui có hiện tượng nhiều nhánh trạng thái k
 #### Câu 11 (Bản chất State Identity trong bài toán Subset Sum):
 Trong bài toán Subset Sum, giả sử hai lời gọi đệ quy khác nhau đều đang đứng tại chỉ số `index = 5`, nhưng một nhánh có `current_sum = 12` và nhánh kia có `current_sum = 18`. Hai lời gọi này có được xem là cùng một State Identity trong DP không?
 * A. Có, vì chúng có cùng chỉ số `index = 5`.
-* B. **(Đáp án đúng)** Không, vì `current_sum` quyết định trực tiếp đến các lựa chọn và khả năng đạt tổng mục tiêu còn lại, nên `(index, current_sum)` mới là State Identity hoàn chỉnh.
+* B. **(Đáp án đúng)** Không, vì `current_sum` quyết định trực tiếp đến các lựa chọn và khả năng đạt tổng mục tiêu còn lại, nên $(\text{index}, \text{current\_sum})$ mới là State Identity hoàn chỉnh.
 * C. Có, vì chỉ số mảng quan trọng hơn tổng.
 * D. Tùy thuộc vào việc mảng có số âm hay không.
 > *Giải thích:* State Identity phải bao hàm đủ thông tin để xác định không gian nghiệm phía sau; khác `current_sum` dẫn đến các bài toán con phía sau hoàn toàn khác nhau.

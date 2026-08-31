@@ -42,7 +42,9 @@ Tại mỗi bước, thuật toán tính toán một hàm mục tiêu trên cặ
 ### 3.1. Mô hình 1: Tìm cặp số có tổng đúng bằng $S$ (Two Sum)
 * **Mục tiêu:** Tìm $i < j$ sao cho $A_i + A_j = S$.
 * **Quy tắc di chuyển:**
-  $$\begin{cases} L \leftarrow L + 1 & \text{khi } A_L + A_R < S \\ R \leftarrow R - 1 & \text{khi } A_L + A_R > S \\ \text{Dừng thuật toán} & \text{khi } A_L + A_R = S \end{cases}$$
+  * Nếu $A_L + A_R < S \implies L \leftarrow L + 1$ (Tổng nhỏ hơn mục tiêu, tăng cận dưới).
+  * Nếu $A_L + A_R > S \implies R \leftarrow R - 1$ (Tổng lớn hơn mục tiêu, giảm cận trên).
+  * Nếu $A_L + A_R = S \implies$ Ghi nhận nghiệm và dừng thuật toán.
 
 #### Ví Dụ Minh Họa 1: Tìm cặp số có tổng $S = 14$
 Cho mảng $N = 6$ phần tử đã sắp xếp: $A = [2, 3, 5, 8, 11, 15]$ (0-based indexing).
@@ -198,11 +200,11 @@ Trong bài toán đếm số cặp có `A_i + A_j <= S` trên mảng tăng dần
 
 #### Câu 4 (Chuyển giao — Transfer):
 Độ phức tạp thời gian tổng thể của bài toán Two Sum gồm 2 bước: Sắp xếp mảng `N` phần tử bằng `sort` rồi duyệt bằng Two Pointers là bao nhiêu?
-* A. `O(N^2)`
-* B. `O(N)`
-* C. **(Đáp án đúng)** `O(N log N)` (trong đó sắp xếp mất `O(N log N)` và duyệt Two Pointers mất `O(N)`).
-* D. `O(log N)`
-> *Giải thích:* Bước sắp xếp tốn `O(N log N)`, bước duyệt 2 con trỏ tốn `O(N)`. Tổng thời gian bị chi phối bởi bước sắp xếp là `O(N log N)`, nhanh hơn vượt bậc so với vét cạn `O(N^2)`.
+* A. $\mathcal{O}(N^2)$
+* B. $\mathcal{O}(N)$
+* C. **(Đáp án đúng)** $\mathcal{O}(N \log N)$ (trong đó sắp xếp mất $\mathcal{O}(N \log N)$ và duyệt Two Pointers mất $\mathcal{O}(N)$).
+* D. $\mathcal{O}(\log N)$
+> *Giải thích:* Bước sắp xếp tốn $\mathcal{O}(N \log N)$, bước duyệt 2 con trỏ tốn $\mathcal{O}(N)$. Tổng thời gian bị chi phối bởi bước sắp xếp là $\mathcal{O}(N \log N)$, nhanh hơn vượt bậc so với vét cạn $\mathcal{O}(N^2)$.
 
 ---
 
@@ -228,21 +230,21 @@ Trong bài toán **Ghép thuyền cứu hộ** (mỗi thuyền chở tối đa 2
 
 #### Câu 7 (Khử chiều đa biến — Dimensionality Reduction):
 Đối với bài toán **3-Sum** (tìm 3 số `A_i + A_j + A_k = S` với `i < j < k`), kỹ thuật Two Pointers giúp tối ưu hóa thuật toán như thế nào?
-* A. Giảm từ `O(N^2)` xuống `O(N log N)`.
-* B. **(Đáp án đúng)** Cố định chỉ số `i` bằng 1 vòng for (`O(N)`), sau đó dùng Two Pointers trên đoạn `[i+1 ... N-1]` (`O(N)`) để tìm `A_j + A_k = S - A_i`, giảm tổng thời gian từ `O(N^3)` xuống `O(N^2)`.
-* C. Chạy 3 con trỏ cùng lúc từ 3 đầu mảng trong `O(N)`.
-* D. Tính tổng tiền tố của 3 mảng con trong `O(1)`.
+* A. Giảm từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
+* B. **(Đáp án đúng)** Cố định chỉ số `i` bằng 1 vòng for ($\mathcal{O}(N)$), sau đó dùng Two Pointers trên đoạn `[i+1 ... N-1]` ($\mathcal{O}(N)$) để tìm `A_j + A_k = S - A_i`, giảm tổng thời gian từ $\mathcal{O}(N^3)$ xuống $\mathcal{O}(N^2)$.
+* C. Chạy 3 con trỏ cùng lúc từ 3 đầu mảng trong $\mathcal{O}(N)$.
+* D. Tính tổng tiền tố của 3 mảng con trong $\mathcal{O}(1)$.
 > *Giải thích:* Bằng cách cố định 1 biến, bài toán 3 biến quy về bài toán Two Sum 2 biến trên đoạn còn lại, giúp giảm đúng 1 bậc lũy thừa của độ phức tạp thời gian.
 
 ---
 
 #### Câu 8 (Xử lý trùng lặp — Duplicates Handling):
-Khi mảng có nhiều phần tử bằng nhau (ví dụ: `[2, 2, 2, 2]` và `S = 4`), để đếm chính xác số lượng cặp có tổng bằng `S` mà không bị chạy `O(N^2)`, ta xử lý như thế nào?
+Khi mảng có nhiều phần tử bằng nhau (ví dụ: `[2, 2, 2, 2]` và `S = 4`), để đếm chính xác số lượng cặp có tổng bằng `S` mà không bị chạy $\mathcal{O}(N^2)$, ta xử lý như thế nào?
 * A. Xóa bỏ tất cả các phần tử trùng lặp trước khi chạy.
 * B. **(Đáp án đúng)** Đếm số lượng phần tử bằng nhau liên tiếp ở 2 đầu `L` và `R` (ví dụ có `cnt_L` số bằng `A[L]` và `cnt_R` số bằng `A[R]`), sau đó cộng `cnt_L * cnt_R` vào kết quả (hoặc `(cnt_L * (cnt_L - 1))/(2)` nếu `A[L] == A[R]`).
 * C. Chỉ duyệt một lần và bỏ qua các số giống nhau.
 * D. Dùng vòng lặp lồng nhau duyệt lại đoạn trùng.
-> *Giải thích:* Nhân trực tiếp số lượng tần suất ở 2 đầu cho phép nhảy qua toàn bộ khối phần tử trùng lặp trong `O(1)`, giữ nguyên độ phức tạp tuyến tính `O(N)`.
+> *Giải thích:* Nhân trực tiếp số lượng tần suất ở 2 đầu cho phép nhảy qua toàn bộ khối phần tử trùng lặp trong $\mathcal{O}(1)$, giữ nguyên độ phức tạp tuyến tính $\mathcal{O}(N)$.
 
 ---
 
@@ -257,12 +259,12 @@ Cho 2 mảng đã sắp xếp tăng dần `A` kích thước `N` và `B` kích t
 ---
 
 #### Câu 10 (Phòng thủ kiểu dữ liệu — Data Overflow):
-Trong bài toán Two Sum với các phần tử mảng `A_i in [1, 10^9]` và `S = 2 * 10^9`, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
+Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và `S = 2 * 10^9`, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
 * A. Dùng kiểu `int` cho biến `sum = a[l] + a[r]` là hoàn toàn an toàn vì `2 * 10^9 < 2^31 - 1`.
 * B. **(Đáp án đúng)** Biến `current_sum` và biến đếm số lượng cặp bắt buộc phải khai báo `long long` để phòng ngừa tràn số 32-bit (số lượng cặp có thể lên tới `(N(N-1))/(2) ≈ 5 * 10^9`).
 * C. Chỉ cần dùng kiểu `double` là giải quyết được mọi trường hợp.
 * D. Không cần quan tâm kiểu dữ liệu vì compiler tự động ép kiểu 64-bit.
-> *Giải thích:* Giá trị tổng `A[L] + A[R]` có thể vượt ngưỡng `2^31-1` khi các số lớn hơn `10^9`, và số lượng cặp đếm được với `N = 2 * 10^5` có thể đạt tới `2 * 10^10`, bắt buộc phải dùng `long long` cho biến đếm.
+> Giải thích: Giá trị tổng `A[L] + A[R]` có thể vượt ngưỡng `2^31-1` khi các số lớn hơn $10^9$, và số lượng cặp đếm được với `N = 2  10^5` có thể đạt tới `2  10^10`, bắt buộc phải dùng `long long` cho biến đếm.
 
 ---
 
@@ -270,17 +272,17 @@ Trong bài toán Two Sum với các phần tử mảng `A_i in [1, 10^9]` và `S
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-HCT-01` | **Mô Phỏng Hai Con Trỏ Đối Đầu** | `P0` | `N <= 10^5, A_i <= 10^9` | Cơ chế co hẹp `L to <=ftarrow R` |
-| 02 | `CPPB-HCT-02` | **Cặp Số Có Tổng Bằng S (Two Sum)** | `P1` | `N <= 10^5, A_i <= 10^9` | Sắp xếp + Hai con trỏ |
-| 03 | `CPPB-HCT-03` | **Đếm Cặp Có Tổng Không Quá S** | `P2` | `N <= 2 * 10^5, A_i <= 10^9` | Cộng dồn tổ hợp đoạn `(R - L)` |
-| 04 | `CPPB-HCT-04` | **Đếm Cặp Có Tổng Lớn Hơn Hoặc Bằng S** | `P2` | `N <= 2 * 10^5, A_i <= 10^9` | Biến thể chặn dưới tổ hợp |
+| 01 | `CPPB-HCT-01` | **Mô Phỏng Hai Con Trỏ Đối Đầu** | `P0` | $N \le 10^5, A_i \le 10^9$ | Cơ chế co hẹp `L to <=ftarrow R` |
+| 02 | `CPPB-HCT-02` | **Cặp Số Có Tổng Bằng S (Two Sum)** | `P1` | $N \le 10^5, A_i \le 10^9$ | Sắp xếp + Hai con trỏ |
+| 03 | `CPPB-HCT-03` | **Đếm Cặp Có Tổng Không Quá S** | `P2` | $N \le 2 \times 10^5, A_i \le 10^9$ | Cộng dồn tổ hợp đoạn `(R - L)` |
+| 04 | `CPPB-HCT-04` | **Đếm Cặp Có Tổng Lớn Hơn Hoặc Bằng S** | `P2` | $N \le 2 \times 10^5, A_i \le 10^9$ | Biến thể chặn dưới tổ hợp |
 | 05 | `CPPB-HCT-05` | **Ghép Thuyền Cứu Hộ Tối Ưu** | `P3` | `N <= 10^5, C <= 10^9` | Tham lam ghép cực trị |
 | 06 | `CPPB-HCT-06` | **Vận Chuyển Thùng Hàng Cực Đại** | `P4` | `N <= 10^5, W_i <= 10^12` | Ghép cặp với dữ liệu cực lớn |
-| 07 | `CPPB-HCT-07` | **Tìm Cặp Có Tổng Gần S Nhất** | `P1` | `N <= 10^5, A_i <= 10^9` | Tối ưu sai số tuyệt đối |
+| 07 | `CPPB-HCT-07` | **Tìm Cặp Có Tổng Gần S Nhất** | `P1` | $N \le 10^5, A_i \le 10^9$ | Tối ưu sai số tuyệt đối |
 | 08 | `CPPB-HCT-08` | **Tìm Cặp Có Hiệu Đúng Bằng K** | `P2` | `N <= 10^5, K <= 10^18` | Hai con trỏ truy vết hiệu |
 | 09 | `CPPB-HCT-09` | **Bộ Ba Số Có Tổng Bằng S (3-Sum)** | `P3` | `N <= 3000, A_i <= 10^9` | Cố định 1 phần tử + Two Pointers |
 | 10 | `CPPB-HCT-10` | **Đếm Số Tam Giác Có Thể Tạo Thành** | `P3` | `N <= 3000, A_i <= 10^9` | Cố định cạnh lớn nhất + Two Pointers |
-| 11 | `CPPB-HCT-11` | **Đếm Cặp Tổng S Trên Mảng Trùng Lặp** | `P4` | `N <= 2 * 10^5` | Xử lý tần suất giá trị trùng nhau |
+| 11 | `CPPB-HCT-11` | **Đếm Cặp Tổng S Trên Mảng Trùng Lặp** | `P4` | $N \le 2 \times 10^5$ | Xử lý tần suất giá trị trùng nhau |
 | 12 | `CPPB-HCT-12` | **Ghép Cặp Trẻ Em Và Bánh Quy** | `P4` | `N, M <= 10^5` | Hai con trỏ trên 2 mảng khác nhau |
-| 13 | `CPPB-HCT-13` | **Bộ Bốn Số Có Tổng Bằng S (4-Sum)** | `P5` | `N <= 1000` | Cố định 2 phần tử + Two Pointers |
-| 14 | `CPPB-HCT-14` | **Cặp Số Tối Ưu Với Chênh Lệch Cực Hạn** | `P5` | `N, M <= 2 * 10^5` | Tìm `min vert A_i - B_j vert` tuyến tính |
+| 13 | `CPPB-HCT-13` | **Bộ Bốn Số Có Tổng Bằng S (4-Sum)** | `P5` | $N \le 1000$ | Cố định 2 phần tử + Two Pointers |
+| 14 | `CPPB-HCT-14` | **Cặp Số Tối Ưu Với Chênh Lệch Cực Hạn** | `P5` | `N, M <= 2 * 10^5` | Tìm `min \vert A_i - B_j \vert` tuyến tính |

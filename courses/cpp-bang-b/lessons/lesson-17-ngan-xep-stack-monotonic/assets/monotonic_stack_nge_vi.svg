@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <rect width="900" height="380" fill="#0f172a" rx="16"/>
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">MONOTONIC STACK: TÌM PHẦN TỬ LỚN HƠN TIẾP THEO (NEXT GREATER ELEMENT)</text>
+
+  <!-- Array visual -->
+  <g transform="translate(100, 80)">
+    <text x="0" y="25" fill="#94a3b8" font-size="14">Mảng A = [ 4, 2, 1, 5, 3 ]</text>
+
+    <rect x="0" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="40" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">4</text>
+    <rect x="90" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="130" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">2</text>
+    <rect x="180" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="220" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">1</text>
+    <rect x="270" y="50" width="80" height="50" fill="#854d0e" stroke="#facc15" rx="6"/>
+    <text x="310" y="80" fill="#f8fafc" font-size="18" font-family="monospace" font-weight="bold" text-anchor="middle">5</text>
+    <rect x="360" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="400" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">3</text>
+  </g>
+
+  <!-- Action explanation -->
+  <rect x="100" y="200" width="700" height="140" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="120" y="235" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Bất Biến Ngăn Xếp Đơn Điệu Giảm Dần (Lưu Chỉ Số i):</text>
+  <text x="120" y="265" fill="#f8fafc" font-size="14">• Duyệt qua phần tử 5: 5 lớn hơn 1 (pop 1, NGE[1]=5), 5 lớn hơn 2 (pop 2, NGE[2]=5), 5 lớn hơn 4 (pop 4, NGE[4]=5)</text>
+  <text x="120" y="295" fill="#4ade80" font-family="monospace" font-size="14">• Mỗi phần tử vào/ra Stack đúng 1 lần duy nhất → Tổng thời gian toàn mảng O(N)</text>
+  <text x="120" y="320" fill="#facc15" font-size="13">Kết quả NGE = [ 5, 5, 5, -1, -1 ]</text>
+</svg>

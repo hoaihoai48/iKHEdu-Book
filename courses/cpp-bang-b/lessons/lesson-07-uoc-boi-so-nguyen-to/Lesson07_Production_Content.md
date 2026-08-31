@@ -203,10 +203,10 @@ int main() {
 
 #### Câu 1 (Độ phức tạp):
 Thuật toán Euclid tìm `gcd(A, B)` có độ phức tạp thời gian trong trường hợp xấu nhất là bao nhiêu?
-* A. `O(min(A, B))`
-* B. **(Đáp án đúng)** `O(log(min(A, B)))`
-* C. `O(sqrt(min(A, B)))`
-* D. `O(1)`
+* A. $\mathcal{O}(\min(A, B))$
+* B. **(Đáp án đúng)** $\mathcal{O}(\log(\min(A, B)))$
+* C. $\mathcal{O}(\sqrt{\min(A, B)})$
+* D. $\mathcal{O}(1)$
 > *Giải thích:* Sau mỗi hai bước lặp của phép lấy dư Euclid, số nhỏ hơn sẽ giảm ít nhất một nửa, do đó số bước lặp tối đa không vượt quá `2 log2(min(A, B))`.
 
 ---
@@ -235,19 +235,19 @@ Trong template C++ chuẩn thi đấu, công thức nào sau đây được sử
 Tại sao để kiểm tra số `N` có phải là số nguyên tố hay không, ta chỉ cần kiểm tra các ước nguyên từ `2` đến `floor(sqrt(N) )`?
 * A. Vì các số lớn hơn `sqrt(N)` luôn là số lẻ.
 * B. **(Đáp án đúng)** Vì nếu `N = a * b`, không thể xảy ra trường hợp cả `a` và `b` đều đồng thời lớn hơn `sqrt(N)`.
-* C. Vì hàm `sqrt(N)` trong C++ chạy trong `O(1)`.
+* C. Vì hàm `sqrt(N)` trong C++ chạy trong $\mathcal{O}(1)$.
 * D. Vì số lượng ước của `N` không bao giờ vượt quá `sqrt(N)`.
 > *Giải thích:* Nếu `a > sqrt(N)` và `b > sqrt(N)` thì `a * b > N` (vô lý). Do đó, nếu `N` là hợp số, ước nhỏ hơn bắt buộc phải nằm trong khoảng `[2, sqrt(N)]`.
 
 ---
 
 #### Câu 5 (Ứng dụng Sàng nguyên tố):
-Độ phức tạp thời gian chuẩn của thuật toán Sàng Eratosthenes để tìm tất cả các số nguyên tố `<= N` là:
-* A. `O(N sqrt(N))`
-* B. `O(N log N)`
+Độ phức tạp thời gian chuẩn của thuật toán Sàng Eratosthenes để tìm tất cả các số nguyên tố `$\le N$` là:
+* A. $\mathcal{O}(N \sqrt{N})$
+* B. $\mathcal{O}(N \log N)$
 * C. **(Đáp án đúng)** `O(N log log N)`
-* D. `O(N)`
-> *Giải thích:* Tổng số thao tác gạch bỏ bằng `N sum(p <= N) (1)/(p)`. Theo định lý Mertens, chuỗi nghịch đảo các số nguyên tố có tổng tiệm cận `ln(ln N)`, do đó độ phức tạp là `O(N log log N)`, gần như tuyến tính tuyệt đối.
+* D. $\mathcal{O}(N)$
+> *Giải thích:* Tổng số thao tác gạch bỏ bằng `N sum(p $\le N$) (1)/(p)`. Theo định lý Mertens, chuỗi nghịch đảo các số nguyên tố có tổng tiệm cận `ln(ln N)`, do đó độ phức tạp là `O(N log log N)`, gần như tuyến tính tuyệt đối.
 
 ---
 
@@ -262,52 +262,52 @@ Trong kỹ thuật Sàng Ước Nguyên Tố Nhỏ Nhất (SPF), mảng `spf[x]`
 ---
 
 #### Câu 7 (Đếm số lượng ước):
-Một số nguyên `N` có dạng phân tích thừa số nguyên tố `N = p1^3 * p2^4 * p3^1` (với `p1, p2, p3` là các số nguyên tố phân biệt). Số `N` có tất cả bao nhiêu ước số nguyên dương?
+Một số nguyên `N` có dạng phân tích thừa số nguyên tố $N = p_1^3 \cdot p_2^4 \cdot p_3^1$ (với `p1, p2, p3` là các số nguyên tố phân biệt). Số `N` có tất cả bao nhiêu ước số nguyên dương?
 * A. `3 * 4 * 1 = 12`
 * B. `3 + 4 + 1 = 8`
 * C. **(Đáp án đúng)** `(3+1) * (4+1) * (1+1) = 4 * 5 * 2 = 40` ước
 * D. `40 - 1 = 39` ước
-> *Giải thích:* Theo công thức nhân tính, số lượng ước số của `N = tích p_i^a_i` là `tích (a_i + 1)`.
+> *Giải thích:* Theo công thức nhân tính, số lượng ước số của $N = \prod p_i^{a_i}$ là $\prod (a_i + 1)$.
 
 ---
 
 #### Câu 8 (Đặc điểm số chính phương):
-Một số nguyên dương `N` là số chính phương (`N = k^2`) khi và chỉ khi điều kiện nào sau đây được thỏa mãn?
+Một số nguyên dương `N` là số chính phương ($N = k^2$) khi và chỉ khi điều kiện nào sau đây được thỏa mãn?
 * A. `N` có số lượng thừa số nguyên tố phân biệt là một số chẵn.
 * B. Tổng các chữ số của `N` chia hết cho 9.
 * C. **(Đáp án đúng)** Số lượng ước số nguyên dương của `N` là một số lẻ (tương đương số mũ của mọi thừa số nguyên tố đều là số chẵn).
 * D. `N` có chữ số tận cùng thuộc tập `2, 3, 7, 8`.
-> *Giải thích:* Các ước số luôn đi thành từng cặp đối xứng `(d, (N)/(d))`. Chỉ khi `N = k^2` thì cặp ước tại `k = (N)/(k)` mới trùng nhau, tạo ra số lượng ước số lẻ. Về mặt thừa số nguyên tố, `N = tích p_i^2a_i` nên số lượng ước `(2a1 + 1)(2a2 + 1)...` luôn là tích các số lẻ (kết quả là số lẻ).
+> *Giải thích:* Các ước số luôn đi thành từng cặp đối xứng $(d, N/d)$. Chỉ khi $N = k^2$ thì cặp ước tại $k = N/k$ mới trùng nhau, tạo ra số lượng ước số lẻ. Về mặt thừa số nguyên tố, $N = \prod p_i^{2a_i}$ nên số lượng ước $(2a_1 + 1)(2a_2 + 1) \dots$ luôn là tích các số lẻ (kết quả là số lẻ).
 
 ---
 
 #### Câu 9 (Công thức Legendre):
-Công thức Legendre `E_p(N!) = sum(k=1)^infty floor((N)/(p^k) )` dùng để tính đại lượng nào?
-* A. Số lượng số nguyên tố nhỏ hơn `N!`.
-* B. **(Đáp án đúng)** Số mũ của thừa số nguyên tố `p` trong phân tích thừa số nguyên tố của `N!`.
-* C. Ước chung lớn nhất của `N!` và `p`.
-* D. Số chữ số của `N!`.
-> *Giải thích:* Công thức Legendre đếm số lượng bội của `p, p^2, p^3 ...` đóng góp vào tích `N! = 1 * 2 * ... * N`.
+Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng để tính đại lượng nào?
+* A. Số lượng số nguyên tố nhỏ hơn $N!$.
+* B. **(Đáp án đúng)** Số mũ của thừa số nguyên tố `p` trong phân tích thừa số nguyên tố của $N!$.
+* C. Ước chung lớn nhất của $N!$ và `p`.
+* D. Số chữ số của $N!$.
+> *Giải thích:* Công thức Legendre đếm số lượng bội của $p, p^2, p^3, \dots$ đóng góp vào tích $N! = 1 \times 2 \times \dots \times N$.
 
 ---
 
 #### Câu 10 (Chữ số 0 tận cùng):
-Số lượng chữ số `0` liên tiếp tận cùng của `100!` là bao nhiêu?
+Số lượng chữ số `0` liên tiếp tận cùng của $100!$ là bao nhiêu?
 * A. `10`
 * B. `20`
-* C. **(Đáp án đúng)** `floor((100)/(5) ) + floor((100)/(25) ) = 20 + 4 = 24`
+* C. **(Đáp án đúng)** $\lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = 24$
 * D. `25`
-> *Giải thích:* Mỗi chữ số 0 tận cùng được tạo bởi tích `2 * 5`. Trong `N!`, số lượng thừa số 2 luôn nhiều hơn số lượng thừa số 5, do đó số chữ số 0 bằng số mũ của 5 trong `100!`.
+> *Giải thích:* Mỗi chữ số 0 tận cùng được tạo bởi tích `2 * 5`. Trong $N!$, số lượng thừa số 2 luôn nhiều hơn số lượng thừa số 5, do đó số chữ số 0 bằng số mũ của 5 trong $100!$.
 
 ---
 
 #### Câu 11 (Sàng phân đoạn - Segmented Sieve):
 Kỹ thuật Sàng phân đoạn (Segmented Sieve) được sử dụng tối ưu nhất trong tình huống nào?
-* A. Khi cần tìm số nguyên tố trong khoảng `[1 ... 10^7]`.
-* B. **(Đáp án đúng)** Khi cần tìm số nguyên tố trong đoạn `[L, R]` với `R <= 10^12` nhưng độ dài đoạn `R - L <= 10^6`.
+* A. Khi cần tìm số nguyên tố trong khoảng $[1, 10^7]$.
+* B. **(Đáp án đúng)** Khi cần tìm số nguyên tố trong đoạn $[L, R]$ với $R \le 10^{12}$ nhưng độ dài đoạn $R - L \le 10^6$.
 * C. Khi `L` và `R` đều là số chẵn.
 * D. Khi bộ nhớ RAM máy tính có dung lượng trên 16GB.
-> *Giải thích:* Ta không thể tạo mảng kích thước `10^12`, nhưng có thể sàng trên mảng kích thước `R - L + 1 <= 10^6` bằng cách chỉ dùng các số nguyên tố `<= sqrt(R) <= 10^6`.
+> *Giải thích:* Ta không thể tạo mảng kích thước $10^{12}$, nhưng có thể sàng trên mảng kích thước $R - L + 1 \le 10^6$ bằng cách chỉ dùng các số nguyên tố $\le \sqrt{R} \le 10^6$.
 
 ---
 
@@ -316,7 +316,7 @@ Hai số nguyên dương `A` và `B` được gọi là nguyên tố cùng nhau 
 * A. Cả `A` và `B` đều là số nguyên tố.
 * B. `A + B` là số nguyên tố.
 * C. **(Đáp án đúng)** `gcd(A, B) = 1`.
-* D. `lcm(A, B) = A * B + 1`.
+* D. $\text{lcm}(A, B) = A \times B + 1$.
 > *Giải thích:* Hai số nguyên tố cùng nhau là hai số không có ước chung nào khác ngoài `1`, tức `gcd(A, B) = 1`.
 
 ---

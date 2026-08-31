@@ -1,15 +1,15 @@
-# iKHEDU C++ BẢNG B
 # C++ CƠ BẢN — TỜ GHI NHỚ & TRA CỨU NHANH
+* iKHEDU C++ Bảng B — Level 1*
 
-> Tài liệu này là bản tóm tắt để học sinh tra cứu trong quá trình học các chuyên đề thuật toán. Không cần học thuộc toàn bộ trong một lần. Hãy dùng tài liệu để nhớ lại **ý nghĩa, mẫu tư duy, cách dùng và lỗi thường gặp**.
+> Tài liệu tra cứu nhanh trong quá trình học chuyên đề thuật toán. Không cần học thuộc một lần — dùng để nhớ **ý nghĩa, cách dùng và lỗi thường gặp**.
 
-> **Nguyên tắc cốt lõi:** Cú pháp cần nhớ; ý nghĩa cần hiểu; cách chọn thuật toán cần tự suy luận.
+> **Nguyên tắc:** Nhớ cú pháp — Hiểu ý nghĩa — Tự suy luận cách chọn thuật toán.
 
 ---
 
-## 1. XƯƠNG SỐNG CỦA MỌI BÀI LẬP TRÌNH
+## 1. KHUNG TƯ DUY CỦA MỌI BÀI LẬP TRÌNH
 
-Mọi bài toán đều có thể bắt đầu bằng chuỗi câu hỏi:
+Mọi bài toán đều bắt đầu bằng chuỗi câu hỏi:
 
 ```text
 Đề bài → Dữ liệu → Biến → Công thức/Điều kiện
@@ -31,6 +31,30 @@ Trước khi viết code, hãy viết bằng lời hoặc pseudocode:
 2. Tính hoặc xử lý dữ liệu.
 3. Kiểm tra điều kiện nếu có.
 4. In kết quả.
+```
+
+### Công thức trước code
+
+Không viết code trước khi biết mình đang tính gì.
+
+```text
+Bài toán → Công thức hoặc quy tắc → Code
+```
+
+Ví dụ tính diện tích hình chữ nhật:
+
+```text
+S = chiều_dài × chiều_rộng
+```
+
+```cpp
+long long area = length * width;
+```
+
+Ví dụ tính trung bình (giữ phần thập phân):
+
+```cpp
+double average = 1.0 * sum / n;
 ```
 
 ### Chuỗi ghi nhớ nền tảng
@@ -78,13 +102,13 @@ int main() {
 | `cin.tie(nullptr);` | Tối ưu liên kết giữa nhập và xuất |
 | `return 0;` | Kết thúc chương trình thành công |
 
-Trong giai đoạn đầu, học sinh cần tập trung vào phần **dữ liệu – xử lý – kết quả**, không cần học sâu cơ chế hoạt động của thư viện.
+Giai đoạn đầu chỉ cần tập trung vào **dữ liệu – xử lý – kết quả**, chưa cần hiểu sâu cơ chế thư viện.
 
 ---
 
 ## 3. BIẾN VÀ KIỂU DỮ LIỆU
 
-> **Biến là một nơi có tên để lưu dữ liệu.**
+> **Biến là ô nhớ có tên để lưu dữ liệu.**
 
 ```cpp
 int age = 15;
@@ -159,6 +183,25 @@ getline(cin, s);
 
 Trong phần lớn bài thi cơ bản, dữ liệu dạng số hoặc từ không có khoảng trắng có thể đọc bằng `cin >>`.
 
+### Ba mẹo thi đấu thường gặp
+
+```cpp
+// 1. Đọc nhiều bộ test đến khi hết file
+int n;
+while (cin >> n) {
+    // xử lý từng bộ test
+}
+
+// 2. Đọc dòng có khoảng trắng sau khi đã cin >> n
+cin.ignore(numeric_limits<streamsize>::max(), '\n');
+getline(cin, s);
+
+// 3. Ép kiểu giữ phần thập phân khi sum là long long
+double avg = 1.0 * sum / n;
+```
+
+> Cần `#include <bits/stdc++.h>` đã bao gồm `limits` cho `numeric_limits`.
+
 ---
 
 ## 5. TOÁN TỬ VÀ BIỂU THỨC
@@ -205,7 +248,7 @@ Khi cả hai toán hạng là số nguyên, phép `/` cho phần nguyên. Toán 
 | `>=` | Lớn hơn hoặc bằng |
 | `<=` | Nhỏ hơn hoặc bằng |
 
-> **Cẩn thận:** `=` là phép gán; `==` là phép so sánh.
+> **Lưu ý:** Đừng nhầm `=` (gán) với `==` (so sánh).
 
 ### Toán tử logic
 
@@ -217,39 +260,7 @@ Khi cả hai toán hạng là số nguyên, phép `/` cho phần nguyên. Toán 
 
 ---
 
-## 6. CÔNG THỨC TRƯỚC CODE
-
-Không viết code trước khi biết mình đang tính gì.
-
-```text
-Bài toán → Công thức hoặc quy tắc → Code
-```
-
-Ví dụ tính diện tích hình chữ nhật:
-
-```text
-S = chiều_dài × chiều_rộng
-```
-
-```cpp
-long long area = length * width;
-```
-
-Ví dụ tính trung bình:
-
-```text
-Trung bình = Tổng / Số lượng
-```
-
-Nếu muốn giữ phần thập phân, cần chú ý phép chia:
-
-```cpp
-double average = 1.0 * sum / n;
-```
-
----
-
-## 7. ĐIỀU KIỆN – MÁY TÍNH RA QUYẾT ĐỊNH
+## 6. ĐIỀU KIỆN — RẼ NHÁNH
 
 ### Mẫu cơ bản
 
@@ -297,7 +308,7 @@ Chỉ dùng khi quyết định thứ hai phụ thuộc vào quyết định th�
 
 ---
 
-## 8. VÒNG LẶP – LÀM MỘT VIỆC NHIỀU LẦN
+## 7. VÒNG LẶP – LÀM MỘT VIỆC NHIỀU LẦN
 
 Trước khi viết vòng lặp, trả lời ba câu hỏi:
 
@@ -350,7 +361,7 @@ Nếu vòng ngoài chạy `N` lần và vòng trong chạy `M` lần, số thao 
 
 ---
 
-## 9. BỐN MẪU TÍCH LŨY CẦN NHỚ
+## 8. BỐN MẪU TÍCH LŨY
 
 ### Tính tổng
 
@@ -392,7 +403,7 @@ for (int x : a) {
 
 ---
 
-## 10. MẢNG, `VECTOR` VÀ `STRING`
+## 9. MẢNG, `VECTOR` VÀ `STRING`
 
 ### Mảng và chỉ số
 
@@ -400,7 +411,7 @@ for (int x : a) {
 a[0], a[1], a[2], .., a[n - 1]
 ```
 
-> **C++ đánh chỉ số từ 0.** Với `n` phần tử, chỉ số cuối là `n - 1`.
+> **Chỉ số bắt đầu từ 0.** Với `n` phần tử, chỉ số hợp lệ là `0 … n-1`.
 
 ### Đọc và duyệt mảng
 
@@ -462,9 +473,9 @@ for (int i = 0; i < (int)s.size(); i++) {
 
 ---
 
-## 11. HÀM – CHIA BÀI TOÁN THÀNH CÁC PHẦN
+## 10. HÀM — CHIA BÀI TOÁN THÀNH CÁC PHẦN
 
-> **Hàm là một chiếc máy:** nhận dữ liệu vào, thực hiện một nhiệm vụ và có thể trả về kết quả.
+> **Hàm là một khối công việc riêng:** nhận dữ liệu vào, thực hiện một nhiệm vụ và có thể trả về kết quả.
 
 ```cpp
 int square(int x) {
@@ -498,9 +509,9 @@ Hàm nên thực hiện **một nhiệm vụ rõ ràng**. Các tên hàm thườ
 
 ---
 
-## 12. DEBUG VÀ KIỂM THỬ
+## 11. GỠ LỖI VÀ KIỂM THỬ
 
-Khi chương trình sai, không đoán mò. Hãy kiểm tra theo thứ tự:
+Khi chương trình sai, không đoán bừa. Hãy kiểm tra theo thứ tự:
 
 | Câu hỏi | Việc cần làm |
 |---|---|
@@ -534,7 +545,7 @@ Mỗi bài nên thử:
 
 ---
 
-## 13. ĐỘ PHỨC TẠP – CHƯƠNG TRÌNH CÓ ĐỦ NHANH KHÔNG?
+## 12. ĐỘ PHỨC TẠP — CHƯƠNG TRÌNH CÓ ĐỦ NHANH?
 
 | Độ phức tạp | Trực giác |
 |---|---|
@@ -558,82 +569,7 @@ Mỗi bài nên thử:
 
 ---
 
-## 14. CÁC MẪU TƯ DUY NỀN TẢNG
-
-| Mẫu | Code đại diện | Dùng khi… |
-|---|---|---|
-| Tính toán | `result = formula;` | Kết quả được mô tả bằng công thức |
-| Kiểm tra | `if (condition)` | Cần quyết định đúng/sai |
-| Lặp | `for (..)` | Cần xử lý nhiều lần |
-| Đếm | `count++` | Cần đếm số đối tượng thỏa điều kiện |
-| Cộng dồn | `sum += x` | Cần giữ tổng hoặc giá trị tích lũy |
-| Max/Min | `mx = max(mx, x)` | Cần giữ đáp án tốt nhất hiện tại |
-| Tìm kiếm tuyến tính | Duyệt từ đầu đến cuối | Cần tìm phần tử đầu tiên/phù hợp |
-| Lưu nhiều dữ liệu | `vector<int> a` | Có một danh sách dữ liệu |
-| Đóng gói | `check(x)`, `solve()` | Một nhiệm vụ được dùng nhiều lần |
-
----
-
-## 15. DẤU HIỆU NHẬN BIẾT THUẬT TOÁN
-
-Khi gặp bài mới, không chọn thuật toán chỉ vì nhìn thấy tên quen thuộc. Hãy quan sát dấu hiệu của bài toán.
-
-| Dấu hiệu trong đề | Hướng cần nghĩ đến |
-|---|---|
-| Cần sắp thứ tự hoặc xử lý từ nhỏ đến lớn | Sorting |
-| Cần tổng nhiều đoạn liên tiếp | Prefix Sum |
-| Cần duy trì một đoạn liên tục | Two Pointers / Sliding Window |
-| Mỗi bước chọn một phương án hiện tại | Greedy |
-| Tìm giá trị nhỏ nhất/lớn nhất thỏa điều kiện | Binary Search on Answer |
-| Có các trạng thái và kết quả của bài nhỏ hơn | Dynamic Programming |
-| Có đối tượng và quan hệ kết nối | Graph, BFS, DFS |
-| Cần vào trước ra sau | Stack |
-| Cần vào trước ra trước | Queue |
-| Cần thao tác nhanh trên đoạn | Fenwick Tree / Segment Tree |
-
-Trước khi chọn thuật toán, hãy trả lời:
-
-```text
-1. Tôi đang cần tìm hoặc tính cái gì?
-2. Dữ liệu có cấu trúc gì?
-3. Cách làm trực tiếp là gì?
-4. Cách trực tiếp có đủ nhanh không?
-5. Có chuyên đề thuật toán nào phù hợp không?
-```
-
----
-
-## 16. CHECKLIST TRƯỚC KHI NỘP BÀI
-
-### Hiểu đề
-
-- Tôi đã xác định đúng Input chưa?
-- Tôi đã xác định đúng Output chưa?
-- Tôi đã đọc giới hạn dữ liệu chưa?
-- Tôi có biết trường hợp đặc biệt không?
-
-### Viết lời giải
-
-- Tôi đã viết công thức hoặc các bước xử lý chưa?
-- Tên biến có thể hiện đúng ý nghĩa không?
-- Tôi đã khởi tạo `sum`, `count`, `mx`, `mn` đúng chưa?
-- Tôi có dùng đúng kiểu dữ liệu không?
-- Chỉ số có nằm trong khoảng hợp lệ không?
-
-### Kiểm tra chương trình
-
-- Chương trình có biên dịch không?
-- Có vòng lặp vô hạn không?
-- Có nhầm `=` và `==` không?
-- Có nhầm `i < n` và `i <= n` không?
-- Output có thừa chữ hoặc thừa dòng không?
-- Độ phức tạp có phù hợp với giới hạn không?
-
-> Nếu chưa biết bắt đầu từ đâu, hãy quay về chuỗi: **Input → Biến → Công thức → Điều kiện → Lặp → Kết quả → Kiểm tra**.
-
----
-
-## 17. TÓM TẮT MỘT TRANG
+## TÓM TẮT MỘT TRANG
 
 ```text
 BIẾN
@@ -655,19 +591,10 @@ MẢNG
   Tôi có nhiều dữ liệu cùng loại không?
 
 HÀM
-  Tôi có thể tách nhiệm vụ nào thành một chiếc máy nhỏ?
+  Tôi có thể tách nhiệm vụ nào thành một khối công việc riêng?
 
 DEBUG
   Input, biến, công thức, điều kiện, vòng lặp và kết quả trung gian có đúng không?
 ```
 
 > **Mục tiêu của C++ Cơ bản:** Không phải nhớ thật nhiều câu lệnh, mà là nhìn một bài toán đơn giản và biết biến nó thành các bước có thể lập trình được.
-
----
-
-## Tài liệu tham chiếu nội bộ
-
-Tài liệu này được biên soạn độc lập để tra cứu và không thay đổi nội dung của knowledge base gốc:
-
-- `IKHEDU_Knowledge_Base.md`
-- `Lo_trinh_hoc_tap_bangB_level1.jpg`
