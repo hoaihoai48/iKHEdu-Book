@@ -45,7 +45,7 @@ $$dp[i] = 1 + \min_{\{c \in C \mid i \ge c\}} dp[i - c]$$
 > **Lưu ý quan trọng:** Quy tắc thứ tự vòng lặp phân biệt Hoán vị / Tổ hợp dưới đây áp dụng cho **bài toán đếm số cách**. Với bài toán tối ưu số đồng xu ít nhất $dp[i] = 1 + \min(dp[i-c])$, do phép toán $\min$ có tính chất giao hoán và kết hợp nên ta luôn duyệt $i$ từ $1 \to S$ mà không làm thay đổi giá trị tối ưu.
 
 * **Phân biệt Sư phạm Cốt lõi Trong Bài Toán Đếm Số Cách (Counting Coin Change):**
-* **Bài toán Hoán vị (Permutation):** Thứ tự các đồng xu có phân biệt (ví dụ $1+2 \ne 2+1$). Vòng lặp ngoài duyệt Tiền $i = 1 \to S$, vòng lặp trong thử từng đồng xu $c \in C$.
+* **Bài toán Hoán vị (Permutation):** Thứ tự các đồng xu có phân biệt (ví dụ $1+2 \neq 2+1$ (khác $2+1$)). Vòng lặp ngoài duyệt Tiền $i = 1 \to S$, vòng lặp trong thử từng đồng xu $c \in C$.
 * **Bài toán Tổ hợp (Combination):** Thứ tự các đồng xu không phân biệt (ví dụ $1+2$ và $2+1$ là một cách). Vòng lặp ngoài duyệt từng đồng xu $c \in C$, vòng lặp trong duyệt Tiền $i = c \to S$.
 
 ![Bài toán Đổi tiền Coin Change và DAG trạng thái](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/coin_change_dag_vi.svg)
@@ -303,7 +303,7 @@ Khi khởi tạo mảng $dp$ tìm giá trị nhỏ nhất, giá trị nào sau �
 
 - **D.** $0$.
 
-> *Giải thích:* $INT_MAX + 1$ sẽ bị tràn số nguyên thành số âm cực lớn. Dùng `const long long INF = 1e18;` và luôn kiểm tra $if (dp[v] \ne INF)$ là chuẩn mực an toàn.
+> *Giải thích:* $INT_MAX + 1$ sẽ bị tràn số nguyên thành số âm cực lớn. Dùng `const long long INF = 1e18;` và luôn kiểm tra `if (dp[v] != INF)` là chuẩn mực an toàn.
 
 #### Câu 6 (Khôi phục vết nghiệm Traceback):
 
@@ -450,7 +450,7 @@ Trong thuật toán LIS $\mathcal{O}(N \log N)$ (chỉ số 0-based), phần t�
 | Mã Bài Tập | Tên Bài Toán | Mức Độ | Trọng Tâm Kiến Thức & DP Invariant |
 |---|---|:---:|---|
 | $CPPB-DP1-01$ | Bước Nhảy Bậc Thang Cơ Bản | **P0** | Nhận diện Base Case $dp[0]=1, dp[1]=1$ & Công thức truy hồi $1D$. |
-| $CPPB-DP1-02$ | Chú Ếch Nhảy Cóc Chi Phí Min | **P1** | $dp[i] = \min(dp[i-1] + |h_i-h_{i-1}|, dp[i-2] + |h_i-h_{i-2}|)$. |
+| $CPPB-DP1-02$ | Chú Ếch Nhảy Cóc Chi Phí Min | **P1** | $dp[i] = \min(dp[i-1] + \vert h_i - h_{i-1} \vert, dp[i-2] + \vert h_i - h_{i-2} \vert)$. |
 | $CPPB-DP1-03$ | Trộm Nhà Không Liền Kề (House Robber) | **P1** | Quyết định nhị phân: $dp[i] = \max(dp[i-1], dp[i-2] + A[i])$. |
 | $CPPB-DP1-04$ | Delete and Earn Tối Đa Điểm | **P2** | Quy đổi bài toán trên mảng giá trị về mô hình House Robber. |
 | $CPPB-DP1-05$ | Đổi Tiền Ít Đồng Xu Nhất | **P2** | $dp[S] = 1 + \min(dp[S-c])$, xử lý khởi tạo giá trị vô cùng $\infty$. |

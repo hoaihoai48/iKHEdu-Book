@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="900" height="380" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="30" y="42" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Mô phỏng sàng Eratosthenes tìm số nguyên tố trong đoạn [2 .. 20]</text>
+  <text x="30" y="68" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Gạch bỏ bội số của các số nguyên tố p từ p² trở đi. Dừng khi p² > 20 (p = 5).</text>
+
+  <!-- Row 1: 2 to 10 -->
+  <g transform="translate(30, 95)">
+    <!-- 2: Prime -->
+    <g transform="translate(0, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">2</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 3: Prime -->
+    <g transform="translate(88, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">3</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 4: Crossed (by 2) -->
+    <g transform="translate(176, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">4</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 5: Prime -->
+    <g transform="translate(264, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">5</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 6: Crossed (by 2) -->
+    <g transform="translate(352, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">6</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 7: Prime -->
+    <g transform="translate(440, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">7</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 8: Crossed (by 2) -->
+    <g transform="translate(528, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">8</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 9: Crossed (by 3) -->
+    <g transform="translate(616, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">9</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#fbbf24" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 3</text>
+    </g>
+    <!-- 10: Crossed (by 2) -->
+    <g transform="translate(704, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">10</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+  </g>
+
+  <!-- Row 2: 11 to 20 -->
+  <g transform="translate(30, 205)">
+    <!-- 11: Prime -->
+    <g transform="translate(0, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">11</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 12: Crossed -->
+    <g transform="translate(88, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">12</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 13: Prime -->
+    <g transform="translate(176, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">13</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 14: Crossed -->
+    <g transform="translate(264, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">14</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 15: Crossed -->
+    <g transform="translate(352, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">15</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#fbbf24" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 3</text>
+    </g>
+    <!-- 16: Crossed -->
+    <g transform="translate(440, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">16</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 17: Prime -->
+    <g transform="translate(528, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">17</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 18: Crossed -->
+    <g transform="translate(616, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">18</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+    <!-- 19: Prime -->
+    <g transform="translate(704, 0)">
+      <rect width="80" height="90" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+      <text x="40" y="32" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">19</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#047857"/>
+      <text x="40" y="59" fill="#ecfdf5" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">isPrime</text>
+      <text x="40" y="80" fill="#a7f3d0" font-family="sans-serif" font-size="10" text-anchor="middle">Nguyên tố</text>
+    </g>
+    <!-- 20: Crossed -->
+    <g transform="translate(792, 0)">
+      <rect width="80" height="90" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <text x="40" y="32" fill="#64748b" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" text-decoration="line-through">20</text>
+      <rect x="8" y="44" width="64" height="22" rx="4" fill="#334155"/>
+      <text x="40" y="59" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">false</text>
+      <text x="40" y="80" fill="#f87171" font-family="sans-serif" font-size="10" text-anchor="middle">Bội của 2</text>
+    </g>
+  </g>
+
+  <!-- Legend / Summary Bar -->
+  <g transform="translate(30, 320)">
+    <rect width="842" height="42" rx="8" fill="#0f172a" stroke="#334155"/>
+    <circle cx="25" cy="21" r="7" fill="#10b981"/>
+    <text x="40" y="26" fill="#ecfdf5" font-family="sans-serif" font-size="12" font-weight="bold">8 Số nguyên tố tìm được: {2, 3, 5, 7, 11, 13, 17, 19}</text>
+    <circle cx="480" cy="21" r="7" fill="#ef4444"/>
+    <text x="495" y="26" fill="#f87171" font-family="sans-serif" font-size="12">Hợp số bị gạch bởi p = 2</text>
+    <circle cx="680" cy="21" r="7" fill="#f59e0b"/>
+    <text x="695" y="26" fill="#fcd34d" font-family="sans-serif" font-size="12">Hợp số bị gạch bởi p = 3</text>
+  </g>
+</svg>

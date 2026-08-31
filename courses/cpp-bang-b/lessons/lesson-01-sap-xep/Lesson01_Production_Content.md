@@ -13,7 +13,7 @@ Trong lập trình thi đấu và khoa học máy tính, sắp xếp không đơ
 
 ### 2.1. Định lý về cặp phần tử có khoảng cách nhỏ nhất
 
-> **Định lý:** Trong một tập hợp các số thực $A = \{A_1, A_2, \dots, A_N\}$, sau khi sắp xếp tăng dần $A_1 \le A_2 \le \dots \le A_N$, giá trị nhỏ nhất của $|A_i - A_j|$ (với $i \ne j$) luôn đạt được tại ít nhất một cặp phần tử kề nhau $(A_k, A_{k+1})$.
+> **Định lý:** Trong một tập hợp các số thực $A = \{A_1, A_2, \dots, A_N\}$, sau khi sắp xếp tăng dần $A_1 \le A_2 \le \dots \le A_N$, giá trị nhỏ nhất của $|A_i - A_j|$ giữa hai phần tử phân biệt ($i < j$) luôn đạt được tại ít nhất một cặp phần tử kề nhau $(A_k, A_{k+1})$.
 
 ### 2.2. Chứng minh toán học
 Xét hai chỉ số bất kỳ $i < j$. Nếu $j > i + 1$ (hai phần tử không kề nhau), tồn tại phần tử trung gian $A_{i+1}$ thỏa mãn:
@@ -262,7 +262,7 @@ Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đ�
 
 - **B.** $\mathcal{O}(N \log N)$ vì phải dùng thêm cây nhị phân tìm kiếm.
 
-- **C.** **[Đáp án đúng]** $\mathcal{O}(N)$ vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi $A[i] \ne A[i-1]$.
+- **C.** **[Đáp án đúng]** $\mathcal{O}(N)$ vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi `A[i] != A[i-1]`.
 
 - **D.** $\mathcal{O}(1)$ bằng công thức toán học.
 
@@ -294,7 +294,7 @@ Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Đ
 
 - **D.** `return a[0] < b[0] || a[1] > b[1];`
 
-> *Giải thích:* Phải kiểm tra sự khác biệt của tiêu chí chính trước ($a[0] \ne b[0]$). Chỉ khi tiêu chí chính bằng nhau mới so sánh tiêu chí phụ. Cả hai nhánh đều phải dùng toán tử nghiêm ngặt `<` hoặc `>`.
+> *Giải thích:* Phải kiểm tra sự khác biệt của tiêu chí chính trước (`a[0] != b[0]`). Chỉ khi tiêu chí chính bằng nhau mới so sánh tiêu chí phụ. Cả hai nhánh đều phải dùng toán tử nghiêm ngặt `<` hoặc `>`.
 
 #### Câu 10 (Xử lý kiểu dữ liệu & Tràn số — Robustness):
 

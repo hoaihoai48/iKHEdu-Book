@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>iKHEDU C++ Bảng B — Trendy</title>
 <style>
-@page { size: A4; margin: 2cm 2cm 2.2cm 2cm; @top-center { content: "iKHEDU  •  C++ Bảng B (Level 1)  •  Giáo trình Toàn tập"; font-family: "Inter", Helvetica, Arial, sans-serif; font-size: 7pt; color: #94a3b8; font-variant: small-caps; letter-spacing: 0.5pt; } @bottom-center { content: counter(page) "  —  iKHEDU Foundation • 2026"; font-family: "Inter", Helvetica, Arial, sans-serif; font-size: 8pt; color: #94a3b8; } }
+@page { size: A4; margin: 2cm 2cm 2.2cm 2cm; @top-center { content: "IKHEDU  •  C++ Bảng B (Level 1)  •  Giáo trình Toàn tập"; font-family: "Inter", Helvetica, Arial, sans-serif; font-size: 7pt; color: #94a3b8; font-variant: small-caps; letter-spacing: 0.5pt; } @bottom-center { content: counter(page) "  —  IKHEDU Foundation • 2026"; font-family: "Inter", Helvetica, Arial, sans-serif; font-size: 8pt; color: #94a3b8; } }
 @page :first { margin: 0; @top-center { content: none; } @bottom-center { content: none; } }
 * { box-sizing: border-box; }
 body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 10.5pt; line-height: 1.65; color: #1e293b; }
@@ -22,8 +22,8 @@ body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robo
 h1 { font-size: 18pt; font-weight: 800; color: #0f2a44; text-align: center; margin: 28pt 0 12pt 0; padding-bottom: 8pt; border-bottom: 3px solid #3b82f6; page-break-before: always; line-height: 1.3; }
 h1:first-of-type { page-break-before: avoid; }
 h2 { font-size: 13pt; font-weight: 700; color: #1a4a6b; margin: 18pt 0 8pt 0; padding-left: 10pt; border-left: 4px solid #3b82f6; }
-h3 { font-size: 11.5pt; font-weight: 700; color: #2e5e8a; margin: 14pt 0 6pt 0; }
-h4 { font-size: 11pt; font-weight: 700; font-style: italic; color: #3a6a9a; margin: 10pt 0 6pt 0; }
+h3 { font-size: 11.5pt; font-weight: 700; color: #2e5e8a; margin: 14pt 0 6pt 12pt; padding-left: 8pt; border-left: 2px solid #93c5fd; }
+h4 { font-size: 10.5pt; font-weight: 700; font-style: italic; color: #3a6a9a; margin: 10pt 0 6pt 24pt; padding-left: 8pt; border-left: 1px solid #cbd5e1; }
 p { margin: 6pt 0; text-align: justify; hyphens: auto; }
 blockquote { background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 0 8px 8px 0; padding: 10pt 14pt; margin: 10pt 0; color: #1e40af; font-style: italic; page-break-inside: avoid; }
 pre { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12pt 14pt; margin: 10pt 0; white-space: pre-wrap; word-break: break-word; font-family: "JetBrains Mono", Consolas, monospace; font-size: 8.5pt; line-height: 1.5; color: #1e293b; page-break-inside: avoid; }
@@ -41,26 +41,26 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 </head>
 <body>
 <div class="cover">
-  <div class="eyebrow">iKHEDU FOUNDATION  •  C++ BẢNG B  •  LEVEL 1</div>
+  <div class="eyebrow">IKHEDU FOUNDATION  •  C++ BẢNG B  •  LEVEL 1</div>
   <h1>GIÁO TRÌNH<br>LÝ THUYẾT &amp; THUẬT TOÁN</h1>
   <div style="font-size:14pt; font-weight:300; opacity:0.9; margin: 0.6cm 0 1cm 0;">TOÀN TẬP</div>
   <div style="font-size:11pt; font-style:italic; opacity:0.9; margin-bottom:1.2cm;">Cẩm nang 21 chuyên đề trọng tâm thi Học sinh giỏi &amp; Tin học trẻ</div>
   <div style="width:60px; height:3px; background:rgba(255,255,255,0.8); margin:0 auto 1.2cm auto; border-radius:2px;"></div>
-  <div style="font-size:9pt; opacity:0.8; line-height:1.6;">HỆ THỐNG ĐÀO TẠO TIN HỌC iKHEDU<br>Phiên bản Trendy • Xuất bản số 2026 • Khóa học C++ Cơ bản (Bảng B)</div>
+  <div style="font-size:9pt; opacity:0.8; line-height:1.6;">HỆ THỐNG ĐÀO TẠO TIN HỌC IKHEDU<br>2026</div>
 </div>
 <div class="toc">
   <h1 style="text-align:left; page-break-before:avoid;">Mục lục</h1>
   <ul>
-<li class="l1"><a href="#ikhedu-c-b-ng-b-t-ng-h-p-n-i-dung-21-chu">Ikhedu c++ bảng b — tổng hợp nội dung 21 chuyên đề</a></li>
-<li class="l2"><a href="#m-c-l-c-t-ng-quan">Mục lục tổng quan</a></li>
-<li class="l3"><a href="#module-01-thu-t-to-n-s-p-x-p-k-thu-t-m-n">Module 01: Thuật toán sắp xếp &amp; kỹ thuật mảng</a></li>
-<li class="l3"><a href="#module-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">Module 02: Mảng tiền tố &amp; tìm kiếm nhị phân</a></li>
-<li class="l3"><a href="#module-03-s-h-c-i-s-modular">Module 03: Số học &amp; đại số modular</a></li>
-<li class="l3"><a href="#module-04-quy-chia-tr-quay-lui">Module 04: Đệ quy, chia để trị &amp; quay lui</a></li>
-<li class="l3"><a href="#module-05-quy-ho-ch-ng-dynamic-programmi">Module 05: Quy hoạch động (dynamic programming)</a></li>
-<li class="l3"><a href="#module-06-c-u-tr-c-d-li-u-n-ng-cao">Module 06: Cấu trúc dữ liệu nâng cao</a></li>
-<li class="l3"><a href="#module-07-th-c-y-truy-v-n-o-n">Module 07: Đồ thị &amp; cây truy vấn đoạn</a></li>
-<li class="l1"><a href="#module-01-thu-t-to-n-s-p-x-p-k-thu-t-m-n">Module 01: Thuật toán sắp xếp &amp; kỹ thuật mảng</a></li>
+<li class="l1"><a href="#ikhedu-c-b-ng-b-t-ng-h-p-n-i-dung-21-chu">IKHEDU C++ BẢNG B — TỔNG HỢP NỘI DUNG 21 CHUYÊN ĐỀ</a></li>
+<li class="l2"><a href="#m-c-l-c-t-ng-quan">MỤC LỤC TỔNG QUAN</a></li>
+<li class="l3"><a href="#ch-ng-01-thu-t-to-n-s-p-x-p-k-thu-t-m-ng">Chương 01: Thuật toán sắp xếp &amp; kỹ thuật mảng</a></li>
+<li class="l3"><a href="#ch-ng-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">Chương 02: Mảng tiền tố &amp; tìm kiếm nhị phân</a></li>
+<li class="l3"><a href="#ch-ng-03-s-h-c-i-s-modular">Chương 03: Số học &amp; đại số modular</a></li>
+<li class="l3"><a href="#ch-ng-04-quy-chia-tr-quay-lui">Chương 04: Đệ quy, chia để trị &amp; quay lui</a></li>
+<li class="l3"><a href="#ch-ng-05-quy-ho-ch-ng-dynamic-programmin">Chương 05: Quy hoạch động (dynamic programming)</a></li>
+<li class="l3"><a href="#ch-ng-06-c-u-tr-c-d-li-u-n-ng-cao">Chương 06: Cấu trúc dữ liệu nâng cao</a></li>
+<li class="l3"><a href="#ch-ng-07-th-c-y-truy-v-n-o-n">Chương 07: Đồ thị &amp; cây truy vấn đoạn</a></li>
+<li class="l1"><a href="#ch-ng-01-thu-t-to-n-s-p-x-p-k-thu-t-m-ng">CHƯƠNG 01: THUẬT TOÁN SẮP XẾP &amp; KỸ THUẬT MẢNG</a></li>
 <li class="l1"><a href="#chuy-n-01-thu-t-to-n-s-p-x-p">Chuyên đề 01: Thuật toán sắp xếp</a></li>
 <li class="l2"><a href="#1-kh-i-ni-m-b-n-ch-t-c-a-s-p-x-p-trong-t">1. Khái niệm &amp; bản chất của sắp xếp trong tối ưu thuật toán</a></li>
 <li class="l2"><a href="#2-t-nh-ch-t-l-n-c-n-ch-ng-minh-to-n-h-c">2. Tính chất lân cận &amp; chứng minh toán học</a></li>
@@ -147,7 +147,7 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 <li class="l4"><a href="#c-u-9-x-l-gi-i-h-n-d-li-u-l-n-large-cons">Câu 9 (xử lý giới hạn dữ liệu lớn — large constraints):</a></li>
 <li class="l4"><a href="#c-u-10-k-thu-t-hi-u-m-o-n-con-interval-c">Câu 10 (kỹ thuật hiệu đếm đoạn con — interval counting trick):</a></li>
 <li class="l2"><a href="#ma-tr-n-b-i-t-p-th-c-h-nh-p0-p5">Ma trận bài tập thực hành (p0 → p5)</a></li>
-<li class="l1"><a href="#module-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">Module 02: Mảng tiền tố &amp; tìm kiếm nhị phân</a></li>
+<li class="l1"><a href="#ch-ng-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">CHƯƠNG 02: MẢNG TIỀN TỐ &amp; TÌM KIẾM NHỊ PHÂN</a></li>
 <li class="l1"><a href="#chuy-n-04-m-ng-ti-n-t-m-ng-hi-u">Chuyên đề 04: Mảng tiền tố &amp; mảng hiệu</a></li>
 <li class="l2"><a href="#1-kh-i-ni-m-b-n-ch-t-c-a-m-ng-ti-n-t-pre">1. Khái niệm &amp; bản chất của mảng tiền tố (prefix sum 1d)</a></li>
 <li class="l3"><a href="#1-1-c-ng-th-c-x-y-d-ng-m-ng-ti-n-t">1.1. Công thức xây dựng mảng tiền tố</a></li>
@@ -255,7 +255,7 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 <li class="l4"><a href="#c-u-11-c-p-t-ng-l-y-th-a-c-a-2-power-of">Câu 11 (cặp tổng lũy thừa của 2 — power of 2 pairs):</a></li>
 <li class="l4"><a href="#c-u-12-t-p-c-l-p-v-bit-bit-independence">Câu 12 (tập độc lập về bit — bit independence):</a></li>
 <li class="l2"><a href="#ma-tr-n-b-i-t-p-th-c-h-nh-p0-p5">Ma trận bài tập thực hành (p0 → p5)</a></li>
-<li class="l1"><a href="#module-03-s-h-c-i-s-modular">Module 03: Số học &amp; đại số modular</a></li>
+<li class="l1"><a href="#ch-ng-03-s-h-c-i-s-modular">CHƯƠNG 03: SỐ HỌC &amp; ĐẠI SỐ MODULAR</a></li>
 <li class="l1"><a href="#chuy-n-07-l-thuy-t-s-s-nguy-n-t">Chuyên đề 07: Lý thuyết số &amp; số nguyên tố</a></li>
 <li class="l2"><a href="#1-b-n-ch-t-v-n-tr-c-gi-c-thu-t-to-n-the">1. Bản chất vấn đề &amp; trực giác thuật toán (the core problem &amp; intuition)</a></li>
 <li class="l3"><a href="#v-n-1-t-m-c-chung-l-n-nh-t-gcd">Vấn đề 1: Tìm ước chung lớn nhất (gcd)</a></li>
@@ -346,7 +346,7 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 <li class="l4"><a href="#c-u-10-so-s-nh-hai-s-l-n-d-ng-chu-i">Câu 10 (so sánh hai số lớn dạng chuỗi):</a></li>
 <li class="l2"><a href="#ma-tr-n-b-i-t-p-th-c-h-nh-p0-p5">Ma trận bài tập thực hành (p0 → p5)</a></li>
 <li class="l3"><a href="#ghi-ch">Ghi chú:</a></li>
-<li class="l1"><a href="#module-04-quy-chia-tr-quay-lui">Module 04: Đệ quy, chia để trị &amp; quay lui</a></li>
+<li class="l1"><a href="#ch-ng-04-quy-chia-tr-quay-lui">CHƯƠNG 04: ĐỆ QUY, CHIA ĐỂ TRỊ &amp; QUAY LUI</a></li>
 <li class="l1"><a href="#chuy-n-10-thu-t-to-n-quy-c-y-g-i-h-m">Chuyên đề 10: Thuật toán đệ quy &amp; cây gọi hàm</a></li>
 <li class="l2"><a href="#1-b-n-ch-t-v-n-tr-c-gi-c-thu-t-to-n-the">1. Bản chất vấn đề &amp; trực giác thuật toán (the core problem &amp; intuition)</a></li>
 <li class="l3"><a href="#kh-i-ni-m-quy-recursion">Khái niệm đệ quy (recursion):</a></li>
@@ -438,7 +438,7 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 <li class="l4"><a href="#c-u-12-nguy-n-t-c-an-to-n-c-a-h-m-bound">Câu 12 (nguyên tắc an toàn của hàm bound trong branch &amp; bound):</a></li>
 <li class="l2"><a href="#ma-tr-n-b-i-t-p-th-c-h-nh-p0-p5">Ma trận bài tập thực hành (p0 → p5)</a></li>
 <li class="l3"><a href="#l-tr-nh-ph-n-t-ng-h-c-t-p-chu-n-m-c">Lộ trình phân tầng học tập chuẩn mực:</a></li>
-<li class="l1"><a href="#module-05-quy-ho-ch-ng-dynamic-programmi">Module 05: Quy hoạch động (dynamic programming)</a></li>
+<li class="l1"><a href="#ch-ng-05-quy-ho-ch-ng-dynamic-programmin">CHƯƠNG 05: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)</a></li>
 <li class="l1"><a href="#chuy-n-13-quy-ho-ch-ng-1d-d-y-con-t-ng-d">Chuyên đề 13: Quy hoạch động 1d &amp; dãy con tăng dài nhất</a></li>
 <li class="l2"><a href="#1-b-n-ch-t-v-n-c-u-n-i-t-quy-sang-quy-ho">1. Bản chất vấn đề &amp; cầu nối từ đệ quy sang quy hoạch động</a></li>
 <li class="l2"><a href="#2-khung-ph-ng-ph-p-lu-n-7-b-c-dp-state-i">2. Khung phương pháp luận: 7 Bước dp state invariant</a></li>
@@ -537,7 +537,7 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 <li class="l4"><a href="#c-u-14-b-i-to-n-x-u-an-xen-interleaving">Câu 14 (bài toán xâu đan xen interleaving string):</a></li>
 <li class="l4"><a href="#c-u-15-m-s-l-n-xu-t-hi-n-x-u-con-distinc">Câu 15 (đếm số lần xuất hiện xâu con distinct subsequences):</a></li>
 <li class="l2"><a href="#8-ma-tr-n-15-b-i-t-p-th-c-h-nh-theo-m-c">8. Ma trận 15 bài tập thực hành theo mức độ (p0 → p5)</a></li>
-<li class="l1"><a href="#module-06-c-u-tr-c-d-li-u-n-ng-cao">Module 06: Cấu trúc dữ liệu nâng cao</a></li>
+<li class="l1"><a href="#ch-ng-06-c-u-tr-c-d-li-u-n-ng-cao">CHƯƠNG 06: CẤU TRÚC DỮ LIỆU NÂNG CAO</a></li>
 <li class="l1"><a href="#chuy-n-16-c-u-tr-c-d-li-u-stl-set-map-he">Chuyên đề 16: Cấu trúc dữ liệu stl: Set, map &amp; heap</a></li>
 <li class="l2"><a href="#1-b-n-ch-t-c-c-c-u-tr-c-d-li-u-n-ng-cao">1. Bản chất các cấu trúc dữ liệu nâng cao trong thư viện chuẩn stl</a></li>
 <li class="l2"><a href="#2-k-thu-t-n-n-t-a-coordinate-compression">2. Kỹ thuật nén tọa độ (coordinate compression)</a></li>
@@ -621,7 +621,7 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
 <li class="l4"><a href="#c-u-14-h-ng-i-hai-u-trong-sliding-window">Câu 14 (hàng đợi hai đầu trong sliding window median):</a></li>
 <li class="l4"><a href="#c-u-15-s-b-c-bi-n-i-t-a-sang-b-nh-nh-t">Câu 15 (số bước biến đổi từ a sang b nhỏ nhất):</a></li>
 <li class="l2"><a href="#ma-tr-n-b-i-t-p-th-c-h-nh-p0-p5">Ma trận bài tập thực hành (p0 → p5)</a></li>
-<li class="l1"><a href="#module-07-th-c-y-truy-v-n-o-n">Module 07: Đồ thị &amp; cây truy vấn đoạn</a></li>
+<li class="l1"><a href="#ch-ng-07-th-c-y-truy-v-n-o-n">CHƯƠNG 07: ĐỒ THỊ &amp; CÂY TRUY VẤN ĐOẠN</a></li>
 <li class="l1"><a href="#chuy-n-19-l-thuy-t-th-c-b-n-duy-t-bfs-df">Chuyên đề 19: Lý thuyết đồ thị cơ bản: Duyệt bfs &amp; dfs</a></li>
 <li class="l2"><a href="#1-b-n-ch-t-th-c-c-ph-ng-ph-p-bi-u-di-n">1. Bản chất đồ thị &amp; các phương pháp biểu diễn</a></li>
 <li class="l3"><a href="#1-1-ma-tr-n-k-adjacency-matrix">1.1. Ma trận kề (adjacency matrix)</a></li>
@@ -708,63 +708,56 @@ hr { border: none; border-top: 2px solid #e2e8f0; margin: 16pt 0; }
   </ul>
   <p style="font-size:8pt; color:#94a3b8; font-style:italic; margin-top:12pt;">Mục lục tự động theo Heading 1–4 • Nhấn vào tên mục để nhảy nhanh trong PDF</p>
 </div>
-<h1 id="ikhedu-c-b-ng-b-t-ng-h-p-n-i-dung-21-chu">Ikhedu c++ bảng b — tổng hợp nội dung 21 chuyên đề</h1>
-<blockquote><strong>File tổng hợp tự động</strong> — Nối liền toàn bộ nội dung Production Content của 21 Chuyên đề thuộc 7 Module trong khóa <strong>C++ Bảng B Level 1</strong>.</blockquote>
-<blockquote>Tổng số Module: <strong>7</strong> | Tổng số Chuyên đề: <strong>21</strong></blockquote>
+<h1 id="ikhedu-c-b-ng-b-t-ng-h-p-n-i-dung-21-chu">IKHEDU C++ BẢNG B — TỔNG HỢP NỘI DUNG 21 CHUYÊN ĐỀ</h1>
+<blockquote><strong>File tổng hợp tự động</strong> — Nối liền toàn bộ nội dung Production Content của 21 Chuyên đề thuộc 7 Chương trong khóa <strong>C++ Bảng B Level 1</strong>.</blockquote>
+<blockquote>Tổng số Chương: <strong>7</strong> | Tổng số Chuyên đề: <strong>21</strong></blockquote>
 <hr>
-<h2 id="m-c-l-c-t-ng-quan">Mục lục tổng quan</h2>
-<h3 id="module-01-thu-t-to-n-s-p-x-p-k-thu-t-m-n">Module 01: Thuật toán sắp xếp &amp; kỹ thuật mảng</h3>
+<h2 id="m-c-l-c-t-ng-quan">MỤC LỤC TỔNG QUAN</h2>
+<h3 id="ch-ng-01-thu-t-to-n-s-p-x-p-k-thu-t-m-ng">Chương 01: Thuật toán sắp xếp &amp; kỹ thuật mảng</h3>
 <ul>
 <li>Chuyên đề 01: Sắp Xếp</li>
 <li>Chuyên đề 02: Hai Con Trỏ</li>
 <li>Chuyên đề 03: Cửa Sổ Trượt</li>
 </ul>
-<h3 id="module-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">Module 02: Mảng tiền tố &amp; tìm kiếm nhị phân</h3>
+<h3 id="ch-ng-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">Chương 02: Mảng tiền tố &amp; tìm kiếm nhị phân</h3>
 <ul>
 <li>Chuyên đề 04: Mảng Tiền Tố</li>
 <li>Chuyên đề 05: Tìm Kiếm Nhị Phân</li>
 <li>Chuyên đề 06: Phép Toán Bit</li>
 </ul>
-<h3 id="module-03-s-h-c-i-s-modular">Module 03: Số học &amp; đại số modular</h3>
+<h3 id="ch-ng-03-s-h-c-i-s-modular">Chương 03: Số học &amp; đại số modular</h3>
 <ul>
 <li>Chuyên đề 07: Ước, Bội &amp; Số Nguyên Tố</li>
 <li>Chuyên đề 08: Đồng Dư, Lũy Thừa &amp; Nghịch Đảo</li>
 <li>Chuyên đề 09: Số Nguyên Lớn (BigInt)</li>
 </ul>
-<h3 id="module-04-quy-chia-tr-quay-lui">Module 04: Đệ quy, chia để trị &amp; quay lui</h3>
+<h3 id="ch-ng-04-quy-chia-tr-quay-lui">Chương 04: Đệ quy, chia để trị &amp; quay lui</h3>
 <ul>
 <li>Chuyên đề 10: Đệ Quy Cơ Bản</li>
 <li>Chuyên đề 11: Chia Để Trị</li>
 <li>Chuyên đề 12: Quay Lui &amp; Nhánh Cận</li>
 </ul>
-<h3 id="module-05-quy-ho-ch-ng-dynamic-programmi">Module 05: Quy hoạch động (dynamic programming)</h3>
+<h3 id="ch-ng-05-quy-ho-ch-ng-dynamic-programmin">Chương 05: Quy hoạch động (dynamic programming)</h3>
 <ul>
 <li>Chuyên đề 13: Quy Hoạch Động 1D &amp; LIS</li>
 <li>Chuyên đề 14: Quy Hoạch Động 2D &amp; Knapsack</li>
 <li>Chuyên đề 15: Quy Hoạch Động Chuỗi &amp; LCS</li>
 </ul>
-<h3 id="module-06-c-u-tr-c-d-li-u-n-ng-cao">Module 06: Cấu trúc dữ liệu nâng cao</h3>
+<h3 id="ch-ng-06-c-u-tr-c-d-li-u-n-ng-cao">Chương 06: Cấu trúc dữ liệu nâng cao</h3>
 <ul>
 <li>Chuyên đề 16: STL: set, map &amp; Nén Tọa Độ</li>
 <li>Chuyên đề 17: Stack &amp; Monotonic Stack</li>
 <li>Chuyên đề 18: Queue &amp; Deque</li>
 </ul>
-<h3 id="module-07-th-c-y-truy-v-n-o-n">Module 07: Đồ thị &amp; cây truy vấn đoạn</h3>
+<h3 id="ch-ng-07-th-c-y-truy-v-n-o-n">Chương 07: Đồ thị &amp; cây truy vấn đoạn</h3>
 <ul>
 <li>Chuyên đề 19: Lý Thuyết Đồ Thị, BFS &amp; DFS</li>
 <li>Chuyên đề 20: Đồ Thị Lưới 2D &amp; Flood Fill</li>
 <li>Chuyên đề 21: Cây Phân Đoạn &amp; Fenwick Tree</li>
 </ul>
 <hr>
-<p>&lt;!-- ═══════════════════════════════════════════════════════════ --&gt; &lt;!-- BẮT ĐẦU NỘI DUNG CHI TIẾT 21 CHUYÊN ĐỀ                  --&gt; &lt;!-- ═══════════════════════════════════════════════════════════ --&gt;</p>
-<p>================================================================================</p>
-<h1 id="module-01-thu-t-to-n-s-p-x-p-k-thu-t-m-n">Module 01: Thuật toán sắp xếp &amp; kỹ thuật mảng</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 01: Sắp Xếp | 333 dòng | 20,775 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-01-thu-t-to-n-s-p-x-p-k-thu-t-m-ng">CHƯƠNG 01: THUẬT TOÁN SẮP XẾP &amp; KỸ THUẬT MẢNG</h1>
 <h1 id="chuy-n-01-thu-t-to-n-s-p-x-p">Chuyên đề 01: Thuật toán sắp xếp</h1>
-<p><em>Tối ưu hóa dữ liệu với sort & Custom Comparator trong C++</em></p>
 <h2 id="1-kh-i-ni-m-b-n-ch-t-c-a-s-p-x-p-trong-t">1. Khái niệm &amp; bản chất của sắp xếp trong tối ưu thuật toán</h2>
 <p><strong>Sắp xếp (Sorting)</strong> là quá trình tái sắp đặt các phần tử trong một tập dữ liệu theo một trật tự xác định (thường là tăng dần hoặc giảm dần theo một hoặc nhiều tiêu chí).</p>
 <p>Trong lập trình thi đấu và khoa học máy tính, sắp xếp không đơn thuần là định dạng lại dữ liệu hiển thị, mà là một <strong>phép biến đổi cấu trúc dữ liệu</strong> nhằm:</p>
@@ -913,7 +906,7 @@ sort(a.begin(), a.end());</code></pre>
 
 }</code></pre>
 <h2 id="6-m-u-c-i-t-chu-n-thi-u-competitive-temp">6. Mẫu cài đặt chuẩn thi đấu (competitive template)</h2>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -1222,11 +1215,7 @@ int main() {
 <td>Strict Weak Ordering & <code>stable_sort</code></td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 02: Hai Con Trỏ | 321 dòng | 21,143 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-02-k-thu-t-hai-con-tr">Chuyên đề 02: Kỹ thuật hai con trỏ</h1>
-<p>*Tối ưu hóa tìm kiếm tuyến tính <span class="math">O(N)</span> trong C++*</p>
 <h2 id="1-kh-i-ni-m-nguy-n-l-ho-t-ng">1. Khái niệm &amp; nguyên lý hoạt động</h2>
 <p><strong>Kỹ thuật Hai con trỏ (Two Pointers Technique)</strong> là phương pháp sử dụng hai biến chỉ số (thường ký hiệu là <span class="math">L</span> và <span class="math">R</span>) duyệt trên cấu trúc dữ liệu tuyến tính (mảng hoặc chuỗi) nhằm thu hẹp không gian tìm kiếm từ <span class="math">O(N²)</span> xuống <span class="math">O(N)</span>.</p>
 <p>Trong mô hình <strong>Hai con trỏ đối đầu (Opposite-direction Two Pointers)</strong>:</p>
@@ -1409,7 +1398,7 @@ int main() {
 <li><span class="math">O(1)</span> bộ nhớ phụ trợ khi xử lý trực tiếp trên mảng (in-place).</li>
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive template)</h2>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -1734,11 +1723,7 @@ int main() {
 <td>Tìm <code>min \vert A_i - B_j \vert</code> tuyến tính</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 03: Cửa Sổ Trượt | 316 dòng | 20,832 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-03-k-thu-t-c-a-s-tr-t">Chuyên đề 03: Kỹ thuật cửa sổ trượt</h1>
-<p>*Tối ưu hóa đoạn con tuyến tính <span class="math">O(N)</span> trong C++*</p>
 <h2 id="1-kh-i-ni-m-b-n-ch-t-c-a-k-thu-t-c-a-s-t">1. Khái niệm &amp; bản chất của kỹ thuật cửa sổ trượt</h2>
 <p><strong>Kỹ thuật Cửa sổ trượt (Sliding Window Technique)</strong> là phương pháp tối ưu hóa trên cấu trúc dữ liệu mảng hoặc chuỗi nhằm giải quyết các bài toán liên quan đến <strong>đoạn con liên tiếp (Contiguous Subarray / Substring)</strong>.</p>
 <p>Thay vì phải tính toán lại từ đầu hàm mục tiêu trên từng đoạn con <span class="math">[i … j]</span> với độ phức tạp <span class="math">O(K)</span> hoặc <span class="math">O(N)</span>, kỹ thuật này duy trì một &quot;khung cửa sổ&quot; <span class="math">[L … R]</span> và cập nhật trạng thái mục tiêu trong **<span class="math">O(1)</span> thời gian** bằng cách: <span class="math display">Statemớᵢ = Statecũ + Phần tử nạp vào A_R - Phần tử nhả ra AL₋₁</span></p>
@@ -1926,7 +1911,7 @@ int main() {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive template)</h2>
 <h3 id="m-u-o-n-con-li-n-ti-p-ng-n-nh-t-c-t-ng-g">Mẫu: Đoạn con liên tiếp ngắn nhất có tổng <span class="math">≥ S</span> (<span class="math">Aᵢ ≥ 0</span>)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -2256,14 +2241,8 @@ int main() {
 <td>Kỹ thuật hiệu <code>F(B) - F(A - 1)</code></td>
 </tr>
 </tbody></table>
-<p>================================================================================</p>
-<h1 id="module-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">Module 02: Mảng tiền tố &amp; tìm kiếm nhị phân</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 04: Mảng Tiền Tố | 401 dòng | 23,187 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-02-m-ng-ti-n-t-t-m-ki-m-nh-ph-n">CHƯƠNG 02: MẢNG TIỀN TỐ &amp; TÌM KIẾM NHỊ PHÂN</h1>
 <h1 id="chuy-n-04-m-ng-ti-n-t-m-ng-hi-u">Chuyên đề 04: Mảng tiền tố &amp; mảng hiệu</h1>
-<p>*Tối ưu hóa truy vấn tổng &amp; cập nhật đoạn <span class="math">O(1)</span> trong C++*</p>
 <h2 id="1-kh-i-ni-m-b-n-ch-t-c-a-m-ng-ti-n-t-pre">1. Khái niệm &amp; bản chất của mảng tiền tố (prefix sum 1d)</h2>
 <p><strong>Mảng tiền tố (Prefix Sum)</strong> là một kỹ thuật tiền xử lý dữ liệu mảng ban đầu thành một mảng cộng dồn tích lũy, cho phép tính toán tổng của bất kỳ đoạn con liên tiếp <span class="math">[L … R]</span> nào chỉ trong **<span class="math">O(1)</span> thời gian**, thay vì phải duyệt vòng lặp <span class="math">O(N)</span>.</p>
 <h3 id="1-1-c-ng-th-c-x-y-d-ng-m-ng-ti-n-t">1.1. Công thức xây dựng mảng tiền tố</h3>
@@ -2282,7 +2261,7 @@ int main() {
 <h4 id="v-d-minh-h-a-1-x-y-d-ng-v-truy-v-n-prefi">Ví dụ minh họa 1: Xây dựng và truy vấn prefix sum 1d</h4>
 <p>Cho mảng <span class="math">N = 6</span> phần tử: <span class="math">A = [3, 1, 4, 1, 5, 9]</span> (1-based indexing).</p>
 <table><thead><tr>
-<th>Chỉ số (<span class="math">i</span>)</th>
+<th>Chỉ số <span class="math">i</span></th>
 <th><span class="math">0</span></th>
 <th><span class="math">1</span></th>
 <th><span class="math">2</span></th>
@@ -2292,7 +2271,7 @@ int main() {
 <th><span class="math">6</span></th>
 </tr></thead><tbody>
 <tr>
-<td>**Mảng ban đầu (<span class="math">Aᵢ</span>)**</td>
+<td>**Mảng gốc <span class="math">A[i]</span>**</td>
 <td>—</td>
 <td><span class="math">3</span></td>
 <td><span class="math">1</span></td>
@@ -2302,7 +2281,7 @@ int main() {
 <td><span class="math">9</span></td>
 </tr>
 <tr>
-<td>**Mảng tiền tố (<span class="math">Pᵢ</span>)**</td>
+<td>**Tiền tố <span class="math">P[i]</span>**</td>
 <td><span class="math">0</span></td>
 <td><span class="math">3</span></td>
 <td><span class="math">4</span></td>
@@ -2311,17 +2290,8 @@ int main() {
 <td><span class="math">14</span></td>
 <td><span class="math">23</span></td>
 </tr>
-<tr>
-<td><strong>Công thức truy hồi</strong></td>
-<td><span class="math">P₀ = 0</span></td>
-<td><span class="math">P₀ + A₁ = 3</span></td>
-<td><span class="math">P₁ + A₂ = 4</span></td>
-<td><span class="math">P₂ + A₃ = 8</span></td>
-<td><span class="math">P₃ + A₄ = 9</span></td>
-<td><span class="math">P₄ + A₅ = 14</span></td>
-<td><span class="math">P₅ + A₆ = 23</span></td>
-</tr>
 </tbody></table>
+<p><em>Quy tắc cộng dồn:</em> <span class="math">P[0] = 0</span>, <span class="math">P[i] = P[i-1] + A[i]</span> (ví dụ: <span class="math">P[3] = 4 + 4 = 8, P[6] = 14 + 9 = 23</span>).</p>
 <ul>
 <li><strong>Truy vấn 1:</strong> Tính tổng đoạn từ <span class="math">L = 2</span> đến <span class="math">R = 5</span> (đoạn <span class="math">[1, 4, 1, 5]</span>):</li>
 </ul>
@@ -2405,7 +2375,7 @@ int main() {
 <p>Sau khi thực hiện xong <span class="math">Q</span> thao tác, khôi phục ma trận gốc bằng công thức Prefix Sum 2D trong <span class="math">O(N × M)</span>.</p>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive template)</h2>
 <h3 id="m-u-1-prefix-sum-1d-truy-v-n-t-ng-o-n">Mẫu 1: Prefix sum 1d (truy vấn tổng đoạn)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -2437,7 +2407,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-difference-array-1d-c-p-nh-t-o-n">Mẫu 2: Difference array 1d (cập nhật đoạn)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -2488,7 +2458,7 @@ int main() {
 <li><strong>Cập nhật và truy vấn xen kẽ Online:</strong> Nếu chương trình vừa yêu cầu cập nhật giá trị một phần tử/đoạn, vừa yêu cầu truy vấn tổng đoạn ngay lập tức lặp đi lặp lại <span class="math">Q</span> lần:</li>
 <li>Dùng Prefix Sum sẽ tốn <span class="math">O(N)</span> để cập nhật lại mảng <span class="math">P ⇒</span> Tổng thời gian <span class="math">O(Q × N)</span> (TLE).</li>
 <li>Dùng Difference Array sẽ tốn <span class="math">O(N)</span> để khôi phục mỗi khi có truy vấn <span class="math">⇒</span> Tổng thời gian <span class="math">O(Q × N)</span> (TLE).</li>
-<li><strong>Giải pháp chuẩn thi đấu:</strong> Khi có cập nhật và truy vấn xen kẽ liên tục, bắt buộc phải sử dụng các cấu trúc dữ liệu cây động như <strong>Cây chỉ số nhị phân (Fenwick Tree)</strong> hoặc <strong>Cây phân đoạn (Segment Tree)</strong> (thuộc Module 08).</li>
+<li><strong>Giải pháp chuẩn thi đấu:</strong> Khi có cập nhật và truy vấn xen kẽ liên tục, bắt buộc phải sử dụng các cấu trúc dữ liệu cây động như <strong>Cây chỉ số nhị phân (Fenwick Tree)</strong> hoặc <strong>Cây phân đoạn (Segment Tree)</strong> (thuộc Chương 08).</li>
 </ul>
 <h2 id="c-u-h-i-tr-c-nghi-m-c-ng-c-kh-i-ni-m">Câu hỏi trắc nghiệm củng cố khái niệm</h2>
 <h4 id="c-u-1-nh-n-di-n-recognize">Câu 1 (nhận diện — recognize):</h4>
@@ -2809,11 +2779,7 @@ int main() {
 <td>Cân bằng 3 trạng thái đồng thời</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 05: Tìm Kiếm Nhị Phân | 502 dòng | 29,801 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-05-thu-t-to-n-t-m-ki-m-nh-ph-n">Chuyên đề 05: Thuật toán tìm kiếm nhị phân</h1>
-<p>*Tối ưu hóa không gian tìm kiếm từ <span class="math">O(N)</span> xuống <span class="math">O(log N)</span> trong C++*</p>
 <h2 id="1-kh-i-ni-m-b-n-ch-t-c-a-t-m-ki-m-nh-ph">1. Khái niệm &amp; bản chất của tìm kiếm nhị phân (binary search)</h2>
 <p><strong>Tìm kiếm nhị phân (Binary Search)</strong> là thuật toán tìm kiếm dựa trên nguyên lý <strong>chia để trị (Divide and Conquer)</strong>. Bằng cách so sánh giá trị cần tìm với phần tử ở chính giữa không gian tìm kiếm, thuật toán loại bỏ chính xác <strong>một nửa không gian tìm kiếm</strong> sau mỗi bước lặp.</p>
 <h3 id="1-1-i-u-ki-n-ti-n-quy-t-prerequisite-con">1.1. Điều kiện tiên quyết (prerequisite condition)</h3>
@@ -2995,62 +2961,44 @@ int main() {
 <p><strong>Bảng mô phỏng từng bước chặt nhị phân:</strong></p>
 <table><thead><tr>
 <th>Bước</th>
-<th><span class="math">low</span></th>
-<th><span class="math">high</span></th>
-<th><span class="math">mid (H)</span></th>
-<th>Lượng gỗ cắt được từ từng cây</th>
-<th>Tổng gỗ thu được</th>
-<th><code>check(H) &gt;= 7</code></th>
-<th>Quyết định cập nhật</th>
+<th>Khoảng <span class="math">[low, high]</span></th>
+<th>Thử độ cao <span class="math">H = mid</span></th>
+<th>Tổng gỗ cắt được</th>
+<th>Đánh giá <span class="math">≥ 7m</span> &amp; Quyết định</th>
 </tr></thead><tbody>
 <tr>
 <td><strong>1</strong></td>
-<td><span class="math">0</span></td>
-<td><span class="math">20</span></td>
-<td>**<span class="math">10</span>**</td>
-<td><span class="math">(20-10) + (15-10) + (0) + (17-10) = 10 + 5 + 0 + 7</span></td>
-<td>**<span class="math">22m</span>**</td>
-<td><code>True</code> <span class="math">(≥ 7)</span></td>
-<td>Lưu <code>ans = 10</code>, thử tăng độ cao: <span class="math">low = 11</span></td>
+<td><span class="math">[0, 20]</span></td>
+<td><span class="math">H = 10</span></td>
+<td><span class="math">10 + 5 + 0 + 7 = 22m</span></td>
+<td><span class="math">≥ 7 ⇒</span> Đủ gỗ! Lưu <code>ans = 10</code>, thử cưa cao hơn: <span class="math">low ≤ftarrow 11</span></td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
-<td><span class="math">11</span></td>
-<td><span class="math">20</span></td>
-<td>**<span class="math">15</span>**</td>
-<td><span class="math">(20-15) + (0) + (0) + (17-15) = 5 + 0 + 0 + 2</span></td>
-<td>**<span class="math">7m</span>**</td>
-<td><code>True</code> <span class="math">(≥ 7)</span></td>
-<td>Lưu <code>ans = 15</code>, thử tăng độ cao: <span class="math">low = 16</span></td>
+<td><span class="math">[11, 20]</span></td>
+<td><span class="math">H = 15</span></td>
+<td><span class="math">5 + 0 + 0 + 2 = 7m</span></td>
+<td><span class="math">≥ 7 ⇒</span> Đủ gỗ! Lưu <code>ans = 15</code>, thử cưa cao hơn: <span class="math">low ≤ftarrow 16</span></td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
-<td><span class="math">16</span></td>
-<td><span class="math">20</span></td>
-<td>**<span class="math">18</span>**</td>
-<td><span class="math">(20-18) + (0) + (0) + (0) = 2 + 0 + 0 + 0</span></td>
-<td>**<span class="math">2m</span>**</td>
-<td><code>False</code> <span class="math">(&lt; 7)</span></td>
-<td>Thiếu gỗ! Phải hạ cưa xuống: <span class="math">high = 17</span></td>
+<td><span class="math">[16, 20]</span></td>
+<td><span class="math">H = 18</span></td>
+<td><span class="math">2 + 0 + 0 + 0 = 2m</span></td>
+<td><span class="math">&lt; 7 ⇒</span> Thiếu gỗ! Phải hạ cưa: <span class="math">high ≤ftarrow 17</span></td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
-<td><span class="math">16</span></td>
-<td><span class="math">17</span></td>
-<td>**<span class="math">16</span>**</td>
-<td><span class="math">(20-16) + (0) + (0) + (17-16) = 4 + 0 + 0 + 1</span></td>
-<td>**<span class="math">5m</span>**</td>
-<td><code>False</code> <span class="math">(&lt; 7)</span></td>
-<td>Thiếu gỗ! Phải hạ cưa xuống: <span class="math">high = 15</span></td>
+<td><span class="math">[16, 17]</span></td>
+<td><span class="math">H = 16</span></td>
+<td><span class="math">4 + 0 + 0 + 1 = 5m</span></td>
+<td><span class="math">&lt; 7 ⇒</span> Thiếu gỗ! Phải hạ cưa: <span class="math">high ≤ftarrow 15</span></td>
 </tr>
 <tr>
 <td><strong>Dừng</strong></td>
-<td><span class="math">16</span></td>
-<td><span class="math">15</span></td>
+<td><span class="math">[16, 15]</span></td>
 <td>—</td>
-<td><span class="math">low &gt; high ⇒</span> Thuật toán kết thúc</td>
-<td>—</td>
-<td>—</td>
+<td><span class="math">low &gt; high ⇒</span> Kết thúc</td>
 <td>**Đáp án tối ưu: <span class="math">H = 15</span>**</td>
 </tr>
 </tbody></table>
@@ -3065,7 +3013,7 @@ int main() {
 <p><span class="math display">Độ thu hẹp = frac{high - low}{2¹⁰⁰} approx frac{10⁹}{1.26 × 10³⁰} approx 10⁻²¹ ll 10⁻⁶</span> Đảm bảo thuật toán luôn dừng đúng số bước, an toàn tuyệt đối và đạt độ chính xác tối đa của phần cứng.</p>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1a-t-m-gi-tr-l-n-nh-t-th-a-m-n-d-ng">Mẫu 1a: Tìm giá trị lớn nhất thỏa mãn (dạng <code>True -&gt; False</code>)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 // Hàm kiểm tra: Lượng gỗ thu được khi cưa ở độ cao mid có &gt;= M hay không?
@@ -3112,7 +3060,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-1b-t-m-gi-tr-nh-nh-t-th-a-m-n-d-ng-f">Mẫu 1b: Tìm giá trị nhỏ nhất thỏa mãn (dạng <code>False -&gt; True</code>)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 // Hàm kiểm tra: Với tải trọng phà là mid, có chở hết hàng trong &lt;= D ngày hay không?
@@ -3166,7 +3114,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-binary-search-s-th-c-100-v-ng-l-p">Mẫu 2: Binary search số thực (100 vòng lặp robust)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 bool check_real(double mid) {
@@ -3572,11 +3520,7 @@ int main() {
 <td>Phân chia vách ngăn nhị phân tối ưu <code>O(log(min(N, M)))</code></td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 06: Phép Toán Bit | 389 dòng | 18,532 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-06-ph-p-to-n-bit-bi-u-di-n-tr-ng">Chuyên đề 06: Phép toán bit &amp; biểu diễn trạng thái</h1>
-<p><em>Tối ưu hóa cấp độ thanh ghi & kỹ thuật mặt nạ bit (Bitmask) trong C++</em></p>
 <h2 id="1-kh-i-ni-m-6-ph-p-to-n-bit-c-b-n">1. Khái niệm &amp; 6 phép toán bit cơ bản</h2>
 <p>Máy tính biểu diễn tất cả dữ liệu dưới dạng chuỗi nhị phân (gồm các bit <span class="math">0</span> và <span class="math">1</span>). <strong>Phép toán bit (Bitwise Operations)</strong> là các thao tác tác động trực tiếp lên từng bit của thanh ghi CPU, đạt tốc độ thực thi nhanh nhất trong mọi câu lệnh phần mềm.</p>
 <h3 id="1-1-b-ng-ch-n-tr-c-a-6-ph-p-to-n-bit-tro">1.1. Bảng chân trị của 6 phép toán bit trong c++</h3>
@@ -3595,14 +3539,12 @@ int main() {
 <td><span class="math">5 \ \&amp; \ 3 = 101₂ \ \&amp; \ 011₂ = 001₂ = 1</span></td>
 </tr>
 <tr>
-<td>`</td>
+<td>`\</td>
 <td>`</td>
 <td><strong>OR</strong> (Hoặc)</td>
 <td><span class="math">vee</span></td>
 <td>Ra <span class="math">1</span> khi có ít nhất một bit là <span class="math">1</span></td>
-<td>$5 \ \</td>
-<td>\ 3 = 101_2 \ \</td>
-<td>\ 011_2 = 111_2 = 7$</td>
+<td><span class="math">5 OR 3 = 101₂ OR 011₂ = 111₂ = 7</span></td>
 </tr>
 <tr>
 <td><code>^</code></td>
@@ -3656,74 +3598,7 @@ int main() {
 <pre><code>mask = mask ^ (1LL &lt;&lt; k);
 // Viết gọn: mask ^= (1LL &lt;&lt; k);</code></pre>
 <h4 id="v-d-minh-h-a-1-thao-t-c-tr-n-s-n-13-1101">Ví dụ minh họa 1: Thao tác trên số <span class="math">N = 13 = 1101₂</span></h4>
-<table><thead><tr>
-<th>Trọng số nhị phân</th>
-<th><span class="math">2⁴ = 16</span></th>
-<th><span class="math">2³ = 8</span></th>
-<th><span class="math">2² = 4</span></th>
-<th><span class="math">2¹ = 2</span></th>
-<th><span class="math">2⁰ = 1</span></th>
-<th>Giá trị thập phân</th>
-</tr></thead><tbody>
-<tr>
-<td>**Vị trí bit (<span class="math">k</span>)**</td>
-<td>Bit 4</td>
-<td>Bit 3</td>
-<td>Bit 2</td>
-<td>Bit 1</td>
-<td>Bit 0</td>
-<td>—</td>
-</tr>
-<tr>
-<td>**Giá trị bit của <span class="math">N</span>**</td>
-<td><code>0</code></td>
-<td><code>1</code></td>
-<td><code>1</code></td>
-<td><code>0</code></td>
-<td><code>1</code></td>
-<td>**<span class="math">13</span>**</td>
-</tr>
-</tbody></table>
-<p><strong>Bảng mô phỏng 4 thao tác bit:</strong></p>
-<table><thead><tr>
-<th>Thao Tác Cần Thực Hiện</th>
-<th>Mã Lệnh C++</th>
-<th>Phép Toán Nhị Phân</th>
-<th>Kết Quả Nhị Phân</th>
-<th>Giá Trị Thập Phân Mới</th>
-</tr></thead><tbody>
-<tr>
-<td><strong>1. Kiểm tra bit 2</strong></td>
-<td><code>(n &gt;&gt; 2) &amp; 1</code></td>
-<td><code>(1101 &gt;&gt; 2) &amp; 0001 = 0011 &amp; 0001</code></td>
-<td><code>1</code></td>
-<td>Bit 2 đang bật (<code>true</code>)</td>
-</tr>
-</tbody></table>
-<table><thead><tr>
-<th><strong>2. Bật bit 1</strong></th>
-<th>`n</th>
-<th>= (1 &lt;&lt; 1)`</th>
-<th>`1101</th>
-<th>0010`</th>
-<th><code>1111</code></th>
-<th><span class="math">13 → 15</span></th>
-</tr></thead><tbody>
-<tr>
-<td><strong>3. Tắt bit 3</strong></td>
-<td><code>n &amp;= ~(1 &lt;&lt; 3)</code></td>
-<td><code>1101 &amp; ~(1000) = 1101 &amp; 0111</code></td>
-<td><code>0101</code></td>
-<td><span class="math">13 → 5</span></td>
-</tr>
-<tr>
-<td><strong>4. Đảo bit 0</strong></td>
-<td><code>n ^= (1 &lt;&lt; 0)</code></td>
-<td><code>1101 ^ 0001</code></td>
-<td><code>1100</code></td>
-<td><span class="math">13 → 12</span></td>
-</tr>
-</tbody></table>
+<p>![Trực quan hóa cấu trúc Bit &amp; 4 Thao tác Bit trên N = 13](assets/bit_operations_simulation_vi.svg)</p>
 <h2 id="3-c-c-tuy-t-k-bit-h-m-n-i-t-i-cpu-builti">3. Các tuyệt kỹ bit &amp; hàm nội tại cpu (builtin functions)</h2>
 <h3 id="3-1-ki-m-tra-m-t-s-nguy-n-d-ng-c-ph-i-l">3.1. Kiểm tra một số nguyên dương có phải là lũy thừa của 2</h3>
 <p>Một số <span class="math">N &gt; 0</span> là lũy thừa của 2 (<span class="math">2^k</span>) khi và chỉ khi trong biểu diễn nhị phân của nó có <strong>đúng duy nhất một bit 1</strong>:</p>
@@ -3836,7 +3711,7 @@ for (int mask = 0; mask &lt; (1 &lt;&lt; n); ++mask) {
 </tbody></table>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive template)</h2>
 <h3 id="m-u-1-v-t-c-n-t-p-con-b-ng-m-t-n-bit-sub">Mẫu 1: Vét cạn tập con bằng mặt nạ bit (subset sum)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -4094,7 +3969,7 @@ int main() {
 <td><strong>Bật, Tắt Và Kiểm Tra Bit Thứ K</strong></td>
 <td><code>P0</code></td>
 <td><code>N &lt;= 10^18, K &lt;= 60</code></td>
-<td>Thao tác <span class="math">(1LL ll k)</span>, <code>&amp;</code>, `</td>
+<td>Thao tác <span class="math">(1LL ll k)</span>, <code>&amp;</code>, `\</td>
 <td><code>, </code>^`</td>
 </tr>
 <tr>
@@ -4219,12 +4094,7 @@ int main() {
 <td>Bitmask đồ thị độc lập cực đại</td>
 </tr>
 </tbody></table>
-<p>================================================================================</p>
-<h1 id="module-03-s-h-c-i-s-modular">Module 03: Số học &amp; đại số modular</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 07: Ước, Bội &amp; Số Nguyên Tố | 378 dòng | 19,246 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-03-s-h-c-i-s-modular">CHƯƠNG 03: SỐ HỌC &amp; ĐẠI SỐ MODULAR</h1>
 <h1 id="chuy-n-07-l-thuy-t-s-s-nguy-n-t">Chuyên đề 07: Lý thuyết số &amp; số nguyên tố</h1>
 <h2 id="1-b-n-ch-t-v-n-tr-c-gi-c-thu-t-to-n-the">1. Bản chất vấn đề &amp; trực giác thuật toán (the core problem &amp; intuition)</h2>
 <p>Trong khoa học máy tính và lập trình thi đấu, các bài toán xoay quanh <strong>ước số, bội số và số nguyên tố</strong> là nền tảng của mật mã học (như thuật toán mã hóa khóa công khai RSA), phân tích độ phức tạp thuật toán và tối ưu hóa tài nguyên.</p>
@@ -4287,51 +4157,7 @@ int main() {
 <li>Xét <span class="math">i = 4</span> (đã bị gạch) <span class="math">⇒</span> Bỏ qua.</li>
 <li>Vì <span class="math">i² = 5² = 25 &gt; 20</span>, vòng lặp dừng lại.</li>
 </ol>
-<table><thead><tr>
-<th><span class="math">N</span></th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-<th>15</th>
-<th>16</th>
-<th>17</th>
-<th>18</th>
-<th>19</th>
-<th>20</th>
-</tr></thead><tbody>
-<tr>
-<td><strong><code>isPrime</code></strong></td>
-<td><code>true</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-</tr>
-</tbody></table>
+<p>![Mô phỏng sàng Eratosthenes tìm số nguyên tố từ 2 đến 20](assets/sieve_eratosthenes_simulation_vi.svg)</p>
 <blockquote>**Danh sách số nguyên tố <span class="math">≤ 20</span>:** <span class="math">{2, 3, 5, 7, 11, 13, 17, 19}</span> (gồm 8 số).</blockquote>
 <h2 id="3-l-thuy-t-c-t-l-i-b-t-bi-n-to-n-h-c-cor">3. Lý thuyết cốt lõi &amp; bất biến toán học (core invariants)</h2>
 <h3 id="3-1-m-i-quan-h-gi-a-gcd-v-lcm">3.1. Mối quan hệ giữa gcd và lcm</h3>
@@ -4384,7 +4210,7 @@ int main() {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-c-chung-l-n-nh-t-b-i-chung-nh-nh-t">Mẫu 1: Ước chung lớn nhất &amp; bội chung nhỏ nhất</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 // GCD bằng thuật toán Euclid lặp O(log(min(A, B)))
@@ -4414,7 +4240,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-s-ng-eratosthenes-s-ng-spf-t-i-u-p">Mẫu 2: Sàng eratosthenes &amp; sàng spf (tối ưu phân tích thừa số)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 const int MAXN = 1000000;
@@ -4775,9 +4601,6 @@ int main() {
 <td>Ứng dụng Hàm Phi Euler <span class="math">phi(N)</span> và sàng nguyên tố đa năng</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 08: Đồng Dư, Lũy Thừa &amp; Nghịch Đảo | 382 dòng | 19,663 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-08-ng-d-th-c-l-y-th-a-nh-ph-n-ngh">Chuyên đề 08: Đồng dư thức, lũy thừa nhị phân &amp; nghịch đảo modulo</h1>
 <h2 id="1-b-n-ch-t-v-n-tr-c-gi-c-thu-t-to-n-the">1. Bản chất vấn đề &amp; trực giác thuật toán (the core problem &amp; intuition)</h2>
 <p>Trong nhiều bài toán lập trình và thi đấu thuật toán, kết quả tính toán hoặc số cách đếm tổ hợp thường tăng rất nhanh và vượt quá giới hạn lưu trữ của kiểu số nguyên 64-bit (<code>long long</code>). Để tránh việc phải xử lý số lớn phức tạp, đề bài thường yêu cầu: **"In ra kết quả sau khi chia lấy dư cho <span class="math">M</span>&quot;** (thông thường <span class="math">M = 10⁹ + 7</span> hoặc <span class="math">998244353</span> — là các số nguyên tố lớn).</p>
@@ -4949,7 +4772,7 @@ int main() {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-l-y-th-a-nh-ph-n-ngh-ch-o-modulo-c">Mẫu 1: Lũy thừa nhị phân &amp; nghịch đảo modulo chuẩn</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 // Tính (a^b) % m trong O(log b)
@@ -4982,7 +4805,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-ti-n-x-l-t-h-p-c-n-k-pmod-m-trong">Mẫu 2: Tiền xử lý tổ hợp <span class="math">C(N, K) pmod M</span> trong <span class="math">O(1)</span> mỗi truy vấn</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 const int MAXN = 1000000;
@@ -5330,9 +5153,6 @@ int main() {
 <td>Giải phương trình <span class="math">x² equiv A pmod P</span></td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 09: Số Nguyên Lớn (BigInt) | 385 dòng | 21,333 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-09-x-l-s-nguy-n-l-n-bigint">Chuyên đề 09: Xử lý số nguyên lớn (bigint)</h1>
 <h2 id="1-b-n-ch-t-v-n-tr-c-gi-c-thu-t-to-n-the">1. Bản chất vấn đề &amp; trực giác thuật toán (the core problem &amp; intuition)</h2>
 <p>Trong ngôn ngữ lập trình C++, kiểu dữ liệu số nguyên có kích thước lớn nhất được hỗ trợ phần cứng là <code>unsigned long long</code> (64-bit, tối đa xấp xỉ <span class="math">1.84 × 10¹⁹</span>) hoặc phần mở rộng GCC <code>__int128</code> (128-bit, tối đa xấp xỉ <span class="math">3.4 × 10³⁸</span>).</p>
@@ -5395,58 +5215,46 @@ int main() {
 <li><span class="math">A&#x27; = [6, 7, 8, 9]</span>, <span class="math">B&#x27; = [3, 4, 5]</span>.</li>
 </ul>
 <table><thead><tr>
-<th>Vị trí <span class="math">i</span></th>
-<th>Chữ số <span class="math">A&#x27;[i]</span></th>
-<th>Chữ số <span class="math">B&#x27;[i]</span></th>
-<th>Biến nhớ trước (<code>carry</code>)</th>
-<th>Tổng <span class="math">sum = A&#x27;[i] + B&#x27;[i] + carry</span></th>
-<th>Chữ số ghi nhận (<span class="math">sum pmod{10}</span>)</th>
-<th>Biến nhớ mới (<span class="math">lfloor sum / 10 rfloor</span>)</th>
+<th>Vị trí hàng (<span class="math">i</span>)</th>
+<th>Cặp chữ số <span class="math">(A&#x27;ᵢ, B&#x27;ᵢ)</span></th>
+<th>Biến nhớ vào</th>
+<th>Phép tính tổng</th>
+<th>Ghi nhận &amp; Nhớ mới</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>0</strong> (Hàng đv)</td>
-<td><span class="math">6</span></td>
-<td><span class="math">3</span></td>
+<td><strong>0</strong> (Hàng đơn vị)</td>
+<td><span class="math">(6, 3)</span></td>
 <td><span class="math">0</span></td>
 <td><span class="math">6 + 3 + 0 = 9</span></td>
-<td>**<span class="math">9</span>**</td>
-<td><span class="math">0</span></td>
+<td>Ghi **<span class="math">9</span>**, nhớ <span class="math">0</span></td>
 </tr>
 <tr>
 <td><strong>1</strong> (Hàng chục)</td>
-<td><span class="math">7</span></td>
-<td><span class="math">4</span></td>
+<td><span class="math">(7, 4)</span></td>
 <td><span class="math">0</span></td>
 <td><span class="math">7 + 4 + 0 = 11</span></td>
-<td>**<span class="math">1</span>**</td>
-<td><span class="math">1</span></td>
+<td>Ghi **<span class="math">1</span>**, nhớ <span class="math">1</span></td>
 </tr>
 <tr>
 <td><strong>2</strong> (Hàng trăm)</td>
-<td><span class="math">8</span></td>
-<td><span class="math">5</span></td>
+<td><span class="math">(8, 5)</span></td>
 <td><span class="math">1</span></td>
 <td><span class="math">8 + 5 + 1 = 14</span></td>
-<td>**<span class="math">4</span>**</td>
-<td><span class="math">1</span></td>
+<td>Ghi **<span class="math">4</span>**, nhớ <span class="math">1</span></td>
 </tr>
 <tr>
 <td><strong>3</strong> (Hàng nghìn)</td>
-<td><span class="math">9</span></td>
-<td><span class="math">0</span></td>
+<td><span class="math">(9, 0)</span></td>
 <td><span class="math">1</span></td>
 <td><span class="math">9 + 0 + 1 = 10</span></td>
-<td>**<span class="math">0</span>**</td>
-<td><span class="math">1</span></td>
+<td>Ghi **<span class="math">0</span>**, nhớ <span class="math">1</span></td>
 </tr>
 <tr>
 <td><strong>Dư cuối</strong></td>
 <td>—</td>
-<td>—</td>
 <td><span class="math">1</span></td>
 <td><span class="math">carry = 1</span></td>
-<td>**<span class="math">1</span>**</td>
-<td><span class="math">0</span></td>
+<td>Ghi **<span class="math">1</span>**, nhớ <span class="math">0</span></td>
 </tr>
 </tbody></table>
 <ul>
@@ -5561,7 +5369,7 @@ int main() {
 <li>Trong phép nhân <span class="math">A × b</span> với <span class="math">b = 10⁹</span>, <code>carry</code> sau mỗi bước có thể lên tới <span class="math">10⁹</span>, do đó kiểu dữ liệu của <code>carry</code> bắt buộc phải là <code>long long</code>.</li>
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 // Hàm xóa số 0 vô nghĩa ở đầu chuỗi đảo ngược
@@ -5956,12 +5764,7 @@ int main() {
 <td>Tối ưu hóa: Phân tích thừa số nguyên tố kết hợp nhân lũy thừa số lớn (hoặc DP Pascal BigInt)</td>
 </tr>
 </tbody></table>
-<p>================================================================================</p>
-<h1 id="module-04-quy-chia-tr-quay-lui">Module 04: Đệ quy, chia để trị &amp; quay lui</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 10: Đệ Quy Cơ Bản | 371 dòng | 22,301 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-04-quy-chia-tr-quay-lui">CHƯƠNG 04: ĐỆ QUY, CHIA ĐỂ TRỊ &amp; QUAY LUI</h1>
 <h1 id="chuy-n-10-thu-t-to-n-quy-c-y-g-i-h-m">Chuyên đề 10: Thuật toán đệ quy &amp; cây gọi hàm</h1>
 <h2 id="1-b-n-ch-t-v-n-tr-c-gi-c-thu-t-to-n-the">1. Bản chất vấn đề &amp; trực giác thuật toán (the core problem &amp; intuition)</h2>
 <p>Trong các bài toán lập trình cơ bản, chúng ta quen thuộc với tư duy lặp tuần tự (<code>for</code>, <code>while</code>): xử lý từng phần tử lần lượt từ đầu đến cuối. Tuy nhiên, trong thế giới cấu trúc dữ liệu và giải thuật nâng cao, rất nhiều bài toán mang bản chất <strong>tự đồng dạng (Self-Similarity)</strong>: Để giải một bài toán quy mô <span class="math">N</span>, ta có thể giải bài toán tương tự nhưng ở quy mô nhỏ hơn <span class="math">N-1</span> hoặc <span class="math">N/2</span>, sau đó kết hợp kết quả lại.</p>
@@ -6112,7 +5915,7 @@ void printForward(int n) {
 </ul>
 <p>Để tính <span class="math">F(5)</span>, hàm <span class="math">F(3)</span> bị tính lại 2 lần, <span class="math">F(2)</span> bị tính lại 3 lần. Với <span class="math">N = 40</span>, số lượng lời gọi đã lên tới hàng trăm triệu theo mô hình Fibonacci (<span class="math">Θ(varphi^N)</span>), minh họa rõ hiện tượng bùng nổ thời gian.</p>
 <ul>
-<li><strong>Bài học sư phạm:</strong> Đệ quy thuần túy rất đẹp nhưng sẽ bị tê liệt khi không gian trạng thái có các bài toán con trùng lặp. Việc <strong>lưu lại kết quả đã tính vào bảng nhớ (Memoization)</strong> sẽ được học bài bản ở <strong>Module 05: Quy hoạch động (Dynamic Programming)</strong>.</li>
+<li><strong>Bài học sư phạm:</strong> Đệ quy thuần túy rất đẹp nhưng sẽ bị tê liệt khi không gian trạng thái có các bài toán con trùng lặp. Việc <strong>lưu lại kết quả đã tính vào bảng nhớ (Memoization)</strong> sẽ được học bài bản ở <strong>Chương 05: Quy hoạch động (Dynamic Programming)</strong>.</li>
 </ul>
 <h2 id="4-c-c-b-y-l-i-l-p-tr-nh-kinh-i-n-bug-tra">4. Các bẫy lỗi lập trình kinh điển (bug traps)</h2>
 <ol>
@@ -6137,7 +5940,7 @@ void printForward(int n) {
 <li><strong>Quy tắc vàng:</strong> <em>Không có Memoization, hai lời gọi hàm giống nhau là hai lần tính toán hoàn toàn độc lập.</em> Tính 1 lần vào biến tạm: <code>long long half = power(a, b/2, m); return (half * half) % m;</code>.</li>
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 // 1. In dãy số 1..N và N..1 chuẩn Winding / Unwinding
@@ -6412,15 +6215,9 @@ int main() {
 <td><strong>Kiểm Tra Chuỗi Palindrome</strong></td>
 <td><code>P1</code></td>
 <td><strong>Core</strong></td>
-<td>$\Theta(</td>
-<td>S</td>
-<td>)$</td>
-<td>$\Theta(</td>
-<td>S</td>
-<td>)$</td>
-<td>$</td>
-<td>S</td>
-<td>/2$</td>
+<td><span class="math">Θ(vert S vert)</span></td>
+<td><span class="math">Θ(vert S vert)</span></td>
+<td><span class="math">vert S vert / 2</span></td>
 </tr>
 <tr>
 <td>06</td>
@@ -6533,9 +6330,6 @@ int main() {
 <td><span class="math">N</span></td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 11: Chia Để Trị | 383 dòng | 24,229 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-11-k-thu-t-chia-tr">Chuyên đề 11: Kỹ thuật chia để trị</h1>
 <h2 id="1-c-u-n-i-t-duy-recurrence-to-recursion">1. Cầu nối tư duy: Recurrence <span class="math">→</span> recursion tree <span class="math">→</span> complexity</h2>
 <p>Ở Chuyên đề 10, chúng ta đã làm chủ kỹ thuật Đệ quy: giải bài toán quy mô <span class="math">N</span> bằng cách thu nhỏ dần bài toán. Từ cấu trúc code đệ quy, ta có thể thiết lập <strong>Hệ thức truy hồi (Recurrence)</strong> và phân tích qua <strong>Cây đệ quy (Recursion Tree)</strong> để tìm ra độ phức tạp chính xác:</p>
@@ -6742,7 +6536,7 @@ int main() {
 <li>Đoạn con lớn nhất có thể nằm trọn bên trái, trọn bên phải, hoặc vắt ngang qua tâm <span class="math">mid</span>. Bắt buộc phải tính <span class="math">maxCrossingSum</span> từ <span class="math">mid</span> lan sang 2 phía.</li>
 </ul>
 <h2 id="11-m-u-c-i-t-chu-n-thi-u-competitive-tem">11. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 using ll = long long;
@@ -7163,9 +6957,6 @@ int main() {
 <td><span class="math">log₂(min)</span></td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 12: Quay Lui &amp; Nhánh Cận | 399 dòng | 27,304 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-12-thu-t-to-n-quay-lui-nh-nh-c-n">Chuyên đề 12: Thuật toán quay lui &amp; nhánh cận</h1>
 <h2 id="1-c-u-n-i-ki-n-tr-c-recursion-to-divide">1. Cầu nối kiến trúc: Recursion <span class="math">→</span> divide &amp; conquer <span class="math">→</span> state-space search <span class="math">→</span> dynamic programming</h2>
 <p>Để có cái nhìn toàn cảnh về các phương pháp giải thuật lớn trong Lập trình thi đấu:</p>
@@ -7340,7 +7131,7 @@ int main() {
 <li>Mọi mệnh giá xu <span class="math">Cᵢ ≥ 1</span> để đảm bảo độ sâu tối đa bị chặn trên bởi <span class="math">lfloor S / Cmᵢₙ rfloor</span>.</li>
 </ul>
 <h2 id="10-m-u-c-i-t-chu-n-thi-u-competitive-tem">10. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 using ll = long long;
@@ -7596,197 +7387,140 @@ int main() {
 <th>STT</th>
 <th>Mã Bài</th>
 <th>Tên Bài Toán</th>
-<th>Difficulty</th>
-<th>Concept Group</th>
-<th>Output / Time Complexity</th>
-<th>Search Space / Number of Solutions</th>
-<th>Call Stack</th>
-<th>Max Depth</th>
+<th>Cấp Độ</th>
+<th>Độ Phức Tạp</th>
+<th>Mục Tiêu Rèn Luyện</th>
 </tr></thead><tbody>
 <tr>
 <td>01</td>
 <td><code>CPPB-BKT-01</code></td>
 <td>**Sinh Xâu Nhị Phân Độ Dài <span class="math">N</span>**</td>
 <td><code>P0</code></td>
-<td><strong>Level 1</strong></td>
-<td><span class="math">Θ(N · 2^N)</span> (Output-sensitive)</td>
-<td><span class="math">2^N</span> nghiệm lá</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">Θ(N · 2^N)</span></td>
+<td>Cây trạng thái nhị phân đầy đủ</td>
 </tr>
 <tr>
 <td>02</td>
 <td><code>CPPB-BKT-02</code></td>
 <td>**Sinh Tập Con Của Tập <span class="math">N</span> Phần Tử**</td>
 <td><code>P0</code></td>
-<td><strong>Level 1</strong></td>
-<td><span class="math">Θ(N · 2^N)</span> (Output-sensitive)</td>
-<td><span class="math">2^N</span> tập con</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">Θ(N · 2^N)</span></td>
+<td>Trực quan hóa mô hình Include/Exclude</td>
 </tr>
 <tr>
 <td>03</td>
 <td><code>CPPB-BKT-03</code></td>
 <td>**Sinh Hoán Vị <span class="math">1 … N</span>**</td>
 <td><code>P1</code></td>
-<td><strong>Level 1</strong></td>
-<td><span class="math">Θ(N · N!)</span> (Output-sensitive)</td>
-<td><span class="math">N!</span> hoán vị lá</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">Θ(N · N!)</span></td>
+<td>Mảng đánh dấu <code>visited</code></td>
 </tr>
 <tr>
 <td>04</td>
 <td><code>CPPB-BKT-04</code></td>
 <td>**Sinh Tổ Hợp Chập <span class="math">K</span> Của <span class="math">N</span>**</td>
 <td><code>P1</code></td>
-<td><strong>Level 1</strong></td>
-<td><span class="math">Θ(K · C_N^K)</span> (Output-sensitive)</td>
-<td><span class="math">C_N^K</span> tổ hợp</td>
-<td><span class="math">Θ(K)</span></td>
-<td><span class="math">K</span></td>
+<td><span class="math">Θ(K · C_N^K)</span></td>
+<td>Cận trên/cận dưới giá trị phần tử</td>
 </tr>
 <tr>
 <td>05</td>
 <td><code>CPPB-BKT-05</code></td>
 <td>**Sinh Dãy Ngoặc Hợp Lệ Độ Dài <span class="math">2N</span>**</td>
 <td><code>P1</code></td>
-<td><strong>Level 2</strong></td>
 <td><span class="math">Θ(N · Catalan(N))</span></td>
-<td><span class="math">Catalan(N)</span> nghiệm</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">2N</span></td>
+<td>Cắt tỉa điều kiện số ngoặc đóng <span class="math">≤</span> mở</td>
 </tr>
 <tr>
 <td>06</td>
 <td><code>CPPB-BKT-06</code></td>
 <td>**Bài Toán <span class="math">N</span>-Queens (Đếm Số Cách)**</td>
 <td><code>P2</code></td>
-<td><strong>Level 2</strong></td>
-<td><span class="math">O(N!)</span> (Worst-case bound)</td>
-<td><span class="math">≤ N!</span> gán thô (pruned mạnh)</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">O(N!)</span></td>
+<td>Mặt nạ đánh dấu cột &amp; 2 đường chéo</td>
 </tr>
 <tr>
 <td>07</td>
 <td><code>CPPB-BKT-07</code></td>
 <td><strong>Mê Cung (Rat in a Maze)</strong></td>
 <td><code>P2</code></td>
-<td><strong>Level 2</strong></td>
-<td><span class="math">O(4N^²)</span> (Loose bound)</td>
-<td>Cây đường đi <span class="math">≤ 4N^²</span></td>
-<td><span class="math">Θ(N²)</span></td>
-<td><span class="math">N²</span></td>
+<td><span class="math">O(4N^²)</span></td>
+<td>Đánh dấu ô đang đi tránh chu trình</td>
 </tr>
 <tr>
 <td>08</td>
 <td><code>CPPB-BKT-08</code></td>
 <td>**Tập Con Có Tổng Bằng <span class="math">S</span> (Subset Sum)**</td>
 <td><code>P2</code></td>
-<td><strong>Level 2</strong></td>
-<td><span class="math">O(2^N)</span> (Pruned)</td>
-<td><span class="math">≤ 2^N</span> tập con (<span class="math">Aᵢ &gt; 0</span>)</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">O(2^N)</span></td>
+<td>Cắt tỉa tổng vượt ngưỡng <span class="math">S</span></td>
 </tr>
-</tbody></table>
-<table><thead><tr>
-<th>09</th>
-<th><code>CPPB-BKT-09</code></th>
-<th><strong>Chia Tập Thành 2 Phần Bằng Nhau</strong></th>
-<th><code>P3</code></th>
-<th><strong>Level 2</strong></th>
-<th><span class="math">O(2^N)</span> (Pruned)</th>
-<th><span class="math">≤ 2^N</span> phân hoạch</th>
-<th><span class="math">Θ(N)</span></th>
-<th><span class="math">N</span></th>
-</tr></thead><tbody>
+<tr>
+<td>09</td>
+<td><code>CPPB-BKT-09</code></td>
+<td><strong>Chia Tập Thành 2 Phần Bằng Nhau</strong></td>
+<td><code>P3</code></td>
+<td><span class="math">O(2^N)</span></td>
+<td>Chuyển về bài toán Subset Sum <span class="math">S/2</span></td>
+</tr>
 <tr>
 <td>10</td>
 <td><code>CPPB-BKT-10</code></td>
 <td><strong>Đổi Tiền Xu Ít Nhất (B&B Coin Change)</strong></td>
 <td><code>P3</code></td>
-<td><strong>Level 3</strong></td>
-<td>Exponential worst-case</td>
-<td>Phụ thuộc chất lượng Bound</td>
-<td><span class="math">O(S / Cmᵢₙ)</span></td>
-<td><span class="math">≤ lfloor S / Cmᵢₙ rfloor</span></td>
+<td>Exponential</td>
+<td>Cắt tỉa cận dưới <span class="math">count + lceil rem / cmₐₓ rceil</span></td>
 </tr>
 <tr>
 <td>11</td>
 <td><code>CPPB-BKT-11</code></td>
 <td><strong>Mã Đi Tuần (Knight's Tour)</strong></td>
 <td><code>P3</code></td>
-<td><strong>Level 4</strong></td>
-<td><span class="math">O(8N^²)</span> (Loose bound)</td>
-<td>Search tree with heuristic order</td>
-<td><span class="math">Θ(N²)</span></td>
-<td><span class="math">N²</span></td>
+<td><span class="math">O(8N^²)</span></td>
+<td>Heuristic Warnsdorff ưu tiên bậc nhỏ</td>
 </tr>
 <tr>
 <td>12</td>
 <td><code>CPPB-BKT-12</code></td>
 <td>**Trò Chơi Sudoku <span class="math">9 × 9</span>**</td>
 <td><code>P3</code></td>
-<td><strong>Level 4</strong></td>
-<td><span class="math">O(9^E)</span> (<span class="math">E ≤ 81</span> ô trống)</td>
-<td>Không gian gán thô <span class="math">≤ 9^E</span></td>
-<td><span class="math">O(E)</span></td>
-<td><span class="math">E ≤ 81</span></td>
+<td><span class="math">O(9^E)</span></td>
+<td>MRV Heuristic (ô ít lựa chọn nhất)</td>
 </tr>
 <tr>
 <td>13</td>
 <td><code>CPPB-BKT-13</code></td>
-<td>**Bài Toán Cái Túi <span class="math">0/1</span> Nhánh Cận (B&amp;B)**</td>
+<td>**Bài Toán Cái Túi <span class="math">0/1</span> Nhánh Cận**</td>
 <td><code>P4</code></td>
-<td><strong>Level 3</strong></td>
-<td>Exponential worst-case</td>
-<td>Fractional Bound Pruned</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td>Exponential</td>
+<td>Cận trên Fractional Knapsack (Greedy UB)</td>
 </tr>
 <tr>
 <td>14</td>
 <td><code>CPPB-BKT-14</code></td>
 <td><strong>Người Du Lịch (TSP) Nhánh Cận</strong></td>
 <td><code>P4</code></td>
-<td><strong>Level 3</strong></td>
-<td><span class="math">O(N!)</span> worst-case</td>
-<td>Min-edge Bound Pruned</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">O(N!)</span></td>
+<td>Cận dưới tổng cạnh nhỏ nhất còn lại</td>
 </tr>
 <tr>
 <td>15</td>
 <td><code>CPPB-BKT-15</code></td>
 <td>**Tô Màu Đồ Thị (Graph <span class="math">K</span>-Coloring)**</td>
 <td><code>P4</code></td>
-<td><strong>Level 4</strong></td>
-<td><span class="math">O(K^V)</span> (Pruned)</td>
-<td><span class="math">≤ K^V</span> trạng thái màu</td>
-<td><span class="math">Θ(V)</span></td>
-<td><span class="math">V</span></td>
+<td><span class="math">O(K^V)</span></td>
+<td>Kiểm tra xung đột đỉnh kề</td>
 </tr>
 <tr>
 <td>16</td>
 <td><code>CPPB-BKT-16</code></td>
-<td><strong>Phân Công Công Việc Tối Ưu (Job Assign)</strong></td>
+<td><strong>Phân Công Công Việc Tối Ưu</strong></td>
 <td><code>P5</code></td>
-<td><strong>Level 3</strong></td>
-<td><span class="math">O(N!)</span> worst-case</td>
-<td>Min-row Bound Pruned</td>
-<td><span class="math">Θ(N)</span></td>
-<td><span class="math">N</span></td>
+<td><span class="math">O(N!)</span></td>
+<td>Cận dưới tổng chi phí tối thiểu theo hàng</td>
 </tr>
 </tbody></table>
-<p>================================================================================</p>
-<h1 id="module-05-quy-ho-ch-ng-dynamic-programmi">Module 05: Quy hoạch động (dynamic programming)</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 13: Quy Hoạch Động 1D &amp; LIS | 467 dòng | 28,715 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-05-quy-ho-ch-ng-dynamic-programmin">CHƯƠNG 05: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)</h1>
 <h1 id="chuy-n-13-quy-ho-ch-ng-1d-d-y-con-t-ng-d">Chuyên đề 13: Quy hoạch động 1d &amp; dãy con tăng dài nhất</h1>
 <h2 id="1-b-n-ch-t-v-n-c-u-n-i-t-quy-sang-quy-ho">1. Bản chất vấn đề &amp; cầu nối từ đệ quy sang quy hoạch động</h2>
 <p>Trong Chuyên đề 10 và 12, ta đã chứng kiến hiện tượng <strong>Bùng nổ Không gian Trạng thái (Combinatorial Explosion)</strong> khi duyệt đệ quy phân nhánh:</p>
@@ -7866,7 +7600,7 @@ int main() {
 <li><strong>Tổng thời gian:</strong> <span class="math">O(N log N)</span>. Đây là kỹ thuật mở rộng tối ưu hóa nâng cao (Challenge Extension).</li>
 </ul>
 <h2 id="4-c-c-bi-n-th-thi-t-k-tr-ng-th-i-t-m-h-n">4. Các biến thể thiết kế trạng thái từ mô hình 1d (state design variations)</h2>
-<p>Mục tiêu lớn nhất của Module 05 không phải là học thuộc các công thức, mà là rèn luyện khả năng <strong>Thiết Kế Trạng Thái (State Design)</strong> trước các biến thể bài toán mới:</p>
+<p>Mục tiêu lớn nhất của Chương 05 không phải là học thuộc các công thức, mà là rèn luyện khả năng <strong>Thiết Kế Trạng Thái (State Design)</strong> trước các biến thể bài toán mới:</p>
 <h3 id="4-1-pattern-a-quy-t-nh-nh-ph-n-binary-ch">4.1. Pattern a: Quyết định nhị phân (binary choice — chọn / bỏ qua)</h3>
 <ul>
 <li><strong>Bối cảnh (House Robber):</strong> Không được chọn hai phần tử liền kề nhau.</li>
@@ -7931,7 +7665,7 @@ int main() {
 </ul>
 <h2 id="6-m-u-c-i-t-chu-n-thi-u-competitive-temp">6. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-d-y-con-t-ng-d-i-nh-t-lis-mathcal">Mẫu 1: Dãy con tăng dài nhất lis <span class="math">O(N²)</span> kèm truy vết nghiệm</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -7993,7 +7727,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-i-ti-n-t-xu-nh-t-coin-change-1d">Mẫu 2: Đổi tiền ít xu nhất (coin change 1d)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 const long long INF = 1e18;
@@ -8276,11 +8010,7 @@ int main() {
 <td><span class="math">CPPB-DP1-02</span></td>
 <td>Chú Ếch Nhảy Cóc Chi Phí Min</td>
 <td><strong>P1</strong></td>
-<td>$dp[i] = \min(dp[i-1] +</td>
-<td>h_i-h_{i-1}</td>
-<td>, dp[i-2] +</td>
-<td>h_i-h_{i-2}</td>
-<td>)$.</td>
+<td><span class="math">dp[i] = min(dp[i-1] + vert hᵢ - hᵢ₋₁ vert, dp[i-2] + vert hᵢ - hᵢ₋₂ vert)</span>.</td>
 </tr>
 <tr>
 <td><span class="math">CPPB-DP1-03</span></td>
@@ -8361,9 +8091,6 @@ int main() {
 <td><span class="math">dp[i] = min(dp[j] + cost(j+1, i))</span>, phân hoạch tiền tố tối ưu.</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 14: Quy Hoạch Động 2D &amp; Knapsack | 400 dòng | 21,360 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-14-quy-ho-ch-ng-2d-b-i-to-n-c-i-t">Chuyên đề 14: Quy hoạch động 2d &amp; bài toán cái túi (knapsack)</h1>
 <h2 id="1-b-n-ch-t-kh-ng-gian-tr-ng-th-i-2d">1. Bản chất không gian trạng thái 2d</h2>
 <p>Trong Chuyên đề 13, trạng thái <span class="math">dp[i]</span> chỉ phụ thuộc vào một tham số đơn lẻ (vị trí trên dãy số hoặc giá trị tổng tiền). Tuy nhiên, trong thực tế thi đấu, bài toán thường yêu cầu thỏa mãn đồng thời <strong>hai điều kiện độc lập</strong>:</p>
@@ -8461,7 +8188,7 @@ int main() {
 </ul>
 <h2 id="7-m-u-c-i-t-chu-n-thi-u-competitive-temp">7. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-b-i-to-n-c-i-t-i-0-1-n-n-m-ng-1d">Mẫu 1: Bài toán cái túi <span class="math">0/1</span> nén mảng 1d</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -8494,7 +8221,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-ng-i-c-t-ng-l-n-nh-t-tr-n-l-i-2d">Mẫu 2: Đường đi có tổng lớn nhất trên lưới 2d</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -8801,8 +8528,7 @@ int main() {
 <td><span class="math">CPPB-DP2-06</span></td>
 <td>Kiểm Tra Tập Con Có Tổng Bằng S</td>
 <td><strong>P2</strong></td>
-<td>Subset Sum boolean $dp[w] = dp[w] \</td>
-<td>dp[w - A[i]]$.</td>
+<td>Subset Sum boolean <span class="math">dp[w] = dp[w] lor dp[w - A[i]]</span>.</td>
 </tr>
 <tr>
 <td><span class="math">CPPB-DP2-07</span></td>
@@ -8814,9 +8540,7 @@ int main() {
 <td><span class="math">CPPB-DP2-08</span></td>
 <td>Phân Chia Tập Hợp Chênh Lệch Min</td>
 <td><strong>P3</strong></td>
-<td>Tìm tổng tập con gần <span class="math">S/2</span> nhất, cực tiểu hóa $</td>
-<td>S - 2 \cdot s_1</td>
-<td>$.</td>
+<td>Tìm tổng tập con gần <span class="math">S/2</span> nhất, cực tiểu hóa <span class="math">vert S - 2 · s₁ vert</span>.</td>
 </tr>
 <tr>
 <td><span class="math">CPPB-DP2-09</span></td>
@@ -8861,9 +8585,6 @@ int main() {
 <td>Lưới ma trận với quy tắc di chuyển mở rộng chuẩn Olympic.</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 15: Quy Hoạch Động Chuỗi &amp; LCS | 410 dòng | 20,461 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-15-quy-ho-ch-ng-chu-i-lcs-edit-di">Chuyên đề 15: Quy hoạch động chuỗi: Lcs &amp; edit distance</h1>
 <h2 id="1-kh-ng-gian-tr-ng-th-i-hai-ti-n-t-2-pre">1. Không gian trạng thái hai tiền tố (2-prefix state)</h2>
 <p>Trong xử lý chuỗi ký tự thi đấu, các bài toán so khớp, tìm chuỗi tương đồng hay biến đổi xâu thường thao tác trên hai chuỗi <span class="math">A</span> (độ dài <span class="math">N</span>) và <span class="math">B</span> (độ dài <span class="math">M</span>).</p>
@@ -8962,7 +8683,7 @@ int main() {
 </ul>
 <h2 id="6-m-u-c-i-t-chu-n-thi-u-competitive-temp">6. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-d-y-con-chung-d-i-nh-t-lcs-k-m-kh">Mẫu 1: Dãy con chung dài nhất (lcs) kèm khôi phục xâu</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -9014,7 +8735,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-kho-ng-c-ch-bi-n-i-x-u-edit-distan">Mẫu 2: Khoảng cách biến đổi xâu (edit distance)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -9371,12 +9092,7 @@ int main() {
 <td>Bài toán tối ưu hóa xâu kết hợp điều kiện từ vựng chuẩn thi đấu.</td>
 </tr>
 </tbody></table>
-<p>================================================================================</p>
-<h1 id="module-06-c-u-tr-c-d-li-u-n-ng-cao">Module 06: Cấu trúc dữ liệu nâng cao</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 16: STL: set, map &amp; Nén Tọa Độ | 380 dòng | 18,338 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-06-c-u-tr-c-d-li-u-n-ng-cao">CHƯƠNG 06: CẤU TRÚC DỮ LIỆU NÂNG CAO</h1>
 <h1 id="chuy-n-16-c-u-tr-c-d-li-u-stl-set-map-he">Chuyên đề 16: Cấu trúc dữ liệu stl: Set, map &amp; heap</h1>
 <h2 id="1-b-n-ch-t-c-c-c-u-tr-c-d-li-u-n-ng-cao">1. Bản chất các cấu trúc dữ liệu nâng cao trong thư viện chuẩn stl</h2>
 <p>Trong lập trình thi đấu hiện đại, việc tự cài đặt lại cây nhị phân cân bằng hay bảng băm từ đầu cho mọi bài toán là không khả thi. C++ Standard Template Library (STL) cung cấp các cấu trúc dữ liệu tối ưu hóa cực mạnh:</p>
@@ -9441,7 +9157,7 @@ int main() {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-k-thu-t-n-n-t-a-chu-n-m-c">Mẫu 1: Kỹ thuật nén tọa độ chuẩn mực</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -9481,7 +9197,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-duy-tr-trung-v-ng-b-ng-2-heap-medi">Mẫu 2: Duy trì trung vị động bằng 2 heap (median of stream)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -9849,9 +9565,6 @@ int main() {
 <td>Cấu trúc dữ liệu STL đa tiêu chí hỗ trợ cập nhật điểm và xếp hạng.</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 17: Stack &amp; Monotonic Stack | 365 dòng | 17,937 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-17-c-u-tr-c-d-li-u-ng-n-x-p-stack">Chuyên đề 17: Cấu trúc dữ liệu ngăn xếp (stack) &amp; monotonic stack</h1>
 <h2 id="1-b-n-ch-t-c-u-tr-c-d-li-u-ng-n-x-p-stac">1. Bản chất cấu trúc dữ liệu ngăn xếp (stack)</h2>
 <p>Ngăn xếp (Stack) là cấu trúc dữ liệu hoạt động theo nguyên lý <strong>LIFO (Last In, First Out — Vào sau, Ra trước)</strong>:</p>
@@ -9906,7 +9619,7 @@ int main() {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-t-m-ph-n-t-l-n-h-n-ti-p-theo-next">Mẫu 1: Tìm phần tử lớn hơn tiếp theo (next greater element)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -9946,7 +9659,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-h-nh-ch-nh-t-l-n-nh-t-tr-n-bi-u-c">Mẫu 2: Hình chữ nhật lớn nhất trên biểu đồ cột (histogram)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -10308,9 +10021,6 @@ int main() {
 <td>Thuật toán Shunting-Yard xử lý ngoặc và thứ tự ưu tiên toán tử.</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 18: Queue &amp; Deque | 389 dòng | 17,816 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-18-c-u-tr-c-d-li-u-h-ng-i-queue-d">Chuyên đề 18: Cấu trúc dữ liệu hàng đợi (queue, deque) &amp; monotonic deque</h1>
 <h2 id="1-b-n-ch-t-c-u-tr-c-d-li-u-h-ng-i-queue">1. Bản chất cấu trúc dữ liệu hàng đợi (queue &amp; deque)</h2>
 <h3 id="1-1-h-ng-i-chu-n-queue-fifo">1.1. Hàng đợi chuẩn (queue — fifo)</h3>
@@ -10370,7 +10080,7 @@ int main() {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-min-tr-n-m-i-c-a-s-tr-t-d-i-k-b-ng">Mẫu 1: Min trên mọi cửa sổ trượt độ dài k bằng monotonic deque <span class="math">O(N)</span></h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -10421,7 +10131,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-bfs-t-m-b-c-i-ng-n-nh-t-t-1-n-n">Mẫu 2: Bfs tìm bước đi ngắn nhất từ 1 đến n</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int main() {
@@ -10790,12 +10500,7 @@ int main() {
 <td>0-1 BFS / BFS nhiều chiều trạng thái <span class="math">(r, c, dir)</span> chuẩn Olympic.</td>
 </tr>
 </tbody></table>
-<p>================================================================================</p>
-<h1 id="module-07-th-c-y-truy-v-n-o-n">Module 07: Đồ thị &amp; cây truy vấn đoạn</h1>
-<p>================================================================================</p>
-<hr>
-<p>&lt;!-- Chuyên đề 19: Lý Thuyết Đồ Thị, BFS &amp; DFS | 405 dòng | 18,374 bytes --&gt;</p>
-<hr>
+<h1 id="ch-ng-07-th-c-y-truy-v-n-o-n">CHƯƠNG 07: ĐỒ THỊ &amp; CÂY TRUY VẤN ĐOẠN</h1>
 <h1 id="chuy-n-19-l-thuy-t-th-c-b-n-duy-t-bfs-df">Chuyên đề 19: Lý thuyết đồ thị cơ bản: Duyệt bfs &amp; dfs</h1>
 <h2 id="1-b-n-ch-t-th-c-c-ph-ng-ph-p-bi-u-di-n">1. Bản chất đồ thị &amp; các phương pháp biểu diễn</h2>
 <p>Đồ thị <span class="math">G = (V, E)</span> là cấu trúc toán học biểu diễn tập hợp các đỉnh (Vertices — <span class="math">V</span>) và các cạnh nối giữa chúng (Edges — <span class="math">E</span>). Đồ thị có thể là vô hướng (Undirected) hoặc có hướng (Directed), có trọng số hoặc không có trọng số.</p>
@@ -10854,7 +10559,7 @@ int main() {
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-dfs-m-s-th-nh-ph-n-li-n-th-ng-v-t">Mẫu 1: Dfs đếm số thành phần liên thông và tìm kích thước từng thành phần</h3>
 <blockquote>⚠️ <strong>Lưu ý về Stack Overflow:</strong> Hàm DFS đệ quy dưới đây có thể gây tràn ngăn xếp hệ thống (Segmentation Fault) khi đồ thị có dạng đường thẳng <span class="math">N = 2 × 10⁵</span> đỉnh (độ sâu đệ quy lên tới <span class="math">N</span> tầng). Trong thi đấu thực tế, nên dùng <strong>DFS bằng <code>std::stack</code> tường minh</strong> hoặc thiết lập <code>ulimit -s unlimited</code> (Linux) trước khi chạy. Mẫu đệ quy được giữ lại ở đây vì tính trực quan sư phạm.</blockquote>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int n, m;
@@ -10912,7 +10617,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-ph-t-hi-n-chu-tr-nh-tr-n-th-v-h-ng">Mẫu 2: Phát hiện chu trình trên đồ thị vô hướng bằng dfs</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int n, m;
@@ -11291,9 +10996,6 @@ int main() {
 <td>Bài toán đồ thị tổng hợp kết hợp liên thông và đường đi tối ưu.</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 20: Đồ Thị Lưới 2D &amp; Flood Fill | 407 dòng | 18,604 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-20-th-l-i-2d-k-thu-t-flood-fill-t">Chuyên đề 20: Đồ thị lưới 2d, kỹ thuật flood fill &amp; tính chất cây</h1>
 <h2 id="1-b-n-ch-t-m-h-nh-h-a-l-i-2d-th-nh-th">1. Bản chất mô hình hóa lưới 2d thành đồ thị</h2>
 <p>Trong lập trình thi đấu, ma trận bảng vuông <span class="math">N × M</span> có thể được xem là một đồ thị đặc biệt:</p>
@@ -11348,7 +11050,7 @@ int main() {
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-m-s-l-ng-h-n-o-v-di-n-t-ch-l-n-nh">Mẫu 1: Đếm số lượng hòn đảo và diện tích lớn nhất (flood fill dfs)</h3>
 <blockquote>⚠️ <strong>Lưu ý về Stack Overflow:</strong> Hàm DFS đệ quy trên lưới 2D có thể gây tràn ngăn xếp hệ thống khi hòn đảo có kích thước lớn (ví dụ lưới <span class="math">500 × 500</span> toàn ô đất tạo ra độ sâu đệ quy <span class="math">250{,}000</span> tầng). Trong thi đấu thực tế với lưới lớn (<span class="math">N × M ≥ 10⁵</span>), <strong>nên dùng BFS bằng <code>std::queue</code> (xem Mẫu 2 bên dưới)</strong> để tránh hoàn toàn rủi ro này. Mẫu DFS đệ quy được giữ lại vì tính trực quan sư phạm.</blockquote>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int n, m;
@@ -11408,7 +11110,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-t-m-ng-i-ng-n-nh-t-trong-m-cung-gr">Mẫu 2: Tìm đường đi ngắn nhất trong mê cung (grid bfs)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 int n, m;
@@ -11789,9 +11491,6 @@ int main() {
 <td>2 lượt BFS đồng thời: Quái vật lan tỏa trước, Người đi sau chuẩn thi đấu.</td>
 </tr>
 </tbody></table>
-<hr>
-<p>&lt;!-- Chuyên đề 21: Cây Phân Đoạn &amp; Fenwick Tree | 468 dòng | 20,303 bytes --&gt;</p>
-<hr>
 <h1 id="chuy-n-21-c-u-tr-c-c-y-ph-n-o-n-segment">Chuyên đề 21: Cấu trúc cây phân đoạn (segment tree) &amp; fenwick tree (bit)</h1>
 <h2 id="1-b-n-ch-t-b-i-to-n-truy-v-n-o-n-ng-dyna">1. Bản chất bài toán truy vấn đoạn động (dynamic range queries)</h2>
 <p>Cho mảng <span class="math">A</span> gồm <span class="math">N</span> phần tử. Cần thực hiện liên tiếp <span class="math">Q</span> thao tác thuộc 2 loại:</p>
@@ -11890,7 +11589,7 @@ long long range_query(int L, int R) {
 </ul>
 <h2 id="5-m-u-c-i-t-chu-n-thi-u-competitive-temp">5. Mẫu cài đặt chuẩn thi đấu (competitive templates)</h2>
 <h3 id="m-u-1-c-y-fenwick-bit-point-update-range">Mẫu 1: Cây fenwick (bit) point update &amp; range sum query</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 struct FenwickTree {
@@ -11960,7 +11659,7 @@ int main() {
     return 0;
 }</code></pre>
 <h3 id="m-u-2-c-y-ph-n-o-n-segment-tree-range-mi">Mẫu 2: Cây phân đoạn (segment tree) range minimum query (rmq)</h3>
-<pre><code>#include &lt;bits/stdc++.h&gt;
+<pre><code>#include &lt;bits/stdC++.h&gt;
 using namespace std;
 
 const long long INF = 1e18;
@@ -12369,7 +12068,6 @@ int main() {
 <td>Bài toán cấu trúc dữ liệu tổng hợp kết hợp Segment Tree và hình học/đồ thị.</td>
 </tr>
 </tbody></table>
-<p>================================================================================ &lt;!-- KẾT THÚC NỘI DUNG 21 CHUYÊN ĐỀ --&gt; ================================================================================</p>
-<blockquote><strong>Thống kê:</strong> 21 chuyên đề đã nối | 0 thiếu | 8,251 dòng | 450,254 bytes tổng cộng</blockquote>
+<blockquote><strong>Thống kê:</strong> 21 chuyên đề đã nối | 0 thiếu | 8,230 dòng | 447,978 bytes tổng cộng</blockquote>
 </body>
 </html>

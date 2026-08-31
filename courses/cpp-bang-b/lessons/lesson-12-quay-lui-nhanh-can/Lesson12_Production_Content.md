@@ -285,7 +285,7 @@ Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt 
 
 > *Giải thích:* Vì $LB(X) \le OPT(X)$, nếu $LB(X) \ge best$ thì chi phí thực tế chắc chắn không thể tốt hơn $best$.
 
-#### Câu 7 (Độ phức tạp không gian: Exponential Tree $\ne$ Exponential Stack):
+#### Câu 7 (Độ phức tạp không gian: Exponential Tree vs. Linear Stack Depth):
 
 Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \dots, N\}$ tiêu tốn bộ nhớ ngăn xếp (Call Stack Space) tối đa là bao nhiêu?
 
@@ -377,22 +377,21 @@ Nếu một lập trình viên thiết kế một hàm Cận Dưới $LB(\text{s
 * **LEVEL 3: Optimization Search & Branch and Bound (`CPPB-BKT-10`, `13`, `14`, `16`):** Đổi tiền xu ít nhất (B&B), Cái túi $0/1$ B&B, TSP B&B, Phân công công việc B&B.
 * **LEVEL 4: Advanced CSP & Heuristic Search (`CPPB-BKT-11`, `12`, `15`):** Mã đi tuần Warnsdorff, Sudoku $9 \times 9$, Tô màu đồ thị ($K$-Coloring).
 
-| STT | Mã Bài | Tên Bài Toán | Difficulty | Concept Group | Output / Time Complexity | Search Space / Number of Solutions | Call Stack | Max Depth |
-|:---:|:---:|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| 01 | `CPPB-BKT-01` | **Sinh Xâu Nhị Phân Độ Dài $N$** | `P0` | **Level 1** | $\Theta(N \cdot 2^N)$ (Output-sensitive)| $2^N$ nghiệm lá | $\Theta(N)$ | $N$ |
-| 02 | `CPPB-BKT-02` | **Sinh Tập Con Của Tập $N$ Phần Tử** | `P0` | **Level 1** | $\Theta(N \cdot 2^N)$ (Output-sensitive)| $2^N$ tập con | $\Theta(N)$ | $N$ |
-| 03 | `CPPB-BKT-03` | **Sinh Hoán Vị $1 \dots N$** | `P1` | **Level 1** | $\Theta(N \cdot N!)$ (Output-sensitive)| $N!$ hoán vị lá | $\Theta(N)$ | $N$ |
-| 04 | `CPPB-BKT-04` | **Sinh Tổ Hợp Chập $K$ Của $N$** | `P1` | **Level 1** | $\Theta(K \cdot C_N^K)$ (Output-sensitive)| $C_N^K$ tổ hợp | $\Theta(K)$ | $K$ |
-| 05 | `CPPB-BKT-05` | **Sinh Dãy Ngoặc Hợp Lệ Độ Dài $2N$** | `P1` | **Level 2** | $\Theta(N \cdot \text{Catalan}(N))$| $\text{Catalan}(N)$ nghiệm | $\Theta(N)$ | $2N$ |
-| 06 | `CPPB-BKT-06` | **Bài Toán $N$-Queens (Đếm Số Cách)** | `P2` | **Level 2** | $\mathcal{O}(N!)$ (Worst-case bound) | $\le N!$ gán thô (pruned mạnh) | $\Theta(N)$ | $N$ |
-| 07 | `CPPB-BKT-07` | **Mê Cung (Rat in a Maze)** | `P2` | **Level 2** | $\mathcal{O}(4^{N^2})$ (Loose bound) | Cây đường đi $\le 4^{N^2}$ | $\Theta(N^2)$ | $N^2$ |
-| 08 | `CPPB-BKT-08` | **Tập Con Có Tổng Bằng $S$ (Subset Sum)** | `P2` | **Level 2** | $\mathcal{O}(2^N)$ (Pruned) | $\le 2^N$ tập con ($A_i > 0$) | $\Theta(N)$ | $N$ |
-
-| 09 | `CPPB-BKT-09` | **Chia Tập Thành 2 Phần Bằng Nhau** | `P3` | **Level 2** | $\mathcal{O}(2^N)$ (Pruned) | $\le 2^N$ phân hoạch | $\Theta(N)$ | $N$ |
-| 10 | `CPPB-BKT-10` | **Đổi Tiền Xu Ít Nhất (B&B Coin Change)** | `P3` | **Level 3** | Exponential worst-case | Phụ thuộc chất lượng Bound | $\mathcal{O}(S / C_{\min})$ | $\le \lfloor S / C_{\min} \rfloor$ |
-| 11 | `CPPB-BKT-11` | **Mã Đi Tuần (Knight's Tour)** | `P3` | **Level 4** | $\mathcal{O}(8^{N^2})$ (Loose bound) | Search tree with heuristic order | $\Theta(N^2)$ | $N^2$ |
-| 12 | `CPPB-BKT-12` | **Trò Chơi Sudoku $9 \times 9$** | `P3` | **Level 4** | $\mathcal{O}(9^E)$ ($E \le 81$ ô trống) | Không gian gán thô $\le 9^E$ | $\mathcal{O}(E)$ | $E \le 81$ |
-| 13 | `CPPB-BKT-13` | **Bài Toán Cái Túi $0/1$ Nhánh Cận (B&B)**| `P4` | **Level 3** | Exponential worst-case | Fractional Bound Pruned | $\Theta(N)$ | $N$ |
-| 14 | `CPPB-BKT-14` | **Người Du Lịch (TSP) Nhánh Cận** | `P4` | **Level 3** | $\mathcal{O}(N!)$ worst-case | Min-edge Bound Pruned | $\Theta(N)$ | $N$ |
-| 15 | `CPPB-BKT-15` | **Tô Màu Đồ Thị (Graph $K$-Coloring)** | `P4` | **Level 4** | $\mathcal{O}(K^V)$ (Pruned) | $\le K^V$ trạng thái màu | $\Theta(V)$ | $V$ |
-| 16 | `CPPB-BKT-16` | **Phân Công Công Việc Tối Ưu (Job Assign)**| `P5` | **Level 3** | $\mathcal{O}(N!)$ worst-case | Min-row Bound Pruned | $\Theta(N)$ | $N$ |
+| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Độ Phức Tạp | Mục Tiêu Rèn Luyện |
+|:---:|:---:|---|:---:|:---:|---|
+| 01 | `CPPB-BKT-01` | **Sinh Xâu Nhị Phân Độ Dài $N$** | `P0` | $\Theta(N \cdot 2^N)$ | Cây trạng thái nhị phân đầy đủ |
+| 02 | `CPPB-BKT-02` | **Sinh Tập Con Của Tập $N$ Phần Tử** | `P0` | $\Theta(N \cdot 2^N)$ | Trực quan hóa mô hình Include/Exclude |
+| 03 | `CPPB-BKT-03` | **Sinh Hoán Vị $1 \dots N$** | `P1` | $\Theta(N \cdot N!)$ | Mảng đánh dấu `visited` |
+| 04 | `CPPB-BKT-04` | **Sinh Tổ Hợp Chập $K$ Của $N$** | `P1` | $\Theta(K \cdot C_N^K)$ | Cận trên/cận dưới giá trị phần tử |
+| 05 | `CPPB-BKT-05` | **Sinh Dãy Ngoặc Hợp Lệ Độ Dài $2N$** | `P1` | $\Theta(N \cdot \text{Catalan}(N))$ | Cắt tỉa điều kiện số ngoặc đóng $\le$ mở |
+| 06 | `CPPB-BKT-06` | **Bài Toán $N$-Queens (Đếm Số Cách)** | `P2` | $\mathcal{O}(N!)$ | Mặt nạ đánh dấu cột & 2 đường chéo |
+| 07 | `CPPB-BKT-07` | **Mê Cung (Rat in a Maze)** | `P2` | $\mathcal{O}(4^{N^2})$ | Đánh dấu ô đang đi tránh chu trình |
+| 08 | `CPPB-BKT-08` | **Tập Con Có Tổng Bằng $S$ (Subset Sum)** | `P2` | $\mathcal{O}(2^N)$ | Cắt tỉa tổng vượt ngưỡng $S$ |
+| 09 | `CPPB-BKT-09` | **Chia Tập Thành 2 Phần Bằng Nhau** | `P3` | $\mathcal{O}(2^N)$ | Chuyển về bài toán Subset Sum $S/2$ |
+| 10 | `CPPB-BKT-10` | **Đổi Tiền Xu Ít Nhất (B&B Coin Change)** | `P3` | Exponential | Cắt tỉa cận dưới $\text{count} + \lceil rem / c_{\max} \rceil$ |
+| 11 | `CPPB-BKT-11` | **Mã Đi Tuần (Knight's Tour)** | `P3` | $\mathcal{O}(8^{N^2})$ | Heuristic Warnsdorff ưu tiên bậc nhỏ |
+| 12 | `CPPB-BKT-12` | **Trò Chơi Sudoku $9 \times 9$** | `P3` | $\mathcal{O}(9^E)$ | MRV Heuristic (ô ít lựa chọn nhất) |
+| 13 | `CPPB-BKT-13` | **Bài Toán Cái Túi $0/1$ Nhánh Cận** | `P4` | Exponential | Cận trên Fractional Knapsack (Greedy UB) |
+| 14 | `CPPB-BKT-14` | **Người Du Lịch (TSP) Nhánh Cận** | `P4` | $\mathcal{O}(N!)$ | Cận dưới tổng cạnh nhỏ nhất còn lại |
+| 15 | `CPPB-BKT-15` | **Tô Màu Đồ Thị (Graph $K$-Coloring)** | `P4` | $\mathcal{O}(K^V)$ | Kiểm tra xung đột đỉnh kề |
+| 16 | `CPPB-BKT-16` | **Phân Công Công Việc Tối Ưu** | `P5` | $\mathcal{O}(N!)$ | Cận dưới tổng chi phí tối thiểu theo hàng |

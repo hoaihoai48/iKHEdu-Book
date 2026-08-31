@@ -15,7 +15,7 @@ $$T(N) = 2T(N-1) + \mathcal{O}(1) \implies \text{Cây nhị phân bùng nổ, } 
 
 > **Quy luật cốt lõi:** "Đệ quy" chỉ là cơ chế cài đặt; cấu trúc cây lời gọi và khối lượng công việc ở mỗi tầng mới là yếu tố quyết định độ phức tạp.
 
-## 2. Phân biệt cốt lõi: Đệ quy (recursion) $\ne$ chia để trị (Divide & Conquer)
+## 2. Phân biệt cốt lõi: Đệ quy (Recursion) và chia để trị (Divide & Conquer)
 
 Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
 

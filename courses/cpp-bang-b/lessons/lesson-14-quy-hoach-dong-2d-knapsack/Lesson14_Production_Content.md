@@ -387,9 +387,9 @@ Khi lần ngược từ ô $(N, M)$ về ô $(1, 1)$ để in ra các bước đ
 | $CPPB-DP2-03$ | Đường Đi Lưới Có Vật Cản | **P1** | Xử lý ô cấm gán $dp[i][j] = 0$, xử lý Base Case xuất phát. |
 | $CPPB-DP2-04$ | Tam Giác Số Tối Ưu (Triangle DP) | **P2** | Quy hoạch động từ đáy lên đỉnh hội tụ tại $dp[0][0]$. |
 | $CPPB-DP2-05$ | Cái Túi $0/1$ Knapsack Cơ Bản | **P2** | Cài đặt chuẩn mảng nén 1D $dp[w]$ duyệt ngược $w$ giảm. |
-| $CPPB-DP2-06$ | Kiểm Tra Tập Con Có Tổng Bằng S | **P2** | Subset Sum boolean $dp[w] = dp[w] \| dp[w - A[i]]$. |
+| $CPPB-DP2-06$ | Kiểm Tra Tập Con Có Tổng Bằng S | **P2** | Subset Sum boolean $dp[w] = dp[w] \lor dp[w - A[i]]$. |
 | $CPPB-DP2-07$ | Chia Mảng Thành 2 Phần Bằng Nhau | **P2** | Kiểm tra tổng chẵn và quy về Subset Sum với mục tiêu $S/2$. |
-| $CPPB-DP2-08$ | Phân Chia Tập Hợp Chênh Lệch Min | **P3** | Tìm tổng tập con gần $S/2$ nhất, cực tiểu hóa $|S - 2 \cdot s_1|$. |
+| $CPPB-DP2-08$ | Phân Chia Tập Hợp Chênh Lệch Min | **P3** | Tìm tổng tập con gần $S/2$ nhất, cực tiểu hóa $\vert S - 2 \cdot s_1 \vert$. |
 | $CPPB-DP2-09$ | Unbounded Knapsack (Đồ Vô Hạn) | **P3** | Vòng lặp $w$ duyệt xuôi tăng dần từ $wt_i \to W$. |
 | $CPPB-DP2-10$ | Đổi Tiền 2D Số Cách Tổ Hợp | **P3** | Đếm số cách đổi tiền không phân biệt thứ tự (Unbounded Ways). |
 | $CPPB-DP2-11$ | Knapsack Theo Tổng Giá Trị (Value DP) | **P3** | Đổi trục $dp[v] = \text{Min Weight}$ khi $W \le 10^9, V \le 10^5$. |

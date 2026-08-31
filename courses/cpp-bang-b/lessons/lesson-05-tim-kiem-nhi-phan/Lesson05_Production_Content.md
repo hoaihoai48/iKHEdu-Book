@@ -104,13 +104,13 @@ Cho $N = 4$ cây có chiều cao: $A = [20, 15, 10, 17]$. Cần tìm độ cao m
 
 **Bảng mô phỏng từng bước chặt nhị phân:**
 
-| Bước | $low$ | $high$ | $mid (H)$ | Lượng gỗ cắt được từ từng cây | Tổng gỗ thu được | `check(H) >= 7` | Quyết định cập nhật |
-|:---:|:---:|:---:|:---:|---|:---:|:---:|---|
-| **1** | $0$ | $20$ | **$10$** | $(20-10) + (15-10) + (0) + (17-10) = 10 + 5 + 0 + 7$ | **$22\text{m}$** | `True` $(\ge 7)$ | Lưu `ans = 10`, thử tăng độ cao: $low = 11$ |
-| **2** | $11$ | $20$ | **$15$** | $(20-15) + (0) + (0) + (17-15) = 5 + 0 + 0 + 2$ | **$7\text{m}$** | `True` $(\ge 7)$ | Lưu `ans = 15`, thử tăng độ cao: $low = 16$ |
-| **3** | $16$ | $20$ | **$18$** | $(20-18) + (0) + (0) + (0) = 2 + 0 + 0 + 0$ | **$2\text{m}$** | `False` $(< 7)$ | Thiếu gỗ! Phải hạ cưa xuống: $high = 17$ |
-| **4** | $16$ | $17$ | **$16$** | $(20-16) + (0) + (0) + (17-16) = 4 + 0 + 0 + 1$ | **$5\text{m}$** | `False` $(< 7)$ | Thiếu gỗ! Phải hạ cưa xuống: $high = 15$ |
-| **Dừng** | $16$ | $15$ | — | $low > high \implies$ Thuật toán kết thúc | — | — | **Đáp án tối ưu: $H = 15$** |
+| Bước | Khoảng $[low, high]$ | Thử độ cao $H = mid$ | Tổng gỗ cắt được | Đánh giá $\ge 7\text{m}$ & Quyết định |
+| :---: | :---: | :---: | :---: | :--- |
+| **1** | $[0, 20]$ | $H = 10$ | $10 + 5 + 0 + 7 = \mathbf{22\text{m}}$ | $\ge 7 \implies$ Đủ gỗ! Lưu `ans = 10`, thử cưa cao hơn: $low \leftarrow 11$ |
+| **2** | $[11, 20]$ | $H = 15$ | $5 + 0 + 0 + 2 = \mathbf{7\text{m}}$ | $\ge 7 \implies$ Đủ gỗ! Lưu `ans = 15`, thử cưa cao hơn: $low \leftarrow 16$ |
+| **3** | $[16, 20]$ | $H = 18$ | $2 + 0 + 0 + 0 = \mathbf{2\text{m}}$ | $< 7 \implies$ Thiếu gỗ! Phải hạ cưa: $high \leftarrow 17$ |
+| **4** | $[16, 17]$ | $H = 16$ | $4 + 0 + 0 + 1 = \mathbf{5\text{m}}$ | $< 7 \implies$ Thiếu gỗ! Phải hạ cưa: $high \leftarrow 15$ |
+| **Dừng** | $[16, 15]$ | — | $low > high \implies$ Kết thúc | **Đáp án tối ưu: $H = 15$** |
 
 ## 4. Chặt nhị phân trên tập số thực (real-number Binary Search)
 

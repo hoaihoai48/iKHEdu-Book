@@ -34,7 +34,7 @@
 ![Đếm số thành phần liên thông](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/connected_components_vi.svg)
 
 * **Thuật toán đếm thành phần liên thông:** Duyệt qua mọi đỉnh $i \in [1, N]$. Nếu đỉnh $i$ chưa được thăm (`!visited[i]`), tăng biến đếm số thành phần liên thông `components++` và gọi `DFS(i)` để loang thăm toàn bộ các đỉnh thuộc cùng thành phần.
-* **Phát hiện chu trình trên đồ thị vô hướng bằng DFS:** Khi duyệt từ $u$ sang đỉnh kề $v$, nếu $v$ đã được thăm (`visited[v] == true`) và $v \ne parent[u]$, ta khẳng định đồ thị **CÓ CHU TRÌNH**!
+* **Phát hiện chu trình trên đồ thị vô hướng bằng DFS:** Khi duyệt từ $u$ sang đỉnh kề $v$, nếu $v$ đã được thăm (`visited[v] == true`) và `v != parent[u]`, ta khẳng định đồ thị **CÓ CHU TRÌNH**!
 
 ## 4. Các bẫy lỗi lập trình kinh điển (bug traps)
 
@@ -207,7 +207,7 @@ Trong hàm `DFS(u, p)` với $p$ là đỉnh cha trực tiếp của $u$, dấu 
 
 - **A.** Gặp một đỉnh kề $v$ chưa được thăm.
 
-- **B.** **[Đáp án đúng]** Gặp đỉnh kề $v$ đã được thăm ($visited[v] = true$) và $v \ne p$.
+- **B.** **[Đáp án đúng]** Gặp đỉnh kề $v$ đã được thăm ($visited[v] = true$) và `v != p`.
 
 - **C.** Đỉnh $u$ có bậc lớn hơn 2.
 

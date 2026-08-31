@@ -18,7 +18,7 @@ Trong xử lý chuỗi ký tự thi đấu, các bài toán so khớp, tìm chu�
 * **State Transition:** So sánh ký tự đuôi $A[i]$ và $B[j]$:
 1. Nếu $A[i] == B[j]$: Ký tự này chắc chắn thuộc LCS chung:
 $$dp[i][j] = 1 + dp[i-1][j-1]$$
-2. Nếu $A[i] \ne B[j]$: Bỏ qua $A[i]$ hoặc bỏ qua $B[j]$ để lấy phương án tốt hơn:
+2. Nếu `A[i] != B[j]`: Bỏ qua $A[i]$ hoặc bỏ qua $B[j]$ để lấy phương án tốt hơn:
 $$dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$$
 * **Độ phức tạp:** Thời gian $\mathcal{O}(N \cdot M)$, Bộ nhớ $\mathcal{O}(N \cdot M)$.
 
@@ -45,7 +45,7 @@ Cần tìm số phép biến đổi **ít nhất** để biến xâu $A$ thành 
 * `dp[0][j] = j` (Biến xâu rỗng thành xâu độ dài $j$ cần $j$ phép chèn).
 * **State Transition:**
 * Nếu $A[i] == B[j] \implies dp[i][j] = dp[i-1][j-1]$ (Không tốn chi phí).
-* Nếu $A[i] \ne B[j]$:
+* Nếu `A[i] != B[j]`:
 $$dp[i][j] = 1 + \min(\underbrace{dp[i-1][j-1]}_{\text{Thay thế}}, \underbrace{dp[i-1][j]}_{\text{Xóa}}, \underbrace{dp[i][j-1]}_{\text{Chèn}})$$
 
 ![Khoảng cách biến đổi xâu Edit Distance](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/edit_distance_transitions_vi.svg)

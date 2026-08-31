@@ -62,7 +62,7 @@
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 01: Sắp Xếp | 332 dòng | 20,731 bytes -->
+<!-- Chuyên đề 01: Sắp Xếp | 332 dòng | 20,705 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 01: Thuật toán sắp xếp
@@ -80,7 +80,7 @@ Trong lập trình thi đấu và khoa học máy tính, sắp xếp không đơ
 
 ### 2.1. Định lý về cặp phần tử có khoảng cách nhỏ nhất
 
-> **Định lý:** Trong một tập hợp các số thực $A = \{A_1, A_2, \dots, A_N\}$, sau khi sắp xếp tăng dần $A_1 \le A_2 \le \dots \le A_N$, giá trị nhỏ nhất của $|A_i - A_j|$ giữa hai phần tử phân biệt ($i < j$) luôn đạt được tại ít nhất một cặp phần tử kề nhau $(A_k, A_{k+1})$.
+> **Định lý:** Trong một tập hợp các số thực $A = \{A_1, A_2, \dots, A_N\}$, sau khi sắp xếp tăng dần $A_1 \le A_2 \le \dots \le A_N$, giá trị nhỏ nhất của $|A_i - A_j|$ (với $i \ne j$) luôn đạt được tại ít nhất một cặp phần tử kề nhau $(A_k, A_{k+1})$.
 
 ### 2.2. Chứng minh toán học
 Xét hai chỉ số bất kỳ $i < j$. Nếu $j > i + 1$ (hai phần tử không kề nhau), tồn tại phần tử trung gian $A_{i+1}$ thỏa mãn:
@@ -329,7 +329,7 @@ Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đ�
 
 - **B.** $\mathcal{O}(N \log N)$ vì phải dùng thêm cây nhị phân tìm kiếm.
 
-- **C.** **[Đáp án đúng]** $\mathcal{O}(N)$ vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi `A[i] != A[i-1]`.
+- **C.** **[Đáp án đúng]** $\mathcal{O}(N)$ vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi $A[i] \ne A[i-1]$.
 
 - **D.** $\mathcal{O}(1)$ bằng công thức toán học.
 
@@ -361,7 +361,7 @@ Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Đ
 
 - **D.** `return a[0] < b[0] || a[1] > b[1];`
 
-> *Giải thích:* Phải kiểm tra sự khác biệt của tiêu chí chính trước (`a[0] != b[0]`). Chỉ khi tiêu chí chính bằng nhau mới so sánh tiêu chí phụ. Cả hai nhánh đều phải dùng toán tử nghiêm ngặt `<` hoặc `>`.
+> *Giải thích:* Phải kiểm tra sự khác biệt của tiêu chí chính trước ($a[0] \ne b[0]$). Chỉ khi tiêu chí chính bằng nhau mới so sánh tiêu chí phụ. Cả hai nhánh đều phải dùng toán tử nghiêm ngặt `<` hoặc `>`.
 
 #### Câu 10 (Xử lý kiểu dữ liệu & Tràn số — Robustness):
 
@@ -2725,7 +2725,7 @@ Hai số nguyên dương $A$ và $B$ được gọi là nguyên tố cùng nhau 
 
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 08: Đồng Dư, Lũy Thừa & Nghịch Đảo | 382 dòng | 19,670 bytes -->
+<!-- Chuyên đề 08: Đồng Dư, Lũy Thừa & Nghịch Đảo | 382 dòng | 19,663 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 08: Đồng dư thức, lũy thừa nhị phân & nghịch đảo modulo
@@ -2745,7 +2745,7 @@ $\text{Đồng Dư Cơ Bản (+, -, *)} \longrightarrow \text{Lũy Thừa Nhị 
 * Sau mỗi bước, số mũ $B$ giảm đi một nửa $\implies$ Số phép nhân chỉ còn $\mathcal{O}(\log_2 B)$ (chưa tới $60$ phép tính với $B = 10^{18}$).
 
 ### Vấn đề 2: Phép chia trên vành modulo $\left(\frac{A}{B} \pmod M\right)$
-* Trong số học đồng dư, **không thể thực hiện phép chia bằng phép chia số nguyên thông thường** (tức $\frac{A}{B} \pmod M \not\equiv \frac{A \pmod M}{B \pmod M}$).
+* Trong số học đồng dư, **không thể thực hiện phép chia bằng phép chia số nguyên thông thường** (tức $\frac{A}{B} \pmod M \ne \frac{A \pmod M}{B \pmod M}$).
 * **Nghịch đảo Modulo ($B^{-1}$):** Muốn tính $\frac{A}{B} \pmod M$, ta chuyển phép chia thành phép nhân với nghịch đảo modulo $B^{-1}$ (nếu nghịch đảo tồn tại):
 $$\frac{A}{B} \pmod M \equiv (A \times B^{-1}) \pmod M$$
 với $B^{-1}$ là số nguyên thỏa mãn: $(B \times B^{-1}) \equiv 1 \pmod M$.
@@ -3881,7 +3881,7 @@ Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị 
 
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 11: Chia Để Trị | 383 dòng | 24,227 bytes -->
+<!-- Chuyên đề 11: Chia Để Trị | 383 dòng | 24,229 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 11: Kỹ thuật chia để trị
@@ -3901,7 +3901,7 @@ $$T(N) = 2T(N-1) + \mathcal{O}(1) \implies \text{Cây nhị phân bùng nổ, } 
 
 > **Quy luật cốt lõi:** "Đệ quy" chỉ là cơ chế cài đặt; cấu trúc cây lời gọi và khối lượng công việc ở mỗi tầng mới là yếu tố quyết định độ phức tạp.
 
-## 2. Phân biệt cốt lõi: Đệ quy (Recursion) và chia để trị (Divide & Conquer)
+## 2. Phân biệt cốt lõi: Đệ quy (recursion) $\ne$ chia để trị (Divide & Conquer)
 
 Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
 
@@ -4269,7 +4269,7 @@ Tính lũy thừa ma trận vuông $A^N$ cấp $2 \times 2$ modulo $M$ bằng Ch
 
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 12: Quay Lui & Nhánh Cận | 398 dòng | 26,706 bytes -->
+<!-- Chuyên đề 12: Quay Lui & Nhánh Cận | 398 dòng | 26,707 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 12: Thuật toán quay lui & nhánh cận
@@ -4559,7 +4559,7 @@ Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt 
 
 > *Giải thích:* Vì $LB(X) \le OPT(X)$, nếu $LB(X) \ge best$ thì chi phí thực tế chắc chắn không thể tốt hơn $best$.
 
-#### Câu 7 (Độ phức tạp không gian: Exponential Tree vs. Linear Stack Depth):
+#### Câu 7 (Độ phức tạp không gian: Exponential Tree $\ne$ Exponential Stack):
 
 Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \dots, N\}$ tiêu tốn bộ nhớ ngăn xếp (Call Stack Space) tối đa là bao nhiêu?
 
@@ -4676,7 +4676,7 @@ Nếu một lập trình viên thiết kế một hàm Cận Dưới $LB(\text{s
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 13: Quy Hoạch Động 1D & LIS | 467 dòng | 28,753 bytes -->
+<!-- Chuyên đề 13: Quy Hoạch Động 1D & LIS | 467 dòng | 28,739 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 13: Quy hoạch động 1D & dãy con tăng dài nhất
@@ -4726,7 +4726,7 @@ $$dp[i] = 1 + \min_{\{c \in C \mid i \ge c\}} dp[i - c]$$
 > **Lưu ý quan trọng:** Quy tắc thứ tự vòng lặp phân biệt Hoán vị / Tổ hợp dưới đây áp dụng cho **bài toán đếm số cách**. Với bài toán tối ưu số đồng xu ít nhất $dp[i] = 1 + \min(dp[i-c])$, do phép toán $\min$ có tính chất giao hoán và kết hợp nên ta luôn duyệt $i$ từ $1 \to S$ mà không làm thay đổi giá trị tối ưu.
 
 * **Phân biệt Sư phạm Cốt lõi Trong Bài Toán Đếm Số Cách (Counting Coin Change):**
-* **Bài toán Hoán vị (Permutation):** Thứ tự các đồng xu có phân biệt (ví dụ $1+2 \neq 2+1$ (khác $2+1$)). Vòng lặp ngoài duyệt Tiền $i = 1 \to S$, vòng lặp trong thử từng đồng xu $c \in C$.
+* **Bài toán Hoán vị (Permutation):** Thứ tự các đồng xu có phân biệt (ví dụ $1+2 \ne 2+1$). Vòng lặp ngoài duyệt Tiền $i = 1 \to S$, vòng lặp trong thử từng đồng xu $c \in C$.
 * **Bài toán Tổ hợp (Combination):** Thứ tự các đồng xu không phân biệt (ví dụ $1+2$ và $2+1$ là một cách). Vòng lặp ngoài duyệt từng đồng xu $c \in C$, vòng lặp trong duyệt Tiền $i = c \to S$.
 
 ![Bài toán Đổi tiền Coin Change và DAG trạng thái](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/coin_change_dag_vi.svg)
@@ -4984,7 +4984,7 @@ Khi khởi tạo mảng $dp$ tìm giá trị nhỏ nhất, giá trị nào sau �
 
 - **D.** $0$.
 
-> *Giải thích:* $INT_MAX + 1$ sẽ bị tràn số nguyên thành số âm cực lớn. Dùng `const long long INF = 1e18;` và luôn kiểm tra `if (dp[v] != INF)` là chuẩn mực an toàn.
+> *Giải thích:* $INT_MAX + 1$ sẽ bị tràn số nguyên thành số âm cực lớn. Dùng `const long long INF = 1e18;` và luôn kiểm tra $if (dp[v] \ne INF)$ là chuẩn mực an toàn.
 
 #### Câu 6 (Khôi phục vết nghiệm Traceback):
 
@@ -5553,7 +5553,7 @@ Khi lần ngược từ ô $(N, M)$ về ô $(1, 1)$ để in ra các bước đ
 
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 15: Quy Hoạch Động Chuỗi & LCS | 410 dòng | 20,459 bytes -->
+<!-- Chuyên đề 15: Quy Hoạch Động Chuỗi & LCS | 410 dòng | 20,461 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 15: Quy hoạch động chuỗi: LCS & Edit Distance
@@ -5576,7 +5576,7 @@ Trong xử lý chuỗi ký tự thi đấu, các bài toán so khớp, tìm chu�
 * **State Transition:** So sánh ký tự đuôi $A[i]$ và $B[j]$:
 1. Nếu $A[i] == B[j]$: Ký tự này chắc chắn thuộc LCS chung:
 $$dp[i][j] = 1 + dp[i-1][j-1]$$
-2. Nếu `A[i] != B[j]`: Bỏ qua $A[i]$ hoặc bỏ qua $B[j]$ để lấy phương án tốt hơn:
+2. Nếu $A[i] \ne B[j]$: Bỏ qua $A[i]$ hoặc bỏ qua $B[j]$ để lấy phương án tốt hơn:
 $$dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$$
 * **Độ phức tạp:** Thời gian $\mathcal{O}(N \cdot M)$, Bộ nhớ $\mathcal{O}(N \cdot M)$.
 
@@ -5603,7 +5603,7 @@ Cần tìm số phép biến đổi **ít nhất** để biến xâu $A$ thành 
 * `dp[0][j] = j` (Biến xâu rỗng thành xâu độ dài $j$ cần $j$ phép chèn).
 * **State Transition:**
 * Nếu $A[i] == B[j] \implies dp[i][j] = dp[i-1][j-1]$ (Không tốn chi phí).
-* Nếu `A[i] != B[j]`:
+* Nếu $A[i] \ne B[j]$:
 $$dp[i][j] = 1 + \min(\underbrace{dp[i-1][j-1]}_{\text{Thay thế}}, \underbrace{dp[i-1][j]}_{\text{Xóa}}, \underbrace{dp[i][j-1]}_{\text{Chèn}})$$
 
 ![Khoảng cách biến đổi xâu Edit Distance](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/edit_distance_transitions_vi.svg)
@@ -7125,7 +7125,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 19: Lý Thuyết Đồ Thị, BFS & DFS | 405 dòng | 18,372 bytes -->
+<!-- Chuyên đề 19: Lý Thuyết Đồ Thị, BFS & DFS | 405 dòng | 18,374 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 19: Lý thuyết đồ thị cơ bản: Duyệt BFS & DFS
@@ -7164,7 +7164,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 ![Đếm số thành phần liên thông](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/connected_components_vi.svg)
 
 * **Thuật toán đếm thành phần liên thông:** Duyệt qua mọi đỉnh $i \in [1, N]$. Nếu đỉnh $i$ chưa được thăm (`!visited[i]`), tăng biến đếm số thành phần liên thông `components++` và gọi `DFS(i)` để loang thăm toàn bộ các đỉnh thuộc cùng thành phần.
-* **Phát hiện chu trình trên đồ thị vô hướng bằng DFS:** Khi duyệt từ $u$ sang đỉnh kề $v$, nếu $v$ đã được thăm (`visited[v] == true`) và `v != parent[u]`, ta khẳng định đồ thị **CÓ CHU TRÌNH**!
+* **Phát hiện chu trình trên đồ thị vô hướng bằng DFS:** Khi duyệt từ $u$ sang đỉnh kề $v$, nếu $v$ đã được thăm (`visited[v] == true`) và $v \ne parent[u]$, ta khẳng định đồ thị **CÓ CHU TRÌNH**!
 
 ## 4. Các bẫy lỗi lập trình kinh điển (bug traps)
 
@@ -7337,7 +7337,7 @@ Trong hàm `DFS(u, p)` với $p$ là đỉnh cha trực tiếp của $u$, dấu 
 
 - **A.** Gặp một đỉnh kề $v$ chưa được thăm.
 
-- **B.** **[Đáp án đúng]** Gặp đỉnh kề $v$ đã được thăm ($visited[v] = true$) và `v != p`.
+- **B.** **[Đáp án đúng]** Gặp đỉnh kề $v$ đã được thăm ($visited[v] = true$) và $v \ne p$.
 
 - **C.** Đỉnh $u$ có bậc lớn hơn 2.
 
@@ -7535,7 +7535,7 @@ Một đồ thị có hướng được gọi là Liên thông mạnh (Strongly 
 
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 20: Đồ Thị Lưới 2D & Flood Fill | 407 dòng | 18,608 bytes -->
+<!-- Chuyên đề 20: Đồ Thị Lưới 2D & Flood Fill | 407 dòng | 18,604 bytes -->
 --------------------------------------------------------------------------------
 
 # Chuyên đề 20: Đồ thị lưới 2D, kỹ thuật Flood Fill & tính chất cây
@@ -7580,7 +7580,7 @@ Cây (Tree) là một dạng đồ thị vô hướng đặc biệt có cấu tr
 2. **Bẫy nhầm lẫn thứ tự tọa độ Hàng và Cột (`r` vs `c`, `x` vs `y`):**
 * Trong toán học, trục $x$ là ngang, $y$ là dọc. Nhưng trong ma trận máy tính, chỉ số thứ nhất là **Hàng** (chiều dọc, $N$), chỉ số thứ hai là **Cột** (chiều ngang, $M$).
 * **Chuẩn hóa đặt tên:** Dùng `r` (row) và `c` (col) hoặc $dr$ và $dc$ để triệt tiêu hoàn toàn sự nhầm lẫn.
-3. **Bẫy kích thước ma trận hình chữ nhật (khi $N \ne M$):**
+3. **Bẫy kích thước ma trận hình chữ nhật ($N \ne M$):**
 * Viết nhầm `c <= n` thay vì `c <= m` khi ma trận có số hàng khác số cột sẽ dẫn đến truy cập sai vùng nhớ hoặc đọc thiếu dữ liệu.
 
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
@@ -8424,4 +8424,4 @@ Khi cần thực hiện **Cập nhật cả đoạn (Range Update)** và **Truy 
 <!-- KẾT THÚC NỘI DUNG 21 CHUYÊN ĐỀ -->
 ================================================================================
 
-> **Thống kê:** 21 chuyên đề đã nối | 0 thiếu | 8,230 dòng | 448,022 bytes tổng cộng
+> **Thống kê:** 21 chuyên đề đã nối | 0 thiếu | 8,230 dòng | 447,978 bytes tổng cộng

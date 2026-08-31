@@ -10,7 +10,7 @@ Máy tính biểu diễn tất cả dữ liệu dưới dạng chuỗi nhị ph�
 | Toán Tử C++ | Tên Phép Toán | Ký Hiệu Toán | Quy Tắc Bit | Ví dụ ($a = 5 = 101_2, b = 3 = 011_2$) |
 |:---:|---|:---:|---|---|
 | `&` | **AND** (Và) | $\wedge$ | Ra $1$ khi và chỉ khi cả 2 bit đều là $1$ | $5 \ \& \ 3 = 101_2 \ \& \ 011_2 = 001_2 = 1$ |
-| `|` | **OR** (Hoặc) | $\vee$ | Ra $1$ khi có ít nhất một bit là $1$ | $5 \ \| \ 3 = 101_2 \ \| \ 011_2 = 111_2 = 7$ |
+| `\|` | **OR** (Hoặc) | $\vee$ | Ra $1$ khi có ít nhất một bit là $1$ | $5 \text{ OR } 3 = 101_2 \text{ OR } 011_2 = 111_2 = 7$ |
 | `^` | **XOR** (Hoặc loại trừ) | $\oplus$ | Ra $1$ khi 2 bit khác nhau, ra $0$ khi 2 bit giống nhau | $5 \ \hat{} \ 3 = 101_2 \ \hat{} \ 011_2 = 110_2 = 6$ |
 | `~` | **NOT** (Đảo bit) | $\neg$ | Đổi $0 \to 1$ và $1 \to 0$ | $\sim 5 = \sim(00\dots0101_2) = -6$ |
 | `<<` | **Dịch trái** (Left Shift) | $\ll$ | Dịch các bit sang trái $k$ vị trí (nhân $2^k$) | $5 \ll 2 = 10100_2 = 20$ |
@@ -53,20 +53,7 @@ mask = mask ^ (1LL << k);
 
 #### Ví dụ minh họa 1: Thao tác trên số $N = 13 = 1101_2$
 
-| Trọng số nhị phân | $2^4 = 16$ | $2^3 = 8$ | $2^2 = 4$ | $2^1 = 2$ | $2^0 = 1$ | Giá trị thập phân |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Vị trí bit ($k$)** | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 | — |
-| **Giá trị bit của $N$** | `0` | `1` | `1` | `0` | `1` | **$13$** |
-
-**Bảng mô phỏng 4 thao tác bit:**
-
-| Thao Tác Cần Thực Hiện | Mã Lệnh C++ | Phép Toán Nhị Phân | Kết Quả Nhị Phân | Giá Trị Thập Phân Mới |
-|---|---|---|:---:|:---:|
-| **1. Kiểm tra bit 2** | `(n >> 2) & 1` | `(1101 >> 2) & 0001 = 0011 & 0001` | `1` | Bit 2 đang bật (`true`) |
-
-| **2. Bật bit 1** | `n |= (1 << 1)` | `1101 | 0010` | `1111` | $13 \to \mathbf{15}$ |
-| **3. Tắt bit 3** | `n &= ~(1 << 3)` | `1101 & ~(1000) = 1101 & 0111` | `0101` | $13 \to \mathbf{5}$ |
-| **4. Đảo bit 0** | `n ^= (1 << 0)` | `1101 ^ 0001` | `1100` | $13 \to \mathbf{12}$ |
+![Trực quan hóa cấu trúc Bit & 4 Thao tác Bit trên N = 13](assets/bit_operations_simulation_vi.svg)
 
 ## 3. Các tuyệt kỹ BIT & hàm nội tại CPU (builtin functions)
 
@@ -368,7 +355,7 @@ Hai số nguyên dương $X$ và $Y$ được gọi là độc lập về bit kh
 
 | STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `CPPB-BIT-01` | **Bật, Tắt Và Kiểm Tra Bit Thứ K** | `P0` | `N <= 10^18, K <= 60` | Thao tác $(1\text{LL} \ll k)$, `&`, `|`, `^` |
+| 01 | `CPPB-BIT-01` | **Bật, Tắt Và Kiểm Tra Bit Thứ K** | `P0` | `N <= 10^18, K <= 60` | Thao tác $(1\text{LL} \ll k)$, `&`, `\|`, `^` |
 | 02 | `CPPB-BIT-02` | **Đếm Số Lượng Bit 1 (Popcount)** | `P1` | $N \le 10^{18}$ | `__builtin_popcountll` và thuật toán bit |
 | 03 | `CPPB-BIT-03` | **Kiểm Tra Số Có Phải Lũy Thừa Của 2** | `P1` | $N \le 10^{18}$ | Kỹ thuật `n > 0 && (n & (n - 1)) == 0` |
 

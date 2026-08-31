@@ -356,7 +356,7 @@ Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị 
 | 02 | `CPPB-REC-02` | **Tính Tổng Dãy Số & Giai Thừa $N!$** | `P0` | **Core** | $\Theta(N)$ | $\Theta(N)$ | $N$ |
 | 03 | `CPPB-REC-03` | **Đếm & Tính Tổng Chữ Số Của $N$** | `P1` | **Core** | $\Theta(\log_{10} N)$ | $\Theta(\log_{10} N)$ | $\le 19$ |
 | 04 | `CPPB-REC-04` | **Đảo Ngược Mảng Bằng Đệ Quy** | `P1` | **Core** | $\Theta(N)$ | $\Theta(N)$ | $N/2$ |
-| 05 | `CPPB-REC-05` | **Kiểm Tra Chuỗi Palindrome** | `P1` | **Core** | $\Theta(|S|)$ | $\Theta(|S|)$ | $|S|/2$ |
+| 05 | `CPPB-REC-05` | **Kiểm Tra Chuỗi Palindrome** | `P1` | **Core** | $\Theta(\vert S \vert)$ | $\Theta(\vert S \vert)$ | $\vert S \vert / 2$ |
 | 06 | `CPPB-REC-06` | **So Sánh Đệ Quy Tuyến Tính & Chia Đôi (Min/Max)**| `P2` | **Core** | $\Theta(N)$ | $\Theta(\log N)$ | $\log_2 N$ |
 | 07 | `CPPB-REC-07` | **Thuật Toán Euclid Tính $\gcd(A, B)$** | `P2` | **Core** | $\Theta(\log(\min))$ | $\Theta(\log(\min))$ | $\le 90$ |
 | 08 | `CPPB-REC-08` | **Lũy Thừa Đệ Quy $A^B \pmod M$** | `P2` | **Core** | $\Theta(\log B)$ | $\Theta(\log B)$ | $\log_2 B$ |

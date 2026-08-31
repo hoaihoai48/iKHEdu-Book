@@ -40,7 +40,7 @@ Cây (Tree) là một dạng đồ thị vô hướng đặc biệt có cấu tr
 2. **Bẫy nhầm lẫn thứ tự tọa độ Hàng và Cột (`r` vs `c`, `x` vs `y`):**
 * Trong toán học, trục $x$ là ngang, $y$ là dọc. Nhưng trong ma trận máy tính, chỉ số thứ nhất là **Hàng** (chiều dọc, $N$), chỉ số thứ hai là **Cột** (chiều ngang, $M$).
 * **Chuẩn hóa đặt tên:** Dùng `r` (row) và `c` (col) hoặc $dr$ và $dc$ để triệt tiêu hoàn toàn sự nhầm lẫn.
-3. **Bẫy kích thước ma trận hình chữ nhật ($N \ne M$):**
+3. **Bẫy kích thước ma trận hình chữ nhật (khi $N \ne M$):**
 * Viết nhầm `c <= n` thay vì `c <= m` khi ma trận có số hàng khác số cột sẽ dẫn đến truy cập sai vùng nhớ hoặc đọc thiếu dữ liệu.
 
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
