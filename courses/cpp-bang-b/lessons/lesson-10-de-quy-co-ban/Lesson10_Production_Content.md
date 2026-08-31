@@ -114,15 +114,7 @@ Trong lý thuyết ngôn ngữ, *Đệ quy đuôi (Tail Recursion)* là hàm đ�
 
 Xét cây gọi hàm khi tính $F(5)$ bằng đệ quy phân nhánh:
 
-```text
-                        F(5)
-                     /        \
-                 F(4)          F(3)
-                /    \        /    \
-             F(3)   F(2)    F(2)   F(1)
-            /   \
-         F(2)  F(1)
-```
+![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/fibonacci_recursion_tree_vi.svg)
 
 * **Phân tích độ phức tạp tiệm cận chính xác:**
   Số lời gọi hàm thỏa mãn hệ thức truy hồi $T(N) = T(N-1) + T(N-2) + 1$. Bằng phương trình đặc trưng $r^2 - r - 1 = 0$, ta chứng minh được số phép tính thực tế tăng theo **cấp số nhân chính xác**:

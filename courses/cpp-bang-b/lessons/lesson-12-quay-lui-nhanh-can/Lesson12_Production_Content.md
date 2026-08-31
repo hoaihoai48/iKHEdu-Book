@@ -88,16 +88,9 @@ void search(State state) {
 
 ## 6. Phân Biệt Cắt Tỉa Ràng Buộc (Feasibility) vs Cắt Tỉa Tối Ưu (Branch & Bound)
 
-```text
-BACKTRACKING
-"Xây dựng nghiệm từng bước + quay lui khi cần (có thể không cần pruning như sinh nhị phân)"
-
-FEASIBILITY PRUNING
-"Cắt những trạng thái chắc chắn không thể dẫn tới nghiệm hợp lệ"
-
-BRANCH AND BOUND
-"Framework tìm kiếm tối ưu trên không gian trạng thái, kết hợp hàm Cận (Bound) để cắt tỉa nhánh không thể tốt hơn best hiện tại"
-```
+* **BACKTRACKING:** *"Xây dựng nghiệm từng bước + quay lui khi cần (có thể không cần pruning như sinh nhị phân)"*
+* **FEASIBILITY PRUNING:** *"Cắt những trạng thái chắc chắn không thể dẫn tới nghiệm hợp lệ"*
+* **BRANCH AND BOUND:** *"Framework tìm kiếm tối ưu trên không gian trạng thái, kết hợp hàm Cận (Bound) để cắt tỉa nhánh không thể tốt hơn best hiện tại"*
 
 > **Lưu ý mở rộng:** Trong chuyên đề này, ta triển khai Branch & Bound trên nền DFS / Backtracking để nắm vững nguyên lý. Về tổng quát, Branch & Bound là một framework tìm kiếm tối ưu có thể triển khai bằng Best-First Search với hàng đợi ưu tiên `priority_queue` hoặc BFS.
 
@@ -133,16 +126,7 @@ BRANCH AND BOUND
 
 ## 8. Cầu Nối Sâu Sang DP: Từ Cây Tìm Kiếm (Search Tree) Đến Đồ Thị Trạng Thái (State DAG)
 
-```text
-                  CÂY TÌM KIẾM (SEARCH TREE)
-                          Trạng Thái A
-                         /            \
-                   Trạng Thái B     Trạng Thái C
-                   /          \     /          \
-                  D            E   E            F
-                               ▲   ▲
-                      CÙNG LẶP LẠI TRẠNG THÁI E!
-```
+![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_dag_overlapping_vi.svg)
 
 * **Duyệt cây thuần túy (Tree Search):** Phải tính toán lại trạng thái `E` nhiều lần ở các nhánh con khác nhau.
 * **Quan điểm Đồ thị (State DAG View):** `E` chỉ là một đỉnh duy nhất trong không gian trạng thái.

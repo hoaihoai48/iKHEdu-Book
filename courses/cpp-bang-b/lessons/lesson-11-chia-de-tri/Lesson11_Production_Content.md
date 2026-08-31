@@ -53,12 +53,10 @@ Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
 
 Trước bất kỳ bài toán nào nghi ngờ sử dụng Chia Để Trị, hãy luôn trả lời **4 câu hỏi định hướng**:
 
-```text
-1. Tôi chia bài toán ở đâu? (Tại điểm giữa mid, theo trục tọa độ x, hay qua pivot?)
-2. Bài toán con có kích thước bao nhiêu? (N/2, N₁, N₂?)
-3. Tôi cần giải bao nhiêu bài toán con? (Chỉ 1 nhánh như Binary Search/QuickSelect hay cả 2 nhánh như Merge Sort?)
-4. Tôi combine kết quả của các bài toán con như thế nào? (Đây là bước quyết định độ phức tạp!)
-```
+1. **Tôi chia bài toán ở đâu?** (Tại điểm giữa `mid`, theo trục tọa độ $x$, hay qua `pivot`?)
+2. **Bài toán con có kích thước bao nhiêu?** ($N/2, N_1, N_2$?)
+3. **Tôi cần giải bao nhiêu bài toán con?** (Chỉ 1 nhánh như Binary Search/QuickSelect hay cả 2 nhánh như Merge Sort?)
+4. **Tôi combine kết quả của các bài toán con như thế nào?** (Đây là bước quyết định độ phức tạp!)
 
 ![Cây quyết định lựa chọn thuật toán Chia để trị](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_decision_tree_vi.svg)
 
