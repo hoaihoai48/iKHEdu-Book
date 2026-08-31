@@ -1,7 +1,6 @@
 # Số Catalan Đồng Dư
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Số Catalan $C_N = \frac{1}{N + 1} C(2N, N)$. Cho số nguyên $N$, hãy tính $C_N \pmod{10^9 + 7}$.
 

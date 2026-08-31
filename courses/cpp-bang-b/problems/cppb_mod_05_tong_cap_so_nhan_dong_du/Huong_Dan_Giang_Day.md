@@ -1,8 +1,7 @@
 # Hướng Dẫn Giảng Dạy: Tính Tổng Cấp Số Nhân Đồng Dư
 Chuyên đề: **Đồng Dư Thức & Lũy Thừa Nhị Phân (Modular Arithmetic)**
 
-> [!NOTE]
-> **Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
+**Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
 
 ---
 

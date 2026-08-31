@@ -73,8 +73,8 @@ Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải th�
 2. **Tính bất đối xứng (Asymmetry):** Nếu `cmp(a, b)` là `true` thì `cmp(b, a)` bắt buộc phải là `false`.
 3. **Tính bắc cầu (Transitivity):** Nếu `cmp(a, b)` là `true` và `cmp(b, c)` là `true` thì `cmp(a, c)` phải là `true`.
 
-> [!CAUTION]
-> **TỬ HUYỆT LẬP TRÌNH: BẪY DẤU `<= ` TRONG COMPARATOR**
+### ⚠️ Cảnh Báo Quan Trọng:
+**TỬ HUYỆT LẬP TRÌNH: BẪY DẤU `<= ` TRONG COMPARATOR**
 > 
 > Nếu viết `return a <= b;`, khi `a == b` thì cả `cmp(a, b)` và `cmp(b, a)` đều trả về `true` $\implies$ Vi phạm tiên đề Bất phản xạ và Bất đối xứng $\implies$ `sort` sẽ tiếp tục truy cập vùng nhớ ngoài biên của mảng $\implies$ **RUNTIME ERROR / CRASH CHƯƠNG TRÌNH**.
 > 

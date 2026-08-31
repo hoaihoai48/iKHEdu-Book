@@ -1,7 +1,6 @@
 # Căn Bậc Hai Số Nguyên Lớn
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho số nguyên dương lớn $A$. Hãy tìm phần nguyên căn bậc hai $\lfloor \sqrt{A} \rfloor$.
 

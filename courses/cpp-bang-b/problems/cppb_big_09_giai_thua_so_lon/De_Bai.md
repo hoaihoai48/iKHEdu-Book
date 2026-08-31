@@ -1,7 +1,6 @@
 # Tính Giai Thừa Số Lớn (N!)
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho số nguyên dương $N$. Hãy in ra giá trị chính xác của $N! = 1 \times 2 \times \dots \times N$.
 

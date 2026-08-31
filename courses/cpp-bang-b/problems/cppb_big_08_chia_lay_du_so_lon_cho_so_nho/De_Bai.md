@@ -1,7 +1,6 @@
 # Chia Lấy Dư Số Lớn Cho Số Nhỏ
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho số nguyên lớn $A$ và số nguyên nhỏ $b$ ($1 \le b \le 10^{18}$). Hãy tính $A \pmod b$.
 

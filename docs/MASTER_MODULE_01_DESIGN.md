@@ -26,13 +26,13 @@ LESSON ACTIVITY PLACEMENT (Vị trí & Vai trò sư phạm trong bài học — 
    ├───────────────────────────────┐
    ▼                               ▼
 PROBLEM ENTITY (Global Unique)    QUIZ ENTITY (Global Unique)
-Code: IKH-0051 (Mã toàn cục)     ID: QUIZ-0101
+Code: CPPB-SX-01 (Mã bài toán)     ID: QUIZ-0101
 ```
 
 ### 🔒 Nguyên Tắc Định Danh Bất Biến (Identity Contract):
-1. **`IKH-xxxx` là Global Problem Code**: Đại diện cho thực thể bài toán duy nhất trong toàn hệ thống iKHEDU (toàn bộ đề bài, testcases, solution, limit). `Problem.code` là trường **UNIQUE** trên cơ sở dữ liệu.
-2. **`LessonActivity` là Quan Hệ Sử Dụng (Placement / Reference)**: Lesson chỉ tham chiếu tới `Problem.code`. Một bài toán `IKH-xxxx` có thể được tái sử dụng ở nhiều Lesson (làm bài tập rèn luyện ở Lesson này và làm bài thử thách ở Lesson khác) mà **không nhân bản dữ liệu bài toán**.
-3. **Thứ tự (`order`) và Nấc thang (`P0..P4`, `Homework`) thuộc về Activity Placement**: Không phải là thuộc tính định danh cố định của Problem.
+1. **`CPPB-xx-xx` / `IKH-xxxx` là Global Problem Code**: Đại diện cho thực thể bài toán duy nhất trong toàn hệ thống iKHEDU DKOJ (toàn bộ đề bài, testcases, solution, limit). `Problem.code` là trường **UNIQUE** trên cơ sở dữ liệu.
+2. **`LessonActivity` là Quan Hệ Sử Dụng (Placement / Reference)**: Lesson chỉ tham chiếu tới `Problem.code`. Một bài toán `CPPB-xx-xx` có thể được tái sử dụng ở nhiều Lesson mà **không nhân bản dữ liệu bài toán**.
+3. **Thứ tự (`order`) và Nấc thang (`P0..P5`, `Homework`) thuộc về Activity Placement**: Không phải là thuộc tính định danh cố định của Problem.
 
 ---
 

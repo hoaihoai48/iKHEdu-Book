@@ -1,7 +1,6 @@
 # Nghịch Đảo Tuyến Tính 1..N Trong O(N)
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho số nguyên $N$ và $M = 10^9 + 7$. Hãy tính nghịch đảo modulo của tất cả các số từ $1$ đến $N$ trong thời gian $\mathcal{O}(N)$.
 

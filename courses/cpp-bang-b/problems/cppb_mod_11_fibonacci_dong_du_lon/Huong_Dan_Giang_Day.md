@@ -1,8 +1,7 @@
 # Hướng Dẫn Giảng Dạy: Dãy Fibonacci Đồng Dư Lớn
 Chuyên đề: **Đồng Dư Thức & Lũy Thừa Nhị Phân (Modular Arithmetic)**
 
-> [!NOTE]
-> **Phân loại chuyên đề:** `Advanced Challenge` (Kiến thức mở rộng chuyên sâu)
+**Phân loại chuyên đề:** `Advanced Challenge` (Kiến thức mở rộng chuyên sâu)
 
 ---
 

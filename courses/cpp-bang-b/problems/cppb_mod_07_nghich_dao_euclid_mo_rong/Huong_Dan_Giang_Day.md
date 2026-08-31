@@ -1,8 +1,7 @@
 # Hướng Dẫn Giảng Dạy: Nghịch Đảo Modulo Bằng Euclid Mở Rộng
 Chuyên đề: **Đồng Dư Thức & Lũy Thừa Nhị Phân (Modular Arithmetic)**
 
-> [!NOTE]
-> **Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
+**Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
 
 ---
 

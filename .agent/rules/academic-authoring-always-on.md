@@ -43,7 +43,7 @@ Mọi đoạn code C++ mẫu, code tham chiếu, solution, editorial và testcas
 * **Kiến trúc dữ liệu tối giản:** Ưu tiên tuyệt đối các kiểu dữ liệu nguyên bản (`int`, `long long`, `double`, `char`, `string`, `vector<int>`). Khi cần sắp xếp nhiều trường số, **ƯU TIÊN DÙNG `vector<vector<long long>>` (vector lồng nhau / mảng 2 chiều)** để học sinh tận dụng cơ chế so sánh mặc định của `sort`.
 * **Về `pair` và `struct`**: Vẫn giữ trong C++ Foundation nhưng **chỉ dùng khi bất đắc dĩ** (khi cần sắp xếp đa trường có kiểu dữ liệu khác nhau hoặc hàm so sánh đặc thù `a + b > b + a`).
 * **Ranh giới công cụ (Not Yet Boundary)**: Trong Module 01 và Module 02, **TUYỆT ĐỐI CHƯA DÙNG** `set`, `map`, `deque`, `priority_queue`, `Segment Tree`, `Fenwick Tree`, Quy hoạch động.
-* **Quy chuẩn hiển thị Markdown & KaTeX:** Tuyệt đối không vẽ sơ đồ bằng ký tự ASCII (`│`, `┌`, `└`, `text` block) gây vỡ giao diện Web LMS. Mọi minh họa dữ liệu bắt buộc dùng **Markdown Tables chuẩn kết hợp KaTeX math notation**. Các lưu ý/tử huyệt lập trình phải dùng **GitHub Alert Callouts (`> [!CAUTION]`, `> [!IMPORTANT]`)**.
+* **Quy chuẩn hiển thị Markdown & KaTeX:** Tuyệt đối không vẽ sơ đồ bằng ký tự ASCII (`│`, `┌`, `└`, `text` block) gây vỡ giao diện Web LMS. Mọi minh họa dữ liệu bắt buộc dùng **Markdown Tables chuẩn kết hợp KaTeX math notation**. Các lưu ý/tử huyệt lập trình dùng **callout tiếng Việt đơn giản** (`> ⚠️ **Lưu ý:** ...`, `> 💡 **Mẹo nhớ:** ...`), **không dùng cú pháp GitHub Alert (`> [!CAUTION]`, `> [!IMPORTANT]`)** vì học sinh không hiểu.
 
 ## 5. Vòng lặp học tập trong bài (Lesson Learning Loop)
 Không nhồi lý thuyết suông. Mỗi Lesson phải vận hành theo chu trình khép kín:

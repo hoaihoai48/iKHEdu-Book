@@ -85,7 +85,7 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 | **Cộng ($A + B$)** | Mô phỏng cộng từng hàng kèm biến nhớ `carry` | $\mathcal{O}(\max(L_A, L_B))$ | Xử lý `carry` còn dư sau khi hết chữ số |
 | **Trừ ($A - B$)** | Mô phỏng trừ có mượn `borrow` ($A \ge B$) | $\mathcal{O}(L_A)$ | Xóa sạch số $0$ vô nghĩa ở đầu (`leading zeros`) |
 | **Nhân nhỏ ($A \times b$)** | Nhân từng chữ số của $A$ với số nguyên $b$ | $\mathcal{O}(L_A)$ | Biến `carry` có thể vượt quá $10$, cần kiểu `long long` |
-| **Nhân lớn ($A \times B$)** | Tích lũy $C[i + j] += A[i] \times B[j]$ rồi normalize | $\mathcal{O}(L_A \times L_B)$ | Khởi tạo mảng kết quả độ dài $L_A + L_B$ |
+| **Nhân lớn ($A \times B$)** | Tích lũy $C[i + j] += A[i] \times B[j]$ rồi normalize | $\mathcal{O}(L_A \times L_B)$ | Khởi tạo mảng $L_A + L_B$ (áp dụng cho $L \le 5000$) |
 | **Chia nhỏ ($A / b, A \% b$)** | Chia từ hàng cao nhất xuống hàng đơn vị | $\mathcal{O}(L_A)$ | Biến tích lũy `cur = cur * 10 + A[i]` |
 
 ---
@@ -109,8 +109,8 @@ string divSmall(string a, long long b) {
 }
 ```
 
-> [!NOTE]
-> **BẤT BIẾN TOÁN HỌC CỦA PHÉP CHIA TỪNG BƯỚC:**
+### 📌 Ghi Chú:
+**BẤT BIẾN TOÁN HỌC CỦA PHÉP CHIA TỪNG BƯỚC:**
 > Vì trước mỗi bước lặp ta luôn duy trì số dư $0 \le cur < b$, nên sau khi nhận thêm một chữ số mới $cur = cur \times 10 + \text{digit}$, giá trị luôn thỏa mãn $cur < 10b$. Do đó thương tại mỗi bước `digit = cur / b` **chắc chắn luôn nằm trong khoảng $[0, 9]$** (là một chữ số thập phân hợp lệ duy nhất).
 
 ---
@@ -345,8 +345,8 @@ Khi cần tính `A^B` với `A = 2` và `B = 10000` (kết quả chính xác kh�
 
 ## 7. Ma Trận Bài Tập Thực Hành (Practice Problems $P0 \to P5$)
 
-> [!NOTE]
-> **Phân tầng lộ trình học tập:**
+### 📌 Ghi Chú:
+**Phân tầng lộ trình học tập:**
 > * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-BIG-01` $\to$ `12`):** Mô hình biểu diễn, So sánh, 4 phép tính cơ bản (+, -, *, /), Giai thừa, Lũy thừa, Fibonacci và Tổng chữ số.
 > * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-BIG-13` $\to$ `16`):** Chia hai số lớn, Căn bậc hai số lớn, Binary GCD và Tổ hợp chính xác kết hợp phân tích nguyên tố.
 

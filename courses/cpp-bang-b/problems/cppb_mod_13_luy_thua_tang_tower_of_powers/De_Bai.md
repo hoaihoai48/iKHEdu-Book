@@ -1,7 +1,6 @@
 # Lũy Thừa Tầng (Tower of Powers)
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho 3 số nguyên $A, B, C$. Hãy tính $A^{B^C} \pmod{10^9 + 7}$.
 

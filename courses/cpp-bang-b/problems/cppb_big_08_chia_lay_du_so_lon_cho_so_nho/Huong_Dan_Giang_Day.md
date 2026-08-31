@@ -1,8 +1,7 @@
 # Hướng Dẫn Giảng Dạy: Chia Lấy Dư Số Lớn Cho Số Nhỏ
 Chuyên đề: **Xử Lý Số Nguyên Lớn (Big Integer Arithmetic)**
 
-> [!NOTE]
-> **Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
+**Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
 
 ---
 

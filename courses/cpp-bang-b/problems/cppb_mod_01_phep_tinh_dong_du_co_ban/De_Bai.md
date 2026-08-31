@@ -1,7 +1,6 @@
 # Phép Tính Đồng Dư Cơ Bản (+, -, *)
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 2 số nguyên $A, B$ và số nguyên dương $M = 10^9 + 7$. Hãy tính $(A + B) \pmod M$, $(A - B) \pmod M$ và $(A \times B) \pmod M$ sao cho kết quả luôn thuộc $[0, M - 1]$.
 

@@ -1,7 +1,6 @@
 # Lũy Thừa Nhị Phân Cơ Bản
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 3 số nguyên $A, B, M$. Hãy tính $A^B \pmod M$ bằng thuật toán Lũy thừa nhị phân $\mathcal{O}(\log B)$.
 

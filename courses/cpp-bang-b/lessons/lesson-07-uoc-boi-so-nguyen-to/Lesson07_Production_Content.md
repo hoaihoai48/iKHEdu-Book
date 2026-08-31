@@ -54,8 +54,8 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 ### 3.1. Mối quan hệ giữa GCD và LCM
 $$\gcd(A, B) \times \text{lcm}(A, B) = A \times B \implies \text{lcm}(A, B) = \frac{A}{\gcd(A, B)} \times B$$
 
-> [!CAUTION]
-> **TỬ HUYỆT TRÀN SỐ KHI TÍNH BỘI CHUNG NHỎ NHẤT (LCM):**
+### ⚠️ Cảnh Báo Quan Trọng:
+**TỬ HUYỆT TRÀN SỐ KHI TÍNH BỘI CHUNG NHỎ NHẤT (LCM):**
 > * Không viết `(A * B) / gcd(A, B)` vì tích $A \times B$ có thể lên tới $10^{36}$ gây tràn số `long long`.
 > * Luôn viết: `long long lcm = (a / gcd(a, b)) * b;`
 > * **Lưu ý chuyên sâu:** Việc chia trước giúp triệt tiêu nguy cơ tràn số ở bước trung gian; tuy nhiên, nếu bản thân giá trị $\text{lcm}(A, B)$ thực tế vượt quá $9 \cdot 10^{18}$ (giới hạn của `long long`), ta bắt buộc phải sử dụng `__int128` hoặc kiểu dữ liệu số lớn (Big Integer).

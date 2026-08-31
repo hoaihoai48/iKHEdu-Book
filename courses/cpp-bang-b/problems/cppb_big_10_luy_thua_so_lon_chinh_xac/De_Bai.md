@@ -1,7 +1,6 @@
 # Lũy Thừa Số Lớn Chính Xác (A^B)
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 2 số nguyên $A, B$. Hãy in ra giá trị chính xác của $A^B$.
 

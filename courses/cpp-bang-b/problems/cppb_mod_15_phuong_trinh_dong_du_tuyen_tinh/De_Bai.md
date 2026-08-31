@@ -1,7 +1,6 @@
 # Giải Phương Trình Đồng Dư Tuyến Tính Ax = B mod M
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho 3 số nguyên $A, B, M$. Hãy tìm nghiệm nguyên không âm nhỏ nhất $X$ của phương trình $A \times X \equiv B \pmod M$. Nếu vô nghiệm in `-1`.
 

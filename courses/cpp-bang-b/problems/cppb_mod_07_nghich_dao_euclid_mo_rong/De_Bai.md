@@ -1,7 +1,6 @@
 # Nghịch Đảo Modulo Bằng Euclid Mở Rộng
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho hai số nguyên dương $A, M$ với $\gcd(A, M) = 1$. Hãy tìm nghịch đảo modulo $A^{-1} \pmod M$ bằng thuật toán Euclid mở rộng.
 

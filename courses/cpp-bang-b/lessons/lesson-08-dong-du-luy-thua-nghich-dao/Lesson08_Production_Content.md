@@ -64,8 +64,8 @@ Ta cần tìm số nguyên $X \in \{1, \dots, 6\}$ sao cho $(3 \times X) \pmod 7
 2. **Phép Trừ (Tránh số âm):** $(A - B) \pmod M = ((A \pmod M) - (B \pmod M) + M) \pmod M$.
 3. **Phép Nhân:** $(A \times B) \pmod M = ((A \pmod M) \times (B \pmod M)) \pmod M$.
 
-> [!CAUTION]
-> **2 TỬ HUYỆT KHI THỰC HIỆN PHÉP TOÁN ĐỒNG DƯ:**
+### ⚠️ Cảnh Báo Quan Trọng:
+**2 TỬ HUYỆT KHI THỰC HIỆN PHÉP TOÁN ĐỒNG DƯ:**
 > 1. **Số dư âm trong C++:** Trong C++, phép toán `-7 % 5` trả về `-2` (không phải `3`). Để luôn nhận kết quả không âm, bắt buộc phải viết: `(a % m + m) % m`.
 > 2. **Tràn số 32-bit khi nhân:** Nếu $A, B \approx 10^9$, tích $A \times B \approx 10^{18}$ vượt giới hạn kiểu `int`. Bắt buộc phải ép kiểu 64-bit trước khi nhân: `(1LL * a * b) % m`.
 
@@ -79,8 +79,8 @@ $$\implies \mathbf{A^{-1} \equiv A^{M - 2} \pmod M}$$
 
 Ta có thể tính $A^{-1} \pmod M$ chỉ bằng một hàm Lũy thừa nhị phân: `power(A, M - 2, M)` trong $\mathcal{O}(\log M)$.
 
-> [!WARNING]
-> **ĐIỀU KIỆN TIÊN QUYẾT CỦA ĐỊNH LÝ FERMAT NHỎ:**
+### ⚠️ Chú Ý:
+**ĐIỀU KIỆN TIÊN QUYẾT CỦA ĐỊNH LÝ FERMAT NHỎ:**
 > * Quy tắc $A^{M - 1} \equiv 1 \pmod M$ và việc rút gọn số mũ $B \gets B \pmod{(M - 1)}$ **CHỈ ĐÚNG KHI $M$ LÀ SỐ NGUYÊN TỐ VÀ $\gcd(A, M) = 1$**.
 > * Tuyệt đối không tùy tiện áp dụng nếu $A$ chia hết cho $M$ hoặc $M$ là hợp số.
 
@@ -330,8 +330,8 @@ Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phươ
 
 ## 7. Ma Trận Bài Tập Thực Hành (Practice Problems $P0 \to P5$)
 
-> [!NOTE]
-> **Phân tầng lộ trình học tập:**
+### 📌 Ghi Chú:
+**Phân tầng lộ trình học tập:**
 > * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-MOD-01` $\to$ `09`):** Nắm vững các phép toán đồng dư, lũy thừa nhị phân, nghịch đảo Fermat/Euclid và tổ hợp $C(N, K)$.
 > * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-MOD-10` $\to$ `16`):** Dành cho học sinh giỏi nâng cao tiếp cận các mô hình toán học chuyên sâu.
 

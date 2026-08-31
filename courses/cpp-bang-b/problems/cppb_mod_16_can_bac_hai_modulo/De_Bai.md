@@ -1,7 +1,6 @@
 # Đồng Dư Cực Hạn: Căn Bậc Hai Modulo
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho số nguyên $A$ và số nguyên tố $P = 10^9 + 7$. Hãy tìm số nguyên $X$ ($0 \le X < P$) nhỏ nhất sao cho $X^2 \equiv A \pmod P$. Nếu không tồn tại $X$, in `-1`.
 

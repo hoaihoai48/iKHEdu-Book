@@ -1,7 +1,6 @@
 # Lũy Thừa Chuỗi Số Lớn
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho số nguyên $A$ và số nguyên $B$ rất lớn được biểu diễn dưới dạng chuỗi có thể lên tới $10^5$ chữ số. Cho $M = 10^9 + 7$. Hãy tính $A^B \pmod M$.
 

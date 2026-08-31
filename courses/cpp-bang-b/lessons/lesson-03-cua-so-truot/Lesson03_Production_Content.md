@@ -285,4 +285,4 @@ Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mản
 | 11 | `CPPB-CST-11` | **Đoạn Con Ngắn Nhất Chứa Đủ Mọi Ký Tự Của Tập Hợp** | `P3` | `N <= 10^5, M <= 26` | Bài toán Minimum Window Substring |
 | 12 | `CPPB-CST-12` | **Phủ Sóng Trạm Phát Sóng Wifi Đô Thị** | `P4` | `N <= 10^5, X_i <= 10^14` | Hai con trỏ + Tham lam vị trí |
 | 13 | `CPPB-CST-13` | **Đoạn Con Có Độ Chênh Lệch Max - Min Không Quá K** | `P4` | `N <= 5000` | Khống chế biên độ trong cửa sổ |
-| 14 | `CPPB-CST-14` | **Tối Ưu Cửa Sổ Trượt Tuyến Tính Khi N = 2.10⁵** | `P5` | `N <= 2 * 10^5` | Kỹ thuật hiệu `F(B) - F(A - 1)` |
+| 14 | `CPPB-CST-14` | **Tối Ưu Cửa Sổ Trượt Tuyến Tính Khi N = 2.10⁵** | `P5` | `N <= 2 * 10^5, A_i > 0` | Kỹ thuật hiệu `F(B) - F(A - 1)` |

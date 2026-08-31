@@ -1,7 +1,6 @@
 # Ước Chung Lớn Nhất Số Lớn
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho 2 số nguyên dương lớn $A$ và $B$. Hãy tìm $\gcd(A, B)$.
 

@@ -1,7 +1,6 @@
 # Số Lớn Cực Hạn: Tổ Hợp C(N, K) Chính Xác
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho 2 số nguyên $N, K$. Hãy tính giá trị chính xác của $C(N, K) = \frac{N!}{K!(N-K)!}$ mà không lấy dư.
 

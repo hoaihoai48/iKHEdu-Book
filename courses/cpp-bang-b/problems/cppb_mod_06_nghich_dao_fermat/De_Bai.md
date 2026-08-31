@@ -1,7 +1,6 @@
 # Nghịch Đảo Modulo Bằng Fermat Nhỏ
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho số nguyên $A$ và số nguyên tố $M = 10^9 + 7$. Hãy tìm nghịch đảo modulo $A^{-1} \pmod M$ ($1 \le A < M$).
 

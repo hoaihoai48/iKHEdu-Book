@@ -1,8 +1,7 @@
 # Hướng Dẫn Giảng Dạy: So Sánh Hai Số Nguyên Lớn
 Chuyên đề: **Xử Lý Số Nguyên Lớn (Big Integer Arithmetic)**
 
-> [!NOTE]
-> **Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
+**Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
 
 ---
 

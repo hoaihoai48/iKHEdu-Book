@@ -1,7 +1,6 @@
 # Phép Chia Đồng Dư A / B mod M
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 2 số nguyên $A, B$ và số nguyên tố $M = 10^9 + 7$ ($B 
 ot\equiv 0 \pmod M$). Hãy tính giá trị $\frac{A}{B} \pmod M$.

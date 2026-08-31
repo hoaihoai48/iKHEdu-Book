@@ -1,7 +1,6 @@
 # Nhân Ấn Độ Chống Tràn Số 64-bit
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 3 số nguyên $A, B, M$ ($0 \le A, B, M \le 10^{18}, M > 0$). Hãy tính $(A \times B) \pmod M$ mà không bị tràn số.
 

@@ -1,7 +1,6 @@
 # Số Fibonacci Lớn Thứ N
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho số nguyên $N$. Hãy in ra giá trị chính xác của số Fibonacci thứ $N$ ($F_0 = 0, F_1 = 1, F_2 = 1, \dots$).
 

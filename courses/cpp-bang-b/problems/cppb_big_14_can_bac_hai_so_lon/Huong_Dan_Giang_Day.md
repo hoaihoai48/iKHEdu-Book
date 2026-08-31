@@ -1,8 +1,7 @@
 # Hướng Dẫn Giảng Dạy: Căn Bậc Hai Số Nguyên Lớn
 Chuyên đề: **Xử Lý Số Nguyên Lớn (Big Integer Arithmetic)**
 
-> [!NOTE]
-> **Phân loại chuyên đề:** `Advanced Challenge` (Kiến thức mở rộng chuyên sâu)
+**Phân loại chuyên đề:** `Advanced Challenge` (Kiến thức mở rộng chuyên sâu)
 
 ---
 

@@ -1,7 +1,6 @@
 # Tính Số Chỉnh Hợp A(N, K) mod M
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho $Q$ truy vấn, mỗi truy vấn chứa 2 số $N, K$. Hãy tính số chỉnh hợp $A(N, K) = \frac{N!}{(N - K)!} \pmod{10^9 + 7}$.
 

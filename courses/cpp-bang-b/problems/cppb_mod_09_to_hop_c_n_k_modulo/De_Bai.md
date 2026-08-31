@@ -1,7 +1,6 @@
 # Tính Số Tổ Hợp C(N, K) mod M
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho $Q$ truy vấn, mỗi truy vấn chứa 2 số $N, K$. Hãy tính $C(N, K) \pmod{10^9 + 7}$.
 

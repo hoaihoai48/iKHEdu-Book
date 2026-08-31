@@ -1,7 +1,6 @@
 # Tính Tổng Cấp Số Nhân Đồng Dư
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho $A, N$ và $M = 10^9 + 7$. Hãy tính tổng $S = 1 + A + A^2 + \dots + A^N \pmod M$.
 

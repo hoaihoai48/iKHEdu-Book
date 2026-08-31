@@ -66,6 +66,7 @@ Chuyên đề: **Mảng Tiền Tố & Mảng Hiệu (Prefix Sum & Difference Arr
 1. Tràn số khi cộng dồn mảng tiền tố $P$ với $A_i \le 10^9$ (bắt buộc dùng `vector<long long>` hoặc `long long P[]`).
 2. Lỗi truy cập ngoài mảng khi cập nhật $D[R+1]$ với $R = N$ (cần khai báo mảng kích thước $N + 2$).
 3. Nhầm lẫn chỉ số 0-based và 1-based dẫn đến truy vấn $P[L-1]$ bị truy cập ô rác hoặc âm.
+4. Tràn bộ nhớ ngăn xếp (Stack Overflow / MLE) khi khai báo mảng 2D kích thước lớn cục bộ trong hàm `main()`; bắt buộc khai báo toàn cục (`global`) hoặc dùng `vector<vector<long long>>`.
 
 ---
 

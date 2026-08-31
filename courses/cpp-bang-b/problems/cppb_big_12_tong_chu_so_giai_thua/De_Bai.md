@@ -1,7 +1,6 @@
 # Tổng Các Chữ Số Của N!
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho số nguyên $N$. Hãy tính tổng tất cả các chữ số trong biểu diễn thập phân của $N!$.
 

@@ -1,7 +1,6 @@
 # Trừ Hai Số Nguyên Lớn (A >= B)
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 2 số nguyên dương lớn $A$ và $B$ ($A \ge B$). Hãy tính hiệu $A - B$.
 

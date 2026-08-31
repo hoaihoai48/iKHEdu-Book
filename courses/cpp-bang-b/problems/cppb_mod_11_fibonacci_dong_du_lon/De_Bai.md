@@ -1,7 +1,6 @@
 # Dãy Fibonacci Đồng Dư Lớn
 
-> [!NOTE]
-> **Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
+**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
 Cho số nguyên $N$. Hãy tìm số Fibonacci thứ $N$ ($F_N$) theo modulo $10^9 + 7$ (với $F_0 = 0, F_1 = 1, F_2 = 1, \dots$).
 

@@ -1,7 +1,6 @@
 # So Sánh Hai Số Nguyên Lớn
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 2 số nguyên dương lớn $A$ và $B$. Hãy so sánh $A$ và $B$.
 

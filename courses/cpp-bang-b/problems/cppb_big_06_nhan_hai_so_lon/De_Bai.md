@@ -1,7 +1,6 @@
 # Nhân Hai Số Nguyên Lớn
 
-> [!NOTE]
-> **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
+**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
 Cho 2 số nguyên lớn $A$ và $B$. Hãy tính tích $A \times B$.
 
