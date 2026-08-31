@@ -38,7 +38,7 @@ Khởi tạo hai con trỏ biên: $low = 0, high = N - 1$.
 * Nếu $A[mid] < X \implies$ Giá trị $X$ chỉ có thể nằm ở nửa phải $\implies low = mid + 1$.
 * Nếu $A[mid] > X \implies$ Giá trị $X$ chỉ có thể nằm ở nửa trái $\implies high = mid - 1$.
 
-#### 💡 Ví Dụ Minh Họa 1: Tìm kiếm giá trị $X = 23$
+#### Ví Dụ Minh Họa 1: Tìm kiếm giá trị $X = 23$
 Cho mảng đã sắp xếp gồm 10 phần tử: $A = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]$
 
 | Chỉ số (0-based) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ | $7$ | $8$ | $9$ |
@@ -66,7 +66,7 @@ Trong lập trình thi đấu, dạng toán tìm vị trí biên quan trọng h�
    * Tìm vị trí đầu tiên mà giá trị tại đó $> X$.
    * Vị trí phần tử lớn nhất $\le X$ chính là `upper_bound - 1`.
 
-#### 💡 Ví Dụ Minh Họa 2: Mảng có phần tử lặp lại
+#### Ví Dụ Minh Họa 2: Mảng có phần tử lặp lại
 Cho mảng: $A = [1, 3, 5, 5, 5, 8, 12]$, tìm các mốc biên với $X = 5$:
 
 | Chỉ số (0-based) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ |
@@ -100,7 +100,7 @@ Trước khi cài đặt, **bắt buộc phải xác định hướng biến thi
   * Nếu `check(mid) == false` $\implies$ $mid$ chưa đủ lớn, tăng giá trị lên: `low = mid + 1`.
   * *Ví dụ điển hình:* Vận chuyển hàng trong $D$ ngày (tải trọng thuyền càng lớn càng dễ chở $\implies$ tìm tải trọng Min).
 
-#### 💡 Ví Dụ Minh Họa 3: Bài toán Cắt gỗ lấy tối thiểu $M = 7$ mét gỗ
+#### Ví Dụ Minh Họa 3: Bài toán Cắt gỗ lấy tối thiểu $M = 7$ mét gỗ
 Cho $N = 4$ cây có chiều cao: $A = [20, 15, 10, 17]$. Cần tìm độ cao máy cưa $H$ **lớn nhất** sao cho tổng lượng gỗ thu được $\ge 7$.
 
 * Không gian tìm kiếm: $low = 0, high = \max(A) = 20$.
@@ -133,7 +133,7 @@ Khi đề bài yêu cầu tìm nghiệm thực với độ chính xác sai số 
 ### Mẫu 1A: Tìm Giá Trị LỚN NHẤT Thỏa Mãn (Dạng `True -> False`)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 // Hàm kiểm tra: Lượng gỗ thu được khi cưa ở độ cao mid có >= M hay không?
@@ -181,7 +181,7 @@ int main() {
 ### Mẫu 1B: Tìm Giá Trị NHỎ NHẤT Thỏa Mãn (Dạng `False -> True`)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 // Hàm kiểm tra: Với tải trọng phà là mid, có chở hết hàng trong <= D ngày hay không?
@@ -236,7 +236,7 @@ int main() {
 ### Mẫu 2: Binary Search Số Thực (100 Vòng Lặp Robust)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 bool check_real(double mid) {

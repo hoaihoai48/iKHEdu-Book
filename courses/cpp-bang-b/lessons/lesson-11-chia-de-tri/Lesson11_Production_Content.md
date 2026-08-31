@@ -1,5 +1,4 @@
 # CHUYÊN ĐỀ 11: KỸ THUẬT CHIA ĐỂ TRỊ (DIVIDE AND CONQUER)
-*(Divide-Solve-Combine Paradigm, D&C Mental Model, Master Theorem, Merge Sort, Inversion Counting & Binary Selection)*
 
 ---
 
@@ -7,9 +6,7 @@
 
 Ở Chuyên đề 10, chúng ta đã làm chủ kỹ thuật Đệ quy: giải bài toán quy mô $N$ bằng cách thu nhỏ dần bài toán. Từ cấu trúc code đệ quy, ta có thể thiết lập **Hệ thức truy hồi (Recurrence)** và phân tích qua **Cây đệ quy (Recursion Tree)** để tìm ra độ phức tạp chính xác:
 
-```text
-Code Đệ Quy ──► Hệ Thức Truy Hồi (Recurrence) ──► Cây Đệ Quy (Recursion Tree) ──► Độ Phức Tạp (Complexity)
-```
+$$\text{Code Đệ Quy} \longrightarrow \text{Hệ Thức Truy Hồi (Recurrence)} \longrightarrow \text{Cây Đệ Quy (Recursion Tree)} \longrightarrow \text{Độ Phức Tạp (Complexity)}$$
 
 * **Đệ quy tuyến tính (Chuyên đề 10):**
   $$T(N) = T(N-1) + \mathcal{O}(1) \implies \text{Cây 1 nhánh thẳng, độ sâu } N \implies \Theta(N)$$
@@ -48,20 +45,7 @@ Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
    * Chia động dựa trên việc so sánh các phần tử với một giá trị chốt (`pivot`), kích thước 2 nửa có thể không đều nhau.
    * *Ví dụ:* QuickSelect phân hoạch `[7 2 9 1 5 3 8]` với `pivot = 5` thành `[2 1 3]` (nhỏ hơn 5), `[5]`, và `[7 9 8]` (lớn hơn 5).
 
-```text
-                           BÀI TOÁN LỚN QUY MÔ N
-                                     │
-                 ┌───────────────────┴───────────────────┐
-                 ▼ (DIVIDE / PARTITION)                  ▼
-        BÀI TOÁN CON 1 (Quy mô N₁)              BÀI TOÁN CON 2 (Quy mô N₂)
-                 │                                       │
-                 ▼ (SOLVE)                               ▼ (SOLVE)
-        ĐÁP ÁN BÀI TOÁN CON 1                   ĐÁP ÁN BÀI TOÁN CON 2
-                 │                                       │
-                 └───────────────────┬───────────────────┘
-                                     ▼ (COMBINE)
-                           ĐÁP ÁN BÀI TOÁN GỐC (N)
-```
+![Mô hình Thuật toán Chia để trị (Divide & Conquer)](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_model_vi.svg)
 
 ---
 
@@ -76,30 +60,7 @@ Trước bất kỳ bài toán nào nghi ngờ sử dụng Chia Để Trị, hã
 4. Tôi combine kết quả của các bài toán con như thế nào? (Đây là bước quyết định độ phức tạp!)
 ```
 
-```text
-                              BÀI TOÁN CẦN GIẢI
-                                      │
-                                      ▼
-                   Có thể chia thành các bài toán con
-                        cùng bản chất và nhỏ hơn?
-                                      │
-                         ┌────────────┴────────────┐
-                         │                         │
-                        NO                        YES
-                         │                         │
-                   Không dùng D&C                  ▼
-                                           Có cần giải quyết
-                                       nhiều bài toán con không?
-                                                   │
-                                     ┌─────────────┴─────────────┐
-                                     │                           │
-                                    YES                          NO
-                                     │                           │
-                                     ▼                           ▼
-                               D&C ĐA NHÁNH                D&C ĐƠN NHÁNH
-                         (Merge Sort, Inversion,       (Binary Search, QuickSelect,
-                           Closest Pair, RMQ...)           Peak Finding...)
-```
+![Cây quyết định lựa chọn thuật toán Chia để trị](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_decision_tree_vi.svg)
 
 ---
 
@@ -109,21 +70,7 @@ Xét mảng ban đầu: `A = [38, 27, 43, 3, 9, 82, 10]`.
 
 ### Sơ Đồ Cây Phân Rã & Gộp Mảng (Divide & Merge Tree):
 
-```text
-[38, 27, 43, 3, 9, 82, 10]
-           /                    \
-   [38, 27, 43, 3]            [9, 82, 10]
-      /         \               /      \
-  [38, 27]    [43, 3]        [9, 82]   [10]
-   /    \      /   \          /   \      │
- [38]  [27]  [43]  [3]      [9]  [82]  [10]   <-- BASE CASE (l == r)
-   \    /      \   /          \   /      │
-  [27, 38]    [3, 43]        [9, 82]   [10]   <-- MERGE TẦNG 1
-      \         /               \      /
-   [3, 27, 38, 43]             [9, 10, 82]     <-- MERGE TẦNG 2
-           \                    /
-         [3, 9, 10, 27, 38, 43, 82]            <-- KẾT QUẢ CUỐI CÙNG
-```
+![Mô phỏng Cây phân rã và gộp Merge Sort](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/mergesort_tree_vi.svg)
 
 ---
 
@@ -207,7 +154,7 @@ $$\text{Merge Step (2 con trỏ)} \longrightarrow \text{Merge Sort } \Theta(N \l
 ## 11. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Templates)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;
@@ -386,7 +333,7 @@ Tính lũy thừa ma trận vuông $A^N$ cấp $2 \times 2$ modulo $M$ bằng Ch
 
 ## 13. Ma Trận 16 Bài Tập Thực Hành Đa Chiều (Time / Call Stack / Auxiliary Memory / Max Depth)
 
-### 📌 Phân Tầng Lộ Trình Học Tập Lesson 11:
+### Phân Tầng Lộ Trình Học Tập Lesson 11:
 * **Nhóm Cốt Lõi (Core Foundations - `CPPB-DAC-01` $\to$ `12`):** Binary Search D&C, RMQ D&C, Tournament Tree, Cài đặt Merge Step, Merge Sort trọn vẹn, Đếm số cặp nghịch thế, Maximum Subarray D&C, Majority Element Voting, Lũy thừa ma trận $2 \times 2$, Đỉnh mảng Unimodal, Tổng cấp số nhân D&C, Đếm cặp $A_i > 2A_j$.
 * **Nhóm Nâng Cao & Thử Thách (Advanced & Challenge `CPPB-DAC-13` $\to$ `16`):** QuickSelect D&C ($\mathcal{O}(N)$ expected), Đếm đoạn con tổng nằm trong $[L, R]$, Cặp điểm gần nhất trong mặt phẳng (Closest Pair $\mathcal{O}(N \log N)$), Median của 2 mảng đã sắp xếp ($\mathcal{O}(\log(\min(N, M)))$).
 

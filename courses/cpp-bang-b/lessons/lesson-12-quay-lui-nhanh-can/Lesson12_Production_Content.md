@@ -1,5 +1,4 @@
 # CHUYÊN ĐỀ 12: THUẬT TOÁN QUAY LUI & NHÁNH CẬN (STATE-SPACE SEARCH: BACKTRACKING & BRANCH AND BOUND)
-*(State Space Tree, State Identity, Choose-Explore-Unchoose Pattern, Feasibility vs Optimality Pruning, State Restoration Invariant)*
 
 ---
 
@@ -7,26 +6,7 @@
 
 Để có cái nhìn toàn cảnh về các phương pháp giải thuật lớn trong Lập trình thi đấu:
 
-```text
-                               RECURSION (Cơ Chế Điều Khiển Call Stack)
-                                                  │
-                 ┌────────────────────────────────┴────────────────────────────────┐
-                 ▼                                                                 ▼
-   DIVIDE & CONQUER (Chia Để Trị)                                    STATE-SPACE SEARCH (Duyệt Không Gian Trạng Thái)
-"Phân chia bài toán lớn thành các bài                                              │
- toán con, thường độc lập hoặc giải riêng biệt"                   ┌────────────────┴────────────────┐
-                                                                 ▼                                 ▼
-                                                        BACKTRACKING (Quay Lui)         BRANCH & BOUND (Nhánh Cận)
-                                                   "Xây dựng nghiệm từng bước +         "Tìm kiếm tối ưu kết hợp hàm Cận
-                                                    Feasibility Pruning khi vi phạm"     để cắt tỉa nhánh không thể tốt hơn"
-                                                                 │                                 │
-                                                                 └────────────────┬────────────────┘
-                                                                                  │
-               Khi nhiều đường đi trong quá trình tìm kiếm gặp lại cùng một State Identity và có thể tái sử dụng kết quả
-                                                                                  ▼
-                                                        DYNAMIC PROGRAMMING & MEMOIZATION (Quy Hoạch Động)
-                                                        "Ghi nhớ kết quả trạng thái để không phải tính lại"
-```
+![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/search_paradigms_bridge_vi.svg)
 
 * **Divide & Conquer:** $\text{Bài toán lớn} \longrightarrow \text{Các bài toán con riêng biệt}$.
 * **Backtracking / State-Space Search:** $\text{Trạng thái hiện tại} \longrightarrow \text{Các nhánh quyết định thử nghiệm (Choices)}$.
@@ -36,7 +16,7 @@
 
 ## 2. Bản Chất Trạng Thái (State Definition & State Identity)
 
-### 🧠 Khái niệm State (Trạng thái) & State Identity:
+### Khái niệm State (Trạng thái) & State Identity:
 > **Định nghĩa:** **State (Trạng thái)** là tập thông tin tối thiểu cần thiết để xác định chính xác các lựa chọn tiếp theo và kết quả có thể đạt được từ trạng thái hiện tại.
 >
 > * **Không phải mọi biến xuất hiện trong hàm đệ quy đều là thành phần của State Identity; chỉ những thông tin có thể làm thay đổi các lựa chọn hoặc kết quả của phần còn lại mới cần thiết.**
@@ -58,20 +38,14 @@
 
 ## 3. Khung Phương Pháp Luận: Design-Time Framework vs Runtime Pattern
 
-### 📐 1. Khung Thiết Kế Thuật Toán (Design-Time Framework):
-```text
-1. Define State (Xác định các biến trạng thái tối thiểu)
-       ↓
-2. Generate Candidates (Xác định danh sách các lựa chọn khả dĩ)
-       ↓
-3. Define Feasibility (Thiết lập điều kiện ràng buộc hợp lệ)
-       ↓
-4. Define Bound (Thiết lập hàm cận LB / UB nếu là bài toán tối ưu)
-       ↓
-5. Define Transition & Restoration (Quy tắc chuyển trạng thái và hoàn tác)
-```
+### 1. Khung Thiết Kế Thuật Toán (Design-Time Framework):
+1. **Define State:** Xác định các biến trạng thái tối thiểu cần thiết để mô tả bài toán.
+2. **Generate Candidates:** Xác định danh sách các lựa chọn khả dĩ tại mỗi bước đi.
+3. **Define Feasibility:** Thiết lập điều kiện ràng buộc hợp lệ (Feasibility Pruning).
+4. **Define Bound:** Thiết lập hàm cận dưới $LB$ hoặc cận trên $UB$ nếu là bài toán tối ưu (Branch & Bound).
+5. **Define Transition & Restoration:** Thiết lập quy tắc chuyển trạng thái (`Choose`), gọi đệ quy (`Explore`) và hoàn tác (`Unchoose`).
 
-### ⚡ 2. Khung Thực Thi Mã Nguồn (Runtime Pattern):
+### 2. Khung Thực Thi Mã Nguồn (Runtime Pattern):
 ```cpp
 void search(State state) {
     if (isGoal(state)) {
@@ -94,45 +68,11 @@ void search(State state) {
 
 ## 4. Khung Tư Duy Mental Model: Hai Sơ Đồ Cốt Lõi Của Lesson 12
 
-### 🌲 Sơ đồ 1: Cây Quyết Định Quay Lui Thuần Túy (Backtracking)
-```text
-                    TRẠNG THÁI (STATE)
-                            │
-            ┌───────────────┴───────────────┐
-            │                               │
-         HỢP LỆ                          SAI / VI PHẠM
-            │                               │
-       Đi sâu (Explore)               [CẮT TỈA - PRUNE]
-            │
-      ┌─────┴─────┐
-      │           │
-   ĐẠT LÁ      CHƯA XONG
-      │           │
-  Ghi nhận      Đi tiếp
-  nghiệm          │
-      │           │
-   Return ◄───────┘
-      │
-  [UNCHOOSE] ──► Khôi phục trạng thái cha để thử nhánh kế tiếp
-```
+![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_space_tree_vi.svg)
 
-### 🎯 Sơ đồ 2: Cây Nhánh Cận Tối Ưu (Branch & Bound)
-```text
-                 TRẠNG THÁI (STATE)
-                         │
-        ┌────────────────┴────────────────┐
-        │                                 │
-  VI PHẠM RÀNG BUỘC?                    HỢP LỆ
-        │                                 │
- [CẮT TỈA - PRUNE]                        ▼
-                           ĐÁNH GIÁ HÀM BOUND (LB / UB)
-                                          │
-                         ┌────────────────┴────────────────┐
-                         │                                 │
-             BOUND KHÔNG THỂ CẢI THIỆN BEST?       CÓ THỂ CẢI THIỆN BEST?
-                         │                                 │
-                 [CẮT TỈA - PRUNE]                  Đi sâu (Explore)
-```
+### Quy Trình 1: Luồng Ra Quyết Định Quay Lui Thuần Túy (Backtracking)
+
+### Quy Trình 2: Luồng Ra Quyết Định Nhánh Cận (Branch & Bound)
 
 ---
 
@@ -184,10 +124,10 @@ BRANCH AND BOUND
 
 | Kỹ Thuật | Ảnh Hưởng Đến Tính Đúng Đắn | Vai Trò Thuật Toán |
 |---|:---:|---|
-| **Feasibility Pruning Hợp Lệ** | ✅ Không mất nghiệm hợp lệ | Loại bỏ trạng thái chắc chắn vi phạm ràng buộc bài toán. |
-| **Valid Lower / Upper Bound** | ✅ Không mất nghiệm tối ưu | Loại bỏ trạng thái đã chứng minh toán học không thể vượt qua `best`. |
-| **Heuristic Ordering** | ✅ Không làm mất nghiệm | Sắp xếp thứ tự thử nhánh (như Warnsdorff) để tìm thấy nghiệm tốt sớm hơn; tính đầy đủ vẫn bảo toàn nếu duyệt hết. |
-| **Heuristic Pruning không chứng minh** | ❌ Có thể mất nghiệm | Cắt nhánh theo cảm tính, có nguy cơ bỏ sót nghiệm tối ưu toàn cục. |
+| **Feasibility Pruning Hợp Lệ** | Không mất nghiệm hợp lệ | Loại bỏ trạng thái chắc chắn vi phạm ràng buộc bài toán. |
+| **Valid Lower / Upper Bound** | Không mất nghiệm tối ưu | Loại bỏ trạng thái đã chứng minh toán học không thể vượt qua `best`. |
+| **Heuristic Ordering** | Không làm mất nghiệm | Sắp xếp thứ tự thử nhánh (như Warnsdorff) để tìm thấy nghiệm tốt sớm hơn; tính đầy đủ vẫn bảo toàn nếu duyệt hết. |
+| **Heuristic Pruning không chứng minh** | Có nguy cơ mất nghiệm | Cắt nhánh theo cảm tính, có nguy cơ bỏ sót nghiệm tối ưu toàn cục. |
 
 ---
 
@@ -229,7 +169,7 @@ BRANCH AND BOUND
 ## 10. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Templates)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;
@@ -417,7 +357,7 @@ Nếu một lập trình viên thiết kế một hàm Cận Dưới $LB(\text{s
 
 ## 12. Ma Trận 16 Bài Tập Thực Hành 4 Tầng Phân Cấp (Level 1 $\to$ Level 4)
 
-### 📌 Lộ Trình Phân Tầng Học Tập Chuẩn Mực:
+### Lộ Trình Phân Tầng Học Tập Chuẩn Mực:
 * **LEVEL 1: Pattern Sinh Cấu Hình Cơ Bản (`CPPB-BKT-01` $\to$ `04`):** Xâu nhị phân, Tập con, Hoán vị, Tổ hợp chập $K$.
 * **LEVEL 2: Constraint Backtracking / Feasibility Pruning (`CPPB-BKT-05` $\to$ `09`):** Dãy ngoặc đúng, $N$-Queens, Mê cung, Subset Sum, Chia tập bằng nhau.
 * **LEVEL 3: Optimization Search & Branch and Bound (`CPPB-BKT-10`, `13`, `14`, `16`):** Đổi tiền xu ít nhất (B&B), Cái túi $0/1$ B&B, TSP B&B, Phân công công việc B&B.

@@ -44,7 +44,7 @@ Tại mỗi bước, thuật toán tính toán một hàm mục tiêu trên cặ
 * **Quy tắc di chuyển:**
   $$\begin{cases} L \leftarrow L + 1 & \text{khi } A_L + A_R < S \\ R \leftarrow R - 1 & \text{khi } A_L + A_R > S \\ \text{Dừng thuật toán} & \text{khi } A_L + A_R = S \end{cases}$$
 
-#### 💡 Ví Dụ Minh Họa 1: Tìm cặp số có tổng $S = 14$
+#### Ví Dụ Minh Họa 1: Tìm cặp số có tổng $S = 14$
 Cho mảng $N = 6$ phần tử đã sắp xếp: $A = [2, 3, 5, 8, 11, 15]$ (0-based indexing).
 
 | Chỉ số ($i$) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |
@@ -69,7 +69,7 @@ Cho mảng $N = 6$ phần tử đã sắp xếp: $A = [2, 3, 5, 8, 11, 15]$ (0-b
   Do đó, có đúng **$R - L$ cặp hợp lệ** xuất phát từ $L$: $(L, L+1), (L, L+2), \dots, (L, R)$.
 * **Thao tác:** Cộng $(R - L)$ vào kết quả đếm, sau đó tăng $L \leftarrow L + 1$. Ngược lại, nếu $A_L + A_R > S$, giảm $R \leftarrow R - 1$.
 
-#### 💡 Ví Dụ Minh Họa 2: Đếm số cặp có tổng $\le 10$ trên mảng $A = [1, 2, 4, 7, 9]$
+#### Ví Dụ Minh Họa 2: Đếm số cặp có tổng $\le 10$ trên mảng $A = [1, 2, 4, 7, 9]$
 
 | Bước | $L$ | $R$ | $A[L] + A[R]$ | Điều kiện $\le 10$ | Số cặp hợp lệ cộng thêm ($R - L$) | Các cặp được đếm | Thao tác kế tiếp |
 |:---:|:---:|:---:|:---:|:---:|:---:|---|---|
@@ -110,7 +110,7 @@ Cho mảng $N = 6$ phần tử đã sắp xếp: $A = [2, 3, 5, 8, 11, 15]$ (0-b
 ## 5. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Template)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main() {

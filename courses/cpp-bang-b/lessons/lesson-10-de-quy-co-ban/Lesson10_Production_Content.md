@@ -1,5 +1,4 @@
 # CHUYÊN ĐỀ 10: THUẬT TOÁN ĐỆ QUY & CÂY GỌI HÀM (RECURSION & CALL STACK)
-*(Call Stack Architecture, Winding & Unwinding Phases, Base Case Invariant & State Space Tree)*
 
 ---
 
@@ -7,24 +6,14 @@
 
 Trong các bài toán lập trình cơ bản, chúng ta quen thuộc với tư duy lặp tuần tự (`for`, `while`): xử lý từng phần tử lần lượt từ đầu đến cuối. Tuy nhiên, trong thế giới cấu trúc dữ liệu và giải thuật nâng cao, rất nhiều bài toán mang bản chất **tự đồng dạng (Self-Similarity)**: *Để giải một bài toán quy mô $N$, ta có thể giải bài toán tương tự nhưng ở quy mô nhỏ hơn $N-1$ hoặc $N/2$, sau đó kết hợp kết quả lại.*
 
-### 💡 Khái Niệm Đệ Quy (Recursion):
+### Khái Niệm Đệ Quy (Recursion):
 Đệ quy là kỹ thuật lập trình trong đó **một hàm tự gọi lại chính nó** (trực tiếp hoặc gián tiếp) với các tham số đại diện cho bài toán con nhỏ hơn.
 
 Mỗi hàm đệ quy chuẩn mực bắt buộc phải có đủ 2 thành phần cốt lõi:
 1. **Điểm Dừng (Base Case / Anchor):** Trường hợp bài toán đơn giản nhất đã biết trước đáp án mà không cần gọi tiếp đệ quy. Điểm dừng có nhiệm vụ **ngắt chuỗi lời gọi vô tận**.
 2. **Bước Đệ Quy (Recursive Case / Reduction Step):** Thu nhỏ quy mô bài toán bằng cách gọi lại chính hàm đó với tham số tiến dần về phía Base Case.
 
-```text
-                  HÀM ĐỆ QUY f(N)
-                         │
-         ┌───────────────┴───────────────┐
-         │                               │
-    N là Base Case?              N là Recursive Case?
-         │                               │
-         ▼                               ▼
-    Trả về đáp án                f(N) = Thu nhỏ bài toán
-    ngay lập tức                 kết hợp với f(N - 1) hoặc f(N/2)
-```
+![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_structure_vi.svg)
 
 ---
 
@@ -36,7 +25,7 @@ Mỗi hàm đệ quy chuẩn mực bắt buộc phải có đủ 2 thành phần
 
 ---
 
-### 💡 Ví Dụ 1: Mô phỏng hàm tính giai thừa `fact(4)`
+### Ví Dụ 1: Mô phỏng hàm tính giai thừa `fact(4)`
 
 ```cpp
 long long fact(int n) {
@@ -60,7 +49,7 @@ long long fact(int n) {
 
 ---
 
-### 💡 Ví Dụ 2: So sánh vị trí lệnh in (Winding vs Unwinding)
+### Ví Dụ 2: So sánh vị trí lệnh in (Winding vs Unwinding)
 
 Quan sát sự khác biệt khi đặt lệnh `cout` **trước** vs **sau** lời gọi đệ quy:
 
@@ -82,7 +71,7 @@ void printForward(int n) {
 // Gọi printForward(3) -> Output: 1 2 3
 ```
 
-### 📌 Quy Luật Vàng (Winding vs Unwinding):
+### Quy Luật Vàng (Winding vs Unwinding):
 * Các thao tác viết **trước lời gọi đệ quy** sẽ thực thi theo thứ tự từ ngoài vào trong ($N \to 1$).
 * Các thao tác viết **sau lời gọi đệ quy** sẽ thực thi theo thứ tự từ trong ra ngoài ($1 \to N$), khi stack bắt đầu rút lui (Unwind).
 
@@ -96,23 +85,14 @@ void printForward(int n) {
 * **Độ sâu đệ quy (Recursion Depth) vs Kích thước Stack Frame:**
   * Để đánh giá an toàn bộ nhớ của hàm đệ quy, ta phải xem xét đồng thời **Độ sâu đệ quy tối đa (Maximum Depth)** và **Dung lượng bộ nhớ tiêu thụ trên mỗi Frame**. Nếu mỗi frame chứa mảng cục bộ lớn hoặc đệ quy vượt quá giới hạn bộ nhớ stack, chương trình sẽ gặp lỗi tràn ngăn xếp (**Stack Overflow / Segmentation Fault**).
 
-### ⚠️ Lưu Ý Kỹ Thuật Về Tail Recursion Trong C++:
+### Lưu Ý Kỹ Thuật Về Tail Recursion Trong C++:
 Trong lý thuyết ngôn ngữ, *Đệ quy đuôi (Tail Recursion)* là hàm đệ quy mà lời gọi hàm là câu lệnh cuối cùng. Tuy nhiên, **chuẩn ngôn ngữ C++ không bắt buộc trình biên dịch phải tối ưu hóa đệ quy đuôi (Tail-Call Optimization - TCO)** trong mọi cờ biên dịch thi đấu. Do đó, học sinh không được chủ quan giả định đệ quy đuôi sẽ luôn tự biến thành vòng lặp $\mathcal{O}(1)$ bộ nhớ. Luôn phân tích độ sâu stack cẩn trọng!
 
 ---
 
 ### 3.2. Hệ Thống Phân Loại Thuật Ngữ Đệ Quy (Recursion Taxonomy)
 
-```text
-THUẬT TOÁN ĐỆ QUY (RECURSION)
-│
-├── 1. Linear Recursion (Đệ quy tuyến tính)
-│      └── Mỗi frame tạo tối đa 1 lời gọi đệ quy (Giai thừa, GCD, Lũy thừa nhị phân powerRec)
-│
-└── 2. Branching Recursion (Đệ quy phân nhánh)
-       ├── Binary Recursion (Đệ quy nhị phân - 2 nhánh/frame): Fibonacci, Tháp Hà Nội, Chia đôi Min/Max
-       └── Multi-Branch Recursion (Đệ quy đa phân - ≥ 3 nhánh/frame): Tháp Hà Nội ràng buộc, Cây trạng thái
-```
+![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_taxonomy_vi.svg)
 
 1. **Đệ quy Tuyến tính (Linear Recursion - 1 nhánh gọi / Frame):**
    * Trong mỗi Stack Frame chỉ thực hiện **đúng 1 lời gọi đệ quy con**. Cây gọi hàm là một đường thẳng đơn tuyến.
@@ -171,7 +151,7 @@ Xét cây gọi hàm khi tính $F(5)$ bằng đệ quy phân nhánh:
 ## 5. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Templates)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 // 1. In dãy số 1..N và N..1 chuẩn Winding / Unwinding
@@ -346,7 +326,7 @@ Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị 
 
 ## 7. Ma Trận Bài Tập Thực Hành Đầy Đủ 3 Chiều Độ Phức Tạp (Time / Space / Depth)
 
-### 📌 Phân Tầng Lộ Trình Học Tập Lesson 10:
+### Phân Tầng Lộ Trình Học Tập Lesson 10:
 * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-REC-01` $\to$ `12`):** Nắm vững Winding/Unwinding phase, Base case, Đệ quy tuyến tính vs Đệ quy nhị phân, Tháp Hà Nội, Khảo sát cây Fibonacci.
 * **Nhóm Thử Thách Mở Rộng (Advanced & Optional Extension `CPPB-REC-13` $\to$ `16`):** Tháp Hà Nội ràng buộc nước đi ($\Theta(3^N)$), Sinh xâu không 2 số 1 liền kề, Đếm phân tích số thành tổng (Integer Partitioning không xét thứ tự), Đếm cấu hình cây nhị phân (Catalan Tree Recurrence).
 

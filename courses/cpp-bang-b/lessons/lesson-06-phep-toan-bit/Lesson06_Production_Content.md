@@ -56,7 +56,7 @@ mask = mask ^ (1LL << k);
 // Viết gọn: mask ^= (1LL << k);
 ```
 
-#### 💡 Ví Dụ Minh Họa 1: Thao tác trên số $N = 13 = 1101_2$
+#### Ví Dụ Minh Họa 1: Thao tác trên số $N = 13 = 1101_2$
 
 | Trọng số nhị phân | $2^4 = 16$ | $2^3 = 8$ | $2^2 = 4$ | $2^1 = 2$ | $2^0 = 1$ | Giá trị thập phân |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -120,7 +120,7 @@ for (int sub = mask; sub > 0; sub = (sub - 1) & mask) {
 }
 ```
 
-#### 💡 Ví Dụ Minh Họa 2: Biểu diễn tập con của tập 3 phần tử $S = \{A_0, A_1, A_2\}$
+#### Ví Dụ Minh Họa 2: Biểu diễn tập con của tập 3 phần tử $S = \{A_0, A_1, A_2\}$
 Với $N = 3$, có $2^3 = 8$ mặt nạ bit từ $0$ đến $7$:
 
 | Giá Trị Mask (Thập phân) | Biểu Diễn Nhị Phân ($b_2 b_1 b_0$) | Bit $2$ ($A_2$) | Bit $1$ ($A_1$) | Bit $0$ ($A_0$) | Tập Con Tương Ứng |
@@ -141,7 +141,7 @@ Với $N = 3$, có $2^3 = 8$ mặt nạ bit từ $0$ đến $7$:
 ### Mẫu 1: Vét Cạn Tập Con Bằng Mặt Nạ Bit (Subset Sum)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -183,10 +183,10 @@ int main() {
 ## 6. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
 
 1. **Bẫy thứ tự ưu tiên toán tử (Operator Precedence Bug):** Trong C++, các phép toán bit `&`, `|`, `^` có độ ưu tiên **thấp hơn** các phép toán so sánh `==`, `!=`, `<`, `>`.
-   * ❌ Lỗi sai: `if (mask & (1 << k) != 0)` sẽ bị hiểu thành `if (mask & ((1 << k) != 0))` $\implies$ Sai kết quả!
-   * ✅ Cú pháp chuẩn: `if ((mask & (1 << k)) != 0)` hoặc `if ((mask >> k) & 1)`.
+   * **Lỗi sai:** `if (mask & (1 << k) != 0)` sẽ bị hiểu thành `if (mask & ((1 << k) != 0))` $\implies$ Sai kết quả!
+   * **Cú pháp chuẩn:** `if ((mask & (1 << k)) != 0)` hoặc `if ((mask >> k) & 1)`.
 2. **Bẫy tràn số khi dịch bit quá 31:** Hằng số `1` mặc định là số nguyên 32-bit có dấu. Biểu thức `1 << 40` sẽ gây tràn số và lỗi hành vi không xác định (Undefined Behavior).
-   * ✅ Quy tắc bắt buộc: Luôn viết `1LL << k` khi $k \ge 31$.
+   * **Quy tắc bắt buộc:** Luôn viết `1LL << k` khi $k \ge 31$.
 
 ---
 

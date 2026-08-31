@@ -39,7 +39,7 @@ Do đó, tổng số thao tác thêm/bớt phần tử trong toàn bộ chương
     $$\text{Current\_Sum} \leftarrow \text{Current\_Sum} + A_i - A_{i-K}$$
   * Cập nhật giá trị cực trị: $\text{Ans} = \max(\text{Ans}, \text{Current\_Sum})$.
 
-#### 💡 Ví Dụ Minh Họa 1: Tìm tổng đoạn con $K = 3$ lớn nhất trên dãy $A = [2, 1, 5, 1, 3, 2]$
+#### Ví Dụ Minh Họa 1: Tìm tổng đoạn con $K = 3$ lớn nhất trên dãy $A = [2, 1, 5, 1, 3, 2]$
 
 | Chỉ số ($i$) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -67,7 +67,7 @@ $$\implies \text{Kết quả: Tổng lớn nhất của đoạn dài 3 là } \ma
 | **Đoạn con dài nhất có tổng $\le S$** | Mở $R$, nếu $\text{Sum} > S$ thì co $L$ cho đến khi $\text{Sum} \le S$ | $\text{Max\_Len} = \max(\text{Max\_Len}, R - L + 1)$ |
 | **Đếm số lượng đoạn con có tổng $\le S$** | Mở $R$, co $L$ cho đến khi $\text{Sum} \le S$. Mọi đoạn con kết thúc tại $R$ bắt đầu từ $[L \dots R]$ đều thỏa mãn | $\text{Total} \leftarrow \text{Total} + (R - L + 1)$ |
 
-#### 💡 Ví Dụ Minh Họa 2: Tìm đoạn con ngắn nhất có tổng $\ge S = 7$ trên $A = [2, 3, 1, 2, 4, 3]$
+#### Ví Dụ Minh Họa 2: Tìm đoạn con ngắn nhất có tổng $\ge S = 7$ trên $A = [2, 3, 1, 2, 4, 3]$
 
 | Bước ($R$) | Nạp $A_R$ | Tổng Cửa Sổ | Điều Kiện $\ge 7$ | Thao Tác Co $L$ | Độ Dài Cửa Sổ | $\text{Min\_Len}$ |
 |:---:|:---:|:---:|:---:|---|:---:|:---:|
@@ -105,7 +105,7 @@ Xét mảng $A = [2, -5, 10, -2, 8]$ với mục tiêu tìm đoạn con ngắn n
 ### Mẫu: Đoạn con liên tiếp ngắn nhất có tổng $\ge S$ ($A_i \ge 0$)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main() {

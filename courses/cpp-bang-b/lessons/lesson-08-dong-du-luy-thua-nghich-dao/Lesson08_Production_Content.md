@@ -1,5 +1,4 @@
 # CHUYÊN ĐỀ 08: ĐỒNG DƯ THỨC, LŨY THỪA NHỊ PHÂN & NGHỊCH ĐẢO MODULO
-*(Modular Arithmetic, Binary Exponentiation, Modular Inverse & Combinatorics Modulo)*
 
 ---
 
@@ -27,7 +26,7 @@ $$\text{Đồng Dư Cơ Bản (+, -, *)} \longrightarrow \text{Lũy Thừa Nhị
 
 ## 2. Mô Phỏng Từng Bước (Visual Step-by-Step Simulation)
 
-### 💡 Ví Dụ 1: Mô phỏng tính $3^{13} \pmod{1000}$ bằng Lũy Thừa Nhị Phân
+### Ví Dụ 1: Mô phỏng tính $3^{13} \pmod{1000}$ bằng Lũy Thừa Nhị Phân
 
 Biểu diễn nhị phân của số mũ $13 = 1101_2 = 8 + 4 + 1$.  
 Do đó: $3^{13} = 3^8 \times 3^4 \times 3^1$.
@@ -42,16 +41,16 @@ Do đó: $3^{13} = 3^8 \times 3^4 \times 3^1$.
 
 ---
 
-### 💡 Ví Dụ 2: Mô phỏng tìm nghịch đảo Modulo của $3 \pmod 7$
+### Ví Dụ 2: Mô phỏng tìm nghịch đảo Modulo của $3 \pmod 7$
 Ta cần tìm số nguyên $X \in \{1, \dots, 6\}$ sao cho $(3 \times X) \pmod 7 = 1$.
 
 | Thử giá trị $X$ | Phép nhân $3 \times X$ | Lấy dư $(3 \times X) \pmod 7$ | Kết luận |
 |:---:|:---:|:---:|:---:|
-| $X = 1$ | $3 \times 1 = 3$ | $3$ | ❌ |
-| $X = 2$ | $3 \times 2 = 6$ | $6$ | ❌ |
-| $X = 3$ | $3 \times 3 = 9$ | $2$ | ❌ |
-| $X = 4$ | $3 \times 4 = 12$ | $5$ | ❌ |
-| **$X = 5$** | $3 \times 5 = 15$ | **$1$** | 🟢 **$3^{-1} \equiv 5 \pmod 7$** |
+| $X = 1$ | $3 \times 1 = 3$ | $3$ | Không thỏa mãn |
+| $X = 2$ | $3 \times 2 = 6$ | $6$ | Không thỏa mãn |
+| $X = 3$ | $3 \times 3 = 9$ | $2$ | Không thỏa mãn |
+| $X = 4$ | $3 \times 4 = 12$ | $5$ | Không thỏa mãn |
+| **$X = 5$** | $3 \times 5 = 15$ | **$1$** | **$3^{-1} \equiv 5 \pmod 7$ (Thỏa mãn)** |
 
 > **Kiểm chứng bằng Định lý Fermat nhỏ:** $3^{7-2} = 3^5 = 243 \equiv 5 \pmod 7$.
 
@@ -64,7 +63,7 @@ Ta cần tìm số nguyên $X \in \{1, \dots, 6\}$ sao cho $(3 \times X) \pmod 7
 2. **Phép Trừ (Tránh số âm):** $(A - B) \pmod M = ((A \pmod M) - (B \pmod M) + M) \pmod M$.
 3. **Phép Nhân:** $(A \times B) \pmod M = ((A \pmod M) \times (B \pmod M)) \pmod M$.
 
-### ⚠️ Cảnh Báo Quan Trọng:
+### Cảnh Báo Quan Trọng:
 **2 TỬ HUYỆT KHI THỰC HIỆN PHÉP TOÁN ĐỒNG DƯ:**
 > 1. **Số dư âm trong C++:** Trong C++, phép toán `-7 % 5` trả về `-2` (không phải `3`). Để luôn nhận kết quả không âm, bắt buộc phải viết: `(a % m + m) % m`.
 > 2. **Tràn số 32-bit khi nhân:** Nếu $A, B \approx 10^9$, tích $A \times B \approx 10^{18}$ vượt giới hạn kiểu `int`. Bắt buộc phải ép kiểu 64-bit trước khi nhân: `(1LL * a * b) % m`.
@@ -79,7 +78,7 @@ $$\implies \mathbf{A^{-1} \equiv A^{M - 2} \pmod M}$$
 
 Ta có thể tính $A^{-1} \pmod M$ chỉ bằng một hàm Lũy thừa nhị phân: `power(A, M - 2, M)` trong $\mathcal{O}(\log M)$.
 
-### ⚠️ Chú Ý:
+### Chú Ý:
 **ĐIỀU KIỆN TIÊN QUYẾT CỦA ĐỊNH LÝ FERMAT NHỎ:**
 > * Quy tắc $A^{M - 1} \equiv 1 \pmod M$ và việc rút gọn số mũ $B \gets B \pmod{(M - 1)}$ **CHỈ ĐÚNG KHI $M$ LÀ SỐ NGUYÊN TỐ VÀ $\gcd(A, M) = 1$**.
 > * Tuyệt đối không tùy tiện áp dụng nếu $A$ chia hết cho $M$ hoặc $M$ là hợp số.
@@ -133,7 +132,7 @@ $$S_N = 1 + A + A^2 + \dots + A^N \pmod M$$
 
 ### Mẫu 1: Lũy Thừa Nhị Phân & Nghịch Đảo Modulo Chuẩn
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 // Tính (a^b) % m trong O(log b)
@@ -170,7 +169,7 @@ int main() {
 
 ### Mẫu 2: Tiền Xử Lý Tổ Hợp $C(N, K) \pmod M$ Trong $\mathcal{O}(1)$ Mỗi Truy Vấn
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 const int MAXN = 1000000;
@@ -330,7 +329,7 @@ Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phươ
 
 ## 7. Ma Trận Bài Tập Thực Hành (Practice Problems $P0 \to P5$)
 
-### 📌 Ghi Chú:
+### Ghi Chú:
 **Phân tầng lộ trình học tập:**
 > * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-MOD-01` $\to$ `09`):** Nắm vững các phép toán đồng dư, lũy thừa nhị phân, nghịch đảo Fermat/Euclid và tổ hợp $C(N, K)$.
 > * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-MOD-10` $\to$ `16`):** Dành cho học sinh giỏi nâng cao tiếp cận các mô hình toán học chuyên sâu.

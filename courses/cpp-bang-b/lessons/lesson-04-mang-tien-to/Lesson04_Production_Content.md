@@ -27,7 +27,7 @@ $$P_R - P_{L-1} = (A_1 + \dots + A_{L-1} + A_L + \dots + A_R) - (A_1 + \dots + A
 
 > **Bất biến toán học:** Phép trừ $P_R - P_{L-1}$ đã loại bỏ chính xác đoạn tiền tố thừa từ $1$ đến $L-1$, chỉ giữ lại trọn vẹn đoạn con $[L \dots R]$ cần tính.
 
-#### 💡 Ví Dụ Minh Họa 1: Xây dựng và truy vấn Prefix Sum 1D
+#### Ví Dụ Minh Họa 1: Xây dựng và truy vấn Prefix Sum 1D
 Cho mảng $N = 6$ phần tử: $A = [3, 1, 4, 1, 5, 9]$ (1-based indexing).
 
 | Chỉ số ($i$) | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ |
@@ -58,7 +58,7 @@ $$P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]$$
 ### 2.3. Công thức truy vấn tổng hình chữ nhật $(x_1, y_1) \to (x_2, y_2)$ trong $\mathcal{O}(1)$
 $$\text{Sum}((x_1, y_1), (x_2, y_2)) = P[x_2][y_2] - P[x_1-1][y_2] - P[x_2][y_1-1] + P[x_1-1][y_1-1]$$
 
-#### 💡 Ví Dụ Minh Họa 2: Truy vấn hình chữ nhật trên ma trận $3 \times 3$
+#### Ví Dụ Minh Họa 2: Truy vấn hình chữ nhật trên ma trận $3 \times 3$
 Cho ma trận $A$:
 $$\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \quad \xrightarrow{\text{Xây dựng } P} \quad P = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 3 & 6 \\ 0 & 5 & 12 & 21 \\ 0 & 12 & 27 & 45 \end{bmatrix}$$
 
@@ -82,13 +82,14 @@ Cho mảng ban đầu gồm $N$ phần tử (toàn số 0 hoặc có giá trị 
 ### 3.2. Cơ chế hoạt động của Mảng hiệu
 Xây dựng mảng hiệu $D$ thỏa mãn: $A_i = \sum_{k=1}^{i} D_k$ (Mảng ban đầu chính là mảng tiền tố của mảng hiệu).
 Để cộng giá trị $V$ vào mọi phần tử trong đoạn $[L \dots R]$, ta chỉ cần thực hiện 2 thao tác điểm:
-$$\begin{cases} D[L] &\leftarrow D[L] + V \\ D[R+1] &\leftarrow D[R+1] - V \end{cases}$$
+* **Tại điểm bắt đầu đoạn $L$:** $D[L] \mathrel{+}= V$
+* **Tại điểm sau kết thúc đoạn $R + 1$:** $D[R + 1] \mathrel{-}= V$
 
 ### 3.3. Khôi phục mảng kết quả sau $Q$ thao tác
 Sau khi hoàn thành tất cả $Q$ thao tác cập nhật $\mathcal{O}(1)$, ta khôi phục lại mảng kết quả $A$ bằng một lần chạy tiền tố duy nhất trong **$\mathcal{O}(N)$ thời gian**:
 $$A_i = A_{i-1} + D_i \quad (i = 1 \dots N)$$
 
-#### 💡 Ví Dụ Minh Họa 3: Mảng hiệu trên dãy $N = 5$ phần tử
+#### Ví Dụ Minh Họa 3: Mảng hiệu trên dãy $N = 5$ phần tử
 Ban đầu dãy toàn số 0: $A = [0, 0, 0, 0, 0]$, mảng hiệu $D = [0, 0, 0, 0, 0, 0, 0]$ (kích thước $N+2$).
 1. **Thao tác 1:** Cộng $V = 3$ vào đoạn $[1 \dots 3] \implies D[1] += 3, D[4] -= 3$.
    $$D = [0, \mathbf{+3}, 0, 0, \mathbf{-3}, 0, 0]$$
@@ -110,12 +111,12 @@ Ban đầu dãy toàn số 0: $A = [0, 0, 0, 0, 0]$, mảng hiệu $D = [0, 0, 0
 
 Để cộng thêm giá trị $V$ vào tất cả các ô trong hình chữ nhật từ $(x_1, y_1)$ đến $(x_2, y_2)$ trên ma trận $N \times M$, ta chỉ cần tác động lên **4 điểm góc** của mảng hiệu $2D$ trong $\mathcal{O}(1)$:
 
-$$\begin{cases}
-D[x_1][y_1] &\mathrel{+}= V \\
-D[x_1][y_2+1] &\mathrel{-}= V \\
-D[x_2+1][y_1] &\mathrel{-}= V \\
-D[x_2+1][y_2+1] &\mathrel{+}= V
-\end{cases}$$
+| Điểm Góc Tác Động | Tọa Độ Ô Mảng Hiệu | Thao Tác Cập Nhật $\mathcal{O}(1)$ |
+|---|:---:|:---:|
+| **Góc trên - trái** | $(x_1, y_1)$ | `D[x1][y1] += V` |
+| **Góc trên - phải** | $(x_1, y_2 + 1)$ | `D[x1][y2 + 1] -= V` |
+| **Góc dưới - trái** | $(x_2 + 1, y_1)$ | `D[x2 + 1][y1] -= V` |
+| **Góc dưới - phải** | $(x_2 + 1, y_2 + 1)$ | `D[x2 + 1][y2 + 1] += V` |
 
 Sau khi thực hiện xong $Q$ thao tác, khôi phục ma trận gốc bằng công thức Prefix Sum 2D trong $\mathcal{O}(N \times M)$.
 
@@ -126,7 +127,7 @@ Sau khi thực hiện xong $Q$ thao tác, khôi phục ma trận gốc bằng c�
 ### Mẫu 1: Prefix Sum 1D (Truy vấn tổng đoạn)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -159,7 +160,7 @@ int main() {
 ### Mẫu 2: Difference Array 1D (Cập nhật đoạn)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main() {

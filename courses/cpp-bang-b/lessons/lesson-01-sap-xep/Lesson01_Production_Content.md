@@ -30,7 +30,7 @@ $$A_j - A_i \ge A_{i+1} - A_i$$
 
 **Hệ quả:** Mọi cặp phần tử không kề nhau đều có khoảng cách lớn hơn hoặc bằng khoảng cách của cặp kề nhau $(A_i, A_{i+1})$. Do đó, để tìm khoảng cách nhỏ nhất, ta chỉ cần duyệt qua $N - 1$ cặp kề nhau sau khi sắp xếp.
 
-#### 💡 Ví Dụ Minh Họa 1: Tìm khoảng cách nhỏ nhất giữa hai phần tử
+#### Ví Dụ Minh Họa 1: Tìm khoảng cách nhỏ nhất giữa hai phần tử
 Cho mảng gồm 6 phần tử chưa sắp xếp: $A = [15, 3, 9, 22, 4, 11]$
 
 1. **Bước 1: Sắp xếp tăng dần $\mathcal{O}(N \log N)$:**
@@ -73,7 +73,7 @@ Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải th�
 2. **Tính bất đối xứng (Asymmetry):** Nếu `cmp(a, b)` là `true` thì `cmp(b, a)` bắt buộc phải là `false`.
 3. **Tính bắc cầu (Transitivity):** Nếu `cmp(a, b)` là `true` và `cmp(b, c)` là `true` thì `cmp(a, c)` phải là `true`.
 
-### ⚠️ Cảnh Báo Quan Trọng:
+### Cảnh Báo Quan Trọng:
 **TỬ HUYỆT LẬP TRÌNH: BẪY DẤU `<= ` TRONG COMPARATOR**
 > 
 > Nếu viết `return a <= b;`, khi `a == b` thì cả `cmp(a, b)` và `cmp(b, a)` đều trả về `true` $\implies$ Vi phạm tiên đề Bất phản xạ và Bất đối xứng $\implies$ `sort` sẽ tiếp tục truy cập vùng nhớ ngoài biên của mảng $\implies$ **RUNTIME ERROR / CRASH CHƯƠNG TRÌNH**.
@@ -98,7 +98,7 @@ bool cmpInterval(const vector<int> &a, const vector<int> &b) {
 }
 ```
 
-#### 💡 Ví Dụ Minh Họa 2: Sắp xếp danh sách 4 đoạn thẳng
+#### Ví Dụ Minh Họa 2: Sắp xếp danh sách 4 đoạn thẳng
 Cho 4 đoạn thẳng: $\{ [1, 5], [2, 3], [3, 6], [1, 3] \}$
 
 * **Trước khi sắp xếp:** $[1, 5], [2, 3], [3, 6], [1, 3]$
@@ -139,7 +139,7 @@ bool cmpConcat(const string &a, const string &b) {
 ## 6. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Template)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 int main() {

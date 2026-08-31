@@ -1,5 +1,4 @@
 # CHUYÊN ĐỀ 07: LÝ THUYẾT SỐ & SỐ NGUYÊN TỐ (NUMBER THEORY FOUNDATIONS)
-*(GCD / LCM, Prime Factorization, Sieve of Eratosthenes, SPF, Segmented Sieve, Legendre & Euler's Totient)*
 
 ---
 
@@ -22,7 +21,7 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 
 ## 2. Mô Phỏng Từng Bước (Visual Step-by-Step Simulation)
 
-### 💡 Ví Dụ 1: Mô phỏng thuật toán Euclid tìm $\gcd(252, 105)$
+### Ví Dụ 1: Mô phỏng thuật toán Euclid tìm $\gcd(252, 105)$
 
 | Bước lặp | $A$ | $B$ | Phép chia lấy dư $A \pmod B$ | Trạng thái tiếp theo $(A', B') = (B, A \pmod B)$ |
 |:---:|:---:|:---:|:---:|:---:|
@@ -33,7 +32,7 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 
 ---
 
-### 💡 Ví Dụ 2: Mô phỏng Sàng Eratosthenes tìm các số nguyên tố $\le 20$
+### Ví Dụ 2: Mô phỏng Sàng Eratosthenes tìm các số nguyên tố $\le 20$
 
 1. Khởi tạo mảng đánh dấu `isPrime` từ $2 \dots 20$ đều là `true`.
 2. Xét $i = 2$ (nguyên tố) $\implies$ Gạch bỏ các bội $4, 6, 8, 10, 12, 14, 16, 18, 20$.
@@ -43,7 +42,7 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 
 | $N$ | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Trạng thái** | 🟢 | 🟢 | ❌ | 🟢 | ❌ | 🟢 | ❌ | ❌ | ❌ | 🟢 | ❌ | 🟢 | ❌ | ❌ | ❌ | 🟢 | ❌ | 🟢 | ❌ |
+| **`isPrime`** | `true` | `true` | `false` | `true` | `false` | `true` | `false` | `false` | `false` | `true` | `false` | `true` | `false` | `false` | `false` | `true` | `false` | `true` | `false` |
 
 > **Danh sách số nguyên tố $\le 20$:** $\{2, 3, 5, 7, 11, 13, 17, 19\}$ (gồm 8 số).
 
@@ -54,7 +53,7 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 ### 3.1. Mối quan hệ giữa GCD và LCM
 $$\gcd(A, B) \times \text{lcm}(A, B) = A \times B \implies \text{lcm}(A, B) = \frac{A}{\gcd(A, B)} \times B$$
 
-### ⚠️ Cảnh Báo Quan Trọng:
+### Cảnh Báo Quan Trọng:
 **TỬ HUYỆT TRÀN SỐ KHI TÍNH BỘI CHUNG NHỎ NHẤT (LCM):**
 > * Không viết `(A * B) / gcd(A, B)` vì tích $A \times B$ có thể lên tới $10^{36}$ gây tràn số `long long`.
 > * Luôn viết: `long long lcm = (a / gcd(a, b)) * b;`
@@ -106,7 +105,7 @@ $$\phi(N) = N \times \left(1 - \frac{1}{p_1}\right) \times \left(1 - \frac{1}{p_
 
 ### Mẫu 1: Ước Chung Lớn Nhất & Bội Chung Nhỏ Nhất
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 // GCD bằng thuật toán Euclid lặp O(log(min(A, B)))
@@ -141,7 +140,7 @@ int main() {
 
 ### Mẫu 2: Sàng Eratosthenes & Sàng SPF (Tối Ưu Phân Tích Thừa Số)
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 const int MAXN = 1000000;

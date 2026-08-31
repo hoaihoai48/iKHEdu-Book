@@ -1,5 +1,4 @@
 # CHUYÊN ĐỀ 09: XỬ LÝ SỐ NGUYÊN LỚN (BIG INTEGER ARITHMETIC)
-*(High-Precision Arithmetic, String Simulation, Base 10 & Base 10^9 Optimization)*
 
 ---
 
@@ -9,19 +8,9 @@ Trong ngôn ngữ lập trình C++, kiểu dữ liệu số nguyên có kích th
 
 Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (như tính $100!$, tính số Fibonacci thứ $1000$, hoặc tính $2^{10000}$ **mà không lấy dư modulo**), kết quả có thể dài hàng nghìn đến hàng chục nghìn chữ số. Vì C++ không có sẵn kiểu dữ liệu BigInteger như Python hay Java, lập trình viên thi đấu C++ bắt buộc phải **tự mô phỏng các phép tính số học đặt tính rồi tính như toán tiểu học** trên mảng ký tự (`string`) hoặc mảng số nguyên (`vector<int>`).
 
-### 💡 Big Integer Hay Modular Arithmetic: Chọn Vũ Khí Nào?
+### Big Integer Hay Modular Arithmetic: Chọn Vũ Khí Nào?
 
-```text
-                          SỐ HỌC DỮ LIỆU CỰC LỚN
-                                     │
-                  ┌──────────────────┴──────────────────┐
-                  │                                     │
-             Cần số dư?                            Cần chính xác?
-                  │                                     │
-                  ▼                                     ▼
-           MODULO ARITHMETIC                       BIG INTEGER
-            (Chuyên đề 08)                        (Chuyên đề 09)
-```
+![Phân định lựa chọn giải thuật: Modulo vs Big Integer](file:///Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-09-so-nguyen-lon-bigint/assets/bigint_vs_modulo_vi.svg)
 
 | Đề bài yêu cầu | Quy mô kết quả | Vũ khí tối ưu | Kỹ thuật cốt lõi |
 |---|:---:|:---:|---|
@@ -37,7 +26,7 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 
 ## 2. Mô Phỏng Từng Bước (Visual Step-by-Step Simulation)
 
-### 💡 Ví Dụ 1: Mô phỏng phép cộng số lớn $A = 9876$ và $B = 543$
+### Ví Dụ 1: Mô phỏng phép cộng số lớn $A = 9876$ và $B = 543$
 * **Quy tắc:** Đảo ngược chuỗi để chữ số hàng đơn vị nằm ở chỉ số `0`.
 * $A' = [6, 7, 8, 9]$, $B' = [3, 4, 5]$.
 
@@ -53,7 +42,7 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 
 ---
 
-### 💡 Ví Dụ 2: Mô phỏng phép nhân số lớn $A = 48$ với số nhỏ $b = 7$
+### Ví Dụ 2: Mô phỏng phép nhân số lớn $A = 48$ với số nhỏ $b = 7$
 * $A' = [8, 4]$.
 * **Bước 0 ($i = 0$):** $8 \times 7 + 0 = 56 \implies$ Ghi $6$, `carry` $= 5$.
 * **Bước 1 ($i = 1$):** $4 \times 7 + 5 = 33 \implies$ Ghi $3$, `carry` $= 3$.
@@ -109,7 +98,7 @@ string divSmall(string a, long long b) {
 }
 ```
 
-### 📌 Ghi Chú:
+### Ghi Chú:
 **BẤT BIẾN TOÁN HỌC CỦA PHÉP CHIA TỪNG BƯỚC:**
 > Vì trước mỗi bước lặp ta luôn duy trì số dư $0 \le cur < b$, nên sau khi nhận thêm một chữ số mới $cur = cur \times 10 + \text{digit}$, giá trị luôn thỏa mãn $cur < 10b$. Do đó thương tại mỗi bước `digit = cur / b` **chắc chắn luôn nằm trong khoảng $[0, 9]$** (là một chữ số thập phân hợp lệ duy nhất).
 
@@ -136,7 +125,7 @@ string divSmall(string a, long long b) {
 ## 5. Mẫu Cài Đặt Chuẩn Thi Đấu (Competitive Templates)
 
 ```cpp
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 using namespace std;
 
 // Hàm xóa số 0 vô nghĩa ở đầu chuỗi đảo ngược
@@ -345,7 +334,7 @@ Khi cần tính `A^B` với `A = 2` và `B = 10000` (kết quả chính xác kh�
 
 ## 7. Ma Trận Bài Tập Thực Hành (Practice Problems $P0 \to P5$)
 
-### 📌 Ghi Chú:
+### Ghi Chú:
 **Phân tầng lộ trình học tập:**
 > * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-BIG-01` $\to$ `12`):** Mô hình biểu diễn, So sánh, 4 phép tính cơ bản (+, -, *, /), Giai thừa, Lũy thừa, Fibonacci và Tổng chữ số.
 > * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-BIG-13` $\to$ `16`):** Chia hai số lớn, Căn bậc hai số lớn, Binary GCD và Tổ hợp chính xác kết hợp phân tích nguyên tố.
