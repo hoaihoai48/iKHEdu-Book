@@ -2,7 +2,7 @@
 
 **Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
-Cho số nguyên dương $N$. Hãy in ra giá trị chính xác của $N! = 1 \times 2 \times \dots \times N$.
+Cho số nguyên dương $N$. Hãy in ra giá trị chính xác của $N! = 1 \times 2 \times \cdots \times N$.
 
 ## Input
 - Một dòng duy nhất chứa số nguyên $N$ ($1 \le N \le 1000$).

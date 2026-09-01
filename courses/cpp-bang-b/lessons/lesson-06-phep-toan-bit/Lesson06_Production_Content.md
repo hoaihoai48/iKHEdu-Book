@@ -122,7 +122,7 @@ Với $N = 3$, có $2^3 = 8$ mặt nạ bit từ $0$ đến $7$:
 ### Mẫu 1: Vét cạn tập con bằng mặt nạ BIT (subset sum)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -279,7 +279,7 @@ Một tập hợp có `N = 20` phần tử. Số lượng tập con được sin
 
 - **D.** $2^{20} \approx 10^9$ tập con, bị quá thời gian.
 
-> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) $implies 2^20 ≈ 1.05 * 10^6$ trạng thái. Vòng lặp $10^6$ chạy dưới `0.02` giây trong C++.
+> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) $implies 2^20 ≈ 1.05 \cdot 10^6$ trạng thái. Vòng lặp $10^6$ chạy dưới `0.02` giây trong C++.
 
 #### Câu 8 (Tìm phần tử đơn lẻ — XOR Application):
 
@@ -329,13 +329,13 @@ Cho $A_i \le 10^9$. Để đếm số cặp $A_i + A_j = 2^k$, tại sao ta ch�
 
 - **A.** Vì kiểu `long long` trong C++ chỉ biểu diễn được 30 bit.
 
-- **B.** **[Đáp án đúng]** Vì giá trị tổng lớn nhất của hai số là $10^9 + 10^9 = 2 * 10^9 < 2^31$, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
+- **B.** **[Đáp án đúng]** Vì giá trị tổng lớn nhất của hai số là $10^9 + 10^9 = 2 \cdot 10^9 < 2^31$, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
 
 - **C.** Vì số 30 là số nguyên tố.
 
 - **D.** Do thuật toán chỉ kiểm tra các số chẵn.
 
-> *Giải thích:* $A_i + A_j \le 2 * 10^9 < 2^31 ≈ 2.147 * 10^9$. Do đó $k$ chỉ có thể nhận các giá trị từ $1 \dots 30$.
+> *Giải thích:* $A_i + A_j \le 2 \cdot 10^9 < 2^31 ≈ 2.147 \cdot 10^9$. Do đó $k$ chỉ có thể nhận các giá trị từ $1 \dots 30$.
 
 #### Câu 12 (Tập độc lập về bit — Bit Independence):
 

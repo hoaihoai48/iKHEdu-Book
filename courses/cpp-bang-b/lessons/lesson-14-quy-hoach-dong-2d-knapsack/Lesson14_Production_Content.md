@@ -278,7 +278,7 @@ Cho tam giác số gồm $N$ hàng, hàng thứ $i$ có $i$ số. Độ phức t
 
 - **D.** $\mathcal{O}(N \log N)$
 
-> *Giải thích:* Tổng số ô trong tam giác là $1 + 2 + \dots + N = N(N+1)/2 \approx N^2 / 2$. Mỗi ô tính trong $\mathcal{O}(1) \implies \mathcal{O}(N^2)$.
+> *Giải thích:* Tổng số ô trong tam giác là $1 + 2 + \cdots + N = N(N+1)/2 \approx N^2 / 2$. Mỗi ô tính trong $\mathcal{O}(1) \implies \mathcal{O}(N^2)$.
 
 #### Câu 9 (Bẫy bộ nhớ 2D MLE):
 

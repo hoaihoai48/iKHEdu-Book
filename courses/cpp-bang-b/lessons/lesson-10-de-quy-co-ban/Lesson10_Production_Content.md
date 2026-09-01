@@ -132,7 +132,7 @@ Chặn trên $O(2^N)$ là một cận trên lỏng (Upper Bound).
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // 1. In dãy số 1..N và N..1 chuẩn Winding / Unwinding

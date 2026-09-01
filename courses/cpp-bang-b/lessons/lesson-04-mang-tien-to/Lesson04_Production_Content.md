@@ -17,11 +17,11 @@ $$\text{Sum}(L, R) = \sum_{k=L}^{R} A_k = P_R - P_{L-1}$$
 
 ### 1.3. Chứng minh toán học
 Theo định nghĩa:
-$$P_R = A_1 + A_2 + \dots + A_{L-1} + A_L + \dots + A_R$$
-$$P_{L-1} = A_1 + A_2 + \dots + A_{L-1}$$
+$$P_R = A_1 + A_2 + \cdots + A_{L-1} + A_L + \cdots + A_R$$
+$$P_{L-1} = A_1 + A_2 + \cdots + A_{L-1}$$
 
 Lấy hiệu hai vế:
-$$P_R - P_{L-1} = (A_1 + \dots + A_{L-1} + A_L + \dots + A_R) - (A_1 + \dots + A_{L-1}) = A_L + A_{L+1} + \dots + A_R = \text{Sum}(L, R)$$
+$$P_R - P_{L-1} = (A_1 + \cdots + A_{L-1} + A_L + \cdots + A_R) - (A_1 + \cdots + A_{L-1}) = A_L + A_{L+1} + \cdots + A_R = \text{Sum}(L, R)$$
 
 > **Bất biến toán học:** Phép trừ $P_R - P_{L-1}$ đã loại bỏ chính xác đoạn tiền tố thừa từ $1$ đến $L-1$, chỉ giữ lại trọn vẹn đoạn con $[L \dots R]$ cần tính.
 
@@ -118,7 +118,7 @@ Sau khi thực hiện xong $Q$ thao tác, khôi phục ma trận gốc bằng c�
 ### Mẫu 1: Prefix Sum 1D (truy vấn tổng đoạn)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -154,7 +154,7 @@ int main() {
 ### Mẫu 2: Difference Array 1D (cập nhật đoạn)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -258,7 +258,7 @@ Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^
 
 - **A.** Từ $\mathcal{O}(N \log N)$ xuống $\mathcal{O}(N)$.
 
-- **B.** **[Đáp án đúng]** Từ $O(Q * N) ≈ 10^10$ phép tính xuống $O(Q + N) ≈ 2 * 10^5$ phép tính.
+- **B.** **[Đáp án đúng]** Từ $O(Q * N) ≈ 10^10$ phép tính xuống $O(Q + N) ≈ 2 \cdot 10^5$ phép tính.
 
 - **C.** Từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
 
@@ -344,7 +344,7 @@ Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận $N * M
 
 - **B.** $2 \times 10^9$, dùng kiểu `int`.
 
-- **C.** **[Đáp án đúng]** $10^6 * 10^9 = 10^15$, bắt buộc phải khai báo bảng $P$ bằng kiểu `long long`.
+- **C.** **[Đáp án đúng]** $10^6 \cdot 10^9 = 10^15$, bắt buộc phải khai báo bảng $P$ bằng kiểu `long long`.
 
 - **D.** $10^{18}$, bắt buộc dùng kiểu `__int128`.
 

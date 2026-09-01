@@ -55,12 +55,12 @@ $$\gcd(A, B) \times \text{lcm}(A, B) = A \times B \implies \text{lcm}(A, B) = \f
 ### 3.2. Định lý cơ bản của số học & công thức nhân tính
 Mọi số nguyên $N > 1$ đều phân tích duy nhất thành tích các thừa số nguyên tố:
 
-$$N = p_1^{a_1} \times p_2^{a_2} \times \dots \times p_k^{a_k}$$
+$$N = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
 
 * **Số lượng ước số của $N$ ($\sigma_0(N)$):**
 $$\text{d}(N) = (a_1 + 1)(a_2 + 1)\dots(a_k + 1)$$
 * **Tổng các ước số của $N$ ($\sigma_1(N)$):**
-$$\sigma(N) = \frac{p_1^{a_1+1} - 1}{p_1 - 1} \times \frac{p_2^{a_2+1} - 1}{p_2 - 1} \times \dots \times \frac{p_k^{a_k+1} - 1}{p_k - 1}$$
+$$\sigma(N) = \frac{p_1^{a_1+1} - 1}{p_1 - 1} \times \frac{p_2^{a_2+1} - 1}{p_2 - 1} \times \cdots \times \frac{p_k^{a_k+1} - 1}{p_k - 1}$$
 
 ### 3.3. Sàng ước nguyên tố nhỏ nhất (spf - Smallest prime factor)
 Thay vì chỉ lưu mảng `bool`, ta lưu mảng `spf[x]` là **ước số nguyên tố nhỏ nhất của $x$**.
@@ -89,7 +89,7 @@ $$\phi(N) = N \times \left(1 - \frac{1}{p_1}\right) \times \left(1 - \frac{1}{p_
 
 ### Mẫu 1: Ước chung lớn nhất & bội chung nhỏ nhất
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // GCD bằng thuật toán Euclid lặp O(log(min(A, B)))
@@ -122,7 +122,7 @@ int main() {
 
 ### Mẫu 2: Sàng Eratosthenes & sàng spf (tối ưu phân tích thừa số)
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 const int MAXN = 1000000;
@@ -309,7 +309,7 @@ Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng 
 
 - **D.** Số chữ số của $N!$.
 
-> *Giải thích:* Công thức Legendre đếm số lượng bội của $p, p^2, p^3, \dots$ đóng góp vào tích $N! = 1 \times 2 \times \dots \times N$.
+> *Giải thích:* Công thức Legendre đếm số lượng bội của $p, p^2, p^3, \dots$ đóng góp vào tích $N! = 1 \times 2 \times \cdots \times N$.
 
 #### Câu 10 (Chữ số 0 tận cùng):
 

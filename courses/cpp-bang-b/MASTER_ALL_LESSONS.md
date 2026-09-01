@@ -198,7 +198,7 @@ bool cmpConcat(const string &a, const string &b) {
 ## 6. Mẫu cài đặt chuẩn thi đấu (competitive template)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -507,7 +507,7 @@ Do đó, có đúng **$R - L$ cặp hợp lệ** xuất phát từ $L$: $(L, L+1
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive template)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -691,11 +691,11 @@ Cho 2 mảng đã sắp xếp tăng dần $A$ kích thước $N$ và $B$ kích t
 
 #### Câu 10 (Phòng thủ kiểu dữ liệu — Data Overflow):
 
-Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và $S = 2 * 10^9$, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
+Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và $S = 2 \cdot 10^9$, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
 
-- **A.** Dùng kiểu `int` cho biến $sum = a[l] + a[r]$ là hoàn toàn an toàn vì $2 * 10^9 < 2^31 - 1$.
+- **A.** Dùng kiểu `int` cho biến $sum = a[l] + a[r]$ là hoàn toàn an toàn vì $2 \cdot 10^9 < 2^31 - 1$.
 
-- **B.** **[Đáp án đúng]** Biến `current_sum` và biến đếm số lượng cặp bắt buộc phải khai báo `long long` để phòng ngừa tràn số 32-bit (số lượng cặp có thể lên tới $(N(N-1))/(2) ≈ 5 * 10^9$).
+- **B.** **[Đáp án đúng]** Biến `current_sum` và biến đếm số lượng cặp bắt buộc phải khai báo `long long` để phòng ngừa tràn số 32-bit (số lượng cặp có thể lên tới $(N(N-1))/(2) ≈ 5 \cdot 10^9$).
 
 - **C.** Chỉ cần dùng kiểu `double` là giải quyết được mọi trường hợp.
 
@@ -822,7 +822,7 @@ Xét mảng $A = [2, -5, 10, -2, 8]$ với mục tiêu tìm đoạn con ngắn n
 ### Mẫu: Đoạn con liên tiếp ngắn nhất có tổng $\ge S$ ($A_i \ge 0$)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -1070,11 +1070,11 @@ $$\text{Sum}(L, R) = \sum_{k=L}^{R} A_k = P_R - P_{L-1}$$
 
 ### 1.3. Chứng minh toán học
 Theo định nghĩa:
-$$P_R = A_1 + A_2 + \dots + A_{L-1} + A_L + \dots + A_R$$
-$$P_{L-1} = A_1 + A_2 + \dots + A_{L-1}$$
+$$P_R = A_1 + A_2 + \cdots + A_{L-1} + A_L + \cdots + A_R$$
+$$P_{L-1} = A_1 + A_2 + \cdots + A_{L-1}$$
 
 Lấy hiệu hai vế:
-$$P_R - P_{L-1} = (A_1 + \dots + A_{L-1} + A_L + \dots + A_R) - (A_1 + \dots + A_{L-1}) = A_L + A_{L+1} + \dots + A_R = \text{Sum}(L, R)$$
+$$P_R - P_{L-1} = (A_1 + \cdots + A_{L-1} + A_L + \cdots + A_R) - (A_1 + \cdots + A_{L-1}) = A_L + A_{L+1} + \cdots + A_R = \text{Sum}(L, R)$$
 
 > **Bất biến toán học:** Phép trừ $P_R - P_{L-1}$ đã loại bỏ chính xác đoạn tiền tố thừa từ $1$ đến $L-1$, chỉ giữ lại trọn vẹn đoạn con $[L \dots R]$ cần tính.
 
@@ -1171,7 +1171,7 @@ Sau khi thực hiện xong $Q$ thao tác, khôi phục ma trận gốc bằng c�
 ### Mẫu 1: Prefix Sum 1D (truy vấn tổng đoạn)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -1207,7 +1207,7 @@ int main() {
 ### Mẫu 2: Difference Array 1D (cập nhật đoạn)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -1311,7 +1311,7 @@ Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^
 
 - **A.** Từ $\mathcal{O}(N \log N)$ xuống $\mathcal{O}(N)$.
 
-- **B.** **[Đáp án đúng]** Từ $O(Q * N) ≈ 10^10$ phép tính xuống $O(Q + N) ≈ 2 * 10^5$ phép tính.
+- **B.** **[Đáp án đúng]** Từ $O(Q * N) ≈ 10^10$ phép tính xuống $O(Q + N) ≈ 2 \cdot 10^5$ phép tính.
 
 - **C.** Từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
 
@@ -1397,7 +1397,7 @@ Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận $N * M
 
 - **B.** $2 \times 10^9$, dùng kiểu `int`.
 
-- **C.** **[Đáp án đúng]** $10^6 * 10^9 = 10^15$, bắt buộc phải khai báo bảng $P$ bằng kiểu `long long`.
+- **C.** **[Đáp án đúng]** $10^6 \cdot 10^9 = 10^15$, bắt buộc phải khai báo bảng $P$ bằng kiểu `long long`.
 
 - **D.** $10^{18}$, bắt buộc dùng kiểu `__int128`.
 
@@ -1585,7 +1585,7 @@ $$\text{Độ thu hẹp} = \frac{\text{high} - \text{low}}{2^{100}} \approx \fra
 ### Mẫu 1a: Tìm giá trị lớn nhất thỏa mãn (dạng `True -> False`)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Hàm kiểm tra: Lượng gỗ thu được khi cưa ở độ cao mid có >= M hay không?
@@ -1636,7 +1636,7 @@ int main() {
 ### Mẫu 1b: Tìm giá trị nhỏ nhất thỏa mãn (dạng `False -> True`)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Hàm kiểm tra: Với tải trọng phà là mid, có chở hết hàng trong <= D ngày hay không?
@@ -1694,7 +1694,7 @@ int main() {
 ### Mẫu 2: Binary Search số thực (100 vòng lặp robust)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 bool check_real(double mid) {
@@ -1779,7 +1779,7 @@ Biểu thức nào sau đây tính trung điểm $mid$ an toàn nhất để ch�
 
 - **D.** `mid = low + high / 2;`
 
-> *Giải thích:* Nếu $low = 1.5 * 10^9$ và $high = 1.8 * 10^9$, tổng $low + high = 3.3 * 10^9$ vượt giới hạn $2.14 * 10^9$ của `int`. Dùng $low + (high - low) / 2$ phép trừ $(high - low)$ luôn không âm và nhỏ hơn $high$, không bao giờ tràn số.
+> *Giải thích:* Nếu $low = 1.5 \cdot 10^9$ và $high = 1.8 \cdot 10^9$, tổng $low + high = 3.3 \cdot 10^9$ vượt giới hạn $2.14 \cdot 10^9$ của `int`. Dùng $low + (high - low) / 2$ phép trừ $(high - low)$ luôn không âm và nhỏ hơn $high$, không bao giờ tràn số.
 
 #### Câu 4 (Hàm STL — lower_bound):
 
@@ -2087,7 +2087,7 @@ Với $N = 3$, có $2^3 = 8$ mặt nạ bit từ $0$ đến $7$:
 ### Mẫu 1: Vét cạn tập con bằng mặt nạ BIT (subset sum)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -2244,7 +2244,7 @@ Một tập hợp có `N = 20` phần tử. Số lượng tập con được sin
 
 - **D.** $2^{20} \approx 10^9$ tập con, bị quá thời gian.
 
-> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) $implies 2^20 ≈ 1.05 * 10^6$ trạng thái. Vòng lặp $10^6$ chạy dưới `0.02` giây trong C++.
+> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) $implies 2^20 ≈ 1.05 \cdot 10^6$ trạng thái. Vòng lặp $10^6$ chạy dưới `0.02` giây trong C++.
 
 #### Câu 8 (Tìm phần tử đơn lẻ — XOR Application):
 
@@ -2294,13 +2294,13 @@ Cho $A_i \le 10^9$. Để đếm số cặp $A_i + A_j = 2^k$, tại sao ta ch�
 
 - **A.** Vì kiểu `long long` trong C++ chỉ biểu diễn được 30 bit.
 
-- **B.** **[Đáp án đúng]** Vì giá trị tổng lớn nhất của hai số là $10^9 + 10^9 = 2 * 10^9 < 2^31$, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
+- **B.** **[Đáp án đúng]** Vì giá trị tổng lớn nhất của hai số là $10^9 + 10^9 = 2 \cdot 10^9 < 2^31$, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
 
 - **C.** Vì số 30 là số nguyên tố.
 
 - **D.** Do thuật toán chỉ kiểm tra các số chẵn.
 
-> *Giải thích:* $A_i + A_j \le 2 * 10^9 < 2^31 ≈ 2.147 * 10^9$. Do đó $k$ chỉ có thể nhận các giá trị từ $1 \dots 30$.
+> *Giải thích:* $A_i + A_j \le 2 \cdot 10^9 < 2^31 ≈ 2.147 \cdot 10^9$. Do đó $k$ chỉ có thể nhận các giá trị từ $1 \dots 30$.
 
 #### Câu 12 (Tập độc lập về bit — Bit Independence):
 
@@ -2404,12 +2404,12 @@ $$\gcd(A, B) \times \text{lcm}(A, B) = A \times B \implies \text{lcm}(A, B) = \f
 ### 3.2. Định lý cơ bản của số học & công thức nhân tính
 Mọi số nguyên $N > 1$ đều phân tích duy nhất thành tích các thừa số nguyên tố:
 
-$$N = p_1^{a_1} \times p_2^{a_2} \times \dots \times p_k^{a_k}$$
+$$N = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
 
 * **Số lượng ước số của $N$ ($\sigma_0(N)$):**
 $$\text{d}(N) = (a_1 + 1)(a_2 + 1)\dots(a_k + 1)$$
 * **Tổng các ước số của $N$ ($\sigma_1(N)$):**
-$$\sigma(N) = \frac{p_1^{a_1+1} - 1}{p_1 - 1} \times \frac{p_2^{a_2+1} - 1}{p_2 - 1} \times \dots \times \frac{p_k^{a_k+1} - 1}{p_k - 1}$$
+$$\sigma(N) = \frac{p_1^{a_1+1} - 1}{p_1 - 1} \times \frac{p_2^{a_2+1} - 1}{p_2 - 1} \times \cdots \times \frac{p_k^{a_k+1} - 1}{p_k - 1}$$
 
 ### 3.3. Sàng ước nguyên tố nhỏ nhất (spf - Smallest prime factor)
 Thay vì chỉ lưu mảng `bool`, ta lưu mảng `spf[x]` là **ước số nguyên tố nhỏ nhất của $x$**.
@@ -2438,7 +2438,7 @@ $$\phi(N) = N \times \left(1 - \frac{1}{p_1}\right) \times \left(1 - \frac{1}{p_
 
 ### Mẫu 1: Ước chung lớn nhất & bội chung nhỏ nhất
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // GCD bằng thuật toán Euclid lặp O(log(min(A, B)))
@@ -2471,7 +2471,7 @@ int main() {
 
 ### Mẫu 2: Sàng Eratosthenes & sàng spf (tối ưu phân tích thừa số)
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 const int MAXN = 1000000;
@@ -2658,7 +2658,7 @@ Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng 
 
 - **D.** Số chữ số của $N!$.
 
-> *Giải thích:* Công thức Legendre đếm số lượng bội của $p, p^2, p^3, \dots$ đóng góp vào tích $N! = 1 \times 2 \times \dots \times N$.
+> *Giải thích:* Công thức Legendre đếm số lượng bội của $p, p^2, p^3, \dots$ đóng góp vào tích $N! = 1 \times 2 \times \cdots \times N$.
 
 #### Câu 10 (Chữ số 0 tận cùng):
 
@@ -2738,7 +2738,7 @@ Từ yêu cầu thực tế này, bộ ba kỹ thuật nền tảng được hì
 $\text{Đồng Dư Cơ Bản (+, -, *)} \longrightarrow \text{Lũy Thừa Nhị Phân } \mathcal{O}(\log B) \longrightarrow \text{Nghịch Đảo Modulo } (B^{-1})$
 
 ### Vấn đề 1: Phép tính lũy thừa $A^B \pmod M$
-* **Cách ngây thơ:** Nhân $B$ lần liên tiếp: $A \times A \times \dots \times A \implies \mathcal{O}(B)$. Khi $B = 10^{18}$, cách này hoàn toàn bất khả thi.
+* **Cách ngây thơ:** Nhân $B$ lần liên tiếp: $A \times A \times \cdots \times A \implies \mathcal{O}(B)$. Khi $B = 10^{18}$, cách này hoàn toàn bất khả thi.
 * **Trực giác Chia để trị (Binary Exponentiation):**
 * Nếu $B$ chẵn: $A^B = (A^2)^{B / 2} = (A^{B / 2})^2$.
 * Nếu $B$ lẻ: $A^B = A \times A^{B - 1}$.
@@ -2822,10 +2822,10 @@ $$C(N, K) = \text{fact}[N] \times \text{invFact}[K] \pmod M \times \text{invFact
 
 ### 3.5. Tính tổng cấp số nhân modulo bằng chia để trị
 Cần tính tổng:
-$$S_N = 1 + A + A^2 + \dots + A^N \pmod M$$
+$$S_N = 1 + A + A^2 + \cdots + A^N \pmod M$$
 * **Trường hợp cơ sở:** Nếu $N = 0 \implies S_0 = 1$.
 * **Nếu $N$ lẻ (Tổng có $N + 1$ số hạng chẵn):**
-$$S_N = (1 + A + \dots + A^{(N-1)/2}) + A^{(N+1)/2} (1 + A + \dots + A^{(N-1)/2})$$
+$$S_N = (1 + A + \cdots + A^{(N-1)/2}) + A^{(N+1)/2} (1 + A + \cdots + A^{(N-1)/2})$$
 $$S_N = S_{(N-1)/2} \times \left(1 + A^{(N+1)/2}\right) \pmod M$$
 * **Nếu $N$ chẵn:** Tách riêng số hạng cuối cùng:
 $$S_N = 1 + A \times S_{N-1} \pmod M$$
@@ -2846,7 +2846,7 @@ $$S_N = 1 + A \times S_{N-1} \pmod M$$
 
 ### Mẫu 1: Lũy thừa nhị phân & nghịch đảo modulo chuẩn
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Tính (a^b) % m trong O(log b)
@@ -2882,7 +2882,7 @@ int main() {
 
 ### Mẫu 2: Tiền xử lý tổ hợp $C(N, K) \pmod M$ trong $\mathcal{O}(1)$ mỗi truy vấn
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 const int MAXN = 1000000;
@@ -3096,7 +3096,7 @@ Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phươ
 | 02 | `CPPB-MOD-02` | **Lũy Thừa Nhị Phân Cơ Bản ($A^B \pmod M$)** | `P0` | **Core** | Thuật toán Lũy thừa nhị phân lặp $\mathcal{O}(\log B)$ |
 | 03 | `CPPB-MOD-03` | **Lũy Thừa Chuỗi Số Lớn ($A^B \pmod M$)** | `P1` | **Core** | Định lý Fermat nhỏ và rút gọn số mũ $B \pmod{M - 1}$ |
 | 04 | `CPPB-MOD-04` | **Nhân Ấn Độ Chống Tràn Số ($A \times B \pmod M$)** | `P1` | **Core** | Nhân nhân đôi nhị phân $\mathcal{O}(\log B)$ hoặc `__int128` |
-| 05 | `CPPB-MOD-05` | **Tính Tổng Cấp Số Nhân Đồng Dư** | `P2` | **Core** | Chia để trị tính $S = 1 + A + \dots + A^N \pmod M$ |
+| 05 | `CPPB-MOD-05` | **Tính Tổng Cấp Số Nhân Đồng Dư** | `P2` | **Core** | Chia để trị tính $S = 1 + A + \cdots + A^N \pmod M$ |
 | 06 | `CPPB-MOD-06` | **Nghịch Đảo Modulo Bằng Fermat Nhỏ** | `P2` | **Core** | Tính $A^{-1} \equiv A^{M-2} \pmod M$ với $M$ nguyên tố |
 | 07 | `CPPB-MOD-07` | **Nghịch Đảo Modulo Bằng Euclid Mở Rộng** | `P2` | **Core** | Giải phương trình $Ax + My = 1$ khi $\gcd(A, M) = 1$ |
 | 08 | `CPPB-MOD-08` | **Phép Chia Đồng Dư $\frac{A}{B} \pmod M$** | `P2` | **Core** | Thực hiện phép nhân với nghịch đảo modulo $A \times B^{-1}$ |
@@ -3225,7 +3225,7 @@ string divSmall(string a, long long b) {
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Hàm xóa số 0 vô nghĩa ở đầu chuỗi đảo ngược
@@ -3642,7 +3642,7 @@ Chặn trên $O(2^N)$ là một cận trên lỏng (Upper Bound).
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // 1. In dãy số 1..N và N..1 chuẩn Winding / Unwinding
@@ -4021,7 +4021,7 @@ $\text{Merge Step (2 con trỏ)} \longrightarrow \text{Merge Sort } \Theta(N \lo
 ## 11. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;
@@ -4408,7 +4408,7 @@ void search(State state) {
 ## 10. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;
@@ -5431,7 +5431,7 @@ Cho tam giác số gồm $N$ hàng, hàng thứ $i$ có $i$ số. Độ phức t
 
 - **D.** $\mathcal{O}(N \log N)$
 
-> *Giải thích:* Tổng số ô trong tam giác là $1 + 2 + \dots + N = N(N+1)/2 \approx N^2 / 2$. Mỗi ô tính trong $\mathcal{O}(1) \implies \mathcal{O}(N^2)$.
+> *Giải thích:* Tổng số ô trong tam giác là $1 + 2 + \cdots + N = N(N+1)/2 \approx N^2 / 2$. Mỗi ô tính trong $\mathcal{O}(1) \implies \mathcal{O}(N^2)$.
 
 #### Câu 9 (Bẫy bộ nhớ 2D MLE):
 

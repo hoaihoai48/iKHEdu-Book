@@ -109,7 +109,7 @@ string divSmall(string a, long long b) {
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Hàm xóa số 0 vô nghĩa ở đầu chuỗi đảo ngược

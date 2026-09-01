@@ -2,7 +2,7 @@
 
 ## Bối cảnh
 Cho dãy số nguyên gồm $N$ phần tử. Có $Q$ truy vấn, mỗi truy vấn yêu cầu tính tích XOR của các phần tử trong đoạn từ $L$ đến $R$:
-$$\text{XOR}(L, R) = A_L \oplus A_{L+1} \oplus \dots \oplus A_R$$
+$$\text{XOR}(L, R) = A_L \oplus A_{L+1} \oplus \cdots \oplus A_R$$
 
 ## Input
 - Dòng 1: Gồm 2 số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).

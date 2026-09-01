@@ -3,7 +3,7 @@
 **Phân loại bài toán:** `Core Foundation`
 
 ## Bối cảnh
-Cho số nguyên dương $N$. Hãy tính tổng $S = 1 + 2 + \dots + N$ và tích giai thừa $P = N! = 1 \times 2 \times \dots \times N$ bằng các hàm đệ quy có giá trị trả về.
+Cho số nguyên dương $N$. Hãy tính tổng $S = 1 + 2 + \cdots + N$ và tích giai thừa $P = N! = 1 \times 2 \times \cdots \times N$ bằng các hàm đệ quy có giá trị trả về.
 
 ## Input
 - Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 20$).

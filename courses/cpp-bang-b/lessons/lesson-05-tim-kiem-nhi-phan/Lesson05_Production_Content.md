@@ -126,7 +126,7 @@ $$\text{Độ thu hẹp} = \frac{\text{high} - \text{low}}{2^{100}} \approx \fra
 ### Mẫu 1a: Tìm giá trị lớn nhất thỏa mãn (dạng `True -> False`)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Hàm kiểm tra: Lượng gỗ thu được khi cưa ở độ cao mid có >= M hay không?
@@ -177,7 +177,7 @@ int main() {
 ### Mẫu 1b: Tìm giá trị nhỏ nhất thỏa mãn (dạng `False -> True`)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Hàm kiểm tra: Với tải trọng phà là mid, có chở hết hàng trong <= D ngày hay không?
@@ -235,7 +235,7 @@ int main() {
 ### Mẫu 2: Binary Search số thực (100 vòng lặp robust)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 bool check_real(double mid) {
@@ -320,7 +320,7 @@ Biểu thức nào sau đây tính trung điểm $mid$ an toàn nhất để ch�
 
 - **D.** `mid = low + high / 2;`
 
-> *Giải thích:* Nếu $low = 1.5 * 10^9$ và $high = 1.8 * 10^9$, tổng $low + high = 3.3 * 10^9$ vượt giới hạn $2.14 * 10^9$ của `int`. Dùng $low + (high - low) / 2$ phép trừ $(high - low)$ luôn không âm và nhỏ hơn $high$, không bao giờ tràn số.
+> *Giải thích:* Nếu $low = 1.5 \cdot 10^9$ và $high = 1.8 \cdot 10^9$, tổng $low + high = 3.3 \cdot 10^9$ vượt giới hạn $2.14 \cdot 10^9$ của `int`. Dùng $low + (high - low) / 2$ phép trừ $(high - low)$ luôn không âm và nhỏ hơn $high$, không bao giờ tràn số.
 
 #### Câu 4 (Hàm STL — lower_bound):
 

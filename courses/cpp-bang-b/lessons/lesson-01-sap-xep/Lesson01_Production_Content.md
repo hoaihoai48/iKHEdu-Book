@@ -131,7 +131,7 @@ bool cmpConcat(const string &a, const string &b) {
 ## 6. Mẫu cài đặt chuẩn thi đấu (competitive template)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {

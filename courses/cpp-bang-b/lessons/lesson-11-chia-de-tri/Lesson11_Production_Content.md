@@ -135,7 +135,7 @@ $\text{Merge Step (2 con trỏ)} \longrightarrow \text{Merge Sort } \Theta(N \lo
 ## 11. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;

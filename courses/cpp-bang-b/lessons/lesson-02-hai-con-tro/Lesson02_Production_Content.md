@@ -103,7 +103,7 @@ Do đó, có đúng **$R - L$ cặp hợp lệ** xuất phát từ $L$: $(L, L+1
 ## 5. Mẫu cài đặt chuẩn thi đấu (competitive template)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -287,11 +287,11 @@ Cho 2 mảng đã sắp xếp tăng dần $A$ kích thước $N$ và $B$ kích t
 
 #### Câu 10 (Phòng thủ kiểu dữ liệu — Data Overflow):
 
-Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và $S = 2 * 10^9$, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
+Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và $S = 2 \cdot 10^9$, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
 
-- **A.** Dùng kiểu `int` cho biến $sum = a[l] + a[r]$ là hoàn toàn an toàn vì $2 * 10^9 < 2^31 - 1$.
+- **A.** Dùng kiểu `int` cho biến $sum = a[l] + a[r]$ là hoàn toàn an toàn vì $2 \cdot 10^9 < 2^31 - 1$.
 
-- **B.** **[Đáp án đúng]** Biến `current_sum` và biến đếm số lượng cặp bắt buộc phải khai báo `long long` để phòng ngừa tràn số 32-bit (số lượng cặp có thể lên tới $(N(N-1))/(2) ≈ 5 * 10^9$).
+- **B.** **[Đáp án đúng]** Biến `current_sum` và biến đếm số lượng cặp bắt buộc phải khai báo `long long` để phòng ngừa tràn số 32-bit (số lượng cặp có thể lên tới $(N(N-1))/(2) ≈ 5 \cdot 10^9$).
 
 - **C.** Chỉ cần dùng kiểu `double` là giải quyết được mọi trường hợp.
 

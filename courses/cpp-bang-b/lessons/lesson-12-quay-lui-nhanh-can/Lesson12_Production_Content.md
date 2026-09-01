@@ -134,7 +134,7 @@ void search(State state) {
 ## 10. Mẫu cài đặt chuẩn thi đấu (competitive templates)
 
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;

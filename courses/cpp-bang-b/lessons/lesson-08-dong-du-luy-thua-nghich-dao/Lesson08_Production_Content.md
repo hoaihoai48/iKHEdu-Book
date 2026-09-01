@@ -8,7 +8,7 @@ Từ yêu cầu thực tế này, bộ ba kỹ thuật nền tảng được hì
 $\text{Đồng Dư Cơ Bản (+, -, *)} \longrightarrow \text{Lũy Thừa Nhị Phân } \mathcal{O}(\log B) \longrightarrow \text{Nghịch Đảo Modulo } (B^{-1})$
 
 ### Vấn đề 1: Phép tính lũy thừa $A^B \pmod M$
-* **Cách ngây thơ:** Nhân $B$ lần liên tiếp: $A \times A \times \dots \times A \implies \mathcal{O}(B)$. Khi $B = 10^{18}$, cách này hoàn toàn bất khả thi.
+* **Cách ngây thơ:** Nhân $B$ lần liên tiếp: $A \times A \times \cdots \times A \implies \mathcal{O}(B)$. Khi $B = 10^{18}$, cách này hoàn toàn bất khả thi.
 * **Trực giác Chia để trị (Binary Exponentiation):**
 * Nếu $B$ chẵn: $A^B = (A^2)^{B / 2} = (A^{B / 2})^2$.
 * Nếu $B$ lẻ: $A^B = A \times A^{B - 1}$.
@@ -92,10 +92,10 @@ $$C(N, K) = \text{fact}[N] \times \text{invFact}[K] \pmod M \times \text{invFact
 
 ### 3.5. Tính tổng cấp số nhân modulo bằng chia để trị
 Cần tính tổng:
-$$S_N = 1 + A + A^2 + \dots + A^N \pmod M$$
+$$S_N = 1 + A + A^2 + \cdots + A^N \pmod M$$
 * **Trường hợp cơ sở:** Nếu $N = 0 \implies S_0 = 1$.
 * **Nếu $N$ lẻ (Tổng có $N + 1$ số hạng chẵn):**
-$$S_N = (1 + A + \dots + A^{(N-1)/2}) + A^{(N+1)/2} (1 + A + \dots + A^{(N-1)/2})$$
+$$S_N = (1 + A + \cdots + A^{(N-1)/2}) + A^{(N+1)/2} (1 + A + \cdots + A^{(N-1)/2})$$
 $$S_N = S_{(N-1)/2} \times \left(1 + A^{(N+1)/2}\right) \pmod M$$
 * **Nếu $N$ chẵn:** Tách riêng số hạng cuối cùng:
 $$S_N = 1 + A \times S_{N-1} \pmod M$$
@@ -116,7 +116,7 @@ $$S_N = 1 + A \times S_{N-1} \pmod M$$
 
 ### Mẫu 1: Lũy thừa nhị phân & nghịch đảo modulo chuẩn
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Tính (a^b) % m trong O(log b)
@@ -152,7 +152,7 @@ int main() {
 
 ### Mẫu 2: Tiền xử lý tổ hợp $C(N, K) \pmod M$ trong $\mathcal{O}(1)$ mỗi truy vấn
 ```cpp
-# include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 const int MAXN = 1000000;
@@ -366,7 +366,7 @@ Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phươ
 | 02 | `CPPB-MOD-02` | **Lũy Thừa Nhị Phân Cơ Bản ($A^B \pmod M$)** | `P0` | **Core** | Thuật toán Lũy thừa nhị phân lặp $\mathcal{O}(\log B)$ |
 | 03 | `CPPB-MOD-03` | **Lũy Thừa Chuỗi Số Lớn ($A^B \pmod M$)** | `P1` | **Core** | Định lý Fermat nhỏ và rút gọn số mũ $B \pmod{M - 1}$ |
 | 04 | `CPPB-MOD-04` | **Nhân Ấn Độ Chống Tràn Số ($A \times B \pmod M$)** | `P1` | **Core** | Nhân nhân đôi nhị phân $\mathcal{O}(\log B)$ hoặc `__int128` |
-| 05 | `CPPB-MOD-05` | **Tính Tổng Cấp Số Nhân Đồng Dư** | `P2` | **Core** | Chia để trị tính $S = 1 + A + \dots + A^N \pmod M$ |
+| 05 | `CPPB-MOD-05` | **Tính Tổng Cấp Số Nhân Đồng Dư** | `P2` | **Core** | Chia để trị tính $S = 1 + A + \cdots + A^N \pmod M$ |
 | 06 | `CPPB-MOD-06` | **Nghịch Đảo Modulo Bằng Fermat Nhỏ** | `P2` | **Core** | Tính $A^{-1} \equiv A^{M-2} \pmod M$ với $M$ nguyên tố |
 | 07 | `CPPB-MOD-07` | **Nghịch Đảo Modulo Bằng Euclid Mở Rộng** | `P2` | **Core** | Giải phương trình $Ax + My = 1$ khi $\gcd(A, M) = 1$ |
 | 08 | `CPPB-MOD-08` | **Phép Chia Đồng Dư $\frac{A}{B} \pmod M$** | `P2` | **Core** | Thực hiện phép nhân với nghịch đảo modulo $A \times B^{-1}$ |
