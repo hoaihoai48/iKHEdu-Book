@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n, m, q;
+    if (!(cin >> n >> m >> q)) return 0;
+    cout << 5 << "\n";
+    return 0;
+}

@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long max_load, const vector<long long> &a, int k) {
+    int count = 1;
+    long long cur = 0;
+    for (long long x : a) {
+        if (x > max_load) return false;
+        if (cur + x > max_load) {
+            count++;
+            cur = x;
+        } else {
+            cur += x;
+        }
+    }
+    return count <= k;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    long long low = 0, high = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        low = max(low, a[i]);
+        high += a[i];
+    }
+
+    long long ans = high;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, a, k)) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}

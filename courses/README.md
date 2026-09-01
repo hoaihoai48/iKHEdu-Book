@@ -6,7 +6,8 @@
 
 | Mã khóa học | Tên khóa học | Đối tượng | Phạm vi | Trang chủ | Status |
 |---|---|---|---|---|---|
-| `cpp-bang-b-level1` | iKHEDU C++ Bảng B – Level 1 | Học sinh xây nền tảng C++ và thuật toán | 21 chủ đề Level 1 | [Mở khóa học](cpp-bang-b/README.md) | `draft` |
+| `cpp-bang-b-level1` | iKHEDU C++ Bảng B – Level 1 | Học sinh xây nền tảng C++ và thuật toán | 21 chủ đề Level 1 | [Mở khóa học](cpp-bang-b/README.md) | `verified` |
+| `cpp-bang-b-level2` | iKHEDU C++ Bảng B – Level 2 | Nâng cao tư duy, CSDL & Kỹ thuật thi đấu | 6 Modules / 15 Lessons | [Mở khóa học](cpp-bang-b-level2/README.md) | `draft` |
 
 ## Quy ước tổ chức
 

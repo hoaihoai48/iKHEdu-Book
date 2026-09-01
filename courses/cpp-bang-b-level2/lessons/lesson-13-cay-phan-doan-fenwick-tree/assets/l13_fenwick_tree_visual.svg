@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="100%" height="100%">
+  <rect width="900" height="340" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="40" y="42" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="20" font-weight="bold">Cấu trúc Cây nhị phân Fenwick Tree (Binary Indexed Tree — BIT) &amp; Hàm lowbit</text>
+  <text x="40" y="68" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Mỗi BIT[i] quản lý một đoạn có độ dài đúng bằng lowbit(i) = i &amp; (-i), kết thúc tại chỉ số i.</text>
+
+  <!-- BIT Bars -->
+  <g transform="translate(60, 100)">
+    <!-- 1: BIT[1] length 1 -->
+    <g transform="translate(0, 130)">
+      <rect width="85" height="35" rx="4" fill="#EFF6FF" stroke="#3B82F6"/>
+      <text x="42" y="22" fill="#1D4ED8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">BIT[1]: [1..1]</text>
+    </g>
+
+    <!-- 2: BIT[2] length 2 -->
+    <g transform="translate(0, 90)">
+      <rect width="180" height="35" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="90" y="22" fill="#1E40AF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">BIT[2]: [1..2] (len=2)</text>
+    </g>
+
+    <!-- 3: BIT[3] length 1 -->
+    <g transform="translate(190, 130)">
+      <rect width="85" height="35" rx="4" fill="#EFF6FF" stroke="#3B82F6"/>
+      <text x="42" y="22" fill="#1D4ED8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">BIT[3]: [3..3]</text>
+    </g>
+
+    <!-- 4: BIT[4] length 4 -->
+    <g transform="translate(0, 50)">
+      <rect width="370" height="35" rx="4" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+      <text x="185" y="22" fill="#92400E" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">BIT[4]: [1..4] (len=4)</text>
+    </g>
+
+    <!-- 5: BIT[5] length 1 -->
+    <g transform="translate(380, 130)">
+      <rect width="85" height="35" rx="4" fill="#EFF6FF" stroke="#3B82F6"/>
+      <text x="42" y="22" fill="#1D4ED8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">BIT[5]: [5..5]</text>
+    </g>
+
+    <!-- 6: BIT[6] length 2 -->
+    <g transform="translate(380, 90)">
+      <rect width="180" height="35" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="90" y="22" fill="#1E40AF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">BIT[6]: [5..6] (len=2)</text>
+    </g>
+
+    <!-- 7: BIT[7] length 1 -->
+    <g transform="translate(570, 130)">
+      <rect width="85" height="35" rx="4" fill="#EFF6FF" stroke="#3B82F6"/>
+      <text x="42" y="22" fill="#1D4ED8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">BIT[7]: [7..7]</text>
+    </g>
+
+    <!-- 8: BIT[8] length 8 -->
+    <g transform="translate(0, 10)">
+      <rect width="760" height="35" rx="4" fill="#DCFCE7" stroke="#10B981" stroke-width="2"/>
+      <text x="380" y="22" fill="#065F46" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">BIT[8]: [1..8] (len=8) — Quản lý toàn bộ 8 phần tử</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tip -->
+  <g transform="translate(60, 280)">
+    <rect width="760" height="40" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="380" y="25" fill="#334155" font-family="'Times New Roman', serif" font-size="13" font-weight="bold" text-anchor="middle">⚡ Thao tác: Truy vấn tổng i -= lowbit(i)  •  Cập nhật giá trị i += lowbit(i)  (Code cực ngắn chỉ 5 dòng!)</text>
+  </g>
+</svg>

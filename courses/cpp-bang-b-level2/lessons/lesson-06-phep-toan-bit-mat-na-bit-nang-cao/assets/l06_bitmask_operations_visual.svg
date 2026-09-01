@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="100%">
+  <rect width="900" height="360" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="40" y="42" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="20" font-weight="bold">Bảng tổng hợp các thao tác Thao tác Bitmask chuẩn thi đấu</text>
+  <text x="40" y="68" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Biểu diễn tập hợp N phần tử bằng một số nguyên không âm mask (Bit thứ i = 1 nếu phần tử i được chọn, = 0 nếu không chọn).</text>
+
+  <!-- Table Grid Layout -->
+  <g transform="translate(40, 95)">
+    <!-- Header -->
+    <rect x="0" y="0" width="820" height="35" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="20" y="23" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="14" font-weight="bold">Thao tác tập hợp</text>
+    <text x="260" y="23" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="14" font-weight="bold">Cú pháp C++ tối ưu</text>
+    <text x="560" y="23" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="14" font-weight="bold">Ý nghĩa toán học</text>
+
+    <!-- Row 1: Kiểm tra bit -->
+    <rect x="0" y="35" width="820" height="38" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="60" fill="#1E293B" font-family="'Times New Roman', serif" font-size="13">1. Kiểm tra phần tử i có trong tập</text>
+    <text x="260" y="60" fill="#2563EB" font-family="monospace" font-size="14" font-weight="bold">(mask &gt;&gt; i) &amp; 1  hoặc  mask &amp; (1 &lt;&lt; i)</text>
+    <text x="560" y="60" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Kiểm tra bit thứ i là 1 hay 0</text>
+
+    <!-- Row 2: Bật bit -->
+    <rect x="0" y="73" width="820" height="38" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="20" y="98" fill="#1E293B" font-family="'Times New Roman', serif" font-size="13">2. Thêm phần tử i vào tập (Bật bit)</text>
+    <text x="260" y="98" fill="#16A34A" font-family="monospace" font-size="14" font-weight="bold">mask = mask | (1 &lt;&lt; i)</text>
+    <text x="560" y="98" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Gán bit thứ i thành 1</text>
+
+    <!-- Row 3: Tắt bit -->
+    <rect x="0" y="111" width="820" height="38" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="136" fill="#1E293B" font-family="'Times New Roman', serif" font-size="13">3. Xóa phần tử i khỏi tập (Tắt bit)</text>
+    <text x="260" y="136" fill="#DC2626" font-family="monospace" font-size="14" font-weight="bold">mask = mask &amp; ~(1 &lt;&lt; i)</text>
+    <text x="560" y="136" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Gán bit thứ i về 0</text>
+
+    <!-- Row 4: Đảo bit -->
+    <rect x="0" y="149" width="820" height="38" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="20" y="174" fill="#1E293B" font-family="'Times New Roman', serif" font-size="13">4. Đảo trạng thái phần tử i (Toggle)</text>
+    <text x="260" y="174" fill="#D97706" font-family="monospace" font-size="14" font-weight="bold">mask = mask ^ (1 &lt;&lt; i)</text>
+    <text x="560" y="174" fill="#475569" font-family="'Times New Roman', serif" font-size="13">0 → 1 hoặc 1 → 0</text>
+
+    <!-- Row 5: Đếm số lượng phần tử -->
+    <rect x="0" y="187" width="820" height="38" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="20" y="212" fill="#1E293B" font-family="'Times New Roman', serif" font-size="13">5. Đếm số phần tử trong tập</text>
+    <text x="260" y="212" fill="#7C3AED" font-family="monospace" font-size="14" font-weight="bold">__builtin_popcountll(mask)</text>
+    <text x="560" y="212" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Đếm số lượng bit 1 trong O(1)</text>
+
+    <!-- Row 6: Duyệt tất cả tập con -->
+    <rect x="0" y="225" width="820" height="38" fill="#EFF6FF" stroke="#3B82F6"/>
+    <text x="20" y="250" fill="#1E3A8A" font-family="'Times New Roman', serif" font-size="13" font-weight="bold">6. Duyệt tập con của mask (Submask)</text>
+    <text x="260" y="250" fill="#1D4ED8" font-family="monospace" font-size="13" font-weight="bold">for (int s = mask; s &gt; 0; s = (s - 1) &amp; mask)</text>
+    <text x="560" y="250" fill="#1E40AF" font-family="'Times New Roman', serif" font-size="13" font-weight="bold">Duyệt 3^N thay vì 4^N</text>
+  </g>
+</svg>
