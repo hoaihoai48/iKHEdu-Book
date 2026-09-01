@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" height="100%">
   <rect width="900" height="350" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-  <text x="40" y="42" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="20" font-weight="bold">Kiến trúc Cây tiền tố (Trie) lưu trữ tập từ: {"cat", "cap", "car", "dog"}</text>
-  <text x="40" y="68" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Các từ có chung tiền tố sẽ dùng chung các nút nhánh ban đầu. Tìm kiếm từ độ dài L chỉ mất O(L).</text>
+  <text x="40" y="42" fill="#0F2A44" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Kiến trúc Cây tiền tố (Trie) lưu trữ tập từ: {"cat", "cap", "car", "dog"}</text>
+  <text x="40" y="68" fill="#475569" font-family="Arial, sans-serif" font-size="13">Các từ có chung tiền tố sẽ dùng chung các nút nhánh ban đầu. Tìm kiếm từ độ dài L chỉ mất O(L).</text>
 
   <!-- Trie Layout -->
   <g transform="translate(100, 95)">
@@ -74,11 +74,11 @@
   <!-- Legend on Right -->
   <g transform="translate(620, 110)">
     <rect width="240" height="190" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
-    <text x="20" y="30" fill="#0F172A" font-family="'Times New Roman', serif" font-size="14" font-weight="bold">📌 Ghi chú ký hiệu:</text>
-    <text x="20" y="65" fill="#15803D" font-family="'Times New Roman', serif" font-size="13" font-weight="bold">• Dấu * (Màu xanh):</text>
-    <text x="30" y="85" fill="#334155" font-family="'Times New Roman', serif" font-size="12">Đánh dấu kết thúc một từ hoàn chỉnh (`is_end = true`).</text>
+    <text x="20" y="30" fill="#0F172A" font-family="Arial, sans-serif" font-size="14" font-weight="bold">(*) Ghi chú ký hiệu:</text>
+    <text x="20" y="65" fill="#15803D" font-family="Arial, sans-serif" font-size="13" font-weight="bold">• Dấu * (Màu xanh):</text>
+    <text x="30" y="85" fill="#334155" font-family="Arial, sans-serif" font-size="12">Đánh dấu kết thúc một từ hoàn chỉnh (`is_end = true`).</text>
 
-    <text x="20" y="125" fill="#1D4ED8" font-family="'Times New Roman', serif" font-size="13" font-weight="bold">• Tiết kiệm bộ nhớ:</text>
-    <text x="30" y="145" fill="#334155" font-family="'Times New Roman', serif" font-size="12">3 từ "cat", "cap", "car" dùng chung nút 'c' và 'a'.</text>
+    <text x="20" y="125" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="13" font-weight="bold">• Tiết kiệm bộ nhớ:</text>
+    <text x="30" y="145" fill="#334155" font-family="Arial, sans-serif" font-size="12">3 từ "cat", "cap", "car" dùng chung nút 'c' và 'a'.</text>
   </g>
 </svg>

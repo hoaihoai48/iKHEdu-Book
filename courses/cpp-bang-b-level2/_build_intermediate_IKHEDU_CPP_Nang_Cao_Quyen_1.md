@@ -354,7 +354,7 @@ Các hình dưới đây là kế hoạch minh họa cho bản phát hành; tr�
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L01-01]: Ước Chung & Bội Chung Cơ Bản
+### Bài 01 [CPPB2-L01-01]: Ước chung & bội chung cơ bản
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -397,7 +397,7 @@ Nhiệm vụ của bạn là tính và in ra $\gcd(A, B)$ và $\text{lcm}(A, B)$
 
 
 
-### Bài 02 [CPPB2-L01-02]: Rút Gọn Mảng Phân Số Lớn
+### Bài 02 [CPPB2-L01-02]: Rút gọn mảng phân số lớn
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -448,7 +448,7 @@ Hãy lập trình giải quyết bài toán Rút Gọn Mảng Phân Số Lớn v
 
 
 
-### Bài 03 [CPPB2-L01-03]: Sàng Ước Số Nguyên Tố Nhỏ Nhất (spf)
+### Bài 03 [CPPB2-L01-03]: Sàng ước số nguyên tố nhỏ nhất (SPF)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -497,7 +497,7 @@ Hãy lập trình giải quyết bài toán Sàng Ước Số Nguyên Tố Nhỏ
 
 
 
-### Bài 04 [CPPB2-L01-04]: Phân Tích Thừa Số Truy Vấn Nhanh
+### Bài 04 [CPPB2-L01-04]: Phân tích thừa số truy vấn nhanh
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -545,7 +545,7 @@ Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Truy Vấn N
 
 
 
-### Bài 05 [CPPB2-L01-05]: Đếm Ước Số & Tổng Ước Số Nhanh
+### Bài 05 [CPPB2-L01-05]: Đếm ước số & tổng ước số nhanh
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -594,7 +594,7 @@ Hãy lập trình giải quyết bài toán Đếm Ước Số & Tổng Ước S
 
 
 
-### Bài 06 [CPPB2-L01-06]: Sàng Nguyên Tố Đoạn [l, R]
+### Bài 06 [CPPB2-L01-06]: Sàng nguyên tố đoạn [l, r]
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -631,7 +631,7 @@ Trong đoạn $[1, 10]$, có 4 số nguyên tố là $2, 3, 5, 7$ (số 1 không
 
 
 
-### Bài 07 [CPPB2-L01-07]: Cặp Số Nguyên Tố Sinh Đôi Trong Đoạn
+### Bài 07 [CPPB2-L01-07]: Cặp số nguyên tố sinh đôi trong đoạn
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -669,7 +669,7 @@ Hãy lập trình giải quyết bài toán Cặp Số Nguyên Tố Sinh Đôi T
 
 
 
-### Bài 08 [CPPB2-L01-08]: Tìm Nghiệm Nguyên Phương Trình Diophantine
+### Bài 08 [CPPB2-L01-08]: Tìm nghiệm nguyên phương trình Diophantine
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -718,7 +718,7 @@ YES 0 0
 
 
 
-### Bài 09 [CPPB2-L01-09]: Nghiệm Nguyên Dương Nhỏ Nhất Của Phương Trình Diophantine
+### Bài 09 [CPPB2-L01-09]: Nghiệm nguyên dương nhỏ nhất của phương trình Diophantine
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -758,7 +758,7 @@ NO
 
 
 
-### Bài 10 [CPPB2-L01-10]: Hàm Phi Euler $\phi(n)$ Nhanh Với Spf
+### Bài 10 [CPPB2-L01-10]: Hàm phi Euler $\phi(n)$ nhanh với SPF
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -795,7 +795,7 @@ Hãy lập trình giải quyết bài toán Hàm Phi Euler $\phi(n)$ Nhanh Với
 
 
 
-### Bài 11 [CPPB2-L01-11]: Phân Tích Thừa Số Nguyên Tố Của Giai Thừa (định Lý Legendre)
+### Bài 11 [CPPB2-L01-11]: Phân tích thừa số nguyên tố của giai thừa (định lý Legendre)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -828,7 +828,7 @@ Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Nguyên Tố
 
 
 
-### Bài 12 [CPPB2-L01-12]: Đếm Số Có Số Lượng Ước Là Số Lẻ Trong Đoạn
+### Bài 12 [CPPB2-L01-12]: Đếm số có số lượng ước là số lẻ trong đoạn
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -861,7 +861,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Có Số Lượng Ước
 
 
 
-### Bài 13 [CPPB2-L01-13]: Tìm Cặp Số Biết Gcd Và Lcm Có Tổng Nhỏ Nhất
+### Bài 13 [CPPB2-L01-13]: Tìm cặp số biết GCD và LCM có tổng nhỏ nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -894,7 +894,7 @@ Hãy lập trình giải quyết bài toán Tìm Cặp Số Biết Gcd Và Lcm C
 
 
 
-### Bài 14 [CPPB2-L01-14]: Khoảng Cách Lớn Nhất Giữa Hai Số Nguyên Tố Liên Tiếp
+### Bài 14 [CPPB2-L01-14]: Khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -927,7 +927,7 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Lớn Nhất Giữa H
 
 
 
-### Bài 15 [CPPB2-L01-15]: Đếm Số Cách Đổi Tiền Bằng Phương Trình Diophantine
+### Bài 15 [CPPB2-L01-15]: Đếm số cách đổi tiền bằng phương trình Diophantine
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -960,7 +960,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Cách Đổi Tiền Bằ
 
 
 
-### Bài 16 [CPPB2-L01-16]: Tính Tổng Gcd Của N Với Tất Cả Các Số Từ 1 Đến N
+### Bài 16 [CPPB2-L01-16]: Tính tổng GCD của n với tất cả các số từ 1 đến n
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -993,7 +993,7 @@ Hãy lập trình giải quyết bài toán Tính Tổng Gcd Của N Với Tất
 
 
 
-### Bài 17 [CPPB2-L01-17]: Định Lý Thặng Dư Trung Hoa (chinese Remainder Theorem — Crt)
+### Bài 17 [CPPB2-L01-17]: Định lý thặng dư trung hoa (chinese remainder theorem — CRT)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1030,7 +1030,7 @@ Hãy lập trình giải quyết bài toán Định Lý Thặng Dư Trung Hoa (c
 
 
 
-### Bài 18 [CPPB2-L01-18]: Bậc Của Số Nguyên Theo Modulo M (multiplicative Order)
+### Bài 18 [CPPB2-L01-18]: Bậc của số nguyên theo modulo m (multiplicative order)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1068,7 +1068,7 @@ Hãy lập trình giải quyết bài toán Bậc Của Số Nguyên Theo Modulo
 
 
 
-### Bài 19 [CPPB2-L01-19]: Can Nguyen Nguyen Thuy Primitive Root
+### Bài 19 [CPPB2-L01-19]: Can nguyen nguyen thuy primitive root
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1103,7 +1103,7 @@ Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Roo
 
 
 
-### Bài 20 [CPPB2-L01-20]: Tinh Uoc Nguyen To Lon Nhat
+### Bài 20 [CPPB2-L01-20]: Tinh uoc nguyen to lon nhat
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1138,7 +1138,7 @@ Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với đ
 
 
 
-### Bài 21 [CPPB2-L01-21]: Phuong Trinh Pell Co Ban
+### Bài 21 [CPPB2-L01-21]: Phuong trinh pell co ban
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1173,7 +1173,7 @@ Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ
 
 
 
-### Bài 22 [CPPB2-L01-22]: Phan Tich Legendre Nang Cao
+### Bài 22 [CPPB2-L01-22]: Phan tich Legendre nang cao
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1414,7 +1414,7 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L02-01]: Lũy Thừa Nhanh Cơ Bản
+### Bài 01 [CPPB2-L02-01]: Lũy thừa nhanh cơ bản
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1448,7 +1448,7 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Nhanh Cơ Bản với đ
 
 
 
-### Bài 02 [CPPB2-L02-02]: Tính Giá Trị Phân Số Modulo
+### Bài 02 [CPPB2-L02-02]: Tính giá trị phân số modulo
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1482,7 +1482,7 @@ Hãy lập trình giải quyết bài toán Tính Giá Trị Phân Số Modulo v
 
 
 
-### Bài 03 [CPPB2-L02-03]: Lũy Thừa Ma Trận 2x2 (dãy Fibonacci Lớn)
+### Bài 03 [CPPB2-L02-03]: Lũy thừa ma trận 2x2 (dãy fibonacci lớn)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1519,7 +1519,7 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận 2x2 (dãy Fibo
 
 
 
-### Bài 04 [CPPB2-L02-04]: Nghịch Đảo Modulo Tổng Quát
+### Bài 04 [CPPB2-L02-04]: Nghịch đảo modulo tổng quát
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1556,7 +1556,7 @@ Hãy lập trình giải quyết bài toán Nghịch Đảo Modulo Tổng Quát 
 
 
 
-### Bài 05 [CPPB2-L02-05]: Tính Tổ Hợp $c_n^k \bmod (10^9+7)$
+### Bài 05 [CPPB2-L02-05]: Tính tổ hợp $c_n^k \bmod (10^9+7)$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1593,7 +1593,7 @@ Hãy lập trình giải quyết bài toán Tính Tổ Hợp $c_n^k \bmod (10^9+
 
 
 
-### Bài 06 [CPPB2-L02-06]: Lũy Thừa Với Số Mũ Cực Lớn
+### Bài 06 [CPPB2-L02-06]: Lũy thừa với số mũ cực lớn
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1630,7 +1630,7 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Với Số Mũ Cực L�
 
 
 
-### Bài 07 [CPPB2-L02-07]: Nhân Modulo Hai Số Cực Lớn (nhân Ấn Độ)
+### Bài 07 [CPPB2-L02-07]: Nhân modulo hai số cực lớn (nhân ấn độ)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1667,7 +1667,7 @@ Hãy lập trình giải quyết bài toán Nhân Modulo Hai Số Cực Lớn (n
 
 
 
-### Bài 08 [CPPB2-L02-08]: Tổng Cấp Số Nhân $s_n = \sum_{i=0}^n A^i \bmod M$
+### Bài 08 [CPPB2-L02-08]: Tổng cấp số nhân $s_n = \sum_{i=0}^n a^i \bmod m$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1704,7 +1704,7 @@ Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân $s_n = \sum_
 
 
 
-### Bài 09 [CPPB2-L02-09]: Tháp Lũy Thừa $a^{b^c} \bmod M$
+### Bài 09 [CPPB2-L02-09]: Tháp lũy thừa $a^{b^c} \bmod m$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1741,7 +1741,7 @@ Hãy lập trình giải quyết bài toán Tháp Lũy Thừa $a^{b^c} \bmod M$ 
 
 
 
-### Bài 10 [CPPB2-L02-10]: Đếm Dãy Ngoặc Đúng (số Catalan Modulo)
+### Bài 10 [CPPB2-L02-10]: Đếm dãy ngoặc đúng (số Catalan modulo)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1778,7 +1778,7 @@ Hãy lập trình giải quyết bài toán Đếm Dãy Ngoặc Đúng (số Cat
 
 
 
-### Bài 11 [CPPB2-L02-11]: Hệ Phương Trình Đồng Dư (chinese Remainder Theorem)
+### Bài 11 [CPPB2-L02-11]: Hệ phương trình đồng dư (chinese remainder theorem)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1815,7 +1815,7 @@ Hãy lập trình giải quyết bài toán Hệ Phương Trình Đồng Dư (ch
 
 
 
-### Bài 12 [CPPB2-L02-12]: Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{o}(n)$
+### Bài 12 [CPPB2-L02-12]: Tiền xử lý nghịch đảo tuyến tính $\mathcal{o}(n)$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1852,7 +1852,7 @@ Hãy lập trình giải quyết bài toán Tiền Xử Lý Nghịch Đảo Tuy�
 
 
 
-### Bài 13 [CPPB2-L02-13]: Lũy Thừa Ma Trận Kích Thước $k \times K$
+### Bài 13 [CPPB2-L02-13]: Lũy thừa ma trận kích thước $k \times k$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1889,7 +1889,7 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận Kích Thước
 
 
 
-### Bài 14 [CPPB2-L02-14]: Căn Bậc Hai Modulo Nguyên Tố (thuật Toán Tonelli-shanks)
+### Bài 14 [CPPB2-L02-14]: Căn bậc hai modulo nguyên tố (thuật toán tonelli-shanks)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1926,7 +1926,7 @@ Hãy lập trình giải quyết bài toán Căn Bậc Hai Modulo Nguyên Tố (
 
 
 
-### Bài 15 [CPPB2-L02-15]: Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số
+### Bài 15 [CPPB2-L02-15]: Lũy thừa số mũ lớn khi modulo là hợp số
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -1963,7 +1963,7 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Số Mũ Lớn Khi Modul
 
 
 
-### Bài 16 [CPPB2-L02-16]: Logarit Rời Rạc (baby-step Giant-step)
+### Bài 16 [CPPB2-L02-16]: Logarit rời rạc (baby-step giant-step)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2000,7 +2000,7 @@ Hãy lập trình giải quyết bài toán Logarit Rời Rạc (baby-step Giant
 
 
 
-### Bài 17 [CPPB2-L02-17]: Luy Thua Ma Tran Dem Duong Di
+### Bài 17 [CPPB2-L02-17]: Luy thua ma tran dem duong di
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2035,7 +2035,7 @@ Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với 
 
 
 
-### Bài 18 [CPPB2-L02-18]: Tinh Cap So Nhan Modulo Hop So
+### Bài 18 [CPPB2-L02-18]: Tinh cap so nhan modulo hop so
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2070,7 +2070,7 @@ Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với
 
 
 
-### Bài 19 [CPPB2-L02-19]: Luy Thua Tang Thap Power Tower
+### Bài 19 [CPPB2-L02-19]: Luy thua tang thap power tower
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2105,7 +2105,7 @@ Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với
 
 
 
-### Bài 20 [CPPB2-L02-20]: Can Bac Hai Modulo Tonelli Shanks
+### Bài 20 [CPPB2-L02-20]: Can bac hai modulo tonelli shanks
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2140,7 +2140,7 @@ Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks v�
 
 
 
-### Bài 21 [CPPB2-L02-21]: Ma Tran Fibonacci Tong Doan
+### Bài 21 [CPPB2-L02-21]: Ma tran fibonacci tong doan
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2175,7 +2175,7 @@ Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với đ
 
 
 
-### Bài 22 [CPPB2-L02-22]: Số Tribonacci Thứ N Bằng Nhân Ma Trận 3x3
+### Bài 22 [CPPB2-L02-22]: Số tribonacci thứ n bằng nhân ma trận 3x3
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2403,7 +2403,7 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L03-01]: Chặt Nhị Phân Cắt Gỗ (eko)
+### Bài 01 [CPPB2-L03-01]: Chặt nhị phân cắt gỗ (eko)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2435,7 +2435,7 @@ Hãy lập trình giải quyết bài toán Chặt Nhị Phân Cắt Gỗ (eko) 
 
 
 
-### Bài 02 [CPPB2-L03-02]: Chia Bánh Pizza Đều Nhau
+### Bài 02 [CPPB2-L03-02]: Chia bánh pizza đều nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2472,7 +2472,7 @@ Hãy lập trình giải quyết bài toán Chia Bánh Pizza Đều Nhau với �
 
 
 
-### Bài 03 [CPPB2-L03-03]: Chuồng Bò Xa Nhau Nhất (aggressive Cows)
+### Bài 03 [CPPB2-L03-03]: Chuồng bò xa nhau nhất (aggressive cows)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2509,7 +2509,7 @@ Hãy lập trình giải quyết bài toán Chuồng Bò Xa Nhau Nhất (aggress
 
 
 
-### Bài 04 [CPPB2-L03-04]: Phân Chia Công Việc Thợ Sơn (painter's Partition)
+### Bài 04 [CPPB2-L03-04]: Phân chia công việc thợ sơn (painter's partition)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2546,7 +2546,7 @@ Hãy lập trình giải quyết bài toán Phân Chia Công Việc Thợ Sơn (
 
 
 
-### Bài 05 [CPPB2-L03-05]: Đoàn Tàu Vận Chuyển Hàng Hóa
+### Bài 05 [CPPB2-L03-05]: Đoàn tàu vận chuyển hàng hóa
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2583,7 +2583,7 @@ Hãy lập trình giải quyết bài toán Đoàn Tàu Vận Chuyển Hàng Hó
 
 
 
-### Bài 06 [CPPB2-L03-06]: Khoảng Cách Dây Cáp Nhỏ Nhất
+### Bài 06 [CPPB2-L03-06]: Khoảng cách dây cáp nhỏ nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2620,7 +2620,7 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Dây Cáp Nhỏ Nhấ
 
 
 
-### Bài 07 [CPPB2-L03-07]: Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$
+### Bài 07 [CPPB2-L03-07]: Trung bình cộng đoạn con lớn nhất $\ge k$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2657,7 +2657,7 @@ Hãy lập trình giải quyết bài toán Trung Bình Cộng Đoạn Con Lớn
 
 
 
-### Bài 08 [CPPB2-L03-08]: Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng
+### Bài 08 [CPPB2-L03-08]: Tối ưu hóa chi phí lắp trạm phát sóng
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2694,7 +2694,7 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Lắp Trạm
 
 
 
-### Bài 09 [CPPB2-L03-09]: Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $n \times N$
+### Bài 09 [CPPB2-L03-09]: Tìm phần tử nhỏ thứ k trong bảng nhân $n \times n$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2731,7 +2731,7 @@ Hãy lập trình giải quyết bài toán Tìm Phần Tử Nhỏ Thứ K Trong
 
 
 
-### Bài 10 [CPPB2-L03-10]: Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d
+### Bài 10 [CPPB2-L03-10]: Tối ưu phân đoạn trọng số ma trận 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2768,7 +2768,7 @@ Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số
 
 
 
-### Bài 11 [CPPB2-L03-11]: Tìm Nghiệm Thực Của Phương Trình Phi Tuyến
+### Bài 11 [CPPB2-L03-11]: Tìm nghiệm thực của phương trình phi tuyến
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2805,7 +2805,7 @@ Hãy lập trình giải quyết bài toán Tìm Nghiệm Thực Của Phương 
 
 
 
-### Bài 12 [CPPB2-L03-12]: Đếm Số Cặp $(a_i, B_j)$ Có Tổng Trong Khoảng $[l, R]$
+### Bài 12 [CPPB2-L03-12]: Đếm số cặp $(a_i, b_j)$ có tổng trong khoảng $[l, r]$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2842,7 +2842,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, B_j)$ Có T
 
 
 
-### Bài 13 [CPPB2-L03-13]: Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp
+### Bài 13 [CPPB2-L03-13]: Phần tử nhỏ thứ k của hợp hai mảng đã sắp xếp
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2879,7 +2879,7 @@ Hãy lập trình giải quyết bài toán Phần Tử Nhỏ Thứ K Của Hợ
 
 
 
-### Bài 14 [CPPB2-L03-14]: Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d
+### Bài 14 [CPPB2-L03-14]: Tối ưu phân đoạn trọng số ma trận 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2916,7 +2916,7 @@ Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số
 
 
 
-### Bài 15 [CPPB2-L03-15]: Chặt Nhị Phân Song Song (parallel Binary Search)
+### Bài 15 [CPPB2-L03-15]: Chặt nhị phân song song (parallel binary search)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2953,7 +2953,7 @@ Hãy lập trình giải quyết bài toán Chặt Nhị Phân Song Song (parall
 
 
 
-### Bài 16 [CPPB2-L03-16]: Khoảng Cách Cực Trị Trên Đa Giác Lồi
+### Bài 16 [CPPB2-L03-16]: Khoảng cách cực trị trên đa giác lồi
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -2990,7 +2990,7 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Cực Trị Trên Đa
 
 
 
-### Bài 17 [CPPB2-L03-17]: Chặt Nhị Phân Song Song
+### Bài 17 [CPPB2-L03-17]: Chặt nhị phân song song
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3031,7 +3031,7 @@ Với mỗi thiên thạch, hãy tìm mốc thời gian $t$ nhỏ nhất ($1 \le
 
 
 
-### Bài 18 [CPPB2-L03-18]: Tìm Cực Tiểu Của Hàm Bậc Hai
+### Bài 18 [CPPB2-L03-18]: Tìm cực tiểu của hàm bậc hai
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3064,7 +3064,7 @@ Hãy sử dụng thuật toán Tìm kiếm tam phân (Ternary Search) trên tậ
 
 
 
-### Bài 19 [CPPB2-L03-19]: Trung Vị Của Hai Mảng Đã Sắp Xếp
+### Bài 19 [CPPB2-L03-19]: Trung vị của hai mảng đã sắp xếp
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3101,7 +3101,7 @@ Hãy tìm trung vị của tập hợp tất cả các phần tử trong cả 2 
 
 
 
-### Bài 20 [CPPB2-L03-20]: Tam Giác Có Diện Tích Lớn Nhất
+### Bài 20 [CPPB2-L03-20]: Tam giác có diện tích lớn nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3139,7 +3139,7 @@ Hãy lập trình tìm diện tích lớn nhất của tam giác được tạo 
 
 
 
-### Bài 21 [CPPB2-L03-21]: Chat Nhi Phan Khoang Cach K Diem
+### Bài 21 [CPPB2-L03-21]: Chat nhi phan khoang cach k diem
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3174,7 +3174,7 @@ Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem v�
 
 
 
-### Bài 22 [CPPB2-L03-22]: Chat Nhi Phan Phan So Toi Gian
+### Bài 22 [CPPB2-L03-22]: Chat nhi phan phan so toi gian
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3223,7 +3223,11 @@ Trong lập trình thi đấu, các kỹ thuật xử lý mảng như **Hai con 
 * **Nén tọa độ (Coordinate Compression):** Ánh xạ các giá trị rời rạc rất lớn ($A_i \le 10^9$) về dải chỉ số nhỏ liên tiếp $[1, N]$ mà vẫn bảo toàn hoàn toàn quan hệ thứ tự $A_i < A_j$.
 
 
-![Sơ đồ 2D Prefix Sum](lessons/lesson-04-ky-thuat-mang-nang-cao/assets/l04_2d_prefix_sum_visual.svg)
+
+
+![Sơ đồ 2D Prefix Sum](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b-level2/lessons/lesson-04-ky-thuat-mang-nang-cao/assets/l04_2d_prefix_sum_visual.png)
+
+
 
 ## 2. Mảng tiền tố 2D & Mảng hiệu 2D (2D Prefix & Difference)
 
@@ -3337,7 +3341,7 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L04-01]: Truy Vấn Tổng Ma Trận Con 2d
+### Bài 01 [CPPB2-L04-01]: Truy vấn tổng ma trận con 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3374,7 +3378,7 @@ Hãy lập trình giải quyết bài toán Truy Vấn Tổng Ma Trận Con 2d v
 
 
 
-### Bài 02 [CPPB2-L04-02]: Cập Nhật Hình Chữ Nhật Ma Trận 2d
+### Bài 02 [CPPB2-L04-02]: Cập nhật hình chữ nhật ma trận 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3411,7 +3415,7 @@ Hãy lập trình giải quyết bài toán Cập Nhật Hình Chữ Nhật Ma T
 
 
 
-### Bài 03 [CPPB2-L04-03]: Đoạn Con Ngắn Nhất Có Tổng $\ge S$
+### Bài 03 [CPPB2-L04-03]: Đoạn con ngắn nhất có tổng $\ge s$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3448,7 +3452,7 @@ Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Có Tổng
 
 
 
-### Bài 04 [CPPB2-L04-04]: Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn
+### Bài 04 [CPPB2-L04-04]: Nén tọa độ & đếm tần suất trên dải lớn
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3485,7 +3489,7 @@ Hãy lập trình giải quyết bài toán Nén Tọa Độ & Đếm Tần Su�
 
 
 
-### Bài 05 [CPPB2-L04-05]: Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau
+### Bài 05 [CPPB2-L04-05]: Đoạn con dài nhất có không quá k số khác nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3522,7 +3526,7 @@ Hãy lập trình giải quyết bài toán Đoạn Con Dài Nhất Có Không Q
 
 
 
-### Bài 06 [CPPB2-L04-06]: Ma Trận Con Có Tổng Lớn Nhất (maximum Submatrix Sum)
+### Bài 06 [CPPB2-L04-06]: Ma trận con có tổng lớn nhất (maximum submatrix sum)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3559,7 +3563,7 @@ Hãy lập trình giải quyết bài toán Ma Trận Con Có Tổng Lớn Nhấ
 
 
 
-### Bài 07 [CPPB2-L04-07]: Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc
+### Bài 07 [CPPB2-L04-07]: Diện tích phủ bởi các hình chữ nhật rời rạc
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3596,7 +3600,7 @@ Hãy lập trình giải quyết bài toán Diện Tích Phủ Bởi Các Hình 
 
 
 
-### Bài 08 [CPPB2-L04-08]: Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau
+### Bài 08 [CPPB2-L04-08]: Đếm cặp đoạn thẳng chồng lấn nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3633,7 +3637,7 @@ Hãy lập trình giải quyết bài toán Đếm Cặp Đoạn Thẳng Chồng
 
 
 
-### Bài 09 [CPPB2-L04-09]: Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram
+### Bài 09 [CPPB2-L04-09]: Cửa sổ trượt đếm số lượng xâu anagram
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3670,7 +3674,7 @@ Hãy lập trình giải quyết bài toán Cửa Sổ Trượt Đếm Số Lư�
 
 
 
-### Bài 10 [CPPB2-L04-10]: Đếm Hình Vuông Con Có Tổng Đúng Bằng K
+### Bài 10 [CPPB2-L04-10]: Đếm hình vuông con có tổng đúng bằng k
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3707,7 +3711,7 @@ Hãy lập trình giải quyết bài toán Đếm Hình Vuông Con Có Tổng �
 
 
 
-### Bài 11 [CPPB2-L04-11]: Khử Chiều 3-sum & 4-sum Hai Con Trỏ
+### Bài 11 [CPPB2-L04-11]: Khử chiều 3-sum & 4-sum hai con trỏ
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3744,7 +3748,7 @@ Hãy lập trình giải quyết bài toán Khử Chiều 3-sum & 4-sum Hai Con 
 
 
 
-### Bài 12 [CPPB2-L04-12]: Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$
+### Bài 12 [CPPB2-L04-12]: Đếm số đoạn con có hiệu max - min $\le k$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3781,7 +3785,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Hiệu M
 
 
 
-### Bài 13 [CPPB2-L04-13]: Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái
+### Bài 13 [CPPB2-L04-13]: Đoạn con ngắn nhất chứa đầy đủ bảng chữ cái
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3818,7 +3822,7 @@ Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Chứa Đ�
 
 
 
-### Bài 14 [CPPB2-L04-14]: Mảng Hiệu Trên Cây (tree Difference Array)
+### Bài 14 [CPPB2-L04-14]: Mảng hiệu trên cây (Tree difference array)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3855,7 +3859,7 @@ Hãy lập trình giải quyết bài toán Mảng Hiệu Trên Cây (tree Diffe
 
 
 
-### Bài 15 [CPPB2-L04-15]: Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ
+### Bài 15 [CPPB2-L04-15]: Đếm tam giác có độ dài cạnh hợp lệ
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3892,7 +3896,7 @@ Hãy lập trình giải quyết bài toán Đếm Tam Giác Có Độ Dài Cạ
 
 
 
-### Bài 16 [CPPB2-L04-16]: Quét Đường Thẳng Nén Tọa Độ (sweep-line Area 2d)
+### Bài 16 [CPPB2-L04-16]: Quét đường thẳng nén tọa độ (sweep-line area 2d)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3929,7 +3933,7 @@ Hãy lập trình giải quyết bài toán Quét Đường Thẳng Nén Tọa �
 
 
 
-### Bài 17 [CPPB2-L04-17]: Diện Tích Hợp Các Hình Chữ Nhật
+### Bài 17 [CPPB2-L04-17]: Diện tích hợp các hình chữ nhật
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -3968,7 +3972,7 @@ Hãy tính tổng diện tích của phần mặt phẳng bị phủ bởi ít n
 
 
 
-### Bài 18 [CPPB2-L04-18]: Mảng Hiệu Trên Hình Vuông Xoay 45 Độ
+### Bài 18 [CPPB2-L04-18]: Mảng hiệu trên hình vuông xoay 45 độ
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4005,7 +4009,7 @@ Hãy tìm giá trị lớn nhất trong toàn bộ lưới ô vuông $N \times N
 
 
 
-### Bài 19 [CPPB2-L04-19]: Nen Toa Do Da Chieu 3d
+### Bài 19 [CPPB2-L04-19]: Nen toa do da chieu 3d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4040,7 +4044,7 @@ Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ p
 
 
 
-### Bài 20 [CPPB2-L04-20]: Đếm Số Bộ Ba Tam Giác Hợp Lệ
+### Bài 20 [CPPB2-L04-20]: Đếm số bộ ba tam giác hợp lệ
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4076,7 +4080,7 @@ Hãy đếm số lượng bộ ba chỉ số $(i, j, k)$ thỏa mãn điều ki�
 
 
 
-### Bài 21 [CPPB2-L04-21]: Đếm Xâu Con Có Đúng K Ký Tự Khác Nhau
+### Bài 21 [CPPB2-L04-21]: Đếm xâu con có đúng k ký tự khác nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4111,7 +4115,7 @@ pqpqs
 
 
 
-### Bài 22 [CPPB2-L04-22]: Ma Tran Tong Lon Nhat Kadane 2d
+### Bài 22 [CPPB2-L04-22]: Ma tran tong lon nhat Kadane 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4276,7 +4280,7 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L05-01]: Đếm Cặp Nghịch Thế
+### Bài 01 [CPPB2-L05-01]: Đếm cặp nghịch thế
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4308,7 +4312,7 @@ Hãy lập trình giải quyết bài toán Đếm Cặp Nghịch Thế với đ
 
 
 
-### Bài 02 [CPPB2-L05-02]: Cái Túi Kích Thước Nhỏ (knapsack $n \le 40$)
+### Bài 02 [CPPB2-L05-02]: Cái túi kích thước nhỏ (knapsack $n \le 40$)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4345,7 +4349,7 @@ Hãy lập trình giải quyết bài toán Cái Túi Kích Thước Nhỏ (knap
 
 
 
-### Bài 03 [CPPB2-L05-03]: Tập Con Có Tổng Gần S Nhất
+### Bài 03 [CPPB2-L05-03]: Tập con có tổng gần s nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4382,7 +4386,7 @@ Hãy lập trình giải quyết bài toán Tập Con Có Tổng Gần S Nhất 
 
 
 
-### Bài 04 [CPPB2-L05-04]: Giải Phương Trình $4$ Ẩn Tuyến Tính (4-sum Mitm)
+### Bài 04 [CPPB2-L05-04]: Giải phương trình $4$ ẩn tuyến tính (4-sum mitm)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4419,7 +4423,7 @@ Hãy lập trình giải quyết bài toán Giải Phương Trình $4$ Ẩn Tuy�
 
 
 
-### Bài 05 [CPPB2-L05-05]: Đếm Số Tập Con Có Xor Bằng K
+### Bài 05 [CPPB2-L05-05]: Đếm số tập con có xor bằng k
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4456,7 +4460,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Tập Con Có Xor Bằng
 
 
 
-### Bài 06 [CPPB2-L05-06]: Khoảng Cách Giữa Hai Điểm Gần Nhất (closest Pair)
+### Bài 06 [CPPB2-L05-06]: Khoảng cách giữa hai điểm gần nhất (closest pair)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4493,7 +4497,7 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Giữa Hai Điểm G�
 
 
 
-### Bài 07 [CPPB2-L05-07]: Bẻ Khóa Mật Mã Đổi Dấu (subset Sum With Signs)
+### Bài 07 [CPPB2-L05-07]: Bẻ khóa mật mã đổi dấu (subset sum with signs)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4530,7 +4534,7 @@ Hãy lập trình giải quyết bài toán Bẻ Khóa Mật Mã Đổi Dấu (s
 
 
 
-### Bài 08 [CPPB2-L05-08]: Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path With Mitm)
+### Bài 08 [CPPB2-L05-08]: Tối ưu hóa tuyến đường đi qua đỉnh (shortest path with mitm)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4567,7 +4571,7 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi
 
 
 
-### Bài 09 [CPPB2-L05-09]: Trò Chơi Xếp Gạch Đa Diện (puzzle Mitm)
+### Bài 09 [CPPB2-L05-09]: Trò chơi xếp gạch đa diện (puzzle mitm)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4604,7 +4608,7 @@ Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (
 
 
 
-### Bài 10 [CPPB2-L05-10]: Đếm Cặp $a_i > 2 A_j$ (significant Inversions)
+### Bài 10 [CPPB2-L05-10]: Đếm cặp $a_i > 2 a_j$ (significant inversions)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4641,7 +4645,7 @@ Hãy lập trình giải quyết bài toán Đếm Cặp $a_i > 2 A_j$ (signific
 
 
 
-### Bài 11 [CPPB2-L05-11]: Tổng Cấp Số Nhân Bằng Chia Để Trị
+### Bài 11 [CPPB2-L05-11]: Tổng cấp số nhân bằng chia để trị
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4678,7 +4682,7 @@ Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân Bằng Chia 
 
 
 
-### Bài 12 [CPPB2-L05-12]: Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path Mitm)
+### Bài 12 [CPPB2-L05-12]: Tối ưu hóa tuyến đường đi qua đỉnh (shortest path mitm)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4715,7 +4719,7 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi
 
 
 
-### Bài 13 [CPPB2-L05-13]: Trò Chơi Xếp Gạch Đa Diện (15-puzzle Mitm)
+### Bài 13 [CPPB2-L05-13]: Trò chơi xếp gạch đa diện (15-puzzle mitm)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4752,7 +4756,7 @@ Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (
 
 
 
-### Bài 14 [CPPB2-L05-14]: Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau
+### Bài 14 [CPPB2-L05-14]: Phân chia tập hợp thành hai nửa có tổng bằng nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4789,7 +4793,7 @@ Hãy lập trình giải quyết bài toán Phân Chia Tập Hợp Thành Hai N�
 
 
 
-### Bài 15 [CPPB2-L05-15]: Đếm Số Đoạn Con Có Tổng Nằm Trong $[l, R]$
+### Bài 15 [CPPB2-L05-15]: Đếm số đoạn con có tổng nằm trong $[l, r]$
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4826,7 +4830,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Tổng N
 
 
 
-### Bài 16 [CPPB2-L05-16]: Chia Để Trị Trên Cây (centroid Decomposition Cơ Bản)
+### Bài 16 [CPPB2-L05-16]: Chia để trị trên cây (centroid decomposition cơ bản)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4863,7 +4867,7 @@ Hãy lập trình giải quyết bài toán Chia Để Trị Trên Cây (centroi
 
 
 
-### Bài 17 [CPPB2-L05-17]: Centroid Decomposition Co Ban
+### Bài 17 [CPPB2-L05-17]: Centroid decomposition co ban
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4898,7 +4902,7 @@ Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với 
 
 
 
-### Bài 18 [CPPB2-L05-18]: Dem Chu Trinh 4 Canh Mitm
+### Bài 18 [CPPB2-L05-18]: Dem chu trinh 4 canh mitm
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4933,7 +4937,7 @@ Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với đ�
 
 
 
-### Bài 19 [CPPB2-L05-19]: Chia De Tri Day Con Tong Max
+### Bài 19 [CPPB2-L05-19]: Chia de tri day con tong max
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -4968,7 +4972,7 @@ Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với �
 
 
 
-### Bài 20 [CPPB2-L05-20]: Mitm Dem Nghiem Nguyen Tong Bang 0
+### Bài 20 [CPPB2-L05-20]: Mitm dem nghiem nguyen tong bang 0
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5003,7 +5007,7 @@ Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 v
 
 
 
-### Bài 21 [CPPB2-L05-21]: Tim Cap Diem Gan Nhat 2d
+### Bài 21 [CPPB2-L05-21]: Tim cap diem gan nhat 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5038,7 +5042,7 @@ Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ
 
 
 
-### Bài 22 [CPPB2-L05-22]: Dem Nghich The 3 Chieu Cdq
+### Bài 22 [CPPB2-L05-22]: Dem nghich the 3 chieu cdq
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5175,7 +5179,7 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L06-01]: Bài Toán Người Du Lịch (tsp)
+### Bài 01 [CPPB2-L06-01]: Bài toán người du lịch (tsp)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5210,7 +5214,7 @@ Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp) 
 
 
 
-### Bài 02 [CPPB2-L06-02]: Đếm Số Phần Tử Bật Bit Chung (bitwise And)
+### Bài 02 [CPPB2-L06-02]: Đếm số phần tử bật BIT chung (bitwise and)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5247,7 +5251,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Bật Bit Ch
 
 
 
-### Bài 03 [CPPB2-L06-03]: Bài Toán Người Du Lịch (tsp Bitmask Dp)
+### Bài 03 [CPPB2-L06-03]: Bài toán người du lịch (tsp bitmask DP)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5284,7 +5288,7 @@ Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp B
 
 
 
-### Bài 04 [CPPB2-L06-04]: Phân Chia Công Việc Hoàn Hảo (job Assignment)
+### Bài 04 [CPPB2-L06-04]: Phân chia công việc hoàn hảo (job assignment)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5321,7 +5325,7 @@ Hãy lập trình giải quyết bài toán Phân Chia Công Việc Hoàn Hảo 
 
 
 
-### Bài 05 [CPPB2-L06-05]: Duyệt Tất Cả Submask Tính Tổng Phân Hoạch
+### Bài 05 [CPPB2-L06-05]: Duyệt tất cả submask tính tổng phân hoạch
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5358,7 +5362,7 @@ Hãy lập trình giải quyết bài toán Duyệt Tất Cả Submask Tính T�
 
 
 
-### Bài 06 [CPPB2-L06-06]: Đường Đi Hamilton Đếm Số Cách
+### Bài 06 [CPPB2-L06-06]: Đường đi hamilton đếm số cách
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5395,7 +5399,7 @@ Hãy lập trình giải quyết bài toán Đường Đi Hamilton Đếm Số C
 
 
 
-### Bài 07 [CPPB2-L06-07]: Tối Đa Hóa Giá Trị Xor Đoạn Con Bằng Trie Bit
+### Bài 07 [CPPB2-L06-07]: Tối đa hóa giá trị xor đoạn con bằng Trie BIT
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5432,7 +5436,7 @@ Hãy lập trình giải quyết bài toán Tối Đa Hóa Giá Trị Xor Đoạ
 
 
 
-### Bài 08 [CPPB2-L06-08]: Ghép Cặp Trọng Số Cực Đại (maximum Matching Bitmask)
+### Bài 08 [CPPB2-L06-08]: Ghép cặp trọng số cực đại (maximum matching bitmask)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5469,7 +5473,7 @@ Hãy lập trình giải quyết bài toán Ghép Cặp Trọng Số Cực Đạ
 
 
 
-### Bài 09 [CPPB2-L06-09]: Sos Dp (sum Over Subsets Dynamic Programming)
+### Bài 09 [CPPB2-L06-09]: Sos DP (sum over subsets dynamic programming)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5506,7 +5510,7 @@ Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Pro
 
 
 
-### Bài 10 [CPPB2-L06-10]: Đếm Số Cặp $(a_i, A_j)$ Có Tích And Bằng 0
+### Bài 10 [CPPB2-L06-10]: Đếm số cặp $(a_i, a_j)$ có tích and bằng 0
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5543,7 +5547,7 @@ Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, A_j)$ Có T
 
 
 
-### Bài 11 [CPPB2-L06-11]: Sos Dp (sum Over Subsets Dynamic Programming)
+### Bài 11 [CPPB2-L06-11]: Sos DP (sum over subsets dynamic programming)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5580,7 +5584,7 @@ Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Pro
 
 
 
-### Bài 12 [CPPB2-L06-12]: Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (graph Coloring)
+### Bài 12 [CPPB2-L06-12]: Tô màu đồ thị số lượng màu nhỏ nhất (graph coloring)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5617,7 +5621,7 @@ Hãy lập trình giải quyết bài toán Tô Màu Đồ Thị Số Lượng M
 
 
 
-### Bài 13 [CPPB2-L06-13]: Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất
+### Bài 13 [CPPB2-L06-13]: Tìm chu trình hamilton chi phí nhỏ nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5654,7 +5658,7 @@ Hãy lập trình giải quyết bài toán Tìm Chu Trình Hamilton Chi Phí Nh
 
 
 
-### Bài 14 [CPPB2-L06-14]: Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ
+### Bài 14 [CPPB2-L06-14]: Tập độc lập trọng số lớn nhất trên đồ thị nhỏ
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5691,7 +5695,7 @@ Hãy lập trình giải quyết bài toán Tập Độc Lập Trọng Số Lớ
 
 
 
-### Bài 15 [CPPB2-L06-15]: Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau
+### Bài 15 [CPPB2-L06-15]: Phân hoạch tập hợp thành k tập con có tổng bằng nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5728,7 +5732,7 @@ Hãy lập trình giải quyết bài toán Phân Hoạch Tập Hợp Thành K T
 
 
 
-### Bài 16 [CPPB2-L06-16]: Tối Ưu Hóa Trò Chơi Nim Tổng Quát (sprague-grundy Bit)
+### Bài 16 [CPPB2-L06-16]: Tối ưu hóa trò chơi nim tổng quát (sprague-grundy BIT)
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5765,7 +5769,7 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Trò Chơi Nim Tổng
 
 
 
-### Bài 17 [CPPB2-L06-17]: Sos Dp Sum Over Subsets
+### Bài 17 [CPPB2-L06-17]: Sos DP sum over subsets
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5800,7 +5804,7 @@ Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ 
 
 
 
-### Bài 18 [CPPB2-L06-18]: Profile Dp Lat Gach Domino
+### Bài 18 [CPPB2-L06-18]: Profile DP lat gach domino
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5835,7 +5839,7 @@ Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với đ�
 
 
 
-### Bài 19 [CPPB2-L06-19]: Bien Doi Fwt Bitwise Xor
+### Bài 19 [CPPB2-L06-19]: Bien doi FWT bitwise xor
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5870,7 +5874,7 @@ Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ
 
 
 
-### Bài 20 [CPPB2-L06-20]: Dem Tap Doc Lap Cuc Dai
+### Bài 20 [CPPB2-L06-20]: Dem tap doc lap cuc dai
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5905,7 +5909,7 @@ Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ 
 
 
 
-### Bài 21 [CPPB2-L06-21]: Bitmask Dp Phan Nhom K Tap
+### Bài 21 [CPPB2-L06-21]: Bitmask DP phan nhom k tap
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5940,7 +5944,7 @@ Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với đ�
 
 
 
-### Bài 22 [CPPB2-L06-22]: Xor Basis Vector Khong Gian Tuyen Tinh
+### Bài 22 [CPPB2-L06-22]: Xor basis vector khong gian tuyen tinh
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -5975,7 +5979,7 @@ Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Ti
 
 
 
-### Bài 23 [CPPB2-L06-23]: Bitmask Ghep Doi Trong So Cuc Dai
+### Bài 23 [CPPB2-L06-23]: Bitmask ghep doi trong so cuc dai
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -6010,7 +6014,7 @@ Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai v�
 
 
 
-### Bài 24 [CPPB2-L06-24]: Dem Duong Di Hamilton Bitmask
+### Bài 24 [CPPB2-L06-24]: Dem duong di hamilton bitmask
 
 **Bối cảnh & Nhiệm vụ:**
 
@@ -6655,7 +6659,7 @@ DEBUG
 
 ## Chương 01 — Bài 01: Số học cơ bản & chuyên sâu
 
-### `CPPB2-L01-01` — Ước Chung & Bội Chung Cơ Bản
+### `CPPB2-L01-01` — Ước chung & bội chung cơ bản
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6690,7 +6694,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-02` — Rút Gọn Mảng Phân Số Lớn
+### `CPPB2-L01-02` — Rút gọn mảng phân số lớn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6727,7 +6731,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-03` — Sàng Ước Số Nguyên Tố Nhỏ Nhất (spf)
+### `CPPB2-L01-03` — Sàng ước số nguyên tố nhỏ nhất (SPF)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6765,7 +6769,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-04` — Phân Tích Thừa Số Truy Vấn Nhanh
+### `CPPB2-L01-04` — Phân tích thừa số truy vấn nhanh
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6816,7 +6820,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-05` — Đếm Ước Số & Tổng Ước Số Nhanh
+### `CPPB2-L01-05` — Đếm ước số & tổng ước số nhanh
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6871,7 +6875,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-06` — Sàng Nguyên Tố Đoạn [l, R]
+### `CPPB2-L01-06` — Sàng nguyên tố đoạn [l, r]
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6914,7 +6918,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-07` — Cặp Số Nguyên Tố Sinh Đôi Trong Đoạn
+### `CPPB2-L01-07` — Cặp số nguyên tố sinh đôi trong đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -6958,7 +6962,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-08` — Tìm Nghiệm Nguyên Phương Trình Diophantine
+### `CPPB2-L01-08` — Tìm nghiệm nguyên phương trình Diophantine
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7000,7 +7004,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-09` — Nghiệm Nguyên Dương Nhỏ Nhất Của Phương Trình Diophantine
+### `CPPB2-L01-09` — Nghiệm nguyên dương nhỏ nhất của phương trình Diophantine
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7052,7 +7056,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-10` — Hàm Phi Euler $\phi(n)$ Nhanh Với Spf
+### `CPPB2-L01-10` — Hàm phi Euler $\phi(n)$ nhanh với SPF
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7097,7 +7101,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-11` — Phân Tích Thừa Số Nguyên Tố Của Giai Thừa (định Lý Legendre)
+### `CPPB2-L01-11` — Phân tích thừa số nguyên tố của giai thừa (định lý Legendre)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7125,7 +7129,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-12` — Đếm Số Có Số Lượng Ước Là Số Lẻ Trong Đoạn
+### `CPPB2-L01-12` — Đếm số có số lượng ước là số lẻ trong đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7148,7 +7152,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-13` — Tìm Cặp Số Biết Gcd Và Lcm Có Tổng Nhỏ Nhất
+### `CPPB2-L01-13` — Tìm cặp số biết GCD và LCM có tổng nhỏ nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7192,7 +7196,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-14` — Khoảng Cách Lớn Nhất Giữa Hai Số Nguyên Tố Liên Tiếp
+### `CPPB2-L01-14` — Khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7244,7 +7248,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-15` — Đếm Số Cách Đổi Tiền Bằng Phương Trình Diophantine
+### `CPPB2-L01-15` — Đếm số cách đổi tiền bằng phương trình Diophantine
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7305,7 +7309,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-16` — Tính Tổng Gcd Của N Với Tất Cả Các Số Từ 1 Đến N
+### `CPPB2-L01-16` — Tính tổng GCD của n với tất cả các số từ 1 đến n
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7346,7 +7350,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-17` — Định Lý Thặng Dư Trung Hoa (chinese Remainder Theorem — Crt)
+### `CPPB2-L01-17` — Định lý thặng dư trung hoa (chinese remainder theorem — CRT)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7392,7 +7396,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-18` — Bậc Của Số Nguyên Theo Modulo M (multiplicative Order)
+### `CPPB2-L01-18` — Bậc của số nguyên theo modulo m (multiplicative order)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7438,7 +7442,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-19` — Can Nguyen Nguyen Thuy Primitive Root
+### `CPPB2-L01-19` — Can nguyen nguyen thuy primitive root
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7491,7 +7495,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-20` — Tinh Uoc Nguyen To Lon Nhat
+### `CPPB2-L01-20` — Tinh uoc nguyen to lon nhat
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7528,7 +7532,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-21` — Phuong Trinh Pell Co Ban
+### `CPPB2-L01-21` — Phuong trinh pell co ban
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7563,7 +7567,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-22` — Phan Tich Legendre Nang Cao
+### `CPPB2-L01-22` — Phan tich Legendre nang cao
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7592,7 +7596,7 @@ int main() {
 
 ## Chương 01 — Bài 02: Modulo & lũy thừa nhanh
 
-### `CPPB2-L02-01` — Lũy Thừa Nhanh Cơ Bản
+### `CPPB2-L02-01` — Lũy thừa nhanh cơ bản
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7626,7 +7630,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-02` — Tính Giá Trị Phân Số Modulo
+### `CPPB2-L02-02` — Tính giá trị phân số modulo
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7662,7 +7666,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-03` — Lũy Thừa Ma Trận 2x2 (dãy Fibonacci Lớn)
+### `CPPB2-L02-03` — Lũy thừa ma trận 2x2 (dãy fibonacci lớn)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7722,7 +7726,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-04` — Nghịch Đảo Modulo Tổng Quát
+### `CPPB2-L02-04` — Nghịch đảo modulo tổng quát
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7762,7 +7766,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-05` — Tính Tổ Hợp $c_n^k \bmod (10^9+7)$
+### `CPPB2-L02-05` — Tính tổ hợp $c_n^k \bmod (10^9+7)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7815,7 +7819,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-06` — Lũy Thừa Với Số Mũ Cực Lớn
+### `CPPB2-L02-06` — Lũy thừa với số mũ cực lớn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7853,7 +7857,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-07` — Nhân Modulo Hai Số Cực Lớn (nhân Ấn Độ)
+### `CPPB2-L02-07` — Nhân modulo hai số cực lớn (nhân ấn độ)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7879,7 +7883,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-08` — Tổng Cấp Số Nhân $s_n = \sum_{i=0}^n A^i \bmod M$
+### `CPPB2-L02-08` — Tổng cấp số nhân $s_n = \sum_{i=0}^n a^i \bmod m$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7925,7 +7929,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-09` — Tháp Lũy Thừa $a^{b^c} \bmod M$
+### `CPPB2-L02-09` — Tháp lũy thừa $a^{b^c} \bmod m$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7961,7 +7965,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-10` — Đếm Dãy Ngoặc Đúng (số Catalan Modulo)
+### `CPPB2-L02-10` — Đếm dãy ngoặc đúng (số Catalan modulo)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8014,7 +8018,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-11` — Hệ Phương Trình Đồng Dư (chinese Remainder Theorem)
+### `CPPB2-L02-11` — Hệ phương trình đồng dư (chinese remainder theorem)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8062,7 +8066,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-12` — Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{o}(n)$
+### `CPPB2-L02-12` — Tiền xử lý nghịch đảo tuyến tính $\mathcal{o}(n)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8097,7 +8101,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-13` — Lũy Thừa Ma Trận Kích Thước $k \times K$
+### `CPPB2-L02-13` — Lũy thừa ma trận kích thước $k \times k$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8155,7 +8159,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-14` — Căn Bậc Hai Modulo Nguyên Tố (thuật Toán Tonelli-shanks)
+### `CPPB2-L02-14` — Căn bậc hai modulo nguyên tố (thuật toán tonelli-shanks)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8230,7 +8234,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-15` — Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số
+### `CPPB2-L02-15` — Lũy thừa số mũ lớn khi modulo là hợp số
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8285,7 +8289,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-16` — Logarit Rời Rạc (baby-step Giant-step)
+### `CPPB2-L02-16` — Logarit rời rạc (baby-step giant-step)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8339,7 +8343,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-17` — Luy Thua Ma Tran Dem Duong Di
+### `CPPB2-L02-17` — Luy thua ma tran dem duong di
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8392,7 +8396,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-18` — Tinh Cap So Nhan Modulo Hop So
+### `CPPB2-L02-18` — Tinh cap so nhan modulo hop so
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8434,7 +8438,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-19` — Luy Thua Tang Thap Power Tower
+### `CPPB2-L02-19` — Luy thua tang thap power tower
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8465,7 +8469,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-20` — Can Bac Hai Modulo Tonelli Shanks
+### `CPPB2-L02-20` — Can bac hai modulo tonelli shanks
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8524,7 +8528,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-21` — Ma Tran Fibonacci Tong Doan
+### `CPPB2-L02-21` — Ma tran fibonacci tong doan
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8574,7 +8578,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-22` — Số Tribonacci Thứ N Bằng Nhân Ma Trận 3x3
+### `CPPB2-L02-22` — Số tribonacci thứ n bằng nhân ma trận 3x3
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8627,7 +8631,7 @@ int main() {
 
 ## Chương 02 — Bài 03: Tìm kiếm nhị phân nâng cao
 
-### `CPPB2-L03-01` — Chặt Nhị Phân Cắt Gỗ (eko)
+### `CPPB2-L03-01` — Chặt nhị phân cắt gỗ (eko)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8673,7 +8677,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-02` — Chia Bánh Pizza Đều Nhau
+### `CPPB2-L03-02` — Chia bánh pizza đều nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8721,7 +8725,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-03` — Chuồng Bò Xa Nhau Nhất (aggressive Cows)
+### `CPPB2-L03-03` — Chuồng bò xa nhau nhất (aggressive cows)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8769,7 +8773,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-04` — Phân Chia Công Việc Thợ Sơn (painter's Partition)
+### `CPPB2-L03-04` — Phân chia công việc thợ sơn (painter's partition)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8822,7 +8826,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-05` — Đoàn Tàu Vận Chuyển Hàng Hóa
+### `CPPB2-L03-05` — Đoàn tàu vận chuyển hàng hóa
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8875,7 +8879,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-06` — Khoảng Cách Dây Cáp Nhỏ Nhất
+### `CPPB2-L03-06` — Khoảng cách dây cáp nhỏ nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8913,7 +8917,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-07` — Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$
+### `CPPB2-L03-07` — Trung bình cộng đoạn con lớn nhất $\ge k$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8961,7 +8965,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-08` — Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng
+### `CPPB2-L03-08` — Tối ưu hóa chi phí lắp trạm phát sóng
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8999,7 +9003,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-09` — Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $n \times N$
+### `CPPB2-L03-09` — Tìm phần tử nhỏ thứ k trong bảng nhân $n \times n$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9039,7 +9043,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-10` — Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d
+### `CPPB2-L03-10` — Tối ưu phân đoạn trọng số ma trận 2d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9078,7 +9082,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-11` — Tìm Nghiệm Thực Của Phương Trình Phi Tuyến
+### `CPPB2-L03-11` — Tìm nghiệm thực của phương trình phi tuyến
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9108,7 +9112,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-12` — Đếm Số Cặp $(a_i, B_j)$ Có Tổng Trong Khoảng $[l, R]$
+### `CPPB2-L03-12` — Đếm số cặp $(a_i, b_j)$ có tổng trong khoảng $[l, r]$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9141,7 +9145,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-13` — Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp
+### `CPPB2-L03-13` — Phần tử nhỏ thứ k của hợp hai mảng đã sắp xếp
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9189,7 +9193,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-14` — Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d
+### `CPPB2-L03-14` — Tối ưu phân đoạn trọng số ma trận 2d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9251,7 +9255,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-15` — Chặt Nhị Phân Song Song (parallel Binary Search)
+### `CPPB2-L03-15` — Chặt nhị phân song song (parallel binary search)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9296,7 +9300,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-16` — Khoảng Cách Cực Trị Trên Đa Giác Lồi
+### `CPPB2-L03-16` — Khoảng cách cực trị trên đa giác lồi
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9338,7 +9342,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-17` — Chặt Nhị Phân Song Song
+### `CPPB2-L03-17` — Chặt nhị phân song song
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9386,7 +9390,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-18` — Tìm Cực Tiểu Của Hàm Bậc Hai
+### `CPPB2-L03-18` — Tìm cực tiểu của hàm bậc hai
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9420,7 +9424,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-19` — Trung Vị Của Hai Mảng Đã Sắp Xếp
+### `CPPB2-L03-19` — Trung vị của hai mảng đã sắp xếp
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9474,7 +9478,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-20` — Tam Giác Có Diện Tích Lớn Nhất
+### `CPPB2-L03-20` — Tam giác có diện tích lớn nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9513,7 +9517,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-21` — Chat Nhi Phan Khoang Cach K Diem
+### `CPPB2-L03-21` — Chat nhi phan khoang cach k diem
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9560,7 +9564,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-22` — Chat Nhi Phan Phan So Toi Gian
+### `CPPB2-L03-22` — Chat nhi phan phan so toi gian
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9608,7 +9612,7 @@ int main() {
 
 ## Chương 02 — Bài 04: Kỹ thuật mảng: Two Pointers, Window & 2D Prefix
 
-### `CPPB2-L04-01` — Truy Vấn Tổng Ma Trận Con 2d
+### `CPPB2-L04-01` — Truy vấn tổng ma trận con 2d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9642,7 +9646,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-02` — Cập Nhật Hình Chữ Nhật Ma Trận 2d
+### `CPPB2-L04-02` — Cập nhật hình chữ nhật ma trận 2d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9680,7 +9684,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-03` — Đoạn Con Ngắn Nhất Có Tổng $\ge S$
+### `CPPB2-L04-03` — Đoạn con ngắn nhất có tổng $\ge s$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9716,7 +9720,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-04` — Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn
+### `CPPB2-L04-04` — Nén tọa độ & đếm tần suất trên dải lớn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9750,7 +9754,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-05` — Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau
+### `CPPB2-L04-05` — Đoạn con dài nhất có không quá k số khác nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9786,7 +9790,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-06` — Ma Trận Con Có Tổng Lớn Nhất (maximum Submatrix Sum)
+### `CPPB2-L04-06` — Ma trận con có tổng lớn nhất (maximum submatrix sum)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9825,7 +9829,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-07` — Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc
+### `CPPB2-L04-07` — Diện tích phủ bởi các hình chữ nhật rời rạc
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9884,7 +9888,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-08` — Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau
+### `CPPB2-L04-08` — Đếm cặp đoạn thẳng chồng lấn nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9931,7 +9935,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-09` — Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram
+### `CPPB2-L04-09` — Cửa sổ trượt đếm số lượng xâu anagram
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9970,7 +9974,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-10` — Đếm Hình Vuông Con Có Tổng Đúng Bằng K
+### `CPPB2-L04-10` — Đếm hình vuông con có tổng đúng bằng k
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10011,7 +10015,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-11` — Khử Chiều 3-sum & 4-sum Hai Con Trỏ
+### `CPPB2-L04-11` — Khử chiều 3-sum & 4-sum hai con trỏ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10052,7 +10056,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-12` — Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$
+### `CPPB2-L04-12` — Đếm số đoạn con có hiệu max - min $\le k$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10095,7 +10099,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-13` — Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái
+### `CPPB2-L04-13` — Đoạn con ngắn nhất chứa đầy đủ bảng chữ cái
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10131,7 +10135,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-14` — Mảng Hiệu Trên Cây (tree Difference Array)
+### `CPPB2-L04-14` — Mảng hiệu trên cây (Tree difference array)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10180,7 +10184,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-15` — Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ
+### `CPPB2-L04-15` — Đếm tam giác có độ dài cạnh hợp lệ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10217,7 +10221,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-16` — Quét Đường Thẳng Nén Tọa Độ (sweep-line Area 2d)
+### `CPPB2-L04-16` — Quét đường thẳng nén tọa độ (sweep-line area 2d)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10278,7 +10282,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-17` — Diện Tích Hợp Các Hình Chữ Nhật
+### `CPPB2-L04-17` — Diện tích hợp các hình chữ nhật
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10334,7 +10338,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-18` — Mảng Hiệu Trên Hình Vuông Xoay 45 Độ
+### `CPPB2-L04-18` — Mảng hiệu trên hình vuông xoay 45 độ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10384,7 +10388,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-19` — Nen Toa Do Da Chieu 3d
+### `CPPB2-L04-19` — Nen toa do da chieu 3d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10450,7 +10454,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-20` — Đếm Số Bộ Ba Tam Giác Hợp Lệ
+### `CPPB2-L04-20` — Đếm số bộ ba tam giác hợp lệ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10488,7 +10492,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-21` — Đếm Xâu Con Có Đúng K Ký Tự Khác Nhau
+### `CPPB2-L04-21` — Đếm xâu con có đúng k ký tự khác nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10528,7 +10532,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-22` — Ma Tran Tong Lon Nhat Kadane 2d
+### `CPPB2-L04-22` — Ma tran tong lon nhat Kadane 2d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10576,7 +10580,7 @@ int main() {
 
 ## Chương 03 — Bài 05: Đệ quy, chia để trị & Meet in the Middle
 
-### `CPPB2-L05-01` — Đếm Cặp Nghịch Thế
+### `CPPB2-L05-01` — Đếm cặp nghịch thế
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10626,7 +10630,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-02` — Cái Túi Kích Thước Nhỏ (knapsack $n \le 40$)
+### `CPPB2-L05-02` — Cái túi kích thước nhỏ (knapsack $n \le 40$)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10662,7 +10666,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-03` — Tập Con Có Tổng Gần S Nhất
+### `CPPB2-L05-03` — Tập con có tổng gần s nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10712,7 +10716,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-04` — Giải Phương Trình $4$ Ẩn Tuyến Tính (4-sum Mitm)
+### `CPPB2-L05-04` — Giải phương trình $4$ ẩn tuyến tính (4-sum mitm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10771,7 +10775,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-05` — Đếm Số Tập Con Có Xor Bằng K
+### `CPPB2-L05-05` — Đếm số tập con có xor bằng k
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10814,7 +10818,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-06` — Khoảng Cách Giữa Hai Điểm Gần Nhất (closest Pair)
+### `CPPB2-L05-06` — Khoảng cách giữa hai điểm gần nhất (closest pair)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10860,7 +10864,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-07` — Bẻ Khóa Mật Mã Đổi Dấu (subset Sum With Signs)
+### `CPPB2-L05-07` — Bẻ khóa mật mã đổi dấu (subset sum with signs)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10884,7 +10888,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-08` — Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path With Mitm)
+### `CPPB2-L05-08` — Tối ưu hóa tuyến đường đi qua đỉnh (shortest path with mitm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10947,7 +10951,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-09` — Trò Chơi Xếp Gạch Đa Diện (puzzle Mitm)
+### `CPPB2-L05-09` — Trò chơi xếp gạch đa diện (puzzle mitm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10992,7 +10996,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-10` — Đếm Cặp $a_i > 2 A_j$ (significant Inversions)
+### `CPPB2-L05-10` — Đếm cặp $a_i > 2 a_j$ (significant inversions)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11044,7 +11048,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-11` — Tổng Cấp Số Nhân Bằng Chia Để Trị
+### `CPPB2-L05-11` — Tổng cấp số nhân bằng chia để trị
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11086,7 +11090,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-12` — Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path Mitm)
+### `CPPB2-L05-12` — Tối ưu hóa tuyến đường đi qua đỉnh (shortest path mitm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11138,7 +11142,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-13` — Trò Chơi Xếp Gạch Đa Diện (15-puzzle Mitm)
+### `CPPB2-L05-13` — Trò chơi xếp gạch đa diện (15-puzzle mitm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11203,7 +11207,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-14` — Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau
+### `CPPB2-L05-14` — Phân chia tập hợp thành hai nửa có tổng bằng nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11259,7 +11263,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-15` — Đếm Số Đoạn Con Có Tổng Nằm Trong $[l, R]$
+### `CPPB2-L05-15` — Đếm số đoạn con có tổng nằm trong $[l, r]$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11302,7 +11306,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-16` — Chia Để Trị Trên Cây (centroid Decomposition Cơ Bản)
+### `CPPB2-L05-16` — Chia để trị trên cây (centroid decomposition cơ bản)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11355,7 +11359,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-17` — Centroid Decomposition Co Ban
+### `CPPB2-L05-17` — Centroid decomposition co ban
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11417,7 +11421,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-18` — Dem Chu Trinh 4 Canh Mitm
+### `CPPB2-L05-18` — Dem chu trinh 4 canh mitm
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11467,7 +11471,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-19` — Chia De Tri Day Con Tong Max
+### `CPPB2-L05-19` — Chia de tri day con tong max
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11490,7 +11494,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-20` — Mitm Dem Nghiem Nguyen Tong Bang 0
+### `CPPB2-L05-20` — Mitm dem nghiem nguyen tong bang 0
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11521,7 +11525,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-21` — Tim Cap Diem Gan Nhat 2d
+### `CPPB2-L05-21` — Tim cap diem gan nhat 2d
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11547,7 +11551,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-22` — Dem Nghich The 3 Chieu Cdq
+### `CPPB2-L05-22` — Dem nghich the 3 chieu cdq
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11574,7 +11578,7 @@ int main() {
 
 ## Chương 03 — Bài 06: Phép toán bit & mặt nạ bit nâng cao
 
-### `CPPB2-L06-01` — Bài Toán Người Du Lịch (tsp)
+### `CPPB2-L06-01` — Bài toán người du lịch (tsp)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11601,7 +11605,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-02` — Đếm Số Phần Tử Bật Bit Chung (bitwise And)
+### `CPPB2-L06-02` — Đếm số phần tử bật BIT chung (bitwise and)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11630,7 +11634,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-03` — Bài Toán Người Du Lịch (tsp Bitmask Dp)
+### `CPPB2-L06-03` — Bài toán người du lịch (tsp bitmask DP)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11665,7 +11669,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-04` — Phân Chia Công Việc Hoàn Hảo (job Assignment)
+### `CPPB2-L06-04` — Phân chia công việc hoàn hảo (job assignment)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11705,7 +11709,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-05` — Duyệt Tất Cả Submask Tính Tổng Phân Hoạch
+### `CPPB2-L06-05` — Duyệt tất cả submask tính tổng phân hoạch
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11745,7 +11749,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-06` — Đường Đi Hamilton Đếm Số Cách
+### `CPPB2-L06-06` — Đường đi hamilton đếm số cách
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11781,7 +11785,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-07` — Tối Đa Hóa Giá Trị Xor Đoạn Con Bằng Trie Bit
+### `CPPB2-L06-07` — Tối đa hóa giá trị xor đoạn con bằng Trie BIT
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11824,7 +11828,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-08` — Ghép Cặp Trọng Số Cực Đại (maximum Matching Bitmask)
+### `CPPB2-L06-08` — Ghép cặp trọng số cực đại (maximum matching bitmask)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11889,7 +11893,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-09` — Sos Dp (sum Over Subsets Dynamic Programming)
+### `CPPB2-L06-09` — Sos DP (sum over subsets dynamic programming)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11927,7 +11931,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-10` — Đếm Số Cặp $(a_i, A_j)$ Có Tích And Bằng 0
+### `CPPB2-L06-10` — Đếm số cặp $(a_i, a_j)$ có tích and bằng 0
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11969,7 +11973,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-11` — Sos Dp (sum Over Subsets Dynamic Programming)
+### `CPPB2-L06-11` — Sos DP (sum over subsets dynamic programming)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12003,7 +12007,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-12` — Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (graph Coloring)
+### `CPPB2-L06-12` — Tô màu đồ thị số lượng màu nhỏ nhất (graph coloring)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12054,7 +12058,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-13` — Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất
+### `CPPB2-L06-13` — Tìm chu trình hamilton chi phí nhỏ nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12099,7 +12103,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-14` — Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ
+### `CPPB2-L06-14` — Tập độc lập trọng số lớn nhất trên đồ thị nhỏ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12141,7 +12145,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-15` — Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau
+### `CPPB2-L06-15` — Phân hoạch tập hợp thành k tập con có tổng bằng nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12185,7 +12189,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-16` — Tối Ưu Hóa Trò Chơi Nim Tổng Quát (sprague-grundy Bit)
+### `CPPB2-L06-16` — Tối ưu hóa trò chơi nim tổng quát (sprague-grundy BIT)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12214,7 +12218,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-17` — Sos Dp Sum Over Subsets
+### `CPPB2-L06-17` — Sos DP sum over subsets
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12238,7 +12242,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-18` — Profile Dp Lat Gach Domino
+### `CPPB2-L06-18` — Profile DP lat gach domino
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12287,7 +12291,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-19` — Bien Doi Fwt Bitwise Xor
+### `CPPB2-L06-19` — Bien doi FWT bitwise xor
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12340,7 +12344,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-20` — Dem Tap Doc Lap Cuc Dai
+### `CPPB2-L06-20` — Dem tap doc lap cuc dai
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12371,7 +12375,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-21` — Bitmask Dp Phan Nhom K Tap
+### `CPPB2-L06-21` — Bitmask DP phan nhom k tap
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12418,7 +12422,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-22` — Xor Basis Vector Khong Gian Tuyen Tinh
+### `CPPB2-L06-22` — Xor basis vector khong gian tuyen tinh
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12446,7 +12450,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-23` — Bitmask Ghep Doi Trong So Cuc Dai
+### `CPPB2-L06-23` — Bitmask ghep doi trong so cuc dai
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12491,7 +12495,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-24` — Dem Duong Di Hamilton Bitmask
+### `CPPB2-L06-24` — Dem duong di hamilton bitmask
 
 ```cpp
 #include <bits/stdc++.h>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="100%" height="100%">
+  <rect width="900" height="200" fill="#FFFFFF"/>
+  <text x="20" y="40" font-family="Arial" font-size="20">📌 Với Emoji: Các số nguyên tố tìm được</text>
+  <text x="20" y="80" font-family="Arial" font-size="20">👉 Với Emoji: 101, 103, 107</text>
+  <text x="20" y="120" font-family="Arial" font-size="20">[!] Không Emoji: Các số nguyên tố tìm được</text>
+  <text x="20" y="160" font-family="Arial" font-size="20">[*] Không Emoji: 101, 103, 107</text>
+</svg>

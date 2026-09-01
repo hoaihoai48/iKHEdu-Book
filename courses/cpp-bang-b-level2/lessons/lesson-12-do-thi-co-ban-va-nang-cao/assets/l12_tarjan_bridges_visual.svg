@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" height="100%">
   <rect width="900" height="350" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-  <text x="40" y="42" fill="#0F2A44" font-family="'Times New Roman', serif" font-size="20" font-weight="bold">Thuật toán Tarjan tìm Khớp (Articulation Points) và Cầu (Bridges) trong O(V + E)</text>
-  <text x="40" y="68" fill="#475569" font-family="'Times New Roman', serif" font-size="13">Dựa trên mảng thời gian thăm tin[u] và mảng low[u] (thời gian thăm nhỏ nhất của đỉnh mà u có thể đi tới bằng 1 cạnh ngược).</text>
+  <text x="40" y="42" fill="#0F2A44" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Thuật toán Tarjan tìm Khớp (Articulation Points) và Cầu (Bridges) trong O(V + E)</text>
+  <text x="40" y="68" fill="#475569" font-family="Arial, sans-serif" font-size="13">Dựa trên mảng thời gian thăm tin[u] và mảng low[u] (thời gian thăm nhỏ nhất của đỉnh mà u có thể đi tới bằng 1 cạnh ngược).</text>
 
   <!-- Graph Layout -->
   <g transform="translate(60, 95)">
@@ -45,14 +45,14 @@
   <!-- Rules Panel on Right -->
   <g transform="translate(580, 95)">
     <rect width="280" height="220" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
-    <text x="20" y="30" fill="#0F172A" font-family="'Times New Roman', serif" font-size="15" font-weight="bold">📌 Điều kiện nhận diện:</text>
+    <text x="20" y="30" fill="#0F172A" font-family="Arial, sans-serif" font-size="15" font-weight="bold">(*) Điều kiện nhận diện:</text>
     
-    <text x="20" y="65" fill="#B91C1C" font-family="'Times New Roman', serif" font-size="13" font-weight="bold">1. Cạnh (u, v) là CẦU khi:</text>
+    <text x="20" y="65" fill="#B91C1C" font-family="Arial, sans-serif" font-size="13" font-weight="bold">1. Cạnh (u, v) là CẦU khi:</text>
     <text x="35" y="88" fill="#DC2626" font-family="monospace" font-size="13" font-weight="bold">low[v] &gt; tin[u]</text>
-    <text x="35" y="108" fill="#64748B" font-family="'Times New Roman', serif" font-size="11">(Nhánh v không có đường về tổ tiên của u)</text>
+    <text x="35" y="108" fill="#64748B" font-family="Arial, sans-serif" font-size="11">(Nhánh v không có đường về tổ tiên của u)</text>
 
-    <text x="20" y="145" fill="#1D4ED8" font-family="'Times New Roman', serif" font-size="13" font-weight="bold">2. Đỉnh u là KHỚP khi:</text>
+    <text x="20" y="145" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="13" font-weight="bold">2. Đỉnh u là KHỚP khi:</text>
     <text x="35" y="168" fill="#2563EB" font-family="monospace" font-size="13" font-weight="bold">low[v] ≥ tin[u]</text>
-    <text x="35" y="188" fill="#64748B" font-family="'Times New Roman', serif" font-size="11">(Hoặc u là gốc cây DFS có ≥ 2 con)</text>
+    <text x="35" y="188" fill="#64748B" font-family="Arial, sans-serif" font-size="11">(Hoặc u là gốc cây DFS có ≥ 2 con)</text>
   </g>
 </svg>
