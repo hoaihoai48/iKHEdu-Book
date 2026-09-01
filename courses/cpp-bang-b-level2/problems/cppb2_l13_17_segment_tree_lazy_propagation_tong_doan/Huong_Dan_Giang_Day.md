@@ -139,8 +139,7 @@ int main() {
         } else {
             int l, r;
             cin >> l >> r;
-            cout << query_range(1, 1, n, l, r) << "
-";
+            cout << query_range(1, 1, n, l, r) << "\n";
         }
     }
     return 0;

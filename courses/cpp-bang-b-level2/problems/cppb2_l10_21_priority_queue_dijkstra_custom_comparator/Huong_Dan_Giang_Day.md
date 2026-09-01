@@ -82,18 +82,16 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
-    cout << ans << "
-";
+    cout << ans << "\n";
     return 0;
 }
 ```
-
----
 
 ## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
 * Mở rộng bài toán khi dữ liệu chuyển sang môi trường động hoặc có các truy vấn cập nhật liên tục.

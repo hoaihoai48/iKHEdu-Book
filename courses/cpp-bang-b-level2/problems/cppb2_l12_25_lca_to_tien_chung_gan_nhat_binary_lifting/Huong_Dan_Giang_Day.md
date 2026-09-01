@@ -127,8 +127,7 @@ int main() {
     while (q--) {
         int u, v;
         cin >> u >> v;
-        cout << get_lca(u, v) << "
-";
+        cout << get_lca(u, v) << "\n";
     }
     return 0;
 }

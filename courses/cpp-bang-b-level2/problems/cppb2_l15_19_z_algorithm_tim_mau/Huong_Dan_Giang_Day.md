@@ -69,23 +69,32 @@ aaaaa
 #include <bits/stdc++.h>
 using namespace std;
 
+// Z-Algorithm tính mảng Z-array O(N)
+vector<int> compute_z(const string& s) {
+    int n = s.size();
+    vector<int> z(n, 0);
+    int l = 0, r = 0;
+    for (int i = 1; i < n; ++i) {
+        if (i <= r) z[i] = min(r - i + 1, z[i - l]);
+        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) z[i]++;
+        if (i + z[i] - 1 > r) {
+            l = i;
+            r = i + z[i] - 1;
+        }
+    }
+    return z;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s;
+    if (!(cin >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
-
-    cout << ans << "
-";
+    vector<int> z = compute_z(s);
+    for (int val : z) cout << val << " ";
+    cout << "\n";
     return 0;
 }
 ```

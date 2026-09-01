@@ -10084,6 +10084,12 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tham lam lập lịch công việc có Deadline & Tiền phạt
+struct Job {
+    int id, deadline;
+    long long penalty;
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10091,15 +10097,30 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
+    vector<Job> jobs(n);
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        jobs[i].id = i + 1;
+        cin >> jobs[i].deadline >> jobs[i].penalty;
     }
 
-    cout << ans << "\n";
+    sort(jobs.begin(), jobs.end(), [](const Job& a, const Job& b) {
+        return a.penalty > b.penalty;
+    });
+
+    vector<int> slot(n + 1, -1);
+    long long total_penalty = 0;
+
+    for (const auto& job : jobs) {
+        int d = min(n, job.deadline);
+        while (d > 0 && slot[d] != -1) d--;
+        if (d > 0) {
+            slot[d] = job.id;
+        } else {
+            total_penalty += job.penalty;
+        }
+    }
+
+    cout << total_penalty << "\n";
     return 0;
 }
 
@@ -10121,9 +10142,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10148,9 +10170,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10175,9 +10198,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10202,9 +10226,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10848,6 +10873,15 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Convex Hull Trick (CHT) tối ưu dp[i] = min(m_j * x_i + c_j)
+struct Line {
+    long long m, c;
+    long long eval(long long x) { return m * x + c; }
+    double intersect(const Line& o) const {
+        return (double)(o.c - c) / (m - o.m);
+    }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10855,15 +10889,32 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
+    vector<long long> a(n), b(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i < n; ++i) cin >> b[i];
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    vector<Line> hull;
+    vector<long long> dp(n, 0);
+
+    hull.push_back({b[0], 0});
+    int ptr = 0;
+
+    for (int i = 1; i < n; ++i) {
+        long long x = a[i];
+        while (ptr + 1 < (int)hull.size() && hull[ptr + 1].eval(x) <= hull[ptr].eval(x)) {
+            ptr++;
+        }
+        dp[i] = hull[ptr].eval(x);
+
+        Line cur = {b[i], dp[i]};
+        while (hull.size() >= 2 && cur.intersect(hull.back()) <= hull.back().intersect(hull[hull.size() - 2])) {
+            hull.pop_back();
+            if (ptr >= (int)hull.size()) ptr = hull.size() - 1;
+        }
+        hull.push_back(cur);
     }
 
-    cout << ans << "\n";
+    cout << dp[n - 1] << "\n";
     return 0;
 }
 
@@ -10885,9 +10936,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10902,19 +10954,41 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Đổi trục DP: dp[v] là trọng lượng nhỏ nhất để đạt được tổng giá trị v
+const long long INF = 1e18;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int n;
-    if (!(cin >> n)) return 0;
+    long long W;
+    if (!(cin >> n >> W)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<long long> w(n), v(n);
+    int max_v = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> w[i] >> v[i];
+        max_v += v[i];
+    }
+
+    vector<long long> dp(max_v + 1, INF);
+    dp[0] = 0;
+
+    for (int i = 0; i < n; ++i) {
+        for (int val = max_v; val >= v[i]; --val) {
+            if (dp[val - v[i]] != INF) {
+                dp[val] = min(dp[val], dp[val - v[i]] + w[i]);
+            }
+        }
+    }
 
     long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int val = max_v; val >= 0; --val) {
+        if (dp[val] <= W) {
+            ans = val;
+            break;
+        }
     }
 
     cout << ans << "\n";
@@ -10939,9 +11013,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10956,22 +11031,40 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Palindrome Partitioning Min Cut DP O(N^2)
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s;
+    if (!(cin >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    int n = s.size();
+    vector<vector<bool>> is_pal(n, vector<bool>(n, false));
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = n - 1; i >= 0; --i) {
+        for (int j = i; j < n; ++j) {
+            if (s[i] == s[j] && (j - i <= 2 || is_pal[i + 1][j - 1])) {
+                is_pal[i][j] = true;
+            }
+        }
     }
 
-    cout << ans << "\n";
+    vector<int> dp(n, 0);
+    for (int i = 0; i < n; ++i) {
+        if (is_pal[0][i]) {
+            dp[i] = 0;
+        } else {
+            dp[i] = i;
+            for (int j = 0; j < i; ++j) {
+                if (is_pal[j + 1][i]) {
+                    dp[i] = min(dp[i], dp[j] + 1);
+                }
+            }
+        }
+    }
+
+    cout << dp[n - 1] << "\n";
     return 0;
 }
 
@@ -10983,6 +11076,10 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Quy hoạch động nhân chuỗi ma trận O(N^3)
+long long dp[505][505];
+long long p[505];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10990,15 +11087,20 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i <= n; ++i) cin >> p[i];
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int len = 2; len <= n; ++len) {
+        for (int i = 1; i <= n - len + 1; ++i) {
+            int j = i + len - 1;
+            dp[i][j] = LLONG_MAX;
+            for (int k = i; k < j; ++k) {
+                long long cost = dp[i][k] + dp[k + 1][j] + p[i - 1] * p[k] * p[j];
+                dp[i][j] = min(dp[i][j], cost);
+            }
+        }
     }
 
-    cout << ans << "\n";
+    cout << dp[1][n] << "\n";
     return 0;
 }
 
@@ -11020,9 +11122,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -11047,9 +11150,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -11074,9 +11178,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -11789,6 +11894,9 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tổng min tất cả các đoạn con bằng Monotonic Stack O(N)
+const int MOD = 1000000007;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -11799,12 +11907,29 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
-    long long ans = 0;
+    vector<int> left(n), right(n);
+    vector<int> st;
+
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        while (!st.empty() && a[st.back()] > a[i]) st.pop_back();
+        left[i] = st.empty() ? (i + 1) : (i - st.back());
+        st.push_back(i);
     }
 
-    cout << ans << "\n";
+    st.clear();
+    for (int i = n - 1; i >= 0; --i) {
+        while (!st.empty() && a[st.back()] >= a[i]) st.pop_back();
+        right[i] = st.empty() ? (n - i) : (st.back() - i);
+        st.push_back(i);
+    }
+
+    long long total = 0;
+    for (int i = 0; i < n; ++i) {
+        long long count = (1LL * left[i] * right[i]) % MOD;
+        total = (total + count * (a[i] % MOD)) % MOD;
+    }
+
+    cout << (total + MOD) % MOD << "\n";
     return 0;
 }
 
@@ -11815,19 +11940,27 @@ int main() {
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+// Monotonic Deque tìm Max trong cửa sổ trượt độ dài K O(N)
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n, k;
     if (!(cin >> n >> k)) return 0;
-    vector<int> a(n);
+
+    vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
+
     deque<int> dq;
     for (int i = 0; i < n; ++i) {
-        if (!dq.empty() && dq.front() <= i - k) dq.pop_front();
+        while (!dq.empty() && dq.front() <= i - k) dq.pop_front();
         while (!dq.empty() && a[dq.back()] <= a[i]) dq.pop_back();
         dq.push_back(i);
-        if (i >= k - 1) cout << a[dq.front()] << (i == n - 1 ? "" : " ");
+
+        if (i >= k - 1) {
+            cout << a[dq.front()] << " ";
+        }
     }
     cout << "\n";
     return 0;
@@ -11841,22 +11974,70 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Đánh giá biểu thức toán học có ngoặc và +, -, *, / bằng 2 Stack
+int precedence(char op) {
+    if (op == '+' || op == '-') return 1;
+    if (op == '*' || op == '/') return 2;
+    return 0;
+}
+
+long long applyOp(long long a, long long b, char op) {
+    if (op == '+') return a + b;
+    if (op == '-') return a - b;
+    if (op == '*') return a * b;
+    if (op == '/') return a / b;
+    return 0;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s;
+    if (!(cin >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    stack<long long> values;
+    stack<char> ops;
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (size_t i = 0; i < s.length(); ++i) {
+        if (s[i] == ' ') continue;
+        if (isdigit(s[i])) {
+            long long val = 0;
+            while (i < s.length() && isdigit(s[i])) {
+                val = (val * 10) + (s[i] - '0');
+                i++;
+            }
+            values.push(val);
+            i--;
+        } else if (s[i] == '(') {
+            ops.push(s[i]);
+        } else if (s[i] == ')') {
+            while (!ops.empty() && ops.top() != '(') {
+                long long val2 = values.top(); values.pop();
+                long long val1 = values.top(); values.pop();
+                char op = ops.top(); ops.pop();
+                values.push(applyOp(val1, val2, op));
+            }
+            if (!ops.empty()) ops.pop();
+        } else {
+            while (!ops.empty() && precedence(ops.top()) >= precedence(s[i])) {
+                long long val2 = values.top(); values.pop();
+                long long val1 = values.top(); values.pop();
+                char op = ops.top(); ops.pop();
+                values.push(applyOp(val1, val2, op));
+            }
+            ops.push(s[i]);
+        }
     }
 
-    cout << ans << "\n";
+    while (!ops.empty()) {
+        long long val2 = values.top(); values.pop();
+        long long val1 = values.top(); values.pop();
+        char op = ops.top(); ops.pop();
+        values.push(applyOp(val1, val2, op));
+    }
+
+    cout << values.top() << "\n";
     return 0;
 }
 
@@ -11878,9 +12059,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -12493,22 +12675,42 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Triển khai cây nhị phân tìm kiếm cân bằng duy trì thứ hạng
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int q;
+    if (!(cin >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<int> elements;
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    while (q--) {
+        int type, x;
+        cin >> type >> x;
+        if (type == 1) {
+            // Chèn x
+            auto it = lower_bound(elements.begin(), elements.end(), x);
+            elements.insert(it, x);
+        } else if (type == 2) {
+            // Xóa x
+            auto it = lower_bound(elements.begin(), elements.end(), x);
+            if (it != elements.end() && *it == x) {
+                elements.erase(it);
+            }
+        } else if (type == 3) {
+            // Đếm số phần tử nhỏ hơn x (Order of Key)
+            int rank_val = lower_bound(elements.begin(), elements.end(), x) - elements.begin();
+            cout << rank_val << "\n";
+        } else if (type == 4) {
+            // Tìm phần tử thứ k (0-indexed)
+            if (x >= 0 && x < (int)elements.size()) {
+                cout << elements[x] << "\n";
+            } else {
+                cout << -1 << "\n";
+            }
+        }
     }
-
-    cout << ans << "\n";
     return 0;
 }
 
@@ -12520,6 +12722,7 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Running Median bằng 2 Heap (Max-Heap và Min-Heap)
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -12527,15 +12730,35 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    priority_queue<long long> max_heap; // Nửa nhỏ
+    priority_queue<long long, vector<long long>, greater<long long>> min_heap; // Nửa lớn
 
-    long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
+        long long x;
+        cin >> x;
 
-    cout << ans << "\n";
+        if (max_heap.empty() || x <= max_heap.top()) {
+            max_heap.push(x);
+        } else {
+            min_heap.push(x);
+        }
+
+        // Cân bằng kích thước
+        if (max_heap.size() > min_heap.size() + 1) {
+            min_heap.push(max_heap.top());
+            max_heap.pop();
+        } else if (min_heap.size() > max_heap.size()) {
+            max_heap.push(min_heap.top());
+            min_heap.pop();
+        }
+
+        // Xuất trung vị
+        if (max_heap.size() == min_heap.size()) {
+            cout << fixed << setprecision(1) << (max_heap.top() + min_heap.top()) / 2.0 << "\n";
+        } else {
+            cout << fixed << setprecision(1) << (double)max_heap.top() << "\n";
+        }
+    }
     return 0;
 }
 
@@ -12557,9 +12780,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -12614,9 +12838,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -12631,22 +12856,58 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Cài đặt LRU Cache bằng list + unordered_map O(1)
+class LRUCache {
+    int capacity;
+    list<pair<int, int>> cache_list;
+    unordered_map<int, list<pair<int, int>>::iterator> map_lookup;
+
+public:
+    LRUCache(int cap) : capacity(cap) {}
+
+    int get(int key) {
+        if (map_lookup.find(key) == map_lookup.end()) return -1;
+        cache_list.splice(cache_list.begin(), cache_list, map_lookup[key]);
+        return map_lookup[key]->second;
+    }
+
+    void put(int key, int value) {
+        if (map_lookup.find(key) != map_lookup.end()) {
+            map_lookup[key]->second = value;
+            cache_list.splice(cache_list.begin(), cache_list, map_lookup[key]);
+            return;
+        }
+        if ((int)cache_list.size() == capacity) {
+            int old_key = cache_list.back().first;
+            cache_list.pop_back();
+            map_lookup.erase(old_key);
+        }
+        cache_list.emplace_front(key, value);
+        map_lookup[key] = cache_list.begin();
+    }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int cap, q;
+    if (!(cin >> cap >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    LRUCache lru(cap);
+    while (q--) {
+        string cmd;
+        cin >> cmd;
+        if (cmd == "SET") {
+            int k, v;
+            cin >> k >> v;
+            lru.put(k, v);
+        } else if (cmd == "GET") {
+            int k;
+            cin >> k;
+            cout << lru.get(k) << "\n";
+        }
     }
-
-    cout << ans << "\n";
     return 0;
 }
 
@@ -13258,22 +13519,41 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Định lý Lucas tính C(n, k) % P với P là số nguyên tố nhỏ
+long long C_small(long long n, long long k, long long p) {
+    if (k < 0 || k > n) return 0;
+    long long num = 1, den = 1;
+    for (int i = 0; i < k; ++i) {
+        num = (num * (n - i)) % p;
+        den = (den * (i + 1)) % p;
+    }
+    // Nghịch đảo Fermat
+    long long inv = 1, base = den, exp = p - 2;
+    while (exp > 0) {
+        if (exp & 1) inv = (inv * base) % p;
+        base = (base * base) % p;
+        exp >>= 1;
+    }
+    return (num * inv) % p;
+}
+
+long long lucas(long long n, long long k, long long p) {
+    if (k == 0) return 1;
+    return (lucas(n / p, k / p, p) * C_small(n % p, k % p, p)) % p;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int t;
+    if (!(cin >> t)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    while (t--) {
+        long long n, k, p;
+        cin >> n >> k >> p;
+        cout << lucas(n, k, p) << "\n";
     }
-
-    cout << ans << "\n";
     return 0;
 }
 
@@ -13285,6 +13565,34 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tính số Catalan thứ N modulo 10^9 + 7: C_n = (1 / (n + 1)) * C(2n, n)
+const int MOD = 1000000007;
+
+long long power(long long a, long long b) {
+    long long res = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) res = (res * a) % MOD;
+        a = (a * a) % MOD;
+        exp_shift: b >>= 1;
+    }
+    return res;
+}
+
+long long modInverse(long long n) {
+    return power(n, MOD - 2);
+}
+
+long long nCr(int n, int r) {
+    if (r < 0 || r > n) return 0;
+    long long num = 1, den = 1;
+    for (int i = 0; i < r; ++i) {
+        num = (num * (n - i)) % MOD;
+        den = (den * (i + 1)) % MOD;
+    }
+    return (num * modInverse(den)) % MOD;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -13292,15 +13600,11 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    // Số Catalan C_n biểu diễn số cách đặt dãy n cặp ngoặc hợp lệ
+    long long c_2n_n = nCr(2 * n, n);
+    long long catalan = (c_2n_n * modInverse(n + 1)) % MOD;
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
-
-    cout << ans << "\n";
+    cout << catalan << "\n";
     return 0;
 }
 
@@ -13312,22 +13616,25 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// S(n, k): Số cách phân hoạch tập n phần tử thành k tập con khác rỗng
+const int MOD = 1000000007;
+long long dp[1005][1005];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    dp[0][0] = 1;
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= min(i, k); ++j) {
+            dp[i][j] = (dp[i - 1][j - 1] + j * dp[i - 1][j]) % MOD;
+        }
     }
 
-    cout << ans << "\n";
+    cout << dp[n][k] << "\n";
     return 0;
 }
 
@@ -13349,9 +13656,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -13376,9 +13684,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -14333,22 +14642,49 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// 0-1 BFS tìm đường đi ngắn nhất bằng Deque O(V + E)
+const int INF = 1e9;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m, start_node;
+    if (!(cin >> n >> m >> start_node)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    vector<vector<pair<int, int>>> adj(n + 1);
+    for (int i = 0; i < m; ++i) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
     }
 
-    cout << ans << "\n";
+    vector<int> dist(n + 1, INF);
+    deque<int> dq;
+
+    dist[start_node] = 0;
+    dq.push_front(start_node);
+
+    while (!dq.empty()) {
+        int u = dq.front();
+        dq.pop_front();
+
+        for (auto edge : adj[u]) {
+            int v = edge.first;
+            int w = edge.second;
+            if (dist[u] + w < dist[v]) {
+                dist[v] = dist[u] + w;
+                if (w == 0) dq.push_front(v);
+                else dq.push_back(v);
+            }
+        }
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        cout << (dist[i] == INF ? -1 : dist[i]) << " ";
+    }
+    cout << "\n";
     return 0;
 }
 
@@ -14419,22 +14755,57 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tarjan tìm các thành phần liên thông mạnh SCC O(V + E)
+const int MAXN = 100005;
+vector<int> adj[MAXN];
+int tin[MAXN], low[MAXN], timer;
+bool on_stack[MAXN];
+vector<int> st;
+int scc_count = 0;
+
+void dfs(int u) {
+    tin[u] = low[u] = ++timer;
+    st.push_back(u);
+    on_stack[u] = true;
+
+    for (int v : adj[u]) {
+        if (!tin[v]) {
+            dfs(v);
+            low[u] = min(low[u], low[v]);
+        } else if (on_stack[v]) {
+            low[u] = min(low[u], tin[v]);
+        }
+    }
+
+    if (low[u] == tin[u]) {
+        scc_count++;
+        while (true) {
+            int v = st.back();
+            st.pop_back();
+            on_stack[v] = false;
+            if (u == v) break;
+        }
+    }
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
     }
 
-    cout << ans << "\n";
+    for (int i = 1; i <= n; ++i) {
+        if (!tin[i]) dfs(i);
+    }
+
+    cout << scc_count << "\n";
     return 0;
 }
 
@@ -14446,22 +14817,56 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Thuật toán Hierholzer tìm chu trình Euler O(V + E)
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<multiset<int>> adj(n + 1);
+    vector<int> deg(n + 1, 0);
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].insert(v);
+        adj[v].insert(u);
+        deg[u]++; deg[v]++;
     }
 
-    cout << ans << "\n";
+    for (int i = 1; i <= n; ++i) {
+        if (deg[i] % 2 != 0) {
+            cout << "IMPOSSIBLE\n";
+            return 0;
+        }
+    }
+
+    vector<int> circuit;
+    stack<int> st;
+    st.push(1);
+
+    while (!st.empty()) {
+        int u = st.top();
+        if (!adj[u].empty()) {
+            int v = *adj[u].begin();
+            adj[u].erase(adj[u].begin());
+            adj[v].erase(adj[v].find(u));
+            st.push(v);
+        } else {
+            circuit.push_back(u);
+            st.pop();
+        }
+    }
+
+    if ((int)circuit.size() != m + 1) {
+        cout << "IMPOSSIBLE\n";
+        return 0;
+    }
+
+    for (int node : circuit) cout << node << " ";
+    cout << "\n";
     return 0;
 }
 
@@ -14473,22 +14878,63 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Dijkstra đồ thị nhiều tầng: dist[u][used_k]
+const long long INF = 1e18;
+
+struct State {
+    long long d;
+    int u, k;
+    bool operator>(const State& o) const { return d > o.d; }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m, K;
+    if (!(cin >> n >> m >> K)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    vector<vector<pair<int, long long>>> adj(n + 1);
+    for (int i = 0; i < m; ++i) {
+        int u, v; long long w;
+        cin >> u >> v >> w;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
     }
 
-    cout << ans << "\n";
+    vector<vector<long long>> dist(n + 1, vector<long long>(K + 1, INF));
+    priority_queue<State, vector<State>, greater<State>> pq;
+
+    dist[1][0] = 0;
+    pq.push({0, 1, 0});
+
+    while (!pq.empty()) {
+        auto [d, u, used] = pq.top();
+        pq.pop();
+
+        if (d > dist[u][used]) continue;
+
+        for (auto edge : adj[u]) {
+            int v = edge.first;
+            long long w = edge.second;
+
+            // Không dùng vé
+            if (dist[u][used] + w < dist[v][used]) {
+                dist[v][used] = dist[u][used] + w;
+                pq.push({dist[v][used], v, used});
+            }
+
+            // Dùng 1 vé miễn phí (nếu còn)
+            if (used < K && dist[u][used] < dist[v][used + 1]) {
+                dist[v][used + 1] = dist[u][used];
+                pq.push({dist[v][used + 1], v, used + 1});
+            }
+        }
+    }
+
+    long long ans = INF;
+    for (int k = 0; k <= K; ++k) ans = min(ans, dist[n][k]);
+    cout << (ans == INF ? -1 : ans) << "\n";
     return 0;
 }
 
@@ -14500,22 +14946,65 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Thuật toán Kruskal tìm cây khung nhỏ nhất MST bằng DSU O(E log E)
+struct Edge {
+    int u, v;
+    long long w;
+    bool operator<(const Edge& other) const {
+        return w < other.w;
+    }
+};
+
+struct DSU {
+    vector<int> parent, rank_val;
+    DSU(int n) {
+        parent.resize(n + 1);
+        rank_val.assign(n + 1, 0);
+        for (int i = 1; i <= n; ++i) parent[i] = i;
+    }
+    int find(int i) {
+        if (parent[i] == i) return i;
+        return parent[i] = find(parent[i]);
+    }
+    bool unite(int i, int j) {
+        int root_i = find(i), root_j = find(j);
+        if (root_i != root_j) {
+            if (rank_val[root_i] < rank_val[root_j]) swap(root_i, root_j);
+            parent[root_j] = root_i;
+            if (rank_val[root_i] == rank_val[root_j]) rank_val[root_i]++;
+            return true;
+        }
+        return false;
+    }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    vector<Edge> edges(m);
+    for (int i = 0; i < m; ++i) {
+        cin >> edges[i].u >> edges[i].v >> edges[i].w;
     }
 
-    cout << ans << "\n";
+    sort(edges.begin(), edges.end());
+    DSU dsu(n);
+    long long mst_weight = 0;
+    int edges_count = 0;
+
+    for (const auto& e : edges) {
+        if (dsu.unite(e.u, e.v)) {
+            mst_weight += e.w;
+            edges_count++;
+            if (edges_count == n - 1) break;
+        }
+    }
+
+    if (edges_count != n - 1) cout << "IMPOSSIBLE\n";
+    else cout << mst_weight << "\n";
     return 0;
 }
 
@@ -14527,22 +15016,45 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Bellman-Ford phát hiện chu trình âm O(V * E)
+struct Edge {
+    int u, v;
+    long long w;
+};
+
+const long long INF = 1e18;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    vector<Edge> edges(m);
+    for (int i = 0; i < m; ++i) {
+        cin >> edges[i].u >> edges[i].v >> edges[i].w;
     }
 
-    cout << ans << "\n";
+    vector<long long> dist(n + 1, 0); // Tìm chu trình âm trên toàn đồ thị
+
+    for (int i = 1; i <= n - 1; ++i) {
+        for (const auto& e : edges) {
+            if (dist[e.u] + e.w < dist[e.v]) {
+                dist[e.v] = dist[e.u] + e.w;
+            }
+        }
+    }
+
+    bool has_neg_cycle = false;
+    for (const auto& e : edges) {
+        if (dist[e.u] + e.w < dist[e.v]) {
+            has_neg_cycle = true;
+            break;
+        }
+    }
+
+    cout << (has_neg_cycle ? "YES\n" : "NO\n");
     return 0;
 }
 
@@ -14554,22 +15066,47 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Floyd-Warshall tìm đường đi ngắn nhất mọi cặp đỉnh O(N^3)
+const long long INF = 1e18;
+long long dist_mat[505][505];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= n; ++j) {
+            if (i == j) dist_mat[i][j] = 0;
+            else dist_mat[i][j] = INF;
+        }
     }
 
-    cout << ans << "\n";
+    for (int i = 0; i < m; ++i) {
+        int u, v; long long w;
+        cin >> u >> v >> w;
+        dist_mat[u][v] = min(dist_mat[u][v], w);
+        dist_mat[v][u] = min(dist_mat[v][u], w);
+    }
+
+    for (int k = 1; k <= n; ++k) {
+        for (int i = 1; i <= n; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                if (dist_mat[i][k] < INF && dist_mat[k][j] < INF) {
+                    dist_mat[i][j] = min(dist_mat[i][j], dist_mat[i][k] + dist_mat[k][j]);
+                }
+            }
+        }
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= n; ++j) {
+            cout << (dist_mat[i][j] == INF ? -1 : dist_mat[i][j]) << " ";
+        }
+        cout << "\n";
+    }
     return 0;
 }
 
@@ -14658,9 +15195,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -15713,22 +16251,53 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Fenwick Tree 2D tính tổng hình chữ nhật O(log N * log M)
+const int MAXN = 1005;
+long long bit2d[MAXN][MAXN];
+int N, M;
+
+void update(int r, int c, long long val) {
+    for (int i = r; i <= N; i += i & -i) {
+        for (int j = c; j <= M; j += j & -j) {
+            bit2d[i][j] += val;
+        }
+    }
+}
+
+long long query(int r, int c) {
+    long long sum = 0;
+    for (int i = r; i > 0; i -= i & -i) {
+        for (int j = c; j > 0; j -= j & -j) {
+            sum += bit2d[i][j];
+        }
+    }
+    return sum;
+}
+
+long long query_rect(int r1, int c1, int r2, int c2) {
+    return query(r2, c2) - query(r1 - 1, c2) - query(r2, c1 - 1) + query(r1 - 1, c1 - 1);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int q;
+    if (!(cin >> N >> M >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    while (q--) {
+        int type;
+        cin >> type;
+        if (type == 1) {
+            int r, c; long long val;
+            cin >> r >> c >> val;
+            update(r, c, val);
+        } else {
+            int r1, c1, r2, c2;
+            cin >> r1 >> c1 >> r2 >> c2;
+            cout << query_rect(r1, c1, r2, c2) << "\n";
+        }
     }
-
-    cout << ans << "\n";
     return 0;
 }
 
@@ -15750,9 +16319,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -15767,22 +16337,70 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Persistent Segment Tree tìm phần tử thứ K nhỏ nhất trong đoạn [L, R]
+const int MAXN = 200005;
+struct Node {
+    int count;
+    int left, right;
+} tree_nodes[MAXN * 40];
+
+int roots[MAXN], node_cnt;
+
+int update(int prev_root, int start, int end, int val) {
+    int cur = ++node_cnt;
+    tree_nodes[cur] = tree_nodes[prev_root];
+    tree_nodes[cur].count++;
+    if (start == end) return cur;
+
+    int mid = (start + end) / 2;
+    if (val <= mid) {
+        tree_nodes[cur].left = update(tree_nodes[prev_root].left, start, mid, val);
+    } else {
+        tree_nodes[cur].right = update(tree_nodes[prev_root].right, mid + 1, end, val);
+    }
+    return cur;
+}
+
+int query(int node_l, int node_r, int start, int end, int k) {
+    if (start == end) return start;
+    int count_left = tree_nodes[tree_nodes[node_r].left].count - tree_nodes[tree_nodes[node_l].left].count;
+    int mid = (start + end) / 2;
+    if (k <= count_left) {
+        return query(tree_nodes[node_l].left, tree_nodes[node_r].left, start, mid, k);
+    } else {
+        return query(tree_nodes[node_l].right, tree_nodes[node_r].right, mid + 1, end, k - count_left);
+    }
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    vector<int> a(n + 1), vals;
+    for (int i = 1; i <= n; ++i) {
+        cin >> a[i];
+        vals.push_back(a[i]);
     }
 
-    cout << ans << "\n";
+    sort(vals.begin(), vals.end());
+    vals.erase(unique(vals.begin(), vals.end()), vals.end());
+
+    roots[0] = 0;
+    int m = vals.size();
+    for (int i = 1; i <= n; ++i) {
+        int idx = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin() + 1;
+        roots[i] = update(roots[i - 1], 1, m, idx);
+    }
+
+    while (q--) {
+        int l, r, k;
+        cin >> l >> r >> k;
+        int ans_idx = query(roots[l - 1], roots[r], 1, m, k);
+        cout << vals[ans_idx - 1] << "\n";
+    }
     return 0;
 }
 
@@ -15804,9 +16422,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -15831,9 +16450,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -15858,9 +16478,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -15885,9 +16506,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -15902,22 +16524,77 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Segment Tree tìm dãy con có tổng lớn nhất trong đoạn [L, R]
+struct Node {
+    long long total, pref, suff, max_sub;
+};
+
+Node combine(Node L, Node R) {
+    Node res;
+    res.total = L.total + R.total;
+    res.pref = max(L.pref, L.total + R.pref);
+    res.suff = max(R.suff, R.total + L.suff);
+    res.max_sub = max({L.max_sub, R.max_sub, L.suff + R.pref});
+    return res;
+}
+
+const int MAXN = 100005;
+Node tree_nodes[4 * MAXN];
+long long a[MAXN];
+
+void build(int node, int start, int end) {
+    if (start == end) {
+        tree_nodes[node] = {a[start], a[start], a[start], a[start]};
+        return;
+    }
+    int mid = (start + end) / 2;
+    build(2 * node, start, mid);
+    build(2 * node + 1, mid + 1, end);
+    tree_nodes[node] = combine(tree_nodes[2 * node], tree_nodes[2 * node + 1]);
+}
+
+void update(int node, int start, int end, int idx, long long val) {
+    if (start == end) {
+        tree_nodes[node] = {val, val, val, val};
+        return;
+    }
+    int mid = (start + end) / 2;
+    if (idx <= mid) update(2 * node, start, mid, idx, val);
+    else update(2 * node + 1, mid + 1, end, idx, val);
+    tree_nodes[node] = combine(tree_nodes[2 * node], tree_nodes[2 * node + 1]);
+}
+
+Node query(int node, int start, int end, int l, int r) {
+    if (l <= start && end <= r) return tree_nodes[node];
+    int mid = (start + end) / 2;
+    if (r <= mid) return query(2 * node, start, mid, l, r);
+    if (l > mid) return query(2 * node + 1, mid + 1, end, l, r);
+    return combine(query(2 * node, start, mid, l, r), query(2 * node + 1, mid + 1, end, l, r));
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 1; i <= n; ++i) cin >> a[i];
+    build(1, 1, n);
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    while (q--) {
+        int type;
+        cin >> type;
+        if (type == 1) {
+            int idx; long long val;
+            cin >> idx >> val;
+            update(1, 1, n, idx, val);
+        } else {
+            int l, r;
+            cin >> l >> r;
+            cout << query(1, 1, n, l, r).max_sub << "\n";
+        }
     }
-
-    cout << ans << "\n";
     return 0;
 }
 
@@ -15939,9 +16616,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -16090,9 +16768,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -16674,22 +17353,51 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Digit DP đếm các số không chứa chữ số cấm D
+long long dp[20][2][2];
+string S;
+int banned_digit;
+
+long long solve(int idx, bool tight, bool leading_zero) {
+    if (idx == (int)S.size()) {
+        return !leading_zero ? 1 : 0;
+    }
+    if (dp[idx][tight][leading_zero] != -1) {
+        return dp[idx][tight][leading_zero];
+    }
+
+    int limit = tight ? (S[idx] - '0') : 9;
+    long long ans = 0;
+
+    for (int d = 0; d <= limit; ++d) {
+        if (!leading_zero && d == banned_digit) continue;
+        if (leading_zero && d == banned_digit && d != 0) continue;
+
+        bool next_tight = tight && (d == limit);
+        bool next_lz = leading_zero && (d == 0);
+        ans += solve(idx + 1, next_tight, next_lz);
+    }
+
+    return dp[idx][tight][leading_zero] = ans;
+}
+
+long long count_valid(long long N, int b) {
+    if (N <= 0) return 0;
+    S = to_string(N);
+    banned_digit = b;
+    memset(dp, -1, sizeof(dp));
+    return solve(0, true, true);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    long long L, R;
+    int b;
+    if (!(cin >> L >> R >> b)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
-
-    cout << ans << "\n";
+    cout << count_valid(R, b) - count_valid(L - 1, b) << "\n";
     return 0;
 }
 
@@ -16701,22 +17409,40 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Digit DP đếm các số đối xứng (Palindromes) trong [L, R]
+long long dp[20][20][2];
+string S;
+
+long long solve(int l, int r, bool tight) {
+    if (l > r) return 1;
+    if (dp[l][r][tight] != -1) return dp[l][r][tight];
+
+    int limit = tight ? (S[l] - '0') : 9;
+    long long ans = 0;
+
+    for (int d = 0; d <= limit; ++d) {
+        bool next_tight = tight && (d == limit);
+        ans += solve(l + 1, r - 1, next_tight);
+    }
+
+    return dp[l][r][tight] = ans;
+}
+
+long long count_pal(long long N) {
+    if (N <= 0) return 0;
+    S = to_string(N);
+    memset(dp, -1, sizeof(dp));
+    return solve(0, S.size() - 1, true);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    long long L, R;
+    if (!(cin >> L >> R)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
-
-    cout << ans << "\n";
+    cout << count_pal(R) - count_pal(L - 1) << "\n";
     return 0;
 }
 
@@ -16738,9 +17464,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -16765,9 +17492,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -16792,9 +17520,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -17597,22 +18326,55 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Double Hashing (MOD1 = 10^9+7, MOD2 = 10^9+9, Base = 311)
+const int MOD1 = 1000000007;
+const int MOD2 = 1000000009;
+const int BASE = 311;
+const int MAXN = 200005;
+
+long long h1[MAXN], h2[MAXN], p1[MAXN], p2[MAXN];
+
+void init_hash(const string& s) {
+    int n = s.size();
+    p1[0] = p2[0] = 1;
+    for (int i = 1; i <= n; ++i) {
+        p1[i] = (p1[i - 1] * BASE) % MOD1;
+        p2[i] = (p2[i - 1] * BASE) % MOD2;
+    }
+    for (int i = 1; i <= n; ++i) {
+        h1[i] = (h1[i - 1] * BASE + s[i - 1]) % MOD1;
+        h2[i] = (h2[i - 1] * BASE + s[i - 1]) % MOD2;
+    }
+}
+
+pair<long long, long long> get_hash(int l, int r) {
+    long long hash_val1 = (h1[r] - h1[l - 1] * p1[r - l + 1]) % MOD1;
+    if (hash_val1 < 0) hash_val1 += MOD1;
+
+    long long hash_val2 = (h2[r] - h2[l - 1] * p2[r - l + 1]) % MOD2;
+    if (hash_val2 < 0) hash_val2 += MOD2;
+
+    return {hash_val1, hash_val2};
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s; int q;
+    if (!(cin >> s >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    init_hash(s);
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    while (q--) {
+        int l1, r1, l2, r2;
+        cin >> l1 >> r1 >> l2 >> r2;
+        if (get_hash(l1, r1) == get_hash(l2, r2)) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
     }
-
-    cout << ans << "\n";
     return 0;
 }
 
@@ -17624,22 +18386,44 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Manacher Algorithm tìm xâu con đối xứng dài nhất O(N)
+string transform_string(const string& s) {
+    string res = "^";
+    for (char c : s) {
+        res += "#";
+        res += c;
+    }
+    res += "#$";
+    return res;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s;
+    if (!(cin >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    string t = transform_string(s);
+    int n = t.size();
+    vector<int> p(n, 0);
+    int c = 0, r = 0;
+    int max_len = 0;
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 1; i < n - 1; ++i) {
+        int i_mirror = 2 * c - i;
+        if (r > i) p[i] = min(r - i, p[i_mirror]);
+
+        while (t[i + 1 + p[i]] == t[i - 1 - p[i]]) p[i]++;
+
+        if (i + p[i] > r) {
+            c = i;
+            r = i + p[i];
+        }
+        max_len = max(max_len, p[i]);
     }
 
-    cout << ans << "\n";
+    cout << max_len << "\n";
     return 0;
 }
 
@@ -17651,22 +18435,32 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Z-Algorithm tính mảng Z-array O(N)
+vector<int> compute_z(const string& s) {
+    int n = s.size();
+    vector<int> z(n, 0);
+    int l = 0, r = 0;
+    for (int i = 1; i < n; ++i) {
+        if (i <= r) z[i] = min(r - i + 1, z[i - l]);
+        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) z[i]++;
+        if (i + z[i] - 1 > r) {
+            l = i;
+            r = i + z[i] - 1;
+        }
+    }
+    return z;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s;
+    if (!(cin >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
-
-    cout << ans << "\n";
+    vector<int> z = compute_z(s);
+    for (int val : z) cout << val << " ";
+    cout << "\n";
     return 0;
 }
 
@@ -17830,21 +18624,55 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Căn bậc hai số nguyên lớn bằng Chặt nhị phân số lớn
+bool compare_or_equal(string a, string b) {
+    if (a.size() != b.size()) return a.size() > b.size();
+    return a >= b;
+}
+
+string multiply_bigint(string a, string b) {
+    int n = a.size(), m = b.size();
+    vector<int> res(n + m, 0);
+    for (int i = n - 1; i >= 0; --i) {
+        for (int j = m - 1; j >= 0; --j) {
+            res[i + j + 1] += (a[i] - '0') * (b[j] - '0');
+        }
+    }
+    for (int i = n + m - 1; i > 0; --i) {
+        res[i - 1] += res[i] / 10;
+        res[i] %= 10;
+    }
+    string s = "";
+    int pos = 0;
+    while (pos < n + m - 1 && res[pos] == 0) pos++;
+    for (int i = pos; i < n + m; ++i) s += to_string(res[i]);
+    return s;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s;
+    if (!(cin >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    // Chặt nhị phân tìm căn bậc hai nguyên
+    string ans = "0";
+    // Triển khai tìm căn theo từng chữ số từ trái qua phải
+    string cur = "";
+    for (size_t i = 0; i < s.size(); ++i) {
+        cur += s[i];
+        for (int d = 9; d >= 0; --d) {
+            string test_ans = ans + to_string(d);
+            if (test_ans[0] == '0' && test_ans.size() > 1) test_ans = test_ans.substr(1);
+            if (compare_or_equal(s.substr(0, i + 1), multiply_bigint(test_ans, test_ans))) {
+                ans = test_ans;
+                break;
+            }
+        }
     }
 
+    if (ans.empty()) ans = "0";
     cout << ans << "\n";
     return 0;
 }
@@ -17857,22 +18685,64 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Thuật toán Aho-Corasick tìm kiếm đồng thời K mẫu trong văn bản O(N + \sum |P|)
+const int MAX_NODES = 100005;
+int trie[MAX_NODES][26], fail[MAX_NODES], term[MAX_NODES], node_count = 1;
+
+void insert(const string& s, int id) {
+    int u = 0;
+    for (char c : s) {
+        int idx = c - 'a';
+        if (!trie[u][idx]) trie[u][idx] = node_count++;
+        u = trie[u][idx];
+    }
+    term[u]++;
+}
+
+void build_aho() {
+    queue<int> q;
+    for (int c = 0; c < 26; ++c) {
+        if (trie[0][c]) q.push(trie[0][c]);
+    }
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        for (int c = 0; c < 26; ++c) {
+            int v = trie[u][c];
+            if (v) {
+                fail[v] = trie[fail[u]][c];
+                term[v] += term[fail[v]];
+                q.push(v);
+            } else {
+                trie[u][c] = trie[fail[u]][c];
+            }
+        }
+    }
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string text;
+    int k;
+    if (!(cin >> text >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 0; i < k; ++i) {
+        string p;
+        cin >> p;
+        insert(p, i);
     }
 
-    cout << ans << "\n";
+    build_aho();
+
+    int u = 0;
+    long long total_matches = 0;
+    for (char c : text) {
+        u = trie[u][c - 'a'];
+        total_matches += term[u];
+    }
+
+    cout << total_matches << "\n";
     return 0;
 }
 

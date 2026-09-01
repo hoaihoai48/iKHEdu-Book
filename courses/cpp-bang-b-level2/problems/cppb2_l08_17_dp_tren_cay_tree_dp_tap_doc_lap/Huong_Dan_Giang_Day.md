@@ -107,8 +107,7 @@ int main() {
 
     dfs(1, 0);
 
-    cout << max(dp[1][0], dp[1][1]) << "
-";
+    cout << max(dp[1][0], dp[1][1]) << "\n";
     return 0;
 }
 ```

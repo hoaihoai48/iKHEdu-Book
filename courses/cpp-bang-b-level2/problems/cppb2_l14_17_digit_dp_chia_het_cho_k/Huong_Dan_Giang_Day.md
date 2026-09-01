@@ -110,8 +110,7 @@ int main() {
     int k;
     if (!(cin >> L >> R >> k)) return 0;
 
-    cout << count_div(R, k) - count_div(L - 1, k) << "
-";
+    cout << count_div(R, k) - count_div(L - 1, k) << "\n";
     return 0;
 }
 ```

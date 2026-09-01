@@ -128,8 +128,7 @@ int main() {
     while (q--) {
         string p;
         cin >> p;
-        cout << query_prefix(p) << "
-";
+        cout << query_prefix(p) << "\n";
     }
     return 0;
 }

@@ -90,8 +90,7 @@ int main() {
     long long b;
     if (!(cin >> a >> b)) return 0;
 
-    cout << divide_bigint(a, b) << "
-";
+    cout << divide_bigint(a, b) << "\n";
     return 0;
 }
 ```

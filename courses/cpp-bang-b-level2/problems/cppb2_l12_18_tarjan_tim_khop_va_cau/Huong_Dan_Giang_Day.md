@@ -120,8 +120,7 @@ int main() {
         if (is_cut[i]) cut_count++;
     }
 
-    cout << cut_count << " " << bridge_count << "
-";
+    cout << cut_count << " " << bridge_count << "\n";
     return 0;
 }
 ```

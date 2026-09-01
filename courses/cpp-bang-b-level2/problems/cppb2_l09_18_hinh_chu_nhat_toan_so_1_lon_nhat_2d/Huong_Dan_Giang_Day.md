@@ -122,8 +122,7 @@ int main() {
         ans = max(ans, largest_rectangle_histogram(heights));
     }
 
-    cout << ans << "
-";
+    cout << ans << "\n";
     return 0;
 }
 ```

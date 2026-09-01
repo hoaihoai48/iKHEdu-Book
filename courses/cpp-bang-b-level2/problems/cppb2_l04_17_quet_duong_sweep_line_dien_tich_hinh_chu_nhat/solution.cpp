@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Sweep-line tính diện tích hợp các hình chữ nhật
+struct Event {
+    long long x, y1, y2;
+    int type;
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -8,14 +14,45 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<Event> events;
+    vector<long long> Y;
 
-    long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        long long x1, y1, x2, y2;
+        cin >> x1 >> y1 >> x2 >> y2;
+        events.push_back({x1, y1, y2, 1});
+        events.push_back({x2, y1, y2, -1});
+        Y.push_back(y1);
+        Y.push_back(y2);
     }
 
-    cout << ans << "\n";
+    sort(Y.begin(), Y.end());
+    Y.erase(unique(Y.begin(), Y.end()), Y.end());
+
+    sort(events.begin(), events.end(), [](const Event& a, const Event& b) {
+        return a.x < b.x;
+    });
+
+    vector<int> count_cover(Y.size(), 0);
+    long long total_area = 0;
+
+    for (size_t i = 0; i + 1 < events.size(); ++i) {
+        int y1_idx = lower_bound(Y.begin(), Y.end(), events[i].y1) - Y.begin();
+        int y2_idx = lower_bound(Y.begin(), Y.end(), events[i].y2) - Y.begin();
+
+        for (int j = y1_idx; j < y2_idx; ++j) {
+            count_cover[j] += events[i].type;
+        }
+
+        long long covered_len = 0;
+        for (size_t j = 0; j + 1 < Y.size(); ++j) {
+            if (count_cover[j] > 0) {
+                covered_len += Y[j + 1] - Y[j];
+            }
+        }
+        total_area += covered_len * (events[i + 1].x - events[i].x);
+    }
+
+    cout << total_area << "\n";
     return 0;
 }

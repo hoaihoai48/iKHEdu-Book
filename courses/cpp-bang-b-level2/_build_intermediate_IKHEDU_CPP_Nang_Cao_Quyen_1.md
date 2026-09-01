@@ -9324,22 +9324,43 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Parallel Binary Search (Chặt nhị phân song song)
+const int MAXN = 100005;
+int L[MAXN], R[MAXN], mid_val[MAXN], ans[MAXN];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 1; i <= q; ++i) {
+        L[i] = 1; R[i] = n; ans[i] = -1;
     }
 
-    cout << ans << "\n";
+    // Mô phỏng các vòng lặp Parallel BS
+    for (int iter = 0; iter < 20; ++iter) {
+        vector<vector<int>> check_at(n + 1);
+        bool has_query = false;
+        for (int i = 1; i <= q; ++i) {
+            if (L[i] <= R[i]) {
+                mid_val[i] = (L[i] + R[i]) / 2;
+                check_at[mid_val[i]].push_back(i);
+                has_query = true;
+            }
+        }
+        if (!has_query) break;
+
+        for (int m = 1; m <= n; ++m) {
+            for (int q_idx : check_at[m]) {
+                ans[q_idx] = m;
+                R[q_idx] = m - 1; // Điều kiện tìm nghiệm nhỏ nhất
+            }
+        }
+    }
+
+    for (int i = 1; i <= q; ++i) cout << (ans[i] == -1 ? 1 : ans[i]) << "\n";
     return 0;
 }
 
@@ -9351,22 +9372,29 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Ternary Search tìm cực tiểu hàm lồi f(x)
+double f(double x, double a, double b, double c) {
+    return a * x * x + b * x + c;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    double a, b, c, left_bound, right_bound;
+    if (!(cin >> a >> b >> c >> left_bound >> right_bound)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int iter = 0; iter < 100; ++iter) {
+        double m1 = left_bound + (right_bound - left_bound) / 3.0;
+        double m2 = right_bound - (right_bound - left_bound) / 3.0;
+        if (f(m1, a, b, c) < f(m2, a, b, c)) {
+            right_bound = m2;
+        } else {
+            left_bound = m1;
+        }
     }
 
-    cout << ans << "\n";
+    cout << fixed << setprecision(6) << left_bound << "\n";
     return 0;
 }
 
@@ -9378,22 +9406,49 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tìm trung vị của hai mảng đã sắp xếp trong O(log(min(N, M)))
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    if (nums1.size() > nums2.size()) return findMedianSortedArrays(nums2, nums1);
+    int m = nums1.size(), n = nums2.size();
+    int low = 0, high = m;
+
+    while (low <= high) {
+        int i = (low + high) / 2;
+        int j = (m + n + 1) / 2 - i;
+
+        int maxLeft1 = (i == 0) ? INT_MIN : nums1[i - 1];
+        int minRight1 = (i == m) ? INT_MAX : nums1[i];
+
+        int maxLeft2 = (j == 0) ? INT_MIN : nums2[j - 1];
+        int minRight2 = (j == n) ? INT_MAX : nums2[j];
+
+        if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
+            if ((m + n) % 2 == 0) {
+                return (max(maxLeft1, maxLeft2) + min(minRight1, minRight2)) / 2.0;
+            } else {
+                return max(maxLeft1, maxLeft2);
+            }
+        } else if (maxLeft1 > minRight2) {
+            high = i - 1;
+        } else {
+            low = i + 1;
+        }
+    }
+    return 0.0;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
+    vector<int> a(n), b(m);
     for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int j = 0; j < m; ++j) cin >> b[j];
 
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
-    }
-
-    cout << ans << "\n";
+    cout << fixed << setprecision(1) << findMedianSortedArrays(a, b) << "\n";
     return 0;
 }
 
@@ -9415,9 +9470,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -9442,9 +9498,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -9469,9 +9526,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10158,6 +10216,12 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Sweep-line tính diện tích hợp các hình chữ nhật
+struct Event {
+    long long x, y1, y2;
+    int type;
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10165,15 +10229,46 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<Event> events;
+    vector<long long> Y;
 
-    long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        long long x1, y1, x2, y2;
+        cin >> x1 >> y1 >> x2 >> y2;
+        events.push_back({x1, y1, y2, 1});
+        events.push_back({x2, y1, y2, -1});
+        Y.push_back(y1);
+        Y.push_back(y2);
     }
 
-    cout << ans << "\n";
+    sort(Y.begin(), Y.end());
+    Y.erase(unique(Y.begin(), Y.end()), Y.end());
+
+    sort(events.begin(), events.end(), [](const Event& a, const Event& b) {
+        return a.x < b.x;
+    });
+
+    vector<int> count_cover(Y.size(), 0);
+    long long total_area = 0;
+
+    for (size_t i = 0; i + 1 < events.size(); ++i) {
+        int y1_idx = lower_bound(Y.begin(), Y.end(), events[i].y1) - Y.begin();
+        int y2_idx = lower_bound(Y.begin(), Y.end(), events[i].y2) - Y.begin();
+
+        for (int j = y1_idx; j < y2_idx; ++j) {
+            count_cover[j] += events[i].type;
+        }
+
+        long long covered_len = 0;
+        for (size_t j = 0; j + 1 < Y.size(); ++j) {
+            if (count_cover[j] > 0) {
+                covered_len += Y[j + 1] - Y[j];
+            }
+        }
+        total_area += covered_len * (events[i + 1].x - events[i].x);
+    }
+
+    cout << total_area << "\n";
     return 0;
 }
 
@@ -10195,9 +10290,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10222,9 +10318,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10249,9 +10346,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10276,9 +10374,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -10293,22 +10392,41 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Kadane 2D tìm ma trận con có tổng lớn nhất O(N^3)
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
+    vector<vector<long long>> a(n, vector<long long>(m));
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        for (int j = 0; j < m; ++j) {
+            cin >> a[i][j];
+        }
     }
 
-    cout << ans << "\n";
+    long long max_sum = LLONG_MIN;
+
+    for (int top = 0; top < n; ++top) {
+        vector<long long> temp(m, 0);
+        for (int bottom = top; bottom < n; ++bottom) {
+            for (int j = 0; j < m; ++j) {
+                temp[j] += a[bottom][j];
+            }
+
+            // Kadane 1D
+            long long current = 0;
+            for (int j = 0; j < m; ++j) {
+                current += temp[j];
+                max_sum = max(max_sum, current);
+                if (current < 0) current = 0;
+            }
+        }
+    }
+
+    cout << max_sum << "\n";
     return 0;
 }
 
@@ -11111,9 +11229,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -11128,19 +11247,42 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Đếm số chu trình 4 đỉnh C4 bằng Meet in the Middle O(M * sqrt(M))
+const int MAXN = 50005;
+vector<int> adj[MAXN];
+int cnt[MAXN];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
 
     long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int u = 1; u <= n; ++u) {
+        for (int v : adj[u]) {
+            for (int w : adj[v]) {
+                if (w != u && w > u) { // Đảm bảo đếm không lặp
+                    ans += cnt[w];
+                    cnt[w]++;
+                }
+            }
+        }
+        for (int v : adj[u]) {
+            for (int w : adj[v]) {
+                if (w != u && w > u) {
+                    cnt[w] = 0; // Reset
+                }
+            }
+        }
     }
 
     cout << ans << "\n";
@@ -11926,22 +12068,44 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Profile DP / DP Broken Profile lát gạch 1x2 trên lưới NxM
+int dp[2][1 << 12];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+    if (n < m) swap(n, m);
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    dp[0][0] = 1;
+    int cur = 0, next = 1;
 
-    long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        for (int j = 0; j < m; ++j) {
+            memset(dp[next], 0, sizeof(dp[next]));
+            for (int mask = 0; mask < (1 << m); ++mask) {
+                if (!dp[cur][mask]) continue;
+
+                if (mask & (1 << j)) {
+                    // Ô đã bị chiếm bởi gạch dọc từ trên xuống
+                    dp[next][mask ^ (1 << j)] += dp[cur][mask];
+                } else {
+                    // Đặt gạch dọc xuống dưới
+                    dp[next][mask | (1 << j)] += dp[cur][mask];
+
+                    // Đặt gạch ngang sang phải
+                    if (j + 1 < m && !(mask & (1 << (j + 1)))) {
+                        dp[next][mask] += dp[cur][mask];
+                    }
+                }
+            }
+            swap(cur, next);
+        }
     }
 
-    cout << ans << "\n";
+    cout << dp[cur][0] << "\n";
     return 0;
 }
 
@@ -11963,9 +12127,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -12021,9 +12186,10 @@ int main() {
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
 
+    sort(a.begin(), a.end());
     long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i];
+        ans += a[i] * (i + 1);
     }
 
     cout << ans << "\n";
@@ -12066,6 +12232,10 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Bitmask DP ghép cặp trọng số lớn nhất
+long long dp[1 << 20];
+long long cost[20][20];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -12073,15 +12243,29 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i];
+    for (int i = 0; i < 2 * n; ++i) {
+        for (int j = 0; j < 2 * n; ++j) {
+            cin >> cost[i][j];
+        }
     }
 
-    cout << ans << "\n";
+    int total_nodes = 2 * n;
+    memset(dp, 0, sizeof(dp));
+
+    for (int mask = 0; mask < (1 << total_nodes); ++mask) {
+        int i = 0;
+        while (i < total_nodes && (mask & (1 << i))) i++;
+        if (i == total_nodes) continue;
+
+        for (int j = i + 1; j < total_nodes; ++j) {
+            if (!(mask & (1 << j))) {
+                int next_mask = mask | (1 << i) | (1 << j);
+                dp[next_mask] = max(dp[next_mask], dp[mask] + cost[i][j]);
+            }
+        }
+    }
+
+    cout << dp[(1 << total_nodes) - 1] << "\n";
     return 0;
 }
 

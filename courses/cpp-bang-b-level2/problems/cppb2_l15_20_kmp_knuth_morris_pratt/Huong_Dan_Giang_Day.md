@@ -108,8 +108,7 @@ int main() {
         }
     }
 
-    cout << matches << "
-";
+    cout << matches << "\n";
     return 0;
 }
 ```
