@@ -574,8 +574,8 @@ def preprocess_markdown_for_volume(volume=1):
     # Front matter
     front = build_front_matter(volume)
 
-    # Back matter
-    foundation = build_back_matter_foundation() if volume in [1, None] else ""
+    # Back matter — cả 2 quyển đều có Phụ lục A (theo plan in màu)
+    foundation = build_back_matter_foundation() if volume in [1, 2, None] else ""
     solutions = collect_solutions_for_volume(volume)
     toc_section = "\n\\newpage\n\n# Mục lục\n\n"
 
@@ -727,13 +727,14 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
     # ============================================================
     style = doc.styles
 
-    if "Normal" in [s.name for s in style]:
-        normal = style["Normal"]
-        normal.font.name = "Times New Roman"
-        normal.font.size = Pt(11)
-        normal.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
-        normal.paragraph_format.line_spacing = 1.2
-        normal.paragraph_format.space_after = Pt(4)
+    for style_name in ["Normal", "Body Text", "List Paragraph", "Compact", "First Paragraph"]:
+        if style_name in [s.name for s in style]:
+            st = style[style_name]
+            st.font.name = "Times New Roman"
+            st.font.size = Pt(12.5)
+            st.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+            st.paragraph_format.line_spacing = 1.1
+            st.paragraph_format.space_after = Pt(2)
 
     # ============================================================
     # 3. COVER PAGE TRANSFORMATION
@@ -821,8 +822,8 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             prev_text = doc.paragraphs[idx - 1].text.strip() if idx > 0 else ""
             is_first_lesson_in_chapter = is_lesson and prev_text.startswith("CHƯƠNG")
 
-            para.paragraph_format.space_before = Pt(28) if is_chapter else (Pt(12) if is_first_lesson_in_chapter else Pt(20))
-            para.paragraph_format.space_after = Pt(8)
+            para.paragraph_format.space_before = Pt(18) if is_chapter else (Pt(10) if is_first_lesson_in_chapter else Pt(16))
+            para.paragraph_format.space_after = Pt(5) if is_chapter else Pt(4)
             para.paragraph_format.keep_with_next = True
             
             if not is_first_lesson_in_chapter:
@@ -832,7 +833,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 r.font.name = "Times New Roman"
                 r.font.size = Pt(17.5) if is_chapter else Pt(15)
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(0x0F, 0x2A, 0x44) if is_chapter else RGBColor(0x1A, 0x4A, 0x6B)
+                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
             if is_toc:
                 p_toc_heading = para
@@ -854,24 +855,24 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 })
 
         elif style_name == "Heading 2":
-            para.paragraph_format.space_before = Pt(15)
-            para.paragraph_format.space_after = Pt(5)
+            para.paragraph_format.space_before = Pt(11)
+            para.paragraph_format.space_after = Pt(3)
             para.paragraph_format.keep_with_next = True
             for r in para.runs:
                 r.font.name = "Times New Roman"
                 r.font.size = Pt(13.5)
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(0x1A, 0x4A, 0x6B)
+                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
         elif style_name == "Heading 3":
-            para.paragraph_format.space_before = Pt(13)
-            para.paragraph_format.space_after = Pt(4)
+            para.paragraph_format.space_before = Pt(9)
+            para.paragraph_format.space_after = Pt(3)
             para.paragraph_format.keep_with_next = True
             for r in para.runs:
                 r.font.name = "Times New Roman"
                 r.font.size = Pt(11.5)
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(0x0F, 0x2A, 0x44)
+                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
         elif style_name == "Heading 4":
             para.paragraph_format.space_before = Pt(8)
@@ -881,9 +882,19 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 r.font.name = "Times New Roman"
                 r.font.size = Pt(10.5)
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(0x33, 0x41, 0x55)
+                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
-        # --- B. CODE BLOCKS ---
+        # --- B. TABLE CAPTION (Ví dụ/Bảng) - gọn, không tốn trang ---
+        elif text.startswith("Ví dụ minh họa") or text.startswith("Bảng ") or text.startswith("Hình "):
+            para.paragraph_format.space_before = Pt(2)
+            para.paragraph_format.space_after = Pt(2)
+            for r in para.runs:
+                r.font.name = "Times New Roman"
+                r.font.size = Pt(9.5)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+
+        # --- C. CODE BLOCKS ---
         elif "Code" in style_name or style_name == "Source Code":
             para.paragraph_format.space_before = Pt(0)
             para.paragraph_format.space_after = Pt(0)
@@ -912,8 +923,9 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             is_tip = "💡" in text or "Mẹo" in text or "Lưu ý" in text
             is_theorem = "Định lý" in text or "Định nghĩa" in text or "Hệ quả" in text or "Bất biến" in text
 
-            fill_color = "FFFBEB" if is_warning else ("F0FDF4" if is_tip else ("F1F5F9" if is_theorem else "F8FAFC"))
-            bdr_color = "F59E0B" if is_warning else ("10B981" if is_tip else ("0F2A44" if is_theorem else "94A3B8"))
+            # Thống nhất ghi chú xanh cho in màu — nền nhạt chữ đậm dễ đọc, tiết kiệm mực
+            fill_color = "EFF6FF" if (is_warning or is_tip or is_theorem) else "F8FAFC"
+            bdr_color = "3B82F6" if (is_warning or is_tip or is_theorem) else "94A3B8"
 
             shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{fill_color}"/>')
             bdr = parse_xml(f'''<w:pBdr {nsdecls("w")}>
@@ -1087,9 +1099,9 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             tblPr.remove(b)
 
         tblBorders = parse_xml(f'''<w:tblBorders {nsdecls("w")}>
-            <w:top w:val="single" w:sz="6" w:space="0" w:color="0F2A44"/>
+            <w:top w:val="single" w:sz="4" w:space="0" w:color="CBD5E1"/>
             <w:left w:val="single" w:sz="4" w:space="0" w:color="CBD5E1"/>
-            <w:bottom w:val="single" w:sz="6" w:space="0" w:color="CBD5E1"/>
+            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="CBD5E1"/>
             <w:right w:val="single" w:sz="4" w:space="0" w:color="CBD5E1"/>
             <w:insideH w:val="single" w:sz="4" w:space="0" w:color="E2E8F0"/>
             <w:insideV w:val="single" w:sz="4" w:space="0" w:color="E2E8F0"/>
@@ -1109,23 +1121,23 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 tcPr.append(parse_xml(f'<w:vAlign {nsdecls("w")} w:val="center"/>'))
 
                 if is_header:
-                    tcPr.append(parse_xml(f'<w:shd {nsdecls("w")} w:fill="0F2A44"/>'))
+                    tcPr.append(parse_xml(f'<w:shd {nsdecls("w")} w:fill="F1F5F9"/>'))
                     for p in cell.paragraphs:
                         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                        p.paragraph_format.space_before = Pt(4)
-                        p.paragraph_format.space_after = Pt(4)
+                        p.paragraph_format.space_before = Pt(3)
+                        p.paragraph_format.space_after = Pt(3)
                         p.paragraph_format.keep_with_next = True
                         for run in p.runs:
                             run.font.name = "Times New Roman"
                             run.font.bold = True
                             run.font.size = Pt(10)
-                            run.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
+                            run.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
                         for r_elem in p._p.findall(".//" + qn("w:r")):
                             rPr = r_elem.get_or_add_rPr()
                             for c in rPr.findall(qn("w:color")):
                                 rPr.remove(c)
-                            rPr.append(parse_xml(f'<w:color {nsdecls("w")} w:val="FFFFFF"/>'))
+                            rPr.append(parse_xml(f'<w:color {nsdecls("w")} w:val="1E293B"/>'))
 
                         math_ns = "http://schemas.openxmlformats.org/officeDocument/2006/math"
                         for mr in p._p.findall(".//{" + math_ns + "}r"):
@@ -1133,22 +1145,24 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                             if existing_rPr is not None:
                                 for c in existing_rPr.findall(qn("w:color")):
                                     existing_rPr.remove(c)
-                                existing_rPr.append(parse_xml(f'<w:color {nsdecls("w")} w:val="FFFFFF"/>'))
+                                existing_rPr.append(parse_xml(f'<w:color {nsdecls("w")} w:val="1E293B"/>'))
                             else:
-                                rPr = parse_xml(f'<w:rPr {nsdecls("w")}><w:rFonts {nsdecls("w")} w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:b {nsdecls("w")}/><w:color {nsdecls("w")} w:val="FFFFFF"/><w:sz {nsdecls("w")} w:val="20"/></w:rPr>')
+                                rPr = parse_xml(f'<w:rPr {nsdecls("w")}><w:rFonts {nsdecls("w")} w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:b {nsdecls("w")}/><w:color {nsdecls("w")} w:val="1E293B"/><w:sz {nsdecls("w")} w:val="20"/></w:rPr>')
                                 mr.insert(0, rPr)
                 else:
                     fill_color = "F8FAFC" if r_idx % 2 == 0 else "FFFFFF"
                     tcPr.append(parse_xml(f'<w:shd {nsdecls("w")} w:fill="{fill_color}"/>'))
+                    # Tối ưu bảng dày (>4 cột): giảm font và padding để gọn
+                    is_dense = len(row.cells) > 4
                     for p in cell.paragraphs:
-                        p.paragraph_format.space_before = Pt(3)
-                        p.paragraph_format.space_after = Pt(3)
+                        p.paragraph_format.space_before = Pt(1.5) if is_dense else Pt(2)
+                        p.paragraph_format.space_after = Pt(1.5) if is_dense else Pt(2)
                         for run in p.runs:
                             run.font.name = "Times New Roman"
-                            run.font.size = Pt(10)
+                            run.font.size = Pt(9) if is_dense else Pt(10)
                             run.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
-                tcMar = parse_xml(f'<w:tcMar {nsdecls("w")}><w:top w:w="80" w:type="dxa"/><w:bottom w:w="80" w:type="dxa"/><w:left w:w="120" w:type="dxa"/><w:right w:w="120" w:type="dxa"/></w:tcMar>')
+                tcMar = parse_xml(f'<w:tcMar {nsdecls("w")}><w:top w:w="40" w:type="dxa"/><w:bottom w:w="40" w:type="dxa"/><w:left w:w="60" w:type="dxa"/><w:right w:w="60" w:type="dxa"/></w:tcMar>')
                 tcPr.append(tcMar)
 
     doc.save(str(output_file))
