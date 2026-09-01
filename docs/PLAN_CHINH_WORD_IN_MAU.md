@@ -1,22 +1,20 @@
-# Kế hoạch biên soạn & In màu 3 Tập Giáo Trình iKHEDU C++
+# Kế hoạch biên soạn & In màu Bộ Giáo Trình iKHEDU C++ (2 Quyển)
 
 ## 1. Mục đích & Quyết định Chốt
-Thống nhất chuẩn in màu toàn diện và phân chia giáo trình thành **3 Tập (Kịch bản A)** để đảm bảo mỗi tập mỏng nhẹ (~130 – 195 trang), tối ưu chi phí in ấn, tiết kiệm mực và nâng cao trải nghiệm học tập của học sinh.
+Thống nhất chuẩn in màu toàn diện và phân chia giáo trình thành **2 Quyển độc lập** chuẩn in ấn để đảm bảo mỗi quyển cân đối (~200 – 210 trang), tối ưu chi phí in ấn, tiết kiệm mực và nâng cao trải nghiệm học tập của học sinh.
 
 ---
 
-## 2. Cấu Trúc Phân Chia 3 Tập (Kịch Bản A)
+## 2. Cấu Trúc Phân Chia 2 Quyển
 
-| Tập | Tên Tập | Phạm vi Bài học | Khối lượng dự kiến | Đối tượng & Trọng tâm sư phạm |
+| Quyển | Tên Quyển | Phạm vi Bài học | Khối lượng dự kiến | Đối tượng & Trọng tâm sư phạm |
 | :--- | :--- | :--- | :--- | :--- |
-| **Tập 1** | **C++ Căn Bản & Xử Lý Mảng** | **Bài 01 – Bài 06** (6 bài) | **~130 trang** (gồm ~85 bài tập & giải) | Nhập môn lập trình: Cú pháp, I/O, Rẽ nhánh, Vòng lặp, Mảng 1D, Vector, Mảng 2D/Ma trận. |
-| **Tập 2** | **Kỹ Thuật Thuật Toán Tuyến Tính & Đệ Quy** | **Bài 07 – Bài 12** (6 bài) | **~135 trang** (gồm ~100 bài tập & giải) | Tư duy tối ưu hóa: Two Pointers, Binary Search, Sliding Window, Prefix Sum, Sorting, Đệ quy/Quay lui. |
-| **Tập 3** | **Thuật Toán Chuyên Sâu & Cấu Trúc Dữ Liệu** | **Bài 13 – Bài 21** (9 bài) | **~195 trang** (gồm ~150 bài tập & giải) | Luyện thi HSG/ICPC: Lý thuyết số, QHĐ 1D/2D, Đồ thị BFS/DFS, Cây, Shortest Path, MST, String Hashing, Fenwick/Segment Tree. |
+| **Quyển 1** | **Kỹ Thuật Lập Trình & Nền Tảng Thuật Toán** | **Chương 01 – Chương 04 (Bài 01 – Bài 12)** (12 bài) | **~210 trang** (gồm 188 bài tập & giải) | Nhập môn lập trình & tư duy tối ưu: Mảng, Two Pointers, Sliding Window, Prefix Sum, Binary Search, Bitwise, Số học, Modulo, BigInt, Đệ quy, Chia để trị, Quay lui. |
+| **Quyển 2** | **Cấu Trúc Dữ Liệu & Thuật Toán Nâng Cao** | **Chương 05 – Chương 07 (Bài 13 – Bài 21)** (9 bài) | **~205 trang** (gồm 135 bài tập & giải) | Luyện thi HSG/ICPC: Quy hoạch động 1D/2D/chuỗi, Cấu trúc dữ liệu STL nâng cao, Stack, Monotonic Queue, Đồ thị BFS/DFS, Đồ thị lưới 2D, Cây Segment Tree & Fenwick Tree. |
 
 * **Đầu ra file DOCX**:
-  1. `IKHEDU_CPP_Co_Ban_Quyen_1.docx` (Tập 1: Bài 01 – Bài 06)
-  2. `IKHEDU_CPP_Co_Ban_Quyen_2.docx` (Tập 2: Bài 07 – Bài 12)
-  3. `IKHEDU_CPP_Co_Ban_Quyen_3.docx` (Tập 3: Bài 13 – Bài 21)
+  1. `IKHEDU_CPP_Co_Ban_Quyen_1.docx` (Quyển 1: Bài 01 – Bài 12)
+  2. `IKHEDU_CPP_Co_Ban_Quyen_2.docx` (Quyển 2: Bài 13 – Bài 21)
 
 ---
 

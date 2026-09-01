@@ -1,6 +1,6 @@
 ---
 title: "Khoá học C++ cơ bản — Quyển 1"
-subtitle: "Kỹ thuật mảng, Số học & Thuật toán vét cạn"
+subtitle: "Kỹ thuật lập trình & Nền tảng thuật toán (Bài 01-12)"
 author: "Trung tâm tin học iKH"
 lang: vi
 documentclass: report
@@ -15,29 +15,29 @@ header-includes:
   - \fancyhead[R]{\textit{Trung tâm tin học iKH}}
 ---
 
+\newpage
 
 # Lời nói đầu
 
-Cuốn sách **Khoá học C++ cơ bản — QUYỂN 1: KỸ THUẬT MẢNG, SỐ HỌC & THUẬT TOÁN VÉT CẠN** được biên soạn bởi **Trung tâm tin học iKH** nhằm cung cấp cho các em học sinh một lộ trình học tập toàn diện, hệ thống và chuyên sâu về lập trình C++ — từ nền tảng cơ bản đến các thuật toán nâng cao trong lập trình thi đấu.
+Chào mừng các em học sinh và quý thầy cô đến với bộ giáo trình **Khoá học C++ cơ bản — QUYỂN 1: KỸ THUẬT LẬP TRÌNH & NỀN TẢNG THUẬT TOÁN** của Trung tâm tin học iKH.
 
-Sách được thiết kế tối ưu cho học sinh ôn luyện thi **Tin học trẻ Bảng B**, **Học sinh giỏi THCS/THPT** và các kỳ thi lập trình thuật toán. Cuốn sách này gồm **4 Chương trọng tâm (Chương 01 đến Chương 04)** với **12 Bài học** và **180 bài toán thực hành**, trang bị toàn bộ nền tảng cốt lõi từ thuật toán sắp xếp, kỹ thuật hai con trỏ, cửa sổ trượt, mảng tiền tố, tìm kiếm nhị phân, phép toán bit, số học modular, số nguyên lớn cho đến tư duy đệ quy, chia để trị và quay lui vét cạn.
+Bộ tài liệu này được biên soạn công phu nhằm cung cấp lộ trình học tập lập trình thi đấu bài bản, chuẩn mực và hiện đại nhất dành cho học sinh THCS, THPT và sinh viên đam mê thuật toán.
 
-Mỗi bài học trong sách tuân theo một khung logic sư phạm nhất quán:
+Phần nội dung này gồm **4 Chương trọng tâm (Chương 01 đến Chương 04)** với **12 Bài học** và **188 bài toán thực hành**, trang bị toàn diện kỹ thuật lập trình C++, mảng, con trỏ, cửa sổ trượt, tìm kiếm nhị phân, bit, số học, đệ quy và quay lui.
 
-- **Khái niệm & bản chất toán học** — giúp học sinh hiểu sâu bản chất thay vì chỉ học vẹt cú pháp.
-- **Chứng minh & bất biến thuật toán** — rèn tư duy phân tích toán học nghiêm ngặt.
-- **Mẫu cài đặt chuẩn thi đấu** — code C++ sạch, tối ưu, an toàn, sẵn sàng nộp bài.
-- **Bẫy lỗi lập trình kinh điển** — cảnh báo những sai lầm và ngộ nhận phổ biến nhất.
-- **Bài tập thực hành chi tiết** — mỗi bài toán đều có đề bài chuẩn, ví dụ I/O và ràng buộc toán học rõ ràng.
+Mỗi bài học được thiết kế theo cấu trúc sư phạm chặt chẽ:
 
-Toàn bộ code C++ trong sách tuân theo chuẩn thi đấu iKHEDU: sử dụng `#include <bits/stdc++.h>`, Fast I/O và Safe Input, giúp học sinh rèn luyện phong cách lập trình chuyên nghiệp ngay từ đầu.
+- **Khái niệm & Bản chất toán học**: Giải thích trực quan, dễ hiểu kèm chứng minh toán học ngắn gọn.
+- **Mô hình bài toán kinh điển**: Các dạng bài đặc trưng kèm phân tích độ phức tạp thời gian/không gian.
+- **Mẫu cài đặt chuẩn thi đấu**: Code C++ chuẩn, tối ưu, dễ hiểu và tuân thủ các quy chuẩn lập trình hiện đại.
+- **Hệ thống bài tập thực hành**: Phân tầng từ cơ bản đến nâng cao (P0 đến P5), có đầy đủ giới hạn thời gian, bộ nhớ, sample test và giải thích chi tiết.
+- **Lời giải tham khảo chi tiết**: Phụ lục B cung cấp mã nguồn C++ hoàn chỉnh cho toàn bộ bài tập trong sách.
 
-Chúc các em học tập hiệu quả và chinh phục những giải thưởng cao nhất!
+Chúc các em học tập hiệu quả và chinh phục những giải thưởng cao trong các kỳ thi học sinh giỏi Tin học và Olympic lập trình!
 
-**Trung tâm tin học iKH**
-
-\newpage
-
+\begin{flushright}
+\textbf{Trung tâm tin học iKH}
+\end{flushright}
 
 
 
@@ -121,6 +121,7 @@ Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải th�
 **Cảnh báo bẫy lỗi: BẪY DẤU `<= ` TRONG COMPARATOR**
 
 > Nếu viết `return a <= b;`, khi `a == b` thì cả `cmp(a, b)` và `cmp(b, a)` đều trả về `true` $\implies$ Vi phạm tiên đề Bất phản xạ và Bất đối xứng $\implies$ `sort` sẽ tiếp tục truy cập vùng nhớ ngoài biên của mảng $\implies$ **RUNTIME ERROR / CRASH CHƯƠNG TRÌNH**.
+>
 > **Lưu ý quan trọng:** Luôn dùng toán tử so sánh nghiêm ngặt (`<` hoặc `>`). Khi hai phần tử bằng nhau (`a == b`), hàm so sánh bắt buộc phải trả về `false`!
 
 ## 5. Các kỹ thuật Custom Comparator nâng cao
@@ -3705,6 +3706,8 @@ $$\gcd(A, B) \times \text{lcm}(A, B) = A \times B \implies \text{lcm}(A, B) = \f
 **Bẫy Lỗi TRÀN SỐ KHI TÍNH BỘI CHUNG NHỎ NHẤT (LCM):**
 
 > * Không viết `(A * B) / gcd(A, B)` vì tích $A \times B$ có thể lên tới $10^{36}$ gây tràn số `long long`.
+>
+>
 > * Luôn viết: `long long lcm = (a / gcd(a, b)) * b;`
 
 > * **Lưu ý chuyên sâu:** Việc chia trước giúp triệt tiêu nguy cơ tràn số ở bước trung gian; tuy nhiên, nếu bản thân giá trị $\text{lcm}(A, B)$ thực tế vượt quá $9 \cdot 10^{18}$ (giới hạn của `long long`), ta bắt buộc phải sử dụng `__int128` hoặc kiểu dữ liệu số lớn (Big Integer).
@@ -4230,6 +4233,8 @@ Ta cần tìm số nguyên $X \in \{1, \dots, 6\}$ sao cho $(3 \times X) \pmod 7
 **2 Bẫy Lỗi KHI THỰC HIỆN PHÉP TOÁN ĐỒNG DƯ:**
 
 > 1. **Số dư âm trong C++:** Trong C++, phép toán `-7 % 5` trả về `-2` (không phải `3`). Để luôn nhận kết quả không âm, bắt buộc phải viết: `(a % m + m) % m`.
+>
+>
 > 2. **Tràn số 32-bit khi nhân:** Nếu $A, B \approx 10^9$, tích $A \times B \approx 10^{18}$ vượt giới hạn kiểu `int`. Bắt buộc phải ép kiểu 64-bit trước khi nhân: `(1LL * a * b) % m`.
 
 ### 3.2. Định lý Fermat nhỏ & nghịch đảo modulo
@@ -4244,6 +4249,8 @@ Ta có thể tính $A^{-1} \pmod M$ chỉ bằng một hàm Lũy thừa nhị ph
 **ĐIỀU KIỆN TIÊN QUYẾT CỦA ĐỊNH LÝ FERMAT NHỎ:**
 
 > * Quy tắc $A^{M - 1} \equiv 1 \pmod M$ và việc rút gọn số mũ $B \gets B \pmod{(M - 1)}$ **CHỈ ĐÚNG KHI $M$ LÀ SỐ NGUYÊN TỐ VÀ $\gcd(A, M) = 1$**.
+>
+>
 > * Tuyệt đối không tùy tiện áp dụng nếu $A$ chia hết cho $M$ hoặc $M$ là hợp số.
 
 ### 3.3. Thuật toán euclid mở rộng (extended euclidean algorithm)
@@ -6850,9 +6857,12 @@ int main() {
 
 > **Định nghĩa:** **State (Trạng thái)** là tập thông tin tối thiểu cần thiết để xác định chính xác các lựa chọn tiếp theo và kết quả có thể đạt được từ trạng thái hiện tại.
 >
+>
 > * **Không phải mọi biến xuất hiện trong hàm đệ quy đều là thành phần của State Identity; chỉ những thông tin có thể làm thay đổi các lựa chọn hoặc kết quả của phần còn lại mới cần thiết.**
 
 > * **Trong cài đặt DFS / Quay lui:** State bao gồm cả dữ liệu cấu hình đang xây dựng và các đại lượng tích lũy (`current_value`, `current_cost`).
+>
+>
 > * **Khi chuyển sang Quy Hoạch Động (DP):** Ta chắt lọc những biến thực sự tạo nên **"State Identity"** (ví dụ: `dp[index][remaining_weight]` hoặc `dp[city][mask]`), còn giá trị mục tiêu trở thành giá trị lưu trong bảng DP thay vì là tham số đệ quy.
 
 | Bài Toán | State Trong Cài Đặt DFS | State Identity Khi Chuyển Sang DP (Nếu có Memoization/DP) |
@@ -7542,7 +7552,7 @@ int main() {
 
 # Phụ lục A: Nền tảng C++
 
-> Phần này ôn tập nhanh các kiến thức nền tảng C++ cần thiết trước khi học thuật toán.
+> Phần này tóm tắt toàn bộ cú pháp, cấu trúc dữ liệu và quy trình giải bài C++ cơ bản.
 
 ## 1. KHUNG TƯ DUY CỦA MỌI BÀI LẬP TRÌNH
 
@@ -8140,9 +8150,9 @@ DEBUG
 
 \newpage
 
-# Phụ lục B: Bài giải
+# Phụ lục B: Lời giải bài tập tham khảo
 
-> Phần này chứa lời giải tham khảo (code C++) cho toàn bộ bài tập trong sách. Hãy tự cố gắng giải bài ít nhất 30 phút trước khi xem bài giải.
+> Phần này cung cấp mã nguồn C++ tham khảo chuẩn thi đấu cho các bài tập thực hành trong sách.
 
 ## Chương 01 — Bài 01: Sắp xếp
 

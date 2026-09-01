@@ -36,7 +36,7 @@ PROBLEMS_DIR = BASE_DIR / "problems"
 
 # Topic metadata
 ALL_TOPICS = [
-    # Volume 1
+    # Quyển 1: Kỹ thuật lập trình & Nền tảng thuật toán (Bài 01-12)
     ("Chương 01 — Bài 01: Sắp xếp", "cppb_sx", 1),
     ("Chương 01 — Bài 02: Hai con trỏ", "cppb_hct", 1),
     ("Chương 01 — Bài 03: Cửa sổ trượt", "cppb_cst", 1),
@@ -49,7 +49,7 @@ ALL_TOPICS = [
     ("Chương 04 — Bài 10: Đệ quy", "cppb_rec", 1),
     ("Chương 04 — Bài 11: Chia để trị", "cppb_dac", 1),
     ("Chương 04 — Bài 12: Quay lui & nhánh cận", "cppb_bkt", 1),
-    # Volume 2
+    # Quyển 2: Cấu trúc dữ liệu & Thuật toán nâng cao (Bài 13-21)
     ("Chương 05 — Bài 13: QHĐ 1D & LIS", "cppb_dp1", 2),
     ("Chương 05 — Bài 14: QHĐ 2D & Knapsack", "cppb_dp2", 2),
     ("Chương 05 — Bài 15: QHĐ chuỗi & LCS", "cppb_dps", 2),
@@ -414,56 +414,57 @@ def clean_separators(lines):
 
 
 def build_front_matter(volume=1):
-    """Build front matter markdown: Lời nói đầu theo Quyển."""
+    """Build front matter markdown: Lời nói đầu theo Quyển (2 quyển)."""
     if volume == 1:
-        vol_name = "QUYỂN 1: KỸ THUẬT MẢNG, SỐ HỌC & THUẬT TOÁN VÉT CẠN"
-        vol_desc = "gồm **4 Chương trọng tâm (Chương 01 đến Chương 04)** với **12 Bài học** và **180 bài toán thực hành**, trang bị toàn bộ nền tảng cốt lõi từ thuật toán sắp xếp, kỹ thuật hai con trỏ, cửa sổ trượt, mảng tiền tố, tìm kiếm nhị phân, phép toán bit, số học modular, số nguyên lớn cho đến tư duy đệ quy, chia để trị và quay lui vét cạn."
+        vol_name = "QUYỂN 1: KỸ THUẬT LẬP TRÌNH & NỀN TẢNG THUẬT TOÁN"
+        vol_desc = "gồm **4 Chương trọng tâm (Chương 01 đến Chương 04)** với **12 Bài học** và **188 bài toán thực hành**, trang bị toàn diện kỹ thuật lập trình C++, mảng, con trỏ, cửa sổ trượt, tìm kiếm nhị phân, bit, số học, đệ quy và quay lui."
     elif volume == 2:
-        vol_name = "QUYỂN 2: QUY HOẠCH ĐỘNG, CẤU TRÚC DỮ LIỆU & THUẬT TOÁN ĐỒ THỊ"
-        vol_desc = "gồm **3 Chương chuyên sâu (Chương 05 đến Chương 07)** với **9 Bài học** và **143 bài toán thực hành**, đưa học sinh bước vào thế giới của các kỹ thuật thuật toán đỉnh cao: quy hoạch động 1D/2D/chuỗi, cấu trúc dữ liệu STL nâng cao, ngăn xếp đơn điệu (Monotonic Stack), hàng đợi hai đầu (Deque), lý thuyết đồ thị (BFS, DFS, Flood Fill) và cây truy vấn đoạn (Segment Tree, Fenwick Tree)."
+        vol_name = "QUYỂN 2: CẤU TRÚC DỮ LIỆU & THUẬT TOÁN NÂNG CAO"
+        vol_desc = "gồm **3 Chương chuyên sâu (Chương 05 đến Chương 07)** với **9 Bài học** và **135 bài toán thực hành**, chinh phục quy hoạch động 1D/2D/chuỗi, cấu trúc dữ liệu STL nâng cao, Stack, Queue, Đồ thị BFS/DFS và cây Segment/Fenwick."
     else:
         vol_name = "TRỌN BỘ 7 CHƯƠNG"
         vol_desc = "bao gồm đầy đủ 7 Chương trọng tâm với 21 Bài học và 323 bài toán thực hành có lời giải chi tiết."
 
-    preface = f"""
+    return f"""\\newpage
+
 # Lời nói đầu
 
-Cuốn sách **Khoá học C++ cơ bản — {vol_name}** được biên soạn bởi **{BOOK_AUTHOR}** nhằm cung cấp cho các em học sinh một lộ trình học tập toàn diện, hệ thống và chuyên sâu về lập trình C++ — từ nền tảng cơ bản đến các thuật toán nâng cao trong lập trình thi đấu.
+Chào mừng các em học sinh và quý thầy cô đến với bộ giáo trình **Khoá học C++ cơ bản — {vol_name}** của Trung tâm tin học iKH.
 
-Sách được thiết kế tối ưu cho học sinh ôn luyện thi **Tin học trẻ Bảng B**, **Học sinh giỏi THCS/THPT** và các kỳ thi lập trình thuật toán. Cuốn sách này {vol_desc}
+Bộ tài liệu này được biên soạn công phu nhằm cung cấp lộ trình học tập lập trình thi đấu bài bản, chuẩn mực và hiện đại nhất dành cho học sinh THCS, THPT và sinh viên đam mê thuật toán.
 
-Mỗi bài học trong sách tuân theo một khung logic sư phạm nhất quán:
+Phần nội dung này {vol_desc}
 
-- **Khái niệm & bản chất toán học** — giúp học sinh hiểu sâu bản chất thay vì chỉ học vẹt cú pháp.
-- **Chứng minh & bất biến thuật toán** — rèn tư duy phân tích toán học nghiêm ngặt.
-- **Mẫu cài đặt chuẩn thi đấu** — code C++ sạch, tối ưu, an toàn, sẵn sàng nộp bài.
-- **Bẫy lỗi lập trình kinh điển** — cảnh báo những sai lầm và ngộ nhận phổ biến nhất.
-- **Bài tập thực hành chi tiết** — mỗi bài toán đều có đề bài chuẩn, ví dụ I/O và ràng buộc toán học rõ ràng.
+Mỗi bài học được thiết kế theo cấu trúc sư phạm chặt chẽ:
 
-Toàn bộ code C++ trong sách tuân theo chuẩn thi đấu iKHEDU: sử dụng `#include <bits/stdc++.h>`, Fast I/O và Safe Input, giúp học sinh rèn luyện phong cách lập trình chuyên nghiệp ngay từ đầu.
+- **Khái niệm & Bản chất toán học**: Giải thích trực quan, dễ hiểu kèm chứng minh toán học ngắn gọn.
+- **Mô hình bài toán kinh điển**: Các dạng bài đặc trưng kèm phân tích độ phức tạp thời gian/không gian.
+- **Mẫu cài đặt chuẩn thi đấu**: Code C++ chuẩn, tối ưu, dễ hiểu và tuân thủ các quy chuẩn lập trình hiện đại.
+- **Hệ thống bài tập thực hành**: Phân tầng từ cơ bản đến nâng cao (P0 đến P5), có đầy đủ giới hạn thời gian, bộ nhớ, sample test và giải thích chi tiết.
+- **Lời giải tham khảo chi tiết**: Phụ lục B cung cấp mã nguồn C++ hoàn chỉnh cho toàn bộ bài tập trong sách.
 
-Chúc các em học tập hiệu quả và chinh phục những giải thưởng cao nhất!
+Chúc các em học tập hiệu quả và chinh phục những giải thưởng cao trong các kỳ thi học sinh giỏi Tin học và Olympic lập trình!
 
-**{BOOK_AUTHOR}**
-
-\\newpage
-
+\\begin{{flushright}}
+\\textbf{{{BOOK_AUTHOR}}}
+\\end{{flushright}}
 """
-    return preface
 
 
 def build_back_matter_foundation():
-    """Build Appendix A: Foundation content."""
+    """Build Appendix A: C++ Foundation from source file."""
+    if not FOUNDATION_FILE.exists():
+        return ""
     content = read_file(FOUNDATION_FILE)
     result = "\n\\newpage\n\n"
     result += "# Phụ lục A: Nền tảng C++\n\n"
-    result += "> Phần này ôn tập nhanh các kiến thức nền tảng C++ cần thiết trước khi học thuật toán.\n\n"
+    result += "> Phần này tóm tắt toàn bộ cú pháp, cấu trúc dữ liệu và quy trình giải bài C++ cơ bản.\n\n"
     result += content
     return result
 
 
 def collect_solutions_for_volume(volume=None):
-    """Collect solution.cpp files for specific volume or all."""
+    """Collect solution.cpp files for specific volume or all (2 quyển)."""
     if volume == 1:
         target_topics = [t for t in ALL_TOPICS if t[2] == 1]
     elif volume == 2:
@@ -472,14 +473,21 @@ def collect_solutions_for_volume(volume=None):
         target_topics = ALL_TOPICS
 
     result = "\n\\newpage\n\n"
-    result += "# Phụ lục B: Bài giải\n\n"
-    result += "> Phần này chứa lời giải tham khảo (code C++) cho toàn bộ bài tập trong sách. "
-    result += "Hãy tự cố gắng giải bài ít nhất 30 phút trước khi xem bài giải.\n\n"
+    result += "# Phụ lục B: Lời giải bài tập tham khảo\n\n"
+    result += "> Phần này cung cấp mã nguồn C++ tham khảo chuẩn thi đấu cho các bài tập thực hành trong sách.\n\n"
 
     total_solutions = 0
+    for topic_title, dir_prefix, vol in target_topics:
+        topic_pattern = f"*{dir_prefix}*"
+        matching_dirs = sorted(PROBLEMS_DIR.glob(topic_pattern))
 
-    for topic_title, dir_prefix, _ in target_topics:
-        dirs = sorted(PROBLEMS_DIR.glob(f"{dir_prefix}_*"))
+        code_pattern = dir_prefix.upper().replace("_", "-")
+        prefix_dirs = sorted(PROBLEMS_DIR.glob(f"{code_pattern}*"))
+        prefix_dirs2 = sorted(PROBLEMS_DIR.glob(f"CPPB-{code_pattern.split('-')[-1]}*"))
+
+        all_matching = sorted(set(matching_dirs + prefix_dirs + prefix_dirs2))
+        dirs = [d for d in all_matching if d.is_dir() and not d.name.startswith(".")]
+
         if not dirs:
             continue
 
@@ -513,9 +521,8 @@ def collect_solutions_for_volume(volume=None):
 
 
 def extract_volume_lines(lines, volume=1):
-    """Filter lines for Volume 1 (Chương 01 -> 04) or Volume 2 (Chương 05 -> 07)."""
+    """Filter lines for Volume 1 (Chương 01-04) and Volume 2 (Chương 05-07)."""
     if volume == 1:
-        # From start of content to before CHƯƠNG 05
         vol_lines = []
         for line in lines:
             if line.startswith("# CHƯƠNG 05"):
@@ -523,7 +530,6 @@ def extract_volume_lines(lines, volume=1):
             vol_lines.append(line)
         return vol_lines
     elif volume == 2:
-        # From CHƯƠNG 05 to end
         vol_lines = []
         capture = False
         for line in lines:
@@ -536,9 +542,26 @@ def extract_volume_lines(lines, volume=1):
         return lines
 
 
+def format_callouts_and_blockquotes(content):
+    """Ensure multi-sentence/multi-idea blockquotes are rendered as distinct paragraphs in Word."""
+    lines = content.split("\n")
+    new_lines = []
+    for i, line in enumerate(lines):
+        if line.startswith("> ") and i > 0 and lines[i-1].startswith("> ") and lines[i-1].strip() != ">":
+            # If current line starts with key headers or bullet-like markers, insert a blank quote line
+            if any(line.startswith(prefix) for prefix in [
+                "> **Lưu ý", "> 💡", "> ⚠️", "> **Chú ý", "> **Cảnh báo",
+                "> *Lưu ý", "> **Nhắc lại", "> *Giải thích", "> - ", "> * ", "> 1. ", "> 2. ",
+                "> **Định lý", "> **Quy tắc", "> **Tóm lại"
+            ]):
+                new_lines.append(">")
+        new_lines.append(line)
+    return "\n".join(new_lines)
+
+
 def preprocess_markdown_for_volume(volume=1):
     """Main pre-processing pipeline for a specific volume."""
-    vol_str = f"QUYỂN {volume}" if volume in [1, 2] else "TRỌN BỘ"
+    vol_str = f"QUYỂN {volume}" if volume in [1, 2, 3] else "TRỌN BỘ"
     print(f"\n📖 Đang xử lý nội dung cho {vol_str}...")
 
     convert_svg_to_png()
@@ -557,6 +580,7 @@ def preprocess_markdown_for_volume(volume=1):
     content = re.sub(r"#\s+endif\b", "#endif", content)
     content = re.sub(r"#\s+ifdef\b", "#ifdef", content)
 
+    content = format_callouts_and_blockquotes(content)
     content = resolve_and_embed_images(content)
 
     lines = content.split("\n")
@@ -574,7 +598,7 @@ def preprocess_markdown_for_volume(volume=1):
     # Front matter
     front = build_front_matter(volume)
 
-    # Back matter — cả 2 quyển đều có Phụ lục A (theo plan in màu)
+    # Back matter — cả 2 quyển đều có Phụ lục A
     foundation = build_back_matter_foundation() if volume in [1, 2, None] else ""
     solutions = collect_solutions_for_volume(volume)
     toc_section = "\n\\newpage\n\n# Mục lục\n\n"
@@ -583,10 +607,10 @@ def preprocess_markdown_for_volume(volume=1):
 
     if volume == 1:
         book_title = "Khoá học C++ cơ bản — Quyển 1"
-        book_subtitle = "Kỹ thuật mảng, Số học & Thuật toán vét cạn"
+        book_subtitle = "Kỹ thuật lập trình & Nền tảng thuật toán (Bài 01-12)"
     elif volume == 2:
         book_title = "Khoá học C++ cơ bản — Quyển 2"
-        book_subtitle = "Quy hoạch động, Cấu trúc dữ liệu & Thuật toán đồ thị"
+        book_subtitle = "Cấu trúc dữ liệu & Thuật toán nâng cao (Bài 13-21)"
     else:
         book_title = "Khoá học C++ cơ bản"
         book_subtitle = "Từ nền tảng lập trình đến thuật toán thi đấu"
@@ -697,7 +721,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
         p_head.alignment = WD_ALIGN_PARAGRAPH.RIGHT
         for run in p_head.runs:
             run.font.name = "Times New Roman"
-            run.font.size = Pt(8.5)
+            run.font.size = Pt(9)
             run.font.italic = True
             run.font.color.rgb = RGBColor(0x64, 0x74, 0x8B)
 
@@ -749,9 +773,9 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
         vol_sub_title = f"QUYỂN {volume}: {book_subtitle.upper()}" if volume in [1, 2] else "TỪ NỀN TẢNG LẬP TRÌNH ĐẾN THUẬT TOÁN THI ĐẤU"
 
         if volume == 1:
-            tagline = "Giáo trình 4 Chương trọng tâm & 180 Bài toán thực hành có lời giải chi tiết"
+            tagline = "Chương 01 - 04 (Bài 01-12) & 188 Bài toán thực hành có lời giải chi tiết"
         elif volume == 2:
-            tagline = "Giáo trình 3 Chương trọng tâm & 143 Bài toán thực hành có lời giải chi tiết"
+            tagline = "Chương 05 - 07 (Bài 13-21) & 135 Bài toán thực hành có lời giải chi tiết"
         else:
             tagline = "Giáo trình 7 Chương trọng tâm & 323 Bài toán thực hành có lời giải chi tiết"
 
@@ -831,7 +855,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
 
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(17.5) if is_chapter else Pt(15)
+                r.font.size = Pt(18) if is_chapter else Pt(15.5)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
@@ -860,7 +884,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             para.paragraph_format.keep_with_next = True
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(13.5)
+                r.font.size = Pt(14)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
@@ -870,7 +894,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             para.paragraph_format.keep_with_next = True
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(11.5)
+                r.font.size = Pt(13)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
@@ -880,17 +904,17 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             para.paragraph_format.keep_with_next = True
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(10.5)
+                r.font.size = Pt(12.5)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
-        # --- B. TABLE CAPTION (Ví dụ/Bảng) - gọn, không tốn trang ---
+        # --- B. TABLE CAPTION (Ví dụ/Bảng) - nổi bật, phân cấp rõ ràng ---
         elif text.startswith("Ví dụ minh họa") or text.startswith("Bảng ") or text.startswith("Hình "):
-            para.paragraph_format.space_before = Pt(2)
+            para.paragraph_format.space_before = Pt(3)
             para.paragraph_format.space_after = Pt(2)
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(9.5)
+                r.font.size = Pt(11.5)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
@@ -901,7 +925,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             para.paragraph_format.line_spacing = 1.05
             for r in para.runs:
                 r.font.name = "Consolas"
-                r.font.size = Pt(8.5)
+                r.font.size = Pt(9)
                 r.font.color.rgb = RGBColor(0x0F, 0x17, 0x2A)
 
             shd = parse_xml(f'<w:shd {nsdecls("w")} w:fill="F8FAFC"/>')
@@ -940,16 +964,16 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             pPr.append(bdr)
             pPr.append(ind)
 
-            para.paragraph_format.space_before = Pt(5)
-            para.paragraph_format.space_after = Pt(5)
+            para.paragraph_format.space_before = Pt(3)
+            para.paragraph_format.space_after = Pt(3)
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(10.5)
+                r.font.size = Pt(12)
 
         # --- D. IMAGES & DRAWINGS ---
         elif len(para._p.findall('.//' + qn('w:drawing'))) > 0:
             para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            para.paragraph_format.space_before = Pt(8)
+            para.paragraph_format.space_before = Pt(4)
             para.paragraph_format.space_after = Pt(2)
             
             for drawing in para._p.findall('.//' + qn('w:drawing')):
@@ -985,15 +1009,16 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 r.font.italic = True
                 r.font.color.rgb = RGBColor(0x33, 0x41, 0x55)
 
-        # --- F. NORMAL TEXT ---
+        # --- F. NORMAL TEXT (Fallback) ---
         else:
             if para.paragraph_format.space_after is None or para.paragraph_format.space_after.pt < 1:
-                para.paragraph_format.space_after = Pt(3.5)
+                para.paragraph_format.space_after = Pt(2)
+            para.paragraph_format.line_spacing = 1.1
             for r in para.runs:
                 if not r.font.name:
                     r.font.name = "Times New Roman"
-                if not r.font.size:
-                    r.font.size = Pt(11)
+                r.font.size = Pt(12.5)
+                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
     # ============================================================
     # 5. BUILD INTERACTIVE HYPERLINKED TOC AT END
@@ -1120,6 +1145,10 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
 
                 tcPr.append(parse_xml(f'<w:vAlign {nsdecls("w")} w:val="center"/>'))
 
+                is_dense = len(row.cells) > 4
+                header_font_size = Pt(9.5) if is_dense else Pt(10.5)
+                math_sz = "19" if is_dense else "21"
+
                 if is_header:
                     tcPr.append(parse_xml(f'<w:shd {nsdecls("w")} w:fill="F1F5F9"/>'))
                     for p in cell.paragraphs:
@@ -1130,7 +1159,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                         for run in p.runs:
                             run.font.name = "Times New Roman"
                             run.font.bold = True
-                            run.font.size = Pt(10)
+                            run.font.size = header_font_size
                             run.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
                         for r_elem in p._p.findall(".//" + qn("w:r")):
@@ -1147,13 +1176,12 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                                     existing_rPr.remove(c)
                                 existing_rPr.append(parse_xml(f'<w:color {nsdecls("w")} w:val="1E293B"/>'))
                             else:
-                                rPr = parse_xml(f'<w:rPr {nsdecls("w")}><w:rFonts {nsdecls("w")} w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:b {nsdecls("w")}/><w:color {nsdecls("w")} w:val="1E293B"/><w:sz {nsdecls("w")} w:val="20"/></w:rPr>')
+                                rPr = parse_xml(f'<w:rPr {nsdecls("w")}><w:rFonts {nsdecls("w")} w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:b {nsdecls("w")}/><w:color {nsdecls("w")} w:val="1E293B"/><w:sz {nsdecls("w")} w:val="{math_sz}"/></w:rPr>')
                                 mr.insert(0, rPr)
                 else:
                     fill_color = "F8FAFC" if r_idx % 2 == 0 else "FFFFFF"
                     tcPr.append(parse_xml(f'<w:shd {nsdecls("w")} w:fill="{fill_color}"/>'))
                     # Tối ưu bảng dày (>4 cột): giảm font và padding để gọn
-                    is_dense = len(row.cells) > 4
                     for p in cell.paragraphs:
                         p.paragraph_format.space_before = Pt(1.5) if is_dense else Pt(2)
                         p.paragraph_format.space_after = Pt(1.5) if is_dense else Pt(2)
@@ -1174,7 +1202,7 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
 # ============================================================
 
 def build_single_volume(volume):
-    """Build a specific volume or all."""
+    """Build a specific volume or all (2 quyển)."""
     if volume == 1:
         output_file = BASE_DIR / "IKHEDU_CPP_Co_Ban_Quyen_1.docx"
     elif volume == 2:
@@ -1202,14 +1230,14 @@ def build_single_volume(volume):
 
 def main():
     parser = argparse.ArgumentParser(description="Build Word Docx for C++ Curriculum")
-    parser.add_argument("--volume", type=int, choices=[1, 2], help="Build only Volume 1 or Volume 2")
-    parser.add_argument("--all", action="store_true", help="Build both Volume 1 and Volume 2")
+    parser.add_argument("--volume", type=int, choices=[1, 2], help="Build only Volume 1 or 2")
+    parser.add_argument("--all", action="store_true", help="Build all Volumes (1,2)")
     args = parser.parse_args()
 
     if args.volume:
         build_single_volume(args.volume)
     else:
-        # Default: Build both Quyển 1 and Quyển 2
+        # Default: Build cả 2 Quyển
         print("=" * 60)
         print("📚 BẮT ĐẦU XUẤT BẢN BỘ SÁCH 2 QUYỂN")
         print(f"   Tác giả: {BOOK_AUTHOR}")
@@ -1221,8 +1249,8 @@ def main():
         if success1 and success2:
             print("\n" + "=" * 60)
             print("🎉 TẤT CẢ CÁC QUYỂN ĐÃ ĐƯỢC XUẤT BẢN THÀNH CÔNG!")
-            print("   📘 Quyển 1: IKHEDU_CPP_Co_Ban_Quyen_1.docx")
-            print("   📕 Quyển 2: IKHEDU_CPP_Co_Ban_Quyen_2.docx")
+            print("   📘 Quyển 1: IKHEDU_CPP_Co_Ban_Quyen_1.docx (Chương 01-04, Bài 01-12)")
+            print("   📕 Quyển 2: IKHEDU_CPP_Co_Ban_Quyen_2.docx (Chương 05-07, Bài 13-21)")
             print("=" * 60)
 
 

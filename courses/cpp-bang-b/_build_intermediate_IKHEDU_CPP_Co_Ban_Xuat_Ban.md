@@ -1,6 +1,6 @@
 ---
-title: "Khoá học C++ cơ bản — Quyển 2"
-subtitle: "Cấu trúc dữ liệu & Thuật toán nâng cao (Bài 13-21)"
+title: "Khoá học C++ cơ bản — Tập 3"
+subtitle: "Thuật Toán Chuyên Sâu & Cấu Trúc Dữ Liệu (Bài 13-21)"
 author: "Trung tâm tin học iKH"
 lang: vi
 documentclass: report
@@ -11,36 +11,33 @@ monofont: "Courier New"
 header-includes:
   - \usepackage{fancyhdr}
   - \pagestyle{fancy}
-  - \fancyhead[L]{\textit{Khoá học C++ cơ bản — Quyển 2}}
+  - \fancyhead[L]{\textit{Khoá học C++ cơ bản — Tập 3}}
   - \fancyhead[R]{\textit{Trung tâm tin học iKH}}
 ---
 
-\newpage
 
 # Lời nói đầu
 
-Chào mừng các em học sinh và quý thầy cô đến với bộ giáo trình **Khoá học C++ cơ bản — QUYỂN 2: CẤU TRÚC DỮ LIỆU & THUẬT TOÁN NÂNG CAO** của Trung tâm tin học iKH.
+Cuốn sách **Khoá học C++ cơ bản — TẬP 3: THUẬT TOÁN CHUYÊN SÂU & CẤU TRÚC DỮ LIỆU** được biên soạn bởi **Trung tâm tin học iKH** nhằm cung cấp cho các em học sinh một lộ trình học tập toàn diện, hệ thống và chuyên sâu về lập trình C++ — từ nền tảng cơ bản đến các thuật toán nâng cao trong lập trình thi đấu.
 
-Bộ tài liệu này được biên soạn công phu nhằm cung cấp lộ trình học tập lập trình thi đấu bài bản, chuẩn mực và hiện đại nhất dành cho học sinh THCS, THPT và sinh viên đam mê thuật toán.
+Sách được thiết kế tối ưu cho học sinh ôn luyện thi **Tin học trẻ Bảng B**, **Học sinh giỏi THCS/THPT** và các kỳ thi lập trình thuật toán. Cuốn sách này gồm **3 Chương chuyên sâu (Chương 05 đến Chương 07)** với **9 Bài học** và **~138 bài toán thực hành**, chinh phục QHĐ 1D/2D/chuỗi, STL, Stack/Queue, đồ thị BFS/DFS và cây Segment/Fenwick.
 
-Phần nội dung này gồm **3 Chương chuyên sâu (Chương 05 đến Chương 07)** với **9 Bài học** và **135 bài toán thực hành**, chinh phục quy hoạch động 1D/2D/chuỗi, cấu trúc dữ liệu STL nâng cao, Stack, Queue, Đồ thị BFS/DFS và cây Segment/Fenwick.
+Mỗi bài học trong sách tuân theo một khung logic sư phạm nhất quán:
 
-Mỗi bài học được thiết kế theo cấu trúc sư phạm chặt chẽ:
+- **Khái niệm & bản chất toán học** — giúp học sinh hiểu sâu bản chất thay vì chỉ học vẹt cú pháp.
+- **Chứng minh & bất biến thuật toán** — rèn tư duy phân tích toán học nghiêm ngặt.
+- **Mẫu cài đặt chuẩn thi đấu** — code C++ sạch, tối ưu, an toàn, sẵn sàng nộp bài.
+- **Bẫy lỗi lập trình kinh điển** — cảnh báo những sai lầm và ngộ nhận phổ biến nhất.
+- **Bài tập thực hành chi tiết** — mỗi bài toán đều có đề bài chuẩn, ví dụ I/O và ràng buộc toán học rõ ràng.
 
-- **Khái niệm & Bản chất toán học**: Giải thích trực quan, dễ hiểu kèm chứng minh toán học ngắn gọn.
-- **Mô hình bài toán kinh điển**: Các dạng bài đặc trưng kèm phân tích độ phức tạp thời gian/không gian.
-- **Mẫu cài đặt chuẩn thi đấu**: Code C++ chuẩn, tối ưu, dễ hiểu và tuân thủ các quy chuẩn lập trình hiện đại.
-- **Hệ thống bài tập thực hành**: Phân tầng từ cơ bản đến nâng cao (P0 đến P5), có đầy đủ giới hạn thời gian, bộ nhớ, sample test và giải thích chi tiết.
-- **Lời giải tham khảo chi tiết**: Phụ lục B cung cấp mã nguồn C++ hoàn chỉnh cho toàn bộ bài tập trong sách.
+Toàn bộ code C++ trong sách tuân theo chuẩn thi đấu iKHEDU: sử dụng `#include <bits/stdc++.h>`, Fast I/O và Safe Input, giúp học sinh rèn luyện phong cách lập trình chuyên nghiệp ngay từ đầu.
 
-Chúc các em học tập hiệu quả và chinh phục những giải thưởng cao trong các kỳ thi học sinh giỏi Tin học và Olympic lập trình!
+Chúc các em học tập hiệu quả và chinh phục những giải thưởng cao nhất!
 
-\begin{flushright}
-\textbf{Trung tâm tin học iKH}
-\end{flushright}
+**Trung tâm tin học iKH**
 
+\newpage
 
-# CHƯƠNG 05: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)
 
 
 # Bài 13: Quy hoạch động 1D & dãy con tăng dài nhất
@@ -5498,76 +5495,24 @@ int main() {
 
 # Phụ lục A: Nền tảng C++
 
-> Phần này tóm tắt toàn bộ cú pháp, cấu trúc dữ liệu và quy trình giải bài C++ cơ bản.
+> Hai hình dưới đây tóm tắt toàn bộ 12 mục tra cứu. Chi tiết đầy đủ xem file `IKHEDU_Level0_Foundation.md` kèm theo.
 
-## 1. KHUNG TƯ DUY CỦA MỌI BÀI LẬP TRÌNH
+![Phụ lục A trang 1 — Khung tư duy & 6 mục đầu](source/level0/assets/appendix_a_page1.svg)
 
-Mọi bài toán đều bắt đầu bằng chuỗi câu hỏi:
+![Phụ lục A trang 2 — Vòng lặp & 6 mục sau](source/level0/assets/appendix_a_page2.svg)
 
-```text
-Đề bài → Dữ liệu → Biến → Công thức/Điều kiện
-       → Các bước xử lý → Code → Kiểm tra kết quả
-```
 
-### Mô hình Input – Process – Output
 
-| Thành phần | Câu hỏi cần trả lời |
-|---|---|
-| **Input** | Chương trình nhận những dữ liệu nào? |
-| **Process** | Cần tính toán, kiểm tra hoặc lặp lại việc gì? |
-| **Output** | Cần in ra kết quả nào, theo định dạng nào? |
 
-Trước khi viết code, hãy viết bằng lời hoặc pseudocode:
+\newpage
 
-```text
-1. Đọc dữ liệu.
-2. Tính hoặc xử lý dữ liệu.
-3. Kiểm tra điều kiện nếu có.
-4. In kết quả.
-```
+# Phụ lục B: Bài giải
 
-### Công thức trước code
+> Phần này chứa lời giải tham khảo (code C++) cho toàn bộ bài tập trong sách. Hãy tự cố gắng giải bài ít nhất 30 phút trước khi xem bài giải.
 
-Không viết code trước khi biết mình đang tính gì.
+## Chương 01 — Bài 01: Sắp xếp
 
-```text
-Bài toán → Công thức hoặc quy tắc → Code
-```
-
-Ví dụ tính diện tích hình chữ nhật:
-
-```text
-S = chiều_dài × chiều_rộng
-```
-
-```cpp
-long long area = length * width;
-```
-
-Ví dụ tính trung bình (giữ phần thập phân):
-
-```cpp
-double average = 1.0 * sum / n;
-```
-
-### Chuỗi ghi nhớ nền tảng
-
-> **BIẾN → TÍNH → ĐIỀU KIỆN → LẶP → TÍCH LŨY → MẢNG → HÀM → DEBUG**
-
-| Từ khóa | Câu hỏi tự kiểm tra |
-|---|---|
-| **Biến** | Tôi cần lưu dữ liệu gì? |
-| **Tính** | Tôi cần công thức nào? |
-| **Điều kiện** | Tôi cần đưa ra quyết định nào? |
-| **Lặp** | Tôi cần làm việc gì nhiều lần? |
-| **Tích lũy** | Tôi cần cộng, đếm, tìm lớn nhất hay nhỏ nhất? |
-| **Mảng** | Tôi có nhiều dữ liệu cùng loại không? |
-| **Hàm** | Tôi có thể tách phần việc nào thành một nhiệm vụ riêng? |
-| **Debug** | Nếu kết quả sai, tôi sẽ kiểm tra từ đâu? |
-
----
-
-## 2. KHUNG CHƯƠNG TRÌNH C++ TỐI THIỂU
+### `CPPB-SX-01` — Xep Hang Diem Danh
 
 ```cpp
 #include <bits/stdc++.h>
@@ -5577,528 +5522,7368 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    // 1. Khai báo biến
-    // 2. Đọc dữ liệu
-    // 3. Xử lý
-    // 4. In kết quả
+    int n;
+    if (!(cin >> n)) return 0;
 
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i] << (i == n - 1 ? "" : " ");
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-02` — Khoang Cach Nho Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    long long ans = a[1] - a[0];
+    for (int i = 1; i < n - 1; ++i) {
+        ans = min(ans, a[i + 1] - a[i]);
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-03` — Tri Tuyet Doi
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool cmp(long long u, long long v) {
+    if (abs(u) != abs(v)) return abs(u) < abs(v);
+    return u < v;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end(), cmp);
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i] << (i == n - 1 ? "" : " ");
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-04` — Dem Gia Tri Phan Biet
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int cnt = 1;
+    for (int i = 1; i < n; ++i) {
+        if (a[i] != a[i - 1]) ++cnt;
+    }
+
+    cout << cnt << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-05` — Hai Tram Kiem Soat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> x(n);
+    for (int i = 0; i < n; ++i) cin >> x[i];
+
+    sort(x.begin(), x.end());
+
+    long long min_dist = x[1] - x[0];
+    for (int i = 1; i < n - 1; ++i) {
+        min_dist = min(min_dist, x[i + 1] - x[i]);
+    }
+
+    cout << min_dist << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-06` — Khoang Trong Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    long long max_gap = 0;
+    for (int i = 0; i < n - 1; ++i) {
+        max_gap = max(max_gap, a[i + 1] - a[i]);
+    }
+
+    cout << max_gap << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-07` — Sap Xep Tong Chu So
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long sum_digits(long long x) {
+    long long s = 0;
+    while (x > 0) {
+        s += x % 10;
+        x /= 10;
+    }
+    return s;
+}
+
+bool cmp(long long a, long long b) {
+    long long sa = sum_digits(a);
+    long long sb = sum_digits(b);
+    if (sa != sb) return sa < sb;
+    return a < b;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end(), cmp);
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i] << (i == n - 1 ? "" : " ");
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-08` — Gom Cum Chenh Lech K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int groups = 1;
+    long long min_val = a[0];
+
+    for (int i = 1; i < n; ++i) {
+        if (a[i] - min_val > k) {
+            ++groups;
+            min_val = a[i];
+        }
+    }
+
+    cout << groups << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-09` — Phan Tu Xuat Hien Nhieu Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    long long best_val = a[0];
+    int max_freq = 1;
+
+    long long cur_val = a[0];
+    int cur_freq = 1;
+
+    for (int i = 1; i < n; ++i) {
+        if (a[i] == cur_val) {
+            ++cur_freq;
+        } else {
+            if (cur_freq > max_freq) {
+                max_freq = cur_freq;
+                best_val = cur_val;
+            }
+            cur_val = a[i];
+            cur_freq = 1;
+        }
+    }
+    if (cur_freq > max_freq) {
+        max_freq = cur_freq;
+        best_val = cur_val;
+    }
+
+    cout << best_val << " " << max_freq << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-10` — Sap Xep Luu Vi Tri
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<vector<long long>> a(n, vector<long long>(2));
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i][0];
+        a[i][1] = i + 1;
+    }
+
+    sort(a.begin(), a.end());
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i][0] << " " << a[i][1] << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-SX-11` — Ghep So Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool cmp(const string &a, const string &b) {
+    return a + b > b + a;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<string> s(n);
+    for (int i = 0; i < n; ++i) cin >> s[i];
+
+    sort(s.begin(), s.end(), cmp);
+
+    if (s[0] == "0") {
+        cout << 0 << "\n";
+        return 0;
+    }
+
+    for (int i = 0; i < n; ++i) {
+        cout << s[i];
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-12` — Bang Diem Hoc Sinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool cmp(const vector<long long> &a, const vector<long long> &b) {
+    long long total_a = a[1] + a[2];
+    long long total_b = b[1] + b[2];
+    if (total_a != total_b) return total_a > total_b;
+    if (a[2] != b[2]) return a[2] > b[2];
+    return a[0] < b[0];
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<vector<long long>> a(n, vector<long long>(3));
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i][0] >> a[i][1] >> a[i][2];
+    }
+
+    sort(a.begin(), a.end(), cmp);
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i][0] << " " << a[i][1] << " " << a[i][2] << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-SX-13` — Bang Xep Hang The Thao
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool cmp(const vector<long long> &a, const vector<long long> &b) {
+    if (a[1] != b[1]) return a[1] > b[1];
+    if (a[2] != b[2]) return a[2] > b[2];
+    if (a[3] != b[3]) return a[3] > b[3];
+    return a[0] < b[0];
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<vector<long long>> a(n, vector<long long>(4));
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i][0] >> a[i][1] >> a[i][2] >> a[i][3];
+    }
+
+    sort(a.begin(), a.end(), cmp);
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i][0] << (i == n - 1 ? "" : " ");
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-SX-14` — Khac Phuc Strict Weak Ordering
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool cmp(const vector<long long> &a, const vector<long long> &b) {
+    if (a[0] != b[0]) return a[0] < b[0];
+    return a[1] > b[1];
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<vector<long long>> a(n, vector<long long>(2));
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i][0] >> a[i][1];
+    }
+
+    stable_sort(a.begin(), a.end(), cmp);
+
+    for (int i = 0; i < n; ++i) {
+        cout << a[i][0] << " " << a[i][1] << "\n";
+    }
+    return 0;
+}
+
+```
+
+## Chương 01 — Bài 02: Hai con trỏ
+
+### `CPPB-HCT-01` — Mo Phong Hai Con Tro
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int l = 0, r = n - 1;
+    bool found = false;
+
+    while (l < r) {
+        long long sum = a[l] + a[r];
+        if (sum == s) {
+            found = true;
+            break;
+        } else if (sum < s) {
+            ++l;
+        } else {
+            --r;
+        }
+    }
+
+    if (found) cout << "YES\n";
+    else cout << "NO\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-02` — Tong Hai So
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int l = 0, r = n - 1;
+    bool found = false;
+
+    while (l < r) {
+        long long sum = a[l] + a[r];
+        if (sum == s) {
+            cout << a[l] << " " << a[r] << "\n";
+            found = true;
+            break;
+        } else if (sum < s) {
+            ++l;
+        } else {
+            --r;
+        }
+    }
+
+    if (!found) cout << -1 << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-03` — Dem Cap Tong Be Hon S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int l = 0, r = n - 1;
+    long long count = 0;
+
+    while (l < r) {
+        if (a[l] + a[r] <= s) {
+            count += (r - l);
+            ++l;
+        } else {
+            --r;
+        }
+    }
+
+    cout << count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-04` — Dem Cap Tong Lon Hon S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int l = 0, r = n - 1;
+    long long count = 0;
+
+    while (l < r) {
+        if (a[l] + a[r] >= s) {
+            count += (r - l);
+            --r;
+        } else {
+            ++l;
+        }
+    }
+
+    cout << count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-05` — Thuyen Cuu Ho
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long c;
+    if (!(cin >> n >> c)) return 0;
+
+    vector<long long> w(n);
+    for (int i = 0; i < n; ++i) cin >> w[i];
+
+    sort(w.begin(), w.end());
+
+    int l = 0, r = n - 1;
+    int boats = 0;
+
+    while (l <= r) {
+        if (l == r) {
+            ++boats;
+            break;
+        }
+        if (w[l] + w[r] <= c) {
+            ++l;
+            --r;
+        } else {
+            --r;
+        }
+        ++boats;
+    }
+
+    cout << boats << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-06` — Van Chuyen Hang Hoa
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long c;
+    if (!(cin >> n >> c)) return 0;
+
+    vector<long long> w(n);
+    for (int i = 0; i < n; ++i) cin >> w[i];
+
+    sort(w.begin(), w.end());
+
+    int l = 0, r = n - 1;
+    int trips = 0;
+
+    while (l <= r) {
+        if (l == r) {
+            ++trips;
+            break;
+        }
+        if (w[l] + w[r] <= c) {
+            ++l;
+            --r;
+        } else {
+            --r;
+        }
+        ++trips;
+    }
+
+    cout << trips << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-07` — Tong Gan S Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int l = 0, r = n - 1;
+    long long best_diff = -1;
+    long long ans_l = a[0], ans_r = a[1];
+
+    while (l < r) {
+        long long cur_sum = a[l] + a[r];
+        long long cur_diff = abs(cur_sum - s);
+
+        if (best_diff == -1 || cur_diff < best_diff || (cur_diff == best_diff && cur_sum < ans_l + ans_r)) {
+            best_diff = cur_diff;
+            ans_l = a[l];
+            ans_r = a[r];
+        }
+
+        if (cur_sum == s) break;
+        else if (cur_sum < s) ++l;
+        else --r;
+    }
+
+    cout << ans_l << " " << ans_r << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-08` — Hieu Hai So Bang K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int l = 0, r = 1;
+    bool found = false;
+
+    while (r < n) {
+        if (l == r) {
+            ++r;
+            continue;
+        }
+        long long diff = a[r] - a[l];
+        if (diff == k) {
+            found = true;
+            break;
+        } else if (diff < k) {
+            ++r;
+        } else {
+            ++l;
+        }
+    }
+
+    if (found) cout << "YES\n";
+    else cout << "NO\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-09` — Bo Ba Tong Bang S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    for (int i = 0; i < n - 2; ++i) {
+        long long target = s - a[i];
+        int l = i + 1, r = n - 1;
+        while (l < r) {
+            long long sum = a[l] + a[r];
+            if (sum == target) {
+                cout << a[i] << " " << a[l] << " " << a[r] << "\n";
+                return 0;
+            } else if (sum < target) {
+                ++l;
+            } else {
+                --r;
+            }
+        }
+    }
+
+    cout << -1 << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-10` — Dem So Tam Giac
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    long long count = 0;
+
+    for (int k = n - 1; k >= 2; --k) {
+        int l = 0, r = k - 1;
+        while (l < r) {
+            if (a[l] + a[r] > a[k]) {
+                count += (r - l);
+                --r;
+            } else {
+                ++l;
+            }
+        }
+    }
+
+    cout << count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-11` — Dem Cap Trung Lap
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    int l = 0, r = n - 1;
+    long long ans = 0;
+
+    while (l < r) {
+        long long sum = a[l] + a[r];
+        if (sum == s) {
+            if (a[l] == a[r]) {
+                long long cnt = r - l + 1;
+                ans += cnt * (cnt - 1) / 2;
+                break;
+            } else {
+                long long c1 = 1, c2 = 1;
+                while (l + 1 < r && a[l + 1] == a[l]) { ++c1; ++l; }
+                while (r - 1 > l && a[r - 1] == a[r]) { ++c2; --r; }
+                ans += c1 * c2;
+                ++l;
+                --r;
+            }
+        } else if (sum < s) {
+            ++l;
+        } else {
+            --r;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-12` — Ghep Tre Em Banh Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+
+    vector<long long> g(n), s(m);
+    for (int i = 0; i < n; ++i) cin >> g[i];
+    for (int i = 0; i < m; ++i) cin >> s[i];
+
+    sort(g.begin(), g.end());
+    sort(s.begin(), s.end());
+
+    int i = 0, j = 0;
+    int satisfied = 0;
+
+    while (i < n && j < m) {
+        if (s[j] >= g[i]) {
+            ++satisfied;
+            ++i;
+            ++j;
+        } else {
+            ++j;
+        }
+    }
+
+    cout << satisfied << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-13` — Bo Bon Tong Bang S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    for (int i = 0; i < n - 3; ++i) {
+        for (int j = i + 1; j < n - 2; ++j) {
+            long long target = s - a[i] - a[j];
+            int l = j + 1, r = n - 1;
+            while (l < r) {
+                long long sum = a[l] + a[r];
+                if (sum == target) {
+                    cout << a[i] << " " << a[j] << " " << a[l] << " " << a[r] << "\n";
+                    return 0;
+                } else if (sum < target) {
+                    ++l;
+                } else {
+                    --r;
+                }
+            }
+        }
+    }
+
+    cout << -1 << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-HCT-14` — Hai Con Tro Cuc Han
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+
+    vector<long long> a(n), b(m);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i < m; ++i) cin >> b[i];
+
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+
+    int i = 0, j = 0;
+    long long min_diff = abs(a[0] - b[0]);
+
+    while (i < n && j < m) {
+        min_diff = min(min_diff, abs(a[i] - b[j]));
+        if (a[i] == b[j]) break;
+        else if (a[i] < b[j]) ++i;
+        else ++j;
+    }
+
+    cout << min_diff << "\n";
+    return 0;
+}
+
+```
+
+## Chương 01 — Bài 03: Cửa sổ trượt
+
+### `CPPB-CST-01` — Cua So K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long cur_sum = 0;
+    for (int i = 0; i < k; ++i) cur_sum += a[i];
+
+    long long max_sum = cur_sum;
+    for (int i = k; i < n; ++i) {
+        cur_sum += a[i] - a[i - k];
+        max_sum = max(max_sum, cur_sum);
+    }
+
+    cout << max_sum << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-02` — Trung Binh K Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long cur_sum = 0;
+    for (int i = 0; i < k; ++i) cur_sum += a[i];
+
+    long long max_sum = cur_sum;
+    for (int i = k; i < n; ++i) {
+        cur_sum += a[i] - a[i - k];
+        max_sum = max(max_sum, cur_sum);
+    }
+
+    double ans = (double)max_sum / k;
+    cout << fixed << setprecision(3) << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-03` — Doan Con Ngan Nhat Tong S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int l = 0;
+    long long cur_sum = 0;
+    int min_len = n + 1;
+
+    for (int r = 0; r < n; ++r) {
+        cur_sum += a[r];
+        while (cur_sum >= s) {
+            min_len = min(min_len, r - l + 1);
+            cur_sum -= a[l];
+            ++l;
+        }
+    }
+
+    if (min_len > n) cout << -1 << "\n";
+    else cout << min_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-04` — Doan Con Dai Nhat Tong S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int l = 0;
+    long long cur_sum = 0;
+    int max_len = 0;
+
+    for (int r = 0; r < n; ++r) {
+        cur_sum += a[r];
+        while (cur_sum > s) {
+            cur_sum -= a[l];
+            ++l;
+        }
+        max_len = max(max_len, r - l + 1);
+    }
+
+    cout << max_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-05` — Lat Bit K So Khong
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int l = 0;
+    int zero_cnt = 0;
+    int max_len = 0;
+
+    for (int r = 0; r < n; ++r) {
+        if (a[r] == 0) ++zero_cnt;
+
+        while (zero_cnt > k) {
+            if (a[l] == 0) --zero_cnt;
+            ++l;
+        }
+
+        max_len = max(max_len, r - l + 1);
+    }
+
+    cout << max_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-06` — Camera Giao Thong
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int cur_broken = 0;
+    for (int i = 0; i < k; ++i) {
+        if (a[i] == 0) ++cur_broken;
+    }
+
+    int min_broken = cur_broken;
+    for (int i = k; i < n; ++i) {
+        if (a[i] == 0) ++cur_broken;
+        if (a[i - k] == 0) --cur_broken;
+        min_broken = min(min_broken, cur_broken);
+    }
+
+    cout << min_broken << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-07` — Min Max Cua So K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    for (int i = 0; i <= n - k; ++i) {
+        long long cur_min = a[i];
+        for (int j = i + 1; j < i + k; ++j) {
+            cur_min = min(cur_min, a[j]);
+        }
+        cout << cur_min << (i == n - k ? "" : " ");
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-08` — Dem Doan Con Tong Be Hon S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int l = 0;
+    long long cur_sum = 0;
+    long long count = 0;
+
+    for (int r = 0; r < n; ++r) {
+        cur_sum += a[r];
+        while (cur_sum > s) {
+            cur_sum -= a[l];
+            ++l;
+        }
+        count += (r - l + 1);
+    }
+
+    cout << count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-09` — Dem Doan Con Tong Bang S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int l = 0;
+    long long cur_sum = 0;
+    long long count = 0;
+
+    for (int r = 0; r < n; ++r) {
+        cur_sum += a[r];
+        while (cur_sum > s) {
+            cur_sum -= a[l];
+            ++l;
+        }
+        if (cur_sum == s) {
+            ++count;
+        }
+    }
+
+    cout << count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-10` — Doan Con K Ky Tu Khac Nhau
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    string s;
+    cin >> s;
+
+    vector<int> freq(26, 0);
+    int distinct = 0;
+    int l = 0, max_len = 0;
+
+    for (int r = 0; r < n; ++r) {
+        int c = s[r] - 'a';
+        if (freq[c] == 0) ++distinct;
+        ++freq[c];
+
+        while (distinct > k) {
+            int lc = s[l] - 'a';
+            --freq[lc];
+            if (freq[lc] == 0) --distinct;
+            ++l;
+        }
+
+        max_len = max(max_len, r - l + 1);
+    }
+
+    cout << max_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-11` — Doan Con Ngan Nhat Chua Du Ky Tu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+
+    string s, t;
+    cin >> s >> t;
+
+    vector<int> need(26, 0);
+    for (char c : t) need[c - 'a'] = 1;
+
+    vector<int> have(26, 0);
+    int matched = 0;
+    int l = 0, min_len = n + 1;
+
+    for (int r = 0; r < n; ++r) {
+        int c = s[r] - 'a';
+        if (need[c]) {
+            if (have[c] == 0) ++matched;
+            ++have[c];
+        }
+
+        while (matched == m) {
+            min_len = min(min_len, r - l + 1);
+            int lc = s[l] - 'a';
+            if (need[lc]) {
+                --have[lc];
+                if (have[lc] == 0) --matched;
+            }
+            ++l;
+        }
+    }
+
+    if (min_len > n) cout << -1 << "\n";
+    else cout << min_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-12` — Phu Song Wifi
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long r;
+    if (!(cin >> n >> r)) return 0;
+
+    vector<long long> x(n);
+    for (int i = 0; i < n; ++i) cin >> x[i];
+
+    int i = 0;
+    int count = 0;
+
+    while (i < n) {
+        ++count;
+        long long loc = x[i];
+        while (i < n && x[i] - loc <= r) ++i;
+        long long tower = x[i - 1];
+        while (i < n && x[i] - tower <= r) ++i;
+    }
+
+    cout << count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-13` — Doan Con Chenh Lech K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    int max_len = 0;
+
+    for (int l = 0; l < n; ++l) {
+        long long cur_min = a[l], cur_max = a[l];
+        for (int r = l; r < n; ++r) {
+            cur_min = min(cur_min, a[r]);
+            cur_max = max(cur_max, a[r]);
+            if (cur_max - cur_min <= k) {
+                max_len = max(max_len, r - l + 1);
+            } else {
+                break;
+            }
+        }
+    }
+
+    cout << max_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-CST-14` — Cua So Truot Cuc Han
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long count_at_most(const vector<long long> &x, long long limit) {
+    if (limit <= 0) return 0;
+    int n = x.size();
+    int l = 0;
+    long long cur_sum = 0;
+    long long count = 0;
+
+    for (int r = 0; r < n; ++r) {
+        cur_sum += x[r];
+        while (cur_sum > limit) {
+            cur_sum -= x[l];
+            ++l;
+        }
+        count += (r - l + 1);
+    }
+    return count;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long a, b;
+    if (!(cin >> n >> a >> b)) return 0;
+
+    vector<long long> x(n);
+    for (int i = 0; i < n; ++i) cin >> x[i];
+
+    long long ans = count_at_most(x, b) - count_at_most(x, a - 1);
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+## Chương 02 — Bài 04: Mảng tiền tố
+
+### `CPPB-PT-01` — Truy Van Tong Doan Con
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> p(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+        long long x;
+        cin >> x;
+        p[i] = p[i - 1] + x;
+    }
+
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        cout << p[r] - p[l - 1] << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-02` — Dem So Chan Trong Doan
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<int> p(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+        long long x;
+        cin >> x;
+        p[i] = p[i - 1] + (abs(x) % 2 == 0 ? 1 : 0);
+    }
+
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        cout << p[r] - p[l - 1] << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-03` — Vi Tri Can Bang
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n + 1);
+    vector<long long> p(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+        cin >> a[i];
+        p[i] = p[i - 1] + a[i];
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        long long left_sum = p[i - 1];
+        long long right_sum = p[n] - p[i];
+        if (left_sum == right_sum) {
+            cout << i << "\n";
+            return 0;
+        }
+    }
+
+    cout << -1 << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-04` — Doan Con Tong Bang Khong
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> p(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+        long long x;
+        cin >> x;
+        p[i] = p[i - 1] + x;
+    }
+
+    sort(p.begin(), p.end());
+
+    for (int i = 1; i <= n; ++i) {
+        if (p[i] == p[i - 1]) {
+            cout << "YES\n";
+            return 0;
+        }
+    }
+
+    cout << "NO\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-05` — Cap Nhat Cong Doan
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> d(n + 2, 0);
+
+    while (q--) {
+        int l, r;
+        long long v;
+        cin >> l >> r >> v;
+        d[l] += v;
+        d[r + 1] -= v;
+    }
+
+    long long current = 0;
+    for (int i = 1; i <= n; ++i) {
+        current += d[i];
+        cout << current << (i == n ? "" : " ");
+    }
+    cout << "\n";
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-06` — Trong Cay Phu Doan
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q, k;
+    if (!(cin >> n >> q >> k)) return 0;
+
+    vector<int> d(n + 2, 0);
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        d[l]++;
+        d[r + 1]--;
+    }
+
+    int count_ge_k = 0;
+    int current = 0;
+    for (int i = 1; i <= n; ++i) {
+        current += d[i];
+        if (current >= k) {
+            count_ge_k++;
+        }
+    }
+
+    cout << count_ge_k << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-07` — Truy Van Hinh Chu Nhat 2d
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m, q;
+    if (!(cin >> n >> m >> q)) return 0;
+
+    vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            long long val;
+            cin >> val;
+            p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + val;
+        }
+    }
+
+    while (q--) {
+        int x1, y1, x2, y2;
+        cin >> x1 >> y1 >> x2 >> y2;
+        long long ans = p[x2][y2] - p[x1 - 1][y2] - p[x2][y1 - 1] + p[x1 - 1][y1 - 1];
+        cout << ans << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-08` — Hinh Vuong K Tong Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m, k;
+    if (!(cin >> n >> m >> k)) return 0;
+
+    vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            long long val;
+            cin >> val;
+            p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + val;
+        }
+    }
+
+    long long max_sum = -4e18; // Khởi tạo âm vô cùng
+    for (int i = k; i <= n; ++i) {
+        for (int j = k; j <= m; ++j) {
+            long long current = p[i][j] - p[i - k][j] - p[i][j - k] + p[i - k][j - k];
+            max_sum = max(max_sum, current);
+        }
+    }
+
+    cout << max_sum << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-09` — Mang Hieu 2d
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m, q;
+    if (!(cin >> n >> m >> q)) return 0;
+
+    vector<vector<long long>> d(n + 2, vector<long long>(m + 2, 0));
+
+    while (q--) {
+        int x1, y1, x2, y2;
+        long long v;
+        cin >> x1 >> y1 >> x2 >> y2 >> v;
+        d[x1][y1] += v;
+        d[x1][y2 + 1] -= v;
+        d[x2 + 1][y1] -= v;
+        d[x2 + 1][y2 + 1] += v;
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            d[i][j] = d[i - 1][j] + d[i][j - 1] - d[i - 1][j - 1] + d[i][j];
+            cout << d[i][j] << (j == m ? "" : " ");
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-10` — Tong Chia Het Cho K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> cnt(k, 0);
+    cnt[0] = 1; // P[0] = 0
+
+    long long current_sum = 0;
+    for (int i = 1; i <= n; ++i) {
+        long long x;
+        cin >> x;
+        current_sum += x;
+        long long rem = (current_sum % k + k) % k;
+        cnt[rem]++;
+    }
+
+    long long total_pairs = 0;
+    for (int r = 0; r < k; ++r) {
+        total_pairs += cnt[r] * (cnt[r] - 1) / 2;
+    }
+
+    cout << total_pairs << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-11` — Mang Tien To Xor
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> p(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+        long long x;
+        cin >> x;
+        p[i] = p[i - 1] ^ x;
+    }
+
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        cout << (p[r] ^ p[l - 1]) << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-12` — Can Bang Khong Va Mot
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    // Tiền tố có thể chạy từ -N đến +N, offset = n
+    vector<int> first_pos(2 * n + 1, -2);
+    first_pos[0 + n] = 0; // P[0] = 0 tại vị trí 0
+
+    int current_sum = 0;
+    int max_len = 0;
+
+    for (int i = 1; i <= n; ++i) {
+        int x;
+        cin >> x;
+        current_sum += (x == 1 ? 1 : -1);
+
+        int idx = current_sum + n;
+        if (first_pos[idx] != -2) {
+            max_len = max(max_len, i - first_pos[idx]);
+        } else {
+            first_pos[idx] = i;
+        }
+    }
+
+    cout << max_len << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-13` — Ma Tran Da Vung
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m, q;
+    if (!(cin >> n >> m >> q)) return 0;
+
+    vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            long long val;
+            cin >> val;
+            p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + val;
+        }
+    }
+
+    auto query = [&](int x1, int y1, int x2, int y2) -> long long {
+        return p[x2][y2] - p[x1 - 1][y2] - p[x2][y1 - 1] + p[x1 - 1][y1 - 1];
+    };
+
+    while (q--) {
+        int x1, y1, x2, y2, u1, v1, u2, v2;
+        cin >> x1 >> y1 >> x2 >> y2 >> u1 >> v1 >> u2 >> v2;
+        cout << query(x1, y1, x2, y2) + query(u1, v1, u2, v2) << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-14` — Phan Phoi Tai Nguyen
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> d2(n + 3, 0);
+
+    while (q--) {
+        long long l, r, s, d;
+        cin >> l >> r >> s >> d;
+        d2[l] += s;
+        d2[l + 1] += (d - s);
+        d2[r + 1] -= (s + (r - l + 1) * d);
+        d2[r + 2] += (s + (r - l) * d);
+    }
+
+    // Lần 1: Khôi phục mảng hiệu bậc 1
+    vector<long long> d1(n + 2, 0);
+    for (int i = 1; i <= n + 1; ++i) {
+        d1[i] = d1[i - 1] + d2[i];
+    }
+
+    // Lần 2: Khôi phục mảng giá trị gốc
+    vector<long long> a(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+        a[i] = a[i - 1] + d1[i];
+        cout << a[i] << (i == n ? "" : " ");
+    }
+    cout << "\n";
+
+    return 0;
+}
+
+```
+
+### `CPPB-PT-15` — Ma Tran Con Tong Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+
+    vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
+    vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
+
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= m; ++j) {
+            cin >> a[i][j];
+            p[i][j] = p[i - 1][j] + a[i][j]; // Tiền tố theo cột
+        }
+    }
+
+    long long max_sum = -4e18;
+
+    for (int r1 = 1; r1 <= n; ++r1) {
+        for (int r2 = r1; r2 <= n; ++r2) {
+            long long current_kadane = 0;
+            for (int c = 1; c <= m; ++c) {
+                long long val = p[r2][c] - p[r1 - 1][c];
+                current_kadane = max(val, current_kadane + val);
+                max_sum = max(max_sum, current_kadane);
+            }
+        }
+    }
+
+    cout << max_sum << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-PT-16` — Can Bang Tien To Da Chieu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    string s;
+    if (!(cin >> n >> s)) return 0;
+
+    int ca = 0, cb = 0, cc = 0;
+
+    // Lưu: {diff1, diff2, index}
+    vector<vector<int>> states;
+    states.reserve(n + 1);
+    states.push_back({0, 0, 0}); // Tại vị trí 0
+
+    for (int i = 1; i <= n; ++i) {
+        if (s[i - 1] == 'A') ca++;
+        else if (s[i - 1] == 'B') cb++;
+        else if (s[i - 1] == 'C') cc++;
+
+        states.push_back({ca - cb, cb - cc, i});
+    }
+
+    sort(states.begin(), states.end(), [](const vector<int>& u, const vector<int>& v) {
+        if (u[0] != v[0]) return u[0] < v[0];
+        if (u[1] != v[1]) return u[1] < v[1];
+        return u[2] < v[2];
+    });
+
+    int max_len = 0;
+    int i = 0;
+    while (i <= n) {
+        int j = i;
+        while (j <= n && states[j][0] == states[i][0] && states[j][1] == states[i][1]) {
+            j++;
+        }
+        max_len = max(max_len, states[j - 1][2] - states[i][2]);
+        i = j;
+    }
+
+    cout << max_len << "\n";
+    return 0;
+}
+
+```
+
+## Chương 02 — Bài 05: Tìm kiếm nhị phân
+
+### `CPPB-BS-01` — Tim Kiem Tren Mang Sap Xep
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    while (q--) {
+        long long x;
+        cin >> x;
+        if (binary_search(a.begin(), a.end(), x)) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BS-02` — Vi Tri Dau Va Cuoi
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    while (q--) {
+        long long x;
+        cin >> x;
+        auto it1 = lower_bound(a.begin(), a.end(), x);
+        if (it1 == a.end() || *it1 != x) {
+            cout << "-1 -1\n";
+        } else {
+            auto it2 = upper_bound(a.begin(), a.end(), x);
+            int first_idx = it1 - a.begin() + 1;
+            int last_idx = it2 - a.begin();
+            cout << first_idx << " " << last_idx << "\n";
+        }
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BS-03` — Dem So Trong Khoang
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+    sort(a.begin(), a.end());
+
+    while (q--) {
+        long long l, r;
+        cin >> l >> r;
+        auto it_l = lower_bound(a.begin(), a.end(), l);
+        auto it_r = upper_bound(a.begin(), a.end(), r);
+        cout << (it_r - it_l) << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BS-04` — Can Bac Hai So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    long long n;
+    cin >> n;
+    long long low = 1, high = 1000000000LL, ans = 1;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (mid <= n / mid) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    cout << ans << "\n";
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-BS-05` — Phan Tu Nho Nhat Lon Hon X
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    while (q--) {
+        long long x;
+        cin >> x;
+        auto it = upper_bound(a.begin(), a.end(), x);
+        if (it == a.end()) {
+            cout << -1 << "\n";
+        } else {
+            cout << *it << "\n";
+        }
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BS-06` — Chia Keo Hoc Sinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long mid, const vector<long long>& a, long long k) {
+    long long count = 0;
+    for (long long x : a) {
+        count += (x / mid);
+    }
+    return count >= k;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    long long max_val = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        max_val = max(max_val, a[i]);
+    }
+
+    long long low = 1, high = max_val, ans = 0;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, a, k)) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-07` — Cat Go Xay Dung
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long h, const vector<long long>& a, long long m) {
+    long long wood = 0;
+    for (long long x : a) {
+        if (x > h) {
+            wood += (x - h);
+        }
+    }
+    return wood >= m;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long m;
+    if (!(cin >> n >> m)) return 0;
+
+    vector<long long> a(n);
+    long long max_val = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        max_val = max(max_val, a[i]);
+    }
+
+    long long low = 0, high = max_val, ans = 0;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, a, m)) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-08` — Dat Tram Phat Song
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long d, const vector<long long>& x, int c) {
+    int count = 1;
+    long long last_pos = x[0];
+    for (size_t i = 1; i < x.size(); ++i) {
+        if (x[i] - last_pos >= d) {
+            count++;
+            last_pos = x[i];
+        }
+    }
+    return count >= c;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, c;
+    if (!(cin >> n >> c)) return 0;
+
+    vector<long long> x(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> x[i];
+    }
+    sort(x.begin(), x.end());
+
+    long long low = 1, high = x[n - 1] - x[0], ans = 1;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, x, c)) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-09` — Chia Mang Tong Max Nho Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long limit, const vector<long long>& a, int k) {
+    int segments = 1;
+    long long current_sum = 0;
+    for (long long x : a) {
+        if (current_sum + x > limit) {
+            segments++;
+            current_sum = x;
+        } else {
+            current_sum += x;
+        }
+    }
+    return segments <= k;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    long long max_val = 0, total_sum = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        max_val = max(max_val, a[i]);
+        total_sum += a[i];
+    }
+
+    long long low = max_val, high = total_sum, ans = total_sum;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, a, k)) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-10` — Van Chuyen Hang Hoa
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long cap, const vector<long long>& w, int d) {
+    int days = 1;
+    long long current_weight = 0;
+    for (long long x : w) {
+        if (current_weight + x > cap) {
+            days++;
+            current_weight = x;
+        } else {
+            current_weight += x;
+        }
+    }
+    return days <= d;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, d;
+    if (!(cin >> n >> d)) return 0;
+
+    vector<long long> w(n);
+    long long max_w = 0, sum_w = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> w[i];
+        max_w = max(max_w, w[i]);
+        sum_w += w[i];
+    }
+
+    long long low = max_w, high = sum_w, ans = sum_w;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, w, d)) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-11` — Nghiem Thuc Phuong Trinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+double f(double x) {
+    return x * x * x + 2.0 * x * x + 10.0 * x;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    double c;
+    if (!(cin >> c)) return 0;
+
+    double low = 0.0, high = 1000.0;
+    for (int iter = 0; iter < 100; ++iter) {
+        double mid = low + (high - low) / 2.0;
+        if (f(mid) >= c) {
+            high = mid;
+        } else {
+            low = mid;
+        }
+    }
+
+    cout << fixed << setprecision(6) << low << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-12` — Phan Tu Thu K Hai Mang
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long count_le(long long x, const vector<long long>& a, const vector<long long>& b) {
+    auto it1 = upper_bound(a.begin(), a.end(), x);
+    auto it2 = upper_bound(b.begin(), b.end(), x);
+    return (it1 - a.begin()) + (it2 - b.begin());
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    long long k;
+    if (!(cin >> n >> m >> k)) return 0;
+
+    vector<long long> a(n), b(m);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i < m; ++i) cin >> b[i];
+
+    long long low = -2e9, high = 2e9, ans = high;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (count_le(mid, a, b) >= k) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-13` — Trung Binh Lon Nhat Do Dai K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(double mid, const vector<double>& a, int n, int k) {
+    vector<double> p(n + 1, 0.0);
+    for (int i = 1; i <= n; ++i) {
+        p[i] = p[i - 1] + (a[i - 1] - mid);
+    }
+
+    double min_p = 0.0;
+    for (int i = k; i <= n; ++i) {
+        min_p = min(min_p, p[i - k]);
+        if (p[i] - min_p >= -1e-9) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<double> a(n);
+    double max_val = 0.0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        max_val = max(max_val, a[i]);
+    }
+
+    double low = 0.0, high = max_val;
+    for (int iter = 0; iter < 80; ++iter) {
+        double mid = low + (high - low) / 2.0;
+        if (check(mid, a, n, k)) {
+            low = mid;
+        } else {
+            high = mid;
+        }
+    }
+
+    cout << fixed << setprecision(4) << low << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-14` — Tuyen Duong Van Tai
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool check(long long cap, const vector<long long>& a, int n, int m, int d) {
+    int trucks = 0;
+    int i = 0;
+    while (i < n) {
+        trucks++;
+        if (trucks > m) return false;
+        long long current_load = 0;
+        int count_cities = 0;
+        while (i < n && count_cities < d && current_load + a[i] <= cap) {
+            current_load += a[i];
+            count_cities++;
+            i++;
+        }
+    }
+    return trucks <= m;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m, d;
+    if (!(cin >> n >> m >> d)) return 0;
+
+    vector<long long> a(n);
+    long long max_val = 0, sum_val = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        max_val = max(max_val, a[i]);
+        sum_val += a[i];
+    }
+
+    long long low = max_val, high = sum_val, ans = sum_val;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, a, n, m, d)) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BS-15` — Tim Kiem Mang Xoay Vong
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int search_rotated(const vector<long long>& a, long long target) {
+    int low = 0, high = (int)a.size() - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (a[mid] == target) return mid + 1; // 1-based
+
+        if (a[low] <= a[mid]) {
+            // Nửa trái được sắp xếp
+            if (a[low] <= target && target < a[mid]) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        } else {
+            // Nửa phải được sắp xếp
+            if (a[mid] < target && target <= a[high]) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+    }
+    return -1;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    while (q--) {
+        long long x;
+        cin >> x;
+        cout << search_rotated(a, x) << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BS-16` — Tim Kiem Ma Tran 2d
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m, q;
+    if (!(cin >> n >> m >> q)) return 0;
+
+    vector<vector<long long>> a(n, vector<long long>(m));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cin >> a[i][j];
+        }
+    }
+
+    while (q--) {
+        long long target;
+        cin >> target;
+
+        int low = 0, high = n * m - 1;
+        bool found = false;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            int r = mid / m;
+            int c = mid % m;
+
+            if (a[r][c] == target) {
+                found = true;
+                break;
+            } else if (a[r][c] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+
+        cout << (found ? "YES\n" : "NO\n");
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BS-17` — Tim Dinh Day Nui
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int low = 0, high = n - 1;
+    while (low < high) {
+        int mid = low + (high - low) / 2;
+        if (a[mid] < a[mid + 1]) {
+            low = mid + 1;
+        } else {
+            high = mid;
+        }
+    }
+
+    cout << (low + 1) << "\n"; // 1-based
+    return 0;
+}
+
+```
+
+### `CPPB-BS-18` — Trung Vi Hai Mang Sap Xep
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+double findMedianSortedArrays(vector<long long>& a, vector<long long>& b) {
+    if (a.size() > b.size()) return findMedianSortedArrays(b, a);
+
+    int n = (int)a.size();
+    int m = (int)b.size();
+    int low = 0, high = n;
+
+    const long long INF = 2e18;
+
+    while (low <= high) {
+        int i = low + (high - low) / 2;
+        int j = (n + m + 1) / 2 - i;
+
+        long long maxLeftA = (i == 0) ? -INF : a[i - 1];
+        long long minRightA = (i == n) ? INF : a[i];
+
+        long long maxLeftB = (j == 0) ? -INF : b[j - 1];
+        long long minRightB = (j == m) ? INF : b[j];
+
+        if (maxLeftA <= minRightB && maxLeftB <= minRightA) {
+            if ((n + m) % 2 == 1) {
+                return (double)max(maxLeftA, maxLeftB);
+            } else {
+                return (max(maxLeftA, maxLeftB) + min(minRightA, minRightB)) / 2.0;
+            }
+        } else if (maxLeftA > minRightB) {
+            high = i - 1;
+        } else {
+            low = i + 1;
+        }
+    }
+    return 0.0;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+
+    vector<long long> a(n), b(m);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i < m; ++i) cin >> b[i];
+
+    double median = findMedianSortedArrays(a, b);
+    cout << fixed << setprecision(1) << median << "\n";
+
+    return 0;
+}
+
+```
+
+## Chương 02 — Bài 06: Phép toán bit
+
+### `CPPB-BIT-01` — Bat Tat Kiem Tra Bit
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    unsigned long long n;
+    int q;
+    if (!(cin >> n >> q)) return 0;
+
+    while (q--) {
+        int type, k;
+        cin >> type >> k;
+        if (type == 1) {
+            n |= (1ULL << k);
+        } else if (type == 2) {
+            n &= ~(1ULL << k);
+        } else if (type == 3) {
+            cout << ((n >> k) & 1ULL) << "\n";
+        }
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-02` — Dem So Bit Mot
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    unsigned long long n;
+    cin >> n;
+    cout << __builtin_popcountll(n) << "\n";
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-03` — Kiem Tra Luy Thua Cua Hai
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    unsigned long long n;
+    cin >> n;
+    if (n > 0 && (n & (n - 1)) == 0) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    if (!(cin >> t)) return 0;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-04` — Tim Phan Tu Don Le
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    int total_elements = 2 * n + 1;
+    long long ans = 0;
+    for (int i = 0; i < total_elements; ++i) {
+        long long x;
+        cin >> x;
+        ans ^= x;
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-05` — Tim Hai So Don Le
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    int total_elements = 2 * n + 2;
+    vector<long long> a(total_elements);
+    long long xor_sum = 0;
+    for (int i = 0; i < total_elements; ++i) {
+        cin >> a[i];
+        xor_sum ^= a[i];
+    }
+
+    // Lấy bit 1 phân biệt
+    long long diff_bit = xor_sum & (-xor_sum);
+
+    long long num1 = 0, num2 = 0;
+    for (long long val : a) {
+        if (val & diff_bit) {
+            num1 ^= val;
+        } else {
+            num2 ^= val;
+        }
+    }
+
+    if (num1 > num2) swap(num1, num2);
+    cout << num1 << " " << num2 << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-06` — Dao Bit Gia Tri Bu Mot
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    unsigned long long n;
+    if (!(cin >> n)) return 0;
+
+    int length = 64 - __builtin_clzll(n);
+    unsigned long long mask = (1ULL << length) - 1;
+    unsigned long long ans = n ^ mask;
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-07` — Duyet Tap Con Bitmask
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int total_masks = (1 << n);
+    for (int mask = 0; mask < total_masks; ++mask) {
+        bool first = true;
+        for (int i = 0; i < n; ++i) {
+            if ((mask >> i) & 1) {
+                if (!first) cout << " ";
+                cout << a[i];
+                first = false;
+            }
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-08` — Tong Tap Con Bang S
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long s;
+    if (!(cin >> n >> s)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int total_masks = (1 << n);
+    for (int mask = 0; mask < total_masks; ++mask) {
+        long long current_sum = 0;
+        for (int i = 0; i < n; ++i) {
+            if ((mask >> i) & 1) {
+                current_sum += a[i];
+            }
+        }
+        if (current_sum == s) {
+            cout << "YES\n";
+            return 0;
+        }
+    }
+
+    cout << "NO\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-09` — Chia Tap Hop Chenh Lech Min
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> p(n);
+    long long total_sum = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> p[i];
+        total_sum += p[i];
+    }
+
+    long long min_diff = total_sum;
+    int total_masks = (1 << n);
+
+    for (int mask = 0; mask < total_masks; ++mask) {
+        long long s1 = 0;
+        for (int i = 0; i < n; ++i) {
+            if ((mask >> i) & 1) {
+                s1 += p[i];
+            }
+        }
+        long long s2 = total_sum - s1;
+        min_diff = min(min_diff, abs(s1 - s2));
+    }
+
+    cout << min_diff << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-10` — Dem Cap Tich And Bang Khong
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    const int MAX_VAL = 4096;
+    vector<long long> cnt(MAX_VAL, 0);
+
+    for (int i = 0; i < n; ++i) {
+        int x;
+        cin >> x;
+        cnt[x]++;
+    }
+
+    long long total_pairs = 0;
+
+    // Trường hợp u == 0
+    total_pairs += cnt[0] * (cnt[0] - 1) / 2;
+    for (int v = 1; v < MAX_VAL; ++v) {
+        total_pairs += cnt[0] * cnt[v];
+    }
+
+    // Trường hợp 1 <= u < v
+    for (int u = 1; u < MAX_VAL; ++u) {
+        if (cnt[u] == 0) continue;
+        for (int v = u + 1; v < MAX_VAL; ++v) {
+            if ((u & v) == 0) {
+                total_pairs += cnt[u] * cnt[v];
+            }
+        }
+    }
+
+    cout << total_pairs << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-11` — Cap Xor Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    long long max_xor = 0;
+    long long mask = 0;
+
+    for (int bit = 30; bit >= 0; --bit) {
+        mask |= (1LL << bit);
+        vector<long long> prefixes;
+        prefixes.reserve(n);
+        for (long long x : a) {
+            prefixes.push_back(x & mask);
+        }
+        sort(prefixes.begin(), prefixes.end());
+        prefixes.erase(unique(prefixes.begin(), prefixes.end()), prefixes.end());
+
+        long long candidate = max_xor | (1LL << bit);
+        bool found = false;
+
+        for (long long p : prefixes) {
+            long long target = p ^ candidate;
+            if (binary_search(prefixes.begin(), prefixes.end(), target)) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            max_xor = candidate;
+        }
+    }
+
+    cout << max_xor << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-12` — Duyet Tat Ca Submask
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    bool first = true;
+    for (long long sub = n; sub > 0; sub = (sub - 1) & n) {
+        if (!first) cout << " ";
+        cout << sub;
+        first = false;
+    }
+    cout << "\n";
+
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-13` — Day Con Tong Xor Bang K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int count_k = 0;
+    int total_masks = (1 << n);
+
+    for (int mask = 1; mask < total_masks; ++mask) {
+        long long current_xor = 0;
+        for (int i = 0; i < n; ++i) {
+            if ((mask >> i) & 1) {
+                current_xor ^= a[i];
+            }
+        }
+        if (current_xor == k) {
+            count_k++;
+        }
+    }
+
+    cout << count_k << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-14` — Toi Uu Gan Viec N Nguoi
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<vector<long long>> cost(n, vector<long long>(n));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cin >> cost[i][j];
+        }
+    }
+
+    int total_masks = (1 << n);
+    const long long INF = 1e18;
+    vector<long long> dp(total_masks, INF);
+    dp[0] = 0;
+
+    for (int mask = 0; mask < total_masks; ++mask) {
+        if (dp[mask] == INF) continue;
+        int task_idx = __builtin_popcount(mask);
+        if (task_idx >= n) continue;
+
+        for (int j = 0; j < n; ++j) {
+            if (!((mask >> j) & 1)) {
+                int next_mask = mask | (1 << j);
+                dp[next_mask] = min(dp[next_mask], dp[mask] + cost[task_idx][j]);
+            }
+        }
+    }
+
+    cout << dp[total_masks - 1] << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-15` — Cap Tong Luy Thua Hai
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+    sort(a.begin(), a.end());
+
+    long long total_pairs = 0;
+
+    for (int i = 0; i < n; ++i) {
+        for (int k = 1; k <= 30; ++k) {
+            long long target = (1LL << k) - a[i];
+            if (target <= 0) continue;
+
+            auto it1 = lower_bound(a.begin() + i + 1, a.end(), target);
+            auto it2 = upper_bound(a.begin() + i + 1, a.end(), target);
+            total_pairs += (it2 - it1);
+        }
+    }
+
+    cout << total_pairs << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BIT-16` — Tap Doc Lap Bit Lon Nhat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int max_size = 0;
+    int total_masks = (1 << n);
+
+    for (int mask = 0; mask < total_masks; ++mask) {
+        long long used_bits = 0;
+        bool valid = true;
+        int current_count = 0;
+
+        for (int i = 0; i < n; ++i) {
+            if ((mask >> i) & 1) {
+                if (used_bits & a[i]) {
+                    valid = false;
+                    break;
+                }
+                used_bits |= a[i];
+                current_count++;
+            }
+        }
+
+        if (valid) {
+            max_size = max(max_size, current_count);
+        }
+    }
+
+    cout << max_size << "\n";
+    return 0;
+}
+
+```
+
+## Chương 03 — Bài 07: Ước, bội & số nguyên tố
+
+### `CPPB-NT-01` — Uoc Chung Boi Chung
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long getGcd(long long a, long long b) {
+    while (b != 0) {
+        long long r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    long long g = getGcd(a, b);
+    long long l = (a / g) * b;
+
+    cout << g << " " << l << "\n";
     return 0;
 }
 ```
 
-| Thành phần | Ý nghĩa |
-|---|---|
-| `#include <bits/stdc++.h>` | Nạp các thư viện C++ thường dùng trong thi đấu |
-| `using namespace std;` | Cho phép dùng `vector`, `string`, `cin`, `cout`… trực tiếp |
-| `int main()` | Điểm bắt đầu thực hiện chương trình |
-| `ios::sync_with_stdio(false);` | Tăng tốc nhập/xuất |
-| `cin.tie(nullptr);` | Tối ưu liên kết giữa nhập và xuất |
-| `return 0;` | Kết thúc chương trình thành công |
-
-Giai đoạn đầu chỉ cần tập trung vào **dữ liệu – xử lý – kết quả**, chưa cần hiểu sâu cơ chế thư viện.
-
----
-
-## 3. BIẾN VÀ KIỂU DỮ LIỆU
-
-> **Biến là ô nhớ có tên để lưu dữ liệu.**
+### `CPPB-NT-02` — Kiem Tra So Nguyen To
 
 ```cpp
-int age = 15;
-long long population = 9000000000LL;
-double average = 8.5;
-char grade = 'A';
-string name = "An";
-bool passed = true;
-```
+#include <bits/stdc++.h>
+using namespace std;
 
-| Kiểu | Dùng để lưu | Ví dụ |
-|---|---|---|
-| `int` | Số nguyên thông thường | tuổi, số lượng nhỏ |
-| `long long` | Số nguyên lớn hoặc tổng lớn | tổng tiền, tổng mảng |
-| `double` | Số thực | trung bình, kết quả đo |
-| `char` | Một ký tự | `'A'`, `'7'` |
-| `string` | Một chuỗi ký tự | `"Hello"` |
-| `bool` | Đúng hoặc sai | `true`, `false` |
-
-### Quy tắc chọn kiểu dữ liệu
-
-| Nếu giá trị… | Nên nghĩ đến… |
-|---|---|
-| Là số đếm nhỏ | `int` |
-| Có thể vượt giới hạn `int`, hoặc là tổng nhiều số | `long long` |
-| Có phần thập phân | `double` |
-| Là một ký tự duy nhất | `char` |
-| Là nhiều ký tự liên tiếp | `string` |
-| Chỉ có hai trạng thái đúng/sai | `bool` |
-
-> Khi chưa chắc tổng có lớn hay không, hãy cân nhắc dùng `long long`.
-
-### Khởi tạo biến tích lũy
-
-```cpp
-long long sum = 0;
-int count = 0;
-int mx = -1000000000;
-int mn = 1000000000;
-```
-
-Biến dùng để cộng hoặc đếm phải có giá trị ban đầu đúng. Không dùng biến chưa khởi tạo.
-
----
-
-## 4. NHẬP VÀ XUẤT DỮ LIỆU
-
-```cpp
-int a, b;
-cin >> a >> b;
-cout << a + b << '\n';
-```
-
-```cpp
-string s;
-cin >> s;
-cout << s << '\n';
-```
-
-| Lệnh | Ý nghĩa |
-|---|---|
-| `cin >> a` | Đọc một giá trị vào biến `a` |
-| `cin >> a >> b` | Đọc nhiều giá trị liên tiếp |
-| `cout << answer` | In kết quả |
-| `<< '\n'` | Xuống dòng |
-
-Nếu cần đọc cả một dòng có khoảng trắng, có thể dùng:
-
-```cpp
-getline(cin, s);
-```
-
-Trong phần lớn bài thi cơ bản, dữ liệu dạng số hoặc từ không có khoảng trắng có thể đọc bằng `cin >>`.
-
-### Ba mẹo thi đấu thường gặp
-
-```cpp
-// 1. Đọc nhiều bộ test đến khi hết file
-int n;
-while (cin >> n) {
-    // xử lý từng bộ test
+bool isPrime(long long n) {
+    if (n < 2) return false;
+    if (n == 2 || n == 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (long long i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) return false;
+    }
+    return true;
 }
 
-// 2. Đọc dòng có khoảng trắng sau khi đã cin >> n
-cin.ignore(numeric_limits<streamsize>::max(), '\n');
-getline(cin, s);
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-// 3. Ép kiểu giữ phần thập phân khi sum là long long
-double avg = 1.0 * sum / n;
-```
+    long long n;
+    if (!(cin >> n)) return 0;
 
-> Cần `#include <bits/stdc++.h>` đã bao gồm `limits` cho `numeric_limits`.
-
----
-
-## 5. TOÁN TỬ VÀ BIỂU THỨC
-
-### Toán tử số học
-
-| Toán tử | Ý nghĩa | Ví dụ |
-|---|---|---|
-| `+` | Cộng | `a + b` |
-| `-` | Trừ | `a - b` |
-| `*` | Nhân | `a * b` |
-| `/` | Chia | `a / b` |
-| `%` | Phần dư | `a % b` |
-
-### Chia nguyên và phần dư
-
-```cpp
-15 / 4 == 3
-15 % 4 == 3
-```
-
-Khi cả hai toán hạng là số nguyên, phép `/` cho phần nguyên. Toán tử `%` cho phần dư.
-
-| Mẫu | Ý nghĩa |
-|---|---|
-| `x % 2 == 0` | `x` là số chẵn |
-| `x % 2 != 0` | `x` là số lẻ |
-| `x % 10` | Chữ số cuối của `x` |
-| `x / 10` | Bỏ chữ số cuối của `x` |
-| `a % b == 0` | `a` chia hết cho `b` |
-
-### Toán tử so sánh
-
-```cpp
->    <    >=    <=    ==    !=
-```
-
-| Toán tử | Ý nghĩa |
-|---|---|
-| `==` | Bằng nhau |
-| `!=` | Khác nhau |
-| `>` | Lớn hơn |
-| `<` | Nhỏ hơn |
-| `>=` | Lớn hơn hoặc bằng |
-| `<=` | Nhỏ hơn hoặc bằng |
-
-> **Lưu ý:** Đừng nhầm `=` (gán) với `==` (so sánh).
-
-### Toán tử logic
-
-| Toán tử | Ý nghĩa | Ví dụ |
-|---|---|---|
-| `&&` | Và | `age >= 10 && age <= 15` |
-| `||` | Hoặc | `x == 0 || y == 0` |
-| `!` | Phủ định | `!passed` |
-
----
-
-## 6. ĐIỀU KIỆN — RẼ NHÁNH
-
-### Mẫu cơ bản
-
-```cpp
-if (condition) {
-    // việc A
-} else {
-    // việc B
+    cout << (isPrime(n) ? "YES" : "NO") << "\n";
+    return 0;
 }
 ```
 
-Mô hình bằng lời:
-
-```text
-NẾU điều kiện đúng
-    thực hiện A
-NGƯỢC LẠI
-    thực hiện B
-```
-
-### Nhiều trường hợp
+### `CPPB-NT-03` — Phan Tich Thua So Nguyen To
 
 ```cpp
-if (score >= 8) {
-    cout << "Gioi";
-} else if (score >= 6.5) {
-    cout << "Kha";
-} else {
-    cout << "Can co gang";
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    vector<pair<long long, int>> factors;
+    for (long long i = 2; i * i <= n; ++i) {
+        if (n % i == 0) {
+            int cnt = 0;
+            while (n % i == 0) {
+                cnt++;
+                n /= i;
+            }
+            factors.push_back({i, cnt});
+        }
+    }
+    if (n > 1) {
+        factors.push_back({n, 1});
+    }
+
+    for (int i = 0; i < (int)factors.size(); ++i) {
+        cout << factors[i].first << "^" << factors[i].second;
+        if (i + 1 < (int)factors.size()) cout << " * ";
+    }
+    cout << "\n";
+    return 0;
 }
 ```
 
-### Điều kiện lồng nhau
-
-Chỉ dùng khi quyết định thứ hai phụ thuộc vào quyết định thứ nhất. Hãy viết điều kiện bằng lời trước để tránh rối.
-
-### Lỗi thường gặp
-
-| Lỗi | Cách kiểm tra |
-|---|---|
-| Dùng `=` thay cho `==` | Đọc lại mọi điều kiện so sánh |
-| Nhầm `>` với `>=` | Kiểm tra trường hợp bằng đúng ngưỡng |
-| Thiếu trường hợp | Thử giá trị nhỏ nhất, lớn nhất và đúng biên |
-| Điều kiện quá phức tạp | Tách thành các biến `bool` hoặc viết lại bằng lời |
-
----
-
-## 7. VÒNG LẶP – LÀM MỘT VIỆC NHIỀU LẦN
-
-Trước khi viết vòng lặp, trả lời ba câu hỏi:
-
-1. Việc gì được lặp lại?
-2. Biến nào thay đổi sau mỗi lần?
-3. Khi nào vòng lặp dừng?
-
-### `for`: biết trước số lần hoặc khoảng lặp
+### `CPPB-NT-04` — Dem Uoc Va Tong Uoc
 
 ```cpp
-for (int i = 0; i < n; i++) {
-    // xử lý phần tử thứ i
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    long long count_div = 1;
+    long long sum_div = 1;
+
+    for (long long i = 2; i * i <= n; ++i) {
+        if (n % i == 0) {
+            int a = 0;
+            long long p_pow = 1;
+            long long cur_sum = 1;
+            while (n % i == 0) {
+                a++;
+                n /= i;
+                p_pow *= i;
+                cur_sum += p_pow;
+            }
+            count_div *= (a + 1);
+            sum_div *= cur_sum;
+        }
+    }
+    if (n > 1) {
+        count_div *= 2;
+        sum_div *= (1 + n);
+    }
+
+    cout << count_div << " " << sum_div << "\n";
+    return 0;
 }
 ```
 
-Với mảng có `n` phần tử, chỉ số thường chạy từ `0` đến `n - 1`.
-
-### `while`: lặp khi điều kiện còn đúng
+### `CPPB-NT-05` — Kiem Tra So Chinh Phuong
 
 ```cpp
-while (condition) {
-    // xử lý
-    // phải có cách làm condition thay đổi
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    unsigned long long n;
+    if (!(cin >> n)) return 0;
+
+    unsigned long long r = sqrt((double)n);
+    while (r * r > n) r--;
+    while ((r + 1) * (r + 1) <= n) r++;
+
+    if (r * r == n) cout << "YES\n";
+    else cout << "NO\n";
+    return 0;
 }
 ```
 
-Nếu điều kiện không bao giờ sai, chương trình có thể lặp vô hạn.
-
-### `do..while`: thực hiện ít nhất một lần
+### `CPPB-NT-06` — Sang Nguyen To Eratosthenes
 
 ```cpp
-do {
-    // xử lý
-} while (condition);
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<bool> is_prime(n + 1, true);
+    is_prime[0] = is_prime[1] = false;
+
+    for (int i = 2; 1LL * i * i <= n; ++i) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= n; j += i) {
+                is_prime[j] = false;
+            }
+        }
+    }
+
+    bool first = true;
+    for (int i = 2; i <= n; ++i) {
+        if (is_prime[i]) {
+            if (!first) cout << " ";
+            cout << i;
+            first = false;
+        }
+    }
+    cout << "\n";
+    return 0;
+}
 ```
 
-Trong phần C++ cơ bản, `for` và `while` là hai dạng cần dùng thành thạo nhất.
-
-### Vòng lặp lồng nhau
+### `CPPB-NT-07` — Dem So Nguyen To Doan L R
 
 ```cpp
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++) {
-        // xử lý từng cặp (i, j)
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 1000000;
+vector<bool> is_prime(MAXN + 1, true);
+vector<int> pref(MAXN + 1, 0);
+
+void sieve() {
+    is_prime[0] = is_prime[1] = false;
+    for (int i = 2; 1LL * i * i <= MAXN; ++i) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= MAXN; j += i) {
+                is_prime[j] = false;
+            }
+        }
+    }
+    for (int i = 1; i <= MAXN; ++i) {
+        pref[i] = pref[i - 1] + (is_prime[i] ? 1 : 0);
     }
 }
-```
 
-Nếu vòng ngoài chạy `N` lần và vòng trong chạy `M` lần, số thao tác thường là `O(NM)`.
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
----
+    sieve();
 
-## 8. BỐN MẪU TÍCH LŨY
+    int q;
+    if (!(cin >> q)) return 0;
 
-### Tính tổng
-
-```cpp
-long long sum = 0;
-for (int x : a) {
-    sum += x;
+    while (q--) {
+        int l, r;
+        cin >> l >> r;
+        cout << pref[r] - pref[l - 1] << "\n";
+    }
+    return 0;
 }
 ```
 
-### Đếm phần tử thỏa điều kiện
+### `CPPB-NT-08` — Sang Uoc Nguyen To Nho Nhat Spf
 
 ```cpp
-int count = 0;
-for (int x : a) {
-    if (x % 2 == 0) count++;
-}
-```
+#include <bits/stdc++.h>
+using namespace std;
 
-### Tìm giá trị lớn nhất
+const int MAXN = 1000000;
+vector<int> spf(MAXN + 1);
 
-```cpp
-int mx = a[0];
-for (int x : a) {
-    mx = max(mx, x);
-}
-```
-
-### Tìm giá trị nhỏ nhất
-
-```cpp
-int mn = a[0];
-for (int x : a) {
-    mn = min(mn, x);
-}
-```
-
-> Nếu dữ liệu có thể rỗng, không được truy cập `a[0]` trước khi kiểm tra kích thước. Có thể khởi tạo `mx`, `mn` theo giới hạn bài toán.
-
----
-
-## 9. MẢNG, `VECTOR` VÀ `STRING`
-
-### Mảng và chỉ số
-
-```text
-a[0], a[1], a[2], .., a[n - 1]
-```
-
-> **Chỉ số bắt đầu từ 0.** Với `n` phần tử, chỉ số hợp lệ là `0 … n-1`.
-
-### Đọc và duyệt mảng
-
-```cpp
-int n;
-cin >> n;
-
-vector<int> a(n);
-for (int i = 0; i < n; i++) {
-    cin >> a[i];
-}
-
-for (int i = 0; i < n; i++) {
-    cout << a[i] << ' ';
-}
-```
-
-### Duyệt bằng phần tử
-
-```cpp
-for (int x : a) {
-    cout << x << ' ';
-}
-```
-
-Dùng chỉ số `i` khi cần biết vị trí hoặc cập nhật `a[i]`. Dùng `x` khi chỉ cần đọc từng giá trị.
-
-### Các thao tác `vector` cơ bản
-
-| Lệnh | Ý nghĩa |
-|---|---|
-| `vector<int> a(n)` | Tạo vector có `n` phần tử |
-| `a.size()` | Số phần tử |
-| `a.push_back(x)` | Thêm `x` vào cuối |
-| `a.pop_back()` | Xóa phần tử cuối |
-| `a[i]` | Truy cập phần tử vị trí `i` |
-| `a.empty()` | Kiểm tra có rỗng không |
-
-### Xử lý `string`
-
-```cpp
-string s;
-cin >> s;
-
-for (int i = 0; i < (int)s.size(); i++) {
-    if (s[i] == 'A') {
-        // xử lý ký tự A
+void sieveSPF() {
+    for (int i = 1; i <= MAXN; ++i) spf[i] = i;
+    for (int i = 2; 1LL * i * i <= MAXN; ++i) {
+        if (spf[i] == i) {
+            for (int j = i * i; j <= MAXN; j += i) {
+                if (spf[j] == j) spf[j] = i;
+            }
+        }
     }
 }
-```
 
-| Biểu thức | Ý nghĩa |
-|---|---|
-| `s.size()` | Độ dài xâu |
-| `s[i]` | Ký tự ở vị trí `i` |
-| `s.front()` | Ký tự đầu |
-| `s.back()` | Ký tự cuối |
-|
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
----
+    sieveSPF();
 
-## 10. HÀM — CHIA BÀI TOÁN THÀNH CÁC PHẦN
+    int q;
+    if (!(cin >> q)) return 0;
 
-> **Hàm là một khối công việc riêng:** nhận dữ liệu vào, thực hiện một nhiệm vụ và có thể trả về kết quả.
-
-```cpp
-int square(int x) {
-    return x * x;
+    for (int i = 0; i < q; ++i) {
+        int n;
+        cin >> n;
+        cout << spf[n] << (i + 1 == q ? "" : " ");
+    }
+    cout << "\n";
+    return 0;
 }
 ```
 
-```cpp
-int result = square(5); // result = 25
-```
-
-### Mẫu hàm
+### `CPPB-NT-09` — Sang Phan Doan Segmented Sieve
 
 ```cpp
-return_type function_name(parameters) {
-    // xử lý
-    return value;
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long l, r;
+    if (!(cin >> l >> r)) return 0;
+
+    int lim = sqrt(r);
+    vector<bool> is_prime(lim + 1, true);
+    vector<int> primes;
+    for (int i = 2; i <= lim; ++i) {
+        if (is_prime[i]) {
+            primes.push_back(i);
+            for (int j = i * 2; j <= lim; j += i) is_prime[j] = false;
+        }
+    }
+
+    vector<bool> is_prime_range(r - l + 1, true);
+    for (int p : primes) {
+        long long start = max(1LL * p * p, ((l + p - 1) / p) * p);
+        for (long long j = start; j <= r; j += p) {
+            is_prime_range[j - l] = false;
+        }
+    }
+
+    if (l == 1) is_prime_range[0] = false;
+
+    int count_primes = 0;
+    for (int i = 0; i <= r - l; ++i) {
+        if (is_prime_range[i]) count_primes++;
+    }
+
+    cout << count_primes << "\n";
+    return 0;
 }
 ```
 
-Nếu hàm không trả về kết quả, dùng `void`:
+### `CPPB-NT-10` — Cap So Nguyen To Sinh Doi
 
 ```cpp
-void printLine(int n) {
-    for (int i = 0; i < n; i++) cout << '-';
-    cout << '\n';
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    if (n < 5) {
+        cout << 0 << "\n";
+        return 0;
+    }
+
+    vector<bool> is_prime(n + 1, true);
+    is_prime[0] = is_prime[1] = false;
+    for (int i = 2; 1LL * i * i <= n; ++i) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= n; j += i) is_prime[j] = false;
+        }
+    }
+
+    int count_twin = 0;
+    for (int p = 3; p + 2 <= n; p += 2) {
+        if (is_prime[p] && is_prime[p + 2]) count_twin++;
+    }
+
+    cout << count_twin << "\n";
+    return 0;
 }
 ```
 
-Hàm nên thực hiện **một nhiệm vụ rõ ràng**. Các tên hàm thường gặp trong bài thuật toán là `check()`, `isPrime()`, `gcd()`, `solve()` và `dfs()`.
-
----
-
-## 11. GỠ LỖI VÀ KIỂM THỬ
-
-Khi chương trình sai, không đoán bừa. Hãy kiểm tra theo thứ tự:
-
-| Câu hỏi | Việc cần làm |
-|---|---|
-| Input có đúng không? | Đọc lại định dạng và số lượng dữ liệu |
-| Kiểu dữ liệu có đủ lớn không? | Kiểm tra `int`, `long long`, phép nhân và tổng |
-| Công thức có đúng không? | Tính thủ công bằng một ví dụ nhỏ |
-| Điều kiện có đúng không? | Thử trường hợp bằng biên, nhỏ hơn và lớn hơn biên |
-| Vòng lặp có chạy đủ không? | Theo dõi giá trị bắt đầu, kết thúc và bước nhảy |
-| Chỉ số có hợp lệ không? | Kiểm tra `0 ≤ i < n` |
-| Kết quả trung gian có đúng không? | In biến tạm tại vị trí cần kiểm tra |
-
-### In giá trị trung gian
+### `CPPB-NT-11` — So Hoan Hao
 
 ```cpp
-cerr << "i = " << i << ", sum = " << sum << '\n';
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPrime(long long p) {
+    if (p < 2) return false;
+    for (long long i = 2; i * i <= p; ++i) {
+        if (p % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    unsigned long long n;
+    if (!(cin >> n)) return 0;
+
+    // Theo Euclid-Euler, số hoàn hảo chẵn có dạng 2^(p-1) * (2^p - 1) với 2^p - 1 là số nguyên tố
+    vector<unsigned long long> perfect_nums;
+    int primes[] = {2, 3, 5, 7, 13, 17, 19, 31};
+    for (int p : primes) {
+        unsigned long long mersenne = (1ULL << p) - 1;
+        if (isPrime(mersenne)) {
+            unsigned long long perf = (1ULL << (p - 1)) * mersenne;
+            perfect_nums.push_back(perf);
+        }
+    }
+
+    for (auto v : perfect_nums) {
+        if (v == n) {
+            cout << "YES\n";
+            return 0;
+        }
+    }
+    cout << "NO\n";
+    return 0;
+}
 ```
 
-Có thể dùng `cout` ở bài đơn giản, nhưng phải xóa các dòng debug trước khi nộp nếu output yêu cầu chính xác.
+### `CPPB-NT-12` — So Co Dung Ba Uoc
 
-### Bộ test tối thiểu
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
-Mỗi bài nên thử:
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-1. Ví dụ mẫu.
-2. Dữ liệu nhỏ nhất.
-3. Dữ liệu lớn nhất hoặc gần lớn nhất.
-4. Trường hợp đúng bằng ngưỡng.
-5. Trường hợp không có phần tử thỏa điều kiện.
-6. Trường hợp tất cả phần tử đều thỏa điều kiện.
-7. Trường hợp có nhiều phần tử bằng nhau.
+    long long n;
+    if (!(cin >> n)) return 0;
 
----
+    int lim = sqrt(n);
+    vector<bool> is_prime(lim + 1, true);
+    is_prime[0] = is_prime[1] = false;
+    for (int i = 2; 1LL * i * i <= lim; ++i) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= lim; j += i) is_prime[j] = false;
+        }
+    }
 
-## 12. ĐỘ PHỨC TẠP — CHƯƠNG TRÌNH CÓ ĐỦ NHANH?
+    int count_3div = 0;
+    for (int i = 2; i <= lim; ++i) {
+        if (is_prime[i] && 1LL * i * i <= n) count_3div++;
+    }
 
-| Độ phức tạp | Trực giác |
-|---|---|
-| `O(1)` | Số thao tác gần như không phụ thuộc kích thước dữ liệu |
-| `O(log N)` | Mỗi bước thu nhỏ đáng kể phạm vi tìm kiếm |
-| `O(N)` | Duyệt dữ liệu một lần |
-| `O(N log N)` | Thường gặp khi sắp xếp |
-| `O(N²)` | Xét mọi cặp hoặc hai vòng lặp theo `N` |
-| `O(2^N)` | Thử mọi tập con; chỉ phù hợp với `N` nhỏ |
-
-### Quy tắc đọc giới hạn
-
-| Nếu `N` khoảng… | Có thể cân nhắc… |
-|---:|---|
-| `N ≤ 20` | Duyệt tập con, bitmask, quay lui |
-| `N ≤ 10^3` | Một số lời giải `O(N²)` |
-| `N ≤ 10^5` hoặc `2 × 10^5` | `O(N)`, `O(N log N)` |
-| `N` rất lớn | Công thức, toán học hoặc tối ưu mạnh hơn |
-
-Đây chỉ là quy tắc định hướng. Cần xét thêm số test, hằng số trong chương trình và giới hạn thời gian.
-
----
-
-## TÓM TẮT MỘT TRANG
-
-```text
-BIẾN
-  Tôi cần lưu dữ liệu gì?
-
-TÍNH
-  Tôi cần công thức nào?
-
-ĐIỀU KIỆN
-  Tôi cần quyết định điều gì?
-
-LẶP
-  Tôi cần làm việc gì nhiều lần?
-
-TÍCH LŨY
-  Tôi cần cộng, đếm, max hay min?
-
-MẢNG
-  Tôi có nhiều dữ liệu cùng loại không?
-
-HÀM
-  Tôi có thể tách nhiệm vụ nào thành một khối công việc riêng?
-
-DEBUG
-  Input, biến, công thức, điều kiện, vòng lặp và kết quả trung gian có đúng không?
+    cout << count_3div << "\n";
+    return 0;
+}
 ```
 
-> **Mục tiêu của C++ Cơ bản:** Không phải nhớ thật nhiều câu lệnh, mà là nhìn một bài toán đơn giản và biết biến nó thành các bước có thể lập trình được.
+### `CPPB-NT-13` — So Gan Nguyen To Almost Prime
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-\newpage
+    int n;
+    if (!(cin >> n)) return 0;
 
-# Phụ lục B: Lời giải bài tập tham khảo
+    vector<int> prime_count(n + 1, 0);
+    for (int i = 2; i <= n; ++i) {
+        if (prime_count[i] == 0) { // i là số nguyên tố
+            for (int j = i; j <= n; j += i) {
+                prime_count[j]++;
+            }
+        }
+    }
 
-> Phần này cung cấp mã nguồn C++ tham khảo chuẩn thi đấu cho các bài tập thực hành trong sách.
+    int ans = 0;
+    for (int i = 1; i <= n; ++i) {
+        if (prime_count[i] == 2) ans++;
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-NT-14` — Phan Tich Giai Thua Legendre
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n, p;
+    if (!(cin >> n >> p)) return 0;
+
+    long long k = 0;
+    while (n > 0) {
+        k += (n / p);
+        n /= p;
+    }
+
+    cout << k << "\n";
+    return 0;
+}
+```
+
+### `CPPB-NT-15` — Dem So Khong Tan Cung Giai Thua
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    long long count_zeros = 0;
+    while (n > 0) {
+        count_zeros += (n / 5);
+        n /= 5;
+    }
+
+    cout << count_zeros << "\n";
+    return 0;
+}
+```
+
+### `CPPB-NT-16` — Cap Nguyen To Cung Nhau Phi Euler
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 1000000;
+vector<int> phi(MAXN + 1);
+
+void sievePhi() {
+    for (int i = 0; i <= MAXN; ++i) phi[i] = i;
+    for (int i = 2; i <= MAXN; ++i) {
+        if (phi[i] == i) { // i là số nguyên tố
+            for (int j = i; j <= MAXN; j += i) {
+                phi[j] -= phi[j] / i;
+            }
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    sievePhi();
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    long long sum_phi = 0;
+    for (int i = 1; i <= n; ++i) {
+        sum_phi += phi[i];
+    }
+
+    // Số cặp (x, y) với gcd(x, y) = 1 là 2 * sum(phi(i)) - 1 (do (1,1) tính 1 lần)
+    long long ans = 2 * sum_phi - 1;
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+## Chương 03 — Bài 08: Đồng dư & lũy thừa
+
+### `CPPB-MOD-01` — Phep Tinh Dong Du Co Ban
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    a %= MOD;
+    b %= MOD;
+
+    long long add_res = (a + b) % MOD;
+    long long sub_res = (a - b + MOD) % MOD;
+    long long mul_res = (a * b) % MOD;
+
+    cout << add_res << " " << sub_res << " " << mul_res << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-02` — Luy Thua Nhi Phan
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long powerMod(long long a, long long b, long long m) {
+    if (m == 1) return 0;
+    long long ans = 1 % m;
+    a %= m;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b, m;
+    if (!(cin >> a >> b >> m)) return 0;
+
+    cout << powerMod(a, b, m) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-03` — Luy Thua Chuoi So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+long long powerMod(long long a, long long b, long long m) {
+    long long ans = 1;
+    a %= m;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a;
+    string b_str;
+    if (!(cin >> a >> b_str)) return 0;
+
+    if (a % MOD == 0) {
+        cout << 0 << "\n";
+        return 0;
+    }
+
+    long long rem_b = 0;
+    for (char c : b_str) {
+        rem_b = (rem_b * 10 + (c - '0')) % (MOD - 1);
+    }
+
+    cout << powerMod(a, rem_b, MOD) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-04` — Nhan An Do Chong Tran So
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long mulMod(long long a, long long b, long long m) {
+    long long ans = 0;
+    a %= m;
+    while (b > 0) {
+        if (b & 1) ans = (ans + a) % m;
+        a = (a + a) % m;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b, m;
+    if (!(cin >> a >> b >> m)) return 0;
+
+    cout << mulMod(a, b, m) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-05` — Tong Cap So Nhan Dong Du
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+long long powerMod(long long a, long long b) {
+    long long ans = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % MOD;
+        a = (a * a) % MOD;
+        b >>= 1;
+    }
+    return ans;
+}
+
+long long sumGeo(long long a, long long k) {
+    if (k == 0) return 0;
+    if (k == 1) return 1;
+    if (k % 2 == 0) {
+        long long half = sumGeo(a, k / 2);
+        return half * (1 + powerMod(a, k / 2)) % MOD;
+    } else {
+        return (1 + a * sumGeo(a, k - 1)) % MOD;
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, n;
+    if (!(cin >> a >> n)) return 0;
+
+    cout << sumGeo(a, n + 1) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-06` — Nghich Dao Fermat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+long long powerMod(long long a, long long b) {
+    long long ans = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % MOD;
+        a = (a * a) % MOD;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a;
+    if (!(cin >> a)) return 0;
+
+    cout << powerMod(a, MOD - 2) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-07` — Nghich Dao Euclid Mo Rong
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long extGCD(long long a, long long b, long long &x, long long &y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    long long x1, y1;
+    long long d = extGCD(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a / b);
+    return d;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, m;
+    if (!(cin >> a >> m)) return 0;
+
+    long long x, y;
+    extGCD(a, m, x, y);
+    x = (x % m + m) % m;
+
+    cout << x << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-08` — Phep Chia Dong Du
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+long long powerMod(long long a, long long b) {
+    long long ans = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % MOD;
+        a = (a * a) % MOD;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    a %= MOD;
+    long long inv_b = powerMod(b, MOD - 2);
+    long long ans = (a * inv_b) % MOD;
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-09` — To Hop C N K Modulo
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 1000000;
+const long long MOD = 1000000007;
+
+vector<long long> fact(MAXN + 1);
+vector<long long> invFact(MAXN + 1);
+
+long long powerMod(long long a, long long b) {
+    long long ans = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % MOD;
+        a = (a * a) % MOD;
+        b >>= 1;
+    }
+    return ans;
+}
+
+void precompute() {
+    fact[0] = 1;
+    for (int i = 1; i <= MAXN; ++i) fact[i] = (fact[i - 1] * i) % MOD;
+    invFact[MAXN] = powerMod(fact[MAXN], MOD - 2);
+    for (int i = MAXN; i >= 1; --i) invFact[i - 1] = (invFact[i] * i) % MOD;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    precompute();
+
+    int q;
+    if (!(cin >> q)) return 0;
+
+    while (q--) {
+        int n, k;
+        cin >> n >> k;
+        if (k < 0 || k > n) cout << 0 << "\n";
+        else cout << fact[n] * invFact[k] % MOD * invFact[n - k] % MOD << "\n";
+    }
+    return 0;
+}
+```
+
+### `CPPB-MOD-10` — Chinh Hop A N K Modulo
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 1000000;
+const long long MOD = 1000000007;
+
+vector<long long> fact(MAXN + 1);
+vector<long long> invFact(MAXN + 1);
+
+long long powerMod(long long a, long long b) {
+    long long ans = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % MOD;
+        a = (a * a) % MOD;
+        b >>= 1;
+    }
+    return ans;
+}
+
+void precompute() {
+    fact[0] = 1;
+    for (int i = 1; i <= MAXN; ++i) fact[i] = (fact[i - 1] * i) % MOD;
+    invFact[MAXN] = powerMod(fact[MAXN], MOD - 2);
+    for (int i = MAXN; i >= 1; --i) invFact[i - 1] = (invFact[i] * i) % MOD;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    precompute();
+
+    int q;
+    if (!(cin >> q)) return 0;
+
+    while (q--) {
+        int n, k;
+        cin >> n >> k;
+        if (k < 0 || k > n) cout << 0 << "\n";
+        else cout << fact[n] * invFact[n - k] % MOD << "\n";
+    }
+    return 0;
+}
+```
+
+### `CPPB-MOD-11` — Fibonacci Dong Du Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+void multiply(long long F[2][2], long long M[2][2]) {
+    long long x = (F[0][0] * M[0][0] + F[0][1] * M[1][0]) % MOD;
+    long long y = (F[0][0] * M[0][1] + F[0][1] * M[1][1]) % MOD;
+    long long z = (F[1][0] * M[0][0] + F[1][0] * M[1][0]) % MOD;
+    long long w = (F[1][0] * M[0][1] + F[1][1] * M[1][1]) % MOD;
+    F[0][0] = x; F[0][1] = y;
+    F[1][0] = z; F[1][1] = w;
+}
+
+void powerMat(long long F[2][2], long long n) {
+    if (n == 0 || n == 1) return;
+    long long M[2][2] = {{1, 1}, {1, 0}};
+    powerMat(F, n / 2);
+    multiply(F, F);
+    if (n % 2 != 0) multiply(F, M);
+}
+
+long long fib(long long n) {
+    if (n == 0) return 0;
+    long long F[2][2] = {{1, 1}, {1, 0}};
+    powerMat(F, n - 1);
+    return F[0][0];
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    if (!(cin >> n)) return 0;
+
+    cout << fib(n) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-12` — So Catalan Dong Du
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 2000000;
+const long long MOD = 1000000007;
+
+vector<long long> fact(MAXN + 1);
+vector<long long> invFact(MAXN + 1);
+
+long long powerMod(long long a, long long b) {
+    long long ans = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % MOD;
+        a = (a * a) % MOD;
+        b >>= 1;
+    }
+    return ans;
+}
+
+void precompute() {
+    fact[0] = 1;
+    for (int i = 1; i <= MAXN; ++i) fact[i] = (fact[i - 1] * i) % MOD;
+    invFact[MAXN] = powerMod(fact[MAXN], MOD - 2);
+    for (int i = MAXN; i >= 1; --i) invFact[i - 1] = (invFact[i] * i) % MOD;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    precompute();
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    long long c2n_n = fact[2 * n] * invFact[n] % MOD * invFact[n] % MOD;
+    long long inv_n_plus_1 = powerMod(n + 1, MOD - 2);
+    long long ans = (c2n_n * inv_n_plus_1) % MOD;
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-13` — Luy Thua Tang Tower Of Powers
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+long long powerMod(long long a, long long b, long long m) {
+    if (m == 1) return 0;
+    long long ans = 1 % m;
+    a %= m;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b, c;
+    if (!(cin >> a >> b >> c)) return 0;
+
+    long long exp = powerMod(b, c, MOD - 1);
+    long long ans = powerMod(a, exp, MOD);
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-14` — Nghich Dao Tuyen Tinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long MOD = 1000000007;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> inv(n + 1);
+    inv[1] = 1;
+    long long sum_inv = 1;
+
+    for (int i = 2; i <= n; ++i) {
+        inv[i] = (MOD - (MOD / i) * inv[MOD % i] % MOD) % MOD;
+        sum_inv = (sum_inv + inv[i]) % MOD;
+    }
+
+    cout << sum_inv << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-15` — Phuong Trinh Dong Du Tuyen Tinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long extGCD(long long a, long long b, long long &x, long long &y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    long long x1, y1;
+    long long d = extGCD(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a / b);
+    return d;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a, b, m;
+    if (!(cin >> a >> b >> m)) return 0;
+
+    long long x, y;
+    long long g = extGCD(a, m, x, y);
+
+    if (b % g != 0) {
+        cout << -1 << "\n";
+        return 0;
+    }
+
+    x = (x % m + m) % m;
+    long long m_prime = m / g;
+    long long ans = (x * ((b / g) % m_prime)) % m_prime;
+    ans = (ans % m_prime + m_prime) % m_prime;
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-MOD-16` — Can Bac Hai Modulo
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const long long P = 1000000007;
+
+long long powerMod(long long a, long long b, long long m) {
+    long long ans = 1;
+    a %= m;
+    while (b > 0) {
+        if (b & 1) ans = (ans * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return ans;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long a;
+    if (!(cin >> a)) return 0;
+
+    a %= P;
+    if (a == 0) {
+        cout << 0 << "\n";
+        return 0;
+    }
+
+    if (powerMod(a, (P - 1) / 2, P) != 1) {
+        cout << -1 << "\n";
+        return 0;
+    }
+
+    long long x = powerMod(a, (P + 1) / 4, P);
+    long long x2 = P - x;
+
+    long long min_x = min(x, x2);
+    cout << min_x << "\n";
+    return 0;
+}
+```
+
+## Chương 03 — Bài 09: Số nguyên lớn
+
+### `CPPB-BIG-01` — So Sanh Hai So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    if (a.size() > b.size()) cout << ">\n";
+    else if (a.size() < b.size()) cout << "<\n";
+    else {
+        if (a > b) cout << ">\n";
+        else if (a < b) cout << "<\n";
+        else cout << "=\n";
+    }
+    return 0;
+}
+```
+
+### `CPPB-BIG-02` — Cong Hai So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string addBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+
+    string res = "";
+    int carry = 0;
+    int n = max(a.size(), b.size());
+
+    for (int i = 0; i < n || carry; ++i) {
+        int sum = carry;
+        if (i < (int)a.size()) sum += a[i] - '0';
+        if (i < (int)b.size()) sum += b[i] - '0';
+        res.push_back((sum % 10) + '0');
+        carry = sum / 10;
+    }
+
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << addBig(a, b) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-03` — Tru Hai So Lon Khong Am
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string subBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+
+    string res = "";
+    int borrow = 0;
+
+    for (int i = 0; i < (int)a.size(); ++i) {
+        int diff = (a[i] - '0') - borrow;
+        if (i < (int)b.size()) diff -= (b[i] - '0');
+        if (diff < 0) {
+            diff += 10;
+            borrow = 1;
+        } else {
+            borrow = 0;
+        }
+        res.push_back(diff + '0');
+    }
+
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << subBig(a, b) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-04` — Tru Hai So Lon Tong Quat
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isLess(const string &a, const string &b) {
+    if (a.size() != b.size()) return a.size() < b.size();
+    return a < b;
+}
+
+string subBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+
+    string res = "";
+    int borrow = 0;
+
+    for (int i = 0; i < (int)a.size(); ++i) {
+        int diff = (a[i] - '0') - borrow;
+        if (i < (int)b.size()) diff -= (b[i] - '0');
+        if (diff < 0) {
+            diff += 10;
+            borrow = 1;
+        } else {
+            borrow = 0;
+        }
+        res.push_back(diff + '0');
+    }
+
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    if (a == b) {
+        cout << "0\n";
+    } else if (isLess(a, b)) {
+        cout << "-" << subBig(b, a) << "\n";
+    } else {
+        cout << subBig(a, b) << "\n";
+    }
+    return 0;
+}
+```
+
+### `CPPB-BIG-05` — Nhan So Lon Voi So Nho
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string mulSmall(string a, long long b) {
+    if (a == "0" || b == 0) return "0";
+
+    reverse(a.begin(), a.end());
+    string res = "";
+    long long carry = 0;
+
+    for (int i = 0; i < (int)a.size() || carry; ++i) {
+        long long prod = carry;
+        if (i < (int)a.size()) prod += 1LL * (a[i] - '0') * b;
+        res.push_back((prod % 10) + '0');
+        carry = prod / 10;
+    }
+
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a;
+    long long b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << mulSmall(a, b) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-06` — Nhan Hai So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string mulBig(string a, string b) {
+    if (a == "0" || b == "0") return "0";
+
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+
+    int n = a.size(), m = b.size();
+    vector<int> c(n + m, 0);
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            c[i + j] += (a[i] - '0') * (b[j] - '0');
+        }
+    }
+
+    int carry = 0;
+    string res = "";
+    for (int i = 0; i < n + m || carry; ++i) {
+        if (i < (int)c.size()) carry += c[i];
+        res.push_back((carry % 10) + '0');
+        carry /= 10;
+    }
+
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << mulBig(a, b) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-07` — Chia So Lon Cho So Nho
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string divSmall(string a, long long b) {
+    string res = "";
+    long long cur = 0;
+
+    for (char c : a) {
+        cur = cur * 10 + (c - '0');
+        res.push_back((cur / b) + '0');
+        cur %= b;
+    }
+
+    int pos = 0;
+    while (pos + 1 < (int)res.size() && res[pos] == '0') pos++;
+    return res.substr(pos);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a;
+    long long b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << divSmall(a, b) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-08` — Chia Lay Du So Lon Cho So Nho
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a;
+    long long b;
+    if (!(cin >> a >> b)) return 0;
+
+    long long cur = 0;
+    for (char c : a) {
+        cur = (cur * 10 + (c - '0')) % b;
+    }
+
+    cout << cur << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-09` — Giai Thua So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string mulSmall(string a, int b) {
+    reverse(a.begin(), a.end());
+    string res = "";
+    int carry = 0;
+    for (int i = 0; i < (int)a.size() || carry; ++i) {
+        int prod = carry;
+        if (i < (int)a.size()) prod += (a[i] - '0') * b;
+        res.push_back((prod % 10) + '0');
+        carry = prod / 10;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    string ans = "1";
+    for (int i = 2; i <= n; ++i) {
+        ans = mulSmall(ans, i);
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-10` — Luy Thua So Lon Chinh Xac
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string mulBig(string a, string b) {
+    if (a == "0" || b == "0") return "0";
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    int n = a.size(), m = b.size();
+    vector<int> c(n + m, 0);
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            c[i + j] += (a[i] - '0') * (b[j] - '0');
+        }
+    }
+    int carry = 0;
+    string res = "";
+    for (int i = 0; i < n + m || carry; ++i) {
+        if (i < (int)c.size()) carry += c[i];
+        res.push_back((carry % 10) + '0');
+        carry /= 10;
+    }
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    string base = to_string(a);
+    string ans = "1";
+
+    while (b > 0) {
+        if (b & 1) ans = mulBig(ans, base);
+        base = mulBig(base, base);
+        b >>= 1;
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-11` — Fibonacci So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string addBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    string res = "";
+    int carry = 0;
+    int n = max(a.size(), b.size());
+    for (int i = 0; i < n || carry; ++i) {
+        int sum = carry;
+        if (i < (int)a.size()) sum += a[i] - '0';
+        if (i < (int)b.size()) sum += b[i] - '0';
+        res.push_back((sum % 10) + '0');
+        carry = sum / 10;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    if (n == 0) { cout << "0\n"; return 0; }
+    if (n == 1) { cout << "1\n"; return 0; }
+
+    string f0 = "0", f1 = "1", f2 = "";
+    for (int i = 2; i <= n; ++i) {
+        f2 = addBig(f0, f1);
+        f0 = f1;
+        f1 = f2;
+    }
+
+    cout << f1 << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-12` — Tong Chu So Giai Thua
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string mulSmall(string a, int b) {
+    reverse(a.begin(), a.end());
+    string res = "";
+    int carry = 0;
+    for (int i = 0; i < (int)a.size() || carry; ++i) {
+        int prod = carry;
+        if (i < (int)a.size()) prod += (a[i] - '0') * b;
+        res.push_back((prod % 10) + '0');
+        carry = prod / 10;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    string fact = "1";
+    for (int i = 2; i <= n; ++i) {
+        fact = mulSmall(fact, i);
+    }
+
+    long long sum_digits = 0;
+    for (char c : fact) {
+        sum_digits += (c - '0');
+    }
+
+    cout << sum_digits << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-13` — Chia Hai So Nguyen Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isLess(const string &a, const string &b) {
+    if (a.size() != b.size()) return a.size() < b.size();
+    return a < b;
+}
+
+string subBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    string res = "";
+    int borrow = 0;
+    for (int i = 0; i < (int)a.size(); ++i) {
+        int diff = (a[i] - '0') - borrow;
+        if (i < (int)b.size()) diff -= (b[i] - '0');
+        if (diff < 0) { diff += 10; borrow = 1; }
+        else borrow = 0;
+        res.push_back(diff + '0');
+    }
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    if (isLess(a, b)) {
+        cout << "0\n";
+        return 0;
+    }
+
+    string cur = "";
+    string res = "";
+
+    for (char c : a) {
+        cur.push_back(c);
+        while (cur.size() > 1 && cur[0] == '0') cur.erase(cur.begin());
+        int digit = 0;
+        while (!isLess(cur, b)) {
+            cur = subBig(cur, b);
+            digit++;
+        }
+        res.push_back(digit + '0');
+    }
+
+    int pos = 0;
+    while (pos + 1 < (int)res.size() && res[pos] == '0') pos++;
+    cout << res.substr(pos) << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-14` — Can Bac Hai So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isLess(const string &a, const string &b) {
+    if (a.size() != b.size()) return a.size() < b.size();
+    return a < b;
+}
+
+string mulBig(string a, string b) {
+    if (a == "0" || b == "0") return "0";
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    int n = a.size(), m = b.size();
+    vector<int> c(n + m, 0);
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            c[i + j] += (a[i] - '0') * (b[j] - '0');
+        }
+    }
+    int carry = 0;
+    string res = "";
+    for (int i = 0; i < n + m || carry; ++i) {
+        if (i < (int)c.size()) carry += c[i];
+        res.push_back((carry % 10) + '0');
+        carry /= 10;
+    }
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+string addBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    string res = "";
+    int carry = 0;
+    int n = max(a.size(), b.size());
+    for (int i = 0; i < n || carry; ++i) {
+        int sum = carry;
+        if (i < (int)a.size()) sum += a[i] - '0';
+        if (i < (int)b.size()) sum += b[i] - '0';
+        res.push_back((sum % 10) + '0');
+        carry = sum / 10;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+string div2(string a) {
+    string res = "";
+    int cur = 0;
+    for (char c : a) {
+        cur = cur * 10 + (c - '0');
+        res.push_back((cur / 2) + '0');
+        cur %= 2;
+    }
+    int pos = 0;
+    while (pos + 1 < (int)res.size() && res[pos] == '0') pos++;
+    return res.substr(pos);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a;
+    if (!(cin >> a)) return 0;
+
+    int target_len = (a.size() + 1) / 2;
+    string low = "1";
+    string high = string(target_len + 1, '9');
+    string ans = "1";
+
+    while (!isLess(high, low)) {
+        string mid = div2(addBig(low, high));
+        string sq = mulBig(mid, mid);
+        if (!isLess(a, sq)) {
+            ans = mid;
+            low = addBig(mid, "1");
+        } else {
+            // high = mid - 1
+            // vi low, high chi dung cho binary search chuoi
+            int borrow = 1;
+            for (int i = (int)mid.size() - 1; i >= 0; --i) {
+                if (mid[i] >= '1') { mid[i]--; break; }
+                else mid[i] = '9';
+            }
+            while (mid.size() > 1 && mid[0] == '0') mid.erase(mid.begin());
+            high = mid;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-15` — Uoc Chung Lon Nhat So Lon
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isLess(const string &a, const string &b) {
+    if (a.size() != b.size()) return a.size() < b.size();
+    return a < b;
+}
+
+string subBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    string res = "";
+    int borrow = 0;
+    for (int i = 0; i < (int)a.size(); ++i) {
+        int diff = (a[i] - '0') - borrow;
+        if (i < (int)b.size()) diff -= (b[i] - '0');
+        if (diff < 0) { diff += 10; borrow = 1; }
+        else borrow = 0;
+        res.push_back(diff + '0');
+    }
+    while (res.size() > 1 && res.back() == '0') res.pop_back();
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+string div2(string a) {
+    string res = "";
+    int cur = 0;
+    for (char c : a) {
+        cur = cur * 10 + (c - '0');
+        res.push_back((cur / 2) + '0');
+        cur %= 2;
+    }
+    int pos = 0;
+    while (pos + 1 < (int)res.size() && res[pos] == '0') pos++;
+    return res.substr(pos);
+}
+
+string mul2(string a) {
+    reverse(a.begin(), a.end());
+    string res = "";
+    int carry = 0;
+    for (int i = 0; i < (int)a.size() || carry; ++i) {
+        int prod = carry;
+        if (i < (int)a.size()) prod += (a[i] - '0') * 2;
+        res.push_back((prod % 10) + '0');
+        carry = prod / 10;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+bool isEven(const string &s) {
+    return (s.back() - '0') % 2 == 0;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    string a, b;
+    if (!(cin >> a >> b)) return 0;
+
+    int shift = 0;
+    while (a != "0" && b != "0") {
+        if (isEven(a) && isEven(b)) {
+            shift++;
+            a = div2(a);
+            b = div2(b);
+        } else if (isEven(a)) {
+            a = div2(a);
+        } else if (isEven(b)) {
+            b = div2(b);
+        } else {
+            if (isLess(a, b)) b = subBig(b, a);
+            else a = subBig(a, b);
+        }
+    }
+
+    string ans = (a == "0" ? b : a);
+    while (shift--) ans = mul2(ans);
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+### `CPPB-BIG-16` — To Hop So Lon Chinh Xac
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string addBig(string a, string b) {
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    string res = "";
+    int carry = 0;
+    int n = max(a.size(), b.size());
+    for (int i = 0; i < n || carry; ++i) {
+        int sum = carry;
+        if (i < (int)a.size()) sum += a[i] - '0';
+        if (i < (int)b.size()) sum += b[i] - '0';
+        res.push_back((sum % 10) + '0');
+        carry = sum / 10;
+    }
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+
+    vector<vector<string>> c(n + 1, vector<string>(k + 1, "0"));
+    for (int i = 0; i <= n; ++i) {
+        c[i][0] = "1";
+        for (int j = 1; j <= min(i, k); ++j) {
+            if (j == i) c[i][j] = "1";
+            else c[i][j] = addBig(c[i - 1][j - 1], c[i - 1][j]);
+        }
+    }
+
+    cout << c[n][k] << "\n";
+    return 0;
+}
+```
+
+## Chương 04 — Bài 10: Đệ quy
+
+### `CPPB-REC-01` — In Day So De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void printForward(int n) {
+    if (n <= 0) return;
+    printForward(n - 1);
+    cout << n << " ";
+}
+
+void printBackward(int n) {
+    if (n <= 0) return;
+    cout << n << " ";
+    printBackward(n - 1);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    printForward(n);
+    cout << "\n";
+    printBackward(n);
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-02` — Tong Day So Va Giai Thua
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long getSum(int n) {
+    if (n <= 1) return n;
+    return n + getSum(n - 1);
+}
+
+long long getFact(int n) {
+    if (n <= 1) return 1;
+    return 1LL * n * getFact(n - 1);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    cout << getSum(n) << " " << getFact(n) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-03` — Dem Va Tinh Tong Chu So
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int countDigits(long long n) {
+    if (n < 10) return 1;
+    return 1 + countDigits(n / 10);
+}
+
+long long sumDigits(long long n) {
+    if (n < 10) return n;
+    return (n % 10) + sumDigits(n / 10);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    long long n;
+    if (!(cin >> n)) return 0;
+    cout << countDigits(n) << " " << sumDigits(n) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-04` — Dao Nguoc Mang De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverseRec(vector<long long> &a, int l, int r) {
+    if (l >= r) return;
+    swap(a[l], a[r]);
+    reverseRec(a, l + 1, r - 1);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    reverseRec(a, 0, n - 1);
+    for (int i = 0; i < n; ++i) cout << a[i] << (i + 1 == n ? "" : " ");
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-05` — Kiem Tra Palindrome De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPalindromeRec(const string &s, int l, int r) {
+    if (l >= r) return true;
+    if (s[l] != s[r]) return false;
+    return isPalindromeRec(s, l + 1, r - 1);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    string s;
+    if (!(cin >> s)) return 0;
+    if (isPalindromeRec(s, 0, (int)s.size() - 1)) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-REC-06` — Tim Min Max De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long getMinRec(const vector<long long> &a, int l, int r) {
+    if (l == r) return a[l];
+    int mid = l + (r - l) / 2;
+    return min(getMinRec(a, l, mid), getMinRec(a, mid + 1, r));
+}
+
+long long getMaxRec(const vector<long long> &a, int l, int r) {
+    if (l == r) return a[l];
+    int mid = l + (r - l) / 2;
+    return max(getMaxRec(a, l, mid), getMaxRec(a, mid + 1, r));
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << getMinRec(a, 0, n - 1) << " " << getMaxRec(a, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-07` — Uoc Chung Lon Nhat De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long gcdRec(long long a, long long b) {
+    if (b == 0) return a;
+    return gcdRec(b, a % b);
+}
+
+void print128(__int128 n) {
+    if (n == 0) { cout << 0; return; }
+    string s = "";
+    while (n > 0) {
+        s.push_back(char('0' + (n % 10)));
+        n /= 10;
+    }
+    reverse(s.begin(), s.end());
+    cout << s;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    long long a, b;
+    if (!(cin >> a >> b)) return 0;
+    long long g = gcdRec(a, b);
+    __int128 lcm = ((__int128)a / g) * b;
+    cout << g << " ";
+    print128(lcm);
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-08` — Luy Thua Nhi Phan De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long powerRec(long long a, long long b, long long m) {
+    if (b == 0) return 1 % m;
+    long long half = powerRec(a, b / 2, m);
+    long long res = (1LL * (half % m) * (half % m)) % m;
+    if (b % 2 == 1) res = (1LL * res * (a % m)) % m;
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    long long a, b, m;
+    if (!(cin >> a >> b >> m)) return 0;
+    cout << powerRec(a, b, m) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-09` — Thap Ha Noi Co Ban
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void solveHanoi(int n, char from, char to, char aux) {
+    if (n == 0) return;
+    solveHanoi(n - 1, from, aux, to);
+    cout << from << " -> " << to << "\n";
+    solveHanoi(n - 1, aux, to, from);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    cout << (1 << n) - 1 << "\n";
+    solveHanoi(n, 'A', 'C', 'B');
+    return 0;
+}
+
+```
+
+### `CPPB-REC-10` — Fibonacci Cay Nhi Phan
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long call_count = 0;
+
+long long fibRec(int n) {
+    call_count++;
+    if (n <= 0) return 0;
+    if (n == 1) return 1;
+    return fibRec(n - 1) + fibRec(n - 2);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    long long val = fibRec(n);
+    cout << val << " " << call_count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-11` — Chuyen Doi He Nhi Phan De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void printBinaryRec(long long n) {
+    if (n == 0) return;
+    printBinaryRec(n / 2);
+    cout << (n % 2);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    long long n;
+    if (!(cin >> n)) return 0;
+    if (n == 0) {
+        cout << 0 << "\n";
+    } else {
+        printBinaryRec(n);
+        cout << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-REC-12` — Xay Dung Cong Thuc Truy Hoi Dan Dau
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long solveRec(int n) {
+    if (n == 1) return 1;
+    long long term = (n % 2 == 1) ? n : -n;
+    return solveRec(n - 1) + term;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    cout << solveRec(n) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-13` — Thap Ha Noi Co Rang Buoc
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void moveAtoB(int n, char a, char b, char c);
+void moveBtoC(int n, char b, char c, char a);
+
+void solveConstrainedHanoi(int n, char from, char to, char aux) {
+    if (n == 0) return;
+    // Chuyển n-1 đĩa from -> to
+    solveConstrainedHanoi(n - 1, from, to, aux);
+    // Chuyển đĩa n: from -> aux
+    cout << from << " -> " << aux << "\n";
+    // Chuyển n-1 đĩa to -> from
+    solveConstrainedHanoi(n - 1, to, from, aux);
+    // Chuyển đĩa n: aux -> to
+    cout << aux << " -> " << to << "\n";
+    // Chuyển n-1 đĩa from -> to
+    solveConstrainedHanoi(n - 1, from, to, aux);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    long long total_steps = 1;
+    for (int i = 0; i < n; ++i) total_steps *= 3;
+    total_steps -= 1;
+    cout << total_steps << "\n";
+    solveConstrainedHanoi(n, 'A', 'C', 'B');
+    return 0;
+}
+
+```
+
+### `CPPB-REC-14` — Sinh Xau Nhi Phan Khong 2 So 1 Lien Ke
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<string> results;
+
+void genRec(int n, string &cur, char last_char) {
+    if ((int)cur.size() == n) {
+        results.push_back(cur);
+        return;
+    }
+    // Luôn có thể thêm '0'
+    cur.push_back('0');
+    genRec(n, cur, '0');
+    cur.pop_back();
+
+    // Chỉ thêm '1' nếu ký tự trước không phải '1'
+    if (last_char != '1') {
+        cur.push_back('1');
+        genRec(n, cur, '1');
+        cur.pop_back();
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    string cur = "";
+    genRec(n, cur, '0');
+    cout << results.size() << "\n";
+    for (const string &s : results) cout << s << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-15` — Phan Tich So Thanh Tong De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long countPartitions(int remain, int max_val) {
+    if (remain == 0) return 1;
+    if (remain < 0 || max_val <= 0) return 0;
+    // Chọn dùng max_val hoặc không dùng max_val
+    return countPartitions(remain - max_val, max_val) + countPartitions(remain, max_val - 1);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    cout << countPartitions(n, n) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-REC-16` — Dem Cau Hinh Cay Catalan De Quy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long countBST(int n) {
+    if (n <= 1) return 1;
+    long long total = 0;
+    for (int root = 1; root <= n; ++root) {
+        int left_size = root - 1;
+        int right_size = n - root;
+        total += countBST(left_size) * countBST(right_size);
+    }
+    return total;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    cout << countBST(n) << "\n";
+    return 0;
+}
+
+```
+
+## Chương 04 — Bài 11: Chia để trị
+
+### `CPPB-DAC-01` — Tim Kiem Nhi Phan Chia De Tri
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int binarySearchDac(const vector<long long> &a, int l, int r, long long x) {
+    if (l > r) return -1;
+    int mid = l + (r - l) / 2;
+    if (a[mid] == x) {
+        int left_res = binarySearchDac(a, l, mid - 1, x);
+        if (left_res != -1) return left_res;
+        return mid;
+    }
+    if (a[mid] > x) return binarySearchDac(a, l, mid - 1, x);
+    return binarySearchDac(a, mid + 1, r, x);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    long long x;
+    if (!(cin >> n >> x)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    int ans = binarySearchDac(a, 0, n - 1, x);
+    if (ans != -1) ans += 1;
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-02` — Range Minimum Query Chia De Tri
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long queryMin(const vector<long long> &a, int l, int r) {
+    if (l == r) return a[l];
+    int mid = l + (r - l) / 2;
+    return min(queryMin(a, l, mid), queryMin(a, mid + 1, r));
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << queryMin(a, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-03` — Tim Phan Tu Lon Thu Hai Tournament
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node {
+    long long winner;
+    vector<long long> losers;
+};
+
+Node tournament(const vector<long long> &a, int l, int r) {
+    if (l == r) return {a[l], {}};
+    int mid = l + (r - l) / 2;
+    Node left_node = tournament(a, l, mid);
+    Node right_node = tournament(a, mid + 1, r);
+    if (left_node.winner > right_node.winner) {
+        left_node.losers.push_back(right_node.winner);
+        return left_node;
+    } else {
+        right_node.losers.push_back(left_node.winner);
+        return right_node;
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    Node res = tournament(a, 0, n - 1);
+    long long second_max = res.losers[0];
+    for (long long x : res.losers) second_max = max(second_max, x);
+    cout << second_max << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-04` — Gop Hai Mang Da Sap Xep Merge Step
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+    vector<long long> a(n), b(m);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int j = 0; j < m; ++j) cin >> b[j];
+
+    int i = 0, j = 0;
+    bool first = true;
+    while (i < n && j < m) {
+        if (!first) cout << " ";
+        if (a[i] <= b[j]) {
+            cout << a[i++];
+        } else {
+            cout << b[j++];
+        }
+        first = false;
+    }
+    while (i < n) {
+        if (!first) cout << " ";
+        cout << a[i++];
+        first = false;
+    }
+    while (j < m) {
+        if (!first) cout << " ";
+        cout << b[j++];
+        first = false;
+    }
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-05` — Sap Xep Tron Merge Sort
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void merge(vector<long long> &a, vector<long long> &temp, int l, int mid, int r) {
+    int i = l, j = mid + 1, k = l;
+    while (i <= mid && j <= r) {
+        if (a[i] <= a[j]) temp[k++] = a[i++];
+        else temp[k++] = a[j++];
+    }
+    while (i <= mid) temp[k++] = a[i++];
+    while (j <= r) temp[k++] = a[j++];
+    for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
+}
+
+void mergeSort(vector<long long> &a, vector<long long> &temp, int l, int r) {
+    if (l >= r) return;
+    int mid = l + (r - l) / 2;
+    mergeSort(a, temp, l, mid);
+    mergeSort(a, temp, mid + 1, r);
+    merge(a, temp, l, mid, r);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n), temp(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    mergeSort(a, temp, 0, n - 1);
+    for (int i = 0; i < n; ++i) cout << a[i] << (i + 1 == n ? "" : " ");
+    cout << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-06` — Dem So Cap Nghich The Inversion
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long countInversions(vector<long long> &a, vector<long long> &temp, int l, int r) {
+    if (l >= r) return 0;
+    int mid = l + (r - l) / 2;
+    long long inv = 0;
+    inv += countInversions(a, temp, l, mid);
+    inv += countInversions(a, temp, mid + 1, r);
+
+    int i = l, j = mid + 1, k = l;
+    while (i <= mid && j <= r) {
+        if (a[i] <= a[j]) {
+            temp[k++] = a[i++];
+        } else {
+            temp[k++] = a[j++];
+            inv += (mid - i + 1);
+        }
+    }
+    while (i <= mid) temp[k++] = a[i++];
+    while (j <= r) temp[k++] = a[j++];
+    for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
+    return inv;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n), temp(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << countInversions(a, temp, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-07` — Doan Con Tong Lon Nhat Maximum Subarray
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long maxCrossingSum(const vector<long long> &a, int l, int mid, int r) {
+    long long left_sum = -1e18, sum = 0;
+    for (int i = mid; i >= l; --i) {
+        sum += a[i];
+        left_sum = max(left_sum, sum);
+    }
+    long long right_sum = -1e18;
+    sum = 0;
+    for (int i = mid + 1; i <= r; ++i) {
+        sum += a[i];
+        right_sum = max(right_sum, sum);
+    }
+    return left_sum + right_sum;
+}
+
+long long maxSubarrayDac(const vector<long long> &a, int l, int r) {
+    if (l == r) return a[l];
+    int mid = l + (r - l) / 2;
+    long long left_max = maxSubarrayDac(a, l, mid);
+    long long right_max = maxSubarrayDac(a, mid + 1, r);
+    long long cross_max = maxCrossingSum(a, l, mid, r);
+    return max({left_max, right_max, cross_max});
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << maxSubarrayDac(a, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-08` — Tim Phan Tu Da So Majority Element
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int countInRange(const vector<long long> &a, long long target, int l, int r) {
+    int cnt = 0;
+    for (int i = l; i <= r; ++i) if (a[i] == target) cnt++;
+    return cnt;
+}
+
+long long majorityDac(const vector<long long> &a, int l, int r) {
+    if (l == r) return a[l];
+    int mid = l + (r - l) / 2;
+    long long left_maj = majorityDac(a, l, mid);
+    long long right_maj = majorityDac(a, mid + 1, r);
+
+    if (left_maj == right_maj) return left_maj;
+
+    int left_count = countInRange(a, left_maj, l, r);
+    int right_count = countInRange(a, right_maj, l, r);
+
+    return (left_count > right_count) ? left_maj : right_maj;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    long long cand = majorityDac(a, 0, n - 1);
+    int total_cnt = 0;
+    for (long long x : a) if (x == cand) total_cnt++;
+    if (total_cnt > n / 2) {
+        cout << cand << "\n";
+    } else {
+        cout << -1 << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-09` — Luy Thua Ma Tran Chia De Tri
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Matrix {
+    long long mat[2][2];
+};
+
+Matrix multiply(const Matrix &A, const Matrix &B, long long m) {
+    Matrix C;
+    for (int i = 0; i < 2; ++i) {
+        for (int j = 0; j < 2; ++j) {
+            C.mat[i][j] = 0;
+            for (int k = 0; k < 2; ++k) {
+                C.mat[i][j] = (C.mat[i][j] + (A.mat[i][k] % m) * (B.mat[k][j] % m)) % m;
+            }
+        }
+    }
+    return C;
+}
+
+Matrix powerMatrix(Matrix A, long long n, long long m) {
+    Matrix res = {{{1 % m, 0}, {0, 1 % m}}};
+    while (n > 0) {
+        if (n & 1) res = multiply(res, A, m);
+        A = multiply(A, A, m);
+        n >>= 1;
+    }
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    Matrix A;
+    if (!(cin >> A.mat[0][0] >> A.mat[0][1] >> A.mat[1][0] >> A.mat[1][1])) return 0;
+    long long n, m;
+    if (!(cin >> n >> m)) return 0;
+    Matrix ans = powerMatrix(A, n, m);
+    cout << ans.mat[0][0] << " " << ans.mat[0][1] << "\n";
+    cout << ans.mat[1][0] << " " << ans.mat[1][1] << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-10` — Tim Dinh Mang Unimodal Peak Index
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long findPeak(const vector<long long> &a, int l, int r) {
+    if (l == r) return a[l];
+    int mid = l + (r - l) / 2;
+    if (a[mid] < a[mid + 1]) {
+        return findPeak(a, mid + 1, r);
+    } else {
+        return findPeak(a, l, mid);
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << findPeak(a, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-11` — Tinh Tong Cap So Nhan Chia De Tri
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long powerMod(long long a, long long b, long long m) {
+    long long res = 1 % m;
+    a %= m;
+    while (b > 0) {
+        if (b & 1) res = (res * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return res;
+}
+
+long long sumGeoDac(long long a, long long n, long long m) {
+    if (n == 0) return 1 % m;
+    if (n % 2 == 1) {
+        long long k = n / 2;
+        long long half_sum = sumGeoDac(a, k, m);
+        long long mult = (1 + powerMod(a, k + 1, m)) % m;
+        return (half_sum * mult) % m;
+    } else {
+        long long prev = sumGeoDac(a, n - 1, m);
+        return (prev + powerMod(a, n, m)) % m;
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    long long a, n, m;
+    if (!(cin >> a >> n >> m)) return 0;
+    cout << sumGeoDac(a, n, m) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-12` — Dem So Cap A I Lon Hon 2 A J
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long countSignificant(vector<long long> &a, vector<long long> &temp, int l, int r) {
+    if (l >= r) return 0;
+    int mid = l + (r - l) / 2;
+    long long cnt = 0;
+    cnt += countSignificant(a, temp, l, mid);
+    cnt += countSignificant(a, temp, mid + 1, r);
+
+    // Bước đếm 2 con trỏ trước khi merge
+    int j = mid + 1;
+    for (int i = l; i <= mid; ++i) {
+        while (j <= r && a[i] > 2LL * a[j]) j++;
+        cnt += (j - (mid + 1));
+    }
+
+    // Merge bình thường
+    int i = l, k = l;
+    j = mid + 1;
+    while (i <= mid && j <= r) {
+        if (a[i] <= a[j]) temp[k++] = a[i++];
+        else temp[k++] = a[j++];
+    }
+    while (i <= mid) temp[k++] = a[i++];
+    while (j <= r) temp[k++] = a[j++];
+    for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
+
+    return cnt;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n), temp(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << countSignificant(a, temp, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-13` — Quickselect Tim Phan Tu Kth
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int partition(vector<long long> &a, int l, int r) {
+    int pivot_idx = l + rand() % (r - l + 1);
+    swap(a[pivot_idx], a[r]);
+    long long pivot = a[r];
+    int i = l;
+    for (int j = l; j < r; ++j) {
+        if (a[j] <= pivot) {
+            swap(a[i], a[j]);
+            i++;
+        }
+    }
+    swap(a[i], a[r]);
+    return i;
+}
+
+long long quickSelect(vector<long long> &a, int l, int r, int k) {
+    if (l == r) return a[l];
+    int p = partition(a, l, r);
+    int rank = p - l + 1;
+    if (rank == k) return a[p];
+    if (k < rank) return quickSelect(a, l, p - 1, k);
+    return quickSelect(a, p + 1, r, k - rank);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    srand(42);
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    cout << quickSelect(a, 0, n - 1, k) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-14` — Dem So Doan Con Tong Trong Khoang L R
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long countSubarraysDac(vector<long long> &prefix, vector<long long> &temp, int l, int r, long long lower, long long upper) {
+    if (l >= r) return 0;
+    int mid = l + (r - l) / 2;
+    long long cnt = 0;
+    cnt += countSubarraysDac(prefix, temp, l, mid, lower, upper);
+    cnt += countSubarraysDac(prefix, temp, mid + 1, r, lower, upper);
+
+    int j1 = mid + 1, j2 = mid + 1;
+    for (int i = l; i <= mid; ++i) {
+        while (j1 <= r && prefix[j1] - prefix[i] < lower) j1++;
+        while (j2 <= r && prefix[j2] - prefix[i] <= upper) j2++;
+        cnt += (j2 - j1);
+    }
+
+    int i = l, j = mid + 1, k = l;
+    while (i <= mid && j <= r) {
+        if (prefix[i] <= prefix[j]) temp[k++] = prefix[i++];
+        else temp[k++] = prefix[j++];
+    }
+    while (i <= mid) temp[k++] = prefix[i++];
+    while (j <= r) temp[k++] = prefix[j++];
+    for (int idx = l; idx <= r; ++idx) prefix[idx] = temp[idx];
+
+    return cnt;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    long long lower, upper;
+    if (!(cin >> n >> lower >> upper)) return 0;
+    vector<long long> a(n);
+    vector<long long> prefix(n + 1, 0), temp(n + 1, 0);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        prefix[i + 1] = prefix[i] + a[i];
+    }
+    cout << countSubarraysDac(prefix, temp, 0, n, lower, upper) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-15` — Cap Diem Gan Nhat Closest Pair
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Point {
+    long long x, y;
+};
+
+long long distSq(const Point &p1, const Point &p2) {
+    return (p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y);
+}
+
+long long closestPairRec(vector<Point> &pts, int l, int r) {
+    if (r - l <= 3) {
+        long long min_d = 4e18;
+        for (int i = l; i <= r; ++i) {
+            for (int j = i + 1; j <= r; ++j) {
+                min_d = min(min_d, distSq(pts[i], pts[j]));
+            }
+        }
+        sort(pts.begin() + l, pts.begin() + r + 1, [](const Point &a, const Point &b) {
+            return a.y < b.y;
+        });
+        return min_d;
+    }
+
+    int mid = l + (r - l) / 2;
+    long long mid_x = pts[mid].x;
+    long long dl = closestPairRec(pts, l, mid);
+    long long dr = closestPairRec(pts, mid + 1, r);
+    long long d = min(dl, dr);
+
+    vector<Point> temp(r - l + 1);
+    merge(pts.begin() + l, pts.begin() + mid + 1, pts.begin() + mid + 1, pts.begin() + r + 1, temp.begin(), [](const Point &a, const Point &b) {
+        return a.y < b.y;
+    });
+    for (int i = 0; i < (int)temp.size(); ++i) pts[l + i] = temp[i];
+
+    vector<Point> strip;
+    for (int i = l; i <= r; ++i) {
+        if ((pts[i].x - mid_x) * (pts[i].x - mid_x) < d) {
+            strip.push_back(pts[i]);
+        }
+    }
+
+    for (int i = 0; i < (int)strip.size(); ++i) {
+        for (int j = i + 1; j < (int)strip.size() && (strip[j].y - strip[i].y) * (strip[j].y - strip[i].y) < d; ++j) {
+            d = min(d, distSq(strip[i], strip[j]));
+        }
+    }
+    return d;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<Point> pts(n);
+    for (int i = 0; i < n; ++i) cin >> pts[i].x >> pts[i].y;
+    sort(pts.begin(), pts.end(), [](const Point &a, const Point &b) {
+        return a.x < b.x;
+    });
+    cout << closestPairRec(pts, 0, n - 1) << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-DAC-16` — Median Hai Mang Da Sap Xep
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+long long findKth(const vector<long long> &A, int a_l, const vector<long long> &B, int b_l, int k) {
+    if (a_l >= (int)A.size()) return B[b_l + k - 1];
+    if (b_l >= (int)B.size()) return A[a_l + k - 1];
+    if (k == 1) return min(A[a_l], B[b_l]);
+
+    int a_mid = a_l + k / 2 - 1;
+    int b_mid = b_l + k / 2 - 1;
+
+    long long a_val = (a_mid < (int)A.size()) ? A[a_mid] : 2e18;
+    long long b_val = (b_mid < (int)B.size()) ? B[b_mid] : 2e18;
+
+    if (a_val <= b_val) {
+        return findKth(A, a_l + k / 2, B, b_l, k - k / 2);
+    } else {
+        return findKth(A, a_l, B, b_l + k / 2, k - k / 2);
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+    vector<long long> a(n), b(m);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int j = 0; j < m; ++j) cin >> b[j];
+    int total = n + m;
+    int k = (total % 2 == 1) ? (total / 2 + 1) : (total / 2);
+    cout << findKth(a, 0, b, 0, k) << "\n";
+    return 0;
+}
+
+```
+
+## Chương 04 — Bài 12: Quay lui & nhánh cận
+
+### `CPPB-BKT-01` — Sinh Xau Nhi Phan
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+string cur = "";
+
+void backtrack(int step) {
+    if (step > n) {
+        cout << cur << "\n";
+        return;
+    }
+    for (char c : {'0', '1'}) {
+        cur.push_back(c);
+        backtrack(step + 1);
+        cur.pop_back();
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    backtrack(1);
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-02` — Sinh Tap Con
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+vector<int> cur;
+
+void backtrack(int step) {
+    if (step > n) {
+        for (int i = 0; i < (int)cur.size(); ++i) cout << cur[i] << (i + 1 == (int)cur.size() ? "" : " ");
+        cout << "\n";
+        return;
+    }
+    // Không chọn step
+    backtrack(step + 1);
+    // Chọn step
+    cur.push_back(step);
+    backtrack(step + 1);
+    cur.pop_back();
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    backtrack(1);
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-03` — Sinh Hoan Vi
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+vector<int> cur;
+vector<bool> visited;
+
+void backtrack(int step) {
+    if (step > n) {
+        for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n ? "" : " ");
+        cout << "\n";
+        return;
+    }
+    for (int val = 1; val <= n; ++val) {
+        if (!visited[val]) {
+            visited[val] = true;
+            cur.push_back(val);
+            backtrack(step + 1);
+            cur.pop_back();
+            visited[val] = false;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    visited.assign(n + 1, false);
+    backtrack(1);
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-04` — Sinh To Hop Chap K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n, k;
+vector<int> cur;
+
+void backtrack(int step, int start_val) {
+    if (step > k) {
+        for (int i = 0; i < k; ++i) cout << cur[i] << (i + 1 == k ? "" : " ");
+        cout << "\n";
+        return;
+    }
+    for (int val = start_val; val <= n - (k - step); ++val) {
+        cur.push_back(val);
+        backtrack(step + 1, val + 1);
+        cur.pop_back();
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n >> k)) return 0;
+    backtrack(1, 1);
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-05` — Sinh Day Ngoac Dung
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+string cur = "";
+
+void backtrack(int open_cnt, int close_cnt) {
+    if (open_cnt == n && close_cnt == n) {
+        cout << cur << "\n";
+        return;
+    }
+    if (open_cnt < n) {
+        cur.push_back('(');
+        backtrack(open_cnt + 1, close_cnt);
+        cur.pop_back();
+    }
+    if (close_cnt < open_cnt) {
+        cur.push_back(')');
+        backtrack(open_cnt, close_cnt + 1);
+        cur.pop_back();
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    backtrack(0, 0);
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-06` — Bai Toan N Queens
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+long long ans = 0;
+vector<bool> col_used, diag1, diag2;
+
+void backtrack(int row) {
+    if (row > n) {
+        ans++;
+        return;
+    }
+    for (int col = 1; col <= n; ++col) {
+        if (!col_used[col] && !diag1[row - col + n] && !diag2[row + col]) {
+            col_used[col] = diag1[row - col + n] = diag2[row + col] = true;
+            backtrack(row + 1);
+            col_used[col] = diag1[row - col + n] = diag2[row + col] = false;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    col_used.assign(n + 1, false);
+    diag1.assign(2 * n + 1, false);
+    diag2.assign(2 * n + 1, false);
+    backtrack(1);
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-07` — Me Cung Rat In A Maze
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+int a[10][10];
+bool visited[10][10];
+vector<string> paths;
+string cur = "";
+
+int dx[] = {1, 0, 0, -1};
+int dy[] = {0, -1, 1, 0};
+char step_char[] = {'D', 'L', 'R', 'U'};
+
+void backtrack(int x, int y) {
+    if (x == n - 1 && y == n - 1) {
+        paths.push_back(cur);
+        return;
+    }
+    for (int i = 0; i < 4; ++i) {
+        int nx = x + dx[i], ny = y + dy[i];
+        if (nx >= 0 && nx < n && ny >= 0 && ny < n && a[nx][ny] == 1 && !visited[nx][ny]) {
+            visited[nx][ny] = true;
+            cur.push_back(step_char[i]);
+            backtrack(nx, ny);
+            cur.pop_back();
+            visited[nx][ny] = false;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n; ++j) cin >> a[i][j];
+
+    if (a[0][0] == 1) {
+        visited[0][0] = true;
+        backtrack(0, 0);
+    }
+    if (paths.empty()) {
+        cout << -1 << "\n";
+    } else {
+        for (const string &s : paths) cout << s << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-08` — Tap Con Tong Bang S Subset Sum
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+long long S;
+vector<long long> a;
+vector<long long> cur;
+bool found = false;
+
+void backtrack(int idx, long long current_sum) {
+    if (current_sum == S) {
+        found = true;
+        for (int i = 0; i < (int)cur.size(); ++i) cout << cur[i] << (i + 1 == (int)cur.size() ? "" : " ");
+        cout << "\n";
+        return;
+    }
+    if (idx >= n || current_sum > S) return;
+
+    for (int i = idx; i < n; ++i) {
+        if (current_sum + a[i] <= S) {
+            cur.push_back(a[i]);
+            backtrack(i + 1, current_sum + a[i]);
+            cur.pop_back();
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n >> S)) return 0;
+    a.resize(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    sort(a.begin(), a.end());
+    backtrack(0, 0);
+    if (!found) cout << -1 << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-09` — Chia Tap Hai Phan Bang Nhau
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+long long target;
+vector<long long> a;
+bool possible = false;
+
+void backtrack(int idx, long long cur_sum) {
+    if (possible) return;
+    if (cur_sum == target) {
+        possible = true;
+        return;
+    }
+    if (idx >= n || cur_sum > target) return;
+
+    for (int i = idx; i < n; ++i) {
+        if (cur_sum + a[i] <= target) {
+            backtrack(i + 1, cur_sum + a[i]);
+            if (possible) return;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    a.resize(n);
+    long long total = 0;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        total += a[i];
+    }
+    if (total % 2 != 0) {
+        cout << "NO\n";
+        return 0;
+    }
+    target = total / 2;
+    sort(a.rbegin(), a.rend());
+    backtrack(0, 0);
+    cout << (possible ? "YES\n" : "NO\n");
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-10` — Doi Tien Xu It Nhat Branch And Bound
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+long long S;
+vector<long long> c;
+long long best_coins = 1e9;
+
+void branchAndBound(int idx, long long remain, long long count) {
+    // Optimality Pruning
+    if (count + (remain + c[0] - 1) / c[0] >= best_coins) return;
+
+    if (remain == 0) {
+        best_coins = min(best_coins, count);
+        return;
+    }
+    if (idx >= n) return;
+
+    long long max_use = remain / c[idx];
+    for (long long k = max_use; k >= 0; --k) {
+        if (count + k + (remain - k * c[idx] + c[0] - 1) / c[0] < best_coins) {
+            branchAndBound(idx + 1, remain - k * c[idx], count + k);
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n >> S)) return 0;
+    c.resize(n);
+    for (int i = 0; i < n; ++i) cin >> c[i];
+    sort(c.rbegin(), c.rend());
+    branchAndBound(0, S, 0);
+    if (best_coins > 1e8) cout << -1 << "\n";
+    else cout << best_coins << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-11` — Ma Di Tuan Knights Tour
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+int board[10][10];
+int dx[] = {-2, -2, -1, -1, 1, 1, 2, 2};
+int dy[] = {-1, 1, -2, 2, -2, 2, -1, 1};
+bool found = false;
+
+int countDegree(int x, int y) {
+    int deg = 0;
+    for (int i = 0; i < 8; ++i) {
+        int nx = x + dx[i], ny = y + dy[i];
+        if (nx >= 1 && nx <= n && ny >= 1 && ny <= n && board[nx][ny] == 0) deg++;
+    }
+    return deg;
+}
+
+void solveKnight(int x, int y, int step) {
+    if (step == n * n) {
+        found = true;
+        return;
+    }
+
+    vector<pair<int, int>> next_moves;
+    for (int i = 0; i < 8; ++i) {
+        int nx = x + dx[i], ny = y + dy[i];
+        if (nx >= 1 && nx <= n && ny >= 1 && ny <= n && board[nx][ny] == 0) {
+            next_moves.push_back({countDegree(nx, ny), i});
+        }
+    }
+    sort(next_moves.begin(), next_moves.end());
+
+    for (auto &p : next_moves) {
+        int idx = p.second;
+        int nx = x + dx[idx], ny = y + dy[idx];
+        board[nx][ny] = step + 1;
+        solveKnight(nx, ny, step + 1);
+        if (found) return;
+        board[nx][ny] = 0;
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int r, c;
+    if (!(cin >> n >> r >> c)) return 0;
+    memset(board, 0, sizeof(board));
+    board[r][c] = 1;
+    solveKnight(r, c, 1);
+    if (!found) {
+        cout << -1 << "\n";
+    } else {
+        for (int i = 1; i <= n; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                cout << board[i][j] << (j == n ? "" : " ");
+            }
+            cout << "\n";
+        }
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-12` — Tro Choi Sudoku 9x9
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int board[9][9];
+bool row_used[9][10], col_used[9][10], box_used[9][10];
+
+bool solveSudoku(int r, int c) {
+    if (r == 9) return true;
+    if (c == 9) return solveSudoku(r + 1, 0);
+    if (board[r][c] != 0) return solveSudoku(r, c + 1);
+
+    int b = (r / 3) * 3 + (c / 3);
+    for (int num = 1; num <= 9; ++num) {
+        if (!row_used[r][num] && !col_used[c][num] && !box_used[b][num]) {
+            board[r][c] = num;
+            row_used[r][num] = col_used[c][num] = box_used[b][num] = true;
+            if (solveSudoku(r, c + 1)) return true;
+            row_used[r][num] = col_used[c][num] = box_used[b][num] = false;
+            board[r][c] = 0;
+        }
+    }
+    return false;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    for (int i = 0; i < 9; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            if (!(cin >> board[i][j])) return 0;
+            int num = board[i][j];
+            if (num != 0) {
+                row_used[i][num] = col_used[j][num] = box_used[(i / 3) * 3 + (j / 3)][num] = true;
+            }
+        }
+    }
+    solveSudoku(0, 0);
+    for (int i = 0; i < 9; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            cout << board[i][j] << (j == 8 ? "" : " ");
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-13` — Cai Tui 01 Nhanh Can Knapsack
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Item {
+    long long w, v;
+    double ratio;
+};
+
+int n;
+long long max_w;
+vector<Item> items;
+long long best_val = 0;
+
+double getUpperBound(int idx, long long cur_w, long long cur_v) {
+    long long remain_w = max_w - cur_w;
+    double bound = cur_v;
+    for (int i = idx; i < n; ++i) {
+        if (items[i].w <= remain_w) {
+            remain_w -= items[i].w;
+            bound += items[i].v;
+        } else {
+            bound += items[i].ratio * remain_w;
+            break;
+        }
+    }
+    return bound;
+}
+
+void branchAndBound(int idx, long long cur_w, long long cur_v) {
+    if (cur_v > best_val) best_val = cur_v;
+    if (idx >= n) return;
+
+    if (getUpperBound(idx, cur_w, cur_v) <= best_val) return;
+
+    // Nhánh 1: Chọn vật idx
+    if (cur_w + items[idx].w <= max_w) {
+        branchAndBound(idx + 1, cur_w + items[idx].w, cur_v + items[idx].v);
+    }
+    // Nhánh 2: Không chọn vật idx
+    branchAndBound(idx + 1, cur_w, cur_v);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n >> max_w)) return 0;
+    items.resize(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> items[i].w >> items[i].v;
+        items[i].ratio = (double)items[i].v / items[i].w;
+    }
+    sort(items.begin(), items.end(), [](const Item &a, const Item &b) {
+        return a.ratio > b.ratio;
+    });
+    branchAndBound(0, 0, 0);
+    cout << best_val << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-14` — Nguoi Du Lich Tsp Nhanh Can
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+long long c[15][15];
+bool visited[15];
+long long min_edge = 1e9;
+long long best_cost = 1e18;
+
+void branchAndBound(int u, int count, long long current_cost) {
+    // Optimality Pruning
+    if (current_cost + (n - count + 1) * min_edge >= best_cost) return;
+
+    if (count == n) {
+        best_cost = min(best_cost, current_cost + c[u][1]);
+        return;
+    }
+
+    for (int v = 2; v <= n; ++v) {
+        if (!visited[v]) {
+            visited[v] = true;
+            branchAndBound(v, count + 1, current_cost + c[u][v]);
+            visited[v] = false;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= n; ++j) {
+            cin >> c[i][j];
+            if (i != j) min_edge = min(min_edge, c[i][j]);
+        }
+    }
+    memset(visited, false, sizeof(visited));
+    visited[1] = true;
+    branchAndBound(1, 1, 0);
+    cout << best_cost << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-15` — To Mau Do Thi Graph Coloring
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int V, E, K;
+vector<int> adj[15];
+int color[15];
+bool possible = false;
+
+bool isSafe(int u, int c) {
+    for (int v : adj[u]) {
+        if (color[v] == c) return false;
+    }
+    return true;
+}
+
+void backtrack(int u) {
+    if (possible) return;
+    if (u > V) {
+        possible = true;
+        return;
+    }
+    for (int c = 1; c <= K; ++c) {
+        if (isSafe(u, c)) {
+            color[u] = c;
+            backtrack(u + 1);
+            color[u] = 0;
+            if (possible) return;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> V >> E >> K)) return 0;
+    for (int i = 0; i < E; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    memset(color, 0, sizeof(color));
+    backtrack(1);
+    cout << (possible ? "YES\n" : "NO\n");
+    return 0;
+}
+
+```
+
+### `CPPB-BKT-16` — Phan Cong Cong Viec Toi Uu Job Assignment
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int n;
+long long c[15][15];
+bool job_assigned[15];
+long long min_row[15];
+long long best_cost = 1e18;
+
+void branchAndBound(int worker, long long current_cost) {
+    // Optimality Pruning
+    long long bound = current_cost;
+    for (int w = worker; w <= n; ++w) bound += min_row[w];
+    if (bound >= best_cost) return;
+
+    if (worker > n) {
+        best_cost = min(best_cost, current_cost);
+        return;
+    }
+
+    for (int job = 1; job <= n; ++job) {
+        if (!job_assigned[job]) {
+            job_assigned[job] = true;
+            branchAndBound(worker + 1, current_cost + c[worker][job]);
+            job_assigned[job] = false;
+        }
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    if (!(cin >> n)) return 0;
+    for (int i = 1; i <= n; ++i) {
+        min_row[i] = 1e9;
+        for (int j = 1; j <= n; ++j) {
+            cin >> c[i][j];
+            min_row[i] = min(min_row[i], c[i][j]);
+        }
+    }
+    memset(job_assigned, false, sizeof(job_assigned));
+    branchAndBound(1, 0);
+    cout << best_cost << "\n";
+    return 0;
+}
+
+```
 
 ## Chương 05 — Bài 13: QHĐ 1D & LIS
 
