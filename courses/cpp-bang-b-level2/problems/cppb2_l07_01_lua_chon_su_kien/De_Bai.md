@@ -1,4 +1,4 @@
-# Lựa Chọn Sự Kiện Không Trùng Giờ
+# Lựa chọn sự kiện không trùng giờ
 
 ## Bối cảnh
 Cho $N$ sự kiện $[L_i, R_i]$. Chọn số lượng sự kiện nhiều nhất không trùng thời gian.

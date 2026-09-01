@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHIA KẸO THƯỞNG CHO HỌC SINH THEO ĐIỂM SỐ
+# Hướng dẫn giảng dạy: Chia kẹo thưởng cho học sinh theo điểm số
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

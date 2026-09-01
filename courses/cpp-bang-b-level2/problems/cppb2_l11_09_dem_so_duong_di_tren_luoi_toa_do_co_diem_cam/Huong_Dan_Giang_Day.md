@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ ĐƯỜNG ĐI TRÊN LƯỚI TỌA ĐỘ CÓ ĐIỂM CẤM
+# Hướng dẫn giảng dạy: Đếm số đường đi trên lưới tọa độ có điểm cấm
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

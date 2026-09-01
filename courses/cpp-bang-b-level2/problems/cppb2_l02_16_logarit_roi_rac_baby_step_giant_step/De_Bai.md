@@ -1,4 +1,4 @@
-# Logarit Rời Rạc (baby-step Giant-step)
+# Logarit rời rạc (baby-step giant-step)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Logarit Rời Rạc (Baby-step Giant-step)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ nhỏ nhất thỏa $A^X \equiv B \pmod M$ trong $\mathcal{O}(\sqrt{M})$.

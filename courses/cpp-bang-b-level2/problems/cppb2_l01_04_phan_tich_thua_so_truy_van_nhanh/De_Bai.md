@@ -1,4 +1,4 @@
-# Phân Tích Thừa Số Truy Vấn Nhanh
+# Phân tích thừa số truy vấn nhanh
 
 ## Bối cảnh
 Phân tích một số nguyên dương $N$ thành tích các thừa số nguyên tố:

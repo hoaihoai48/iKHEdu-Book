@@ -1,4 +1,4 @@
-# Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng
+# Tầm nhìn xa của các tòa nhà cao tầng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Monotonic Stack đếm số tòa nhà quan sát được.

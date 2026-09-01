@@ -1,4 +1,4 @@
-# Truy Vấn Tổng Đoạn Fenwick Tree
+# Truy vấn tổng đoạn Fenwick Tree
 
 ## Bối cảnh
 Cho mảng $N$ phần tử. Có $Q$ thao tác: `1 u v` (cộng $v$ vào $A[u]$) và `2 l r` (tính tổng $A[l..r]$).

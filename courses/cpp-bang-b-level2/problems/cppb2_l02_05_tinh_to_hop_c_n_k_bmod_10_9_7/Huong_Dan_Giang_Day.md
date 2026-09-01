@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÍNH TỔ HỢP $C_N^K \BMOD (10^9+7)$
+# Hướng dẫn giảng dạy: Tính tổ hợp $c_n^k \bmod (10^9+7)$
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

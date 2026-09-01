@@ -1,4 +1,4 @@
-# Dãy Con Tăng Dài Nhất Lis Bằng Segment Tree
+# Dãy con tăng dài nhất LIS bằng Segment Tree
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Dài Nhất LIS Bằng Segment Tree** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP kết hợp Segment Tree Range Max.

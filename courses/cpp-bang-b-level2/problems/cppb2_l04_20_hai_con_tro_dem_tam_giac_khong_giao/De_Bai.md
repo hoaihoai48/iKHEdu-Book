@@ -1,30 +1,32 @@
-# Hai Con Tro Dem Tam Giac Khong Giao
+# Đếm số bộ ba tam giác hợp lệ
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Hai Con Tro Dem Tam Giac Khong Giao** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho một mảng $A$ gồm $N$ số nguyên dương biểu thị độ dài các thanh gỗ. Người ta muốn chọn ra 3 thanh gỗ có độ dài $A_i, A_j, A_k$ ($i < j < k$) sao cho 3 thanh gỗ này có thể ghép thành một tam giác không suy biến (nghĩa là thỏa mãn $A_i + A_j > A_k$ với $A_i \le A_j \le A_k$).
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hai Con Tro Dem Tam Giac Khong Giao với độ phức tạp tối ưu nhất.
+Hãy đếm số lượng bộ ba chỉ số $(i, j, k)$ thỏa mãn điều kiện tạo thành tam giác bằng kỹ thuật Hai con trỏ với độ phức tạp $\mathcal{O}(N^2)$.
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 1 số nguyên $N$ ($3 \le N \le 5000$) — số lượng thanh gỗ.
+- Dòng 2: $N$ số nguyên dương $A_1, A_2, \dots, A_N$ ($1 \le A_i \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số nguyên duy nhất là số lượng bộ ba tam giác hợp lệ.
 
 ## Sample 1
 ### Input
 ```text
-1
+4
+4 6 3 7
 ```
 ### Output
 ```text
-1
+3
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Sắp xếp mảng: $[3, 4, 6, 7]$.
+* Các bộ ba tam giác hợp lệ: $(3, 4, 6)$ vì $3+4 > 6$, $(3, 6, 7)$ vì $3+6 > 7$, $(4, 6, 7)$ vì $4+6 > 7$. Tổng cộng có $3$ bộ ba.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $3 \le N \le 5000, 1 \le A_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

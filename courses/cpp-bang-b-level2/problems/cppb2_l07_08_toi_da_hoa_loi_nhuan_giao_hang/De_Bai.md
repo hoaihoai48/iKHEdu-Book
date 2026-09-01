@@ -1,4 +1,4 @@
-# Tối Đa Hóa Lợi Nhuận Giao Hàng
+# Tối đa hóa lợi nhuận giao hàng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Đa Hóa Lợi Nhuận Giao Hàng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Min-heap duy trì tập công việc được chọn.

@@ -1,4 +1,4 @@
-# Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 Bfs)
+# Đua xe trong mê cung đổi hướng ít nhất (0-1 BFS)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 BFS)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Hàng đợi Deque tìm đường tối ưu góc rẽ.

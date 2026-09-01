@@ -1,4 +1,4 @@
-# Xâu Con Đối Xứng Dài Nhất (longest Palindromic Substring)
+# Xâu con đối xứng dài nhất (longest palindromic substring)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Substring)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Băm xuôi + Băm ngược + Chặt nhị phân độ dài.

@@ -1,4 +1,4 @@
-# Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K
+# Đếm số phần tử phân biệt trong mọi cửa sổ k
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: `unordered_map` kết hợp Sliding Window.

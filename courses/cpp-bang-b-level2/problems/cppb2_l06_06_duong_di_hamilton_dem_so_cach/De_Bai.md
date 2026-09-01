@@ -1,4 +1,4 @@
-# Đường Đi Hamilton Đếm Số Cách
+# Đường đi hamilton đếm số cách
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Hamilton Đếm Số Cách** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP Bitmask đếm số đường đi qua mọi đỉnh.

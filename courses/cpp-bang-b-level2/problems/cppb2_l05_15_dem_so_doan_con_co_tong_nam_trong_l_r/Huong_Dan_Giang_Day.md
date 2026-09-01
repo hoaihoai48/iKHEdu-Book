@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ ĐOẠN CON CÓ TỔNG NẰM TRONG $[L, R]$
+# Hướng dẫn giảng dạy: Đếm số đoạn con có tổng nằm trong $[l, r]$
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

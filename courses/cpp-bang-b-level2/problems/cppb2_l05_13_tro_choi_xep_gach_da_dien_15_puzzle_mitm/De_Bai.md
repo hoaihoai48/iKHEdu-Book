@@ -1,4 +1,4 @@
-# Trò Chơi Xếp Gạch Đa Diện (15-puzzle Mitm)
+# Trò chơi xếp gạch đa diện (15-puzzle mitm)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trò Chơi Xếp Gạch Đa Diện (15-Puzzle MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: MITM kết hợp Hash Table nén bộ nhớ.

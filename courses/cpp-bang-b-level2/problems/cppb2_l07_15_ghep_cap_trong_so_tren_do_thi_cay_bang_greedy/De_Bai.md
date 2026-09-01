@@ -1,4 +1,4 @@
-# Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy
+# Ghép cặp trọng số trên đồ thị cây bằng greedy
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tham lam từ lá lên gốc (Bottom-up Tree Greedy).

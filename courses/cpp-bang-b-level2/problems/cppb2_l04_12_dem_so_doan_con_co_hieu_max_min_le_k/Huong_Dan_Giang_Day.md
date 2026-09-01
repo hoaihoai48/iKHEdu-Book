@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ ĐOẠN CON CÓ HIỆU MAX - MIN $\LE K$
+# Hướng dẫn giảng dạy: Đếm số đoạn con có hiệu max - min $\le k$
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

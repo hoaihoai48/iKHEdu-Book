@@ -1,4 +1,4 @@
-# Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng
+# Phần tử lớn hơn gần nhất trên mảng xoay vòng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Monotonic Stack duyệt $2N$ phần tử.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐƯỜNG ĐI TRÊN MA TRẬN CÓ TỔNG LỚN NHẤT
+# Hướng dẫn giảng dạy: Đường đi trên ma trận có tổng lớn nhất
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

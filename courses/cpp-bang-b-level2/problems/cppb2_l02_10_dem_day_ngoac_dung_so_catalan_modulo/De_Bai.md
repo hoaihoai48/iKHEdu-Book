@@ -1,4 +1,4 @@
-# Đếm Dãy Ngoặc Đúng (số Catalan Modulo)
+# Đếm dãy ngoặc đúng (số Catalan modulo)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Dãy Ngoặc Đúng (Số Catalan Modulo)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Công thức $C_n = \frac{1}{n+1} C_{2n}^n \bmod M$.

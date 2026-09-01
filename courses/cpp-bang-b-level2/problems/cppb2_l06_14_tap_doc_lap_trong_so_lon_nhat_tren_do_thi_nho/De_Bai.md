@@ -1,4 +1,4 @@
-# Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ
+# Tập độc lập trọng số lớn nhất trên đồ thị nhỏ
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP Bitmask duyệt cấu hình không kề nhau.

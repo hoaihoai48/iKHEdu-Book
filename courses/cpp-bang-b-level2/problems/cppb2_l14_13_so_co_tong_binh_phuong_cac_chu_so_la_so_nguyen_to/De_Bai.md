@@ -1,4 +1,4 @@
-# Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố
+# Số có tổng bình phương các chữ số là số nguyên tố
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sàng nguyên tố kết hợp Digit DP.

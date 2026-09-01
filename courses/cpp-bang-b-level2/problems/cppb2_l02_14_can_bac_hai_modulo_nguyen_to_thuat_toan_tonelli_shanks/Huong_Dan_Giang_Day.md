@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CĂN BẬC HAI MODULO NGUYÊN TỐ (THUẬT TOÁN TONELLI-SHANKS)
+# Hướng dẫn giảng dạy: Căn bậc hai modulo nguyên tố (thuật toán tonelli-shanks)
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

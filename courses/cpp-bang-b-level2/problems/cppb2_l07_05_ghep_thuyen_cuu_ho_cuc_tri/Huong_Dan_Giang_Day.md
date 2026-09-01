@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: GHÉP THUYỀN CỨU HỘ CỰC TRỊ
+# Hướng dẫn giảng dạy: Ghép thuyền cứu hộ cực trị
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

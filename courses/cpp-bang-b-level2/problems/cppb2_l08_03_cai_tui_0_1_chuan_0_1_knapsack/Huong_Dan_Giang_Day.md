@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CÁI TÚI 0/1 CHUẨN (0/1 KNAPSACK)
+# Hướng dẫn giảng dạy: Cái túi 0/1 chuẩn (0/1 knapsack)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

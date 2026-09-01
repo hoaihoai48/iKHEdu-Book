@@ -1,4 +1,4 @@
-# Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K
+# Giá trị nhỏ nhất trên cửa sổ trượt k
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt Monotonic Deque $\mathcal{O}(N)$.

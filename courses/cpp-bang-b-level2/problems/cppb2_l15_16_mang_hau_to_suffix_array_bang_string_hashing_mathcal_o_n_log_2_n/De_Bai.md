@@ -1,4 +1,4 @@
-# Mảng Hậu Tố (suffix Array) Bằng String Hashing $\mathcal{o}(n \log^2 N)$
+# Mảng hậu tố (suffix array) bằng string hashing $\mathcal{o}(n \log^2 n)$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mảng Hậu Tố (Suffix Array) Bằng String Hashing $\mathcal{O}(N \log^2 N)$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Sắp xếp các hậu tố bằng so sánh mã băm và LCP.

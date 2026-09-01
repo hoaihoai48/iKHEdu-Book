@@ -1,4 +1,4 @@
-# Đếm Cặp Nghịch Thế Bằng Fenwick Tree
+# Đếm cặp nghịch thế bằng Fenwick Tree
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp Nghịch Thế Bằng Fenwick Tree** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Nén tọa độ + Fenwick Tree.

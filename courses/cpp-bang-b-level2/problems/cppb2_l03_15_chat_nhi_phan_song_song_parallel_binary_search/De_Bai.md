@@ -1,4 +1,4 @@
-# Chặt Nhị Phân Song Song (parallel Binary Search)
+# Chặt nhị phân song song (parallel binary search)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chặt Nhị Phân Song Song (Parallel Binary Search)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Kỹ thuật chặt nhị phân đồng thời cho $Q$ truy vấn.

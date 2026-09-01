@@ -1,4 +1,4 @@
-# Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau
+# Phân chia tập hợp thành hai nửa có tổng bằng nhau
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: MITM kết hợp tối ưu hóa bộ nhớ RAM.

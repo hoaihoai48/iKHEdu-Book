@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM KHỚP VÀ CẦU TRÊN ĐỒ THỊ (TARJAN'S BRIDGE & ARTICULATION)
+# Hướng dẫn giảng dạy: Tìm khớp và cầu trên đồ thị (tarjan's bridge & articulation)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

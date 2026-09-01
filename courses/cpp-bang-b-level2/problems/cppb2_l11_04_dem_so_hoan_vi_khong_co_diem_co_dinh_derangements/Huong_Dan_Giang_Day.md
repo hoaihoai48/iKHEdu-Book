@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ HOÁN VỊ KHÔNG CÓ ĐIỂM CỐ ĐỊNH (DERANGEMENTS)
+# Hướng dẫn giảng dạy: Đếm số hoán vị không có điểm cố định (derangements)
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

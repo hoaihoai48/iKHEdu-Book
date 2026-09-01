@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRUY VẤN GIÁ TRỊ NHỎ NHẤT ĐOẠN (RMQ SEGMENT TREE)
+# Hướng dẫn giảng dạy: Truy vấn giá trị nhỏ nhất đoạn (RMQ Segment Tree)
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

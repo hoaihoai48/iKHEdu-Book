@@ -1,4 +1,4 @@
-# Đếm Số Cách Đổi Tiền Bằng Phương Trình Diophantine
+# Đếm số cách đổi tiền bằng phương trình Diophantine
 
 ## Bối cảnh
 Một máy rút tiền chỉ có 2 loại mệnh giá tiền là $A$ đồng và $B$ đồng. Khách hàng muốn rút đúng $C$ đồng. Hãy đếm số cách chọn số lượng tờ tiền $(x, y)$ ($x \ge 0, y \ge 0$) sao cho $A \cdot x + B \cdot y = C$.

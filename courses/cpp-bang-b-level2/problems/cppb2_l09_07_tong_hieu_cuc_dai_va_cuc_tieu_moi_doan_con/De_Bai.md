@@ -1,4 +1,4 @@
-# Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con
+# Tổng hiệu cực đại và cực tiểu mọi đoạn con
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Monotonic Stack đếm số đoạn con mà $A_i$ là $\min/\max$.

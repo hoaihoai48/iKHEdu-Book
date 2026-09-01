@@ -1,4 +1,4 @@
-# Chia Hai Số Nguyên Lớn Cho Nhau (bigint / Bigint)
+# Chia hai số nguyên lớn cho nhau (BigInt / BigInt)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Hai Số Nguyên Lớn Cho Nhau (BigInt / BigInt)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán chia dài Knuth (Algorithm D).

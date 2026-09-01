@@ -1,20 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool check(long long mid, const vector<long long>& x, int c) {
+    int count = 1;
+    long long last_pos = x[0];
+    for (size_t i = 1; i < x.size(); ++i) {
+        if (x[i] - last_pos >= mid) {
+            count++;
+            last_pos = x[i];
+            if (count == c) return true;
+        }
+    }
+    return count >= c;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, c;
+    if (!(cin >> n >> c)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<long long> x(n);
+    for (int i = 0; i < n; ++i) cin >> x[i];
+    sort(x.begin(), x.end());
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+    long long low = 1, high = x[n - 1] - x[0], ans = 0;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, x, c)) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
     }
 
     cout << ans << "\n";

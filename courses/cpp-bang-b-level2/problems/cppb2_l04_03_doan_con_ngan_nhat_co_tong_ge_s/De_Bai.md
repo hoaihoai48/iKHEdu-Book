@@ -1,4 +1,4 @@
-# Đoạn Con Ngắn Nhất Có Tổng $\ge S$
+# Đoạn con ngắn nhất có tổng $\ge s$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Ngắn Nhất Có Tổng $\ge S$** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cửa sổ trượt co giãn.

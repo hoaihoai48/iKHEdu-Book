@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LŨY THỪA VỚI SỐ MŨ CỰC LỚN
+# Hướng dẫn giảng dạy: Lũy thừa với số mũ cực lớn
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: THUẬT TOÁN MANACHER TÌM MỌI PALINDROME TUYẾN TÍNH $\MATHCAL{O}(N)$
+# Hướng dẫn giảng dạy: Thuật toán Manacher tìm mọi palindrome tuyến tính $\mathcal{o}(n)$
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

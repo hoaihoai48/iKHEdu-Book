@@ -1,4 +1,4 @@
-# Đếm Số Xâu Con Khác Nhau Của Một Xâu
+# Đếm số xâu con khác nhau của một xâu
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Xâu Con Khác Nhau Của Một Xâu** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: String Hashing + `unordered_set`.

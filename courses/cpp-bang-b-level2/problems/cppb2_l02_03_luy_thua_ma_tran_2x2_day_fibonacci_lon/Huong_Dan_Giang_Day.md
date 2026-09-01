@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LŨY THỪA MA TRẬN 2X2 (DÃY FIBONACCI LỚN)
+# Hướng dẫn giảng dạy: Lũy thừa ma trận 2x2 (dãy fibonacci lớn)
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

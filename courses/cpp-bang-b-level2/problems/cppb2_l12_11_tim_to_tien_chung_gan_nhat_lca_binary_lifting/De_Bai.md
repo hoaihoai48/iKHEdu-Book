@@ -1,4 +1,4 @@
-# Tìm Tổ Tiên Chung Gần Nhất (lca Binary Lifting)
+# Tìm tổ tiên chung gần nhất (LCA binary lifting)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Tổ Tiên Chung Gần Nhất (LCA Binary Lifting)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bảng nhảy nhị phân $up[u][k]$ trong $\mathcal{O}(\log N)$.

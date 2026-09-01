@@ -1,4 +1,4 @@
-# Ma Trận Toàn Số 1 Lớn Nhất (maximal Rectangle 2d)
+# Ma trận toàn số 1 lớn nhất (maximal rectangle 2d)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ma Trận Toàn Số 1 Lớn Nhất (Maximal Rectangle 2D)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Histogram DP 2D.

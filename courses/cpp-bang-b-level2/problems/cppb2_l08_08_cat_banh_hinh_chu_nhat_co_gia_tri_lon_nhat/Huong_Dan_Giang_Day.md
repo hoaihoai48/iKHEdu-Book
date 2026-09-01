@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CẮT BÁNH HÌNH CHỮ NHẬT CÓ GIÁ TRỊ LỚN NHẤT
+# Hướng dẫn giảng dạy: Cắt bánh hình chữ nhật có giá trị lớn nhất
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

@@ -1,4 +1,4 @@
-# Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$
+# Thuật toán Manacher tìm mọi palindrome tuyến tính $\mathcal{o}(n)$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Thuật toán Manacher tìm mảng bán kính đối xứng.

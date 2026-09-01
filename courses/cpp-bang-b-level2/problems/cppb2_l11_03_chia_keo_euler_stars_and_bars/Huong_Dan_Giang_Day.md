@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHIA KẸO EULER (STARS AND BARS)
+# Hướng dẫn giảng dạy: Chia kẹo Euler (stars and bars)
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

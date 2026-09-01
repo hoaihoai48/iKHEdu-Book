@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ CẶP $(A_I, A_J)$ CÓ TÍCH AND BẰNG 0
+# Hướng dẫn giảng dạy: Đếm số cặp $(a_i, a_j)$ có tích and bằng 0
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

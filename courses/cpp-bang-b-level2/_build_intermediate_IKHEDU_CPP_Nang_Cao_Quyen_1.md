@@ -1072,16 +1072,16 @@ Hãy lập trình giải quyết bài toán Bậc Của Số Nguyên Theo Modulo
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Can Nguyen Nguyen Thuy Primitive Root** là một dạng bài điển hình thuộc chuyên đề **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Can Nguyen Nguyen Thuy Primitive Root**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Root với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Root với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -1091,14 +1091,15 @@ Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Roo
 
 ### Input
 ```text
-7
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-3
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Can Nguyen Nguyen Thuy Primitive Root.
 
 
 
@@ -1106,16 +1107,16 @@ Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Roo
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tinh Uoc Nguyen To Lon Nhat** là một dạng bài điển hình thuộc chuyên đề **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Tinh Uoc Nguyen To Lon Nhat**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -1125,15 +1126,15 @@ Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với đ
 
 ### Input
 ```text
-3
-12 35 22
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-11
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `11`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tinh Uoc Nguyen To Lon Nhat.
 
 
 
@@ -1141,16 +1142,16 @@ Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với đ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Phuong Trinh Pell Co Ban** là một dạng bài điển hình thuộc chuyên đề **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Phuong Trinh Pell Co Ban**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -1160,14 +1161,15 @@ Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ
 
 ### Input
 ```text
-2
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-3 2
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3 2`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Phuong Trinh Pell Co Ban.
 
 
 
@@ -1175,16 +1177,16 @@ Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Phan Tich Legendre Nang Cao** là một dạng bài điển hình thuộc chuyên đề **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Phan Tich Legendre Nang Cao**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -1194,14 +1196,15 @@ Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với đ
 
 ### Input
 ```text
-5 3 2
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-4
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Phan Tich Legendre Nang Cao.
 
 
 
@@ -2001,16 +2004,16 @@ Hãy lập trình giải quyết bài toán Logarit Rời Rạc (baby-step Giant
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Luy Thua Ma Tran Dem Duong Di** là một dạng bài điển hình thuộc chuyên đề **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Luy Thua Ma Tran Dem Duong Di**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -2020,17 +2023,15 @@ Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với 
 
 ### Input
 ```text
-3 3 2 1 3
-1 2
-2 3
-1 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Luy Thua Ma Tran Dem Duong Di.
 
 
 
@@ -2038,16 +2039,16 @@ Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tinh Cap So Nhan Modulo Hop So** là một dạng bài điển hình thuộc chuyên đề **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Tinh Cap So Nhan Modulo Hop So**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -2057,14 +2058,15 @@ Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với
 
 ### Input
 ```text
-2 3 100
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
 15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `15`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tinh Cap So Nhan Modulo Hop So.
 
 
 
@@ -2072,16 +2074,16 @@ Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Luy Thua Tang Thap Power Tower** là một dạng bài điển hình thuộc chuyên đề **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Luy Thua Tang Thap Power Tower**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -2091,14 +2093,15 @@ Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với
 
 ### Input
 ```text
-2 3 2 1000000007
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-512
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `512`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Luy Thua Tang Thap Power Tower.
 
 
 
@@ -2106,16 +2109,16 @@ Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Can Bac Hai Modulo Tonelli Shanks** là một dạng bài điển hình thuộc chuyên đề **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Can Bac Hai Modulo Tonelli Shanks**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -2125,14 +2128,15 @@ Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks v�
 
 ### Input
 ```text
-2 7
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-3
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Can Bac Hai Modulo Tonelli Shanks.
 
 
 
@@ -2140,16 +2144,16 @@ Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks v�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Ma Tran Fibonacci Tong Doan** là một dạng bài điển hình thuộc chuyên đề **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Ma Tran Fibonacci Tong Doan**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -2159,14 +2163,15 @@ Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với đ
 
 ### Input
 ```text
-1 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-4
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Ma Tran Fibonacci Tong Doan.
 
 
 
@@ -2985,139 +2990,152 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Cực Trị Trên Đa
 
 
 
-### Bài 17 [CPPB2-L03-17]: Chat Nhi Phan Song Song
+### Bài 17 [CPPB2-L03-17]: Chặt Nhị Phân Song Song
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Chat Nhi Phan Song Song** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho một hệ thống gồm $N$ trạm thiên văn và $Q$ thiên thạch di chuyển. Mỗi thiên thạch cần thu thập ít nhất $P_i$ đơn vị năng lượng từ các trạm thiên văn trong phạm vi kiểm soát của nó sau một số mốc thời gian $M$. Sau mỗi mốc thời gian $t$, một trạm thiên văn sẽ phát ra một lượng sóng năng lượng.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Song Song với độ phức tạp tối ưu nhất.
+Với mỗi thiên thạch, hãy tìm mốc thời gian $t$ nhỏ nhất ($1 \le t \le N$) để thiên thạch đó tích lũy đủ số năng lượng $P_i$. Nếu không thể tích lũy đủ sau tất cả $N$ mốc thời gian, hãy in ra `-1`.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 2 số nguyên $N, Q$ ($1 \le N, Q \le 10^5$) — số mốc thời gian và số lượng thiên thạch.
+- Dòng 2: $N$ số nguyên biểu thị năng lượng phát ra tại các trạm theo thứ tự thời gian.
+- Dòng 3: $Q$ số nguyên $P_1, P_2, \dots, P_Q$ ($1 \le P_i \le 10^9$) — lượng năng lượng yêu cầu của từng thiên thạch.
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra $Q$ dòng, mỗi dòng chứa mốc thời gian nhỏ nhất tương ứng cho từng thiên thạch.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+5 3
+10 20 30 40 50
+15 55 200
 ```
 ### Output
 ```text
-1
+2
+3
+-1
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thiên thạch 1 cần $15$ năng lượng: tại mốc $t=1$ có $10$, tại mốc $t=2$ tích lũy tổng $30 \ge 15$, do đó đáp án là $2$.
+* Thiên thạch 2 cần $55$ năng lượng: tại $t=3$ tích lũy tổng $60 \ge 55$, đáp án là $3$.
+* Thiên thạch 3 cần $200$ năng lượng: sau cả $5$ mốc chỉ tích lũy được $150 < 200$, in ra `-1`.
 
 
 
-### Bài 18 [CPPB2-L03-18]: Tim Kiem Tam Phan Cuc Tri Ham Loi
-
-**Bối cảnh & Nhiệm vụ:**
-
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tim Kiem Tam Phan Cuc Tri Ham Loi** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+### Bài 18 [CPPB2-L03-18]: Tìm Cực Tiểu Của Hàm Bậc Hai
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tim Kiem Tam Phan Cuc Tri Ham Loi với độ phức tạp tối ưu nhất.
+Cho hàm số bậc hai $f(x) = ax^2 + bx + c$ với hệ số $a > 0$ (hàm lồi trên tập số thực $\mathbb{R}$). Cần tìm giá trị của biến số $x$ trong đoạn $[L, R]$ sao cho giá trị $f(x)$ đạt cực tiểu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy sử dụng thuật toán Tìm kiếm tam phân (Ternary Search) trên tập số thực để tìm hoành độ $x \in [L, R]$ làm cho $f(x)$ đạt giá trị nhỏ nhất với độ chính xác tuyệt đối không quá $10^{-6}$.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Một dòng duy nhất chứa 5 số thực $a, b, c, L, R$ ($a > 0, -10^6 \le b, c, L, R \le 10^6, L \le R$).
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra giá trị $x$ tìm được với đúng 6 chữ số thập phân sau dấu phẩy.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+1 -4 4 0 5
 ```
 ### Output
 ```text
-1
+2.000000
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Hàm số $f(x) = x^2 - 4x + 4 = (x - 2)^2$ đạt giá trị nhỏ nhất bằng $0$ tại điểm cực trị $x = -b / (2a) = 2.000000$ thuộc đoạn $[0, 5]$.
 
 
 
-### Bài 19 [CPPB2-L03-19]: Trung Vi Hai Mang Da Sap Xep
-
-**Bối cảnh & Nhiệm vụ:**
-
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Trung Vi Hai Mang Da Sap Xep** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+### Bài 19 [CPPB2-L03-19]: Trung Vị Của Hai Mảng Đã Sắp Xếp
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Trung Vi Hai Mang Da Sap Xep với độ phức tạp tối ưu nhất.
+Cho hai mảng số nguyên $A$ gồm $N$ phần tử và $B$ gồm $M$ phần tử đều đã được sắp xếp theo thứ tự tăng dần. Trung vị của dãy hợp nhất gồm $N + M$ phần tử là phần tử ở chính giữa (nếu $N+M$ lẻ) hoặc trung bình cộng của 2 phần tử ở chính giữa (nếu $N+M$ chẵn).
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy tìm trung vị của tập hợp tất cả các phần tử trong cả 2 mảng với độ phức tạp thời gian $\mathcal{O}(\log(\min(N, M)))$.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 2 số nguyên $N, M$ ($1 \le N, M \le 10^5$).
+- Dòng 2: $N$ số nguyên đã sắp xếp tăng dần của mảng $A$ ($|A_i| \le 10^9$).
+- Dòng 3: $M$ số nguyên đã sắp xếp tăng dần của mảng $B$ ($|B_j| \le 10^9$).
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số thực duy nhất là giá trị trung vị với đúng 1 chữ số thập phân sau dấu phẩy.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+2 2
+1 3
+2 4
 ```
 ### Output
 ```text
-1
+2.5
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Dãy hợp nhất sau khi sắp xếp là $[1, 2, 3, 4]$. Tổng số phần tử chẵn ($4$), hai phần tử chính giữa là $2$ và $3$, trung vị là $(2 + 3) / 2 = 2.5$.
 
 
 
-### Bài 20 [CPPB2-L03-20]: Tam Giac Co Dien Tich Lon Nhat
-
-**Bối cảnh & Nhiệm vụ:**
-
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tam Giac Co Dien Tich Lon Nhat** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+### Bài 20 [CPPB2-L03-20]: Tam Giác Có Diện Tích Lớn Nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tam Giac Co Dien Tich Lon Nhat với độ phức tạp tối ưu nhất.
+Cho một đa giác lồi gồm $N$ đỉnh trên mặt phẳng tọa độ $Oxy$ được liệt kê theo chiều ngược chiều kim đồng hồ. Cần chọn ra 3 đỉnh phân biệt của đa giác lồi sao cho tam giác tạo bởi 3 đỉnh này có diện tích lớn nhất.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình tìm diện tích lớn nhất của tam giác được tạo từ 3 đỉnh bất kỳ của đa giác lồi bằng kỹ thuật Hai con trỏ quay (Rotating Calipers) với độ phức tạp $\mathcal{O}(N^2)$ hoặc $\mathcal{O}(N)$.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 1 số nguyên $N$ ($3 \le N \le 3000$) — số đỉnh của đa giác lồi.
+- $N$ dòng tiếp theo: Mỗi dòng gồm 2 số nguyên $x_i, y_i$ ($|x_i|, |y_i| \le 10^9$) — tọa độ đỉnh thứ $i$.
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra diện tích lớn nhất tìm được với đúng 1 chữ số thập phân sau dấu phẩy.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+4
+0 0
+4 0
+4 3
+0 3
 ```
 ### Output
 ```text
-1
+6.0
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* 4 đỉnh tạo thành hình chữ nhật kích thước $4 \times 3$. Chọn 3 đỉnh $(0,0), (4,0), (4,3)$ tạo thành tam giác vuông có diện tích $S = \frac{1}{2} \times 4 \times 3 = 6.0$.
 
 
 
@@ -3125,16 +3143,16 @@ Hãy lập trình giải quyết bài toán Tam Giac Co Dien Tich Lon Nhat với
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Chat Nhi Phan Khoang Cach K Diem** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Chat Nhi Phan Khoang Cach K Diem**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -3144,14 +3162,15 @@ Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem v�
 
 ### Input
 ```text
-1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Chat Nhi Phan Khoang Cach K Diem.
 
 
 
@@ -3159,16 +3178,16 @@ Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem v�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Chat Nhi Phan Phan So Toi Gian** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Chat Nhi Phan Phan So Toi Gian**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Phan So Toi Gian với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Chat Nhi Phan Phan So Toi Gian với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -3178,14 +3197,15 @@ Hãy lập trình giải quyết bài toán Chat Nhi Phan Phan So Toi Gian với
 
 ### Input
 ```text
-1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Chat Nhi Phan Phan So Toi Gian.
 
 
 
@@ -3909,71 +3929,79 @@ Hãy lập trình giải quyết bài toán Quét Đường Thẳng Nén Tọa �
 
 
 
-### Bài 17 [CPPB2-L04-17]: Quet Duong Sweep Line Dien Tich Hinh Chu Nhat
+### Bài 17 [CPPB2-L04-17]: Diện Tích Hợp Các Hình Chữ Nhật
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Quet Duong Sweep Line Dien Tich Hinh Chu Nhat** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Trên mặt phẳng tọa độ $Oxy$, cho $N$ hình chữ nhật có các cạnh song song với các trục tọa độ. Mỗi hình chữ nhật thứ $i$ được xác định bởi tọa độ góc dưới trái $(x_1, y_1)$ và góc trên phải $(x_2, y_2)$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Quet Duong Sweep Line Dien Tich Hinh Chu Nhat với độ phức tạp tối ưu nhất.
+Hãy tính tổng diện tích của phần mặt phẳng bị phủ bởi ít nhất một trong $N$ hình chữ nhật bằng thuật toán Quét đường (Sweep-line) kết hợp Nén tọa độ.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 1 số nguyên $N$ ($1 \le N \le 2000$) — số lượng hình chữ nhật.
+- $N$ dòng tiếp theo: Mỗi dòng gồm 4 số nguyên $x_1, y_1, x_2, y_2$ ($0 \le x_1 < x_2 \le 10^9, 0 \le y_1 < y_2 \le 10^9$).
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số nguyên duy nhất là tổng diện tích hợp của các hình chữ nhật.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+2
+10 10 20 20
+15 15 25 25
 ```
 ### Output
 ```text
-1
+175
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Hình chữ nhật 1 có diện tích $10 \times 10 = 100$.
+* Hình chữ nhật 2 có diện tích $10 \times 10 = 100$.
+* Phần giao nhau là hình chữ nhật $[15, 20] \times [15, 20]$ có diện tích $5 \times 5 = 25$.
+* Tổng diện tích hợp phủ = $100 + 100 - 25 = 175$.
 
 
 
-### Bài 18 [CPPB2-L04-18]: Mang Hieu 2d Tren Hinh Chu Nhat Xoay
+### Bài 18 [CPPB2-L04-18]: Mảng Hiệu Trên Hình Vuông Xoay 45 Độ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Mang Hieu 2D Tren Hinh Chu Nhat Xoay** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho một lưới ô vuông kích thước $N \times N$, ban đầu tất cả các ô đều có giá trị bằng $0$. Có $Q$ phép cập nhật, mỗi phép cập nhật cho một ô tâm $(x, y)$, bán kính khoảng cách Manhattan $d$ và một giá trị cộng thêm $val$. Nghĩa là mọi ô $(r, c)$ thỏa mãn $|r - x| + |c - y| \le d$ đều được cộng thêm giá trị $val$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Mang Hieu 2d Tren Hinh Chu Nhat Xoay với độ phức tạp tối ưu nhất.
+Hãy tìm giá trị lớn nhất trong toàn bộ lưới ô vuông $N \times N$ sau khi thực hiện xong tất cả $Q$ phép cập nhật.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 2 số nguyên $N, Q$ ($1 \le N \le 1000, 1 \le Q \le 10^5$).
+- $Q$ dòng tiếp theo: Mỗi dòng gồm 4 số nguyên $x, y, d, val$ ($1 \le x, y \le N, 0 \le d \le 2N, 1 \le val \le 10^6$).
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số nguyên duy nhất là giá trị lớn nhất trong lưới sau $Q$ phép cập nhật.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+3 2
+2 2 1 5
+1 1 0 3
 ```
 ### Output
 ```text
-1
+8
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Phép cập nhật 1: Cộng $5$ vào vùng Manhattan bán kính $1$ quanh ô $(2, 2)$ gồm các ô $(2,2), (1,2), (3,2), (2,1), (2,3)$.
+* Phép cập nhật 2: Cộng $3$ vào riêng ô $(1, 1)$. Ô $(2, 2)$ đạt giá trị lớn nhất là $5$, hoặc ô $(1, 2)$ đạt $5$.
 
 
 
@@ -3981,16 +4009,16 @@ Hãy lập trình giải quyết bài toán Mang Hieu 2d Tren Hinh Chu Nhat Xoay
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Nen Toa Do Da Chieu 3D** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Nen Toa Do Da Chieu 3d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -4000,82 +4028,86 @@ Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ p
 
 ### Input
 ```text
-1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Nen Toa Do Da Chieu 3d.
 
 
 
-### Bài 20 [CPPB2-L04-20]: Hai Con Tro Dem Tam Giac Khong Giao
-
-**Bối cảnh & Nhiệm vụ:**
-
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Hai Con Tro Dem Tam Giac Khong Giao** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+### Bài 20 [CPPB2-L04-20]: Đếm Số Bộ Ba Tam Giác Hợp Lệ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Hai Con Tro Dem Tam Giac Khong Giao với độ phức tạp tối ưu nhất.
+Cho một mảng $A$ gồm $N$ số nguyên dương biểu thị độ dài các thanh gỗ. Người ta muốn chọn ra 3 thanh gỗ có độ dài $A_i, A_j, A_k$ ($i < j < k$) sao cho 3 thanh gỗ này có thể ghép thành một tam giác không suy biến (nghĩa là thỏa mãn $A_i + A_j > A_k$ với $A_i \le A_j \le A_k$).
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy đếm số lượng bộ ba chỉ số $(i, j, k)$ thỏa mãn điều kiện tạo thành tam giác bằng kỹ thuật Hai con trỏ với độ phức tạp $\mathcal{O}(N^2)$.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 1 số nguyên $N$ ($3 \le N \le 5000$) — số lượng thanh gỗ.
+- Dòng 2: $N$ số nguyên dương $A_1, A_2, \dots, A_N$ ($1 \le A_i \le 10^9$).
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số nguyên duy nhất là số lượng bộ ba tam giác hợp lệ.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+4
+4 6 3 7
 ```
 ### Output
 ```text
-1
+3
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Sắp xếp mảng: $[3, 4, 6, 7]$.
+* Các bộ ba tam giác hợp lệ: $(3, 4, 6)$ vì $3+4 > 6$, $(3, 6, 7)$ vì $3+6 > 7$, $(4, 6, 7)$ vì $4+6 > 7$. Tổng cộng có $3$ bộ ba.
 
 
 
-### Bài 21 [CPPB2-L04-21]: Cua So Truot Dem Xau K Ky Tu Khac Nhau
-
-**Bối cảnh & Nhiệm vụ:**
-
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Cua So Truot Dem Xau K Ky Tu Khac Nhau** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+### Bài 21 [CPPB2-L04-21]: Đếm Xâu Con Có Đúng K Ký Tự Khác Nhau
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Cua So Truot Dem Xau K Ky Tu Khac Nhau với độ phức tạp tối ưu nhất.
+Cho một xâu ký tự $S$ chỉ gồm các chữ cái tiếng Anh in thường và một số nguyên dương $K$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy đếm số lượng xâu con liên tiếp của $S$ chứa đúng $K$ ký tự phân biệt bằng kỹ thuật Cửa sổ trượt (Sliding Window / Two Pointers).
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Xâu ký tự $S$ ($1 \le |S| \le 10^5$).
+- Dòng 2: Một số nguyên $K$ ($1 \le K \le 26$).
 
 **Đầu ra (Output):**
 
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số nguyên duy nhất là số lượng xâu con thỏa mãn.
 
 **Ví dụ mẫu:**
 
 ### Input
 ```text
-1
+pqpqs
+2
 ```
 ### Output
 ```text
-1
+7
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Các xâu con có đúng 2 ký tự khác nhau: `pq` (vị trí 0..1), `pqp` (0..2), `pqpq` (0..3), `qp` (1..2), `qpq` (1..3), `pq` (2..3), `qs` (3..4). Tổng cộng có $7$ xâu.
 
 
 
@@ -4083,16 +4115,16 @@ Hãy lập trình giải quyết bài toán Cua So Truot Dem Xau K Ky Tu Khac Nh
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Ma Tran Tong Lon Nhat Kadane 2D** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Ma Tran Tong Lon Nhat Kadane 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Ma Tran Tong Lon Nhat Kadane 2d với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Ma Tran Tong Lon Nhat Kadane 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -4102,14 +4134,15 @@ Hãy lập trình giải quyết bài toán Ma Tran Tong Lon Nhat Kadane 2d vớ
 
 ### Input
 ```text
-1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Ma Tran Tong Lon Nhat Kadane 2d.
 
 
 
@@ -4834,16 +4867,16 @@ Hãy lập trình giải quyết bài toán Chia Để Trị Trên Cây (centroi
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Centroid Decomposition Co Ban** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Centroid Decomposition Co Ban**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -4853,16 +4886,15 @@ Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với 
 
 ### Input
 ```text
-3 2
-1 2
-2 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Centroid Decomposition Co Ban.
 
 
 
@@ -4870,16 +4902,16 @@ Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Dem Chu Trinh 4 Canh Mitm** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Dem Chu Trinh 4 Canh Mitm**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -4889,18 +4921,15 @@ Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với đ�
 
 ### Input
 ```text
-4 4
-1 2
-2 3
-3 4
-4 1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Chu Trinh 4 Canh Mitm.
 
 
 
@@ -4908,16 +4937,16 @@ Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với đ�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Chia De Tri Day Con Tong Max** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Chia De Tri Day Con Tong Max**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -4927,15 +4956,15 @@ Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với �
 
 ### Input
 ```text
-4
-1 -2 3 4
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-7
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `7`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Chia De Tri Day Con Tong Max.
 
 
 
@@ -4943,16 +4972,16 @@ Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với �
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Mitm Dem Nghiem Nguyen Tong Bang 0** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Mitm Dem Nghiem Nguyen Tong Bang 0**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -4962,18 +4991,15 @@ Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 v
 
 ### Input
 ```text
-2
-1 -1
-2 -2
--1 1
--2 2
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-4
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Mitm Dem Nghiem Nguyen Tong Bang 0.
 
 
 
@@ -4981,16 +5007,16 @@ Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 v
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tim Cap Diem Gan Nhat 2D** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Tim Cap Diem Gan Nhat 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5000,17 +5026,15 @@ Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ
 
 ### Input
 ```text
-3
-0 0
-1 1
-2 2
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-2
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tim Cap Diem Gan Nhat 2d.
 
 
 
@@ -5018,16 +5042,16 @@ Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Dem Nghich The 3 Chieu Cdq** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Dem Nghich The 3 Chieu Cdq**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Nghich The 3 Chieu Cdq với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Dem Nghich The 3 Chieu Cdq với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5037,15 +5061,15 @@ Hãy lập trình giải quyết bài toán Dem Nghich The 3 Chieu Cdq với đ�
 
 ### Input
 ```text
-4
-4 3 2 1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-4
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Nghich The 3 Chieu Cdq.
 
 
 
@@ -5745,16 +5769,16 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Trò Chơi Nim Tổng
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Sos Dp Sum Over Subsets** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Sos Dp Sum Over Subsets**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5764,15 +5788,15 @@ Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ 
 
 ### Input
 ```text
-2
-1 2 3 4
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1 3 4 10
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1 3 4 10`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Sos Dp Sum Over Subsets.
 
 
 
@@ -5780,16 +5804,16 @@ Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Profile Dp Lat Gach Domino** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Profile Dp Lat Gach Domino**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5799,14 +5823,15 @@ Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với đ�
 
 ### Input
 ```text
-2 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-3
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Profile Dp Lat Gach Domino.
 
 
 
@@ -5814,16 +5839,16 @@ Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với đ�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Bien Doi Fwt Bitwise Xor** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Bien Doi Fwt Bitwise Xor**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5833,16 +5858,15 @@ Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ
 
 ### Input
 ```text
-1
-1 2
-3 4
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-11 10
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `11 10`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bien Doi Fwt Bitwise Xor.
 
 
 
@@ -5850,16 +5874,16 @@ Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Dem Tap Doc Lap Cuc Dai** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Dem Tap Doc Lap Cuc Dai**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5869,16 +5893,15 @@ Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ 
 
 ### Input
 ```text
-3 2
-1 2
-2 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-2
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Tap Doc Lap Cuc Dai.
 
 
 
@@ -5886,16 +5909,16 @@ Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Bitmask Dp Phan Nhom K Tap** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Bitmask Dp Phan Nhom K Tap**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5905,15 +5928,15 @@ Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với đ�
 
 ### Input
 ```text
-4 2
-1 2 2 1
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-YES
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `YES`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bitmask Dp Phan Nhom K Tap.
 
 
 
@@ -5921,16 +5944,16 @@ YES
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Xor Basis Vector Khong Gian Tuyen Tinh** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Xor Basis Vector Khong Gian Tuyen Tinh**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Tinh với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Tinh với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5940,15 +5963,15 @@ Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Ti
 
 ### Input
 ```text
-3
-1 2 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-3
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Xor Basis Vector Khong Gian Tuyen Tinh.
 
 
 
@@ -5956,16 +5979,16 @@ Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Ti
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Bitmask Ghep Doi Trong So Cuc Dai** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Bitmask Ghep Doi Trong So Cuc Dai**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -5975,16 +5998,15 @@ Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai v�
 
 ### Input
 ```text
-2
-0 3
-3 0
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-3
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bitmask Ghep Doi Trong So Cuc Dai.
 
 
 
@@ -5992,16 +6014,16 @@ Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai v�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Dem Duong Di Hamilton Bitmask** là một dạng bài điển hình thuộc chuyên đề **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Dem Duong Di Hamilton Bitmask**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Duong Di Hamilton Bitmask với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Dem Duong Di Hamilton Bitmask với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 **Đầu vào (Input):**
 
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
@@ -6011,17 +6033,15 @@ Hãy lập trình giải quyết bài toán Dem Duong Di Hamilton Bitmask với 
 
 ### Input
 ```text
-3 3
-1 2
-2 3
-1 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-1
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Duong Di Hamilton Bitmask.
 
 
 
@@ -9318,7 +9338,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-17` — Chat Nhi Phan Song Song
+### `CPPB2-L03-17` — Chặt Nhị Phân Song Song
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9366,7 +9386,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-18` — Tim Kiem Tam Phan Cuc Tri Ham Loi
+### `CPPB2-L03-18` — Tìm Cực Tiểu Của Hàm Bậc Hai
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9400,7 +9420,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-19` — Trung Vi Hai Mang Da Sap Xep
+### `CPPB2-L03-19` — Trung Vị Của Hai Mảng Đã Sắp Xếp
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9454,11 +9474,16 @@ int main() {
 
 ```
 
-### `CPPB2-L03-20` — Tam Giac Co Dien Tich Lon Nhat
+### `CPPB2-L03-20` — Tam Giác Có Diện Tích Lớn Nhất
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+// Diện tích tam giác tính theo tọa độ không dùng struct
+long long cross_product(long long x1, long long y1, long long x2, long long y2, long long x3, long long y3) {
+    return abs((x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1));
+}
 
 int main() {
     ios::sync_with_stdio(false);
@@ -9467,16 +9492,22 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<long long> x(n), y(n);
+    for (int i = 0; i < n; ++i) cin >> x[i] >> y[i];
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
+    long long max_area2 = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+        int k = (i + 2) % n;
+        for (int j = (i + 1) % n; j != i; j = (j + 1) % n) {
+            while (cross_product(x[i], y[i], x[j], y[j], x[(k + 1) % n], y[(k + 1) % n]) >
+                   cross_product(x[i], y[i], x[j], y[j], x[k], y[k])) {
+                k = (k + 1) % n;
+            }
+            max_area2 = max(max_area2, cross_product(x[i], y[i], x[j], y[j], x[k], y[k]));
+        }
     }
 
-    cout << ans << "\n";
+    cout << fixed << setprecision(1) << max_area2 / 2.0 << "\n";
     return 0;
 }
 
@@ -9488,20 +9519,39 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+bool check(long long mid, const vector<long long>& x, int c) {
+    int count = 1;
+    long long last_pos = x[0];
+    for (size_t i = 1; i < x.size(); ++i) {
+        if (x[i] - last_pos >= mid) {
+            count++;
+            last_pos = x[i];
+            if (count == c) return true;
+        }
+    }
+    return count >= c;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, c;
+    if (!(cin >> n >> c)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<long long> x(n);
+    for (int i = 0; i < n; ++i) cin >> x[i];
+    sort(x.begin(), x.end());
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+    long long low = 1, high = x[n - 1] - x[0], ans = 0;
+    while (low <= high) {
+        long long mid = low + (high - low) / 2;
+        if (check(mid, x, c)) {
+            ans = mid;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
     }
 
     cout << ans << "\n";
@@ -9516,23 +9566,41 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tìm phân số tối giản thứ K trong đoạn (0, 1) có mẫu <= N
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n; long long k;
+    if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    double low = 0.0, high = 1.0;
+    int best_p = 0, best_q = 1;
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+    for (int iter = 0; iter < 60; ++iter) {
+        double mid = (low + high) / 2.0;
+        long long count = 0;
+        int p_curr = 0, q_curr = 1;
+
+        for (int q = 1; q <= n; ++q) {
+            int p = (int)(mid * q);
+            count += p;
+            if (p > 0 && 1.0 * p / q > 1.0 * p_curr / q_curr) {
+                p_curr = p;
+                q_curr = q;
+            }
+        }
+
+        if (count < k) {
+            low = mid;
+        } else {
+            best_p = p_curr;
+            best_q = q_curr;
+            high = mid;
+        }
     }
 
-    cout << ans << "\n";
+    cout << best_p << " " << best_q << "\n";
     return 0;
 }
 
@@ -10210,18 +10278,13 @@ int main() {
 
 ```
 
-### `CPPB2-L04-17` — Quet Duong Sweep Line Dien Tich Hinh Chu Nhat
+### `CPPB2-L04-17` — Diện Tích Hợp Các Hình Chữ Nhật
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-// Sweep-line tính diện tích hợp các hình chữ nhật
-struct Event {
-    long long x, y1, y2;
-    int type;
-};
-
+// Sweep-line dùng vector<vector<long long>> biểu diễn sự kiện: {x, type, y1, y2}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10229,34 +10292,31 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<Event> events;
+    vector<vector<long long>> events;
     vector<long long> Y;
 
     for (int i = 0; i < n; ++i) {
         long long x1, y1, x2, y2;
         cin >> x1 >> y1 >> x2 >> y2;
-        events.push_back({x1, y1, y2, 1});
-        events.push_back({x2, y1, y2, -1});
+        events.push_back({x1, 1, y1, y2});
+        events.push_back({x2, -1, y1, y2});
         Y.push_back(y1);
         Y.push_back(y2);
     }
 
     sort(Y.begin(), Y.end());
     Y.erase(unique(Y.begin(), Y.end()), Y.end());
-
-    sort(events.begin(), events.end(), [](const Event& a, const Event& b) {
-        return a.x < b.x;
-    });
+    sort(events.begin(), events.end());
 
     vector<int> count_cover(Y.size(), 0);
     long long total_area = 0;
 
     for (size_t i = 0; i + 1 < events.size(); ++i) {
-        int y1_idx = lower_bound(Y.begin(), Y.end(), events[i].y1) - Y.begin();
-        int y2_idx = lower_bound(Y.begin(), Y.end(), events[i].y2) - Y.begin();
+        int y1_idx = lower_bound(Y.begin(), Y.end(), events[i][2]) - Y.begin();
+        int y2_idx = lower_bound(Y.begin(), Y.end(), events[i][3]) - Y.begin();
 
         for (int j = y1_idx; j < y2_idx; ++j) {
-            count_cover[j] += events[i].type;
+            count_cover[j] += events[i][1];
         }
 
         long long covered_len = 0;
@@ -10265,7 +10325,7 @@ int main() {
                 covered_len += Y[j + 1] - Y[j];
             }
         }
-        total_area += covered_len * (events[i + 1].x - events[i].x);
+        total_area += covered_len * (events[i + 1][0] - events[i][0]);
     }
 
     cout << total_area << "\n";
@@ -10274,29 +10334,51 @@ int main() {
 
 ```
 
-### `CPPB2-L04-18` — Mang Hieu 2d Tren Hinh Chu Nhat Xoay
+### `CPPB2-L04-18` — Mảng Hiệu Trên Hình Vuông Xoay 45 Độ
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
+// Biến đổi tọa độ quay 45 độ: u = x + y, v = x - y + N
+const int MAXN = 2005;
+long long diff[MAXN][MAXN], pref[MAXN][MAXN];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    while (q--) {
+        int x, y, d; long long val;
+        cin >> x >> y >> d >> val;
+        int u1 = max(1, x + y - d), u2 = min(2 * n, x + y + d);
+        int v1 = max(1, x - y + n - d), v2 = min(2 * n, x - y + n + d);
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+        diff[u1][v1] += val;
+        diff[u1][v2 + 1] -= val;
+        diff[u2 + 1][v1] -= val;
+        diff[u2 + 1][v2 + 1] += val;
     }
 
-    cout << ans << "\n";
+    for (int i = 1; i <= 2 * n; ++i) {
+        for (int j = 1; j <= 2 * n; ++j) {
+            pref[i][j] = diff[i][j] + pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1];
+        }
+    }
+
+    long long max_val = 0;
+    for (int x = 1; x <= n; ++x) {
+        for (int y = 1; y <= n; ++y) {
+            int u = x + y;
+            int v = x - y + n;
+            max_val = max(max_val, pref[u][v]);
+        }
+    }
+
+    cout << max_val << "\n";
     return 0;
 }
 
@@ -10308,6 +10390,7 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Nén tọa độ 3D dùng vector<vector<int>>: {x1, y1, z1, x2, y2, z2}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10315,27 +10398,65 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<vector<int>> boxes(n, vector<int>(6));
+    vector<int> X, Y, Z;
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+        cin >> boxes[i][0] >> boxes[i][1] >> boxes[i][2];
+        cin >> boxes[i][3] >> boxes[i][4] >> boxes[i][5];
+        X.push_back(boxes[i][0]); X.push_back(boxes[i][3]);
+        Y.push_back(boxes[i][1]); Y.push_back(boxes[i][4]);
+        Z.push_back(boxes[i][2]); Z.push_back(boxes[i][5]);
     }
 
-    cout << ans << "\n";
+    sort(X.begin(), X.end()); X.erase(unique(X.begin(), X.end()), X.end());
+    sort(Y.begin(), Y.end()); Y.erase(unique(Y.begin(), Y.end()), Y.end());
+    sort(Z.begin(), Z.end()); Z.erase(unique(Z.begin(), Z.end()), Z.end());
+
+    int nx = X.size(), ny = Y.size(), nz = Z.size();
+    vector<vector<vector<int>>> grid(nx, vector<vector<int>>(ny, vector<int>(nz, 0)));
+
+    for (const auto& b : boxes) {
+        int x1 = lower_bound(X.begin(), X.end(), b[0]) - X.begin();
+        int x2 = lower_bound(X.begin(), X.end(), b[3]) - X.begin();
+        int y1 = lower_bound(Y.begin(), Y.end(), b[1]) - Y.begin();
+        int y2 = lower_bound(Y.begin(), Y.end(), b[4]) - Y.begin();
+        int z1 = lower_bound(Z.begin(), Z.end(), b[2]) - Z.begin();
+        int z2 = lower_bound(Z.begin(), Z.end(), b[5]) - Z.begin();
+
+        for (int i = x1; i < x2; ++i) {
+            for (int j = y1; j < y2; ++j) {
+                for (int k = z1; k < z2; ++k) {
+                    grid[i][j][k] = 1;
+                }
+            }
+        }
+    }
+
+    long long total_vol = 0;
+    for (int i = 0; i + 1 < nx; ++i) {
+        for (int j = 0; j + 1 < ny; ++j) {
+            for (int k = 0; k + 1 < nz; ++k) {
+                if (grid[i][j][k]) {
+                    total_vol += 1LL * (X[i + 1] - X[i]) * (Y[j + 1] - Y[j]) * (Z[k + 1] - Z[k]);
+                }
+            }
+        }
+    }
+
+    cout << total_vol << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L04-20` — Hai Con Tro Dem Tam Giac Khong Giao
+### `CPPB2-L04-20` — Đếm Số Bộ Ba Tam Giác Hợp Lệ
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
+// Đếm bộ ba (a, b, c) thỏa mãn bất đẳng thức tam giác: a + b > c
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -10347,40 +10468,61 @@ int main() {
     for (int i = 0; i < n; ++i) cin >> a[i];
 
     sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+    long long count_triangles = 0;
+
+    for (int k = n - 1; k >= 2; --k) {
+        int i = 0, j = k - 1;
+        while (i < j) {
+            if (a[i] + a[j] > a[k]) {
+                count_triangles += (j - i);
+                j--;
+            } else {
+                i++;
+            }
+        }
     }
 
-    cout << ans << "\n";
+    cout << count_triangles << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L04-21` — Cua So Truot Dem Xau K Ky Tu Khac Nhau
+### `CPPB2-L04-21` — Đếm Xâu Con Có Đúng K Ký Tự Khác Nhau
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
+long long atMostKDistinct(const string& s, int k) {
+    if (k <= 0) return 0;
+    int n = s.size();
+    vector<int> freq(26, 0);
+    int distinct_count = 0, l = 0;
+    long long ans = 0;
+
+    for (int r = 0; r < n; ++r) {
+        if (freq[s[r] - 'a'] == 0) distinct_count++;
+        freq[s[r] - 'a']++;
+
+        while (distinct_count > k) {
+            freq[s[l] - 'a']--;
+            if (freq[s[l] - 'a'] == 0) distinct_count--;
+            l++;
+        }
+        ans += (r - l + 1);
+    }
+    return ans;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    string s; int k;
+    if (!(cin >> s >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
-    }
-
-    cout << ans << "\n";
+    cout << atMostKDistinct(s, k) - atMostKDistinct(s, k - 1) << "\n";
     return 0;
 }
 
@@ -11219,6 +11361,41 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Tìm trọng tâm cây (Centroid) để chia để trị trên cây O(N log N)
+const int MAXN = 100005;
+vector<int> adj[MAXN];
+int sz[MAXN];
+bool removed[MAXN];
+
+void get_sz(int u, int p) {
+    sz[u] = 1;
+    for (int v : adj[u]) {
+        if (v != p && !removed[v]) {
+            get_sz(v, u);
+            sz[u] += sz[v];
+        }
+    }
+}
+
+int get_centroid(int u, int p, int total_size) {
+    for (int v : adj[u]) {
+        if (v != p && !removed[v] && sz[v] > total_size / 2) {
+            return get_centroid(v, u, total_size);
+        }
+    }
+    return u;
+}
+
+int decompose(int u) {
+    get_sz(u, 0);
+    int c = get_centroid(u, 0, sz[u]);
+    removed[c] = true;
+    for (int v : adj[c]) {
+        if (!removed[v]) decompose(v);
+    }
+    return c;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -11226,16 +11403,15 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+    for (int i = 0; i < n - 1; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
 
-    cout << ans << "\n";
+    int root_centroid = decompose(1);
+    cout << root_centroid << "\n";
     return 0;
 }
 
@@ -12117,6 +12293,29 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Fast Walsh-Hadamard Transform (FWT) tính tích chập XOR O(N log N)
+const int MOD = 1000000007;
+const int INV2 = 500000004; // 2^(MOD-2) % MOD
+
+void FWT(vector<long long>& a, bool invert) {
+    int n = a.size();
+    for (int len = 1; 2 * len <= n; len <<= 1) {
+        for (int i = 0; i < n; i += 2 * len) {
+            for (int j = 0; j < len; ++j) {
+                long long u = a[i + j];
+                long long v = a[i + len + j];
+                if (!invert) {
+                    a[i + j] = (u + v) % MOD;
+                    a[i + len + j] = (u - v + MOD) % MOD;
+                } else {
+                    a[i + j] = (u + v) % MOD * INV2 % MOD;
+                    a[i + len + j] = (u - v + MOD) % MOD * INV2 % MOD;
+                }
+            }
+        }
+    }
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -12124,16 +12323,18 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    int sz = 1 << n;
+    vector<long long> a(sz), b(sz);
+    for (int i = 0; i < sz; ++i) cin >> a[i];
+    for (int i = 0; i < sz; ++i) cin >> b[i];
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
-    }
+    FWT(a, false);
+    FWT(b, false);
+    for (int i = 0; i < sz; ++i) a[i] = (a[i] * b[i]) % MOD;
+    FWT(a, true);
 
-    cout << ans << "\n";
+    for (int i = 0; i < sz; ++i) cout << a[i] << " ";
+    cout << "\n";
     return 0;
 }
 
@@ -12176,23 +12377,42 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
+// Chia mảng thành K tập có tổng bằng nhau bằng Bitmask DP
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    sort(a.begin(), a.end());
-    long long ans = 0;
+    vector<int> a(n);
+    int total_sum = 0;
     for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+        cin >> a[i];
+        total_sum += a[i];
     }
 
-    cout << ans << "\n";
+    if (total_sum % k != 0) {
+        cout << "NO\n";
+        return 0;
+    }
+
+    int target = total_sum / k;
+    vector<int> dp(1 << n, -1);
+    dp[0] = 0;
+
+    for (int mask = 0; mask < (1 << n); ++mask) {
+        if (dp[mask] == -1) continue;
+        for (int i = 0; i < n; ++i) {
+            if (!(mask & (1 << i))) {
+                if (dp[mask] + a[i] <= target) {
+                    dp[mask | (1 << i)] = (dp[mask] + a[i]) % target;
+                }
+            }
+        }
+    }
+
+    cout << (dp[(1 << n) - 1] == 0 ? "YES\n" : "NO\n");
     return 0;
 }
 

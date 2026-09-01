@@ -1,4 +1,4 @@
-# Lập Lịch Phòng Họp Đa Năng (meeting Rooms)
+# Lập lịch phòng họp đa năng (meeting rooms)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Phòng Họp Đa Năng (Meeting Rooms)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Min-Heap theo dõi thời điểm kết thúc.

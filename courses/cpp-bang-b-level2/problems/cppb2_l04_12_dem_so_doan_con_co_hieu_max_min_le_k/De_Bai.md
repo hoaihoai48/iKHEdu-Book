@@ -1,4 +1,4 @@
-# Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$
+# Đếm số đoạn con có hiệu max - min $\le k$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Two Pointers kết hợp 2 Deque đơn điệu.

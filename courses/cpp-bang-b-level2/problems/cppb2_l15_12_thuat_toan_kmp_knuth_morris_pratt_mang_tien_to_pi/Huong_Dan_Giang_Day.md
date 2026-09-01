@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: THUẬT TOÁN KMP (KNUTH-MORRIS-PRATT) & MẢNG TIỀN TỐ $\PI$
+# Hướng dẫn giảng dạy: Thuật toán KMP (knuth-morris-pratt) & mảng tiền tố $\pi$
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

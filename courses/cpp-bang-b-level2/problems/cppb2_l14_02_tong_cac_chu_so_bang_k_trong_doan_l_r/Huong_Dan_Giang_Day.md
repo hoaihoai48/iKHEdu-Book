@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG CÁC CHỮ SỐ BẰNG K TRONG ĐOẠN [L, R]
+# Hướng dẫn giảng dạy: Tổng các chữ số bằng k trong đoạn [l, r]
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

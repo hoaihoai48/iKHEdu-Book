@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHOẢNG CÁCH GIỮA HAI ĐIỂM GẦN NHẤT (CLOSEST PAIR)
+# Hướng dẫn giảng dạy: Khoảng cách giữa hai điểm gần nhất (closest pair)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

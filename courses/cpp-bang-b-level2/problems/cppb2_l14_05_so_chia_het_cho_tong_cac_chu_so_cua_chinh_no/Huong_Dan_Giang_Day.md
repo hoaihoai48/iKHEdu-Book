@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ CHIA HẾT CHO TỔNG CÁC CHỮ SỐ CỦA CHÍNH NÓ
+# Hướng dẫn giảng dạy: Số chia hết cho tổng các chữ số của chính nó
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

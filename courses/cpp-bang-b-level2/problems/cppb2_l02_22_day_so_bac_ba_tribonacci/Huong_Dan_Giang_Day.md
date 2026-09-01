@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ TRIBONACCI THỨ N BẰNG NHÂN MA TRẬN 3X3
+# Hướng dẫn giảng dạy: Số tribonacci thứ n bằng nhân ma trận 3x3
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHOẢNG CÁCH CỰC TRỊ TRÊN ĐA GIÁC LỒI
+# Hướng dẫn giảng dạy: Khoảng cách cực trị trên đa giác lồi
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

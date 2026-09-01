@@ -1,4 +1,4 @@
-# Phân Chia Công Việc Thợ Sơn (painter's Partition)
+# Phân chia công việc thợ sơn (painter's partition)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Công Việc Thợ Sơn (Painter's Partition)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: BS tìm Min của Max tổng đoạn.

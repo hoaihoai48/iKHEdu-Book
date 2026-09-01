@@ -1,4 +1,4 @@
-# Đếm Ước Số & Tổng Ước Số Nhanh
+# Đếm ước số & tổng ước số nhanh
 
 ## Bối cảnh
 Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$ ($2 \le N \le 10^6$). Với mỗi $N$, hãy tính:

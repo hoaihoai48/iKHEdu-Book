@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng
+# Tối ưu hóa chi phí lắp trạm phát sóng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tìm kiếm tam phân (Ternary Search).

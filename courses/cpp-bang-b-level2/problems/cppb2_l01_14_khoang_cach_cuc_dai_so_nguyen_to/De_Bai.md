@@ -1,4 +1,4 @@
-# Khoảng Cách Lớn Nhất Giữa Hai Số Nguyên Tố Liên Tiếp
+# Khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp
 
 ## Bối cảnh
 Cho đoạn $[L, R]$ với $1 \le L \le R \le 10^9$ và $R - L \le 10^6$. Hãy tìm khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp nằm trong đoạn này. Nếu trong đoạn có ít hơn 2 số nguyên tố, in ra `-1`.

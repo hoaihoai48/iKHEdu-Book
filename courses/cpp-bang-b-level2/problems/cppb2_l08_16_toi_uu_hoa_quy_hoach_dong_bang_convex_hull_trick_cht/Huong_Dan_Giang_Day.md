@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ƯU HÓA QUY HOẠCH ĐỘNG BẰNG CONVEX HULL TRICK (CHT)
+# Hướng dẫn giảng dạy: Tối ưu hóa quy hoạch động bằng convex hull trick (CHT)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐƯỜNG ĐI NGẮN NHẤT MÊ CUNG 2D BẰNG BFS
+# Hướng dẫn giảng dạy: Đường đi ngắn nhất mê cung 2d bằng BFS
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

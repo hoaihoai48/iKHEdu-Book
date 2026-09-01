@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KIỂM TRA DÃY NGOẶC ĐÚNG NHIỀU LOẠI
+# Hướng dẫn giảng dạy: Kiểm tra dãy ngoặc đúng nhiều loại
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

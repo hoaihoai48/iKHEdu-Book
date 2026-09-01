@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM DÃY NGOẶC ĐÚNG (SỐ CATALAN MODULO)
+# Hướng dẫn giảng dạy: Đếm dãy ngoặc đúng (số Catalan modulo)
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG CÁC SỐ TRONG ĐOẠN THỎA MÃN TÍNH CHẤT CHỮ SỐ
+# Hướng dẫn giảng dạy: Tổng các số trong đoạn thỏa mãn tính chất chữ số
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

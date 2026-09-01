@@ -1,30 +1,37 @@
-# Chat Nhi Phan Song Song
+# Chặt nhị phân song song
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Chat Nhi Phan Song Song** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho một hệ thống gồm $N$ trạm thiên văn và $Q$ thiên thạch di chuyển. Mỗi thiên thạch cần thu thập ít nhất $P_i$ đơn vị năng lượng từ các trạm thiên văn trong phạm vi kiểm soát của nó sau một số mốc thời gian $M$. Sau mỗi mốc thời gian $t$, một trạm thiên văn sẽ phát ra một lượng sóng năng lượng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Song Song với độ phức tạp tối ưu nhất.
+Với mỗi thiên thạch, hãy tìm mốc thời gian $t$ nhỏ nhất ($1 \le t \le N$) để thiên thạch đó tích lũy đủ số năng lượng $P_i$. Nếu không thể tích lũy đủ sau tất cả $N$ mốc thời gian, hãy in ra `-1`.
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 2 số nguyên $N, Q$ ($1 \le N, Q \le 10^5$) — số mốc thời gian và số lượng thiên thạch.
+- Dòng 2: $N$ số nguyên biểu thị năng lượng phát ra tại các trạm theo thứ tự thời gian.
+- Dòng 3: $Q$ số nguyên $P_1, P_2, \dots, P_Q$ ($1 \le P_i \le 10^9$) — lượng năng lượng yêu cầu của từng thiên thạch.
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra $Q$ dòng, mỗi dòng chứa mốc thời gian nhỏ nhất tương ứng cho từng thiên thạch.
 
 ## Sample 1
 ### Input
 ```text
-1
+5 3
+10 20 30 40 50
+15 55 200
 ```
 ### Output
 ```text
-1
+2
+3
+-1
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Thiên thạch 1 cần $15$ năng lượng: tại mốc $t=1$ có $10$, tại mốc $t=2$ tích lũy tổng $30 \ge 15$, do đó đáp án là $2$.
+* Thiên thạch 2 cần $55$ năng lượng: tại $t=3$ tích lũy tổng $60 \ge 55$, đáp án là $3$.
+* Thiên thạch 3 cần $200$ năng lượng: sau cả $5$ mốc chỉ tích lũy được $150 < 200$, in ra `-1`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $1 \le N, Q \le 10^5, 1 \le P_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

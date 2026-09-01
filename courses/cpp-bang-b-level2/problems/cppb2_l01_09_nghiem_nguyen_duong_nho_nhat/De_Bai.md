@@ -1,4 +1,4 @@
-# Nghiệm Nguyên Dương Nhỏ Nhất Của Phương Trình Diophantine
+# Nghiệm nguyên dương nhỏ nhất của phương trình Diophantine
 
 ## Bối cảnh
 Xét phương trình Diophantine tuyến tính $A \cdot x + B \cdot y = C$ với các hệ số nguyên dương $A, B, C$. Bằng thuật toán Euclid mở rộng, ta có thể tìm được nghiệm tổng quát $x = x_0 + k \cdot \frac{B}{\gcd(A, B)}$.

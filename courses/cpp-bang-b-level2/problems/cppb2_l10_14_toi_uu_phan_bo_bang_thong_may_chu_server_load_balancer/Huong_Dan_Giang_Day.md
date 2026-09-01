@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ƯU PHÂN BỔ BĂNG THÔNG MÁY CHỦ (SERVER LOAD BALANCER)
+# Hướng dẫn giảng dạy: Tối ưu phân bổ băng thông máy chủ (server load balancer)
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

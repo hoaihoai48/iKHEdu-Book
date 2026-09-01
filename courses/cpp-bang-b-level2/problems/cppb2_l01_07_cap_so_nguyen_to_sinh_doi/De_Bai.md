@@ -1,4 +1,4 @@
-# Cặp Số Nguyên Tố Sinh Đôi Trong Đoạn
+# Cặp số nguyên tố sinh đôi trong đoạn
 
 ## Bối cảnh
 Trong lý thuyết số học, một cặp số nguyên tố sinh đôi (Twin Primes) là cặp số nguyên tố $(p, p+2)$ có khoảng cách đúng bằng 2. Bài toán đặt ra yêu cầu đếm số lượng cặp số nguyên tố sinh đôi nằm hoàn toàn trong đoạn $[L, R]$. Do $R$ có thể lên tới $10^{12}$ và độ dài đoạn $R - L \le 10^6$, ta cần kết hợp Sàng nguyên tố phân đoạn (Segmented Sieve) để đánh dấu các số nguyên tố trong khoảng truy vấn.

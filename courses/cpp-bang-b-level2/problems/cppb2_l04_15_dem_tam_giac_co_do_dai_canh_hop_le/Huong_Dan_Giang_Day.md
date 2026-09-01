@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM TAM GIÁC CÓ ĐỘ DÀI CẠNH HỢP LỆ
+# Hướng dẫn giảng dạy: Đếm tam giác có độ dài cạnh hợp lệ
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

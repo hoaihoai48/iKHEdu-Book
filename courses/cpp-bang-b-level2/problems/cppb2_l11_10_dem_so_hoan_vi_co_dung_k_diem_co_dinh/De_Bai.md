@@ -1,4 +1,4 @@
-# Đếm Số Hoán Vị Có Đúng K Điểm Cố Định
+# Đếm số hoán vị có đúng k điểm cố định
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Hoán Vị Có Đúng K Điểm Cố Định** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Công thức $\binom{N}{K} \times D_{N-K} \bmod M$.

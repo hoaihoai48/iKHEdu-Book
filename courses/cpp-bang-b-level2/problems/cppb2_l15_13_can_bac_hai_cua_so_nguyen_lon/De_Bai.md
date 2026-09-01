@@ -1,4 +1,4 @@
-# Căn Bậc Hai Của Số Nguyên Lớn
+# Căn bậc hai của số nguyên lớn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Căn Bậc Hai Của Số Nguyên Lớn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân kết hợp nhân BigInt.

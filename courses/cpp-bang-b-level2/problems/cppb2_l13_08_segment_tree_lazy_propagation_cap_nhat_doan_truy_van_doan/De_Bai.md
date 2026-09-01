@@ -1,4 +1,4 @@
-# Segment Tree Lazy Propagation (cập Nhật Đoạn & Truy Vấn Đoạn)
+# Segment Tree lazy propagation (cập nhật đoạn & truy vấn đoạn)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Lazy Propagation (Cập Nhật Đoạn & Truy Vấn Đoạn)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Kỹ thuật Lazy Propagation.

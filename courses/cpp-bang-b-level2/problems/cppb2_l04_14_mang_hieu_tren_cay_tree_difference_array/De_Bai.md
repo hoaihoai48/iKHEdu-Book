@@ -1,4 +1,4 @@
-# Mảng Hiệu Trên Cây (tree Difference Array)
+# Mảng hiệu trên cây (Tree difference array)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mảng Hiệu Trên Cây (Tree Difference Array)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cập nhật cộng trọng số trên đường đi $(u, v)$ qua LCA.

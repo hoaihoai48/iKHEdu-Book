@@ -1,14 +1,14 @@
-# Segment Tree Max Subarray Sum
+# Segment Tree max subarray sum
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Max Subarray Sum** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Segment Tree Max Subarray Sum**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Segment Tree Max Subarray Sum với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Segment Tree Max Subarray Sum với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 ## Output
 - In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
@@ -16,18 +16,16 @@ Hãy lập trình giải quyết bài toán Segment Tree Max Subarray Sum với 
 ## Sample 1
 ### Input
 ```text
-3 2
--1 2 3
-1 1 4
-2 1 3
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-9
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `9`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Segment Tree Max Subarray Sum.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $1 \le N \le 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

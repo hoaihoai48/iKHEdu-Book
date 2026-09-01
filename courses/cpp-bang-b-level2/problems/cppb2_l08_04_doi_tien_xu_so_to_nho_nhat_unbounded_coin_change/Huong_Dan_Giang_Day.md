@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐỔI TIỀN XU SỐ TỜ NHỎ NHẤT (UNBOUNDED COIN CHANGE)
+# Hướng dẫn giảng dạy: Đổi tiền xu số tờ nhỏ nhất (unbounded coin change)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

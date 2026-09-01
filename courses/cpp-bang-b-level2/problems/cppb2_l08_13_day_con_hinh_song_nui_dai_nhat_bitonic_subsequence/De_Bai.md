@@ -1,4 +1,4 @@
-# Dãy Con Hình Sóng Núi Dài Nhất (bitonic Subsequence)
+# Dãy con hình sóng núi dài nhất (bitonic subsequence)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Hình Sóng Núi Dài Nhất (Bitonic Subsequence)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Kết hợp LIS xuôi và LDS ngược trong $\mathcal{O}(N \log N)$.

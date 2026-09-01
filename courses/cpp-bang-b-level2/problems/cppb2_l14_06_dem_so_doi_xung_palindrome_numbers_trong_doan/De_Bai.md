@@ -1,4 +1,4 @@
-# Đếm Số Đối Xứng (palindrome Numbers) Trong Đoạn
+# Đếm số đối xứng (palindrome numbers) trong đoạn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đối Xứng (Palindrome Numbers) Trong Đoạn** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP xây dựng nửa đầu và nửa sau.

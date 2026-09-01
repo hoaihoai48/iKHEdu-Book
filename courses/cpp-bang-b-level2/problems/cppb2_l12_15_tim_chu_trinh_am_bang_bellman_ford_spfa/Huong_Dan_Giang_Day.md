@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM CHU TRÌNH ÂM BẰNG BELLMAN-FORD / SPFA
+# Hướng dẫn giảng dạy: Tìm chu trình âm bằng bellman-ford / spfa
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

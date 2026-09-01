@@ -1,4 +1,4 @@
-# Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất
+# Tìm số thỏa mãn điều kiện chữ số thứ k nhỏ nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chặt nhị phân kết quả kết hợp hàm đếm Digit DP.

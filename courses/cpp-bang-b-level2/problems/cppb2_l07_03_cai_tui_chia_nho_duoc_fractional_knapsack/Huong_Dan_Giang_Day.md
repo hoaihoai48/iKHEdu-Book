@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CÁI TÚI CHIA NHỎ ĐƯỢC (FRACTIONAL KNAPSACK)
+# Hướng dẫn giảng dạy: Cái túi chia nhỏ được (fractional knapsack)
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

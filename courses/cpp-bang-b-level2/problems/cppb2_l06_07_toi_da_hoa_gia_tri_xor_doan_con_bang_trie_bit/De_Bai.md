@@ -1,4 +1,4 @@
-# Tối Đa Hóa Giá Trị Xor Đoạn Con Bằng Trie Bit
+# Tối đa hóa giá trị xor đoạn con bằng Trie BIT
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Đa Hóa Giá Trị XOR Đoạn Con Bằng Trie Bit** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Cây Trie nhị phân tìm Max XOR $\mathcal{O}(30N)$.

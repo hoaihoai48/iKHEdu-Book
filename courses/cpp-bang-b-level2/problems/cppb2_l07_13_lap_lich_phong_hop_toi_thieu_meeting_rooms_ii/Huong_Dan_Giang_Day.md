@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LẬP LỊCH PHÒNG HỌP TỐI THIỂU (MEETING ROOMS II)
+# Hướng dẫn giảng dạy: Lập lịch phòng họp tối thiểu (meeting rooms ii)
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

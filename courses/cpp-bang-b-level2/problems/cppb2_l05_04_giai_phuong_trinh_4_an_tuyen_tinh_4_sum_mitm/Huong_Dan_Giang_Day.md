@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: GIẢI PHƯƠNG TRÌNH $4$ ẨN TUYẾN TÍNH (4-SUM MITM)
+# Hướng dẫn giảng dạy: Giải phương trình $4$ ẩn tuyến tính (4-sum mitm)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

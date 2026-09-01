@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SẮP XẾP TÔ-PÔ LẬP LỊCH KHÓA HỌC (TOPOLOGICAL SORT)
+# Hướng dẫn giảng dạy: Sắp xếp tô-pô lập lịch khóa học (topological sort)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

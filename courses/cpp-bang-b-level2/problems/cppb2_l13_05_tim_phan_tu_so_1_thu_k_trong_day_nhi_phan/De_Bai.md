@@ -1,4 +1,4 @@
-# Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân
+# Tìm phần tử số 1 thứ k trong dãy nhị phân
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Chặt nhị phân trực tiếp trên Segment Tree.

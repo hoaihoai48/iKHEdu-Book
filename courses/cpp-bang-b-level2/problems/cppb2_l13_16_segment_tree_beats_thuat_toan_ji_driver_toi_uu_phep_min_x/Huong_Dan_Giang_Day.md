@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SEGMENT TREE BEATS (THUẬT TOÁN JI DRIVER TỐI ƯU PHÉP MIN=X)
+# Hướng dẫn giảng dạy: Segment Tree beats (thuật toán ji driver tối ưu phép min=x)
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

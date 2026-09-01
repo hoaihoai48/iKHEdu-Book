@@ -1,4 +1,4 @@
-# Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất
+# Tìm cặp điểm có khoảng cách manhattan nhỏ nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sweep-line kết hợp `set` tìm kiếm lân cận.

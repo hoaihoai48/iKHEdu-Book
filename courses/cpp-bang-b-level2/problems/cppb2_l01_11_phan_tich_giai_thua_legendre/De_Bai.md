@@ -1,4 +1,4 @@
-# Phân Tích Thừa Số Nguyên Tố Của Giai Thừa (định Lý Legendre)
+# Phân tích thừa số nguyên tố của giai thừa (định lý Legendre)
 
 ## Bối cảnh
 Cho số nguyên dương $N$ và một số nguyên tố $P$. Cần tìm số mũ lớn nhất $K$ sao cho $N!$ chia hết cho $P^K$ (ký hiệu $v_P(N!)$). Áp dụng công thức Legendre: $v_P(N!) = \sum_{i=1}^{\infty} \lfloor \frac{N}{P^i} \rfloor$, thuật toán cho phép tính $K$ trong thời gian $\mathcal{O}(\log_P N)$ mà không cần tính trực tiếp giá trị khổng lồ của $N!$.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SẮP ĐẶT CHUỖI KÝ TỰ KHÔNG TRÙNG LẶP KỀ NHAU
+# Hướng dẫn giảng dạy: Sắp đặt chuỗi ký tự không trùng lặp kề nhau
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

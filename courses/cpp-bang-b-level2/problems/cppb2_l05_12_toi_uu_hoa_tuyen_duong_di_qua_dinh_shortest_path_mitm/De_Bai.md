@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path Mitm)
+# Tối ưu hóa tuyến đường đi qua đỉnh (shortest path mitm)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (Shortest Path MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS 2 đầu gặp nhau ở giữa.

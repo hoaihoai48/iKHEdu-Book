@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHÂN TÍCH THỪA SỐ TRUY VẤN NHANH
+# Hướng dẫn giảng dạy: Phân tích thừa số truy vấn nhanh
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

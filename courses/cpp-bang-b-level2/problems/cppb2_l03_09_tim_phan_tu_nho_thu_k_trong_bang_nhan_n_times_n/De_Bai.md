@@ -1,4 +1,4 @@
-# Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $n \times N$
+# Tìm phần tử nhỏ thứ k trong bảng nhân $n \times n$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $N \times N$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BS trên giá trị, hàm check đếm $\mathcal{O}(N)$.

@@ -1,4 +1,4 @@
-# Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ
+# Định lý Lucas cho tổ hợp modulo nguyên tố nhỏ
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Định lý Lucas $\binom{n}{k} \equiv \prod \binom{n_i}{k_i} \pmod P$.

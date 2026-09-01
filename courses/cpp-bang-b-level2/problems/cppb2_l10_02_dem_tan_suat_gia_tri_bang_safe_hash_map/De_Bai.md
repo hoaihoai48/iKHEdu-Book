@@ -1,4 +1,4 @@
-# Đếm Tần Suất Giá Trị Bằng Safe Hash Map
+# Đếm tần suất giá trị bằng safe hash map
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Tần Suất Giá Trị Bằng Safe Hash Map** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: `unordered_map` với `custom_hash`.

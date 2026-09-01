@@ -1,4 +1,4 @@
-# Số Phân Hoạch Tập Hợp (số Stirling Loại 2)
+# Số phân hoạch tập hợp (số Stirling loại 2)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Phân Hoạch Tập Hợp (Số Stirling Loại 2)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP tính $S(n, k) = S(n-1, k-1) + k \cdot S(n-1, k)$.

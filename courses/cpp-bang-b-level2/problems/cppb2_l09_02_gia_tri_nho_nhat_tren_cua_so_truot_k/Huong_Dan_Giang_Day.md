@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: GIÁ TRỊ NHỎ NHẤT TRÊN CỬA SỔ TRƯỢT K
+# Hướng dẫn giảng dạy: Giá trị nhỏ nhất trên cửa sổ trượt k
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

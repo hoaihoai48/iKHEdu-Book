@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHÔI PHỤC CÂY KHẢO SÁT TẦM NHÌN ĐA HƯỚNG
+# Hướng dẫn giảng dạy: Khôi phục cây khảo sát tầm nhìn đa hướng
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

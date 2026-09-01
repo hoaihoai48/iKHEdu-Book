@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LAZY PROPAGATION GÁN ĐOẠN VÀ TÌM MIN ĐOẠN
+# Hướng dẫn giảng dạy: Lazy propagation gán đoạn và tìm min đoạn
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

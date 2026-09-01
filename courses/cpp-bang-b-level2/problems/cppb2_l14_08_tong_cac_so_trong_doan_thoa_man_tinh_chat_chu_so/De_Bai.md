@@ -1,4 +1,4 @@
-# Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số
+# Tổng các số trong đoạn thỏa mãn tính chất chữ số
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP trả về cặp `{số_lượng, tổng_giá_trị}`.

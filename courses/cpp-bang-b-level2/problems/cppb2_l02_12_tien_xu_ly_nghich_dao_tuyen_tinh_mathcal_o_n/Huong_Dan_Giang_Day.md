@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TIỀN XỬ LÝ NGHỊCH ĐẢO TUYẾN TÍNH $\MATHCAL{O}(N)$
+# Hướng dẫn giảng dạy: Tiền xử lý nghịch đảo tuyến tính $\mathcal{o}(n)$
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

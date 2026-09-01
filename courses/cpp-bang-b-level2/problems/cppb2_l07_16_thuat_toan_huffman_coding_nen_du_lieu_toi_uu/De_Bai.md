@@ -1,4 +1,4 @@
-# Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu
+# Thuật toán huffman coding nén dữ liệu tối ưu
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cây mã hóa nhị phân tiền tố tối ưu.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM PHẦN TỬ SỐ 1 THỨ K TRONG DÃY NHỊ PHÂN
+# Hướng dẫn giảng dạy: Tìm phần tử số 1 thứ k trong dãy nhị phân
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

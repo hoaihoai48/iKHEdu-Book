@@ -1,4 +1,4 @@
-# Cái Túi Kích Thước Nhỏ (knapsack $n \le 40$)
+# Cái túi kích thước nhỏ (knapsack $n \le 40$)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Kích Thước Nhỏ (Knapsack $N \le 40$)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cài đặt Meet in the Middle cơ bản.

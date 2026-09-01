@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHÂN CHIA CÔNG VIỆC THỢ SƠN (PAINTER'S PARTITION)
+# Hướng dẫn giảng dạy: Phân chia công việc thợ sơn (painter's partition)
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

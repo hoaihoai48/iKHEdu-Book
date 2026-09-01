@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÍNH TỔ HỢP NCR MODULO
+# Hướng dẫn giảng dạy: Tính tổ hợp ncr modulo
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

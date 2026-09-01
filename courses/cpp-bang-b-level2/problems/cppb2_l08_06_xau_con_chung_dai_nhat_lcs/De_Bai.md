@@ -1,4 +1,4 @@
-# Xâu Con Chung Dài Nhất (lcs)
+# Xâu con chung dài nhất (lcs)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Chung Dài Nhất (LCS)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP chuỗi 2D.

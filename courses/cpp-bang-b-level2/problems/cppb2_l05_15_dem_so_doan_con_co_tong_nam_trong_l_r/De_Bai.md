@@ -1,4 +1,4 @@
-# Đếm Số Đoạn Con Có Tổng Nằm Trong $[l, R]$
+# Đếm số đoạn con có tổng nằm trong $[l, r]$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đoạn Con Có Tổng Nằm Trong $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chia để trị trên mảng tiền tố $\mathcal{O}(N \log N)$.

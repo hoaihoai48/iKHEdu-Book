@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: BỔ ĐỀ BURNSIDE ĐẾM CẤU HÌNH BẤT BIẾN PHÉP QUAY
+# Hướng dẫn giảng dạy: Bổ đề burnside đếm cấu hình bất biến phép quay
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

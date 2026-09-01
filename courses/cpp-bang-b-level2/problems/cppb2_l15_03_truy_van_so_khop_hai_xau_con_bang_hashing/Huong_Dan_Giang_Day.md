@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRUY VẤN SO KHỚP HAI XÂU CON BẰNG HASHING
+# Hướng dẫn giảng dạy: Truy vấn so khớp hai xâu con bằng hashing
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

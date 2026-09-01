@@ -1,4 +1,4 @@
-# Tính Giai Thừa $n!$ Cho $n = 1000$ Bằng Bigint
+# Tính giai thừa $n!$ cho $n = 1000$ bằng BigInt
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tính Giai Thừa $N!$ Cho $N = 1000$ Bằng BigInt** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Nhân BigInt với số nguyên.

@@ -1,4 +1,4 @@
-# Tập Con Có Tổng Gần S Nhất
+# Tập con có tổng gần s nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tập Con Có Tổng Gần S Nhất** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: MITM kết hợp `lower_bound`.

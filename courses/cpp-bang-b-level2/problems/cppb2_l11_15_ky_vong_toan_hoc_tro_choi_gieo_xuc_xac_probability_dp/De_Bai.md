@@ -1,4 +1,4 @@
-# Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (probability Dp)
+# Kỳ vọng toán học trò chơi gieo xúc xắc (probability DP)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (Probability DP)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP tính kỳ vọng bước đi $E[i]$.

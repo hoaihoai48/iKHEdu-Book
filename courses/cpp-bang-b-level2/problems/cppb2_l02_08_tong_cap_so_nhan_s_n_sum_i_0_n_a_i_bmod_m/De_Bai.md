@@ -1,4 +1,4 @@
-# Tổng Cấp Số Nhân $s_n = \sum_{i=0}^n A^i \bmod M$
+# Tổng cấp số nhân $s_n = \sum_{i=0}^n a^i \bmod m$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Cấp Số Nhân $S_N = \sum_{i=0}^N A^i \bmod M$** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chia để trị tính tổng cấp số nhân $\mathcal{O}(\log N)$.

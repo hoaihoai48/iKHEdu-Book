@@ -1,4 +1,4 @@
-# Lập Lịch Phòng Họp Tối Thiểu (meeting Rooms Ii)
+# Lập lịch phòng họp tối thiểu (meeting rooms ii)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Phòng Họp Tối Thiểu (Meeting Rooms II)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Min-Heap theo dõi phòng họp trống sớm nhất.

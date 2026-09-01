@@ -1,4 +1,4 @@
-# Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái
+# Đoạn con ngắn nhất chứa đầy đủ bảng chữ cái
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cửa sổ trượt co giãn duy trì biến đếm `unique_count`.

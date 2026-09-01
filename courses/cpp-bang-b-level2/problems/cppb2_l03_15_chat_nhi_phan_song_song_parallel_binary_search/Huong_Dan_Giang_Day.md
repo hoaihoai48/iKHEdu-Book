@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHẶT NHỊ PHÂN SONG SONG (PARALLEL BINARY SEARCH)
+# Hướng dẫn giảng dạy: Chặt nhị phân song song (parallel binary search)
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

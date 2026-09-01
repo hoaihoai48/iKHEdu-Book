@@ -1,4 +1,4 @@
-# Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất
+# Nối các sợi dây tiết kiệm chi phí nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hàng đợi ưu tiên `priority_queue` (Cây Huffman).

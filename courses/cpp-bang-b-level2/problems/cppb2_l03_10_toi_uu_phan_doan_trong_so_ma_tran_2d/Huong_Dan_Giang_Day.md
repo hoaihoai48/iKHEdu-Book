@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ƯU PHÂN ĐOẠN TRỌNG SỐ MA TRẬN 2D
+# Hướng dẫn giảng dạy: Tối ưu phân đoạn trọng số ma trận 2d
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

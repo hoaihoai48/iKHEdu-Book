@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐUA XE TRONG MÊ CUNG ĐỔI HƯỚNG ÍT NHẤT (0-1 BFS)
+# Hướng dẫn giảng dạy: Đua xe trong mê cung đổi hướng ít nhất (0-1 BFS)
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

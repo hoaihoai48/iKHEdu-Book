@@ -1,4 +1,4 @@
-# Tìm Khớp Và Cầu Trên Đồ Thị (tarjan's Bridge & Articulation)
+# Tìm khớp và cầu trên đồ thị (tarjan's bridge & articulation)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Khớp Và Cầu Trên Đồ Thị (Tarjan's Bridge & Articulation)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Mảng `num` và `low` trong DFS.

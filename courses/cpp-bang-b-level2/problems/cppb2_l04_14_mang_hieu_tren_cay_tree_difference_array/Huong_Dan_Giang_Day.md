@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: MẢNG HIỆU TRÊN CÂY (TREE DIFFERENCE ARRAY)
+# Hướng dẫn giảng dạy: Mảng hiệu trên cây (Tree difference array)
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

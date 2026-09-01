@@ -1,4 +1,4 @@
-# Ghép Thuyền Cứu Hộ Cực Trị
+# Ghép thuyền cứu hộ cực trị
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Thuyền Cứu Hộ Cực Trị** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hai con trỏ ghép kiện nặng nhất + nhẹ nhất.

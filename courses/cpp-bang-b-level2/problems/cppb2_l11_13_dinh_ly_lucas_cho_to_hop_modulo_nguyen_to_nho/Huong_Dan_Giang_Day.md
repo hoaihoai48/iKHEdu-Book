@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐỊNH LÝ LUCAS CHO TỔ HỢP MODULO NGUYÊN TỐ NHỎ
+# Hướng dẫn giảng dạy: Định lý Lucas cho tổ hợp modulo nguyên tố nhỏ
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

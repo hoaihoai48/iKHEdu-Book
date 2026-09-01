@@ -1,4 +1,4 @@
-# Đường Đi Trên Ma Trận Có Tổng Lớn Nhất
+# Đường đi trên ma trận có tổng lớn nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Trên Ma Trận Có Tổng Lớn Nhất** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: DP 2D $dp[i][j] = \max(dp[i-1][j], dp[i][j-1]) + A[i][j]$.

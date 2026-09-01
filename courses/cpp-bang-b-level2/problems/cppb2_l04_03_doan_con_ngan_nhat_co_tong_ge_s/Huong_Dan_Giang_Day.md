@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐOẠN CON NGẮN NHẤT CÓ TỔNG $\GE S$
+# Hướng dẫn giảng dạy: Đoạn con ngắn nhất có tổng $\ge s$
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

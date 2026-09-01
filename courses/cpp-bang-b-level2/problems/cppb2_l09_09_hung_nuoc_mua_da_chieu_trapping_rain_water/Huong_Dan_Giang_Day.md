@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HỨNG NƯỚC MƯA ĐA CHIỀU (TRAPPING RAIN WATER)
+# Hướng dẫn giảng dạy: Hứng nước mưa đa chiều (trapping rain water)
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

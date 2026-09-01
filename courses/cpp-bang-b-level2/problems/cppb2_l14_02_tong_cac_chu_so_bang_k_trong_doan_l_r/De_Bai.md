@@ -1,4 +1,4 @@
-# Tổng Các Chữ Số Bằng K Trong Đoạn [l, R]
+# Tổng các chữ số bằng k trong đoạn [l, r]
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Các Chữ Số Bằng K Trong Đoạn [L, R]** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Digit DP lưu trạng thái `current_sum`.

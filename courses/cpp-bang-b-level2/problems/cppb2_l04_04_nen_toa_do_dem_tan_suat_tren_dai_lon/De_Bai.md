@@ -1,4 +1,4 @@
-# Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn
+# Nén tọa độ & đếm tần suất trên dải lớn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: `sort` + `unique` + `lower_bound`.

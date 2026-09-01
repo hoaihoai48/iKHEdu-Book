@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐỊNH LÝ THẶNG DƯ TRUNG HOA (CHINESE REMAINDER THEOREM — CRT)
+# Hướng dẫn giảng dạy: Định lý thặng dư trung hoa (chinese remainder theorem — CRT)
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

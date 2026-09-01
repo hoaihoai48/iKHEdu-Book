@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CĂN BẬC HAI CỦA SỐ NGUYÊN LỚN
+# Hướng dẫn giảng dạy: Căn bậc hai của số nguyên lớn
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

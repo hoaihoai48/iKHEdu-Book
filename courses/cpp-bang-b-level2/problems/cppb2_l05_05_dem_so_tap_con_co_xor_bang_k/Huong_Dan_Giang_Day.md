@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ TẬP CON CÓ XOR BẰNG K
+# Hướng dẫn giảng dạy: Đếm số tập con có xor bằng k
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

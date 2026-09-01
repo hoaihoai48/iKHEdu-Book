@@ -1,4 +1,4 @@
-# Lũy Thừa Ma Trận 2x2 (dãy Fibonacci Lớn)
+# Lũy thừa ma trận 2x2 (dãy fibonacci lớn)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Ma Trận 2x2 (Dãy Fibonacci Lớn)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Áp dụng Fast Power cho nhân ma trận.

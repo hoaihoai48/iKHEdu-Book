@@ -1,4 +1,4 @@
-# Đếm Số Tự Mãn (số Armstrong / Narcissistic) Trong Đoạn
+# Đếm số tự mãn (số armstrong / narcissistic) trong đoạn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tự Mãn (Số Armstrong / Narcissistic) Trong Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP tính tổng lũy thừa bậc $K$ chữ số.

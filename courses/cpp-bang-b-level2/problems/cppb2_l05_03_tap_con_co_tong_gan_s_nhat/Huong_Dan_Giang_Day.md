@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TẬP CON CÓ TỔNG GẦN S NHẤT
+# Hướng dẫn giảng dạy: Tập con có tổng gần s nhất
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

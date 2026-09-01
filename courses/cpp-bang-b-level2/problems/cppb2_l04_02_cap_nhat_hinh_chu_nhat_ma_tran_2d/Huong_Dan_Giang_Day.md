@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CẬP NHẬT HÌNH CHỮ NHẬT MA TRẬN 2D
+# Hướng dẫn giảng dạy: Cập nhật hình chữ nhật ma trận 2d
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

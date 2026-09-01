@@ -1,4 +1,4 @@
-# Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần
+# Xâu con lặp lại dài nhất xuất hiện ít nhất k lần
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chặt nhị phân độ dài kết hợp Double Hash.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM NGHIỆM THỰC CỦA PHƯƠNG TRÌNH PHI TUYẾN
+# Hướng dẫn giảng dạy: Tìm nghiệm thực của phương trình phi tuyến
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

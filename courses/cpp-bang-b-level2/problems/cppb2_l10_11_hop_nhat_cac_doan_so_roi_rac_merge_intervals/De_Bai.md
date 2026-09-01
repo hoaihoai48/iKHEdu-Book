@@ -1,4 +1,4 @@
-# Hợp Nhất Các Đoạn Số Rời Rạc (merge Intervals)
+# Hợp nhất các đoạn số rời rạc (merge intervals)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hợp Nhất Các Đoạn Số Rời Rạc (Merge Intervals)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `map` hoặc `set` quản lý các khoảng rời.

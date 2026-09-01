@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ TỰ MÃN (SỐ ARMSTRONG / NARCISSISTIC) TRONG ĐOẠN
+# Hướng dẫn giảng dạy: Đếm số tự mãn (số armstrong / narcissistic) trong đoạn
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

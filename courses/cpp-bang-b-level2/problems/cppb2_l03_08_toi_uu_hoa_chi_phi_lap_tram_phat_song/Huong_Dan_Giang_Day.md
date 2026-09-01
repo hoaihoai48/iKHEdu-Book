@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ƯU HÓA CHI PHÍ LẮP TRẠM PHÁT SÓNG
+# Hướng dẫn giảng dạy: Tối ưu hóa chi phí lắp trạm phát sóng
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

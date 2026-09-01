@@ -1,4 +1,4 @@
-# Dãy Con Tăng Dài Nhất Lis
+# Dãy con tăng dài nhất LIS
 
 ## Bối cảnh
 Tìm độ dài dãy con tăng nghiêm ngặt dài nhất của mảng $N$ phần tử.

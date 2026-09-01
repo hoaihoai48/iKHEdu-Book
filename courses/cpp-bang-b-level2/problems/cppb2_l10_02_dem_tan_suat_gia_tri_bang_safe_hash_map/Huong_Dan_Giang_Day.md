@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM TẦN SUẤT GIÁ TRỊ BẰNG SAFE HASH MAP
+# Hướng dẫn giảng dạy: Đếm tần suất giá trị bằng safe hash map
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

@@ -1,4 +1,4 @@
-# Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất
+# Cắt bánh hình chữ nhật có giá trị lớn nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP 2D chia đôi hình chữ nhật.

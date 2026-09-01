@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HÌNH CHỮ NHẬT LỚN NHẤT DƯỚI BIỂU ĐỒ CỘT (HISTOGRAM)
+# Hướng dẫn giảng dạy: Hình chữ nhật lớn nhất dưới biểu đồ cột (histogram)
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

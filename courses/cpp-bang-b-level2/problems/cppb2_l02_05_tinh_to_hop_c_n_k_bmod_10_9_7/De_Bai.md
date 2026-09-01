@@ -1,4 +1,4 @@
-# Tính Tổ Hợp $c_n^k \bmod (10^9+7)$
+# Tính tổ hợp $c_n^k \bmod (10^9+7)$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tính Tổ Hợp $C_n^k \bmod (10^9+7)$** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tiền xử lý giai thừa & nghịch đảo giai thừa.

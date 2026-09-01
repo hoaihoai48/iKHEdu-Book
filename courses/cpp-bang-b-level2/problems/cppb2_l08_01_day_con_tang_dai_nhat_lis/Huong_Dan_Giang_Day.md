@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DÃY CON TĂNG DÀI NHẤT LIS
+# Hướng dẫn giảng dạy: Dãy con tăng dài nhất LIS
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

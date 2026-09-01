@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ CHỨA ĐẦY ĐỦ CÁC CHỮ SỐ TỪ 0 ĐẾN 9
+# Hướng dẫn giảng dạy: Số chứa đầy đủ các chữ số từ 0 đến 9
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

@@ -1,4 +1,4 @@
-# Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (gas Station)
+# Số lượng trạm tiếp nhiên liệu ít nhất (gas station)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (Gas Station)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Max-Heap chọn cây xăng có trữ lượng lớn nhất khi hết xăng.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HỆ THỐNG ĐẶT CHỖ RẠP CHIẾU PHIM TỐI ƯU
+# Hướng dẫn giảng dạy: Hệ thống đặt chỗ rạp chiếu phim tối ưu
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

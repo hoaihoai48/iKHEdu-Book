@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NHÂN HAI SỐ NGUYÊN LỚN
+# Hướng dẫn giảng dạy: Nhân hai số nguyên lớn
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

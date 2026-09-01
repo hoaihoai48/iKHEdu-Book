@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XÓA K CHỮ SỐ ĐỂ ĐƯỢC SỐ NHỎ NHẤT
+# Hướng dẫn giảng dạy: Xóa k chữ số để được số nhỏ nhất
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

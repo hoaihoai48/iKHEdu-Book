@@ -1,4 +1,4 @@
-# Đếm Số Tập Con Có Xor Bằng K
+# Đếm số tập con có xor bằng k
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tập Con Có XOR Bằng K** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: MITM với phép toán Bitwise XOR.

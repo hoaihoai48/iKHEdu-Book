@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: MÊ CUNG TRỌNG SỐ 0 VÀ 1 (0-1 BFS)
+# Hướng dẫn giảng dạy: Mê cung trọng số 0 và 1 (0-1 BFS)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

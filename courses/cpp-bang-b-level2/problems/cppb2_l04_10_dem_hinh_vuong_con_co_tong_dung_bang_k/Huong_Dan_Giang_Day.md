@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM HÌNH VUÔNG CON CÓ TỔNG ĐÚNG BẰNG K
+# Hướng dẫn giảng dạy: Đếm hình vuông con có tổng đúng bằng k
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

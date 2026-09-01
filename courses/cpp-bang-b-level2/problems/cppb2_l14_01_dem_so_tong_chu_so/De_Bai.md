@@ -1,4 +1,4 @@
-# Đếm Số Có Tổng Chữ Số Bằng K
+# Đếm số có tổng chữ số bằng k
 
 ## Bối cảnh
 Đếm số lượng số nguyên trong đoạn $[L, R]$ có tổng các chữ số đúng bằng $K$.

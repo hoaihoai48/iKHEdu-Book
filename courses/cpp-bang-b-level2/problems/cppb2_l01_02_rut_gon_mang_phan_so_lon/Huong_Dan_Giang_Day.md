@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: RÚT GỌN MẢNG PHÂN SỐ LỚN
+# Hướng dẫn giảng dạy: Rút gọn mảng phân số lớn
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

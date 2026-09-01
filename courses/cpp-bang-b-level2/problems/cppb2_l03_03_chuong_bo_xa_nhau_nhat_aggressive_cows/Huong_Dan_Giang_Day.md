@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHUỒNG BÒ XA NHAU NHẤT (AGGRESSIVE COWS)
+# Hướng dẫn giảng dạy: Chuồng bò xa nhau nhất (aggressive cows)
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: MA TRẬN TOÀN SỐ 1 LỚN NHẤT (MAXIMAL RECTANGLE 2D)
+# Hướng dẫn giảng dạy: Ma trận toàn số 1 lớn nhất (maximal rectangle 2d)
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

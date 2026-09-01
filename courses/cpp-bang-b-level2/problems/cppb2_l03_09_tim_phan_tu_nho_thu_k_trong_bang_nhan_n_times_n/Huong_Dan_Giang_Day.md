@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM PHẦN TỬ NHỎ THỨ K TRONG BẢNG NHÂN $N \TIMES N$
+# Hướng dẫn giảng dạy: Tìm phần tử nhỏ thứ k trong bảng nhân $n \times n$
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

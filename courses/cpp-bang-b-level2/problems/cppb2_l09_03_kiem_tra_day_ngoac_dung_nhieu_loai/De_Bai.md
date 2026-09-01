@@ -1,4 +1,4 @@
-# Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại
+# Kiểm tra dãy ngoặc đúng nhiều loại
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Ứng dụng Stack cơ bản.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LẬP LỊCH CÔNG VIỆC CÓ DEADLINE & TIỀN PHẠT
+# Hướng dẫn giảng dạy: Lập lịch công việc có deadline & tiền phạt
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

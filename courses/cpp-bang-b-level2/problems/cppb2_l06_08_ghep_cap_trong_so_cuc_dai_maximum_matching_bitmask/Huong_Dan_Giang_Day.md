@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: GHÉP CẶP TRỌNG SỐ CỰC ĐẠI (MAXIMUM MATCHING BITMASK)
+# Hướng dẫn giảng dạy: Ghép cặp trọng số cực đại (maximum matching bitmask)
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

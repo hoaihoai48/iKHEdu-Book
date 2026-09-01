@@ -1,4 +1,4 @@
-# Khử Chiều 3-sum & 4-sum Hai Con Trỏ
+# Khử chiều 3-sum & 4-sum hai con trỏ
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khử Chiều 3-Sum & 4-Sum Hai Con Trỏ** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Khử chiều không gian từ $\mathcal{O}(N^3) \to \mathcal{O}(N^2)$.

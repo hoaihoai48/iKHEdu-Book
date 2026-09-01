@@ -1,4 +1,4 @@
-# Tính Tổ Hợp Ncr Modulo
+# Tính tổ hợp ncr modulo
 
 ## Bối cảnh
 Tính $\binom{N}{K} \bmod (10^9+7)$ cho $Q$ truy vấn.

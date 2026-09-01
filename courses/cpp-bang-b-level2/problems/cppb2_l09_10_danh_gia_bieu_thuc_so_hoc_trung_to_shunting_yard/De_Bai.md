@@ -1,4 +1,4 @@
-# Đánh Giá Biểu Thức Số Học Trung Tố (shunting-yard)
+# Đánh giá biểu thức số học trung tố (shunting-yard)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đánh Giá Biểu Thức Số Học Trung Tố (Shunting-yard)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Thuật toán Shunting-yard của Dijkstra dùng 2 Stack.

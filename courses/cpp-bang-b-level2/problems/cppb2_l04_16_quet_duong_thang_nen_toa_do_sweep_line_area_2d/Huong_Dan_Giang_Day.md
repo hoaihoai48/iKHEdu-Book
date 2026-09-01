@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: QUÉT ĐƯỜNG THẲNG NÉN TỌA ĐỘ (SWEEP-LINE AREA 2D)
+# Hướng dẫn giảng dạy: Quét đường thẳng nén tọa độ (sweep-line area 2d)
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

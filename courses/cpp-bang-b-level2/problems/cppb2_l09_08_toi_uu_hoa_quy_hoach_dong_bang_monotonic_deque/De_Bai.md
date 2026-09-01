@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque
+# Tối ưu hóa quy hoạch động bằng monotonic deque
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP $dp[i] = \min_{i-K \le j < i} (dp[j]) + A[i]$ qua Deque.

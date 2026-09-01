@@ -1,4 +1,4 @@
-# Xóa K Chữ Số Để Được Số Nhỏ Nhất
+# Xóa k chữ số để được số nhỏ nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xóa K Chữ Số Để Được Số Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Monotonic Stack duy trì các chữ số tăng dần.

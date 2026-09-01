@@ -1,4 +1,4 @@
-# Căn Bậc Hai Modulo Nguyên Tố (thuật Toán Tonelli-shanks)
+# Căn bậc hai modulo nguyên tố (thuật toán tonelli-shanks)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Căn Bậc Hai Modulo Nguyên Tố (Thuật Toán Tonelli-Shanks)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ thỏa $X^2 \equiv A \pmod P$.

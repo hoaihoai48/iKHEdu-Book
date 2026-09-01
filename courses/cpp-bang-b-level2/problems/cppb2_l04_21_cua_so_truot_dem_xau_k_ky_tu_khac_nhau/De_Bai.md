@@ -1,30 +1,31 @@
-# Cua So Truot Dem Xau K Ky Tu Khac Nhau
+# Đếm xâu con có đúng k ký tự khác nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Cua So Truot Dem Xau K Ky Tu Khac Nhau** là một dạng bài điển hình thuộc chuyên đề **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho một xâu ký tự $S$ chỉ gồm các chữ cái tiếng Anh in thường và một số nguyên dương $K$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cua So Truot Dem Xau K Ky Tu Khac Nhau với độ phức tạp tối ưu nhất.
+Hãy đếm số lượng xâu con liên tiếp của $S$ chứa đúng $K$ ký tự phân biệt bằng kỹ thuật Cửa sổ trượt (Sliding Window / Two Pointers).
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Xâu ký tự $S$ ($1 \le |S| \le 10^5$).
+- Dòng 2: Một số nguyên $K$ ($1 \le K \le 26$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra một số nguyên duy nhất là số lượng xâu con thỏa mãn.
 
 ## Sample 1
 ### Input
 ```text
-1
+pqpqs
+2
 ```
 ### Output
 ```text
-1
+7
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Các xâu con có đúng 2 ký tự khác nhau: `pq` (vị trí 0..1), `pqp` (0..2), `pqpq` (0..3), `qp` (1..2), `qpq` (1..3), `pq` (2..3), `qs` (3..4). Tổng cộng có $7$ xâu.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $1 \le |S| \le 10^5, 1 \le K \le 26$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

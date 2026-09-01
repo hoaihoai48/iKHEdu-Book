@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NỐI DÂY TIẾT KIỆM BẰNG PRIORITY QUEUE
+# Hướng dẫn giảng dạy: Nối dây tiết kiệm bằng priority queue
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

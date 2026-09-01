@@ -1,4 +1,4 @@
-# Đếm Cặp $a_i > 2 A_j$ (significant Inversions)
+# Đếm cặp $a_i > 2 a_j$ (significant inversions)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp $A_i > 2 A_j$ (Significant Inversions)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Biến thể Merge Sort đếm cặp điều kiện nâng cao.

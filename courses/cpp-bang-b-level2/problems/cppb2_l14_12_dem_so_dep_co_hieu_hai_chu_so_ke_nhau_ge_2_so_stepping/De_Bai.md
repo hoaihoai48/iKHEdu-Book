@@ -1,4 +1,4 @@
-# Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (số Stepping)
+# Đếm số đẹp có hiệu hai chữ số kề nhau $\ge 2$ (số stepping)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (Số Stepping)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP kiểm tra $\vert D_i - D_{i-1} \vert \ge 2$.

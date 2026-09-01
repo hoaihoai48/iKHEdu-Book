@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐƯỜNG ĐI EULER & CHU TRÌNH EULER (HIERHOLZER)
+# Hướng dẫn giảng dạy: Đường đi Euler & chu trình Euler (Hierholzer)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

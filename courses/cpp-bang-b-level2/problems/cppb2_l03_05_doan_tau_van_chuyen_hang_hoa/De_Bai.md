@@ -1,4 +1,4 @@
-# Đoàn Tàu Vận Chuyển Hàng Hóa
+# Đoàn tàu vận chuyển hàng hóa
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoàn Tàu Vận Chuyển Hàng Hóa** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tham lam kiểm tra tính khả thi trong $\text{check}(X)$.

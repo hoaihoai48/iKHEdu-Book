@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHỬ CHIỀU 3-SUM & 4-SUM HAI CON TRỎ
+# Hướng dẫn giảng dạy: Khử chiều 3-sum & 4-sum hai con trỏ
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

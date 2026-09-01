@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐOẠN CON CÓ TỔNG LỚN NHẤT (MAXIMUM SUBSEGMENT SUM QUERY)
+# Hướng dẫn giảng dạy: Đoạn con có tổng lớn nhất (maximum subsegment sum query)
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

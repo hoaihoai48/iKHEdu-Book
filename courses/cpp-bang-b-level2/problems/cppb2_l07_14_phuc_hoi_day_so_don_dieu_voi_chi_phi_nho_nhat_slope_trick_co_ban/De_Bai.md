@@ -1,4 +1,4 @@
-# Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (slope Trick Cơ Bản)
+# Phục hồi dãy số đơn điệu với chi phí nhỏ nhất (slope trick cơ bản)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (Slope Trick Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Duy trì hàm lỗi lồi bằng Priority Queue.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LOGARIT RỜI RẠC (BABY-STEP GIANT-STEP)
+# Hướng dẫn giảng dạy: Logarit rời rạc (baby-step giant-step)
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

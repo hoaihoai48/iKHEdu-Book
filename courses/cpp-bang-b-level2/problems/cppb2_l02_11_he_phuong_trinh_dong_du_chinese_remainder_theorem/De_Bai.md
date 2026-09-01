@@ -1,4 +1,4 @@
-# Hệ Phương Trình Đồng Dư (chinese Remainder Theorem)
+# Hệ phương trình đồng dư (chinese remainder theorem)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Phương Trình Đồng Dư (Chinese Remainder Theorem)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Định lý phần dư Trung Hoa giải hệ đồng dư.

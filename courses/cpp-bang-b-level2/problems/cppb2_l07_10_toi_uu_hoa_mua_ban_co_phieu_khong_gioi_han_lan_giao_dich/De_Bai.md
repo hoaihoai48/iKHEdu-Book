@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch
+# Tối ưu hóa mua bán cổ phiếu không giới hạn lần giao dịch
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tham lam gom mọi khoảng giá tăng $\max(0, P_{i+1} - P_i)$.

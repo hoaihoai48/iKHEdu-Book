@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHIA BÁNH PIZZA ĐỀU NHAU
+# Hướng dẫn giảng dạy: Chia bánh pizza đều nhau
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

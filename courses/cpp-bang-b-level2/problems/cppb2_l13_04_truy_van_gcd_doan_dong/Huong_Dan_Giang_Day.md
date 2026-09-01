@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRUY VẤN GCD ĐOẠN ĐỘNG
+# Hướng dẫn giảng dạy: Truy vấn GCD đoạn động
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

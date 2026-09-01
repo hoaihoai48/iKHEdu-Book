@@ -1,4 +1,4 @@
-# Quét Đường Thẳng Nén Tọa Độ (sweep-line Area 2d)
+# Quét đường thẳng nén tọa độ (sweep-line area 2d)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Quét Đường Thẳng Nén Tọa Độ (Sweep-line Area 2D)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Sweep-line kết hợp Segment Tree tính diện tích hợp.

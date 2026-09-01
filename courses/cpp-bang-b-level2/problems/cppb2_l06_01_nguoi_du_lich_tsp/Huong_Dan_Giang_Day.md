@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: BÀI TOÁN NGƯỜI DU LỊCH (TSP)
+# Hướng dẫn giảng dạy: Bài toán người du lịch (tsp)
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

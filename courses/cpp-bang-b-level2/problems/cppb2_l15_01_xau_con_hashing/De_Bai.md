@@ -1,4 +1,4 @@
-# Truy Vấn So Khớp Xâu Con Hashing
+# Truy vấn so khớp xâu con hashing
 
 ## Bối cảnh
 Cho xâu $S$ và $Q$ truy vấn kiểm tra xem hai xâu con $S[a..b]$ và $S[c..d]$ có giống nhau hay không.

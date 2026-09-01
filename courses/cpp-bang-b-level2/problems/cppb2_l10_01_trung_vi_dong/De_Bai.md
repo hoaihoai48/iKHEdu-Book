@@ -1,4 +1,4 @@
-# Duy Trì Trung Vị Động
+# Duy trì trung vị động
 
 ## Bối cảnh
 Cho luồng $N$ số, sau mỗi số được thêm vào, in ra trung vị của tập số hiện tại.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG GIÁ TRỊ MIN MỌI ĐOẠN CON NHÂN ĐỘ DÀI
+# Hướng dẫn giảng dạy: Tổng giá trị min mọi đoạn con nhân độ dài
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

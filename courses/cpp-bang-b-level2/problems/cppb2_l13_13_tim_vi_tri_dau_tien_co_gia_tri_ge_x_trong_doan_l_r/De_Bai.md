@@ -1,4 +1,4 @@
-# Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[l, R]$
+# Tìm vị trí đầu tiên có giá trị $\ge x$ trong đoạn $[l, r]$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Binary Search trên Segment Tree nhánh trái/phải.

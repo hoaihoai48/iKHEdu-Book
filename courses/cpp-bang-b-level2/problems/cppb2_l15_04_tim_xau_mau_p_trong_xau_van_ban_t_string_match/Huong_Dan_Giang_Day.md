@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM XÂU MẪU P TRONG XÂU VĂN BẢN T (STRING MATCH)
+# Hướng dẫn giảng dạy: Tìm xâu mẫu p trong xâu văn bản t (string match)
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

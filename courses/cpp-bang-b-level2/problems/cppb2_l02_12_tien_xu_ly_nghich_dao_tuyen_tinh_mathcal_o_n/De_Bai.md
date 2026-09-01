@@ -1,4 +1,4 @@
-# Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{o}(n)$
+# Tiền xử lý nghịch đảo tuyến tính $\mathcal{o}(n)$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cài đặt mảng `inv[i]` trong $\mathcal{O}(N)$.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: BẬC CỦA SỐ NGUYÊN THEO MODULO M (MULTIPLICATIVE ORDER)
+# Hướng dẫn giảng dạy: Bậc của số nguyên theo modulo m (multiplicative order)
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

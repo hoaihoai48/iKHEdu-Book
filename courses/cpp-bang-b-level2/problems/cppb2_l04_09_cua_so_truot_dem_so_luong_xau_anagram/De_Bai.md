@@ -1,4 +1,4 @@
-# Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram
+# Cửa sổ trượt đếm số lượng xâu anagram
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sliding window duy trì vector tần suất 26 chữ cái.

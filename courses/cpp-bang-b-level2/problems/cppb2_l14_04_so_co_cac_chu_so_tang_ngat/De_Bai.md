@@ -1,4 +1,4 @@
-# Số Có Các Chữ Số Tăng Ngặt
+# Số có các chữ số tăng ngặt
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Các Chữ Số Tăng Ngặt** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Digit DP lưu chữ số liền trước `last_digit`.

@@ -1,4 +1,4 @@
-# Phân Chia Công Việc Hoàn Hảo (job Assignment)
+# Phân chia công việc hoàn hảo (job assignment)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Công Việc Hoàn Hảo (Job Assignment)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Bitmask DP ghép cặp trọng số nhỏ nhất.

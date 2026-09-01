@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NHÂN MA TRẬN DÂY CHUYỀN CHI PHÍ NHỎ NHẤT (MATRIX CHAIN)
+# Hướng dẫn giảng dạy: Nhân ma trận dây chuyền chi phí nhỏ nhất (matrix chain)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

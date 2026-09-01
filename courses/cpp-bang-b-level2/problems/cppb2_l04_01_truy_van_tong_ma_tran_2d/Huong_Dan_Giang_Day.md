@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRUY VẤN TỔNG MA TRẬN CON 2D
+# Hướng dẫn giảng dạy: Truy vấn tổng ma trận con 2d
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

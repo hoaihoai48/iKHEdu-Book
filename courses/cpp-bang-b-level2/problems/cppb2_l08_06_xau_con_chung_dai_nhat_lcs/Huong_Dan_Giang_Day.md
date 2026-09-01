@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XÂU CON CHUNG DÀI NHẤT (LCS)
+# Hướng dẫn giảng dạy: Xâu con chung dài nhất (lcs)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

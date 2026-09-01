@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ CÓ SỐ LƯỢNG ƯỚC LÀ SỐ LẺ TRONG ĐOẠN
+# Hướng dẫn giảng dạy: Đếm số có số lượng ước là số lẻ trong đoạn
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

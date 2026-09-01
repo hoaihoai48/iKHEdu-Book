@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ CÓ CÁC CHỮ SỐ TĂNG NGẶT
+# Hướng dẫn giảng dạy: Số có các chữ số tăng ngặt
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

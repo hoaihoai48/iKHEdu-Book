@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHỤC HỒI DÃY SỐ ĐƠN ĐIỆU VỚI CHI PHÍ NHỎ NHẤT (SLOPE TRICK CƠ BẢN)
+# Hướng dẫn giảng dạy: Phục hồi dãy số đơn điệu với chi phí nhỏ nhất (slope trick cơ bản)
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

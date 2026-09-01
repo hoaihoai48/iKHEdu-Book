@@ -1,4 +1,4 @@
-# Tháp Lũy Thừa $a^{b^c} \bmod M$
+# Tháp lũy thừa $a^{b^c} \bmod m$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tháp Lũy Thừa $A^{B^C} \bmod M$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Áp dụng hạ bậc số mũ 2 tầng qua Euler.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ƯU HÓA MUA BÁN CỔ PHIẾU KHÔNG GIỚI HẠN LẦN GIAO DỊCH
+# Hướng dẫn giảng dạy: Tối ưu hóa mua bán cổ phiếu không giới hạn lần giao dịch
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

@@ -1,4 +1,4 @@
-# Bài Toán Người Du Lịch (tsp)
+# Bài toán người du lịch (tsp)
 
 ## Bối cảnh
 Cho ma trận khoảng cách giữa $N$ thành phố ($N \le 18$). Tìm chi phí nhỏ nhất xuất phát từ thành phố 0, thăm tất cả các thành phố đúng 1 lần rồi quay về 0.

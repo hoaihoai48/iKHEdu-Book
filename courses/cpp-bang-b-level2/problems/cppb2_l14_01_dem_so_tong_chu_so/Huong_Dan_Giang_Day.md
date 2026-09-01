@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ CÓ TỔNG CHỮ SỐ BẰNG K
+# Hướng dẫn giảng dạy: Đếm số có tổng chữ số bằng k
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

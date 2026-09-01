@@ -1,30 +1,29 @@
-# Tim Kiem Tam Phan Cuc Tri Ham Loi
+# Tìm cực tiểu của hàm bậc hai
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tim Kiem Tam Phan Cuc Tri Ham Loi** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho hàm số bậc hai $f(x) = ax^2 + bx + c$ với hệ số $a > 0$ (hàm lồi trên tập số thực $\mathbb{R}$). Cần tìm giá trị của biến số $x$ trong đoạn $[L, R]$ sao cho giá trị $f(x)$ đạt cực tiểu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tim Kiem Tam Phan Cuc Tri Ham Loi với độ phức tạp tối ưu nhất.
+Hãy sử dụng thuật toán Tìm kiếm tam phân (Ternary Search) trên tập số thực để tìm hoành độ $x \in [L, R]$ làm cho $f(x)$ đạt giá trị nhỏ nhất với độ chính xác tuyệt đối không quá $10^{-6}$.
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Một dòng duy nhất chứa 5 số thực $a, b, c, L, R$ ($a > 0, -10^6 \le b, c, L, R \le 10^6, L \le R$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra giá trị $x$ tìm được với đúng 6 chữ số thập phân sau dấu phẩy.
 
 ## Sample 1
 ### Input
 ```text
-1
+1 -4 4 0 5
 ```
 ### Output
 ```text
-1
+2.000000
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* Hàm số $f(x) = x^2 - 4x + 4 = (x - 2)^2$ đạt giá trị nhỏ nhất bằng $0$ tại điểm cực trị $x = -b / (2a) = 2.000000$ thuộc đoạn $[0, 5]$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $a > 0, -10^6 \le b, c, L, R \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

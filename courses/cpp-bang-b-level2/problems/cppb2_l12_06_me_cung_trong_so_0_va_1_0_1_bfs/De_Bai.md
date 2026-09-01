@@ -1,4 +1,4 @@
-# Mê Cung Trọng Số 0 Và 1 (0-1 Bfs)
+# Mê cung trọng số 0 và 1 (0-1 BFS)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mê Cung Trọng Số 0 và 1 (0-1 BFS)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: 0-1 BFS với `std::deque`.

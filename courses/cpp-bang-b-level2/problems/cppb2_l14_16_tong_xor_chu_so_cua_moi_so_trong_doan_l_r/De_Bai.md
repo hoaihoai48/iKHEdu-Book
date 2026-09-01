@@ -1,4 +1,4 @@
-# Tổng Xor Chữ Số Của Mọi Số Trong Đoạn $[l, R]$
+# Tổng xor chữ số của mọi số trong đoạn $[l, r]$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng XOR Chữ Số Của Mọi Số Trong Đoạn $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP đa chiều tính tổng tích lũy XOR.

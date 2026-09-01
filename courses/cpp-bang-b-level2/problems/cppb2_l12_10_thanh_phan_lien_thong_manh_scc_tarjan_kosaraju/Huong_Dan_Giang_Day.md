@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: THÀNH PHẦN LIÊN THÔNG MẠNH (SCC TARJAN/KOSARAJU)
+# Hướng dẫn giảng dạy: Thành phần liên thông mạnh (scc tarjan/kosaraju)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

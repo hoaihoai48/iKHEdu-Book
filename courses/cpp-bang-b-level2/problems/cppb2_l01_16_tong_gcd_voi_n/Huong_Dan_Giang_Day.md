@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÍNH TỔNG GCD CỦA N VỚI TẤT CẢ CÁC SỐ TỪ 1 ĐẾN N
+# Hướng dẫn giảng dạy: Tính tổng GCD của n với tất cả các số từ 1 đến n
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

@@ -1,4 +1,4 @@
-# Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau
+# Sắp đặt chuỗi ký tự không trùng lặp kề nhau
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Max-Heap xếp ký tự có tần suất cao nhất.

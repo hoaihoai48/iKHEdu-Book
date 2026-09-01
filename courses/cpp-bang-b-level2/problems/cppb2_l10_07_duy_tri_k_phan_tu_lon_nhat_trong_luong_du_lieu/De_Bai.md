@@ -1,4 +1,4 @@
-# Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu
+# Duy trì k phần tử lớn nhất trong luồng dữ liệu
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Min-Heap kích thước cố định $K$.

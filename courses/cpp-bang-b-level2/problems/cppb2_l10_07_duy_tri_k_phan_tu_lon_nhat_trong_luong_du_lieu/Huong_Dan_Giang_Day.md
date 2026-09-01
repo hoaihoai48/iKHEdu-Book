@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DUY TRÌ K PHẦN TỬ LỚN NHẤT TRONG LUỒNG DỮ LIỆU
+# Hướng dẫn giảng dạy: Duy trì k phần tử lớn nhất trong luồng dữ liệu
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

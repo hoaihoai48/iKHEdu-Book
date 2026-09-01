@@ -1,4 +1,4 @@
-# Tổng Thời Gian Chờ Nhỏ Nhất (sjf)
+# Tổng thời gian chờ nhỏ nhất (sjf)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Thời Gian Chờ Nhỏ Nhất (SJF)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Sắp xếp thời gian phục vụ tăng dần.

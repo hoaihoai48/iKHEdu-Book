@@ -1,4 +1,4 @@
-# Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm
+# Đếm số đường đi trên lưới tọa độ có điểm cấm
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP sắp xếp điểm cấm + PIE.

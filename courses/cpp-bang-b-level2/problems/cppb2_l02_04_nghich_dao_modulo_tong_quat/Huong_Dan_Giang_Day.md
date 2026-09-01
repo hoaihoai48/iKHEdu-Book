@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NGHỊCH ĐẢO MODULO TỔNG QUÁT
+# Hướng dẫn giảng dạy: Nghịch đảo modulo tổng quát
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

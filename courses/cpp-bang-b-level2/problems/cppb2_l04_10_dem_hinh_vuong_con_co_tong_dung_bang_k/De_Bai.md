@@ -1,4 +1,4 @@
-# Đếm Hình Vuông Con Có Tổng Đúng Bằng K
+# Đếm hình vuông con có tổng đúng bằng k
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Hình Vuông Con Có Tổng Đúng Bằng K** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2D Prefix Sum + Hai con trỏ trên đường chéo.

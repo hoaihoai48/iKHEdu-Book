@@ -1,4 +1,4 @@
-# Chuồng Bò Xa Nhau Nhất (aggressive Cows)
+# Chuồng bò xa nhau nhất (aggressive cows)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chuồng Bò Xa Nhau Nhất (Aggressive Cows)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Sắp xếp + BS khoảng cách cực đại.

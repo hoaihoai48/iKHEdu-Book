@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NGHIỆM NGUYÊN DƯƠNG NHỎ NHẤT CỦA PHƯƠNG TRÌNH DIOPHANTINE
+# Hướng dẫn giảng dạy: Nghiệm nguyên dương nhỏ nhất của phương trình Diophantine
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

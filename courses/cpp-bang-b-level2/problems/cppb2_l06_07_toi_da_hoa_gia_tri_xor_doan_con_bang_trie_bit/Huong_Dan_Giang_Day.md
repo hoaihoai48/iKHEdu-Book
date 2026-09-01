@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ĐA HÓA GIÁ TRỊ XOR ĐOẠN CON BẰNG TRIE BIT
+# Hướng dẫn giảng dạy: Tối đa hóa giá trị xor đoạn con bằng Trie BIT
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

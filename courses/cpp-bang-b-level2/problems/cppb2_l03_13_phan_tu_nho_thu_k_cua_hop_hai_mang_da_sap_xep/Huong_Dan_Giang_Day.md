@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHẦN TỬ NHỎ THỨ K CỦA HỢP HAI MẢNG ĐÃ SẮP XẾP
+# Hướng dẫn giảng dạy: Phần tử nhỏ thứ k của hợp hai mảng đã sắp xếp
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

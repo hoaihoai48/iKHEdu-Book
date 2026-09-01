@@ -1,4 +1,4 @@
-# Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó
+# Số chia hết cho tổng các chữ số của chính nó
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cố định tổng chữ số từ $1 \dots 162$ + Digit DP.

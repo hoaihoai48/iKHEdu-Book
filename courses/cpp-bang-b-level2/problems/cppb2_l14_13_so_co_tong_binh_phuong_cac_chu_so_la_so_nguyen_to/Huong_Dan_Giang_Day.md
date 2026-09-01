@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ CÓ TỔNG BÌNH PHƯƠNG CÁC CHỮ SỐ LÀ SỐ NGUYÊN TỐ
+# Hướng dẫn giảng dạy: Số có tổng bình phương các chữ số là số nguyên tố
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

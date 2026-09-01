@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ĐA HÓA LỢI NHUẬN GIAO HÀNG
+# Hướng dẫn giảng dạy: Tối đa hóa lợi nhuận giao hàng
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

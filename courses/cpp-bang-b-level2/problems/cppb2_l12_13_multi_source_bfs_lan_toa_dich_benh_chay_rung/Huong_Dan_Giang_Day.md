@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: MULTI-SOURCE BFS LAN TỎA DỊCH BỆNH / CHÁY RỪNG
+# Hướng dẫn giảng dạy: Multi-source BFS lan tỏa dịch bệnh / cháy rừng
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

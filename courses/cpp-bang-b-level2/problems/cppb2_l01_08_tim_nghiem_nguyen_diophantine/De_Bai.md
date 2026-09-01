@@ -1,4 +1,4 @@
-# Tìm Nghiệm Nguyên Phương Trình Diophantine
+# Tìm nghiệm nguyên phương trình Diophantine
 
 ## Bối cảnh
 Phương trình Diophantine tuyến tính có dạng:

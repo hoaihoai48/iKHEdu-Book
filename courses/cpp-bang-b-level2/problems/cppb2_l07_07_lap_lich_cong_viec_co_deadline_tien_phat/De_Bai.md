@@ -1,4 +1,4 @@
-# Lập Lịch Công Việc Có Deadline & Tiền Phạt
+# Lập lịch công việc có deadline & tiền phạt
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Công Việc Có Deadline & Tiền Phạt** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tham lam kết hợp Disjoint Set Union (DSU).

@@ -1,4 +1,4 @@
-# Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó
+# Số chia hết cho tất cả các chữ số khác không của nó
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP trạng thái $lcm$ và số dư theo $2520$.

@@ -1,4 +1,4 @@
-# Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số
+# Chia kẹo thưởng cho học sinh theo điểm số
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Quét hai chiều trái $\to$ phải và phải $\to$ trái.

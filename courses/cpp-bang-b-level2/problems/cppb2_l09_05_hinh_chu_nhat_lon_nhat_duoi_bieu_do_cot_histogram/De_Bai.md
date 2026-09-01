@@ -1,4 +1,4 @@
-# Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (histogram)
+# Hình chữ nhật lớn nhất dưới biểu đồ cột (histogram)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (Histogram)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Monotonic Stack tìm biên trái & biên phải.

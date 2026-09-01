@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CÁI TÚI ĐỔI TRỤC TRẠNG THÁI (VALUE-BASED KNAPSACK)
+# Hướng dẫn giảng dạy: Cái túi đổi trục trạng thái (value-based knapsack)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

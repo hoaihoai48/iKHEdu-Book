@@ -1,38 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Persistent Segment Tree tìm phần tử thứ K nhỏ nhất trong đoạn [L, R]
+// Persistent Segment Tree dùng mảng song song nguyên bản
 const int MAXN = 200005;
-struct Node {
-    int count;
-    int left, right;
-} tree_nodes[MAXN * 40];
+int node_count_val[MAXN * 40];
+int node_left_child[MAXN * 40];
+int node_right_child[MAXN * 40];
+int roots[MAXN], total_nodes;
 
-int roots[MAXN], node_cnt;
+int update_tree(int prev_root, int start, int end, int val) {
+    int cur = ++total_nodes;
+    node_count_val[cur] = node_count_val[prev_root] + 1;
+    node_left_child[cur] = node_left_child[prev_root];
+    node_right_child[cur] = node_right_child[prev_root];
 
-int update(int prev_root, int start, int end, int val) {
-    int cur = ++node_cnt;
-    tree_nodes[cur] = tree_nodes[prev_root];
-    tree_nodes[cur].count++;
     if (start == end) return cur;
 
     int mid = (start + end) / 2;
     if (val <= mid) {
-        tree_nodes[cur].left = update(tree_nodes[prev_root].left, start, mid, val);
+        node_left_child[cur] = update_tree(node_left_child[prev_root], start, mid, val);
     } else {
-        tree_nodes[cur].right = update(tree_nodes[prev_root].right, mid + 1, end, val);
+        node_right_child[cur] = update_tree(node_right_child[prev_root], mid + 1, end, val);
     }
     return cur;
 }
 
-int query(int node_l, int node_r, int start, int end, int k) {
+int query_tree(int node_l, int node_r, int start, int end, int k) {
     if (start == end) return start;
-    int count_left = tree_nodes[tree_nodes[node_r].left].count - tree_nodes[tree_nodes[node_l].left].count;
+    int count_left = node_count_val[node_left_child[node_r]] - node_count_val[node_left_child[node_l]];
     int mid = (start + end) / 2;
     if (k <= count_left) {
-        return query(tree_nodes[node_l].left, tree_nodes[node_r].left, start, mid, k);
+        return query_tree(node_left_child[node_l], node_left_child[node_r], start, mid, k);
     } else {
-        return query(tree_nodes[node_l].right, tree_nodes[node_r].right, mid + 1, end, k - count_left);
+        return query_tree(node_right_child[node_l], node_right_child[node_r], mid + 1, end, k - count_left);
     }
 }
 
@@ -56,13 +56,13 @@ int main() {
     int m = vals.size();
     for (int i = 1; i <= n; ++i) {
         int idx = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin() + 1;
-        roots[i] = update(roots[i - 1], 1, m, idx);
+        roots[i] = update_tree(roots[i - 1], 1, m, idx);
     }
 
     while (q--) {
         int l, r, k;
         cin >> l >> r >> k;
-        int ans_idx = query(roots[l - 1], roots[r], 1, m, k);
+        int ans_idx = query_tree(roots[l - 1], roots[r], 1, m, k);
         cout << vals[ans_idx - 1] << "\n";
     }
     return 0;

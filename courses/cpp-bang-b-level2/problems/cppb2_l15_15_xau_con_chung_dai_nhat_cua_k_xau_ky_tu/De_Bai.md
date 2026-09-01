@@ -1,4 +1,4 @@
-# Xâu Con Chung Dài Nhất Của K Xâu Ký Tự
+# Xâu con chung dài nhất của k xâu ký tự
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Chung Dài Nhất Của K Xâu Ký Tự** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chặt nhị phân độ dài + Băm đa chuỗi.

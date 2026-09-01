@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: QUY HOẠCH ĐỘNG TRÊN CÂY (TREE DP: MAX INDEPENDENT SET)
+# Hướng dẫn giảng dạy: Quy hoạch động trên cây (Tree dp: max independent set)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

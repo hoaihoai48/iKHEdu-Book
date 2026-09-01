@@ -1,4 +1,4 @@
-# Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số
+# Lũy thừa số mũ lớn khi modulo là hợp số
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Áp dụng định lý Euler mở rộng $A^B \equiv A^{B \bmod \phi(M) + \phi(M)}$.

@@ -1,4 +1,4 @@
-# Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X
+# Tìm phần tử kế tiếp nhỏ nhất lớn hơn x
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: `s.upper_bound(x)` trên `set`.

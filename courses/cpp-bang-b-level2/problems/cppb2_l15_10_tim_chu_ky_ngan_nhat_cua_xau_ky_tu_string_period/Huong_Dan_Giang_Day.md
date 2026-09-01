@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM CHU KỲ NGẮN NHẤT CỦA XÂU KÝ TỰ (STRING PERIOD)
+# Hướng dẫn giảng dạy: Tìm chu kỳ ngắn nhất của xâu ký tự (string period)
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

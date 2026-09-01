@@ -1,4 +1,4 @@
-# Rút Gọn Mảng Phân Số Lớn
+# Rút gọn mảng phân số lớn
 
 ## Bối cảnh
 Trong toán học và lập trình thi đấu, việc chuẩn hóa phân số về dạng **tối giản** là thao tác then chốt để so sánh và tính toán chính xác mà không gặp sai số dấu phẩy động (`floating-point error`).

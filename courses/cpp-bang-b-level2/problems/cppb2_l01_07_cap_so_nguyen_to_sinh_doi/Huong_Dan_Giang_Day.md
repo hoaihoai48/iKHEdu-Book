@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CẶP SỐ NGUYÊN TỐ SINH ĐÔI TRONG ĐOẠN
+# Hướng dẫn giảng dạy: Cặp số nguyên tố sinh đôi trong đoạn
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

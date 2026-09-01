@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TAM GIÁC PASCAL MODULO HỢP SỐ
+# Hướng dẫn giảng dạy: Tam giác pascal modulo hợp số
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐOÀN TÀU VẬN CHUYỂN HÀNG HÓA
+# Hướng dẫn giảng dạy: Đoàn tàu vận chuyển hàng hóa
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

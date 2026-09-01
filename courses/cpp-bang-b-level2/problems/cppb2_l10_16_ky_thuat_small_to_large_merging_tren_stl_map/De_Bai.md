@@ -1,4 +1,4 @@
-# Kỹ Thuật Small-to-large Merging Trên Stl Map
+# Kỹ thuật small-to-large merging trên STL map
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kỹ Thuật Small-to-Large Merging Trên STL Map** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Gộp `map` từ cây con lên gốc trong $\mathcal{O}(N \log^2 N)$.

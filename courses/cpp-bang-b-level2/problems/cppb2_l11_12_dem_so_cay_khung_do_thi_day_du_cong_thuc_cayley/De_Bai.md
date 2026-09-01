@@ -1,4 +1,4 @@
-# Đếm Số Cây Khung Đồ Thị Đầy Đủ (công Thức Cayley)
+# Đếm số cây khung đồ thị đầy đủ (công thức cayley)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cây Khung Đồ Thị Đầy Đủ (Công Thức Cayley)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Công thức $N^{N-2} \bmod M$ bằng Fast Power.

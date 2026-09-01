@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHÂN CHIA CÔNG VIỆC HOÀN HẢO (JOB ASSIGNMENT)
+# Hướng dẫn giảng dạy: Phân chia công việc hoàn hảo (job assignment)
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

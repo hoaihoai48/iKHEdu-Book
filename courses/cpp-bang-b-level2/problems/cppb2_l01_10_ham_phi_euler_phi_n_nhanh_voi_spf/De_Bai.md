@@ -1,4 +1,4 @@
-# Hàm Phi Euler $\phi(n)$ Nhanh Với Spf
+# Hàm phi Euler $\phi(n)$ nhanh với SPF
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, hàm phi euler $\phi(n)$ nhanh với spf là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Đếm số nguyên tố cùng nhau qua SPF.

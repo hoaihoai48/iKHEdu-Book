@@ -1,4 +1,4 @@
-# Sắp Xếp Tô-pô Lập Lịch Khóa Học (topological Sort)
+# Sắp xếp tô-pô lập lịch khóa học (topological sort)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Sắp Xếp Tô-pô Lập Lịch Khóa Học (Topological Sort)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Thuật toán Kahn (Bán bậc vào `in_degree`).

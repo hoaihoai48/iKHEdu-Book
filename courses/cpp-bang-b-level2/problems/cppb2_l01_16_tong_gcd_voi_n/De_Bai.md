@@ -1,4 +1,4 @@
-# Tính Tổng Gcd Của N Với Tất Cả Các Số Từ 1 Đến N
+# Tính tổng GCD của n với tất cả các số từ 1 đến n
 
 ## Bối cảnh
 Cho số nguyên dương $N$. Hãy tính giá trị của tổng $S(N) = \sum_{i=1}^N \gcd(i, N)$. Bằng cách gom nhóm các số $i$ theo giá trị $d = \gcd(i, N)$, ta có công thức tối ưu: $S(N) = \sum_{d | N} d \cdot \phi(N / d)$. Thuật toán cho phép tính $S(N)$ trong $\mathcal{O}(\sqrt{N})$.

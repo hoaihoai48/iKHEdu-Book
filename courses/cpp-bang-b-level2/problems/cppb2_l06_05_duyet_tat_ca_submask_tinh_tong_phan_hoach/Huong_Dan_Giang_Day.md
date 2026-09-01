@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DUYỆT TẤT CẢ SUBMASK TÍNH TỔNG PHÂN HOẠCH
+# Hướng dẫn giảng dạy: Duyệt tất cả submask tính tổng phân hoạch
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LUỒNG CỰC ĐẠI TRONG MẠNG (MAX FLOW DINIC ALGORITHM)
+# Hướng dẫn giảng dạy: Luồng cực đại trong mạng (max flow dinic algorithm)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHỦ ĐOẠN THẲNG ÍT NHẤT (MINIMUM INTERVAL COVER)
+# Hướng dẫn giảng dạy: Phủ đoạn thẳng ít nhất (minimum interval cover)
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

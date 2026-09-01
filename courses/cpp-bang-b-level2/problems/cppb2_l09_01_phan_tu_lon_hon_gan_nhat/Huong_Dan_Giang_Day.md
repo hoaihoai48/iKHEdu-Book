@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHẦN TỬ LỚN HƠN GẦN NHẤT (NGE)
+# Hướng dẫn giảng dạy: Phần tử lớn hơn gần nhất (nge)
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (cht)
+# Tối ưu hóa quy hoạch động bằng convex hull trick (CHT)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (CHT)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: CHT tối ưu $dp[i] = \min(dp[j] + m_j x_i + c_j)$ từ $\mathcal{O}(N^2) \to \mathcal{O}(N \log N)$.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ NGUYÊN TỐ CÙNG NHAU BẰNG PIE
+# Hướng dẫn giảng dạy: Đếm số nguyên tố cùng nhau bằng pie
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

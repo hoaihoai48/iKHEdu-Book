@@ -1,4 +1,4 @@
-# Hứng Nước Mưa Đa Chiều (trapping Rain Water)
+# Hứng nước mưa đa chiều (trapping rain water)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hứng Nước Mưa Đa Chiều (Trapping Rain Water)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Monotonic Stack tính thể tích nước đọng.

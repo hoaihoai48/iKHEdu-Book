@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SÀNG ƯỚC SỐ NGUYÊN TỐ NHỎ NHẤT (SPF)
+# Hướng dẫn giảng dạy: Sàng ước số nguyên tố nhỏ nhất (SPF)
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

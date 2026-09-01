@@ -1,4 +1,4 @@
-# Đếm Số Lượng Chữ Số 0 Xuất Hiện
+# Đếm số lượng chữ số 0 xuất hiện
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Lượng Chữ Số 0 Xuất Hiện** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Digit DP với cờ `leading_zero`.

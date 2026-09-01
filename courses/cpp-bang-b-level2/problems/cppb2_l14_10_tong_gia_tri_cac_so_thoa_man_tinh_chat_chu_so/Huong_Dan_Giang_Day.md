@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG GIÁ TRỊ CÁC SỐ THỎA MÃN TÍNH CHẤT CHỮ SỐ
+# Hướng dẫn giảng dạy: Tổng giá trị các số thỏa mãn tính chất chữ số
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

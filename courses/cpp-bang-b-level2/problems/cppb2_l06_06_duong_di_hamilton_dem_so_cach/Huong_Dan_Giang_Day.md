@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐƯỜNG ĐI HAMILTON ĐẾM SỐ CÁCH
+# Hướng dẫn giảng dạy: Đường đi hamilton đếm số cách
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

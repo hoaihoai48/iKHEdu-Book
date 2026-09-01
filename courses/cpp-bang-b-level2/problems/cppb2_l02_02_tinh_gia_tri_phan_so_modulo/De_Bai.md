@@ -1,4 +1,4 @@
-# Tính Giá Trị Phân Số Modulo
+# Tính giá trị phân số modulo
 
 ## Bối cảnh
 Cho hai số nguyên $P, Q$ ($Q \not\equiv 0 \pmod{10^9+7}$). Hãy tính $(P \times Q^{-1}) \bmod (10^9+7)$.

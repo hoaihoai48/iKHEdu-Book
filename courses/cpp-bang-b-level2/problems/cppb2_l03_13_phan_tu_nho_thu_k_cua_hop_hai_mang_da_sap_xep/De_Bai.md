@@ -1,4 +1,4 @@
-# Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp
+# Phần tử nhỏ thứ k của hợp hai mảng đã sắp xếp
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân trong $\mathcal{O}(\log(\min(N, M)))$.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CÂY PHÂN ĐOẠN BỀN VỮNG (PERSISTENT SEGMENT TREE CƠ BẢN)
+# Hướng dẫn giảng dạy: Cây phân đoạn bền vững (persistent Segment Tree cơ bản)
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

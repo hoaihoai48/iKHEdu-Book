@@ -1,4 +1,4 @@
-# Kiểm Tra Đồ Thị Hai Phía (bipartite Graph Coloring)
+# Kiểm tra đồ thị hai phía (bipartite graph coloring)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph Coloring)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Tô màu 2 màu bằng BFS/DFS.

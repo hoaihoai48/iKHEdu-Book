@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐOẠN CON DÀI NHẤT CÓ KHÔNG QUÁ K SỐ KHÁC NHAU
+# Hướng dẫn giảng dạy: Đoạn con dài nhất có không quá k số khác nhau
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

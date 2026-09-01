@@ -1,4 +1,4 @@
-# Lũy Thừa Nhanh Cơ Bản
+# Lũy thừa nhanh cơ bản
 
 ## Bối cảnh
 Tính $A^B \bmod (10^9+7)$ với $A, B \le 10^{18}$.

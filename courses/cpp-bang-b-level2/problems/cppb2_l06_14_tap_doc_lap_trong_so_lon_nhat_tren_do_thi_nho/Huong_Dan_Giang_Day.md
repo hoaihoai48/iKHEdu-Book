@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TẬP ĐỘC LẬP TRỌNG SỐ LỚN NHẤT TRÊN ĐỒ THỊ NHỎ
+# Hướng dẫn giảng dạy: Tập độc lập trọng số lớn nhất trên đồ thị nhỏ
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

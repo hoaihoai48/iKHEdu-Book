@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG THỜI GIAN CHỜ NHỎ NHẤT (SJF)
+# Hướng dẫn giảng dạy: Tổng thời gian chờ nhỏ nhất (sjf)
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

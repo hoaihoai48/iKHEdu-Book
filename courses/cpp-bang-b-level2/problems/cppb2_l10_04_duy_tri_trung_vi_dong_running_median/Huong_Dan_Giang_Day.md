@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DUY TRÌ TRUNG VỊ ĐỘNG (RUNNING MEDIAN)
+# Hướng dẫn giảng dạy: Duy trì trung vị động (running median)
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

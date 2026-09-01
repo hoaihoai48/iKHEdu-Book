@@ -1,4 +1,4 @@
-# Lũy Thừa Ma Trận Kích Thước $k \times K$
+# Lũy thừa ma trận kích thước $k \times k$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Ma Trận Kích Thước $K \times K$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Giải bài toán quy hoạch động truy hồi qua ma trận.

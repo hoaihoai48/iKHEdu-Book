@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐOẠN CON NGẮN NHẤT CHỨA ĐẦY ĐỦ BẢNG CHỮ CÁI
+# Hướng dẫn giảng dạy: Đoạn con ngắn nhất chứa đầy đủ bảng chữ cái
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

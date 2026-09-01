@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG XOR CHỮ SỐ CỦA MỌI SỐ TRONG ĐOẠN $[L, R]$
+# Hướng dẫn giảng dạy: Tổng xor chữ số của mọi số trong đoạn $[l, r]$
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

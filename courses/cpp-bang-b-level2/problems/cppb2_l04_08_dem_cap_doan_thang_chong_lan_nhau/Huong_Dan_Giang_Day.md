@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM CẶP ĐOẠN THẲNG CHỒNG LẤN NHAU
+# Hướng dẫn giảng dạy: Đếm cặp đoạn thẳng chồng lấn nhau
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

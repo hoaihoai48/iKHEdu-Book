@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÍNH GIÁ TRỊ PHÂN SỐ MODULO
+# Hướng dẫn giảng dạy: Tính giá trị phân số modulo
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

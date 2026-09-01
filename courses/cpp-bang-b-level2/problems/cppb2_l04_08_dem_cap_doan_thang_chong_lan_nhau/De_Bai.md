@@ -1,4 +1,4 @@
-# Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau
+# Đếm cặp đoạn thẳng chồng lấn nhau
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Nén tọa độ + Mảng hiệu 1D.

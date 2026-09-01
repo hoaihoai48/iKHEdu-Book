@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ PHẦN TỬ BẬT BIT CHUNG (BITWISE AND)
+# Hướng dẫn giảng dạy: Đếm số phần tử bật BIT chung (bitwise and)
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

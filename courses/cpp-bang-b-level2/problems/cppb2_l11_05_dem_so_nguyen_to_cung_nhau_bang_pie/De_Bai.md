@@ -1,4 +1,4 @@
-# Đếm Số Nguyên Tố Cùng Nhau Bằng Pie
+# Đếm số nguyên tố cùng nhau bằng pie
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Nguyên Tố Cùng Nhau Bằng PIE** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Nguyên lý bù trừ kết hợp Bitmask.

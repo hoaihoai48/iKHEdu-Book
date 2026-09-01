@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG HIỆU CỰC ĐẠI VÀ CỰC TIỂU MỌI ĐOẠN CON
+# Hướng dẫn giảng dạy: Tổng hiệu cực đại và cực tiểu mọi đoạn con
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

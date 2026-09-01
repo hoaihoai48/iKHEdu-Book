@@ -1,4 +1,4 @@
-# Chặt Nhị Phân Cắt Gỗ (eko)
+# Chặt nhị phân cắt gỗ (eko)
 
 ## Bối cảnh
 Có $N$ cây gỗ có chiều cao $H_1, H_2, \dots, H_N$. Cần cưa ở độ cao $H$ sao cho tổng lượng gỗ thu được $\ge M$. Tìm độ cao $H$ lớn nhất có thể.

@@ -1,4 +1,4 @@
-# Khoảng Cách Cực Trị Trên Đa Giác Lồi
+# Khoảng cách cực trị trên đa giác lồi
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Cực Trị Trên Đa Giác Lồi** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Ternary Search trên cấu trúc đa giác.

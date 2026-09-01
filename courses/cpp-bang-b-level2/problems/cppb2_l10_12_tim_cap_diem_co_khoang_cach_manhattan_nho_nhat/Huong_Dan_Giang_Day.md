@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM CẶP ĐIỂM CÓ KHOẢNG CÁCH MANHATTAN NHỎ NHẤT
+# Hướng dẫn giảng dạy: Tìm cặp điểm có khoảng cách manhattan nhỏ nhất
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

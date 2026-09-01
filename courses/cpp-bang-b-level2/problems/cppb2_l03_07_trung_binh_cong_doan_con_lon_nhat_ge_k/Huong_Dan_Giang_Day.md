@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRUNG BÌNH CỘNG ĐOẠN CON LỚN NHẤT $\GE K$
+# Hướng dẫn giảng dạy: Trung bình cộng đoạn con lớn nhất $\ge k$
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

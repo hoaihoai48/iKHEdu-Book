@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KỸ THUẬT SMALL-TO-LARGE MERGING TRÊN STL MAP
+# Hướng dẫn giảng dạy: Kỹ thuật small-to-large merging trên STL map
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

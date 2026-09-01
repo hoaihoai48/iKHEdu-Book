@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KIỂM TRA ĐỒ THỊ HAI PHÍA (BIPARTITE GRAPH COLORING)
+# Hướng dẫn giảng dạy: Kiểm tra đồ thị hai phía (bipartite graph coloring)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

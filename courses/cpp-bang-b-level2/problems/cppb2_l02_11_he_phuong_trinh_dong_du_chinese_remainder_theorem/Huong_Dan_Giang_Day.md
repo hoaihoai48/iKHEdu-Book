@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HỆ PHƯƠNG TRÌNH ĐỒNG DƯ (CHINESE REMAINDER THEOREM)
+# Hướng dẫn giảng dạy: Hệ phương trình đồng dư (chinese remainder theorem)
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

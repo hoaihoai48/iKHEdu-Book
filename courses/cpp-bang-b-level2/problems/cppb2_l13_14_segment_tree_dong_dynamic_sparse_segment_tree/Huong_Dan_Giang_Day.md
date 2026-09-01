@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SEGMENT TREE ĐỘNG (DYNAMIC / SPARSE SEGMENT TREE)
+# Hướng dẫn giảng dạy: Segment Tree động (dynamic / sparse Segment Tree)
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

@@ -1,4 +1,4 @@
-# Segment Tree Động (dynamic / Sparse Segment Tree)
+# Segment Tree động (dynamic / sparse Segment Tree)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Động (Dynamic / Sparse Segment Tree)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tạo nút cây theo yêu cầu bằng con trỏ.

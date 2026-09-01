@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LŨY THỪA SỐ MŨ LỚN KHI MODULO LÀ HỢP SỐ
+# Hướng dẫn giảng dạy: Lũy thừa số mũ lớn khi modulo là hợp số
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

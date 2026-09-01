@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM TỔ TIÊN CHUNG GẦN NHẤT (LCA BINARY LIFTING)
+# Hướng dẫn giảng dạy: Tìm tổ tiên chung gần nhất (LCA binary lifting)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

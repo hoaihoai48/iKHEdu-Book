@@ -1,4 +1,4 @@
-# Lũy Thừa Với Số Mũ Cực Lớn
+# Lũy thừa với số mũ cực lớn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Với Số Mũ Cực Lớn** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hạ bậc số mũ bằng định lý Fermat $B \bmod (M-1)$.

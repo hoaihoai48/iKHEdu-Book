@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM CẶP SỐ BIẾT GCD VÀ LCM CÓ TỔNG NHỎ NHẤT
+# Hướng dẫn giảng dạy: Tìm cặp số biết GCD và LCM có tổng nhỏ nhất
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

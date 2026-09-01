@@ -1,4 +1,4 @@
-# Truy Vấn Giá Trị Nhỏ Nhất Đoạn (rmq Segment Tree)
+# Truy vấn giá trị nhỏ nhất đoạn (RMQ Segment Tree)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn Giá Trị Nhỏ Nhất Đoạn (RMQ Segment Tree)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt Segment Tree Point Update.

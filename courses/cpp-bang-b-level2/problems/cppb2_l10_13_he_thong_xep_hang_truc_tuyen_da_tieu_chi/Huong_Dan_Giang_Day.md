@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HỆ THỐNG XẾP HẠNG TRỰC TUYẾN ĐA TIÊU CHÍ
+# Hướng dẫn giảng dạy: Hệ thống xếp hạng trực tuyến đa tiêu chí
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

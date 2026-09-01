@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SÀNG NGUYÊN TỐ ĐOẠN [L, R]
+# Hướng dẫn giảng dạy: Sàng nguyên tố đoạn [l, r]
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ LƯỢNG CHỮ SỐ 0 XUẤT HIỆN
+# Hướng dẫn giảng dạy: Đếm số lượng chữ số 0 xuất hiện
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

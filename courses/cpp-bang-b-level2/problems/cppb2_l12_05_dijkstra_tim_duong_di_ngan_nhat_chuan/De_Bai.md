@@ -1,4 +1,4 @@
-# Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn
+# Dijkstra tìm đường đi ngắn nhất chuẩn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cài đặt Dijkstra Min-Heap.

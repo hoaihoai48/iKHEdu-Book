@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM CẶP NGHỊCH THẾ BẰNG FENWICK TREE
+# Hướng dẫn giảng dạy: Đếm cặp nghịch thế bằng Fenwick Tree
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

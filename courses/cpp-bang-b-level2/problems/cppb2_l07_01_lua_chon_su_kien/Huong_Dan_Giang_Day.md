@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LỰA CHỌN SỰ KIỆN KHÔNG TRÙNG GIỜ
+# Hướng dẫn giảng dạy: Lựa chọn sự kiện không trùng giờ
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

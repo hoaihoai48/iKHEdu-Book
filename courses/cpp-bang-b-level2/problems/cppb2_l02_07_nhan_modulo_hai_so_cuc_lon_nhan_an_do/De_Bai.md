@@ -1,4 +1,4 @@
-# Nhân Modulo Hai Số Cực Lớn (nhân Ấn Độ)
+# Nhân modulo hai số cực lớn (nhân ấn độ)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Modulo Hai Số Cực Lớn (Nhân Ấn Độ)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Xử lý chống tràn số khi $M$ lớn.

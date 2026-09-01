@@ -1,4 +1,4 @@
-# Định Lý Thặng Dư Trung Hoa (chinese Remainder Theorem — Crt)
+# Định lý thặng dư trung hoa (chinese remainder theorem — CRT)
 
 ## Bối cảnh
 Trong lý thuyết số học và mật mã học, Định lý thặng dư Trung Hoa (CRT) giải quyết bài toán tìm số nguyên $x$ thỏa mãn một hệ phương trình đồng dư: $x \equiv r_i \pmod{m_i}$ ($1 \le i \le K$) với các modulo $m_i$ đôi một nguyên tố cùng nhau. Nghiệm $x$ duy nhất trong modulo $M = \prod m_i$ được tính bằng công thức: $x = \sum r_i \cdot M_i \cdot M_i^{-1} \pmod M$.

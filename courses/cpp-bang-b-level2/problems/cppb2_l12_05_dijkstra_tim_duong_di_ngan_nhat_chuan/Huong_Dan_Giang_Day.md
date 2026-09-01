@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DIJKSTRA TÌM ĐƯỜNG ĐI NGẮN NHẤT CHUẨN
+# Hướng dẫn giảng dạy: Dijkstra tìm đường đi ngắn nhất chuẩn
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

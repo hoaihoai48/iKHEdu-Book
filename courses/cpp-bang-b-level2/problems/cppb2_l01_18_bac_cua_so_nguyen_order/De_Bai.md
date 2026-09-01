@@ -1,4 +1,4 @@
-# Bậc Của Số Nguyên Theo Modulo M (multiplicative Order)
+# Bậc của số nguyên theo modulo m (multiplicative order)
 
 ## Bối cảnh
 Cho hai số nguyên dương nguyên tố cùng nhau $A$ và $M$ ($\gcd(A, M) = 1$). Bậc của $A$ theo modulo $M$ (ký hiệu $\text{ord}_M(A)$) là số nguyên dương $k$ nhỏ nhất sao cho $A^k \equiv 1 \pmod M$. Theo định lý Euler, $k$ bắt buộc phải là một ước của $\phi(M)$.

@@ -1,4 +1,4 @@
-# Đường Đi Ngắn Nhất Mê Cung 2d Bằng Bfs
+# Đường đi ngắn nhất mê cung 2d bằng BFS
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Ngắn Nhất Mê Cung 2D Bằng BFS** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: BFS trên lưới ma trận 2D.

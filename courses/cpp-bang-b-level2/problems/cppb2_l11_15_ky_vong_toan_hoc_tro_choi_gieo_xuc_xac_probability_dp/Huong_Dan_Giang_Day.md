@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KỲ VỌNG TOÁN HỌC TRÒ CHƠI GIEO XÚC XẮC (PROBABILITY DP)
+# Hướng dẫn giảng dạy: Kỳ vọng toán học trò chơi gieo xúc xắc (probability DP)
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

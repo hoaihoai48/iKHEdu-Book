@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÔ MÀU ĐỒ THỊ SỐ LƯỢNG MÀU NHỎ NHẤT (GRAPH COLORING)
+# Hướng dẫn giảng dạy: Tô màu đồ thị số lượng màu nhỏ nhất (graph coloring)
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

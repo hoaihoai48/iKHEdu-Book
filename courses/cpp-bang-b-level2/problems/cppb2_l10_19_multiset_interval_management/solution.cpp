@@ -1,22 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Quản lý đoạn không dùng struct, dùng set<vector<int>> hoặc set<pair<int, int>>
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+    int q;
+    if (!(cin >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    set<vector<int>> intervals; // Mỗi đoạn là {l, r}
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
-    for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+    while (q--) {
+        int type, l, r;
+        cin >> type >> l >> r;
+        if (type == 1) {
+            auto it = intervals.lower_bound({l, 0});
+            if (it != intervals.begin() && prev(it)->at(1) >= l) it--;
+
+            while (it != intervals.end() && it->at(0) <= r) {
+                l = min(l, it->at(0));
+                r = max(r, it->at(1));
+                it = intervals.erase(it);
+            }
+            intervals.insert({l, r});
+        } else {
+            auto it = intervals.upper_bound({l, INT_MAX});
+            if (it != intervals.begin() && prev(it)->at(1) >= r) {
+                cout << "YES\n";
+            } else {
+                cout << "NO\n";
+            }
+        }
     }
-
-    cout << ans << "\n";
     return 0;
 }

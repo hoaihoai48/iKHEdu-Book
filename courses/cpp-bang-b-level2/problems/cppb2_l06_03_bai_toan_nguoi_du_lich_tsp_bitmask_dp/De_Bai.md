@@ -1,4 +1,4 @@
-# Bài Toán Người Du Lịch (tsp Bitmask Dp)
+# Bài toán người du lịch (tsp bitmask DP)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bài Toán Người Du Lịch (TSP Bitmask DP)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP trạng thái $dp[mask][u]$.

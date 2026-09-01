@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TẦM NHÌN XA CỦA CÁC TÒA NHÀ CAO TẦNG
+# Hướng dẫn giảng dạy: Tầm nhìn xa của các tòa nhà cao tầng
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM CẶP NGHỊCH THẾ
+# Hướng dẫn giảng dạy: Đếm cặp nghịch thế
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

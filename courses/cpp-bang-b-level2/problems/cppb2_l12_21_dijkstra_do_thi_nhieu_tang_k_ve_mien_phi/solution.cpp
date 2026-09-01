@@ -1,14 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Dijkstra đồ thị nhiều tầng: dist[u][used_k]
+// Dijkstra nhiều tầng dùng priority_queue<vector<long long>>
 const long long INF = 1e18;
-
-struct State {
-    long long d;
-    int u, k;
-    bool operator>(const State& o) const { return d > o.d; }
-};
 
 int main() {
     ios::sync_with_stdio(false);
@@ -17,7 +11,7 @@ int main() {
     int n, m, K;
     if (!(cin >> n >> m >> K)) return 0;
 
-    vector<vector<pair<int, long long>>> adj(n + 1);
+    vector<vector<vector<long long>>> adj(n + 1);
     for (int i = 0; i < m; ++i) {
         int u, v; long long w;
         cin >> u >> v >> w;
@@ -26,28 +20,27 @@ int main() {
     }
 
     vector<vector<long long>> dist(n + 1, vector<long long>(K + 1, INF));
-    priority_queue<State, vector<State>, greater<State>> pq;
+    priority_queue<vector<long long>, vector<vector<long long>>, greater<vector<long long>>> pq;
 
     dist[1][0] = 0;
-    pq.push({0, 1, 0});
+    pq.push({0, 1, 0}); // {d, u, used_k}
 
     while (!pq.empty()) {
-        auto [d, u, used] = pq.top();
+        auto top = pq.top();
         pq.pop();
+        long long d = top[0], u = top[1], used = top[2];
 
         if (d > dist[u][used]) continue;
 
-        for (auto edge : adj[u]) {
-            int v = edge.first;
-            long long w = edge.second;
+        for (const auto& edge : adj[u]) {
+            int v = edge[0];
+            long long w = edge[1];
 
-            // Không dùng vé
             if (dist[u][used] + w < dist[v][used]) {
                 dist[v][used] = dist[u][used] + w;
                 pq.push({dist[v][used], v, used});
             }
 
-            // Dùng 1 vé miễn phí (nếu còn)
             if (used < K && dist[u][used] < dist[v][used + 1]) {
                 dist[v][used + 1] = dist[u][used];
                 pq.push({dist[v][used + 1], v, used + 1});

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHÂN TÍCH THỪA SỐ NGUYÊN TỐ CỦA GIAI THỪA (ĐỊNH LÝ LEGENDRE)
+# Hướng dẫn giảng dạy: Phân tích thừa số nguyên tố của giai thừa (định lý Legendre)
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHIA HAI SỐ NGUYÊN LỚN CHO NHAU (BIGINT / BIGINT)
+# Hướng dẫn giảng dạy: Chia hai số nguyên lớn cho nhau (BigInt / BigInt)
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

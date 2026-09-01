@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM VỊ TRÍ ĐẦU TIÊN CÓ GIÁ TRỊ $\GE X$ TRONG ĐOẠN $[L, R]$
+# Hướng dẫn giảng dạy: Tìm vị trí đầu tiên có giá trị $\ge x$ trong đoạn $[l, r]$
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

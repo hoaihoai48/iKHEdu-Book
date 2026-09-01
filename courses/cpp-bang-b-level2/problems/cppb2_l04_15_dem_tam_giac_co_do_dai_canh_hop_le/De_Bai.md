@@ -1,4 +1,4 @@
-# Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ
+# Đếm tam giác có độ dài cạnh hợp lệ
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Two Pointers đếm tổ hợp bất đẳng thức tam giác.

@@ -1,4 +1,4 @@
-# Cái Túi Chia Nhỏ Được (fractional Knapsack)
+# Cái túi chia nhỏ được (fractional knapsack)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Chia Nhỏ Được (Fractional Knapsack)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Sắp xếp theo đơn giá $V_i / W_i$.

@@ -1,4 +1,4 @@
-# Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay
+# Bổ đề burnside đếm cấu hình bất biến phép quay
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Lý thuyết nhóm & Bổ đề Burnside đếm vòng cổ.

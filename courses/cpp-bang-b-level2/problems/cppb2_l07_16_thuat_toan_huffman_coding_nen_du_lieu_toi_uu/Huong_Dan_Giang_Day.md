@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: THUẬT TOÁN HUFFMAN CODING NÉN DỮ LIỆU TỐI ƯU
+# Hướng dẫn giảng dạy: Thuật toán huffman coding nén dữ liệu tối ưu
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

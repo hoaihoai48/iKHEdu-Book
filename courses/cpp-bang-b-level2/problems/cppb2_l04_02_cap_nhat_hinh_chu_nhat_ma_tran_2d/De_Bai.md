@@ -1,4 +1,4 @@
-# Cập Nhật Hình Chữ Nhật Ma Trận 2d
+# Cập nhật hình chữ nhật ma trận 2d
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cập Nhật Hình Chữ Nhật Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt 2D Difference Array.

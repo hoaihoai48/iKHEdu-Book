@@ -1,4 +1,4 @@
-# Cái Túi Đổi Trục Trạng Thái (value-based Knapsack)
+# Cái túi đổi trục trạng thái (value-based knapsack)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Đổi Trục Trạng Thái (Value-based Knapsack)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Đổi trục DP $dp[v]$ là trọng lượng nhỏ nhất đạt giá trị $v$.

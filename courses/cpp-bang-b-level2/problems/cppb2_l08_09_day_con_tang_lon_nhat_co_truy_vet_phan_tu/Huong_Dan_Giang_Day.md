@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DÃY CON TĂNG LỚN NHẤT CÓ TRUY VẾT PHẦN TỬ
+# Hướng dẫn giảng dạy: Dãy con tăng lớn nhất có truy vết phần tử
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XẾP GẠCH LÁT SÀN KÍCH THƯỚC $3 \TIMES N$
+# Hướng dẫn giảng dạy: Xếp gạch lát sàn kích thước $3 \times n$
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

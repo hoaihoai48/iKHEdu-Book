@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CẮT BĂNG RÔN QUẢNG CÁO TỐI ƯU BẰNG 2 DEQUE
+# Hướng dẫn giảng dạy: Cắt băng rôn quảng cáo tối ưu bằng 2 deque
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

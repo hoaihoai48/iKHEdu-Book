@@ -1,4 +1,4 @@
-# Segment Tree Beats (thuật Toán Ji Driver Tối Ưu Phép Min=x)
+# Segment Tree beats (thuật toán ji driver tối ưu phép min=x)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Beats (Thuật Toán Ji Driver Tối Ưu Phép Min=X)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Phân rã lịch sử giá trị lớn nhất/nhì.

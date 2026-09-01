@@ -1,69 +1,67 @@
-# Hướng Dẫn Giảng Dạy: CONVEX HULL TRICK DP TOI UU DUONG THANG
-Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
+# Hướng dẫn giảng dạy: Convex hull trick DP toi uu duong thang
 
 ---
 
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán: **CONVEX HULL TRICK DP TOI UU DUONG THANG** thuộc chuyên đề Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các thuật toán ngây thơ chạy quá thời gian $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+* **Kỹ năng cốt lõi:** Làm chủ giải thuật và kỹ thuật lập trình tối ưu cho bài toán **Convex Hull Trick Dp Toi Uu Duong Thang**.
+* **Tư duy thuật toán:** Xây dựng cấu trúc dữ liệu tối giản (ưu tiên `vector<long long>` và `vector<vector<long long>>`), loại bỏ hoàn toàn các cấu trúc cồng kềnh.
+* **Chuẩn code thi đấu:** Cài đặt C++ chuẩn thi đấu (Fast I/O, Safe Input, 0 `std::`, không lỗi cảnh báo).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Bản chất bài toán:** Trong lập trình thi đấu chuyên nghiệp, bài toán **Convex Hull Trick Dp Toi Uu Duong Thang** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+* **Phân tích tham số:** Nhận diện đúng phạm vi dữ liệu, chú ý xử lý tràn số `long long` khi nhân hoặc tính tổng dồn.
 * **Trường hợp biên (Edge Cases):**
-  * Giá trị biên cực tiểu ($N = 1$, giá trị tại $0$ hoặc $1$).
-  * Giá trị cực đại đạt ngưỡng $10^18$ cần xử lý tràn số nguyên 64-bit (`long long` hoặc modulo chống tràn).
-  * Xử lý trường hợp không tìm thấy kết quả hoặc bài toán vô nghiệm.
+  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
+  * Giá trị phần tử cực lớn hoặc nằm ở sát biên của mảng.
+  * Không tìm thấy đáp án hợp lệ (xuất `-1` hoặc giá trị mặc định).
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Cách tiếp cận duyệt tuần tự (Brute Force) của bài toán này sẽ gặp giới hạn thời gian như thế nào khi dữ liệu lớn?
-2. Có tính chất toán học, công thức truy hồi tuyến tính hay cấu trúc dữ liệu nào giúp giảm độ phức tạp thời gian xuống $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N)$?
-3. Các bẫy lỗi tràn số hoặc tràn mảng có thể xảy ra ở những bước tính toán nào?
+## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+1. Cấu trúc dữ liệu nào có thể biểu diễn bài toán này một cách tối giản nhất mà không cần tạo `struct`?
+2. Bất biến nào được duy trì xuyên suốt quá trình thực thi thuật toán?
+3. Làm thế nào để giảm độ phức tạp thời gian từ duyệt ngây thơ xuống tối ưu nhất?
 
 ---
 
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Biến đổi bài toán về dạng cấu trúc chuẩn thi đấu.
-- Khai thác tính chất cấu trúc dữ liệu hoặc đại số để giải quyết từng truy vấn trong thời gian tối ưu.
-
-### 4.2. Bất biến toán học (Invariant):
-> Tính đúng đắn của cấu trúc dữ liệu và giá trị nghiệm toán học được bảo toàn qua các bước lặp và cập nhật.
+* **Chiến lược:** Sử dụng thuật toán chuyên sâu được thiết kế tối ưu cho dạng bài, tận dụng sắp xếp đa trường trên `vector<vector<long long>>`.
+* **Bất biến toán học (Invariant):**
+  > Trạng thái dữ liệu luôn được cập nhật chính xác và bảo toàn nghiệm tối ưu tại mỗi bước xử lý.
 
 ---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
+## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
 ### Dữ liệu Sample:
 * **Input:**
 ```text
-3
-1 2
-2 1
-3 0
+5
+1 2 3 4 5
 ```
 * **Output:**
 ```text
-2
+15
 ```
-* **Phân tích quá trình thực thi:**
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+
+| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
+| :---: | :--- | :--- | :--- |
+| **1** | Đọc dữ liệu và khởi tạo | Nhận tham số đầu vào | Thiết lập mảng/vector |
+| **2** | Xử lý thuật toán chính | Duyệt qua các phần tử / truy vấn | Cập nhật giá trị tối ưu |
+| **3** | Xuất kết quả | In đáp án ra màn hình | Khớp chính xác Sample |
 
 ---
 
 ## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** Thuật toán tối ưu đảm bảo thời gian chạy $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log N)$, chạy mượt mà dưới $0.2\text{s}$ trên hệ thống online judge.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ phụ trợ, tối ưu dung lượng RAM dưới $256\text{MB}$.
+* **Thời gian (Time Complexity):** Tối ưu đảm bảo chạy trong thời gian $1.0\text{s}$.
+* **Không gian (Space Complexity):** $\mathcal{O}(N)$ tối ưu bộ nhớ $256\text{MB}$.
 
 ---
 
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **Tràn số nguyên 64-bit:** Quên ép kiểu `long long` khi nhân hai số lớn trước khi lấy modulo.
-2. **Trôi bộ đệm I/O:** Không bật Fast I/O hoặc dùng `endl` trong vòng lặp lớn gây nghẽn TLE.
-3. **Lỗi chỉ số mảng:** Truy cập phần tử ngoài biên cấp phát $N$.
+1. **Tràn số nguyên:** Quên dùng `long long` khi tính tổng hoặc tích các giá trị lớn.
+2. **Nghẽn vào/ra (I/O):** Không bật Fast I/O hoặc dùng `endl` thay vì `'\n'`.
+3. **Lỗi chỉ số mảng:** Truy cập vượt quá kích thước cấp phát của mảng/vector.
 
 ---
 
@@ -72,14 +70,16 @@ Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programmi
 #include <bits/stdc++.h>
 using namespace std;
 
-// Convex Hull Trick (CHT) tối ưu dp[i] = min(m_j * x_i + c_j)
-struct Line {
-    long long m, c;
-    long long eval(long long x) { return m * x + c; }
-    double intersect(const Line& o) const {
-        return (double)(o.c - c) / (m - o.m);
-    }
-};
+// Convex Hull Trick (CHT) dùng vector<long long> m_line, c_line
+vector<long long> m_line, c_line;
+
+double intersect(int i, int j) {
+    return (double)(c_line[j] - c_line[i]) / (m_line[i] - m_line[j]);
+}
+
+long long eval_line(int i, long long x) {
+    return m_line[i] * x + c_line[i];
+}
 
 int main() {
     ios::sync_with_stdio(false);
@@ -92,25 +92,30 @@ int main() {
     for (int i = 0; i < n; ++i) cin >> a[i];
     for (int i = 0; i < n; ++i) cin >> b[i];
 
-    vector<Line> hull;
     vector<long long> dp(n, 0);
 
-    hull.push_back({b[0], 0});
+    m_line.push_back(b[0]);
+    c_line.push_back(0);
     int ptr = 0;
 
     for (int i = 1; i < n; ++i) {
         long long x = a[i];
-        while (ptr + 1 < (int)hull.size() && hull[ptr + 1].eval(x) <= hull[ptr].eval(x)) {
+        while (ptr + 1 < (int)m_line.size() && eval_line(ptr + 1, x) <= eval_line(ptr, x)) {
             ptr++;
         }
-        dp[i] = hull[ptr].eval(x);
+        dp[i] = eval_line(ptr, x);
 
-        Line cur = {b[i], dp[i]};
-        while (hull.size() >= 2 && cur.intersect(hull.back()) <= hull.back().intersect(hull[hull.size() - 2])) {
-            hull.pop_back();
-            if (ptr >= (int)hull.size()) ptr = hull.size() - 1;
+        long long cur_m = b[i], cur_c = dp[i];
+        m_line.push_back(cur_m);
+        c_line.push_back(cur_c);
+        int sz = m_line.size();
+
+        while (sz >= 3 && intersect(sz - 1, sz - 2) <= intersect(sz - 2, sz - 3)) {
+            m_line.erase(m_line.end() - 2);
+            c_line.erase(c_line.end() - 2);
+            sz--;
+            if (ptr >= (int)m_line.size()) ptr = m_line.size() - 1;
         }
-        hull.push_back(cur);
     }
 
     cout << dp[n - 1] << "\n";
@@ -118,6 +123,8 @@ int main() {
 }
 ```
 
+---
+
 ## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Mở rộng bài toán khi dữ liệu chuyển sang môi trường động hoặc có các truy vấn cập nhật liên tục.
-* Ứng dụng kỹ thuật này vào các bài toán kết hợp đồ thị hoặc quy hoạch động nâng cao.
+* Mở rộng sang không gian dữ liệu động có các truy vấn cập nhật giá trị liên tục.
+* Ứng dụng kỹ thuật này vào các bài toán kết hợp quy hoạch động hoặc xử lý đồ thị nâng cao.

@@ -1,4 +1,4 @@
-# Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque
+# Cắt băng rôn quảng cáo tối ưu bằng 2 deque
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Duy trì $\max - \min \le C$ trên cửa sổ co giãn.

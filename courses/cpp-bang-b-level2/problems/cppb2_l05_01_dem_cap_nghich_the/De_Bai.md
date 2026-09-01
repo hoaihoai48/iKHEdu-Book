@@ -1,4 +1,4 @@
-# Đếm Cặp Nghịch Thế
+# Đếm cặp nghịch thế
 
 ## Bối cảnh
 Cho mảng $N$ phần tử. Đếm số cặp $(i, j)$ thỏa mãn $1 \le i < j \le N$ và $A_i > A_j$.

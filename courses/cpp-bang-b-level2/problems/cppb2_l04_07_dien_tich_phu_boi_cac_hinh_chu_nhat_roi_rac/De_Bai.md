@@ -1,4 +1,4 @@
-# Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc
+# Diện tích phủ bởi các hình chữ nhật rời rạc
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Nén tọa độ 2D kết hợp mảng hiệu 2D.

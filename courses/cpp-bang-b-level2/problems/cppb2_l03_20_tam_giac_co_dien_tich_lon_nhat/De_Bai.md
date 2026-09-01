@@ -1,30 +1,34 @@
-# Tam Giac Co Dien Tich Lon Nhat
+# Tam giác có diện tích lớn nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Tam Giac Co Dien Tich Lon Nhat** là một dạng bài điển hình thuộc chuyên đề **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho một đa giác lồi gồm $N$ đỉnh trên mặt phẳng tọa độ $Oxy$ được liệt kê theo chiều ngược chiều kim đồng hồ. Cần chọn ra 3 đỉnh phân biệt của đa giác lồi sao cho tam giác tạo bởi 3 đỉnh này có diện tích lớn nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tam Giac Co Dien Tich Lon Nhat với độ phức tạp tối ưu nhất.
+Hãy lập trình tìm diện tích lớn nhất của tam giác được tạo từ 3 đỉnh bất kỳ của đa giác lồi bằng kỹ thuật Hai con trỏ quay (Rotating Calipers) với độ phức tạp $\mathcal{O}(N^2)$ hoặc $\mathcal{O}(N)$.
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm 1 số nguyên $N$ ($3 \le N \le 3000$) — số đỉnh của đa giác lồi.
+- $N$ dòng tiếp theo: Mỗi dòng gồm 2 số nguyên $x_i, y_i$ ($|x_i|, |y_i| \le 10^9$) — tọa độ đỉnh thứ $i$.
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+- In ra diện tích lớn nhất tìm được với đúng 1 chữ số thập phân sau dấu phẩy.
 
 ## Sample 1
 ### Input
 ```text
-1
+4
+0 0
+4 0
+4 3
+0 3
 ```
 ### Output
 ```text
-1
+6.0
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+* 4 đỉnh tạo thành hình chữ nhật kích thước $4 \times 3$. Chọn 3 đỉnh $(0,0), (4,0), (4,3)$ tạo thành tam giác vuông có diện tích $S = \frac{1}{2} \times 4 \times 3 = 6.0$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $3 \le N \le 3000, |x_i|, |y_i| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

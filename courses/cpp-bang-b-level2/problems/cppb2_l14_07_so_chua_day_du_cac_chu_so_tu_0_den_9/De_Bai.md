@@ -1,4 +1,4 @@
-# Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9
+# Số chứa đầy đủ các chữ số từ 0 đến 9
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP kết hợp Bitmask lưu tập chữ số.

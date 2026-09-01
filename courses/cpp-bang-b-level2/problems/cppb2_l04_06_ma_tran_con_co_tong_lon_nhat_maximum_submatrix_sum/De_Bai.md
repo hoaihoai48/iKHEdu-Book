@@ -1,4 +1,4 @@
-# Ma Trận Con Có Tổng Lớn Nhất (maximum Submatrix Sum)
+# Ma trận con có tổng lớn nhất (maximum submatrix sum)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ma Trận Con Có Tổng Lớn Nhất (Maximum Submatrix Sum)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cố định 2 hàng + Thuật toán Kadane 1D.

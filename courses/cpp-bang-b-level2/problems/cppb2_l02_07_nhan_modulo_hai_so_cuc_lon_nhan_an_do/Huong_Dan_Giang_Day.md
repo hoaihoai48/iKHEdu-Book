@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NHÂN MODULO HAI SỐ CỰC LỚN (NHÂN ẤN ĐỘ)
+# Hướng dẫn giảng dạy: Nhân modulo hai số cực lớn (nhân ấn độ)
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

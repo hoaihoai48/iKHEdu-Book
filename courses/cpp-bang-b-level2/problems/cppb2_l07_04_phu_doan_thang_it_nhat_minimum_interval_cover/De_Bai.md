@@ -1,4 +1,4 @@
-# Phủ Đoạn Thẳng Ít Nhất (minimum Interval Cover)
+# Phủ đoạn thẳng ít nhất (minimum interval cover)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phủ Đoạn Thẳng Ít Nhất (Minimum Interval Cover)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Tham lam chọn đoạn vươn xa nhất.

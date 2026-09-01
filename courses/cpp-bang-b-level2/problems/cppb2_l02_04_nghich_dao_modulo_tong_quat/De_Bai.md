@@ -1,4 +1,4 @@
-# Nghịch Đảo Modulo Tổng Quát
+# Nghịch đảo modulo tổng quát
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nghịch Đảo Modulo Tổng Quát** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Euclid mở rộng tìm nghịch đảo khi $M$ không nguyên tố.

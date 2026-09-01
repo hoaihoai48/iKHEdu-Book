@@ -1,4 +1,4 @@
-# Cái Túi 0/1 Chuẩn (0/1 Knapsack)
+# Cái túi 0/1 chuẩn (0/1 knapsack)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi 0/1 Chuẩn (0/1 Knapsack)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP Cái túi tối ưu bộ nhớ 1D.

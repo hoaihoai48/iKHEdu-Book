@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM SỐ THỎA MÃN ĐIỀU KIỆN CHỮ SỐ THỨ K NHỎ NHẤT
+# Hướng dẫn giảng dạy: Tìm số thỏa mãn điều kiện chữ số thứ k nhỏ nhất
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

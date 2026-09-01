@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG CẤP SỐ NHÂN $S_N = \SUM_{I=0}^N A^I \BMOD M$
+# Hướng dẫn giảng dạy: Tổng cấp số nhân $s_n = \sum_{i=0}^n a^i \bmod m$
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

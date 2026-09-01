@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NỐI CÁC SỢI DÂY TIẾT KIỆM CHI PHÍ NHẤT
+# Hướng dẫn giảng dạy: Nối các sợi dây tiết kiệm chi phí nhất
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

@@ -1,4 +1,4 @@
-# Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (matrix Chain)
+# Nhân ma trận dây chuyền chi phí nhỏ nhất (matrix chain)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (Matrix Chain)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Interval DP $\mathcal{O}(N^3)$ tìm vị trí chia cắt tối ưu.

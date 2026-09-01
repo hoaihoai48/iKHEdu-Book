@@ -1,4 +1,4 @@
-# Đếm Số Cặp $(a_i, B_j)$ Có Tổng Trong Khoảng $[l, R]$
+# Đếm số cặp $(a_i, b_j)$ có tổng trong khoảng $[l, r]$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cặp $(A_i, B_j)$ Có Tổng Trong Khoảng $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `lower_bound` và `upper_bound` đếm số lượng.

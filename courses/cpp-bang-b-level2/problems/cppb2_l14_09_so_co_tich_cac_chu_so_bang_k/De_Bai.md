@@ -1,4 +1,4 @@
-# Số Có Tích Các Chữ Số Bằng K
+# Số có tích các chữ số bằng k
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Tích Các Chữ Số Bằng K** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP kiểm tra $K$ chỉ có ước nguyên tố 2, 3, 5, 7.

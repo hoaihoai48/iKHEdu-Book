@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XÂU CON LẶP LẠI DÀI NHẤT XUẤT HIỆN ÍT NHẤT K LẦN
+# Hướng dẫn giảng dạy: Xâu con lặp lại dài nhất xuất hiện ít nhất k lần
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

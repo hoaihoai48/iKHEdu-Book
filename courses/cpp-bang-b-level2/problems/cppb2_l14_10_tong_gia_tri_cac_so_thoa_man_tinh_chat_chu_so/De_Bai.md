@@ -1,4 +1,4 @@
-# Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số
+# Tổng giá trị các số thỏa mãn tính chất chữ số
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP trả về cặp `{số_lượng, tổng_giá_trị}`.

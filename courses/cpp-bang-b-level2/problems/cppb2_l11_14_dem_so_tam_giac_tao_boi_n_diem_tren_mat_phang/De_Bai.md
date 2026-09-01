@@ -1,4 +1,4 @@
-# Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng
+# Đếm số tam giác tạo bởi n điểm trên mặt phẳng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: $\binom{N}{3}$ trừ các bộ 3 điểm thẳng hàng qua $\gcd$.

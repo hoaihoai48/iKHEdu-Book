@@ -1,4 +1,4 @@
-# Tìm Nghiệm Thực Của Phương Trình Phi Tuyến
+# Tìm nghiệm thực của phương trình phi tuyến
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Nghiệm Thực Của Phương Trình Phi Tuyến** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân số thực trên hàm đơn điệu ngặt.

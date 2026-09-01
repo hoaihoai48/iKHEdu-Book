@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHOẢNG CÁCH DÂY CÁP NHỎ NHẤT
+# Hướng dẫn giảng dạy: Khoảng cách dây cáp nhỏ nhất
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

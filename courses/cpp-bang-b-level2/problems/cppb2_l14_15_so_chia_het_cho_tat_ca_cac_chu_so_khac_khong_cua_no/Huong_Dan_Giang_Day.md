@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ CHIA HẾT CHO TẤT CẢ CÁC CHỮ SỐ KHÁC KHÔNG CỦA NÓ
+# Hướng dẫn giảng dạy: Số chia hết cho tất cả các chữ số khác không của nó
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

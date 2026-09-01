@@ -1,4 +1,4 @@
-# Cây Phân Đoạn Bền Vững (persistent Segment Tree Cơ Bản)
+# Cây phân đoạn bền vững (persistent Segment Tree cơ bản)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Phân Đoạn Bền Vững (Persistent Segment Tree Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cây lưu vết phiên bản tìm phần tử nhỏ thứ $K$ trên đoạn.

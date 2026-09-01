@@ -1,4 +1,4 @@
-# Sos Dp (sum Over Subsets Dynamic Programming)
+# Sos DP (sum over subsets dynamic programming)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **SOS DP (Sum Over Subsets Dynamic Programming)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP tính tổng hàm trên mọi submask $\mathcal{O}(N 2^N)$.

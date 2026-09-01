@@ -1,4 +1,4 @@
-# Nhân Hai Số Nguyên Lớn
+# Nhân hai số nguyên lớn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Hai Số Nguyên Lớn** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt BigInt Multiplication $\mathcal{O}(NM)$.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CẬP NHẬT ĐOẠN TRUY VẤN ĐIỂM BẰNG FENWICK TREE
+# Hướng dẫn giảng dạy: Cập nhật đoạn truy vấn điểm bằng Fenwick Tree
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

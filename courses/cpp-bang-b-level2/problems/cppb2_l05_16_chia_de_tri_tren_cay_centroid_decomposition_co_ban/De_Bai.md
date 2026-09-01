@@ -1,4 +1,4 @@
-# Chia Để Trị Trên Cây (centroid Decomposition Cơ Bản)
+# Chia để trị trên cây (centroid decomposition cơ bản)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Để Trị Trên Cây (Centroid Decomposition Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm trọng tâm cây đệ quy chia để trị.

@@ -1,4 +1,4 @@
-# Đường Đi Euler & Chu Trình Euler (hierholzer)
+# Đường đi Euler & chu trình Euler (Hierholzer)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Euler & Chu Trình Euler (Hierholzer)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán Hierholzer tìm hành trình Euler.

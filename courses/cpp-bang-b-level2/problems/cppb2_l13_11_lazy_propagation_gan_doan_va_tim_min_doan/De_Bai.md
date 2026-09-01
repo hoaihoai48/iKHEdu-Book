@@ -1,4 +1,4 @@
-# Lazy Propagation Gán Đoạn Và Tìm Min Đoạn
+# Lazy propagation gán đoạn và tìm min đoạn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lazy Propagation Gán Đoạn Và Tìm Min Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Lazy gán giá trị mới lên khoảng.

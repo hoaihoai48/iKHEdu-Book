@@ -1,4 +1,4 @@
-# Tổng Cấp Số Nhân Bằng Chia Để Trị
+# Tổng cấp số nhân bằng chia để trị
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Cấp Số Nhân Bằng Chia Để Trị** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Phân rã $S_N = S_{N/2} \times (1 + A^{N/2})$.

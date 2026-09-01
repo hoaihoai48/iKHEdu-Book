@@ -1,4 +1,4 @@
-# Đường Đi Ngắn Nhất Dijkstra
+# Đường đi ngắn nhất Dijkstra
 
 ## Bối cảnh
 Tìm đường đi ngắn nhất từ đỉnh 1 đến đỉnh $N$ trên đồ thị có hướng trọng số không âm.

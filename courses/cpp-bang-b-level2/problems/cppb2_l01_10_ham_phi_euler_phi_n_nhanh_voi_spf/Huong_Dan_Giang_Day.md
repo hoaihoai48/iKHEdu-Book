@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HÀM PHI EULER $\PHI(N)$ NHANH VỚI SPF
+# Hướng dẫn giảng dạy: Hàm phi Euler $\phi(n)$ nhanh với SPF
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

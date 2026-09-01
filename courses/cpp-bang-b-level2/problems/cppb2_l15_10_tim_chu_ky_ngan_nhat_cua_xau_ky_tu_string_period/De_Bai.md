@@ -1,4 +1,4 @@
-# Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (string Period)
+# Tìm chu kỳ ngắn nhất của xâu ký tự (string period)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (String Period)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: String Hashing kiểm tra chu kỳ lặp.

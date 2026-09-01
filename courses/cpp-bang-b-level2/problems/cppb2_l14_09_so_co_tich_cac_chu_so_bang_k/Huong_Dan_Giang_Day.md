@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ CÓ TÍCH CÁC CHỮ SỐ BẰNG K
+# Hướng dẫn giảng dạy: Số có tích các chữ số bằng k
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

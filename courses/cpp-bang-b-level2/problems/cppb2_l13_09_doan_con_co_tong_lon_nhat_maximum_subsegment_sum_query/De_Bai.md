@@ -1,4 +1,4 @@
-# Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query)
+# Đoạn con có tổng lớn nhất (maximum subsegment sum query)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Segment Tree lưu 4 trường (sum, pref, suff, ans).

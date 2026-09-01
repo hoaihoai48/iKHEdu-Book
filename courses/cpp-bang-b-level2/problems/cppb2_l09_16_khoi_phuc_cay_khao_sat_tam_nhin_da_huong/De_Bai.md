@@ -1,4 +1,4 @@
-# Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng
+# Khôi phục cây khảo sát tầm nhìn đa hướng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Monotonic Stack 2 chiều xây dựng Cartesian Tree.

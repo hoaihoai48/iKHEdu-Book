@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: MA TRẬN CON CÓ TỔNG LỚN NHẤT (MAXIMUM SUBMATRIX SUM)
+# Hướng dẫn giảng dạy: Ma trận con có tổng lớn nhất (maximum submatrix sum)
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

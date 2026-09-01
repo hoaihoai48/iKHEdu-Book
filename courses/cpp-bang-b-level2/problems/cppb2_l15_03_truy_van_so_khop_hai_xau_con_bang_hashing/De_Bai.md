@@ -1,4 +1,4 @@
-# Truy Vấn So Khớp Hai Xâu Con Bằng Hashing
+# Truy vấn so khớp hai xâu con bằng hashing
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn So Khớp Hai Xâu Con Bằng Hashing** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cài đặt Rolling Hash $\mathcal{O}(1)$.

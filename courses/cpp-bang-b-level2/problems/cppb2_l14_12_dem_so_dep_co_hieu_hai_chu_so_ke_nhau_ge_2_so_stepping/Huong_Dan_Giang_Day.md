@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ ĐẸP CÓ HIỆU HAI CHỮ SỐ KỀ NHAU $\GE 2$ (SỐ STEPPING)
+# Hướng dẫn giảng dạy: Đếm số đẹp có hiệu hai chữ số kề nhau $\ge 2$ (số stepping)
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

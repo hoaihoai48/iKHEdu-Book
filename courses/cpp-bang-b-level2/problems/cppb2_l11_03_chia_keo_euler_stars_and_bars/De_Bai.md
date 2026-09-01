@@ -1,4 +1,4 @@
-# Chia Kẹo Euler (stars And Bars)
+# Chia kẹo Euler (stars and bars)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Kẹo Euler (Stars and Bars)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Ứng dụng công thức chia kẹo Euler.

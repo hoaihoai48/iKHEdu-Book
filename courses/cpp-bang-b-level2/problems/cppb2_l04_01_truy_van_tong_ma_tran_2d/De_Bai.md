@@ -1,4 +1,4 @@
-# Truy Vấn Tổng Ma Trận Con 2d
+# Truy vấn tổng ma trận con 2d
 
 ## Bối cảnh
 Cho ma trận $A$ kích thước $N \times M$. Có $Q$ truy vấn tính tổng hình chữ nhật từ $(x_1, y_1)$ đến $(x_2, y_2)$.

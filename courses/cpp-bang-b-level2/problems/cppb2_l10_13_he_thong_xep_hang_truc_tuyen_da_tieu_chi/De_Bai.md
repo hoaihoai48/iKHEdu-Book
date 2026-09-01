@@ -1,4 +1,4 @@
-# Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí
+# Hệ thống xếp hạng trực tuyến đa tiêu chí
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `set<CustomStruct>` với Strict Weak Ordering.

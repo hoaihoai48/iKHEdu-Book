@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ PHẦN TỬ PHÂN BIỆT TRONG MỌI CỬA SỔ K
+# Hướng dẫn giảng dạy: Đếm số phần tử phân biệt trong mọi cửa sổ k
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

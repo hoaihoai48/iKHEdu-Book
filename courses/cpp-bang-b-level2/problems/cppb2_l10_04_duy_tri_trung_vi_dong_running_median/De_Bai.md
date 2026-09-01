@@ -1,4 +1,4 @@
-# Duy Trì Trung Vị Động (running Median)
+# Duy trì trung vị động (running median)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì Trung Vị Động (Running Median)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: 2 Heap cân bằng kích thước.

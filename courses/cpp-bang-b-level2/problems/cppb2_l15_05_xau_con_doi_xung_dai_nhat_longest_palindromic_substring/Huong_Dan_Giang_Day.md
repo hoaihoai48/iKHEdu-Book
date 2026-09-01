@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XÂU CON ĐỐI XỨNG DÀI NHẤT (LONGEST PALINDROMIC SUBSTRING)
+# Hướng dẫn giảng dạy: Xâu con đối xứng dài nhất (longest palindromic substring)
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

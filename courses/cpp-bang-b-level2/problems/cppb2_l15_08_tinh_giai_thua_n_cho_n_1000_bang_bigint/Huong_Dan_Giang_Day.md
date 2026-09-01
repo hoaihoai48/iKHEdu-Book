@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÍNH GIAI THỪA $N!$ CHO $N = 1000$ BẰNG BIGINT
+# Hướng dẫn giảng dạy: Tính giai thừa $n!$ cho $n = 1000$ bằng BigInt
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

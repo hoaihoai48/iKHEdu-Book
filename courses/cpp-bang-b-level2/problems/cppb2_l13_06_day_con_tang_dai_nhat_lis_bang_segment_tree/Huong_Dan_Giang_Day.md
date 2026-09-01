@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DÃY CON TĂNG DÀI NHẤT LIS BẰNG SEGMENT TREE
+# Hướng dẫn giảng dạy: Dãy con tăng dài nhất LIS bằng Segment Tree
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

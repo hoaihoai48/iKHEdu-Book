@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CÂY KHUNG NHỎ NHẤT (MST KRUSKAL VỚI DSU)
+# Hướng dẫn giảng dạy: Cây khung nhỏ nhất (MST Kruskal với DSU)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

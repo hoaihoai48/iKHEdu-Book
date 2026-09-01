@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỐI ƯU HÓA CHI PHÍ MUA CỔ PHIẾU THEO THỜI GIAN
+# Hướng dẫn giảng dạy: Tối ưu hóa chi phí mua cổ phiếu theo thời gian
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

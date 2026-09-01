@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐƯỜNG ĐI NGẮN NHẤT DIJKSTRA
+# Hướng dẫn giảng dạy: Đường đi ngắn nhất Dijkstra
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

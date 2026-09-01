@@ -1,4 +1,4 @@
-# Tam Giác Pascal Modulo Hợp Số
+# Tam giác pascal modulo hợp số
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tam Giác Pascal Modulo Hợp Số** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: DP Tam giác Pascal $C_n^k = C_{n-1}^{k-1} + C_{n-1}^k$.

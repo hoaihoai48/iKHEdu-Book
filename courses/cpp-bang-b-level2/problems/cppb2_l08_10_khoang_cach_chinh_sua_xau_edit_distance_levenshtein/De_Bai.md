@@ -1,4 +1,4 @@
-# Khoảng Cách Chỉnh Sửa Xâu (edit Distance / Levenshtein)
+# Khoảng cách chỉnh sửa xâu (edit distance / levenshtein)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Chỉnh Sửa Xâu (Edit Distance / Levenshtein)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP 2D tính 3 thao tác Thêm, Xóa, Thay thế.

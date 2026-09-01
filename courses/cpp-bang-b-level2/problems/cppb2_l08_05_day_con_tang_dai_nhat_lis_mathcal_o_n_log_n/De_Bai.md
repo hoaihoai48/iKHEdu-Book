@@ -1,4 +1,4 @@
-# Dãy Con Tăng Dài Nhất Lis $\mathcal{o}(n \log N)$
+# Dãy con tăng dài nhất LIS $\mathcal{o}(n \log n)$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Dài Nhất LIS $\mathcal{O}(N \log N)$** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: `lower_bound` trên mảng `tail`.

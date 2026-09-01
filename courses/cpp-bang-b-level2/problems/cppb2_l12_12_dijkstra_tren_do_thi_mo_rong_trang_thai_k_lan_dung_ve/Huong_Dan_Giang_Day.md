@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DIJKSTRA TRÊN ĐỒ THỊ MỞ RỘNG TRẠNG THÁI (K LẦN DÙNG VÉ)
+# Hướng dẫn giảng dạy: Dijkstra trên đồ thị mở rộng trạng thái (k lần dùng vé)
 Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**
 
 ---

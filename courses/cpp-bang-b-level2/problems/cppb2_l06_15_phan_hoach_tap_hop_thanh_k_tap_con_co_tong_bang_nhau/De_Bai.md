@@ -1,4 +1,4 @@
-# Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau
+# Phân hoạch tập hợp thành k tập con có tổng bằng nhau
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Bitmask DP kiểm tra tính khả thi.

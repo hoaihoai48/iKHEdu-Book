@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: BẺ KHÓA MẬT MÃ ĐỔI DẤU (SUBSET SUM WITH SIGNS)
+# Hướng dẫn giảng dạy: Bẻ khóa mật mã đổi dấu (subset sum with signs)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

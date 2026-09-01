@@ -1,4 +1,4 @@
-# Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé)
+# Dijkstra trên đồ thị mở rộng trạng thái (k lần dùng vé)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Dijkstra đa tầng $dist[u][k]$.

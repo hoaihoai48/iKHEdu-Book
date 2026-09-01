@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SEGMENT TREE LAZY PROPAGATION (CẬP NHẬT ĐOẠN & TRUY VẤN ĐOẠN)
+# Hướng dẫn giảng dạy: Segment Tree lazy propagation (cập nhật đoạn & truy vấn đoạn)
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

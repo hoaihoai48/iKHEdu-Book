@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DUY TRÌ TỔNG CỦA K PHẦN TỬ LỚN NHẤT ĐỘNG
+# Hướng dẫn giảng dạy: Duy trì tổng của k phần tử lớn nhất động
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

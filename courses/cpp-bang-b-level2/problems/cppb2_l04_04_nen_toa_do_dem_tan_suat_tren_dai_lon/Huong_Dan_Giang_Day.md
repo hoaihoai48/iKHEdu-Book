@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: NÉN TỌA ĐỘ & ĐẾM TẦN SUẤT TRÊN DẢI LỚN
+# Hướng dẫn giảng dạy: Nén tọa độ & đếm tần suất trên dải lớn
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

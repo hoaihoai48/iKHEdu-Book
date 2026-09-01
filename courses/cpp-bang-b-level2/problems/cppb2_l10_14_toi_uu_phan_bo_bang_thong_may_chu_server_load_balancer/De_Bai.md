@@ -1,4 +1,4 @@
-# Tối Ưu Phân Bổ Băng Thông Máy Chủ (server Load Balancer)
+# Tối ưu phân bổ băng thông máy chủ (server load balancer)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Bổ Băng Thông Máy Chủ (Server Load Balancer)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2 `set` quản lý máy chủ bận và máy chủ rảnh.

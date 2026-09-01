@@ -1,4 +1,4 @@
-# Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu
+# Hệ thống đặt chỗ rạp chiếu phim tối ưu
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: `set<pair<int, int>>` quản lý đoạn trống.

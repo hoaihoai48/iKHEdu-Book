@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ ĐỐI XỨNG (PALINDROME NUMBERS) TRONG ĐOẠN
+# Hướng dẫn giảng dạy: Đếm số đối xứng (palindrome numbers) trong đoạn
 Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 
 ---

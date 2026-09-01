@@ -1,4 +1,4 @@
-# Ghép Cặp Trọng Số Cực Đại (maximum Matching Bitmask)
+# Ghép cặp trọng số cực đại (maximum matching bitmask)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Cặp Trọng Số Cực Đại (Maximum Matching Bitmask)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP khử chiều đối xứng.

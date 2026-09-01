@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHẶT NHỊ PHÂN CẮT GỖ (EKO)
+# Hướng dẫn giảng dạy: Chặt nhị phân cắt gỗ (eko)
 Chuyên đề: **Tìm Kiếm Nhị Phân Nâng Cao (Binary Search)**
 
 ---

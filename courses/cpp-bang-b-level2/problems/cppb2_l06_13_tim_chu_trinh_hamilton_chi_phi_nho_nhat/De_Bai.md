@@ -1,4 +1,4 @@
-# Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất
+# Tìm chu trình hamilton chi phí nhỏ nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP kết hợp truy vết chu trình.

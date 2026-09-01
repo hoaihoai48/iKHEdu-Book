@@ -1,4 +1,4 @@
-# Multi-source Bfs Lan Tỏa Dịch Bệnh / Cháy Rừng
+# Multi-source BFS lan tỏa dịch bệnh / cháy rừng
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Multi-Source BFS Lan Tỏa Dịch Bệnh / Cháy Rừng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS đồng thời từ nhiều đỉnh nguồn ban đầu.

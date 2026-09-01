@@ -1,4 +1,4 @@
-# Sàng Ước Số Nguyên Tố Nhỏ Nhất (spf)
+# Sàng ước số nguyên tố nhỏ nhất (SPF)
 
 ## Bối cảnh
 Trong các bài toán xử lý số học nhiều truy vấn, việc tìm **ước số nguyên tố nhỏ nhất** ($\text{Smallest Prime Factor} - \text{SPF}$) của một số là bước tiền xử lý nền tảng giúp phân tích thừa số nguyên tố, đếm ước số, tính hàm nhân tính và tìm các số nguyên tố cùng nhau trong thời gian logarit $\mathcal{O}(\log N)$.

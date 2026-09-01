@@ -1,4 +1,4 @@
-# Đổi Tiền Xu Số Tờ Nhỏ Nhất (unbounded Coin Change)
+# Đổi tiền xu số tờ nhỏ nhất (unbounded coin change)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đổi Tiền Xu Số Tờ Nhỏ Nhất (Unbounded Coin Change)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP Cái túi vô hạn duyệt xuôi.

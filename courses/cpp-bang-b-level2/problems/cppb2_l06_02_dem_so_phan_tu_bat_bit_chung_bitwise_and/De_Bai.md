@@ -1,4 +1,4 @@
-# Đếm Số Phần Tử Bật Bit Chung (bitwise And)
+# Đếm số phần tử bật BIT chung (bitwise and)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Phần Tử Bật Bit Chung (Bitwise AND)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Đếm bit độc lập theo từng cột $0 \dots 30$.

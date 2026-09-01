@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SOS DP (SUM OVER SUBSETS DYNAMIC PROGRAMMING)
+# Hướng dẫn giảng dạy: Sos DP (sum over subsets dynamic programming)
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

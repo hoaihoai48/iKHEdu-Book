@@ -1,4 +1,4 @@
-# Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$
+# Trung bình cộng đoạn con lớn nhất $\ge k$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: BS số thực kết hợp Mảng tiền tố trừ $mid$.

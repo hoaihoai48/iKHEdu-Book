@@ -1,4 +1,4 @@
-# Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d
+# Tối ưu phân đoạn trọng số ma trận 2d
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: BS trên đáp án kết hợp 2D Prefix Sum & Greedy.

@@ -1,4 +1,4 @@
-# Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé Miễn Phí)
+# Dijkstra trên đồ thị mở rộng trạng thái (k lần dùng vé miễn phí)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé Miễn Phí)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Dijkstra đa tầng $dist[u][k]$.

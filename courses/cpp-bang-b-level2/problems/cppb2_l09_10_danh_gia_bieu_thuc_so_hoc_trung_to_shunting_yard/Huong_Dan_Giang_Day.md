@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐÁNH GIÁ BIỂU THỨC SỐ HỌC TRUNG TỐ (SHUNTING-YARD)
+# Hướng dẫn giảng dạy: Đánh giá biểu thức số học trung tố (shunting-yard)
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

@@ -1,4 +1,4 @@
-# Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử
+# Dãy con tăng lớn nhất có truy vết phần tử
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: LIS $\mathcal{O}(N \log N)$ kèm mảng truy vết $parent[i]$.

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XÓA KÝ TỰ ĐỂ THÀNH PALINDROME NGẮN NHẤT
+# Hướng dẫn giảng dạy: Xóa ký tự để thành palindrome ngắn nhất
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

@@ -1,4 +1,4 @@
-# Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree
+# Cập nhật đoạn truy vấn điểm bằng Fenwick Tree
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Fenwick trên mảng hiệu (Difference BIT).

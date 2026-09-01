@@ -1,4 +1,4 @@
-# Quy Hoạch Động Trên Cây (tree Dp: Max Independent Set)
+# Quy hoạch động trên cây (Tree dp: max independent set)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Quy Hoạch Động Trên Cây (Tree DP: Max Independent Set)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP $dp[u][0/1]$ chọn hoặc không chọn đỉnh $u$.

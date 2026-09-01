@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LŨY THỪA NHANH CƠ BẢN
+# Hướng dẫn giảng dạy: Lũy thừa nhanh cơ bản
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

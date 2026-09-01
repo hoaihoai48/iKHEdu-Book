@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM CHU TRÌNH HAMILTON CHI PHÍ NHỎ NHẤT
+# Hướng dẫn giảng dạy: Tìm chu trình hamilton chi phí nhỏ nhất
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

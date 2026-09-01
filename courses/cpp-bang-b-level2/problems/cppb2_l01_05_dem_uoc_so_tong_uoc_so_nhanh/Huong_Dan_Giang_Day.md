@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM ƯỚC SỐ & TỔNG ƯỚC SỐ NHANH
+# Hướng dẫn giảng dạy: Đếm ước số & tổng ước số nhanh
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

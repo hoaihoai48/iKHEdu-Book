@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: MẢNG HẬU TỐ (SUFFIX ARRAY) BẰNG STRING HASHING $\MATHCAL{O}(N \LOG^2 N)$
+# Hướng dẫn giảng dạy: Mảng hậu tố (suffix array) bằng string hashing $\mathcal{o}(n \log^2 n)$
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

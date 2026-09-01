@@ -1,4 +1,4 @@
-# Cây Khung Nhỏ Nhất (mst Kruskal Với Dsu)
+# Cây khung nhỏ nhất (MST Kruskal với DSU)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Khung Nhỏ Nhất (MST Kruskal với DSU)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Kruskal + Disjoint Set Union.

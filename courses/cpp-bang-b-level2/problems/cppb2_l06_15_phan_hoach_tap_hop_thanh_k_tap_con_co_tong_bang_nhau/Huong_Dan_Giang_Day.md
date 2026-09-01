@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHÂN HOẠCH TẬP HỢP THÀNH K TẬP CON CÓ TỔNG BẰNG NHAU
+# Hướng dẫn giảng dạy: Phân hoạch tập hợp thành k tập con có tổng bằng nhau
 Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 
 ---

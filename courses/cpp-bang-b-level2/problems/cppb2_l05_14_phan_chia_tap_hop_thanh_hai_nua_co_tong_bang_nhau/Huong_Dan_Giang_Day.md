@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHÂN CHIA TẬP HỢP THÀNH HAI NỬA CÓ TỔNG BẰNG NHAU
+# Hướng dẫn giảng dạy: Phân chia tập hợp thành hai nửa có tổng bằng nhau
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

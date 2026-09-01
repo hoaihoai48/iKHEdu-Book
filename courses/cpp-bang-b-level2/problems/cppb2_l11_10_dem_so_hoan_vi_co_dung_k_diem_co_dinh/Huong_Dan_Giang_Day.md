@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ HOÁN VỊ CÓ ĐÚNG K ĐIỂM CỐ ĐỊNH
+# Hướng dẫn giảng dạy: Đếm số hoán vị có đúng k điểm cố định
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

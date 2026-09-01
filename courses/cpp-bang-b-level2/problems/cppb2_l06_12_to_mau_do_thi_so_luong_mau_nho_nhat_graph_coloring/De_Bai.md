@@ -1,4 +1,4 @@
-# Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (graph Coloring)
+# Tô màu đồ thị số lượng màu nhỏ nhất (graph coloring)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (Graph Coloring)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP trên tập độc lập cực đại (MIS).

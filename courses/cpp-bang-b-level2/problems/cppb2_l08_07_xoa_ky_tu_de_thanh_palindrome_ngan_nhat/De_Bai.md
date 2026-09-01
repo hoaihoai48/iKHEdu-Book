@@ -1,4 +1,4 @@
-# Xóa Ký Tự Để Thành Palindrome Ngắn Nhất
+# Xóa ký tự để thành palindrome ngắn nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xóa Ký Tự Để Thành Palindrome Ngắn Nhất** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP khoảng $[l, r]$ (Interval DP).

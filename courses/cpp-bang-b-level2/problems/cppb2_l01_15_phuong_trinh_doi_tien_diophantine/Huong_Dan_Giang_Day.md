@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ CÁCH ĐỔI TIỀN BẰNG PHƯƠNG TRÌNH DIOPHANTINE
+# Hướng dẫn giảng dạy: Đếm số cách đổi tiền bằng phương trình Diophantine
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

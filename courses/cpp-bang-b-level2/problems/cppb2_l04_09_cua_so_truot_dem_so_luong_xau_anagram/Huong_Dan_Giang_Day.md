@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CỬA SỔ TRƯỢT ĐẾM SỐ LƯỢNG XÂU ANAGRAM
+# Hướng dẫn giảng dạy: Cửa sổ trượt đếm số lượng xâu anagram
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

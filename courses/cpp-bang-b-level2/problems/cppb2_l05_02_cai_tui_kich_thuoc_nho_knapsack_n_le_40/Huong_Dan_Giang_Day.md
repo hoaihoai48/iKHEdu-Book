@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CÁI TÚI KÍCH THƯỚC NHỎ (KNAPSACK $N \LE 40$)
+# Hướng dẫn giảng dạy: Cái túi kích thước nhỏ (knapsack $n \le 40$)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: XÂU CON CHUNG DÀI NHẤT CỦA K XÂU KÝ TỰ
+# Hướng dẫn giảng dạy: Xâu con chung dài nhất của k xâu ký tự
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

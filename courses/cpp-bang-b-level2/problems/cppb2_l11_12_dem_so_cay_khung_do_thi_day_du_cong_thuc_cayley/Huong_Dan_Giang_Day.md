@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ CÂY KHUNG ĐỒ THỊ ĐẦY ĐỦ (CÔNG THỨC CAYLEY)
+# Hướng dẫn giảng dạy: Đếm số cây khung đồ thị đầy đủ (công thức cayley)
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

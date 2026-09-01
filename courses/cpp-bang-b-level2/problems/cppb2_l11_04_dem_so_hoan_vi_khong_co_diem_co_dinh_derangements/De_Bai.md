@@ -1,4 +1,4 @@
-# Đếm Số Hoán Vị Không Có Điểm Cố Định (derangements)
+# Đếm số hoán vị không có điểm cố định (derangements)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Hoán Vị Không Có Điểm Cố Định (Derangements)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Công thức $D_n = (n-1)(D_{n-1} + D_{n-2})$.

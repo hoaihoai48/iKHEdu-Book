@@ -1,4 +1,4 @@
-# Tìm Chu Trình Âm Bằng Bellman-ford / Spfa
+# Tìm chu trình âm bằng bellman-ford / spfa
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Trình Âm Bằng Bellman-Ford / SPFA** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Kiểm tra nới lỏng lần thứ $V$ phát hiện chu trình âm.

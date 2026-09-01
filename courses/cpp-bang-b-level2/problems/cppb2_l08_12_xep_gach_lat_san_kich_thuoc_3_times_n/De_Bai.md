@@ -1,4 +1,4 @@
-# Xếp Gạch Lát Sàn Kích Thước $3 \times N$
+# Xếp gạch lát sàn kích thước $3 \times n$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xếp Gạch Lát Sàn Kích Thước $3 \times N$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP ma trận trạng thái chẵn lẻ.

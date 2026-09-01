@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TỔNG CẤP SỐ NHÂN BẰNG CHIA ĐỂ TRỊ
+# Hướng dẫn giảng dạy: Tổng cấp số nhân bằng chia để trị
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

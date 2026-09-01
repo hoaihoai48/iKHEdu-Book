@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LŨY THỪA MA TRẬN KÍCH THƯỚC $K \TIMES K$
+# Hướng dẫn giảng dạy: Lũy thừa ma trận kích thước $k \times k$
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: PHẦN TỬ LỚN HƠN GẦN NHẤT TRÊN MẢNG XOAY VÒNG
+# Hướng dẫn giảng dạy: Phần tử lớn hơn gần nhất trên mảng xoay vòng
 Chuyên đề: **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**
 
 ---

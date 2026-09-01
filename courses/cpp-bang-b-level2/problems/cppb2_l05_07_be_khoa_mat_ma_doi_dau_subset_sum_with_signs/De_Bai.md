@@ -1,4 +1,4 @@
-# Bẻ Khóa Mật Mã Đổi Dấu (subset Sum With Signs)
+# Bẻ khóa mật mã đổi dấu (subset sum with signs)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bẻ Khóa Mật Mã Đổi Dấu (Subset Sum with Signs)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: MITM với 3 trạng thái mỗi phần tử (0, +1, -1).

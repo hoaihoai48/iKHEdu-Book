@@ -1,4 +1,4 @@
-# Tìm Xâu Mẫu P Trong Xâu Văn Bản T (string Match)
+# Tìm xâu mẫu p trong xâu văn bản t (string match)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Xâu Mẫu P Trong Xâu Văn Bản T (String Match)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: So khớp mã băm trượt.

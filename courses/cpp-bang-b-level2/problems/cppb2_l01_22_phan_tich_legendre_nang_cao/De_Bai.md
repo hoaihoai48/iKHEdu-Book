@@ -1,14 +1,14 @@
-# Phan Tich Legendre Nang Cao
+# Phan tich Legendre nang cao
 
 ## Bối cảnh
-Trong lập trình thi đấu chuyên nghiệp, bài toán **Phan Tich Legendre Nang Cao** là một dạng bài điển hình thuộc chuyên đề **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+Cho dữ liệu bài toán liên quan đến **Phan Tich Legendre Nang Cao**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với độ phức tạp tối ưu nhất.
+Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
 
 ## Input
-- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
+- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
 
 ## Output
 - In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
@@ -16,15 +16,16 @@ Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với đ
 ## Sample 1
 ### Input
 ```text
-5 3 2
+5
+1 2 3 4 5
 ```
 ### Output
 ```text
-4
+15
 ```
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Phan Tich Legendre Nang Cao.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- $100\%$ số test có $1 \le N \le 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

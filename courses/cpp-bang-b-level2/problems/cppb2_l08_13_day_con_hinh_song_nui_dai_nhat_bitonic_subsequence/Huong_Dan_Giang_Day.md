@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DÃY CON HÌNH SÓNG NÚI DÀI NHẤT (BITONIC SUBSEQUENCE)
+# Hướng dẫn giảng dạy: Dãy con hình sóng núi dài nhất (bitonic subsequence)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

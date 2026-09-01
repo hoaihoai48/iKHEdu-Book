@@ -1,4 +1,4 @@
-# Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau
+# Đoạn con dài nhất có không quá k số khác nhau
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Two pointers kết hợp mảng tần suất.

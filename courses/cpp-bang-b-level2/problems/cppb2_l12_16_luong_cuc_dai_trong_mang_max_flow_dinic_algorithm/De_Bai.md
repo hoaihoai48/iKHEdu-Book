@@ -1,4 +1,4 @@
-# Luồng Cực Đại Trong Mạng (max Flow Dinic Algorithm)
+# Luồng cực đại trong mạng (max flow dinic algorithm)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Luồng Cực Đại Trong Mạng (Max Flow Dinic Algorithm)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán Dinic dùng đồ thị tầng Level Graph.

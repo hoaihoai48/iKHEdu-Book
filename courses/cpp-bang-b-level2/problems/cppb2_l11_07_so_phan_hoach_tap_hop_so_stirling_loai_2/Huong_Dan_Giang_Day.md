@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ PHÂN HOẠCH TẬP HỢP (SỐ STIRLING LOẠI 2)
+# Hướng dẫn giảng dạy: Số phân hoạch tập hợp (số Stirling loại 2)
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

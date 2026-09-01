@@ -1,4 +1,4 @@
-# Phần Tử Lớn Hơn Gần Nhất (nge)
+# Phần tử lớn hơn gần nhất (nge)
 
 ## Bối cảnh
 Với mỗi phần tử $A_i$, tìm giá trị của phần tử đầu tiên bên phải lớn hơn $A_i$. Nếu không có in -1.

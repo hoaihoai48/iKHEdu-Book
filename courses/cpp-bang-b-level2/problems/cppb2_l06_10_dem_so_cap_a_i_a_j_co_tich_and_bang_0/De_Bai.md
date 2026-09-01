@@ -1,4 +1,4 @@
-# Đếm Số Cặp $(a_i, A_j)$ Có Tích And Bằng 0
+# Đếm số cặp $(a_i, a_j)$ có tích and bằng 0
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cặp $(A_i, A_j)$ Có Tích AND Bằng 0** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: SOS DP đếm số phần tử là submask.

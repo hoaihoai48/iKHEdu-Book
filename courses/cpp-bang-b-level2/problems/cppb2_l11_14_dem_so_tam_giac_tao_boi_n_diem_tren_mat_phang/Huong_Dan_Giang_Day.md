@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ TAM GIÁC TẠO BỞI N ĐIỂM TRÊN MẶT PHẲNG
+# Hướng dẫn giảng dạy: Đếm số tam giác tạo bởi n điểm trên mặt phẳng
 Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**
 
 ---

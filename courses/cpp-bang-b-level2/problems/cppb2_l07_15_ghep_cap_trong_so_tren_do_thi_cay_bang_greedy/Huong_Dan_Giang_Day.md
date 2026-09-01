@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: GHÉP CẶP TRỌNG SỐ TRÊN ĐỒ THỊ CÂY BẰNG GREEDY
+# Hướng dẫn giảng dạy: Ghép cặp trọng số trên đồ thị cây bằng greedy
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

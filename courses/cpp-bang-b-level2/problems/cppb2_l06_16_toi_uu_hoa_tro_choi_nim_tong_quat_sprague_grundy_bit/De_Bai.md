@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Trò Chơi Nim Tổng Quát (sprague-grundy Bit)
+# Tối ưu hóa trò chơi nim tổng quát (sprague-grundy BIT)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Trò Chơi Nim Tổng Quát (Sprague-Grundy Bit)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Trò chơi toán học kết hợp phép toán XOR.

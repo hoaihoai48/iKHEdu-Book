@@ -1,4 +1,4 @@
-# Thành Phần Liên Thông Mạnh (scc Tarjan/kosaraju)
+# Thành phần liên thông mạnh (scc tarjan/kosaraju)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thành Phần Liên Thông Mạnh (SCC Tarjan/Kosaraju)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Co đồ thị có hướng thành DAG.

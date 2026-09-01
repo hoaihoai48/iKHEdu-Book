@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHOẢNG CÁCH LỚN NHẤT GIỮA HAI SỐ NGUYÊN TỐ LIÊN TIẾP
+# Hướng dẫn giảng dạy: Khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

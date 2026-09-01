@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM NGHIỆM NGUYÊN PHƯƠNG TRÌNH DIOPHANTINE
+# Hướng dẫn giảng dạy: Tìm nghiệm nguyên phương trình Diophantine
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

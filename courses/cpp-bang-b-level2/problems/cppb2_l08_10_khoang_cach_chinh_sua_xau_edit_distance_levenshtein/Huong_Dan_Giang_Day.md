@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: KHOẢNG CÁCH CHỈNH SỬA XÂU (EDIT DISTANCE / LEVENSHTEIN)
+# Hướng dẫn giảng dạy: Khoảng cách chỉnh sửa xâu (edit distance / levenshtein)
 Chuyên đề: **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**
 
 ---

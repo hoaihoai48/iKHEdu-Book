@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Đếm số lượng tòa nhà mà mỗi vị trí có thể nhìn thấy (trái + phải)
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -8,15 +9,28 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<int> h(n);
+    for (int i = 0; i < n; ++i) cin >> h[i];
 
-    sort(a.begin(), a.end());
-    long long ans = 0;
+    vector<int> left_vis(n, 0), right_vis(n, 0);
+    vector<int> st;
+
     for (int i = 0; i < n; ++i) {
-        ans += a[i] * (i + 1);
+        left_vis[i] = st.size();
+        while (!st.empty() && h[st.back()] <= h[i]) st.pop_back();
+        st.push_back(i);
     }
 
-    cout << ans << "\n";
+    st.clear();
+    for (int i = n - 1; i >= 0; --i) {
+        right_vis[i] = st.size();
+        while (!st.empty() && h[st.back()] <= h[i]) st.pop_back();
+        st.push_back(i);
+    }
+
+    for (int i = 0; i < n; ++i) {
+        cout << left_vis[i] + right_vis[i] + 1 << " ";
+    }
+    cout << "\n";
     return 0;
 }

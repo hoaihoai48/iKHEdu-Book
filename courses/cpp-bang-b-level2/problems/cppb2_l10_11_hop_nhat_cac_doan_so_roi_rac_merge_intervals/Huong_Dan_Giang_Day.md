@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: HỢP NHẤT CÁC ĐOẠN SỐ RỜI RẠC (MERGE INTERVALS)
+# Hướng dẫn giảng dạy: Hợp nhất các đoạn số rời rạc (merge intervals)
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

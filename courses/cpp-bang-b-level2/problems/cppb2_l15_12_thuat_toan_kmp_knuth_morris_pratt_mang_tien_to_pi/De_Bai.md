@@ -1,4 +1,4 @@
-# Thuật Toán Kmp (knuth-morris-pratt) & Mảng Tiền Tố $\pi$
+# Thuật toán KMP (knuth-morris-pratt) & mảng tiền tố $\pi$
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán KMP (Knuth-Morris-Pratt) & Mảng Tiền Tố $\pi$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cài đặt hàm tiền xử lý $\pi$ của KMP.

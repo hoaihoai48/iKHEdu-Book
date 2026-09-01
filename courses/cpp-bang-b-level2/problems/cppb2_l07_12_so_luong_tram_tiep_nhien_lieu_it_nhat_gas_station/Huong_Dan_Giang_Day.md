@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: SỐ LƯỢNG TRẠM TIẾP NHIÊN LIỆU ÍT NHẤT (GAS STATION)
+# Hướng dẫn giảng dạy: Số lượng trạm tiếp nhiên liệu ít nhất (gas station)
 Chuyên đề: **Thuật Toán Tham Lam (Greedy Algorithms)**
 
 ---

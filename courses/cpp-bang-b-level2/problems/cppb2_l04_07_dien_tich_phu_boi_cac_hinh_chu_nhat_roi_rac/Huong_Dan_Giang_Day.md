@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: DIỆN TÍCH PHỦ BỞI CÁC HÌNH CHỮ NHẬT RỜI RẠC
+# Hướng dẫn giảng dạy: Diện tích phủ bởi các hình chữ nhật rời rạc
 Chuyên đề: **Kỹ Thuật Mảng: Two Pointers, Window & 2D Prefix Sum**
 
 ---

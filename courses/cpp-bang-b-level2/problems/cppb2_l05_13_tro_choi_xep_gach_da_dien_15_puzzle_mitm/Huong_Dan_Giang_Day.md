@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRÒ CHƠI XẾP GẠCH ĐA DIỆN (15-PUZZLE MITM)
+# Hướng dẫn giảng dạy: Trò chơi xếp gạch đa diện (15-puzzle mitm)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

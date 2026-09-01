@@ -1,4 +1,4 @@
-# Khoảng Cách Dây Cáp Nhỏ Nhất
+# Khoảng cách dây cáp nhỏ nhất
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Dây Cáp Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Chặt nhị phân số thực độ chính xác $10^{-6}$.

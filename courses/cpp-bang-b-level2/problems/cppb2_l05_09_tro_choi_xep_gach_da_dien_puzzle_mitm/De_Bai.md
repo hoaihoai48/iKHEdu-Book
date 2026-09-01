@@ -1,4 +1,4 @@
-# Trò Chơi Xếp Gạch Đa Diện (puzzle Mitm)
+# Trò chơi xếp gạch đa diện (puzzle mitm)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trò Chơi Xếp Gạch Đa Diện (Puzzle MITM)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: MITM kết hợp Hash Table nén bộ nhớ.

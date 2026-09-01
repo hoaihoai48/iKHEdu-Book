@@ -1,4 +1,4 @@
-# Nối Dây Tiết Kiệm Bằng Priority Queue
+# Nối dây tiết kiệm bằng priority queue
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nối Dây Tiết Kiệm Bằng Priority Queue** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Min-Heap `priority_queue`.

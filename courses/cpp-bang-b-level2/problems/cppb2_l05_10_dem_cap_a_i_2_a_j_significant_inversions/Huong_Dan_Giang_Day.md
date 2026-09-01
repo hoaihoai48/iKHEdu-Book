@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM CẶP $A_I > 2 A_J$ (SIGNIFICANT INVERSIONS)
+# Hướng dẫn giảng dạy: Đếm cặp $a_i > 2 a_j$ (significant inversions)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

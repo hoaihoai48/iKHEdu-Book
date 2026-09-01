@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: CHIA ĐỂ TRỊ TRÊN CÂY (CENTROID DECOMPOSITION CƠ BẢN)
+# Hướng dẫn giảng dạy: Chia để trị trên cây (centroid decomposition cơ bản)
 Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 
 ---

@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TRUY VẤN TỔNG ĐOẠN FENWICK TREE
+# Hướng dẫn giảng dạy: Truy vấn tổng đoạn Fenwick Tree
 Chuyên đề: **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**
 
 ---

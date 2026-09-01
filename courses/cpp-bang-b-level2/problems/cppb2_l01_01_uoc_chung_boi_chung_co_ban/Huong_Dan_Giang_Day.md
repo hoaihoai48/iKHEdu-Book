@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ƯỚC CHUNG & BỘI CHUNG CƠ BẢN
+# Hướng dẫn giảng dạy: Ước chung & bội chung cơ bản
 Chuyên đề: **Số Học Cơ Bản & Chuyên Sâu (Number Theory)**
 
 ---

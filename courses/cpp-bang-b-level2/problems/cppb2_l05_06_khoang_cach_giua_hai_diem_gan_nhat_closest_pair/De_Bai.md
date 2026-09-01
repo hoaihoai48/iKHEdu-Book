@@ -1,4 +1,4 @@
-# Khoảng Cách Giữa Hai Điểm Gần Nhất (closest Pair)
+# Khoảng cách giữa hai điểm gần nhất (closest pair)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Giữa Hai Điểm Gần Nhất (Closest Pair)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chia để trị trên mặt phẳng 2D $\mathcal{O}(N \log N)$.

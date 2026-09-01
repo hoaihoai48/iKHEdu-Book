@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: LẬP LỊCH PHÒNG HỌP ĐA NĂNG (MEETING ROOMS)
+# Hướng dẫn giảng dạy: Lập lịch phòng họp đa năng (meeting rooms)
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

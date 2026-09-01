@@ -1,4 +1,4 @@
-# Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn
+# Cây Fenwick cập nhật đoạn & truy vấn đoạn
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: 2 mảng BIT quản lý $\sum (d_1 \cdot i - d_2)$.

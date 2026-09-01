@@ -1,4 +1,4 @@
-# Giải Phương Trình $4$ Ẩn Tuyến Tính (4-sum Mitm)
+# Giải phương trình $4$ ẩn tuyến tính (4-sum mitm)
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Giải Phương Trình $4$ Ẩn Tuyến Tính (4-Sum MITM)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tách thành 2 cặp $(A+B)$ và $-(C+D)$.

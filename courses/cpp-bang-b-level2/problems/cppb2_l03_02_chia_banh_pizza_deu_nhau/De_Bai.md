@@ -1,4 +1,4 @@
-# Chia Bánh Pizza Đều Nhau
+# Chia bánh pizza đều nhau
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Bánh Pizza Đều Nhau** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: BS trên đáp án số thực.

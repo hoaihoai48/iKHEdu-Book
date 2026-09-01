@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: TÌM PHẦN TỬ KẾ TIẾP NHỎ NHẤT LỚN HƠN X
+# Hướng dẫn giảng dạy: Tìm phần tử kế tiếp nhỏ nhất lớn hơn x
 Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 
 ---

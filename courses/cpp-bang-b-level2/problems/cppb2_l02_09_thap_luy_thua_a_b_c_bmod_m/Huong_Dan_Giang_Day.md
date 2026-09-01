@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: THÁP LŨY THỪA $A^{B^C} \BMOD M$
+# Hướng dẫn giảng dạy: Tháp lũy thừa $a^{b^c} \bmod m$
 Chuyên đề: **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**
 
 ---

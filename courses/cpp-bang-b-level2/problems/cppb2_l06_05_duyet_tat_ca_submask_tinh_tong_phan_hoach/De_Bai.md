@@ -1,4 +1,4 @@
-# Duyệt Tất Cả Submask Tính Tổng Phân Hoạch
+# Duyệt tất cả submask tính tổng phân hoạch
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duyệt Tất Cả Submask Tính Tổng Phân Hoạch** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Vòng lặp `sub = (sub - 1) & mask`.

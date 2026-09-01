@@ -1,4 +1,4 @@
-# Hướng Dẫn Giảng Dạy: ĐẾM SỐ XÂU CON KHÁC NHAU CỦA MỘT XÂU
+# Hướng dẫn giảng dạy: Đếm số xâu con khác nhau của một xâu
 Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 
 ---

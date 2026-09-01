@@ -1,4 +1,4 @@
-# Duy Trì Tổng Của K Phần Tử Lớn Nhất Động
+# Duy trì tổng của k phần tử lớn nhất động
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì Tổng Của K Phần Tử Lớn Nhất Động** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2 `multiset` cân bằng kích thước $K$ và tổng.

@@ -1,4 +1,4 @@
-# Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian
+# Tối ưu hóa chi phí mua cổ phiếu theo thời gian
 
 ## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `multiset` duy trì trật tự giá trị.
