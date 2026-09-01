@@ -1,29 +1,33 @@
-# Đếm số đường đi trên đồ thị có hướng không chu trình (DAG)
-## Mã bài toán: CPPB2-L12-26-DEM-SO-DUONG-DI-TOPO-DAG
+# Dem So Duong Di Topo Dag
 
-## Bối cảnh & Nhiệm vụ
-Đếm số đường đi phân biệt từ đỉnh $S$ đến đỉnh $T$ trên DAG modulo $10^9+7$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dem So Duong Di Topo Dag** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Đồ thị $N$ đỉnh, $M$ cạnh và đỉnh $S, T$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Dem So Duong Di Topo Dag với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra số đường đi modulo $10^9+7$.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3 3 1 3
 1 2
 2 3
 1 3
 ```
-Output:
+### Output
 ```text
 2
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

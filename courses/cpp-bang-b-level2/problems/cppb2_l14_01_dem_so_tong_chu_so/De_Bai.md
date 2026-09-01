@@ -1,42 +1,27 @@
-# ĐẾM SỐ CÓ TỔNG CHỮ SỐ BẰNG K
-## Mã bài toán: `CPPB2-L14-01` | Khóa học C++ Bảng B (Level 2)
+# Đếm Số Có Tổng Chữ Số Bằng K
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Đếm số lượng số nguyên trong đoạn $[L, R]$ có tổng các chữ số đúng bằng $K$.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Đếm Số Có Tổng Chữ Số Bằng K với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Gồm 1 dòng chứa $L, R, K$ ($1 \le L \le R \le 10^{18}, 1 \le K \le 180$).
 
-* Gồm 1 dòng chứa $L, R, K$ ($1 \le L \le R \le 10^{18}, 1 \le K \le 180$).
+## Output
+- In ra số lượng số thỏa mãn.
 
----
-
-## 📤 3. Định Dạng Đầu Ra (Output)
-
-* In ra số lượng số thỏa mãn.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 1 100 5
 ```
-
-**Output:**
+### Output
 ```text
 6
 ```
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

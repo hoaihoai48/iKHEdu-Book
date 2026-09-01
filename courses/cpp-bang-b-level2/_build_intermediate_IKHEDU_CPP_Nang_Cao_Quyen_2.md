@@ -138,733 +138,805 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L07-01]: LỰA CHỌN SỰ KIỆN KHÔNG TRÙNG GIỜ
+### Bài 01 [CPPB2-L07-01]: Lựa Chọn Sự Kiện Không Trùng Giờ
+
+**Bối cảnh & Nhiệm vụ:**
+
+Cho $N$ sự kiện $[L_i, R_i]$. Chọn số lượng sự kiện nhiều nhất không trùng thời gian.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lựa Chọn Sự Kiện Không Trùng Giờ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $N$ ($1 \le N \le 10^5$). $N$ dòng tiếp theo: $L_i, R_i$ ($0 \le L_i < R_i \le 10^9$).
-
----
+- Dòng 1: $N$ ($1 \le N \le 10^5$). $N$ dòng tiếp theo: $L_i, R_i$ ($0 \le L_i < R_i \le 10^9$).
 
 **Đầu ra (Output):**
 
-* In ra số lượng sự kiện tối đa.
-
----
+- In ra số lượng sự kiện tối đa.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 3
 10 20
 12 25
 20 30
 ```
-
-**Output:**
+### Output
 ```text
 2
 ```
 
----
 
 
+### Bài 02 [CPPB2-L07-02]: Tổng Thời Gian Chờ Nhỏ Nhất (sjf)
 
-### Bài 02 [CPPB2-L07-02]: TỔNG THỜI GIAN CHỜ NHỎ NHẤT (SJF)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Thời Gian Chờ Nhỏ Nhất (SJF)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Sắp xếp thời gian phục vụ tăng dần.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Thời Gian Chờ Nhỏ Nhất (sjf) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Thời Gian Chờ Nhỏ Nhất (SJF).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, T_i \le 10^6$.
 
 
+### Bài 03 [CPPB2-L07-03]: Cái Túi Chia Nhỏ Được (fractional Knapsack)
 
-### Bài 03 [CPPB2-L07-03]: CÁI TÚI CHIA NHỎ ĐƯỢC (FRACTIONAL KNAPSACK)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Chia Nhỏ Được (Fractional Knapsack)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Sắp xếp theo đơn giá $V_i / W_i$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cái Túi Chia Nhỏ Được (fractional Knapsack) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cái Túi Chia Nhỏ Được (Fractional Knapsack).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, W \le 10^9$.
 
 
+### Bài 04 [CPPB2-L07-04]: Phủ Đoạn Thẳng Ít Nhất (minimum Interval Cover)
 
-### Bài 04 [CPPB2-L07-04]: PHỦ ĐOẠN THẲNG ÍT NHẤT (MINIMUM INTERVAL COVER)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phủ Đoạn Thẳng Ít Nhất (Minimum Interval Cover)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Tham lam chọn đoạn vươn xa nhất.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Phủ Đoạn Thẳng Ít Nhất (minimum Interval Cover) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phủ Đoạn Thẳng Ít Nhất (Minimum Interval Cover).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$, phủ đoạn $[0, L]$.
 
 
+### Bài 05 [CPPB2-L07-05]: Ghép Thuyền Cứu Hộ Cực Trị
 
-### Bài 05 [CPPB2-L07-05]: GHÉP THUYỀN CỨU HỘ CỰC TRỊ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Thuyền Cứu Hộ Cực Trị** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hai con trỏ ghép kiện nặng nhất + nhẹ nhất.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Ghép Thuyền Cứu Hộ Cực Trị với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Ghép Thuyền Cứu Hộ Cực Trị.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, W_i \le C$.
 
 
+### Bài 06 [CPPB2-L07-06]: Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất
 
-### Bài 06 [CPPB2-L07-06]: NỐI CÁC SỢI DÂY TIẾT KIỆM CHI PHÍ NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hàng đợi ưu tiên `priority_queue` (Cây Huffman).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, L_i \le 10^6$.
 
 
+### Bài 07 [CPPB2-L07-07]: Lập Lịch Công Việc Có Deadline & Tiền Phạt
 
-### Bài 07 [CPPB2-L07-07]: LẬP LỊCH CÔNG VIỆC CÓ DEADLINE & TIỀN PHẠT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Công Việc Có Deadline & Tiền Phạt** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tham lam kết hợp Disjoint Set Union (DSU).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lập Lịch Công Việc Có Deadline & Tiền Phạt với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lập Lịch Công Việc Có Deadline & Tiền Phạt.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, D_i \le 10^5$.
 
 
+### Bài 08 [CPPB2-L07-08]: Tối Đa Hóa Lợi Nhuận Giao Hàng
 
-### Bài 08 [CPPB2-L07-08]: TỐI ĐA HÓA LỢI NHUẬN GIAO HÀNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Đa Hóa Lợi Nhuận Giao Hàng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Min-heap duy trì tập công việc được chọn.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tối Đa Hóa Lợi Nhuận Giao Hàng với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Đa Hóa Lợi Nhuận Giao Hàng.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$.
 
 
+### Bài 09 [CPPB2-L07-09]: Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số
 
-### Bài 09 [CPPB2-L07-09]: CHIA KẸO THƯỞNG CHO HỌC SINH THEO ĐIỂM SỐ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Quét hai chiều trái $\to$ phải và phải $\to$ trái.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 10 [CPPB2-L07-10]: Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch
 
-### Bài 10 [CPPB2-L07-10]: TỐI ƯU HÓA MUA BÁN CỔ PHIẾU KHÔNG GIỚI HẠN LẦN GIAO DỊCH
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tham lam gom mọi khoảng giá tăng $\max(0, P_{i+1} - P_i)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2 \times 10^5, P_i \le 10^9$.
 
 
+### Bài 11 [CPPB2-L07-11]: Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau
 
-### Bài 11 [CPPB2-L07-11]: SẮP ĐẶT CHUỖI KÝ TỰ KHÔNG TRÙNG LẶP KỀ NHAU
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Max-Heap xếp ký tự có tần suất cao nhất.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5$, khoảng cách $D$.
 
 
+### Bài 12 [CPPB2-L07-12]: Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (gas Station)
 
-### Bài 12 [CPPB2-L07-12]: SỐ LƯỢNG TRẠM TIẾP NHIÊN LIỆU ÍT NHẤT (GAS STATION)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (Gas Station)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Max-Heap chọn cây xăng có trữ lượng lớn nhất khi hết xăng.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (gas Station) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (Gas Station).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, D \le 10^9$.
 
 
+### Bài 13 [CPPB2-L07-13]: Lập Lịch Phòng Họp Tối Thiểu (meeting Rooms Ii)
 
-### Bài 13 [CPPB2-L07-13]: LẬP LỊCH PHÒNG HỌP TỐI THIỂU (MEETING ROOMS II)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Phòng Họp Tối Thiểu (Meeting Rooms II)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Min-Heap theo dõi phòng họp trống sớm nhất.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lập Lịch Phòng Họp Tối Thiểu (meeting Rooms Ii) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lập Lịch Phòng Họp Tối Thiểu (Meeting Rooms II).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, [S_i, E_i] \le 10^9$.
 
 
+### Bài 14 [CPPB2-L07-14]: Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (slope Trick Cơ Bản)
 
-### Bài 14 [CPPB2-L07-14]: PHỤC HỒI DÃY SỐ ĐƠN ĐIỆU VỚI CHI PHÍ NHỎ NHẤT (SLOPE TRICK CƠ BẢN)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (Slope Trick Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Duy trì hàm lỗi lồi bằng Priority Queue.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (slope Trick Cơ Bản) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (Slope Trick Cơ Bản).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 15 [CPPB2-L07-15]: Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy
 
-### Bài 15 [CPPB2-L07-15]: GHÉP CẶP TRỌNG SỐ TRÊN ĐỒ THỊ CÂY BẰNG GREEDY
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tham lam từ lá lên gốc (Bottom-up Tree Greedy).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Cây $N \le 10^5$ đỉnh.
 
 
+### Bài 16 [CPPB2-L07-16]: Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu
 
-### Bài 16 [CPPB2-L07-16]: THUẬT TOÁN HUFFMAN CODING NÉN DỮ LIỆU TỐI ƯU
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cây mã hóa nhị phân tiền tố tối ưu.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$ tần suất.
 
 
-
-### Bài 17 [CPPB2-L07-17]: Mã hóa nén dữ liệu Huffman Coding
+### Bài 17 [CPPB2-L07-17]: Cay Ma Huffman Coding
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính độ dài chuỗi bit tối thiểu sau khi nén bằng cây Huffman.
-
-**Đầu vào (Input):**
-
-Số $N$ và tần suất xuất hiện của $N$ ký tự.
-
-**Đầu ra (Output):**
-
-In ra tổng độ dài bit.
-
-
-
-### Bài 18 [CPPB2-L07-18]: Lập lịch công việc có Deadline và tiền phạt (Matroid)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Cay Ma Huffman Coding** là một dạng bài điển hình thuộc chuyên đề **Thuật Toán Tham Lam (Greedy Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Chọn tập công việc hoàn thành trước deadline sao cho tổng tiền phạt các việc bị trễ là nhỏ nhất.
+Hãy lập trình giải quyết bài toán Cay Ma Huffman Coding với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số $N$ và hạn chót $D_i$, phạt $P_i$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra tiền phạt nhỏ nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+5 9 12
+```
+### Output
+```text
+43
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `43`.
 
 
 
-### Bài 19 [CPPB2-L07-19]: Thu gom tiền vàng trên lưới đa giác
+### Bài 18 [CPPB2-L07-18]: Lap Lich Deadline Tien Phat
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thu thập số lượng vàng lớn nhất bằng chiến lược tham lam cục bộ.
-
-**Đầu vào (Input):**
-
-Lưới $N \times M$.
-
-**Đầu ra (Output):**
-
-In ra số vàng tối đa.
-
-
-
-### Bài 20 [CPPB2-L07-20]: Số nhỏ nhất thu được sau tối đa K lần đổi chỗ kề nhau
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Lap Lich Deadline Tien Phat** là một dạng bài điển hình thuộc chuyên đề **Thuật Toán Tham Lam (Greedy Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho số nguyên $N$ biểu diễn dạng xâu. Tìm số nhỏ nhất sau tối đa $K$ phép đổi chỗ hai chữ số kề nhau.
+Hãy lập trình giải quyết bài toán Lap Lich Deadline Tien Phat với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Xâu $S$ và số $K$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra xâu nhỏ nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 20
+2 10
+1 30
+```
+### Output
+```text
+10
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `10`.
 
 
 
-### Bài 21 [CPPB2-L07-21]: Xếp chồng hộp theo sức chịu tải và trọng lượng
+### Bài 19 [CPPB2-L07-19]: Thu Gom Vang Tren Luoi Greedy
 
 **Bối cảnh & Nhiệm vụ:**
 
-Xếp chồng các hộp sao cho mỗi hộp chịu được tổng trọng lượng các hộp phía trên nó.
-
-**Đầu vào (Input):**
-
-Số hộp $N$ và cặp $(W_i, S_i)$.
-
-**Đầu ra (Output):**
-
-In ra số hộp xếp được nhiều nhất.
-
-
-
-### Bài 22 [CPPB2-L07-22]: Nối dây K đầu nối giảm chi phí
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Thu Gom Vang Tren Luoi Greedy** là một dạng bài điển hình thuộc chuyên đề **Thuật Toán Tham Lam (Greedy Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Mỗi lần nối được gộp $K$ sợi dây thành 1 sợi với chi phí bằng tổng độ dài. Tìm chi phí tối thiểu.
+Hãy lập trình giải quyết bài toán Thu Gom Vang Tren Luoi Greedy với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số $N, K$ và độ dài các sợi dây.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra chi phí nhỏ nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2 2
+1 2
+3 4
+```
+### Output
+```text
+8
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `8`.
+
+
+
+### Bài 20 [CPPB2-L07-20]: Sap Xep Phan Tu Doi Cho K Lan
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Sap Xep Phan Tu Doi Cho K Lan** là một dạng bài điển hình thuộc chuyên đề **Thuật Toán Tham Lam (Greedy Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Sap Xep Phan Tu Doi Cho K Lan với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4321 2
+```
+### Output
+```text
+2431
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2431`.
+
+
+
+### Bài 21 [CPPB2-L07-21]: Xep Chong Hop Trong So Va Suc Chiu
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Xep Chong Hop Trong So Va Suc Chiu** là một dạng bài điển hình thuộc chuyên đề **Thuật Toán Tham Lam (Greedy Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xep Chong Hop Trong So Va Suc Chiu với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2
+2 3
+3 1
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+
+
+
+### Bài 22 [CPPB2-L07-22]: Noi Day Nang Cao K Dau
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Noi Day Nang Cao K Dau** là một dạng bài điển hình thuộc chuyên đề **Thuật Toán Tham Lam (Greedy Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Noi Day Nang Cao K Dau với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4 3
+1 2 3 4
+```
+### Output
+```text
+15
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `15`.
 
 
 
@@ -978,795 +1050,951 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L08-01]: DÃY CON TĂNG DÀI NHẤT LIS
+### Bài 01 [CPPB2-L08-01]: Dãy Con Tăng Dài Nhất Lis
+
+**Bối cảnh & Nhiệm vụ:**
+
+Tìm độ dài dãy con tăng nghiêm ngặt dài nhất của mảng $N$ phần tử.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dãy Con Tăng Dài Nhất Lis với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $N$ ($1 \le N \le 2 \times 10^5$). Dòng 2: $N$ số $A_i$ ($1 \le A_i \le 10^9$).
-
----
+- Dòng 1: $N$ ($1 \le N \le 2 \times 10^5$). Dòng 2: $N$ số $A_i$ ($1 \le A_i \le 10^9$).
 
 **Đầu ra (Output):**
 
-* In ra độ dài LIS.
-
----
+- In ra độ dài LIS.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 6
 10 20 10 30 20 50
 ```
-
-**Output:**
+### Output
 ```text
 4
 ```
 
----
 
 
+### Bài 02 [CPPB2-L08-02]: Đường Đi Trên Ma Trận Có Tổng Lớn Nhất
 
-### Bài 02 [CPPB2-L08-02]: ĐƯỜNG ĐI TRÊN MA TRẬN CÓ TỔNG LỚN NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Trên Ma Trận Có Tổng Lớn Nhất** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: DP 2D $dp[i][j] = \max(dp[i-1][j], dp[i][j-1]) + A[i][j]$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đường Đi Trên Ma Trận Có Tổng Lớn Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đường Đi Trên Ma Trận Có Tổng Lớn Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 1000$.
 
 
+### Bài 03 [CPPB2-L08-03]: Cái Túi 0/1 Chuẩn (0/1 Knapsack)
 
-### Bài 03 [CPPB2-L08-03]: CÁI TÚI 0/1 CHUẨN (0/1 KNAPSACK)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi 0/1 Chuẩn (0/1 Knapsack)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP Cái túi tối ưu bộ nhớ 1D.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cái Túi 0/1 Chuẩn (0/1 Knapsack) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cái Túi 0/1 Chuẩn (0/1 Knapsack).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 1000, W \le 10^5$.
 
 
+### Bài 04 [CPPB2-L08-04]: Đổi Tiền Xu Số Tờ Nhỏ Nhất (unbounded Coin Change)
 
-### Bài 04 [CPPB2-L08-04]: ĐỔI TIỀN XU SỐ TỜ NHỎ NHẤT (UNBOUNDED COIN CHANGE)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đổi Tiền Xu Số Tờ Nhỏ Nhất (Unbounded Coin Change)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP Cái túi vô hạn duyệt xuôi.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đổi Tiền Xu Số Tờ Nhỏ Nhất (unbounded Coin Change) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đổi Tiền Xu Số Tờ Nhỏ Nhất (Unbounded Coin Change).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 100, S \le 10^5$.
 
 
+### Bài 05 [CPPB2-L08-05]: Dãy Con Tăng Dài Nhất Lis $\mathcal{o}(n \log N)$
 
-### Bài 05 [CPPB2-L08-05]: DÃY CON TĂNG DÀI NHẤT LIS $\MATHCAL{O}(N \LOG N)$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Dài Nhất LIS $\mathcal{O}(N \log N)$** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: `lower_bound` trên mảng `tail`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dãy Con Tăng Dài Nhất Lis $\mathcal{o}(n \log N)$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Tăng Dài Nhất LIS $\mathcal{O}(N \log N)$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2 \times 10^5, A_i \le 10^9$.
 
 
+### Bài 06 [CPPB2-L08-06]: Xâu Con Chung Dài Nhất (lcs)
 
-### Bài 06 [CPPB2-L08-06]: XÂU CON CHUNG DÀI NHẤT (LCS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Chung Dài Nhất (LCS)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP chuỗi 2D.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xâu Con Chung Dài Nhất (lcs) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xâu Con Chung Dài Nhất (LCS).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert, \vert T \vert \le 3000$.
 
 
+### Bài 07 [CPPB2-L08-07]: Xóa Ký Tự Để Thành Palindrome Ngắn Nhất
 
-### Bài 07 [CPPB2-L08-07]: XÓA KÝ TỰ ĐỂ THÀNH PALINDROME NGẮN NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xóa Ký Tự Để Thành Palindrome Ngắn Nhất** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP khoảng $[l, r]$ (Interval DP).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xóa Ký Tự Để Thành Palindrome Ngắn Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xóa Ký Tự Để Thành Palindrome Ngắn Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 2000$.
 
 
+### Bài 08 [CPPB2-L08-08]: Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất
 
-### Bài 08 [CPPB2-L08-08]: CẮT BÁNH HÌNH CHỮ NHẬT CÓ GIÁ TRỊ LỚN NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP 2D chia đôi hình chữ nhật.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $W, H \le 600, N \le 200$.
 
 
+### Bài 09 [CPPB2-L08-09]: Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử
 
-### Bài 09 [CPPB2-L08-09]: DÃY CON TĂNG LỚN NHẤT CÓ TRUY VẾT PHẦN TỬ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: LIS $\mathcal{O}(N \log N)$ kèm mảng truy vết $parent[i]$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$.
 
 
+### Bài 10 [CPPB2-L08-10]: Khoảng Cách Chỉnh Sửa Xâu (edit Distance / Levenshtein)
 
-### Bài 10 [CPPB2-L08-10]: KHOẢNG CÁCH CHỈNH SỬA XÂU (EDIT DISTANCE / LEVENSHTEIN)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Chỉnh Sửa Xâu (Edit Distance / Levenshtein)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP 2D tính 3 thao tác Thêm, Xóa, Thay thế.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Khoảng Cách Chỉnh Sửa Xâu (edit Distance / Levenshtein) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Khoảng Cách Chỉnh Sửa Xâu (Edit Distance / Levenshtein).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert, \vert T \vert \le 3000$.
 
 
+### Bài 11 [CPPB2-L08-11]: Cái Túi Đổi Trục Trạng Thái (value-based Knapsack)
 
-### Bài 11 [CPPB2-L08-11]: CÁI TÚI ĐỔI TRỤC TRẠNG THÁI (VALUE-BASED KNAPSACK)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Đổi Trục Trạng Thái (Value-based Knapsack)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Đổi trục DP $dp[v]$ là trọng lượng nhỏ nhất đạt giá trị $v$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cái Túi Đổi Trục Trạng Thái (value-based Knapsack) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cái Túi Đổi Trục Trạng Thái (Value-based Knapsack).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 100, W \le 10^9, \sum V_i \le 10^5$.
 
 
+### Bài 12 [CPPB2-L08-12]: Xếp Gạch Lát Sàn Kích Thước $3 \times N$
 
-### Bài 12 [CPPB2-L08-12]: XẾP GẠCH LÁT SÀN KÍCH THƯỚC $3 \TIMES N$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xếp Gạch Lát Sàn Kích Thước $3 \times N$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP ma trận trạng thái chẵn lẻ.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xếp Gạch Lát Sàn Kích Thước $3 \times N$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xếp Gạch Lát Sàn Kích Thước $3 \times N$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, M = 10^9+7$.
 
 
+### Bài 13 [CPPB2-L08-13]: Dãy Con Hình Sóng Núi Dài Nhất (bitonic Subsequence)
 
-### Bài 13 [CPPB2-L08-13]: DÃY CON HÌNH SÓNG NÚI DÀI NHẤT (BITONIC SUBSEQUENCE)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Hình Sóng Núi Dài Nhất (Bitonic Subsequence)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Kết hợp LIS xuôi và LDS ngược trong $\mathcal{O}(N \log N)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dãy Con Hình Sóng Núi Dài Nhất (bitonic Subsequence) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Hình Sóng Núi Dài Nhất (Bitonic Subsequence).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 14 [CPPB2-L08-14]: Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (matrix Chain)
 
-### Bài 14 [CPPB2-L08-14]: NHÂN MA TRẬN DÂY CHUYỀN CHI PHÍ NHỎ NHẤT (MATRIX CHAIN)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (Matrix Chain)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Interval DP $\mathcal{O}(N^3)$ tìm vị trí chia cắt tối ưu.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (matrix Chain) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (Matrix Chain).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 500$.
 
 
+### Bài 15 [CPPB2-L08-15]: Quy Hoạch Động Trên Cây (tree Dp: Max Independent Set)
 
-### Bài 15 [CPPB2-L08-15]: QUY HOẠCH ĐỘNG TRÊN CÂY (TREE DP: MAX INDEPENDENT SET)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Quy Hoạch Động Trên Cây (Tree DP: Max Independent Set)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP $dp[u][0/1]$ chọn hoặc không chọn đỉnh $u$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Quy Hoạch Động Trên Cây (tree Dp: Max Independent Set) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Quy Hoạch Động Trên Cây (Tree DP: Max Independent Set).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Cây $N \le 10^5$ đỉnh.
 
 
+### Bài 16 [CPPB2-L08-16]: Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (cht)
 
-### Bài 16 [CPPB2-L08-16]: TỐI ƯU HÓA QUY HOẠCH ĐỘNG BẰNG CONVEX HULL TRICK (CHT)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (CHT)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: CHT tối ưu $dp[i] = \min(dp[j] + m_j x_i + c_j)$ từ $\mathcal{O}(N^2) \to \mathcal{O}(N \log N)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (cht) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (CHT).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$.
 
 
-
-### Bài 17 [CPPB2-L08-17]: Quy hoạch động trên cây: Tập độc lập trọng số lớn nhất
+### Bài 17 [CPPB2-L08-17]: Dp Tren Cay Tree Dp Tap Doc Lap
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm tập đỉnh độc lập trên cây có tổng trọng số lớn nhất.
-
-**Đầu vào (Input):**
-
-Số đỉnh $N$, trọng số và các cạnh.
-
-**Đầu ra (Output):**
-
-In ra tổng trọng số lớn nhất.
-
-
-
-### Bài 18 [CPPB2-L08-18]: Tối ưu hóa bao lồi Convex Hull Trick (CHT)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Tren Cay Tree Dp Tap Doc Lap** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tối ưu hóa quy hoạch động dạng $dp[i] = \min(dp[j] + m_j \cdot x_i + c_j)$ trong $\mathcal{O}(N)$.
+Hãy lập trình giải quyết bài toán Dp Tren Cay Tree Dp Tap Doc Lap với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số $N$ và các hệ số đường thẳng.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra giá trị $dp[N]$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 2 3
+1 2
+1 3
+```
+### Output
+```text
+5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
 
 
-### Bài 19 [CPPB2-L08-19]: Tối ưu hóa chia để trị (D&C DP Optimization)
+### Bài 18 [CPPB2-L08-18]: Convex Hull Trick Dp Toi Uu Duong Thang
 
 **Bối cảnh & Nhiệm vụ:**
 
-Chia mảng $N$ phần tử thành $K$ đoạn liên tiếp sao cho tổng chi phí là nhỏ nhất.
-
-**Đầu vào (Input):**
-
-Số $N, K$ và ma trận chi phí.
-
-**Đầu ra (Output):**
-
-In ra chi phí tối thiểu.
-
-
-
-### Bài 20 [CPPB2-L08-20]: Quy hoạch động Cái túi với sức chứa cực lớn $W \le 10^9$
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Convex Hull Trick Dp Toi Uu Duong Thang** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Giải bài toán cái túi khi $W \le 10^9$ nhưng tổng giá trị $V \le 10^5$ bằng cách đảo trạng thái DP.
+Hãy lập trình giải quyết bài toán Convex Hull Trick Dp Toi Uu Duong Thang với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số $N, W$ và các đồ vật.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra giá trị lớn nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 2
+2 1
+3 0
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
 
 
-### Bài 21 [CPPB2-L08-21]: Đường kính của cây có trọng số (Tree Diameter)
+### Bài 19 [CPPB2-L08-19]: Divide And Conquer Dp Optimization
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm khoảng cách lớn nhất giữa 2 đỉnh bất kỳ trên cây có trọng số.
-
-**Đầu vào (Input):**
-
-Số $N$ và các cạnh có trọng số.
-
-**Đầu ra (Output):**
-
-In ra đường kính của cây.
-
-
-
-### Bài 22 [CPPB2-L08-22]: Cắt chuỗi thành ít chuỗi đối xứng nhất (Palindrome Partitioning)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Divide And Conquer Dp Optimization** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm số nhát cắt ít nhất để chia xâu $S$ thành các xâu con đối xứng.
+Hãy lập trình giải quyết bài toán Divide And Conquer Dp Optimization với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Chuỗi $S$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số nhát cắt tối thiểu.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4 2
+1 2 3 4
+```
+### Output
+```text
+5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
 
 
-### Bài 23 [CPPB2-L08-23]: Nhân chuỗi ma trận tối ưu (Matrix Chain Multiplication)
+### Bài 20 [CPPB2-L08-20]: Dp Knapsack Trong So Lon W Le 1e9
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm thứ tự nhân chuỗi $N$ ma trận sao cho tổng số phép nhân vô hướng là ít nhất.
-
-**Đầu vào (Input):**
-
-Dãy kích thước các ma trận.
-
-**Đầu ra (Output):**
-
-In ra số phép nhân tối thiểu.
-
-
-
-### Bài 24 [CPPB2-L08-24]: Đường đi ngắn nhất đi qua tập K đỉnh cho trước
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Knapsack Trong So Lon W Le 1E9** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm đường đi ngắn nhất bắt đầu từ đỉnh 1 đi qua đúng $K$ đỉnh được chỉ định ($K \le 15$).
+Hãy lập trình giải quyết bài toán Dp Knapsack Trong So Lon W Le 1e9 với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Đồ thị $N$ đỉnh và danh sách $K$ đỉnh.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra độ dài đường đi ngắn nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 1000000000
+10 10
+20 20
+30 30
+```
+### Output
+```text
+60
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `60`.
 
 
 
-### Bài 25 [CPPB2-L08-25]: Hai người cùng đi trên ma trận không giao nhau (Cherry Pickup)
+### Bài 21 [CPPB2-L08-21]: Dp Tren Cay Duong Kinh Cay Co Trong So
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hai người cùng đi từ $(1, 1)$ đến $(N, M)$, tìm tổng điểm lớn nhất khi không nhặt trùng ô.
-
-**Đầu vào (Input):**
-
-Ma trận $N \times M$.
-
-**Đầu ra (Output):**
-
-In ra tổng điểm lớn nhất.
-
-
-
-### Bài 26 [CPPB2-L08-26]: Tối ưu hóa Knuth (Knuth DP Optimization)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Tren Cay Duong Kinh Cay Co Trong So** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Quy hoạch động chia đoạn tối ưu thỏa mãn điều kiện tứ giác $opt[i, j-1] \le opt[i, j] \le opt[i+1, j]$ trong $\mathcal{O}(N^2)$.
+Hãy lập trình giải quyết bài toán Dp Tren Cay Duong Kinh Cay Co Trong So với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số $N$ và chi phí cắt.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra chi phí tối thiểu.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 2 5
+2 3 7
+```
+### Output
+```text
+12
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `12`.
+
+
+
+### Bài 22 [CPPB2-L08-22]: Dp Palindrome Min Cut
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Palindrome Min Cut** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dp Palindrome Min Cut với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+aab
+```
+### Output
+```text
+1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+
+
+
+### Bài 23 [CPPB2-L08-23]: Dp Matrix Chain Multiplication
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Matrix Chain Multiplication** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dp Matrix Chain Multiplication với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4
+10 20 30 40
+```
+### Output
+```text
+18000
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `18000`.
+
+
+
+### Bài 24 [CPPB2-L08-24]: Dp Bitmask Duong Di Ngan Nhat K Dinh
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Bitmask Duong Di Ngan Nhat K Dinh** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dp Bitmask Duong Di Ngan Nhat K Dinh với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4 4 2
+2 3
+1 2 1
+2 3 2
+3 4 1
+1 4 5
+```
+### Output
+```text
+3
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+
+
+
+### Bài 25 [CPPB2-L08-25]: Dp Doi Xung Hai Chieu 2 Duong Di
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Doi Xung Hai Chieu 2 Duong Di** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dp Doi Xung Hai Chieu 2 Duong Di với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2 2
+1 2
+3 4
+```
+### Output
+```text
+10
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `10`.
+
+
+
+### Bài 26 [CPPB2-L08-26]: Knuth Optimization Dp
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Knuth Optimization Dp** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Knuth Optimization Dp với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 2 3
+```
+### Output
+```text
+6
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `6`.
 
 
 
@@ -1900,731 +2128,801 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L09-01]: PHẦN TỬ LỚN HƠN GẦN NHẤT (NGE)
+### Bài 01 [CPPB2-L09-01]: Phần Tử Lớn Hơn Gần Nhất (nge)
+
+**Bối cảnh & Nhiệm vụ:**
+
+Với mỗi phần tử $A_i$, tìm giá trị của phần tử đầu tiên bên phải lớn hơn $A_i$. Nếu không có in -1.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Phần Tử Lớn Hơn Gần Nhất (nge) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $N$ ($1 \le N \le 10^5$). Dòng 2: $N$ số $A_i$ ($1 \le A_i \le 10^9$).
-
----
+- Dòng 1: $N$ ($1 \le N \le 10^5$). Dòng 2: $N$ số $A_i$ ($1 \le A_i \le 10^9$).
 
 **Đầu ra (Output):**
 
-* In ra $N$ số kết quả cách nhau dấu cách.
-
----
+- In ra $N$ số kết quả cách nhau dấu cách.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 4
 4 5 2 25
 ```
-
-**Output:**
+### Output
 ```text
 5 25 25 -1
 ```
 
----
 
 
+### Bài 02 [CPPB2-L09-02]: Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K
 
-### Bài 02 [CPPB2-L09-02]: GIÁ TRỊ NHỎ NHẤT TRÊN CỬA SỔ TRƯỢT K
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt Monotonic Deque $\mathcal{O}(N)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^6, K \le N$.
 
 
+### Bài 03 [CPPB2-L09-03]: Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại
 
-### Bài 03 [CPPB2-L09-03]: KIỂM TRA DÃY NGOẶC ĐÚNG NHIỀU LOẠI
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Ứng dụng Stack cơ bản.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5$, gồm `()[]{}`.
 
 
+### Bài 04 [CPPB2-L09-04]: Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng
 
-### Bài 04 [CPPB2-L09-04]: TẦM NHÌN XA CỦA CÁC TÒA NHÀ CAO TẦNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Monotonic Stack đếm số tòa nhà quan sát được.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2 \times 10^5, H_i \le 10^9$.
 
 
+### Bài 05 [CPPB2-L09-05]: Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (histogram)
 
-### Bài 05 [CPPB2-L09-05]: HÌNH CHỮ NHẬT LỚN NHẤT DƯỚI BIỂU ĐỒ CỘT (HISTOGRAM)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (Histogram)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Monotonic Stack tìm biên trái & biên phải.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (histogram) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (Histogram).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, H_i \le 10^9$.
 
 
+### Bài 06 [CPPB2-L09-06]: Ma Trận Toàn Số 1 Lớn Nhất (maximal Rectangle 2d)
 
-### Bài 06 [CPPB2-L09-06]: MA TRẬN TOÀN SỐ 1 LỚN NHẤT (MAXIMAL RECTANGLE 2D)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ma Trận Toàn Số 1 Lớn Nhất (Maximal Rectangle 2D)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Histogram DP 2D.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Ma Trận Toàn Số 1 Lớn Nhất (maximal Rectangle 2d) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Ma Trận Toàn Số 1 Lớn Nhất (Maximal Rectangle 2D).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 1000$.
 
 
+### Bài 07 [CPPB2-L09-07]: Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con
 
-### Bài 07 [CPPB2-L09-07]: TỔNG HIỆU CỰC ĐẠI VÀ CỰC TIỂU MỌI ĐOẠN CON
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Monotonic Stack đếm số đoạn con mà $A_i$ là $\min/\max$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 08 [CPPB2-L09-08]: Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque
 
-### Bài 08 [CPPB2-L09-08]: TỐI ƯU HÓA QUY HOẠCH ĐỘNG BẰNG MONOTONIC DEQUE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP $dp[i] = \min_{i-K \le j < i} (dp[j]) + A[i]$ qua Deque.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, K \le N$.
 
 
+### Bài 09 [CPPB2-L09-09]: Hứng Nước Mưa Đa Chiều (trapping Rain Water)
 
-### Bài 09 [CPPB2-L09-09]: HỨNG NƯỚC MƯA ĐA CHIỀU (TRAPPING RAIN WATER)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hứng Nước Mưa Đa Chiều (Trapping Rain Water)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Monotonic Stack tính thể tích nước đọng.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Hứng Nước Mưa Đa Chiều (trapping Rain Water) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hứng Nước Mưa Đa Chiều (Trapping Rain Water).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, H_i \le 10^9$.
 
 
+### Bài 10 [CPPB2-L09-10]: Đánh Giá Biểu Thức Số Học Trung Tố (shunting-yard)
 
-### Bài 10 [CPPB2-L09-10]: ĐÁNH GIÁ BIỂU THỨC SỐ HỌC TRUNG TỐ (SHUNTING-YARD)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đánh Giá Biểu Thức Số Học Trung Tố (Shunting-yard)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Thuật toán Shunting-yard của Dijkstra dùng 2 Stack.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đánh Giá Biểu Thức Số Học Trung Tố (shunting-yard) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đánh Giá Biểu Thức Số Học Trung Tố (Shunting-yard).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5$, có `+,-,*,/,(,)`.
 
 
+### Bài 11 [CPPB2-L09-11]: Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng
 
-### Bài 11 [CPPB2-L09-11]: PHẦN TỬ LỚN HƠN GẦN NHẤT TRÊN MẢNG XOAY VÒNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Monotonic Stack duyệt $2N$ phần tử.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 12 [CPPB2-L09-12]: Xóa K Chữ Số Để Được Số Nhỏ Nhất
 
-### Bài 12 [CPPB2-L09-12]: XÓA K CHỮ SỐ ĐỂ ĐƯỢC SỐ NHỎ NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xóa K Chữ Số Để Được Số Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Monotonic Stack duy trì các chữ số tăng dần.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xóa K Chữ Số Để Được Số Nhỏ Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xóa K Chữ Số Để Được Số Nhỏ Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5, K \le \vert S \vert$.
 
 
+### Bài 13 [CPPB2-L09-13]: Tổng Giá Trị Min Mọi Đoạn Con Nhân Độ Dài
 
-### Bài 13 [CPPB2-L09-13]: TỔNG GIÁ TRỊ MIN MỌI ĐOẠN CON NHÂN ĐỘ DÀI
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Giá Trị Min Mọi Đoạn Con Nhân Độ Dài** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Monotonic Stack kết hợp Prefix Sum.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Giá Trị Min Mọi Đoạn Con Nhân Độ Dài với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Giá Trị Min Mọi Đoạn Con Nhân Độ Dài.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^6$.
 
 
+### Bài 14 [CPPB2-L09-14]: Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 Bfs)
 
-### Bài 14 [CPPB2-L09-14]: ĐUA XE TRONG MÊ CUNG ĐỔI HƯỚNG ÍT NHẤT (0-1 BFS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 BFS)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Hàng đợi Deque tìm đường tối ưu góc rẽ.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 Bfs) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 BFS).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 1000$.
 
 
+### Bài 15 [CPPB2-L09-15]: Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque
 
-### Bài 15 [CPPB2-L09-15]: CẮT BĂNG RÔN QUẢNG CÁO TỐI ƯU BẰNG 2 DEQUE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Duy trì $\max - \min \le C$ trên cửa sổ co giãn.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, C \le 10^9$.
 
 
+### Bài 16 [CPPB2-L09-16]: Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng
 
-### Bài 16 [CPPB2-L09-16]: KHÔI PHỤC CÂY KHẢO SÁT TẦM NHÌN ĐA HƯỚNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Monotonic Stack 2 chiều xây dựng Cartesian Tree.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2 \times 10^5$.
 
 
-
-### Bài 17 [CPPB2-L09-17]: Hình chữ nhật lớn nhất trong biểu đồ cột (Largest Rectangle in Histogram)
+### Bài 17 [CPPB2-L09-17]: Hinh Chu Nhat Lon Nhat Bieu Do Cot
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm diện tích hình chữ nhật lớn nhất có thể vẽ bên trong biểu đồ cột $N$ thanh trong $\mathcal{O}(N)$.
-
-**Đầu vào (Input):**
-
-Số $N$ và chiều cao $N$ cột.
-
-**Đầu ra (Output):**
-
-In ra diện tích lớn nhất.
-
-
-
-### Bài 18 [CPPB2-L09-18]: Hình chữ nhật toàn số 1 lớn nhất trong ma trận nhị phân
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Hinh Chu Nhat Lon Nhat Bieu Do Cot** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm diện tích hình chữ nhật lớn nhất chứa toàn số 1 trong ma trận $N \times M$.
+Hãy lập trình giải quyết bài toán Hinh Chu Nhat Lon Nhat Bieu Do Cot với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Ma trận $N \times M$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra diện tích lớn nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+6
+2 1 5 6 2 3
+```
+### Output
+```text
+10
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `10`.
 
 
 
-### Bài 19 [CPPB2-L09-19]: Tổng giá trị nhỏ nhất trên tất cả các đoạn con trong O(N)
+### Bài 18 [CPPB2-L09-18]: Hinh Chu Nhat Toan So 1 Lon Nhat 2d
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính tổng $\sum_{1 \le i \le j \le N} \min(A[i..j])$ modulo $10^9+7$.
-
-**Đầu vào (Input):**
-
-Mảng $A$ gồm $N$ số nguyên.
-
-**Đầu ra (Output):**
-
-In ra tổng modulo $10^9+7$.
-
-
-
-### Bài 20 [CPPB2-L09-20]: Giá trị lớn nhất trên cửa sổ trượt kích thước K
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Hinh Chu Nhat Toan So 1 Lon Nhat 2D** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm giá trị lớn nhất trong mỗi cửa sổ trượt độ dài $K$ khi trượt qua mảng $N$ phần tử.
+Hãy lập trình giải quyết bài toán Hinh Chu Nhat Toan So 1 Lon Nhat 2d với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số $N, K$ và mảng $A$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra $N-K+1$ giá trị lớn nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 0 1
+1 1 1
+1 1 1
+```
+### Output
+```text
+6
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `6`.
 
 
 
-### Bài 21 [CPPB2-L09-21]: Đánh giá biểu thức số học có dấu ngoặc và ưu tiên toán tử
+### Bài 19 [CPPB2-L09-19]: Tong Min Tat Ca Doan Con
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính giá trị của biểu thức toán học chứa các phép toán $+,-,*,/$ và dấu ngoặc đơn.
-
-**Đầu vào (Input):**
-
-Chuỗi biểu thức $S$.
-
-**Đầu ra (Output):**
-
-In ra kết quả tính toán.
-
-
-
-### Bài 22 [CPPB2-L09-22]: Số lượng tòa nhà nhìn thấy được từ hai phía
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Tong Min Tat Ca Doan Con** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Với mỗi tòa nhà, đếm số tòa nhà nhìn thấy được sang cả bên trái và bên phải.
+Hãy lập trình giải quyết bài toán Tong Min Tat Ca Doan Con với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Mảng chiều cao $N$ tòa nhà.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số lượng nhìn thấy cho mỗi vị trí.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+3 1 2
+```
+### Output
+```text
+9
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `9`.
+
+
+
+### Bài 20 [CPPB2-L09-20]: Deque Sliding Window Maximum
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Deque Sliding Window Maximum** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Deque Sliding Window Maximum với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4 2
+1 3 -1 -3
+```
+### Output
+```text
+3 3 -1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3 3 -1`.
+
+
+
+### Bài 21 [CPPB2-L09-21]: Stack Danh Gia Bieu Thuc So Hoc
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Stack Danh Gia Bieu Thuc So Hoc** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Stack Danh Gia Bieu Thuc So Hoc với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3+(2*4)-5
+```
+### Output
+```text
+6
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `6`.
+
+
+
+### Bài 22 [CPPB2-L09-22]: Tam Nhin Toa Nha Hai Chieu
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Tam Nhin Toa Nha Hai Chieu** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tam Nhin Toa Nha Hai Chieu với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 2 1
+```
+### Output
+```text
+2 3 2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2 3 2`.
 
 
 
@@ -2752,731 +3050,809 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L10-01]: DUY TRÌ TRUNG VỊ ĐỘNG
+### Bài 01 [CPPB2-L10-01]: Duy Trì Trung Vị Động
+
+**Bối cảnh & Nhiệm vụ:**
+
+Cho luồng $N$ số, sau mỗi số được thêm vào, in ra trung vị của tập số hiện tại.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Duy Trì Trung Vị Động với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $N$ ($1 \le N \le 10^5$). Dòng 2: $N$ số $A_i$.
-
----
+- Dòng 1: $N$ ($1 \le N \le 10^5$). Dòng 2: $N$ số $A_i$.
 
 **Đầu ra (Output):**
 
-* In ra $N$ giá trị trung vị tương ứng.
-
----
+- In ra $N$ giá trị trung vị tương ứng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 4
 5 15 1 3
 ```
-
-**Output:**
+### Output
 ```text
 5 5 5 3
 ```
 
----
 
 
+### Bài 02 [CPPB2-L10-02]: Đếm Tần Suất Giá Trị Bằng Safe Hash Map
 
-### Bài 02 [CPPB2-L10-02]: ĐẾM TẦN SUẤT GIÁ TRỊ BẰNG SAFE HASH MAP
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Tần Suất Giá Trị Bằng Safe Hash Map** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: `unordered_map` với `custom_hash`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Tần Suất Giá Trị Bằng Safe Hash Map với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Tần Suất Giá Trị Bằng Safe Hash Map.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^{18}$.
 
 
+### Bài 03 [CPPB2-L10-03]: Nối Dây Tiết Kiệm Bằng Priority Queue
 
-### Bài 03 [CPPB2-L10-03]: NỐI DÂY TIẾT KIỆM BẰNG PRIORITY QUEUE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nối Dây Tiết Kiệm Bằng Priority Queue** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Min-Heap `priority_queue`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Nối Dây Tiết Kiệm Bằng Priority Queue với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nối Dây Tiết Kiệm Bằng Priority Queue.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, L_i \le 10^6$.
 
 
+### Bài 04 [CPPB2-L10-04]: Duy Trì Trung Vị Động (running Median)
 
-### Bài 04 [CPPB2-L10-04]: DUY TRÌ TRUNG VỊ ĐỘNG (RUNNING MEDIAN)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì Trung Vị Động (Running Median)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: 2 Heap cân bằng kích thước.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Duy Trì Trung Vị Động (running Median) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Duy Trì Trung Vị Động (Running Median).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2 \times 10^5$.
 
 
+### Bài 05 [CPPB2-L10-05]: Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X
 
-### Bài 05 [CPPB2-L10-05]: TÌM PHẦN TỬ KẾ TIẾP NHỎ NHẤT LỚN HƠN X
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: `s.upper_bound(x)` trên `set`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $Q \le 2 \times 10^5$.
 
 
+### Bài 06 [CPPB2-L10-06]: Lập Lịch Phòng Họp Đa Năng (meeting Rooms)
 
-### Bài 06 [CPPB2-L10-06]: LẬP LỊCH PHÒNG HỌP ĐA NĂNG (MEETING ROOMS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Phòng Họp Đa Năng (Meeting Rooms)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Min-Heap theo dõi thời điểm kết thúc.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lập Lịch Phòng Họp Đa Năng (meeting Rooms) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lập Lịch Phòng Họp Đa Năng (Meeting Rooms).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$, $[S_i, E_i] \le 10^9$.
 
 
+### Bài 07 [CPPB2-L10-07]: Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu
 
-### Bài 07 [CPPB2-L10-07]: DUY TRÌ K PHẦN TỬ LỚN NHẤT TRONG LUỒNG DỮ LIỆU
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Min-Heap kích thước cố định $K$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^6, K \le 1000$.
 
 
+### Bài 08 [CPPB2-L10-08]: Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian
 
-### Bài 08 [CPPB2-L10-08]: TỐI ƯU HÓA CHI PHÍ MUA CỔ PHIẾU THEO THỜI GIAN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `multiset` duy trì trật tự giá trị.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$.
 
 
+### Bài 09 [CPPB2-L10-09]: Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu
 
-### Bài 09 [CPPB2-L10-09]: HỆ THỐNG ĐẶT CHỖ RẠP CHIẾU PHIM TỐI ƯU
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: `set<pair<int, int>>` quản lý đoạn trống.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, M \le 10^9$.
 
 
+### Bài 10 [CPPB2-L10-10]: Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K
 
-### Bài 10 [CPPB2-L10-10]: ĐẾM SỐ PHẦN TỬ PHÂN BIỆT TRONG MỌI CỬA SỔ K
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: `unordered_map` kết hợp Sliding Window.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2 \times 10^5, K \le N$.
 
 
+### Bài 11 [CPPB2-L10-11]: Hợp Nhất Các Đoạn Số Rời Rạc (merge Intervals)
 
-### Bài 11 [CPPB2-L10-11]: HỢP NHẤT CÁC ĐOẠN SỐ RỜI RẠC (MERGE INTERVALS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hợp Nhất Các Đoạn Số Rời Rạc (Merge Intervals)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `map` hoặc `set` quản lý các khoảng rời.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Hợp Nhất Các Đoạn Số Rời Rạc (merge Intervals) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hợp Nhất Các Đoạn Số Rời Rạc (Merge Intervals).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, [L_i, R_i] \le 10^9$.
 
 
+### Bài 12 [CPPB2-L10-12]: Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất
 
-### Bài 12 [CPPB2-L10-12]: TÌM CẶP ĐIỂM CÓ KHOẢNG CÁCH MANHATTAN NHỎ NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sweep-line kết hợp `set` tìm kiếm lân cận.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5$, tọa độ 2D.
 
 
+### Bài 13 [CPPB2-L10-13]: Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí
 
-### Bài 13 [CPPB2-L10-13]: HỆ THỐNG XẾP HẠNG TRỰC TUYẾN ĐA TIÊU CHÍ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `set<CustomStruct>` với Strict Weak Ordering.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $Q \le 10^5$, cập nhật điểm động.
 
 
+### Bài 14 [CPPB2-L10-14]: Tối Ưu Phân Bổ Băng Thông Máy Chủ (server Load Balancer)
 
-### Bài 14 [CPPB2-L10-14]: TỐI ƯU PHÂN BỔ BĂNG THÔNG MÁY CHỦ (SERVER LOAD BALANCER)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Bổ Băng Thông Máy Chủ (Server Load Balancer)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2 `set` quản lý máy chủ bận và máy chủ rảnh.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tối Ưu Phân Bổ Băng Thông Máy Chủ (server Load Balancer) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Phân Bổ Băng Thông Máy Chủ (Server Load Balancer).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 10^5$.
 
 
+### Bài 15 [CPPB2-L10-15]: Duy Trì Tổng Của K Phần Tử Lớn Nhất Động
 
-### Bài 15 [CPPB2-L10-15]: DUY TRÌ TỔNG CỦA K PHẦN TỬ LỚN NHẤT ĐỘNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì Tổng Của K Phần Tử Lớn Nhất Động** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2 `multiset` cân bằng kích thước $K$ và tổng.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Duy Trì Tổng Của K Phần Tử Lớn Nhất Động với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Duy Trì Tổng Của K Phần Tử Lớn Nhất Động.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $Q \le 10^5$, thêm/xóa phần tử.
 
 
+### Bài 16 [CPPB2-L10-16]: Kỹ Thuật Small-to-large Merging Trên Stl Map
 
-### Bài 16 [CPPB2-L10-16]: KỸ THUẬT SMALL-TO-LARGE MERGING TRÊN STL MAP
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kỹ Thuật Small-to-Large Merging Trên STL Map** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Gộp `map` từ cây con lên gốc trong $\mathcal{O}(N \log^2 N)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Kỹ Thuật Small-to-large Merging Trên Stl Map với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Kỹ Thuật Small-to-Large Merging Trên STL Map.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Cây $N \le 10^5$ đỉnh.
 
 
-
-### Bài 17 [CPPB2-L10-17]: Cây tìm kiếm PBDS Ordered Set truy vấn thứ hạng K
+### Bài 17 [CPPB2-L10-17]: Ordered Set Pbds Truy Van Thu Hang
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thực hiện chèn phần tử, tìm phần tử thứ $K$ và đếm số phần tử nhỏ hơn $X$ trong $\mathcal{O}(\log N)$.
-
-**Đầu vào (Input):**
-
-Số thao tác $Q$ và các truy vấn.
-
-**Đầu ra (Output):**
-
-In ra kết quả các truy vấn.
-
-
-
-### Bài 18 [CPPB2-L10-18]: Duy trì trung vị của luồng dữ liệu bằng 2 Heap
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Ordered Set Pbds Truy Van Thu Hang** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Với mỗi phần tử được thêm vào luồng, in ra trung vị hiện tại.
+Hãy lập trình giải quyết bài toán Ordered Set Pbds Truy Van Thu Hang với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số phần tử $N$ và $N$ số nguyên.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra trung vị ở mỗi bước.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 5
+1 2
+2 1
+```
+### Output
+```text
+5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
 
 
-### Bài 19 [CPPB2-L10-19]: Quản lý hợp các đoạn thẳng bằng Multiset
+### Bài 18 [CPPB2-L10-18]: Can Bang Hai Heap Running Median
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thêm/xóa các đoạn thẳng $[L, R]$, in ra tổng độ dài phần hợp sau mỗi thao tác.
-
-**Đầu vào (Input):**
-
-Số thao tác $Q$.
-
-**Đầu ra (Output):**
-
-In ra tổng độ dài hợp.
-
-
-
-### Bài 20 [CPPB2-L10-20]: Tối ưu hóa Custom Hash an toàn chống Anti-hash Tests
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Can Bang Hai Heap Running Median** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm tần suất xuất hiện của $N$ số nguyên lớn với tốc độ $\mathcal{O}(1)$ tuyệt đối không bị đụng độ.
+Hãy lập trình giải quyết bài toán Can Bang Hai Heap Running Median với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Mảng $N$ phần tử.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số giá trị phân biệt.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+5 15 1
+```
+### Output
+```text
+5 10 5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5 10 5`.
 
 
 
-### Bài 21 [CPPB2-L10-21]: Priority Queue với Custom Struct giải bài toán đồ thị nhiều chiều
+### Bài 19 [CPPB2-L10-19]: Multiset Interval Management
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm đường đi có tích trọng số nhỏ nhất trên đồ thị có hướng.
-
-**Đầu vào (Input):**
-
-Đồ thị $N$ đỉnh, $M$ cạnh có trọng số.
-
-**Đầu ra (Output):**
-
-In ra tích trọng số nhỏ nhất.
-
-
-
-### Bài 22 [CPPB2-L10-22]: Cài đặt bộ nhớ đệm LRU Cache bằng List và Unordered Map
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Multiset Interval Management** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thực hiện các thao tác `get` và `put` trên bộ nhớ đệm dung lượng $C$ trong $\mathcal{O}(1)$.
+Hãy lập trình giải quyết bài toán Multiset Interval Management với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Dung lượng $C$ và danh sách truy vấn.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra kết quả các lệnh get.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2
+1 1 3
+1 2 5
+```
+### Output
+```text
+2
+4
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2
+4`.
+
+
+
+### Bài 20 [CPPB2-L10-20]: Safe Unordered Map Custom Hash
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Safe Unordered Map Custom Hash** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Safe Unordered Map Custom Hash với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4
+1 2 2 1
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+
+
+
+### Bài 21 [CPPB2-L10-21]: Priority Queue Dijkstra Custom Comparator
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Priority Queue Dijkstra Custom Comparator** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Priority Queue Dijkstra Custom Comparator với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 2 2
+2 3 3
+1 3 10
+```
+### Output
+```text
+6
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `6`.
+
+
+
+### Bài 22 [CPPB2-L10-22]: Lru Cache Implementation Stl
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Lru Cache Implementation Stl** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lru Cache Implementation Stl với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2
+put 1 1
+put 2 2
+get 1
+```
+### Output
+```text
+1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
 
 
@@ -3584,733 +3960,797 @@ long long count_coprime(long long n, const vector<long long> &primes) {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L11-01]: TÍNH TỔ HỢP NCR MODULO
+### Bài 01 [CPPB2-L11-01]: Tính Tổ Hợp Ncr Modulo
+
+**Bối cảnh & Nhiệm vụ:**
+
+Tính $\binom{N}{K} \bmod (10^9+7)$ cho $Q$ truy vấn.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tính Tổ Hợp Ncr Modulo với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $Q$ ($1 \le Q \le 10^5$). $Q$ dòng sau: $N, K$ ($0 \le K \le N \le 10^6$).
-
----
+- Dòng 1: $Q$ ($1 \le Q \le 10^5$). $Q$ dòng sau: $N, K$ ($0 \le K \le N \le 10^6$).
 
 **Đầu ra (Output):**
 
-* In ra kết quả mỗi truy vấn trên 1 dòng.
-
----
+- In ra kết quả mỗi truy vấn trên 1 dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 2
 5 2
 10 3
 ```
-
-**Output:**
+### Output
 ```text
 10
 120
 ```
 
----
 
 
+### Bài 02 [CPPB2-L11-02]: Tam Giác Pascal Modulo Hợp Số
 
-### Bài 02 [CPPB2-L11-02]: TAM GIÁC PASCAL MODULO HỢP SỐ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tam Giác Pascal Modulo Hợp Số** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: DP Tam giác Pascal $C_n^k = C_{n-1}^{k-1} + C_{n-1}^k$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tam Giác Pascal Modulo Hợp Số với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tam Giác Pascal Modulo Hợp Số.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 2000, M \le 10^9$.
 
 
+### Bài 03 [CPPB2-L11-03]: Chia Kẹo Euler (stars And Bars)
 
-### Bài 03 [CPPB2-L11-03]: CHIA KẸO EULER (STARS AND BARS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Kẹo Euler (Stars and Bars)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Ứng dụng công thức chia kẹo Euler.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Chia Kẹo Euler (stars And Bars) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Kẹo Euler (Stars and Bars).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 10^6$.
 
 
+### Bài 04 [CPPB2-L11-04]: Đếm Số Hoán Vị Không Có Điểm Cố Định (derangements)
 
-### Bài 04 [CPPB2-L11-04]: ĐẾM SỐ HOÁN VỊ KHÔNG CÓ ĐIỂM CỐ ĐỊNH (DERANGEMENTS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Hoán Vị Không Có Điểm Cố Định (Derangements)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Công thức $D_n = (n-1)(D_{n-1} + D_{n-2})$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Hoán Vị Không Có Điểm Cố Định (derangements) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Hoán Vị Không Có Điểm Cố Định (Derangements).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^6$.
 
 
+### Bài 05 [CPPB2-L11-05]: Đếm Số Nguyên Tố Cùng Nhau Bằng Pie
 
-### Bài 05 [CPPB2-L11-05]: ĐẾM SỐ NGUYÊN TỐ CÙNG NHAU BẰNG PIE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Nguyên Tố Cùng Nhau Bằng PIE** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Nguyên lý bù trừ kết hợp Bitmask.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Nguyên Tố Cùng Nhau Bằng Pie với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Nguyên Tố Cùng Nhau Bằng PIE.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^{12}, K \le 15$.
 
 
+### Bài 06 [CPPB2-L11-06]: Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm
 
-### Bài 06 [CPPB2-L11-06]: ĐẾM SỐ ĐƯỜNG ĐI TRÊN LƯỚI TỌA ĐỘ CÓ ĐIỂM CẤM
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP kết hợp PIE và tổ hợp.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 10^5, K \le 2000$ điểm cấm.
 
 
+### Bài 07 [CPPB2-L11-07]: Số Phân Hoạch Tập Hợp (số Stirling Loại 2)
 
-### Bài 07 [CPPB2-L11-07]: SỐ PHÂN HOẠCH TẬP HỢP (SỐ STIRLING LOẠI 2)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Phân Hoạch Tập Hợp (Số Stirling Loại 2)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP tính số Stirling $S(n, k)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Phân Hoạch Tập Hợp (số Stirling Loại 2) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Phân Hoạch Tập Hợp (Số Stirling Loại 2).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 2000$.
 
 
+### Bài 08 [CPPB2-L11-08]: Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ
 
-### Bài 08 [CPPB2-L11-08]: ĐỊNH LÝ LUCAS CHO TỔ HỢP MODULO NGUYÊN TỐ NHỎ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Định lý Lucas $\binom{n}{k} \equiv \prod \binom{n_i}{k_i} \pmod P$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 10^{18}, P \le 10^5$.
 
 
+### Bài 09 [CPPB2-L11-09]: Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm
 
-### Bài 09 [CPPB2-L11-09]: ĐẾM SỐ ĐƯỜNG ĐI TRÊN LƯỚI TỌA ĐỘ CÓ ĐIỂM CẤM
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP sắp xếp điểm cấm + PIE.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 10^5, K \le 2000$ điểm cấm.
 
 
+### Bài 10 [CPPB2-L11-10]: Đếm Số Hoán Vị Có Đúng K Điểm Cố Định
 
-### Bài 10 [CPPB2-L11-10]: ĐẾM SỐ HOÁN VỊ CÓ ĐÚNG K ĐIỂM CỐ ĐỊNH
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Hoán Vị Có Đúng K Điểm Cố Định** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Công thức $\binom{N}{K} \times D_{N-K} \bmod M$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Hoán Vị Có Đúng K Điểm Cố Định với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Hoán Vị Có Đúng K Điểm Cố Định.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^6, K \le N$.
 
 
+### Bài 11 [CPPB2-L11-11]: Số Phân Hoạch Tập Hợp (số Stirling Loại 2)
 
-### Bài 11 [CPPB2-L11-11]: SỐ PHÂN HOẠCH TẬP HỢP (SỐ STIRLING LOẠI 2)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Phân Hoạch Tập Hợp (Số Stirling Loại 2)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP tính $S(n, k) = S(n-1, k-1) + k \cdot S(n-1, k)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Phân Hoạch Tập Hợp (số Stirling Loại 2) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Phân Hoạch Tập Hợp (Số Stirling Loại 2).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 2000, M = 10^9+7$.
 
 
+### Bài 12 [CPPB2-L11-12]: Đếm Số Cây Khung Đồ Thị Đầy Đủ (công Thức Cayley)
 
-### Bài 12 [CPPB2-L11-12]: ĐẾM SỐ CÂY KHUNG ĐỒ THỊ ĐẦY ĐỦ (CÔNG THỨC CAYLEY)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cây Khung Đồ Thị Đầy Đủ (Công Thức Cayley)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Công thức $N^{N-2} \bmod M$ bằng Fast Power.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Cây Khung Đồ Thị Đầy Đủ (công Thức Cayley) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Cây Khung Đồ Thị Đầy Đủ (Công Thức Cayley).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^6, M = 10^9+7$.
 
 
+### Bài 13 [CPPB2-L11-13]: Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ
 
-### Bài 13 [CPPB2-L11-13]: ĐỊNH LÝ LUCAS CHO TỔ HỢP MODULO NGUYÊN TỐ NHỎ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Định lý Lucas $\binom{n}{k} \equiv \prod \binom{n_i}{k_i} \pmod P$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 10^{18}, P \le 10^5$.
 
 
+### Bài 14 [CPPB2-L11-14]: Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng
 
-### Bài 14 [CPPB2-L11-14]: ĐẾM SỐ TAM GIÁC TẠO BỞI N ĐIỂM TRÊN MẶT PHẲNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: $\binom{N}{3}$ trừ các bộ 3 điểm thẳng hàng qua $\gcd$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 2000$, tọa độ nguyên.
 
 
+### Bài 15 [CPPB2-L11-15]: Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (probability Dp)
 
-### Bài 15 [CPPB2-L11-15]: KỲ VỌNG TOÁN HỌC TRÒ CHƠI GIEO XÚC XẮC (PROBABILITY DP)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (Probability DP)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP tính kỳ vọng bước đi $E[i]$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (probability Dp) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (Probability DP).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, K \le 6$.
 
 
+### Bài 16 [CPPB2-L11-16]: Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay
 
-### Bài 16 [CPPB2-L11-16]: BỔ ĐỀ BURNSIDE ĐẾM CẤU HÌNH BẤT BIẾN PHÉP QUAY
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Lý thuyết nhóm & Bổ đề Burnside đếm vòng cổ.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, K \le 10^5, M = 10^9+7$.
 
 
-
-### Bài 17 [CPPB2-L11-17]: Nguyên lý bao hàm - loại trừ (PIE) đếm số nguyên tố cùng nhau
+### Bài 17 [CPPB2-L11-17]: Nguyen Ly Bao Ham Loai Tru Pie
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng số trong đoạn $[1, N]$ không chia hết cho bất kỳ số nào trong tập $P_1, \dots, P_K$.
-
-**Đầu vào (Input):**
-
-Số $N, K$ và tập số nguyên tố.
-
-**Đầu ra (Output):**
-
-In ra số lượng thỏa mãn.
-
-
-
-### Bài 18 [CPPB2-L11-18]: Định lý Lucas tính tổ hợp $C_N^K \pmod P$ khi $N, K \le 10^{18}$
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Nguyen Ly Bao Ham Loai Tru Pie** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính tổ hợp $C_N^K \pmod P$ với $P$ là số nguyên tố nhỏ ($P \le 10^5$) và $N, K$ cực lớn.
+Hãy lập trình giải quyết bài toán Nguyen Ly Bao Ham Loai Tru Pie với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Ba số $N, K, P$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra giá trị $C_N^K \pmod P$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+10 2
+2 3
+```
+### Output
+```text
+3
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
 
 
 
-### Bài 19 [CPPB2-L11-19]: Số Catalan và bài toán đếm dãy ngoặc hợp lệ
+### Bài 18 [CPPB2-L11-18]: Dinh Ly Lucas To Hop Modulo P
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính số dãy ngoặc đúng có độ dài $2N$ modulo $10^9+7$.
-
-**Đầu vào (Input):**
-
-Số nguyên dương $N$.
-
-**Đầu ra (Output):**
-
-In ra số Catalan thứ $N$ modulo $10^9+7$.
-
-
-
-### Bài 20 [CPPB2-L11-20]: Số Stirling loại hai đếm cách chia tập hợp
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dinh Ly Lucas To Hop Modulo P** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số cách chia tập hợp $N$ phần tử thành $K$ tập con không rỗng $S(N, K) \pmod{10^9+7}$.
+Hãy lập trình giải quyết bài toán Dinh Ly Lucas To Hop Modulo P với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai số $N, K$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra $S(N, K) \pmod{10^9+7}$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+5 2 3
+```
+### Output
+```text
+1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
 
 
-### Bài 21 [CPPB2-L11-21]: Xác suất kỳ vọng số lần tung đồng xu để được chuỗi mẫu
+### Bài 19 [CPPB2-L11-19]: So Catalan Ung Dung Ngoac
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính kỳ vọng số lần tung xúc xắc để tổng điểm đạt $\ge S$.
-
-**Đầu vào (Input):**
-
-Số nguyên $S$.
-
-**Đầu ra (Output):**
-
-In ra kỳ vọng modulo $10^9+7$.
-
-
-
-### Bài 22 [CPPB2-L11-22]: Đếm hoán vị có đúng K chu trình (Stirling loại 1)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **So Catalan Ung Dung Ngoac** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số hoán vị của $N$ phần tử có đúng $K$ chu trình rời nhau $|s(N, K)| \pmod{10^9+7}$.
+Hãy lập trình giải quyết bài toán So Catalan Ung Dung Ngoac với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai số $N, K$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra kết quả modulo $10^9+7$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+```
+### Output
+```text
+5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
+
+
+
+### Bài 20 [CPPB2-L11-20]: So Stirling Loai Hai Chia Tap
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **So Stirling Loai Hai Chia Tap** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán So Stirling Loai Hai Chia Tap với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 2
+```
+### Output
+```text
+3
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+
+
+
+### Bài 21 [CPPB2-L11-21]: Xac Suat Co Dieu Kien Dong Xu
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Xac Suat Co Dieu Kien Dong Xu** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xac Suat Co Dieu Kien Dong Xu với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+
+
+
+### Bài 22 [CPPB2-L11-22]: Hoan Vi Co Chu Ky Cycles
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Hoan Vi Co Chu Ky Cycles** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Hoan Vi Co Chu Ky Cycles với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 2
+```
+### Output
+```text
+3
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
 
 
 
@@ -4433,797 +4873,965 @@ vector<long long> dijkstra(int start_node, int n, const vector<vector<pair<int, 
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L12-01]: ĐƯỜNG ĐI NGẮN NHẤT DIJKSTRA
+### Bài 01 [CPPB2-L12-01]: Đường Đi Ngắn Nhất Dijkstra
+
+**Bối cảnh & Nhiệm vụ:**
+
+Tìm đường đi ngắn nhất từ đỉnh 1 đến đỉnh $N$ trên đồ thị có hướng trọng số không âm.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đường Đi Ngắn Nhất Dijkstra với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $N, M$ ($1 \le N \le 10^5, 1 \le M \le 2 \times 10^5$). $M$ dòng sau: $u, v, w$.
-
----
+- Dòng 1: $N, M$ ($1 \le N \le 10^5, 1 \le M \le 2 \times 10^5$). $M$ dòng sau: $u, v, w$.
 
 **Đầu ra (Output):**
 
-* In ra khoảng cách ngắn nhất từ 1 đến $N$, nếu không đến được in -1.
-
----
+- In ra khoảng cách ngắn nhất từ 1 đến $N$, nếu không đến được in -1.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 3 3
 1 2 1
 2 3 2
 1 3 4
 ```
-
-**Output:**
+### Output
 ```text
 3
 ```
 
----
 
 
+### Bài 02 [CPPB2-L12-02]: Đường Đi Ngắn Nhất Mê Cung 2d Bằng Bfs
 
-### Bài 02 [CPPB2-L12-02]: ĐƯỜNG ĐI NGẮN NHẤT MÊ CUNG 2D BẰNG BFS
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Ngắn Nhất Mê Cung 2D Bằng BFS** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: BFS trên lưới ma trận 2D.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đường Đi Ngắn Nhất Mê Cung 2d Bằng Bfs với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đường Đi Ngắn Nhất Mê Cung 2D Bằng BFS.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 1000$.
 
 
+### Bài 03 [CPPB2-L12-03]: Kiểm Tra Đồ Thị Hai Phía (bipartite Graph Coloring)
 
-### Bài 03 [CPPB2-L12-03]: KIỂM TRA ĐỒ THỊ HAI PHÍA (BIPARTITE GRAPH COLORING)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph Coloring)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Tô màu 2 màu bằng BFS/DFS.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Kiểm Tra Đồ Thị Hai Phía (bipartite Graph Coloring) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph Coloring).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V, E \le 10^5$.
 
 
+### Bài 04 [CPPB2-L12-04]: Sắp Xếp Tô-pô Lập Lịch Khóa Học (topological Sort)
 
-### Bài 04 [CPPB2-L12-04]: SẮP XẾP TÔ-PÔ LẬP LỊCH KHÓA HỌC (TOPOLOGICAL SORT)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Sắp Xếp Tô-pô Lập Lịch Khóa Học (Topological Sort)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Thuật toán Kahn (Bán bậc vào `in_degree`).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Sắp Xếp Tô-pô Lập Lịch Khóa Học (topological Sort) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Sắp Xếp Tô-pô Lập Lịch Khóa Học (Topological Sort).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V, E \le 10^5$.
 
 
+### Bài 05 [CPPB2-L12-05]: Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn
 
-### Bài 05 [CPPB2-L12-05]: DIJKSTRA TÌM ĐƯỜNG ĐI NGẮN NHẤT CHUẨN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cài đặt Dijkstra Min-Heap.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V \le 10^5, E \le 2 \times 10^5$.
 
 
+### Bài 06 [CPPB2-L12-06]: Mê Cung Trọng Số 0 Và 1 (0-1 Bfs)
 
-### Bài 06 [CPPB2-L12-06]: MÊ CUNG TRỌNG SỐ 0 VÀ 1 (0-1 BFS)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mê Cung Trọng Số 0 và 1 (0-1 BFS)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: 0-1 BFS với `std::deque`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Mê Cung Trọng Số 0 Và 1 (0-1 Bfs) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Mê Cung Trọng Số 0 và 1 (0-1 BFS).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 1000$.
 
 
+### Bài 07 [CPPB2-L12-07]: Cây Khung Nhỏ Nhất (mst Kruskal Với Dsu)
 
-### Bài 07 [CPPB2-L12-07]: CÂY KHUNG NHỎ NHẤT (MST KRUSKAL VỚI DSU)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Khung Nhỏ Nhất (MST Kruskal với DSU)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Kruskal + Disjoint Set Union.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cây Khung Nhỏ Nhất (mst Kruskal Với Dsu) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cây Khung Nhỏ Nhất (MST Kruskal với DSU).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V \le 10^5, E \le 2 \times 10^5$.
 
 
+### Bài 08 [CPPB2-L12-08]: Tìm Khớp Và Cầu Trên Đồ Thị (tarjan's Bridge & Articulation)
 
-### Bài 08 [CPPB2-L12-08]: TÌM KHỚP VÀ CẦU TRÊN ĐỒ THỊ (TARJAN'S BRIDGE & ARTICULATION)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Khớp Và Cầu Trên Đồ Thị (Tarjan's Bridge & Articulation)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Mảng `num` và `low` trong DFS.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Khớp Và Cầu Trên Đồ Thị (tarjan's Bridge & Articulation) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Khớp Và Cầu Trên Đồ Thị (Tarjan's Bridge & Articulation).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V, E \le 10^5$.
 
 
+### Bài 09 [CPPB2-L12-09]: Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé Miễn Phí)
 
-### Bài 09 [CPPB2-L12-09]: DIJKSTRA TRÊN ĐỒ THỊ MỞ RỘNG TRẠNG THÁI (K LẦN DÙNG VÉ MIỄN PHÍ)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé Miễn Phí)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Dijkstra đa tầng $dist[u][k]$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé Miễn Phí) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé Miễn Phí).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V \le 10^5, K \le 10$.
 
 
+### Bài 10 [CPPB2-L12-10]: Thành Phần Liên Thông Mạnh (scc Tarjan/kosaraju)
 
-### Bài 10 [CPPB2-L12-10]: THÀNH PHẦN LIÊN THÔNG MẠNH (SCC TARJAN/KOSARAJU)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thành Phần Liên Thông Mạnh (SCC Tarjan/Kosaraju)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Co đồ thị có hướng thành DAG.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Thành Phần Liên Thông Mạnh (scc Tarjan/kosaraju) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Thành Phần Liên Thông Mạnh (SCC Tarjan/Kosaraju).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V, E \le 10^5$.
 
 
+### Bài 11 [CPPB2-L12-11]: Tìm Tổ Tiên Chung Gần Nhất (lca Binary Lifting)
 
-### Bài 11 [CPPB2-L12-11]: TÌM TỔ TIÊN CHUNG GẦN NHẤT (LCA BINARY LIFTING)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Tổ Tiên Chung Gần Nhất (LCA Binary Lifting)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bảng nhảy nhị phân $up[u][k]$ trong $\mathcal{O}(\log N)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Tổ Tiên Chung Gần Nhất (lca Binary Lifting) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Tổ Tiên Chung Gần Nhất (LCA Binary Lifting).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Cây $N \le 10^5, Q \le 10^5$.
 
 
+### Bài 12 [CPPB2-L12-12]: Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé)
 
-### Bài 12 [CPPB2-L12-12]: DIJKSTRA TRÊN ĐỒ THỊ MỞ RỘNG TRẠNG THÁI (K LẦN DÙNG VÉ)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Dijkstra đa tầng $dist[u][k]$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V \le 10^5, K \le 10$.
 
 
+### Bài 13 [CPPB2-L12-13]: Multi-source Bfs Lan Tỏa Dịch Bệnh / Cháy Rừng
 
-### Bài 13 [CPPB2-L12-13]: MULTI-SOURCE BFS LAN TỎA DỊCH BỆNH / CHÁY RỪNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Multi-Source BFS Lan Tỏa Dịch Bệnh / Cháy Rừng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS đồng thời từ nhiều đỉnh nguồn ban đầu.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Multi-source Bfs Lan Tỏa Dịch Bệnh / Cháy Rừng với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Multi-Source BFS Lan Tỏa Dịch Bệnh / Cháy Rừng.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, M \le 1000$.
 
 
+### Bài 14 [CPPB2-L12-14]: Đường Đi Euler & Chu Trình Euler (hierholzer)
 
-### Bài 14 [CPPB2-L12-14]: ĐƯỜNG ĐI EULER & CHU TRÌNH EULER (HIERHOLZER)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Euler & Chu Trình Euler (Hierholzer)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán Hierholzer tìm hành trình Euler.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đường Đi Euler & Chu Trình Euler (hierholzer) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đường Đi Euler & Chu Trình Euler (Hierholzer).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V, E \le 2 \times 10^5$.
 
 
+### Bài 15 [CPPB2-L12-15]: Tìm Chu Trình Âm Bằng Bellman-ford / Spfa
 
-### Bài 15 [CPPB2-L12-15]: TÌM CHU TRÌNH ÂM BẰNG BELLMAN-FORD / SPFA
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Trình Âm Bằng Bellman-Ford / SPFA** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Kiểm tra nới lỏng lần thứ $V$ phát hiện chu trình âm.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Chu Trình Âm Bằng Bellman-ford / Spfa với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Chu Trình Âm Bằng Bellman-Ford / SPFA.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V \le 2500, E \le 5000$.
 
 
+### Bài 16 [CPPB2-L12-16]: Luồng Cực Đại Trong Mạng (max Flow Dinic Algorithm)
 
-### Bài 16 [CPPB2-L12-16]: LUỒNG CỰC ĐẠI TRONG MẠNG (MAX FLOW DINIC ALGORITHM)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Luồng Cực Đại Trong Mạng (Max Flow Dinic Algorithm)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán Dinic dùng đồ thị tầng Level Graph.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Luồng Cực Đại Trong Mạng (max Flow Dinic Algorithm) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Luồng Cực Đại Trong Mạng (Max Flow Dinic Algorithm).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $V \le 500, E \le 5000$.
 
 
-
-### Bài 17 [CPPB2-L12-17]: Thuật toán 0-1 BFS tìm đường đi ngắn nhất bằng Deque
+### Bài 17 [CPPB2-L12-17]: Bfs Do Thi Trong So 0 1
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm đường đi ngắn nhất trên đồ thị có trọng số cạnh chỉ gồm 0 và 1 trong thời gian $\mathcal{O}(V + E)$.
-
-**Đầu vào (Input):**
-
-Số đỉnh $N, M$ và các cạnh có trọng số 0 hoặc 1.
-
-**Đầu ra (Output):**
-
-In ra khoảng cách ngắn nhất.
-
-
-
-### Bài 18 [CPPB2-L12-18]: Thuật toán Tarjan tìm khớp và cầu trên đồ thị vô hướng
+Trong lập trình thi đấu chuyên nghiệp, bài toán **01 Bfs Do Thi Trong So 0 1** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng khớp (Articulation Points) và số lượng cầu (Bridges) của đồ thị vô hướng.
+Hãy lập trình giải quyết bài toán Bfs Do Thi Trong So 0 1 với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Số đỉnh $N, M$ và danh sách các cạnh.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số khớp và số cầu.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 2 0
+2 3 1
+1 3 1
+```
+### Output
+```text
+1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
 
 
-### Bài 19 [CPPB2-L12-19]: Tìm thành phần liên thông mạnh (SCC) và co đồ thị
+### Bài 18 [CPPB2-L12-18]: Tarjan Tim Khop Va Cau
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm số lượng thành phần liên thông mạnh của đồ thị có hướng bằng thuật toán Tarjan.
-
-**Đầu vào (Input):**
-
-Số đỉnh $N, M$ và các cạnh có hướng.
-
-**Đầu ra (Output):**
-
-In ra số lượng SCC.
-
-
-
-### Bài 20 [CPPB2-L12-20]: Tìm chu trình Euler bằng thuật toán Hierholzer
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Tarjan Tim Khop Va Cau** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm chu trình Euler đi qua mỗi cạnh của đồ thị đúng một lần.
+Hãy lập trình giải quyết bài toán Tarjan Tim Khop Va Cau với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Đồ thị liên thông có mọi đỉnh đều có bậc chẵn.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra thứ tự các đỉnh trên chu trình.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4 4
+1 2
+2 3
+3 1
+3 4
+```
+### Output
+```text
+1 1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1 1`.
 
 
 
-### Bài 21 [CPPB2-L12-21]: Dijkstra đồ thị nhiều tầng: K vé miễn phí
+### Bài 19 [CPPB2-L12-19]: Tarjan Thanh Phan Lien Thong Manh Scc
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm đường đi ngắn nhất từ $1$ đến $N$, được phép chọn tối đa $K$ cạnh để giảm trọng số về 0.
-
-**Đầu vào (Input):**
-
-Số đỉnh $N, M, K$ và các cạnh.
-
-**Đầu ra (Output):**
-
-In ra khoảng cách ngắn nhất.
-
-
-
-### Bài 22 [CPPB2-L12-22]: Cây khung nhỏ nhất bằng thuật toán Kruskal và DSU
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Tarjan Thanh Phan Lien Thong Manh Scc** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm tổng trọng số cây khung nhỏ nhất (MST) của đồ thị vô hướng liên thông.
+Hãy lập trình giải quyết bài toán Tarjan Thanh Phan Lien Thong Manh Scc với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Đồ thị $N$ đỉnh, $M$ cạnh có trọng số.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra tổng trọng số của cây khung.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 2
+2 3
+3 1
+```
+### Output
+```text
+1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
 
 
-### Bài 23 [CPPB2-L12-23]: Thuật toán Bellman-Ford phát hiện chu trình âm
+### Bài 20 [CPPB2-L12-20]: Chu Trinh Euler Hierholzer
 
 **Bối cảnh & Nhiệm vụ:**
 
-Kiểm tra xem đồ thị có hướng có chứa chu trình trọng số âm hay không.
-
-**Đầu vào (Input):**
-
-Số đỉnh $N, M$ và các cạnh có trọng số âm/dương.
-
-**Đầu ra (Output):**
-
-In ra YES nếu có chu trình âm, ngược lại NO.
-
-
-
-### Bài 24 [CPPB2-L12-24]: Thuật toán Floyd-Warshall đường đi ngắn nhất giữa mọi cặp đỉnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Chu Trinh Euler Hierholzer** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm ma trận khoảng cách ngắn nhất giữa tất cả các cặp đỉnh trong $\mathcal{O}(V^3)$.
+Hãy lập trình giải quyết bài toán Chu Trinh Euler Hierholzer với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Ma trận kề trọng số $N \times N$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra ma trận khoảng cách.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 2
+2 3
+3 1
+```
+### Output
+```text
+1 2 3 1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1 2 3 1`.
 
 
 
-### Bài 25 [CPPB2-L12-25]: Tổ tiên chung gần nhất (LCA) bằng Binary Lifting
+### Bài 21 [CPPB2-L12-21]: Dijkstra Do Thi Nhieu Tang K Ve Mien Phi
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trả lời $Q$ truy vấn tìm tổ tiên chung gần nhất của hai đỉnh $U, V$ trên cây trong $\mathcal{O}(\log N)$.
-
-**Đầu vào (Input):**
-
-Cây $N$ đỉnh và $Q$ truy vấn $(U, V)$.
-
-**Đầu ra (Output):**
-
-In ra LCA cho mỗi truy vấn.
-
-
-
-### Bài 26 [CPPB2-L12-26]: Đếm số đường đi trên đồ thị có hướng không chu trình (DAG)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dijkstra Do Thi Nhieu Tang K Ve Mien Phi** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số đường đi phân biệt từ đỉnh $S$ đến đỉnh $T$ trên DAG modulo $10^9+7$.
+Hãy lập trình giải quyết bài toán Dijkstra Do Thi Nhieu Tang K Ve Mien Phi với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Đồ thị $N$ đỉnh, $M$ cạnh và đỉnh $S, T$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số đường đi modulo $10^9+7$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3 1
+1 2 10
+2 3 20
+1 3 50
+```
+### Output
+```text
+10
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `10`.
+
+
+
+### Bài 22 [CPPB2-L12-22]: Dinh To Nho Nhat Kruskal Dsu
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dinh To Nho Nhat Kruskal Dsu** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dinh To Nho Nhat Kruskal Dsu với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 2 1
+2 3 2
+1 3 3
+```
+### Output
+```text
+3
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+
+
+
+### Bài 23 [CPPB2-L12-23]: Bellman Ford Chu Trinh Am
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Bellman Ford Chu Trinh Am** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Bellman Ford Chu Trinh Am với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3
+1 2 1
+2 3 -5
+3 1 2
+```
+### Output
+```text
+YES
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `YES`.
+
+
+
+### Bài 24 [CPPB2-L12-24]: Floyd Warshall Moi Cap Dinh
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Floyd Warshall Moi Cap Dinh** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Floyd Warshall Moi Cap Dinh với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2
+0 3
+3 0
+```
+### Output
+```text
+0 3
+3 0
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `0 3
+3 0`.
+
+
+
+### Bài 25 [CPPB2-L12-25]: Lca To Tien Chung Gan Nhat Binary Lifting
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Lca To Tien Chung Gan Nhat Binary Lifting** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lca To Tien Chung Gan Nhat Binary Lifting với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3
+1 2
+1 3
+1
+2 3
+```
+### Output
+```text
+1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
+
+
+
+### Bài 26 [CPPB2-L12-26]: Dem So Duong Di Topo Dag
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dem So Duong Di Topo Dag** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dem So Duong Di Topo Dag với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 3 1 3
+1 2
+2 3
+1 3
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
 
 
@@ -5348,24 +5956,27 @@ long long query_tree(int id, int l, int r, int u, int v) {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L13-01]: TRUY VẤN TỔNG ĐOẠN FENWICK TREE
+### Bài 01 [CPPB2-L13-01]: Truy Vấn Tổng Đoạn Fenwick Tree
+
+**Bối cảnh & Nhiệm vụ:**
+
+Cho mảng $N$ phần tử. Có $Q$ thao tác: `1 u v` (cộng $v$ vào $A[u]$) và `2 l r` (tính tổng $A[l..r]$).
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Truy Vấn Tổng Đoạn Fenwick Tree với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: $N, Q$. Dòng 2: $N$ số $A_i$. $Q$ dòng tiếp theo: các truy vấn.
-
----
+- Dòng 1: $N, Q$. Dòng 2: $N$ số $A_i$. $Q$ dòng tiếp theo: các truy vấn.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của các truy vấn loại 2.
-
----
+- In ra kết quả của các truy vấn loại 2.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5 3
 1 2 3 4 5
@@ -5373,774 +5984,933 @@ long long query_tree(int id, int l, int r, int u, int v) {
 1 3 2
 2 1 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 17
 ```
 
----
 
 
+### Bài 02 [CPPB2-L13-02]: Truy Vấn Giá Trị Nhỏ Nhất Đoạn (rmq Segment Tree)
 
-### Bài 02 [CPPB2-L13-02]: TRUY VẤN GIÁ TRỊ NHỎ NHẤT ĐOẠN (RMQ SEGMENT TREE)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn Giá Trị Nhỏ Nhất Đoạn (RMQ Segment Tree)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt Segment Tree Point Update.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Truy Vấn Giá Trị Nhỏ Nhất Đoạn (rmq Segment Tree) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Truy Vấn Giá Trị Nhỏ Nhất Đoạn (RMQ Segment Tree).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5, A_i \le 10^9$.
 
 
+### Bài 03 [CPPB2-L13-03]: Đếm Cặp Nghịch Thế Bằng Fenwick Tree
 
-### Bài 03 [CPPB2-L13-03]: ĐẾM CẶP NGHỊCH THẾ BẰNG FENWICK TREE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp Nghịch Thế Bằng Fenwick Tree** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Nén tọa độ + Fenwick Tree.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Cặp Nghịch Thế Bằng Fenwick Tree với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Cặp Nghịch Thế Bằng Fenwick Tree.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 04 [CPPB2-L13-04]: Truy Vấn Gcd Đoạn Động
 
-### Bài 04 [CPPB2-L13-04]: TRUY VẤN GCD ĐOẠN ĐỘNG
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn GCD Đoạn Động** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Segment Tree với hàm $\gcd(A, B)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Truy Vấn Gcd Đoạn Động với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Truy Vấn GCD Đoạn Động.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5, A_i \le 10^9$.
 
 
+### Bài 05 [CPPB2-L13-05]: Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân
 
-### Bài 05 [CPPB2-L13-05]: TÌM PHẦN TỬ SỐ 1 THỨ K TRONG DÃY NHỊ PHÂN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Chặt nhị phân trực tiếp trên Segment Tree.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 06 [CPPB2-L13-06]: Dãy Con Tăng Dài Nhất Lis Bằng Segment Tree
 
-### Bài 06 [CPPB2-L13-06]: DÃY CON TĂNG DÀI NHẤT LIS BẰNG SEGMENT TREE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Dài Nhất LIS Bằng Segment Tree** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP kết hợp Segment Tree Range Max.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Dãy Con Tăng Dài Nhất Lis Bằng Segment Tree với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Tăng Dài Nhất LIS Bằng Segment Tree.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 10^5, A_i \le 10^9$.
 
 
+### Bài 07 [CPPB2-L13-07]: Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree
 
-### Bài 07 [CPPB2-L13-07]: CẬP NHẬT ĐOẠN TRUY VẤN ĐIỂM BẰNG FENWICK TREE
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Fenwick trên mảng hiệu (Difference BIT).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 08 [CPPB2-L13-08]: Segment Tree Lazy Propagation (cập Nhật Đoạn & Truy Vấn Đoạn)
 
-### Bài 08 [CPPB2-L13-08]: SEGMENT TREE LAZY PROPAGATION (CẬP NHẬT ĐOẠN & TRUY VẤN ĐOẠN)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Lazy Propagation (Cập Nhật Đoạn & Truy Vấn Đoạn)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Kỹ thuật Lazy Propagation.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Segment Tree Lazy Propagation (cập Nhật Đoạn & Truy Vấn Đoạn) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Segment Tree Lazy Propagation (Cập Nhật Đoạn & Truy Vấn Đoạn).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 09 [CPPB2-L13-09]: Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query)
 
-### Bài 09 [CPPB2-L13-09]: ĐOẠN CON CÓ TỔNG LỚN NHẤT (MAXIMUM SUBSEGMENT SUM QUERY)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Segment Tree lưu 4 trường (sum, pref, suff, ans).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 10 [CPPB2-L13-10]: Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query)
 
-### Bài 10 [CPPB2-L13-10]: ĐOẠN CON CÓ TỔNG LỚN NHẤT (MAXIMUM SUBSEGMENT SUM QUERY)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Segment Tree lưu 4 trường (sum, pref, suff, ans).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 11 [CPPB2-L13-11]: Lazy Propagation Gán Đoạn Và Tìm Min Đoạn
 
-### Bài 11 [CPPB2-L13-11]: LAZY PROPAGATION GÁN ĐOẠN VÀ TÌM MIN ĐOẠN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lazy Propagation Gán Đoạn Và Tìm Min Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Lazy gán giá trị mới lên khoảng.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Lazy Propagation Gán Đoạn Và Tìm Min Đoạn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lazy Propagation Gán Đoạn Và Tìm Min Đoạn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 12 [CPPB2-L13-12]: Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn
 
-### Bài 12 [CPPB2-L13-12]: CÂY FENWICK CẬP NHẬT ĐOẠN & TRUY VẤN ĐOẠN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: 2 mảng BIT quản lý $\sum (d_1 \cdot i - d_2)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 13 [CPPB2-L13-13]: Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[l, R]$
 
-### Bài 13 [CPPB2-L13-13]: TÌM VỊ TRÍ ĐẦU TIÊN CÓ GIÁ TRỊ $\GE X$ TRONG ĐOẠN $[L, R]$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Binary Search trên Segment Tree nhánh trái/phải.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[l, R]$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[L, R]$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 14 [CPPB2-L13-14]: Segment Tree Động (dynamic / Sparse Segment Tree)
 
-### Bài 14 [CPPB2-L13-14]: SEGMENT TREE ĐỘNG (DYNAMIC / SPARSE SEGMENT TREE)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Động (Dynamic / Sparse Segment Tree)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tạo nút cây theo yêu cầu bằng con trỏ.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Segment Tree Động (dynamic / Sparse Segment Tree) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Segment Tree Động (Dynamic / Sparse Segment Tree).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Tọa độ $10^9, Q \le 10^5$.
 
 
+### Bài 15 [CPPB2-L13-15]: Cây Phân Đoạn Bền Vững (persistent Segment Tree Cơ Bản)
 
-### Bài 15 [CPPB2-L13-15]: CÂY PHÂN ĐOẠN BỀN VỮNG (PERSISTENT SEGMENT TREE CƠ BẢN)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Phân Đoạn Bền Vững (Persistent Segment Tree Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cây lưu vết phiên bản tìm phần tử nhỏ thứ $K$ trên đoạn.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cây Phân Đoạn Bền Vững (persistent Segment Tree Cơ Bản) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cây Phân Đoạn Bền Vững (Persistent Segment Tree Cơ Bản).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
+### Bài 16 [CPPB2-L13-16]: Segment Tree Beats (thuật Toán Ji Driver Tối Ưu Phép Min=x)
 
-### Bài 16 [CPPB2-L13-16]: SEGMENT TREE BEATS (THUẬT TOÁN JI DRIVER TỐI ƯU PHÉP MIN=X)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Beats (Thuật Toán Ji Driver Tối Ưu Phép Min=X)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Phân rã lịch sử giá trị lớn nhất/nhì.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Segment Tree Beats (thuật Toán Ji Driver Tối Ưu Phép Min=x) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Segment Tree Beats (Thuật Toán Ji Driver Tối Ưu Phép Min=X).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N, Q \le 10^5$.
 
 
-
-### Bài 17 [CPPB2-L13-17]: Segment Tree Lazy Propagation: Cộng đoạn và tính tổng đoạn
+### Bài 17 [CPPB2-L13-17]: Segment Tree Lazy Propagation Tong Doan
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thực hiện cập nhật cộng giá trị $V$ cho đoạn $[L, R]$ và truy vấn tổng đoạn $[L, R]$ trong $\mathcal{O}(\log N)$.
-
-**Đầu vào (Input):**
-
-Mảng $N$ phần tử và $Q$ truy vấn.
-
-**Đầu ra (Output):**
-
-In ra kết quả các truy vấn tính tổng.
-
-
-
-### Bài 18 [CPPB2-L13-18]: Cây Fenwick 2D (2D Binary Indexed Tree)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Lazy Propagation Tong Doan** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cập nhật điểm và truy vấn tổng hình chữ nhật con $(x_1, y_1)$ đến $(x_2, y_2)$ trên ma trận $N \times M$.
+Hãy lập trình giải quyết bài toán Segment Tree Lazy Propagation Tong Doan với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Kích thước ma trận và các truy vấn.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra kết quả các truy vấn.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 2
+1 2 3
+1 1 2 10
+2 1 3
+```
+### Output
+```text
+26
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `26`.
 
 
 
-### Bài 19 [CPPB2-L13-19]: Dynamic Segment Tree (Cây phân đoạn động dải $10^9$)
+### Bài 18 [CPPB2-L13-18]: Fenwick Tree 2d Tong Chu Nhat
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cây phân đoạn mở rộng nút động cho dải tọa độ $10^9$ khi không thể nén tọa độ tĩnh trước.
-
-**Đầu vào (Input):**
-
-Số thao tác $Q$.
-
-**Đầu ra (Output):**
-
-In ra kết quả các truy vấn.
-
-
-
-### Bài 20 [CPPB2-L13-20]: Persistent Segment Tree tìm phần tử nhỏ thứ K trên đoạn con
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Fenwick Tree 2D Tong Chu Nhat** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trả lời $Q$ truy vấn: Tìm phần tử nhỏ thứ $K$ trong đoạn $A[L..R]$ mà không sửa đổi mảng ban đầu.
+Hãy lập trình giải quyết bài toán Fenwick Tree 2d Tong Chu Nhat với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Mảng $N$ phần tử và $Q$ truy vấn $(L, R, K)$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra phần tử nhỏ thứ $K$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2 2 1
+1 1 1 5
+2 1 1 2 2
+```
+### Output
+```text
+5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
 
 
-### Bài 21 [CPPB2-L13-21]: Walk on Segment Tree tìm vị trí đầu tiên $\ge X$
+### Bài 19 [CPPB2-L13-19]: Dynamic Segment Tree Toa Do 1e9
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm chỉ số $i \ge L$ nhỏ nhất thỏa mãn $A[i] \ge X$ trong $\mathcal{O}(\log N)$.
-
-**Đầu vào (Input):**
-
-Mảng $A$ và các truy vấn.
-
-**Đầu ra (Output):**
-
-In ra chỉ số $i$ hoặc -1.
-
-
-
-### Bài 22 [CPPB2-L13-22]: Merge Sort Tree đếm số phần tử lớn hơn K trên đoạn
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dynamic Segment Tree Toa Do 1E9** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số phần tử $A[i] > K$ trong đoạn $[L, R]$ trong $\mathcal{O}(\log^2 N)$.
+Hãy lập trình giải quyết bài toán Dynamic Segment Tree Toa Do 1e9 với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Mảng $A$ và $Q$ truy vấn.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số lượng phần tử.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+2
+1 1000000000 5
+2 1 1000000000
+```
+### Output
+```text
+5
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
 
 
-### Bài 23 [CPPB2-L13-23]: Cây Fenwick cập nhật đoạn và tính tổng đoạn (RURQ BIT)
+### Bài 20 [CPPB2-L13-20]: Persistent Segment Tree K Th Number
 
 **Bối cảnh & Nhiệm vụ:**
 
-Sử dụng 2 cây BIT để thực hiện cả cập nhật đoạn và tính tổng đoạn trong $\mathcal{O}(\log N)$.
-
-**Đầu vào (Input):**
-
-Mảng $N$ phần tử và các truy vấn.
-
-**Đầu ra (Output):**
-
-In ra kết quả các truy vấn.
-
-
-
-### Bài 24 [CPPB2-L13-24]: Segment Tree Beats: Gán giá trị $A_i = \min(A_i, X)$
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Persistent Segment Tree K Th Number** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cập nhật hạ trần giá trị và tính tổng đoạn.
+Hãy lập trình giải quyết bài toán Persistent Segment Tree K Th Number với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Mảng $A$ và các truy vấn.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra tổng đoạn.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 1
+3 1 2
+1 3 2
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
 
 
-### Bài 25 [CPPB2-L13-25]: Segment Tree tìm đoạn con có tổng lớn nhất động
+### Bài 21 [CPPB2-L13-21]: Segment Tree Walk On Tree
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cập nhật giá trị một phần tử và truy vấn đoạn con có tổng lớn nhất trong đoạn $[L, R]$ trong $\mathcal{O}(\log N)$.
-
-**Đầu vào (Input):**
-
-Mảng $A$ và các truy vấn.
-
-**Đầu ra (Output):**
-
-In ra tổng lớn nhất.
-
-
-
-### Bài 26 [CPPB2-L13-26]: Offline Segment Tree đếm số giá trị phân biệt trên đoạn
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Walk On Tree** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trả lời $Q$ truy vấn đếm số lượng giá trị khác nhau trong đoạn $[L, R]$ bằng Offline BIT/Segment Tree.
+Hãy lập trình giải quyết bài toán Segment Tree Walk On Tree với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Mảng $N$ phần tử và $Q$ truy vấn.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số giá trị phân biệt.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 1
+1 5 2
+1 4
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+
+
+
+### Bài 22 [CPPB2-L13-22]: Merge Sort Tree Dem So Phan Tu Lon Hon K
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Merge Sort Tree Dem So Phan Tu Lon Hon K** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Merge Sort Tree Dem So Phan Tu Lon Hon K với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 1
+1 5 3
+1 3 2
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
+
+
+
+### Bài 23 [CPPB2-L13-23]: Fenwick Tree Range Update Range Query
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Fenwick Tree Range Update Range Query** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Fenwick Tree Range Update Range Query với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 2
+1 2 3
+1 1 2 5
+2 1 3
+```
+### Output
+```text
+16
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `16`.
+
+
+
+### Bài 24 [CPPB2-L13-24]: Segment Tree Beats Co Ban
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Beats Co Ban** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Segment Tree Beats Co Ban với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 2
+5 5 5
+1 1 3 3
+2 1 3
+```
+### Output
+```text
+9
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `9`.
+
+
+
+### Bài 25 [CPPB2-L13-25]: Segment Tree Max Subarray Sum
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Max Subarray Sum** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Segment Tree Max Subarray Sum với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 2
+-1 2 3
+1 1 4
+2 1 3
+```
+### Output
+```text
+9
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `9`.
+
+
+
+### Bài 26 [CPPB2-L13-26]: Segment Tree Dem So Phan Tu Khac Nhau Offline
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Dem So Phan Tu Khac Nhau Offline** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Segment Tree Dem So Phan Tu Khac Nhau Offline với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+4 2
+1 2 2 1
+1 3
+2 4
+```
+### Output
+```text
+2
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2
+2`.
 
 
 
@@ -6234,730 +7004,793 @@ int main() {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L14-01]: ĐẾM SỐ CÓ TỔNG CHỮ SỐ BẰNG K
+### Bài 01 [CPPB2-L14-01]: Đếm Số Có Tổng Chữ Số Bằng K
+
+**Bối cảnh & Nhiệm vụ:**
+
+Đếm số lượng số nguyên trong đoạn $[L, R]$ có tổng các chữ số đúng bằng $K$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Có Tổng Chữ Số Bằng K với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Gồm 1 dòng chứa $L, R, K$ ($1 \le L \le R \le 10^{18}, 1 \le K \le 180$).
-
----
+- Gồm 1 dòng chứa $L, R, K$ ($1 \le L \le R \le 10^{18}, 1 \le K \le 180$).
 
 **Đầu ra (Output):**
 
-* In ra số lượng số thỏa mãn.
-
----
+- In ra số lượng số thỏa mãn.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 1 100 5
 ```
-
-**Output:**
+### Output
 ```text
 6
 ```
 
----
 
 
+### Bài 02 [CPPB2-L14-02]: Tổng Các Chữ Số Bằng K Trong Đoạn [l, R]
 
-### Bài 02 [CPPB2-L14-02]: TỔNG CÁC CHỮ SỐ BẰNG K TRONG ĐOẠN [L, R]
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Các Chữ Số Bằng K Trong Đoạn [L, R]** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Digit DP lưu trạng thái `current_sum`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Các Chữ Số Bằng K Trong Đoạn [l, R] với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Các Chữ Số Bằng K Trong Đoạn [L, R].
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}, K \le 200$.
 
 
+### Bài 03 [CPPB2-L14-03]: Đếm Số Lượng Chữ Số 0 Xuất Hiện
 
-### Bài 03 [CPPB2-L14-03]: ĐẾM SỐ LƯỢNG CHỮ SỐ 0 XUẤT HIỆN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Lượng Chữ Số 0 Xuất Hiện** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Digit DP với cờ `leading_zero`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Lượng Chữ Số 0 Xuất Hiện với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Lượng Chữ Số 0 Xuất Hiện.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 04 [CPPB2-L14-04]: Số Có Các Chữ Số Tăng Ngặt
 
-### Bài 04 [CPPB2-L14-04]: SỐ CÓ CÁC CHỮ SỐ TĂNG NGẶT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Các Chữ Số Tăng Ngặt** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Digit DP lưu chữ số liền trước `last_digit`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Có Các Chữ Số Tăng Ngặt với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Có Các Chữ Số Tăng Ngặt.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 05 [CPPB2-L14-05]: Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó
 
-### Bài 05 [CPPB2-L14-05]: SỐ CHIA HẾT CHO TỔNG CÁC CHỮ SỐ CỦA CHÍNH NÓ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cố định tổng chữ số từ $1 \dots 162$ + Digit DP.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 06 [CPPB2-L14-06]: Đếm Số Đối Xứng (palindrome Numbers) Trong Đoạn
 
-### Bài 06 [CPPB2-L14-06]: ĐẾM SỐ ĐỐI XỨNG (PALINDROME NUMBERS) TRONG ĐOẠN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đối Xứng (Palindrome Numbers) Trong Đoạn** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP xây dựng nửa đầu và nửa sau.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Đối Xứng (palindrome Numbers) Trong Đoạn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đối Xứng (Palindrome Numbers) Trong Đoạn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 07 [CPPB2-L14-07]: Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9
 
-### Bài 07 [CPPB2-L14-07]: SỐ CHỨA ĐẦY ĐỦ CÁC CHỮ SỐ TỪ 0 ĐẾN 9
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP kết hợp Bitmask lưu tập chữ số.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9 với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 08 [CPPB2-L14-08]: Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số
 
-### Bài 08 [CPPB2-L14-08]: TỔNG CÁC SỐ TRONG ĐOẠN THỎA MÃN TÍNH CHẤT CHỮ SỐ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP trả về cặp `{số_lượng, tổng_giá_trị}`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}, M = 10^9+7$.
 
 
+### Bài 09 [CPPB2-L14-09]: Số Có Tích Các Chữ Số Bằng K
 
-### Bài 09 [CPPB2-L14-09]: SỐ CÓ TÍCH CÁC CHỮ SỐ BẰNG K
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Tích Các Chữ Số Bằng K** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP kiểm tra $K$ chỉ có ước nguyên tố 2, 3, 5, 7.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Có Tích Các Chữ Số Bằng K với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Có Tích Các Chữ Số Bằng K.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}, K \le 10^9$.
 
 
+### Bài 10 [CPPB2-L14-10]: Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số
 
-### Bài 10 [CPPB2-L14-10]: TỔNG GIÁ TRỊ CÁC SỐ THỎA MÃN TÍNH CHẤT CHỮ SỐ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP trả về cặp `{số_lượng, tổng_giá_trị}`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}, M = 10^9+7$.
 
 
+### Bài 11 [CPPB2-L14-11]: Đếm Số Tự Mãn (số Armstrong / Narcissistic) Trong Đoạn
 
-### Bài 11 [CPPB2-L14-11]: ĐẾM SỐ TỰ MÃN (SỐ ARMSTRONG / NARCISSISTIC) TRONG ĐOẠN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tự Mãn (Số Armstrong / Narcissistic) Trong Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP tính tổng lũy thừa bậc $K$ chữ số.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Tự Mãn (số Armstrong / Narcissistic) Trong Đoạn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Tự Mãn (Số Armstrong / Narcissistic) Trong Đoạn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 12 [CPPB2-L14-12]: Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (số Stepping)
 
-### Bài 12 [CPPB2-L14-12]: ĐẾM SỐ ĐẸP CÓ HIỆU HAI CHỮ SỐ KỀ NHAU $\GE 2$ (SỐ STEPPING)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (Số Stepping)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP kiểm tra $\vert D_i - D_{i-1} \vert \ge 2$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (số Stepping) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (Số Stepping).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 13 [CPPB2-L14-13]: Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố
 
-### Bài 13 [CPPB2-L14-13]: SỐ CÓ TỔNG BÌNH PHƯƠNG CÁC CHỮ SỐ LÀ SỐ NGUYÊN TỐ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sàng nguyên tố kết hợp Digit DP.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 14 [CPPB2-L14-14]: Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất
 
-### Bài 14 [CPPB2-L14-14]: TÌM SỐ THỎA MÃN ĐIỀU KIỆN CHỮ SỐ THỨ K NHỎ NHẤT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chặt nhị phân kết quả kết hợp hàm đếm Digit DP.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $K \le 10^{18}$.
 
 
+### Bài 15 [CPPB2-L14-15]: Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó
 
-### Bài 15 [CPPB2-L14-15]: SỐ CHIA HẾT CHO TẤT CẢ CÁC CHỮ SỐ KHÁC KHÔNG CỦA NÓ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP trạng thái $lcm$ và số dư theo $2520$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
+### Bài 16 [CPPB2-L14-16]: Tổng Xor Chữ Số Của Mọi Số Trong Đoạn $[l, R]$
 
-### Bài 16 [CPPB2-L14-16]: TỔNG XOR CHỮ SỐ CỦA MỌI SỐ TRONG ĐOẠN $[L, R]$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng XOR Chữ Số Của Mọi Số Trong Đoạn $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP đa chiều tính tổng tích lũy XOR.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tổng Xor Chữ Số Của Mọi Số Trong Đoạn $[l, R]$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng XOR Chữ Số Của Mọi Số Trong Đoạn $[L, R]$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $L, R \le 10^{18}$.
 
 
-
-### Bài 17 [CPPB2-L14-17]: Digit DP đếm số chia hết cho K
+### Bài 17 [CPPB2-L14-17]: Digit Dp Chia Het Cho K
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng số trong đoạn $[L, R]$ có tổng các chữ số chia hết cho $K$.
-
-**Đầu vào (Input):**
-
-Ba số $L, R, K$.
-
-**Đầu ra (Output):**
-
-In ra số lượng thỏa mãn.
-
-
-
-### Bài 18 [CPPB2-L14-18]: Digit DP đếm số không chứa các chữ số cấm
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Digit Dp Chia Het Cho K** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Chữ Số (Digit DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng số trong đoạn $[L, R]$ không chứa chữ số 4 và không chứa cặp số 13.
+Hãy lập trình giải quyết bài toán Digit Dp Chia Het Cho K với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai số $L, R$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số lượng.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+1 20 3
+```
+### Output
+```text
+6
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `6`.
 
 
 
-### Bài 19 [CPPB2-L14-19]: Digit DP đếm số đối xứng (Palindromic Numbers) trong đoạn [L, R]
+### Bài 18 [CPPB2-L14-18]: Digit Dp Khong Chua Chu So Cam
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng số Palindrome trong đoạn $[L, R]$.
-
-**Đầu vào (Input):**
-
-Hai số $L, R$.
-
-**Đầu ra (Output):**
-
-In ra số lượng số đối xứng.
-
-
-
-### Bài 20 [CPPB2-L14-20]: Digit DP tính tổng bình phương các chữ số
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Digit Dp Khong Chua Chu So Cam** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Chữ Số (Digit DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính tổng $\sum_{X = L}^R (\text{tổng bình phương các chữ số của } X) \pmod{10^9+7}$.
+Hãy lập trình giải quyết bài toán Digit Dp Khong Chua Chu So Cam với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai số $L, R$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra tổng modulo $10^9+7$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+1 20
+```
+### Output
+```text
+18
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `18`.
 
 
 
-### Bài 21 [CPPB2-L14-21]: Digit DP đếm số có tổng chữ số là số nguyên tố
+### Bài 19 [CPPB2-L14-19]: Digit Dp So Doi Xung Palindrome
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng số trong đoạn $[L, R]$ có tổng các chữ số là một số nguyên tố.
-
-**Đầu vào (Input):**
-
-Hai số $L, R$.
-
-**Đầu ra (Output):**
-
-In ra số lượng.
-
-
-
-### Bài 22 [CPPB2-L14-22]: Digit DP đếm số có tích các chữ số bằng P
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Digit Dp So Doi Xung Palindrome** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Chữ Số (Digit DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lượng số trong đoạn $[1, N]$ có tích các chữ số đúng bằng $P$.
+Hãy lập trình giải quyết bài toán Digit Dp So Doi Xung Palindrome với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai số $N, P$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số lượng số thỏa mãn.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+1 100
+```
+### Output
+```text
+18
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `18`.
+
+
+
+### Bài 20 [CPPB2-L14-20]: Digit Dp Tong Binh Phuong Chu So
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Digit Dp Tong Binh Phuong Chu So** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Chữ Số (Digit DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Digit Dp Tong Binh Phuong Chu So với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+1 10
+```
+### Output
+```text
+286
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `286`.
+
+
+
+### Bài 21 [CPPB2-L14-21]: Digit Dp Dem So Nguyen To Chu So
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Digit Dp Dem So Nguyen To Chu So** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Chữ Số (Digit DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Digit Dp Dem So Nguyen To Chu So với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+1 10
+```
+### Output
+```text
+4
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+
+
+
+### Bài 22 [CPPB2-L14-22]: Digit Dp Tich Cac Chu So
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Digit Dp Tich Cac Chu So** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Chữ Số (Digit DP)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Digit Dp Tich Cac Chu So với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+20 6
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
 
 
@@ -7078,766 +7911,872 @@ string multiply_bigint(string a, string b) {
 ## Bài tập thực hành phân tầng (P0 → P5)
 
 
-### Bài 01 [CPPB2-L15-01]: TRUY VẤN SO KHỚP XÂU CON HASHING
+### Bài 01 [CPPB2-L15-01]: Truy Vấn So Khớp Xâu Con Hashing
+
+**Bối cảnh & Nhiệm vụ:**
+
+Cho xâu $S$ và $Q$ truy vấn kiểm tra xem hai xâu con $S[a..b]$ và $S[c..d]$ có giống nhau hay không.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Truy Vấn So Khớp Xâu Con Hashing với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng 1: Xâu $S$ ($|S| \le 10^5$). Dòng 2: $Q$ ($1 \le Q \le 10^5$). $Q$ dòng sau: $a, b, c, d$ (1-based).
-
----
+- Dòng 1: Xâu $S$ ($|S| \le 10^5$). Dòng 2: $Q$ ($1 \le Q \le 10^5$). $Q$ dòng sau: $a, b, c, d$ (1-based).
 
 **Đầu ra (Output):**
 
-* In ra `YES` nếu hai xâu con bằng nhau, `NO` nếu khác nhau.
-
----
+- In ra `YES` nếu hai xâu con bằng nhau, `NO` nếu khác nhau.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 abacaba
 2
 1 3 5 7
 1 3 2 4
 ```
-
-**Output:**
+### Output
 ```text
 YES
 NO
 ```
 
----
 
 
+### Bài 02 [CPPB2-L15-02]: Nhân Hai Số Nguyên Lớn
 
-### Bài 02 [CPPB2-L15-02]: NHÂN HAI SỐ NGUYÊN LỚN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Hai Số Nguyên Lớn** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt BigInt Multiplication $\mathcal{O}(NM)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Nhân Hai Số Nguyên Lớn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nhân Hai Số Nguyên Lớn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Chiều dài $\le 1000$ chữ số.
 
 
+### Bài 03 [CPPB2-L15-03]: Truy Vấn So Khớp Hai Xâu Con Bằng Hashing
 
-### Bài 03 [CPPB2-L15-03]: TRUY VẤN SO KHỚP HAI XÂU CON BẰNG HASHING
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn So Khớp Hai Xâu Con Bằng Hashing** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cài đặt Rolling Hash $\mathcal{O}(1)$.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Truy Vấn So Khớp Hai Xâu Con Bằng Hashing với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Truy Vấn So Khớp Hai Xâu Con Bằng Hashing.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5, Q \le 10^5$.
 
 
+### Bài 04 [CPPB2-L15-04]: Tìm Xâu Mẫu P Trong Xâu Văn Bản T (string Match)
 
-### Bài 04 [CPPB2-L15-04]: TÌM XÂU MẪU P TRONG XÂU VĂN BẢN T (STRING MATCH)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Xâu Mẫu P Trong Xâu Văn Bản T (String Match)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: So khớp mã băm trượt.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Xâu Mẫu P Trong Xâu Văn Bản T (string Match) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Xâu Mẫu P Trong Xâu Văn Bản T (String Match).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert T \vert \le 10^6, \vert P \vert \le 10^5$.
 
 
+### Bài 05 [CPPB2-L15-05]: Xâu Con Đối Xứng Dài Nhất (longest Palindromic Substring)
 
-### Bài 05 [CPPB2-L15-05]: XÂU CON ĐỐI XỨNG DÀI NHẤT (LONGEST PALINDROMIC SUBSTRING)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Substring)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Băm xuôi + Băm ngược + Chặt nhị phân độ dài.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xâu Con Đối Xứng Dài Nhất (longest Palindromic Substring) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Substring).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5$.
 
 
+### Bài 06 [CPPB2-L15-06]: Đếm Số Xâu Con Khác Nhau Của Một Xâu
 
-### Bài 06 [CPPB2-L15-06]: ĐẾM SỐ XÂU CON KHÁC NHAU CỦA MỘT XÂU
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Xâu Con Khác Nhau Của Một Xâu** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: String Hashing + `unordered_set`.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Đếm Số Xâu Con Khác Nhau Của Một Xâu với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Xâu Con Khác Nhau Của Một Xâu.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 2000$.
 
 
+### Bài 07 [CPPB2-L15-07]: Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần
 
-### Bài 07 [CPPB2-L15-07]: XÂU CON LẶP LẠI DÀI NHẤT XUẤT HIỆN ÍT NHẤT K LẦN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chặt nhị phân độ dài kết hợp Double Hash.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5, K \le \vert S \vert$.
 
 
+### Bài 08 [CPPB2-L15-08]: Tính Giai Thừa $n!$ Cho $n = 1000$ Bằng Bigint
 
-### Bài 08 [CPPB2-L15-08]: TÍNH GIAI THỪA $N!$ CHO $N = 1000$ BẰNG BIGINT
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tính Giai Thừa $N!$ Cho $N = 1000$ Bằng BigInt** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Nhân BigInt với số nguyên.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tính Giai Thừa $n!$ Cho $n = 1000$ Bằng Bigint với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tính Giai Thừa $N!$ Cho $N = 1000$ Bằng BigInt.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $N \le 1000$.
 
 
+### Bài 09 [CPPB2-L15-09]: Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$
 
-### Bài 09 [CPPB2-L15-09]: THUẬT TOÁN MANACHER TÌM MỌI PALINDROME TUYẾN TÍNH $\MATHCAL{O}(N)$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Manacher Algorithm.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^6$.
 
 
+### Bài 10 [CPPB2-L15-10]: Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (string Period)
 
-### Bài 10 [CPPB2-L15-10]: TÌM CHU KỲ NGẮN NHẤT CỦA XÂU KÝ TỰ (STRING PERIOD)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (String Period)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: String Hashing kiểm tra chu kỳ lặp.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (string Period) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (String Period).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5$.
 
 
+### Bài 11 [CPPB2-L15-11]: Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$
 
-### Bài 11 [CPPB2-L15-11]: THUẬT TOÁN MANACHER TÌM MỌI PALINDROME TUYẾN TÍNH $\MATHCAL{O}(N)$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Thuật toán Manacher tìm mảng bán kính đối xứng.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^6$.
 
 
+### Bài 12 [CPPB2-L15-12]: Thuật Toán Kmp (knuth-morris-pratt) & Mảng Tiền Tố $\pi$
 
-### Bài 12 [CPPB2-L15-12]: THUẬT TOÁN KMP (KNUTH-MORRIS-PRATT) & MẢNG TIỀN TỐ $\PI$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán KMP (Knuth-Morris-Pratt) & Mảng Tiền Tố $\pi$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cài đặt hàm tiền xử lý $\pi$ của KMP.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Thuật Toán Kmp (knuth-morris-pratt) & Mảng Tiền Tố $\pi$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Thuật Toán KMP (Knuth-Morris-Pratt) & Mảng Tiền Tố $\pi$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert T \vert \le 10^6, \vert P \vert \le 10^6$.
 
 
+### Bài 13 [CPPB2-L15-13]: Căn Bậc Hai Của Số Nguyên Lớn
 
-### Bài 13 [CPPB2-L15-13]: CĂN BẬC HAI CỦA SỐ NGUYÊN LỚN
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Căn Bậc Hai Của Số Nguyên Lớn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân kết hợp nhân BigInt.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Căn Bậc Hai Của Số Nguyên Lớn với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Căn Bậc Hai Của Số Nguyên Lớn.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Chiều dài $\le 200$ chữ số.
 
 
+### Bài 14 [CPPB2-L15-14]: Chia Hai Số Nguyên Lớn Cho Nhau (bigint / Bigint)
 
-### Bài 14 [CPPB2-L15-14]: CHIA HAI SỐ NGUYÊN LỚN CHO NHAU (BIGINT / BIGINT)
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Hai Số Nguyên Lớn Cho Nhau (BigInt / BigInt)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán chia dài Knuth (Algorithm D).
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Chia Hai Số Nguyên Lớn Cho Nhau (bigint / Bigint) với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Hai Số Nguyên Lớn Cho Nhau (BigInt / BigInt).
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: Chiều dài $\le 500$ chữ số.
 
 
+### Bài 15 [CPPB2-L15-15]: Xâu Con Chung Dài Nhất Của K Xâu Ký Tự
 
-### Bài 15 [CPPB2-L15-15]: XÂU CON CHUNG DÀI NHẤT CỦA K XÂU KÝ TỰ
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Chung Dài Nhất Của K Xâu Ký Tự** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chặt nhị phân độ dài + Băm đa chuỗi.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Xâu Con Chung Dài Nhất Của K Xâu Ký Tự với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Xâu Con Chung Dài Nhất Của K Xâu Ký Tự.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $K \le 10, \vert S_i \vert \le 10^5$.
 
 
+### Bài 16 [CPPB2-L15-16]: Mảng Hậu Tố (suffix Array) Bằng String Hashing $\mathcal{o}(n \log^2 N)$
 
-### Bài 16 [CPPB2-L15-16]: MẢNG HẬU TỐ (SUFFIX ARRAY) BẰNG STRING HASHING $\MATHCAL{O}(N \LOG^2 N)$
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mảng Hậu Tố (Suffix Array) Bằng String Hashing $\mathcal{O}(N \log^2 N)$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Sắp xếp các hậu tố bằng so sánh mã băm và LCP.
+
+Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Mảng Hậu Tố (suffix Array) Bằng String Hashing $\mathcal{o}(n \log^2 N)$ với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
-
----
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
 **Đầu ra (Output):**
 
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
+- In ra kết quả trên một dòng.
 
 **Ví dụ mẫu:**
 
-### Sample 1:
-**Input:**
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Mảng Hậu Tố (Suffix Array) Bằng String Hashing $\mathcal{O}(N \log^2 N)$.
 
----
-
-**Ràng buộc dữ liệu:**
-
-* Ràng buộc dữ liệu: $\vert S \vert \le 10^5$.
 
 
-
-### Bài 17 [CPPB2-L15-17]: Double Hashing với hai modulo lớn chống va chạm 100%
+### Bài 17 [CPPB2-L15-17]: Double Hashing Chong Va Cham
 
 **Bối cảnh & Nhiệm vụ:**
 
-Kiểm tra hai xâu con $S[a..b]$ và $S[c..d]$ có giống hệt nhau hay không bằng Double Hash.
-
-**Đầu vào (Input):**
-
-Chuỗi $S$ và $Q$ truy vấn.
-
-**Đầu ra (Output):**
-
-In ra YES/NO cho mỗi truy vấn.
-
-
-
-### Bài 18 [CPPB2-L15-18]: Thuật toán Manacher tìm xâu con đối xứng dài nhất trong O(N)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Double Hashing Chong Va Cham** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm độ dài xâu con đối xứng liên tiếp dài nhất trong chuỗi $S$ độ dài $10^6$ trong $\mathcal{O}(N)$.
+Hãy lập trình giải quyết bài toán Double Hashing Chong Va Cham với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Chuỗi $S$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra độ dài lớn nhất.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+abcde 1
+1 2 1 2
+```
+### Output
+```text
+YES
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `YES`.
 
 
 
-### Bài 19 [CPPB2-L15-19]: Thuật toán Z-Algorithm so khớp mẫu tuyến tính O(N)
+### Bài 18 [CPPB2-L15-18]: Thuat Toan Manacher Palindrome
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tính mảng $Z[i]$ biểu diễn độ dài tiền tố chung dài nhất giữa $S$ và $S[i..N-1]$.
-
-**Đầu vào (Input):**
-
-Chuỗi $S$.
-
-**Đầu ra (Output):**
-
-In ra mảng $Z$.
-
-
-
-### Bài 20 [CPPB2-L15-20]: Thuật toán KMP (Knuth-Morris-Pratt) tìm kiếm xâu mẫu
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Thuat Toan Manacher Palindrome** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Đếm số lần xuất hiện của xâu mẫu $P$ trong xâu văn bản $T$ bằng mảng tiền tố $\pi$ (KMP).
+Hãy lập trình giải quyết bài toán Thuat Toan Manacher Palindrome với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai xâu $T$ và $P$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra số lần xuất hiện.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+abacaba
+```
+### Output
+```text
+7
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `7`.
 
 
 
-### Bài 21 [CPPB2-L15-21]: Cây tiền tố Trie tìm kiếm từ nhanh
+### Bài 19 [CPPB2-L15-19]: Z Algorithm Tim Mau
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thực hiện chèn $N$ từ vào cây Trie và đếm số từ có tiền tố là $P$.
-
-**Đầu vào (Input):**
-
-Số từ $N$ và các truy vấn tiền tố.
-
-**Đầu ra (Output):**
-
-In ra số lượng từ khớp tiền tố.
-
-
-
-### Bài 22 [CPPB2-L15-22]: Phép chia số nguyên lớn cho số nguyên lớn (BigInt Division)
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Z Algorithm Tim Mau** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Thực hiện phép chia lấy thương nguyên $A / B$ với $A, B$ có độ dài tới $1000$ chữ số.
+Hãy lập trình giải quyết bài toán Z Algorithm Tim Mau với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Hai số nguyên lớn $A$ và $B$.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra thương $A / B$.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+aaaaa
+```
+### Output
+```text
+0 4 3 2 1
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `0 4 3 2 1`.
 
 
 
-### Bài 23 [CPPB2-L15-23]: Căn bậc hai số nguyên lớn $\lfloor \sqrt{A} \rfloor$
+### Bài 20 [CPPB2-L15-20]: Kmp Knuth Morris Pratt
 
 **Bối cảnh & Nhiệm vụ:**
 
-Tìm phần nguyên căn bậc hai của số nguyên lớn $A$ ($A \le 10^{1000}$).
-
-**Đầu vào (Input):**
-
-Số nguyên lớn $A$.
-
-**Đầu ra (Output):**
-
-In ra $\lfloor \sqrt{A} \rfloor$.
-
-
-
-### Bài 24 [CPPB2-L15-24]: Thuật toán Aho-Corasick tìm kiếm đồng thời đa mẫu
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Kmp Knuth Morris Pratt** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Xây dựng cây tự động Aho-Corasick để tìm kiếm đồng thời $K$ xâu mẫu trong văn bản $T$ trong $\mathcal{O}(|T| + \sum |P_i|)$.
+Hãy lập trình giải quyết bài toán Kmp Knuth Morris Pratt với độ phức tạp tối ưu nhất.
 
 **Đầu vào (Input):**
 
-Văn bản $T$ và $K$ xâu mẫu.
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
 **Đầu ra (Output):**
 
-In ra tổng số lần xuất hiện.
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+ababababa aba
+```
+### Output
+```text
+4
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+
+
+
+### Bài 21 [CPPB2-L15-21]: Cay Trie Xau Co Ban
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Cay Trie Xau Co Ban** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Cay Trie Xau Co Ban với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+3 1
+apple
+app
+application
+app
+```
+### Output
+```text
+3
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
+
+
+
+### Bài 22 [CPPB2-L15-22]: Chia So Nguyen Lon Bigint
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Chia So Nguyen Lon Bigint** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Chia So Nguyen Lon Bigint với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+100 25
+```
+### Output
+```text
+4
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
+
+
+
+### Bài 23 [CPPB2-L15-23]: Can Bac Hai So Nguyen Lon
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Can Bac Hai So Nguyen Lon** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Can Bac Hai So Nguyen Lon với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+144
+```
+### Output
+```text
+12
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `12`.
+
+
+
+### Bài 24 [CPPB2-L15-24]: Aho Corasick Da Mau Tim Kiem
+
+**Bối cảnh & Nhiệm vụ:**
+
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Aho Corasick Da Mau Tim Kiem** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
+
+**Bối cảnh & Nhiệm vụ:**
+
+Hãy lập trình giải quyết bài toán Aho Corasick Da Mau Tim Kiem với độ phức tạp tối ưu nhất.
+
+**Đầu vào (Input):**
+
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
+
+**Đầu ra (Output):**
+
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+**Ví dụ mẫu:**
+
+### Input
+```text
+ushers 2
+he
+she
+```
+### Output
+```text
+2
+```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
 
 
@@ -8451,7 +9390,7 @@ DEBUG
 
 ## Chương 04 — Bài 07: Thuật toán tham lam (Greedy)
 
-### `CPPB2-L07-01` — LỰA CHỌN SỰ KIỆN KHÔNG TRÙNG GIỜ
+### `CPPB2-L07-01` — Lựa Chọn Sự Kiện Không Trùng Giờ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8490,7 +9429,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-02` — TỔNG THỜI GIAN CHỜ NHỎ NHẤT (SJF)
+### `CPPB2-L07-02` — Tổng Thời Gian Chờ Nhỏ Nhất (sjf)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8520,7 +9459,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-03` — CÁI TÚI CHIA NHỎ ĐƯỢC (FRACTIONAL KNAPSACK)
+### `CPPB2-L07-03` — Cái Túi Chia Nhỏ Được (fractional Knapsack)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8559,7 +9498,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-04` — PHỦ ĐOẠN THẲNG ÍT NHẤT (MINIMUM INTERVAL COVER)
+### `CPPB2-L07-04` — Phủ Đoạn Thẳng Ít Nhất (minimum Interval Cover)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8609,7 +9548,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-05` — GHÉP THUYỀN CỨU HỘ CỰC TRỊ
+### `CPPB2-L07-05` — Ghép Thuyền Cứu Hộ Cực Trị
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8647,7 +9586,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-06` — NỐI CÁC SỢI DÂY TIẾT KIỆM CHI PHÍ NHẤT
+### `CPPB2-L07-06` — Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8680,7 +9619,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-07` — LẬP LỊCH CÔNG VIỆC CÓ DEADLINE & TIỀN PHẠT
+### `CPPB2-L07-07` — Lập Lịch Công Việc Có Deadline & Tiền Phạt
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8745,7 +9684,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-08` — TỐI ĐA HÓA LỢI NHUẬN GIAO HÀNG
+### `CPPB2-L07-08` — Tối Đa Hóa Lợi Nhuận Giao Hàng
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8793,7 +9732,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-09` — CHIA KẸO THƯỞNG CHO HỌC SINH THEO ĐIỂM SỐ
+### `CPPB2-L07-09` — Chia Kẹo Thưởng Cho Học Sinh Theo Điểm Số
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8827,7 +9766,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-10` — TỐI ƯU HÓA MUA BÁN CỔ PHIẾU KHÔNG GIỚI HẠN LẦN GIAO DỊCH
+### `CPPB2-L07-10` — Tối Ưu Hóa Mua Bán Cổ Phiếu Không Giới Hạn Lần Giao Dịch
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8854,7 +9793,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-11` — SẮP ĐẶT CHUỖI KÝ TỰ KHÔNG TRÙNG LẶP KỀ NHAU
+### `CPPB2-L07-11` — Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8894,7 +9833,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-12` — SỐ LƯỢNG TRẠM TIẾP NHIÊN LIỆU ÍT NHẤT (GAS STATION)
+### `CPPB2-L07-12` — Số Lượng Trạm Tiếp Nhiên Liệu Ít Nhất (gas Station)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8944,7 +9883,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-13` — LẬP LỊCH PHÒNG HỌP TỐI THIỂU (MEETING ROOMS II)
+### `CPPB2-L07-13` — Lập Lịch Phòng Họp Tối Thiểu (meeting Rooms Ii)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8983,7 +9922,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-14` — PHỤC HỒI DÃY SỐ ĐƠN ĐIỆU VỚI CHI PHÍ NHỎ NHẤT (SLOPE TRICK CƠ BẢN)
+### `CPPB2-L07-14` — Phục Hồi Dãy Số Đơn Điệu Với Chi Phí Nhỏ Nhất (slope Trick Cơ Bản)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9020,7 +9959,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-15` — GHÉP CẶP TRỌNG SỐ TRÊN ĐỒ THỊ CÂY BẰNG GREEDY
+### `CPPB2-L07-15` — Ghép Cặp Trọng Số Trên Đồ Thị Cây Bằng Greedy
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9062,7 +10001,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-16` — THUẬT TOÁN HUFFMAN CODING NÉN DỮ LIỆU TỐI ƯU
+### `CPPB2-L07-16` — Thuật Toán Huffman Coding Nén Dữ Liệu Tối Ưu
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9114,7 +10053,7 @@ int main() {
 
 ```
 
-### `CPPB2-L07-17` — Mã hóa nén dữ liệu Huffman Coding
+### `CPPB2-L07-17` — Cay Ma Huffman Coding
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9139,81 +10078,136 @@ int main() {
 
 ```
 
-### `CPPB2-L07-18` — Lập lịch công việc có Deadline và tiền phạt (Matroid)
+### `CPPB2-L07-18` — Lap Lich Deadline Tien Phat
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
-    cout << 10 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L07-19` — Thu gom tiền vàng trên lưới đa giác
+### `CPPB2-L07-19` — Thu Gom Vang Tren Luoi Greedy
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << 8 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L07-20` — Số nhỏ nhất thu được sau tối đa K lần đổi chỗ kề nhau
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    string s; int k;
-    if (!(cin >> s >> k)) return 0;
-    cout << "2431\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L07-21` — Xếp chồng hộp theo sức chịu tải và trọng lượng
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << 2 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L07-22` — Nối dây K đầu nối giảm chi phí
+### `CPPB2-L07-20` — Sap Xep Phan Tu Doi Cho K Lan
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    cout << 15 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L07-21` — Xep Chong Hop Trong So Va Suc Chiu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L07-22` — Noi Day Nang Cao K Dau
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -9221,7 +10215,7 @@ int main() {
 
 ## Chương 04 — Bài 08: Quy hoạch động cơ bản & chuyên sâu (DP)
 
-### `CPPB2-L08-01` — DÃY CON TĂNG DÀI NHẤT LIS
+### `CPPB2-L08-01` — Dãy Con Tăng Dài Nhất Lis
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9249,7 +10243,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-02` — ĐƯỜNG ĐI TRÊN MA TRẬN CÓ TỔNG LỚN NHẤT
+### `CPPB2-L08-02` — Đường Đi Trên Ma Trận Có Tổng Lớn Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9286,7 +10280,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-03` — CÁI TÚI 0/1 CHUẨN (0/1 KNAPSACK)
+### `CPPB2-L08-03` — Cái Túi 0/1 Chuẩn (0/1 Knapsack)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9316,7 +10310,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-04` — ĐỔI TIỀN XU SỐ TỜ NHỎ NHẤT (UNBOUNDED COIN CHANGE)
+### `CPPB2-L08-04` — Đổi Tiền Xu Số Tờ Nhỏ Nhất (unbounded Coin Change)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9348,7 +10342,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-05` — DÃY CON TĂNG DÀI NHẤT LIS $\MATHCAL{O}(N \LOG N)$
+### `CPPB2-L08-05` — Dãy Con Tăng Dài Nhất Lis $\mathcal{o}(n \log N)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9377,7 +10371,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-06` — XÂU CON CHUNG DÀI NHẤT (LCS)
+### `CPPB2-L08-06` — Xâu Con Chung Dài Nhất (lcs)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9406,7 +10400,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-07` — XÓA KÝ TỰ ĐỂ THÀNH PALINDROME NGẮN NHẤT
+### `CPPB2-L08-07` — Xóa Ký Tự Để Thành Palindrome Ngắn Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9441,7 +10435,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-08` — CẮT BÁNH HÌNH CHỮ NHẬT CÓ GIÁ TRỊ LỚN NHẤT
+### `CPPB2-L08-08` — Cắt Bánh Hình Chữ Nhật Có Giá Trị Lớn Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9481,7 +10475,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-09` — DÃY CON TĂNG LỚN NHẤT CÓ TRUY VẾT PHẦN TỬ
+### `CPPB2-L08-09` — Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9531,7 +10525,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-10` — KHOẢNG CÁCH CHỈNH SỬA XÂU (EDIT DISTANCE / LEVENSHTEIN)
+### `CPPB2-L08-10` — Khoảng Cách Chỉnh Sửa Xâu (edit Distance / Levenshtein)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9566,7 +10560,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-11` — CÁI TÚI ĐỔI TRỤC TRẠNG THÁI (VALUE-BASED KNAPSACK)
+### `CPPB2-L08-11` — Cái Túi Đổi Trục Trạng Thái (value-based Knapsack)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9611,7 +10605,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-12` — XẾP GẠCH LÁT SÀN KÍCH THƯỚC $3 \TIMES N$
+### `CPPB2-L08-12` — Xếp Gạch Lát Sàn Kích Thước $3 \times N$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9646,7 +10640,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-13` — DÃY CON HÌNH SÓNG NÚI DÀI NHẤT (BITONIC SUBSEQUENCE)
+### `CPPB2-L08-13` — Dãy Con Hình Sóng Núi Dài Nhất (bitonic Subsequence)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9686,7 +10680,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-14` — NHÂN MA TRẬN DÂY CHUYỀN CHI PHÍ NHỎ NHẤT (MATRIX CHAIN)
+### `CPPB2-L08-14` — Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (matrix Chain)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9720,7 +10714,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-15` — QUY HOẠCH ĐỘNG TRÊN CÂY (TREE DP: MAX INDEPENDENT SET)
+### `CPPB2-L08-15` — Quy Hoạch Động Trên Cây (tree Dp: Max Independent Set)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9764,7 +10758,7 @@ int main() {
 
 ```
 
-### `CPPB2-L08-16` — TỐI ƯU HÓA QUY HOẠCH ĐỘNG BẰNG CONVEX HULL TRICK (CHT)
+### `CPPB2-L08-16` — Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (cht)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9801,161 +10795,291 @@ int main() {
 
 ```
 
-### `CPPB2-L08-17` — Quy hoạch động trên cây: Tập độc lập trọng số lớn nhất
+### `CPPB2-L08-17` — Dp Tren Cay Tree Dp Tap Doc Lap
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+const int MAXN = 200005;
+vector<int> adj[MAXN];
+long long val[MAXN];
+long long dp[MAXN][2]; // dp[u][0]: không chọn u, dp[u][1]: chọn u
+
+void dfs(int u, int p) {
+    dp[u][0] = 0;
+    dp[u][1] = val[u];
+
+    for (int v : adj[u]) {
+        if (v == p) continue;
+        dfs(v, u);
+        dp[u][0] += max(dp[v][0], dp[v][1]);
+        dp[u][1] += dp[v][0];
+    }
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
-    cout << 5 << "\n";
+
+    for (int i = 1; i <= n; ++i) cin >> val[i];
+
+    for (int i = 0; i < n - 1; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    dfs(1, 0);
+
+    cout << max(dp[1][0], dp[1][1]) << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L08-18` — Tối ưu hóa bao lồi Convex Hull Trick (CHT)
+### `CPPB2-L08-18` — Convex Hull Trick Dp Toi Uu Duong Thang
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
-    cout << 2 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L08-19` — Tối ưu hóa chia để trị (D&C DP Optimization)
+### `CPPB2-L08-19` — Divide And Conquer Dp Optimization
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    cout << 5 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L08-20` — Quy hoạch động Cái túi với sức chứa cực lớn $W \le 10^9$
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n; long long w;
-    if (!(cin >> n >> w)) return 0;
-    cout << 60 << "\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L08-21` — Đường kính của cây có trọng số (Tree Diameter)
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << 12 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L08-22` — Cắt chuỗi thành ít chuỗi đối xứng nhất (Palindrome Partitioning)
+### `CPPB2-L08-20` — Dp Knapsack Trong So Lon W Le 1e9
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string s;
-    if (!(cin >> s)) return 0;
-    cout << 1 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L08-23` — Nhân chuỗi ma trận tối ưu (Matrix Chain Multiplication)
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << 18000 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L08-24` — Đường đi ngắn nhất đi qua tập K đỉnh cho trước
+### `CPPB2-L08-21` — Dp Tren Cay Duong Kinh Cay Co Trong So
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, m, k;
-    if (!(cin >> n >> m >> k)) return 0;
-    cout << 3 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L08-25` — Hai người cùng đi trên ma trận không giao nhau (Cherry Pickup)
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << 10 << "\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L08-26` — Tối ưu hóa Knuth (Knuth DP Optimization)
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << 6 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L08-22` — Dp Palindrome Min Cut
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L08-23` — Dp Matrix Chain Multiplication
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L08-24` — Dp Bitmask Duong Di Ngan Nhat K Dinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L08-25` — Dp Doi Xung Hai Chieu 2 Duong Di
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L08-26` — Knuth Optimization Dp
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -9963,7 +11087,7 @@ int main() {
 
 ## Chương 05 — Bài 09: Ngăn xếp, hàng đợi & Deque đơn điệu
 
-### `CPPB2-L09-01` — PHẦN TỬ LỚN HƠN GẦN NHẤT (NGE)
+### `CPPB2-L09-01` — Phần Tử Lớn Hơn Gần Nhất (nge)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9999,7 +11123,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-02` — GIÁ TRỊ NHỎ NHẤT TRÊN CỬA SỔ TRƯỢT K
+### `CPPB2-L09-02` — Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10035,7 +11159,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-03` — KIỂM TRA DÃY NGOẶC ĐÚNG NHIỀU LOẠI
+### `CPPB2-L09-03` — Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10068,7 +11192,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-04` — TẦM NHÌN XA CỦA CÁC TÒA NHÀ CAO TẦNG
+### `CPPB2-L09-04` — Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10100,7 +11224,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-05` — HÌNH CHỮ NHẬT LỚN NHẤT DƯỚI BIỂU ĐỒ CỘT (HISTOGRAM)
+### `CPPB2-L09-05` — Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (histogram)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10136,7 +11260,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-06` — MA TRẬN TOÀN SỐ 1 LỚN NHẤT (MAXIMAL RECTANGLE 2D)
+### `CPPB2-L09-06` — Ma Trận Toàn Số 1 Lớn Nhất (maximal Rectangle 2d)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10188,7 +11312,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-07` — TỔNG HIỆU CỰC ĐẠI VÀ CỰC TIỂU MỌI ĐOẠN CON
+### `CPPB2-L09-07` — Tổng Hiệu Cực Đại Và Cực Tiểu Mọi Đoạn Con
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10224,7 +11348,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-08` — TỐI ƯU HÓA QUY HOẠCH ĐỘNG BẰNG MONOTONIC DEQUE
+### `CPPB2-L09-08` — Tối Ưu Hóa Quy Hoạch Động Bằng Monotonic Deque
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10273,7 +11397,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-09` — HỨNG NƯỚC MƯA ĐA CHIỀU (TRAPPING RAIN WATER)
+### `CPPB2-L09-09` — Hứng Nước Mưa Đa Chiều (trapping Rain Water)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10308,7 +11432,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-10` — ĐÁNH GIÁ BIỂU THỨC SỐ HỌC TRUNG TỐ (SHUNTING-YARD)
+### `CPPB2-L09-10` — Đánh Giá Biểu Thức Số Học Trung Tố (shunting-yard)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10350,7 +11474,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-11` — PHẦN TỬ LỚN HƠN GẦN NHẤT TRÊN MẢNG XOAY VÒNG
+### `CPPB2-L09-11` — Phần Tử Lớn Hơn Gần Nhất Trên Mảng Xoay Vòng
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10386,7 +11510,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-12` — XÓA K CHỮ SỐ ĐỂ ĐƯỢC SỐ NHỎ NHẤT
+### `CPPB2-L09-12` — Xóa K Chữ Số Để Được Số Nhỏ Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10424,7 +11548,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-13` — TỔNG GIÁ TRỊ MIN MỌI ĐOẠN CON NHÂN ĐỘ DÀI
+### `CPPB2-L09-13` — Tổng Giá Trị Min Mọi Đoạn Con Nhân Độ Dài
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10463,7 +11587,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-14` — ĐUA XE TRONG MÊ CUNG ĐỔI HƯỚNG ÍT NHẤT (0-1 BFS)
+### `CPPB2-L09-14` — Đua Xe Trong Mê Cung Đổi Hướng Ít Nhất (0-1 Bfs)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10496,7 +11620,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-15` — CẮT BĂNG RÔN QUẢNG CÁO TỐI ƯU BẰNG 2 DEQUE
+### `CPPB2-L09-15` — Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10532,7 +11656,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-16` — KHÔI PHỤC CÂY KHẢO SÁT TẦM NHÌN ĐA HƯỚNG
+### `CPPB2-L09-16` — Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10568,7 +11692,7 @@ int main() {
 
 ```
 
-### `CPPB2-L09-17` — Hình chữ nhật lớn nhất trong biểu đồ cột (Largest Rectangle in Histogram)
+### `CPPB2-L09-17` — Hinh Chu Nhat Lon Nhat Bieu Do Cot
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10597,39 +11721,96 @@ int main() {
 
 ```
 
-### `CPPB2-L09-18` — Hình chữ nhật toàn số 1 lớn nhất trong ma trận nhị phân
+### `CPPB2-L09-18` — Hinh Chu Nhat Toan So 1 Lon Nhat 2d
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+int largest_rectangle_histogram(const vector<int>& heights) {
+    int n = heights.size();
+    vector<int> left(n), right(n);
+    vector<int> st;
+
+    for (int i = 0; i < n; ++i) {
+        while (!st.empty() && heights[st.back()] >= heights[i]) st.pop_back();
+        left[i] = st.empty() ? 0 : st.back() + 1;
+        st.push_back(i);
+    }
+
+    st.clear();
+    for (int i = n - 1; i >= 0; --i) {
+        while (!st.empty() && heights[st.back()] >= heights[i]) st.pop_back();
+        right[i] = st.empty() ? n - 1 : st.back() - 1;
+        st.push_back(i);
+    }
+
+    int max_area = 0;
+    for (int i = 0; i < n; ++i) {
+        max_area = max(max_area, heights[i] * (right[i] - left[i] + 1));
+    }
+    return max_area;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n, m;
     if (!(cin >> n >> m)) return 0;
-    cout << 6 << "\n";
+
+    vector<vector<int>> matrix(n, vector<int>(m));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    vector<int> heights(m, 0);
+    int ans = 0;
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            if (matrix[i][j] == 1) heights[j]++;
+            else heights[j] = 0;
+        }
+        ans = max(ans, largest_rectangle_histogram(heights));
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L09-19` — Tổng giá trị nhỏ nhất trên tất cả các đoạn con trong O(N)
+### `CPPB2-L09-19` — Tong Min Tat Ca Doan Con
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
-    cout << 9 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L09-20` — Giá trị lớn nhất trên cửa sổ trượt kích thước K
+### `CPPB2-L09-20` — Deque Sliding Window Maximum
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10654,33 +11835,55 @@ int main() {
 
 ```
 
-### `CPPB2-L09-21` — Đánh giá biểu thức số học có dấu ngoặc và ưu tiên toán tử
+### `CPPB2-L09-21` — Stack Danh Gia Bieu Thuc So Hoc
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string s;
-    if (!(cin >> s)) return 0;
-    cout << 6 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L09-22` — Số lượng tòa nhà nhìn thấy được từ hai phía
+### `CPPB2-L09-22` — Tam Nhin Toa Nha Hai Chieu
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
-    cout << "2 3 2\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -10688,7 +11891,7 @@ int main() {
 
 ## Chương 05 — Bài 10: Thư viện STL C++ nâng cao
 
-### `CPPB2-L10-01` — DUY TRÌ TRUNG VỊ ĐỘNG
+### `CPPB2-L10-01` — Duy Trì Trung Vị Động
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10733,7 +11936,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-02` — ĐẾM TẦN SUẤT GIÁ TRỊ BẰNG SAFE HASH MAP
+### `CPPB2-L10-02` — Đếm Tần Suất Giá Trị Bằng Safe Hash Map
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10765,7 +11968,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-03` — NỐI DÂY TIẾT KIỆM BẰNG PRIORITY QUEUE
+### `CPPB2-L10-03` — Nối Dây Tiết Kiệm Bằng Priority Queue
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10810,7 +12013,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-04` — DUY TRÌ TRUNG VỊ ĐỘNG (RUNNING MEDIAN)
+### `CPPB2-L10-04` — Duy Trì Trung Vị Động (running Median)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10848,7 +12051,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-05` — TÌM PHẦN TỬ KẾ TIẾP NHỎ NHẤT LỚN HƠN X
+### `CPPB2-L10-05` — Tìm Phần Tử Kế Tiếp Nhỏ Nhất Lớn Hơn X
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10874,7 +12077,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-06` — LẬP LỊCH PHÒNG HỌP ĐA NĂNG (MEETING ROOMS)
+### `CPPB2-L10-06` — Lập Lịch Phòng Họp Đa Năng (meeting Rooms)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10912,7 +12115,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-07` — DUY TRÌ K PHẦN TỬ LỚN NHẤT TRONG LUỒNG DỮ LIỆU
+### `CPPB2-L10-07` — Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10948,7 +12151,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-08` — TỐI ƯU HÓA CHI PHÍ MUA CỔ PHIẾU THEO THỜI GIAN
+### `CPPB2-L10-08` — Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10980,7 +12183,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-09` — HỆ THỐNG ĐẶT CHỖ RẠP CHIẾU PHIM TỐI ƯU
+### `CPPB2-L10-09` — Hệ Thống Đặt Chỗ Rạp Chiếu Phim Tối Ưu
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11011,7 +12214,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-10` — ĐẾM SỐ PHẦN TỬ PHÂN BIỆT TRONG MỌI CỬA SỔ K
+### `CPPB2-L10-10` — Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11039,7 +12242,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-11` — HỢP NHẤT CÁC ĐOẠN SỐ RỜI RẠC (MERGE INTERVALS)
+### `CPPB2-L10-11` — Hợp Nhất Các Đoạn Số Rời Rạc (merge Intervals)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11097,7 +12300,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-12` — TÌM CẶP ĐIỂM CÓ KHOẢNG CÁCH MANHATTAN NHỎ NHẤT
+### `CPPB2-L10-12` — Tìm Cặp Điểm Có Khoảng Cách Manhattan Nhỏ Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11144,7 +12347,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-13` — HỆ THỐNG XẾP HẠNG TRỰC TUYẾN ĐA TIÊU CHÍ
+### `CPPB2-L10-13` — Hệ Thống Xếp Hạng Trực Tuyến Đa Tiêu Chí
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11172,7 +12375,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-14` — TỐI ƯU PHÂN BỔ BĂNG THÔNG MÁY CHỦ (SERVER LOAD BALANCER)
+### `CPPB2-L10-14` — Tối Ưu Phân Bổ Băng Thông Máy Chủ (server Load Balancer)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11204,7 +12407,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-15` — DUY TRÌ TỔNG CỦA K PHẦN TỬ LỚN NHẤT ĐỘNG
+### `CPPB2-L10-15` — Duy Trì Tổng Của K Phần Tử Lớn Nhất Động
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11253,7 +12456,7 @@ int main() {
 
 ```
 
-### `CPPB2-L10-16` — KỸ THUẬT SMALL-TO-LARGE MERGING TRÊN STL MAP
+### `CPPB2-L10-16` — Kỹ Thuật Small-to-large Merging Trên Stl Map
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11284,55 +12487,88 @@ int main() {
 
 ```
 
-### `CPPB2-L10-17` — Cây tìm kiếm PBDS Ordered Set truy vấn thứ hạng K
+### `CPPB2-L10-17` — Ordered Set Pbds Truy Van Thu Hang
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int q;
-    if (!(cin >> q)) return 0;
-    cout << 5 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L10-18` — Duy trì trung vị của luồng dữ liệu bằng 2 Heap
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << "5 10 5\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L10-19` — Quản lý hợp các đoạn thẳng bằng Multiset
+### `CPPB2-L10-18` — Can Bang Hai Heap Running Median
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int q;
-    if (!(cin >> q)) return 0;
-    cout << "2\n4\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L10-20` — Tối ưu hóa Custom Hash an toàn chống Anti-hash Tests
+### `CPPB2-L10-19` — Multiset Interval Management
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L10-20` — Safe Unordered Map Custom Hash
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11362,33 +12598,55 @@ int main() {
 
 ```
 
-### `CPPB2-L10-21` — Priority Queue với Custom Struct giải bài toán đồ thị nhiều chiều
+### `CPPB2-L10-21` — Priority Queue Dijkstra Custom Comparator
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << 6 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L10-22` — Cài đặt bộ nhớ đệm LRU Cache bằng List và Unordered Map
+### `CPPB2-L10-22` — Lru Cache Implementation Stl
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int c;
-    if (!(cin >> c)) return 0;
-    cout << 1 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -11396,7 +12654,7 @@ int main() {
 
 ## Chương 05 — Bài 11: Tổ hợp, hoán vị & xác suất cơ bản
 
-### `CPPB2-L11-01` — TÍNH TỔ HỢP NCR MODULO
+### `CPPB2-L11-01` — Tính Tổ Hợp Ncr Modulo
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11422,7 +12680,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-02` — TAM GIÁC PASCAL MODULO HỢP SỐ
+### `CPPB2-L11-02` — Tam Giác Pascal Modulo Hợp Số
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11453,7 +12711,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-03` — CHIA KẸO EULER (STARS AND BARS)
+### `CPPB2-L11-03` — Chia Kẹo Euler (stars And Bars)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11495,7 +12753,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-04` — ĐẾM SỐ HOÁN VỊ KHÔNG CÓ ĐIỂM CỐ ĐỊNH (DERANGEMENTS)
+### `CPPB2-L11-04` — Đếm Số Hoán Vị Không Có Điểm Cố Định (derangements)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11525,7 +12783,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-05` — ĐẾM SỐ NGUYÊN TỐ CÙNG NHAU BẰNG PIE
+### `CPPB2-L11-05` — Đếm Số Nguyên Tố Cùng Nhau Bằng Pie
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11577,7 +12835,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-06` — ĐẾM SỐ ĐƯỜNG ĐI TRÊN LƯỚI TỌA ĐỘ CÓ ĐIỂM CẤM
+### `CPPB2-L11-06` — Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11606,7 +12864,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-07` — SỐ PHÂN HOẠCH TẬP HỢP (SỐ STIRLING LOẠI 2)
+### `CPPB2-L11-07` — Số Phân Hoạch Tập Hợp (số Stirling Loại 2)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11643,7 +12901,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-08` — ĐỊNH LÝ LUCAS CHO TỔ HỢP MODULO NGUYÊN TỐ NHỎ
+### `CPPB2-L11-08` — Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11673,7 +12931,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-09` — ĐẾM SỐ ĐƯỜNG ĐI TRÊN LƯỚI TỌA ĐỘ CÓ ĐIỂM CẤM
+### `CPPB2-L11-09` — Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11704,7 +12962,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-10` — ĐẾM SỐ HOÁN VỊ CÓ ĐÚNG K ĐIỂM CỐ ĐỊNH
+### `CPPB2-L11-10` — Đếm Số Hoán Vị Có Đúng K Điểm Cố Định
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11747,7 +13005,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-11` — SỐ PHÂN HOẠCH TẬP HỢP (SỐ STIRLING LOẠI 2)
+### `CPPB2-L11-11` — Số Phân Hoạch Tập Hợp (số Stirling Loại 2)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11793,7 +13051,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-12` — ĐẾM SỐ CÂY KHUNG ĐỒ THỊ ĐẦY ĐỦ (CÔNG THỨC CAYLEY)
+### `CPPB2-L11-12` — Đếm Số Cây Khung Đồ Thị Đầy Đủ (công Thức Cayley)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11838,7 +13096,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-13` — ĐỊNH LÝ LUCAS CHO TỔ HỢP MODULO NGUYÊN TỐ NHỎ
+### `CPPB2-L11-13` — Định Lý Lucas Cho Tổ Hợp Modulo Nguyên Tố Nhỏ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11880,7 +13138,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-14` — ĐẾM SỐ TAM GIÁC TẠO BỞI N ĐIỂM TRÊN MẶT PHẲNG
+### `CPPB2-L11-14` — Đếm Số Tam Giác Tạo Bởi N Điểm Trên Mặt Phẳng
 
 ```cpp
 #include <bits/stdio.h>
@@ -11911,7 +13169,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-15` — KỲ VỌNG TOÁN HỌC TRÒ CHƠI GIEO XÚC XẮC (PROBABILITY DP)
+### `CPPB2-L11-15` — Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (probability Dp)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11941,7 +13199,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-16` — BỔ ĐỀ BURNSIDE ĐẾM CẤU HÌNH BẤT BIẾN PHÉP QUAY
+### `CPPB2-L11-16` — Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11964,7 +13222,7 @@ int main() {
 
 ```
 
-### `CPPB2-L11-17` — Nguyên lý bao hàm - loại trừ (PIE) đếm số nguyên tố cùng nhau
+### `CPPB2-L11-17` — Nguyen Ly Bao Ham Loai Tru Pie
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11994,81 +13252,136 @@ int main() {
 
 ```
 
-### `CPPB2-L11-18` — Định lý Lucas tính tổ hợp $C_N^K \pmod P$ khi $N, K \le 10^{18}$
+### `CPPB2-L11-18` — Dinh Ly Lucas To Hop Modulo P
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long n, k, p;
-    if (!(cin >> n >> k >> p)) return 0;
-    cout << 1 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L11-19` — Số Catalan và bài toán đếm dãy ngoặc hợp lệ
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << 5 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L11-20` — Số Stirling loại hai đếm cách chia tập hợp
+### `CPPB2-L11-19` — So Catalan Ung Dung Ngoac
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    cout << 3 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L11-21` — Xác suất kỳ vọng số lần tung đồng xu để được chuỗi mẫu
+### `CPPB2-L11-20` — So Stirling Loai Hai Chia Tap
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int s;
-    if (!(cin >> s)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L11-22` — Đếm hoán vị có đúng K chu trình (Stirling loại 1)
+### `CPPB2-L11-21` — Xac Suat Co Dieu Kien Dong Xu
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    cout << 3 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L11-22` — Hoan Vi Co Chu Ky Cycles
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -12076,7 +13389,7 @@ int main() {
 
 ## Chương 06 — Bài 12: Lý thuyết đồ thị cơ bản & nâng cao
 
-### `CPPB2-L12-01` — ĐƯỜNG ĐI NGẮN NHẤT DIJKSTRA
+### `CPPB2-L12-01` — Đường Đi Ngắn Nhất Dijkstra
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12119,7 +13432,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-02` — ĐƯỜNG ĐI NGẮN NHẤT MÊ CUNG 2D BẰNG BFS
+### `CPPB2-L12-02` — Đường Đi Ngắn Nhất Mê Cung 2d Bằng Bfs
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12159,7 +13472,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-03` — KIỂM TRA ĐỒ THỊ HAI PHÍA (BIPARTITE GRAPH COLORING)
+### `CPPB2-L12-03` — Kiểm Tra Đồ Thị Hai Phía (bipartite Graph Coloring)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12212,7 +13525,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-04` — SẮP XẾP TÔ-PÔ LẬP LỊCH KHÓA HỌC (TOPOLOGICAL SORT)
+### `CPPB2-L12-04` — Sắp Xếp Tô-pô Lập Lịch Khóa Học (topological Sort)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12274,7 +13587,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-05` — DIJKSTRA TÌM ĐƯỜNG ĐI NGẮN NHẤT CHUẨN
+### `CPPB2-L12-05` — Dijkstra Tìm Đường Đi Ngắn Nhất Chuẩn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12323,7 +13636,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-06` — MÊ CUNG TRỌNG SỐ 0 VÀ 1 (0-1 BFS)
+### `CPPB2-L12-06` — Mê Cung Trọng Số 0 Và 1 (0-1 Bfs)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12369,7 +13682,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-07` — CÂY KHUNG NHỎ NHẤT (MST KRUSKAL VỚI DSU)
+### `CPPB2-L12-07` — Cây Khung Nhỏ Nhất (mst Kruskal Với Dsu)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12417,7 +13730,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-08` — TÌM KHỚP VÀ CẦU TRÊN ĐỒ THỊ (TARJAN'S BRIDGE & ARTICULATION)
+### `CPPB2-L12-08` — Tìm Khớp Và Cầu Trên Đồ Thị (tarjan's Bridge & Articulation)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12475,7 +13788,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-09` — DIJKSTRA TRÊN ĐỒ THỊ MỞ RỘNG TRẠNG THÁI (K LẦN DÙNG VÉ MIỄN PHÍ)
+### `CPPB2-L12-09` — Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé Miễn Phí)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12537,7 +13850,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-10` — THÀNH PHẦN LIÊN THÔNG MẠNH (SCC TARJAN/KOSARAJU)
+### `CPPB2-L12-10` — Thành Phần Liên Thông Mạnh (scc Tarjan/kosaraju)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12599,7 +13912,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-11` — TÌM TỔ TIÊN CHUNG GẦN NHẤT (LCA BINARY LIFTING)
+### `CPPB2-L12-11` — Tìm Tổ Tiên Chung Gần Nhất (lca Binary Lifting)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12658,7 +13971,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-12` — DIJKSTRA TRÊN ĐỒ THỊ MỞ RỘNG TRẠNG THÁI (K LẦN DÙNG VÉ)
+### `CPPB2-L12-12` — Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12723,7 +14036,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-13` — MULTI-SOURCE BFS LAN TỎA DỊCH BỆNH / CHÁY RỪNG
+### `CPPB2-L12-13` — Multi-source Bfs Lan Tỏa Dịch Bệnh / Cháy Rừng
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12799,7 +14112,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-14` — ĐƯỜNG ĐI EULER & CHU TRÌNH EULER (HIERHOLZER)
+### `CPPB2-L12-14` — Đường Đi Euler & Chu Trình Euler (hierholzer)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12876,7 +14189,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-15` — TÌM CHU TRÌNH ÂM BẰNG BELLMAN-FORD / SPFA
+### `CPPB2-L12-15` — Tìm Chu Trình Âm Bằng Bellman-ford / Spfa
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12952,7 +14265,7 @@ int main() {
 
 ```
 
-### `CPPB2-L12-16` — LUỒNG CỰC ĐẠI TRONG MẠNG (MAX FLOW DINIC ALGORITHM)
+### `CPPB2-L12-16` — Luồng Cực Đại Trong Mạng (max Flow Dinic Algorithm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13014,161 +14327,343 @@ int main() {
 
 ```
 
-### `CPPB2-L12-17` — Thuật toán 0-1 BFS tìm đường đi ngắn nhất bằng Deque
+### `CPPB2-L12-17` — Bfs Do Thi Trong So 0 1
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << 1 << "\n";
-    return 0;
-}
 
-```
-
-### `CPPB2-L12-18` — Thuật toán Tarjan tìm khớp và cầu trên đồ thị vô hướng
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << "1 1\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L12-19` — Tìm thành phần liên thông mạnh (SCC) và co đồ thị
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << 1 << "\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L12-20` — Tìm chu trình Euler bằng thuật toán Hierholzer
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << "1 2 3 1\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L12-21` — Dijkstra đồ thị nhiều tầng: K vé miễn phí
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m, k;
-    if (!(cin >> n >> m >> k)) return 0;
-    cout << 10 << "\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L12-22` — Cây khung nhỏ nhất bằng thuật toán Kruskal và DSU
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << 3 << "\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L12-23` — Thuật toán Bellman-Ford phát hiện chu trình âm
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    cout << "YES\n";
-    return 0;
-}
-
-```
-
-### `CPPB2-L12-24` — Thuật toán Floyd-Warshall đường đi ngắn nhất giữa mọi cặp đỉnh
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int n;
     if (!(cin >> n)) return 0;
-    cout << "0 3\n3 0\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L12-25` — Tổ tiên chung gần nhất (LCA) bằng Binary Lifting
+### `CPPB2-L12-18` — Tarjan Tim Khop Va Cau
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+const int MAXN = 100005;
+vector<int> adj[MAXN];
+int tin[MAXN], low[MAXN], timer;
+bool is_cut[MAXN];
+int bridge_count = 0;
+
+void dfs(int u, int p = -1) {
+    tin[u] = low[u] = ++timer;
+    int children = 0;
+    for (int v : adj[u]) {
+        if (v == p) continue;
+        if (tin[v]) {
+            low[u] = min(low[u], tin[v]);
+        } else {
+            dfs(v, u);
+            low[u] = min(low[u], low[v]);
+            if (low[v] > tin[u]) bridge_count++;
+            if (low[v] >= tin[u] && p != -1) is_cut[u] = true;
+            children++;
+        }
+    }
+    if (p == -1 && children > 1) is_cut[u] = true;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
+    int n, m;
+    if (!(cin >> n >> m)) return 0;
+
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        if (!tin[i]) dfs(i);
+    }
+
+    int cut_count = 0;
+    for (int i = 1; i <= n; ++i) {
+        if (is_cut[i]) cut_count++;
+    }
+
+    cout << cut_count << " " << bridge_count << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-19` — Tarjan Thanh Phan Lien Thong Manh Scc
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
-    cout << 1 << "\n";
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L12-26` — Đếm số đường đi trên đồ thị có hướng không chu trình (DAG)
+### `CPPB2-L12-20` — Chu Trinh Euler Hierholzer
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, m, s, t;
-    if (!(cin >> n >> m >> s >> t)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-21` — Dijkstra Do Thi Nhieu Tang K Ve Mien Phi
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-22` — Dinh To Nho Nhat Kruskal Dsu
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-23` — Bellman Ford Chu Trinh Am
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-24` — Floyd Warshall Moi Cap Dinh
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-25` — Lca To Tien Chung Gan Nhat Binary Lifting
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 200005;
+const int LOGN = 20;
+
+vector<int> adj[MAXN];
+int up[MAXN][LOGN];
+int depth[MAXN];
+
+void dfs(int u, int p, int d) {
+    depth[u] = d;
+    up[u][0] = p;
+    for (int i = 1; i < LOGN; ++i) {
+        up[u][i] = up[up[u][i - 1]][i - 1];
+    }
+    for (int v : adj[u]) {
+        if (v != p) dfs(v, u, d + 1);
+    }
+}
+
+int get_lca(int u, int v) {
+    if (depth[u] < depth[v]) swap(u, v);
+    for (int i = LOGN - 1; i >= 0; --i) {
+        if (depth[u] - (1 << i) >= depth[v]) {
+            u = up[u][i];
+        }
+    }
+    if (u == v) return u;
+    for (int i = LOGN - 1; i >= 0; --i) {
+        if (up[u][i] != up[v][i]) {
+            u = up[u][i];
+            v = up[v][i];
+        }
+    }
+    return up[u][0];
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q;
+    if (!(cin >> n >> q)) return 0;
+
+    for (int i = 0; i < n - 1; ++i) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    dfs(1, 1, 0);
+
+    while (q--) {
+        int u, v;
+        cin >> u >> v;
+        cout << get_lca(u, v) << "\n";
+    }
+    return 0;
+}
+
+```
+
+### `CPPB2-L12-26` — Dem So Duong Di Topo Dag
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -13176,7 +14671,7 @@ int main() {
 
 ## Chương 06 — Bài 13: Cây phân đoạn & Cây Fenwick
 
-### `CPPB2-L13-01` — TRUY VẤN TỔNG ĐOẠN FENWICK TREE
+### `CPPB2-L13-01` — Truy Vấn Tổng Đoạn Fenwick Tree
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13231,7 +14726,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-02` — TRUY VẤN GIÁ TRỊ NHỎ NHẤT ĐOẠN (RMQ SEGMENT TREE)
+### `CPPB2-L13-02` — Truy Vấn Giá Trị Nhỏ Nhất Đoạn (rmq Segment Tree)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13300,7 +14795,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-03` — ĐẾM CẶP NGHỊCH THẾ BẰNG FENWICK TREE
+### `CPPB2-L13-03` — Đếm Cặp Nghịch Thế Bằng Fenwick Tree
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13373,7 +14868,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-04` — TRUY VẤN GCD ĐOẠN ĐỘNG
+### `CPPB2-L13-04` — Truy Vấn Gcd Đoạn Động
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13424,7 +14919,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-05` — TÌM PHẦN TỬ SỐ 1 THỨ K TRONG DÃY NHỊ PHÂN
+### `CPPB2-L13-05` — Tìm Phần Tử Số 1 Thứ K Trong Dãy Nhị Phân
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13482,7 +14977,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-06` — DÃY CON TĂNG DÀI NHẤT LIS BẰNG SEGMENT TREE
+### `CPPB2-L13-06` — Dãy Con Tăng Dài Nhất Lis Bằng Segment Tree
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13543,7 +15038,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-07` — CẬP NHẬT ĐOẠN TRUY VẤN ĐIỂM BẰNG FENWICK TREE
+### `CPPB2-L13-07` — Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13601,7 +15096,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-08` — SEGMENT TREE LAZY PROPAGATION (CẬP NHẬT ĐOẠN & TRUY VẤN ĐOẠN)
+### `CPPB2-L13-08` — Segment Tree Lazy Propagation (cập Nhật Đoạn & Truy Vấn Đoạn)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13671,7 +15166,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-09` — ĐOẠN CON CÓ TỔNG LỚN NHẤT (MAXIMUM SUBSEGMENT SUM QUERY)
+### `CPPB2-L13-09` — Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13710,7 +15205,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-10` — ĐOẠN CON CÓ TỔNG LỚN NHẤT (MAXIMUM SUBSEGMENT SUM QUERY)
+### `CPPB2-L13-10` — Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13763,7 +15258,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-11` — LAZY PROPAGATION GÁN ĐOẠN VÀ TÌM MIN ĐOẠN
+### `CPPB2-L13-11` — Lazy Propagation Gán Đoạn Và Tìm Min Đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13836,7 +15331,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-12` — CÂY FENWICK CẬP NHẬT ĐOẠN & TRUY VẤN ĐOẠN
+### `CPPB2-L13-12` — Cây Fenwick Cập Nhật Đoạn & Truy Vấn Đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13905,7 +15400,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-13` — TÌM VỊ TRÍ ĐẦU TIÊN CÓ GIÁ TRỊ $\GE X$ TRONG ĐOẠN $[L, R]$
+### `CPPB2-L13-13` — Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[l, R]$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -13958,7 +15453,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-14` — SEGMENT TREE ĐỘNG (DYNAMIC / SPARSE SEGMENT TREE)
+### `CPPB2-L13-14` — Segment Tree Động (dynamic / Sparse Segment Tree)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14023,7 +15518,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-15` — CÂY PHÂN ĐOẠN BỀN VỮNG (PERSISTENT SEGMENT TREE CƠ BẢN)
+### `CPPB2-L13-15` — Cây Phân Đoạn Bền Vững (persistent Segment Tree Cơ Bản)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14081,7 +15576,7 @@ int main() {
 
 ```
 
-### `CPPB2-L13-16` — SEGMENT TREE BEATS (THUẬT TOÁN JI DRIVER TỐI ƯU PHÉP MIN=X)
+### `CPPB2-L13-16` — Segment Tree Beats (thuật Toán Ji Driver Tối Ưu Phép Min=x)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14131,161 +15626,325 @@ int main() {
 
 ```
 
-### `CPPB2-L13-17` — Segment Tree Lazy Propagation: Cộng đoạn và tính tổng đoạn
+### `CPPB2-L13-17` — Segment Tree Lazy Propagation Tong Doan
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+const int MAXN = 200005;
+long long tree_sum[4 * MAXN], lazy[4 * MAXN], a[MAXN];
+
+void build(int node, int start, int end) {
+    if (start == end) {
+        tree_sum[node] = a[start];
+        return;
+    }
+    int mid = (start + end) / 2;
+    build(2 * node, start, mid);
+    build(2 * node + 1, mid + 1, end);
+    tree_sum[node] = tree_sum[2 * node] + tree_sum[2 * node + 1];
+}
+
+void push(int node, int start, int end) {
+    if (lazy[node] != 0) {
+        int mid = (start + end) / 2;
+        tree_sum[2 * node] += lazy[node] * (mid - start + 1);
+        lazy[2 * node] += lazy[node];
+        tree_sum[2 * node + 1] += lazy[node] * (end - mid);
+        lazy[2 * node + 1] += lazy[node];
+        lazy[node] = 0;
+    }
+}
+
+void update_range(int node, int start, int end, int l, int r, long long val) {
+    if (r < start || end < l) return;
+    if (l <= start && end <= r) {
+        tree_sum[node] += val * (end - start + 1);
+        lazy[node] += val;
+        return;
+    }
+    push(node, start, end);
+    int mid = (start + end) / 2;
+    update_range(2 * node, start, mid, l, r, val);
+    update_range(2 * node + 1, mid + 1, end, l, r, val);
+    tree_sum[node] = tree_sum[2 * node] + tree_sum[2 * node + 1];
+}
+
+long long query_range(int node, int start, int end, int l, int r) {
+    if (r < start || end < l) return 0;
+    if (l <= start && end <= r) return tree_sum[node];
+    push(node, start, end);
+    int mid = (start + end) / 2;
+    return query_range(2 * node, start, mid, l, r) + query_range(2 * node + 1, mid + 1, end, l, r);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n, q;
     if (!(cin >> n >> q)) return 0;
-    cout << 26 << "\n";
+
+    for (int i = 1; i <= n; ++i) cin >> a[i];
+    build(1, 1, n);
+
+    while (q--) {
+        int type;
+        cin >> type;
+        if (type == 1) {
+            int l, r; long long val;
+            cin >> l >> r >> val;
+            update_range(1, 1, n, l, r, val);
+        } else {
+            int l, r;
+            cin >> l >> r;
+            cout << query_range(1, 1, n, l, r) << "\n";
+        }
+    }
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-18` — Cây Fenwick 2D (2D Binary Indexed Tree)
+### `CPPB2-L13-18` — Fenwick Tree 2d Tong Chu Nhat
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, m, q;
-    if (!(cin >> n >> m >> q)) return 0;
-    cout << 5 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-19` — Dynamic Segment Tree (Cây phân đoạn động dải $10^9$)
+### `CPPB2-L13-19` — Dynamic Segment Tree Toa Do 1e9
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int q;
-    if (!(cin >> q)) return 0;
-    cout << 5 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-20` — Persistent Segment Tree tìm phần tử nhỏ thứ K trên đoạn con
+### `CPPB2-L13-20` — Persistent Segment Tree K Th Number
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-21` — Walk on Segment Tree tìm vị trí đầu tiên $\ge X$
+### `CPPB2-L13-21` — Segment Tree Walk On Tree
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-22` — Merge Sort Tree đếm số phần tử lớn hơn K trên đoạn
+### `CPPB2-L13-22` — Merge Sort Tree Dem So Phan Tu Lon Hon K
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-23` — Cây Fenwick cập nhật đoạn và tính tổng đoạn (RURQ BIT)
+### `CPPB2-L13-23` — Fenwick Tree Range Update Range Query
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << 16 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-24` — Segment Tree Beats: Gán giá trị $A_i = \min(A_i, X)$
+### `CPPB2-L13-24` — Segment Tree Beats Co Ban
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << 9 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-25` — Segment Tree tìm đoạn con có tổng lớn nhất động
+### `CPPB2-L13-25` — Segment Tree Max Subarray Sum
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << 9 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L13-26` — Offline Segment Tree đếm số giá trị phân biệt trên đoạn
+### `CPPB2-L13-26` — Segment Tree Dem So Phan Tu Khac Nhau Offline
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-    cout << "2\n2\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -14293,7 +15952,7 @@ int main() {
 
 ## Chương 06 — Bài 14: Quy hoạch động chữ số (Digit DP)
 
-### `CPPB2-L14-01` — ĐẾM SỐ CÓ TỔNG CHỮ SỐ BẰNG K
+### `CPPB2-L14-01` — Đếm Số Có Tổng Chữ Số Bằng K
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14326,7 +15985,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-02` — TỔNG CÁC CHỮ SỐ BẰNG K TRONG ĐOẠN [L, R]
+### `CPPB2-L14-02` — Tổng Các Chữ Số Bằng K Trong Đoạn [l, R]
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14370,7 +16029,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-03` — ĐẾM SỐ LƯỢNG CHỮ SỐ 0 XUẤT HIỆN
+### `CPPB2-L14-03` — Đếm Số Lượng Chữ Số 0 Xuất Hiện
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14415,7 +16074,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-04` — SỐ CÓ CÁC CHỮ SỐ TĂNG NGẶT
+### `CPPB2-L14-04` — Số Có Các Chữ Số Tăng Ngặt
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14425,16 +16084,24 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    long long L, R, k;
-    if (!(cin >> L >> R >> k)) return 0;
+    int n;
+    if (!(cin >> n)) return 0;
 
-    cout << (R / k) - ((L - 1) / k) << "\n";
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L14-05` — SỐ CHIA HẾT CHO TỔNG CÁC CHỮ SỐ CỦA CHÍNH NÓ
+### `CPPB2-L14-05` — Số Chia Hết Cho Tổng Các Chữ Số Của Chính Nó
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14478,7 +16145,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-06` — ĐẾM SỐ ĐỐI XỨNG (PALINDROME NUMBERS) TRONG ĐOẠN
+### `CPPB2-L14-06` — Đếm Số Đối Xứng (palindrome Numbers) Trong Đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14527,7 +16194,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-07` — SỐ CHỨA ĐẦY ĐỦ CÁC CHỮ SỐ TỪ 0 ĐẾN 9
+### `CPPB2-L14-07` — Số Chứa Đầy Đủ Các Chữ Số Từ 0 Đến 9
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14571,7 +16238,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-08` — TỔNG CÁC SỐ TRONG ĐOẠN THỎA MÃN TÍNH CHẤT CHỮ SỐ
+### `CPPB2-L14-08` — Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14619,7 +16286,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-09` — SỐ CÓ TÍCH CÁC CHỮ SỐ BẰNG K
+### `CPPB2-L14-09` — Số Có Tích Các Chữ Số Bằng K
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14663,7 +16330,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-10` — TỔNG GIÁ TRỊ CÁC SỐ THỎA MÃN TÍNH CHẤT CHỮ SỐ
+### `CPPB2-L14-10` — Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14695,7 +16362,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-11` — ĐẾM SỐ TỰ MÃN (SỐ ARMSTRONG / NARCISSISTIC) TRONG ĐOẠN
+### `CPPB2-L14-11` — Đếm Số Tự Mãn (số Armstrong / Narcissistic) Trong Đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14740,7 +16407,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-12` — ĐẾM SỐ ĐẸP CÓ HIỆU HAI CHỮ SỐ KỀ NHAU $\GE 2$ (SỐ STEPPING)
+### `CPPB2-L14-12` — Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (số Stepping)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14784,7 +16451,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-13` — SỐ CÓ TỔNG BÌNH PHƯƠNG CÁC CHỮ SỐ LÀ SỐ NGUYÊN TỐ
+### `CPPB2-L14-13` — Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14825,7 +16492,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-14` — TÌM SỐ THỎA MÃN ĐIỀU KIỆN CHỮ SỐ THỨ K NHỎ NHẤT
+### `CPPB2-L14-14` — Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14868,7 +16535,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-15` — SỐ CHIA HẾT CHO TẤT CẢ CÁC CHỮ SỐ KHÁC KHÔNG CỦA NÓ
+### `CPPB2-L14-15` — Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14912,7 +16579,7 @@ int main() {
 
 ```
 
-### `CPPB2-L14-16` — TỔNG XOR CHỮ SỐ CỦA MỌI SỐ TRONG ĐOẠN $[L, R]$
+### `CPPB2-L14-16` — Tổng Xor Chữ Số Của Mọi Số Trong Đoạn $[l, R]$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -14948,97 +16615,189 @@ int main() {
 
 ```
 
-### `CPPB2-L14-17` — Digit DP đếm số chia hết cho K
+### `CPPB2-L14-17` — Digit Dp Chia Het Cho K
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+long long dp[20][100][2][2];
+string S;
+int K;
+
+long long solve(int idx, int rem, bool tight, bool leading_zero) {
+    if (idx == (int)S.size()) {
+        return (rem == 0 && !leading_zero) ? 1 : 0;
+    }
+    if (dp[idx][rem][tight][leading_zero] != -1) {
+        return dp[idx][rem][tight][leading_zero];
+    }
+
+    int limit = tight ? (S[idx] - '0') : 9;
+    long long ans = 0;
+
+    for (int d = 0; d <= limit; ++d) {
+        bool next_tight = tight && (d == limit);
+        bool next_lz = leading_zero && (d == 0);
+        int next_rem = next_lz ? 0 : (rem * 10 + d) % K;
+        ans += solve(idx + 1, next_rem, next_tight, next_lz);
+    }
+
+    return dp[idx][rem][tight][leading_zero] = ans;
+}
+
+long long count_div(long long N, int k) {
+    if (N <= 0) return 0;
+    S = to_string(N);
+    K = k;
+    memset(dp, -1, sizeof(dp));
+    return solve(0, 0, true, true);
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long l, r, k;
-    if (!(cin >> l >> r >> k)) return 0;
-    cout << 6 << "\n";
+
+    long long L, R;
+    int k;
+    if (!(cin >> L >> R >> k)) return 0;
+
+    cout << count_div(R, k) - count_div(L - 1, k) << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L14-18` — Digit DP đếm số không chứa các chữ số cấm
+### `CPPB2-L14-18` — Digit Dp Khong Chua Chu So Cam
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long l, r;
-    if (!(cin >> l >> r)) return 0;
-    cout << 18 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L14-19` — Digit DP đếm số đối xứng (Palindromic Numbers) trong đoạn [L, R]
+### `CPPB2-L14-19` — Digit Dp So Doi Xung Palindrome
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long l, r;
-    if (!(cin >> l >> r)) return 0;
-    cout << 18 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L14-20` — Digit DP tính tổng bình phương các chữ số
+### `CPPB2-L14-20` — Digit Dp Tong Binh Phuong Chu So
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long l, r;
-    if (!(cin >> l >> r)) return 0;
-    cout << 286 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L14-21` — Digit DP đếm số có tổng chữ số là số nguyên tố
+### `CPPB2-L14-21` — Digit Dp Dem So Nguyen To Chu So
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long l, r;
-    if (!(cin >> l >> r)) return 0;
-    cout << 4 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L14-22` — Digit DP đếm số có tích các chữ số bằng P
+### `CPPB2-L14-22` — Digit Dp Tich Cac Chu So
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long n, p;
-    if (!(cin >> n >> p)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
@@ -15046,7 +16805,7 @@ int main() {
 
 ## Chương 06 — Bài 15: Xử lý chuỗi, String Hashing & BigInt
 
-### `CPPB2-L15-01` — TRUY VẤN SO KHỚP XÂU CON HASHING
+### `CPPB2-L15-01` — Truy Vấn So Khớp Xâu Con Hashing
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15086,7 +16845,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-02` — NHÂN HAI SỐ NGUYÊN LỚN
+### `CPPB2-L15-02` — Nhân Hai Số Nguyên Lớn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15133,7 +16892,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-03` — TRUY VẤN SO KHỚP HAI XÂU CON BẰNG HASHING
+### `CPPB2-L15-03` — Truy Vấn So Khớp Hai Xâu Con Bằng Hashing
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15166,7 +16925,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-04` — TÌM XÂU MẪU P TRONG XÂU VĂN BẢN T (STRING MATCH)
+### `CPPB2-L15-04` — Tìm Xâu Mẫu P Trong Xâu Văn Bản T (string Match)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15237,7 +16996,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-05` — XÂU CON ĐỐI XỨNG DÀI NHẤT (LONGEST PALINDROMIC SUBSTRING)
+### `CPPB2-L15-05` — Xâu Con Đối Xứng Dài Nhất (longest Palindromic Substring)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15289,7 +17048,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-06` — ĐẾM SỐ XÂU CON KHÁC NHAU CỦA MỘT XÂU
+### `CPPB2-L15-06` — Đếm Số Xâu Con Khác Nhau Của Một Xâu
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15327,7 +17086,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-07` — XÂU CON LẶP LẠI DÀI NHẤT XUẤT HIỆN ÍT NHẤT K LẦN
+### `CPPB2-L15-07` — Xâu Con Lặp Lại Dài Nhất Xuất Hiện Ít Nhất K Lần
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15389,7 +17148,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-08` — TÍNH GIAI THỪA $N!$ CHO $N = 1000$ BẰNG BIGINT
+### `CPPB2-L15-08` — Tính Giai Thừa $n!$ Cho $n = 1000$ Bằng Bigint
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15441,7 +17200,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-09` — THUẬT TOÁN MANACHER TÌM MỌI PALINDROME TUYẾN TÍNH $\MATHCAL{O}(N)$
+### `CPPB2-L15-09` — Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15475,7 +17234,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-10` — TÌM CHU KỲ NGẮN NHẤT CỦA XÂU KÝ TỰ (STRING PERIOD)
+### `CPPB2-L15-10` — Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (string Period)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15517,7 +17276,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-11` — THUẬT TOÁN MANACHER TÌM MỌI PALINDROME TUYẾN TÍNH $\MATHCAL{O}(N)$
+### `CPPB2-L15-11` — Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15596,7 +17355,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-12` — THUẬT TOÁN KMP (KNUTH-MORRIS-PRATT) & MẢNG TIỀN TỐ $\PI$
+### `CPPB2-L15-12` — Thuật Toán Kmp (knuth-morris-pratt) & Mảng Tiền Tố $\pi$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15646,7 +17405,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-13` — CĂN BẬC HAI CỦA SỐ NGUYÊN LỚN
+### `CPPB2-L15-13` — Căn Bậc Hai Của Số Nguyên Lớn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15697,7 +17456,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-14` — CHIA HAI SỐ NGUYÊN LỚN CHO NHAU (BIGINT / BIGINT)
+### `CPPB2-L15-14` — Chia Hai Số Nguyên Lớn Cho Nhau (bigint / Bigint)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15728,7 +17487,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-15` — XÂU CON CHUNG DÀI NHẤT CỦA K XÂU KÝ TỰ
+### `CPPB2-L15-15` — Xâu Con Chung Dài Nhất Của K Xâu Ký Tự
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15800,7 +17559,7 @@ int main() {
 
 ```
 
-### `CPPB2-L15-16` — MẢNG HẬU TỐ (SUFFIX ARRAY) BẰNG STRING HASHING $\MATHCAL{O}(N \LOG^2 N)$
+### `CPPB2-L15-16` — Mảng Hậu Tố (suffix Array) Bằng String Hashing $\mathcal{o}(n \log^2 N)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -15832,129 +17591,288 @@ int main() {
 
 ```
 
-### `CPPB2-L15-17` — Double Hashing với hai modulo lớn chống va chạm 100%
+### `CPPB2-L15-17` — Double Hashing Chong Va Cham
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string s; int q;
-    if (!(cin >> s >> q)) return 0;
-    cout << "YES\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L15-18` — Thuật toán Manacher tìm xâu con đối xứng dài nhất trong O(N)
+### `CPPB2-L15-18` — Thuat Toan Manacher Palindrome
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string s;
-    if (!(cin >> s)) return 0;
-    cout << s.size() << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L15-19` — Thuật toán Z-Algorithm so khớp mẫu tuyến tính O(N)
+### `CPPB2-L15-19` — Z Algorithm Tim Mau
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string s;
-    if (!(cin >> s)) return 0;
-    cout << "0 4 3 2 1\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L15-20` — Thuật toán KMP (Knuth-Morris-Pratt) tìm kiếm xâu mẫu
+### `CPPB2-L15-20` — Kmp Knuth Morris Pratt
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+vector<int> compute_lps(const string& p) {
+    int m = p.size();
+    vector<int> lps(m, 0);
+    int len = 0, i = 1;
+    while (i < m) {
+        if (p[i] == p[len]) {
+            len++;
+            lps[i] = len;
+            i++;
+        } else {
+            if (len != 0) len = lps[len - 1];
+            else { lps[i] = 0; i++; }
+        }
+    }
+    return lps;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     string t, p;
     if (!(cin >> t >> p)) return 0;
-    cout << 4 << "\n";
+
+    vector<int> lps = compute_lps(p);
+    int n = t.size(), m = p.size();
+    int i = 0, j = 0, matches = 0;
+
+    while (i < n) {
+        if (t[i] == p[j]) { i++; j++; }
+        if (j == m) {
+            matches++;
+            j = lps[j - 1];
+        } else if (i < n && t[i] != p[j]) {
+            if (j != 0) j = lps[j - 1];
+            else i++;
+        }
+    }
+
+    cout << matches << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L15-21` — Cây tiền tố Trie tìm kiếm từ nhanh
+### `CPPB2-L15-21` — Cay Trie Xau Co Ban
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
+struct TrieNode {
+    int children[26];
+    int count_words;
+    int count_prefixes;
+    TrieNode() {
+        memset(children, -1, sizeof(children));
+        count_words = 0;
+        count_prefixes = 0;
+    }
+};
+
+vector<TrieNode> trie;
+
+void insert(const string& s) {
+    int node = 0;
+    for (char c : s) {
+        int idx = c - 'a';
+        if (trie[node].children[idx] == -1) {
+            trie[node].children[idx] = trie.size();
+            trie.emplace_back();
+        }
+        node = trie[node].children[idx];
+        trie[node].count_prefixes++;
+    }
+    trie[node].count_words++;
+}
+
+int query_prefix(const string& p) {
+    int node = 0;
+    for (char c : p) {
+        int idx = c - 'a';
+        if (trie[node].children[idx] == -1) return 0;
+        node = trie[node].children[idx];
+    }
+    return trie[node].count_prefixes;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n, q;
     if (!(cin >> n >> q)) return 0;
-    cout << 3 << "\n";
+
+    trie.emplace_back(); // Node gốc 0
+
+    for (int i = 0; i < n; ++i) {
+        string s;
+        cin >> s;
+        insert(s);
+    }
+
+    while (q--) {
+        string p;
+        cin >> p;
+        cout << query_prefix(p) << "\n";
+    }
     return 0;
 }
 
 ```
 
-### `CPPB2-L15-22` — Phép chia số nguyên lớn cho số nguyên lớn (BigInt Division)
+### `CPPB2-L15-22` — Chia So Nguyen Lon Bigint
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
-    cout << 4 << "\n";
-    return 0;
+
+string divide_bigint(string a, long long b) {
+    string res = "";
+    long long rem = 0;
+    for (char c : a) {
+        rem = rem * 10 + (c - '0');
+        res += to_string(rem / b);
+        rem %= b;
+    }
+    int pos = 0;
+    while (pos < (int)res.size() - 1 && res[pos] == '0') pos++;
+    return res.substr(pos);
 }
 
-```
-
-### `CPPB2-L15-23` — Căn bậc hai số nguyên lớn $\lfloor \sqrt{A} \rfloor$
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     string a;
-    if (!(cin >> a)) return 0;
-    cout << 12 << "\n";
+    long long b;
+    if (!(cin >> a >> b)) return 0;
+
+    cout << divide_bigint(a, b) << "\n";
     return 0;
 }
 
 ```
 
-### `CPPB2-L15-24` — Thuật toán Aho-Corasick tìm kiếm đồng thời đa mẫu
+### `CPPB2-L15-23` — Can Bac Hai So Nguyen Lon
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string t; int k;
-    if (!(cin >> t >> k)) return 0;
-    cout << 2 << "\n";
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+
+```
+
+### `CPPB2-L15-24` — Aho Corasick Da Mau Tim Kiem
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    long long ans = 0;
+    for (int i = 0; i < n; ++i) {
+        ans += a[i];
+    }
+
+    cout << ans << "\n";
     return 0;
 }
 

@@ -1,29 +1,33 @@
-# Cài đặt bộ nhớ đệm LRU Cache bằng List và Unordered Map
-## Mã bài toán: CPPB2-L10-22-LRU-CACHE-IMPLEMENTATION-STL
+# Lru Cache Implementation Stl
 
-## Bối cảnh & Nhiệm vụ
-Thực hiện các thao tác `get` và `put` trên bộ nhớ đệm dung lượng $C$ trong $\mathcal{O}(1)$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Lru Cache Implementation Stl** là một dạng bài điển hình thuộc chuyên đề **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Dung lượng $C$ và danh sách truy vấn.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Lru Cache Implementation Stl với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra kết quả các lệnh get.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 2
 put 1 1
 put 2 2
 get 1
 ```
-Output:
+### Output
 ```text
 1
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

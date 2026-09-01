@@ -1,27 +1,31 @@
-# Tối ưu hóa Knuth (Knuth DP Optimization)
-## Mã bài toán: CPPB2-L08-26-KNUTH-OPTIMIZATION-DP
+# Knuth Optimization Dp
 
-## Bối cảnh & Nhiệm vụ
-Quy hoạch động chia đoạn tối ưu thỏa mãn điều kiện tứ giác $opt[i, j-1] \le opt[i, j] \le opt[i+1, j]$ trong $\mathcal{O}(N^2)$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Knuth Optimization Dp** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số $N$ và chi phí cắt.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Knuth Optimization Dp với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra chi phí tối thiểu.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3
 1 2 3
 ```
-Output:
+### Output
 ```text
 6
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `6`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

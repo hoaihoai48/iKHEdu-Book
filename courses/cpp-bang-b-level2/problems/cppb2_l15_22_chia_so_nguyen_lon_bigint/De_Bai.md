@@ -1,26 +1,30 @@
-# Phép chia số nguyên lớn cho số nguyên lớn (BigInt Division)
-## Mã bài toán: CPPB2-L15-22-CHIA-SO-NGUYEN-LON-BIGINT
+# Chia So Nguyen Lon Bigint
 
-## Bối cảnh & Nhiệm vụ
-Thực hiện phép chia lấy thương nguyên $A / B$ với $A, B$ có độ dài tới $1000$ chữ số.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Chia So Nguyen Lon Bigint** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Hai số nguyên lớn $A$ và $B$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Chia So Nguyen Lon Bigint với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra thương $A / B$.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 100 25
 ```
-Output:
+### Output
 ```text
 4
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `4`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,50 +1,33 @@
-# LOGARIT RỜI RẠC (BABY-STEP GIANT-STEP)
-## Mã bài toán: `CPPB2-L02-16` | Khóa học C++ Bảng B (Level 2)
+# Logarit Rời Rạc (baby-step Giant-step)
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Logarit Rời Rạc (Baby-step Giant-step)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ nhỏ nhất thỏa $A^X \equiv B \pmod M$ trong $\mathcal{O}(\sqrt{M})$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Logarit Rời Rạc (baby-step Giant-step) với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+## Output
+- In ra kết quả trên một dòng.
 
----
-
-## 📤 3. Định Dạng Đầu Tra (Output)
-
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Logarit Rời Rạc (Baby-step Giant-step).
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
-* Ràng buộc dữ liệu: $A, B, M \le 10^9, \gcd(A, M) = 1$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

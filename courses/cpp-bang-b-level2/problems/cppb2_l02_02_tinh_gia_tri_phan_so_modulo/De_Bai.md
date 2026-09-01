@@ -1,45 +1,30 @@
-# TÍNH GIÁ TRỊ PHÂN SỐ MODULO
-## Mã bài toán: `CPPB2-L02-02` | Khóa học C++ Bảng B (Level 2)
+# Tính Giá Trị Phân Số Modulo
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Cho hai số nguyên $P, Q$ ($Q \not\equiv 0 \pmod{10^9+7}$). Hãy tính $(P \times Q^{-1}) \bmod (10^9+7)$.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Tính Giá Trị Phân Số Modulo với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Dòng 1: $T$ ($1 \le T \le 10^5$). $T$ dòng sau: $P, Q$ ($0 \le P \le 10^9, 1 \le Q \le 10^9$).
 
-* Dòng 1: $T$ ($1 \le T \le 10^5$). $T$ dòng sau: $P, Q$ ($0 \le P \le 10^9, 1 \le Q \le 10^9$).
+## Output
+- In ra $(P / Q) \bmod (10^9+7)$ trên mỗi dòng.
 
----
-
-## 📤 3. Định Dạng Đầu Ra (Output)
-
-* In ra $(P / Q) \bmod (10^9+7)$ trên mỗi dòng.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 2
 1 2
 3 7
 ```
-
-**Output:**
+### Output
 ```text
 500000004
 428571432
 ```
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

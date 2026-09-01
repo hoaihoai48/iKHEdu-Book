@@ -1,28 +1,32 @@
-# Merge Sort Tree đếm số phần tử lớn hơn K trên đoạn
-## Mã bài toán: CPPB2-L13-22-MERGE-SORT-TREE-DEM-SO-PHAN-TU-LON-HON-K
+# Merge Sort Tree Dem So Phan Tu Lon Hon K
 
-## Bối cảnh & Nhiệm vụ
-Đếm số phần tử $A[i] > K$ trong đoạn $[L, R]$ trong $\mathcal{O}(\log^2 N)$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Merge Sort Tree Dem So Phan Tu Lon Hon K** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Mảng $A$ và $Q$ truy vấn.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Merge Sort Tree Dem So Phan Tu Lon Hon K với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra số lượng phần tử.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3 1
 1 5 3
 1 3 2
 ```
-Output:
+### Output
 ```text
 2
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,28 +1,32 @@
-# Đường kính của cây có trọng số (Tree Diameter)
-## Mã bài toán: CPPB2-L08-21-DP-TREN-CAY-DUONG-KINH-CAY-CO-TRONG-SO
+# Dp Tren Cay Duong Kinh Cay Co Trong So
 
-## Bối cảnh & Nhiệm vụ
-Tìm khoảng cách lớn nhất giữa 2 đỉnh bất kỳ trên cây có trọng số.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dp Tren Cay Duong Kinh Cay Co Trong So** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số $N$ và các cạnh có trọng số.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Dp Tren Cay Duong Kinh Cay Co Trong So với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra đường kính của cây.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3
 1 2 5
 2 3 7
 ```
-Output:
+### Output
 ```text
 12
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `12`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

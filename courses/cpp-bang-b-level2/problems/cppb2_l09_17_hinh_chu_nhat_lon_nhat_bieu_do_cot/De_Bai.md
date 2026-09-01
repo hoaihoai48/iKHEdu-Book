@@ -1,27 +1,31 @@
-# Hình chữ nhật lớn nhất trong biểu đồ cột (Largest Rectangle in Histogram)
-## Mã bài toán: CPPB2-L09-17-HINH-CHU-NHAT-LON-NHAT-BIEU-DO-COT
+# Hinh Chu Nhat Lon Nhat Bieu Do Cot
 
-## Bối cảnh & Nhiệm vụ
-Tìm diện tích hình chữ nhật lớn nhất có thể vẽ bên trong biểu đồ cột $N$ thanh trong $\mathcal{O}(N)$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Hinh Chu Nhat Lon Nhat Bieu Do Cot** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số $N$ và chiều cao $N$ cột.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Hinh Chu Nhat Lon Nhat Bieu Do Cot với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra diện tích lớn nhất.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 6
 2 1 5 6 2 3
 ```
-Output:
+### Output
 ```text
 10
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `10`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

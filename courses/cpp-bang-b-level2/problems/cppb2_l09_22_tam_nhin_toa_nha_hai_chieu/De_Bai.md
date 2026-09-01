@@ -1,27 +1,31 @@
-# Số lượng tòa nhà nhìn thấy được từ hai phía
-## Mã bài toán: CPPB2-L09-22-TAM-NHIN-TOA-NHA-HAI-CHIEU
+# Tam Nhin Toa Nha Hai Chieu
 
-## Bối cảnh & Nhiệm vụ
-Với mỗi tòa nhà, đếm số tòa nhà nhìn thấy được sang cả bên trái và bên phải.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Tam Nhin Toa Nha Hai Chieu** là một dạng bài điển hình thuộc chuyên đề **Ngăn Xếp & Deque Đơn Điệu (Monotonic Stack & Deque)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Mảng chiều cao $N$ tòa nhà.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Tam Nhin Toa Nha Hai Chieu với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra số lượng nhìn thấy cho mỗi vị trí.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3
 1 2 1
 ```
-Output:
+### Output
 ```text
 2 3 2
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2 3 2`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

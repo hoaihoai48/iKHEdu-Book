@@ -1,28 +1,32 @@
-# Chia để trị trên cây trọng tâm (Centroid Decomposition)
-## Mã bài toán: CPPB2-L05-17-CENTROID-DECOMPOSITION-CO-BAN
+# Centroid Decomposition Co Ban
 
-## Bối cảnh & Nhiệm vụ
-Đếm số cặp đỉnh có khoảng cách đúng bằng $K$ trên cây.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Centroid Decomposition Co Ban** là một dạng bài điển hình thuộc chuyên đề **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Dòng 1: $N, K$. $N-1$ dòng sau mô tả các cạnh.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra số cặp đỉnh.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3 2
 1 2
 2 3
 ```
-Output:
+### Output
 ```text
 1
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

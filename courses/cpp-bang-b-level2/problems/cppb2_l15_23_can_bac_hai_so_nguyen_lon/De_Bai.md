@@ -1,26 +1,30 @@
-# Căn bậc hai số nguyên lớn $\lfloor \sqrt{A} \rfloor$
-## Mã bài toán: CPPB2-L15-23-CAN-BAC-HAI-SO-NGUYEN-LON
+# Can Bac Hai So Nguyen Lon
 
-## Bối cảnh & Nhiệm vụ
-Tìm phần nguyên căn bậc hai của số nguyên lớn $A$ ($A \le 10^{1000}$).
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Can Bac Hai So Nguyen Lon** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số nguyên lớn $A$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Can Bac Hai So Nguyen Lon với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra $\lfloor \sqrt{A} \rfloor$.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 144
 ```
-Output:
+### Output
 ```text
 12
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `12`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

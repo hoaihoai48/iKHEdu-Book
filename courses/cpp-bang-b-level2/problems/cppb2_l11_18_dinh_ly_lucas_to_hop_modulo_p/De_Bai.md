@@ -1,26 +1,30 @@
-# Định lý Lucas tính tổ hợp $C_N^K \pmod P$ khi $N, K \le 10^{18}$
-## Mã bài toán: CPPB2-L11-18-DINH-LY-LUCAS-TO-HOP-MODULO-P
+# Dinh Ly Lucas To Hop Modulo P
 
-## Bối cảnh & Nhiệm vụ
-Tính tổ hợp $C_N^K \pmod P$ với $P$ là số nguyên tố nhỏ ($P \le 10^5$) và $N, K$ cực lớn.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dinh Ly Lucas To Hop Modulo P** là một dạng bài điển hình thuộc chuyên đề **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Ba số $N, K, P$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Dinh Ly Lucas To Hop Modulo P với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra giá trị $C_N^K \pmod P$.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 5 2 3
 ```
-Output:
+### Output
 ```text
 1
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `1`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

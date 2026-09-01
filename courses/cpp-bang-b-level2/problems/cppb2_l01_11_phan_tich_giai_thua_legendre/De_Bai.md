@@ -1,20 +1,29 @@
-# Phân Tích Giai Thừa N! (Legendre)
+# Phân Tích Thừa Số Nguyên Tố Của Giai Thừa (định Lý Legendre)
 
-## Mã bài: `CPPB2-L01-11`
+## Bối cảnh
+Cho số nguyên dương $N$ và một số nguyên tố $P$. Cần tìm số mũ lớn nhất $K$ sao cho $N!$ chia hết cho $P^K$ (ký hiệu $v_P(N!)$). Áp dụng công thức Legendre: $v_P(N!) = \sum_{i=1}^{\infty} \lfloor \frac{N}{P^i} \rfloor$, thuật toán cho phép tính $K$ trong thời gian $\mathcal{O}(\log_P N)$ mà không cần tính trực tiếp giá trị khổng lồ của $N!$.
 
-Tính số mũ của p trong phân tích N!.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Nguyên Tố Của Giai Thừa (định Lý Legendre) với độ phức tạp tối ưu nhất.
 
 ## Input
-Dòng đầu chứa số bộ dữ liệu `T`. Mỗi dòng tiếp theo chứa các tham số theo thứ tự `N,p`.
+- Một dòng duy nhất chứa hai số nguyên $N$ và $P$ ($1 \le N \le 10^{18}$, $2 \le P \le 10^9$, $P$ là số nguyên tố).
 
 ## Output
-In kết quả tương ứng trên từng dòng. Với bài tìm nghiệm, in `NO` nếu vô nghiệm.
+- In ra một số nguyên duy nhất là số mũ $K$ lớn nhất.
+
+## Sample 1
+### Input
+```text
+100 5
+```
+### Output
+```text
+24
+```
+### Giải thích
+* $v_5(100!) = \lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = 24$.
 
 ## Ràng buộc
-Thời gian `1.0s`, bộ nhớ `256MB`. Dữ liệu nằm trong miền số nguyên dương phù hợp với `long long`; các test công bố thể hiện các trường hợp biên và stress.
-
-## Sample
-```text
-1
-5 2
-```
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

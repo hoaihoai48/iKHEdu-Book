@@ -1,28 +1,32 @@
-# Cây Fenwick 2D (2D Binary Indexed Tree)
-## Mã bài toán: CPPB2-L13-18-FENWICK-TREE-2D-TONG-CHU-NHAT
+# Fenwick Tree 2d Tong Chu Nhat
 
-## Bối cảnh & Nhiệm vụ
-Cập nhật điểm và truy vấn tổng hình chữ nhật con $(x_1, y_1)$ đến $(x_2, y_2)$ trên ma trận $N \times M$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Fenwick Tree 2D Tong Chu Nhat** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Kích thước ma trận và các truy vấn.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Fenwick Tree 2d Tong Chu Nhat với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra kết quả các truy vấn.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 2 2 1
 1 1 1 5
 2 1 1 2 2
 ```
-Output:
+### Output
 ```text
 5
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

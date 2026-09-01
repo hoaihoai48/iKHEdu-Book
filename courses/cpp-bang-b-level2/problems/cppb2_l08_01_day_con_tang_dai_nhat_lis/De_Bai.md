@@ -1,43 +1,28 @@
-# DÃY CON TĂNG DÀI NHẤT LIS
-## Mã bài toán: `CPPB2-L08-01` | Khóa học C++ Bảng B (Level 2)
+# Dãy Con Tăng Dài Nhất Lis
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Tìm độ dài dãy con tăng nghiêm ngặt dài nhất của mảng $N$ phần tử.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Dãy Con Tăng Dài Nhất Lis với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Dòng 1: $N$ ($1 \le N \le 2 \times 10^5$). Dòng 2: $N$ số $A_i$ ($1 \le A_i \le 10^9$).
 
-* Dòng 1: $N$ ($1 \le N \le 2 \times 10^5$). Dòng 2: $N$ số $A_i$ ($1 \le A_i \le 10^9$).
+## Output
+- In ra độ dài LIS.
 
----
-
-## 📤 3. Định Dạng Đầu Ra (Output)
-
-* In ra độ dài LIS.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 6
 10 20 10 30 20 50
 ```
-
-**Output:**
+### Output
 ```text
 4
 ```
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

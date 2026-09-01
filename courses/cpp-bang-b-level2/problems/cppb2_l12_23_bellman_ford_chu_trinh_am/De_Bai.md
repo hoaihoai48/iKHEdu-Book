@@ -1,29 +1,33 @@
-# Thuật toán Bellman-Ford phát hiện chu trình âm
-## Mã bài toán: CPPB2-L12-23-BELLMAN-FORD-CHU-TRINH-AM
+# Bellman Ford Chu Trinh Am
 
-## Bối cảnh & Nhiệm vụ
-Kiểm tra xem đồ thị có hướng có chứa chu trình trọng số âm hay không.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Bellman Ford Chu Trinh Am** là một dạng bài điển hình thuộc chuyên đề **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithms)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số đỉnh $N, M$ và các cạnh có trọng số âm/dương.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Bellman Ford Chu Trinh Am với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra YES nếu có chu trình âm, ngược lại NO.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 3 3
 1 2 1
 2 3 -5
 3 1 2
 ```
-Output:
+### Output
 ```text
 YES
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `YES`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

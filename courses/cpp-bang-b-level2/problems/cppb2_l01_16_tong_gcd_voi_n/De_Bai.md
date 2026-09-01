@@ -1,20 +1,29 @@
-# Tổng GCD Với N
+# Tính Tổng Gcd Của N Với Tất Cả Các Số Từ 1 Đến N
 
-## Mã bài: `CPPB2-L01-16`
+## Bối cảnh
+Cho số nguyên dương $N$. Hãy tính giá trị của tổng $S(N) = \sum_{i=1}^N \gcd(i, N)$. Bằng cách gom nhóm các số $i$ theo giá trị $d = \gcd(i, N)$, ta có công thức tối ưu: $S(N) = \sum_{d | N} d \cdot \phi(N / d)$. Thuật toán cho phép tính $S(N)$ trong $\mathcal{O}(\sqrt{N})$.
 
-Tính tổng gcd(i,N) với 1<=i<=N.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Tính Tổng Gcd Của N Với Tất Cả Các Số Từ 1 Đến N với độ phức tạp tối ưu nhất.
 
 ## Input
-Dòng đầu chứa số bộ dữ liệu `T`. Mỗi dòng tiếp theo chứa các tham số theo thứ tự `N`.
+- Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 10^{12}$).
 
 ## Output
-In kết quả tương ứng trên từng dòng. Với bài tìm nghiệm, in `NO` nếu vô nghiệm.
+- In ra giá trị tổng $S(N)$.
 
-## Ràng buộc
-Thời gian `1.0s`, bộ nhớ `256MB`. Dữ liệu nằm trong miền số nguyên dương phù hợp với `long long`; các test công bố thể hiện các trường hợp biên và stress.
-
-## Sample
+## Sample 1
+### Input
 ```text
-1
 6
 ```
+### Output
+```text
+15
+```
+### Giải thích
+* $\gcd(1,6) + \gcd(2,6) + \gcd(3,6) + \gcd(4,6) + \gcd(5,6) + \gcd(6,6) = 1 + 2 + 3 + 2 + 1 + 6 = 15$.
+
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

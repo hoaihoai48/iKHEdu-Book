@@ -1,45 +1,30 @@
-# TÍNH TỔ HỢP NCR MODULO
-## Mã bài toán: `CPPB2-L11-01` | Khóa học C++ Bảng B (Level 2)
+# Tính Tổ Hợp Ncr Modulo
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Tính $\binom{N}{K} \bmod (10^9+7)$ cho $Q$ truy vấn.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Tính Tổ Hợp Ncr Modulo với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Dòng 1: $Q$ ($1 \le Q \le 10^5$). $Q$ dòng sau: $N, K$ ($0 \le K \le N \le 10^6$).
 
-* Dòng 1: $Q$ ($1 \le Q \le 10^5$). $Q$ dòng sau: $N, K$ ($0 \le K \le N \le 10^6$).
+## Output
+- In ra kết quả mỗi truy vấn trên 1 dòng.
 
----
-
-## 📤 3. Định Dạng Đầu Ra (Output)
-
-* In ra kết quả mỗi truy vấn trên 1 dòng.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 2
 5 2
 10 3
 ```
-
-**Output:**
+### Output
 ```text
 10
 120
 ```
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

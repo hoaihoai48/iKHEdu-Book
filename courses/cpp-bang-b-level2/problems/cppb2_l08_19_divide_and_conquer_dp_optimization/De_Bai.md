@@ -1,27 +1,31 @@
-# Tối ưu hóa chia để trị (D&C DP Optimization)
-## Mã bài toán: CPPB2-L08-19-DIVIDE-AND-CONQUER-DP-OPTIMIZATION
+# Divide And Conquer Dp Optimization
 
-## Bối cảnh & Nhiệm vụ
-Chia mảng $N$ phần tử thành $K$ đoạn liên tiếp sao cho tổng chi phí là nhỏ nhất.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Divide And Conquer Dp Optimization** là một dạng bài điển hình thuộc chuyên đề **Quy Hoạch Động Cơ Bản & Chuyên Sâu (Dynamic Programming)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số $N, K$ và ma trận chi phí.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Divide And Conquer Dp Optimization với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra chi phí tối thiểu.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 4 2
 1 2 3 4
 ```
-Output:
+### Output
 ```text
 5
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

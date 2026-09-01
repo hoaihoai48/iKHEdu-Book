@@ -1,50 +1,33 @@
-# MÊ CUNG TRỌNG SỐ 0 VÀ 1 (0-1 BFS)
-## Mã bài toán: `CPPB2-L12-06` | Khóa học C++ Bảng B (Level 2)
+# Mê Cung Trọng Số 0 Và 1 (0-1 Bfs)
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mê Cung Trọng Số 0 và 1 (0-1 BFS)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: 0-1 BFS với `std::deque`.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Mê Cung Trọng Số 0 Và 1 (0-1 Bfs) với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+## Output
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
----
-
-## 📤 3. Định Dạng Đầu Ra (Output)
-
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Mê Cung Trọng Số 0 và 1 (0-1 BFS).
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
-* Ràng buộc dữ liệu: $N, M \le 1000$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

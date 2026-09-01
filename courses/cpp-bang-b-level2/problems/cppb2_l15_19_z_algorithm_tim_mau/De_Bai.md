@@ -1,26 +1,30 @@
-# Thuật toán Z-Algorithm so khớp mẫu tuyến tính O(N)
-## Mã bài toán: CPPB2-L15-19-Z-ALGORITHM-TIM-MAU
+# Z Algorithm Tim Mau
 
-## Bối cảnh & Nhiệm vụ
-Tính mảng $Z[i]$ biểu diễn độ dài tiền tố chung dài nhất giữa $S$ và $S[i..N-1]$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Z Algorithm Tim Mau** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Chuỗi $S$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Z Algorithm Tim Mau với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra mảng $Z$.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 aaaaa
 ```
-Output:
+### Output
 ```text
 0 4 3 2 1
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `0 4 3 2 1`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

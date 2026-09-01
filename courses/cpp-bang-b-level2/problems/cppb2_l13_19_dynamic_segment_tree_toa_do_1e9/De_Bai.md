@@ -1,28 +1,32 @@
-# Dynamic Segment Tree (Cây phân đoạn động dải $10^9$)
-## Mã bài toán: CPPB2-L13-19-DYNAMIC-SEGMENT-TREE-TOA-DO-1E9
+# Dynamic Segment Tree Toa Do 1e9
 
-## Bối cảnh & Nhiệm vụ
-Cây phân đoạn mở rộng nút động cho dải tọa độ $10^9$ khi không thể nén tọa độ tĩnh trước.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Dynamic Segment Tree Toa Do 1E9** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Số thao tác $Q$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Dynamic Segment Tree Toa Do 1e9 với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra kết quả các truy vấn.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 2
 1 1000000000 5
 2 1 1000000000
 ```
-Output:
+### Output
 ```text
 5
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `5`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

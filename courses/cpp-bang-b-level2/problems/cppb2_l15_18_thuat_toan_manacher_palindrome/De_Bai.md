@@ -1,26 +1,30 @@
-# Thuật toán Manacher tìm xâu con đối xứng dài nhất trong O(N)
-## Mã bài toán: CPPB2-L15-18-THUAT-TOAN-MANACHER-PALINDROME
+# Thuat Toan Manacher Palindrome
 
-## Bối cảnh & Nhiệm vụ
-Tìm độ dài xâu con đối xứng liên tiếp dài nhất trong chuỗi $S$ độ dài $10^6$ trong $\mathcal{O}(N)$.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Thuat Toan Manacher Palindrome** là một dạng bài điển hình thuộc chuyên đề **Xử Lý Chuỗi, String Hashing & BigInt**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Chuỗi $S$.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Thuat Toan Manacher Palindrome với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra độ dài lớn nhất.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 abacaba
 ```
-Output:
+### Output
 ```text
 7
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `7`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

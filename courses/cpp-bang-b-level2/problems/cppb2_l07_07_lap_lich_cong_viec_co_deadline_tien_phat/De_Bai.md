@@ -1,50 +1,33 @@
-# LẬP LỊCH CÔNG VIỆC CÓ DEADLINE & TIỀN PHẠT
-## Mã bài toán: `CPPB2-L07-07` | Khóa học C++ Bảng B (Level 2)
+# Lập Lịch Công Việc Có Deadline & Tiền Phạt
 
----
-
-## 📖 1. Bối Cảnh & Nhiệm Vụ
-
+## Bối cảnh
 Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lập Lịch Công Việc Có Deadline & Tiền Phạt** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tham lam kết hợp Disjoint Set Union (DSU).
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
----
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Lập Lịch Công Việc Có Deadline & Tiền Phạt với độ phức tạp tối ưu nhất.
 
-## 📥 2. Định Dạng Đầu Vào (Input)
+## Input
+- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
 
-* Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-* Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+## Output
+- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
 
----
-
-## 📤 3. Định Dạng Đầu Ra (Output)
-
-* In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
-
----
-
-## 📌 4. Ví Dụ Mẫu (Sample)
-
-### Sample 1:
-**Input:**
+## Sample 1
+### Input
 ```text
 5
 1 2 3 4 5
 ```
-
-**Output:**
+### Output
 ```text
 15
 ```
-
-### Giải thích Sample 1:
+### Giải thích
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lập Lịch Công Việc Có Deadline & Tiền Phạt.
 
----
-
-## ⚙️ 5. Ràng Buộc Kỹ Thuật (Constraints)
-
-* Giới hạn thời gian (Time Limit): $1.0\text{s}$.
-* Giới hạn bộ nhớ (Memory Limit): $256\text{MB}$.
-* Ràng buộc dữ liệu: $N \le 10^5, D_i \le 10^5$.
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,30 +1,35 @@
-# Offline Segment Tree đếm số giá trị phân biệt trên đoạn
-## Mã bài toán: CPPB2-L13-26-SEGMENT-TREE-DEM-SO-PHAN-TU-KHAC-NHAU-OFFLINE
+# Segment Tree Dem So Phan Tu Khac Nhau Offline
 
-## Bối cảnh & Nhiệm vụ
-Trả lời $Q$ truy vấn đếm số lượng giá trị khác nhau trong đoạn $[L, R]$ bằng Offline BIT/Segment Tree.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Segment Tree Dem So Phan Tu Khac Nhau Offline** là một dạng bài điển hình thuộc chuyên đề **Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Mảng $N$ phần tử và $Q$ truy vấn.
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Segment Tree Dem So Phan Tu Khac Nhau Offline với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra số giá trị phân biệt.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 4 2
 1 2 2 1
 1 3
 2 4
 ```
-Output:
+### Output
 ```text
 2
 2
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `2
+2`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

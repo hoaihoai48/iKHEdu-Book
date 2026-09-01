@@ -1,26 +1,30 @@
-# Căn bậc hai Modulo P (Tonelli-Shanks)
-## Mã bài toán: CPPB2-L02-20-CAN-BAC-HAI-MODULO-TONELLI-SHANKS
+# Can Bac Hai Modulo Tonelli Shanks
 
-## Bối cảnh & Nhiệm vụ
-Tìm số nguyên $X$ nhỏ nhất sao cho $X^2 \equiv N \pmod P$ với $P$ là số nguyên tố.
+## Bối cảnh
+Trong lập trình thi đấu chuyên nghiệp, bài toán **Can Bac Hai Modulo Tonelli Shanks** là một dạng bài điển hình thuộc chuyên đề **Đại Số Đồng Dư & Lũy Thừa Nhanh (Modular Arithmetic)**. Bài toán yêu cầu thiết kế thuật toán tối ưu để xử lý tập dữ liệu lớn trong giới hạn thời gian nghiêm ngặt $1.0\text{s}$.
 
-## Đầu vào (Input)
-Hai số nguyên $N$ và $P$ ($P \le 10^9+7$).
+## Nhiệm vụ
+Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks với độ phức tạp tối ưu nhất.
 
-## Đầu ra (Output)
-In ra nghiệm $X$ nhỏ nhất hoặc -1 nếu vô nghiệm.
+## Input
+- Dòng đầu tiên chứa các tham số đầu vào của bài toán theo đúng mô tả cấu trúc dữ liệu.
+- Các dòng tiếp theo chứa dữ liệu chi tiết của mảng hoặc các truy vấn cần xử lý.
 
-## Ví dụ mẫu
-### Sample 1
-Input:
+## Output
+- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+## Sample 1
+### Input
 ```text
 2 7
 ```
-Output:
+### Output
 ```text
 3
 ```
+### Giải thích
+* Thuật toán khởi tạo cấu trúc dữ liệu, thực hiện tính toán và in ra kết quả mẫu: `3`.
 
-## Ràng buộc dữ liệu
-- Thời gian chạy: $\le 1.0\text{s}$
-- Bộ nhớ: $\le 256\text{MB}$
+## Ràng buộc
+- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
