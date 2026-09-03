@@ -1,0 +1,39 @@
+# Mật Mã Caesar Dịch Chuyển K
+
+
+*(Bài toán kinh điển Tin học trẻ Bảng A)*
+
+## Bối cảnh
+
+Hoàng đế Caesar mã hóa bức thư gồm các chữ cái in hoa (`'A'` đến `'Z'`) bằng cách dịch chuyển mỗi chữ cái sang phải $K$ bước theo vòng tròn 26 chữ cái ($A \to B \dots Z \to A$).
+## Nhiệm vụ
+
+Cho chuỗi $S$ chỉ gồm các chữ cái in hoa và số nguyên $K$ ($1 \le K \le 25$). Hãy in ra bản mật mã sau khi mã hóa.
+## Input
+
+Dòng 1 chứa chuỗi $S$. Dòng 2 chứa số $K$.
+## Output
+
+Chuỗi sau khi mã hóa.
+## Sample 1
+
+### Input
+```text
+ABCXYZ
+3
+```
+### Output
+```text
+DEFABC
+```
+### Giải thích
+
+'A'->'D', 'B'->'E', 'X'->'A', 'Y'->'B', 'Z'->'C'.
+* **Công thức toán học:** `chr((ord(ch) - ord('A') + k) % 26 + ord('A'))`.
+
+
+## Ràng buộc
+
+
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$

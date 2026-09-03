@@ -1,0 +1,36 @@
+# Trích Xuất Số Lớn Nhất Trong Văn Bản
+
+
+*(Đề thi Tin học trẻ cấp Tỉnh/Thành phố Bảng A)*
+
+## Bối cảnh
+
+Trong một bài báo cáo có các con số nằm rải rác giữa các câu chữ. Một con số có thể có nhiều chữ số liên tiếp nhau.
+## Nhiệm vụ
+
+Cho chuỗi văn bản $S$. Hãy tìm và in ra giá trị của **con số nguyên lớn nhất** xuất hiện trong chuỗi đó. Dữ liệu đảm bảo có ít nhất 1 chữ số.
+## Input
+
+Một chuỗi văn bản $S$ ($1 \le |S| \le 1000$).
+## Output
+
+Số nguyên lớn nhất tìm được.
+## Sample 1
+
+### Input
+```text
+Lop 5A co 38 hoc sinh va 105 quyen sach
+```
+### Output
+```text
+105
+```
+### Giải thích
+
+Các con số xuất hiện là: 5, 38, 105. Số lớn nhất là 105.
+
+## Ràng buộc
+
+
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$

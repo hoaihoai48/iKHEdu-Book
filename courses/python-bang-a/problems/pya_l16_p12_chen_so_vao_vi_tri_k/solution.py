@@ -1,0 +1,6 @@
+n = int(input().strip())
+a = list(map(int, input().split()))
+line = input().split()
+x, k = int(line[0]), int(line[1])
+a.insert(k, x)
+print(*a)

@@ -1,9 +1,9 @@
 ---
 name: cp-solve
-description: Tạo problem package iKHEDU và bộ testcase competitive programming có generator, oracle, manifest, verification và teacher guide.
+description: Tạo problem package iKHEDU; testcase là tùy chọn theo ngôn ngữ và yêu cầu kiểm thử.
 version: 1.0.0
 requires_skills: ikhedu-authoring
-artifact_outputs: De_Bai.md, Huong_Dan_Giang_Day.md, solution.cpp, generator, oracle, manifest, test-report
+artifact_outputs: De_Bai.md, Huong_Dan_Giang_Day.md, solution.py hoặc solution.cpp; test artifacts khi được yêu cầu
 ---
 # /cp-solve - iKHEDU Problem + Testcase Builder
 $ARGUMENTS
@@ -17,16 +17,16 @@ Dùng khi người dùng muốn biến một đề bài thuật toán thành pac
 1. Đọc `@../skills/ikhedu-authoring/SKILL.md`, `@../context/project-context.md`, `@../context/source-index.md`, `@../context/evidence-ledger.md`, `@../context/decision-log.md` và `@../context/open-questions.md`.
 2. Đọc `@../skills/ikhedu-authoring/references/problem-package-template.md` và `@../skills/ikhedu-authoring/references/testcase-generation-standard.md`.
 3. Lập problem brief: `problem_id`, title, topic, target level, prerequisite, constraints, subtasks, time/memory limit, language, checker policy, output target và license. Nếu thiếu thông tin làm đổi thuật toán hoặc test, dừng để hỏi.
-4. Tạo `De_Bai.md` theo góc nhìn học sinh, không tiết lộ lời giải. Tạo `Huong_Dan_Giang_Day.md` theo góc nhìn giáo viên, gồm câu hỏi dẫn dắt, trực giác, invariant/correctness, complexity, misconception và transfer.
+4. Tạo `De_Bai.md` theo khuôn student-facing thống nhất: `# Tiêu đề`, `## Bối cảnh`, `## Nhiệm vụ`, `## Input`, `## Output`, `## Sample 1` với các heading con, và `## Ràng buộc`. Không đưa mã bài, gợi ý thuật toán hoặc lời giải vào statement. Tạo `Huong_Dan_Giang_Day.md` theo góc nhìn giáo viên, gồm câu hỏi dẫn dắt, trực giác, invariant/correctness, complexity, misconception và transfer.
 5. Lập test matrix trước khi viết generator: sample, minimum, maximum/near-maximum, boundary, degenerate, duplicate/structured, adversarial, random-small và stress-large. Gắn mỗi case với subtask và bug target.
-6. Tạo package:
+6. Tạo package theo ngôn ngữ và yêu cầu task:
 
 ```text
 IKH-XXXX - [Tên bài]/
 ├── De_Bai.md
 ├── Huong_Dan_Giang_Day.md
-├── solution.cpp
-└── test/
+├── solution.py hoặc solution.cpp
+└── test/ (chỉ khi được yêu cầu hoặc QA gate cần)
     ├── README.md
     ├── manifest.json
     ├── generators/generate.py
@@ -36,9 +36,9 @@ IKH-XXXX - [Tên bài]/
     └── ...
 ```
 
-7. Viết generator deterministic, seed cố định theo case, có validation input. Viết hoặc chỉ định oracle độc lập; không dùng duy nhất `solution.cpp` đang kiểm thử để sinh output. Ghi generator version, oracle version, seed, category, subtask, expected source và bug targets vào `manifest.json`.
-8. Compile/run oracle và solution trong thư mục tạm với timeout, kiểm tra exit code/stderr/output checker. Chạy sample trước, sau đó toàn bộ test. Nếu có thể, đối chiếu miền nhỏ với brute-force và tạo mutant solution để kiểm tra test có bắt được lỗi.
-9. Ghi `test/README.md` và test report: command tái tạo, số lượng case, category coverage, runtime, failure, giới hạn chưa cover và trạng thái `draft|review-needed|verified|blocked`.
+7. Với Python, viết `solution.py` trực tiếp ở cấp module; không dùng `import sys`, `from sys ...`, `def main()` hoặc `if __name__ == "__main__":`. Với C++, dùng `solution.cpp` theo rule C++.
+8. Nếu task yêu cầu testcase, viết generator deterministic, seed cố định theo case, validation input và oracle độc lập; không dùng solution đang kiểm thử làm oracle duy nhất. Nếu không yêu cầu testcase, bỏ qua generator/oracle/manifest/test-report.
+9. Nếu có testcase, compile/run oracle và solution trong thư mục tạm với timeout, kiểm tra exit code/stderr/output checker, rồi ghi `test/README.md` và test report. Nếu không có testcase, kiểm tra sample và syntax/runtime tối thiểu của solution.
 10. Chạy QA cho statement–guide–solution–tests. Nếu `output_target` là `print|both`, chạy thêm print-ready gate và proof PDF theo `@../skills/ikhedu-authoring/references/print-production-spec-template.md`.
 11. Bàn giao với các mục: `Status`, `Scope`, `Sources consulted`, `Package tree`, `Generator/oracle`, `Test matrix`, `Verification evidence`, `Print status`, `Unresolved issues`, `Next action`.
 

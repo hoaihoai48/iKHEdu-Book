@@ -1,0 +1,39 @@
+# Số May Mắn Chứa Số 7
+
+
+## Nhiệm vụ
+
+Bé An coi số 7 là con số mang lại may mắn. Một số tự nhiên $N$ được gọi là "May mắn" nếu trong các chữ số của nó có ít nhất một chữ số 7. Cho số $N$, hãy kiểm tra xem $N$ có may mắn không. In `YES` nếu có, `NO` nếu không.
+## Input
+
+Số nguyên $N$ ($1 \le N \le 10^9$).
+## Output
+
+`YES` hoặc `NO`.
+## Sample 1
+
+### Input
+```text
+372
+```
+### Output
+```text
+YES
+```
+## Sample 2
+
+### Input
+```text
+2024
+```
+### Output
+```text
+NO
+```
+
+
+## Ràng buộc
+
+
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$

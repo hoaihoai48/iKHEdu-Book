@@ -1,0 +1,204 @@
+# Hệ thống bài tập thực hành — bài 09: Quy luật dãy số và tam giác số
+
+---
+
+## Bảng ma trận bài tập (14 bài tập phân tầng cơ bản → thử thách)
+
+| STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
+|:---:|:---:|---|:---:|---|---|
+| 01 | `PYA-L09-P01` | Tráo đổi hai chiếc cốc | `Cơ bản` | $-10^9 \le A, B \le 10^9$ | Phép gán hoán đổi `a, b = b, a` |
+| 02 | `PYA-L09-P02` | Dãy số nhân đôi | `Cơ bản` | $1 \le N \le 30$ | In dãy $1, 2, 4, 8, 16 \dots$ |
+| 03 | `PYA-L09-P03` | Số hạng dãy cấp số cộng | `Cơ bản` | $N, u_1, d \le 10^6$ | Tìm số thứ $N$ của dãy cấp số cộng |
+| 04 | `PYA-L09-P04` | Số Fibonacci thứ N | `Cơ bản` | $1 \le N \le 40$ | Thuật toán cuốn chiếu `a, b = b, a + b` |
+| 05 | `PYA-L09-P05` | Dãy số đan dấu | `Cơ bản` | $1 \le N \le 10^6$ | Tính $S = 1 - 2 + 3 - 4 \dots \pm N$ |
+| 06 | `PYA-L09-P06` | Tổng tích hai số liền nhau | `Luyện tập` | $1 \le N \le 10^5$ | Tính $S = 1\times 2 + 2\times 3 + \dots + N(N+1)$ |
+| 07 | `PYA-L09-P07` | Dãy số bội ba bội năm | `Luyện tập` | $1 \le N \le 10^4$ | Dãy số chia hết cho 3 hoặc 5 tăng dần |
+| 08 | `PYA-L09-P08` | Tam giác số đơn giản | `Luyện tập` | $1 \le N \le 20$ | Vòng lặp lồng nhau in tháp số tăng dần |
+| 09 | `PYA-L09-P09` | Tam giác sao cân | `Luyện tập` | $1 \le N \le 20$ | Căn giữa khoảng trắng và in ký tự sao `*` |
+| 10 | `PYA-L09-P10` | Dãy số tam giác (triangular numbers) | `Luyện tập` | $1 \le N \le 10^6$ | Số bi xếp thành tam giác đều $T_n = \frac{n(n+1)}{2}$ |
+| 11 | `PYA-L09-P11` | Dãy số tribonacci | `Luyện tập` | $1 \le N \le 35$ | $T_n = T_{n-1} + T_{n-2} + T_{n-3}$ |
+| 12 | `PYA-L09-P12` | Ma trận số bàn cờ đan xen | `Vận dụng` | $1 \le N \le 50$ | Ma trận $N \times N$ gồm các số 0 và 1 xen kẽ |
+| 13 | `PYA-L09-P13` | Tam giác floyd | `Vận dụng` | $1 \le N \le 20$ | Điền liên tục các số tự nhiên vào tháp tam giác |
+| 14 | `PYA-L09-P14` | Tìm vị trí trong dãy tự nhiên dài | `Thử thách` | $1 \le K \le 10^{12}$ | Tìm chữ số thứ $K$ khi viết $123456789101112\dots$ |
+
+---
+
+### Bài 1 (Cơ bản): Tráo đổi hai chiếc cốc (`PYA-L09-P01`)
+
+* **Bối cảnh:** Bạn Bo có 2 chiếc cốc: cốc $A$ đựng nước cam và cốc $B$ đựng nước dưa hấu. Bo muốn đổi nội dung trong 2 cốc cho nhau.
+* **Yêu cầu:** Nhập vào 2 số nguyên $A$ và $B$. Hãy hoán đổi giá trị của chúng và in ra theo thứ tự $A$ trước, $B$ sau.
+* **Input:** Hai số nguyên $A$ và $B$ trên một dòng, cách nhau bởi khoảng trắng.
+* **Output:** Giá trị mới của $A$ và $B$ sau khi hoán đổi.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5 12` | `12 5` | Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$. |
+* **Gợi ý:** Sử dụng cú pháp Python: `a, b = b, a`.
+
+---
+
+### Bài 2 (Cơ bản): Dãy số nhân đôi (`PYA-L09-P02`)
+
+* **Yêu cầu:** Nhập số nguyên $N$ ($1 \le N \le 30$). Hãy in ra $N$ số đầu tiên của dãy số nhân đôi: $1, 2, 4, 8, 16, 32, \dots$ trên cùng một dòng.
+* **Input:** Một số nguyên $N$.
+* **Output:** Dãy $N$ số, cách nhau bởi dấu cách.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5` | `1 2 4 8 16` |
+
+---
+
+### Bài 3 (Cơ bản): Số hạng dãy cấp số cộng (`PYA-L09-P03`)
+
+* **Yêu cầu:** Cho một dãy số cách đều có số đầu tiên là $u_1$ và khoảng cách giữa 2 số liền kề là $d$. Cho số nguyên dương $N$. Hãy tìm số hạng thứ $N$ của dãy số.
+* **Input:** Ba số nguyên $u_1, d, N$ ($1 \le u_1, d, N \le 10^6$).
+* **Output:** Một số nguyên là số hạng thứ $N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3 4 5` | `19` | Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19. |
+* **Công thức toán học:** $u_N = u_1 + (N - 1) \times d$.
+
+---
+
+### Bài 4 (Cơ bản): Số Fibonacci thứ N (`PYA-L09-P04`)
+
+* **Yêu cầu:** Dãy Fibonacci được định nghĩa: $F_1 = 1, F_2 = 1, F_n = F_{n-1} + F_{n-2}$ với $n \ge 3$. Nhập vào số tự nhiên $N$. Hãy tìm và in ra số Fibonacci thứ $N$.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 40$).
+* **Output:** Giá trị $F_N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `6` | `8` | Dãy là 1, 1, 2, 3, 5, 8. Số thứ 6 là 8. |
+
+---
+
+### Bài 5 (Cơ bản): Dãy số đan dấu (`PYA-L09-P05`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tính tổng của dãy số đan dấu:
+  $$S = 1 - 2 + 3 - 4 + 5 - 6 + \dots + (-1)^{N+1} N$$
+* **Input:** Một số nguyên $N$ ($1 \le N \le 10^6$).
+* **Output:** Giá trị của tổng $S$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5` | `3` | $1 - 2 + 3 - 4 + 5 = 3$. |
+  | `6` | `-3` | $1 - 2 + 3 - 4 + 5 - 6 = -3$. |
+
+---
+
+### Bài 6 (Luyện tập): Tổng tích hai số liền nhau (`PYA-L09-P06`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tính tổng:
+  $$S = 1 \times 2 + 2 \times 3 + 3 \times 4 + \dots + N \times (N + 1)$$
+* **Input:** Một số nguyên dương $N$ ($1 \le N \le 10^5$).
+* **Output:** Tổng $S$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3` | `20` | $1 \times 2 + 2 \times 3 + 3 \times 4 = 2 + 6 + 12 = 20$. |
+
+---
+
+### Bài 7 (Luyện tập): Dãy số bội ba bội năm (`PYA-L09-P07`)
+
+* **Yêu cầu:** Xét dãy các số nguyên dương chia hết cho 3 hoặc chia hết cho 5 theo thứ tự tăng dần: $3, 5, 6, 9, 10, 12, 15, \dots$. Cho số tự nhiên $N$. Hãy in ra $N$ số đầu tiên của dãy này.
+* **Input:** Một số nguyên dương $N$ ($1 \le N \le 10^4$).
+* **Output:** $N$ số đầu tiên của dãy trên một dòng, cách nhau bởi dấu cách.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `6` | `3 5 6 9 10 12` |
+
+---
+
+### Bài 8 (Luyện tập): Tam giác số đơn giản (`PYA-L09-P08`)
+
+* **Yêu cầu:** Nhập vào số tự nhiên $N$ ($1 \le N \le 20$). Hãy in ra tháp tam giác số có $N$ dòng theo quy luật:
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `1`<br>`1 2`<br>`1 2 3`<br>`1 2 3 4` |
+
+---
+
+### Bài 9 (Luyện tập): Tam giác sao cân (`PYA-L09-P09`)
+
+* **Yêu cầu:** Nhập vào độ cao $N$ của tam giác ($1 \le N \le 20$). Hãy in ra một tháp sao tam giác cân đối xứng hoàn hảo.
+* **Quy luật:** Dòng thứ $i$ (từ 1 đến $N$) có $(N - i)$ dấu cách phía trước, tiếp theo là $(2i - 1)$ dấu sao `*`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `3` | `  *`<br>` ***`<br>`*****` |
+
+---
+
+### Bài 10 (Luyện tập): Dãy số tam giác (triangular numbers) (`PYA-L09-P10`)
+
+* **Bối cảnh:** Người Hy Lạp cổ đại thường xếp các viên sỏi thành hình tam giác đều:
+  * Tầng 1: 1 viên
+  * Tầng 2: 1 + 2 = 3 viên
+  * Tầng 3: 1 + 2 + 3 = 6 viên
+  * Tầng 4: 1 + 2 + 3 + 4 = 10 viên
+* **Yêu cầu:** Cho số tự nhiên $K$. Hãy kiểm tra xem $K$ có phải là một "Số tam giác" hay không (nghĩa là có tồn tại số nguyên dương $N$ sao cho $\frac{N(N+1)}{2} = K$)? Nếu có, in ra `YES` và số $N$, ngược lại in `NO`.
+* **Input:** Một số nguyên $K$ ($1 \le K \le 10^9$).
+* **Output:** `YES <N>` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `10` | `YES 4` |
+  | `8` | `NO` |
+
+---
+
+### Bài 11 (Luyện tập): Dãy số tribonacci (`PYA-L09-P11`)
+
+* **Yêu cầu:** Dãy Tribonacci mở rộng từ Fibonacci với 3 số đầu tiên là $1, 1, 2$. Kể từ số thứ tư, mỗi số bằng tổng của 3 số liền kề trước nó:
+  $$T_1 = 1, T_2 = 1, T_3 = 2, \quad T_n = T_{n-1} + T_{n-2} + T_{n-3} \quad (n \ge 4)$$
+  Nhập vào số tự nhiên $N$ ($1 \le N \le 35$). Hãy in ra số Tribonacci thứ $N$.
+* **Input:** Một số nguyên $N$.
+* **Output:** Giá trị $T_N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5` | `7` | Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$. |
+
+---
+
+### Bài 12 (Vận dụng): Ma trận số bàn cờ đan xen (`PYA-L09-P12`)
+
+* **Yêu cầu:** Nhập vào số tự nhiên $N$ ($1 \le N \le 50$). Hãy in ra một bảng ma trận vuông kích thước $N \times N$ gồm các số $0$ và $1$ xếp so le giống như các ô trên bàn cờ vua, với ô góc trên cùng bên trái luôn là số $1$.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `1 0 1 0`<br>`0 1 0 1`<br>`1 0 1 0`<br>`0 1 0 1` |
+* **Gợi ý:** Ô tại dòng $i$, cột $j$ nhận giá trị $(i + j) \% 2 == 0 \implies 1$, ngược lại $\implies 0$ (nếu đánh số từ dòng 1, cột 1).
+
+---
+
+### Bài 13 (Vận dụng): Tam giác floyd (`PYA-L09-P13`)
+
+* **Bối cảnh:** Tam giác Floyd là một tam giác số vuông được điền liên tiếp các số tự nhiên tăng dần bắt đầu từ 1.
+* **Yêu cầu:** Nhập vào số nguyên dương $N$ ($1 \le N \le 20$). Hãy in ra tam giác Floyd có $N$ dòng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `1`<br>`2 3`<br>`4 5 6`<br>`7 8 9 10` |
+* **Gợi ý:** Dùng một biến đếm `dem = 1`. Mỗi khi in một số, tăng `dem += 1`.
+
+---
+
+### Bài 14 (Thử thách): Tìm vị trí trong dãy tự nhiên dài (`PYA-L09-P14`)
+*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+
+* **Bối cảnh:** Bé An viết liên tiếp các số tự nhiên bắt đầu từ 1 thành một dải số vô tận:
+  `123456789101112131415161718192021...`
+* **Yêu cầu:** Cho số nguyên dương $K$ ($1 \le K \le 10^5$). Hãy xác định chữ số thứ $K$ trong dải số trên là chữ số nào?
+* **Input:** Một số nguyên $K$.
+* **Output:** Chữ số tại vị trí $K$ (đếm từ 1).
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `7` | `7` | Ký tự thứ 7 là số 7. |
+  | `11` | `0` | Ký tự thứ 10 là '1', ký tự thứ 11 là '0' (của số 10). |

@@ -1,0 +1,31 @@
+# Thay Thế Tất Cả Số Âm Bằng Số 0
+
+
+## Nhiệm vụ
+
+Cho dãy $N$ số nguyên gồm cả số âm và số dương. Hãy thay thế toàn bộ các số âm trong dãy bằng số 0 và in ra dãy mới.
+## Input
+
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+## Output
+
+Dãy số sau khi thay thế.
+## Sample 1
+
+### Input
+```text
+5
+3 -5 8 -2 0
+```
+### Output
+```text
+3 0 8 0 0
+```
+
+
+## Ràng buộc
+
+
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$

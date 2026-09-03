@@ -1,0 +1,5 @@
+n = int(input().strip())
+a = list(map(int, input().split()))
+a.sort()
+min_diff = min(a[i + 1] - a[i] for i in range(n - 1))
+print(min_diff)

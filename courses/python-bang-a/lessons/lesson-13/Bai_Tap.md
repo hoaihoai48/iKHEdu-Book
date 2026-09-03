@@ -1,0 +1,178 @@
+# Hệ thống bài tập thực hành — bài 13: Chỉ số và cắt lát chuỗi
+
+---
+
+## Bảng ma trận bài tập (12 bài tập phân tầng cơ bản → thử thách)
+
+| STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
+|:---:|:---:|---|:---:|---|---|
+| 01 | `PYA-L13-P01` | Ký tự đầu & ký tự cuối | `Cơ bản` | Độ dài chuỗi $\le 100$ | Truy xuất `s[0]` và `s[-1]` |
+| 02 | `PYA-L13-P02` | Độ dài của chuỗi | `Cơ bản` | Độ dài chuỗi $\le 1000$ | Sử dụng hàm `len(s)` |
+| 03 | `PYA-L13-P03` | Cắt ba ký tự đầu tiên | `Cơ bản` | Chuỗi có $\ge 3$ ký tự | Slicing tiền tố `s[:3]` |
+| 04 | `PYA-L13-P04` | Đảo ngược tên riêng | `Cơ bản` | Độ dài chuỗi $\le 100$ | Slicing đảo chuỗi `s[::-1]` |
+| 05 | `PYA-L13-P05` | Kiểm tra từ đối xứng (palindrome) | `Cơ bản` | Độ dài chuỗi $\le 1000$ | `if s == s[::-1]` |
+| 06 | `PYA-L13-P06` | Cắt đôi chuỗi ký tự | `Luyện tập` | Độ dài chuỗi chẵn $\le 1000$ | Cắt nửa đầu và nửa sau `s[:n//2]` và `s[n//2:]` |
+| 07 | `PYA-L13-P07` | Rút trích tên miền email | `Luyện tập` | Chuỗi email hợp lệ | Cắt chuỗi sau ký tự `@` |
+| 08 | `PYA-L13-P08` | Ký tự ở vị trí chẵn | `Luyện tập` | Độ dài chuỗi $\le 1000$ | Slicing bước nhảy `s[::2]` |
+| 09 | `PYA-L13-P09` | Hoán đổi nửa đầu nửa sau | `Luyện tập` | Độ dài chuỗi chẵn $\le 10^5$ | Nối chuỗi `s[n//2:] + s[:n//2]` |
+| 10 | `PYA-L13-P10` | Xóa ký tự ở vị trí K | `Luyện tập` | Độ dài chuỗi $\le 1000$ | Ghép `s[:k] + s[k+1:]` |
+| 11 | `PYA-L13-P11` | Dịch chuyển vòng quanh (left rotation) | `Vận dụng` | $N \le 10^5, K \le N$ | Dịch trái chuỗi $K$ vị trí `s[k:] + s[:k]` |
+| 12 | `PYA-L13-P12` | Chuỗi con đối xứng dài nhất | `Thử thách` | Độ dài chuỗi $\le 200$ | Duyệt mọi chuỗi con và tìm đối xứng cực đại |
+
+---
+
+### Bài 1 (Cơ bản): Ký tự đầu & ký tự cuối (`PYA-L13-P01`)
+
+* **Yêu cầu:** Nhập vào một chuỗi ký tự $S$ không chứa dấu cách. Hãy in ra ký tự đầu tiên và ký tự cuối cùng của chuỗi $S$, cách nhau bởi một dấu cách.
+* **Input:** Một chuỗi ký tự $S$ ($1 \le |S| \le 100$).
+* **Output:** Ký tự đầu và ký tự cuối.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `PYTHON` | `P N` |
+
+---
+
+### Bài 2 (Cơ bản): Độ dài của chuỗi (`PYA-L13-P02`)
+
+* **Yêu cầu:** Nhập một dòng văn bản $S$ từ bàn phím. Hãy đếm và in ra xem chuỗi $S$ có bao nhiêu ký tự (tính cả các ký tự khoảng trắng nếu có).
+* **Input:** Một chuỗi ký tự $S$.
+* **Output:** Một số nguyên là độ dài chuỗi.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `Tin hoc tre` | `11` |
+
+---
+
+### Bài 3 (Cơ bản): Cắt ba ký tự đầu tiên (`PYA-L13-P03`)
+
+* **Yêu cầu:** Nhập vào một chuỗi $S$ có ít nhất 3 ký tự. Hãy in ra 3 ký tự đầu tiên của chuỗi đó.
+* **Input:** Một chuỗi $S$ ($3 \le |S| \le 100$).
+* **Output:** 3 ký tự đầu tiên.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `VIETNAM` | `VIE` |
+* **Gợi ý:** Sử dụng `print(s[:3])`.
+
+---
+
+### Bài 4 (Cơ bản): Đảo ngược tên riêng (`PYA-L13-P04`)
+
+* **Bối cảnh:** Bé Bo muốn tạo ra một biệt danh bí mật bằng cách đọc ngược tên của mình.
+* **Yêu cầu:** Nhập một chuỗi ký tự $S$. Hãy in ra chuỗi đảo ngược của $S$.
+* **Input:** Một chuỗi ký tự $S$.
+* **Output:** Chuỗi $S$ sau khi đảo ngược.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `DORAEMON` | `NOMEAROD` |
+
+---
+
+### Bài 5 (Cơ bản): Kiểm tra từ đối xứng (palindrome) (`PYA-L13-P05`)
+*(Bài toán kinh điển Tin học trẻ Bảng A)*
+
+* **Bối cảnh:** Một từ được gọi là từ đối xứng nếu đọc xuôi hay đọc ngược đều hoàn toàn giống nhau (ví dụ: `radar`, `level`, `madam`, `noon`).
+* **Yêu cầu:** Cho một từ $S$. Kiểm tra xem $S$ có phải từ đối xứng không. In `YES` nếu đúng, ngược lại in `NO`.
+* **Input:** Một chuỗi $S$ viết liền ($1 \le |S| \le 1000$).
+* **Output:** `YES` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `RADAR` | `YES` |
+  | `ROBOT` | `NO` |
+
+---
+
+### Bài 6 (Luyện tập): Cắt đôi chuỗi ký tự (`PYA-L13-P06`)
+
+* **Yêu cầu:** Cho một chuỗi $S$ có độ dài chẵn. Hãy chia chuỗi $S$ thành 2 nửa bằng nhau và in mỗi nửa trên một dòng.
+* **Input:** Một chuỗi $S$ có độ dài chẵn ($2 \le |S| \le 1000$).
+* **Output:** Dòng 1 in nửa đầu, dòng 2 in nửa sau.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `PYTHON` | `PYT`<br>`HON` |
+
+---
+
+### Bài 7 (Luyện tập): Rút trích tên miền email (`PYA-L13-P07`)
+
+* **Bối cảnh:** Trong địa chỉ thư điện tử dạng `tentaikhoan@domain.com`, phần đứng sau ký tự `@` được gọi là tên miền (domain).
+* **Yêu cầu:** Cho một địa chỉ email hợp lệ. Hãy in ra phần tên miền của địa chỉ đó.
+* **Input:** Một chuỗi email chứa đúng 1 ký tự `@`.
+* **Output:** Phần tên miền đứng sau `@`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `hocsinh@ikhedu.vn` | `ikhedu.vn` |
+* **Gợi ý:** Dùng `vitri = s.find('@')` sau đó cắt `s[vitri + 1:]`.
+
+---
+
+### Bài 8 (Luyện tập): Ký tự ở vị trí chẵn (`PYA-L13-P08`)
+
+* **Yêu cầu:** Cho một chuỗi $S$. Hãy tạo ra một chuỗi mới chỉ gồm các ký tự nằm ở **chỉ số index chẵn** ($0, 2, 4, 6 \dots$) của chuỗi $S$.
+* **Input:** Một chuỗi ký tự $S$ ($1 \le |S| \le 1000$).
+* **Output:** Chuỗi mới thu được.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `ABCDEF` | `ACE` | Lấy các vị trí 0 ('A'), 2 ('C'), 4 ('E'). |
+
+---
+
+### Bài 9 (Luyện tập): Hoán đổi nửa đầu nửa sau (`PYA-L13-P09`)
+
+* **Yêu cầu:** Cho chuỗi ký tự $S$ có độ dài chẵn $2N$. Hãy hoán đổi vị trí của nửa đầu chuỗi và nửa sau chuỗi với nhau.
+* **Input:** Một chuỗi $S$ có độ dài chẵn ($2 \le |S| \le 10^5$).
+* **Output:** Chuỗi sau khi hoán đổi 2 nửa.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `ABCDEF` | `DEFABC` |
+
+---
+
+### Bài 10 (Luyện tập): Xóa ký tự ở vị trí K (`PYA-L13-P10`)
+
+* **Bối cảnh:** Chuỗi trong Python là bất biến (không thể dùng lệnh xóa trực tiếp `del s[k]`). Ta phải dùng kỹ thuật cắt lát ghép chuỗi.
+* **Yêu cầu:** Cho chuỗi $S$ và chỉ số nguyên $K$ ($0 \le K < |S|$). Hãy xóa ký tự tại vị trí $K$ và in ra chuỗi còn lại.
+* **Input:** Dòng 1 chứa chuỗi $S$. Dòng 2 chứa số nguyên $K$.
+* **Output:** Chuỗi sau khi xóa ký tự thứ $K$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `PYTHON`<br>`2` | `PYHON` | Xóa ký tự tại index 2 là chữ 'T'. |
+* **Gợi ý:** Sử dụng `s[:k] + s[k+1:]`.
+
+---
+
+### Bài 11 (Vận dụng): Dịch chuyển vòng quanh (left rotation) (`PYA-L13-P11`)
+
+* **Bối cảnh:** Phép dịch trái chuỗi $K$ vị trí là thao tác nhấc $K$ ký tự đầu tiên của chuỗi đem gắn ra phía sau cùng.
+  Ví dụ: Chuỗi `ABCDE` dịch trái 2 ký tự sẽ thành `CDEAB`.
+* **Yêu cầu:** Cho chuỗi $S$ và số nguyên $K$ ($1 \le K \le |S| \le 10^5$). Hãy in ra chuỗi $S$ sau khi dịch trái $K$ vị trí.
+* **Input:** Dòng 1 chứa chuỗi $S$. Dòng 2 chứa số $K$.
+* **Output:** Chuỗi sau khi dịch.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `ABCDE`<br>`2` | `CDEAB` |
+* **Gợi ý:** `s[k:] + s[:k]`.
+
+---
+
+### Bài 12 (Thử thách): Chuỗi con đối xứng dài nhất (`PYA-L13-P12`)
+*(Đề thi Học sinh giỏi Tin học Bảng A)*
+
+* **Bối cảnh:** Một chuỗi con là một đoạn các ký tự liên tiếp nhau của chuỗi ban đầu.
+* **Yêu cầu:** Cho một chuỗi ký tự $S$. Hãy tìm độ dài của chuỗi con liên tiếp đối xứng dài nhất nằm trong chuỗi $S$.
+* **Input:** Một chuỗi ký tự $S$ ($1 \le |S| \le 200$).
+* **Output:** Độ dài lớn nhất tìm được.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `ABCBADE` | `5` | Chuỗi con đối xứng dài nhất là `ABCBA` có độ dài 5. |

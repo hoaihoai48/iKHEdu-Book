@@ -1,0 +1,61 @@
+TOTAL PARAGRAPHS: 2617
+TOTAL TABLES: 133
+[0] PHẦN A: ĐỀ BÀI
+[1] Bài 1. Điền phép tính (THTA 2024 tỉnh Bắc Giang)
+[2] Cho số tự nhiên A và biểu thức sau: A ? A = B
+[3] Yêu cầu: Hãy sử dụng phép tính +, -, x điền vào ? để được B lớn nhất.
+[4] Input: Nhập vào một số tự nhiên A (0 ≤ A ≤ 100).
+[5] Output: Ghi ra số B lớn nhất tìm được.
+[6] Example:
+[7] Bài 2. Độ dài (THTA TP Bắc Ninh, tỉnh Bắc Ninh)
+[8] Biết 1cm = 10mm. Hỏi thước kẻ dài a cm và b mm thì là dài bao nhiêu mm?
+[9] Input:
+[10] Dòng đầu tiên chứa số tự nhiên a(1 ≤ a ≤ 1000).
+[11] Dòng thứ hai chứa số tự nhiên b(1 ≤ b ≤ 1000).
+[12] Output: Một số tự nhiên là kết quả của bài toán.
+[13] Ví dụ:
+[14] Bài 3. Chu vi tam giác (THTA 2025 tỉnh Hà Tĩnh)
+[15] Cho 3 số tự nhiên a, b,c lần lượt là độ dài 3 cạnh tam giác ABC.
+[16] Em hãy tính và đưa ra chu vi của tam giác ABC.
+[17] Dữ liệu:
+[18] Dòng thứ nhất ghi số tự nhiên a (0 < a ≤ 108)
+[19] Dòng thứ hai ghi số tự nhiên b (0 < b ≤ 108)
+[20] Dòng thứ ba ghi số tự nhiên c (0 < c ≤ 108)
+[21] Kết quả: Một dòng ghi ra kết quả của bài toán.
+[22] Ví dụ:
+[23] Bài 4. Du lịch (THTA 2024 Thị xã Thái Hòa - Nghệ An)
+[24] Có đoàn khách cần di chuyển lên chùa Hương Tích bằng cách đi thuyền, sau đó đi bộ 1 đoạn và cuối cùng là di chuyển bằng cáp treo. Vé thuyền có giá a nghìn đồng/ 1 người lớn và b nghìn đồng/ 1 trẻ em. Cáp treo có giá x nghìn đồng/ 1 người lớn và y nghìn đồng/1 trẻ em. Đoàn khách có n người, trong đó có m trẻ em.
+[25] Em hãy lập trình để xác định số tiền cần chuẩn bị đủ để mua vé thuyền và vé cáp treo cho cả đoàn.
+[26] Dữ liệu vào:
+[27] Các số tự nhiên a, b, x, y, n, m lần lượt mỗi số trên 1 dòng.
+[28]  			(0<a,b,x,y<100;0<m<n<100)
+[29] Kết quả ra:
+[30] Số tiền cần chuẩn bị (đơn vị nghìn đồng).
+[31] Ví dụ:
+[32] Bài 5. Vận tốc (THTA 2024 Huyện Từ Sơn - tỉnh Bắc Ninh)
+[33] Đất nước nơi Thuận và Ánh sống là một trục đường thẳng gồm thành phố, được đánh số lần lượt từ trái sang phải từ 0 tới, hai thành phố kề nhau cách nhau 1 km. Thiện đang đứng ở thành phố x, Ánh đang đứng ở thành phố y. Biết rằng Thuận đang di chuyển với tốc độ n km/h, hỏi sau bao lâu thì Thuận gặp Ánh?
+[34] Dữ liệu:
+[35] Dòng thứ nhất chứa số tự nhiên x (0 ≤ x ≤ 109)
+[36] Dòng thứ hai chứa số tự nhiên y (0 ≤ y ≤ 109)
+[37] Dòng thứ ba chứa số tự nhiên n (1 ≤ n ≤ 109)
+[38] Kết quả: Một số nguyên là thời gian tính theo số giờ để Thuận gặp Ánh.
+[39] Ví dụ:
+[40] Bài 6. Hình chữ nhật (THTA 2025 tỉnh Bắc Giang)
+[41] Một hình chữ nhật có độ dài một cạnh là 5 cm và có chu vi là P cm (P > 10 và P là số chẵn). Hãy in ra độ dài cạnh còn lại của hình chữ nhật.
+[42] Input: Gồm một số tự nhiên P (10 < P ≤ 1000 và P là số chẵn).
+[43] Output: Một số tự nhiên là kết quả của bài toán.
+[44] Example:
+[45] Bài 7. Trồng cây (THTA 2025 sơ khảo toàn quốc lần 1)
+[46] Trên đại lộ THT độ dài N mét, người ta cần trồng cây để làm đẹp cảnh quan. Tuy nhiên, khoảng cách giữa hai cây bắt buộc là K mét.
+[47] Yêu cầu: Bắt đầu trồng cây từ điểm bắt đầu của đại lộ, em hãy tính số lượng cây được trồng ở một bên đường của đại lộ THT.
+[48] Dữ liệu nhập vào từ bàn phím:
+[49] Gồm hai số tự nhiên N và K (1 ≤ N, K ≤ 1000). Mỗi số trên một dòng.
+[50] Kết quả ghi ra màn hình:
+[51] Một số duy nhất là kết quả của bài toán.
+[52] Ví dụ:
+[54] Bài 8. Chạy bộ (THTA 2025 tỉnh Bắc Giang)
+[55] Một sân tập chạy hình chữ nhật có độ dài 
+[56] hai cạnh lần lượt là 10 mét và 15 mét. An xuất 
+[57] phát từ một góc sân và chạy theo các cạnh của 
+[58] sân. An đã chạy được N mét, vậy An đã chạy 
+[59] được trọn vẹn mấy vòng sân.

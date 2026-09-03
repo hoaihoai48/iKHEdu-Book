@@ -33,15 +33,16 @@ IKH-XXXX - [Tên bài]/
 
 Giữ cấu trúc tối thiểu và không đưa lời giải thuật toán vào bản người học:
 
-1. Tiêu đề và mô tả bối cảnh.
-2. Nhiệm vụ cần giải.
-3. Input.
-4. Output.
-5. Giới hạn dữ liệu.
-6. Subtasks nếu có.
-7. Samples và giải thích sample.
-8. Góc kiến thức/ghi chú ứng dụng nếu được yêu cầu.
-9. Challenge question nếu phù hợp.
+1. `# Tiêu đề` (không đặt mã bài trong tiêu đề hoặc một heading riêng).
+2. `## Bối cảnh`.
+3. `## Nhiệm vụ`.
+4. `## Input`.
+5. `## Output`.
+6. `## Sample 1` với `### Input`, `### Output`, `### Giải thích`; thêm `## Sample 2` nếu có sample thứ hai.
+7. `## Ràng buộc` gồm giới hạn dữ liệu, thời gian và bộ nhớ.
+8. Subtasks, góc kiến thức hoặc challenge question chỉ thêm khi được yêu cầu.
+
+Không đưa `Mã bài toán`, gợi ý thuật toán, pseudocode hoặc solution vào `De_Bai.md`. Mã bài chỉ nằm ở package identity, tên thư mục hoặc metadata quản trị.
 
 Bối cảnh có thể thực tế nhưng không được làm mơ hồ mô hình toán học. Kiểm tra mọi ký hiệu, chỉ số, đơn vị, giới hạn và expected output với solution/reference.
 

@@ -1,0 +1,29 @@
+# Cắt Ba Ký Tự Đầu Tiên
+
+
+## Nhiệm vụ
+
+Nhập vào một chuỗi $S$ có ít nhất 3 ký tự. Hãy in ra 3 ký tự đầu tiên của chuỗi đó.
+## Input
+
+Một chuỗi $S$ ($3 \le |S| \le 100$).
+## Output
+
+3 ký tự đầu tiên.
+## Sample 1
+
+### Input
+```text
+VIETNAM
+```
+### Output
+```text
+VIE
+```
+
+
+## Ràng buộc
+
+
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$

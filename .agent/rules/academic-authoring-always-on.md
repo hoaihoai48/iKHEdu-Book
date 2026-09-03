@@ -28,8 +28,10 @@ $$\text{PROGRAM} \longrightarrow \text{MODULE / CHƯƠNG} \longrightarrow \text{
 * **`IKH-xxxx` là Global Unique Problem Code**: Thuộc về Problem Library toàn hệ thống. Trường `Problem.code` là duy nhất (`UNIQUE`), chứa trọn vẹn Statement, 20 Testcases, Solution C++ chuẩn và Editorial.
 * **`LessonActivity` là Quan hệ Sử dụng (Placement / Slot)**: Lesson chỉ tham chiếu tới `Problem.code`. Không tạo mã bài duplicate khi cùng một bài toán được tái sử dụng ở nhiều bài học khác nhau.
 
-## 3. Quy chuẩn code C++ (Boilerplate chuẩn thi đấu iKHEDU)
-Mọi đoạn code C++ mẫu, code tham chiếu, solution, editorial và testcase generator trong toàn bộ dự án **BẮT BUỘC** tuân thủ 100% cấu trúc chuẩn sau:
+## 3. Quy chuẩn code theo ngôn ngữ
+
+### 3.1. C++ (Boilerplate chuẩn thi đấu iKHEDU)
+Mọi đoạn code C++ mẫu, code tham chiếu, solution, editorial và testcase generator trong các khóa C++ **BẮT BUỘC** tuân thủ 100% cấu trúc chuẩn sau:
 1. Header duy nhất: `#include <bits/stdc++.h>` và `using namespace std;`.
 2. Fast I/O ở đầu hàm `main()`:
    ```cpp
@@ -38,6 +40,10 @@ Mọi đoạn code C++ mẫu, code tham chiếu, solution, editorial và testcas
    ```
 3. Đọc dữ liệu an toàn (Safe Input / Graceful Exit): Sử dụng mẫu `if (!(cin >> n >> ...)) return 0;` khi đọc các tham số đầu vào chính để chống crash khi EOF / input rỗng.
 4. **Tuyệt đối không dùng tiền tố `` và không nhắc header riêng lẻ:** Vì đã có `#include <bits/stdc++.h>` và `using namespace std;`, cấm viết `sort`, `vector`, `lower_bound`, `upper_bound`, `min`, `cin`... và cấm nhắc đến `<algorithm>`, `<vector>`, `<iostream>`. Luôn gọi trực tiếp: `sort`, `vector`, `lower_bound`, `min`, `cin`... để tinh gọn cú pháp tối đa cho học sinh.
+
+### 3.2. Python (Khóa Python Bảng A)
+Mọi problem package Python phải dùng `solution.py`: Python 3 chuẩn, không `import sys`/`sys.stdin`/`sys.stdout`, không `def main()` và không `if __name__ == "__main__":`. Đọc/ghi bằng `input()` và `print()` trực tiếp, không in dữ liệu thừa.
+Testcase Python không tạo mặc định; chỉ tạo `test/`, generator, oracle hoặc manifest khi task yêu cầu riêng hoặc QA gate cần.
 
 ## 4. Quy chuẩn kiến trúc dữ liệu & trình bày Markdown/KaTeX
 * **Kiến trúc dữ liệu tối giản:** Ưu tiên tuyệt đối các kiểu dữ liệu nguyên bản (`int`, `long long`, `double`, `char`, `string`, `vector<int>`). Khi cần sắp xếp nhiều trường số, **ƯU TIÊN DÙNG `vector<vector<long long>>` (vector lồng nhau / mảng 2 chiều)** để học sinh tận dụng cơ chế so sánh mặc định của `sort`.
@@ -54,8 +60,8 @@ $$\text{Hook / Vấn đề} \to \text{Mô phỏng tay} \to \text{Lý thuyết & 
 * **Định mức Tối thiểu (Minimum Baseline)**: $\ge 10$ câu Concept Quiz và $\ge 14$ bài tập thực hành là **ngưỡng tối thiểu**, không phải giới hạn trần cố định. Tùy thuộc vào phạm vi và độ sâu của đơn vị kiến thức lớn, số lượng Quiz và Bài tập được mở rộng linh hoạt để bao quát toàn bộ các biến thể bài toán.
 
 ## 7. Quy chuẩn Problem Package theo chuẩn cp-solve & Teacher Guide 9 Phần
-Mọi Problem Package (`IKH-xxxx` / `CPPB-xx-xx`) bắt buộc phải tuân thủ nghiêm ngặt quy trình workflow `cp-solve` và tạo đủ 4 thành phần:
-1. **`De_Bai.md`**: Statement hoàn chỉnh (Tiêu đề, Bối cảnh, Nhiệm vụ, Input, Output, Sample 1, Giải thích sample, Ràng buộc thời gian $1.0\text{s}$ và bộ nhớ $256\text{MB}$).
+Mọi Problem Package phải tuân thủ workflow `cp-solve` (tên đúng là `cp-solve`, không phải `cp-slove`) và tạo các thành phần phù hợp với ngôn ngữ:
+1. **`De_Bai.md`**: Statement student-facing theo đúng khuôn chung của khóa C++: `# Tiêu đề` → `## Bối cảnh` → `## Nhiệm vụ` → `## Input` → `## Output` → `## Sample 1` (`### Input`, `### Output`, `### Giải thích`) → `## Ràng buộc`. Không đưa dòng `Mã bài toán`, gợi ý thuật toán hoặc lời giải vào statement. Nếu chưa có sample được duyệt, ghi nhận thiếu sample trong QA thay vì tự bịa dữ liệu.
 2. **`Huong_Dan_Giang_Day.md` (Bắt buộc đủ 9 phần sư phạm chuyên sâu)**:
    * (1) Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
    * (2) Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
@@ -64,10 +70,10 @@ Mọi Problem Package (`IKH-xxxx` / `CPPB-xx-xx`) bắt buộc phải tuân th�
    * (5) Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
    * (6) Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
    * (7) Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-   * (8) Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu (Boilerplate sạch 0 `std::`)
+   * (8) Mã Nguồn Tham Chiếu theo ngôn ngữ (Python không `sys`, không `main`; C++ sạch 0 `std::`)
    * (9) Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-3. **`solution.cpp`**: Reference Solution chuẩn thi đấu (Fast I/O, Safe Input, biên dịch sạch `g++ -O3 -std=c++17` không lỗi, không cảnh báo).
-4. **`test/`**: Chứa `manifest.json` và trọn bộ **20 testcases** (`test01` $\to$ `test20` kèm file `.in` và `.out`) phân bổ theo ma trận 6 tầng (Sample, Min boundary, Small, Edge cases, Medium, Max scale stress test $N = 10^5$).
+3. **Solution theo ngôn ngữ**: C++ dùng `solution.cpp` theo mục 3.1; Python dùng `solution.py` theo mục 3.2.
+4. **Testcase tùy chọn**: Không mặc định tạo `test/`, generator, oracle hay 20 testcase cho Python. Chỉ tạo khi task ghi rõ hoặc QA/release gate yêu cầu; khi đã tạo thì phải tuân thủ chuẩn kiểm thử độc lập và manifest.
 
 Trước khi bàn giao, chạy `@../skills/ikhedu-authoring/references/qa-checklist.md`, cập nhật evidence ledger/decision log khi cần.
 
