@@ -1,4 +1,4 @@
-# Chuyên đề 07: Thuật toán tham lam (Greedy Algorithms)
+# Bài 07: Thuật toán tham lam (Greedy Algorithms)
 
 ## 1. Khái niệm & bản chất của lựa chọn tối ưu cục bộ
 

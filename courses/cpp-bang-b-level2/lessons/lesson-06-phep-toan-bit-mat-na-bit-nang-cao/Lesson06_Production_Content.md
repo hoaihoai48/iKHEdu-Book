@@ -1,4 +1,4 @@
-# Chuyên đề 06: Phép toán bit & mặt nạ bit nâng cao
+# Bài 06: Phép toán bit & mặt nạ bit nâng cao
 
 ## 1. Khái niệm & bản chất của tối ưu hóa cấp độ bit (Bit Manipulation)
 

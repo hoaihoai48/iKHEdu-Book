@@ -1,4 +1,4 @@
-# Chuyên đề 01: Số học cơ bản & chuyên sâu
+# Bài 01: Số học cơ bản & chuyên sâu
 
 ## 1. Khái niệm & bản chất của tối ưu số học trong lập trình thi đấu
 

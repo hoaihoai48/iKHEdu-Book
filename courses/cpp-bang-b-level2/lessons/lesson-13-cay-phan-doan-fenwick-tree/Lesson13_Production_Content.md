@@ -1,4 +1,4 @@
-# Chuyên đề 13: Cây phân đoạn & cây Fenwick (Segment Tree & Fenwick Tree)
+# Bài 13: Cây phân đoạn & cây Fenwick (Segment Tree & Fenwick Tree)
 
 ## 1. Khái niệm & bản chất của cấu trúc dữ liệu truy vấn đoạn (Range Query Data Structures)
 

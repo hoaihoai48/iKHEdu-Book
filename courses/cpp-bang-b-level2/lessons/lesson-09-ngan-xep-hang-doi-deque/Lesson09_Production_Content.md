@@ -1,4 +1,4 @@
-# Chuyên đề 09: Ngăn xếp, hàng đợi & Deque (Stack, Queue, Deque)
+# Bài 09: Ngăn xếp, hàng đợi & Deque (Stack, Queue, Deque)
 
 ## 1. Khái niệm & bản chất của cấu trúc dữ liệu tuyến tính đơn điệu
 

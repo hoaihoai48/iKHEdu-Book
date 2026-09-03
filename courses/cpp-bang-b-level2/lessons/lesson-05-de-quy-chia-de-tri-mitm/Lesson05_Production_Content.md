@@ -1,4 +1,4 @@
-# Chuyên đề 05: Đệ quy, chia để trị & kỹ thuật Meet in the Middle
+# Bài 05: Đệ quy, chia để trị & kỹ thuật Meet in the Middle
 
 ## 1. Khái niệm & bản chất của phân rã không gian tìm kiếm
 

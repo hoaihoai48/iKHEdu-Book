@@ -1,4 +1,4 @@
-# Chuyên đề 02: Modulo và lũy thừa nhanh
+# Bài 02: Modulo và lũy thừa nhanh
 
 ## 1. Khái niệm & bản chất của đại số đồng dư trong lập trình thi đấu
 

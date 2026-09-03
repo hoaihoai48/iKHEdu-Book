@@ -1,4 +1,4 @@
-# Chuyên đề 10: Thư viện STL C++ nâng cao (Advanced C++ STL)
+# Bài 10: Thư viện STL C++ nâng cao (Advanced C++ STL)
 
 ## 1. Khái niệm & bản chất của các cấu trúc dữ liệu STL nâng cao
 

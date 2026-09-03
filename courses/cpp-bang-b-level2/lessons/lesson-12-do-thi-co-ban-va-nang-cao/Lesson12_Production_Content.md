@@ -1,4 +1,4 @@
-# Chuyên đề 12: Lý thuyết đồ thị cơ bản & nâng cao (Graph Algorithms)
+# Bài 12: Lý thuyết đồ thị cơ bản & nâng cao (Graph Algorithms)
 
 ## 1. Khái niệm & biểu diễn đồ thị trong lập trình thi đấu
 

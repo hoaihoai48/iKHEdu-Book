@@ -1,4 +1,4 @@
-# Chuyên đề 04: Kỹ thuật mảng: Hai con trỏ, Cửa sổ trượt, Mảng tiền tố & Mảng hiệu
+# Bài 04: Kỹ thuật mảng: Hai con trỏ, Cửa sổ trượt, Mảng tiền tố & Mảng hiệu
 
 ## 1. Khái niệm & bản chất của tối ưu hóa tuyến tính trên mảng
 

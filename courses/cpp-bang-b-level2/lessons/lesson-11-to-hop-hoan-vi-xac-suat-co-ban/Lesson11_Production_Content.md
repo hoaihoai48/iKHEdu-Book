@@ -1,4 +1,4 @@
-# Chuyên đề 11: Tổ hợp, hoán vị & xác suất cơ bản (Combinatorics & Probability)
+# Bài 11: Tổ hợp, hoán vị & xác suất cơ bản (Combinatorics & Probability)
 
 ## 1. Khái niệm & bản chất của đại số tổ hợp trong lập trình thi đấu
 

@@ -1,4 +1,4 @@
-# Chuyên đề 08: Quy hoạch động cơ bản (Dynamic Programming)
+# Bài 08: Quy hoạch động cơ bản (Dynamic Programming)
 
 ## 1. Khái niệm & bản chất của phương pháp Quy hoạch động
 

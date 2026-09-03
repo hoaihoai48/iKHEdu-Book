@@ -1,4 +1,4 @@
-# Chuyên đề 03: Tìm kiếm nhị phân nâng cao
+# Bài 03: Tìm kiếm nhị phân nâng cao
 
 ## 1. Khái niệm & bản chất của tìm kiếm nhị phân trong không gian nghiệm
 

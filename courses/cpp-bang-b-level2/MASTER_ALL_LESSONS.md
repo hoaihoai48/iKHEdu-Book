@@ -1,9 +1,9 @@
-# iKHEDU C++ BẢNG B — TỔNG HỢP NỘI DUNG 15 CHUYÊN ĐỀ
+# iKHEDU C++ BẢNG B — TỔNG HỢP NỘI DUNG 15 BÀI HỌC
 
 > **File tổng hợp tự động** — Nối liền toàn bộ nội dung Production Content
-> của 15 Chuyên đề thuộc 6 Module trong khóa **C++ Bảng B Level 2**.
+> của 15 Bài học thuộc 6 Module trong khóa **C++ Bảng B Level 2**.
 
-> Tổng số Module: **6** | Tổng số Chuyên đề: **15** | Tổng số bài tập phân tầng (P0 → P5): **240 bài**
+> Tổng số Module: **6** | Tổng số Bài học: **15** | Tổng số bài tập phân tầng (P0 → P5): **240 bài**
 
 ---
 
@@ -11,41 +11,41 @@
 
 ### Module 01: Số Học & Đại Số Đồng Dư Nâng Cao
 
-- Chuyên đề 01: Số Học Cơ Bản & Chuyên Sâu
-- Chuyên đề 02: Modulo & Lũy Thừa Nhanh
+- Bài 01: Số Học Cơ Bản & Chuyên Sâu
+- Bài 02: Modulo & Lũy Thừa Nhanh
 
 ### Module 02: Kỹ Thuật Tìm Kiếm & Xử Lý Mảng Đa Chiều
 
-- Chuyên đề 03: Tìm Kiếm Nhị Phân Nâng Cao
-- Chuyên đề 04: Kỹ Thuật Mảng: Hai Con Trỏ, Cửa Sổ Trượt, Mảng Tiền Tố & Mảng Hiệu
+- Bài 03: Tìm Kiếm Nhị Phân Nâng Cao
+- Bài 04: Kỹ Thuật Mảng: Hai Con Trỏ, Cửa Sổ Trượt, Mảng Tiền Tố & Mảng Hiệu
 
 ### Module 03: Đệ Quy, Chia Để Trị, Meet In The Middle & Mặt Nạ Bit
 
-- Chuyên đề 05: Đệ Quy, Chia Để Trị & Kỹ Thuật Meet in the Middle
-- Chuyên đề 06: Phép Toán Bit & Mặt Nạ Bit Nâng Cao
+- Bài 05: Đệ Quy, Chia Để Trị & Kỹ Thuật Meet in the Middle
+- Bài 06: Phép Toán Bit & Mặt Nạ Bit Nâng Cao
 
 ### Module 04: Thuật Toán Tham Lam & Quy Hoạch Động Cơ Bản
 
-- Chuyên đề 07: Thuật Toán Tham Lam (Greedy)
-- Chuyên đề 08: Quy Hoạch Động Cơ Bản (Dynamic Programming)
+- Bài 07: Thuật Toán Tham Lam (Greedy)
+- Bài 08: Quy Hoạch Động Cơ Bản (Dynamic Programming)
 
 ### Module 05: Cấu Trúc Dữ Liệu Đơn Điệu, Stl C++ Nâng Cao & Đại Số Tổ Hợp
 
-- Chuyên đề 09: Ngăn Xếp, Hàng Đợi & Deque
-- Chuyên đề 10: Thư Viện STL C++ Nâng Cao
-- Chuyên đề 11: Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản
+- Bài 09: Ngăn Xếp, Hàng Đợi & Deque
+- Bài 10: Thư Viện STL C++ Nâng Cao
+- Bài 11: Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản
 
 ### Module 06: Đồ Thị, Cây Truy Vấn Đoạn, Digit Dp & Xử Lý Chuỗi
 
-- Chuyên đề 12: Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao
-- Chuyên đề 13: Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)
-- Chuyên đề 14: Quy Hoạch Động Chữ Số (Digit DP)
-- Chuyên đề 15: Xử Lý Chuỗi Ký Tự, String Hashing & Số Nguyên Lớn
+- Bài 12: Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao
+- Bài 13: Cây Phân Đoạn & Cây Fenwick (Segment Tree & BIT)
+- Bài 14: Quy Hoạch Động Chữ Số (Digit DP)
+- Bài 15: Xử Lý Chuỗi Ký Tự, String Hashing & Số Nguyên Lớn
 
 ---
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- BẮT ĐẦU NỘI DUNG CHI TIẾT 15 CHUYÊN ĐỀ                  -->
+<!-- BẮT ĐẦU NỘI DUNG CHI TIẾT 15 BÀI HỌC                  -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 ================================================================================
@@ -53,10 +53,10 @@
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 01: Số Học Cơ Bản & Chuyên Sâu | 430 dòng | 22,551 bytes -->
+<!-- Bài 01: Số Học Cơ Bản & Chuyên Sâu | 430 dòng | 22,551 bytes -->
 --------------------------------------------------------------------------------
 
-# Chuyên đề 01: Số học cơ bản & chuyên sâu
+# Bài 01: Số học cơ bản & chuyên sâu
 
 ## 1. Khái niệm & bản chất của tối ưu số học trong lập trình thi đấu
 
@@ -497,7 +497,7 @@ Một số nguyên dương $N$ là số chính phương khi và chỉ khi:
 | 21 | `CPPB2-L01-21` | Phương trình nghiệm nguyên Pell cơ bản | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L01-22` | Bội số nguyên tố trong tích giai thừa lớn | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 02: Modulo và lũy thừa nhanh
+# Bài 02: Modulo và lũy thừa nhanh
 
 ## 1. Khái niệm & bản chất của đại số đồng dư trong lập trình thi đấu
 
@@ -826,10 +826,10 @@ Giá trị của $A^0 \bmod M$ (với $M > 1$) luôn bằng bao nhiêu?
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 03: Tìm Kiếm Nhị Phân Nâng Cao | 248 dòng | 13,620 bytes -->
+<!-- Bài 03: Tìm Kiếm Nhị Phân Nâng Cao | 248 dòng | 13,620 bytes -->
 --------------------------------------------------------------------------------
 
-# Chuyên đề 03: Tìm kiếm nhị phân nâng cao
+# Bài 03: Tìm kiếm nhị phân nâng cao
 
 ## 1. Khái niệm & bản chất của tìm kiếm nhị phân trong không gian nghiệm
 
@@ -1086,7 +1086,7 @@ Tìm kiếm tam phân (Ternary Search) được áp dụng khi hàm số có tí
 | 21 | `CPPB2-L03-21` | Khoảng cách nhỏ nhất giữa K điểm bất kỳ | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L03-22` | Tìm phân số nhỏ nhất lớn hơn X bằng phân số Farey | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 04: Kỹ thuật mảng: Hai con trỏ, Cửa sổ trượt, Mảng tiền tố & Mảng hiệu
+# Bài 04: Kỹ thuật mảng: Hai con trỏ, Cửa sổ trượt, Mảng tiền tố & Mảng hiệu
 
 ## 1. Khái niệm & bản chất của tối ưu hóa tuyến tính trên mảng
 
@@ -1276,10 +1276,10 @@ Nén tọa độ giúp ích gì khi các phần tử $A_i \in [-10^9, 10^9]$ v�
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 05: Đệ Quy, Chia Để Trị & Kỹ Thuật Meet in the Middle | 163 dòng | 9,514 bytes -->
+<!-- Bài 05: Đệ Quy, Chia Để Trị & Kỹ Thuật Meet in the Middle | 163 dòng | 9,514 bytes -->
 --------------------------------------------------------------------------------
 
-# Chuyên đề 05: Đệ quy, chia để trị & kỹ thuật Meet in the Middle
+# Bài 05: Đệ quy, chia để trị & kỹ thuật Meet in the Middle
 
 ## 1. Khái niệm & bản chất của phân rã không gian tìm kiếm
 
@@ -1451,7 +1451,7 @@ Tại sao Merge Sort lại đếm được số cặp nghịch thế trong $\mat
 | 21 | `CPPB2-L05-21` | Cặp điểm gần nhất trên mặt phẳng 2D (Closest Pair of Points) | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L05-22` | Đếm bộ ba nghịch thế chia để trị 3 chiều (CDQ Divide & Conquer) | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 06: Phép toán bit & mặt nạ bit nâng cao
+# Bài 06: Phép toán bit & mặt nạ bit nâng cao
 
 ## 1. Khái niệm & bản chất của tối ưu hóa cấp độ bit (Bit Manipulation)
 
@@ -1605,10 +1605,10 @@ Thuật toán `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` có tổng
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 07: Thuật Toán Tham Lam (Greedy) | 130 dòng | 8,974 bytes -->
+<!-- Bài 07: Thuật Toán Tham Lam (Greedy) | 130 dòng | 8,974 bytes -->
 --------------------------------------------------------------------------------
 
-# Chuyên đề 07: Thuật toán tham lam (Greedy Algorithms)
+# Bài 07: Thuật toán tham lam (Greedy Algorithms)
 
 ## 1. Khái niệm & bản chất của lựa chọn tối ưu cục bộ
 
@@ -1747,7 +1747,7 @@ Hệ tiền xu gồm $\{1, 3, 4\}$ cần đổi số tiền $6$. Thuật toán t
 | 21 | `CPPB2-L07-21` | Xếp chồng hộp theo sức chịu tải và trọng lượng | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L07-22` | Nối dây K đầu nối giảm chi phí | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 08: Quy hoạch động cơ bản (Dynamic Programming)
+# Bài 08: Quy hoạch động cơ bản (Dynamic Programming)
 
 ## 1. Khái niệm & bản chất của phương pháp Quy hoạch động
 
@@ -1908,10 +1908,10 @@ Trong thuật toán LIS $\mathcal{O}(N \log N)$, mảng `tail` lưu trữ giá t
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 09: Ngăn Xếp, Hàng Đợi & Deque | 163 dòng | 9,397 bytes -->
+<!-- Bài 09: Ngăn Xếp, Hàng Đợi & Deque | 163 dòng | 9,397 bytes -->
 --------------------------------------------------------------------------------
 
-# Chuyên đề 09: Ngăn xếp, hàng đợi & Deque (Stack, Queue, Deque)
+# Bài 09: Ngăn xếp, hàng đợi & Deque (Stack, Queue, Deque)
 
 ## 1. Khái niệm & bản chất của cấu trúc dữ liệu tuyến tính đơn điệu
 
@@ -2083,7 +2083,7 @@ Tại sao vòng lặp `while (!st.empty() && ...)` lồng bên trong vòng lặp
 | 21 | `CPPB2-L09-21` | Đánh giá biểu thức số học có dấu ngoặc và ưu tiên toán tử | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L09-22` | Số lượng tòa nhà nhìn thấy được từ hai phía | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 10: Thư viện STL C++ nâng cao (Advanced C++ STL)
+# Bài 10: Thư viện STL C++ nâng cao (Advanced C++ STL)
 
 ## 1. Khái niệm & bản chất của các cấu trúc dữ liệu STL nâng cao
 
@@ -2252,7 +2252,7 @@ Khi tìm kiếm phần tử đầu tiên $\ge X$ trong `set<int> s`, cú pháp n
 | 21 | `CPPB2-L10-21` | Priority Queue với Custom Struct giải bài toán đồ thị nhiều chiều | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L10-22` | Cài đặt bộ nhớ đệm LRU Cache bằng List và Unordered Map | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 11: Tổ hợp, hoán vị & xác suất cơ bản (Combinatorics & Probability)
+# Bài 11: Tổ hợp, hoán vị & xác suất cơ bản (Combinatorics & Probability)
 
 ## 1. Khái niệm & bản chất của đại số tổ hợp trong lập trình thi đấu
 
@@ -2404,10 +2404,10 @@ Công thức truy hồi tính `invFact[i-1]` từ `invFact[i]` là:
 ================================================================================
 
 --------------------------------------------------------------------------------
-<!-- Chuyên đề 12: Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao | 152 dòng | 8,204 bytes -->
+<!-- Bài 12: Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao | 152 dòng | 8,204 bytes -->
 --------------------------------------------------------------------------------
 
-# Chuyên đề 12: Lý thuyết đồ thị cơ bản & nâng cao (Graph Algorithms)
+# Bài 12: Lý thuyết đồ thị cơ bản & nâng cao (Graph Algorithms)
 
 ## 1. Khái niệm & biểu diễn đồ thị trong lập trình thi đấu
 
@@ -2572,7 +2572,7 @@ Khi đồ thị chỉ có trọng số cạnh là 0 hoặc 1, ta dùng cấu tr�
 | 25 | `CPPB2-L12-25` | Tổ tiên chung gần nhất (LCA) bằng Binary Lifting | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 26 | `CPPB2-L12-26` | Đếm số đường đi trên đồ thị có hướng không chu trình (DAG) | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 13: Cây phân đoạn & cây Fenwick (Segment Tree & Fenwick Tree)
+# Bài 13: Cây phân đoạn & cây Fenwick (Segment Tree & Fenwick Tree)
 
 ## 1. Khái niệm & bản chất của cấu trúc dữ liệu truy vấn đoạn (Range Query Data Structures)
 
@@ -2737,7 +2737,7 @@ Biểu thức `idx += idx & (-idx)` trong Fenwick Tree làm nhiệm vụ gì?
 | 25 | `CPPB2-L13-25` | Segment Tree tìm đoạn con có tổng lớn nhất động | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 26 | `CPPB2-L13-26` | Offline Segment Tree đếm số giá trị phân biệt trên đoạn | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 14: Quy hoạch động chữ số (Digit DP)
+# Bài 14: Quy hoạch động chữ số (Digit DP)
 
 ## 1. Khái niệm & bản chất của Quy hoạch động chữ số
 
@@ -2872,11 +2872,11 @@ int main() {
 | 21 | `CPPB2-L14-21` | Digit DP đếm số có tổng chữ số là số nguyên tố | P4 (Nâng cao HSG) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 | 22 | `CPPB2-L14-22` | Digit DP đếm số có tích các chữ số bằng P | P5 (Olympic Master) | Thuật toán chuyên sâu | $N \le 10^5$ | Rèn luyện tư duy thi đấu |
 
-# Chuyên đề 15: Xử lý chuỗi ký tự, String Hashing & số nguyên lớn
+# Bài 15: Xử lý chuỗi ký tự, String Hashing & số nguyên lớn
 
-## 1. Khái niệm & cấu trúc 3 phần của Chuyên đề 15
+## 1. Khái niệm & cấu trúc 3 phần của Bài 15
 
-Chuyên đề 15 là bài học tổng hợp cuối cùng của khóa học Level 2, tích hợp 3 mảng kiến thức lớn:
+Bài 15 là bài học tổng hợp cuối cùng của khóa học Level 2, tích hợp 3 mảng kiến thức lớn:
 1. **15.1. Xử lý xâu cơ bản & Palindrome:** Các thao tác chuẩn trên `string`, đếm tần suất ký tự, kỹ thuật mở rộng tâm (Expand Around Center) tìm xâu con đối xứng dài nhất trong $\mathcal{O}(N^2)$.
 2. **15.2. Kỹ thuật Băm chuỗi đa thức (Rolling Hash / Polynomial Hashing):** Biến đổi một xâu ký tự thành một số nguyên duy nhất theo modulo, cho phép so sánh hai xâu con bất kỳ $S[L \dots R]$ trong thời gian **$\mathcal{O}(1)$** (thay vì $\mathcal{O}(N)$).
 3. **15.3. Xử lý số nguyên lớn (Big Integer):** Tự xây dựng cấu trúc số nguyên lớn để thực hiện các phép cộng, trừ, nhân hai số có hàng nghìn chữ số.

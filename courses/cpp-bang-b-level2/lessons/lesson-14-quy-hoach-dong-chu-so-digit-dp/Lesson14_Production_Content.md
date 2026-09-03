@@ -1,4 +1,4 @@
-# Chuyên đề 14: Quy hoạch động chữ số (Digit DP)
+# Bài 14: Quy hoạch động chữ số (Digit DP)
 
 ## 1. Khái niệm & bản chất của Quy hoạch động chữ số
 
