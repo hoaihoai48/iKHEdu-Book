@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Robot muốn làm quen với từng bạn nhỏ. Robot sẽ hỏi tên của bạn và in ra một câu chào thân thiện.
+Sáng nay ở lớp học vui vẻ, bạn Rô-bốt nhỏ muốn làm quen với từng bạn nhỏ trong lớp. Bạn ấy mỉm cười, chìa ra một tấm danh thiếp thông minh và hỏi tên của mỗi bạn. Nghe tên xong, Rô-bốt sẽ in ngay một câu chào thật thân thiện lên tấm thiếp. Em hãy giúp Rô-bốt viết câu chào đáng yêu đó nhé!
 ## Nhiệm vụ
 
 Nhập vào tên của bạn nhỏ (một từ hoặc cụm từ), sau đó in ra câu chào theo mẫu: `Xin chao ban [Ten]!`

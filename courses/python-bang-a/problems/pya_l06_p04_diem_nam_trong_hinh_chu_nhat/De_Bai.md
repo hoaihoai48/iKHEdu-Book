@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Trong mặt phẳng tọa độ, một hình chữ nhật có góc dưới-trái tại $(0, 0)$ và góc trên-phải tại $(W, H)$.
+Trong giờ vẽ, bé Mít vẽ một khu vườn hình chữ nhật trên giấy ô ly. Bạn đặt góc dưới-trái của vườn tại điểm $(0, 0)$ và góc trên-phải tại điểm $(W, H)$ trong mặt phẳng tọa độ. Mít còn chấm một chú bướm nhỏ đậu ở đâu đó và đố bạn xem bướm đậu trong vườn hay bay ra ngoài. Em hãy giúp Mít kiểm tra chú bướm có nằm trong vườn không nhé!
 ## Nhiệm vụ
 
 Nhập vào $W, H$ và tọa độ của một điểm $(x, y)$. Kiểm tra xem điểm $(x, y)$ có nằm bên trong hoặc trên mép biên của hình chữ nhật hay không? Nếu có in `TRONG`, ngược lại in `NGOAI`.

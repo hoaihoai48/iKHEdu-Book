@@ -1,128 +1,80 @@
 # Bài 02: Phép toán số học, chia nguyên và chia dư
 
----
+## 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
+Python cung cấp 7 phép toán số học. Trong đó, bộ đôi **Chia lấy phần nguyên (`//`)** và **Chia lấy phần dư (`%`)** là nền tảng cốt lõi của mọi bài thi Tin học trẻ:
 
-## 1. Khởi động: Chiếc máy tính bỏ túi siêu đẳng bên trong Python
-
-Ở Bài 1, chúng ta đã biết cách tạo ra các "chiếc hộp biến số" và dùng lệnh `print()` để in kết quả. Nhưng một bạn Robot lập trình thì không thể chỉ biết đứng yên chào hỏi, bạn ấy phải là một **nhà toán học thiên tài**!
-
-Trong cuộc sống hàng ngày, các em thường gặp rất nhiều bài toán thú vị:
-* Có 17 chiếc kẹo chia đều cho 5 bạn, mỗi bạn được mấy cái và còn thừa mấy cái?
-* Một đoàn vận động viên chạy vòng quanh sân vận động 400m, nếu chạy được 1500m thì đang dừng ở vị trí nào của vòng chạy?
-* Cứ 4 năm lại có một năm nhuận, làm sao máy tính biết được năm 2028 có phải năm nhuận không?
-
-Tất cả những bí mật này đều được giải quyết gọn gàng chỉ bằng **các phép toán số học trong Python**, đặc biệt là **bộ đôi quyền năng: Phép chia lấy nguyên (`//`) và Phép chia lấy dư (`%`)**!
-
----
-
-## 2. Bảng tổng hợp 7 phép toán số học thần kỳ trong Python
-
-Python cung cấp đầy đủ các phép tính từ quen thuộc đến các phép toán chuyên dụng cho lập trình thi đấu:
-
-| Ký hiệu trong Python | Tên phép toán | Phép toán trong Toán học | Ví dụ code Python | Kết quả | Ý nghĩa bản chất |
-|:---:|---|:---:|---|:---:|---|
-| `+` | **Cộng** | $a + b$ | `12 + 5` | `17` | Tính tổng hai số |
-| `-` | **Trừ** | $a - b$ | `12 - 5` | `7` | Tính hiệu hai số |
-| `*` | **Nhân** | $a \times b$ | `12 * 5` | `60` | Dùng dấu sao `*`, không dùng chữ `x` |
-| `/` | **Chia thực** | $a : b$ | `12 / 5` | `2.4` | **Luôn luôn trả về số thực (`float`)** |
-| `//` | **Chia lấy phần nguyên** | $\lfloor a / b \rfloor$ | `12 // 5` | `2` | Bỏ hết phần thập phân, chỉ giữ lại số nguyên |
-| `%` | **Chia lấy phần dư** | $a \bmod b$ | `12 % 5` | `2` | Lấy số dư còn lại sau khi chia nguyên |
-| `**` | **Lũy thừa (Mũ)** | $a^b$ | `2 ** 3` | `8` | $2^3 = 2 \times 2 \times 2 = 8$ |
-
----
-
-## 3. Khám phá chuyên sâu: Bộ đôi phép chia `//` và `%`
-
-Đây là **vũ khí quan trọng nhất** trong các kỳ thi Tin học trẻ Tiểu học! Hãy cùng giải mã từng phép toán:
-
-### 3.1. Phép chia lấy phần nguyên: `//` (double slash)
-* Khi em lấy một số chia cho một số khác, phần nguyên cho biết: **Ta có thể chia được trọn vẹn bao nhiêu phần bằng nhau?**
-* **Ví dụ:** Có 14 chiếc bánh pizza, xếp vào các hộp, mỗi hộp chứa được 4 chiếc bánh.
-  * Phép tính: `14 // 4` cho kết quả là `3`.
-  * Nghĩa là: Ta xếp được trọn vẹn **3 chiếc hộp đầy bánh**.
-
-```python
-so_banh = 14
-banh_moi_hop = 4
-so_hop_day = so_banh // banh_moi_hop
-print("Số hộp xếp được là:", so_hop_day) # In ra 3
+```
+Phép chia: A : B  (Ví dụ: 17 chia cho 5)
+17 = 5 x 3 + 2
+       │     │
+       │     └─► 17 % 5  = 2 (Số dư - Modulo)
+       └───────► 17 // 5 = 3 (Thương nguyên - Floor Division)
 ```
 
-### 3.2. Phép chia lấy phần dư: `%` (modulo / mod)
-* Phép chia dư `%` cho biết: **Sau khi đã chia đều hết mức có thể, còn dư lại (thừa ra) bao nhiêu phần tử chưa thể chia?**
-* Tiếp tục với ví dụ 14 chiếc bánh pizza ở trên:
-  * Đã xếp 3 hộp đầy (mất $3 \times 4 = 12$ chiếc bánh).
-  * Số bánh còn thừa lại là: $14 - 12 = 2$ chiếc bánh.
-  * Phép tính trong Python: `14 % 4` cho kết quả chính xác là `2`!
+### A. Phép chia thực (`/`)
+- Ký hiệu một dấu gạch chéo `/`.
+- **Đặc điểm sống còn:** Kết quả luôn luôn là số thực (`float`), kể cả khi chia hết. Ví dụ: `8 / 2` cho ra `4.0` chứ không phải `4`. Nếu đề bài yêu cầu in ra số nguyên, dùng `/` sẽ bị trừ điểm!
 
-```python
-banh_con_thua = so_banh % banh_moi_hop
-print("Số bánh còn thừa là:", banh_con_thua) # In ra 2
-```
+### B. Phép chia lấy phần nguyên (`//`)
+- Ký hiệu hai dấu gạch chéo liền nhau `//`.
+- **Ý nghĩa:** Trả lời câu hỏi *"Có thể chia được trọn vẹn bao nhiêu phần bằng nhau?"*.
+- Bỏ hoàn toàn phần thập phân, chỉ giữ lại số nguyên: `19 // 4 = 4` (vì $19 : 4 = 4.75$, lấy phần nguyên là $4$).
 
-> 🌟 **Công thức vàng của toán học Tiểu học được tái hiện trong Python:**
-> $$\text{Số bị chia } = \text{ Thương } \times \text{ Số chia } + \text{ Số dư}$$
-> $$\mathbf{A} = (\mathbf{A} // \mathbf{B}) \times \mathbf{B} + (\mathbf{A} \% \mathbf{B})$$
-> *Ví dụ kiểm tra lại:* $14 = (14 // 4) \times 4 + (14 \% 4) = 3 \times 4 + 2 = 12 + 2 = 14$ (Tuyệt đối chính xác!).
+### C. Phép chia lấy phần dư (`%`)
+- Ký hiệu dấu phần trăm `%`.
+- **Ý nghĩa:** Trả lời câu hỏi *"Sau khi chia đều hết mức có thể, còn thừa ra bao nhiêu?"*.
+- `19 % 4 = 3` (vì $4 	\times 4 = 16$, còn dư $19 - 16 = 3$).
 
----
+### D. Định lý chia có dư Toán Tiểu học trong Python
+$$\mathbf{A} = (\mathbf{A} // \mathbf{B}) 	\times \mathbf{B} + (\mathbf{A} \% \mathbf{B})$$
 
-## 4. Bốn ứng dụng kỳ diệu của phép chia dư `%` trong đề thi Tin học trẻ
+### E. Thứ tự ưu tiên tính toán (Quy tắc PEMDAS)
+$$	\text{Ngoặc } () \longrightarrow 	\text{Lũy thừa } ** \longrightarrow 	\text{Nhân, Chia } (*, /, //, \%) \longrightarrow 	\text{Cộng, Trừ } (+, -)$$
+*Lưu ý:* Các phép toán cùng cấp độ được thực hiện lần lượt từ **Trái sang Phải**.
 
-Tại sao các đề thi Tin học trẻ Bảng A lại xuất hiện phép `%` nhiều đến thế? Bởi vì nó giải quyết được 4 bài toán kinh điển:
+## 2. Sổ tay 6 kỹ thuật ứng dụng thực chiến của `//` và `%`
 
-### Ứng dụng 1: Kiểm tra tính chẵn lẻ
-* Một số là **số chẵn** nếu số đó chia hết cho 2 (số dư bằng 0) $\implies$ `n % 2 == 0`.
-* Một số là **số lẻ** nếu số đó chia cho 2 dư 1 $\implies$ `n % 2 == 1`.
+### Kỹ thuật 1: Kiểm tra tính chẵn lẻ
+- Số chẵn là số chia hết cho 2 (dư 0): `n % 2 == 0`.
+- Số lẻ là số chia cho 2 dư 1: `n % 2 == 1` (hoặc `n % 2 != 0`).
 
-### Ứng dụng 2: Kiểm tra tính chia hết
-* Đề bài hỏi: *"Số $A$ có phải là bội số của số $B$ hay không?"*
-* Câu trả lời: Nếu `A % B == 0` thì $A$ chia hết cho $B$.
+### Kỹ thuật 2: Kiểm tra tính chia hết
+- Số $A$ là bội số của $B$ (hay $A$ chia hết cho $B$): `A % B == 0`.
 
-### Ứng dụng 3: Bài toán chu kỳ vòng tròn (chạy bộ, đồng hồ, đèn tín hiệu)
-* Đồng hồ có 12 giờ. Nếu bây giờ là 10 giờ, thì 5 giờ nữa là mấy giờ?
-  * Học sinh ngây thơ tính: $10 + 5 = 15$ giờ (đồng hồ kim không có số 15!).
-  * Lập trình viên Python tính: `(10 + 5) % 12 = 15 % 12 = 3` giờ chiều!
-* Bài toán sân chạy vòng tròn: Một sân chạy dài 400m, bạn An chạy quãng đường $N$ mét. Sau khi chạy xong nhiều vòng, An đang cách điểm xuất phát bao xa?
-  * Đáp án siêu tốc: `vi_tri = N % 400`.
+### Kỹ thuật 3: Bóc tách chữ số hàng đơn vị và hàng chục
+- Lấy chữ số hàng đơn vị (chữ số cuối cùng): `don_vi = n % 10`.
+- Gọt bỏ chữ số hàng đơn vị: `tam = n // 10`.
+- Lấy chữ số hàng chục của số $N$: `chuc = (n // 10) % 10`.
 
-### Ứng dụng 4: Kỹ thuật tách chữ số hàng đơn vị
-* Muốn lấy chữ số cuối cùng của số $2026$, ta làm thế nào?
-  * Chỉ cần lấy số đó chia dư cho 10: `2026 % 10` cho kết quả ngay lập tức là `6`!
-  * Muốn bỏ chữ số cuối cùng đi, chỉ giữ lại phần đằng trước: `2026 // 10` cho kết quả là `202`!
-  *(Đây là chìa khóa vàng cho toàn bộ Chương 4 sau này!)*
+### Kỹ thuật 4: Kỹ thuật làm tròn lên (Ceiling Division)
+- *Bài toán:* Có $N$ học sinh, cần thuê xe chở học sinh, mỗi xe chở được $K$ bạn. Cần ít nhất bao nhiêu xe để không bạn nào bị bỏ lại?
+- Nếu dùng `N // K`, với $N = 25, K = 10$ sẽ ra $2$ (thiếu 1 xe chở 5 bạn còn lại!).
+- **Công thức làm tròn lên chuẩn thi đấu:**
+  $$\mathbf{so\_xe = (N + K - 1) // K}$$
+  *Kiểm tra:* $(25 + 10 - 1) // 10 = 34 // 10 = 3$ xe (Tuyệt đối chính xác!).
 
----
+### Kỹ thuật 5: Bài toán chu kỳ vòng tròn (Đồng hồ, Vòng chạy)
+- Một vòng có $M$ trạng thái (từ 0 đến $M-1$). Di chuyển thêm $K$ bước:
+  $$\mathbf{vi\_tri\_moi = (vi\_tri\_cu + K) \% M}$$
+- Đồng hồ 12 giờ: Sau $K$ giờ nữa kim chỉ số mấy?
+  `gio_moi = (gio_hien_tai + K) % 12`. Nếu `gio_moi == 0` thì kết quả là `12`.
+  *Hoặc mẹo 1 dòng:* `(gio_hien_tai + K - 1) % 12 + 1`.
 
-## 5. Thứ tự ưu tiên của các phép toán (quy tắc pemdas)
+### Kỹ thuật 6: Đổi số thứ tự $K$ sang tọa độ (Hàng, Cột) trên bàn cờ
+- Một bảng ô vuông có chiều rộng mỗi hàng là $W$ ô. Ô thứ $K$ ($K$ tính từ 1):
+  - `idx = K - 1` (Chuyển về mốc 0)
+  - `hang = (idx // W) + 1`
+  - `cot = (idx % W) + 1`
 
-Cũng giống như môn Toán ở trường Tiểu học, máy tính tuân thủ quy tắc ưu tiên nghiêm ngặt từ trái sang phải:
-
-$$\text{Ngoặc tròn } () \longrightarrow \text{Lũy thừa } ** \longrightarrow \text{Nhân, Chia } (*, /, //, \%) \longrightarrow \text{Cộng, Trừ } (+, -)$$
-
-**Ví dụ phân tích từng bước:**
-```python
-ket_qua = 2 + 3 * 4 ** 2
-```
-* **Bước 1 (Ưu tiên cao nhất):** Tính lũy thừa $4 ** 2 = 16$.
-* **Bước 2:** Tính phép nhân $3 * 16 = 48$.
-* **Bước 3:** Tính phép cộng $2 + 48 = 50$.
-* Kết quả in ra là `50`. Nếu muốn máy tính cộng trước, em bắt buộc phải dùng ngoặc tròn: `(2 + 3) * 4 ** 2 = 5 * 16 = 80`.
-
----
-
-## 6. Phân tích bẫy lỗi kinh điển bài 2
-
-| Lỗi phổ biến | Hiện tượng | Nguyên nhân | Cách khắc phục |
+## 3. Bảng bẫy lỗi phòng thi thường gặp
+| Code sai | Báo lỗi / Hiện tượng | Nguyên nhân | Cách sửa đúng |
 |---|---|---|---|
-| `ZeroDivisionError: division by zero` | Chương trình dừng đột ngột (Crash) | Chia cho số 0 (Ví dụ: `10 / 0` hoặc `10 % 0`) | Không bao giờ được để mẫu số chia bằng 0! |
-| Dùng nhầm `/` thay vì `//` | Kết quả ra `3.0` thay vì `3` | Phép `/` luôn tạo ra số thực (`float`), khi in ra sẽ dính đuôi `.0` không đúng yêu cầu số nguyên | Dùng phép `//` để nhận kết quả số nguyên chuẩn |
-| Nhầm dấu nhân `x` | `SyntaxError: invalid syntax` | Trong Python, phép nhân bắt buộc phải là dấu sao `*`, không dùng chữ cái `x` hay `X` | Đổi `a x b` thành `a * b` |
-| Quên ngoặc khi tính trung bình cộng | `a + b / 2` tính sai | Máy tính sẽ chia `b / 2` trước rồi mới cộng `a` | Phải viết có ngoặc: `(a + b) / 2` |
+| `a / b` | In ra `3.0` thay vì `3` | Dùng chia thực `/` | Dùng chia nguyên `a // b` |
+| `a % 0` hoặc `a // 0` | `ZeroDivisionError` | Mẫu số chia bằng 0 | Đảm bảo mẫu số $> 0$ |
+| `a ^ b` | Kết quả sai hoàn toàn | `^` là phép XOR bit, không phải mũ | Viết `a ** b` |
+| `a x b` | `SyntaxError` | Dùng chữ `x` làm dấu nhân | Viết `a * b` |
 
----
-
-## 7. Concept quiz: 15 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 4. Concept quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
 #### Câu 1 (nhận diện phép toán):
 Trong Python, ký hiệu nào sau đây dùng để thực hiện phép chia lấy phần nguyên?
@@ -243,3 +195,27 @@ Một trận bóng đá bắt đầu lúc $H$ giờ và kéo dài đúng 15 gi�
 - **C.** Máy tính bị đơ và treo máy.
 - **D.** Trả về kết quả `Infinity`.
 > *Giải thích:* Đây là đặc sản của Python! Python tự động hỗ trợ tính toán số nguyên lớn vô hạn (Arbitrary-precision arithmetic), không bao giờ lo bị tràn số như kiểu `int` trong các ngôn ngữ khác.
+
+#### Câu 16 (thứ tự ưu tiên PEMDAS):
+Giá trị của biểu thức `2 + 3 * 4 ** 2` trong Python là bao nhiêu?
+- **A.** `80`
+- **B.** `56`
+- **C.** **[Đáp án đúng]** `50`
+- **D.** `36`
+> *Giải thích:* Thứ tự PEMDAS: lũy thừa trước $4 ** 2 = 16$, rồi nhân $3 * 16 = 48$, cuối cùng cộng $2 + 48 = 50$. Muốn cộng trước phải thêm ngoặc: $(2 + 3) * 16 = 80$.
+
+#### Câu 17 (phân biệt `//` và `/`):
+Kết quả của hai biểu thức `7 / 2` và `7 // 2` trong Python lần lượt là:
+- **A.** `3` và `3`
+- **B.** `3.5` và `3.5`
+- **C.** **[Đáp án đúng]** `3.5` và `3`
+- **D.** `3` và `3.5`
+> *Giải thích:* Phép `/` luôn trả về số thực $7 / 2 = 3.5$, còn phép `//` chỉ giữ phần nguyên $7 // 2 = 3$.
+
+#### Câu 18 (lũy thừa `**`):
+Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
+- **A.** `64`
+- **B.** `36`
+- **C.** **[Đáp án đúng]** `512`
+- **D.** `12`
+> *Giải thích:* Toán tử `**` có tính kết hợp từ phải sang trái nên $2 ** 3 ** 2 = 2 ** (3 ** 2) = 2 ** 9 = 512$. Đây là bẫy kinh điển khi viết lũy thừa chồng!

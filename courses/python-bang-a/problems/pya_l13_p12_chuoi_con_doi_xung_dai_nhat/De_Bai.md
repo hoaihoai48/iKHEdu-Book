@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Một chuỗi con là một đoạn các ký tự liên tiếp nhau của chuỗi ban đầu.
+Bạn Mít có một vòng hạt với nhiều chữ cái xinh xắn xâu liền nhau. Cô giáo nói một chuỗi con là một đoạn các ký tự liên tiếp nhau của chuỗi ban đầu. Mít muốn tìm đoạn hạt đọc xuôi ngược giống nhau mà dài nhất để làm mặt dây chuyền. Em hãy giúp bạn Mít tìm đoạn hạt đặc biệt đó nhé.
 ## Nhiệm vụ
 
 Cho một chuỗi ký tự $S$. Hãy tìm độ dài của chuỗi con liên tiếp đối xứng dài nhất nằm trong chuỗi $S$.

@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bé Na có một mã số may mắn là một số tự nhiên $N$. Na muốn tìm ra chữ số hàng đơn vị và chữ số hàng chục của số này.
+Bé Na có một mã số may mắn là một số tự nhiên $N$ viết trên chiếc vòng tay. Hôm nay Na chơi trò thám tử cùng bạn thân, muốn tìm ra chữ số hàng đơn vị và chữ số hàng chục của số này để mở chiếc hộp bí mật. Hai bạn xoay chiếc vòng mãi mà chưa tách được. Em hãy giúp bé Na tách hai chữ số đó ra nhé!
 ## Nhiệm vụ
 
 Cho số tự nhiên $N$, hãy tách và in ra chữ số hàng đơn vị và chữ số hàng chục của $N$.

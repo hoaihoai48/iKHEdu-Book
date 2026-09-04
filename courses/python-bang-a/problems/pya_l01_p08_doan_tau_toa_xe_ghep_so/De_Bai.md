@@ -3,9 +3,10 @@
 
 ## Bối cảnh
 
-Ga xe lửa có 2 toa xe mang 2 con số $a$ và $b$. Bác trưởng ga muốn nhìn thấy cả hai kết quả:
+Sáng sớm ở ga xe lửa, có 2 toa xe chở 2 con số $a$ và $b$ vừa chạy vào sân ga. Bác trưởng ga vui tính muốn nhìn thấy cả hai kết quả:
   1. Nếu ghép 2 toa tàu lại thành một dãy số (Ghép chữ).
   2. Nếu cộng giá trị của 2 toa tàu lại với nhau (Cộng số học).
+Bác loay hoay mãi với cuốn sổ ghi chép. Em hãy giúp bác trưởng ga làm cả hai việc này nhé!
 ## Nhiệm vụ
 
 Nhập vào 2 số tự nhiên $a$ và $b$. Dòng 1 in ra kết quả khi ghép chuỗi chữ. Dòng 2 in ra kết quả khi cộng số.

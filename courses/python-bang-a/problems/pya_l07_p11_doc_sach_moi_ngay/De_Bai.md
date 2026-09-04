@@ -5,11 +5,11 @@
 
 ## Bối cảnh
 
-Bạn Hoa quyết tâm rèn luyện thói quen đọc sách trong dịp hè. Cuốn sách có tổng cộng $N$ trang.
-  * Ngày thứ nhất Hoa đọc được 1 trang.
+Nghỉ hè, bạn Hoa mượn ở thư viện một cuốn truyện thật dày có tổng cộng $N$ trang để rèn thói quen đọc sách mỗi ngày. Ngày thứ nhất Hoa đọc được 1 trang thật ngon lành.
   * Ngày thứ hai Hoa đọc được 2 trang.
   * Ngày thứ ba Hoa đọc được 3 trang.
   * Cứ như vậy, ngày thứ $k$ Hoa đọc được $k$ trang.
+Hoa háo hức muốn biết mình đọc hết truyện sau mấy ngày. Em hãy giúp Hoa đếm số ngày nhé!
 ## Nhiệm vụ
 
 Hỏi sau đúng bao nhiêu ngày thì Hoa sẽ đọc hết (hoặc vượt quá) $N$ trang của cuốn sách?

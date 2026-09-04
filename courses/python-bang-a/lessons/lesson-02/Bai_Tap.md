@@ -2,7 +2,7 @@
 
 ---
 
-## Bảng ma trận bài tập (12 bài tập phân tầng cơ bản → vận dụng)
+## Bảng ma trận bài tập (16 bài tập phân tầng cơ bản → vận dụng)
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
@@ -18,6 +18,10 @@
 | 10 | `PYA-L02-P10` | Đảo ngược số 2 chữ số | `Luyện tập` | $10 \le N \le 99$ | Hoán vị vị trí chữ số bằng `//` và `%` |
 | 11 | `PYA-L02-P11` | Xe buýt chở học sinh | `Luyện tập` | $1 \le N, K \le 10^6$ | Kỹ thuật làm tròn lên: `(N + K - 1) // K` |
 | 12 | `PYA-L02-P12` | Bàn cờ ca-rô vô tận | `Vận dụng` | $1 \le K, W \le 10^6$ | Xác định tọa độ hàng cột $(row, col)$ từ số thứ tự |
+| 13 | `PYA-L02-P13` | Lũy thừa cầu thang | `Luyện tập` | $1 \le a \le 10, 0 \le n \le 10$ | Lũy thừa tổng quát `a ** n` |
+| 14 | `PYA-L02-P14` | Đổi phút ra giờ phút | `Luyện tập` | $0 \le T \le 10000$ | Đổi đơn vị thời gian bằng `// 60` và `% 60` |
+| 15 | `PYA-L02-P15` | Giá trị biểu thức PEMDAS | `Vận dụng` | $1 \le a, b, c \le 100$ | Thứ tự ưu tiên mũ nhân cộng `a + b * c ** 2` |
+| 16 | `PYA-L02-P16` | Đu quay vòng tròn | `Vận dụng` | $1 \le N, C \le 10^9$ | Chu kỳ vòng tròn tổng quát `N // C`, `N % C` |
 
 ---
 
@@ -223,3 +227,59 @@
   * Hàng (tính từ 1): `hang = (idx // W) + 1`
   * Cột (tính từ 1): `cot = (idx % W) + 1`
   * In: `print(hang, cot)`.
+
+---
+
+### Bài 13 (Luyện tập): Lũy thừa cầu thang (`PYA-L02-P13`)
+
+* **Bối cảnh:** Bạn Thỏ Nâu xếp các khối gỗ thành cầu thang toán học, mỗi tầng gấp $a$ lần tầng trước, cả cầu thang có $n$ tầng.
+* **Yêu cầu:** Tính số khối gỗ ở tầng cao nhất, tức giá trị $a^n$.
+* **Đầu vào (Input):** Hai dòng lần lượt là cơ số $a$ và số mũ $n$ ($1 \le a \le 10, 0 \le n \le 10$).
+* **Đầu ra (Output):** Một số nguyên duy nhất là $a^n$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3`<br>`4` | `81` | $3^4 = 3 \times 3 \times 3 \times 3 = 81$. |
+* **Gợi ý thuật toán:** `print(a ** n)`. Nhớ `**` mới là lũy thừa, `^` là phép XOR bit!
+
+---
+
+### Bài 14 (Luyện tập): Đổi phút ra giờ phút (`PYA-L02-P14`)
+
+* **Bối cảnh:** Bạn Mèo Cam bấm giờ chạy bộ được tổng cộng $T$ phút và muốn khoe thành tích theo dạng mấy giờ mấy phút.
+* **Yêu cầu:** Đổi tổng số phút $T$ thành số giờ trọn vẹn và số phút lẻ.
+* **Đầu vào (Input):** Một số nguyên $T$ ($0 \le T \le 10000$).
+* **Đầu ra (Output):** Hai số nguyên trên một dòng cách nhau dấu cách: giờ và phút dư.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `135` | `2 15` | $135 = 2 \times 60 + 15$. Được 2 giờ và dư 15 phút. |
+* **Gợi ý thuật toán:** `print(T // 60, T % 60)`.
+
+---
+
+### Bài 15 (Vận dụng): Giá trị biểu thức PEMDAS (`PYA-L02-P15`)
+
+* **Bối cảnh:** Cô giáo viết biểu thức bí mật $a + b \times c^2$ lên bảng, bạn nào tính đúng thứ tự ưu tiên sẽ thắng cuộc thi tính nhẩm.
+* **Yêu cầu:** Cho ba số $a, b, c$, hãy tính giá trị biểu thức $a + b \times c^2$ (lũy thừa trước, nhân trước, cộng sau).
+* **Đầu vào (Input):** Ba dòng lần lượt là $a, b, c$ ($1 \le a, b, c \le 100$).
+* **Đầu ra (Output):** Một số nguyên duy nhất là giá trị biểu thức.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `2`<br>`3`<br>`4` | `50` | $4^2 = 16$, $3 \times 16 = 48$, $2 + 48 = 50$. |
+* **Gợi ý thuật toán:** `print(a + b * c ** 2)`. Không được thêm ngoặc sai thành `(a + b) * c ** 2`!
+
+---
+
+### Bài 16 (Vận dụng): Đu quay vòng tròn (`PYA-L02-P16`)
+
+* **Bối cảnh:** Chiếc đu quay mỗi vòng mất đúng $C$ phút, bạn Sóc Nâu ngồi liên tục $N$ phút để ngắm thành phố.
+* **Yêu cầu:** Tính số vòng quay trọn vẹn và số phút dở dang của vòng hiện tại.
+* **Đầu vào (Input):** Hai dòng lần lượt là $N$ và $C$ ($1 \le N, C \le 10^9$).
+* **Đầu ra (Output):** Hai số nguyên trên một dòng cách nhau dấu cách: số vòng trọn và số phút dư.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `250`<br>`60` | `4 10` | $250 = 4 \times 60 + 10$. Đi được 4 vòng và dư 10 phút. |
+* **Gợi ý thuật toán:** `print(N // C, N % C)`. Kiểm tra lại bằng $N = \text{vòng} \times C + \text{dư}$.

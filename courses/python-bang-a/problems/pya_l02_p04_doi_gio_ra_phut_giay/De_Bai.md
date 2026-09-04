@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Đồng hồ điện tử hiển thị thời gian gồm $H$ giờ, $M$ phút và $S$ giây.
+Bạn Tít được tặng một chiếc đồng hồ điện tử xinh xắn hiển thị thời gian gồm $H$ giờ, $M$ phút và $S$ giây. Tít khoe với bạn thân và đố bạn đoán xem cả khoảng thời gian đó là bao nhiêu giây. Hai bạn đếm xuôi đếm ngược mãi chưa ra. Em hãy giúp hai bạn đổi thời gian ra giây nhé!
 ## Nhiệm vụ
 
 Em hãy tính xem tổng cộng khoảng thời gian đó tương đương với bao nhiêu giây?

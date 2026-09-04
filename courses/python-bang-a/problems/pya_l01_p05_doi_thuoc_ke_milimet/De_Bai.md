@@ -5,8 +5,9 @@
 
 ## Bối cảnh
 
-Bạn An có một chiếc thước kẻ dài $a\text{ cm}$ và thêm một đoạn nhỏ dài $b\text{ mm}$.
+Giờ thủ công, bạn An khoe với cả lớp một chiếc thước kẻ dài $a\text{ cm}$ và thêm một đoạn nhỏ dài $b\text{ mm}$ gắn ở đầu thước. Cả lớp tò mò muốn biết chiếc thước dài tất cả bao nhiêu milimet để cắt giấy cho vừa.
 * **Biết rằng:** $1\text{ cm} = 10\text{ mm}$.
+Em hãy giúp bạn An đổi độ dài chiếc thước ra milimet nhé!
 ## Nhiệm vụ
 
 Đổi toàn bộ chiều dài chiếc thước (gồm $a\text{ cm}$ và $b\text{ mm}$) ra đơn vị milimet ($\text{mm}$).

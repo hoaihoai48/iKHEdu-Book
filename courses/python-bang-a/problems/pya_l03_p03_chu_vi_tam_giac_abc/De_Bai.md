@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Trong giờ học hình học, thầy giáo cho 3 số tự nhiên $a, b, c$ lần lượt là độ dài 3 cạnh của một tam giác $ABC$.
+Trong giờ học hình học vui nhộn, thầy giáo vẽ một hình tam giác $ABC$ lên bảng và đố cả lớp. Thầy cho 3 số tự nhiên $a, b, c$ lần lượt là độ dài 3 cạnh của tam giác $ABC$. Các bạn thi nhau giơ tay xung phong tính chu vi. Em hãy giúp cả lớp tính chu vi của tam giác $ABC$ nhé!
 ## Nhiệm vụ
 
 Em hãy lập trình tính và đưa ra chu vi của tam giác $ABC$.

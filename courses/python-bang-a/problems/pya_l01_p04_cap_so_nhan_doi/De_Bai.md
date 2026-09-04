@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Trong trò chơi ảo thuật, nhà ảo thuật đặt một số nguyên $A$ vào chiếc hộp ma thuật. Khi mở hộp ra, số lượng viên ngọc sẽ được nhân lên gấp đôi.
+Trong buổi biểu diễn ảo thuật ở sân trường, chú ảo thuật đặt một số nguyên $A$ vào chiếc hộp ma thuật. Các bạn nhỏ hồi hộp nín thở chờ xem điều kỳ diệu xảy ra. Khi mở hộp ra, số lượng viên ngọc sẽ được nhân lên gấp đôi. Em hãy giúp chú ảo thuật đếm xem trong hộp có bao nhiêu viên ngọc nhé!
 ## Nhiệm vụ
 
 Nhập vào số nguyên $A$. Hãy in ra số lượng viên ngọc sau khi được nhân đôi.

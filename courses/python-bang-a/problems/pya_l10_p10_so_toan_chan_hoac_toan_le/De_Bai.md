@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Số "Toàn chẵn" là số mà mọi chữ số của nó đều là số chẵn. Số "Toàn lẻ" là số mà mọi chữ số của nó đều là số lẻ.
+Lớp của bé Bi chia thành hai đội chơi xếp số rất vui. Đội Chẵn chỉ thích những số "Toàn chẵn", tức là số mà mọi chữ số của nó đều là số chẵn. Đội Lẻ lại mê những số "Toàn lẻ", tức là số mà mọi chữ số của nó đều là số lẻ. Trọng tài Tí nhờ em giúp phân xử thật nhanh mỗi con số, em hãy giúp bạn ấy nhé!
 ## Nhiệm vụ
 
 Nhập số nguyên dương $N$. In ra `TOAN CHAN` nếu $N$ là số toàn chẵn, in `TOAN LE` nếu $N$ toàn lẻ, ngược lại in `BINH THUONG`.

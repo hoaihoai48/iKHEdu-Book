@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Ngày mùng 1 tháng Giêng là ngày **Thứ Hai**.
+Đầu năm mới, bé Bin treo một tờ lịch thật đẹp trong phòng học. Mẹ đố Bin rằng ngày mùng 1 tháng Giêng năm nay là ngày **Thứ Hai**. Bin rất thích lật từng tờ lịch và đếm xem các ngày tiếp theo rơi vào thứ mấy. Em hãy giúp bé Bin trả lời thật nhanh ngày thứ $K$ là thứ mấy nhé!
 ## Nhiệm vụ
 
 Cho biết ngày thứ $K$ trong năm đó là thứ mấy?

@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Trên một đại lộ thẳng tắp có chiều dài $N$ mét, người ta cần trồng các cây xanh thẳng hàng ở một bên đường để tạo bóng mát. Bắt đầu trồng một cây ngay tại điểm xuất phát (mét thứ 0), và cứ sau mỗi khoảng cách đúng $K$ mét lại trồng tiếp một cây.
+Thành phố vừa khánh thành một đại lộ thẳng tắp dài $N$ mét. Mùa hè sắp đến, để có bóng mát cho người đi bộ, đội cây xanh quyết định trồng một hàng cây ngay ngắn ở một bên đường. Cây đầu tiên được trồng ngay tại điểm xuất phát (mét thứ 0), rồi cứ cách đúng $K$ mét lại trồng tiếp một cây nữa. Trước khi ra quân, đội trưởng muốn biết chính xác cần chuẩn bị bao nhiêu cây, và em chính là người giúp đội tính con số đó!
 ## Nhiệm vụ
 
 Hãy tính tổng số lượng cây xanh được trồng trên đoạn đường từ mét thứ 0 đến mét thứ $N$.

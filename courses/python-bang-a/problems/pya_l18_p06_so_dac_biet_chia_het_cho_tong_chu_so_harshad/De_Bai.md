@@ -3,8 +3,7 @@
 
 ## Bối cảnh
 
-Một số tự nhiên $N$ được gọi là số Harshad nếu nó chia hết cho chính tổng các chữ số của nó.
-  Ví dụ: Số 18 có tổng các chữ số là $1 + 8 = 9$. Vì 18 chia hết cho 9 nên 18 là số Harshad.
+Bạn Tí rất thích sưu tầm các con số kỳ lạ trong cuốn sổ tay toán học của mình. Hôm nay, bạn phát hiện một loại số đặc biệt: một số tự nhiên $N$ được gọi là số Harshad nếu nó chia hết cho chính tổng các chữ số của nó. Ví dụ: số 18 có tổng các chữ số là $1 + 8 = 9$. Vì 18 chia hết cho 9 nên 18 là số Harshad. Bạn Tí đố cả lớp tìm thêm các số như vậy, em hãy giúp cả lớp kiểm tra nhé!
 ## Nhiệm vụ
 
 Cho số $N$. In `YES` nếu $N$ là số Harshad, ngược lại in `NO`.

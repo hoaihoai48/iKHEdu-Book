@@ -1,220 +1,161 @@
-# Bài 05: Rẽ nhánh nhiều hướng với elif
+# Bài 05: Vòng lặp for và hàm range
 
----
+## 1. Tóm tắt kiến thức trọng tâm
+- Dùng khi **đã biết trước số lần lặp cụ thể**.
+- Cú pháp: `for <bien> in range(start, stop, step):`
+- Cận dừng `stop` không bao giờ được lấy tới (máy dừng ngay trước `stop`).
+- **Mẫu tích lũy ống heo (Accumulator):** Khởi tạo `tong = 0` trước vòng lặp, mỗi lượt cộng dồn `tong += i`.
 
-## 1. Khởi động: Ngã ba, ngã tư và bài toán nhiều lựa chọn
+## 2. Bảng công thức ghi nhớ
+| Cú pháp | Dãy số sinh ra |
+|---|---|
+| `range(5)` | `0, 1, 2, 3, 4` |
+| `range(1, N + 1)` | `1, 2, 3, ..., N` |
+| `range(2, N + 1, 2)` | Các số chẵn từ 2 đến $N$ |
+| `range(N, 0, -1)` | Đếm lùi từ $N$ về 1 |
 
-Ở Bài 4, câu lệnh `if - else` giúp chúng ta giải quyết các bài toán có **hai ngã rẽ** (Đúng hoặc Sai).
-Nhưng cuộc sống đâu chỉ có 2 ngã rẽ! Hãy thử tưởng tượng:
-* Đèn giao thông có tới **3 màu**: Đỏ (Dừng lại), Vàng (Đi chậm), Xanh (Được đi).
-* Xếp loại học tập có **4 mức**: Xuất sắc ($\ge 9$), Giỏi ($\ge 8$), Khá ($\ge 6.5$), Cần cố gắng.
-* Giá cước taxi, tiền điện bậc thang tính theo từng nấc khoảng cách khác nhau.
-
-Nếu chỉ dùng `if` và `else`, chúng ta sẽ phải lồng các lệnh `if` vào nhau chằng chịt như mạng nhện. Rất may mắn, Python mang đến một trợ thủ đắc lực: **`elif`** (viết tắt của *Else If - Nếu không thì nếu*)!
-
----
-
-## 2. Cú pháp `if - elif - else`: Chiếc cầu trượt nhiều bậc
-
-### 2.1. Cấu trúc chuẩn
+## 3. Mẫu code chuẩn
 ```python
-if <Điều kiện 1>:
-    # Chạy khi Điều kiện 1 ĐÚNG
-elif <Điều kiện 2>:
-    # Chạy khi Điều kiện 1 SAI, nhưng Điều kiện 2 ĐÚNG
-elif <Điều kiện 3>:
-    # Chạy khi Điều kiện 1 và 2 đều SAI, nhưng Điều kiện 3 ĐÚNG
-else:
-    # Chạy khi TẤT CẢ các điều kiện trên đều SAI
-```
-
-### 2.2. Bản chất dòng chảy (flow of control): Trượt từ trên xuống dưới
-Hãy tưởng tượng cấu trúc `if - elif - else` giống như một **chiếc cầu trượt có nhiều nấc bậc thang**:
-1. Máy tính kiểm tra `if` đầu tiên. **Nếu trúng điều kiện ĐÚNG**, máy lập tức thực hiện khối lệnh đó rồi **TRƯỢT THẲNG RA NGOÀI**, bỏ qua toàn bộ các bậc `elif` và `else` phía dưới!
-2. Chỉ khi nấc trên bị SAI, máy mới chịu bước xuống kiểm tra nấc `elif` tiếp theo.
-3. Nếu tất cả các nấc đều sai, máy sẽ rơi vào căn phòng cứu cánh cuối cùng: `else`.
-
-```python
-diem = 8.5
-
-if diem >= 9.0:
-    print("XUAT SAC")
-elif diem >= 8.0:
-    print("GIOI")
-elif diem >= 6.5:
-    print("KHA")
-else:
-    print("CAN CO GANG")
-```
-*Kết quả:* Máy kiểm tra `diem >= 9.0` (Sai vì 8.5 < 9.0) $\implies$ trượt xuống bậc tiếp theo: `diem >= 8.0` (Đúng!) $\implies$ In ra `GIOI` và kết thúc ngay, không xét `diem >= 6.5` nữa!
-
----
-
-## 3. Các kỹ thuật thuật toán kinh điển với `elif`
-
-### 3.1. Tìm số lớn nhất (max) giữa 3 số $a, b, c$
-```python
+# Tính tổng các số chẵn từ A đến B
 a = int(input())
 b = int(input())
-c = int(input())
-
-# Chiến thuật Đặt lính canh (King of the Hill)
-so_lon_nhat = a
-if b > so_lon_nhat:
-    so_lon_nhat = b
-if c > so_lon_nhat:
-    so_lon_nhat = c
-
-print("So lon nhat la:", so_lon_nhat)
+tong = 0
+for i in range(a, b + 1):
+    if i % 2 == 0:
+        tong += i
+print(tong)
 ```
 
-### 3.2. Bài toán Mario cứu công chúa (bài 3 THT củ chi)
-* Mario cần $K$ năng lượng để leo và tụt $N$ bậc cầu thang (tốn $2N$ năng lượng nếu đi hết).
-* Công chúa có $P$ năng lượng, mỗi bậc tốn 2 năng lượng (tốn $2 \times 2 = 4$ năng lượng mỗi bậc).
-* Khi nào hai người gặp nhau? Xét các trường hợp so sánh năng lượng để đưa ra kết luận `YES` hoặc `NO`.
+## 4. Concept quiz: 15 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
----
+#### Câu 1: Hàm `range(5)` tạo ra dãy số gồm những số nào?
+- **A.** `1, 2, 3, 4, 5`
+- **B.** **[Đáp án đúng]** `0, 1, 2, 3, 4`
+- **C.** `0, 1, 2, 3, 4, 5`
+- **D.** `1, 2, 3, 4`
+> *Giải thích:* Mặc định `range(N)` bắt đầu từ 0 và dừng trước $N$.
 
-## 4. Concept quiz: 14 câu trắc nghiệm bắt bẫy củng cố khái niệm
+#### Câu 2: Để vòng lặp chạy đúng các giá trị `1, 2, 3, 4, 5, 6, 7, 8, 9, 10`, ta viết:
+- **A.** `range(1, 10)`
+- **B.** **[Đáp án đúng]** `range(1, 11)`
+- **C.** `range(0, 10)`
+- **D.** `range(1, 10, 1)`
+> *Giải thích:* Cận trên phải là $11$ thì vòng lặp mới chạy đến hết số $10$.
 
-#### Câu 1: Từ khóa `elif` trong Python là viết tắt của cụm từ nào?
-- **A.** `else if`
-- **B.** **[Đáp án đúng]** `else if`
-- **C.** `early if`
-- **D.** `end if`
-> *Giải thích:* `elif` là dạng viết tắt của `else if` (nếu không thì nếu).
-
-#### Câu 2: Trong cấu trúc `if - elif - else`, có tối đa bao nhiêu khối `elif`?
-- **A.** Chỉ được có 1 khối
-- **B.** Tối đa 3 khối
-- **C.** **[Đáp án đúng]** Không giới hạn số lượng khối `elif`
-- **D.** Bắt buộc phải có ít nhất 2 khối
-> *Giải thích:* Em có thể đặt bao nhiêu khối `elif` tùy thích để phân loại nhiều trường hợp khác nhau.
-
-#### Câu 3: Khối `else` ở cuối cùng có bắt buộc phải có không?
-- **A.** Bắt buộc
-- **B.** **[Đáp án đúng]** Không bắt buộc (có thể bỏ qua nếu không cần xử lý trường hợp còn lại)
-- **C.** Chỉ bắt buộc khi có `elif`
-- **D.** Báo lỗi cú pháp nếu thiếu `else`
-> *Giải thích:* Khối `else` là tùy chọn (optional). Nếu không có trường hợp mặc định thì không cần viết `else`.
-
-#### Câu 4: Đoạn code sau in ra kết quả gì?
+#### Câu 3: Đoạn code sau in ra màn hình bao nhiêu dòng?
 ```python
-x = 10
-if x > 5:
-    print("A")
-elif x > 8:
-    print("B")
-else:
-    print("C")
+for i in range(4):
+    print("Python")
 ```
-- **A.** `B`
-- **B.** `A` và `B`
-- **C.** **[Đáp án đúng]** `A`
-- **D.** `C`
-> *Giải thích:* Mặc dù $10 > 8$ cũng đúng, nhưng máy tính gặp `x > 5` đúng trước nên in `A` và thoát ra ngay, không xét tới `elif` nữa.
+- **A.** 3 dòng
+- **B.** **[Đáp án đúng]** 4 dòng (ứng với $i = 0, 1, 2, 3$)
+- **C.** 5 dòng
+- **D.** Vô hạn dòng
+> *Giải thích:* `range(4)` có 4 giá trị nên lệnh `print` chạy 4 lần.
 
-#### Câu 5: Đoạn code sau in ra gì?
+#### Câu 4: Kết quả của đoạn code sau là gì?
 ```python
-tuoi = 4
-if tuoi >= 18:
-    print("Nguoi lon")
-elif tuoi >= 6:
-    print("Hoc sinh")
-else:
-    print("Mam non")
+s = 0
+for i in range(1, 4):
+    s = s + i
+print(s)
 ```
-- **A.** `Nguoi lon`
-- **B.** `Hoc sinh`
-- **C.** **[Đáp án đúng]** `Mam non`
-- **D.** Không in gì cả
-> *Giải thích:* Cả 2 điều kiện đầu đều sai nên rơi vào khối `else`, in `Mam non`.
+- **A.** `3`
+- **B.** **[Đáp án đúng]** `6`
+- **C.** `10`
+- **D.** `0`
+> *Giải thích:* $s = 0 + 1 + 2 + 3 = 6$.
 
-#### Câu 6: Thứ tự sắp xếp các điều kiện trong chuỗi `if - elif` có quan trọng không?
-- **A.** Không quan trọng, viết cái nào trước cũng được
-- **B.** **[Đáp án đúng]** Rất quan trọng, phải sắp xếp theo trật tự logic (từ chặt chẽ nhất đến lỏng hơn)
-- **C.** Python tự động sắp xếp lại cho đúng
-- **D.** Chỉ quan trọng khi có số âm
-> *Giải thích:* Nếu viết `if diem >= 5:` lên trước `elif diem >= 9:`, mọi điểm 9 và 10 đều bị rơi vào điều kiện $\ge 5$ và không bao giờ xuống được điều kiện $\ge 9$!
+#### Câu 5: Cú pháp nào sau đây in ra các số chẵn từ 2 đến 10?
+- **A.** `range(2, 10)`
+- **B.** **[Đáp án đúng]** `range(2, 11, 2)`
+- **C.** `range(2, 10, 2)`
+- **D.** `range(0, 10, 2)`
+> *Giải thích:* Bắt đầu từ 2, bước nhảy 2, dừng trước 11 sẽ gồm: `2, 4, 6, 8, 10`.
 
-#### Câu 7: Bác bảo vệ phân loại xe: Xe đạp phí 2k, xe máy 5k, ô tô 20k. Cần ít nhất bao nhiêu nhánh điều kiện?
-- **A.** 1 nhánh
-- **B.** 2 nhánh
-- **C.** **[Đáp án đúng]** 3 nhánh (hoặc 1 `if`, 1 `elif`, 1 `else`)
-- **D.** 4 nhánh
-> *Giải thích:* Có 3 loại xe nên cần cấu trúc 3 nhánh.
+#### Câu 6: Để đếm ngược từ 5 về 1, ta viết:
+- **A.** `range(5, 1, -1)`
+- **B.** **[Đáp án đúng]** `range(5, 0, -1)`
+- **C.** `range(5, -1, 0)`
+- **D.** `range(1, 5, -1)`
+> *Giải thích:* Bắt đầu từ 5, dừng trước 0 với bước nhảy âm $-1$ sẽ ra: `5, 4, 3, 2, 1`.
 
-#### Câu 8: Đoạn code nào sau đây báo lỗi cú pháp?
-- **A.** `if a > 0: print("Duong")`
-- **B.** `elif a == 0: print("Khong")` (đứng một mình không có `if`)
-- **C.** **[Đáp án đúng]** Câu B vì `elif` không thể đứng mở đầu mà không có `if`
-- **D.** Cả A và B đều đúng
-> *Giải thích:* `elif` bắt buộc phải đi sau một lệnh `if`.
-
-#### Câu 9: Để tìm số lớn nhất trong 3 số $a, b, c$, hàm nào có sẵn trong Python giúp ta làm việc này chỉ trong 1 dòng?
-- **A.** `maximum(a, b, c)`
-- **B.** **[Đáp án đúng]** `max(a, b, c)`
-- **C.** `greatest(a, b, c)`
-- **D.** `top(a, b, c)`
-> *Giải thích:* Hàm `max()` trong Python có thể nhận nhiều đối số và trả về số lớn nhất.
-
-#### Câu 10: Cho đoạn code sau:
+#### Câu 7: Bẫy thụt lề: Đoạn code sau in ra gì?
 ```python
-a = 0
-if a > 0:
-    print("Duong")
-elif a < 0:
-    print("Am")
-else:
-    print("Khong")
+tong = 0
+for i in range(1, 4):
+    tong = tong + i
+    print(tong)
 ```
-Màn hình sẽ in ra:
-- **A.** `Duong`
-- **B.** `Am`
-- **C.** **[Đáp án đúng]** `Khong`
+- **A.** Chỉ in một số 6
+- **B.** **[Đáp án đúng]** In 3 dòng lần lượt là: `1`, `3`, `6`
+- **C.** In `0, 1, 3, 6`
 - **D.** Báo lỗi
-> *Giải thích:* Số 0 không dương cũng không âm nên chạy vào `else`.
+> *Giải thích:* Vì lệnh `print(tong)` bị thụt lề nằm BÊN TRONG vòng lặp `for`, nên sau mỗi bước lặp nó đều in ra giá trị hiện tại của `tong`.
 
-#### Câu 11: Có thể lồng một khối lệnh `if - else` vào bên trong một khối `if` khác không?
-- **A.** Không được phép
-- **B.** **[Đáp án đúng]** Hoàn toàn được phép (gọi là Nested if - If lồng nhau)
-- **C.** Chỉ được lồng tối đa 2 lần
-- **D.** Python sẽ báo lỗi bộ nhớ
-> *Giải thích:* Python cho phép lồng các cấu trúc điều kiện thoải mái, chỉ cần chú ý thụt lề cho chính xác.
+#### Câu 8: Đoạn code sau in ra gì?
+```python
+for i in range(5, 5):
+    print("Hello")
+```
+- **A.** In 1 chữ Hello
+- **B.** In 5 chữ Hello
+- **C.** **[Đáp án đúng]** Không in ra gì cả
+- **D.** Báo lỗi
+> *Giải thích:* `start = 5` và `stop = 5`, khoảng rỗng nên vòng lặp không chạy lần nào.
+
+#### Câu 9: Trong vòng lặp `for i in range(1, 10):`, sau mỗi lần lặp, biến `i` tự động:
+- **A.** Giữ nguyên giá trị
+- **B.** **[Đáp án đúng]** Tự động tăng lên 1 đơn vị
+- **C.** Tự động giảm đi 1 đơn vị
+- **D.** Bị xóa khỏi bộ nhớ
+> *Giải thích:* Bước nhảy mặc định của `range` là $+1$.
+
+#### Câu 10: Vòng lặp `for` thường được dùng trong trường hợp nào?
+- **A.** Khi không biết trước số lần lặp
+- **B.** **[Đáp án đúng]** Khi đã biết trước số lần lặp cụ thể
+- **C.** Khi muốn chương trình chạy mãi mãi không dừng
+- **D.** Khi muốn chia lấy dư
+> *Giải thích:* Vòng lặp `for` là vòng lặp với số lần biết trước (xác định bởi số phần tử của dãy).
+
+#### Câu 11: Đoạn code tính giai thừa $3! = 1 \times 2 \times 3$ nào sau đây đúng?
+- **A.** `tich = 0; for i in range(1, 4): tich = tich * i`
+- **B.** **[Đáp án đúng]** `tich = 1; for i in range(1, 4): tich = tich * i`
+- **C.** `tich = 1; for i in range(1, 3): tich = tich * i`
+- **D.** `tich = 3 * 2 * 1`
+> *Giải thích:* Tính tích bắt buộc biến khởi tạo phải là $1$. Nếu gán `tich = 0` thì $0$ nhân với số nào cũng bằng $0$!
 
 #### Câu 12: Đoạn code sau in ra gì?
 ```python
-n = 15
-if n % 3 == 0:
-    print("Chia het cho 3")
-elif n % 5 == 0:
-    print("Chia het cho 5")
+dem = 0
+for i in range(1, 11):
+    if i % 2 != 0:
+        dem = dem + 1
+print(dem)
 ```
-- **A.** `Chia het cho 5`
-- **B.** In cả hai dòng
-- **C.** **[Đáp án đúng]** `Chia het cho 3`
-- **D.** Không in gì
-> *Giải thích:* 15 chia hết cho cả 3 và 5, nhưng điều kiện `n % 3 == 0` đứng trước nên thực hiện xong là kết thúc.
+- **A.** `10`
+- **B.** **[Đáp án đúng]** `5`
+- **C.** `25`
+- **D.** `4`
+> *Giải thích:* Từ 1 đến 10 có đúng 5 số lẻ ($1, 3, 5, 7, 9$). Mỗi lần gặp số lẻ thì `dem` tăng 1, vậy kết quả là 5.
 
-#### Câu 13: Làm thế nào để in ra cả hai dòng nếu số chia hết cho cả 3 và 5?
-- **A.** Dùng `elif`
-- **B.** **[Đáp án đúng]** Dùng 2 lệnh `if` độc lập nhau
-- **C.** Dùng `else`
-- **D.** Dùng phép chia dư `% 15`
-> *Giải thích:* Hai lệnh `if` độc lập sẽ không loại trừ nhau, máy tính sẽ kiểm tra và thực thi cả hai nếu cùng đúng.
-
-#### Câu 14: Đoạn code sau in ra gì?
-```python
-x = 5
-if x == 1:
-    print(1)
-elif x == 2:
-    print(2)
-elif x == 3:
-    print(3)
-```
+#### Câu 13: Giá trị của `i` sau khi kết thúc vòng lặp `for i in range(3): pass` là:
 - **A.** `0`
-- **B.** `None`
-- **C.** **[Đáp án đúng]** Không in ra bất kỳ ký tự nào
-- **D.** Báo lỗi
-> *Giải thích:* Cả 3 điều kiện đều sai và không có nhánh `else`, chương trình kết thúc êm đẹp mà không in gì.
+- **B.** `1`
+- **C.** **[Đáp án đúng]** `2`
+- **D.** `3`
+> *Giải thích:* Giá trị cuối cùng được gán cho `i` trong `range(3)` là số 2.
+
+#### Câu 14: Biểu thức `range(10, 2, -2)` sinh ra những số nào?
+- **A.** `10, 8, 6, 4, 2`
+- **B.** **[Đáp án đúng]** `10, 8, 6, 4`
+- **C.** `8, 6, 4, 2`
+- **D.** `10, 9, 8`
+> *Giải thích:* Dừng trước 2 nên chỉ lấy: $10, 8, 6, 4$.
+
+#### Câu 15: Công thức tính nhanh tổng $1 + 2 + \dots + N$ trong toán học mà không cần dùng vòng lặp là:
+- **A.** $N \times (N + 1)$
+- **B.** **[Đáp án đúng]** $N \times (N + 1) // 2$
+- **C.** $(N + 1) // 2$
+- **D.** $N \times N // 2$
+> *Giải thích:* Công thức tính tổng cấp số cộng Gauss: $S = \frac{N(N+1)}{2}$. Khi $N = 10^9$, dùng công thức này tính trong 0.00001s thay vì lặp $10^9$ lần!

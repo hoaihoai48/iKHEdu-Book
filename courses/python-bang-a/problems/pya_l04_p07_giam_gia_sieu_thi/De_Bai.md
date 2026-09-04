@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Siêu thị có chương trình khuyến mãi: Khách hàng mua đơn hàng có tổng giá trị từ $500$ nghìn đồng trở lên sẽ được giảm giá ngay $50$ nghìn đồng. Các đơn hàng dưới $500$ nghìn đồng giữ nguyên giá.
+Cuối tuần, mẹ dẫn bé Bi đi siêu thị mua đồ thật vui. Siêu thị đang có chương trình khuyến mãi: khách hàng mua đơn hàng có tổng giá trị từ $500$ nghìn đồng trở lên sẽ được giảm giá ngay $50$ nghìn đồng, còn các đơn hàng dưới $500$ nghìn đồng thì giữ nguyên giá. Bé Bi xung phong ra quầy tính tiền giúp mẹ. Em hãy giúp bé Bi tính xem phải trả bao nhiêu tiền nhé!
 ## Nhiệm vụ
 
 Nhập vào tổng tiền đơn hàng $N$ (nghìn đồng). Hãy in ra số tiền thực tế khách hàng phải trả sau khi đã áp dụng khuyến mãi.

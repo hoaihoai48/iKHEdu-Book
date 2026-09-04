@@ -5,8 +5,9 @@
 
 ## Bối cảnh
 
-Thuật toán nén chuỗi đơn giản thay thế một dãy các ký tự giống nhau liên tiếp bằng ký tự đó kèm theo số lần lặp lại.
+Bạn Nam gấp thật nhiều ngôi sao giấy cùng màu rồi xếp chúng thành hàng dài trên bàn. Cô giáo dạy thuật toán nén chuỗi đơn giản thay thế một dãy các ký tự giống nhau liên tiếp bằng ký tự đó kèm theo số lần lặp lại.
   Ví dụ: `AAABBC` nén thành `A3B2C1`.
+Nam muốn ghi lại hàng ngôi sao thật gọn vào sổ. Em hãy giúp bạn Nam viết chương trình nén chuỗi thật gọn nhé.
 ## Nhiệm vụ
 
 Cho một chuỗi $S$ chỉ gồm các chữ cái in hoa. Hãy in ra dạng nén của chuỗi $S$.

@@ -3,10 +3,7 @@
 
 ## Bối cảnh
 
-Cửa hàng bánh bột lọc bán bánh với chương trình ưu đãi số lượng:
-  * Mua dưới 10 cái: giá $5$ nghìn đồng/cái.
-  * Mua từ 10 đến 49 cái: giá $4$ nghìn đồng/cái.
-  * Mua từ 50 cái trở lên: giá chỉ còn $3$ nghìn đồng/cái.
+Cuối tuần, cô chủ nhỏ mở một cửa hàng bánh bột lọc thơm ngon trước cổng trường. Cô treo bảng ưu đãi số lượng thật hấp dẫn: mua dưới 10 cái giá $5$ nghìn đồng một cái, mua từ 10 đến 49 cái giá $4$ nghìn đồng một cái, còn mua từ 50 cái trở lên giá chỉ còn $3$ nghìn đồng một cái. Các bạn nhỏ xếp hàng dài chờ mua bánh mang về liên hoan. Em hãy giúp cô chủ nhỏ tính tiền thật nhanh cho khách nhé!
 ## Nhiệm vụ
 
 Nhập vào số lượng bánh $N$ mà khách muốn mua. Tính tổng số tiền khách phải trả.

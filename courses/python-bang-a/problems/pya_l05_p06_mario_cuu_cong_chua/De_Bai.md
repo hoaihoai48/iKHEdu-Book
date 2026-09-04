@@ -5,9 +5,7 @@
 
 ## Bối cảnh
 
-Mario có $K$ năng lượng, Công chúa có $P$ năng lượng. Chiếc cầu thang ngăn cách giữa hai người có đỉnh cao $N$ bậc: Mario đứng ở chân cầu thang bên trái (cần đi lên $N$ bậc và đi xuống $N$ bậc), Công chúa đứng ở chân cầu thang bên phải (cần đi lên $N$ bậc).
-  * Mỗi bậc thang Mario đi tốn $1$ năng lượng.
-  * Mỗi bậc thang Công chúa đi tốn $2$ năng lượng.
+Trong khu vườn trò chơi, bạn Mario có $K$ năng lượng còn Công chúa có $P$ năng lượng. Giữa hai người là một chiếc cầu thang có đỉnh cao $N$ bậc: Mario đứng ở chân cầu thang bên trái (cần đi lên $N$ bậc và đi xuống $N$ bậc), Công chúa đứng ở chân cầu thang bên phải (cần đi lên $N$ bậc). Mỗi bậc thang Mario đi tốn $1$ năng lượng, còn mỗi bậc thang Công chúa đi tốn $2$ năng lượng. Cả hai đều mong gặp được nhau trên cầu thang. Em hãy giúp hai bạn xem với sức của mình có gặp được nhau không nhé!
 ## Nhiệm vụ
 
 Hỏi với mức năng lượng hiện có, Mario và Công chúa có thể gặp được nhau ở một điểm nào đó trên cầu thang hay không? Nếu gặp được in `YES`, ngược lại in `NO`.

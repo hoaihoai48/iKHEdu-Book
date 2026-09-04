@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Cho một dãy gồm $N$ số nguyên lẻ phần tử ($N$ là số lẻ). Trung vị của dãy là phần tử nằm chính giữa sau khi dãy đã được sắp xếp tăng dần.
+Giờ ra chơi, các bạn nhỏ xếp thành một hàng dọc gồm $N$ bạn, trong đó $N$ là số lẻ. Cô giáo muốn tìm bạn đứng chính giữa sau khi cả hàng đã xếp theo chiều cao tăng dần, và bạn đó được gọi là trung vị của dãy: tức là phần tử nằm chính giữa sau khi dãy đã được sắp xếp tăng dần. Các bạn cứ nhốn nháo đổi chỗ mãi không xong. Em hãy giúp cô tìm ra bạn đứng ở vị trí chính giữa nhé!
 ## Nhiệm vụ
 
 Cho dãy $N$ số nguyên ($N$ lẻ). Hãy tìm số trung vị của dãy số.

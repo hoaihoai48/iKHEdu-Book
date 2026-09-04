@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bạn Hoa vừa vẽ xong một bức tranh tuyệt đẹp hình vuông có cạnh là $a\text{ cm}$. Hoa muốn làm khung gỗ bọc viền xung quanh bức tranh và dán giấy kính lên toàn bộ bề mặt tranh.
+Bạn Hoa vừa vẽ xong một bức tranh tuyệt đẹp hình vuông có cạnh là $a\text{ cm}$ để tặng mẹ nhân ngày sinh nhật. Hoa muốn làm khung gỗ bọc viền xung quanh bức tranh và dán giấy kính lên toàn bộ bề mặt tranh cho thật bóng đẹp. Hoa đã chuẩn bị gỗ và giấy kính nhưng chưa biết cần bao nhiêu. Em hãy giúp bạn Hoa tính độ dài khung gỗ và diện tích giấy kính nhé!
 ## Nhiệm vụ
 
 Hãy tính độ dài khung gỗ cần mua (chu vi) và diện tích giấy kính cần dán (diện tích).

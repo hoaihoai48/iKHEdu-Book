@@ -3,10 +3,11 @@
 
 ## Bối cảnh
 
-Chú ốc sên muốn leo lên đỉnh một cột cờ cao $H$ mét.
+Sáng nay, chú ốc sên chăm chỉ thức dậy dưới chân một cột cờ cao $H$ mét trong sân trường và quyết tâm leo lên đỉnh để ngắm mây trời.
   * Ban ngày, chú ốc sên bò lên được $A$ mét.
   * Ban đêm, khi ngủ chú bị tụt xuống $B$ mét ($B < A$).
   * Khi chú chạm tới hoặc vượt qua đỉnh cột cờ vào ban ngày, chú sẽ dừng lại và cắm cờ (không bị tụt nữa).
+Các bạn kiến đứng dưới cổ vũ ầm ĩ. Em hãy giúp chú ốc sên tính xem mình leo mất mấy ngày nhé!
 ## Nhiệm vụ
 
 Hỏi chú ốc sên mất bao nhiêu ngày để leo lên tới đỉnh cột cờ?

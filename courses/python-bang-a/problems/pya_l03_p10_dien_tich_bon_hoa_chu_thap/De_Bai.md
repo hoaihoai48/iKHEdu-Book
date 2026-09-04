@@ -3,10 +3,11 @@
 
 ## Bối cảnh
 
-Trong công viên có một bồn hoa hình chữ thập (dấu cộng) được tạo thành bởi hai luống hoa hình chữ nhật đặt chồng lên nhau:
+Trong công viên xanh mát có một bồn hoa hình chữ thập (dấu cộng) rất đẹp được tạo thành bởi hai luống hoa hình chữ nhật đặt chồng lên nhau:
   * Một luống hoa nằm ngang có kích thước $a \times b$ ($a$ là chiều dài, $b$ là chiều rộng).
   * Một luống hoa nằm dọc có kích thước $b \times a$ ($b$ là chiều rộng, $a$ là chiều dài).
   * Hai luống hoa giao nhau ở chính giữa tạo thành một hình vuông kích thước $b \times b$.
+Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần giao nhau ở giữa không được tính hai lần. Em hãy giúp cô tính diện tích bồn hoa nhé!
 ## Nhiệm vụ
 
 Em hãy tính diện tích thực tế của toàn bộ bồn hoa chữ thập này (không được tính trùng lặp phần diện tích giao nhau ở chính giữa).

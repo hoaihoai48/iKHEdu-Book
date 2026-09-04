@@ -40,7 +40,7 @@ def build_master():
         key=lesson_number,
     )
     output = [
-        "# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 6 CHƯƠNG",
+        "# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 7 CHƯƠNG",
         "",
         "> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python Bảng A — Level 1.",
         "> Nguồn canonical vẫn là các file trong `lessons/`; không chỉnh sửa trực tiếp file này.",
@@ -50,19 +50,22 @@ def build_master():
     ]
 
     chapters = {
-        1: "NỀN TẢNG PYTHON & TÍNH TOÁN CƠ BẢN",
+        1: "TÍNH TOÁN CƠ BẢN",
         2: "TƯ DUY RẼ NHÁNH & ĐIỀU KIỆN LOGIC",
-        3: "VÒNG LẶP & CÁC BÀI TOÁN DÃY SỐ",
-        4: "SỐ HỌC TIỂU HỌC & TÁCH CHỮ SỐ",
-        5: "THẾ GIỚI CHUỖI KÝ TỰ",
-        6: "DANH SÁCH (LIST) & LUYỆN ĐỀ THTA",
+        3: "VÒNG LẶP",
+        4: "BÀI TOÁN SỐ HỌC",
+        5: "DANH SÁCH (LIST)",
+        6: "XỬ LÝ CHUỖI & KÝ TỰ",
+        7: "LUYỆN ĐỀ THI",
+    }
+    lesson_chapter = {
+        1: 1, 2: 1, 3: 1, 4: 2, 5: 3, 6: 3, 7: 4, 8: 4,
+        9: 4, 10: 4, 11: 5, 12: 5, 13: 6, 14: 6, 15: 7, 16: 7,
     }
     for chapter_number, chapter_title in chapters.items():
         output.append(f"### Chương {chapter_number}: {chapter_title}")
         for lesson in lessons:
-            if lesson_number(lesson) in range(
-                (chapter_number - 1) * 3 + 1, chapter_number * 3 + 1
-            ):
+            if lesson_chapter.get(lesson_number(lesson)) == chapter_number:
                 output.append(f"- Bài {lesson_number(lesson):02d}: {lesson.name}")
 
     output.extend(
@@ -91,7 +94,7 @@ def build_master():
 
     current_chapter = None
     for lesson in lessons:
-        chapter_number = (lesson_number(lesson) - 1) // 3 + 1
+        chapter_number = lesson_chapter.get(lesson_number(lesson), 1)
         content_file = next(lesson.glob("Lesson*_Production_Content.md"), None)
         exercise_file = lesson / "Bai_Tap.md"
         if chapter_number != current_chapter:

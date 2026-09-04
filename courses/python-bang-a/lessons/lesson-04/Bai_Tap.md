@@ -1,8 +1,8 @@
-# Hệ thống bài tập thực hành — bài 04: Rẽ nhánh có điều kiện với if-else
+# Hệ thống bài tập thực hành — bài 04: Rẽ nhánh và điều kiện logic
 
 ---
 
-## Bảng ma trận bài tập (12 bài tập phân tầng cơ bản → vận dụng)
+## Bảng ma trận bài tập (36 bài tập phân tầng cơ bản → vận dụng)
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
@@ -18,6 +18,30 @@
 | 10 | `PYA-L04-P10` | Bác thợ mộc cắt gỗ | `Luyện tập` | $1 \le L, K \le 10^9$ | So sánh xem thanh gỗ có đủ dài để cắt không |
 | 11 | `PYA-L04-P11` | Cạnh thứ tư hình chữ nhật | `Luyện tập` | $1 \le A, B, C \le 1000$ | Nhận diện 2 cặp cạnh bằng nhau (THT miền bắc) |
 | 12 | `PYA-L04-P12` | Trò chơi oẳn tù tì | `Vận dụng` | $a, b \in \{1, 2, 3\}$ | Logic thắng thua vòng tròn quy ước số |
+| 13 | `PYA-L05-P01` | Đèn giao thông ngã tư | `Cơ bản` | Ký tự `D, V, X` | Cấu trúc 3 nhánh `if - elif - else` cơ bản |
+| 14 | `PYA-L05-P02` | Dấu của số nguyên | `Cơ bản` | $-10^9 \le N \le 10^9$ | Phân biệt: Dương (`DUONG`), âm (`AM`), không (`KHONG`) |
+| 15 | `PYA-L05-P03` | Số lớn nhất trong ba số | `Cơ bản` | $-10^9 \le a, b, c \le 10^9$ | Kỹ thuật tìm max 3 số hoặc dùng lính canh |
+| 16 | `PYA-L05-P04` | Xếp loại học lực | `Cơ bản` | $0.0 \le diem \le 10.0$ | Phân loại bậc thang điểm số số thực |
+| 17 | `PYA-L05-P05` | Vé gửi xe bến bãi | `Cơ bản` | Loại xe $1, 2, 3$ | Tính tiền gửi xe theo từng mức quy định |
+| 18 | `PYA-L05-P06` | Mario cứu công chúa | `Luyện tập` | $1 \le K, P, N \le 1000$ | Mô phỏng di chuyển năng lượng (THT củ chi) |
+| 19 | `PYA-L05-P07` | Tính cước taxi bậc thang | `Luyện tập` | $1 \le km \le 100$ | Bài toán tính cước lũy tiến kinh điển |
+| 20 | `PYA-L05-P08` | Phân loại tam giác | `Luyện tập` | $1 \le a, b, c \le 1000$ | Phân biệt tam giác đều, cân hay thường |
+| 21 | `PYA-L05-P09` | Thuận đi tìm ánh đa vận tốc | `Luyện tập` | $0 \le x, y \le 10^9, v \ge 0$ | Bắt bẫy $x == y$ hoặc $v == 0$ (THT từ sơn) |
+| 22 | `PYA-L05-P10` | Thứ mấy trong tuần? | `Luyện tập` | $1 \le k \le 365$ | Đổi số ngày sang thứ hai đến chủ nhật |
+| 23 | `PYA-L05-P11` | Cửa hàng bánh bột lọc khuyến mãi | `Luyện tập` | $1 \le N \le 1000$ | Bài toán mua theo gói bậc thang (THT Bảng A) |
+| 24 | `PYA-L05-P12` | Bốn mùa trong năm | `Vận dụng` | $1 \le thang \le 12$ | Gom nhóm nhiều giá trị vào các mùa xuân, hạ, thu, đông |
+| 25 | `PYA-L06-P01` | Số chẵn có hai chữ số | `Cơ bản` | $1 \le N \le 1000$ | Điều kiện kết hợp `and`: $10 \le N \le 99$ và chẵn |
+| 26 | `PYA-L06-P02` | Bội chung của 3 và 5 | `Cơ bản` | $1 \le N \le 10^9$ | Chia hết đồng thời cho cả 3 và 5 |
+| 27 | `PYA-L06-P03` | Ngày nghỉ cuối tuần | `Cơ bản` | $2 \le d \le 8$ | Điều kiện `or`: Thứ bảy hoặc chủ nhật |
+| 28 | `PYA-L06-P04` | Điểm nằm trong hình chữ nhật | `Cơ bản` | $0 \le x, y \le 100$ | Kiểm tra tọa độ kẹp: $0 \le x \le W$ và $0 \le y \le H$ |
+| 29 | `PYA-L06-P05` | Ba cạnh tam giác hợp lệ | `Cơ bản` | $1 \le a, b, c \le 10^9$ | Bất đẳng thức tam giác 3 điều kiện `and` |
+| 30 | `PYA-L06-P06` | Kiểm tra năm nhuận | `Luyện tập` | $1 \le Y \le 10^5$ | Quy tắc năm nhuận thiên văn học kết hợp `and`/`or` |
+| 31 | `PYA-L06-P07` | Số ngày trong tháng | `Luyện tập` | $1 \le M \le 12, 1 \le Y \le 10^5$ | Xác định 28, 29, 30 hay 31 ngày (THT bắc giang) |
+| 32 | `PYA-L06-P08` | Tam giác vuông hay không? | `Luyện tập` | $1 \le a, b, c \le 10^4$ | Định lý pytago kết hợp 3 trường hợp cạnh huyền |
+| 33 | `PYA-L06-P09` | Rút thẻ may mắn | `Luyện tập` | $1 \le N \le 10^9$ | Thẻ trúng thưởng chia hết cho 7 hoặc tận cùng bằng 7 |
+| 34 | `PYA-L06-P10` | Ngày kế tiếp trong năm | `Luyện tập` | Ngày, tháng, năm hợp lệ | Xử lý chuyển ngày cuối tháng, cuối năm nhuận |
+| 35 | `PYA-L06-P11` | Cặp đôi cùng dấu hay trái dấu | `Vận dụng` | $-10^9 \le a, b \le 10^9$ | Bắt bẫy số 0, cùng dương, cùng âm hoặc trái dấu |
+| 36 | `PYA-L06-P12` | Giao nhau của hai đoạn thẳng | `Thử thách` | $-10^9 \le L_1, R_1, L_2, R_2 \le 10^9$ | Xác định hai đoạn trên trục số có giao nhau không |
 
 ---
 
@@ -200,3 +224,327 @@
   | `1`<br>`2` | `TI THANG` | Tí ra Búa (1), Tèo ra Kéo (2) $\to$ Tí thắng. |
   | `1`<br>`3` | `TEO THANG` | Tí ra Búa (1), Tèo ra Bao (3) $\to$ Tèo thắng. |
   | `2`<br>`2` | `HOA` | Cả hai cùng ra Kéo. |
+
+### Bài 13 (Cơ bản): Đèn giao thông ngã tư (`PYA-L05-P01`)
+
+* **Yêu cầu:** Nhập vào một chữ cái in hoa đại diện cho màu đèn: `D` (Đỏ), `V` (Vàng), `X` (Xanh).
+  * Nếu là `D`: in ra `DUNG LAI`.
+  * Nếu là `V`: in ra `DI CHAM`.
+  * Nếu là `X`: in ra `DUOC DI`.
+* **Input:** Một ký tự `D`, `V` hoặc `X`.
+* **Output:** Thông báo tương ứng.
+
+---
+
+### Bài 14 (Cơ bản): Dấu của số nguyên (`PYA-L05-P02`)
+
+* **Yêu cầu:** Nhập vào số nguyên $N$. Hãy in ra:
+  * `DUONG` nếu $N > 0$.
+  * `AM` nếu $N < 0$.
+  * `KHONG` nếu $N == 0$.
+* **Input:** Một số nguyên $N$ ($-10^9 \le N \le 10^9$).
+* **Output:** Chuỗi kết quả.
+
+---
+
+### Bài 15 (Cơ bản): Số lớn nhất trong ba số (`PYA-L05-P03`)
+
+* **Yêu cầu:** Nhập vào 3 số nguyên $a, b, c$ mỗi số trên một dòng. Hãy tìm và in ra số có giá trị lớn nhất trong 3 số đó.
+* **Input:** Ba số nguyên $a, b, c$ ($-10^9 \le a, b, c \le 10^9$).
+* **Output:** Một số nguyên duy nhất là số lớn nhất.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `15`<br>`28`<br>`9` | `28` |
+* **Gợi ý thuật toán:** `print(max(a, b, c))`.
+
+---
+
+### Bài 16 (Cơ bản): Xếp loại học lực (`PYA-L05-P04`)
+
+* **Yêu cầu:** Nhập vào điểm trung bình môn Tin học của một bạn nhỏ (số thực $0.0 \le diem \le 10.0$).
+  * Điểm $\ge 9.0$: in `XUAT SAC`.
+  * Điểm $\ge 8.0$ và $< 9.0$: in `GIOI`.
+  * Điểm $\ge 6.5$ và $< 8.0$: in `KHA`.
+  * Điểm $< 6.5$: in `CAN CO GANG`.
+* **Input:** Một số thực $diem$.
+* **Output:** Xếp loại tương ứng.
+
+---
+
+### Bài 17 (Cơ bản): Vé gửi xe bến bãi (`PYA-L05-P05`)
+
+* **Bối cảnh:** Bãi giữ xe thông minh quy định giá vé theo loại phương tiện:
+  * Loại `1` (Xe đạp): giá $2$ nghìn đồng.
+  * Loại `2` (Xe máy): giá $5$ nghìn đồng.
+  * Loại `3` (Xe ô tô): giá $30$ nghìn đồng.
+  * Các loại khác: in `LOI PHUONG TIEN`.
+* **Input:** Một số nguyên mã loại xe.
+* **Output:** Số tiền gửi xe hoặc chữ `LOI PHUONG TIEN`.
+
+---
+
+### Bài 18 (Luyện tập): Mario cứu công chúa (`PYA-L05-P06`)
+*(Lấy cảm hứng từ Bài 3 Đề thi THT Huyện Củ Chi - TP.HCM)*
+
+* **Bối cảnh:** Mario có $K$ năng lượng, Công chúa có $P$ năng lượng. Chiếc cầu thang ngăn cách giữa hai người có đỉnh cao $N$ bậc: Mario đứng ở chân cầu thang bên trái (cần đi lên $N$ bậc và đi xuống $N$ bậc), Công chúa đứng ở chân cầu thang bên phải (cần đi lên $N$ bậc).
+  * Mỗi bậc thang Mario đi tốn $1$ năng lượng.
+  * Mỗi bậc thang Công chúa đi tốn $2$ năng lượng.
+* **Yêu cầu:** Hỏi với mức năng lượng hiện có, Mario và Công chúa có thể gặp được nhau ở một điểm nào đó trên cầu thang hay không? Nếu gặp được in `YES`, ngược lại in `NO`.
+* **Biết rằng:** Tổng số bậc cầu thang từ chân bên này sang chân bên kia là $2N$. Để gặp nhau, tổng số bậc mà Mario leo được cộng với tổng số bậc mà Công chúa leo được phải $\ge 2N$.
+* **Input:** Ba số tự nhiên $K, P, N$ ($1 \le K, P, N \le 1000$).
+* **Output:** `YES` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3`<br>`3`<br>`2` | `YES` | Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công chúa có 3 năng lượng đi được $3 // 2 = 1$ bậc. Tổng số bậc đi được là $3 + 1 = 4 \ge 4 \implies$ Gặp nhau! |
+* **Gợi ý thuật toán:**
+  * Bậc Mario đi được: `bac_mario = min(K, 2 * N)`
+  * Bậc Công chúa đi được: `bac_cong_chua = min(P // 2, 2 * N)`
+  * Nếu `bac_mario + bac_cong_chua >= 2 * N` in `YES`, ngược lại in `NO`.
+
+---
+
+### Bài 19 (Luyện tập): Tính cước taxi bậc thang (`PYA-L05-P07`)
+
+* **Bối cảnh:** Hãng taxi "Rùa Con" tính cước đi xe như sau:
+  * Giá mở cửa (cho $1\text{ km}$ đầu tiên): $10$ nghìn đồng.
+  * Từ kilomet thứ 2 đến kilomet thứ 10: giá $8$ nghìn đồng mỗi km.
+  * Từ kilomet thứ 11 trở đi: giá $6$ nghìn đồng mỗi km.
+* **Yêu cầu:** Nhập vào số kilomet $N$ mà khách đã đi (số nguyên $N \ge 1$). Tính tổng số tiền cước (nghìn đồng).
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 100$).
+* **Output:** Tổng tiền cước taxi.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `1` | `10` | Đúng 1 km đầu: 10 nghìn. |
+  | `5` | `42` | 1 km đầu: 10k + 4 km tiếp theo: $4 \times 8 = 32$k $\implies 10 + 32 = 42$k. |
+  | `12` | `94` | 1 km đầu (10k) + 9 km tiếp theo ($9 \times 8 = 72$k) + 2 km cuối ($2 \times 6 = 12$k) $\implies 10 + 72 + 12 = 94$k. |
+* **Gợi ý thuật toán:** Dùng `if - elif - else` chia 3 nấc: $N = 1$, $1 < N \le 10$, và $N > 10$.
+
+---
+
+### Bài 20 (Luyện tập): Phân loại tam giác (`PYA-L05-P08`)
+
+* **Bối cảnh:** Cho 3 số tự nhiên $a, b, c$ đã đảm bảo là độ dài 3 cạnh của một tam giác hợp lệ.
+* **Yêu cầu:** Hãy phân loại tam giác đó:
+  * Nếu 3 cạnh bằng nhau ($a == b == c$): in `TAM GIAC DEU`.
+  * Nếu có 2 cạnh bằng nhau ($a == b$ hoặc $b == c$ hoặc $c == a$): in `TAM GIAC CAN`.
+  * Các trường hợp còn lại: in `TAM GIAC THUONG`.
+* **Input:** Ba số tự nhiên $a, b, c$ trên 3 dòng ($1 \le a, b, c \le 1000$).
+* **Output:** Tên phân loại tam giác.
+
+---
+
+### Bài 21 (Luyện tập): Thuận đi tìm ánh đa vận tốc (`PYA-L05-P09`)
+*(Lấy cảm hứng từ Bài 5 Đề thi THT Huyện Từ Sơn)*
+
+* **Bối cảnh:** Thuận đứng ở vị trí $x$, Ánh đứng ở vị trí $y$. Thuận đi về phía Ánh với vận tốc $v\text{ km/h}$.
+* **Yêu cầu:** Hãy phân tích các tình huống:
+  * Nếu $x == y$: in `DA GAP NHAU` (vì đang đứng cùng một chỗ).
+  * Nếu $x \ne y$ nhưng $v == 0$: in `KHONG THE GAP` (vì Thuận đứng yên).
+  * Nếu $x \ne y$ và $v > 0$:
+    * Nếu khoảng cách $|y - x|$ chia hết cho $v$: in ra số giờ để gặp nhau.
+    * Nếu không chia hết: in `GAP NHAU LE GIO`.
+* **Input:** Ba số nguyên $x, y, v$ ($-10^9 \le x, y \le 10^9, 0 \le v \le 10^9$).
+* **Output:** Thông báo tương ứng hoặc số giờ nguyên.
+
+---
+
+### Bài 22 (Luyện tập): Thứ mấy trong tuần? (`PYA-L05-P10`)
+
+* **Bối cảnh:** Ngày mùng 1 tháng Giêng là ngày **Thứ Hai**.
+* **Yêu cầu:** Cho biết ngày thứ $K$ trong năm đó là thứ mấy?
+  * Biết rằng: ngày 1 là Thứ Hai, ngày 2 là Thứ Ba, ..., ngày 7 là Chủ Nhật, ngày 8 lại quay về Thứ Hai.
+* **Input:** Một số tự nhiên $K$ ($1 \le K \le 365$).
+* **Output:** In ra một trong các chuỗi: `THU HAI`, `THU BA`, `THU TU`, `THU NAM`, `THU SAU`, `THU BAY`, `CHU NHAT`.
+* **Gợi ý thuật toán:** Tính số dư `du = K % 7`. Nếu `du == 1`: Thứ Hai, `du == 2`: Thứ Ba, ..., `du == 0`: Chủ Nhật.
+
+---
+
+### Bài 23 (Luyện tập): Cửa hàng bánh bột lọc khuyến mãi (`PYA-L05-P11`)
+
+* **Bối cảnh:** Cửa hàng bánh bột lọc bán bánh với chương trình ưu đãi số lượng:
+  * Mua dưới 10 cái: giá $5$ nghìn đồng/cái.
+  * Mua từ 10 đến 49 cái: giá $4$ nghìn đồng/cái.
+  * Mua từ 50 cái trở lên: giá chỉ còn $3$ nghìn đồng/cái.
+* **Yêu cầu:** Nhập vào số lượng bánh $N$ mà khách muốn mua. Tính tổng số tiền khách phải trả.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 1000$).
+* **Output:** Tổng số tiền (nghìn đồng).
+
+---
+
+### Bài 24 (Vận dụng): Bốn mùa trong năm (`PYA-L05-P12`)
+
+* **Bối cảnh:** Một năm có 12 tháng được chia thành 4 mùa:
+  * **Mùa Xuân:** Tháng 1, 2, 3.
+  * **Mùa Hạ (Hè):** Tháng 4, 5, 6.
+  * **Mùa Thu:** Tháng 7, 8, 9.
+  * **Mùa Đông:** Tháng 10, 11, 12.
+* **Yêu cầu:** Nhập vào một số nguyên $M$.
+  * Nếu $1 \le M \le 12$, hãy in ra tên mùa tương ứng (`XUAN`, `HA`, `THU`, `DONG`).
+  * Nếu $M$ không nằm từ 1 đến 12, in ra `THANG KHONG HOP LE`.
+* **Input:** Một số nguyên $M$ ($-100 \le M \le 100$).
+* **Output:** Tên mùa hoặc thông báo lỗi.
+
+### Bài 25 (Cơ bản): Số chẵn có hai chữ số (`PYA-L06-P01`)
+
+* **Yêu cầu:** Nhập vào một số tự nhiên $N$. Kiểm tra xem $N$ có phải là **số chẵn có đúng hai chữ số** hay không? Nếu đúng in `YES`, ngược lại in `NO`.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 1000$).
+* **Output:** `YES` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `24` | `YES` | 24 là số chẵn và có 2 chữ số. |
+  | `8` | `NO` | 8 là số chẵn nhưng chỉ có 1 chữ số. |
+  | `35` | `NO` | 35 có 2 chữ số nhưng là số lẻ. |
+* **Gợi ý thuật toán:** `if (10 <= N <= 99) and (N % 2 == 0): print("YES") else: print("NO")`.
+
+---
+
+### Bài 26 (Cơ bản): Bội chung của 3 và 5 (`PYA-L06-P02`)
+
+* **Yêu cầu:** Nhập vào số tự nhiên $N$. Nếu $N$ chia hết cho cả 3 và 5 thì in `FIZZBUZZ`. Ngược lại in `KHONG`.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^9$).
+* **Output:** `FIZZBUZZ` hoặc `KHONG`.
+* **Gợi ý:** `if N % 3 == 0 and N % 5 == 0: print("FIZZBUZZ") else: print("KHONG")`.
+
+---
+
+### Bài 27 (Cơ bản): Ngày nghỉ cuối tuần (`PYA-L06-P03`)
+
+* **Bối cảnh:** Quy ước các ngày trong tuần bằng số: `2` (Thứ Hai), `3` (Thứ Ba), ..., `7` (Thứ Bảy), `8` (Chủ Nhật).
+* **Yêu cầu:** Nhập vào một số nguyên $d$ đại diện cho một ngày. Nếu $d$ là Thứ Bảy hoặc Chủ Nhật thì in `NGHI HOC`, ngược lại in `DI HOC`.
+* **Input:** Một số nguyên $d$ ($2 \le d \le 8$).
+* **Output:** `NGHI HOC` hoặc `DI HOC`.
+* **Gợi ý:** `if d == 7 or d == 8: print("NGHI HOC") else: print("DI HOC")`.
+
+---
+
+### Bài 28 (Cơ bản): Điểm nằm trong hình chữ nhật (`PYA-L06-P04`)
+
+* **Bối cảnh:** Trong mặt phẳng tọa độ, một hình chữ nhật có góc dưới-trái tại $(0, 0)$ và góc trên-phải tại $(W, H)$.
+* **Yêu cầu:** Nhập vào $W, H$ và tọa độ của một điểm $(x, y)$. Kiểm tra xem điểm $(x, y)$ có nằm bên trong hoặc trên mép biên của hình chữ nhật hay không? Nếu có in `TRONG`, ngược lại in `NGOAI`.
+* **Input:** Bốn số tự nhiên $W, H, x, y$ trên 4 dòng ($1 \le W, H \le 1000, 0 \le x, y \le 1000$).
+* **Output:** `TRONG` hoặc `NGOAI`.
+* **Gợi ý:** `if (0 <= x <= W) and (0 <= y <= H): print("TRONG") else: print("NGOAI")`.
+
+---
+
+### Bài 29 (Cơ bản): Ba cạnh tam giác hợp lệ (`PYA-L06-P05`)
+*(Lấy cảm hứng từ Bài 11 Đề thi THT Toàn quốc)*
+
+* **Yêu cầu:** Nhập vào 3 số tự nhiên $a, b, c$ trên 3 dòng. Kiểm tra xem 3 số này có thể tạo thành độ dài 3 cạnh của một tam giác hay không? Nếu có in `HOP LE`, ngược lại in `KHONG HOP LE`.
+* **Input:** Ba số tự nhiên $a, b, c$ ($1 \le a, b, c \le 10^9$).
+* **Output:** `HOP LE` hoặc `KHONG HOP LE`.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3`<br>`4`<br>`5` | `HOP LE` | $3+4>5$, $3+5>4$, $4+5>3$ đều đúng. |
+  | `2`<br>`3`<br>`6` | `KHONG HOP LE` | $2 + 3 = 5 < 6$ (Sai bất đẳng thức tam giác). |
+
+---
+
+### Bài 30 (Luyện tập): Kiểm tra năm nhuận (`PYA-L06-P06`)
+
+* **Yêu cầu:** Nhập vào một năm dương lịch $Y$. Hãy in ra `NAM NHUAN` nếu năm đó là năm nhuận, ngược lại in `NAM THUONG`.
+* **Quy tắc:** Năm nhuận là năm chia hết cho 400, HOẶC chia hết cho 4 nhưng không chia hết cho 100.
+* **Input:** Một số tự nhiên $Y$ ($1 \le Y \le 10^5$).
+* **Output:** `NAM NHUAN` hoặc `NAM THUONG`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `2024` | `NAM NHUAN` |
+  | `1900` | `NAM THUONG` |
+  | `2000` | `NAM NHUAN` |
+
+---
+
+### Bài 31 (Luyện tập): Số ngày trong tháng (`PYA-L06-P07`)
+*(Lấy cảm hứng từ Bài 114, 115 Đề thi THT Bắc Giang)*
+
+* **Yêu cầu:** Nhập vào tháng $M$ ($1 \le M \le 12$) và năm $Y$ ($1 \le Y \le 10^5$). Hãy in ra số lượng ngày của tháng đó trong năm $Y$.
+* **Biết rằng:**
+  * Tháng 1, 3, 5, 7, 8, 10, 12 có đúng 31 ngày.
+  * Tháng 4, 6, 9, 11 có đúng 30 ngày.
+  * Tháng 2: có 29 ngày nếu $Y$ là năm nhuận, có 28 ngày nếu $Y$ là năm thường.
+* **Input:** Hai dòng lần lượt là $M$ và $Y$.
+* **Output:** Một số nguyên duy nhất là số ngày của tháng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `2`<br>`2024` | `29` |
+  | `2`<br>`2023` | `28` |
+  | `4`<br>`2025` | `30` |
+
+---
+
+### Bài 32 (Luyện tập): Tam giác vuông hay không? (`PYA-L06-P08`)
+
+* **Bối cảnh:** Theo định lý Pytago, tam giác có 3 cạnh $a, b, c$ là tam giác vuông nếu bình phương một cạnh bằng tổng bình phương hai cạnh còn lại ($a^2 + b^2 = c^2$ hoặc $a^2 + c^2 = b^2$ hoặc $b^2 + c^2 = a^2$).
+* **Yêu cầu:** Cho 3 số dương $a, b, c$. Nếu chúng tạo thành một tam giác vuông thì in `VUONG`, ngược lại in `KHONG VUONG`.
+* **Input:** Ba số nguyên $a, b, c$ ($1 \le a, b, c \le 10^4$).
+* **Output:** `VUONG` hoặc `KHONG VUONG`.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3`<br>`4`<br>`5` | `VUONG` | $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. |
+
+---
+
+### Bài 33 (Luyện tập): Rút thẻ may mắn (`PYA-L06-P09`)
+*(Lấy cảm hứng từ Bài 113 Đề thi THT Nghệ An – Khánh Hòa)*
+
+* **Bối cảnh:** Trong hội chợ xuân, mỗi bạn nhỏ được bốc một chiếc thẻ có ghi một số tự nhiên $N$. Chiếc thẻ được coi là "Thẻ Trúng Thưởng" nếu:
+  * Số $N$ chia hết cho 7, **HOẶC**
+  * Số $N$ có chữ số tận cùng là 7.
+* **Yêu cầu:** Nhập vào số $N$ trên thẻ. In ra `TRUNG THUONG` nếu trúng thưởng, ngược lại in `CHUC MAY MAN LAN SAU`.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^9$).
+* **Output:** Thông báo tương ứng.
+* **Gợi ý thuật toán:** `if N % 7 == 0 or N % 10 == 7: print("TRUNG THUONG")`.
+
+---
+
+### Bài 34 (Luyện tập): Ngày kế tiếp trong năm (`PYA-L06-P10`)
+
+* **Bối cảnh:** Nhập vào một ngày hợp lệ gồm 3 số: ngày $D$, tháng $M$, năm $Y$.
+* **Yêu cầu:** Hãy tính và in ra ngày, tháng, năm của **ngày kế tiếp ngay sau đó**.
+* **Input:** Ba số tự nhiên $D, M, Y$ trên 3 dòng.
+* **Output:** Ba số nguyên cách nhau một dấu cách `D_tiep M_tiep Y_tiep`.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `31`<br>`12`<br>`2024` | `1 1 2025` | Ngày cuối năm chuyển sang ngày đầu năm mới! |
+  | `28`<br>`2`<br>`2024` | `29 2 2024` | Năm 2024 là năm nhuận nên tháng 2 có ngày 29. |
+  | `28`<br>`2`<br>`2023` | `1 3 2023` | Năm 2023 thường nên sau 28/2 là sang 1/3. |
+
+---
+
+### Bài 35 (Vận dụng): Cặp đôi cùng dấu hay trái dấu (`PYA-L06-P11`)
+
+* **Yêu cầu:** Nhập vào hai số nguyên $a$ và $b$ (có thể âm, dương hoặc bằng 0).
+  * In `CO SO KHONG` nếu có ít nhất một số bằng 0 ($a == 0$ hoặc $b == 0$).
+  * In `CUNG DAU` nếu cả hai số cùng mang dấu dương hoặc cùng mang dấu âm ($a \times b > 0$).
+  * In `TRAI DAU` nếu một số dương và một số âm ($a \times b < 0$).
+* **Input:** Hai số nguyên $a, b$ ($-10^9 \le a, b \le 10^9$).
+* **Output:** Thông báo theo quy định.
+
+---
+
+### Bài 36 (Thử thách): Giao nhau của hai đoạn thẳng (`PYA-L06-P12`)
+
+* **Bối cảnh:** Trên trục số thực, đoạn thẳng thứ nhất nối từ điểm $L_1$ đến $R_1$ ($L_1 \le R_1$). Đoạn thẳng thứ hai nối từ điểm $L_2$ đến $R_2$ ($L_2 \le R_2$).
+* **Yêu cầu:** Em hãy kiểm tra xem hai đoạn thẳng này có điểm chung (giao nhau) hay không?
+  * Nếu có giao nhau: in ra `GIAO NHAU` và độ dài của đoạn giao nhau đó.
+  * Nếu không giao nhau: in `KHONG GIAO NHAU`.
+* **Input:** Bốn số nguyên $L_1, R_1, L_2, R_2$ trên 4 dòng ($-10^9 \le L_1 \le R_1 \le 10^9, -10^9 \le L_2 \le R_2 \le 10^9$).
+* **Output:** `GIAO NHAU [do_dai]` hoặc `KHONG GIAO NHAU`.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `1`<br>`6`<br>`4`<br>`9` | `GIAO NHAU 2` | Đoạn giao nhau từ 4 đến 6, độ dài: $6 - 4 = 2$. |
+  | `1`<br>`3`<br>`5`<br>`8` | `KHONG GIAO NHAU` | Hai đoạn rời nhau hoàn toàn. |
+* **Gợi ý thuật toán:**
+  * Điểm bắt đầu giao: `start = max(L1, L2)`
+  * Điểm kết thúc giao: `end = min(R1, R2)`
+  * Nếu `start <= end`: in `GIAO NHAU`, độ dài là `end - start`. Ngược lại in `KHONG GIAO NHAU`.

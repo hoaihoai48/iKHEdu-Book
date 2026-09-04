@@ -1,71 +1,20 @@
-# Bài 14: Duyệt chuỗi và biến đổi ký tự
+# Bài 14: Duyệt chuỗi, biến đổi ký tự và tách từ
+
+## 1. Tóm tắt kiến thức trọng tâm
+- Duyệt từng ký tự: `for ch in s:`
+- **Hàm kiểm tra:** `ch.isdigit()` (chữ số), `ch.isalpha()` (chữ cái), `ch.isupper()` (chữ hoa), `ch.islower()` (chữ thường).
+- **Hàm biến đổi:** `s.upper()` (chuyển sang chữ hoa), `s.lower()` (chuyển sang chữ thường), `s.replace(old, new)`.
+- **Tách từ và ghép từ:**
+  - Tách các từ trong câu (tự động xóa dấu cách thừa): `danh_sach_tu = s.split()`
+  - Ghép lại bằng 1 khoảng trắng: `" ".join(danh_sach_tu)`
+- **Mã ASCII (`ord` và `chr`):**
+  - `ord('A') == 65`, `ord('a') == 97`, `ord('0') == 48`.
+  - `chr(65) == 'A'`.
 
 ---
 
-## 1. Khởi động: Chiếc kính lúp soi từng chữ cái
 
-Ở Bài 13, chúng ta đã biết cách lấy một ký tự cụ thể hoặc cắt một lát chuỗi bằng Indexing và Slicing.
-Nhưng giả sử bác bảo vệ giao cho em một văn bản rất dài và hỏi:
-* *"Văn bản này có bao nhiêu chữ cái in hoa?"*
-* *"Có bao nhiêu chữ số từ '0' đến '9' bị lẫn vào trong tên người?"*
-* *"Hãy đổi toàn bộ các chữ cái thường thành chữ IN HOA để in lên tấm băng rôn cổ vũ!"*
-
-Làm sao để làm được điều đó? Chúng ta cần một **chiếc kính lúp** soi lần lượt từng chữ cái từ đầu đến cuối chuỗi.
-Trong Python, cú pháp duyệt chuỗi đẹp và tự nhiên như ngôn ngữ nói hàng ngày:
-```python
-for ky_tu in chuoi:
-    # Làm việc với từng ky_tu
-```
-
----
-
-## 2. Hai cách duyệt chuỗi trong Python
-
-### Cách 1: Duyệt trực tiếp từng phần tử (`for ch in s`) — đơn giản nhất!
-```python
-s = "iKHEDU"
-for ch in s:
-    print(ch)  # Lần lượt in ra: 'i', 'K', 'H', 'E', 'D', 'U'
-```
-
-### Cách 2: Duyệt qua chỉ số index (`for i in range(len(s))`) — khi cần biết vị trí!
-```python
-s = "PYTHON"
-for i in range(len(s)):
-    print("Vi tri", i, "la ky tu", s[i])
-```
-
----
-
-## 3. Bộ công cụ nhận diện & biến đổi ký tự thần kỳ
-
-Python trang bị sẵn cho chúng ta những phương thức kiểm tra và biến đổi cực kỳ quyền năng:
-
-| Lệnh / Phương thức | Ý nghĩa | Ví dụ thực tế |
-|---|---|---|
-| `ch.isupper()` | Kiểm tra có phải **chữ HOA** không? | `'A'.isupper() \to True`, `'a'.isupper() \to False` |
-| `ch.islower()` | Kiểm tra có phải **chữ thường** không? | `'b'.islower() \to True` |
-| `ch.isdigit()` | Kiểm tra có phải **chữ số ('0'-'9')** không? | `'5'.isdigit() \to True`, `'A'.isdigit() \to False` |
-| `ch.isalpha()` | Kiểm tra có phải **chữ cái** không? | `'x'.isalpha() \to True`, `'?'.isalpha() \to False` |
-| `s.upper()` | Biến toàn bộ chuỗi thành **IN HOA** | `"python".upper() \to "PYTHON"` |
-| `s.lower()` | Biến toàn bộ chuỗi thành **chữ thường** | `"HELLO".lower() \to "hello"` |
-| `s.count(x)` | Đếm số lần xuất hiện của ký tự `x` | `"BANANA".count('A') \to 3` |
-
-### Ví dụ mẫu: Đếm số chữ số xuất hiện trong một dòng chữ
-```python
-s = input()
-dem_so = 0
-
-for ch in s:
-    if ch.isdigit():
-        dem_so += 1
-
-print("So luong chu so trong van ban la:", dem_so)
-```
-
----
-
-## 4. Concept quiz: 14 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 2. Concept quiz: 26 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
 #### Câu 1: Vòng lặp `for ch in "ABC":` sẽ lặp lại bao nhiêu lần?
 - **A.** 1 lần
@@ -187,3 +136,101 @@ print(tong)
 - **C.** `s.swap('a', 'o')`
 - **D.** `s.delete('a')`
 - > *Giải thích:* Phương thức `replace(old, new)` thay thế các chuỗi con khớp với `old` bằng `new`.
+
+#### Câu 15: Phương thức `s.split()` mặc định cắt chuỗi theo ký tự gì?
+- **A.** Dấu phẩy
+- **B.** **[Đáp án đúng]** Khoảng trắng (khoảng trắng đơn, nhiều khoảng trắng, dấu tab, xuống dòng)
+- **C.** Dấu chấm
+- **D.** Chữ cái đầu tiên
+- > *Giải thích:* `split()` không truyền tham số sẽ tự động phân tách theo mọi khoảng trắng liên tiếp.
+
+#### Câu 16: Cho `s = "An   Binh    Cuong"`. Biểu thức `len(s.split())` trả về:
+- **A.** 3
+- **B.** **[Đáp án đúng]** 3 (Bất chấp có bao nhiêu dấu cách giữa các từ!)
+- **C.** 15
+- **D.** 6
+- > *Giải thích:* `split()` tự động gộp các khoảng trắng thừa thành một dấu phân cách duy nhất, danh sách còn đúng 3 từ.
+
+#### Câu 17: Hàm `ord('A')` trong Python trả về giá trị là:
+- **A.** 0
+- **B.** 1
+- **C.** **[Đáp án đúng]** 65
+- **D.** 97
+- > *Giải thích:* Mã ASCII của chữ cái 'A' in hoa là 65.
+
+#### Câu 18: Hàm `chr(66)` trong Python trả về ký tự nào?
+- **A.** `'A'`
+- **B.** **[Đáp án đúng]** `'B'`
+- **C.** `'6'`
+- **D.** `'b'`
+- > *Giải thích:* Mã ASCII 65 là 'A' nên mã 66 là 'B'.
+
+#### Câu 19: Khoảng cách mã ASCII giữa chữ thường `'a'` và chữ hoa `'A'` (`ord('a') - ord('A')`) luôn bằng bao nhiêu?
+- **A.** 26
+- **B.** **[Đáp án đúng]** 32
+- **C.** 10
+- **D.** 48
+- > *Giải thích:* $97 - 65 = 32$. Đây là hằng số dùng để chuyển đổi hoa-thường thủ công!
+
+#### Câu 20: Cho `words = ['Python', 'la', 'so', '1']`. Biểu thức `" ".join(words)` tạo ra chuỗi gì?
+- **A.** `"Pythonlaso1"`
+- **B.** **[Đáp án đúng]** `"Python la so 1"`
+- **C.** `['Python la so 1']`
+- **D.** `"Python-la-so-1"`
+- > *Giải thích:* `join()` lấy chuỗi phân cách đứng trước (ở đây là dấu cách `" "`) nối các phần tử lại với nhau.
+
+#### Câu 21: Mã ASCII của ký tự chữ số `'0'` là bao nhiêu?
+- **A.** 0
+- **B.** **[Đáp án đúng]** 48
+- **C.** 1
+- **D.** 32
+- > *Giải thích:* Ký tự `'0'` có mã ASCII là 48. Vì vậy `ord(ch) - 48` là cách chuyển ký tự số sang số nguyên nhanh!
+
+#### Câu 22: Cho `ch = 'Z'`. Nếu dịch chuyển sang ký tự tiếp theo trong vòng tròn 26 chữ cái tiếng anh, ký tự đó là:
+- **A.** `'['`
+- **B.** **[Đáp án đúng]** `'A'`
+- **C.** `'Z'`
+- **D.** Không tồn tại
+- > *Giải thích:* Trong mật mã Caesar xoay vòng (Modulo 26), sau 'Z' sẽ quay trở lại 'A'.
+
+#### Câu 23: Đoạn code sau in ra từ nào?
+```python
+cau = "Ha Noi mua thu dep lam"
+ds = cau.split()
+print(ds[-1])
+```
+- **A.** `"Ha"`
+- **B.** `"Noi"`
+- **C.** **[Đáp án đúng]** `"lam"`
+- **D.** `"dep"`
+- > *Giải thích:* `ds[-1]` lấy phần tử cuối cùng trong danh sách các từ, đó là từ `"lam"`.
+
+#### Câu 24: Phương thức `s.strip()` có tác dụng gì?
+- **A.** Xóa tất cả các chữ cái
+- **B.** **[Đáp án đúng]** Cắt bỏ toàn bộ các khoảng trắng thừa ở ĐẦU và ĐUÔI của chuỗi
+- **C.** Đảo ngược chuỗi
+- **D.** In hoa chuỗi
+- > *Giải thích:* `strip()` dọn dẹp các khoảng trắng ở hai đầu chuỗi văn bản.
+
+#### Câu 25: Biểu thức `chr(ord('c') - 32)` cho kết quả là gì?
+- **A.** `'a'`
+- **B.** `'d'`
+- **C.** **[Đáp án đúng]** `'C'`
+- **D.** `'c'`
+- > *Giải thích:* Lấy mã ASCII của 'c' (99) trừ đi 32 được 67, là mã của chữ hoa 'C'.
+
+#### Câu 26: Đoạn code sau in ra màn hình giá trị gì?
+```python
+cau = "lap trinh tin hoc tre"
+ds = cau.split()
+max_len = 0
+for tu in ds:
+    if len(tu) > max_len:
+        max_len = len(tu)
+print(max_len)
+```
+- **A.** 3
+- **B.** 4
+- **C.** **[Đáp án đúng]** 5
+- **D.** 6
+- > *Giải thích:* Độ dài các từ: 'lap' (3), 'trinh' (5), 'tin' (3), 'hoc' (3), 'tre' (3). Từ dài nhất có độ dài 5.

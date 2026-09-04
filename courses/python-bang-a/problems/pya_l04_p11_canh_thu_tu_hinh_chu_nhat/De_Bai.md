@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Một hình chữ nhật luôn có 4 cạnh tạo thành 2 cặp cạnh đối bằng nhau (2 chiều dài bằng nhau và 2 chiều rộng bằng nhau). Bạn Nam nhặt được 3 thanh gỗ có độ dài là $A, B, C$ và biết chắc chắn 3 thanh này là 3 cạnh của một hình chữ nhật.
+Sau giờ thủ công, bạn Nam nhặt được 3 thanh gỗ có độ dài là $A, B, C$ ở góc lớp học. Cô giáo mỉm cười cho biết chắc chắn 3 thanh này là 3 cạnh của một hình chữ nhật, mà một hình chữ nhật luôn có 4 cạnh tạo thành 2 cặp cạnh đối bằng nhau (2 chiều dài bằng nhau và 2 chiều rộng bằng nhau). Nam muốn tìm thêm đúng một thanh gỗ nữa để ghép vừa khít thành khung hình. Em hãy giúp bạn Nam tìm độ dài thanh gỗ còn thiếu nhé!
 ## Nhiệm vụ
 
 Em hãy tìm độ dài thanh gỗ thứ 4 còn thiếu để ghép vừa khít thành hình chữ nhật.

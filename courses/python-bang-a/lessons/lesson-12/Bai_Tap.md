@@ -1,181 +1,226 @@
-# Hệ thống bài tập thực hành — bài 12: Đếm số theo quy luật và số đặc biệt
+# Hệ thống bài tập thực hành — bài 12: Thống kê danh sách và sắp xếp
 
 ---
 
-## Bảng ma trận bài tập (12 bài tập phân tầng cơ bản → thử thách)
+## Bảng ma trận bài tập (14 bài tập phân tầng cơ bản → thử thách)
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L12-P01` | Đếm số chia hết cho K | `Cơ bản` | $1 \le N, K \le 10^9$ | Phép chia nguyên $N // K$ chuẩn xác |
-| 02 | `PYA-L12-P02` | Đếm số lẻ trong đoạn | `Cơ bản` | $1 \le A \le B \le 10^9$ | Đếm số lượng số lẻ trong đoạn $[A, B]$ |
-| 03 | `PYA-L12-P03` | Kiểm tra số hoàn hảo | `Cơ bản` | $1 \le N \le 10^6$ | Tính tổng ước nhỏ hơn $N$ và so sánh |
-| 04 | `PYA-L12-P04` | Số armstrong ba chữ số | `Cơ bản` | $100 \le N \le 999$ | Kiểm tra $a^3 + b^3 + c^3 = N$ |
-| 05 | `PYA-L12-P05` | Tìm tất cả số hoàn hảo nhỏ hơn N | `Cơ bản` | $1 \le N \le 10^4$ | Vòng lặp tìm số hoàn hảo (6, 28, 496...) |
-| 06 | `PYA-L12-P06` | Đếm bội của 3 nhưng không chia hết cho 5 | `Luyện tập` | $1 \le A \le B \le 10^{12}$ | Áp dụng trừ tập hợp: Chia 3 trừ chia 15 |
-| 07 | `PYA-L12-P07` | Đếm số chia hết cho 2 hoặc 3 | `Luyện tập` | $1 \le N \le 10^{12}$ | Nguyên lý bao hàm - loại trừ $\mathcal{O}(1)$ |
-| 08 | `PYA-L12-P08` | Cặp số thân thiết | `Luyện tập` | $1 \le A, B \le 10^5$ | Kiểm tra tổng ước của $A$ bằng $B$ và ngược lại |
-| 09 | `PYA-L12-P09` | Số phong phú (abundant number) | `Luyện tập` | $1 \le N \le 10^6$ | Kiểm tra tổng ước thực sự lớn hơn $N$ |
-| 10 | `PYA-L12-P10` | Đếm số không chứa chữ số 0 | `Luyện tập` | $1 \le N \le 10^6$ | Đếm các số không chứa chữ số 0 |
-| 11 | `PYA-L12-P11` | Đếm số chính phương trong đoạn | `Vận dụng` | $1 \le A \le B \le 10^{14}$ | Đếm số lượng chính phương bằng $\lfloor\sqrt{B}\rfloor - \lfloor\sqrt{A-1}\rfloor$ |
-| 12 | `PYA-L12-P12` | Số tự mãn (narcissistic number K chữ số) | `Thử thách` | $1 \le N \le 10^9$ | Tổng lũy thừa bậc $K$ của các chữ số bằng chính nó |
+| 01 | `PYA-L17-P01` | Điểm số cao nhất & thấp nhất | `Cơ bản` | $N \le 1000$ | Dùng hàm `max()` và `min()` |
+| 02 | `PYA-L17-P02` | Sắp xếp tăng dần đơn giản | `Cơ bản` | $N \le 1000$ | Sử dụng `a.sort()` |
+| 03 | `PYA-L17-P03` | Điểm trung bình môn học | `Cơ bản` | $N \le 1000$ | Tính `sum(a) / len(a)` làm tròn 2 chữ số |
+| 04 | `PYA-L17-P04` | Sắp xếp giảm dần bảng xếp hạng | `Cơ bản` | $N \le 10^5$ | Sử dụng `a.sort(reverse=True)` |
+| 05 | `PYA-L17-P05` | Tìm số lớn thứ nhì trong mảng | `Cơ bản` | $N \le 10^5$ | Tìm số lớn thứ hai (loại trừ các số bằng max) |
+| 06 | `PYA-L17-P06` | Đếm số lượng học sinh trên điểm trung bình | `Luyện tập` | $N \le 10^5$ | So sánh từng phần tử với giá trị trung bình |
+| 07 | `PYA-L17-P07` | Lọc bỏ các số trùng lặp | `Luyện tập` | $N \le 10^5$ | Giữ lại các số độc nhất tăng dần |
+| 08 | `PYA-L17-P08` | Điểm Olympic bỏ max bỏ min | `Luyện tập` | $N \ge 3, N \le 1000$ | Bỏ 1 điểm cao nhất và 1 điểm thấp nhất |
+| 09 | `PYA-L17-P09` | Sắp xếp tên theo thứ tự bảng chữ cái | `Luyện tập` | $N \le 1000$ từ | Sắp xếp mảng chuỗi |
+| 10 | `PYA-L17-P10` | Chênh lệch nhỏ nhất giữa hai số | `Luyện tập` | $N \le 10^5$ | Sắp xếp mảng rồi tìm $\min(A_{i+1} - A_i)$ |
+| 11 | `PYA-L17-P11` | Trung vị của dãy số (median) | `Luyện tập` | $N \le 10^5$ | Tìm phần tử chính giữa sau khi sắp xếp |
+| 12 | `PYA-L17-P12` | Số xuất hiện nhiều lần nhất (mode) | `Vận dụng` | $N \le 10^5$ | Thống kê tần số xuất hiện cực đại |
+| 13 | `PYA-L17-P13` | Ghép hai dãy đã sắp xếp | `Vận dụng` | $N, M \le 10^5$ | Hợp nhất 2 mảng tăng dần thành mảng tăng dần |
+| 14 | `PYA-L17-P14` | Xếp hàng mua trà sữa (tổng thời gian chờ ít nhất) | `Thử thách` | $N \le 10^5$ | Thuật toán tham lam (greedy) bằng sắp xếp |
 
 ---
 
-### Bài 1 (Cơ bản): Đếm số chia hết cho K (`PYA-L12-P01`)
+### Bài 1 (Cơ bản): Điểm số cao nhất & thấp nhất (`PYA-L17-P01`)
 
-* **Yêu cầu:** Cho 2 số nguyên dương $N$ và $K$. Hãy đếm xem trong các số từ $1$ đến $N$, có bao nhiêu số chia hết cho $K$.
-* **Input:** Hai số nguyên $N$ và $K$ ($1 \le N, K \le 10^9$) cách nhau bởi khoảng trắng.
-* **Output:** Một số nguyên duy nhất là số lượng các số chia hết cho $K$.
+* **Yêu cầu:** Cho danh sách điểm thi của $N$ bạn học sinh. Hãy in ra điểm số cao nhất và điểm số thấp nhất trong danh sách.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+  * Dòng 2: $N$ số nguyên là điểm của các bạn ($0 \le A_i \le 100$).
+* **Output:** Điểm cao nhất, theo sau là điểm thấp nhất.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5`<br>`80 95 60 100 75` | `100 60` |
+
+---
+
+### Bài 2 (Cơ bản): Sắp xếp tăng dần đơn giản (`PYA-L17-P02`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy sắp xếp dãy số theo thứ tự tăng dần và in ra màn hình trên một dòng.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Dãy số sau khi sắp xếp tăng dần, cách nhau bởi khoảng trắng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5`<br>`9 2 7 1 5` | `1 2 5 7 9` |
+
+---
+
+### Bài 3 (Cơ bản): Điểm trung bình môn học (`PYA-L17-P03`)
+
+* **Yêu cầu:** Cho danh sách điểm kiểm tra của $N$ bài thi. Hãy tính điểm trung bình cộng của các bài thi và in ra với đúng 2 chữ số sau dấu phẩy.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+  * Dòng 2: $N$ số thực hoặc số nguyên là điểm các bài thi.
+* **Output:** Điểm trung bình cộng (định dạng `f"{tb:.2f}"`).
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `20 3` | `6` | Có 6 số: 3, 6, 9, 12, 15, 18. |
-* **Gợi ý:** Sử dụng công thức `N // K`.
+  | `4`<br>`8 9 7 10` | `8.50` | $(8 + 9 + 7 + 10) / 4 = 8.5$. |
 
 ---
 
-### Bài 2 (Cơ bản): Đếm số lẻ trong đoạn (`PYA-L12-P02`)
+### Bài 4 (Cơ bản): Sắp xếp giảm dần bảng xếp hạng (`PYA-L17-P04`)
 
-* **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^9$). Hãy đếm xem có bao nhiêu số lẻ nằm trong đoạn từ $A$ đến $B$ (tính cả $A$ và $B$).
-* **Input:** Hai số $A, B$ trên cùng một dòng.
-* **Output:** Số lượng số lẻ.
+* **Yêu cầu:** Cho danh sách điểm số của $N$ thí sinh tham gia cuộc thi. Hãy sắp xếp bảng điểm theo thứ tự từ cao xuống thấp (giảm dần) để trao giải.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Bảng điểm sắp xếp giảm dần trên một dòng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5`<br>`20 80 40 100 60` | `100 80 60 40 20` |
+
+---
+
+### Bài 5 (Cơ bản): Tìm số lớn thứ nhì trong mảng (`PYA-L17-P05`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy tìm giá trị lớn thứ nhì trong dãy số (nghĩa là giá trị lớn nhất trong số các phần tử nhỏ hơn giá trị cực đại). Nếu tất cả các phần tử trong mảng đều bằng nhau, in ra `KHONG CO`.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($2 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Giá trị lớn thứ nhì, hoặc `KHONG CO`.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `3 8` | `3` | Có 3 số lẻ là: 3, 5, 7. |
+  | `5`<br>`10 20 20 15 5` | `15` | Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15. |
+  | `3`<br>`5 5 5` | `KHONG CO` | Tất cả bằng nhau. |
 
 ---
 
-### Bài 3 (Cơ bản): Kiểm tra số hoàn hảo (`PYA-L12-P03`)
+### Bài 6 (Luyện tập): Đếm số lượng học sinh trên điểm trung bình (`PYA-L17-P06`)
 
-* **Bối cảnh:** Một số nguyên dương $N$ được gọi là "Số hoàn hảo" nếu tổng tất cả các ước số nguyên dương nhỏ hơn $N$ bằng chính số $N$.
-* **Yêu cầu:** Nhập số nguyên dương $N$. Kiểm tra $N$ có phải số hoàn hảo không. In `YES` nếu đúng, ngược lại in `NO`.
-* **Input:** Một số nguyên $N$ ($1 \le N \le 10^6$).
-* **Output:** `YES` hoặc `NO`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `6` | `YES` |
-  | `10` | `NO` |
-
----
-
-### Bài 4 (Cơ bản): Số armstrong ba chữ số (`PYA-L12-P04`)
-
-* **Bối cảnh:** Số Armstrong có 3 chữ số là số tự nhiên có dạng $\overline{abc}$ thỏa mãn $a^3 + b^3 + c^3 = \overline{abc}$.
-* **Yêu cầu:** Cho một số có đúng 3 chữ số $N$. Kiểm tra xem $N$ có phải là số Armstrong không. In `YES` hoặc `NO`.
-* **Input:** Một số nguyên $N$ ($100 \le N \le 999$).
-* **Output:** `YES` hoặc `NO`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `153` | `YES` |
-  | `200` | `NO` |
-
----
-
-### Bài 5 (Cơ bản): Tìm tất cả số hoàn hảo nhỏ hơn N (`PYA-L12-P05`)
-
-* **Yêu cầu:** Cho số nguyên dương $N$ ($1 \le N \le 10^4$). Hãy in ra tất cả các số hoàn hảo nhỏ hơn hoặc bằng $N$ theo thứ tự tăng dần.
-* **Input:** Một số nguyên $N$.
-* **Output:** Các số hoàn hảo, cách nhau bởi khoảng trắng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `30` | `6 28` |
-
----
-
-### Bài 6 (Luyện tập): Đếm bội của 3 nhưng không chia hết cho 5 (`PYA-L12-P06`)
-
-* **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^{12}$). Hãy đếm xem trong đoạn từ $A$ đến $B$ có bao nhiêu số chia hết cho 3 nhưng **không chia hết cho 5**.
-* **Input:** Hai số $A$ và $B$ cách nhau bởi khoảng trắng.
-* **Output:** Số lượng số thỏa mãn.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `1 30` | `8` |
-
----
-
-### Bài 7 (Luyện tập): Đếm số chia hết cho 2 hoặc 3 (`PYA-L12-P07`)
-
-* **Yêu cầu:** Cho số nguyên dương $N$ ($1 \le N \le 10^{12}$). Hãy đếm xem từ 1 đến $N$ có bao nhiêu số chia hết cho 2 hoặc chia hết cho 3.
-* **Input:** Một số nguyên $N$.
-* **Output:** Số lượng số thỏa mãn.
+* **Yêu cầu:** Cho điểm thi của $N$ học sinh. Hãy đếm xem có bao nhiêu bạn học sinh có điểm số lớn hơn hoặc bằng điểm trung bình cộng của cả lớp.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số thực.
+* **Output:** Số lượng học sinh đạt điểm $\ge$ điểm trung bình.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `10` | `7` | Các số là: 2, 3, 4, 6, 8, 9, 10 (có 7 số). |
-* **Gợi ý:** Dùng công thức $N // 2 + N // 3 - N // 6$.
+  | `4`<br>`8 6 10 4` | `2` | Điểm TB: $(8+6+10+4)/4 = 7.0$. Các bạn có điểm $\ge 7$ là 8 và 10 (có 2 bạn). |
 
 ---
 
-### Bài 8 (Luyện tập): Cặp số thân thiết (`PYA-L12-P08`)
+### Bài 7 (Luyện tập): Lọc bỏ các số trùng lặp (`PYA-L17-P07`)
 
-* **Bối cảnh:** Hai số $A$ và $B$ ($A \ne B$) được gọi là "Cặp số thân thiết" nếu tổng các ước số nhỏ hơn $A$ bằng $B$, và tổng các ước số nhỏ hơn $B$ bằng $A$.
-* **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$. In ra `YES` nếu chúng là cặp số thân thiết, ngược lại in `NO`.
-* **Input:** Hai số $A, B$ ($1 \le A, B \le 10^5$).
-* **Output:** `YES` hoặc `NO`.
+* **Yêu cầu:** Cho dãy gồm $N$ số nguyên có thể chứa nhiều số bị trùng lặp. Hãy lọc bỏ các phần tử trùng lặp và in ra các số độc nhất theo thứ tự tăng dần.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Các số độc nhất sắp xếp tăng dần trên một dòng.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `220 284` | `YES` |
-  | `10 20` | `NO` |
+  | `7`<br>`3 1 4 1 5 9 2` | `1 2 3 4 5 9` |
 
 ---
 
-### Bài 9 (Luyện tập): Số phong phú (abundant number) (`PYA-L12-P09`)
+### Bài 8 (Luyện tập): Điểm Olympic bỏ max bỏ min (`PYA-L17-P08`)
 
-* **Bối cảnh:** Một số tự nhiên được gọi là "Số phong phú" nếu tổng các ước số nhỏ hơn nó lớn hơn chính nó (ví dụ: số 12 có tổng các ước nhỏ hơn nó là $1+2+3+4+6=16 > 12$).
-* **Yêu cầu:** Nhập số nguyên dương $N$. Hãy in ra tất cả các số phong phú nhỏ hơn hoặc bằng $N$.
-* **Input:** Số nguyên $N$ ($1 \le N \le 10^4$).
-* **Output:** Dãy các số phong phú tăng dần trên một dòng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `20` | `12 18 20` |
-
----
-
-### Bài 10 (Luyện tập): Đếm số không chứa chữ số 0 (`PYA-L12-P10`)
-
-* **Yêu cầu:** Cho số nguyên dương $N$. Hãy đếm xem từ 1 đến $N$ có bao nhiêu số mà trong cách ghi thập phân của nó **không chứa bất kỳ chữ số 0 nào**.
-* **Input:** Một số nguyên $N$ ($1 \le N \le 10^6$).
-* **Output:** Số lượng số thỏa mãn.
+* **Bối cảnh:** Trong hội thi Bơi lội Olympic, có $N$ giám khảo chấm điểm ($N \ge 3$). Để đảm bảo công bằng tuyệt đối, điểm số chính thức của vận động viên là trung bình cộng sau khi đã **bỏ đi một điểm cao nhất và một điểm thấp nhất**.
+* **Yêu cầu:** Cho $N$ điểm số. Hãy tính điểm chính thức của vận động viên (làm tròn 2 chữ số thập phân).
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($3 \le N \le 1000$).
+  * Dòng 2: $N$ số thực cách nhau bởi khoảng trắng.
+* **Output:** Điểm trung bình sau khi loại bỏ 1 điểm max và 1 điểm min.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `15` | `14` | Từ 1 đến 15 chỉ có duy nhất số 10 chứa chữ số 0. Vậy có $15 - 1 = 14$ số. |
+  | `5`<br>`7.0 9.0 8.0 10.0 6.0` | `8.00` | Bỏ min là 6.0, bỏ max là 10.0. Còn lại: 7.0, 8.0, 9.0. Trung bình là 8.00. |
 
 ---
 
-### Bài 11 (Vận dụng): Đếm số chính phương trong đoạn (`PYA-L12-P11`)
+### Bài 9 (Luyện tập): Sắp xếp tên theo thứ tự bảng chữ cái (`PYA-L17-P09`)
+
+* **Yêu cầu:** Cho danh sách gồm $N$ từ tiếng Anh. Hãy sắp xếp danh sách từ theo thứ tự từ điển A-Z (tăng dần).
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+  * Dòng 2: $N$ từ viết thường cách nhau bởi khoảng trắng.
+* **Output:** Danh sách từ sau khi sắp xếp trên một dòng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4`<br>`orange apple banana grape` | `apple banana grape orange` |
+
+---
+
+### Bài 10 (Luyện tập): Chênh lệch nhỏ nhất giữa hai số (`PYA-L17-P10`)
 *(Đề thi Tin học trẻ Bảng A)*
 
-* **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^{14}$). Hãy đếm xem có bao nhiêu số chính phương nằm trong đoạn từ $A$ đến $B$.
-* **Input:** Hai số nguyên $A, B$ trên cùng một dòng.
-* **Output:** Số lượng số chính phương trong đoạn $[A, B]$.
+* **Yêu cầu:** Cho dãy $N$ số nguyên đôi một khác nhau. Hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử bất kỳ trong dãy (tức là giá trị $|A_i - A_j|$ nhỏ nhất với $i \ne j$).
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($2 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Độ chênh lệch nhỏ nhất.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `5 25` | `3` | Có 3 số chính phương là 9, 16, 25. |
-* **Gợi ý:** Một số $X$ là số chính phương trong $[A, B]$ thì $K = \sqrt{X}$ thỏa mãn $\sqrt{A} \le K \le \sqrt{B}$. Số lượng $K$ nguyên chính bằng: `int(B**0.5) - int((A - 1)**0.5)`.
+  | `4`<br>`10 1 8 15` | `2` | Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $|10 - 8| = 2$ (nhỏ nhất). |
 
 ---
 
-### Bài 12 (Thử thách): Số tự mãn (narcissistic number K chữ số) (`PYA-L12-P12`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+### Bài 11 (Luyện tập): Trung vị của dãy số (median) (`PYA-L17-P11`)
 
-* **Bối cảnh:** Một số tự nhiên $N$ có $K$ chữ số được gọi là "Số tự mãn" (Narcissistic number) nếu tổng lũy thừa bậc $K$ của các chữ số của nó đúng bằng chính số $N$.
-  Ví dụ:
-  * $N = 153$ có 3 chữ số: $1^3 + 5^3 + 3^3 = 153$ $\implies$ Thỏa mãn.
-  * $N = 1634$ có 4 chữ số: $1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634$ $\implies$ Thỏa mãn.
-* **Yêu cầu:** Cho số nguyên dương $N$ ($1 \le N \le 10^9$). Hãy kiểm tra xem $N$ có phải là số tự mãn không. In `YES` nếu đúng, ngược lại in `NO`.
-* **Input:** Một số nguyên $N$.
-* **Output:** `YES` hoặc `NO`.
+* **Bối cảnh:** Cho một dãy gồm $N$ số nguyên lẻ phần tử ($N$ là số lẻ). Trung vị của dãy là phần tử nằm chính giữa sau khi dãy đã được sắp xếp tăng dần.
+* **Yêu cầu:** Cho dãy $N$ số nguyên ($N$ lẻ). Hãy tìm số trung vị của dãy số.
+* **Input:**
+  * Dòng 1: Số nguyên lẻ $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Giá trị trung vị.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5`<br>`10 2 8 4 6` | `6` | Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6. |
+
+---
+
+### Bài 12 (Vận dụng): Số xuất hiện nhiều lần nhất (mode) (`PYA-L17-P12`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy tìm số xuất hiện nhiều lần nhất trong dãy. Nếu có nhiều số có cùng số lần xuất hiện nhiều nhất, hãy in ra số có giá trị nhỏ nhất trong các số đó.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Số xuất hiện nhiều nhất.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `1634` | `YES` |
-  | `2024` | `NO` |
+  | `7`<br>`2 3 5 2 3 7 2` | `2` |
+
+---
+
+### Bài 13 (Vận dụng): Ghép hai dãy đã sắp xếp (`PYA-L17-P13`)
+
+* **Yêu cầu:** Cho hai dãy số nguyên $A$ (gồm $N$ phần tử) và $B$ (gồm $M$ phần tử) đều đã được sắp xếp tăng dần. Hãy ghép hai dãy lại thành một dãy duy nhất gồm $(N + M)$ phần tử cũng được sắp xếp tăng dần.
+* **Input:**
+  * Dòng 1: Hai số $N$ và $M$ ($1 \le N, M \le 10^5$).
+  * Dòng 2: $N$ số nguyên của dãy $A$.
+  * Dòng 3: $M$ số nguyên của dãy $B$.
+* **Output:** Dãy hợp nhất gồm $(N + M)$ phần tử tăng dần trên một dòng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `3 4`<br>`1 4 7`<br>`2 3 5 8` | `1 2 3 4 5 7 8` |
+
+---
+
+### Bài 14 (Thử thách): Xếp hàng mua trà sữa (greedy) (`PYA-L17-P14`)
+*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+
+* **Bối cảnh:** Có $N$ bạn học sinh cùng xếp hàng mua trà sữa. Bạn thứ $i$ cần $T_i$ phút để người bán hàng pha chế xong cốc trà sữa của mình.
+  Tổng thời gian chờ đợi của tất cả các bạn sẽ là tổng thời gian mà mỗi bạn phải đứng xếp hàng chờ cho đến khi nhận được trà sữa.
+* **Yêu cầu:** Hãy tìm cách sắp xếp thứ tự các bạn vào mua trà sữa sao cho **tổng thời gian chờ đợi của tất cả các bạn là NHỎ NHẤT CÓ THỂ**. Hãy in ra tổng thời gian chờ đợi nhỏ nhất đó.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên $T_i$ ($1 \le T_i \le 1000$).
+* **Output:** Một số nguyên duy nhất là tổng thời gian chờ đợi nhỏ nhất.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3`<br>`3 1 2` | `10` | Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt là 1, 2, 3.<br>- Bạn 1 chờ 1 phút.<br>- Bạn 2 chờ $1 + 2 = 3$ phút.<br>- Bạn 3 chờ $1 + 2 + 3 = 6$ phút.<br>Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất). |

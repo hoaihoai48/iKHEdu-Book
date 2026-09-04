@@ -5,10 +5,11 @@
 
 ## Bối cảnh
 
-Một đoàn khách chuẩn bị đi tham quan Chùa Hương Tích. Để lên chùa, đoàn phải đi thuyền và đi cáp treo:
+Cuối tuần này, một đoàn khách nhí nhố chuẩn bị đi tham quan Chùa Hương Tích. Để lên chùa, đoàn phải đi thuyền rồi đi cáp treo ngắm cảnh núi rừng:
   * Vé thuyền: người lớn $a$ nghìn đồng/người, trẻ em $b$ nghìn đồng/người.
   * Vé cáp treo: người lớn $x$ nghìn đồng/người, trẻ em $y$ nghìn đồng/người.
   * Đoàn khách có tổng cộng $n$ người, trong đó có $m$ trẻ em.
+Cô hướng dẫn viên cần tính tiền thật nhanh để mua vé cho cả đoàn. Em hãy giúp cô tính tổng số tiền cần chuẩn bị nhé!
 ## Nhiệm vụ
 
 Em hãy tính tổng số tiền (đơn vị nghìn đồng) cần chuẩn bị để mua toàn bộ vé thuyền và vé cáp treo cho cả đoàn khách.

@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bác thợ mộc có một thanh gỗ dài $L\text{ cm}$. Bác cần cắt ra các đoạn gỗ nhỏ dài $K\text{ cm}$ để đóng bàn ghế.
+Ở đầu làng có một bác thợ mộc rất khéo tay. Hôm nay, bác có một thanh gỗ dài $L\text{ cm}$ và cần cắt ra các đoạn gỗ nhỏ dài $K\text{ cm}$ để đóng bàn ghế tặng lớp học. Bé Tí đứng bên cạnh phụ bác giữ thước, hồi hộp không biết cắt được mấy đoạn. Em hãy giúp bé Tí tính giúp bác thợ mộc nhé!
 ## Nhiệm vụ
 
   * Nếu thanh gỗ đủ dài để cắt được ít nhất một đoạn (nghĩa là $L \ge K$), hãy in ra số đoạn gỗ cắt được và phần gỗ thừa còn lại.

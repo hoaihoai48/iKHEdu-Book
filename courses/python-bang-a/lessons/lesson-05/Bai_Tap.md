@@ -1,184 +1,210 @@
-# Hệ thống bài tập thực hành — bài 05: Rẽ nhánh nhiều hướng với elif
+# Hệ thống bài tập thực hành — bài 05: Vòng lặp for và hàm range
 
 ---
 
-## Bảng ma trận bài tập (12 bài tập phân tầng cơ bản → vận dụng)
+## Bảng ma trận bài tập (14 bài tập phân tầng cơ bản → thử thách)
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L05-P01` | Đèn giao thông ngã tư | `Cơ bản` | Ký tự `D, V, X` | Cấu trúc 3 nhánh `if - elif - else` cơ bản |
-| 02 | `PYA-L05-P02` | Dấu của số nguyên | `Cơ bản` | $-10^9 \le N \le 10^9$ | Phân biệt: Dương (`DUONG`), âm (`AM`), không (`KHONG`) |
-| 03 | `PYA-L05-P03` | Số lớn nhất trong ba số | `Cơ bản` | $-10^9 \le a, b, c \le 10^9$ | Kỹ thuật tìm max 3 số hoặc dùng lính canh |
-| 04 | `PYA-L05-P04` | Xếp loại học lực | `Cơ bản` | $0.0 \le diem \le 10.0$ | Phân loại bậc thang điểm số số thực |
-| 05 | `PYA-L05-P05` | Vé gửi xe bến bãi | `Cơ bản` | Loại xe $1, 2, 3$ | Tính tiền gửi xe theo từng mức quy định |
-| 06 | `PYA-L05-P06` | Mario cứu công chúa | `Luyện tập` | $1 \le K, P, N \le 1000$ | Mô phỏng di chuyển năng lượng (THT củ chi) |
-| 07 | `PYA-L05-P07` | Tính cước taxi bậc thang | `Luyện tập` | $1 \le km \le 100$ | Bài toán tính cước lũy tiến kinh điển |
-| 08 | `PYA-L05-P08` | Phân loại tam giác | `Luyện tập` | $1 \le a, b, c \le 1000$ | Phân biệt tam giác đều, cân hay thường |
-| 09 | `PYA-L05-P09` | Thuận đi tìm ánh đa vận tốc | `Luyện tập` | $0 \le x, y \le 10^9, v \ge 0$ | Bắt bẫy $x == y$ hoặc $v == 0$ (THT từ sơn) |
-| 10 | `PYA-L05-P10` | Thứ mấy trong tuần? | `Luyện tập` | $1 \le k \le 365$ | Đổi số ngày sang thứ hai đến chủ nhật |
-| 11 | `PYA-L05-P11` | Cửa hàng bánh bột lọc khuyến mãi | `Luyện tập` | $1 \le N \le 1000$ | Bài toán mua theo gói bậc thang (THT Bảng A) |
-| 12 | `PYA-L05-P12` | Bốn mùa trong năm | `Vận dụng` | $1 \le thang \le 12$ | Gom nhóm nhiều giá trị vào các mùa xuân, hạ, thu, đông |
+| 01 | `PYA-L07-P01` | Đếm sao lên trời | `Cơ bản` | $1 \le N \le 100$ | In các số từ 1 đến $N$ trên một dòng |
+| 02 | `PYA-L07-P02` | Đếm ngược phóng tên lửa | `Cơ bản` | $1 \le N \le 100$ | Vòng lặp đếm lùi `range(N, 0, -1)` |
+| 03 | `PYA-L07-P03` | Tổng các số tự nhiên | `Cơ bản` | $1 \le N \le 10^5$ | Kỹ thuật ống heo tích lũy tổng $1 + \dots + N$ |
+| 04 | `PYA-L07-P04` | Bảng cửu chương | `Cơ bản` | $1 \le K \le 9$ | In bảng cửu chương của số $K$ |
+| 05 | `PYA-L07-P05` | Tổng số chẵn trong đoạn | `Cơ bản` | $1 \le A \le B \le 10^4$ | Vòng lặp `range(A, B + 1)` kết hợp `if i % 2 == 0` |
+| 06 | `PYA-L07-P06` | Đếm bội số của K | `Luyện tập` | $1 \le A \le B \le 10^5, 1 \le K \le 100$ | Đếm số lượng phần tử chia hết cho $K$ |
+| 07 | `PYA-L07-P07` | Tính giai thừa $N!$ | `Luyện tập` | $1 \le N \le 20$ | Kỹ thuật tích lũy nhân `tich = tich * i` |
+| 08 | `PYA-L07-P08` | Dãy số cách đều | `Luyện tập` | $1 \le a \le 100, 1 \le d \le 10, 1 \le n \le 100$ | In $n$ số hạng đầu tiên của cấp số cộng |
+| 09 | `PYA-L07-P09` | Tìm ước số của N | `Luyện tập` | $1 \le N \le 10^4$ | Duyệt từ 1 đến $N$ tìm các số $N \% i == 0$ |
+| 10 | `PYA-L07-P10` | Tổng bình phương | `Luyện tập` | $1 \le N \le 1000$ | Tính $S = 1^2 + 2^2 + \dots + N^2$ |
+| 11 | `PYA-L07-P11` | Đọc sách mỗi ngày | `Luyện tập` | $1 \le N \le 10^4$ | Mô phỏng số trang sách đọc tăng dần (THT Bảng A) |
+| 12 | `PYA-L07-P12` | Hàng cột dấu sao | `Luyện tập` | $1 \le R, C \le 50$ | Vòng lặp lồng nhau in hình chữ nhật dấu `*` |
+| 13 | `PYA-L07-P13` | Tam giác vuông dấu sao | `Vận dụng` | $1 \le N \le 50$ | In tam giác vuông chiều cao $N$ dòng |
+| 14 | `PYA-L07-P14` | Tổng dãy siêu lớn không lặp | `Thử thách` | $1 \le N \le 10^9$ | Tối ưu thuật toán từ $\mathcal{O}(N)$ sang $\mathcal{O}(1)$ bằng công thức |
 
 ---
 
-### Bài 1 (Cơ bản): Đèn giao thông ngã tư (`PYA-L05-P01`)
+### Bài 1 (Cơ bản): Đếm sao lên trời (`PYA-L07-P01`)
 
-* **Yêu cầu:** Nhập vào một chữ cái in hoa đại diện cho màu đèn: `D` (Đỏ), `V` (Vàng), `X` (Xanh).
-  * Nếu là `D`: in ra `DUNG LAI`.
-  * Nếu là `V`: in ra `DI CHAM`.
-  * Nếu là `X`: in ra `DUOC DI`.
-* **Input:** Một ký tự `D`, `V` hoặc `X`.
-* **Output:** Thông báo tương ứng.
-
----
-
-### Bài 2 (Cơ bản): Dấu của số nguyên (`PYA-L05-P02`)
-
-* **Yêu cầu:** Nhập vào số nguyên $N$. Hãy in ra:
-  * `DUONG` nếu $N > 0$.
-  * `AM` nếu $N < 0$.
-  * `KHONG` nếu $N == 0$.
-* **Input:** Một số nguyên $N$ ($-10^9 \le N \le 10^9$).
-* **Output:** Chuỗi kết quả.
-
----
-
-### Bài 3 (Cơ bản): Số lớn nhất trong ba số (`PYA-L05-P03`)
-
-* **Yêu cầu:** Nhập vào 3 số nguyên $a, b, c$ mỗi số trên một dòng. Hãy tìm và in ra số có giá trị lớn nhất trong 3 số đó.
-* **Input:** Ba số nguyên $a, b, c$ ($-10^9 \le a, b, c \le 10^9$).
-* **Output:** Một số nguyên duy nhất là số lớn nhất.
+* **Yêu cầu:** Nhập vào một số tự nhiên $N$. Hãy in các số từ $1$ đến $N$ trên cùng một dòng, mỗi số cách nhau một khoảng trắng.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 100$).
+* **Output:** Dãy số từ 1 đến $N$.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `15`<br>`28`<br>`9` | `28` |
-* **Gợi ý thuật toán:** `print(max(a, b, c))`.
+  | `5` | `1 2 3 4 5` |
+* **Gợi ý:** Dùng `for i in range(1, N + 1): print(i, end=" ")`.
 
 ---
 
-### Bài 4 (Cơ bản): Xếp loại học lực (`PYA-L05-P04`)
+### Bài 2 (Cơ bản): Đếm ngược phóng tên lửa (`PYA-L07-P02`)
 
-* **Yêu cầu:** Nhập vào điểm trung bình môn Tin học của một bạn nhỏ (số thực $0.0 \le diem \le 10.0$).
-  * Điểm $\ge 9.0$: in `XUAT SAC`.
-  * Điểm $\ge 8.0$ và $< 9.0$: in `GIOI`.
-  * Điểm $\ge 6.5$ và $< 8.0$: in `KHA`.
-  * Điểm $< 6.5$: in `CAN CO GANG`.
-* **Input:** Một số thực $diem$.
-* **Output:** Xếp loại tương ứng.
-
----
-
-### Bài 5 (Cơ bản): Vé gửi xe bến bãi (`PYA-L05-P05`)
-
-* **Bối cảnh:** Bãi giữ xe thông minh quy định giá vé theo loại phương tiện:
-  * Loại `1` (Xe đạp): giá $2$ nghìn đồng.
-  * Loại `2` (Xe máy): giá $5$ nghìn đồng.
-  * Loại `3` (Xe ô tô): giá $30$ nghìn đồng.
-  * Các loại khác: in `LOI PHUONG TIEN`.
-* **Input:** Một số nguyên mã loại xe.
-* **Output:** Số tiền gửi xe hoặc chữ `LOI PHUONG TIEN`.
+* **Yêu cầu:** Trước khi phóng tàu vũ trụ, đồng hồ đếm ngược từ $N$ về 1, cuối cùng in ra chữ `PHONG!`.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 20$).
+* **Output:** Mỗi số trên một dòng, dòng cuối in `PHONG!`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `3` | `3`<br>`2`<br>`1`<br>`PHONG!` |
+* **Gợi ý:** `for i in range(N, 0, -1): print(i)` rồi `print("PHONG!")`.
 
 ---
 
-### Bài 6 (Luyện tập): Mario cứu công chúa (`PYA-L05-P06`)
-*(Lấy cảm hứng từ Bài 3 Đề thi THT Huyện Củ Chi - TP.HCM)*
+### Bài 3 (Cơ bản): Tổng các số tự nhiên (`PYA-L07-P03`)
 
-* **Bối cảnh:** Mario có $K$ năng lượng, Công chúa có $P$ năng lượng. Chiếc cầu thang ngăn cách giữa hai người có đỉnh cao $N$ bậc: Mario đứng ở chân cầu thang bên trái (cần đi lên $N$ bậc và đi xuống $N$ bậc), Công chúa đứng ở chân cầu thang bên phải (cần đi lên $N$ bậc).
-  * Mỗi bậc thang Mario đi tốn $1$ năng lượng.
-  * Mỗi bậc thang Công chúa đi tốn $2$ năng lượng.
-* **Yêu cầu:** Hỏi với mức năng lượng hiện có, Mario và Công chúa có thể gặp được nhau ở một điểm nào đó trên cầu thang hay không? Nếu gặp được in `YES`, ngược lại in `NO`.
-* **Biết rằng:** Tổng số bậc cầu thang từ chân bên này sang chân bên kia là $2N$. Để gặp nhau, tổng số bậc mà Mario leo được cộng với tổng số bậc mà Công chúa leo được phải $\ge 2N$.
-* **Input:** Ba số tự nhiên $K, P, N$ ($1 \le K, P, N \le 1000$).
-* **Output:** `YES` hoặc `NO`.
+* **Yêu cầu:** Nhập số nguyên dương $N$. Hãy tính tổng $S = 1 + 2 + 3 + \dots + N$.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^5$).
+* **Output:** Một số nguyên duy nhất là tổng $S$.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `3`<br>`3`<br>`2` | `YES` | Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công chúa có 3 năng lượng đi được $3 // 2 = 1$ bậc. Tổng số bậc đi được là $3 + 1 = 4 \ge 4 \implies$ Gặp nhau! |
-* **Gợi ý thuật toán:**
-  * Bậc Mario đi được: `bac_mario = min(K, 2 * N)`
-  * Bậc Công chúa đi được: `bac_cong_chua = min(P // 2, 2 * N)`
-  * Nếu `bac_mario + bac_cong_chua >= 2 * N` in `YES`, ngược lại in `NO`.
+  | `4` | `10` | $1 + 2 + 3 + 4 = 10$. |
 
 ---
 
-### Bài 7 (Luyện tập): Tính cước taxi bậc thang (`PYA-L05-P07`)
+### Bài 4 (Cơ bản): Bảng cửu chương (`PYA-L07-P04`)
 
-* **Bối cảnh:** Hãng taxi "Rùa Con" tính cước đi xe như sau:
-  * Giá mở cửa (cho $1\text{ km}$ đầu tiên): $10$ nghìn đồng.
-  * Từ kilomet thứ 2 đến kilomet thứ 10: giá $8$ nghìn đồng mỗi km.
-  * Từ kilomet thứ 11 trở đi: giá $6$ nghìn đồng mỗi km.
-* **Yêu cầu:** Nhập vào số kilomet $N$ mà khách đã đi (số nguyên $N \ge 1$). Tính tổng số tiền cước (nghìn đồng).
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 100$).
-* **Output:** Tổng tiền cước taxi.
+* **Yêu cầu:** Nhập vào một số nguyên $K$ ($1 \le K \le 9$). Hãy in ra bảng cửu chương nhân của số $K$ từ 1 đến 10 theo đúng mẫu.
+* **Input:** Một số nguyên $K$.
+* **Output:** Gồm 10 dòng, mỗi dòng có định dạng: `K x i = [ket_qua]`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5` | `5 x 1 = 5`<br>`5 x 2 = 10`<br>...<br>`5 x 10 = 50` |
+
+---
+
+### Bài 5 (Cơ bản): Tổng số chẵn trong đoạn (`PYA-L07-P05`)
+
+* **Yêu cầu:** Cho hai số nguyên dương $A$ và $B$ ($A \le B$). Hãy tính tổng tất cả các số chẵn nằm trong đoạn từ $A$ đến $B$ (tính cả $A$ và $B$ nếu chúng là số chẵn).
+* **Input:** Hai số tự nhiên $A$ và $B$ trên 2 dòng ($1 \le A \le B \le 10^4$).
+* **Output:** Tổng các số chẵn.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `1` | `10` | Đúng 1 km đầu: 10 nghìn. |
-  | `5` | `42` | 1 km đầu: 10k + 4 km tiếp theo: $4 \times 8 = 32$k $\implies 10 + 32 = 42$k. |
-  | `12` | `94` | 1 km đầu (10k) + 9 km tiếp theo ($9 \times 8 = 72$k) + 2 km cuối ($2 \times 6 = 12$k) $\implies 10 + 72 + 12 = 94$k. |
-* **Gợi ý thuật toán:** Dùng `if - elif - else` chia 3 nấc: $N = 1$, $1 < N \le 10$, và $N > 10$.
+  | `3`<br>`8` | `18` | Các số chẵn là: 4, 6, 8. Tổng: $4 + 6 + 8 = 18$. |
 
 ---
 
-### Bài 8 (Luyện tập): Phân loại tam giác (`PYA-L05-P08`)
+### Bài 6 (Luyện tập): Đếm bội số của K (`PYA-L07-P06`)
 
-* **Bối cảnh:** Cho 3 số tự nhiên $a, b, c$ đã đảm bảo là độ dài 3 cạnh của một tam giác hợp lệ.
-* **Yêu cầu:** Hãy phân loại tam giác đó:
-  * Nếu 3 cạnh bằng nhau ($a == b == c$): in `TAM GIAC DEU`.
-  * Nếu có 2 cạnh bằng nhau ($a == b$ hoặc $b == c$ hoặc $c == a$): in `TAM GIAC CAN`.
-  * Các trường hợp còn lại: in `TAM GIAC THUONG`.
-* **Input:** Ba số tự nhiên $a, b, c$ trên 3 dòng ($1 \le a, b, c \le 1000$).
-* **Output:** Tên phân loại tam giác.
-
----
-
-### Bài 9 (Luyện tập): Thuận đi tìm ánh đa vận tốc (`PYA-L05-P09`)
-*(Lấy cảm hứng từ Bài 5 Đề thi THT Huyện Từ Sơn)*
-
-* **Bối cảnh:** Thuận đứng ở vị trí $x$, Ánh đứng ở vị trí $y$. Thuận đi về phía Ánh với vận tốc $v\text{ km/h}$.
-* **Yêu cầu:** Hãy phân tích các tình huống:
-  * Nếu $x == y$: in `DA GAP NHAU` (vì đang đứng cùng một chỗ).
-  * Nếu $x \ne y$ nhưng $v == 0$: in `KHONG THE GAP` (vì Thuận đứng yên).
-  * Nếu $x \ne y$ và $v > 0$:
-    * Nếu khoảng cách $|y - x|$ chia hết cho $v$: in ra số giờ để gặp nhau.
-    * Nếu không chia hết: in `GAP NHAU LE GIO`.
-* **Input:** Ba số nguyên $x, y, v$ ($-10^9 \le x, y \le 10^9, 0 \le v \le 10^9$).
-* **Output:** Thông báo tương ứng hoặc số giờ nguyên.
+* **Yêu cầu:** Nhập vào 3 số tự nhiên $A, B, K$ ($A \le B$). Hãy đếm xem có bao nhiêu số trong đoạn $[A, B]$ chia hết cho $K$.
+* **Input:** Ba số $A, B, K$ trên 3 dòng ($1 \le A \le B \le 10^5, 1 \le K \le 100$).
+* **Output:** Số lượng số chia hết cho $K$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `1`<br>`10`<br>`3` | `3` | Gồm các số: 3, 6, 9. Tổng cộng 3 số. |
 
 ---
 
-### Bài 10 (Luyện tập): Thứ mấy trong tuần? (`PYA-L05-P10`)
+### Bài 7 (Luyện tập): Tính giai thừa $N!$ (`PYA-L07-P07`)
 
-* **Bối cảnh:** Ngày mùng 1 tháng Giêng là ngày **Thứ Hai**.
-* **Yêu cầu:** Cho biết ngày thứ $K$ trong năm đó là thứ mấy?
-  * Biết rằng: ngày 1 là Thứ Hai, ngày 2 là Thứ Ba, ..., ngày 7 là Chủ Nhật, ngày 8 lại quay về Thứ Hai.
-* **Input:** Một số tự nhiên $K$ ($1 \le K \le 365$).
-* **Output:** In ra một trong các chuỗi: `THU HAI`, `THU BA`, `THU TU`, `THU NAM`, `THU SAU`, `THU BAY`, `CHU NHAT`.
-* **Gợi ý thuật toán:** Tính số dư `du = K % 7`. Nếu `du == 1`: Thứ Hai, `du == 2`: Thứ Ba, ..., `du == 0`: Chủ Nhật.
+* **Bối cảnh:** Giai thừa của số tự nhiên $N$ (ký hiệu $N!$) là tích của tất cả các số tự nhiên từ 1 đến $N$:
+  $$N! = 1 \times 2 \times 3 \times \dots \times N$$
+* **Yêu cầu:** Nhập số tự nhiên $N$ ($1 \le N \le 20$). Hãy tính và in ra giá trị $N!$.
+* **Input:** Một số tự nhiên $N$.
+* **Output:** Giá trị $N!$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5` | `120` | $1 \times 2 \times 3 \times 4 \times 5 = 120$. |
 
 ---
 
-### Bài 11 (Luyện tập): Cửa hàng bánh bột lọc khuyến mãi (`PYA-L05-P11`)
+### Bài 8 (Luyện tập): Dãy số cách đều (`PYA-L07-P08`)
 
-* **Bối cảnh:** Cửa hàng bánh bột lọc bán bánh với chương trình ưu đãi số lượng:
-  * Mua dưới 10 cái: giá $5$ nghìn đồng/cái.
-  * Mua từ 10 đến 49 cái: giá $4$ nghìn đồng/cái.
-  * Mua từ 50 cái trở lên: giá chỉ còn $3$ nghìn đồng/cái.
-* **Yêu cầu:** Nhập vào số lượng bánh $N$ mà khách muốn mua. Tính tổng số tiền khách phải trả.
+* **Bối cảnh:** Một dãy số bắt đầu bằng số $a$, số tiếp theo hơn số đứng trước nó đúng $d$ đơn vị.
+* **Yêu cầu:** Nhập vào số bắt đầu $a$, khoảng cách $d$ và số lượng phần tử cần in $n$. Hãy in ra $n$ số đầu tiên của dãy trên một dòng, cách nhau dấu cách.
+* **Input:** Ba số tự nhiên $a, d, n$ ($1 \le a, d, n \le 100$).
+* **Output:** Dãy số gồm $n$ phần tử.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `2`<br>`3`<br>`5` | `2 5 8 11 14` |
+
+---
+
+### Bài 9 (Luyện tập): Tìm ước số của N (`PYA-L07-P09`)
+
+* **Yêu cầu:** Nhập vào số tự nhiên $N$. Hãy in ra tất cả các ước số dương của $N$ theo thứ tự tăng dần trên một dòng.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^4$).
+* **Output:** Các ước số của $N$ cách nhau một dấu cách.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `12` | `1 2 3 4 6 12` |
+
+---
+
+### Bài 10 (Luyện tập): Tổng bình phương (`PYA-L07-P10`)
+
+* **Yêu cầu:** Nhập vào số nguyên dương $N$. Hãy tính tổng:
+  $$S = 1^2 + 2^2 + 3^2 + \dots + N^2$$
 * **Input:** Một số tự nhiên $N$ ($1 \le N \le 1000$).
-* **Output:** Tổng số tiền (nghìn đồng).
+* **Output:** Một số nguyên duy nhất là tổng $S$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3` | `14` | $1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$. |
 
 ---
 
-### Bài 12 (Vận dụng): Bốn mùa trong năm (`PYA-L05-P12`)
+### Bài 11 (Luyện tập): Đọc sách mỗi ngày (`PYA-L07-P11`)
+*(Lấy cảm hứng từ Bài 52 Đề thi Scratch THT Toàn quốc)*
 
-* **Bối cảnh:** Một năm có 12 tháng được chia thành 4 mùa:
-  * **Mùa Xuân:** Tháng 1, 2, 3.
-  * **Mùa Hạ (Hè):** Tháng 4, 5, 6.
-  * **Mùa Thu:** Tháng 7, 8, 9.
-  * **Mùa Đông:** Tháng 10, 11, 12.
-* **Yêu cầu:** Nhập vào một số nguyên $M$.
-  * Nếu $1 \le M \le 12$, hãy in ra tên mùa tương ứng (`XUAN`, `HA`, `THU`, `DONG`).
-  * Nếu $M$ không nằm từ 1 đến 12, in ra `THANG KHONG HOP LE`.
-* **Input:** Một số nguyên $M$ ($-100 \le M \le 100$).
-* **Output:** Tên mùa hoặc thông báo lỗi.
+* **Bối cảnh:** Bạn Hoa quyết tâm rèn luyện thói quen đọc sách trong dịp hè. Cuốn sách có tổng cộng $N$ trang.
+  * Ngày thứ nhất Hoa đọc được 1 trang.
+  * Ngày thứ hai Hoa đọc được 2 trang.
+  * Ngày thứ ba Hoa đọc được 3 trang.
+  * Cứ như vậy, ngày thứ $k$ Hoa đọc được $k$ trang.
+* **Yêu cầu:** Hỏi sau đúng bao nhiêu ngày thì Hoa sẽ đọc hết (hoặc vượt quá) $N$ trang của cuốn sách?
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^4$).
+* **Output:** Số ngày ít nhất để Hoa đọc xong cuốn sách.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `10` | `4` | Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngày 4: 4 trang (tổng 10 $\ge 10$). Sau 4 ngày đọc xong. |
+  | `11` | `5` | Sau 4 ngày mới đọc 10 trang, phải sang ngày thứ 5 mới đọc hết. |
+
+---
+
+### Bài 12 (Luyện tập): Hàng cột dấu sao (`PYA-L07-P12`)
+
+* **Yêu cầu:** Nhập vào số hàng $R$ và số cột $C$. Hãy in ra một hình chữ nhật đặc gồm các dấu sao `*` có kích thước $R$ hàng và $C$ cột.
+* **Input:** Hai số tự nhiên $R$ và $C$ ($1 \le R, C \le 50$).
+* **Output:** Hình chữ nhật dấu `*`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `3`<br>`5` | `*****`<br>`*****`<br>`*****` |
+* **Gợi ý:** `for i in range(R): print("*" * C)`.
+
+---
+
+### Bài 13 (Vận dụng): Tam giác vuông dấu sao (`PYA-L07-P13`)
+
+* **Yêu cầu:** Nhập vào chiều cao $N$ của tam giác vuông. Hãy in ra tam giác vuông cân gồm các dấu sao theo mẫu:
+  * Dòng 1 có 1 dấu `*`
+  * Dòng 2 có 2 dấu `*`
+  * ...
+  * Dòng $N$ có $N$ dấu `*`.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 50$).
+* **Output:** Tam giác vuông dấu `*`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `*`<br>`**`<br>`***`<br>`****` |
+
+---
+
+### Bài 14 (Thử thách): Tổng dãy siêu lớn không lặp (`PYA-L07-P14`)
+
+* **Bối cảnh:** Trong kỳ thi Tin học trẻ, ban giám khảo cho số $N$ cực lớn lên tới $10^9$ ($1$ tỷ). Nếu em dùng vòng lặp `for i in range(1, N + 1):` thì chương trình sẽ bị chạy quá thời gian quy định (Time Limit Exceeded - TLE) vì máy tính phải lặp 1 tỷ lần mất hơn 10 giây!
+* **Yêu cầu:** Hãy tính tổng $S = 1 + 2 + \dots + N$ với thời gian chạy tức thì ($< 0.001$ giây) bằng công thức toán học.
+* **Input:** Một số nguyên $N$ ($1 \le N \le 10^9$).
+* **Output:** Giá trị tổng $S$.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `1000000000` | `500000000500000000` |
+* **Gợi ý thuật toán:** Áp dụng công thức Gauss: `S = N * (N + 1) // 2`. Nhờ Python tự động hỗ trợ số nguyên lớn, công thức này tính toán trong 1 phép tính duy nhất!

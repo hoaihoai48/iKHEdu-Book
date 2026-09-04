@@ -3,11 +3,7 @@
 
 ## Bối cảnh
 
-Một năm có 12 tháng được chia thành 4 mùa:
-  * **Mùa Xuân:** Tháng 1, 2, 3.
-  * **Mùa Hạ (Hè):** Tháng 4, 5, 6.
-  * **Mùa Thu:** Tháng 7, 8, 9.
-  * **Mùa Đông:** Tháng 10, 11, 12.
+Trong giờ khoa học, cô giáo treo bức tranh bốn mùa thật đẹp lên bảng. Cô giảng rằng một năm có 12 tháng được chia thành 4 mùa: **Mùa Xuân** gồm tháng 1, 2, 3; **Mùa Hạ (Hè)** gồm tháng 4, 5, 6; **Mùa Thu** gồm tháng 7, 8, 9; còn **Mùa Đông** gồm tháng 10, 11, 12. Bé Su thích nhất mùa hè vì được đi biển cùng gia đình. Em hãy giúp bé Su xem một tháng bất kỳ thuộc mùa nào nhé!
 ## Nhiệm vụ
 
 Nhập vào một số nguyên $M$.

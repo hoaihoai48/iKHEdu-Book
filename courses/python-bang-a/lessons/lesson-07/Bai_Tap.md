@@ -1,4 +1,4 @@
-# Hệ thống bài tập thực hành — bài 07: Vòng lặp for và hàm range
+# Hệ thống bài tập thực hành — bài 07: Quy luật dãy số và tam giác số
 
 ---
 
@@ -6,205 +6,199 @@
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L07-P01` | Đếm sao lên trời | `Cơ bản` | $1 \le N \le 100$ | In các số từ 1 đến $N$ trên một dòng |
-| 02 | `PYA-L07-P02` | Đếm ngược phóng tên lửa | `Cơ bản` | $1 \le N \le 100$ | Vòng lặp đếm lùi `range(N, 0, -1)` |
-| 03 | `PYA-L07-P03` | Tổng các số tự nhiên | `Cơ bản` | $1 \le N \le 10^5$ | Kỹ thuật ống heo tích lũy tổng $1 + \dots + N$ |
-| 04 | `PYA-L07-P04` | Bảng cửu chương | `Cơ bản` | $1 \le K \le 9$ | In bảng cửu chương của số $K$ |
-| 05 | `PYA-L07-P05` | Tổng số chẵn trong đoạn | `Cơ bản` | $1 \le A \le B \le 10^4$ | Vòng lặp `range(A, B + 1)` kết hợp `if i % 2 == 0` |
-| 06 | `PYA-L07-P06` | Đếm bội số của K | `Luyện tập` | $1 \le A \le B \le 10^5, 1 \le K \le 100$ | Đếm số lượng phần tử chia hết cho $K$ |
-| 07 | `PYA-L07-P07` | Tính giai thừa $N!$ | `Luyện tập` | $1 \le N \le 20$ | Kỹ thuật tích lũy nhân `tich = tich * i` |
-| 08 | `PYA-L07-P08` | Dãy số cách đều | `Luyện tập` | $1 \le a \le 100, 1 \le d \le 10, 1 \le n \le 100$ | In $n$ số hạng đầu tiên của cấp số cộng |
-| 09 | `PYA-L07-P09` | Tìm ước số của N | `Luyện tập` | $1 \le N \le 10^4$ | Duyệt từ 1 đến $N$ tìm các số $N \% i == 0$ |
-| 10 | `PYA-L07-P10` | Tổng bình phương | `Luyện tập` | $1 \le N \le 1000$ | Tính $S = 1^2 + 2^2 + \dots + N^2$ |
-| 11 | `PYA-L07-P11` | Đọc sách mỗi ngày | `Luyện tập` | $1 \le N \le 10^4$ | Mô phỏng số trang sách đọc tăng dần (THT Bảng A) |
-| 12 | `PYA-L07-P12` | Hàng cột dấu sao | `Luyện tập` | $1 \le R, C \le 50$ | Vòng lặp lồng nhau in hình chữ nhật dấu `*` |
-| 13 | `PYA-L07-P13` | Tam giác vuông dấu sao | `Vận dụng` | $1 \le N \le 50$ | In tam giác vuông chiều cao $N$ dòng |
-| 14 | `PYA-L07-P14` | Tổng dãy siêu lớn không lặp | `Thử thách` | $1 \le N \le 10^9$ | Tối ưu thuật toán từ $\mathcal{O}(N)$ sang $\mathcal{O}(1)$ bằng công thức |
+| 01 | `PYA-L09-P01` | Tráo đổi hai chiếc cốc | `Cơ bản` | $-10^9 \le A, B \le 10^9$ | Phép gán hoán đổi `a, b = b, a` |
+| 02 | `PYA-L09-P02` | Dãy số nhân đôi | `Cơ bản` | $1 \le N \le 30$ | In dãy $1, 2, 4, 8, 16 \dots$ |
+| 03 | `PYA-L09-P03` | Số hạng dãy cấp số cộng | `Cơ bản` | $N, u_1, d \le 10^6$ | Tìm số thứ $N$ của dãy cấp số cộng |
+| 04 | `PYA-L09-P04` | Số Fibonacci thứ N | `Cơ bản` | $1 \le N \le 40$ | Thuật toán cuốn chiếu `a, b = b, a + b` |
+| 05 | `PYA-L09-P05` | Dãy số đan dấu | `Cơ bản` | $1 \le N \le 10^6$ | Tính $S = 1 - 2 + 3 - 4 \dots \pm N$ |
+| 06 | `PYA-L09-P06` | Tổng tích hai số liền nhau | `Luyện tập` | $1 \le N \le 10^5$ | Tính $S = 1\times 2 + 2\times 3 + \dots + N(N+1)$ |
+| 07 | `PYA-L09-P07` | Dãy số bội ba bội năm | `Luyện tập` | $1 \le N \le 10^4$ | Dãy số chia hết cho 3 hoặc 5 tăng dần |
+| 08 | `PYA-L09-P08` | Tam giác số đơn giản | `Luyện tập` | $1 \le N \le 20$ | Vòng lặp lồng nhau in tháp số tăng dần |
+| 09 | `PYA-L09-P09` | Tam giác sao cân | `Luyện tập` | $1 \le N \le 20$ | Căn giữa khoảng trắng và in ký tự sao `*` |
+| 10 | `PYA-L09-P10` | Dãy số tam giác (triangular numbers) | `Luyện tập` | $1 \le N \le 10^6$ | Số bi xếp thành tam giác đều $T_n = \frac{n(n+1)}{2}$ |
+| 11 | `PYA-L09-P11` | Dãy số tribonacci | `Luyện tập` | $1 \le N \le 35$ | $T_n = T_{n-1} + T_{n-2} + T_{n-3}$ |
+| 12 | `PYA-L09-P12` | Ma trận số bàn cờ đan xen | `Vận dụng` | $1 \le N \le 50$ | Ma trận $N \times N$ gồm các số 0 và 1 xen kẽ |
+| 13 | `PYA-L09-P13` | Tam giác floyd | `Vận dụng` | $1 \le N \le 20$ | Điền liên tục các số tự nhiên vào tháp tam giác |
+| 14 | `PYA-L09-P14` | Tìm vị trí trong dãy tự nhiên dài | `Thử thách` | $1 \le K \le 10^{12}$ | Tìm chữ số thứ $K$ khi viết $123456789101112\dots$ |
 
 ---
 
-### Bài 1 (Cơ bản): Đếm sao lên trời (`PYA-L07-P01`)
+### Bài 1 (Cơ bản): Tráo đổi hai chiếc cốc (`PYA-L09-P01`)
 
-* **Yêu cầu:** Nhập vào một số tự nhiên $N$. Hãy in các số từ $1$ đến $N$ trên cùng một dòng, mỗi số cách nhau một khoảng trắng.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 100$).
-* **Output:** Dãy số từ 1 đến $N$.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `5` | `1 2 3 4 5` |
-* **Gợi ý:** Dùng `for i in range(1, N + 1): print(i, end=" ")`.
-
----
-
-### Bài 2 (Cơ bản): Đếm ngược phóng tên lửa (`PYA-L07-P02`)
-
-* **Yêu cầu:** Trước khi phóng tàu vũ trụ, đồng hồ đếm ngược từ $N$ về 1, cuối cùng in ra chữ `PHONG!`.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 20$).
-* **Output:** Mỗi số trên một dòng, dòng cuối in `PHONG!`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `3` | `3`<br>`2`<br>`1`<br>`PHONG!` |
-* **Gợi ý:** `for i in range(N, 0, -1): print(i)` rồi `print("PHONG!")`.
-
----
-
-### Bài 3 (Cơ bản): Tổng các số tự nhiên (`PYA-L07-P03`)
-
-* **Yêu cầu:** Nhập số nguyên dương $N$. Hãy tính tổng $S = 1 + 2 + 3 + \dots + N$.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^5$).
-* **Output:** Một số nguyên duy nhất là tổng $S$.
+* **Bối cảnh:** Bạn Bo có 2 chiếc cốc: cốc $A$ đựng nước cam và cốc $B$ đựng nước dưa hấu. Bo muốn đổi nội dung trong 2 cốc cho nhau.
+* **Yêu cầu:** Nhập vào 2 số nguyên $A$ và $B$. Hãy hoán đổi giá trị của chúng và in ra theo thứ tự $A$ trước, $B$ sau.
+* **Input:** Hai số nguyên $A$ và $B$ trên một dòng, cách nhau bởi khoảng trắng.
+* **Output:** Giá trị mới của $A$ và $B$ sau khi hoán đổi.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `4` | `10` | $1 + 2 + 3 + 4 = 10$. |
+  | `5 12` | `12 5` | Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$. |
+* **Gợi ý:** Sử dụng cú pháp Python: `a, b = b, a`.
 
 ---
 
-### Bài 4 (Cơ bản): Bảng cửu chương (`PYA-L07-P04`)
+### Bài 2 (Cơ bản): Dãy số nhân đôi (`PYA-L09-P02`)
 
-* **Yêu cầu:** Nhập vào một số nguyên $K$ ($1 \le K \le 9$). Hãy in ra bảng cửu chương nhân của số $K$ từ 1 đến 10 theo đúng mẫu.
+* **Yêu cầu:** Nhập số nguyên $N$ ($1 \le N \le 30$). Hãy in ra $N$ số đầu tiên của dãy số nhân đôi: $1, 2, 4, 8, 16, 32, \dots$ trên cùng một dòng.
+* **Input:** Một số nguyên $N$.
+* **Output:** Dãy $N$ số, cách nhau bởi dấu cách.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5` | `1 2 4 8 16` |
+
+---
+
+### Bài 3 (Cơ bản): Số hạng dãy cấp số cộng (`PYA-L09-P03`)
+
+* **Yêu cầu:** Cho một dãy số cách đều có số đầu tiên là $u_1$ và khoảng cách giữa 2 số liền kề là $d$. Cho số nguyên dương $N$. Hãy tìm số hạng thứ $N$ của dãy số.
+* **Input:** Ba số nguyên $u_1, d, N$ ($1 \le u_1, d, N \le 10^6$).
+* **Output:** Một số nguyên là số hạng thứ $N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3 4 5` | `19` | Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19. |
+* **Công thức toán học:** $u_N = u_1 + (N - 1) \times d$.
+
+---
+
+### Bài 4 (Cơ bản): Số Fibonacci thứ N (`PYA-L09-P04`)
+
+* **Yêu cầu:** Dãy Fibonacci được định nghĩa: $F_1 = 1, F_2 = 1, F_n = F_{n-1} + F_{n-2}$ với $n \ge 3$. Nhập vào số tự nhiên $N$. Hãy tìm và in ra số Fibonacci thứ $N$.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 40$).
+* **Output:** Giá trị $F_N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `6` | `8` | Dãy là 1, 1, 2, 3, 5, 8. Số thứ 6 là 8. |
+
+---
+
+### Bài 5 (Cơ bản): Dãy số đan dấu (`PYA-L09-P05`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tính tổng của dãy số đan dấu:
+  $$S = 1 - 2 + 3 - 4 + 5 - 6 + \dots + (-1)^{N+1} N$$
+* **Input:** Một số nguyên $N$ ($1 \le N \le 10^6$).
+* **Output:** Giá trị của tổng $S$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5` | `3` | $1 - 2 + 3 - 4 + 5 = 3$. |
+  | `6` | `-3` | $1 - 2 + 3 - 4 + 5 - 6 = -3$. |
+
+---
+
+### Bài 6 (Luyện tập): Tổng tích hai số liền nhau (`PYA-L09-P06`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tính tổng:
+  $$S = 1 \times 2 + 2 \times 3 + 3 \times 4 + \dots + N \times (N + 1)$$
+* **Input:** Một số nguyên dương $N$ ($1 \le N \le 10^5$).
+* **Output:** Tổng $S$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `3` | `20` | $1 \times 2 + 2 \times 3 + 3 \times 4 = 2 + 6 + 12 = 20$. |
+
+---
+
+### Bài 7 (Luyện tập): Dãy số bội ba bội năm (`PYA-L09-P07`)
+
+* **Yêu cầu:** Xét dãy các số nguyên dương chia hết cho 3 hoặc chia hết cho 5 theo thứ tự tăng dần: $3, 5, 6, 9, 10, 12, 15, \dots$. Cho số tự nhiên $N$. Hãy in ra $N$ số đầu tiên của dãy này.
+* **Input:** Một số nguyên dương $N$ ($1 \le N \le 10^4$).
+* **Output:** $N$ số đầu tiên của dãy trên một dòng, cách nhau bởi dấu cách.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `6` | `3 5 6 9 10 12` |
+
+---
+
+### Bài 8 (Luyện tập): Tam giác số đơn giản (`PYA-L09-P08`)
+
+* **Yêu cầu:** Nhập vào số tự nhiên $N$ ($1 \le N \le 20$). Hãy in ra tháp tam giác số có $N$ dòng theo quy luật:
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `1`<br>`1 2`<br>`1 2 3`<br>`1 2 3 4` |
+
+---
+
+### Bài 9 (Luyện tập): Tam giác sao cân (`PYA-L09-P09`)
+
+* **Yêu cầu:** Nhập vào độ cao $N$ của tam giác ($1 \le N \le 20$). Hãy in ra một tháp sao tam giác cân đối xứng hoàn hảo.
+* **Quy luật:** Dòng thứ $i$ (từ 1 đến $N$) có $(N - i)$ dấu cách phía trước, tiếp theo là $(2i - 1)$ dấu sao `*`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `3` | `  *`<br>` ***`<br>`*****` |
+
+---
+
+### Bài 10 (Luyện tập): Dãy số tam giác (triangular numbers) (`PYA-L09-P10`)
+
+* **Bối cảnh:** Người Hy Lạp cổ đại thường xếp các viên sỏi thành hình tam giác đều:
+  * Tầng 1: 1 viên
+  * Tầng 2: 1 + 2 = 3 viên
+  * Tầng 3: 1 + 2 + 3 = 6 viên
+  * Tầng 4: 1 + 2 + 3 + 4 = 10 viên
+* **Yêu cầu:** Cho số tự nhiên $K$. Hãy kiểm tra xem $K$ có phải là một "Số tam giác" hay không (nghĩa là có tồn tại số nguyên dương $N$ sao cho $\frac{N(N+1)}{2} = K$)? Nếu có, in ra `YES` và số $N$, ngược lại in `NO`.
+* **Input:** Một số nguyên $K$ ($1 \le K \le 10^9$).
+* **Output:** `YES <N>` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `10` | `YES 4` |
+  | `8` | `NO` |
+
+---
+
+### Bài 11 (Luyện tập): Dãy số tribonacci (`PYA-L09-P11`)
+
+* **Yêu cầu:** Dãy Tribonacci mở rộng từ Fibonacci với 3 số đầu tiên là $1, 1, 2$. Kể từ số thứ tư, mỗi số bằng tổng của 3 số liền kề trước nó:
+  $$T_1 = 1, T_2 = 1, T_3 = 2, \quad T_n = T_{n-1} + T_{n-2} + T_{n-3} \quad (n \ge 4)$$
+  Nhập vào số tự nhiên $N$ ($1 \le N \le 35$). Hãy in ra số Tribonacci thứ $N$.
+* **Input:** Một số nguyên $N$.
+* **Output:** Giá trị $T_N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5` | `7` | Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$. |
+
+---
+
+### Bài 12 (Vận dụng): Ma trận số bàn cờ đan xen (`PYA-L09-P12`)
+
+* **Yêu cầu:** Nhập vào số tự nhiên $N$ ($1 \le N \le 50$). Hãy in ra một bảng ma trận vuông kích thước $N \times N$ gồm các số $0$ và $1$ xếp so le giống như các ô trên bàn cờ vua, với ô góc trên cùng bên trái luôn là số $1$.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `1 0 1 0`<br>`0 1 0 1`<br>`1 0 1 0`<br>`0 1 0 1` |
+* **Gợi ý:** Ô tại dòng $i$, cột $j$ nhận giá trị $(i + j) \% 2 == 0 \implies 1$, ngược lại $\implies 0$ (nếu đánh số từ dòng 1, cột 1).
+
+---
+
+### Bài 13 (Vận dụng): Tam giác floyd (`PYA-L09-P13`)
+
+* **Bối cảnh:** Tam giác Floyd là một tam giác số vuông được điền liên tiếp các số tự nhiên tăng dần bắt đầu từ 1.
+* **Yêu cầu:** Nhập vào số nguyên dương $N$ ($1 \le N \le 20$). Hãy in ra tam giác Floyd có $N$ dòng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4` | `1`<br>`2 3`<br>`4 5 6`<br>`7 8 9 10` |
+* **Gợi ý:** Dùng một biến đếm `dem = 1`. Mỗi khi in một số, tăng `dem += 1`.
+
+---
+
+### Bài 14 (Thử thách): Tìm vị trí trong dãy tự nhiên dài (`PYA-L09-P14`)
+*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+
+* **Bối cảnh:** Bé An viết liên tiếp các số tự nhiên bắt đầu từ 1 thành một dải số vô tận:
+  `123456789101112131415161718192021...`
+* **Yêu cầu:** Cho số nguyên dương $K$ ($1 \le K \le 10^5$). Hãy xác định chữ số thứ $K$ trong dải số trên là chữ số nào?
 * **Input:** Một số nguyên $K$.
-* **Output:** Gồm 10 dòng, mỗi dòng có định dạng: `K x i = [ket_qua]`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `5` | `5 x 1 = 5`<br>`5 x 2 = 10`<br>...<br>`5 x 10 = 50` |
-
----
-
-### Bài 5 (Cơ bản): Tổng số chẵn trong đoạn (`PYA-L07-P05`)
-
-* **Yêu cầu:** Cho hai số nguyên dương $A$ và $B$ ($A \le B$). Hãy tính tổng tất cả các số chẵn nằm trong đoạn từ $A$ đến $B$ (tính cả $A$ và $B$ nếu chúng là số chẵn).
-* **Input:** Hai số tự nhiên $A$ và $B$ trên 2 dòng ($1 \le A \le B \le 10^4$).
-* **Output:** Tổng các số chẵn.
+* **Output:** Chữ số tại vị trí $K$ (đếm từ 1).
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `3`<br>`8` | `18` | Các số chẵn là: 4, 6, 8. Tổng: $4 + 6 + 8 = 18$. |
-
----
-
-### Bài 6 (Luyện tập): Đếm bội số của K (`PYA-L07-P06`)
-
-* **Yêu cầu:** Nhập vào 3 số tự nhiên $A, B, K$ ($A \le B$). Hãy đếm xem có bao nhiêu số trong đoạn $[A, B]$ chia hết cho $K$.
-* **Input:** Ba số $A, B, K$ trên 3 dòng ($1 \le A \le B \le 10^5, 1 \le K \le 100$).
-* **Output:** Số lượng số chia hết cho $K$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `1`<br>`10`<br>`3` | `3` | Gồm các số: 3, 6, 9. Tổng cộng 3 số. |
-
----
-
-### Bài 7 (Luyện tập): Tính giai thừa $N!$ (`PYA-L07-P07`)
-
-* **Bối cảnh:** Giai thừa của số tự nhiên $N$ (ký hiệu $N!$) là tích của tất cả các số tự nhiên từ 1 đến $N$:
-  $$N! = 1 \times 2 \times 3 \times \dots \times N$$
-* **Yêu cầu:** Nhập số tự nhiên $N$ ($1 \le N \le 20$). Hãy tính và in ra giá trị $N!$.
-* **Input:** Một số tự nhiên $N$.
-* **Output:** Giá trị $N!$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5` | `120` | $1 \times 2 \times 3 \times 4 \times 5 = 120$. |
-
----
-
-### Bài 8 (Luyện tập): Dãy số cách đều (`PYA-L07-P08`)
-
-* **Bối cảnh:** Một dãy số bắt đầu bằng số $a$, số tiếp theo hơn số đứng trước nó đúng $d$ đơn vị.
-* **Yêu cầu:** Nhập vào số bắt đầu $a$, khoảng cách $d$ và số lượng phần tử cần in $n$. Hãy in ra $n$ số đầu tiên của dãy trên một dòng, cách nhau dấu cách.
-* **Input:** Ba số tự nhiên $a, d, n$ ($1 \le a, d, n \le 100$).
-* **Output:** Dãy số gồm $n$ phần tử.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `2`<br>`3`<br>`5` | `2 5 8 11 14` |
-
----
-
-### Bài 9 (Luyện tập): Tìm ước số của N (`PYA-L07-P09`)
-
-* **Yêu cầu:** Nhập vào số tự nhiên $N$. Hãy in ra tất cả các ước số dương của $N$ theo thứ tự tăng dần trên một dòng.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^4$).
-* **Output:** Các ước số của $N$ cách nhau một dấu cách.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `12` | `1 2 3 4 6 12` |
-
----
-
-### Bài 10 (Luyện tập): Tổng bình phương (`PYA-L07-P10`)
-
-* **Yêu cầu:** Nhập vào số nguyên dương $N$. Hãy tính tổng:
-  $$S = 1^2 + 2^2 + 3^2 + \dots + N^2$$
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 1000$).
-* **Output:** Một số nguyên duy nhất là tổng $S$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `3` | `14` | $1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$. |
-
----
-
-### Bài 11 (Luyện tập): Đọc sách mỗi ngày (`PYA-L07-P11`)
-*(Lấy cảm hứng từ Bài 52 Đề thi Scratch THT Toàn quốc)*
-
-* **Bối cảnh:** Bạn Hoa quyết tâm rèn luyện thói quen đọc sách trong dịp hè. Cuốn sách có tổng cộng $N$ trang.
-  * Ngày thứ nhất Hoa đọc được 1 trang.
-  * Ngày thứ hai Hoa đọc được 2 trang.
-  * Ngày thứ ba Hoa đọc được 3 trang.
-  * Cứ như vậy, ngày thứ $k$ Hoa đọc được $k$ trang.
-* **Yêu cầu:** Hỏi sau đúng bao nhiêu ngày thì Hoa sẽ đọc hết (hoặc vượt quá) $N$ trang của cuốn sách?
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^4$).
-* **Output:** Số ngày ít nhất để Hoa đọc xong cuốn sách.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10` | `4` | Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngày 4: 4 trang (tổng 10 $\ge 10$). Sau 4 ngày đọc xong. |
-  | `11` | `5` | Sau 4 ngày mới đọc 10 trang, phải sang ngày thứ 5 mới đọc hết. |
-
----
-
-### Bài 12 (Luyện tập): Hàng cột dấu sao (`PYA-L07-P12`)
-
-* **Yêu cầu:** Nhập vào số hàng $R$ và số cột $C$. Hãy in ra một hình chữ nhật đặc gồm các dấu sao `*` có kích thước $R$ hàng và $C$ cột.
-* **Input:** Hai số tự nhiên $R$ và $C$ ($1 \le R, C \le 50$).
-* **Output:** Hình chữ nhật dấu `*`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `3`<br>`5` | `*****`<br>`*****`<br>`*****` |
-* **Gợi ý:** `for i in range(R): print("*" * C)`.
-
----
-
-### Bài 13 (Vận dụng): Tam giác vuông dấu sao (`PYA-L07-P13`)
-
-* **Yêu cầu:** Nhập vào chiều cao $N$ của tam giác vuông. Hãy in ra tam giác vuông cân gồm các dấu sao theo mẫu:
-  * Dòng 1 có 1 dấu `*`
-  * Dòng 2 có 2 dấu `*`
-  * ...
-  * Dòng $N$ có $N$ dấu `*`.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 50$).
-* **Output:** Tam giác vuông dấu `*`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `4` | `*`<br>`**`<br>`***`<br>`****` |
-
----
-
-### Bài 14 (Thử thách): Tổng dãy siêu lớn không lặp (`PYA-L07-P14`)
-
-* **Bối cảnh:** Trong kỳ thi Tin học trẻ, ban giám khảo cho số $N$ cực lớn lên tới $10^9$ ($1$ tỷ). Nếu em dùng vòng lặp `for i in range(1, N + 1):` thì chương trình sẽ bị chạy quá thời gian quy định (Time Limit Exceeded - TLE) vì máy tính phải lặp 1 tỷ lần mất hơn 10 giây!
-* **Yêu cầu:** Hãy tính tổng $S = 1 + 2 + \dots + N$ với thời gian chạy tức thì ($< 0.001$ giây) bằng công thức toán học.
-* **Input:** Một số nguyên $N$ ($1 \le N \le 10^9$).
-* **Output:** Giá trị tổng $S$.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `1000000000` | `500000000500000000` |
-* **Gợi ý thuật toán:** Áp dụng công thức Gauss: `S = N * (N + 1) // 2`. Nhờ Python tự động hỗ trợ số nguyên lớn, công thức này tính toán trong 1 phép tính duy nhất!
+  | `7` | `7` | Ký tự thứ 7 là số 7. |
+  | `11` | `0` | Ký tự thứ 10 là '1', ký tự thứ 11 là '0' (của số 10). |

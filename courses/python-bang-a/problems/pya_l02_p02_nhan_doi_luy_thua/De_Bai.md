@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Trong một thí nghiệm vi sinh vật, ban đầu có 1 tế bào. Cứ sau mỗi giờ, số lượng tế bào lại nhân đôi một lần ($2^1, 2^2, 2^3, \dots$).
+Trong phòng thí nghiệm tí hon của trường, các bạn nhỏ nuôi một chú vi sinh vật bé xíu, ban đầu chỉ có 1 tế bào. Điều kỳ lạ là cứ sau mỗi giờ, số lượng tế bào lại nhân đôi một lần ($2^1, 2^2, 2^3, \dots$). Cả lớp háo hức đoán xem đàn tế bào sẽ đông đến mức nào. Em hãy giúp các bạn tính số tế bào sau $n$ giờ nhé!
 ## Nhiệm vụ
 
 Hỏi sau $n$ giờ thì có tất cả bao nhiêu tế bào?

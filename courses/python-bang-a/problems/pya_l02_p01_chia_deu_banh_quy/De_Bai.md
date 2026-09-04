@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Mẹ làm được $a$ chiếc bánh quy và muốn chia đều vào $b$ chiếc đĩa.
+Chiều chủ nhật thơm mùi bơ, mẹ làm được $a$ chiếc bánh quy giòn rụm và muốn chia đều vào $b$ chiếc đĩa xinh xắn. Các bé ngồi quanh bàn, mắt tròn xoe chờ được chia phần. Mẹ muốn mỗi đĩa có số bánh bằng nhau, xem còn dư chiếc nào không. Em hãy giúp mẹ chia bánh thật công bằng nhé!
 ## Nhiệm vụ
 
 Em hãy tính xem mỗi chiếc đĩa có bao nhiêu chiếc bánh, và còn dư lại bao nhiêu chiếc bánh không đủ chia đều.

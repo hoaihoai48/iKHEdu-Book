@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Nhập vào một ngày hợp lệ gồm 3 số: ngày $D$, tháng $M$, năm $Y$.
+Bé Bông có một cuốn lịch để bàn rất xinh và ngày nào cũng tự tay xé một tờ. Hôm nay tờ lịch ghi một ngày hợp lệ gồm 3 số: ngày $D$, tháng $M$, năm $Y$. Bông tò mò muốn biết lật sang tờ tiếp theo sẽ là ngày tháng năm nào. Mẹ dặn rằng phải nhớ cả tháng dài tháng ngắn và năm nhuận nữa. Em hãy giúp bé Bông tìm ra ngày kế tiếp ngay sau đó nhé!
 ## Nhiệm vụ
 
 Hãy tính và in ra ngày, tháng, năm của **ngày kế tiếp ngay sau đó**.

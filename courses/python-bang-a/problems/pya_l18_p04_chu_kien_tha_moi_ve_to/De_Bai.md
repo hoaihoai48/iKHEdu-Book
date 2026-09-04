@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Một chú kiến đứng tại tọa độ $0$ trên một trục số thẳng. Mục tiêu của chú là di chuyển đến vị trí $X$. Chú kiến có thể nhảy mỗi bước dài tùy ý từ $1$ đến $5$ mét ($1, 2, 3, 4$ hoặc $5$).
+Trong vườn nhà bạn Tí có một chú kiến nhỏ chăm chỉ đứng tại tọa độ $0$ trên một con đường thẳng. Hôm nay, chú ngửi thấy mùi bánh thơm ở vị trí $X$ nên muốn bò thật nhanh đến đó. Mỗi bước, chú kiến có thể nhảy dài tùy ý từ $1$ đến $5$ mét ($1, 2, 3, 4$ hoặc $5$). Chú kiến bé xíu nên muốn đi ít bước nhất cho đỡ mệt, em hãy giúp chú tìm đường đi ngắn nhất nhé!
 ## Nhiệm vụ
 
 Hãy tìm số bước nhảy ít nhất để chú kiến đến được đúng vị trí $X$.

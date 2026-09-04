@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Nông trại dâu tây thu hoạch được $K$ kg dâu. Dâu được đóng vào 2 loại hộp: Hộp lớn chứa được $5\text{ kg}$ và Hộp nhỏ chứa được $1\text{ kg}$. Để tiết kiệm chi phí đóng gói, chủ nông trại muốn dùng nhiều hộp lớn nhất có thể.
+Cuối tuần, gia đình bạn Mai lên thăm nông trại dâu tây ở Đà Lạt và thấy bác nông dân vừa thu hoạch được $K$ kg dâu chín mọng. Dâu được đóng vào 2 loại hộp xinh xắn: hộp lớn chứa được $5\text{ kg}$ và hộp nhỏ chứa được $1\text{ kg}$. Để tiết kiệm chi phí đóng gói, bác chủ nông trại muốn dùng nhiều hộp lớn nhất có thể. Em hãy giúp bác chia dâu vào các hộp nhé!
 ## Nhiệm vụ
 
 Cho số nguyên $K$. Hãy in ra số hộp lớn và số hộp nhỏ cần dùng.

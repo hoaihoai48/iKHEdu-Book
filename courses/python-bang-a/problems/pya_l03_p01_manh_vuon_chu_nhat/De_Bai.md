@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bác Nông dân có một mảnh vườn trồng rau hình chữ nhật với chiều dài $a\text{ mét}$ và chiều rộng $b\text{ mét}$.
+Cuối làng có bác nông dân chăm chỉ với một mảnh vườn trồng rau hình chữ nhật có chiều dài $a\text{ mét}$ và chiều rộng $b\text{ mét}$. Mỗi sáng, bác ra vườn tưới rau xanh mướt, nhưng bác muốn rào quanh vườn và tính diện tích để trồng thêm rau mới. Em hãy giúp bác tính chu vi và diện tích của mảnh vườn nhé!
 ## Nhiệm vụ
 
 Em hãy tính chu vi và diện tích của mảnh vườn đó.

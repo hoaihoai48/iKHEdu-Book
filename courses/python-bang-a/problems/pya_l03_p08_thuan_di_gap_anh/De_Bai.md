@@ -5,8 +5,9 @@
 
 ## Bối cảnh
 
-Thuận và Ánh sống trên một con đường thẳng có các mốc tọa độ tính bằng kilomet. Thuận đang đứng ở vị trí $x$, còn Ánh đang đứng ở vị trí $y$ ($x < y$). Thuận bắt đầu đi xe đạp về phía nhà Ánh với vận tốc không đổi là $v\text{ km/h}$.
+Chiều nắng đẹp, hai bạn Thuận và Ánh sống trên một con đường làng thẳng có các mốc tọa độ tính bằng kilomet. Thuận đang đứng ở vị trí $x$, còn Ánh đang đứng ở vị trí $y$ ($x < y$). Thuận nhảy lên xe đạp và phóng về phía nhà Ánh với vận tốc không đổi là $v\text{ km/h}$ để rủ bạn đi đá bóng.
 * **Biết rằng:** Khoảng cách $y - x$ chia hết cho vận tốc $v$.
+Ánh đứng chờ ở cổng, hồi hộp không biết bao lâu bạn tới. Em hãy giúp hai bạn tính thời gian Thuận đi gặp Ánh nhé!
 ## Nhiệm vụ
 
 Sau bao nhiêu giờ thì Thuận sẽ gặp được Ánh?

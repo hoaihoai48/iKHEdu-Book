@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bạn Minh cao $a\text{ cm}$, bạn Nam cao $b\text{ cm}$. Biết chiều cao của hai bạn không bằng nhau.
+Giờ ra chơi, hai bạn thân Minh và Nam đứng tựa lưng vào nhau để so xem ai cao hơn. Cô y tế đo giúp: bạn Minh cao $a\text{ cm}$, bạn Nam cao $b\text{ cm}$. Cả lớp đều biết chiều cao của hai bạn không bằng nhau, nhưng cãi nhau ồn ào chưa ngã ngũ. Em hãy giúp cô giáo gọi tên bạn cao hơn nhé!
 ## Nhiệm vụ
 
 Hãy in ra tên của bạn cao hơn (`Minh` hoặc `Nam`).

@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Một cái ao hình chữ nhật có một cạnh bằng $a\text{ mét}$ và có chu vi là $P\text{ mét}$ ($P$ là số chẵn).
+Ngoài làng có một cái ao cá hình chữ nhật rất mát, một cạnh của ao bằng $a\text{ mét}$ và chu vi của ao là $P\text{ mét}$ ($P$ là số chẵn). Cuối tuần, các bạn nhỏ rủ nhau ra ao câu cá và đố nhau tìm cạnh còn lại của ao. Em hãy giúp các bạn tính độ dài cạnh còn lại nhé!
 ## Nhiệm vụ
 
 Em hãy tính và in ra độ dài của cạnh còn lại của hình chữ nhật.

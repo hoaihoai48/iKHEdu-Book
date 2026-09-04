@@ -3,8 +3,9 @@
 
 ## Bối cảnh
 
-Giai thừa của số tự nhiên $N$ (ký hiệu $N!$) là tích của tất cả các số tự nhiên từ 1 đến $N$:
+Cuối tuần, bạn Tý mở một gian hàng kẹo nhỏ trước cổng trường. Tý xếp kẹo thành từng hàng vui nhộn: hàng có số tự nhiên $N$ thì Tý nhân tất cả các số tự nhiên từ 1 đến $N$ với nhau. Cách nhân dồn này được gọi là giai thừa, ký hiệu là $N!$, và được tính bằng công thức:
   $$N! = 1 \times 2 \times 3 \times \dots \times N$$
+Hôm nay khách đông quá, Tý tính không kịp. Em hãy giúp Tý tính nhanh giá trị $N!$ nhé!
 ## Nhiệm vụ
 
 Nhập số tự nhiên $N$ ($1 \le N \le 20$). Hãy tính và in ra giá trị $N!$.

@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Nhà máy sản xuất bánh kẹo vừa đóng gói được $N$ viên kẹo. Người ta đóng các viên kẹo này vào các hộp quà, mỗi hộp quà chứa đúng $K$ viên kẹo. Những viên kẹo còn thừa lại không đủ đóng thành một hộp quà sẽ được tặng cho các em nhỏ đi tham quan nhà máy.
+Hôm nay lớp mình được đi tham quan nhà máy bánh kẹo thơm phức. Nhà máy vừa đóng gói được $N$ viên kẹo, rồi xếp các viên kẹo này vào các hộp quà, mỗi hộp quà chứa đúng $K$ viên kẹo. Những viên kẹo còn thừa lại không đủ đóng thành một hộp quà sẽ được tặng cho các em nhỏ đi tham quan nhà máy. Em hãy giúp các cô chú công nhân đếm số kẹo dành tặng các bạn nhỏ nhé!
 ## Nhiệm vụ
 
 Hãy tính số kẹo được tặng cho các em nhỏ.

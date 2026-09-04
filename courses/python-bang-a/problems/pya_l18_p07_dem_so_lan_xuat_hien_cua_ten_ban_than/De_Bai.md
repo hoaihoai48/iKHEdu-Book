@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Cho một bài văn miêu tả kỷ niệm tuổi học trò. Bé An muốn đếm xem tên của người bạn thân tên là `BIN` xuất hiện bao nhiêu lần trong bài văn (không phân biệt chữ in hoa hay in thường: `Bin`, `BIN`, `bin` đều được tính).
+Bé An vừa viết một bài văn miêu tả kỷ niệm tuổi học trò thật dễ thương để tặng bạn thân tên là `BIN`. Bé tò mò muốn đếm xem tên của người bạn thân ấy xuất hiện bao nhiêu lần trong bài văn (không phân biệt chữ in hoa hay in thường: `Bin`, `BIN`, `bin` đều được tính). Bài văn dài quá nên bé đếm mãi mà cứ nhầm. Em hãy giúp bé An đếm thật chính xác nhé!
 ## Nhiệm vụ
 
 Cho chuỗi văn bản $S$. Hãy đếm số lần từ `bin` xuất hiện như một từ độc lập.

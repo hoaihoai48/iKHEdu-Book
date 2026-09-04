@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Cho 3 số tự nhiên $a, b, c$ đã đảm bảo là độ dài 3 cạnh của một tam giác hợp lệ.
+Trong giờ thủ công, bé Na cắt được một miếng bìa hình tam giác có 3 cạnh dài $a, b, c$ và cô giáo bảo đó là một tam giác hợp lệ. Cả lớp tò mò không biết miếng bìa của Na thuộc loại tam giác nào. Na muốn khoe với mẹ mà chưa gọi đúng tên hình. Em hãy giúp bạn Na gọi đúng tên loại tam giác nhé!
 ## Nhiệm vụ
 
 Hãy phân loại tam giác đó:

@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Một vệ tinh bay quanh trái đất hết $S$ giây. Nhân vật Robot muốn thông báo khoảng thời gian này dưới dạng dễ hiểu: gồm bao nhiêu Giờ, bao nhiêu Phút và bao nhiêu Giây.
+Đêm trung thu, bạn Rô-bốt nhỏ ngước nhìn trời và thấy một vệ tinh bay quanh trái đất hết $S$ giây. Rô-bốt muốn thông báo khoảng thời gian này cho các bạn nhỏ dưới dạng dễ hiểu: gồm bao nhiêu Giờ, bao nhiêu Phút và bao nhiêu Giây. Các bạn háo hức chờ nghe kết quả. Em hãy giúp Rô-bốt đổi giây ra giờ, phút, giây nhé!
 ## Nhiệm vụ
 
 Nhập vào tổng số giây $S$. Hãy phân rã thành $H$ giờ, $M$ phút, $S$ giây.

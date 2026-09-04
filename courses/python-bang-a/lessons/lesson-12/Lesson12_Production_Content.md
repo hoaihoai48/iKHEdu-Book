@@ -1,177 +1,139 @@
-# Bài 12: Đếm số theo quy luật và số đặc biệt
+# Bài 12: Thống kê danh sách và sắp xếp
 
----
+## 1. Tóm tắt kiến thức trọng tâm
+- **Hàm thống kê tích hợp sẵn:** `max(a)`, `min(a)`, `sum(a)`.
+  - Trung bình cộng: `sum(a) / len(a)`.
+- **Sắp xếp danh sách:**
+  - `a.sort()`: Sắp xếp tăng dần trực tiếp trên mảng `a`.
+  - `a.sort(reverse=True)`: Sắp xếp giảm dần.
+  - `b = sorted(a)`: Tạo mảng mới `b` đã sắp xếp, giữ nguyên mảng `a`.
+- **Lọc phần tử trùng lặp:** `unique = sorted(list(set(a)))`.
 
-## 1. Khởi động: Những "con số kỳ tích" trong thế giới toán học
-
-Em có biết không, trong hàng tỷ con số tự nhiên vô tri vô giác, có những con số mang vẻ đẹp kỳ lạ đến mức các nhà toán học cổ đại đã tôn sùng chúng như những kỳ quan:
-* **Số Hoàn Hảo (Perfect Number):** Tổng tất cả các ước số nhỏ hơn nó lại bằng chính nó!
-  Ví dụ: Số 6 có các ước nhỏ hơn nó là 1, 2, 3. Điều kỳ diệu:
-  $$1 + 2 + 3 = 6$$
-  Số 28 có các ước nhỏ hơn nó là 1, 2, 4, 7, 14:
-  $$1 + 2 + 4 + 7 + 14 = 28$$
-* **Số Armstrong (Số hoa tiên):** Một số 3 chữ số bằng tổng lập phương các chữ số của nó!
-  Ví dụ số 153:
-  $$1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153$$
-* **Bài toán đếm số trong đoạn $[A, B]$:** Trong các đề thi Tin học trẻ, các câu hỏi như: *"Trong đoạn từ $A$ đến $B$, có bao nhiêu số chia hết cho 3 nhưng không chia hết cho 5?"* luôn là "mỏ điểm" quý giá nếu em nắm vững kỹ thuật đếm!
-
----
-
-## 2. Bí thuật đếm nhanh bằng toán học $\mathcal{O}(1)$ thay vì vòng lặp
-
-Khi gặp bài toán: *"Đếm số lượng số chia hết cho $K$ trong đoạn từ $1$ đến $N$"*:
-
-### Cách 1 (học sinh bình thường):
-Dùng vòng lặp `for i in range(1, n + 1)` để kiểm tra `if i % k == 0`.
-$\implies$ Nếu $N = 10^9$, chương trình sẽ chạy mất 10 giây và bị loại vì **Time Limit Exceeded (TLE)**!
-
-### Cách 2 (học sinh chuyên tin iKHEDU):
-Dùng **công thức giải tích 1 dòng lệnh**:
-$$\text{Số lượng} = N // K$$
-
-> 💡 **Mở rộng đếm trong đoạn $[A, B]$:**
-> Số lượng các số chia hết cho $K$ trong đoạn $[A, B]$ chính bằng:
-> $$\text{count}(A, B, K) = (B // K) - ((A - 1) // K)$$
-
-Chỉ bằng một phép trừ duy nhất, máy tính tính xong kết quả cho $N = 10^{18}$ chỉ trong $0.000001$ giây!
-
----
-
-## 3. Thuật toán kiểm tra số hoàn hảo & số armstrong
-
-### 3.1. Kiểm tra số hoàn hảo
+## 2. Mẫu code chuẩn
 ```python
-n = int(input())
-tong_uoc_thuc_su = 0
-
-for i in range(1, n):
-    if n % i == 0:
-        tong_uoc_thuc_su += i
-
-if tong_uoc_thuc_su == n:
-    print("LA SO HOAN HAO")
-else:
-    print("KHONG PHAI SO HOAN HAO")
-```
-
-### 3.2. Kiểm tra số armstrong 3 chữ số
-```python
-n = int(input())
-tram = n // 100
-chuc = (n // 10) % 10
-don_vi = n % 10
-
-if tram**3 + chuc**3 + don_vi**3 == n:
-    print("LA SO ARMSTRONG")
-else:
-    print("KHONG PHAI")
+# Nhập mảng số nguyên, in số lớn nhất, nhỏ nhất và mảng sắp xếp tăng dần
+a = list(map(int, input().split()))
+print("Max:", max(a))
+print("Min:", min(a))
+a.sort()
+print("Sap xep:", *a)
 ```
 
 ---
 
-## 4. Concept quiz: 14 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
-#### Câu 1: Số hoàn hảo nhỏ nhất là số nào?
-- **A.** 1
-- **B.** **[Đáp án đúng]** 6
-- **C.** 12
-- **D.** 28
-- > *Giải thích:* Các ước nhỏ hơn 6 là 1, 2, 3 và $1 + 2 + 3 = 6$.
+## 3. Concept quiz: 15 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
-#### Câu 2: Số nào sau đây cũng là một số hoàn hảo?
+#### Câu 1: Hàm nào trong Python trả về giá trị lớn nhất trong danh sách số `a`?
+- **A.** `a.maximum()`
+- **B.** `a.largest()`
+- **C.** **[Đáp án đúng]** `max(a)`
+- **D.** `top(a)`
+- > *Giải thích:* `max()` là hàm tích hợp sẵn trong Python nhận đầu vào là một danh sách.
+
+#### Câu 2: Hàm `sum(a)` trên danh sách `a = [2, 4, 6, 8]` trả về kết quả bằng bao nhiêu?
 - **A.** 10
-- **B.** 20
-- **C.** **[Đáp án đúng]** 28
-- **D.** 32
-- > *Giải thích:* Các ước nhỏ hơn 28 là 1, 2, 4, 7, 14. Tổng của chúng: $1 + 2 + 4 + 7 + 14 = 28$.
-
-#### Câu 3: Số 153 là số armstrong vì:
-- **A.** $153$ chia hết cho 3
-- **B.** $153$ là số nguyên tố
-- **C.** **[Đáp án đúng]** $1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153$
-- **D.** $1 + 5 + 3 = 9$
-- > *Giải thích:* Định nghĩa số Armstrong bậc 3 là bằng tổng lập phương các chữ số của chính nó.
-
-#### Câu 4: Số lượng các số chia hết cho 5 trong đoạn từ 1 đến 100 là:
-- **A.** 19
 - **B.** **[Đáp án đúng]** 20
-- **C.** 21
-- **D.** 25
-- > *Giải thích:* $100 // 5 = 20$.
+- **C.** 4
+- **D.** 24
+- > *Giải thích:* $2 + 4 + 6 + 8 = 20$.
 
-#### Câu 5: Số lượng các số chia hết cho 4 trong đoạn từ 10 đến 30 là bao nhiêu?
-- **A.** 4
-- **B.** **[Đáp án đúng]** 5 (gồm 12, 16, 20, 24, 28)
-- **C.** 6
-- **D.** 7
-- > *Giải thích:* Áp dụng công thức: $(30 // 4) - ((10 - 1) // 4) = 7 - (9 // 4) = 7 - 2 = 5$.
+#### Câu 3: Điểm khác biệt lớn nhất giữa `a.sort()` và `sorted(a)` là gì?
+- **A.** `a.sort()` chạy chậm hơn
+- **B.** **[Đáp án đúng]** `a.sort()` làm biến đổi trực tiếp danh sách `a` gốc, còn `sorted(a)` tạo ra danh sách mới và giữ nguyên `a` gốc
+- **C.** `sorted(a)` chỉ dùng cho chuỗi
+- **D.** Không có sự khác biệt
+- > *Giải thích:* `a.sort()` là phương thức in-place (tại chỗ), không trả về giá trị (trả về `None`).
 
-#### Câu 6: Trong đoạn từ $1$ đến $N$, số lượng các số chia hết cho cả 2 và 3 (tức là chia hết cho 6) là:
-- **A.** `N // 2 + N // 3`
-- **B.** **[Đáp án đúng]** `N // 6`
-- **C.** `N // 5`
-- **D.** `(N // 2) * (N // 3)`
-- > *Giải thích:* Một số chia hết cho cả 2 và 3 khi và chỉ khi nó chia hết cho $\text{BCNN}(2, 3) = 6$.
+#### Câu 4: Để sắp xếp danh sách `a` theo thứ tự giảm dần, cú pháp nào đúng?
+- **A.** `a.sort(down=True)`
+- **B.** `a.sort(descending=True)`
+- **C.** **[Đáp án đúng]** `a.sort(reverse=True)`
+- **D.** `a.reverse_sort()`
+- > *Giải thích:* Tham số `reverse=True` đảo chiều thứ tự sắp xếp mặc định sang giảm dần.
 
-#### Câu 7: Nguyên lý bao hàm - loại trừ (inclusion-exclusion) dùng để đếm số lượng các số chia hết cho 2 hoặc 3 trong đoạn $[1, N]$ là:
-- **A.** `N // 2 + N // 3`
-- **B.** **[Đáp án đúng]** `N // 2 + N // 3 - N // 6`
-- **C.** `N // 6`
-- **D.** `(N // 2) + (N // 3) + (N // 6)`
-- > *Giải thích:* Lấy tập chia hết cho 2 cộng tập chia hết cho 3, rồi trừ đi phần giao bị đếm lặp 2 lần (các số chia hết cho 6).
+#### Câu 5: Cho `a = [10, 5, 20, 15]`. Sau khi chạy `a.sort()`, phần tử `a[0]` và `a[-1]` lần lượt là:
+- **A.** 10 và 15
+- **B.** **[Đáp án đúng]** 5 và 20
+- **C.** 20 và 5
+- **D.** 5 và 15
+- > *Giải thích:* Sau khi sort tăng dần `[5, 10, 15, 20]`: số nhỏ nhất ở đầu `a[0] = 5`, số lớn nhất ở cuối `a[-1] = 20`.
 
-#### Câu 8: Một số được gọi là "số phong phú" (abundant number) nếu tổng các ước nhỏ hơn nó:
-- **A.** Bằng chính nó
-- **B.** Nhỏ hơn chính nó
-- **C.** **[Đáp án đúng]** Lớn hơn chính nó
-- **D.** Bằng 0
-- > *Giải thích:* Ví dụ số 12: các ước nhỏ hơn nó là 1, 2, 3, 4, 6 có tổng $1+2+3+4+6 = 16 > 12$.
+#### Câu 6: Muốn tìm số lớn thứ hai trong danh sách các số đôi một khác nhau `a`, sau khi gọi `a.sort()`, số đó nằm ở vị trí nào?
+- **A.** `a[1]`
+- **B.** **[Đáp án đúng]** `a[-2]` (Phần tử kế cuối)
+- **C.** `a[-1] - 1`
+- **D.** `a[len(a)]`
+- > *Giải thích:* Trong mảng đã sắp xếp tăng dần, phần tử lớn nhất là `a[-1]`, phần tử lớn thứ nhì là `a[-2]`.
 
-#### Câu 9: Cặp số $(220, 284)$ được gọi là "cặp số thân thiết" (amicable numbers) vì:
-- **A.** Cả hai đều chia hết cho 2
-- **B.** **[Đáp án đúng]** Tổng các ước của số này bằng số kia và ngược lại
-- **C.** Hiệu của chúng bằng 64
-- **D.** Tích của chúng là số chính phương
-- > *Giải thích:* Tổng các ước nhỏ hơn 220 bằng 284, và tổng các ước nhỏ hơn 284 lại đúng bằng 220.
+#### Câu 7: Công thức tính trung bình cộng của các số trong danh sách `a` là:
+- **A.** `average(a)`
+- **B.** `sum(a) // len(a)`
+- **C.** **[Đáp án đúng]** `sum(a) / len(a)`
+- **D.** `mean(a)`
+- > *Giải thích:* Tổng chia cho số lượng phần tử: `sum(a) / len(a)`. Dùng phép chia thực `/` để kết quả chính xác có phần thập phân.
 
-#### Câu 10: Số chính phương có chữ số tận cùng không thể là chữ số nào sau đây?
-- **A.** 1
-- **B.** 4
-- **C.** 5
-- **D.** **[Đáp án đúng]** 2 (hoặc 3, 7, 8)
-- > *Giải thích:* Bình phương của một số tự nhiên chỉ có thể tận cùng bằng 0, 1, 4, 5, 6, 9. Không bao giờ tận cùng bằng 2, 3, 7, 8.
-
-#### Câu 11: Để đếm có bao nhiêu số lẻ trong đoạn từ $A$ đến $B$ (với $A \le B$), cách tính tổng quát chuẩn nhất là:
-- **A.** `(B - A) // 2`
-- **B.** **[Đáp án đúng]** Tổng số phần tử trừ đi số lượng số chẵn trong đoạn
-- **C.** Luôn bằng một nửa
-- **D.** `(B - A + 1) // 2`
-- > *Giải thích:* Đoạn $[A, B]$ có tổng $(B - A + 1)$ số. Số lượng số chẵn là $(B // 2) - ((A - 1) // 2)$. Số lượng số lẻ bằng tổng trừ đi số chẵn.
-
-#### Câu 12: Số tự nhiên $N$ được gọi là "số smith" nếu:
-- **A.** $N$ là số nguyên tố
-- **B.** **[Đáp án đúng]** $N$ là hợp số và tổng chữ số của nó bằng tổng các chữ số của các thừa số nguyên tố cấu tạo nên nó
-- **C.** $N$ chia hết cho 9
-- **D.** $N$ là số đối xứng
-- > *Giải thích:* Ví dụ $4 \to 2 \times 2$: tổng chữ số 4 bằng $2 + 2 = 4$.
-
-#### Câu 13: Đoạn code sau tính điều gì?
+#### Câu 8: Đoạn code sau in ra kết quả gì?
 ```python
-count = 0
-for i in range(1, 101):
-    if i % 3 == 0 and i % 5 != 0:
-        count += 1
-print(count)
+a = [3, 1, 2]
+b = a.sort()
+print(b)
 ```
-- **A.** Đếm số chia hết cho 15
-- **B.** **[Đáp án đúng]** Đếm các số chia hết cho 3 nhưng không chia hết cho 5 trong đoạn 1 đến 100
-- **C.** Đếm số chia hết cho 3 hoặc 5
-- **D.** Luôn bằng 33
-- > *Giải thích:* Biểu thức `i % 3 == 0 and i % 5 != 0` lọc chính xác các bội của 3 loại trừ các bội chung của 3 và 5.
+- **A.** `[1, 2, 3]`
+- **B.** **[Đáp án đúng]** `None` (Bẫy lỗi kinh điển!)
+- **C.** `[3, 1, 2]`
+- **D.** Báo lỗi cú pháp
+- > *Giải thích:* Bẫy kinh điển: Phương thức `a.sort()` sắp xếp tại chỗ và trả về `None`. Biến `b` sẽ nhận giá trị `None`! Muốn lấy danh sách mới phải dùng `b = sorted(a)`.
 
-#### Câu 14: Giá trị `count` ở câu 13 bằng bao nhiêu?
-- **A.** 33
-- **B.** 20
-- **C.** **[Đáp án đúng]** 27
+#### Câu 9: Lệnh `a.reverse()` có tác dụng gì?
+- **A.** Sắp xếp giảm dần
+- **B.** **[Đáp án đúng]** Đảo ngược thứ tự các phần tử hiện tại của danh sách (không quan tâm giá trị lớn hay nhỏ)
+- **C.** Sắp xếp tăng dần
+- **D.** Xóa phần tử cuối
+- > *Giải thích:* `reverse()` chỉ lật ngược thứ tự trước sau của mảng hiện tại.
+
+#### Câu 10: Cho danh sách `a = [4, 7, 2, 7, 9, 7]`. Lệnh `a.count(max(a))` trả về:
+- **A.** 3
+- **B.** **[Đáp án đúng]** 1 (Số lớn nhất là 9, xuất hiện 1 lần)
+- **C.** 7
+- **D.** 9
+- > *Giải thích:* `max(a)` là 9. Số 9 xuất hiện đúng 1 lần trong mảng.
+
+#### Câu 11: Khi sắp xếp danh sách các chuỗi chữ cái `['banana', 'apple', 'cherry']`, Python sẽ sắp xếp theo quy tắc nào?
+- **A.** Theo độ dài ngắn của từ
+- **B.** **[Đáp án đúng]** Theo thứ tự từ điển (Lexicographical order - tra từ điển A-Z)
+- **C.** Theo số lượng nguyên âm
+- **D.** Ngẫu nhiên
+- > *Giải thích:* Thứ tự từ điển so sánh mã ASCII của từng ký tự từ trái qua phải: `'apple' < 'banana' < 'cherry'`.
+
+#### Câu 12: Đoạn code sau in ra giá trị gì?
+```python
+a = [10, 20, 30]
+print(sum(a) - max(a) - min(a))
+```
+- **A.** 0
+- **B.** 10
+- **C.** **[Đáp án đúng]** 20
 - **D.** 30
-- > *Giải thích:* Số lượng số chia hết cho 3 là $100 // 3 = 33$. Số lượng số chia hết cho cả 3 và 5 (tức 15) là $100 // 15 = 6$. Vậy $33 - 6 = 27$.
+- > *Giải thích:* Tổng $10+20+30=60$. Trừ max (30) trừ min (10) còn lại đúng phần tử ở giữa là 20.
+
+#### Câu 13: Cú pháp nào sau đây dùng để lọc bỏ toàn bộ phần tử trùng lặp và giữ lại các số độc nhất sắp xếp tăng dần?
+- **A.** `unique(a)`
+- **B.** **[Đáp án đúng]** `sorted(list(set(a)))`
+- **C.** `a.distinct()`
+- **D.** `a.filter()`
+- > *Giải thích:* `set(a)` loại bỏ phần tử trùng lặp, `list(...)` chuyển lại thành danh sách, `sorted(...)` sắp xếp tăng dần.
+
+#### Câu 14: Thuật toán sắp xếp tích hợp sẵn trong Python có tên là gì?
+- **A.** Bubble Sort (Sắp xếp nổi bọt)
+- **B.** Quick Sort (Sắp xếp nhanh)
+- **C.** **[Đáp án đúng]** Timsort (Thuật toán lai ghép tối ưu cực nhanh)
+- **D.** Selection Sort (Sắp xếp chọn)
+- > *Giải thích:* Timsort do Tim Peters sáng tạo năm 2002, kết hợp Merge Sort và Insertion Sort, có độ phức tạp trung bình $\mathcal{O}(N \log N)$.
+
+#### Câu 15: Cho danh sách `diem = [9.5, 8.0, 10.0, 7.5]`. Để in ra điểm số cao thứ nhì, câu lệnh chuẩn nhất là:
+- **A.** `diem.sort(); print(diem[1])`
+- **B.** **[Đáp án đúng]** `diem.sort(); print(diem[-2])`
+- **C.** `print(max(diem) - 1)`
+- **D.** `print(diem[2])`
+- > *Giải thích:* Sắp xếp tăng dần: điểm cao nhất ở `diem[-1]`, điểm cao thứ nhì ở `diem[-2]`.

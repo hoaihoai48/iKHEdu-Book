@@ -1,131 +1,54 @@
 # Bài 03: Công thức tính toán, hình học và đổi đơn vị
 
----
+## 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
 
-## 1. Khởi động: Khi lập trình viên nhí giải toán hình học
+### A. Các công thức hình học nền tảng
+* **Hình chữ nhật:**
+  - Chu vi: $P = (a + b) 	\times 2 \implies$ Code: `(a + b) * 2` *(Bắt buộc phải có dấu ngoặc tròn)*.
+  - Diện tích: $S = a 	\times b \implies$ Code: `a * b`.
+  - Nửa chu vi: $P_{nua} = P // 2$.
+  - Tìm một cạnh khi biết chu vi $P$ và một cạnh $a$: $b = (P // 2) - a$.
+* **Hình vuông:**
+  - Chu vi: $P = a 	\times 4 \implies$ Code: `a * 4`.
+  - Cạnh hình vuông từ chu vi: $a = P // 4$.
+  - Diện tích: $S = a 	\times a = a^2 \implies$ Code: `a * a` hoặc `a ** 2`.
+* **Tam giác vuông:**
+  - Diện tích khi biết 2 cạnh góc vuông $a$ và $b$: $S = \frac{a 	\times b}{2} \implies$ Code: `(a * b) // 2` (nếu tích chia hết cho 2).
+* **Hình thang:**
+  - Diện tích: $S = \frac{(a + b) 	\times h}{2} \implies$ Code: `((a + b) * h) // 2`.
 
-Trong các kỳ thi Tin học trẻ Bảng A, có một mảng đề thi vô cùng quen thuộc và chiếm tỷ lệ điểm rất cao: **Các bài toán hình học và bài toán thực tế đời thường** (chu vi, diện tích hình chữ nhật, hình vuông, tam giác, bài toán hồ nước bao quanh đảo, bài toán đồng hồ thời gian).
+### B. Bài toán diện tích hình học lồng ghép (Trừ phần giao / Phần còn lại)
+* *Mô hình:* Có một khu đất lớn diện tích $S_1$, bên trong xây một công trình có diện tích $S_2$. Diện tích đất còn lại là:
+  $$\mathbf{S_{con\_lai} = S_1 - S_2}$$
+* *Bài toán bờ hồ & hòn đảo:* Hồ hình vuông cạnh $A$, đảo hình chữ nhật $B 	\times C$:
+  `mat_nuoc = (A * A) - (B * C)`.
 
-Rất nhiều bạn nhỏ học rất giỏi môn Toán trên lớp, nhưng khi chuyển sang viết code Python thì lại gặp khó khăn:
-* *"Tại sao công thức chu vi $(dài + rộng) \times 2$ viết vào Python lại ra kết quả sai?"*
-* *"Làm sao để biết cạnh còn lại của hình chữ nhật khi chỉ biết chu vi?"*
-* *"Làm sao để đổi 3750 giây thành đúng định dạng X giờ Y phút Z giây?"*
+### C. Thuật toán phân rã đơn vị thời gian (Từ giây sang Giờ — Phút — Giây)
+Biết rằng: $1	\text{ giờ} = 60	\text{ phút} = 3600	\text{ giây}$, $1	\text{ phút} = 60	\text{ giây}$.
+Cho trước $S$ giây, quy trình phân rã gồm 3 bước:
+1. **Tính số giờ:** `gio = S // 3600`
+2. **Lấy số giây còn dư sau khi tính giờ:** `giay_du = S % 3600`
+3. **Tính số phút và giây từ phần dư:**
+   - `phut = giay_du // 60`
+   - `giay = giay_du % 60`
 
-Bài học hôm nay sẽ trang bị cho các em toàn bộ kỹ năng:
-1. Chuyển đổi chính xác các công thức hình học Tiểu học thành các dòng code Python an toàn.
-2. Thuật toán phân rã thời gian ngược từ giây sang giờ - phút - giây.
-3. Bí quyết làm tròn số thập phân (`round()` và định dạng `f-string`).
+### D. Kỹ thuật in số thập phân và làm tròn
+- Làm tròn 2 chữ số thập phân: `round(x, 2)`.
+- **In chuẩn định dạng thi đấu bằng f-string:** `print(f"{x:.2f}")` (Đảm bảo số `5` sẽ in ra đủ `5.00`).
+- **In bù số 0 ở đầu (Ví dụ: in 5 giây thành `05`):** `print(f"{giay:02d}")`.
 
----
+## 2. Bảng công thức quy đổi đơn vị đo lường cần thuộc lòng
+| Tên đơn vị | Quy đổi xuôi | Lưu ý khi tính diện tích |
+|---|---|---|
+| Độ dài | $1	\text{ m} = 10	\text{ dm} = 100	\text{ cm} = 1000	\text{ mm}$ | $1	\text{ km} = 1000	\text{ m}$ |
+| Diện tích | $1	\text{ m}^2 = 100	\text{ dm}^2 = 10,000	\text{ cm}^2$ | **Độ dài nhân 10 thì diện tích nhân 100!** |
+| Khối lượng | $1	\text{ tấn} = 10	\text{ tạ} = 1000	\text{ kg}$; $1	\text{ kg} = 1000	\text{ g}$ | Luôn đổi về cùng đơn vị nhỏ nhất trước |
 
-## 2. Các công thức hình học kinh điển trong Python
+## 3. Bẫy lỗi phòng thi
+- ❌ **Quên đổi về cùng đơn vị:** Dài $2	\text{ m}$, rộng $30	\text{ cm}$ mà tính diện tích $2 	\times 30 = 60$ là sai! Phải đổi $2	\text{ m} = 200	\text{ cm}$, diện tích là $200 	\times 30 = 6000	\text{ cm}^2$.
+- ❌ **Thiếu ngoặc phép tính nửa chu vi:** Viết `P // 2 - a` thì đúng, nhưng viết `P - a // 2` là sai hoàn toàn!
 
-Hãy cùng ôn lại các công thức toán Tiểu học và cách viết code tương ứng:
-
-### 2.1. Hình vuông (cạnh là $a$)
-* **Chu vi:** $P = a \times 4$ $\implies$ Code: `chu_vi = a * 4`
-* **Diện tích:** $S = a \times a = a^2$ $\implies$ Code: `dien_tich = a * a` hoặc `dien_tich = a ** 2`
-* **Tìm cạnh khi biết chu vi:** $a = P : 4$ $\implies$ Code: `canh = P // 4` (nếu đề cho chu vi là số nguyên chia hết).
-
-### 2.2. Hình chữ nhật (chiều dài $a$, chiều rộng $b$)
-* **Chu vi:** $P = (a + b) \times 2$ $\implies$ Code: `chu_vi = (a + b) * 2`
-  > ⚠️ **Tử huyệt bắt bẫy:** Tuyệt đối không được viết `a + b * 2`. Vì theo quy tắc ưu tiên, máy tính sẽ nhân `b * 2` trước rồi mới cộng `a`. Bắt buộc phải có dấu ngoặc tròn `(a + b)`!
-* **Diện tích:** $S = a \times b$ $\implies$ Code: `dien_tich = a * b`
-* **Nửa chu vi:** $P_{nua} = P : 2 = a + b$ $\implies$ Code: `nua_chu_vi = P // 2`
-* **Tìm một cạnh khi biết chu vi $P$ và một cạnh $a$:**
-  $$b = (P : 2) - a = \frac{P}{2} - a$$
-  Code: `canh_con_lai = (P // 2) - a`
-
-### 2.3. Hình tam giác (độ dài 3 cạnh là $a, b, c$)
-* **Chu vi:** $P = a + b + c$ $\implies$ Code: `chu_vi = a + b + c`
-* **Diện tích tam giác vuông (2 cạnh góc vuông là $a, b$):**
-  $$S = \frac{a \times b}{2}$$
-  Code: `dien_tich = (a * b) / 2` (nếu muốn số thực) hoặc `(a * b) // 2` (nếu tích $a \times b$ luôn chia hết cho 2).
-
----
-
-## 3. Bài toán hình học lồng nhau: Diện tích phần mặt nước còn lại
-
-Một dạng bài rất hay gặp trong đề thi Tin học trẻ (như *Bài 2: Hồ cá sấu - THT Lâm Đồng*):
-* Người ta có một khu đất/hồ nước lớn hình vuông có kích thước cạnh là $A$.
-* Ở chính giữa, người ta xây một hòn đảo nhỏ hình chữ nhật có kích thước $B \times C$.
-* **Yêu cầu:** Tính diện tích phần mặt nước còn lại sau khi xây hòn đảo.
-
-### Bản chất tư duy toán học:
-$$\text{Diện tích mặt nước} = \text{Diện tích hồ nước lớn} - \text{Diện tích hòn đảo nhỏ}$$
-$$S_{con\_lai} = S_{ho} - S_{dao} = (A \times A) - (B \times C)$$
-
-```python
-# Đoạn code giải trọn vẹn:
-A = int(input())
-B = int(input())
-C = int(input())
-
-dien_tich_ho = A * A
-dien_tich_dao = B * C
-mat_nuoc = dien_tich_ho - dien_tich_dao
-
-print(mat_nuoc)
-```
-*Thời gian chạy:* $\mathcal{O}(1)$ (chỉ mất vài phép tính số học, chạy trong $0.0001$ giây!).
-
----
-
-## 4. Nghệ thuật phân rã thời gian: Từ giây sang giờ - phút - giây
-
-Ở Bài 2, chúng ta đã biết đổi xuôi từ Giờ/Phút sang Giây ($1\text{h} = 3600\text{s}, 1\text{m} = 60\text{s}$).
-Bây giờ, nếu đề bài cho một số giây khổng lồ, ví dụ **$3755$ giây**, làm sao phân rã thành mấy giờ, mấy phút, mấy giây?
-
-### Sơ đồ tư duy 3 bước:
-1. **Bước 1 (Tính số giờ):**
-   * Trong $3755$ giây có bao nhiêu giờ trọn vẹn?
-   * Vì $1$ giờ có $3600$ giây, ta lấy: `gio = 3755 // 3600` $\implies 3755 // 3600 = \mathbf{1}$ giờ.
-2. **Bước 2 (Tìm số giây còn dư lại sau khi đã tính giờ):**
-   * Số giây còn thừa chưa đủ 1 giờ: `giay_du = 3755 % 3600` $\implies 3755 \% 3600 = \mathbf{155}$ giây.
-3. **Bước 3 (Tính số phút và số giây cuối cùng từ phần dư):**
-   * Từ $155$ giây dư đó, ta tính xem được bao nhiêu phút:
-     `phut = giay_du // 60` $\implies 155 // 60 = \mathbf{2}$ phút.
-   * Số giây cuối cùng còn thừa lại là:
-     `giay = giay_du % 60` $\implies 155 \% 60 = \mathbf{35}$ giây.
-
-$$\implies \mathbf{3755 \text{ giây}} = \mathbf{1 \text{ giờ } 2 \text{ phút } 35 \text{ giây}}!$$
-
-```python
-tong_giay = int(input())
-
-gio = tong_giay // 3600
-giay_du = tong_giay % 3600
-
-phut = giay_du // 60
-giay = giay_du % 60
-
-print(gio, phut, giay)
-```
-
----
-
-## 5. Làm tròn số thập phân: `round()` và `f-string`
-
-Khi tính chu vi hình tròn hoặc vận tốc, kết quả có thể ra số thập phân dài vô tận như `3.3333333333333335`.
-Đề thi thường yêu cầu: *"In ra kết quả làm tròn đến 2 chữ số thập phân"*.
-
-### Cách 1: Dùng hàm `round(so, k)`
-Hàm `round(x, 2)` sẽ làm tròn số `x` đến đúng 2 chữ số thập phân theo quy tắc toán học (từ 5 trở lên thì làm tròn lên).
-```python
-diem = 8.66666
-print(round(diem, 2))  # In ra: 8.67
-```
-
-### Cách 2: Dùng định dạng chuỗi chuyên nghiệp (`f-string`)
-Đây là cách các lập trình viên Python hiện đại yêu thích nhất vì vừa đẹp mắt vừa chính xác:
-```python
-diem = 8.66666
-print(f"{diem:.2f}")   # In ra chính xác: 8.67
-```
-
----
-
-## 6. Concept quiz: 12 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 4. Concept quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
 #### Câu 1 (công thức chu vi hình chữ nhật):
 Cho chiều dài `a` và chiều rộng `b`. Biểu thức Python nào tính đúng chu vi hình chữ nhật?
@@ -228,3 +151,59 @@ Lệnh nào sau đây in ra số phút và số giây luôn có 2 chữ số (v�
 - **C.** `print(round(phut, 2), round(giay, 2))`
 - **D.** `print("0" + phut + "0" + giay)`
 > *Giải thích:* Cú pháp `:02d` trong `f-string` của Python tự động bù thêm số 0 ở đằng trước nếu số đó có ít hơn 2 chữ số.
+
+#### Câu 13 (diện tích tam giác vuông):
+Một miếng bánh hình tam giác vuông có hai cạnh góc vuông dài $6\text{ cm}$ và $4\text{ cm}$. Diện tích miếng bánh đó là:
+- **A.** $10\text{ cm}^2$
+- **B.** $20\text{ cm}^2$
+- **C.** **[Đáp án đúng]** $12\text{ cm}^2$
+- **D.** $24\text{ cm}^2$
+> *Giải thích:* Diện tích tam giác vuông bằng tích hai cạnh góc vuông chia cho 2: $(6 \times 4) : 2 = 24 : 2 = 12\text{ cm}^2$.
+
+#### Câu 14 (thể tích hộp chữ nhật):
+Một hộp sữa có chiều dài $3\text{ cm}$, chiều rộng $2\text{ cm}$ và chiều cao $4\text{ cm}$. Thể tích của hộp sữa đó là:
+- **A.** $9\text{ cm}^3$
+- **B.** $14\text{ cm}^3$
+- **C.** **[Đáp án đúng]** $24\text{ cm}^3$
+- **D.** $29\text{ cm}^3$
+> *Giải thích:* Thể tích hộp chữ nhật bằng dài nhân rộng nhân cao: $3 \times 2 \times 4 = 24\text{ cm}^3$.
+
+#### Câu 15 (đổi đơn vị thời gian xuôi):
+Bạn Bi chạy bộ trong $2$ giờ $15$ phút. Hỏi bạn Bi đã chạy tổng cộng bao nhiêu giây?
+- **A.** $215$ giây
+- **B.** $2250$ giây
+- **C.** **[Đáp án đúng]** $8100$ giây
+- **D.** $135$ giây
+> *Giải thích:* $2$ giờ $= 2 \times 3600 = 7200$ giây. $15$ phút $= 15 \times 60 = 900$ giây. Tổng cộng: $7200 + 900 = 8100$ giây.
+
+#### Câu 16 (dự đoán output — phân rã giờ phút giây):
+Đoạn code sau in ra kết quả gì?
+```python
+s = 7325
+gio = s // 3600
+du = s % 3600
+phut = du // 60
+giay = du % 60
+print(gio, phut, giay)
+```
+- **A.** `1 62 5`
+- **B.** `7 3 25`
+- **C.** **[Đáp án đúng]** `2 2 5`
+- **D.** `2 3 5`
+> *Giải thích:* $7325 : 3600 = 2$ dư $125$. Từ $125$ giây dư: $125 : 60 = 2$ phút dư $5$ giây. Vậy in ra `2 2 5` (2 giờ 2 phút 5 giây).
+
+#### Câu 17 (làm tròn với `round()`):
+Kết quả của lệnh `round(5.678, 2)` là:
+- **A.** `5.67`
+- **B.** **[Đáp án đúng]** `5.68`
+- **C.** `5.6`
+- **D.** `6`
+> *Giải thích:* Chữ số thứ ba sau dấu phẩy là 8 ($\ge 5$) nên làm tròn lên: `5.678` thành `5.68`.
+
+#### Câu 18 (làm tròn với `f-string`):
+Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập phân)?
+- **A.** `print(round(x))`
+- **B.** `print(f"{x:.2f}")`
+- **C.** **[Đáp án đúng]** `print(f"{x:.1f}")`
+- **D.** `print(x // 10)`
+> *Giải thích:* Cú pháp `:.1f` trong `f-string` nghĩa là làm tròn và hiển thị đúng 1 chữ số sau dấu phẩy, nên `7.456` thành `7.5`.

@@ -16,6 +16,12 @@
 | 08 | `PYA-L03-P08` | Thuận đi gặp ánh | `Luyện tập` | $0 \le x, y \le 10^9, 1 \le v \le 10^9$ | Vận tốc, khoảng cách và thời gian (THT từ sơn) |
 | 09 | `PYA-L03-P09` | Rào quanh vườn hoa có cửa | `Luyện tập` | $1 \le a, b \le 10^4, 1 \le c < a$ | Chu vi trừ đi độ rộng lối vào cửa |
 | 10 | `PYA-L03-P10` | Diện tích bồn hoa chữ thập | `Vận dụng` | $1 \le a, b \le 10^4$ | Phân tích hình học ghép, trừ phần giao nhau |
+| 11 | `PYA-L03-P11` | Diện tích tam giác vuông | `Luyện tập` | $1 \le a, h \le 1000, (a \times h)$ chẵn | Diện tích tam giác vuông $(a \times h) : 2$ |
+| 12 | `PYA-L03-P12` | Thể tích hộp chữ nhật | `Luyện tập` | $1 \le d, r, c \le 1000$ | Thể tích khối hộp $d \times r \times c$ |
+| 13 | `PYA-L03-P13` | Đổi đô la sang tiền Việt | `Luyện tập` | $1 \le D \le 10^6$ | Đổi đơn vị tiền tệ, nhân tỉ giá $25000$ |
+| 14 | `PYA-L03-P14` | Đổi độ C sang độ F | `Luyện tập` | $-50 \le C \le 50, C$ chia hết cho $5$ | Biểu thức hỗn hợp $C \times 9 : 5 + 32$ |
+| 15 | `PYA-L03-P15` | Tính vận tốc làm tròn | `Vận dụng` | $1 \le D, T \le 10^4$ | Chia thực $D : T$, làm tròn $2$ chữ số thập phân |
+| 16 | `PYA-L03-P16` | Tiền điện bậc thang | `Vận dụng` | $1 \le N \le 10^6$ | Giá bậc thang có điều kiện theo ngưỡng $100$ |
 
 ---
 
@@ -181,3 +187,87 @@
 * **Gợi ý thuật toán:**
   * Công thức gộp: $S = (a \times b) + (a \times b) - (b \times b) = 2ab - b^2$ hoặc $b \times (2a - b)$.
   * Code: `print(2 * a * b - b * b)`.
+
+---
+
+### Bài 11 (Luyện tập): Diện tích tam giác vuông (`PYA-L03-P11`)
+
+* **Bối cảnh:** Bé Na có một miếng bánh hình tam giác vuông với hai cạnh góc vuông dài $a\text{ cm}$ và $h\text{ cm}$ (tích $a \times h$ luôn là số chẵn).
+* **Yêu cầu:** Em hãy tính diện tích của miếng bánh tam giác vuông đó.
+* **Đầu vào (Input):** Hai dòng lần lượt chứa 2 số tự nhiên $a$ và $h$ ($1 \le a, h \le 1000$, $a \times h$ chia hết cho $2$).
+* **Đầu ra (Output):** Một số nguyên là diện tích tam giác vuông.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `6`<br>`4` | `12` | Tích hai cạnh: $6 \times 4 = 24$. Diện tích: $24 : 2 = 12$. |
+* **Gợi ý thuật toán:** `print(a * h // 2)`.
+
+---
+
+### Bài 12 (Luyện tập): Thể tích hộp chữ nhật (`PYA-L03-P12`)
+
+* **Bối cảnh:** Bé Tí được tặng một hộp sữa dâu hình hộp chữ nhật có chiều dài $d\text{ cm}$, chiều rộng $r\text{ cm}$ và chiều cao $c\text{ cm}$.
+* **Yêu cầu:** Em hãy tính thể tích của hộp sữa đó.
+* **Đầu vào (Input):** Ba dòng lần lượt chứa 3 số tự nhiên $d, r, c$ ($1 \le d, r, c \le 1000$).
+* **Đầu ra (Output):** Một số nguyên là thể tích hộp chữ nhật.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5`<br>`3`<br>`2` | `30` | Thể tích: $5 \times 3 \times 2 = 30$. |
+* **Gợi ý thuật toán:** `print(d * r * c)`.
+
+---
+
+### Bài 13 (Luyện tập): Đổi đô la sang tiền Việt (`PYA-L03-P13`)
+
+* **Bối cảnh:** Bác Hùng mang theo $D$ tờ đô la Mỹ (mỗi tờ $1$ đô la) về Việt Nam. Ngân hàng đổi $1$ đô la lấy $25000$ đồng.
+* **Yêu cầu:** Em hãy tính số tiền Việt Nam (đồng) bác Hùng nhận được.
+* **Đầu vào (Input):** Một số tự nhiên $D$ ($1 \le D \le 10^6$).
+* **Đầu ra (Output):** Một số nguyên là số tiền Việt Nam tính bằng đồng.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `4` | `100000` | Số tiền: $4 \times 25000 = 100000$ đồng. |
+* **Gợi ý thuật toán:** `print(D * 25000)`.
+
+---
+
+### Bài 14 (Luyện tập): Đổi độ C sang độ F (`PYA-L03-P14`)
+
+* **Bối cảnh:** Hôm nay trời nóng $C$ độ C ($C$ luôn chia hết cho $5$). Em hãy đổi nhiệt độ này sang độ F để kể cho bạn nhỏ ở Mỹ nghe.
+* **Yêu cầu:** Em hãy tính nhiệt độ độ F theo công thức $F = C \times 9 : 5 + 32$.
+* **Đầu vào (Input):** Một số nguyên $C$ ($-50 \le C \le 50$, $C$ chia hết cho $5$).
+* **Đầu ra (Output):** Một số nguyên là nhiệt độ độ F.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `30` | `86` | $30 \times 9 : 5 + 32 = 54 + 32 = 86$. |
+* **Gợi ý thuật toán:** `print(C * 9 // 5 + 32)`.
+
+---
+
+### Bài 15 (Vận dụng): Tính vận tốc làm tròn (`PYA-L03-P15`)
+
+* **Bối cảnh:** Bạn Mít đạp xe quãng đường $D\text{ km}$ hết $T$ giờ để về thăm bà ngoại. Mẹ dặn bạn ghi lại vận tốc trung bình, làm tròn đến đúng $2$ chữ số sau dấu chấm thập phân.
+* **Yêu cầu:** Em hãy tính vận tốc trung bình $V = D : T$ (km/h) và làm tròn đến $2$ chữ số thập phân.
+* **Đầu vào (Input):** Hai dòng lần lượt chứa 2 số nguyên $D$ và $T$ ($1 \le D, T \le 10^4$).
+* **Đầu ra (Output):** Vận tốc trung bình làm tròn đến $2$ chữ số thập phân.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `100`<br>`6` | `16.67` | $100 : 6 = 16.666\ldots$, làm tròn $2$ chữ số được $16.67$. |
+* **Gợi ý thuật toán:** `print(f"{D / T:.2f}")`.
+
+---
+
+### Bài 16 (Vận dụng): Tiền điện bậc thang (`PYA-L03-P16`)
+
+* **Bối cảnh:** Gia đình bạn Bông dùng hết $N$ số điện. Giá điện: $100$ số đầu giá $2000$ đồng một số, từ số thứ $101$ trở đi giá $3500$ đồng một số.
+* **Yêu cầu:** Em hãy tính tổng số tiền điện (đồng) cả nhà phải trả.
+* **Đầu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 10^6$).
+* **Đầu ra (Output):** Một số nguyên là tổng tiền điện tính bằng đồng.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `120` | `270000` | $100 \times 2000 = 200000$. $20 \times 3500 = 70000$.<br>Tổng: $200000 + 70000 = 270000$. |
+* **Gợi ý thuật toán:** Nếu $N \le 100$ thì in $N \times 2000$, ngược lại in $100 \times 2000 + (N - 100) \times 3500$.

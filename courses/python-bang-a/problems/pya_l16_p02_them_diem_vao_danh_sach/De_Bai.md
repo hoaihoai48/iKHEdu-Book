@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Thầy giáo có một danh sách điểm kiểm tra ban đầu. Sau đó có thêm một bạn học sinh nộp bài muộn và được chấm điểm $X$.
+Lớp của bạn Na vừa làm bài kiểm tra nên cô giáo có một danh sách điểm kiểm tra ban đầu. Sáng nay, bạn Tí nộp bài muộn và cô đã chấm cho bạn điểm $X$. Cô muốn viết thêm điểm $X$ này vào cuối danh sách mà không làm mất điểm của các bạn khác. Em hãy giúp cô thêm điểm mới vào danh sách nhé!
 ## Nhiệm vụ
 
 Cho danh sách các số nguyên ban đầu và số $X$. Hãy thêm $X$ vào cuối danh sách và in ra toàn bộ danh sách mới.

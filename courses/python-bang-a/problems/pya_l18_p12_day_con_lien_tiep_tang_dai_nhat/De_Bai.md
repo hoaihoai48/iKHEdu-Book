@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Cho một dãy gồm $N$ số nguyên. Một "dãy con liên tiếp tăng" là một đoạn các phần tử đứng cạnh nhau mà phần tử đứng sau luôn lớn hơn phần tử đứng ngay trước nó ($A_i < A_{i+1} < A_{i+2} \dots$).
+Các bạn nhỏ lớp 4A đang chơi trò xếp thẻ số thành một hàng dài gồm $N$ số nguyên. Các bạn phát hiện một trò rất vui gọi là "dãy con liên tiếp tăng": đó là một đoạn các phần tử đứng cạnh nhau mà phần tử đứng sau luôn lớn hơn phần tử đứng ngay trước nó ($A_i < A_{i+1} < A_{i+2} \dots$). Ai tìm được đoạn dài nhất sẽ thắng, em hãy giúp các bạn tìm xem đoạn dài nhất có bao nhiêu thẻ số nhé!
 ## Nhiệm vụ
 
 Hãy tìm độ dài của dãy con liên tiếp tăng dài nhất trong dãy số đã cho.

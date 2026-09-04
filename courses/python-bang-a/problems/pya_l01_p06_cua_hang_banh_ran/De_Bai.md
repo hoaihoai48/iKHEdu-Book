@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Chú mèo máy Doraemon đi mua bánh rán. Mỗi chiếc bánh rán có giá $a$ nghìn đồng. Doraemon muốn mua đúng $b$ chiếc bánh rán.
+Chiều tan học, chú mèo máy Doraemon tung tăng đi mua bánh rán ở cửa hàng đầu ngõ. Mỗi chiếc bánh rán có giá $a$ nghìn đồng, thơm phức mùi mật ong. Doraemon muốn mua đúng $b$ chiếc bánh rán để chia cho các bạn. Em hãy giúp Doraemon tính số tiền cần trả cho cô bán hàng nhé!
 ## Nhiệm vụ
 
 Hãy tính số tiền (nghìn đồng) mà Doraemon cần phải trả cho người bán hàng.

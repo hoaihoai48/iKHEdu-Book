@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Cho số tự nhiên $A$ và biểu thức sau: $A \text{ ? } A = B$.
+Trong giờ toán vui, cô giáo viết lên bảng một số tự nhiên $A$ và biểu thức bí ẩn sau: $A \text{ ? } A = B$. Cô đố cả lớp hãy chọn một dấu trong ba dấu cộng, trừ, nhân để lấp vào chỗ dấu hỏi chấm. Bạn nhỏ nào tìm được số $B$ to nhất sẽ được thưởng một tràng pháo tay. Em hãy giúp cả lớp tìm ra số $B$ lớn nhất có thể nhé!
 ## Nhiệm vụ
 
 Hãy dùng một trong các phép tính $+$, $-$, $\times$ điền vào dấu $?$ để giá trị $B$ đạt được là **lớn nhất**. In ra số $B$ lớn nhất tìm được.

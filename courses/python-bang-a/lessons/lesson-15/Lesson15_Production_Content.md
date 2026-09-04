@@ -1,161 +1,104 @@
-# Bài 15: Tách từ và mã hóa thay thế
+# Bài 15: Chiến lược giải đề Tin học trẻ Bảng A
 
----
-
-## 1. Khởi động: Chiếc kéo chia câu & mật thư của julius Caesar
-
-* Khi đọc một câu văn dài như: `"Hoc lap trinh Python rat vui"`, làm sao để máy tính biết câu này có **bao nhiêu từ**, và từ nào là từ dài nhất?
-* Thời La Mã cổ đại, vị hoàng đế vĩ đại **Julius Caesar** khi gửi thư cho các tướng lĩnh đã nghĩ ra một cách mã hóa bí mật: Mỗi chữ cái trong bức thư được **dịch chuyển về phía sau 3 vị trí trong bảng chữ cái**!
-  Ví dụ: Chữ `'A'` dịch thành `'D'`, chữ `'B'` dịch thành `'E'`. Kẻ địch bắt được lá thư chỉ thấy toàn chữ cái kỳ quái vô nghĩa!
-
-Trong bài học hôm nay, chúng ta sẽ làm chủ **nghệ thuật tách từ `split()`** và giải mã các bức mật thư bằng **bảng mã ASCII (`ord` và `chr`)**!
-
----
-
-## 2. Kỹ thuật tách từ siêu tốc: `split()` và nối lại bằng `join()`
-
-### 2.1. Phép màu của `split()`
-Phương thức `s.split()` giống như một chiếc kéo tự động: Nó sẽ tìm tất cả các khoảng trắng (dù là 1 dấu cách hay 10 dấu cách liên tiếp) để cắt dòng văn bản thành một **danh sách (list) các từ riêng biệt**!
-
-```python
-cau = "Hoc lap trinh Python rat vui"
-danh_sach_tu = cau.split()
-
-print(danh_sach_tu)
-# In ra: ['Hoc', 'lap', 'trinh', 'Python', 'rat', 'vui']
-
-print("So tu trong cau la:", len(danh_sach_tu)) # In ra: 6
+## 1. Bản đồ 5 bước tác chiến trong phòng thi
+```
+BƯỚC 1: Đọc đề cẩn thận (Tối thiểu 2 lần, gạch chân Ràng buộc dữ liệu & Input/Output)
+   │
+BƯỚC 2: Nháp thuật toán & Dry Run tay với Sample Test trên giấy
+   │
+BƯỚC 3: Liệt kê các "Bẫy hiểm độc" (Edge Cases: N = 0, N = 1, số âm, số cực lớn)
+   │
+BƯỚC 4: Lập trình sạch sẽ, dùng đúng kiểu dữ liệu, in đúng từng chữ hoa/thường
+   │
+BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên và test lớn nhất trước khi nộp!
 ```
 
-### 2.2. Ghép các từ lại bằng `join()`
-Muốn nối các từ lại với nhau bằng một dấu gạch nối `"-"` hay một dấu cách:
-```python
-ket_qua = "-".join(danh_sach_tu)
-print(ket_qua) # In ra: 'Hoc-lap-trinh-Python-rat-vui'
-```
+## 2. Các tử huyệt làm mất điểm oan
+- In thừa chữ dẫn dắt: Đề chỉ yêu cầu in `15`, viết `print("Ket qua la:", 15)` sẽ bị chấm `Wrong Answer (WA)` ngay lập tức.
+- Không để ý giới hạn $N$: Nếu $N \le 10^5$ thì vòng lặp `for` an toàn. Nếu $N \ge 10^9$ bắt buộc phải dùng công thức giải tích $\mathcal{O}(1)$.
 
----
+## 3. Concept quiz: 12 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
-## 3. Bảng mã số bí mật của máy tính: `ord()` và `chr()`
+#### Câu 1: Khi đề bài yêu cầu "in ra kết quả trên một dòng", nếu in thêm dòng chữ `"Ket qua la:"` thì hệ thống chấm thi tự động sẽ đánh giá thế nào?
+- **A.** Vẫn được điểm tối đa vì code chạy đúng logic
+- **B.** Được cộng điểm vì giải thích rõ ràng
+- **C.** **[Đáp án đúng]** Bị chấm `Wrong Answer (WA)` (0 điểm) vì output không khớp chính xác với định dạng của đề bài
+- **D.** Được nửa số điểm
+- > *Giải thích:* Hệ thống chấm tự động so sánh từng ký tự trong file output của thí sinh với đáp án chuẩn. Mọi ký tự thừa hay thiếu đều bị coi là sai.
 
-Máy tính thực ra không hiểu chữ cái `'A'` hay `'B'`. Bên trong chip xử lý, mọi ký tự đều được quy ước bằng một con số nguyên duy nhất gọi là **Mã ASCII**:
-* Chữ cái in hoa `'A'` có mã số là **$65$**, `'B'` là $66$, ..., `'Z'` là **$90$**.
-* Chữ cái in thường `'a'` có mã số là **$97$**, `'b'` là $98$, ..., `'z'` là **$122$**.
-* Chữ số `'0'` có mã số là **$48$**, ..., `'9'` là **$57$**.
+#### Câu 2: Khi đánh giá số vòng lặp trong chương trình Python, cách suy nghĩ nào phù hợp nhất?
+- **A.** Chỉ nhìn vào số biến trong chương trình
+- **B.** **[Đáp án đúng]** Ước lượng số lần lặp theo giới hạn dữ liệu và kiểm tra bằng test phù hợp
+- **C.** Luôn chọn vòng lặp dài nhất
+- **D.** Bỏ qua giới hạn thời gian
+- > *Giải thích:* Tốc độ phụ thuộc vào môi trường, thao tác và dữ liệu. Điều cần làm là phân tích độ phức tạp, giới hạn đề bài và kiểm tra thực tế khi cần.
 
-### Hai hàm ma thuật trong Python:
-* **`ord(ch)`**: Đưa vào một ký tự $\implies$ Trả về **mã số nguyên** của nó.
-  Ví dụ: `ord('A') \to 65`.
-* **`chr(code)`**: Đưa vào một con số nguyên $\implies$ Trả về **ký tự** tương ứng.
-  Ví dụ: `chr(65) \to 'A'`.
+#### Câu 3: Nếu dữ liệu đầu vào cho $N \le 10^9$, thuật toán có độ phức tạp thời gian nào sau đây sẽ chắc chắn bị lỗi `Time Limit Exceeded` (tle)?
+- **A.** $\mathcal{O}(1)$ (Công thức toán)
+- **B.** **[Đáp án đúng]** $\mathcal{O}(N)$ (Vòng lặp chạy từ 1 đến $N$)
+- **C.** $\mathcal{O}(\sqrt{N})$ (Vòng lặp chạy đến $\sqrt{N} \approx 31622$)
+- **D.** $\mathcal{O}(\log N)$
+- > *Giải thích:* Khi $N$ rất lớn, một vòng lặp tuyến tính có thể vượt giới hạn thời gian. Cần xem giới hạn cụ thể và tìm công thức hoặc cách giảm số bước nếu phù hợp.
 
-### Ứng dụng: Mã hóa Caesar dịch chuyển $K$ bước
-```python
-ch = 'A'
-k = 3
-ma_moi = ord(ch) + k
-ky_tu_moi = chr(ma_moi)
-print(ky_tu_moi) # In ra 'D'
-```
+#### Câu 4: Khi giải bài toán liên quan đến số tự nhiên $N$, các "test biên" (edge cases) bắt buộc phải tự kiểm tra tay trước tiên là:
+- **A.** $N = 100$
+- **B.** **[Đáp án đúng]** $N = 0$, $N = 1$, và giá trị $N$ nhỏ nhất / lớn nhất trong phạm vi đề bài cho
+- **C.** $N = 50$
+- **D.** $N$ là số ngẫu nhiên
+- > *Giải thích:* Các bài toán tin học thường gài bẫy tại các điểm biên như 0, 1 hoặc giới hạn cực đại.
 
----
+#### Câu 5: Dòng lệnh nào sau đây giúp đọc trọn vẹn cả một dòng văn bản chứa cả khoảng trắng trong Python?
+- **A.** `input().split()`
+- **B.** **[Đáp án đúng]** `s = input()`
+- **C.** `s = int(input())`
+- **D.** `s = input().strip().split()`
+- > *Giải thích:* Hàm `input()` đọc nguyên vẹn cả dòng cho đến khi gặp phím Enter.
 
-## 4. Concept quiz: 12 câu trắc nghiệm bắt bẫy củng cố khái niệm
+#### Câu 6: Trong Python, số nguyên có bị giới hạn kích thước tối đa là 32-bit hay 64-bit như trong pascal hay C++ không?
+- **A.** Có, tối đa là $2 \times 10^9$
+- **B.** Có, tối đa là $9 \times 10^{18}$
+- **C.** **[Đáp án đúng]** Không, Python hỗ trợ số nguyên lớn (Arbitrary-precision integers) có thể chứa hàng nghìn chữ số mà không bao giờ bị tràn số
+- **D.** Tối đa 100 chữ số
+- > *Giải thích:* Đây là lợi thế cực lớn của Python so với các ngôn ngữ khác trong kỳ thi Tin học trẻ Tiểu học: Không bao giờ lo bị tràn số!
 
-#### Câu 1: Phương thức `s.split()` mặc định cắt chuỗi theo ký tự gì?
-- **A.** Dấu phẩy
-- **B.** **[Đáp án đúng]** Khoảng trắng (khoảng trắng đơn, nhiều khoảng trắng, dấu tab, xuống dòng)
-- **C.** Dấu chấm
-- **D.** Chữ cái đầu tiên
-- > *Giải thích:* `split()` không truyền tham số sẽ tự động phân tách theo mọi khoảng trắng liên tiếp.
+#### Câu 7: Khi gặp một bài toán khó chưa nghĩ ra cách làm tối ưu $\mathcal{O}(1)$ hay $\mathcal{O}(N)$, chiến thuật khôn ngoan nhất trong phòng thi là gì?
+- **A.** Bỏ bài đó để đi về sớm
+- **B.** Ngồi nghĩ đến hết giờ
+- **C.** **[Đáp án đúng]** Viết lời giải đơn giản trước, kiểm tra đúng đắn rồi cải thiện nếu giới hạn dữ liệu yêu cầu
+- **D.** Viết ngẫu nhiên một câu lệnh print
+- > *Giải thích:* Chiến thuật "vét điểm từng test": 50% điểm của một bài khó quý giá hơn là bỏ trắng 0 điểm.
 
-#### Câu 2: Cho `s = "An   Binh    Cuong"`. Biểu thức `len(s.split())` trả về:
-- **A.** 3
-- **B.** **[Đáp án đúng]** 3 (Bất chấp có bao nhiêu dấu cách giữa các từ!)
-- **C.** 15
-- **D.** 6
-- > *Giải thích:* `split()` tự động gộp các khoảng trắng thừa thành một dấu phân cách duy nhất, danh sách còn đúng 3 từ.
+#### Câu 8: Khi nộp bài lên hệ thống thi đấu, nếu nhận được thông báo lỗi `Memory Limit Exceeded` (mle), nguyên nhân là gì?
+- **A.** Chạy quá thời gian quy định
+- **B.** In ra sai đáp án
+- **C.** **[Đáp án đúng]** Chương trình tiêu thụ quá nhiều bộ nhớ RAM (vượt mức 256MB quy định)
+- **D.** Lỗi cú pháp
+- > *Giải thích:* MLE xảy ra khi tạo mảng quá lớn hoặc để đệ quy quá sâu.
 
-#### Câu 3: Hàm `ord('A')` trong Python trả về giá trị là:
-- **A.** 0
-- **B.** 1
-- **C.** **[Đáp án đúng]** 65
-- **D.** 97
-- > *Giải thích:* Mã ASCII của chữ cái 'A' in hoa là 65.
+#### Câu 9: Để in ra số thực $X$ với đúng 2 chữ số sau dấu phẩy (làm tròn chuẩn), câu lệnh nào chuẩn xác nhất?
+- **A.** `print(round(X, 2))`
+- **B.** **[Đáp án đúng]** `print(f"{X:.2f}")`
+- **C.** `print(int(X))`
+- **D.** `print(X)`
+- > *Giải thích:* `round(5.0, 2)` có thể chỉ in `5.0`. Dùng f-string định dạng `{X:.2f}` đảm bảo luôn in đủ 2 chữ số phần thập phân như `5.00`.
 
-#### Câu 4: Hàm `chr(66)` trong Python trả về ký tự nào?
-- **A.** `'A'`
-- **B.** **[Đáp án đúng]** `'B'`
-- **C.** `'6'`
-- **D.** `'b'`
-- > *Giải thích:* Mã ASCII 65 là 'A' nên mã 66 là 'B'.
+#### Câu 10: Tên file nộp bài trong các kỳ thi thường có định dạng như thế nào?
+- **A.** Tên bất kỳ do thí sinh chọn
+- **B.** **[Đáp án đúng]** Bắt buộc phải trùng khớp với mã bài toán theo quy định của ban tổ chức (ví dụ: `BAI1.PY`)
+- **C.** Luôn luôn là `main.py`
+- **D.** Tên của thí sinh
+- > *Giải thích:* Đặt sai tên file hoặc sai phần mở rộng sẽ khiến máy chấm không tìm thấy bài và bị 0 điểm.
 
-#### Câu 5: Khoảng cách mã ASCII giữa chữ thường `'a'` và chữ hoa `'A'` (`ord('a') - ord('A')`) luôn bằng bao nhiêu?
-- **A.** 26
-- **B.** **[Đáp án đúng]** 32
-- **C.** 10
-- **D.** 48
-- > *Giải thích:* $97 - 65 = 32$. Đây là hằng số dùng để chuyển đổi hoa-thường thủ công!
+#### Câu 11: Trước khi nộp bài 5 phút, thí sinh nên làm việc gì nhất?
+- **A.** Viết lại toàn bộ code của bài khó nhất
+- **B.** **[Đáp án đúng]** Rà soát lại tất cả các dòng `print` thừa dùng để debug, kiểm tra tên file và bấm nộp thử lại toàn bộ các bài
+- **C.** Tắt máy tính đi ra ngoài
+- **D.** Sửa đổi các biến số
+- > *Giải thích:* Rất nhiều thí sinh bị mất điểm vì quên xóa các dòng `print("debug: ...")` dẫn đến bị máy chấm bắt lỗi output thừa.
 
-#### Câu 6: Cho `words = ['Python', 'la', 'so', '1']`. Biểu thức `" ".join(words)` tạo ra chuỗi gì?
-- **A.** `"Pythonlaso1"`
-- **B.** **[Đáp án đúng]** `"Python la so 1"`
-- **C.** `['Python la so 1']`
-- **D.** `"Python-la-so-1"`
-- > *Giải thích:* `join()` lấy chuỗi phân cách đứng trước (ở đây là dấu cách `" "`) nối các phần tử lại với nhau.
-
-#### Câu 7: Mã ASCII của ký tự chữ số `'0'` là bao nhiêu?
-- **A.** 0
-- **B.** **[Đáp án đúng]** 48
-- **C.** 1
-- **D.** 32
-- > *Giải thích:* Ký tự `'0'` có mã ASCII là 48. Vì vậy `ord(ch) - 48` là cách chuyển ký tự số sang số nguyên nhanh!
-
-#### Câu 8: Cho `ch = 'Z'`. Nếu dịch chuyển sang ký tự tiếp theo trong vòng tròn 26 chữ cái tiếng anh, ký tự đó là:
-- **A.** `'['`
-- **B.** **[Đáp án đúng]** `'A'`
-- **C.** `'Z'`
-- **D.** Không tồn tại
-- > *Giải thích:* Trong mật mã Caesar xoay vòng (Modulo 26), sau 'Z' sẽ quay trở lại 'A'.
-
-#### Câu 9: Đoạn code sau in ra từ nào?
-```python
-cau = "Ha Noi mua thu dep lam"
-ds = cau.split()
-print(ds[-1])
-```
-- **A.** `"Ha"`
-- **B.** `"Noi"`
-- **C.** **[Đáp án đúng]** `"lam"`
-- **D.** `"dep"`
-- > *Giải thích:* `ds[-1]` lấy phần tử cuối cùng trong danh sách các từ, đó là từ `"lam"`.
-
-#### Câu 10: Phương thức `s.strip()` có tác dụng gì?
-- **A.** Xóa tất cả các chữ cái
-- **B.** **[Đáp án đúng]** Cắt bỏ toàn bộ các khoảng trắng thừa ở ĐẦU và ĐUÔI của chuỗi
-- **C.** Đảo ngược chuỗi
-- **D.** In hoa chuỗi
-- > *Giải thích:* `strip()` dọn dẹp các khoảng trắng ở hai đầu chuỗi văn bản.
-
-#### Câu 11: Biểu thức `chr(ord('c') - 32)` cho kết quả là gì?
-- **A.** `'a'`
-- **B.** `'d'`
-- **C.** **[Đáp án đúng]** `'C'`
-- **D.** `'c'`
-- > *Giải thích:* Lấy mã ASCII của 'c' (99) trừ đi 32 được 67, là mã của chữ hoa 'C'.
-
-#### Câu 12: Đoạn code sau in ra màn hình giá trị gì?
-```python
-cau = "lap trinh tin hoc tre"
-ds = cau.split()
-max_len = 0
-for tu in ds:
-    if len(tu) > max_len:
-        max_len = len(tu)
-print(max_len)
-```
-- **A.** 3
-- **B.** 4
-- **C.** **[Đáp án đúng]** 5
-- **D.** 6
-- > *Giải thích:* Độ dài các từ: 'lap' (3), 'trinh' (5), 'tin' (3), 'hoc' (3), 'tre' (3). Từ dài nhất có độ dài 5.
+#### Câu 12: Phẩm chất quan trọng nhất của một tuyển thủ Tin học trẻ xuất sắc là gì?
+- **A.** Gõ bàn phím thật nhanh
+- **B.** **[Đáp án đúng]** Tính kiên trì, tư duy cẩn trọng, đọc kỹ đề bài và không bao giờ bỏ cuộc
+- **C.** Thuộc lòng code mẫu
+- **D.** Chỉ làm các bài dễ
+- > *Giải thích:* Sự kiên trì và tư duy logic sắc bén là chìa khóa mở cánh cửa đến với mọi thành công trong công nghệ và cuộc sống.

@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bạn Tèo có hai chiếc hộp: hộp $A$ đựng số kẹo của Tèo, hộp $B$ đựng số kẹo của Tí. Bây giờ hai bạn muốn đổi kẹo cho nhau (số kẹo trong hộp $A$ chuyển sang hộp $B$, và số kẹo trong hộp $B$ chuyển sang hộp $A$).
+Giờ ra chơi, bạn Tèo có hai chiếc hộp xinh xắn: hộp $A$ đựng số kẹo của Tèo, hộp $B$ đựng số kẹo của Tí. Hai bạn cười khúc khích và đố nhau đổi kẹo cho nhau (số kẹo trong hộp $A$ chuyển sang hộp $B$, và số kẹo trong hộp $B$ chuyển sang hộp $A$). Cả hai loay hoay mãi chưa đổi xong. Em hãy giúp hai bạn hoán đổi hai hộp kẹo này nhé!
 ## Nhiệm vụ
 
 Nhập vào 2 số nguyên $A$ và $B$. Hãy hoán đổi giá trị của 2 biến và in ra giá trị mới của $A$ và $B$ sau khi hoán đổi (cách nhau một dấu cách).

@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Một trang trại nuôi cá sấu có một hồ nước hình vuông cạnh $A$. Ở chính giữa hồ, người ta xây một hòn đảo nhỏ hình chữ nhật có kích thước $B \times C$ để cá sấu bò lên phơi nắng (hòn đảo nằm trọn trong hồ nước và không chạm vào bờ hồ).
+Ở một trang trại vui vẻ có một hồ nước hình vuông cạnh $A$ nuôi những chú cá sấu con hiền lành. Ở chính giữa hồ, người ta xây một hòn đảo nhỏ hình chữ nhật có kích thước $B \times C$ để cá sấu bò lên phơi nắng (hòn đảo nằm trọn trong hồ nước và không chạm vào bờ hồ). Các bạn nhỏ thắc mắc mặt nước còn lại rộng bao nhiêu để cá bơi lội. Em hãy giúp các bạn tính diện tích mặt nước còn lại nhé!
 ## Nhiệm vụ
 
 Hãy tính diện tích phần mặt nước còn lại sau khi đã xây hòn đảo nhỏ.

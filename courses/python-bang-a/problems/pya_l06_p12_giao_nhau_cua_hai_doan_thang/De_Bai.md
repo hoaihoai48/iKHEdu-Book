@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Trên trục số thực, đoạn thẳng thứ nhất nối từ điểm $L_1$ đến $R_1$ ($L_1 \le R_1$). Đoạn thẳng thứ hai nối từ điểm $L_2$ đến $R_2$ ($L_2 \le R_2$).
+Trong giờ chơi xếp hình, hai bạn An và Bình mỗi bạn có một đoạn dây thun màu căng trên cây thước dài. Trên trục số thực, đoạn dây thứ nhất nối từ điểm $L_1$ đến $R_1$ ($L_1 \le R_1$), đoạn dây thứ hai nối từ điểm $L_2$ đến $R_2$ ($L_2 \le R_2$). Hai bạn thắc mắc không biết hai đoạn dây có chồng lên nhau ở chỗ nào không. Em hãy giúp hai bạn kiểm tra xem hai đoạn dây có điểm chung không nhé!
 ## Nhiệm vụ
 
 Em hãy kiểm tra xem hai đoạn thẳng này có điểm chung (giao nhau) hay không?

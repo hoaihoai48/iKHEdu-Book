@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Một trường tiểu học tổ chức dã ngoại cho $N$ học sinh. Nhà trường thuê các xe buýt loại $K$ chỗ ngồi. Mỗi xe buýt chở được tối đa $K$ bạn học sinh.
+Trường tiểu học tổ chức một chuyến dã ngoại thật vui cho $N$ học sinh. Nhà trường thuê các xe buýt loại $K$ chỗ ngồi, mỗi xe buýt chở được tối đa $K$ bạn học sinh. Sáng khởi hành, các bạn xếp hàng ngay ngắn, tay vẫy cờ đỏ sao vàng. Thầy hiệu trưởng muốn không bạn nào bị ở lại trường. Em hãy giúp thầy tính số xe buýt cần thuê nhé!
 ## Nhiệm vụ
 
 Hỏi nhà trường cần thuê **ít nhất bao nhiêu xe buýt** để chở hết toàn bộ $N$ học sinh (không để bạn nào phải ở lại trường)?

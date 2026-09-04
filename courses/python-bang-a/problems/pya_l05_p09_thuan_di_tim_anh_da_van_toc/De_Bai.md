@@ -5,7 +5,7 @@
 
 ## Bối cảnh
 
-Thuận đứng ở vị trí $x$, Ánh đứng ở vị trí $y$. Thuận đi về phía Ánh với vận tốc $v\text{ km/h}$.
+Một buổi chiều đẹp trời, bạn Thuận đứng ở vị trí $x$ còn bạn Ánh đứng ở vị trí $y$ trong sân trường rộng. Thuận rất nhớ bạn nên đi bộ về phía Ánh với vận tốc $v\text{ km/h}$. Cả hai hồi hộp không biết bao giờ thì gặp được nhau. Em hãy giúp hai bạn xem khi nào thì gặp nhau nhé!
 ## Nhiệm vụ
 
 Hãy phân tích các tình huống:

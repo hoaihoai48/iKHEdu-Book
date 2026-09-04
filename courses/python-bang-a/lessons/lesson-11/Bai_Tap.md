@@ -1,4 +1,4 @@
-# Hệ thống bài tập thực hành — bài 11: Ước số, bội số và số nguyên tố
+# Hệ thống bài tập thực hành — bài 11: Danh sách và thao tác cơ bản
 
 ---
 
@@ -6,205 +6,221 @@
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L11-P01` | Liệt kê tất cả ước số | `Cơ bản` | $1 \le N \le 1000$ | Vòng lặp `for` kiểm tra `N % i == 0` |
-| 02 | `PYA-L11-P02` | Đếm số lượng ước số | `Cơ bản` | $1 \le N \le 10^5$ | Đếm số ước của $N$ |
-| 03 | `PYA-L11-P03` | Tính tổng các ước số | `Cơ bản` | $1 \le N \le 10^5$ | Cộng dồn các ước số |
-| 04 | `PYA-L11-P04` | Kiểm tra số nguyên tố | `Cơ bản` | $0 \le N \le 10^7$ | Thuật toán kiểm tra số nguyên tố chuẩn |
-| 05 | `PYA-L11-P05` | Kiểm tra số chính phương | `Cơ bản` | $1 \le N \le 10^9$ | Kiểm tra $N = K^2$ |
-| 06 | `PYA-L11-P06` | Ước chung lớn nhất & bcnn | `Luyện tập` | $1 \le A, B \le 10^9$ | Dùng `math.gcd` và công thức bcnn |
-| 07 | `PYA-L11-P07` | Đếm ước chẵn của N | `Luyện tập` | $1 \le N \le 10^6$ | Kết hợp `N % i == 0 and i % 2 == 0` |
-| 08 | `PYA-L11-P08` | Tìm ước số lớn thứ hai | `Luyện tập` | $2 \le N \le 10^9$ | Tìm ước thực sự lớn nhất khác $N$ |
-| 09 | `PYA-L11-P09` | Đếm số nguyên tố trong đoạn | `Luyện tập` | $1 \le A \le B \le 10^4$ | Vòng lặp lồng hoặc hàm đếm số nguyên tố |
-| 10 | `PYA-L11-P10` | Hai số nguyên tố cùng nhau | `Luyện tập` | $1 \le A, B \le 10^9$ | Kiểm tra $\text{gcd}(A, B) == 1$ |
-| 11 | `PYA-L11-P11` | Cặp số nguyên tố sinh đôi | `Luyện tập` | $1 \le N \le 10^4$ | Tìm các cặp số nguyên tố $(P, P+2) \le N$ |
-| 12 | `PYA-L11-P12` | Số siêu nguyên tố (super prime) | `Vận dụng` | $10 \le N \le 10^6$ | Cắt dần bên phải vẫn là số nguyên tố |
-| 13 | `PYA-L11-P13` | Phân tích ra thừa số nguyên tố | `Vận dụng` | $2 \le N \le 10^6$ | Phân tích $N = p_1^{a_1} \times p_2^{a_2} \dots$ |
-| 14 | `PYA-L11-P14` | Tìm số có đúng 3 ước số | `Thử thách` | $1 \le N \le 10^9$ | Nhận diện bản chất số $P^2$ với $P$ là nguyên tố |
+| 01 | `PYA-L16-P01` | Nhập dãy số & in phần tử đầu - cuối | `Cơ bản` | $N \le 1000$ | Cú pháp `list(map(int, ...))` và index |
+| 02 | `PYA-L16-P02` | Thêm điểm vào danh sách | `Cơ bản` | Số lượng phần tử $\le 100$ | Phương thức `append()` |
+| 03 | `PYA-L16-P03` | Tính tổng các phần tử trong dãy | `Cơ bản` | $N \le 10^5, A_i \le 10^9$ | Duyệt `for x in a` cộng dồn |
+| 04 | `PYA-L16-P04` | Đếm số lượng số chẵn trong mảng | `Cơ bản` | $N \le 10^5$ | Đếm phần tử thỏa mãn điều kiện |
+| 05 | `PYA-L16-P05` | Tìm số lớn nhất & nhỏ nhất | `Cơ bản` | $N \le 10^5$ | Tìm min/max bằng thuật toán duyệt |
+| 06 | `PYA-L16-P06` | In dãy số theo thứ tự đảo ngược | `Luyện tập` | $N \le 10^5$ | Đảo ngược mảng `a[::-1]` |
+| 07 | `PYA-L16-P07` | Đếm số lần xuất hiện của x | `Luyện tập` | $N \le 10^5$ | Phương thức `a.count(x)` |
+| 08 | `PYA-L16-P08` | Tìm vị trí đầu tiên của x | `Luyện tập` | $N \le 10^5$ | Tìm kiếm tuần tự trả về chỉ số index |
+| 09 | `PYA-L16-P09` | Tách mảng chẵn và mảng lẻ | `Luyện tập` | $N \le 10^5$ | Phân loại dữ liệu vào 2 danh sách riêng |
+| 10 | `PYA-L16-P10` | Xóa phần tử đầu tiên bằng x | `Luyện tập` | $N \le 10^5$ | Sử dụng `a.remove(x)` an toàn |
+| 11 | `PYA-L16-P11` | Thay thế tất cả số âm bằng số 0 | `Luyện tập` | $N \le 10^5$ | Cập nhật mảng theo vị trí `a[i]` |
+| 12 | `PYA-L16-P12` | Chèn số vào vị trí K | `Vận dụng` | $N \le 1000$ | Thao tác `a.insert(k, x)` |
+| 13 | `PYA-L16-P13` | Xoay vòng danh sách sang phải | `Vận dụng` | $N \le 10^5, K \le N$ | Dịch mảng sang phải $K$ vị trí |
+| 14 | `PYA-L16-P14` | Cặp số có tổng bằng s | `Thử thách` | $N \le 10^4$ | Tìm 2 phần tử $A_i + A_j = S$ |
 
 ---
 
-### Bài 1 (Cơ bản): Liệt kê tất cả ước số (`PYA-L11-P01`)
+### Bài 1 (Cơ bản): Nhập dãy số & in phần tử đầu - cuối (`PYA-L16-P01`)
 
-* **Yêu cầu:** Nhập một số tự nhiên $N$. Hãy in ra tất cả các ước số nguyên dương của $N$ theo thứ tự tăng dần trên một dòng, cách nhau bởi khoảng trắng.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 1000$).
-* **Output:** Dãy các ước số của $N$.
+* **Yêu cầu:** Cho một dãy gồm $N$ số nguyên. Hãy in ra phần tử đầu tiên và phần tử cuối cùng của dãy số đó.
+* **Input:**
+  * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 1000$).
+  * Dòng 2: Gồm $N$ số nguyên cách nhau bởi khoảng trắng.
+* **Output:** In phần tử đầu tiên và phần tử cuối cùng trên một dòng, cách nhau một khoảng trắng.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `12` | `1 2 3 4 6 12` |
+  | `5`<br>`10 25 3 47 99` | `10 99` |
 
 ---
 
-### Bài 2 (Cơ bản): Đếm số lượng ước số (`PYA-L11-P02`)
+### Bài 2 (Cơ bản): Thêm điểm vào danh sách (`PYA-L16-P02`)
 
-* **Yêu cầu:** Cho số tự nhiên $N$. Hãy cho biết số $N$ có tất cả bao nhiêu ước số nguyên dương.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^5$).
-* **Output:** Một số nguyên duy nhất là số lượng ước số của $N$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10` | `4` | Số 10 có 4 ước: 1, 2, 5, 10. |
-
----
-
-### Bài 3 (Cơ bản): Tính tổng các ước số (`PYA-L11-P03`)
-
-* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tính tổng tất cả các ước số của $N$.
-* **Input:** Một số nguyên $N$ ($1 \le N \le 10^5$).
-* **Output:** Tổng các ước số của $N$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `6` | `12` | Các ước là 1, 2, 3, 6 $\implies 1 + 2 + 3 + 6 = 12$. |
-
----
-
-### Bài 4 (Cơ bản): Kiểm tra số nguyên tố (`PYA-L11-P04`)
-*(Bài toán nền tảng thi Tin học trẻ)*
-
-* **Yêu cầu:** Nhập vào số nguyên $N$. Hãy kiểm tra xem $N$ có phải là số nguyên tố hay không. Nếu có in `YES`, nếu không in `NO`.
-* **Input:** Một số nguyên $N$ ($0 \le N \le 10^7$).
-* **Output:** `YES` hoặc `NO`.
+* **Bối cảnh:** Thầy giáo có một danh sách điểm kiểm tra ban đầu. Sau đó có thêm một bạn học sinh nộp bài muộn và được chấm điểm $X$.
+* **Yêu cầu:** Cho danh sách các số nguyên ban đầu và số $X$. Hãy thêm $X$ vào cuối danh sách và in ra toàn bộ danh sách mới.
+* **Input:**
+  * Dòng 1: Danh sách các số nguyên cách nhau bởi khoảng trắng.
+  * Dòng 2: Số nguyên $X$.
+* **Output:** Danh sách các số sau khi thêm $X$, cách nhau bởi khoảng trắng.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `7` | `YES` |
-  | `1` | `NO` |
-  | `9` | `NO` |
+  | `8 9 7 10`<br>`9` | `8 9 7 10 9` |
 
 ---
 
-### Bài 5 (Cơ bản): Kiểm tra số chính phương (`PYA-L11-P05`)
+### Bài 3 (Cơ bản): Tính tổng các phần tử trong dãy (`PYA-L16-P03`)
 
-* **Bối cảnh:** Số chính phương là số bằng bình phương của một số tự nhiên (ví dụ: $0, 1, 4, 9, 16, 25, \dots$).
-* **Yêu cầu:** Nhập số nguyên dương $N$. Kiểm tra $N$ có phải số chính phương không. Nếu đúng in `YES`, ngược lại in `NO`.
-* **Input:** Một số nguyên $N$ ($1 \le N \le 10^9$).
-* **Output:** `YES` hoặc `NO`.
+* **Yêu cầu:** Cho một dãy gồm $N$ số nguyên. Hãy tính tổng tất cả các phần tử trong dãy số.
+* **Input:**
+  * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên ($|A_i| \le 10^9$).
+* **Output:** Tổng các phần tử trong dãy.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `25` | `YES` |
-  | `20` | `NO` |
+  | `4`<br>`10 20 30 40` | `100` |
 
 ---
 
-### Bài 6 (Luyện tập): Ước chung lớn nhất & bcnn (`PYA-L11-P06`)
+### Bài 4 (Cơ bản): Đếm số lượng số chẵn trong mảng (`PYA-L16-P04`)
 
-* **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$. Hãy tìm Ước chung lớn nhất ($\text{GCD}$) và Bội chung nhỏ nhất ($\text{LCM}$) của 2 số này.
-* **Input:** Hai số nguyên $A, B$ cách nhau bởi khoảng trắng ($1 \le A, B \le 10^9$).
-* **Output:** Hai số nguyên: $\text{GCD}$ trước, $\text{LCM}$ sau, cách nhau một khoảng trắng.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `12 18` | `6 36` | $\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$. |
-
----
-
-### Bài 7 (Luyện tập): Đếm ước chẵn của N (`PYA-L11-P07`)
-
-* **Yêu cầu:** Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu ước số của $N$ là số chẵn.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^6$).
-* **Output:** Số lượng ước chẵn của $N$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `12` | `4` | Các ước của 12 là: 1, 2, 3, 4, 6, 12. Trong đó các ước chẵn là: 2, 4, 6, 12 (có 4 số). |
-
----
-
-### Bài 8 (Luyện tập): Tìm ước số lớn thứ hai (`PYA-L11-P08`)
-
-* **Yêu cầu:** Cho số nguyên dương $N$ ($N \ge 2$). Ước số lớn nhất của $N$ luôn là chính nó ($N$). Hãy tìm ước số lớn thứ hai của $N$ (tức là ước số lớn nhất nhưng nhỏ hơn $N$).
-* **Input:** Một số tự nhiên $N$ ($2 \le N \le 10^9$).
-* **Output:** Ước số lớn thứ hai của $N$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `24` | `12` | Ước lớn nhất là 24, lớn thứ hai là 12. |
-  | `7` | `1` | Ước của 7 là 1 và 7, lớn thứ hai là 1. |
-
----
-
-### Bài 9 (Luyện tập): Đếm số nguyên tố trong đoạn (`PYA-L11-P09`)
-
-* **Yêu cầu:** Cho hai số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^4$). Hãy đếm xem có bao nhiêu số nguyên tố nằm trong đoạn từ $A$ đến $B$ (tính cả $A$ và $B$).
-* **Input:** Hai số $A, B$ trên cùng một dòng.
-* **Output:** Số lượng số nguyên tố trong đoạn $[A, B]$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10 20` | `4` | Có 4 số nguyên tố: 11, 13, 17, 19. |
-
----
-
-### Bài 10 (Luyện tập): Hai số nguyên tố cùng nhau (`PYA-L11-P10`)
-
-* **Bối cảnh:** Hai số $A$ và $B$ được gọi là nguyên tố cùng nhau nếu Ước chung lớn nhất của chúng bằng 1 ($\text{GCD}(A, B) = 1$).
-* **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$. In ra `YES` nếu chúng nguyên tố cùng nhau, ngược lại in `NO`.
-* **Input:** Hai số $A, B$ ($1 \le A, B \le 10^9$).
-* **Output:** `YES` hoặc `NO`.
+* **Yêu cầu:** Cho một dãy gồm $N$ số nguyên dương. Hãy đếm xem có bao nhiêu số chẵn trong dãy.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Số lượng số chẵn.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `8 9` | `YES` |
-  | `12 18` | `NO` |
+  | `5`<br>`2 5 8 10 13` | `3` |
 
 ---
 
-### Bài 11 (Luyện tập): Cặp số nguyên tố sinh đôi (`PYA-L11-P11`)
+### Bài 5 (Cơ bản): Tìm số lớn nhất & nhỏ nhất (`PYA-L16-P05`)
 
-* **Bối cảnh:** Hai số nguyên tố được gọi là "Sinh đôi" (Twin Primes) nếu chúng hơn kém nhau đúng 2 đơn vị (ví dụ: $(3, 5), (5, 7), (11, 13), (17, 19)$).
-* **Yêu cầu:** Cho số tự nhiên $N$ ($1 \le N \le 10^4$). Hãy in ra tất cả các cặp số nguyên tố sinh đôi $(P, P+2)$ sao cho $P+2 \le N$.
-* **Input:** Một số nguyên $N$.
-* **Output:** Mỗi dòng in một cặp số nguyên tố sinh đôi cách nhau bởi khoảng trắng, theo thứ tự tăng dần.
+* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy tìm giá trị lớn nhất và giá trị nhỏ nhất trong dãy số.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Giá trị lớn nhất, theo sau là giá trị nhỏ nhất, cách nhau một khoảng trắng.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `15` | `3 5`<br>`5 7`<br>`11 13` |
+  | `5`<br>`12 5 89 3 45` | `89 3` |
 
 ---
 
-### Bài 12 (Vận dụng): Số siêu nguyên tố (super prime) (`PYA-L11-P12`)
+### Bài 6 (Luyện tập): In dãy số theo thứ tự đảo ngược (`PYA-L16-P06`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy in ra dãy số theo thứ tự ngược lại (từ phần tử cuối cùng về phần tử đầu tiên).
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Dãy số sau khi đảo ngược trên một dòng.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4`<br>`1 2 3 4` | `4 3 2 1` |
+
+---
+
+### Bài 7 (Luyện tập): Đếm số lần xuất hiện của x (`PYA-L16-P07`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên và một số nguyên $X$. Hãy đếm xem số $X$ xuất hiện bao nhiêu lần trong dãy số.
+* **Input:**
+  * Dòng 1: Hai số nguyên $N$ và $X$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Số lần xuất hiện của $X$.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `6 5`<br>`5 2 5 7 5 9` | `3` |
+
+---
+
+### Bài 8 (Luyện tập): Tìm vị trí đầu tiên của x (`PYA-L16-P08`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên và số $X$. Hãy tìm vị trí (chỉ số index từ 0) xuất hiện **đầu tiên** của số $X$ trong dãy. Nếu số $X$ không có trong dãy, in ra `-1`.
+* **Input:**
+  * Dòng 1: Hai số nguyên $N$ và $X$.
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Vị trí index đầu tiên của $X$, hoặc `-1`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5 7`<br>`3 5 7 9 7` | `2` |
+  | `4 10`<br>`1 2 3 4` | `-1` |
+
+---
+
+### Bài 9 (Luyện tập): Tách mảng chẵn và mảng lẻ (`PYA-L16-P09`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy tách dãy thành 2 danh sách: một danh sách gồm các số chẵn, một danh sách gồm các số lẻ (giữ nguyên thứ tự xuất hiện ban đầu).
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:**
+  * Dòng 1: Các số chẵn (cách nhau bởi khoảng trắng).
+  * Dòng 2: Các số lẻ (cách nhau bởi khoảng trắng).
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `6`<br>`1 4 7 8 2 9` | `4 8 2`<br>`1 7 9` |
+
+---
+
+### Bài 10 (Luyện tập): Xóa phần tử đầu tiên bằng x (`PYA-L16-P10`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên và số $X$. Nếu $X$ có trong dãy, hãy xóa phần tử đầu tiên có giá trị bằng $X$ và in ra dãy số còn lại. Nếu $X$ không có trong dãy, in ra `KHONG CO`.
+* **Input:**
+  * Dòng 1: Hai số $N, X$.
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Dãy số sau khi xóa, hoặc `KHONG CO`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5 3`<br>`1 3 5 3 7` | `1 5 3 7` |
+
+---
+
+### Bài 11 (Luyện tập): Thay thế tất cả số âm bằng số 0 (`PYA-L16-P11`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên gồm cả số âm và số dương. Hãy thay thế toàn bộ các số âm trong dãy bằng số 0 và in ra dãy mới.
+* **Input:**
+  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Dãy số sau khi thay thế.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `5`<br>`3 -5 8 -2 0` | `3 0 8 0 0` |
+
+---
+
+### Bài 12 (Vận dụng): Chèn số vào vị trí K (`PYA-L16-P12`)
+
+* **Yêu cầu:** Cho dãy $N$ số nguyên, số nguyên $X$ và vị trí index $K$ ($0 \le K \le N$). Hãy chèn số $X$ vào đúng vị trí $K$ của dãy số và in ra dãy mới gồm $(N + 1)$ phần tử.
+* **Input:**
+  * Dòng 1: Số nguyên $N$.
+  * Dòng 2: $N$ số nguyên.
+  * Dòng 3: Hai số nguyên $X$ và $K$.
+* **Output:** Dãy số sau khi chèn.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `4`<br>`10 20 30 40`<br>`99 1` | `10 99 20 30 40` |
+
+---
+
+### Bài 13 (Vận dụng): Xoay vòng danh sách sang phải (`PYA-L16-P13`)
+
+* **Bối cảnh:** Phép xoay phải danh sách $K$ vị trí là thao tác nhấc $K$ phần tử cuối cùng của mảng đem gắn lên đầu mảng.
+* **Yêu cầu:** Cho dãy $N$ số nguyên và số $K$ ($1 \le K \le N \le 10^5$). Hãy in ra dãy số sau khi xoay phải $K$ vị trí.
+* **Input:**
+  * Dòng 1: Hai số $N$ và $K$.
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Dãy số sau khi xoay phải.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `5 2`<br>`1 2 3 4 5` | `4 5 1 2 3` | Hai phần tử cuối là 4, 5 được đưa lên đầu. |
+
+---
+
+### Bài 14 (Thử thách): Cặp số có tổng bằng s (`PYA-L16-P14`)
 *(Đề thi Tin học trẻ Bảng A)*
 
-* **Bối cảnh:** Một số tự nhiên được gọi là "Siêu nguyên tố" nếu bản thân nó là số nguyên tố, và khi ta lần lượt xóa bớt chữ số tận cùng bên phải thì các số thu được vẫn luôn là số nguyên tố!
-  * Ví dụ: Số $239$ là số nguyên tố.
-  * Cắt đuôi 9 còn $23$ (vẫn là số nguyên tố).
-  * Cắt đuôi 3 còn $2$ (vẫn là số nguyên tố).
-  $\implies 239$ là một Siêu nguyên tố!
-* **Yêu cầu:** Cho số tự nhiên $N$. Hãy kiểm tra xem $N$ có phải là Siêu nguyên tố hay không. In `YES` hoặc `NO`.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^7$).
-* **Output:** `YES` hoặc `NO`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `239` | `YES` |
-  | `23` | `YES` |
-  | `27` | `NO` |
-
----
-
-### Bài 13 (Vận dụng): Phân tích ra thừa số nguyên tố (`PYA-L11-P13`)
-
-* **Yêu cầu:** Mọi số tự nhiên $N \ge 2$ đều có thể phân tích thành tích của các thừa số nguyên tố. Cho số tự nhiên $N$. Hãy in ra dạng phân tích của $N$.
-* **Input:** Một số tự nhiên $N$ ($2 \le N \le 10^6$).
-* **Output:** Dãy các thừa số nguyên tố tăng dần theo định dạng `p1 * p2 * ...`.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `60` | `2 * 2 * 3 * 5` |
-  | `17` | `17` |
-
----
-
-### Bài 14 (Thử thách): Tìm số có đúng 3 ước số (`PYA-L11-P14`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
-
-* **Bối cảnh:** Một số tự nhiên $X$ có đúng 3 ước số nguyên dương khi và chỉ khi $X$ là bình phương của một số nguyên tố ($X = P^2$, ví dụ: $4 = 2^2, 9 = 3^2, 25 = 5^2, 49 = 7^2$).
-* **Yêu cầu:** Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu số nhỏ hơn hoặc bằng $N$ mà có **đúng 3 ước số**.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^9$).
-* **Output:** Số lượng các số có đúng 3 ước số $\le N$.
+* **Yêu cầu:** Cho dãy gồm $N$ số nguyên đôi một khác nhau và một số nguyên mục tiêu $S$. Hãy đếm xem có bao nhiêu cặp chỉ số $(i, j)$ với $i < j$ thỏa mãn:
+  $$A_i + A_j = S$$
+* **Input:**
+  * Dòng 1: Hai số nguyên $N$ và $S$ ($1 \le N \le 10^4, |S| \le 10^9$).
+  * Dòng 2: $N$ số nguyên.
+* **Output:** Số lượng cặp thỏa mãn.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `30` | `3` | Có 3 số là: 4 ($2^2$), 9 ($3^2$), 25 ($5^2$). |
+  | `5 10`<br>`2 4 6 8 3` | `2` | Có 2 cặp là $(2, 8)$ và $(4, 6)$. |

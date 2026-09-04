@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Tam giác Floyd là một tam giác số vuông được điền liên tiếp các số tự nhiên tăng dần bắt đầu từ 1.
+Trong câu lạc bộ toán vui, bạn Xoài đố cả nhóm xếp một tháp số thật đẹp. Luật chơi là tam giác Floyd: một tam giác số vuông được điền liên tiếp các số tự nhiên tăng dần bắt đầu từ 1. Các bạn xếp mãi mà tháp cứ lệch, ai cũng bật cười vui vẻ. Em hãy giúp nhóm bạn Xoài xếp tháp số này cho ngay ngắn nhé!
 ## Nhiệm vụ
 
 In ra tam giác Floyd có $N$ dòng (điền liên tiếp các số tự nhiên từ 1 như minh họa ở Sample 1).

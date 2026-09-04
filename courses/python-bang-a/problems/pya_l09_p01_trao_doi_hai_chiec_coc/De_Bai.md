@@ -3,7 +3,7 @@
 
 ## Bối cảnh
 
-Bạn Bo có 2 chiếc cốc: cốc $A$ đựng nước cam và cốc $B$ đựng nước dưa hấu. Bo muốn đổi nội dung trong 2 cốc cho nhau.
+Giờ ăn trưa ở căng-tin, bạn Bo bưng ra hai chiếc cốc mát lạnh: cốc $A$ đựng nước cam vàng ươm và cốc $B$ đựng nước dưa hấu đỏ ngọt. Bo hí hửng khoe với bạn bè rồi nảy ra ý định vui: Bo muốn đổi nội dung trong 2 cốc cho nhau để mời các bạn nếm thử. Các bạn vỗ tay cổ vũ ầm ĩ. Em hãy giúp Bo tráo đổi hai chiếc cốc này nhé!
 ## Nhiệm vụ
 
 Nhập vào 2 số nguyên $A$ và $B$. Hãy hoán đổi giá trị của chúng và in ra theo thứ tự $A$ trước, $B$ sau.

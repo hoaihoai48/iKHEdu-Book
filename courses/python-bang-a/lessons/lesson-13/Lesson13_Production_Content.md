@@ -1,72 +1,17 @@
 # Bài 13: Chỉ số và cắt lát chuỗi
 
----
+## 1. Tóm tắt kiến thức trọng tâm
+- Chuỗi ký tự (String) đánh chỉ số bắt đầu từ **0**.
+  - Ký tự đầu tiên: `s[0]`.
+  - Ký tự cuối cùng: `s[-1]`.
+  - Độ dài chuỗi: `len(s)`.
+- **Cắt lát chuỗi (Slicing) `s[start:stop]`:** Lấy từ `start` đến `stop - 1`.
+  - Lấy $K$ ký tự đầu: `s[:K]`.
+  - Lấy từ vị trí $K$ đến hết: `s[K:]`.
+  - **Đảo ngược chuỗi tức thì:** `s[::-1]`.
+- Chuỗi trong Python là **bất biến (Immutable)**: Không thể gán sửa trực tiếp `s[0] = 'X'`.
 
-## 1. Khởi động: Đoàn tàu hỏa chữ cái & tấm vé số ghế
-
-Trong Python, chuỗi ký tự (String) giống hệt như một **đoàn tàu hỏa chở các chữ cái**.
-Mỗi chữ cái ngồi trên một toa tàu riêng biệt và được đánh số thứ tự (gọi là **Chỉ số - Index**).
-
-Ví dụ với chuỗi `s = "PYTHON"`:
-
-| Toa tàu (Ký tự) | `'P'` | `'Y'` | `'T'` | `'H'` | `'O'` | `'N'` |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Chỉ số dương (Từ đầu tàu)** | **0** | **1** | **2** | **3** | **4** | **5** |
-| **Chỉ số âm (Từ đuôi tàu)** | **-6** | **-5** | **-4** | **-3** | **-2** | **-1** |
-
-> ⚠️ **LUẬT VÀNG SỐ 0 TRONG PYTHON:**
-> Người lập trình viên luôn đếm bắt đầu từ **số 0**! Ký tự đầu tiên của chuỗi là `s[0]`, không phải `s[1]`!
-> Muốn lấy toa cuối cùng ở đuôi tàu? Chỉ cần gọi: `s[-1]`!
-
----
-
-## 2. Truy xuất ký tự bằng indexing `s[i]`
-
-* `s[0]`: Trả về `'P'` (chữ đầu tiên).
-* `s[1]`: Trả về `'Y'`.
-* `s[-1]`: Trả về `'N'` (chữ cuối cùng).
-* `s[-2]`: Trả về `'O'` (chữ kế cuối).
-* `len(s)`: Độ dài chuỗi (chuỗi `"PYTHON"` có độ dài là 6).
-
-> ⚠️ **BẪY LỖI KINH ĐIỂN: `IndexError: string index out of range`**
-> Chuỗi có 6 chữ cái thì chỉ số chỉ từ `0` đến `5`. Nếu em cố tình gọi `s[6]`, Python sẽ "nổi giận" và ném ra lỗi văng khỏi đường ray!
-
----
-
-## 3. Nghệ thuật cắt lát thần thánh: Slicing `s[start:stop:step]`
-
-Nếu muốn cắt ra một khúc của đoàn tàu thì làm thế nào?
-Python cung cấp công cụ cắt chuỗi mạnh mẽ nhất thế giới lập trình:
-$$\text{Cú pháp: } s[\text{start} : \text{stop} : \text{step}]$$
-
-* **`start`**: Vị trí bắt đầu cắt (lấy ký tự này).
-* **`stop`**: Vị trí dừng lại (**KHÔNG LẤY** ký tự tại vị trí `stop`!).
-* **`step`**: Bước nhảy (mặc định là 1).
-
-### Các chiêu thức slicing thường dùng:
-
-1. **Cắt từ vị trí 1 đến vị trí 4 (không lấy 4):**
-   ```python
-   s = "PYTHON"
-   print(s[1:4])  # In ra 'YTH' (gồm s[1], s[2], s[3])
-   ```
-2. **Lấy 3 ký tự đầu tiên:**
-   ```python
-   print(s[:3])   # Khuyết start hiểu là từ đầu: 'PYT'
-   ```
-3. **Lấy từ vị trí 2 đến hết chuỗi:**
-   ```python
-   print(s[2:])   # Khuyết stop hiểu là đến hết: 'THON'
-   ```
-4. **Tuyệt kỹ ĐẢO NGƯỢC CHUỖI chỉ 1 nốt nhạc:**
-   ```python
-   print(s[::-1]) # In ra 'NOHTYP'
-   ```
-   > 💡 Với `step = -1`, đoàn tàu sẽ chạy lùi từ đuôi về đầu, biến việc kiểm tra từ đối xứng thành một dòng code duy nhất: `if s == s[::-1]: print("DOI XUNG")`!
-
----
-
-## 4. Concept quiz: 14 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 2. Concept quiz: 14 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
 #### Câu 1: Ký tự đầu tiên của chuỗi `s = "VIETNAM"` có chỉ số index là bao nhiêu?
 - **A.** 1

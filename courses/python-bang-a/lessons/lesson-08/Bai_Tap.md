@@ -1,191 +1,210 @@
-# Hệ thống bài tập thực hành — bài 08: Vòng lặp while và biến cờ
+# Hệ thống bài tập thực hành — bài 08: Tách chữ số với chia nguyên và chia dư
 
 ---
 
-## Bảng ma trận bài tập (12 bài tập phân tầng cơ bản → vận dụng)
+## Bảng ma trận bài tập (14 bài tập phân tầng cơ bản → thử thách)
 
 | STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
 |:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L08-P01` | Đếm xuôi bằng while | `Cơ bản` | $1 \le N \le 100$ | Cú pháp `while` cơ bản với biến tăng `i = i + 1` |
-| 02 | `PYA-L08-P02` | Rút thăm đến khi trúng | `Cơ bản` | Dãy số kết thúc bằng 7 | Lặp cho đến khi gặp số mục tiêu |
-| 03 | `PYA-L08-P03` | Nhập số đến khi gặp số 0 | `Cơ bản` | Số lượng phần tử $\le 1000$ | Đếm số lượng số đã nhập (THT đà lạt) |
-| 04 | `PYA-L08-P04` | Tổng dãy số kết thúc bằng 0 | `Cơ bản` | Mỗi số $\le 10^6$ | Tính tổng các số đã nhập trước khi gặp 0 |
-| 05 | `PYA-L08-P05` | Đếm số chẵn đến khi gặp 0 | `Cơ bản` | Số nguyên $\le 10^6$ | Lọc và đếm số chẵn trong luồng nhập (THT lâm đồng) |
-| 06 | `PYA-L08-P06` | Gấp đôi tờ giấy lên mặt trăng | `Luyện tập` | $1 \le H \le 10^9$ | Đếm số lần nhân đôi $2 \times 2 \dots$ vượt ngưỡng $H$ |
-| 07 | `PYA-L08-P07` | Ống heo mua xe máy | `Luyện tập` | $1 \le P \le 10^7$ | Tiết kiệm tiền mỗi ngày tăng dần đến khi đủ tiền (THT) |
-| 08 | `PYA-L08-P08` | Tìm lũy thừa của 2 lớn hơn N | `Luyện tập` | $1 \le N \le 10^9$ | Vòng lặp tìm số $2^k > N$ nhỏ nhất |
-| 09 | `PYA-L08-P09` | Chú ốc sên leo cột cờ | `Luyện tập` | $1 \le H, A, B \le 10^6 (A > B)$ | Ban ngày leo lên $A$, ban đêm tụt $B$ đến đỉnh $H$ |
-| 10 | `PYA-L08-P10` | Đếm số lượng chữ số của N | `Luyện tập` | $1 \le N \le 10^{18}$ | Kỹ thuật chia nguyên liên tiếp `N = N // 10` |
-| 11 | `PYA-L08-P11` | Trò chơi đoán số nhị phân | `Vận dụng` | $1 \le N \le 10^6$ | Mô phỏng số bước đoán số tối đa $\log_2 N$ |
-| 12 | `PYA-L08-P12` | Dãy số collatz (3n + 1) | `Vận dụng` | $1 \le N \le 10^6$ | Mô phỏng giả thuyết toán học collatz nổi tiếng |
+| 01 | `PYA-L10-P01` | Lấy chữ số đơn vị & chục | `Cơ bản` | $10 \le N \le 99$ | Thuần thục `% 10` và `// 10` với số 2 chữ số |
+| 02 | `PYA-L10-P02` | Tổng chữ số của số 3 chữ số | `Cơ bản` | $100 \le N \le 999$ | Tách hàng trăm, chục, đơn vị |
+| 03 | `PYA-L10-P03` | Tổng các chữ số của N | `Cơ bản` | $0 \le N \le 10^{18}$ | Vòng lặp `while n > 0` tính tổng chữ số |
+| 04 | `PYA-L10-P04` | Đếm số lượng chữ số | `Cơ bản` | $0 \le N \le 10^{18}$ | Đếm số lượng chữ số có xử lý biên $N = 0$ |
+| 05 | `PYA-L10-P05` | Tích các chữ số khác không | `Cơ bản` | $1 \le N \le 10^9$ | Bỏ qua chữ số 0 khi nhân dồn |
+| 06 | `PYA-L10-P06` | Đếm chữ số chẵn và lẻ | `Luyện tập` | $1 \le N \le 10^{12}$ | Phân loại chẵn/lẻ cho từng chữ số |
+| 07 | `PYA-L10-P07` | Chữ số lớn nhất & nhỏ nhất | `Luyện tập` | $1 \le N \le 10^{12}$ | Cập nhật `max` và `min` qua từng chữ số |
+| 08 | `PYA-L10-P08` | Số đảo ngược | `Luyện tập` | $1 \le N \le 10^{12}$ | Thuật toán `dao = dao * 10 + cs` |
+| 09 | `PYA-L10-P09` | Kiểm tra số đối xứng (palindrome) | `Luyện tập` | $1 \le N \le 10^{15}$ | So sánh số gốc và số đảo ngược |
+| 10 | `PYA-L10-P10` | Số toàn chẵn hoặc toàn lẻ | `Luyện tập` | $1 \le N \le 10^{15}$ | Kiểm tra tính đồng nhất của toàn bộ chữ số |
+| 11 | `PYA-L10-P11` | Số may mắn chứa số 7 | `Luyện tập` | $1 \le N \le 10^9$ | Kiểm tra sự tồn tại của một chữ số cụ thể |
+| 12 | `PYA-L10-P12` | Đếm số lượng số đối xứng trong đoạn | `Vận dụng` | $1 \le A \le B \le 10^5$ | Kết hợp hàm kiểm tra số đối xứng trong đoạn $[A, B]$ |
+| 13 | `PYA-L10-P13` | Căn bậc số học (digital root) | `Vận dụng` | $1 \le N \le 10^{18}$ | Tính tổng chữ số liên tục đến khi còn 1 chữ số |
+| 14 | `PYA-L10-P14` | Số tăng giảm đẹp | `Thử thách` | $10 \le N \le 10^{12}$ | Kiểm tra các chữ số có tăng dần nghiêm ngặt từ trái qua phải |
 
 ---
 
-### Bài 1 (Cơ bản): Đếm xuôi bằng while (`PYA-L08-P01`)
+### Bài 1 (Cơ bản): Lấy chữ số đơn vị & chục (`PYA-L10-P01`)
 
-* **Yêu cầu:** Nhập vào số tự nhiên $N$. Dùng vòng lặp `while`, hãy in ra các số từ $1$ đến $N$ trên một dòng.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 100$).
-* **Output:** Dãy số từ 1 đến $N$.
-* **Gợi ý:**
-  ```python
-  N = int(input())
-  i = 1
-  while i <= N:
-      print(i, end=" ")
-      i = i + 1
-  ```
-
----
-
-### Bài 2 (Cơ bản): Rút thăm đến khi trúng (`PYA-L08-P02`)
-
-* **Bối cảnh:** Bé Bo bốc thăm từng lá phiếu có ghi số. Bo sẽ dừng lại ngay khi bốc trúng lá phiếu ghi số **7**.
-* **Yêu cầu:** Nhập liên tục các số nguyên từ bàn phím cho đến khi gặp số 7 thì dừng lại. Hãy in ra dòng chữ: `DA TRUNG THUONG!`
-* **Input:** Một dãy các số nguyên, số cuối cùng chắc chắn là số 7.
-* **Output:** In `DA TRUNG THUONG!` sau khi vòng lặp dừng.
-
----
-
-### Bài 3 (Cơ bản): Nhập số đến khi gặp số 0 (`PYA-L08-P03`)
-*(Lấy cảm hứng từ Bài 6 Đề thi THT Đà Lạt - Lâm Đồng)*
-
-* **Yêu cầu:** Viết chương trình nhập liên tiếp các số nguyên từ bàn phím. Việc nhập kết thúc khi người dùng nhập số 0. Hãy đếm xem người dùng đã nhập **bao nhiêu số** (không tính số 0 cuối cùng).
-* **Input:** Một dãy các số nguyên, kết thúc bằng số 0.
-* **Output:** Một số nguyên duy nhất là số lượng các số đã nhập trước số 0.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5`<br>`12`<br>`8`<br>`0` | `3` | Có 3 số: 5, 12, 8 đã được nhập trước khi gặp 0. |
-
----
-
-### Bài 4 (Cơ bản): Tổng dãy số kết thúc bằng 0 (`PYA-L08-P04`)
-
-* **Yêu cầu:** Nhập liên tục các số nguyên từ bàn phím cho đến khi gặp số 0. Hãy tính và in ra **tổng của tất cả các số** đã nhập.
-* **Input:** Một dãy số nguyên kết thúc bằng 0.
-* **Output:** Tổng các số.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10`<br>`20`<br>`5`<br>`0` | `35` | $10 + 20 + 5 = 35$. |
-
----
-
-### Bài 5 (Cơ bản): Đếm số chẵn đến khi gặp 0 (`PYA-L08-P05`)
-
-* **Yêu cầu:** Nhập liên tiếp các số nguyên từ bàn phím cho đến khi nhập số 0. Hãy đếm xem có bao nhiêu số chẵn trong các số đã nhập (không tính số 0).
-* **Input:** Dãy số nguyên kết thúc bằng 0.
-* **Output:** Số lượng số chẵn.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `4`<br>`7`<br>`8`<br>`12`<br>`0` | `3` | Có 3 số chẵn là 4, 8, 12. |
-
----
-
-### Bài 6 (Luyện tập): Gấp đôi tờ giấy lên mặt trăng (`PYA-L08-P06`)
-
-* **Bối cảnh:** Một tờ giấy siêu mỏng ban đầu có độ dày là $1\text{ mm}$. Cứ mỗi lần gấp đôi tờ giấy lại, độ dày của nó lại tăng gấp đôi ($2\text{ mm}, 4\text{ mm}, 8\text{ mm}, \dots$).
-* **Yêu cầu:** Hỏi cần phải gấp đôi tờ giấy ít nhất bao nhiêu lần để độ dày của nó đạt hoặc vượt quá độ cao $H\text{ mm}$?
-* **Input:** Một số tự nhiên $H$ ($1 \le H \le 10^9$).
-* **Output:** Số lần gấp đôi tối thiểu.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10` | `4` | Lần 1: 2mm, lần 2: 4mm, lần 3: 8mm, lần 4: 16mm ($\ge 10$). Cần 4 lần. |
-
----
-
-### Bài 7 (Luyện tập): Ống heo mua xe máy (`PYA-L08-P07`)
-*(Lấy cảm hứng từ Bài 51 Đề thi Scratch THT Toàn quốc)*
-
-* **Bối cảnh:** Bác Nam muốn tiết kiệm tiền để mua một chiếc xe máy có giá $P$ nghìn đồng.
-  * Ngày thứ nhất bác bỏ vào ống heo 1 nghìn đồng.
-  * Ngày thứ hai bác bỏ vào 2 nghìn đồng.
-  * Ngày thứ $k$ bác bỏ vào đúng $k$ nghìn đồng.
-* **Yêu cầu:** Hỏi sau bao nhiêu ngày thì tổng số tiền trong ống heo của bác Nam đạt hoặc vượt quá $P$ nghìn đồng?
-* **Input:** Một số tự nhiên $P$ ($1 \le P \le 10^7$).
-* **Output:** Số ngày ít nhất.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `15` | `5` | Ngày 1: 1k, ngày 2: 2k (tổng 3k), ngày 3: 3k (tổng 6k), ngày 4: 4k (tổng 10k), ngày 5: 5k (tổng 15k $\ge 15$). Sau 5 ngày. |
-
----
-
-### Bài 8 (Luyện tập): Tìm lũy thừa của 2 lớn hơn N (`PYA-L08-P08`)
-
-* **Yêu cầu:** Nhập vào số tự nhiên $N$. Hãy tìm số có dạng lũy thừa của 2 ($1, 2, 4, 8, 16, 32, \dots$) **nhỏ nhất mà lớn hơn $N$**.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^9$).
-* **Output:** Số lũy thừa của 2 tìm được.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10` | `16` | Lũy thừa của 2 gồm 1, 2, 4, 8, 16... Số nhỏ nhất $> 10$ là 16. |
-  | `16` | `32` | Số phải lớn hơn 16 nên là 32. |
-
----
-
-### Bài 9 (Luyện tập): Chú ốc sên leo cột cờ (`PYA-L08-P09`)
-
-* **Bối cảnh:** Chú ốc sên muốn leo lên đỉnh một cột cờ cao $H$ mét.
-  * Ban ngày, chú ốc sên bò lên được $A$ mét.
-  * Ban đêm, khi ngủ chú bị tụt xuống $B$ mét ($B < A$).
-  * Khi chú chạm tới hoặc vượt qua đỉnh cột cờ vào ban ngày, chú sẽ dừng lại và cắm cờ (không bị tụt nữa).
-* **Yêu cầu:** Hỏi chú ốc sên mất bao nhiêu ngày để leo lên tới đỉnh cột cờ?
-* **Input:** Ba số tự nhiên $H, A, B$ trên 3 dòng ($1 \le B < A \le H \le 10^6$).
-* **Output:** Số ngày để ốc sên chạm đỉnh.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5`<br>`3`<br>`1` | `2` | Ngày 1: leo lên 3m, đêm tụt 1m còn 2m.<br>Ngày 2: từ 2m leo thêm 3m lên 5m (chạm đỉnh ngay trong ngày!). Vậy mất 2 ngày. |
-
----
-
-### Bài 10 (Luyện tập): Đếm số lượng chữ số của N (`PYA-L08-P10`)
-
-* **Yêu cầu:** Nhập vào một số nguyên dương $N$. Dùng vòng lặp `while` và phép chia nguyên `// 10`, hãy đếm xem số $N$ có bao nhiêu chữ số.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^{18}$).
-* **Output:** Số lượng chữ số của $N$.
+* **Yêu cầu:** Nhập một số nguyên dương $N$ có đúng 2 chữ số. Hãy in ra chữ số hàng chục và chữ số hàng đơn vị của $N$ trên cùng một dòng, cách nhau một khoảng trắng.
+* **Input:** Một số nguyên $N$ ($10 \le N \le 99$).
+* **Output:** Chữ số hàng chục, tiếp theo là chữ số hàng đơn vị.
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `2026` | `4` |
-* **Gợi ý thuật toán:**
-  ```python
-  N = int(input())
-  dem = 0
-  while N > 0:
-      N = N // 10
-      dem = dem + 1
-  print(dem)
-  ```
+  | `47` | `4 7` |
+* **Gợi ý:** `chuc = n // 10`, `don_vi = n % 10`.
 
 ---
 
-### Bài 11 (Vận dụng): Trò chơi đoán số nhị phân (`PYA-L08-P11`)
+### Bài 2 (Cơ bản): Tổng chữ số của số 3 chữ số (`PYA-L10-P02`)
 
-* **Bối cảnh:** Bạn An nghĩ ra một số bí mật từ 1 đến $N$. Bạn Bình dùng chiến thuật "Chặt đôi khoảng tìm kiếm" (Tìm kiếm nhị phân) để đoán số: Mỗi câu hỏi Bình chia đôi khoảng đang xét ($N = N // 2$).
-* **Yêu cầu:** Hỏi trong trường hợp xấu nhất, Bình phải đoán **nhiều nhất bao nhiêu lần** thì chắc chắn tìm ra số của An (lặp cho đến khi khoảng chỉ còn 1 số: $N == 1$)?
+* **Yêu cầu:** Nhập một số nguyên dương $N$ có đúng 3 chữ số. Hãy tính tổng của 3 chữ số đó.
+* **Input:** Một số tự nhiên $N$ ($100 \le N \le 999$).
+* **Output:** Tổng 3 chữ số.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `358` | `16` | $3 + 5 + 8 = 16$. |
+
+---
+
+### Bài 3 (Cơ bản): Tổng các chữ số của N (`PYA-L10-P03`)
+
+* **Yêu cầu:** Cho một số tự nhiên $N$ bất kỳ. Hãy tính tổng tất cả các chữ số cấu tạo nên số $N$.
+* **Input:** Một số nguyên $N$ ($0 \le N \le 10^{18}$).
+* **Output:** Tổng các chữ số của $N$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `2024` | `8` | $2 + 0 + 2 + 4 = 8$. |
+  | `0` | `0` | Chữ số 0 có tổng bằng 0. |
+
+---
+
+### Bài 4 (Cơ bản): Đếm số lượng chữ số (`PYA-L10-P04`)
+
+* **Yêu cầu:** Cho số nguyên không âm $N$. Hãy cho biết số $N$ có bao nhiêu chữ số.
+* **Input:** Một số nguyên $N$ ($0 \le N \le 10^{18}$).
+* **Output:** Số lượng chữ số.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `123456` | `6` | Có 6 chữ số. |
+  | `0` | `1` | Số 0 có đúng 1 chữ số. |
+* **Lưu ý:** Chú ý xử lý trường hợp đặc biệt $N = 0$.
+
+---
+
+### Bài 5 (Cơ bản): Tích các chữ số khác không (`PYA-L10-P05`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tính tích của tất cả các chữ số **khác 0** của $N$.
 * **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^9$).
-* **Output:** Số bước đoán tối đa.
+* **Output:** Tích các chữ số khác 0.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `8` | `4` | Các bước: $8 \to 4 \to 2 \to 1$ (cần 4 bước). |
+  | `205` | `10` | Bỏ qua chữ số 0, tích là $2 \times 5 = 10$. |
 
 ---
 
-### Bài 12 (Vận dụng): Dãy số collatz (3n + 1) (`PYA-L08-P12`)
+### Bài 6 (Luyện tập): Đếm chữ số chẵn và lẻ (`PYA-L10-P06`)
 
-* **Bối cảnh:** Giả thuyết Collatz là một bài toán toán học kỳ bí: Bắt đầu từ số tự nhiên $N > 0$:
-  * Nếu $N$ là số chẵn: chia đôi $N = N // 2$.
-  * Nếu $N$ là số lẻ: nhân ba cộng một $N = 3 \times N + 1$.
-  * Lặp lại quy trình trên cho đến khi số $N$ biến thành số $1$ thì dừng lại!
-* **Yêu cầu:** Nhập vào số tự nhiên $N$. Hãy in ra số bước biến đổi để $N$ trở thành 1.
-* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^5$).
-* **Output:** Số bước biến đổi.
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy đếm xem trong số $N$ có bao nhiêu chữ số chẵn (0, 2, 4, 6, 8) và bao nhiêu chữ số lẻ (1, 3, 5, 7, 9).
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^{12}$).
+* **Output:** In hai số nguyên cách nhau một khoảng trắng: số lượng chữ số chẵn trước, số lượng chữ số lẻ sau.
 * **Ví dụ mẫu:**
   | Input | Output | Giải thích |
   |---|---|---|
-  | `6` | `8` | Dãy biến đổi: $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$ (qua 8 bước biến đổi). |
+  | `2035` | `2 2` | Chữ số chẵn: 2, 0 (2 số). Chữ số lẻ: 3, 5 (2 số). |
+
+---
+
+### Bài 7 (Luyện tập): Chữ số lớn nhất & nhỏ nhất (`PYA-L10-P07`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy tìm chữ số lớn nhất và chữ số nhỏ nhất xuất hiện trong số $N$.
+* **Input:** Một số nguyên $N$ ($1 \le N \le 10^{12}$).
+* **Output:** Chữ số lớn nhất, theo sau là chữ số nhỏ nhất, cách nhau một khoảng trắng.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `9418` | `9 1` | Chữ số lớn nhất là 9, nhỏ nhất là 1. |
+
+---
+
+### Bài 8 (Luyện tập): Số đảo ngược (`PYA-L10-P08`)
+
+* **Yêu cầu:** Cho số nguyên dương $N$. Hãy in ra số đảo ngược của $N$ (bỏ qua các chữ số 0 ở đầu nếu có sau khi đảo).
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^{12}$).
+* **Output:** Số đảo ngược.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `1234` | `4321` | Đảo ngược các chữ số. |
+  | `2500` | `52` | Đảo ngược là 0052, giá trị số học là 52. |
+
+---
+
+### Bài 9 (Luyện tập): Kiểm tra số đối xứng (palindrome) (`PYA-L10-P09`)
+*(Đề thi Tin học trẻ Bảng A)*
+
+* **Bối cảnh:** Một số được gọi là số đối xứng (Palindrome) nếu đọc từ trái sang phải hay từ phải sang trái đều thu được số giống hệt nhau (ví dụ: $121$, $1331$, $5$, $88$).
+* **Yêu cầu:** Nhập vào số tự nhiên $N$. Kiểm tra xem $N$ có phải số đối xứng không. Nếu có in `YES`, ngược lại in `NO`.
+* **Input:** Một số nguyên $N$ ($1 \le N \le 10^{15}$).
+* **Output:** `YES` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `12321` | `YES` |
+  | `1234` | `NO` |
+
+---
+
+### Bài 10 (Luyện tập): Số toàn chẵn hoặc toàn lẻ (`PYA-L10-P10`)
+
+* **Bối cảnh:** Số "Toàn chẵn" là số mà mọi chữ số của nó đều là số chẵn. Số "Toàn lẻ" là số mà mọi chữ số của nó đều là số lẻ.
+* **Yêu cầu:** Nhập số nguyên dương $N$. In ra `TOAN CHAN` nếu $N$ là số toàn chẵn, in `TOAN LE` nếu $N$ toàn lẻ, ngược lại in `BINH THUONG`.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^{15}$).
+* **Output:** `TOAN CHAN`, `TOAN LE` hoặc `BINH THUONG`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `2468` | `TOAN CHAN` |
+  | `1395` | `TOAN LE` |
+  | `2418` | `BINH THUONG` |
+
+---
+
+### Bài 11 (Luyện tập): Số may mắn chứa số 7 (`PYA-L10-P11`)
+
+* **Yêu cầu:** Bé An coi số 7 là con số mang lại may mắn. Một số tự nhiên $N$ được gọi là "May mắn" nếu trong các chữ số của nó có ít nhất một chữ số 7. Cho số $N$, hãy kiểm tra xem $N$ có may mắn không. In `YES` nếu có, `NO` nếu không.
+* **Input:** Số nguyên $N$ ($1 \le N \le 10^9$).
+* **Output:** `YES` hoặc `NO`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `372` | `YES` |
+  | `2024` | `NO` |
+
+---
+
+### Bài 12 (Vận dụng): Đếm số lượng số đối xứng trong đoạn (`PYA-L10-P12`)
+
+* **Yêu cầu:** Cho hai số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^5$). Hãy đếm xem có bao nhiêu số đối xứng nằm trong đoạn từ $A$ đến $B$ (tính cả $A$ và $B$).
+* **Input:** Hai số nguyên $A, B$ trên cùng một dòng.
+* **Output:** Số lượng số đối xứng trong đoạn $[A, B]$.
+* **Ví dụ mẫu:**
+  | Input | Output | Giải thích |
+  |---|---|---|
+  | `1 20` | `10` | Các số đối xứng là: 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 (tổng cộng 10 số). |
+
+---
+
+### Bài 13 (Vận dụng): Căn bậc số học (digital root) (`PYA-L10-P13`)
+
+* **Bối cảnh:** Căn bậc số học của một số tự nhiên là giá trị thu được sau khi cộng dồn liên tục các chữ số của nó cho đến khi chỉ còn lại đúng **một chữ số duy nhất**.
+  Ví dụ: $9875 \to 9 + 8 + 7 + 5 = 29 \to 2 + 9 = 11 \to 1 + 1 = 2$. Căn bậc số học của 9875 là 2.
+* **Yêu cầu:** Nhập vào số tự nhiên $N$. Hãy tìm căn bậc số học của $N$.
+* **Input:** Một số tự nhiên $N$ ($1 \le N \le 10^{18}$).
+* **Output:** Một chữ số duy nhất (từ 1 đến 9).
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `9875` | `2` |
+
+---
+
+### Bài 14 (Thử thách): Số tăng giảm đẹp (`PYA-L10-P14`)
+*(Đề thi Tin học trẻ cấp Tỉnh/Thành phố)*
+
+* **Bối cảnh:** Một số tự nhiên được gọi là:
+  * **Số tăng dần:** Nếu mỗi chữ số đứng sau luôn lớn hơn chữ số đứng trước nó (ví dụ: $1379, 258$).
+  * **Số giảm dần:** Nếu mỗi chữ số đứng sau luôn nhỏ hơn chữ số đứng trước nó (ví dụ: $9641, 852$).
+* **Yêu cầu:** Cho số $N$. In ra `TANG` nếu $N$ là số tăng dần, in `GIAM` nếu $N$ là số giảm dần, và in `KHONG` nếu không thỏa mãn cả 2 tính chất trên.
+* **Input:** Một số nguyên $N$ ($10 \le N \le 10^{12}$).
+* **Output:** `TANG`, `GIAM` hoặc `KHONG`.
+* **Ví dụ mẫu:**
+  | Input | Output |
+  |---|---|
+  | `1379` | `TANG` |
+  | `9520` | `GIAM` |
+  | `1335` | `KHONG` (Có hai chữ số 3 bằng nhau) |

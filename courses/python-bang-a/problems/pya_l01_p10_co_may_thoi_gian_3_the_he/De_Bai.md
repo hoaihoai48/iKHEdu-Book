@@ -3,10 +3,11 @@
 
 ## Bối cảnh
 
-Trong gia đình bạn Nam có 3 thế hệ: Nam, Bố của Nam và Ông nội của Nam.
+Cuối tuần, bạn Nam lôi ra một chiếc album ảnh cũ của gia đình có 3 thế hệ: Nam, Bố của Nam và Ông nội của Nam. Nam tò mò đọc từng trang và thấy ghi lại:
   * Nam năm nay $a$ tuổi.
   * Bố hơn Nam $b$ tuổi.
   * Ông nội hơn Bố $c$ tuổi.
+Nam muốn khoe với cả lớp về ba thế hệ nhà mình. Em hãy giúp bạn Nam tính tuổi của Bố, của Ông và tổng số tuổi của cả ba người nhé!
 ## Nhiệm vụ
 
 Nhập vào 3 số tự nhiên $a, b, c$ lần lượt trên 3 dòng. Hãy tính và in ra:
