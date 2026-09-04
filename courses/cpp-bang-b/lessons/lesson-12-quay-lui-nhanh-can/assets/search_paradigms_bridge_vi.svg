@@ -1,114 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="100%" stop-color="#111827" />
-    </linearGradient>
-    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-    <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1" />
-      <stop offset="100%" stop-color="#0c4a6e" />
-    </linearGradient>
-    <linearGradient id="greenCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#065f46" />
-      <stop offset="100%" stop-color="#064e3b" />
-    </linearGradient>
-    <linearGradient id="purpleCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#581c87" />
-      <stop offset="100%" stop-color="#3b0764" />
-    </linearGradient>
-    <linearGradient id="redCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#991b1b" />
-      <stop offset="100%" stop-color="#7f1d1d" />
-    </linearGradient>
-    <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9a3412" />
-      <stop offset="100%" stop-color="#7c2d12" />
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
 
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#06b6d4" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#10b981" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowAmber" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#a855f7" flood-opacity="0.4" />
-    </filter>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#64748B" flood-opacity="0.12" />
     </filter>
 
     <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8" />
-    </marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#34d399" />
-    </marker>
-    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#fbbf24" />
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#0284C7" />
     </marker>
     <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#c084fc" />
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#7C3AED" />
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#059669" />
     </marker>
   </defs>
 
-  <rect width="1000" height="480" fill="url(#bgGrad)" rx="16" />
-  <rect width="1000" height="480" fill="none" stroke="#334155" stroke-width="1.5" rx="16" />
+  <!-- Background -->
+  <rect width="1000" height="480" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16" />
 
-  
-  <text x="500" y="42" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="21" font-weight="bold" text-anchor="middle">CẦU NỐI KIẾN TRÚC CÁC PHƯƠNG PHÁP THUẬT TOÁN LỚN</text>
-  <text x="500" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Sự tiến hóa từ Đệ quy cơ bản đến Tìm kiếm không gian trạng thái và Quy hoạch động</text>
+  <!-- Title & Subtitle -->
+  <text x="500" y="42" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">CẦU NỐI KIẾN TRÚC CÁC PHƯƠNG PHÁP THUẬT TOÁN LỚN</text>
+  <text x="500" y="68" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Sự tiến hóa từ Đệ quy cơ bản đến Tìm kiếm không gian trạng thái và Quy hoạch động</text>
 
   <!-- Top Root: Recursion -->
   <g transform="translate(350, 95)" filter="url(#cardShadow)">
-    <rect width="300" height="55" rx="10" fill="url(#blueCard)" stroke="#38bdf8" stroke-width="2" filter="url(#glowCyan)" />
-    <text x="150" y="26" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14.5" font-weight="bold" text-anchor="middle">ĐỆ QUY (RECURSION)</text>
-    <text x="150" y="44" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11.5" text-anchor="middle">Cơ chế điều khiển Call Stack</text>
+    <rect width="300" height="58" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" />
+    <text x="150" y="27" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">ĐỆ QUY (RECURSION)</text>
+    <text x="150" y="46" fill="#1D4ED8" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Cơ chế điều khiển Call Stack</text>
   </g>
 
   <!-- Arrow Left (D&C) -->
-  <path d="M 400 150 L 220 200" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)" />
+  <path d="M 400 153 L 220 200" fill="none" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowCyan)" />
   <!-- Arrow Right (State Space) -->
-  <path d="M 600 150 L 780 200" fill="none" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowPurple)" />
+  <path d="M 600 153 L 780 200" fill="none" stroke="#7C3AED" stroke-width="2" marker-end="url(#arrowPurple)" />
 
   <!-- Left: Divide & Conquer -->
   <g transform="translate(60, 205)" filter="url(#cardShadow)">
-    <rect width="320" height="95" rx="10" fill="url(#cyanCard)" stroke="#0ea5e9" stroke-width="1.5" />
-    <text x="160" y="28" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle">CHIA ĐỂ TRỊ (DIVIDE &amp; CONQUER)</text>
-    <text x="160" y="52" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="11.5" text-anchor="middle">Chia nhỏ bài toán thành các bài toán con độc lập</text>
-    <text x="160" y="74" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Merge Sort, QuickSelect, Inversion Counting</text>
+    <rect width="320" height="98" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5" />
+    <text x="160" y="28" fill="#0369A1" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CHIA ĐỂ TRỊ (DIVIDE &amp; CONQUER)</text>
+    <text x="160" y="52" fill="#1E293B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Chia nhỏ bài toán thành các bài toán con độc lập</text>
+    <text x="160" y="75" fill="#475569" font-family="system-ui, sans-serif" font-size="11.5" font-style="italic" text-anchor="middle">Merge Sort, QuickSelect, Inversion Counting</text>
   </g>
 
   <!-- Right: State Space Search -->
   <g transform="translate(480, 205)" filter="url(#cardShadow)">
-    <rect width="460" height="95" rx="10" fill="url(#purpleCard)" stroke="#a855f7" stroke-width="1.5" filter="url(#glowPurple)" />
-    <text x="230" y="28" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle">TÌM KIẾM KHÔNG GIAN TRẠNG THÁI (STATE-SPACE)</text>
-    <text x="230" y="52" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="11.5" text-anchor="middle">Xây dựng nghiệm từng bước qua các quyết định (Choices)</text>
+    <rect width="460" height="98" rx="10" fill="#FAF5FF" stroke="#9333EA" stroke-width="1.5" />
+    <text x="230" y="28" fill="#6B21A8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">TÌM KIẾM KHÔNG GIAN TRẠNG THÁI (STATE-SPACE)</text>
+    <text x="230" y="50" fill="#1E293B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Xây dựng nghiệm từng bước qua các quyết định (Choices)</text>
     
     <!-- Sub-boxes for Backtracking & B&B -->
-    <g transform="translate(20, 60)">
-      <rect width="195" height="26" rx="4" fill="#0f172a" stroke="#38bdf8" /><text x="97" y="17" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">Quay lui (Feasibility Pruning)</text>
-      <rect x="225" width="195" height="26" rx="4" fill="#0f172a" stroke="#f59e0b" /><text x="322" y="17" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">Nhánh cận (Bound Pruning)</text>
+    <g transform="translate(20, 62)">
+      <rect width="195" height="26" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2" />
+      <text x="97" y="17" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Quay lui (Feasibility Pruning)</text>
+
+      <rect x="225" width="195" height="26" rx="4" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2" />
+      <text x="322" y="17" fill="#92400E" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Nhánh cận (Bound Pruning)</text>
     </g>
   </g>
 
   <!-- Downward Arrow to DP -->
-  <path d="M 710 300 L 710 365" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowGreen)" />
-  <rect x="520" y="320" width="380" height="26" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1" />
-  <text x="710" y="337" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Khi nhiều nhánh tìm kiếm lặp lại cùng State Identity ➔ Ghi nhớ</text>
+  <path d="M 710 303 L 710 365" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)" />
+  <rect x="500" y="322" width="420" height="26" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.2" />
+  <text x="710" y="339" fill="#065F46" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle">Khi nhiều nhánh tìm kiếm lặp lại cùng State Identity ➔ Ghi nhớ</text>
 
   <!-- Bottom: Dynamic Programming -->
-  <g transform="translate(480, 375)" filter="url(#cardShadow)">
-    <rect width="460" height="85" rx="12" fill="url(#greenCard)" stroke="#10b981" stroke-width="2" filter="url(#glowGreen)" />
-    <text x="230" y="30" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING &amp; MEMOIZATION)</text>
-    <text x="230" y="55" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Ghi nhớ kết quả trên Đồ thị trạng thái DAG (Không tính lại bài toán con trùng lặp)</text>
+  <g transform="translate(460, 375)" filter="url(#cardShadow)">
+    <rect width="500" height="85" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2" />
+    <text x="250" y="32" fill="#065F46" font-family="system-ui, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle">QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING &amp; MEMOIZATION)</text>
+    <text x="250" y="58" fill="#1E293B" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Ghi nhớ kết quả trên Đồ thị trạng thái DAG (Không tính lại bài toán con trùng lặp)</text>
   </g>
 
 </svg>

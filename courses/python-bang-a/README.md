@@ -5,7 +5,7 @@
 
 ## Master tổng hợp
 
-Toàn bộ syllabus, 18 lesson, Concept Quiz và ma trận bài tập được tổng hợp tại [`MASTER_ALL_LESSONS.md`](MASTER_ALL_LESSONS.md), theo khuôn master của các khóa C++. File này được sinh tự động từ `lessons/`; 224 Problem Package chi tiết vẫn được quản lý riêng trong `problems/`. Khi nội dung lesson thay đổi, chạy `python3 build_master.py` để cập nhật lại.
+Toàn bộ syllabus, 16 lesson, Concept Quiz và ma trận bài tập được tổng hợp tại [`MASTER_ALL_LESSONS.md`](MASTER_ALL_LESSONS.md), theo khuôn master của các khóa C++. File này được sinh tự động từ `lessons/`; 246 Problem Package chi tiết vẫn được quản lý riêng trong `problems/`. Khi nội dung lesson thay đổi, chạy `python3 build_master.py` để cập nhật lại.
 
 Tài liệu kiểm định dành cho giáo viên/biên tập viên: [`CURRICULUM_AUDIT.md`](CURRICULUM_AUDIT.md) và [`ALGORITHM_PATTERNS.md`](ALGORITHM_PATTERNS.md). Các nhãn quản trị nội bộ không xuất hiện trong master học sinh.
 
@@ -78,9 +78,9 @@ Mỗi bài học được lưu trữ tại `lessons/lesson-xx/` gồm 2 file b�
 
 ## 4. Hệ thống Problem Library Độc Lập (`courses/python-bang-a/problems/`)
 
-Toàn bộ **224 bài tập thực hành** đều đã được trích xuất và đóng gói thành các **Problem Package độc lập** đặt tại thư mục `courses/python-bang-a/problems/`.
+Toàn bộ **246 bài tập thực hành** đều đã được trích xuất và đóng gói thành các **Problem Package độc lập** đặt tại thư mục `courses/python-bang-a/problems/`.
 
 Mỗi Problem Package tương ứng với một thư mục định danh chuẩn: `pya_l<lesson>_p<stt>_<slug_ten_bai>/` (Ví dụ: `pya_l01_p01_loi_chao_robot/`), bao gồm:
-* **`De_Bai.md`**: Statement hoàn chỉnh (Tiêu đề, Mã bài `PYA-Lxx-Pxx`, Bối cảnh, Yêu cầu, Input, Output, Ví dụ mẫu Sample, Ràng buộc thi đấu).
+* **`De_Bai.md`**: Statement hoàn chỉnh (Tiêu đề, Bối cảnh, Nhiệm vụ, Input, Output, Ví dụ mẫu Sample, Ràng buộc thi đấu — không ghi mã bài trong đề học sinh, mã chỉ nằm ở tên thư mục).
 * **`Huong_Dan_Giang_Day.md`**: Hướng dẫn giảng dạy sư phạm chuyên sâu 9 phần chuẩn iKHEDU (Mục tiêu, Phân tích đề & Edge cases, Socratic Method, Bất biến thuật toán, Bảng Dry Run, Độ phức tạp thời gian/bộ nhớ, Bẫy lỗi kinh điển, Code Python 3 tham chiếu, Bài toán mở rộng).
 * **`solution.py`**: Mã nguồn lời giải Python 3 tham chiếu tương ứng.

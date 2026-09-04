@@ -1,105 +1,158 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="100%" stop-color="#111827" />
-    </linearGradient>
-    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-    <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1" />
-      <stop offset="100%" stop-color="#0c4a6e" />
-    </linearGradient>
-    <linearGradient id="greenCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#065f46" />
-      <stop offset="100%" stop-color="#064e3b" />
-    </linearGradient>
-    <linearGradient id="purpleCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#581c87" />
-      <stop offset="100%" stop-color="#3b0764" />
-    </linearGradient>
-    <linearGradient id="redCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#991b1b" />
-      <stop offset="100%" stop-color="#7f1d1d" />
-    </linearGradient>
-    <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9a3412" />
-      <stop offset="100%" stop-color="#7c2d12" />
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
 
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#06b6d4" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#10b981" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowAmber" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#a855f7" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ef4444" flood-opacity="0.4" />
-    </filter>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#64748B" flood-opacity="0.12" />
     </filter>
 
-    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8" /></marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#34d399" /></marker>
-    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#fbbf24" /></marker>
-    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#f87171" /></marker>
-    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#c084fc" /></marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#0284C7" /></marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#059669" /></marker>
   </defs>
 
-  <rect width="1000" height="600" fill="url(#bgGrad)" rx="16" />
-  <rect width="1000" height="600" fill="none" stroke="#334155" stroke-width="1.5" rx="16" />
+  <!-- Canvas Background -->
+  <rect width="1000" height="600" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16" />
 
+  <!-- Header Title -->
+  <text x="500" y="42" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">MÔ PHỎNG CÂY PHÂN RÃ &amp; GỘP MERGE SORT</text>
+  <text x="500" y="68" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Dãy đầu vào: A = [38, 27, 43, 3, 9, 82, 10] (Quy mô N = 7)</text>
+
+  <!-- Level Labels on Left Side -->
+  <!-- Level Labels on Left Side -->
+  <g transform="translate(8, 96)">
+    <rect width="60" height="24" rx="4" fill="#F1F5F9" stroke="#CBD5E1" />
+    <text x="30" y="16" fill="#475569" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">GỐC N=7</text>
+  </g>
+
+  <g transform="translate(8, 176)">
+    <rect width="60" height="24" rx="4" fill="#E0F2FE" stroke="#BAE6FD" />
+    <text x="30" y="16" fill="#0369A1" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">CHIA 1</text>
+  </g>
+
+  <g transform="translate(8, 244)">
+    <rect width="60" height="24" rx="4" fill="#E0F2FE" stroke="#BAE6FD" />
+    <text x="30" y="16" fill="#0369A1" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">CHIA 2</text>
+  </g>
+
+  <g transform="translate(8, 313)">
+    <rect width="60" height="24" rx="4" fill="#D1FAE5" stroke="#A7F3D0" />
+    <text x="30" y="16" fill="#065F46" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">CƠ SỞ</text>
+  </g>
+
+  <g transform="translate(8, 385)">
+    <rect width="60" height="24" rx="4" fill="#FEF3C7" stroke="#FDE68A" />
+    <text x="30" y="16" fill="#92400E" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">GỘP 1</text>
+  </g>
+
+  <g transform="translate(8, 457)">
+    <rect width="60" height="24" rx="4" fill="#FEF3C7" stroke="#FDE68A" />
+    <text x="30" y="16" fill="#92400E" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">GỘP 2</text>
+  </g>
+
+  <g transform="translate(8, 537)">
+    <rect width="60" height="24" rx="4" fill="#D1FAE5" stroke="#A7F3D0" />
+    <text x="30" y="16" fill="#065F46" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">KẾT QUẢ</text>
+  </g>
+
+  <!-- Level 0: Root Array -->
+  <g transform="translate(320, 90)" filter="url(#cardShadow)">
+    <rect width="360" height="42" rx="8" fill="#EFF6FF" stroke="#0284C7" stroke-width="2" />
+    <text x="180" y="27" fill="#0369A1" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">[38, 27, 43, 3, 9, 82, 10]</text>
+  </g>
+
+  <!-- Divide to Level 1 -->
+  <path d="M 440 132 L 310 165" fill="none" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowBlue)" />
+  <path d="M 560 132 L 690 165" fill="none" stroke="#0284C7" stroke-width="2" marker-end="url(#arrowBlue)" />
+
+  <!-- Level 1 Arrays -->
+  <g transform="translate(180, 170)" filter="url(#cardShadow)">
+    <rect width="230" height="38" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="115" y="24" fill="#1E3A8A" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[38, 27, 43, 3]</text>
+  </g>
+  <g transform="translate(590, 170)" filter="url(#cardShadow)">
+    <rect width="200" height="38" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="100" y="24" fill="#1E3A8A" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[9, 82, 10]</text>
+  </g>
+
+  <!-- Divide to Level 2 -->
+  <path d="M 250 208 L 190 235" fill="none" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arrowBlue)" />
+  <path d="M 340 208 L 380 235" fill="none" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arrowBlue)" />
+  <path d="M 660 208 L 620 235" fill="none" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arrowBlue)" />
+  <path d="M 730 208 L 770 235" fill="none" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arrowBlue)" />
+
+  <!-- Level 2 Arrays -->
+  <g transform="translate(130, 240)" filter="url(#cardShadow)">
+    <rect width="115" height="32" rx="6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5" />
+    <text x="57" y="21" fill="#1E293B" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[38, 27]</text>
+  </g>
+  <g transform="translate(325, 240)" filter="url(#cardShadow)">
+    <rect width="115" height="32" rx="6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5" />
+    <text x="57" y="21" fill="#1E293B" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[43, 3]</text>
+  </g>
+  <g transform="translate(560, 240)" filter="url(#cardShadow)">
+    <rect width="115" height="32" rx="6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5" />
+    <text x="57" y="21" fill="#1E293B" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[9, 82]</text>
+  </g>
+  <g transform="translate(730, 240)" filter="url(#cardShadow)">
+    <rect width="80" height="32" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" />
+    <text x="40" y="21" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[10]</text>
+  </g>
+
+  <!-- Divide to Level 3 (Leaves: Base Case L = R) -->
+  <path d="M 160 272 L 85 305" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+  <path d="M 215 272 L 155 305" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+  <path d="M 355 272 L 315 305" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+  <path d="M 410 272 L 385 305" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+  <path d="M 590 272 L 555 305" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+  <path d="M 645 272 L 625 305" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+  <path d="M 770 272 L 770 305" fill="none" stroke="#10B981" stroke-width="1" stroke-dasharray="3,3" />
+
+  <g transform="translate(75, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[38]</text></g>
+  <g transform="translate(142, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[27]</text></g>
+  <g transform="translate(290, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[43]</text></g>
+  <g transform="translate(360, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[3]</text></g>
+  <g transform="translate(530, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[9]</text></g>
+  <g transform="translate(600, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[82]</text></g>
+  <g transform="translate(740, 310)" filter="url(#cardShadow)"><rect width="55" height="30" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="27" y="20" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[10]</text></g>
   
-  <text x="500" y="40" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="21" font-weight="bold" text-anchor="middle">MÔ PHỎNG CÂY PHÂN RÃ &amp; GỘP MERGE SORT</text>
-  <text x="500" y="65" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Dãy đầu vào: A = [38, 27, 43, 3, 9, 82, 10] (Quy mô N = 7)</text>
-  <g transform="translate(320, 90)">
-    <rect width="360" height="42" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#glowCyan)" />
-    <text x="180" y="26" fill="#f8fafc" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">[38, 27, 43, 3, 9, 82, 10]</text>
-  </g>
-  <path d="M 440 132 L 310 165" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)" />
-  <path d="M 560 132 L 690 165" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)" />
-  <g transform="translate(180, 170)">
-    <rect width="230" height="38" rx="8" fill="#0f2b46" stroke="#0ea5e9" stroke-width="1.5" />
-    <text x="115" y="24" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[38, 27, 43, 3]</text>
-  </g>
-  <g transform="translate(590, 170)">
-    <rect width="200" height="38" rx="8" fill="#0f2b46" stroke="#0ea5e9" stroke-width="1.5" />
-    <text x="100" y="24" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[9, 82, 10]</text>
-  </g>
-  <path d="M 250 208 L 190 235" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowCyan)" />
-  <path d="M 340 208 L 380 235" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowCyan)" />
-  <path d="M 660 208 L 620 235" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowCyan)" />
-  <path d="M 730 208 L 770 235" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowCyan)" />
-  <g transform="translate(120, 240)"><rect width="120" height="32" rx="6" fill="#1e293b" stroke="#64748b" /><text x="60" y="21" fill="#f8fafc" font-family="monospace" font-size="13" text-anchor="middle">[38, 27]</text></g>
-  <g transform="translate(330, 240)"><rect width="120" height="32" rx="6" fill="#1e293b" stroke="#64748b" /><text x="60" y="21" fill="#f8fafc" font-family="monospace" font-size="13" text-anchor="middle">[43, 3]</text></g>
-  <g transform="translate(560, 240)"><rect width="110" height="32" rx="6" fill="#1e293b" stroke="#64748b" /><text x="55" y="21" fill="#f8fafc" font-family="monospace" font-size="13" text-anchor="middle">[9, 82]</text></g>
-  <g transform="translate(730, 240)"><rect width="80" height="32" rx="6" fill="#064e3b" stroke="#10b981" /><text x="40" y="21" fill="#34d399" font-family="monospace" font-size="13" text-anchor="middle">[10]</text></g>
-  <g transform="translate(50, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[38]</text></g>
-  <g transform="translate(120, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[27]</text></g>
-  <g transform="translate(290, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[43]</text></g>
-  <g transform="translate(360, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[3]</text></g>
-  <g transform="translate(530, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[9]</text></g>
-  <g transform="translate(600, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[82]</text></g>
-  <g transform="translate(740, 310)" filter="url(#glowGreen)"><rect width="55" height="30" rx="6" fill="#064e3b" stroke="#10b981" /><text x="27" y="20" fill="#a7f3d0" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[10]</text></g>
-  <text x="860" y="330" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Base Case (L = R)</text>
-  <g transform="translate(75, 380)"><rect width="120" height="34" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5" /><text x="60" y="22" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[27, 38]</text></g>
-  <g transform="translate(315, 380)"><rect width="120" height="34" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5" /><text x="60" y="22" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[3, 43]</text></g>
-  <g transform="translate(555, 380)"><rect width="120" height="34" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5" /><text x="60" y="22" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[9, 82]</text></g>
-  <g transform="translate(735, 380)"><rect width="70" height="34" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5" /><text x="35" y="22" fill="#34d399" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[10]</text></g>
-  <g transform="translate(170, 450)"><rect width="250" height="38" rx="8" fill="#0f2b46" stroke="#38bdf8" stroke-width="2" /><text x="125" y="24" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[3, 27, 38, 43]</text></g>
-  <g transform="translate(580, 450)"><rect width="220" height="38" rx="8" fill="#0f2b46" stroke="#38bdf8" stroke-width="2" /><text x="110" y="24" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[9, 10, 82]</text></g>
+  <text x="880" y="330" fill="#065F46" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Base Case (L = R)</text>
+
+  <!-- Merge Level 1 arrows -->
+  <path d="M 102 340 L 135 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 169 340 L 155 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 317 340 L 355 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 387 340 L 390 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 557 340 L 595 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 627 340 L 630 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 767 340 L 767 375" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+
+  <!-- Merge Level 1 Cards -->
+  <g transform="translate(98, 380)" filter="url(#cardShadow)"><rect width="120" height="34" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5" /><text x="60" y="22" fill="#92400E" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[27, 38]</text></g>
+  <g transform="translate(320, 380)" filter="url(#cardShadow)"><rect width="120" height="34" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5" /><text x="60" y="22" fill="#92400E" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[3, 43]</text></g>
+  <g transform="translate(560, 380)" filter="url(#cardShadow)"><rect width="120" height="34" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5" /><text x="60" y="22" fill="#92400E" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[9, 82]</text></g>
+  <g transform="translate(735, 380)" filter="url(#cardShadow)"><rect width="70" height="34" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" /><text x="35" y="22" fill="#065F46" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">[10]</text></g>
+
+  <!-- Merge Level 2 arrows -->
+  <path d="M 150 414 L 240 445" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 370 414 L 320 445" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 620 414 L 660 445" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+  <path d="M 765 414 L 720 445" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrowGreen)" />
+
+  <!-- Merge Level 2 Cards -->
+  <g transform="translate(170, 450)" filter="url(#cardShadow)"><rect width="250" height="38" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="2" /><text x="125" y="24" fill="#92400E" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[3, 27, 38, 43]</text></g>
+  <g transform="translate(580, 450)" filter="url(#cardShadow)"><rect width="220" height="38" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="2" /><text x="110" y="24" fill="#92400E" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">[9, 10, 82]</text></g>
+
+  <!-- Final Merge arrows -->
+  <path d="M 300 488 L 440 520" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)" />
+  <path d="M 680 488 L 560 520" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)" />
+
+  <!-- Merge Final Result -->
   <g transform="translate(300, 525)" filter="url(#cardShadow)">
-    <rect width="400" height="48" rx="10" fill="url(#greenCard)" stroke="#10b981" stroke-width="2" filter="url(#glowGreen)" />
-    <text x="200" y="30" fill="#ffffff" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">[3, 9, 10, 27, 38, 43, 82]</text>
+    <rect width="400" height="48" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="2.5" />
+    <text x="200" y="31" fill="#065F46" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">[3, 9, 10, 27, 38, 43, 82]</text>
   </g>
 
 </svg>
