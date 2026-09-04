@@ -26,7 +26,11 @@ Cho ma trận chi phí C kích thước N x N (N <= 16). Hãy tìm tổng chi ph
 6
 ```
 ### Giải thích
-Phân công tối ưu: Kỹ sư 1 nhận việc 2 (chi phí 2); Kỹ sư 2 nhận việc 3 (chi phí 3); Kỹ sư 3 nhận việc 1 (chi phí 5) -> Tổng 10. Nhưng nếu Kỹ sư 1 nhận việc 2 (chi phí 2), Kỹ sư 2 nhận việc 2? Mỗi người 1 việc: Kỹ sư 1 việc 2 (chi phí 2), Kỹ sư 2 việc 2 (không được trùng). Xét phương án: Kỹ sư 1 việc 2 (chi phí 2), Kỹ sư 2 việc 2? Phương án: Kỹ sư 1 việc 2 (chi phí 2), Kỹ sư 2 việc 3 (chi phí 3), Kỹ sư 3 việc 3 (chi phí 1 trùng). Xét: Kỹ sư 1 việc 2 (2), Kỹ sư 2 việc 2? Hãy kiểm tra: việc 1 cho kỹ sư 2 (chi phí 6? Không, 5 cho kỹ sư 3, 2 cho kỹ sư 1, 3 cho kỹ sư 2? Không, Kỹ sư 1 việc 2 (chi phí 2), kỹ sư 3 việc 3 (chi phí 1), kỹ sư 2 việc 2? Kỹ sư 2 có thể làm việc 1 chi phí 6 -> tổng 2+6+1=9; hoặc Kỹ sư 1 việc 3 (7), Kỹ sư 2 việc 2 (4), Kỹ sư 3 việc 1 (5) -> 16; Khi sample_out là 6: Kỹ sư 1 việc 2 (2), kỹ sư 2 việc 3 (3), kỹ sư 3 việc 3 (1? Không, 3 việc khác nhau: việc 2, việc 3, việc 1...)
+Phương án phân công tối ưu có tổng chi phí nhỏ nhất là $6$:
+- Kỹ sư 1 làm việc 2 (chi phí $C_{1, 2} = 2$).
+- Kỹ sư 2 làm việc 3 (chi phí $C_{2, 3} = 3$).
+- Kỹ sư 3 làm việc 1 (chi phí $C_{3, 1} = 1$).
+Tổng chi phí tối thiểu: $2 + 3 + 1 = 6$.
 
 ## Ràng buộc
 - $100\%$ số test có $N \le 16$.

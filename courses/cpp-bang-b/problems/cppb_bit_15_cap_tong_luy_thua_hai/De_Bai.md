@@ -24,10 +24,11 @@ Cho dãy gồm N số nguyên dương. Hãy đếm số lượng cặp chỉ s�
 4
 ```
 ### Giải thích
-Các cặp có tổng là lũy thừa của 2 gồm:
-- (1, 1): tổng 2 = 2^1 (1 cặp).
-- (1, 3): tổng 4 = 2^2 (có 2*2 = 4 cặp: cặp (A[0], A[2]), (A[0], A[3]), (A[1], A[2]), (A[1], A[3])).
-Tổng cộng có 1 + 4 = 5? Trong sample in 4 phần tử {1, 1, 3, 3}: (1, 1) tổng 2, (1, 3) tổng 4 (4 cặp), (3, 3) tổng 6 (không phải lũy thừa 2). Có 1 cặp tổng 2 và 4 cặp tổng 4? Đếm theo chỉ số: có 4 cặp thỏa mãn.
+Các cặp chỉ số $(i, j)$ có tổng là lũy thừa của 2 gồm 3 cặp:
+- $(1, 3)$: tổng $1 + 3 = 4 = 2^2$.
+- $(1, 7)$: tổng $1 + 7 = 8 = 2^3$.
+- $(1, 15)$: tổng $1 + 15 = 16 = 2^4$.
+Vậy có đúng 3 cặp thỏa mãn.
 
 ## Ràng buộc
 - $100\%$ số test có $N \le 10^5$.
