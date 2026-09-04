@@ -1,41 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
-  <rect width="900" height="380" fill="#0f172a" rx="16"/>
-  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">THUẬT TOÁN LOANG (FLOOD FILL) ĐẾM VÙNG &amp; TÌM ĐƯỜNG MÊ CUNG</text>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#64748B" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <rect width="900" height="380" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16"/>
+  <text x="450" y="40" fill="#0F172A" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">THUẬT TOÁN LOANG (FLOOD FILL) ĐẾM VÙNG &amp; TÌM ĐƯỜNG MÊ CUNG</text>
 
   <!-- 4x4 maze visual -->
   <g transform="translate(120, 80)">
-    <rect x="0" y="0" width="50" height="50" fill="#047857" stroke="#334155"/>
-    <text x="25" y="30" fill="#f8fafc" font-weight="bold" text-anchor="middle">S</text>
-    <rect x="50" y="0" width="50" height="50" fill="#047857" stroke="#334155"/>
+    <rect x="0" y="0" width="50" height="50" fill="#059669" stroke="#334155"/>
+    <text x="25" y="30" fill="#1E293B" font-weight="bold" text-anchor="middle">S</text>
+    <rect x="50" y="0" width="50" height="50" fill="#059669" stroke="#334155"/>
     <rect x="100" y="0" width="50" height="50" fill="#7f1d1d" stroke="#334155"/>
-    <text x="125" y="30" fill="#f8fafc" text-anchor="middle">#</text>
-    <rect x="150" y="0" width="50" height="50" fill="#1e293b" stroke="#334155"/>
+    <text x="125" y="30" fill="#1E293B" text-anchor="middle">#</text>
+    <rect x="150" y="0" width="50" height="50" fill="#F8FAFC" stroke="#CBD5E1"/>
 
     <rect x="0" y="50" width="50" height="50" fill="#7f1d1d" stroke="#334155"/>
-    <text x="25" y="80" fill="#f8fafc" text-anchor="middle">#</text>
-    <rect x="50" y="50" width="50" height="50" fill="#047857" stroke="#334155"/>
-    <rect x="100" y="50" width="50" height="50" fill="#047857" stroke="#334155"/>
+    <text x="25" y="80" fill="#1E293B" text-anchor="middle">#</text>
+    <rect x="50" y="50" width="50" height="50" fill="#059669" stroke="#334155"/>
+    <rect x="100" y="50" width="50" height="50" fill="#059669" stroke="#334155"/>
     <rect x="150" y="50" width="50" height="50" fill="#7f1d1d" stroke="#334155"/>
-    <text x="175" y="80" fill="#f8fafc" text-anchor="middle">#</text>
+    <text x="175" y="80" fill="#1E293B" text-anchor="middle">#</text>
 
-    <rect x="0" y="100" width="50" height="50" fill="#1e293b" stroke="#334155"/>
-    <rect x="50" y="100" width="50" height="50" fill="#1e293b" stroke="#334155"/>
-    <rect x="100" y="100" width="50" height="50" fill="#047857" stroke="#334155"/>
-    <rect x="150" y="100" width="50" height="50" fill="#047857" stroke="#334155"/>
+    <rect x="0" y="100" width="50" height="50" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect x="50" y="100" width="50" height="50" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect x="100" y="100" width="50" height="50" fill="#059669" stroke="#334155"/>
+    <rect x="150" y="100" width="50" height="50" fill="#059669" stroke="#334155"/>
 
     <rect x="0" y="150" width="50" height="50" fill="#7f1d1d" stroke="#334155"/>
-    <text x="25" y="180" fill="#f8fafc" text-anchor="middle">#</text>
-    <rect x="50" y="150" width="50" height="50" fill="#1e293b" stroke="#334155"/>
-    <rect x="100" y="150" width="50" height="50" fill="#1e293b" stroke="#334155"/>
-    <rect x="150" y="150" width="50" height="50" fill="#854d0e" stroke="#334155"/>
-    <text x="175" y="180" fill="#f8fafc" font-weight="bold" text-anchor="middle">E</text>
+    <text x="25" y="180" fill="#1E293B" text-anchor="middle">#</text>
+    <rect x="50" y="150" width="50" height="50" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect x="100" y="150" width="50" height="50" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect x="150" y="150" width="50" height="50" fill="#D97706" stroke="#334155"/>
+    <text x="175" y="180" fill="#1E293B" font-weight="bold" text-anchor="middle">E</text>
   </g>
 
-  <rect x="420" y="80" width="400" height="230" rx="12" fill="#1e293b" stroke="#334155"/>
-  <text x="620" y="115" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">Đặc Trưng Thuật Toán Loang</text>
-  <text x="445" y="150" fill="#f8fafc" font-size="14">• Ô hợp lệ: 1 ≤ nr ≤ N, 1 ≤ nc ≤ M</text>
-  <text x="445" y="180" fill="#f8fafc" font-size="14">• Không đi vào ô cản '#' và ô đã thăm !visited[nr][nc]</text>
-  <text x="445" y="210" fill="#4ade80" font-size="14">• Đếm diện tích đảo: DFS đếm số ô kết nối</text>
-  <text x="445" y="240" fill="#facc15" font-size="14">• Tìm đường ngắn nhất mê cung: BFS từ S đến E</text>
-  <text x="445" y="270" fill="#94a3b8" font-size="14">• Độ phức tạp: O(N × M)</text>
+  <rect x="420" y="80" width="400" height="230" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="620" y="115" fill="#0369A1" font-size="16" font-weight="bold" text-anchor="middle">Đặc Trưng Thuật Toán Loang</text>
+  <text x="445" y="150" fill="#1E293B" font-size="14">• Ô hợp lệ: 1 ≤ nr ≤ N, 1 ≤ nc ≤ M</text>
+  <text x="445" y="180" fill="#1E293B" font-size="14">• Không đi vào ô cản '#' và ô đã thăm !visited[nr][nc]</text>
+  <text x="445" y="210" fill="#065F46" font-size="14">• Đếm diện tích đảo: DFS đếm số ô kết nối</text>
+  <text x="445" y="240" fill="#92400E" font-size="14">• Tìm đường ngắn nhất mê cung: BFS từ S đến E</text>
+  <text x="445" y="270" fill="#475569" font-size="14">• Độ phức tạp: O(N × M)</text>
 </svg>

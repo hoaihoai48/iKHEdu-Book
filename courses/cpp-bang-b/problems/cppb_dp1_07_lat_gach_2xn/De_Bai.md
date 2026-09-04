@@ -1,16 +1,16 @@
 # Lát Gạch Bảng 2xN
 
 ## Bối cảnh
-Cần lát kín một sàn nhà kích thước $2 \times N$ bằng các viên gạch kích thước $2 \times 1$ và $1 \times 2$.
+Trong một triển lãm kiến trúc, ban tổ chức cần lát kín một khoảng sàn hình chữ nhật có kích thước cố định là $2  × N$ bằng các viên gạch men trang trí kích thước $1  × 2$. Mỗi viên gạch men có thể được đặt nằm ngang (kích thước $1  × 2$) hoặc dựng đứng (kích thước $2  × 1$). Toàn bộ mặt sàn phải được phủ kín hoàn toàn, không có ô nào bị bỏ trống và các viên gạch không được phép đè lên nhau.
 
 ## Nhiệm vụ
-Tính số cách lát kín sàn nhà modulo $10^9 + 7$.
+Cho số nguyên dương $N$ là chiều dài của mặt sàn. Hãy lập trình tính số cách lát gạch khác nhau để phủ kín mặt sàn $2  × N$, lấy dư cho $10^9 + 7$.
 
 ## Input
-- Một dòng chứa số nguyên dương $N$ ($1 \le N \le 10^5$).
+- Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 10^5$) biểu diễn chiều dài mặt sàn.
 
 ## Output
-- Số cách lát theo modulo $10^9 + 7$.
+- In ra trên một dòng duy nhất số cách lát sàn hợp lệ theo modulo $10^9 + 7$.
 
 ## Sample 1
 ### Input
@@ -21,6 +21,15 @@ Tính số cách lát kín sàn nhà modulo $10^9 + 7$.
 ```text
 5
 ```
+
+### Giải thích
+Với sàn nhà kích thước $2  × 4$ ($N = 4$), có tất cả 5 cách lát kín hợp lệ:
+1. Đặt 4 viên gạch dựng đứng liên tiếp.
+2. Đặt 2 viên nằm ngang ở đầu, theo sau là 2 viên dựng đứng.
+3. Đặt 1 viên dựng đứng, 2 viên nằm ngang ở giữa, 1 viên dựng đứng ở cuối.
+4. Đặt 2 viên dựng đứng ở đầu, theo sau là 2 viên nằm ngang.
+5. Đặt 2 cặp viên nằm ngang chồng lên nhau.
+Kết quả in ra là 5.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N \le 10^5$.

@@ -1,104 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="100%" stop-color="#111827" />
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
     </linearGradient>
-    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-    <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1" />
-      <stop offset="100%" stop-color="#0c4a6e" />
-    </linearGradient>
-    <linearGradient id="greenCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#065f46" />
-      <stop offset="100%" stop-color="#064e3b" />
-    </linearGradient>
-    <linearGradient id="purpleCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#581c87" />
-      <stop offset="100%" stop-color="#3b0764" />
-    </linearGradient>
-    <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9a3412" />
-      <stop offset="100%" stop-color="#7c2d12" />
-    </linearGradient>
-    <linearGradient id="redCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#991b1b" />
-      <stop offset="100%" stop-color="#7f1d1d" />
-    </linearGradient>
-
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#06b6d4" flood-opacity="0.4" />
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#64748B" flood-opacity="0.08" />
     </filter>
-    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#10b981" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowAmber" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#a855f7" flood-opacity="0.4" />
-    </filter>
-    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
-    </filter>
-
-    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8" /></marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#34d399" /></marker>
-    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#fbbf24" /></marker>
-    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#c084fc" /></marker>
+    <marker id="arrowTrace" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 1 L 7 4 L 0 7 Z" fill="#059669" />
+    </marker>
   </defs>
 
-  <rect width="1000" height="360" fill="url(#bgGrad)" rx="16" />
-  <rect width="1000" height="360" fill="none" stroke="#334155" stroke-width="1.5" rx="16" />
+  <!-- Background Canvas -->
+  <rect width="960" height="400" rx="16" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2"/>
 
-  
-  <text x="500" y="40" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="21" font-weight="bold" text-anchor="middle">MÔ HÌNH DÃY CON TĂNG DÀI NHẤT (LIS O(N²)) &amp; TRUY VẾT</text>
-  <text x="500" y="65" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Bất biến Trạng thái: dp[i] là độ dài LIS kết thúc BẮT BUỘC tại A[i]</text>
+  <!-- Header -->
+  <text x="40" y="38" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Mô hình Quy hoạch Động LIS O(N²) &amp; Cơ chế Truy vết</text>
+  <text x="40" y="62" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="13">Bất biến trạng thái: dp[i] là độ dài dãy con tăng dài nhất kết thúc bắt buộc tại phần tử A[i]</text>
 
-  <!-- Array A -->
-  <g transform="translate(80, 100)">
-    <text x="0" y="28" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Mảng A:</text>
-    <g transform="translate(90, 0)">
-      <rect x="0" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="35" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">10</text>
-      <rect x="80" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="115" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">22</text>
-      <rect x="160" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="195" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">9</text>
-      <rect x="240" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="275" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">33</text>
-      <rect x="320" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="355" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">21</text>
-      <rect x="400" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="435" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">50</text>
-      <rect x="480" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="515" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">41</text>
-      <rect x="560" width="70" height="40" rx="6" fill="#1e293b" stroke="#64748b" /><text x="595" y="26" fill="#f8fafc" font-family="monospace" font-size="15" text-anchor="middle">60</text>
+  <!-- Array Container Card -->
+  <g transform="translate(40, 85)" filter="url(#cardShadow)">
+    <rect width="880" height="195" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Labels Column -->
+    <g transform="translate(20, 20)">
+      <text x="0" y="38" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Mảng A</text>
+      <text x="0" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Giá trị gốc</text>
+
+      <text x="0" y="112" fill="#0284C7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Mảng dp</text>
+      <text x="0" y="129" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Độ dài LIS</text>
+    </g>
+
+    <!-- 8 Array Elements: Cell width 86, gap 10, start X=100 -->
+    <!-- Element 0: A[0]=10, dp[0]=1 (Part of LIS) -->
+    <g transform="translate(100, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 0</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">10</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="43" y="106" fill="#065F46" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">1</text>
+    </g>
+
+    <!-- Element 1: A[1]=22, dp[1]=2 (Part of LIS) -->
+    <g transform="translate(196, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 1</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">22</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="43" y="106" fill="#065F46" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">2</text>
+    </g>
+
+    <!-- Element 2: A[2]=9, dp[2]=1 -->
+    <g transform="translate(292, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 2</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">9</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#F0F9FF" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="43" y="106" fill="#0369A1" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">1</text>
+    </g>
+
+    <!-- Element 3: A[3]=33, dp[3]=3 (Part of LIS) -->
+    <g transform="translate(388, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 3</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">33</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="43" y="106" fill="#065F46" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">3</text>
+    </g>
+
+    <!-- Element 4: A[4]=21, dp[4]=2 -->
+    <g transform="translate(484, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 4</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">21</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#F0F9FF" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="43" y="106" fill="#0369A1" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">2</text>
+    </g>
+
+    <!-- Element 5: A[5]=50, dp[5]=4 (Part of LIS) -->
+    <g transform="translate(580, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 5</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">50</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+      <text x="43" y="106" fill="#065F46" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">4</text>
+    </g>
+
+    <!-- Element 6: A[6]=41, dp[6]=4 -->
+    <g transform="translate(676, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 6</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">41</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#F0F9FF" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="43" y="106" fill="#0369A1" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">4</text>
+    </g>
+
+    <!-- Element 7: A[7]=60, dp[7]=5 (Max LIS) -->
+    <g transform="translate(772, 15)">
+      <text x="43" y="12" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 7</text>
+      <rect y="18" width="86" height="42" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="43" y="44" fill="#0F172A" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">60</text>
+      <rect y="80" width="86" height="42" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="2.5"/>
+      <text x="43" y="106" fill="#065F46" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">5 (MAX)</text>
+    </g>
+
+    <!-- Traceback Curved Paths underneath dp cells -->
+    <!-- Cell centers X: 143 (i=0), 239 (i=1), 431 (i=3), 623 (i=5), 815 (i=7). Bottom Y = 137 -->
+    <path d="M 815 142 C 815 178, 623 178, 623 147" fill="none" stroke="#059669" stroke-width="2.2" stroke-dasharray="4 2" marker-end="url(#arrowTrace)" />
+    <path d="M 623 142 C 623 178, 431 178, 431 147" fill="none" stroke="#059669" stroke-width="2.2" stroke-dasharray="4 2" marker-end="url(#arrowTrace)" />
+    <path d="M 431 142 C 431 178, 239 178, 239 147" fill="none" stroke="#059669" stroke-width="2.2" stroke-dasharray="4 2" marker-end="url(#arrowTrace)" />
+    <path d="M 239 142 C 239 178, 143 178, 143 147" fill="none" stroke="#059669" stroke-width="2.2" stroke-dasharray="4 2" marker-end="url(#arrowTrace)" />
+
+    <!-- Traceback explanation badge inside card -->
+    <rect x="25" y="152" width="105" height="24" rx="5" fill="#ECFDF5" stroke="#10B981" stroke-width="1"/>
+    <text x="77" y="168" fill="#065F46" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Cung truy vết ↩</text>
+  </g>
+
+  <!-- Bottom Details & Formula Grid (2 Cards) -->
+  <g transform="translate(40, 295)">
+    <!-- Result Card -->
+    <g transform="translate(0, 0)" filter="url(#cardShadow)">
+      <rect width="430" height="85" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+      <text x="20" y="28" fill="#065F46" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Dãy con tăng dài nhất (LIS) khôi phục:</text>
+      <g transform="translate(20, 38)">
+        <rect width="390" height="34" rx="6" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1"/>
+        <text x="195" y="22" fill="#047857" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">[ 10 ➔ 22 ➔ 33 ➔ 50 ➔ 60 ]  (LIS = 5)</text>
+      </g>
+    </g>
+
+    <!-- Formula Card -->
+    <g transform="translate(450, 0)" filter="url(#cardShadow)">
+      <rect width="430" height="85" rx="10" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+      <text x="20" y="28" fill="#0369A1" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Công thức quy hoạch động &amp; Độ phức tạp:</text>
+      <text x="20" y="52" fill="#0C4A6E" font-family="monospace" font-size="12" font-weight="600">dp[i] = 1 + max({dp[j] | 0 ≤ j &lt; i và A[j] &lt; A[i]})</text>
+      <text x="20" y="72" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="12">Thời gian: <tspan font-weight="700" fill="#0F172A">O(N²)</tspan> • Bộ nhớ: <tspan font-weight="700" fill="#0F172A">O(N)</tspan> với mảng dp và trace</text>
     </g>
   </g>
-
-  <!-- Array DP -->
-  <g transform="translate(80, 160)">
-    <text x="0" y="28" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Mảng dp:</text>
-    <g transform="translate(90, 0)">
-      <rect x="0" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="35" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">1</text>
-      <rect x="80" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="115" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">2</text>
-      <rect x="160" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="195" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">1</text>
-      <rect x="240" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="275" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">3</text>
-      <rect x="320" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="355" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">2</text>
-      <rect x="400" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="435" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">4</text>
-      <rect x="480" width="70" height="40" rx="6" fill="#0f2b46" stroke="#0ea5e9" /><text x="515" y="26" fill="#38bdf8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">4</text>
-      <rect x="560" width="70" height="40" rx="6" fill="url(#greenCard)" stroke="#10b981" stroke-width="2" filter="url(#glowGreen)" /><text x="595" y="26" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">5</text>
-    </g>
-  </g>
-
-  <!-- Traceback Path -->
-  <path d="M 725 180 Q 645 130 565 180" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)" />
-  <path d="M 565 180 Q 405 130 405 180" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)" />
-  <path d="M 405 180 Q 245 130 245 180" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)" />
-  <path d="M 245 180 Q 125 130 125 180" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)" />
-
-  <!-- Legend Bottom -->
-  <g transform="translate(100, 240)" filter="url(#cardShadow)">
-    <rect width="800" height="85" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
-    <text x="30" y="30" fill="#34d399" font-family="system-ui, sans-serif" font-size="13.5" font-weight="bold">Khôi phục chuỗi LIS tối ưu: [10 ➔ 22 ➔ 33 ➔ 50 ➔ 60] (Độ dài = 5)</text>
-    <text x="30" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Công thức chuyển: dp[i] = 1 + max({dp[j] | 0 &lt;= j &lt; i và A[j] &lt; A[i]})</text>
-  </g>
-
 </svg>

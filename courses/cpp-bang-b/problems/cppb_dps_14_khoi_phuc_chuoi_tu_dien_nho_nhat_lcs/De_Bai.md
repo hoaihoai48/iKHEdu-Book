@@ -1,17 +1,17 @@
 # Độ Dài LCS Giữa Hai Chuỗi Gen
 
 ## Bối cảnh
-Trong phân tích sinh học tính toán, hai chuỗi DNA được so sánh mức độ tương đồng thông qua xâu con chung dài nhất.
+Trong đề án nghiên cứu tiến hóa học phân tử, các nhà di truyền học so sánh hai chuỗi gen dài được biểu diễn dưới dạng hai chuỗi ký tự chỉ gồm 4 loại nucleotide cơ bản: `A`, `C`, `G`, `T`. Việc tìm độ dài xâu con chung dài nhất giữa hai chuỗi gen phản ánh mức độ gần gũi về mặt quan hệ tiến hóa giữa hai loài sinh vật.
 
 ## Nhiệm vụ
-In ra độ dài LCS giữa hai chuỗi DNA.
+Cho hai chuỗi gen $S$ và $T$. Hãy lập trình tính độ dài chuỗi con chung dài nhất giữa hai chuỗi đó.
 
 ## Input
-- Dòng 1: Chuỗi $S$ ($1 \le |S| \le 500$).
-- Dòng 2: Chuỗi $T$ ($1 \le |T| \le 500$).
+- Dòng 1: Chứa chuỗi gen thứ nhất $S$ ($1 \le |S| \le 2000$).
+- Dòng 2: Chứa chuỗi gen thứ hai $T$ ($1 \le |T| \le 2000$).
 
 ## Output
-- Độ dài LCS.
+- In ra trên một dòng duy nhất độ dài xâu con chung dài nhất.
 
 ## Sample 1
 ### Input
@@ -23,6 +23,10 @@ GTCGTTCGGAATGCCGTTGCTCTGTAAA
 ```text
 20
 ```
+
+### Giải thích
+Với hai chuỗi gen $S = \text{"AGGTAB"}$ và $T = \text{"GXTXAYB"}$:
+Xâu con chung dài nhất giữa hai mẫu gen là $\text{"GTAB"}$ có độ dài bằng 4.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le |S|, |T| \le 500$.

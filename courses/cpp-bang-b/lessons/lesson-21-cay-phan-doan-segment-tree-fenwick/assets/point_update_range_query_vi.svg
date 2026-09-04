@@ -1,36 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
-  <rect width="900" height="380" fill="#0f172a" rx="16"/>
-  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">SO SÁNH CÁC CẤU TRÚC TRUY VẤN ĐOẠN (RANGE QUERY DATA STRUCTURES)</text>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#64748B" flood-opacity="0.1" />
+    </filter>
+  </defs>
 
-  <rect x="60" y="75" width="780" height="265" rx="12" fill="#1e293b" stroke="#334155"/>
+  <rect width="900" height="380" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16"/>
+  <text x="450" y="40" fill="#0F172A" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">SO SÁNH CÁC CẤU TRÚC TRUY VẤN ĐOẠN (RANGE QUERY DATA STRUCTURES)</text>
+
+  <rect x="60" y="75" width="780" height="265" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
 
   <g transform="translate(80, 95)">
     <!-- Header -->
-    <rect x="0" y="0" width="740" height="40" fill="#1e1b4b" rx="6"/>
-    <text x="120" y="25" fill="#f8fafc" font-weight="bold" text-anchor="middle">Cấu Trúc Dữ Liệu</text>
-    <text x="270" y="25" fill="#f8fafc" font-weight="bold" text-anchor="middle">Khởi Tạo (Build)</text>
-    <text x="430" y="25" fill="#f8fafc" font-weight="bold" text-anchor="middle">Cập Nhật (Update)</text>
-    <text x="610" y="25" fill="#f8fafc" font-weight="bold" text-anchor="middle">Truy Vấn (Query)</text>
+    <rect x="0" y="0" width="740" height="40" fill="#F1F5F9" rx="6"/>
+    <text x="120" y="25" fill="#1E293B" font-weight="bold" text-anchor="middle">Cấu Trúc Dữ Liệu</text>
+    <text x="270" y="25" fill="#1E293B" font-weight="bold" text-anchor="middle">Khởi Tạo (Build)</text>
+    <text x="430" y="25" fill="#1E293B" font-weight="bold" text-anchor="middle">Cập Nhật (Update)</text>
+    <text x="610" y="25" fill="#1E293B" font-weight="bold" text-anchor="middle">Truy Vấn (Query)</text>
 
     <!-- Row 1: Prefix Sum -->
-    <text x="120" y="70" fill="#f8fafc" text-anchor="middle">Mảng Tiền Tố (Prefix Sum)</text>
-    <text x="270" y="70" fill="#4ade80" font-family="monospace" text-anchor="middle">O(N)</text>
-    <text x="430" y="70" fill="#f87171" font-family="monospace" text-anchor="middle">O(N) (Chậm)</text>
-    <text x="610" y="70" fill="#4ade80" font-family="monospace" text-anchor="middle">O(1) (Cực Nhanh)</text>
+    <text x="120" y="70" fill="#1E293B" text-anchor="middle">Mảng Tiền Tố (Prefix Sum)</text>
+    <text x="270" y="70" fill="#065F46" font-family="monospace" text-anchor="middle">O(N)</text>
+    <text x="430" y="70" fill="#B91C1C" font-family="monospace" text-anchor="middle">O(N) (Chậm)</text>
+    <text x="610" y="70" fill="#065F46" font-family="monospace" text-anchor="middle">O(1) (Cực Nhanh)</text>
 
     <!-- Row 2: Fenwick Tree -->
-    <text x="120" y="120" fill="#c084fc" font-weight="bold" text-anchor="middle">Fenwick Tree (BIT)</text>
-    <text x="270" y="120" fill="#4ade80" font-family="monospace" text-anchor="middle">O(N)</text>
-    <text x="430" y="120" fill="#4ade80" font-family="monospace" text-anchor="middle">O(log N)</text>
-    <text x="610" y="120" fill="#4ade80" font-family="monospace" text-anchor="middle">O(log N)</text>
+    <text x="120" y="120" fill="#7E22CE" font-weight="bold" text-anchor="middle">Fenwick Tree (BIT)</text>
+    <text x="270" y="120" fill="#065F46" font-family="monospace" text-anchor="middle">O(N)</text>
+    <text x="430" y="120" fill="#065F46" font-family="monospace" text-anchor="middle">O(log N)</text>
+    <text x="610" y="120" fill="#065F46" font-family="monospace" text-anchor="middle">O(log N)</text>
 
     <!-- Row 3: Segment Tree -->
-    <text x="120" y="170" fill="#38bdf8" font-weight="bold" text-anchor="middle">Segment Tree</text>
-    <text x="270" y="170" fill="#4ade80" font-family="monospace" text-anchor="middle">O(N)</text>
-    <text x="430" y="170" fill="#4ade80" font-family="monospace" text-anchor="middle">O(log N)</text>
-    <text x="610" y="170" fill="#4ade80" font-family="monospace" text-anchor="middle">O(log N)</text>
+    <text x="120" y="170" fill="#0369A1" font-weight="bold" text-anchor="middle">Segment Tree</text>
+    <text x="270" y="170" fill="#065F46" font-family="monospace" text-anchor="middle">O(N)</text>
+    <text x="430" y="170" fill="#065F46" font-family="monospace" text-anchor="middle">O(log N)</text>
+    <text x="610" y="170" fill="#065F46" font-family="monospace" text-anchor="middle">O(log N)</text>
 
     <!-- Note -->
-    <text x="370" y="215" fill="#facc15" font-size="13" text-anchor="middle">Quy tắc chọn: Dùng Fenwick Tree khi chỉ cần tính tổng/đếm nghịch thế (code ngắn). Dùng Segment Tree khi cần RMQ/Max/Min phức tạp.</text>
+    <text x="370" y="215" fill="#92400E" font-size="13" text-anchor="middle">Quy tắc chọn: Dùng Fenwick Tree khi chỉ cần tính tổng/đếm nghịch thế (code ngắn). Dùng Segment Tree khi cần RMQ/Max/Min phức tạp.</text>
   </g>
 </svg>

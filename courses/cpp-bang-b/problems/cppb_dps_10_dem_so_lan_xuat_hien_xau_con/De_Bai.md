@@ -1,17 +1,17 @@
 # Đếm Số Lần Xuất Hiện Xâu Con Rời Rạc (Distinct Subsequences)
 
 ## Bối cảnh
-Cho chuỗi $S$ và $T$. Cần đếm số dãy con khác nhau của $S$ bằng đúng chuỗi $T$.
+Trong bộ lọc từ khóa độc hại của mạng xã hội, hệ thống cần kiểm tra tần suất mà một từ khóa nhạy cảm $T$ xuất hiện dưới dạng chuỗi con rời rạc bên trong một bài viết $S$. Hai cách xuất hiện được tính là khác nhau nếu tập hợp các vị trí chỉ số ký tự được chọn trong bài viết $S$ là khác nhau.
 
 ## Nhiệm vụ
-Tính số cách chọn dãy con modulo $10^9+7$.
+Cho hai chuỗi ký tự $S$ và $T$. Hãy lập trình đếm số cách khác nhau để chọn ra chuỗi con trong $S$ bằng đúng chuỗi $T$, lấy dư cho $10^9 + 7$.
 
 ## Input
-- Dòng 1: Chuỗi $S$ ($1 \le |S| \le 2000$).
-- Dòng 2: Chuỗi $T$ ($1 \le |T| \le 500$).
+- Dòng 1: Chứa chuỗi văn bản $S$ ($1 \le |S| \le 2000$).
+- Dòng 2: Chứa chuỗi mẫu $T$ ($1 \le |T| \le 500$).
 
 ## Output
-- Số cách chọn theo modulo $10^9 + 7$.
+- In ra số cách xuất hiện hợp lệ theo modulo $10^9 + 7$.
 
 ## Sample 1
 ### Input
@@ -23,6 +23,10 @@ rabbit
 ```text
 3
 ```
+
+### Giải thích
+Với $S = \text{"rabbbit"}$ và $T = \text{"rabbit"}$:
+Trong chuỗi $S$ có 3 ký tự 'b' liên tiếp. Để tạo thành từ "rabbit", ta có thể loại bỏ 1 trong 3 ký tự 'b' đó. Do đó có đúng 3 cách chọn khác nhau để thu được từ "rabbit". Kết quả in ra là 3.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le |S| \le 2000, 1 \le |T| \le 500$.

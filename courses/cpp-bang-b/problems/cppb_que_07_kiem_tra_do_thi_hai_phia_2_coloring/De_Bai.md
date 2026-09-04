@@ -1,17 +1,17 @@
 # Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph)
 
 ## Bối cảnh
-Đồ thị hai phía là đồ thị có thể tô màu toàn bộ các đỉnh bằng 2 màu sao cho không có 2 đỉnh kề nhau nào cùng màu.
+Trong một hội thảo giao lưu quốc tế, có $N$ đại biểu và $M$ mối quan hệ quen biết lẫn nhau. Ban tổ chức muốn chia toàn bộ $N$ đại biểu vào đúng 2 phòng thảo luận khác nhau sao cho không có hai người nào quen nhau lại ngồi chung trong cùng một phòng (tương đương bài toán tô màu đồ thị bằng 2 màu sao cho hai đỉnh kề nhau luôn có màu khác nhau).
 
 ## Nhiệm vụ
-In `YES` nếu đồ thị là hai phía, ngược lại in `NO`.
+Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình kiểm tra xem đồ thị có phải là đồ thị hai phía hay không. Nếu có in ra `YES`, ngược lại in ra `NO`.
 
 ## Input
-- Dòng 1: $N, M$ ($1 \le N \le 10^5, 0 \le M \le 2 \cdot 10^5$).
-- $M$ dòng tiếp theo: Các cạnh vô hướng.
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u$ và $v$.
 
 ## Output
-- `YES` hoặc `NO`.
+- In ra `YES` nếu đồ thị là hai phía, ngược lại in ra `NO`.
 
 ## Sample 1
 ### Input
@@ -26,6 +26,10 @@ In `YES` nếu đồ thị là hai phía, ngược lại in `NO`.
 ```text
 YES
 ```
+
+### Giải thích
+Với đồ thị là hình vuông gồm 4 đỉnh có các cạnh: 1-2, 2-3, 3-4, 4-1:
+Ta có thể chia thành hai tập đỉnh độc lập: tập 1 gồm {1, 3} và tập 2 gồm {2, 4}. Không có hai đỉnh nào cùng tập có cạnh nối. Đồ thị là hai phía, kết quả in ra YES.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N \le 10^5, 0 \le M \le 2 \cdot 10^5$.

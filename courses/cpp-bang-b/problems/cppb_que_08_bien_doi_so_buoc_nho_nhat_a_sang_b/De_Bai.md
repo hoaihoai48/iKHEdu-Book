@@ -1,16 +1,16 @@
 # Biến Đổi Số Bước Nhỏ Nhất Từ A Sang B
 
 ## Bối cảnh
-Từ số $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc trừ 1 ($A - 1$).
+Một trò chơi giải đố toán học bắt đầu với số nguyên dương $A$. Tại mỗi bước, người chơi có thể thực hiện một trong hai thao tác: nhân đôi số hiện tại ($x \to 2x$) hoặc trừ số hiện tại đi 1 đơn vị ($x \to x - 1$). Hãy tìm số thao tác ít nhất để biến đổi số $A$ ban đầu thành đúng số mục tiêu $B$.
 
 ## Nhiệm vụ
-Tìm số thao tác ít nhất để biến đổi $A$ thành $B$.
+Cho hai số nguyên dương $A$ và $B$. Hãy lập trình tìm số bước biến đổi ít nhất từ $A$ thành $B$.
 
 ## Input
-- Một dòng chứa hai số nguyên $A$ và $B$ ($1 \le A, B \le 10^4$).
+- Một dòng duy nhất chứa hai số nguyên dương $A$ và $B$ ($1 \le A, B \le 10^4$).
 
 ## Output
-- Số thao tác ít nhất.
+- In ra trên một dòng duy nhất một số nguyên là số bước ít nhất.
 
 ## Sample 1
 ### Input
@@ -21,6 +21,12 @@ Tìm số thao tác ít nhất để biến đổi $A$ thành $B$.
 ```text
 2
 ```
+
+### Giải thích
+Để biến đổi từ $A = 4$ sang $B = 6$:
+- Bước 1: Trừ 1 đơn vị: $4 - 1 = 3$.
+- Bước 2: Nhân đôi: $3 \times 2 = 6$.
+Chỉ cần đúng 2 bước biến đổi, kết quả in ra là 2.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le A, B \le 10^4$.

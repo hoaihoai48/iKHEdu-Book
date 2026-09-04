@@ -1,17 +1,17 @@
 # Sắp Xếp Tô-pô (Topological Sort)
 
 ## Bối cảnh
-Cho đồ thị có hướng $N$ đỉnh $M$ cạnh. Hãy tìm một thứ tự tô-pô của các đỉnh (nếu có cạnh $u \to v$ thì $u$ phải đứng trước $v$).
+Một chương trình đào tạo kỹ sư công nghệ thông tin gồm $N$ môn học được đánh số từ $1$ đến $N$. Giữa các môn học có $M$ điều kiện môn tiên quyết dạng $u  × o v$ (nghĩa là sinh viên bắt buộc phải hoàn thành môn học $u$ trước khi được phép đăng ký môn học $v$). Ban đào tạo cần lập ra một lộ trình học tập hợp lệ thỏa mãn tất cả các điều kiện tiên quyết.
 
 ## Nhiệm vụ
-In ra thứ tự tô-pô hoặc -1 nếu đồ thị có chu trình.
+Cho đồ thị có hướng $N$ đỉnh $M$ cạnh không có chu trình. Hãy lập trình tìm một thứ tự sắp xếp tô-pô của các môn học.
 
 ## Input
-- Dòng 1: $N, M$ ($1 \le N \le 10^5, 0 \le M \le 2 \cdot 10^5$).
-- $M$ dòng tiếp theo: Mỗi dòng gồm cạnh có hướng $u \to v$.
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u$ và $v$ biểu diễn điều kiện môn $u$ học trước môn $v$.
 
 ## Output
-- Thứ tự tô-pô hoặc -1.
+- In ra trên một dòng gồm $N$ số nguyên là thứ tự các môn học hợp lệ, cách nhau bởi khoảng trắng.
 
 ## Sample 1
 ### Input
@@ -25,6 +25,10 @@ In ra thứ tự tô-pô hoặc -1 nếu đồ thị có chu trình.
 ```text
 1 4 2 3
 ```
+
+### Giải thích
+Với 3 môn học và các điều kiện: môn 1 trước môn 2 ($1  × o 2$), môn 2 trước môn 3 ($2  × o 3$):
+Lộ trình học tập bắt buộc duy nhất là: 1 2 3.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N \le 10^5, 0 \le M \le 2 \cdot 10^5$.

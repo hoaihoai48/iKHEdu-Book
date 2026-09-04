@@ -1,0 +1,812 @@
+[
+  {
+    "code": "CPPB-DP1-01",
+    "title": "Bậc Thang Cơ Bản",
+    "sample_inp": "3",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-DP1-02",
+    "title": "Chú Ếch Nhảy Chi Phí Nhỏ Nhất",
+    "sample_inp": "4\n10 30 40 20",
+    "sample_out": "30"
+  },
+  {
+    "code": "CPPB-DP1-03",
+    "title": "Chú Ếch Nhảy K Bước",
+    "sample_inp": "5 3\n10 30 40 50 20",
+    "sample_out": "30"
+  },
+  {
+    "code": "CPPB-DP1-04",
+    "title": "Đổi Tiền Số Xu Ít Nhất",
+    "sample_inp": "3 11\n1 5 6",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-DP1-05",
+    "title": "Đếm Số Cách Đổi Tiền",
+    "sample_inp": "3 9\n2 3 5",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-DP1-06",
+    "title": "Tổng Đoạn Con Không Liền Kề Lớn Nhất",
+    "sample_inp": "4\n1 2 3 1",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DP1-07",
+    "title": "Lát Gạch Bảng 2xN",
+    "sample_inp": "4",
+    "sample_out": "5"
+  },
+  {
+    "code": "CPPB-DP1-08",
+    "title": "Lát Gạch Bảng 3xN",
+    "sample_inp": "2",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-DP1-09",
+    "title": "Dãy Con Tăng Dài Nhất LIS O(N^2)",
+    "sample_inp": "6\n10 20 10 30 20 50",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DP1-10",
+    "title": "Dãy Con Tăng Dài Nhất LIS O(N log N)",
+    "sample_inp": "6\n5 2 7 4 3 8",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-DP1-11",
+    "title": "Truy Vết Dãy Con Tăng Dài Nhất",
+    "sample_inp": "5\n2 1 4 3 5",
+    "sample_out": "3\n2 4 5"
+  },
+  {
+    "code": "CPPB-DP1-12",
+    "title": "Dãy Con Giảm Dài Nhất (LDS)",
+    "sample_inp": "5\n10 9 2 5 3 7 101 18",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DP1-13",
+    "title": "Dãy Con Hình Sóng Núi (Longest Bitonic Subsequence)",
+    "sample_inp": "8\n1 11 2 10 4 5 2 1",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-DP1-14",
+    "title": "Tổng Dãy Con Tăng Lớn Nhất (MSIS)",
+    "sample_inp": "7\n1 101 2 3 100 4 5",
+    "sample_out": "106"
+  },
+  {
+    "code": "CPPB-DP1-15",
+    "title": "Tối Ưu Hóa Chuỗi Dự Án Năng Lượng",
+    "sample_inp": "3\n10 100\n5 50\n20 200",
+    "sample_out": "350"
+  },
+  {
+    "code": "CPPB-DP2-01",
+    "title": "Đếm Số Cách Đi Trên Lưới",
+    "sample_inp": "3 3",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-DP2-02",
+    "title": "Đường Đi Trên Lưới Có Vật Cản",
+    "sample_inp": "3 3\n…\n.#.\n…",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-DP2-03",
+    "title": "Đường Đi Chi Phí Nhỏ Nhất Trên Lưới",
+    "sample_inp": "3 3\n1 3 1\n1 5 1\n4 2 1",
+    "sample_out": "7"
+  },
+  {
+    "code": "CPPB-DP2-04",
+    "title": "Nhặt Vàng Trên Lưới",
+    "sample_inp": "3 3\n1 2 3\n0 5 0\n4 1 2",
+    "sample_out": "13"
+  },
+  {
+    "code": "CPPB-DP2-05",
+    "title": "Cái Túi 0/1 Cơ Bản (0/1 Knapsack)",
+    "sample_inp": "4 7\n1 1\n3 4\n4 5\n5 7",
+    "sample_out": "9"
+  },
+  {
+    "code": "CPPB-DP2-06",
+    "title": "Cái Túi Không Giới Hạn (Unbounded Knapsack)",
+    "sample_inp": "3 8\n2 10\n3 15\n4 40",
+    "sample_out": "80"
+  },
+  {
+    "code": "CPPB-DP2-07",
+    "title": "Truy Vết Món Đồ Cái Túi 0/1",
+    "sample_inp": "3 4\n1 15\n3 20\n4 30",
+    "sample_out": "35\n2\n1 2"
+  },
+  {
+    "code": "CPPB-DP2-08",
+    "title": "Chia Tập Thành Hai Phần Bằng Nhau (Partition Equal Subset Sum)",
+    "sample_inp": "4\n1 5 11 5",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-DP2-09",
+    "title": "Chia Tập Chênh Lệch Nhỏ Nhất (Minimum Subset Sum Difference)",
+    "sample_inp": "4\n1 6 11 5",
+    "sample_out": "1"
+  },
+  {
+    "code": "CPPB-DP2-10",
+    "title": "Tam Giác Số Tổng Lớn Nhất (Triangle DP)",
+    "sample_inp": "4\n2\n3 4\n6 5 7\n4 1 8 3",
+    "sample_out": "21"
+  },
+  {
+    "code": "CPPB-DP2-11",
+    "title": "Đếm Số Tập Con Có Tổng Bằng S",
+    "sample_inp": "4 5\n1 2 3 4",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-DP2-12",
+    "title": "Cái Túi Khối Lượng Cực Đại W <= 10^9 (Đổi Trục DP)",
+    "sample_inp": "3 8\n3 30\n4 50\n5 60",
+    "sample_out": "90"
+  },
+  {
+    "code": "CPPB-DP2-13",
+    "title": "Hình Vuông Toàn 1 Lớn Nhất (Maximal Square)",
+    "sample_inp": "4 5\n10100\n10111\n11111\n10010",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DP2-14",
+    "title": "Đổi Tiền Giới Hạn Số Lượng (Bounded Knapsack)",
+    "sample_inp": "3 11\n1 2\n5 2\n6 1",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-DP2-15",
+    "title": "Tối Ưu Hóa Túi Đồ Hỗn Hợp (Hybrid Knapsack)",
+    "sample_inp": "3 10\n1 4 20\n2 3 15\n1 5 30",
+    "sample_out": "50"
+  },
+  {
+    "code": "CPPB-DPS-01",
+    "title": "Xâu Con Chung Dài Nhất Cơ Bản (LCS)",
+    "sample_inp": "AGGTAB\nGXTXAYB",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DPS-02",
+    "title": "Truy Vết Xâu Con Chung Dài Nhất",
+    "sample_inp": "ABCBDAB\nBDCAB",
+    "sample_out": "4\nBDAB"
+  },
+  {
+    "code": "CPPB-DPS-03",
+    "title": "Khoảng Cách Chỉnh Sửa (Edit Distance / Levenshtein)",
+    "sample_inp": "horse\nros",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-DPS-04",
+    "title": "Chỉ Dùng Phép Xóa Biến Đổi Hai Xâu",
+    "sample_inp": "sea\neat",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-DPS-05",
+    "title": "Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Subsequence)",
+    "sample_inp": "bbbab",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DPS-06",
+    "title": "Đoạn Con Đối Xứng Liên Tiếp Dài Nhất",
+    "sample_inp": "babad",
+    "sample_out": "3\nbab"
+  },
+  {
+    "code": "CPPB-DPS-07",
+    "title": "Đếm Số Đoạn Con Đối Xứng Liên Tiếp",
+    "sample_inp": "aaa",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-DPS-08",
+    "title": "Chèn Ít Ký Tự Nhất Tạo Chuỗi Đối Xứng",
+    "sample_inp": "zzazz",
+    "sample_out": "0"
+  },
+  {
+    "code": "CPPB-DPS-09",
+    "title": "Xâu Mẹ Chung Ngắn Nhất (Shortest Common Supersequence)",
+    "sample_inp": "abac\ncab",
+    "sample_out": "5"
+  },
+  {
+    "code": "CPPB-DPS-10",
+    "title": "Đếm Số Lần Xuất Hiện Xâu Con Rời Rạc (Distinct Subsequences)",
+    "sample_inp": "rabbbit\nrabbit",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-DPS-11",
+    "title": "Khớp Chuỗi Ký Tự Đại Diện (Wildcard Matching)",
+    "sample_inp": "adceb\nab",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-DPS-12",
+    "title": "Xâu Con Chung Của Ba Chuỗi (LCS 3 Strings)",
+    "sample_inp": "geeks\ngeek\ngeekfor",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-DPS-13",
+    "title": "Xóa Ít Ký Tự Nhất Để Chuỗi Đối Xứng",
+    "sample_inp": "aebcbda",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-DPS-14",
+    "title": "Độ Dài LCS Giữa Hai Chuỗi Gen",
+    "sample_inp": "ACCGGTCGAGTGCGCGGAAGCCGGCCGAA\nGTCGTTCGGAATGCCGTTGCTCTGTAAA",
+    "sample_out": "20"
+  },
+  {
+    "code": "CPPB-DPS-15",
+    "title": "Tách Từ Trong Chuỗi (Word Break)",
+    "sample_inp": "leetcode\n2\nleet\ncode",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-STL-01",
+    "title": "Đếm Số Phần Tử Phân Biệt",
+    "sample_inp": "5\n2 3 2 2 3",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-STL-02",
+    "title": "Bảng Tra Cứu Tần Suất Từ Khóa",
+    "sample_inp": "4\napple\nbanana\napple\norange",
+    "sample_out": "apple 2\nbanana 1\norange 1"
+  },
+  {
+    "code": "CPPB-STL-03",
+    "title": "Nén Tọa Độ Mảng Số Lớn",
+    "sample_inp": "5\n100 20000 50 20000 100",
+    "sample_out": "1 2 0 2 1"
+  },
+  {
+    "code": "CPPB-STL-04",
+    "title": "Tìm Phần Tử Nhỏ Nhất Lớn Hơn Hoặc Bằng X",
+    "sample_inp": "5 3\n10 20 30 40 50\n25\n50\n60",
+    "sample_out": "30\n50\n-1"
+  },
+  {
+    "code": "CPPB-STL-05",
+    "title": "Hàng Đợi Ưu Tiên K Phần Tử Lớn Nhất",
+    "sample_inp": "6 3\n10 50 30 20 60 40",
+    "sample_out": "60 50 40"
+  },
+  {
+    "code": "CPPB-STL-06",
+    "title": "Quản Lý Tập Hợp Đa Trùng Lặp (Multiset)",
+    "sample_inp": "5\n1 5\n1 5\n3 5\n2 5\n3 5",
+    "sample_out": "2\n1"
+  },
+  {
+    "code": "CPPB-STL-07",
+    "title": "Hợp Nhất Các Đoạn Số (Merge Intervals)",
+    "sample_inp": "4\n1 3\n2 6\n8 10\n15 18",
+    "sample_out": "3\n1 6\n8 10\n15 18"
+  },
+  {
+    "code": "CPPB-STL-08",
+    "title": "Tìm Trung Vị Động Trong Luồng Dữ Liệu",
+    "sample_inp": "4\n5 15 1 3",
+    "sample_out": "5 5 5 3"
+  },
+  {
+    "code": "CPPB-STL-09",
+    "title": "Đếm Số Phần Tử Phân Biệt Trong Cửa Sổ K",
+    "sample_inp": "7 4\n1 2 1 3 4 2 3",
+    "sample_out": "3 4 4 3"
+  },
+  {
+    "code": "CPPB-STL-10",
+    "title": "Nối Dây Chi Phí Nhỏ Nhất (Huffman Greedy)",
+    "sample_inp": "4\n4 3 2 6",
+    "sample_out": "29"
+  },
+  {
+    "code": "CPPB-STL-11",
+    "title": "Lập Lịch Công Việc Số Máy Chủ Ít Nhất",
+    "sample_inp": "3\n0 30\n5 10\n15 20",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-STL-12",
+    "title": "Đếm Cặp Số Có Hiệu Bằng K",
+    "sample_inp": "5 2\n1 5 3 4 2",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-STL-13",
+    "title": "Phần Tử Xuất Hiện Nhiều Nhất (Mode)",
+    "sample_inp": "6\n1 3 2 1 4 1",
+    "sample_out": "1 3"
+  },
+  {
+    "code": "CPPB-STL-14",
+    "title": "Cặp Điểm Gần Nhất (Closest Pair Of Points)",
+    "sample_inp": "4\n0 0\n1 2\n3 1\n4 0",
+    "sample_out": "5"
+  },
+  {
+    "code": "CPPB-STL-15",
+    "title": "Hệ Thống Xếp Hạng Thi Đấu Dynamic",
+    "sample_inp": "4\n1 Alice 100\n1 Bob 150\n2 Alice\n1 Alice 60",
+    "sample_out": "100"
+  },
+  {
+    "code": "CPPB-STK-01",
+    "title": "Kiểm Tra Dãy Ngoặc Đúng Đơn Loại",
+    "sample_inp": "(()())",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-STK-02",
+    "title": "Dãy Ngoặc Hỗn Hợp Nhiều Loại",
+    "sample_inp": "{[()]}",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-STK-03",
+    "title": "Đánh Giá Biểu Thức Hậu Tố (Reverse Polish Notation)",
+    "sample_inp": "5\n2 1 + 3 *",
+    "sample_out": "9"
+  },
+  {
+    "code": "CPPB-STK-04",
+    "title": "Xóa Ký Tự Trùng Lặp Liền Kề",
+    "sample_inp": "abbaca",
+    "sample_out": "ca"
+  },
+  {
+    "code": "CPPB-STK-05",
+    "title": "Phần Tử Lớn Hơn Tiếp Theo (Next Greater Element)",
+    "sample_inp": "4\n4 5 2 25",
+    "sample_out": "5 25 25 -1"
+  },
+  {
+    "code": "CPPB-STK-06",
+    "title": "Phần Tử Nhỏ Hơn Gần Nhất Bên Trái (Previous Smaller Element)",
+    "sample_inp": "5\n4 5 2 10 8",
+    "sample_out": "-1 4 -1 2 2"
+  },
+  {
+    "code": "CPPB-STK-07",
+    "title": "Độ Dài Đoạn Ngoặc Đúng Liên Tiếp Dài Nhất",
+    "sample_inp": ")()())",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-STK-08",
+    "title": "Xóa K Chữ Số Để Được Số Nhỏ Nhất",
+    "sample_inp": "1432219 3",
+    "sample_out": "1219"
+  },
+  {
+    "code": "CPPB-STK-09",
+    "title": "Hình Chữ Nhật Lớn Nhất Trên Histogram",
+    "sample_inp": "6\n2 1 5 6 2 3",
+    "sample_out": "10"
+  },
+  {
+    "code": "CPPB-STK-10",
+    "title": "Hứng Nước Mưa (Trapping Rain Water)",
+    "sample_inp": "12\n0 1 0 2 1 0 1 3 2 1 2 1",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-STK-11",
+    "title": "Hình Chữ Nhật Toàn 1 Lớn Nhất Trong Ma Trận",
+    "sample_inp": "4 5\n10100\n10111\n11111\n10010",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-STK-12",
+    "title": "Tổng Giá Trị Nhỏ Nhất Của Mọi Đoạn Con",
+    "sample_inp": "4\n3 1 2 4",
+    "sample_out": "17"
+  },
+  {
+    "code": "CPPB-STK-13",
+    "title": "Next Greater Element Trên Mảng Vòng Tròn",
+    "sample_inp": "3\n1 2 1",
+    "sample_out": "2 -1 2"
+  },
+  {
+    "code": "CPPB-STK-14",
+    "title": "Tầm Nhìn Tòa Tháp (Stock Span)",
+    "sample_inp": "7\n100 80 60 70 60 75 85",
+    "sample_out": "1 1 1 2 1 4 6"
+  },
+  {
+    "code": "CPPB-STK-15",
+    "title": "Đánh Giá Biểu Thức Trung Tố (Infix Expression)",
+    "sample_inp": "3+2*2",
+    "sample_out": "7"
+  },
+  {
+    "code": "CPPB-QUE-01",
+    "title": "Cài Đặt Hàng Đợi Cơ Bản",
+    "sample_inp": "5\n1 10\n1 20\n3\n2\n3",
+    "sample_out": "10\n20"
+  },
+  {
+    "code": "CPPB-QUE-02",
+    "title": "Sinh Chuỗi Số Nhị Phân Bằng Queue",
+    "sample_inp": "4",
+    "sample_out": "1 10 11 100"
+  },
+  {
+    "code": "CPPB-QUE-03",
+    "title": "BFS Tìm Bước Đi Ngắn Nhất Đồ Thị",
+    "sample_inp": "4 4\n1 2\n2 3\n3 4\n1 3",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-QUE-04",
+    "title": "Truy Vết Lộ Trình Ngắn Nhất Bằng BFS",
+    "sample_inp": "5 5\n1 2\n2 3\n3 5\n1 4\n4 5",
+    "sample_out": "3\n1 4 5"
+  },
+  {
+    "code": "CPPB-QUE-05",
+    "title": "Min Mọi Cửa Sổ Trượt Bằng Monotonic Deque O(N)",
+    "sample_inp": "8 3\n1 3 -1 -3 5 3 6 7",
+    "sample_out": "-1 -3 -3 -3 3 3"
+  },
+  {
+    "code": "CPPB-QUE-06",
+    "title": "Max Mọi Cửa Sổ Trượt Bằng Monotonic Deque O(N)",
+    "sample_inp": "8 3\n1 3 -1 -3 5 3 6 7",
+    "sample_out": "3 3 5 5 6 7"
+  },
+  {
+    "code": "CPPB-QUE-07",
+    "title": "Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph)",
+    "sample_inp": "4 4\n1 2\n2 3\n3 4\n4 1",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-QUE-08",
+    "title": "Biến Đổi Số Bước Nhỏ Nhất Từ A Sang B",
+    "sample_inp": "4 6",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-QUE-09",
+    "title": "0-1 BFS Tìm Đường Đi Ngắn Nhất Trọng Số 0/1",
+    "sample_inp": "4 4\n1 2 1\n2 3 0\n3 4 1\n1 4 1",
+    "sample_out": "1"
+  },
+  {
+    "code": "CPPB-QUE-10",
+    "title": "Đoạn Con Tổng Lớn Nhất Độ Dài Tối Đa K",
+    "sample_inp": "5 3\n-1 2 4 -3 5",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-QUE-11",
+    "title": "Trò Chơi Vòng Tròn Josephus",
+    "sample_inp": "7 3",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-QUE-12",
+    "title": "Khoảng Cách Đến Trạm Cứu Hỏa Gần Nhất (Multi-Source BFS)",
+    "sample_inp": "4 3 2\n1 4\n1 2\n2 3\n3 4",
+    "sample_out": "0 1 1 0"
+  },
+  {
+    "code": "CPPB-QUE-13",
+    "title": "Đoạn Con Dài Nhất Có Độ Chênh Lệch Max-Min <= C",
+    "sample_inp": "6 2\n4 2 2 2 4 4",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-QUE-14",
+    "title": "Chọn Đoạn Tối Đa Không Quá K Phần Tử Liền Kề",
+    "sample_inp": "5 2\n1 2 3 4 5",
+    "sample_out": "12"
+  },
+  {
+    "code": "CPPB-QUE-15",
+    "title": "Đua Xe Mê Cung Đổi Hướng Ít Nhất (0-1 BFS State)",
+    "sample_inp": "3 3\nS..\n.#.\n..E",
+    "sample_out": "1"
+  },
+  {
+    "code": "CPPB-GRA-01",
+    "title": "Chuyển Danh Sách Cạnh Sang Danh Sách Kề",
+    "sample_inp": "3 2\n1 2\n1 3",
+    "sample_out": "2 2 3\n1 1\n1 1"
+  },
+  {
+    "code": "CPPB-GRA-02",
+    "title": "Duyệt Đồ Thị Theo Chiều Sâu (DFS Traversal)",
+    "sample_inp": "4 3 1\n1 2\n2 3\n1 4",
+    "sample_out": "1 2 3 4"
+  },
+  {
+    "code": "CPPB-GRA-03",
+    "title": "Duyệt Đồ Thị Theo Chiều Rộng (BFS Traversal)",
+    "sample_inp": "4 3 1\n1 2\n1 3\n2 4",
+    "sample_out": "1 2 3 4"
+  },
+  {
+    "code": "CPPB-GRA-04",
+    "title": "Đếm Số Thành Phần Liên Thông",
+    "sample_inp": "5 3\n1 2\n2 3\n4 5",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-GRA-05",
+    "title": "Kích Thước Thành Phần Liên Thông Lớn Nhất",
+    "sample_inp": "5 3\n1 2\n2 3\n4 5",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRA-06",
+    "title": "Kiểm Tra Đường Đi Giữa Hai Đỉnh",
+    "sample_inp": "4 2 1 4\n1 2\n2 3",
+    "sample_out": "NO"
+  },
+  {
+    "code": "CPPB-GRA-07",
+    "title": "Phát Hiện Chu Trình Trên Đồ Thị Vô Hướng",
+    "sample_inp": "3 3\n1 2\n2 3\n3 1",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-GRA-08",
+    "title": "Đường Đi Ngắn Nhất Trên Đồ Thị Không Trọng Số",
+    "sample_inp": "4 4\n1 2\n2 3\n3 4\n1 3",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-GRA-09",
+    "title": "Kiểm Tra Đồ Thị Cây (Tree Verification)",
+    "sample_inp": "4 3\n1 2\n2 3\n3 4",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-GRA-10",
+    "title": "Sắp Xếp Tô-pô (Topological Sort)",
+    "sample_inp": "4 3\n1 2\n2 3\n1 3",
+    "sample_out": "1 4 2 3"
+  },
+  {
+    "code": "CPPB-GRA-11",
+    "title": "Chu Trình Ngắn Nhất Trên Đồ Thị (Girth)",
+    "sample_inp": "5 6\n1 2\n2 3\n3 1\n3 4\n4 5\n5 3",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRA-12",
+    "title": "Đếm Cặp Đỉnh Không Thể Đi Tới Nhau",
+    "sample_inp": "5 2\n1 2\n3 4",
+    "sample_out": "8"
+  },
+  {
+    "code": "CPPB-GRA-13",
+    "title": "Lan Tỏa Virus Trong Mạng Lưới (Multi-Source BFS)",
+    "sample_inp": "4 3 1\n1\n1 2\n2 3\n3 4",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRA-14",
+    "title": "Đếm Số Cạnh Cầu Trên Đồ Thị (Bridges)",
+    "sample_inp": "5 5\n1 2\n2 3\n3 1\n3 4\n4 5",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-GRA-15",
+    "title": "Xây Dựng Thêm Đường Nối Toàn Mạng (Building Roads)",
+    "sample_inp": "4 2\n1 2\n3 4",
+    "sample_out": "1\n1 3"
+  },
+  {
+    "code": "CPPB-GRD-01",
+    "title": "Đếm Số Ô Kề Cạnh Hợp Lệ (4 Hướng)",
+    "sample_inp": "3 3 0 0",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-GRD-02",
+    "title": "Đếm Số Lượng Hòn Đảo (Count Islands)",
+    "sample_inp": "4 5\n11000\n11000\n00100\n00011",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRD-03",
+    "title": "Diện Tích Hòn Đảo Lớn Nhất (Max Area of Island)",
+    "sample_inp": "4 5\n11000\n11000\n00100\n00011",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-GRD-04",
+    "title": "Tìm Đường Thoát Khỏi Mê Cung BFS",
+    "sample_inp": "5 8\n########\n#.A#…#\n#.##.#B#\n#……#\n########",
+    "sample_out": "9"
+  },
+  {
+    "code": "CPPB-GRD-05",
+    "title": "Truy Vết Đường Đi Mê Cung (L, R, U, D)",
+    "sample_inp": "5 8\n########\n#.A#…#\n#.##.#B#\n#……#\n########",
+    "sample_out": "YES\n9\nLDDRRRRRU"
+  },
+  {
+    "code": "CPPB-GRD-06",
+    "title": "Đếm Số Ô Vùng Kín Không Thông Ra Biên",
+    "sample_inp": "4 4\n1111\n1001\n1101\n1111",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRD-07",
+    "title": "Chu Vi Hòn Đảo (Island Perimeter)",
+    "sample_inp": "4 4\n0100\n1110\n0100\n1100",
+    "sample_out": "16"
+  },
+  {
+    "code": "CPPB-GRD-08",
+    "title": "Nước Tràn Mê Cung (Multi-Source BFS)",
+    "sample_inp": "3 3\nW..\n.##\n..E",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-GRD-09",
+    "title": "Bước Nhảy Quân Mã Ngắn Nhất (Knight Moves)",
+    "sample_inp": "8 8 0 0 7 7",
+    "sample_out": "6"
+  },
+  {
+    "code": "CPPB-GRD-10",
+    "title": "Đường Kính Của Cây (Tree Diameter)",
+    "sample_inp": "5\n1 2\n1 3\n3 4\n3 5",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRD-11",
+    "title": "Trọng Tâm Của Cây (Tree Centroid)",
+    "sample_inp": "5\n1 2\n2 3\n3 4\n3 5",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRD-12",
+    "title": "Cổng Dịch Chuyển Tức Thời (Teleport Maze)",
+    "sample_inp": "3 3\n..A\n.##\nA..",
+    "sample_out": "2"
+  },
+  {
+    "code": "CPPB-GRD-13",
+    "title": "Lây Lan Quả Cam Hỏng (Rotting Oranges)",
+    "sample_inp": "3 3\n211\n110\n011",
+    "sample_out": "4"
+  },
+  {
+    "code": "CPPB-GRD-14",
+    "title": "Hòn Đảo Nhân Tạo Lớn Nhất (Making A Large Island)",
+    "sample_inp": "2 2\n10\n01",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-GRD-15",
+    "title": "Thoát Khỏi Mê Cung Quái Vật (Monsters Maze)",
+    "sample_inp": "5 8\n########\n#M..A..#\n#.#.M#.#\n#M#..#..#\n#.######",
+    "sample_out": "YES"
+  },
+  {
+    "code": "CPPB-RNG-01",
+    "title": "Cài Đặt Fenwick Tree Tính Tổng Đoạn (Range Sum)",
+    "sample_inp": "5 3\n1 2 3 4 5\n2 1 3\n1 2 10\n2 1 3",
+    "sample_out": "6\n16"
+  },
+  {
+    "code": "CPPB-RNG-02",
+    "title": "Cài Đặt Segment Tree Tìm Min Đoạn (RMQ)",
+    "sample_inp": "5 3\n5 2 4 1 3\n2 1 3\n1 4 10\n2 3 5",
+    "sample_out": "2\n3"
+  },
+  {
+    "code": "CPPB-RNG-03",
+    "title": "Cập Nhật Đoạn & Truy Vấn Điểm (Range Update Point Query)",
+    "sample_inp": "5 3\n1 2 3 4 5\n1 2 4 5\n2 3\n2 1",
+    "sample_out": "8\n1"
+  },
+  {
+    "code": "CPPB-RNG-04",
+    "title": "Tìm Max Đoạn & Đếm Số Lần Xuất Hiện",
+    "sample_inp": "5 3\n2 5 3 5 1\n2 1 5\n1 3 5\n2 1 5",
+    "sample_out": "5 2\n5 3"
+  },
+  {
+    "code": "CPPB-RNG-05",
+    "title": "Đếm Số Cặp Nghịch Thế (Inversion Count)",
+    "sample_inp": "5\n2 4 1 3 5",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-RNG-06",
+    "title": "Truy Vấn Ước Chung Lớn Nhất Đoạn (Range GCD)",
+    "sample_inp": "5 3\n2 4 6 8 10\n2 1 3\n1 2 12\n2 1 3",
+    "sample_out": "2\n2"
+  },
+  {
+    "code": "CPPB-RNG-07",
+    "title": "Tìm Phần Tử Thứ K Nhỏ Nhất (K-th Element on BIT)",
+    "sample_inp": "5\n1 10\n1 20\n1 15\n2 2\n2 3",
+    "sample_out": "15\n20"
+  },
+  {
+    "code": "CPPB-RNG-08",
+    "title": "Tìm Vị Trí Đầu Tiên Có Giá Trị Lớn Hơn Hoặc Bằng X",
+    "sample_inp": "5 3\n1 3 2 4 5\n2 1 5 3\n1 2 1\n2 1 5 3",
+    "sample_out": "2\n4"
+  },
+  {
+    "code": "CPPB-RNG-09",
+    "title": "Dãy Con Tăng Dài Nhất LIS Bằng Fenwick Tree",
+    "sample_inp": "6\n5 2 7 4 3 8",
+    "sample_out": "3"
+  },
+  {
+    "code": "CPPB-RNG-10",
+    "title": "Đoạn Con Có Tổng Lớn Nhất Trên Đoạn (Maximum Subarray Query)",
+    "sample_inp": "5 3\n1 2 -5 4 5\n2 1 5\n1 3 10\n2 1 5",
+    "sample_out": "9\n22"
+  },
+  {
+    "code": "CPPB-RNG-11",
+    "title": "Đếm Số Điểm Trong Hình Chữ Nhật (2D Range Query)",
+    "sample_inp": "3 2\n1 1\n2 2\n3 3\n1 1 2 2\n2 2 4 4",
+    "sample_out": "2\n2"
+  },
+  {
+    "code": "CPPB-RNG-12",
+    "title": "Cập Nhật Phân Đoạn Nâng Cao",
+    "sample_inp": "5 3\n1 2 3 4 5\n2 1 3\n1 2 10\n2 1 3",
+    "sample_out": "6\n16"
+  },
+  {
+    "code": "CPPB-RNG-13",
+    "title": "Cây Fenwick 2D Tính Tổng Hình Chữ Nhật (2D BIT)",
+    "sample_inp": "3 3 3\n1 1 1 5\n1 2 2 10\n2 1 1 2 2",
+    "sample_out": "15"
+  },
+  {
+    "code": "CPPB-RNG-14",
+    "title": "Lazy Propagation — Cập Nhật & Truy Vấn Đoạn (Range Add Range Sum)",
+    "sample_inp": "5 3\n1 2 3 4 5\n1 2 4 2\n2 1 5\n2 2 4",
+    "sample_out": "21\n15"
+  },
+  {
+    "code": "CPPB-RNG-15",
+    "title": "Hệ Thống Quản Lý Dữ Liệu Olympic (Range Master)",
+    "sample_inp": "5 3\n1 2 3 4 5\n1 2 4 2\n2 1 5\n2 2 4",
+    "sample_out": "21\n15"
+  }
+]

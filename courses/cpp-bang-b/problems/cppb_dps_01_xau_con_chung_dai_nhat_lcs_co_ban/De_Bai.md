@@ -1,17 +1,18 @@
 # Xâu Con Chung Dài Nhất Cơ Bản (LCS)
 
 ## Bối cảnh
-Cho hai chuỗi ký tự $S$ và $T$. Một xâu con chung là một chuỗi xuất hiện trong cả hai chuỗi theo đúng thứ tự tương đối nhưng không nhất thiết phải liền kề.
+Trong lĩnh vực xử lý ngôn ngữ tự nhiên và kiểm tra đạo văn số học, hai văn bản số được chuyển hóa thành hai chuỗi ký tự $S$ và $T$. Một chuỗi con chung là một chuỗi các ký tự cùng xuất hiện trong cả hai văn bản theo đúng thứ tự tương đối ban đầu nhưng không nhất thiết phải đứng liền kề nhau. Các nhà nghiên cứu cần xác định độ dài chuỗi con chung dài nhất giữa hai văn bản để đo lường mức độ tương đồng nội dung.
 
 ## Nhiệm vụ
-Tìm độ dài của xâu con chung dài nhất giữa $S$ và $T$.
+Cho hai chuỗi ký tự $S$ và $T$. Hãy lập trình tìm độ dài của xâu con chung dài nhất của hai chuỗi đó.
 
 ## Input
-- Dòng 1: Chuỗi ký tự $S$ ($1 \le |S| \le 2000$).
-- Dòng 2: Chuỗi ký tự $T$ ($1 \le |T| \le 2000$).
+- Dòng 1: Chứa chuỗi ký tự $S$ ($1 \le |S| \le 2000$).
+- Dòng 2: Chứa chuỗi ký tự $T$ ($1 \le |T| \le 2000$).
+Các chuỗi chỉ chứa các ký tự chữ cái tiếng Anh in hoa hoặc in thường.
 
 ## Output
-- Độ dài LCS.
+- In ra trên một dòng duy nhất một số nguyên là độ dài xâu con chung dài nhất.
 
 ## Sample 1
 ### Input
@@ -23,6 +24,10 @@ GXTXAYB
 ```text
 4
 ```
+
+### Giải thích
+Với hai xâu $S = \text{"ABCBDAB"}$ và $T = \text{"BDCAB"}$:
+Xâu con chung dài nhất có thể tìm được là $\text{"BCAB"}$ (hoặc $\text{"BDAB"}$) có độ dài đúng bằng 4.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le |S|, |T| \le 2000$.

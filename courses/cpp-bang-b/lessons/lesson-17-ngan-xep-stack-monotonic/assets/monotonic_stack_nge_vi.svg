@@ -1,27 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
-  <rect width="900" height="380" fill="#0f172a" rx="16"/>
-  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">MONOTONIC STACK: TÌM PHẦN TỬ LỚN HƠN TIẾP THEO (NEXT GREATER ELEMENT)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#64748B" flood-opacity="0.08" />
+    </filter>
+  </defs>
 
-  <!-- Array visual -->
-  <g transform="translate(100, 80)">
-    <text x="0" y="25" fill="#94a3b8" font-size="14">Mảng A = [ 4, 2, 1, 5, 3 ]</text>
+  <!-- Background Canvas -->
+  <rect width="920" height="420" rx="16" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2"/>
 
-    <rect x="0" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
-    <text x="40" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">4</text>
-    <rect x="90" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
-    <text x="130" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">2</text>
-    <rect x="180" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
-    <text x="220" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">1</text>
-    <rect x="270" y="50" width="80" height="50" fill="#854d0e" stroke="#facc15" rx="6"/>
-    <text x="310" y="80" fill="#f8fafc" font-size="18" font-family="monospace" font-weight="bold" text-anchor="middle">5</text>
-    <rect x="360" y="50" width="80" height="50" fill="#1e293b" stroke="#334155" rx="6"/>
-    <text x="400" y="80" fill="#f8fafc" font-size="18" font-family="monospace" text-anchor="middle">3</text>
+  <!-- Header -->
+  <text x="40" y="38" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Monotonic Stack: Tìm Phần Tử Lớn Hơn Tiếp Theo (NGE)</text>
+  <text x="40" y="62" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="13">Bất biến duy trì các chỉ số i có giá trị A[i] giảm dần nghiêm ngặt trên ngăn xếp</text>
+
+  <!-- Input Array Card -->
+  <g transform="translate(40, 85)" filter="url(#cardShadow)">
+    <rect width="840" height="105" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="25" y="28" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">MẢNG ĐẦU VÀO A = [ 4, 2, 1, 5, 3 ]</text>
+
+    <!-- 5 Cells: width 80, gap 16 -->
+    <!-- Cell 0: 4 -->
+    <g transform="translate(25, 40)">
+      <rect width="70" height="46" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="35" y="28" fill="#1E293B" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">4</text>
+      <text x="35" y="60" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 0</text>
+    </g>
+    <!-- Cell 1: 2 -->
+    <g transform="translate(105, 40)">
+      <rect width="70" height="46" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="35" y="28" fill="#1E293B" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">2</text>
+      <text x="35" y="60" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 1</text>
+    </g>
+    <!-- Cell 2: 1 -->
+    <g transform="translate(185, 40)">
+      <rect width="70" height="46" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="35" y="28" fill="#1E293B" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">1</text>
+      <text x="35" y="60" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 2</text>
+    </g>
+    <!-- Cell 3: 5 (Current Key Element) -->
+    <g transform="translate(265, 40)">
+      <rect width="70" height="46" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2.5"/>
+      <text x="35" y="28" fill="#92400E" font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">5</text>
+      <text x="35" y="60" fill="#D97706" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">i = 3 (Đang xét)</text>
+    </g>
+    <!-- Cell 4: 3 -->
+    <g transform="translate(345, 40)">
+      <rect width="70" height="46" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="35" y="28" fill="#1E293B" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">3</text>
+      <text x="35" y="60" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">i = 4</text>
+    </g>
+
+    <!-- Side Note inside Array Card -->
+    <g transform="translate(450, 22)">
+      <rect width="365" height="68" rx="8" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="15" y="22" fill="#0369A1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Trạng thái Stack trước khi gặp 5:</text>
+      <text x="15" y="42" fill="#0C4A6E" font-family="monospace" font-size="12">st = [ đáy: 4 (i=0), 2 (i=1), đỉnh: 1 (i=2) ]</text>
+      <text x="15" y="58" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11">Phần tử 5 lớn hơn tất cả phần tử hiện có trong Stack!</text>
+    </g>
   </g>
 
-  <!-- Action explanation -->
-  <rect x="100" y="200" width="700" height="140" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
-  <text x="120" y="235" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Bất Biến Ngăn Xếp Đơn Điệu Giảm Dần (Lưu Chỉ Số i):</text>
-  <text x="120" y="265" fill="#f8fafc" font-size="14">• Duyệt qua phần tử 5: 5 lớn hơn 1 (pop 1, NGE[1]=5), 5 lớn hơn 2 (pop 2, NGE[2]=5), 5 lớn hơn 4 (pop 4, NGE[4]=5)</text>
-  <text x="120" y="295" fill="#4ade80" font-family="monospace" font-size="14">• Mỗi phần tử vào/ra Stack đúng 1 lần duy nhất → Tổng thời gian toàn mảng O(N)</text>
-  <text x="120" y="320" fill="#facc15" font-size="13">Kết quả NGE = [ 5, 5, 5, -1, -1 ]</text>
+  <!-- Execution & Resolution Card -->
+  <g transform="translate(40, 205)" filter="url(#cardShadow)">
+    <rect width="840" height="195" rx="12" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="25" y="28" fill="#0369A1" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Diễn Biến Khi Gặp A[3] = 5 (Vòng Lặp While st.top() &lt; A[i]):</text>
+
+    <!-- 3 Action Steps inside clean white pill badges -->
+    <g transform="translate(25, 42)">
+      <rect width="790" height="30" rx="6" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="1"/>
+      <circle cx="20" cy="15" r="9" fill="#FEE2E2" stroke="#EF4444"/>
+      <text x="20" y="19" fill="#B91C1C" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">1</text>
+      <text x="40" y="20" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">So sánh <tspan font-family="monospace" font-weight="700" fill="#0F172A">5 &gt; 1</tspan> ➔ Pop đỉnh 1 ra khỏi Stack, ghi nhận <tspan font-family="monospace" font-weight="700" fill="#059669">NGE[2] = 5</tspan></text>
+    </g>
+
+    <g transform="translate(25, 78)">
+      <rect width="790" height="30" rx="6" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="1"/>
+      <circle cx="20" cy="15" r="9" fill="#FEE2E2" stroke="#EF4444"/>
+      <text x="20" y="19" fill="#B91C1C" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">2</text>
+      <text x="40" y="20" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">So sánh tiếp <tspan font-family="monospace" font-weight="700" fill="#0F172A">5 &gt; 2</tspan> ➔ Pop đỉnh 2 ra khỏi Stack, ghi nhận <tspan font-family="monospace" font-weight="700" fill="#059669">NGE[1] = 5</tspan></text>
+    </g>
+
+    <g transform="translate(25, 114)">
+      <rect width="790" height="30" rx="6" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="1"/>
+      <circle cx="20" cy="15" r="9" fill="#FEE2E2" stroke="#EF4444"/>
+      <text x="20" y="19" fill="#B91C1C" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">3</text>
+      <text x="40" y="20" fill="#334155" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">So sánh tiếp <tspan font-family="monospace" font-weight="700" fill="#0F172A">5 &gt; 4</tspan> ➔ Pop đỉnh 4 ra khỏi Stack, ghi nhận <tspan font-family="monospace" font-weight="700" fill="#059669">NGE[0] = 5</tspan>. Cuối cùng push chỉ số 3 vào Stack rỗng.</text>
+    </g>
+
+    <!-- Final Result Footer -->
+    <g transform="translate(25, 155)">
+      <text x="0" y="18" fill="#047857" font-family="monospace" font-size="13" font-weight="700">➜ Kết quả toàn mảng: NGE = [ 5, 5, 5, -1, -1 ]</text>
+      <text x="430" y="18" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="12">Mỗi phần tử chỉ Push và Pop đúng 1 lần ➔ <tspan font-weight="700" fill="#0F172A">Độ phức tạp O(N)</tspan></text>
+    </g>
+  </g>
 </svg>

@@ -1,23 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
-  <rect width="900" height="380" fill="#0f172a" rx="16"/>
-  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">CÂY FENWICK (BINARY INDEXED TREE - BIT) &amp; PHÉP TOÁN LOWBIT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#64748B" flood-opacity="0.08" />
+    </filter>
+  </defs>
 
-  <rect x="80" y="80" width="340" height="240" rx="12" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
-  <text x="250" y="115" fill="#c084fc" font-size="16" font-weight="bold" text-anchor="middle">Phép Toán Lowbit: x &amp; (-x)</text>
-  <text x="105" y="150" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(1) = 1 (b0001 → đoạn dài 1)</text>
-  <text x="105" y="180" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(2) = 2 (b0010 → đoạn dài 2)</text>
-  <text x="105" y="210" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(4) = 4 (b0100 → đoạn dài 4)</text>
-  <text x="105" y="240" fill="#f8fafc" font-family="monospace" font-size="13">• lowbit(6) = 2 (b0110 → đoạn dài 2)</text>
-  <text x="105" y="275" fill="#4ade80" font-family="monospace" font-size="14">bit[x] lưu tổng đoạn (x - lowbit(x), x]</text>
+  <!-- Background Canvas -->
+  <rect width="920" height="420" rx="16" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2"/>
 
-  <rect x="460" y="80" width="360" height="240" rx="12" fill="#1e293b" stroke="#4ade80" stroke-width="2"/>
-  <text x="640" y="115" fill="#4ade80" font-size="16" font-weight="bold" text-anchor="middle">2 Thao Tác Cốt Lõi Siêu Ngắn</text>
-  <text x="485" y="150" fill="#facc15" font-family="monospace" font-size="13">void update(int x, int val) {</text>
-  <text x="505" y="175" fill="#f8fafc" font-family="monospace" font-size="13">  for (; x &lt;= n; x += x &amp; -x) bit[x] += val;</text>
-  <text x="485" y="200" fill="#facc15" font-family="monospace" font-size="13">}</text>
-  <text x="485" y="230" fill="#38bdf8" font-family="monospace" font-size="13">long long query(int x) {</text>
-  <text x="505" y="255" fill="#f8fafc" font-family="monospace" font-size="13">  long long s = 0;</text>
-  <text x="505" y="280" fill="#f8fafc" font-family="monospace" font-size="13">  for (; x &gt; 0; x -= x &amp; -x) s += bit[x];</text>
-  <text x="505" y="305" fill="#f8fafc" font-family="monospace" font-size="13">  return s;</text>
-  <text x="485" y="325" fill="#38bdf8" font-family="monospace" font-size="13">}</text>
+  <!-- Header -->
+  <text x="40" y="38" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Cây Fenwick (Binary Indexed Tree - BIT) &amp; Phép Toán Lowbit</text>
+  <text x="40" y="62" fill="#475569" font-family="system-ui, -apple-system, sans-serif" font-size="13">Cấu trúc dữ liệu dạng mảng quản lý tổng tiền tố động với thời gian cập nhật và truy vấn đều đạt O(log N)</text>
+
+  <!-- Two Main Cards: Lowbit Math vs Implementation Code -->
+  <g transform="translate(40, 85)">
+    <!-- Left Card: Lowbit Math & Range Responsibility -->
+    <g transform="translate(0, 0)" filter="url(#cardShadow)">
+      <rect width="405" height="315" rx="12" fill="#FAF5FF" stroke="#A855F7" stroke-width="1.5"/>
+      <text x="25" y="30" fill="#7E22CE" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">1. Phép Toán Lowbit: x &amp; (-x)</text>
+      
+      <!-- Math formula badge -->
+      <g transform="translate(25, 42)">
+        <rect width="355" height="26" rx="5" fill="#F3E8FF" stroke="#E9D5FF" stroke-width="1"/>
+        <text x="177" y="17" fill="#6B21A8" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle">Trích xuất bit 1 có trọng số nhỏ nhất (Lowest Set Bit)</text>
+      </g>
+
+      <!-- 4 Concrete Examples -->
+      <g transform="translate(25, 78)">
+        <!-- Ex 1 -->
+        <rect width="355" height="26" rx="5" fill="#FFFFFF" stroke="#F3E8FF" stroke-width="1"/>
+        <text x="15" y="17" fill="#1E293B" font-family="monospace" font-size="12">• lowbit(1) = 1  (0001₂ ➔ đoạn độ dài 1)</text>
+
+        <!-- Ex 2 -->
+        <rect y="31" width="355" height="26" rx="5" fill="#FFFFFF" stroke="#F3E8FF" stroke-width="1"/>
+        <text x="15" y="48" fill="#1E293B" font-family="monospace" font-size="12">• lowbit(2) = 2  (0010₂ ➔ đoạn độ dài 2)</text>
+
+        <!-- Ex 3 -->
+        <rect y="62" width="355" height="26" rx="5" fill="#FFFFFF" stroke="#F3E8FF" stroke-width="1"/>
+        <text x="15" y="79" fill="#1E293B" font-family="monospace" font-size="12">• lowbit(4) = 4  (0100₂ ➔ đoạn độ dài 4)</text>
+
+        <!-- Ex 4 -->
+        <rect y="93" width="355" height="26" rx="5" fill="#FFFFFF" stroke="#F3E8FF" stroke-width="1"/>
+        <text x="15" y="110" fill="#1E293B" font-family="monospace" font-size="12">• lowbit(6) = 2  (0110₂ ➔ đoạn độ dài 2)</text>
+      </g>
+
+      <!-- Bottom Range Definition Box -->
+      <g transform="translate(25, 215)">
+        <rect width="355" height="80" rx="8" fill="#FFFFFF" stroke="#D8B4FE" stroke-width="1.5"/>
+        <text x="15" y="24" fill="#047857" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">★ Định Lý Quản Lý Đoạn:</text>
+        <text x="15" y="46" fill="#6B21A8" font-family="monospace" font-size="12" font-weight="700">bit[x] lưu tổng đoạn (x - lowbit(x), x]</text>
+        <text x="15" y="66" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Cực kỳ gọn: Bộ nhớ chỉ đúng N phần tử nguyên mẫu.</text>
+      </g>
+    </g>
+
+    <!-- Right Card: 2 Core C++ Functions -->
+    <g transform="translate(435, 0)" filter="url(#cardShadow)">
+      <rect width="405" height="315" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+      <text x="25" y="30" fill="#065F46" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">2. Cài Đặt Chuẩn C++ Siêu Ngắn Gọn</text>
+      
+      <!-- Subtitle badge -->
+      <g transform="translate(25, 42)">
+        <rect width="355" height="26" rx="5" fill="#D1FAE5" stroke="#A7F3D0" stroke-width="1"/>
+        <text x="177" y="17" fill="#064E3B" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle">Thời gian: O(log N) • Bộ nhớ: O(N) • 1-based indexing</text>
+      </g>
+
+      <!-- Code Container Box (expanded height to 226) -->
+      <g transform="translate(25, 76)">
+        <rect width="355" height="226" rx="8" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1"/>
+
+        <!-- Function update -->
+        <text x="15" y="22" fill="#92400E" font-family="monospace" font-size="12" font-weight="700">// 1. Cộng giá trị val vào A[x]:</text>
+        <text x="15" y="40" fill="#0F172A" font-family="monospace" font-size="12">void update(int x, int val) {</text>
+        <text x="30" y="58" fill="#0369A1" font-family="monospace" font-size="12">  for (; x &lt;= n; x += x &amp; -x)</text>
+        <text x="50" y="76" fill="#0F172A" font-family="monospace" font-size="12">    bit[x] += val;</text>
+        <text x="15" y="94" fill="#0F172A" font-family="monospace" font-size="12">}</text>
+
+        <!-- Separator line -->
+        <line x1="15" y1="104" x2="340" y2="104" stroke="#E2E8F0" stroke-width="1"/>
+
+        <!-- Function query -->
+        <text x="15" y="122" fill="#047857" font-family="monospace" font-size="12" font-weight="700">// 2. Tính tổng tiền tố từ 1 đến x:</text>
+        <text x="15" y="140" fill="#0F172A" font-family="monospace" font-size="12">long long query(int x) {</text>
+        <text x="30" y="158" fill="#0F172A" font-family="monospace" font-size="12">  long long sum = 0;</text>
+        <text x="30" y="176" fill="#0369A1" font-family="monospace" font-size="12">  for (; x &gt; 0; x -= x &amp; -x)</text>
+        <text x="50" y="194" fill="#0F172A" font-family="monospace" font-size="12">    sum += bit[x];</text>
+        <text x="30" y="210" fill="#0F172A" font-family="monospace" font-size="12">  return sum;</text>
+        <text x="15" y="218" fill="#0F172A" font-family="monospace" font-size="12">}</text>
+      </g>
+    </g>
+  </g>
 </svg>

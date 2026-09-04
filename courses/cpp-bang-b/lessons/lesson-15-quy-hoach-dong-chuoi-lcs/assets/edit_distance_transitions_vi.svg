@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 310" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="100%" stop-color="#111827" />
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
     <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0f172a" />
+      <stop offset="0%" stop-color="#F0F9FF" />
+      <stop offset="100%" stop-color="#E0F2FE" />
     </linearGradient>
     <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1" />
-      <stop offset="100%" stop-color="#0c4a6e" />
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
     </linearGradient>
     <linearGradient id="greenCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#065f46" />
-      <stop offset="100%" stop-color="#064e3b" />
+      <stop offset="0%" stop-color="#ECFDF5" />
+      <stop offset="100%" stop-color="#D1FAE5" />
     </linearGradient>
     <linearGradient id="purpleCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#581c87" />
-      <stop offset="100%" stop-color="#3b0764" />
+      <stop offset="0%" stop-color="#FAF5FF" />
+      <stop offset="100%" stop-color="#F3E8FF" />
     </linearGradient>
     <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9a3412" />
-      <stop offset="100%" stop-color="#7c2d12" />
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="100%" stop-color="#FEF3C7" />
     </linearGradient>
     <linearGradient id="redCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#991b1b" />
-      <stop offset="100%" stop-color="#7f1d1d" />
+      <stop offset="0%" stop-color="#FEF2F2" />
+      <stop offset="100%" stop-color="#FEE2E2" />
     </linearGradient>
 
     <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
@@ -42,41 +42,41 @@
       <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#a855f7" flood-opacity="0.4" />
     </filter>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#64748B" flood-opacity="0.12" />
     </filter>
 
     <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8" /></marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#34d399" /></marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#059669" /></marker>
     <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#fbbf24" /></marker>
     <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#c084fc" /></marker>
   </defs>
 
-  <rect width="1000" height="310" fill="url(#bgGrad)" rx="16" />
-  <rect width="1000" height="310" fill="none" stroke="#334155" stroke-width="1.5" rx="16" />
+  <rect width="1000" height="310" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16" />
+  
 
   
-  <text x="500" y="40" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="21" font-weight="bold" text-anchor="middle">KHOẢNG CÁCH BIẾN ĐỔI XÂU (EDIT DISTANCE / LEVENSHTEIN)</text>
-  <text x="500" y="65" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Hệ thức chuyển trạng thái từ 3 thao tác: Chèn (Insert), Xóa (Delete), Thay thế (Replace)</text>
+  <text x="500" y="40" fill="#0F172A" font-family="system-ui, sans-serif" font-size="21" font-weight="bold" text-anchor="middle">KHOẢNG CÁCH BIẾN ĐỔI XÂU (EDIT DISTANCE / LEVENSHTEIN)</text>
+  <text x="500" y="65" fill="#475569" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Hệ thức chuyển trạng thái từ 3 thao tác: Chèn (Insert), Xóa (Delete), Thay thế (Replace)</text>
 
   <!-- Replace Cell (i-1, j-1) -->
   <g transform="translate(150, 100)" filter="url(#cardShadow)">
-    <rect width="190" height="60" rx="8" fill="#0f2b46" stroke="#0ea5e9" stroke-width="1.5" />
-    <text x="95" y="24" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">THAY THẾ (REPLACE)</text>
-    <text x="95" y="45" fill="#bae6fd" font-family="monospace" font-size="13" text-anchor="middle">dp[i-1][j-1] + cost</text>
+    <rect width="190" height="60" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="95" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">THAY THẾ (REPLACE)</text>
+    <text x="95" y="45" fill="#0369A1" font-family="monospace" font-size="13" text-anchor="middle">dp[i-1][j-1] + cost</text>
   </g>
 
   <!-- Delete Cell (i-1, j) -->
   <g transform="translate(405, 100)" filter="url(#cardShadow)">
-    <rect width="190" height="60" rx="8" fill="#0f2b46" stroke="#0ea5e9" stroke-width="1.5" />
-    <text x="95" y="24" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">XÓA KÝ TỰ (DELETE)</text>
-    <text x="95" y="45" fill="#bae6fd" font-family="monospace" font-size="13" text-anchor="middle">dp[i-1][j] + 1</text>
+    <rect width="190" height="60" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="95" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">XÓA KÝ TỰ (DELETE)</text>
+    <text x="95" y="45" fill="#0369A1" font-family="monospace" font-size="13" text-anchor="middle">dp[i-1][j] + 1</text>
   </g>
 
   <!-- Insert Cell (i, j-1) -->
   <g transform="translate(660, 100)" filter="url(#cardShadow)">
-    <rect width="190" height="60" rx="8" fill="#0f2b46" stroke="#0ea5e9" stroke-width="1.5" />
-    <text x="95" y="24" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CHÈN KÝ TỰ (INSERT)</text>
-    <text x="95" y="45" fill="#bae6fd" font-family="monospace" font-size="13" text-anchor="middle">dp[i][j-1] + 1</text>
+    <rect width="190" height="60" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="95" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CHÈN KÝ TỰ (INSERT)</text>
+    <text x="95" y="45" fill="#0369A1" font-family="monospace" font-size="13" text-anchor="middle">dp[i][j-1] + 1</text>
   </g>
 
   <!-- Arrows to Target -->
@@ -87,8 +87,8 @@
   <!-- Target Cell (i, j) -->
   <g transform="translate(375, 215)" filter="url(#cardShadow)">
     <rect width="250" height="60" rx="10" fill="url(#greenCard)" stroke="#10b981" stroke-width="2" filter="url(#glowGreen)" />
-    <text x="125" y="25" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">TRẠNG THÁI HIỆN TẠI</text>
-    <text x="125" y="47" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">dp[i][j] = min(3 lựa chọn)</text>
+    <text x="125" y="25" fill="#065F46" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">TRẠNG THÁI HIỆN TẠI</text>
+    <text x="125" y="47" fill="#065F46" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">dp[i][j] = min(3 lựa chọn)</text>
   </g>
 
 </svg>

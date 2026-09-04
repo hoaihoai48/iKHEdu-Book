@@ -1,17 +1,17 @@
 # Lây Lan Quả Cam Hỏng (Rotting Oranges)
 
 ## Bối cảnh
-Ma trận chứa `0` (ô trống), `1` (cam tươi), `2` (cam hỏng). Mỗi phút, cam hỏng lan sang 4 quả cam tươi kề cạnh.
+Trong một thùng hàng hoa quả kích thước $N  × M$, mỗi ô có thể chứa: ô trống (số `0`), một quả cam tươi nguyên vẹn (số `1`), hoặc một quả cam đã bị hỏng mốc (số `2`). Cứ sau mỗi phút, những quả cam bị hỏng sẽ làm hỏng tất cả các quả cam tươi kề sát nó theo 4 hướng. Hãy tính số phút tối thiểu để toàn bộ cam tươi trong thùng đều bị hỏng. Nếu có quả cam tươi nào mãi mãi không bị hỏng (bị cô lập), in ra `-1`.
 
 ## Nhiệm vụ
-Tính thời gian tối thiểu để toàn bộ cam tươi bị hỏng (hoặc -1 nếu không thể hỏng hết).
+Cho ma trận trạng thái thùng cam. Hãy lập trình tìm số phút ít nhất để tất cả cam tươi đều hỏng.
 
 ## Input
-- Dòng 1: $N, M$ ($1 \le N, M \le 500$).
-- $N$ dòng tiếp theo: Ma trận số 0, 1, 2.
+- Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$).
+- $N$ dòng tiếp theo, mỗi dòng chứa $M$ số nguyên 0, 1 hoặc 2 cách nhau bởi khoảng trắng.
 
 ## Output
-- Thời gian tối thiểu hoặc -1.
+- In ra số phút ít nhất, hoặc `-1` nếu vẫn còn cam tươi không thể bị hỏng.
 
 ## Sample 1
 ### Input
@@ -25,6 +25,12 @@ Tính thời gian tối thiểu để toàn bộ cam tươi bị hỏng (hoặc 
 ```text
 4
 ```
+
+### Giải thích
+Với thùng cam kích thước $3  × 3$:
+- Phút 1: cam hỏng tại $(0, 0)$ lây sang các ô $(0, 1)$ và $(1, 0)$.
+- Phút 2: tiếp tục lây sang các ô kế tiếp.
+Sau đúng 4 phút, toàn bộ cam tươi đều đã bị lây hỏng. Kết quả là 4.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N, M \le 500$.

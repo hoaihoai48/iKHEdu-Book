@@ -1,19 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
-  <rect width="900" height="380" fill="#0f172a" rx="16"/>
-  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">HÀNG ĐỢI HAI ĐẦU (DEQUE) TRONG BÀI TOÁN SLIDING WINDOW MIN/MAX O(N)</text>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#64748B" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <rect width="900" height="380" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16"/>
+  <text x="450" y="40" fill="#0F172A" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">HÀNG ĐỢI HAI ĐẦU (DEQUE) TRONG BÀI TOÁN SLIDING WINDOW MIN/MAX O(N)</text>
 
   <!-- Deque container -->
   <g transform="translate(150, 80)">
-    <rect x="0" y="0" width="600" height="90" fill="#1e293b" stroke="#c084fc" stroke-width="2" rx="12"/>
-    <text x="300" y="30" fill="#c084fc" font-size="15" font-weight="bold" text-anchor="middle">std::deque (Thao Tác Cả Hai Đầu Trong O(1))</text>
-    <text x="70" y="65" fill="#4ade80" font-family="monospace" font-size="13">pop_front() / push_front()</text>
-    <text x="530" y="65" fill="#facc15" font-family="monospace" font-size="13" text-anchor="end">pop_back() / push_back()</text>
+    <rect x="0" y="0" width="600" height="90" fill="#FAF5FF" stroke="#A855F7" stroke-width="2" rx="12"/>
+    <text x="300" y="30" fill="#7E22CE" font-size="15" font-weight="bold" text-anchor="middle">std::deque (Thao Tác Cả Hai Đầu Trong O(1))</text>
+    <text x="70" y="65" fill="#065F46" font-family="monospace" font-size="13">pop_front() / push_front()</text>
+    <text x="530" y="65" fill="#92400E" font-family="monospace" font-size="13" text-anchor="end">pop_back() / push_back()</text>
   </g>
 
   <!-- Monotonic Deque Rule -->
-  <rect x="150" y="190" width="600" height="150" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-  <text x="180" y="225" fill="#38bdf8" font-size="16" font-weight="bold">Bất Biến Duy Trì Min Cửa Sổ Độ Dài K:</text>
-  <text x="180" y="255" fill="#f8fafc" font-size="14">1. Loại bỏ phần tử lỗi thời hết hạn cửa sổ: index &lt; i - k + 1 → dq.pop_front()</text>
-  <text x="180" y="285" fill="#f8fafc" font-size="14">2. Duy trì tính đơn điệu tăng: Loại bỏ mọi x &gt;= A[i] ở đuôi → dq.pop_back()</text>
-  <text x="180" y="315" fill="#4ade80" font-family="monospace" font-size="14">3. Phần tử nhỏ nhất hiện tại luôn nằm tại dq.front() → O(1)</text>
+  <rect x="150" y="190" width="600" height="150" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="180" y="225" fill="#0369A1" font-size="16" font-weight="bold">Bất Biến Duy Trì Min Cửa Sổ Độ Dài K:</text>
+  <text x="180" y="255" fill="#1E293B" font-size="14">1. Loại bỏ phần tử lỗi thời hết hạn cửa sổ: index &lt; i - k + 1 → dq.pop_front()</text>
+  <text x="180" y="285" fill="#1E293B" font-size="14">2. Duy trì tính đơn điệu tăng: Loại bỏ mọi x &gt;= A[i] ở đuôi → dq.pop_back()</text>
+  <text x="180" y="315" fill="#065F46" font-family="monospace" font-size="14">3. Phần tử nhỏ nhất hiện tại luôn nằm tại dq.front() → O(1)</text>
 </svg>

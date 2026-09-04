@@ -1,17 +1,16 @@
 # Đoạn Con Đối Xứng Liên Tiếp Dài Nhất
 
 ## Bối cảnh
-Tìm đoạn con LIÊN TIẾP (Substring) đối xứng dài nhất trong chuỗi $S$.
+Khác với chuỗi con rời rạc, một đoạn con liên tiếp (Substring) đối xứng đòi hỏi các ký tự phải đứng kề sát nhau và tạo thành một cụm đối xứng hoàn chỉnh. Đây là tác vụ trọng tâm trong việc nhận diện các đoạn lặp đảo ngược trong cấu trúc chuỗi gen sinh học.
 
 ## Nhiệm vụ
-Dòng 1: Độ dài đoạn con đối xứng dài nhất. Dòng 2: Chuỗi đối xứng đó.
+Cho chuỗi ký tự $S$. Hãy lập trình tìm độ dài của đoạn con liên tiếp đối xứng dài nhất trong $S$.
 
 ## Input
-- Một dòng chứa chuỗi $S$ ($1 \le |S| \le 2000$).
+- Một dòng duy nhất chứa chuỗi ký tự $S$ ($1 \le |S| \le 2000$).
 
 ## Output
-- Dòng 1: Độ dài.
-- Dòng 2: Nội dung đoạn con đối xứng.
+- In ra trên một dòng duy nhất độ dài của đoạn con đối xứng liên tiếp dài nhất.
 
 ## Sample 1
 ### Input
@@ -23,6 +22,10 @@ babad
 3
 bab
 ```
+
+### Giải thích
+Với chuỗi $S = \text{"babad"}$:
+Đoạn con liên tiếp đối xứng dài nhất là $\text{"bab"}$ (hoặc $\text{"aba"}$) có độ dài bằng 3.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le |S| \le 2000$.

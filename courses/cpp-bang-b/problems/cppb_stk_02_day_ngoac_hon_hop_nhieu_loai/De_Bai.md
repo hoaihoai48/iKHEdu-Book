@@ -1,16 +1,16 @@
 # Dãy Ngoặc Hỗn Hợp Nhiều Loại
 
 ## Bối cảnh
-Cho một chuỗi gồm 3 loại ngoặc: `()`, `[]`, `{}`. Kiểm tra xem các cặp ngoặc có đóng mở hợp lệ và lồng nhau đúng quy tắc hay không.
+Trình biên dịch mã nguồn mở rộng hỗ trợ đồng thời 3 loại cặp dấu ngoặc khác nhau: ngoặc tròn `()`, ngoặc vuông `[]` và ngoặc nhọn `{}`. Một chuỗi ngoặc hỗn hợp được coi là hợp lệ nếu các cặp ngoặc cùng loại được đóng mở đúng quy tắc lồng nhau, không bị đóng chéo (ví dụ: `([)]` là sai quy tắc vì ngoặc tròn mở trước nhưng lại bị ngoặc vuông xen vào đóng trước).
 
 ## Nhiệm vụ
-In `YES` nếu hợp lệ, ngược lại in `NO`.
+Cho chuỗi $S$ chỉ gồm các ký tự `(`, `)`, `[`, `]`, `{`, `}`. Hãy lập trình kiểm tra tính hợp lệ của chuỗi. Nếu hợp lệ in ra `YES`, ngược lại in ra `NO`.
 
 ## Input
-- Một dòng chứa chuỗi $S$ ($1 \le |S| \le 10^5$).
+- Một dòng duy nhất chứa chuỗi ký tự $S$ ($1 \le |S| \le 10^5$).
 
 ## Output
-- `YES` hoặc `NO`.
+- In ra `YES` nếu chuỗi hợp lệ, ngược lại in ra `NO`.
 
 ## Sample 1
 ### Input
@@ -21,6 +21,10 @@ In `YES` nếu hợp lệ, ngược lại in `NO`.
 ```text
 YES
 ```
+
+### Giải thích
+Với chuỗi $S = \text{"{[()]}"}$:
+Cặp ngoặc tròn nằm hoàn toàn bên trong ngoặc vuông, và ngoặc vuông nằm bên trong ngoặc nhọn. Quy tắc lồng nhau được bảo đảm trọn vẹn, kết quả in ra là YES.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le |S| \le 10^5$.

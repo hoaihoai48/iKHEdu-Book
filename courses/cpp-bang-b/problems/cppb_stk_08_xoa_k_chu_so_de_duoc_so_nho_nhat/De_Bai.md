@@ -1,16 +1,17 @@
 # Xóa K Chữ Số Để Được Số Nhỏ Nhất
 
 ## Bối cảnh
-Cho số nguyên dương $S$ biểu diễn dạng chuỗi và số nguyên $K$. Cần xóa đúng $K$ chữ số sao cho số nhận được là nhỏ nhất có thể.
+Một mã định danh số lớn gồm $N$ chữ số dạng chuỗi ký tự. Do yêu cầu rút gọn mã trong hệ thống lưu trữ, quản trị viên cần xóa bỏ đúng $K$ chữ số bất kỳ khỏi chuỗi sao cho các chữ số còn lại giữ nguyên thứ tự ban đầu và tạo thành một số nguyên có giá trị nhỏ nhất có thể (không để số 0 vô nghĩa đứng ở đầu nếu kết quả lớn hơn 0).
 
 ## Nhiệm vụ
-In ra số nhỏ nhất sau khi xóa.
+Cho chuỗi số $S$ và số nguyên $K$. Hãy lập trình tìm số nguyên nhỏ nhất thu được sau khi xóa đúng $K$ chữ số.
 
 ## Input
-- Một dòng gồm chuỗi số $S$ ($1 \le |S| \le 10^5$) và số $K$ ($0 \le K < |S|$).
+- Dòng 1: Chứa chuỗi ký tự số $S$ ($1 \le |S| \le 10^5$).
+- Dòng 2: Chứa số nguyên không âm $K$ ($0 \le K < |S|$).
 
 ## Output
-- Số nhỏ nhất tìm được.
+- In ra chuỗi ký tự đại diện cho số nhỏ nhất tìm được.
 
 ## Sample 1
 ### Input
@@ -21,6 +22,10 @@ In ra số nhỏ nhất sau khi xóa.
 ```text
 1219
 ```
+
+### Giải thích
+Với số ban đầu là "1432219" và cần xóa đi $K = 3$ chữ số:
+Ta xóa các chữ số 4, 3, 2 tại các vị trí đầu để giữ lại số "1219". Đây là số nguyên nhỏ nhất có thể tạo thành.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le |S| \le 10^5$.

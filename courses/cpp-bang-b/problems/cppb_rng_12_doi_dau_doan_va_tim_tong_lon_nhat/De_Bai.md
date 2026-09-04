@@ -1,18 +1,18 @@
 # Cập Nhật Phân Đoạn Nâng Cao
 
 ## Bối cảnh
-Hỗ trợ cập nhật điểm và truy vấn tổng trên cây phân đoạn.
+Một hệ thống lưới điện thông minh hỗ trợ thao tác đổi dấu đồng loạt toàn bộ điện áp trên một phân đoạn đường dây từ $L$ đến $R$ ($A_i \to -A_i$), đồng thời hỗ trợ truy vấn tính tổng điện áp lớn nhất của một đoạn con bất kỳ.
 
 ## Nhiệm vụ
-In ra tổng các phần tử trong đoạn.
+Cho mảng $A$ và các thao tác đảo dấu đoạn hoặc truy vấn tổng đoạn con lớn nhất. Hãy lập trình xử lý và in ra kết quả cho các thao tác truy vấn.
 
 ## Input
-- Dòng 1: $N, Q$ ($1 \le N, Q \le 10^5$).
-- Dòng 2: $N$ số nguyên ban đầu ($1 \le A_i \le 10^9$).
-- $Q$ dòng tiếp theo: Các truy vấn.
+- Dòng 1: Chứa hai số nguyên $N$ và $Q$ ($1 \le N, Q \le 10^5$).
+- Dòng 2: Chứa $N$ số nguyên $A_1, A_2, \dots, A_N$.
+- Các dòng tiếp theo chứa các thao tác cập nhật và truy vấn.
 
 ## Output
-- Kết quả các truy vấn loại 2.
+- In ra kết quả cho mỗi thao tác truy vấn trên một dòng.
 
 ## Sample 1
 ### Input
@@ -28,6 +28,9 @@ In ra tổng các phần tử trong đoạn.
 6
 16
 ```
+
+### Giải thích
+Sau thao tác đảo dấu đoạn, các giá trị âm biến thành dương giúp hình thành một đoạn con có tổng lớn nhất đạt giá trị tối ưu mới.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N, Q \le 10^5, 1 \le A_i, val \le 10^9$.

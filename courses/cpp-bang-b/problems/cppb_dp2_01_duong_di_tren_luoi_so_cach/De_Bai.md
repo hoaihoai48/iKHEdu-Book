@@ -1,16 +1,16 @@
 # Đếm Số Cách Đi Trên Lưới
 
 ## Bối cảnh
-Trên lưới ô vuông kích thước $N \times M$, một robot xuất phát từ ô $(1, 1)$ và cần di chuyển đến ô $(N, M)$. Mỗi bước robot chỉ có thể di chuyển sang phải $1$ ô hoặc xuống dưới $1$ ô.
+Một robot tự hành giao hàng được đặt ở góc trên bên trái (ô $(1, 1)$) của một kho hàng hình chữ nhật có kích thước $N  × M$ ô vuông. Robot cần di chuyển đến điểm đích ở góc dưới bên phải (ô $(N, M)$) để dỡ kiện hàng. Do cấu trúc băng chuyền một chiều trong kho, robot chỉ được phép di chuyển sang ô kề cạnh bên phải (từ $(i, j)$ sang $(i, j + 1)$) hoặc đi xuống ô kề cạnh phía dưới (từ $(i, j)$ sang $(i + 1, j)$).
 
 ## Nhiệm vụ
-Tính số cách đi khác nhau của robot từ ô $(1, 1)$ đến ô $(N, M)$ lấy dư cho $10^9+7$.
+Cho hai số nguyên dương $N$ và $M$ là kích thước của kho hàng. Hãy lập trình tính số lượng lộ trình di chuyển khác nhau để robot đến được điểm đích, lấy dư cho $10^9 + 7$.
 
 ## Input
-- Một dòng chứa hai số nguyên $N$ và $M$ ($1 \le N, M \le 1000$).
+- Một dòng duy nhất chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$) biểu diễn số hàng và số cột của lưới.
 
 ## Output
-- Số cách đi theo modulo $10^9 + 7$.
+- In ra trên một dòng duy nhất số lượng lộ trình hợp lệ theo modulo $10^9 + 7$.
 
 ## Sample 1
 ### Input
@@ -21,6 +21,9 @@ Tính số cách đi khác nhau của robot từ ô $(1, 1)$ đến ô $(N, M)$ 
 ```text
 6
 ```
+
+### Giải thích
+Với lưới kích thước $3  × 3$ ($N = 3, M = 3$), robot cần thực hiện đúng 2 bước sang phải và 2 bước xuống dưới. Có tất cả 6 đường đi khác nhau từ $(1, 1)$ đến $(3, 3)$. Kết quả là 6.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N, M \le 1000$.

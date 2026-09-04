@@ -1,17 +1,17 @@
 # Quản Lý Tập Hợp Đa Trùng Lặp (Multiset)
 
 ## Bối cảnh
-Hỗ trợ 3 loại thao tác: 1 x (Thêm x), 2 x (Xóa đúng 1 phần tử có giá trị x), 3 x (Đếm số lần xuất hiện của x).
+Một kho hàng thông minh hỗ trợ 3 loại thao tác quản lý sản phẩm: thêm một sản phẩm có mã giá $x$ vào kho, xóa bỏ đúng một sản phẩm có mã giá $x$ khỏi kho (nếu có), và truy vấn sản phẩm có mã giá rẻ nhất hiện đang có trong kho.
 
 ## Nhiệm vụ
-Với thao tác loại 3, in ra số lần xuất hiện.
+Cho $Q$ thao tác thuộc một trong 3 loại: `1 x` (thêm $x$), `2 x` (xóa một phần tử $x$), `3` (in ra giá trị nhỏ nhất hiện tại). Hãy lập trình mô phỏng lại hệ thống và in ra kết quả cho các thao tác loại 3.
 
 ## Input
-- Dòng 1: Số nguyên $Q$ ($1 \le Q \le 50000$).
-- $Q$ dòng tiếp theo: `type` và $x$ ($1 \le x \le 10^9$).
+- Dòng 1: Chứa số nguyên dương $Q$ ($1 \le Q \le 10^5$).
+- $Q$ dòng tiếp theo chứa các thao tác mô tả như trên.
 
 ## Output
-- Kết quả các thao tác loại 3.
+- Với mỗi thao tác loại 3, in ra giá trị nhỏ nhất hiện tại trên một dòng.
 
 ## Sample 1
 ### Input
@@ -28,6 +28,9 @@ Với thao tác loại 3, in ra số lần xuất hiện.
 2
 1
 ```
+
+### Giải thích
+Với chuỗi thao tác: thêm 5, thêm 2, thêm 5, truy vấn min -> in ra 2; xóa 2, truy vấn min -> in ra 5.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le Q \le 50000, 1 \le x \le 10^9$.

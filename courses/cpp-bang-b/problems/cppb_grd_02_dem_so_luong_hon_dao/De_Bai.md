@@ -1,17 +1,17 @@
 # Đếm Số Lượng Hòn Đảo (Count Islands)
 
 ## Bối cảnh
-Cho bản đồ ma trận $N \times M$ gồm các ký tự `'1'` (đất liền) và `'0'` (nước biển). Các ô đất liền kề nhau 4 hướng tạo thành một hòn đảo.
+Một bức ảnh viễn thám chụp một vùng biển được số hóa thành ma trận nhị phân kích thước $N  × M$. Ký tự `'0'` đại diện cho mặt nước biển, còn ký tự `'1'` đại diện cho đất liền. Một hòn đảo được định nghĩa là một tập hợp các ô đất liền `'1'` kết nối với nhau theo 4 hướng (lên, xuống, trái, phải) và được bao quanh hoàn toàn bởi nước biển.
 
 ## Nhiệm vụ
-Đếm số lượng hòn đảo trên bản đồ.
+Cho bản đồ ma trận $N  × M$. Hãy lập trình đếm số lượng hòn đảo xuất hiện trên bản đồ.
 
 ## Input
-- Dòng 1: Hai số $N$ và $M$ ($1 \le N, M \le 1000$).
-- $N$ dòng tiếp theo: Ma trận nhị phân.
+- Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$).
+- $N$ dòng tiếp theo, mỗi dòng chứa một chuỗi gồm $M$ ký tự `'0'` hoặc `'1'` biểu diễn bản đồ.
 
 ## Output
-- Số hòn đảo.
+- In ra trên một dòng duy nhất số lượng hòn đảo đếm được.
 
 ## Sample 1
 ### Input
@@ -26,6 +26,10 @@ Cho bản đồ ma trận $N \times M$ gồm các ký tự `'1'` (đất liền)
 ```text
 3
 ```
+
+### Giải thích
+Với bản đồ kích thước $3  × 3$ chứa các cụm đất liền biệt lập không có ô kề cạnh chung:
+Các ô đất liền kết nối thành đúng 3 cụm độc lập, kết quả đếm được là 3 hòn đảo.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N, M \le 1000$.
