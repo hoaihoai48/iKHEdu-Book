@@ -1,12 +1,14 @@
 # Tối ưu phân đoạn trọng số ma trận 2d
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: BS trên đáp án kết hợp 2D Prefix Sum & Greedy.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác nông dân có một cánh đồng hình chữ nhật chia thành nhiều ô, mỗi ô cho năng suất khác nhau. Bác muốn khoanh các vùng trồng sao cho mỗi vùng có tổng năng suất đạt mức yêu cầu, với số vùng khoanh đúng như kế hoạch.
+
+Bác ghi lại năng suất từng ô rồi tính mức năng suất tối thiểu mỗi vùng cần đạt.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d với độ phức tạp tối ưu nhất.
+
+Cho ma trận trọng số và số khu vực cần chia. Hãy lập trình tìm ngưỡng trọng số tối thiểu thỏa mãn yêu cầu phân đoạn ma trận.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

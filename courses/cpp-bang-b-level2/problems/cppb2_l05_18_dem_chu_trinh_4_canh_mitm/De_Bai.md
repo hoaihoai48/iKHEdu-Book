@@ -1,10 +1,12 @@
-# Dem chu trinh 4 canh mitm
+# Đếm Chu Trình 4 Cạnh bằng MITM
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dem Chu Trinh 4 Canh Mitm**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Nhóm phân tích mạng xã hội muốn đo độ gắn kết của cộng đồng bằng cách đếm các nhóm bốn người khép kín thành vòng tròn bạn bè: mỗi người quen đúng hai người còn lại trong nhóm. Với đồ thị kết bạn lên tới hàng trăm nghìn mối quan hệ, việc liệt kê từng bộ bốn là bất khả thi.
+
+Nhóm kỹ thuật bèn chia đôi danh sách người dùng, liệt kê các cặp bạn chung trong từng nửa rồi ghép kết quả lại để suy ra tổng số vòng tròn bốn người mà không bỏ sót cũng không đếm trùng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một đồ thị vô hướng. Hãy lập trình đếm số chu trình đơn có độ dài đúng $4$ cạnh trong đồ thị.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

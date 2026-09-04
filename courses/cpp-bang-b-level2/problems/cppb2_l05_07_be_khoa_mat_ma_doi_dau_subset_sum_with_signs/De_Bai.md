@@ -1,12 +1,12 @@
 # Bẻ khóa mật mã đổi dấu (subset sum with signs)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bẻ Khóa Mật Mã Đổi Dấu (Subset Sum with Signs)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: MITM với 3 trạng thái mỗi phần tử (0, +1, -1).
+Chiếc két sắt có $N$ núm vặn, mỗi núm mang một con số. Người thợ có thể xoay mỗi núm sang trái (trừ đi con số), sang phải (cộng thêm con số) hoặc giữ nguyên (bỏ qua núm đó).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Người thợ cần biết có bao nhiêu cách vặn để con số hiển thị cuối cùng đúng bằng mật mã mục tiêu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bẻ Khóa Mật Mã Đổi Dấu (subset Sum With Signs) với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một giá trị mục tiêu $T$. Hãy lập trình đếm số cách gán mỗi phần tử vào một trong ba trạng thái (bỏ qua, cộng thêm, trừ đi) sao cho tổng thu được bằng $T$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

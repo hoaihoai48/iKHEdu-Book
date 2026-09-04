@@ -1,10 +1,12 @@
-# Ma tran fibonacci tong doan
+# Ma Trận Fibonacci Tổng Đoạn
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Ma Tran Fibonacci Tong Doan**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Vườn ươm của trường đánh số các luống cây từ $1$ trở đi, luống thứ $i$ trồng đúng $F_i$ cây con theo dãy Fibonacci. Cuối vụ, thầy phụ trách cần tổng số cây trên các luống từ $l$ đến $r$ (chỉ lấy phần dư khi chia cho $10^9+7$) để quyết toán tiền giống.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho đoạn $[l, r]$. Hãy lập trình tính tổng $F_l + F_{l+1} + \dots + F_r$ các số Fibonacci trong đoạn theo modulo $10^9+7$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

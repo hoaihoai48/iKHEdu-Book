@@ -4,7 +4,7 @@
 Cho hai số nguyên dương $G$ và $L$. Cần tìm hai số nguyên dương $A, B$ sao cho $\gcd(A, B) = G$, $\text{lcm}(A, B) = L$ và tổng $A + B$ đạt giá trị nhỏ nhất. Đặt $A = G \cdot a, B = G \cdot b \implies a \cdot b = L / G$ với $\gcd(a, b) = 1$. Ta chỉ cần phân tích $L / G$ thành các cặp thừa số nguyên tố cùng nhau.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Cặp Số Biết Gcd Và Lcm Có Tổng Nhỏ Nhất với độ phức tạp tối ưu nhất.
+Cho hai số nguyên dương $G$ và $L$. Hãy lập trình tìm hai số $A \le B$ sao cho $\gcd(A, B) = G$, $\text{lcm}(A, B) = L$ và tổng $A + B$ nhỏ nhất; in `-1` nếu không tồn tại cặp số thỏa mãn.
 
 ## Input
 - Một dòng duy nhất chứa hai số nguyên dương $G, L$ ($1 \le G, L \le 10^{12}$).

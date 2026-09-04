@@ -1,12 +1,14 @@
 # Cửa sổ trượt đếm số lượng xâu anagram
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sliding window duy trì vector tần suất 26 chữ cái.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trong trò chơi ô chữ, bạn Mai có một xâu chữ dài và một từ khóa cần tìm các phiên bản đảo chữ của nó. Bạn muốn đếm xem có bao nhiêu đoạn con trong xâu dài là một cách sắp xếp lại các chữ cái của từ khóa.
+
+Mai trượt một khung cửa sổ dọc theo xâu chữ, mỗi lần so sánh tần suất chữ cái trong khung với từ khóa.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram với độ phức tạp tối ưu nhất.
+
+Cho xâu văn bản và từ khóa. Hãy lập trình đếm số đoạn con của văn bản là một hoán vị (anagram) của từ khóa.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

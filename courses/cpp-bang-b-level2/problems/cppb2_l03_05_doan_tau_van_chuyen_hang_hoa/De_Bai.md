@@ -1,12 +1,14 @@
 # Đoàn tàu vận chuyển hàng hóa
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoàn Tàu Vận Chuyển Hàng Hóa** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tham lam kiểm tra tính khả thi trong $\text{check}(X)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ga hàng hóa có một đoàn tàu với sức chở giới hạn mỗi chuyến. Thủ kho cần xếp các kiện hàng nặng nhẹ khác nhau lên các chuyến tàu theo đúng thứ tự nhập kho, sao cho dùng ít chuyến nhất mà chuyến nào cũng không bị quá tải.
+
+Anh thủ kho thử tính sức chở tối thiểu cần thiết để chở hết hàng trong số chuyến cho phép.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đoàn Tàu Vận Chuyển Hàng Hóa với độ phức tạp tối ưu nhất.
+
+Cho trọng lượng các kiện hàng theo thứ tự và sức chở của đoàn tàu. Hãy lập trình tìm sức chở tối thiểu (hoặc số chuyến tối thiểu) để vận chuyển hết hàng hóa.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

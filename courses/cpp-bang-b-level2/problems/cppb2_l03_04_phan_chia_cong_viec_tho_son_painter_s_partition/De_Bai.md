@@ -1,12 +1,14 @@
 # Phân chia công việc thợ sơn (painter's partition)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Công Việc Thợ Sơn (Painter's Partition)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: BS tìm Min của Max tổng đoạn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đội thợ sơn nhận sơn một dãy đoạn tường liền kề, mỗi đoạn tốn một khoảng thời gian khác nhau. Anh đội trưởng cần chia dãy tường thành các phần liên tiếp để giao cho các thợ, sao cho người làm lâu nhất cũng xong sớm nhất có thể.
+
+Mọi người cùng bàn cách chia sao cho công việc cân đối, không ai phải chờ ai quá lâu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phân Chia Công Việc Thợ Sơn (painter's Partition) với độ phức tạp tối ưu nhất.
+
+Cho thời gian sơn từng đoạn tường và số thợ. Hãy lập trình tìm thời gian hoàn thành nhỏ nhất có thể của người làm lâu nhất khi chia công việc liên tiếp cho các thợ.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

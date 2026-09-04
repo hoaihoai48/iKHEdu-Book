@@ -1,12 +1,12 @@
 # Lũy thừa ma trận 2x2 (dãy fibonacci lớn)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Ma Trận 2x2 (Dãy Fibonacci Lớn)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Áp dụng Fast Power cho nhân ma trận.
+Trang trại thỏ của bác nông dân phát triển theo quy luật quen thuộc: mỗi tháng, số cặp thỏ mới bằng tổng số cặp thỏ của hai tháng trước đó. Sau rất nhiều tháng, đàn thỏ lên tới con số khổng lồ nên bác chỉ cần biết phần dư của con số đó khi chia cho $10^9+7$ để đối chiếu với sức chứa của chuồng.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận 2x2 (dãy Fibonacci Lớn) với độ phức tạp tối ưu nhất.
+Cho $T$ truy vấn, mỗi truy vấn gồm một số nguyên không âm $n$. Hãy lập trình tính số Fibonacci thứ $n$ (với $F_0 = 0, F_1 = 1$) theo modulo $10^9+7$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

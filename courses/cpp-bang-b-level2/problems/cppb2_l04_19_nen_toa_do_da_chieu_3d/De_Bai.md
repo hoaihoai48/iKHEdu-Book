@@ -1,10 +1,14 @@
-# Nen toa do da chieu 3d
+# Nén Tọa Độ Đa Chiều 3D
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Nen Toa Do Da Chieu 3d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Trung tâm dữ liệu lưu trữ các sự kiện trong không gian ba chiều, mỗi chiều có tọa độ rất lớn và thưa. Kỹ sư muốn gom mỗi chiều về thứ hạng liên tiếp để lưu trữ và tra cứu cho gọn nhẹ.
+
+Anh liệt kê tất cả tọa độ xuất hiện trên từng chiều rồi đánh số lại từ đầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho tập điểm trong không gian ba chiều với tọa độ lớn. Hãy lập trình nén tọa độ từng chiều rồi trả lời các truy vấn theo yêu cầu.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

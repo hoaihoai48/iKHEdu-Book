@@ -1,10 +1,12 @@
-# Can bac hai modulo tonelli shanks
+# Căn Bậc Hai theo modulo bằng Tonelli-Shanks
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Can Bac Hai Modulo Tonelli Shanks**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Két sắt của phòng y tế mở bằng một số $x$ mà bình phương của nó chia cho số nguyên tố $p$ còn dư đúng $n$. Quy định của trường yêu cầu luôn ghi lại chiếc chìa nhỏ hơn trong cặp chìa đối nhau; nếu không có chiếc chìa nào mở được thì ghi $-1$.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho cặp $(n, p)$ với $p$ nguyên tố. Hãy lập trình tìm căn bậc hai của $n$ theo modulo $p$ (in nghiệm nhỏ hơn trong cặp nghiệm đối nhau); in `-1` nếu không tồn tại.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

@@ -1,10 +1,14 @@
-# Chat nhi phan phan so toi gian
+# Chặt Nhị Phân Phân Số Tối Giản
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Chat Nhi Phan Phan So Toi Gian**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Trong tiết học phân số, cô giáo viết lên bảng tất cả các phân số có thể tạo thành từ các số trong phạm vi cho phép rồi xếp chúng theo thứ tự tăng dần. Bạn Lan được hỏi phân số đứng thứ $K$ trong danh sách đó là phân số nào.
+
+Cả lớp cùng rút gọn từng phân số về dạng tối giản trước khi xếp hạng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Phan So Toi Gian với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho phạm vi tạo phân số và số $K$. Hãy lập trình tìm phân số tối giản đứng thứ $K$ khi xếp tăng dần.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

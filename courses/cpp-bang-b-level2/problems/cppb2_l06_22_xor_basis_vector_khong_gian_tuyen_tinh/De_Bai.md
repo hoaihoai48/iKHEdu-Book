@@ -1,10 +1,12 @@
-# Xor basis vector khong gian tuyen tinh
+# XOR Basis trong Không Gian Vectơ Tuyến Tính
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Xor Basis Vector Khong Gian Tuyen Tinh**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Phòng thí nghiệm tín hiệu thu được một dãy số nguyên từ các cảm biến, mỗi số được xem như một vectơ nhị phân. Kỹ sư muốn biết dãy này thực chất chứa bao nhiêu tín hiệu độc lập, tức hạng của cả họ vectơ trên trường $GF(2)$.
+
+Anh lần lượt đưa từng số vào một bộ khung cơ sở, khử dần các bit cao nhất đã có đại diện, và chỉ giữ lại những số mang thông tin thực sự mới cho bộ cơ sở.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Tinh với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm $N$ số nguyên. Hãy lập trình xây dựng cơ sở XOR của dãy và cho biết số vector độc lập tuyến tính tối đa (hạng của họ vector trên trường $GF(2)$).
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

@@ -1,10 +1,14 @@
-# Ma tran tong lon nhat Kadane 2d
+# Ma Trận Tổng Lớn Nhất (Kadane 2D)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Ma Tran Tong Lon Nhat Kadane 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Bác nông dân có cánh đồng hình chữ nhật, mỗi ô có thể lãi hoặc lỗ tùy mùa vụ. Vụ này bác muốn khoanh một vùng hình chữ nhật có tổng lợi nhuận lớn nhất để tập trung đầu tư.
+
+Bác ghi lại lợi nhuận từng ô rồi so sánh các vùng có thể khoanh được.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Ma Tran Tong Lon Nhat Kadane 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho ma trận số nguyên. Hãy lập trình tìm tổng lớn nhất của một hình chữ nhật con bất kỳ trong ma trận.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

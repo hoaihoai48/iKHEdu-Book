@@ -1,10 +1,12 @@
-# Tim cap diem gan nhat 2d
+# Tìm Cặp Điểm Gần Nhất 2D
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Tim Cap Diem Gan Nhat 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Trạm điều phối taxi bay lưu tọa độ của toàn bộ xe đang hoạt động trên bản đồ thành phố. Để tránh hai xe bay quá gần nhau gây mất an toàn, hệ thống cần liên tục tìm ra cặp xe có khoảng cách gần nhất và phát cảnh báo kịp thời.
+
+Thay vì đo khoảng cách từng đôi một, hệ thống sắp xếp các xe theo tọa độ rồi chia mặt phẳng thành từng dải hẹp, chỉ so sánh các xe thực sự có cơ hội là đáp án trong mỗi dải.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho $N$ điểm trên mặt phẳng tọa độ hai chiều. Hãy lập trình tìm khoảng cách nhỏ nhất giữa hai điểm phân biệt trong số đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

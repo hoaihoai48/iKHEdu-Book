@@ -1,7 +1,4 @@
 ---
-title: "Khoá học C++ Bảng B (Level 2) — Quyển 1"
-subtitle: "Số học nâng cao, Kỹ thuật mảng & Bitwise (Bài 01-06)"
-author: "Trung tâm tin học iKH"
 lang: vi
 documentclass: report
 geometry: "a4paper, margin=2.5cm"
@@ -377,22 +374,16 @@ Nhiệm vụ của bạn là tính và in ra $\gcd(A, B)$ và $\text{lcm}(A, B)$
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3
-12 18
-6 9
-1000000000 1000000000
-```
-### Output
-```text
-6 36
-3 18
-1000000000 1000000000
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3<br/>12 18<br/>6 9<br/>1000000000 1000000000<br/>``` | ```text<br/>6 36<br/>3 18<br/>1000000000 1000000000<br/>``` |
+
+**Giải thích:**
+
 * Với cặp $(12, 18)$: $\gcd(12, 18) = 6$, $\text{lcm}(12, 18) = \frac{12}{6} \times 18 = 36$.
+
 * Với cặp $(6, 9)$: $\gcd(6, 9) = 3$, $\text{lcm}(6, 9) = \frac{6}{3} \times 9 = 18$.
+
 * Với cặp $(10^9, 10^9)$: $\gcd = 10^9, \text{lcm} = 10^9$.
 
 
@@ -412,7 +403,7 @@ Cho $N$ phân số, mỗi phân số có dạng $\frac{A_i}{B_i}$ ($B_i \ne 0$).
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Rút Gọn Mảng Phân Số Lớn với độ phức tạp tối ưu nhất.
+Cho $N$ phân số $A_i/B_i$. Hãy lập trình rút gọn mỗi phân số về dạng tối giản chuẩn: mẫu số dương, tử và mẫu nguyên tố cùng nhau, riêng phân số $0$ luôn viết thành `0 1`.
 
 **Đầu vào (Input):**
 
@@ -425,25 +416,18 @@ Hãy lập trình giải quyết bài toán Rút Gọn Mảng Phân Số Lớn v
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-12 18
--6 8
-15 -25
-0 -100
-```
-### Output
-```text
-2 3
--3 4
--3 5
-0 1
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>12 18<br/>-6 8<br/>15 -25<br/>0 -100<br/>``` | ```text<br/>2 3<br/>-3 4<br/>-3 5<br/>0 1<br/>``` |
+
+**Giải thích:**
+
 * $\frac{12}{18}$: $\gcd(12, 18) = 6 \implies \frac{12/6}{18/6} = \frac{2}{3}$.
+
 * $\frac{-6}{8}$: $\gcd(6, 8) = 2 \implies \frac{-6/2}{8/2} = \frac{-3}{4}$.
+
 * $\frac{15}{-25}$: $\gcd(15, 25) = 5 \implies \frac{15/5}{-25/5} = \frac{3}{-5} \implies$ chuẩn hóa mẫu dương thành $\frac{-3}{5}$.
+
 * $\frac{0}{-100}$: chuẩn hóa thành `0 1`.
 
 
@@ -458,7 +442,7 @@ Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $X$ ($2 \l
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Sàng Ước Số Nguyên Tố Nhỏ Nhất (spf) với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $X$. Hãy lập trình tìm ước số nguyên tố nhỏ nhất $\text{spf}[X]$ của mỗi số.
 
 **Đầu vào (Input):**
 
@@ -471,28 +455,20 @@ Hãy lập trình giải quyết bài toán Sàng Ước Số Nguyên Tố Nhỏ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-2
-9
-15
-84
-999983
-```
-### Output
-```text
-2
-3
-3
-2
-999983
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>2<br/>9<br/>15<br/>84<br/>999983<br/>``` | ```text<br/>2<br/>3<br/>3<br/>2<br/>999983<br/>``` |
+
+**Giải thích:**
+
 * $X = 2$: là số nguyên tố $\implies \text{spf}[2] = 2$.
+
 * $X = 9 = 3^2 \implies \text{spf}[9] = 3$.
+
 * $X = 15 = 3 \times 5 \implies \text{spf}[15] = 3$.
+
 * $X = 84 = 2^2 \times 3 \times 7 \implies \text{spf}[84] = 2$.
+
 * $X = 999983$: là số nguyên tố $\implies \text{spf}[999983] = 999983$.
 
 
@@ -509,7 +485,7 @@ Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$ ($2 \l
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Truy Vấn Nhanh với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$. Hãy lập trình in ra dạng phân tích thừa số nguyên tố của $N$ dưới dạng `p^a`, các thừa số xếp theo thứ tự tăng dần.
 
 **Đầu vào (Input):**
 
@@ -522,25 +498,18 @@ Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Truy Vấn N
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-12
-84
-13
-1000000
-```
-### Output
-```text
-2^2 3^1
-2^2 3^1 7^1
-13^1
-2^6 5^6
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>12<br/>84<br/>13<br/>1000000<br/>``` | ```text<br/>2^2 3^1<br/>2^2 3^1 7^1<br/>13^1<br/>2^6 5^6<br/>``` |
+
+**Giải thích:**
+
 * $12 = 2^2 \times 3^1$.
+
 * $84 = 2^2 \times 3^1 \times 7^1$.
+
 * $13 = 13^1$.
+
 * $1000000 = 10^6 = 2^6 \times 5^6$.
 
 
@@ -558,7 +527,7 @@ $$d(N) = \prod_{i=1}^k (a_i + 1) \qquad \sigma(N) = \prod_{i=1}^k \frac{p_i^{a_i
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Ước Số & Tổng Ước Số Nhanh với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$. Hãy lập trình tính số lượng ước $d(N)$ và tổng các ước $\sigma(N)$ của mỗi số.
 
 **Đầu vào (Input):**
 
@@ -571,25 +540,18 @@ Hãy lập trình giải quyết bài toán Đếm Ước Số & Tổng Ước S
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-12
-28
-7
-100
-```
-### Output
-```text
-6 28
-6 56
-2 8
-9 217
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>12<br/>28<br/>7<br/>100<br/>``` | ```text<br/>6 28<br/>6 56<br/>2 8<br/>9 217<br/>``` |
+
+**Giải thích:**
+
 * $12 = 2^2 \times 3^1$: ước là $\{1,2,3,4,6,12\}$, $d = 6$, $\sigma = 28$.
+
 * $28 = 2^2 \times 7^1$: ước là $\{1,2,4,7,14,28\}$, $d = 6$, $\sigma = 56$.
+
 * $7 = 7^1$: $d = 2$, $\sigma = 8$.
+
 * $100 = 2^2 \times 5^2$: $d = (2+1)(2+1) = 9$, $\sigma = \frac{8-1}{1} \cdot \frac{125-1}{4} = 7 \times 31 = 217$.
 
 
@@ -606,7 +568,7 @@ Cho hai số nguyên dương $L$ và $R$. Hãy đếm số lượng số nguyên
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Sàng Nguyên Tố Đoạn [l, R] với độ phức tạp tối ưu nhất.
+Cho hai số nguyên dương $L$ và $R$. Hãy lập trình đếm số lượng số nguyên tố nằm trong đoạn $[L, R]$.
 
 **Đầu vào (Input):**
 
@@ -618,15 +580,12 @@ Hãy lập trình giải quyết bài toán Sàng Nguyên Tố Đoạn [l, R] v�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-1 10
-```
-### Output
-```text
-4
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>1 10<br/>``` | ```text<br/>4<br/>``` |
+
+**Giải thích:**
+
 Trong đoạn $[1, 10]$, có 4 số nguyên tố là $2, 3, 5, 7$ (số 1 không phải số nguyên tố).
 
 
@@ -639,7 +598,7 @@ Trong lý thuyết số học, một cặp số nguyên tố sinh đôi (Twin Pr
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Cặp Số Nguyên Tố Sinh Đôi Trong Đoạn với độ phức tạp tối ưu nhất.
+Cho $T$ đoạn $[L, R]$. Hãy lập trình đếm số cặp số nguyên tố sinh đôi $(p, p+2)$ nằm hoàn toàn trong mỗi đoạn.
 
 **Đầu vào (Input):**
 
@@ -652,19 +611,14 @@ Hãy lập trình giải quyết bài toán Cặp Số Nguyên Tố Sinh Đôi T
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2
-1 20
-10 30
-```
-### Output
-```text
-4
-2
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2<br/>1 20<br/>10 30<br/>``` | ```text<br/>4<br/>2<br/>``` |
+
+**Giải thích:**
+
 * Đoạn [1, 20] có 4 cặp sinh đôi: (3, 5), (5, 7), (11, 13), (17, 19).
+
 * Đoạn [10, 30] có 2 cặp sinh đôi: (11, 13), (17, 19).
 
 
@@ -683,7 +637,7 @@ Cho $T$ bộ dữ liệu, mỗi bộ gồm ba số nguyên $A, B, C$. Hãy kiể
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tìm Nghiệm Nguyên Phương Trình Diophantine với độ phức tạp tối ưu nhất.
+Cho $T$ bộ ba số nguyên $A, B, C$. Hãy lập trình kiểm tra phương trình $Ax + By = C$ có nghiệm nguyên hay không; nếu có, in ra một cặp nghiệm $(x_0, y_0)$.
 
 **Đầu vào (Input):**
 
@@ -698,22 +652,16 @@ Hãy lập trình giải quyết bài toán Tìm Nghiệm Nguyên Phương Trìn
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3
-2 3 7
-4 6 3
-0 0 0
-```
-### Output
-```text
-YES -7 7
-NO
-YES 0 0
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3<br/>2 3 7<br/>4 6 3<br/>0 0 0<br/>``` | ```text<br/>YES -7 7<br/>NO<br/>YES 0 0<br/>``` |
+
+**Giải thích:**
+
 * $2x + 3y = 7$: $\gcd(2, 3) = 1 \mid 7 \implies$ có nghiệm. Nghiệm $(x_0, y_0) = (-7, 7)$: $2(-7) + 3(7) = -14 + 21 = 7$ ✓.
+
 * $4x + 6y = 3$: $\gcd(4, 6) = 2 \nmid 3 \implies$ vô nghiệm.
+
 * $0x + 0y = 0$: $0 = 0 \implies$ mọi $(x, y)$ đều là nghiệm, in $(0, 0)$.
 
 
@@ -739,21 +687,14 @@ Nhiệm vụ của bạn là xác định xem phương trình có tồn tại ng
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3
-2 3 13
-4 6 11
-5 7 35
-```
-### Output
-```text
-2 3
-NO
-NO
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3<br/>2 3 13<br/>4 6 11<br/>5 7 35<br/>``` | ```text<br/>2 3<br/>NO<br/>NO<br/>``` |
+
+**Giải thích:**
+
 * $2(2) + 3(3) = 4 + 9 = 13$ là nghiệm nguyên dương có $x$ nhỏ nhất ($x=2, y=3$).
+
 * $4x + 6y = 11$ vô nghiệm vì $\gcd(4, 6) = 2$ không chia hết cho 11.
 
 
@@ -762,13 +703,13 @@ NO
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, hàm phi euler $\phi(n)$ nhanh với spf là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Đếm số nguyên tố cùng nhau qua SPF.
+Trong giờ sinh hoạt của câu lạc bộ Toán, cô giáo viết lên bảng một số nguyên $n$ và đố cả lớp: có bao nhiêu số từ $1$ đến $n$ không có ước chung nào với $n$ ngoài $1$? Đó chính là số lượng phân số tối giản có mẫu số bằng $n$. Vì cả lớp thay nhau đọc số liên tục, cần một cách trả lời thật nhanh cho mỗi số được gọi tên.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Hàm Phi Euler $\phi(n)$ Nhanh Với Spf với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $n$. Hãy lập trình tính $\phi(n)$ — số lượng số nguyên $k$ ($1 \le k \le n$) nguyên tố cùng nhau với $n$.
 
 **Đầu vào (Input):**
 
@@ -781,16 +722,12 @@ Hãy lập trình giải quyết bài toán Hàm Phi Euler $\phi(n)$ Nhanh Với
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hàm Phi Euler $\phi(N)$ Nhanh Với SPF.
 
 
@@ -803,7 +740,7 @@ Cho số nguyên dương $N$ và một số nguyên tố $P$. Cần tìm số m�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Nguyên Tố Của Giai Thừa (định Lý Legendre) với độ phức tạp tối ưu nhất.
+Cho số nguyên dương $N$ và số nguyên tố $P$. Hãy lập trình tìm số mũ lớn nhất $K$ sao cho $N!$ chia hết cho $P^K$.
 
 **Đầu vào (Input):**
 
@@ -815,15 +752,12 @@ Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Nguyên Tố
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-100 5
-```
-### Output
-```text
-24
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>100 5<br/>``` | ```text<br/>24<br/>``` |
+
+**Giải thích:**
+
 * $v_5(100!) = \lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = 24$.
 
 
@@ -836,7 +770,7 @@ Trong số học, một số nguyên dương $X$ có số lượng ước nguyê
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Có Số Lượng Ước Là Số Lẻ Trong Đoạn với độ phức tạp tối ưu nhất.
+Cho đoạn $[L, R]$. Hãy lập trình đếm các số trong đoạn có số lượng ước nguyên dương là số lẻ.
 
 **Đầu vào (Input):**
 
@@ -848,15 +782,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Có Số Lượng Ước
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-1 100
-```
-### Output
-```text
-10
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>1 100<br/>``` | ```text<br/>10<br/>``` |
+
+**Giải thích:**
+
 * Các số chính phương từ 1 đến 100 là $1^2, 2^2, \dots, 10^2$ (tổng cộng 10 số).
 
 
@@ -869,7 +800,7 @@ Cho hai số nguyên dương $G$ và $L$. Cần tìm hai số nguyên dương $A
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tìm Cặp Số Biết Gcd Và Lcm Có Tổng Nhỏ Nhất với độ phức tạp tối ưu nhất.
+Cho hai số nguyên dương $G$ và $L$. Hãy lập trình tìm hai số $A \le B$ sao cho $\gcd(A, B) = G$, $\text{lcm}(A, B) = L$ và tổng $A + B$ nhỏ nhất; in `-1` nếu không tồn tại cặp số thỏa mãn.
 
 **Đầu vào (Input):**
 
@@ -881,15 +812,12 @@ Hãy lập trình giải quyết bài toán Tìm Cặp Số Biết Gcd Và Lcm C
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2 60
-```
-### Output
-```text
-10 12
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2 60<br/>``` | ```text<br/>10 12<br/>``` |
+
+**Giải thích:**
+
 * $L / G = 30 = 5 \times 6$ với $\gcd(5, 6) = 1 \implies A = 2 \times 5 = 10, B = 2 \times 6 = 12$ có tổng $10 + 12 = 22$ nhỏ nhất.
 
 
@@ -902,7 +830,7 @@ Cho đoạn $[L, R]$ với $1 \le L \le R \le 10^9$ và $R - L \le 10^6$. Hãy t
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Khoảng Cách Lớn Nhất Giữa Hai Số Nguyên Tố Liên Tiếp với độ phức tạp tối ưu nhất.
+Cho đoạn $[L, R]$. Hãy lập trình tìm khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp trong đoạn; in `-1` nếu đoạn có ít hơn $2$ số nguyên tố.
 
 **Đầu vào (Input):**
 
@@ -914,15 +842,12 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Lớn Nhất Giữa H
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-1 30
-```
-### Output
-```text
-6
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>1 30<br/>``` | ```text<br/>6<br/>``` |
+
+**Giải thích:**
+
 * Các số nguyên tố là 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Khoảng cách lớn nhất là $29 - 23 = 6$ (và $23 - 17 = 6$).
 
 
@@ -935,7 +860,7 @@ Một máy rút tiền chỉ có 2 loại mệnh giá tiền là $A$ đồng và
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Cách Đổi Tiền Bằng Phương Trình Diophantine với độ phức tạp tối ưu nhất.
+Cho ba số nguyên dương $A, B, C$. Hãy lập trình đếm số cặp $(x, y)$ không âm thỏa mãn $A\cdot x + B\cdot y = C$.
 
 **Đầu vào (Input):**
 
@@ -947,15 +872,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Cách Đổi Tiền Bằ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3 5 30
-```
-### Output
-```text
-3
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3 5 30<br/>``` | ```text<br/>3<br/>``` |
+
+**Giải thích:**
+
 * Các bộ nghiệm $(x, y)$ là: (10, 0), (5, 3), (0, 6) $\implies$ 3 cách.
 
 
@@ -968,7 +890,7 @@ Cho số nguyên dương $N$. Hãy tính giá trị của tổng $S(N) = \sum_{i
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tính Tổng Gcd Của N Với Tất Cả Các Số Từ 1 Đến N với độ phức tạp tối ưu nhất.
+Cho số nguyên dương $N$. Hãy lập trình tính tổng $S(N) = \sum_{i=1}^N \gcd(i, N)$.
 
 **Đầu vào (Input):**
 
@@ -980,15 +902,12 @@ Hãy lập trình giải quyết bài toán Tính Tổng Gcd Của N Với Tất
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-6
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>6<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * $\gcd(1,6) + \gcd(2,6) + \gcd(3,6) + \gcd(4,6) + \gcd(5,6) + \gcd(6,6) = 1 + 2 + 3 + 2 + 1 + 6 = 15$.
 
 
@@ -1001,7 +920,7 @@ Trong lý thuyết số học và mật mã học, Định lý thặng dư Trung
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Định Lý Thặng Dư Trung Hoa (chinese Remainder Theorem — Crt) với độ phức tạp tối ưu nhất.
+Cho hệ $K$ phương trình đồng dư $x \equiv r_i \pmod{m_i}$ với các $m_i$ đôi một nguyên tố cùng nhau. Hãy lập trình tìm nghiệm $x$ nhỏ nhất không âm thỏa mãn cả hệ.
 
 **Đầu vào (Input):**
 
@@ -1014,18 +933,12 @@ Hãy lập trình giải quyết bài toán Định Lý Thặng Dư Trung Hoa (c
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3
-2 3
-3 5
-2 7
-```
-### Output
-```text
-23
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3<br/>2 3<br/>3 5<br/>2 7<br/>``` | ```text<br/>23<br/>``` |
+
+**Giải thích:**
+
 * $23 \equiv 2 \pmod 3$, $23 \equiv 3 \pmod 5$, $23 \equiv 2 \pmod 7$.
 
 
@@ -1038,7 +951,7 @@ Cho hai số nguyên dương nguyên tố cùng nhau $A$ và $M$ ($\gcd(A, M) = 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bậc Của Số Nguyên Theo Modulo M (multiplicative Order) với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(A, M)$ nguyên tố cùng nhau. Hãy lập trình tìm bậc $\text{ord}_M(A)$ — số nguyên dương $k$ nhỏ nhất sao cho $A^k \equiv 1 \pmod M$.
 
 **Đầu vào (Input):**
 
@@ -1051,32 +964,29 @@ Hãy lập trình giải quyết bài toán Bậc Của Số Nguyên Theo Modulo
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2
-2 7
-3 10
-```
-### Output
-```text
-3
-4
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2<br/>2 7<br/>3 10<br/>``` | ```text<br/>3<br/>4<br/>``` |
+
+**Giải thích:**
+
 * Modulo 7: $2^1=2, 2^2=4, 2^3=8 \equiv 1 \pmod 7 \implies k = 3$.
+
 * Modulo 10: $3^1=3, 3^2=9, 3^3=27 \equiv 7, 3^4=81 \equiv 1 \pmod{10} \implies k = 4$.
 
 
 
-### Bài 19 [CPPB2-L01-19]: Can nguyen nguyen thuy primitive root
+### Bài 19 [CPPB2-L01-19]: Căn Nguyên Nguyên Thủy (Primitive Root)
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Can Nguyen Nguyen Thuy Primitive Root**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Để tạo mật khẩu dùng một lần cho hệ thống điểm danh của trường, thầy tin học chọn một số nguyên tố $p$ rồi tìm một "số sinh" $g$: chỉ cần nhân $g$ với chính nó nhiều lần rồi lấy phần dư theo $p$, ta sẽ lần lượt tạo ra mọi số từ $1$ đến $p - 1$. Số sinh nhỏ nhất như vậy giúp thiết bị điểm danh đời cũ tính toán nhẹ nhàng nhất.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Root với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một số nguyên tố $p$. Hãy lập trình tìm căn nguyên thủy nhỏ nhất của $p$, tức số nguyên $g \ge 2$ nhỏ nhất mà các lũy thừa của $g$ sinh ra mọi số $1, 2, \dots, p-1$ theo modulo $p$.
 
 **Đầu vào (Input):**
 
@@ -1089,29 +999,27 @@ Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Roo
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Can Nguyen Nguyen Thuy Primitive Root.
 
 
 
-### Bài 20 [CPPB2-L01-20]: Tinh uoc nguyen to lon nhat
+### Bài 20 [CPPB2-L01-20]: Tính Ước Nguyên Tố Lớn Nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Tinh Uoc Nguyen To Lon Nhat**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Xưởng tái chế của khu phố nhận về một lô kiện hàng, mỗi kiện dán một con số. Máy phân loại sẽ tách mỗi con số thành các thừa số nguyên tố, và kiện nào có thừa số nguyên tố lớn nhất thì được đưa vào dây chuyền xử lý đặc biệt. Người quản đốc cần biết con số lớn nhất mà máy sẽ gặp trong cả lô hàng hôm nay.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho $n$ số nguyên. Hãy lập trình tìm ước nguyên tố lớn nhất của mỗi số, rồi in ra giá trị lớn nhất trong số đó.
 
 **Đầu vào (Input):**
 
@@ -1124,29 +1032,27 @@ Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với đ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tinh Uoc Nguyen To Lon Nhat.
 
 
 
-### Bài 21 [CPPB2-L01-21]: Phuong trinh pell co ban
+### Bài 21 [CPPB2-L01-21]: Phương Trình Pell Cơ Bản
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Phuong Trinh Pell Co Ban**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Câu lạc bộ cờ của trường tổ chức trò chơi tìm cặp số nguyên $(x, y)$ thỏa mãn đẳng thức $x^2 - d\cdot y^2 = 1$ với số $d$ cho trước. Đội nào tìm được cặp nghiệm dương nhỏ nhất sẽ thắng, vì đó là "chìa khóa" mở ra mọi nghiệm còn lại của đẳng thức này.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho số nguyên dương $d$. Hãy lập trình tìm nghiệm nguyên dương nhỏ nhất $(x, y)$ của phương trình $x^2 - d\cdot y^2 = 1$.
 
 **Đầu vào (Input):**
 
@@ -1159,29 +1065,27 @@ Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Phuong Trinh Pell Co Ban.
 
 
 
-### Bài 22 [CPPB2-L01-22]: Phan tich Legendre nang cao
+### Bài 22 [CPPB2-L01-22]: Phân Tích Legendre Nâng Cao
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Phan Tich Legendre Nang Cao**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Thủ kho của cửa hàng đồ chơi xếp các hộp quà thành dãy dài đánh số từ $1$ đến $N$ rồi lại xếp thêm một dãy nữa đến $M$. Cô muốn biết trong tích tất cả các số của cả hai dãy có tất cả bao nhiêu thừa số nguyên tố $P$ — tức số mũ của $P$ trong $N!$ cộng với số mũ của $P$ trong $M!$ — mà không cần nhân trực tiếp các số khổng lồ này.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ba số nguyên $N, M, P$ với $P$ là số nguyên tố. Hãy lập trình tính tổng số mũ của $P$ trong phân tích của $N!$ và $M!$.
 
 **Đầu vào (Input):**
 
@@ -1194,16 +1098,12 @@ Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với đ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Phan Tich Legendre Nang Cao.
 
 
@@ -1422,7 +1322,7 @@ Tính $A^B \bmod (10^9+7)$ với $A, B \le 10^{18}$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Lũy Thừa Nhanh Cơ Bản với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(A, B)$. Hãy lập trình tính $A^B \bmod (10^9+7)$ cho mỗi cặp.
 
 **Đầu vào (Input):**
 
@@ -1434,17 +1334,9 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Nhanh Cơ Bản với đ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2
-2 10
-3 13
-```
-### Output
-```text
-1024
-323
-```
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2<br/>2 10<br/>3 13<br/>``` | ```text<br/>1024<br/>323<br/>``` |
 
 
 
@@ -1456,7 +1348,7 @@ Cho hai số nguyên $P, Q$ ($Q \not\equiv 0 \pmod{10^9+7}$). Hãy tính $(P \ti
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tính Giá Trị Phân Số Modulo với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(P, Q)$ với $Q \not\equiv 0 \pmod{10^9+7}$. Hãy lập trình tính $(P / Q) \bmod (10^9+7)$ cho mỗi cặp.
 
 **Đầu vào (Input):**
 
@@ -1468,17 +1360,15 @@ Hãy lập trình giải quyết bài toán Tính Giá Trị Phân Số Modulo v
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2
-1 2
-3 7
-```
-### Output
-```text
-500000004
-428571432
-```
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2<br/>1 2<br/>3 7<br/>``` | ```text<br/>500000004<br/>428571432<br/>``` |
+
+**Giải thích:**
+
+* Với cặp $(P, Q) = (1, 2)$: cần tìm số $x$ sao cho $2x \equiv 1 \pmod{10^9+7}$. Thử $x = 500000004$: $2 \times 500000004 = 1000000008 = (10^9+7) + 1 \equiv 1$, vậy đáp án là `500000004`.
+
+* Với cặp $(P, Q) = (3, 7)$: đáp án `428571432` vì $7 \times 428571432 = 3000000024 = 3 \times (10^9+7) + 3 \equiv 3 \pmod{10^9+7}$, tức $428571432$ chính là giá trị của $3/7$ trong phép chia modulo.
 
 
 
@@ -1486,13 +1376,13 @@ Hãy lập trình giải quyết bài toán Tính Giá Trị Phân Số Modulo v
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Ma Trận 2x2 (Dãy Fibonacci Lớn)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Áp dụng Fast Power cho nhân ma trận.
+Trang trại thỏ của bác nông dân phát triển theo quy luật quen thuộc: mỗi tháng, số cặp thỏ mới bằng tổng số cặp thỏ của hai tháng trước đó. Sau rất nhiều tháng, đàn thỏ lên tới con số khổng lồ nên bác chỉ cần biết phần dư của con số đó khi chia cho $10^9+7$ để đối chiếu với sức chứa của chuồng.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận 2x2 (dãy Fibonacci Lớn) với độ phức tạp tối ưu nhất.
+Cho $T$ truy vấn, mỗi truy vấn gồm một số nguyên không âm $n$. Hãy lập trình tính số Fibonacci thứ $n$ (với $F_0 = 0, F_1 = 1$) theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -1505,16 +1395,12 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận 2x2 (dãy Fibo
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Ma Trận 2x2 (Dãy Fibonacci Lớn).
 
 
@@ -1523,13 +1409,13 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận 2x2 (dãy Fibo
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nghịch Đảo Modulo Tổng Quát** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Euclid mở rộng tìm nghịch đảo khi $M$ không nguyên tố.
+Trong trò chơi chia kẹo của lớp, cô giáo quy định mỗi viên kẹo ứng với một phép nhân theo vòng tròn modulo $m$. Để "hoàn tác" một lần chia, cả lớp cần tìm số $x$ sao cho $a \cdot x$ quay đúng một vòng trở về $1$. Có những số $a$ không thể hoàn tác được, khi đó cả lớp hô to $-1$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Nghịch Đảo Modulo Tổng Quát với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(a, m)$. Hãy lập trình tìm số nguyên $x$ nhỏ nhất không âm thỏa $a\cdot x \equiv 1 \pmod m$; in `-1` nếu không tồn tại.
 
 **Đầu vào (Input):**
 
@@ -1542,16 +1428,12 @@ Hãy lập trình giải quyết bài toán Nghịch Đảo Modulo Tổng Quát 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nghịch Đảo Modulo Tổng Quát.
 
 
@@ -1560,13 +1442,13 @@ Hãy lập trình giải quyết bài toán Nghịch Đảo Modulo Tổng Quát 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tính Tổ Hợp $C_n^k \bmod (10^9+7)$** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tiền xử lý giai thừa & nghịch đảo giai thừa.
+Đội văn nghệ của trường có $n$ bạn và cần chọn ra $k$ bạn vào đội hình biểu diễn. Số cách chọn có thể cực lớn nên thầy phụ trách chỉ cần biết phần dư của con số đó khi chia cho $10^9+7$. Vì danh sách đăng ký gửi về liên tục, thầy cần trả lời nhanh cho rất nhiều lượt hỏi khác nhau.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tính Tổ Hợp $c_n^k \bmod (10^9+7)$ với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm hai số nguyên $n, k$. Hãy lập trình tính tổ hợp $C_n^k \bmod (10^9+7)$.
 
 **Đầu vào (Input):**
 
@@ -1579,16 +1461,12 @@ Hãy lập trình giải quyết bài toán Tính Tổ Hợp $c_n^k \bmod (10^9+
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tính Tổ Hợp $C_n^k \bmod (10^9+7)$.
 
 
@@ -1597,13 +1475,13 @@ Hãy lập trình giải quyết bài toán Tính Tổ Hợp $c_n^k \bmod (10^9+
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Với Số Mũ Cực Lớn** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hạ bậc số mũ bằng định lý Fermat $B \bmod (M-1)$.
+Máy chủ của thư viện mã hóa mỗi lượt mượn sách bằng một lũy thừa $a^b$, trong đó số mũ $b$ dài tới hàng nghìn chữ số nên không thể nhập vào máy tính thông thường. Thủ thư chỉ cần biết phần dư của kết quả khi chia cho $10^9+7$ để in lên phiếu mượn.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Lũy Thừa Với Số Mũ Cực Lớn với độ phức tạp tối ưu nhất.
+Cho cơ số $a$ và số mũ $b$ rất lớn được cho dưới dạng chuỗi thập phân. Hãy lập trình tính $a^b \bmod (10^9+7)$.
 
 **Đầu vào (Input):**
 
@@ -1616,16 +1494,12 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Với Số Mũ Cực L�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Với Số Mũ Cực Lớn.
 
 
@@ -1634,13 +1508,13 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Với Số Mũ Cực L�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Modulo Hai Số Cực Lớn (Nhân Ấn Độ)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Xử lý chống tràn số khi $M$ lớn.
+Hai kho hàng điện tử cần đối soát số lượng linh kiện: mỗi bên có một con số cực lớn, và hệ thống chỉ lưu được phần dư của tích hai số đó khi chia cho $m$. Phép nhân trực tiếp sẽ làm tràn bộ nhớ máy quét cũ, nên người ta nhân từng phần rồi cộng dồn phần dư — giống cách nhân đặt cột mà học sinh vẫn làm trên giấy.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Nhân Modulo Hai Số Cực Lớn (nhân Ấn Độ) với độ phức tạp tối ưu nhất.
+Cho $T$ bộ $(a, b, m)$. Hãy lập trình tính $(a \cdot b) \bmod m$ mà không để xảy ra tràn số.
 
 **Đầu vào (Input):**
 
@@ -1653,16 +1527,12 @@ Hãy lập trình giải quyết bài toán Nhân Modulo Hai Số Cực Lớn (n
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nhân Modulo Hai Số Cực Lớn (Nhân Ấn Độ).
 
 
@@ -1671,13 +1541,13 @@ Hãy lập trình giải quyết bài toán Nhân Modulo Hai Số Cực Lớn (n
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Cấp Số Nhân $S_N = \sum_{i=0}^N A^i \bmod M$** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chia để trị tính tổng cấp số nhân $\mathcal{O}(\log N)$.
+Một người gửi tiết kiệm theo kiểu lạ: tháng đầu gửi $1$ đồng, các tháng sau số tiền gửi gấp $a$ lần tháng trước, kéo dài tới tháng thứ $n$. Ngân hàng cần biết tổng số tiền đã gửi theo modulo $10^9+7$ để in sao kê, mà $n$ có thể rất lớn nên không thể cộng từng tháng một.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân $s_n = \sum_{i=0}^n A^i \bmod M$ với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(a, n)$. Hãy lập trình tính $S = 1 + a + a^2 + \dots + a^n$ theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -1690,16 +1560,12 @@ Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân $s_n = \sum_
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Cấp Số Nhân $S_N = \sum_{i=0}^N A^i \bmod M$.
 
 
@@ -1708,13 +1574,13 @@ Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân $s_n = \sum_
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tháp Lũy Thừa $A^{B^C} \bmod M$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Áp dụng hạ bậc số mũ 2 tầng qua Euler.
+Trong cuộc thi xếp tháp số của lớp, mỗi đội dựng một "tháp lũy thừa" ba tầng $a^{b^c}$ rồi chỉ ghi lại phần dư của ngọn tháp khi chia cho $10^9+7$. Vì tầng trên cùng đã là một lũy thừa khổng lồ, không đội nào tính trực tiếp từ trên xuống được.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tháp Lũy Thừa $a^{b^c} \bmod M$ với độ phức tạp tối ưu nhất.
+Cho $T$ bộ $(a, b, c)$. Hãy lập trình tính tháp lũy thừa $a^{b^c} \bmod (10^9+7)$.
 
 **Đầu vào (Input):**
 
@@ -1727,16 +1593,12 @@ Hãy lập trình giải quyết bài toán Tháp Lũy Thừa $a^{b^c} \bmod M$ 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tháp Lũy Thừa $A^{B^C} \bmod M$.
 
 
@@ -1745,13 +1607,13 @@ Hãy lập trình giải quyết bài toán Tháp Lũy Thừa $a^{b^c} \bmod M$ 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Dãy Ngoặc Đúng (Số Catalan Modulo)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Công thức $C_n = \frac{1}{n+1} C_{2n}^n \bmod M$.
+Cô giáo mỹ thuật yêu cầu cả lớp vẽ các dãy ngoặc tròn mở và đóng sao cho mỗi ngoặc đóng đều khớp đúng với một ngoặc mở trước đó. Với $n$ cặp ngoặc, số dãy vẽ đúng có thể rất lớn nên lớp trưởng chỉ ghi lại phần dư khi chia cho $10^9+7$ để báo cáo.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Dãy Ngoặc Đúng (số Catalan Modulo) với độ phức tạp tối ưu nhất.
+Cho $T$ truy vấn, mỗi truy vấn gồm một số nguyên không âm $n$. Hãy lập trình đếm số dãy ngoặc đúng gồm $n$ cặp ngoặc (số Catalan thứ $n$) theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -1764,16 +1626,12 @@ Hãy lập trình giải quyết bài toán Đếm Dãy Ngoặc Đúng (số Cat
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Dãy Ngoặc Đúng (Số Catalan Modulo).
 
 
@@ -1782,13 +1640,13 @@ Hãy lập trình giải quyết bài toán Đếm Dãy Ngoặc Đúng (số Cat
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Phương Trình Đồng Dư (Chinese Remainder Theorem)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Định lý phần dư Trung Hoa giải hệ đồng dư.
+Ba lớp trực nhật đếm số ghế trong hội trường theo ba cách khác nhau: lớp thì đếm dư theo nhóm $m_1$, lớp thì theo nhóm $m_2$, lớp thì theo nhóm $m_3$. Từ các số dư $r_1, r_2, r_3$ đó, ban tổ chức muốn suy ra tổng số ghế nhỏ nhất khớp với cả ba cách đếm.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Hệ Phương Trình Đồng Dư (chinese Remainder Theorem) với độ phức tạp tối ưu nhất.
+Cho hệ $k$ phương trình đồng dư $x \equiv r_i \pmod{m_i}$. Hãy lập trình tìm nghiệm $x$ nhỏ nhất không âm thỏa mãn cả hệ.
 
 **Đầu vào (Input):**
 
@@ -1801,16 +1659,12 @@ Hãy lập trình giải quyết bài toán Hệ Phương Trình Đồng Dư (ch
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Hệ Phương Trình Đồng Dư (Chinese Remainder Theorem).
 
 
@@ -1819,13 +1673,13 @@ Hãy lập trình giải quyết bài toán Hệ Phương Trình Đồng Dư (ch
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cài đặt mảng `inv[i]` trong $\mathcal{O}(N)$.
+Phòng thí nghiệm cần chuẩn bị sẵn một bảng tra cứu: với mỗi số $i$ từ $1$ đến $n$, ghi lại "số đảo" của $i$ theo modulo $10^9+7$ (số nhân với $i$ cho phần dư $1$). Bảng này được in một lần rồi dùng cho cả học kỳ, nên khâu chuẩn bị cần làm gọn trong một lượt duyệt duy nhất.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{o}(n)$ với độ phức tạp tối ưu nhất.
+Cho số nguyên $n$. Hãy lập trình tính nghịch đảo modulo $10^9+7$ của từng số $i$ với $1 \le i \le n$.
 
 **Đầu vào (Input):**
 
@@ -1838,16 +1692,12 @@ Hãy lập trình giải quyết bài toán Tiền Xử Lý Nghịch Đảo Tuy�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{O}(N)$.
 
 
@@ -1856,13 +1706,13 @@ Hãy lập trình giải quyết bài toán Tiền Xử Lý Nghịch Đảo Tuy�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Ma Trận Kích Thước $K \times K$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Giải bài toán quy hoạch động truy hồi qua ma trận.
+Mạng lưới giao thông giữa $k$ bến xe được ghi trong một bảng $k \times k$: ô $(i, j)$ cho biết có bao nhiêu chuyến xe đi thẳng từ bến $i$ đến bến $j$ trong một chặng. Để biết sau đúng $n$ chặng thì giữa các bến có bao nhiêu hành trình, người ta nhân bảng này với chính nó $n$ lần rồi lấy phần dư theo $10^9+7$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận Kích Thước $k \times K$ với độ phức tạp tối ưu nhất.
+Cho ma trận vuông $A$ kích thước $k \times k$ và số mũ $n$. Hãy lập trình tính $A^n$ theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -1875,16 +1725,12 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận Kích Thước
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Ma Trận Kích Thước $K \times K$.
 
 
@@ -1893,13 +1739,13 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận Kích Thước
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Căn Bậc Hai Modulo Nguyên Tố (Thuật Toán Tonelli-Shanks)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ thỏa $X^2 \equiv A \pmod P$.
+Ổ khóa số của phòng dụng cụ mở ra khi nhập đúng số $x$ mà bình phương của nó chia cho số nguyên tố $p$ còn dư đúng $n$. Có những con số $n$ mà không chiếc chìa nào mở được, khi đó người trực phải báo $-1$ để đổi ổ khác.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Căn Bậc Hai Modulo Nguyên Tố (thuật Toán Tonelli-shanks) với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(n, p)$ với $p$ nguyên tố. Hãy lập trình tìm $x$ sao cho $x^2 \equiv n \pmod p$; in `-1` nếu không tồn tại.
 
 **Đầu vào (Input):**
 
@@ -1912,16 +1758,12 @@ Hãy lập trình giải quyết bài toán Căn Bậc Hai Modulo Nguyên Tố (
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Căn Bậc Hai Modulo Nguyên Tố (Thuật Toán Tonelli-Shanks).
 
 
@@ -1930,13 +1772,13 @@ Hãy lập trình giải quyết bài toán Căn Bậc Hai Modulo Nguyên Tố (
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Áp dụng định lý Euler mở rộng $A^B \equiv A^{B \bmod \phi(M) + \phi(M)}$.
+Trạm quan trắc ghi chỉ số bụi mịn dưới dạng lũy thừa $a^b$, trong đó số mũ $b$ dài hàng nghìn chữ số và máy chỉ hiển thị phần dư khi chia cho $m$ (một hợp số). Kỹ thuật viên cần tính phần dư này mỗi giờ mà không thể nhập nổi số mũ khổng lồ vào máy tính bỏ túi.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số với độ phức tạp tối ưu nhất.
+Cho cơ số $a$, số mũ $b$ rất lớn (dạng chuỗi thập phân) và modulo $m$ là hợp số. Hãy lập trình tính $a^b \bmod m$.
 
 **Đầu vào (Input):**
 
@@ -1949,16 +1791,12 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Số Mũ Lớn Khi Modul
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số.
 
 
@@ -1967,13 +1805,13 @@ Hãy lập trình giải quyết bài toán Lũy Thừa Số Mũ Lớn Khi Modul
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Logarit Rời Rạc (Baby-step Giant-step)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ nhỏ nhất thỏa $A^X \equiv B \pmod M$ trong $\mathcal{O}(\sqrt{M})$.
+Trò chơi tìm mật mã của đội hướng đạo quy định: xuất phát từ $1$, mỗi lượt nhân tiếp với $a$ rồi lấy phần dư theo $m$; đội nào tìm được số lượt đi $x$ ít nhất để chạm đúng số $b$ sẽ thắng. Có những số $b$ không bao giờ chạm tới được, khi đó trọng tài ghi $-1$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Logarit Rời Rạc (baby-step Giant-step) với độ phức tạp tối ưu nhất.
+Cho ba số $a, b, m$. Hãy lập trình tìm số mũ $x$ nhỏ nhất không âm thỏa $a^x \equiv b \pmod m$; in `-1` nếu không tồn tại.
 
 **Đầu vào (Input):**
 
@@ -1986,29 +1824,27 @@ Hãy lập trình giải quyết bài toán Logarit Rời Rạc (baby-step Giant
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Logarit Rời Rạc (Baby-step Giant-step).
 
 
 
-### Bài 17 [CPPB2-L02-17]: Luy thua ma tran dem duong di
+### Bài 17 [CPPB2-L02-17]: Lũy Thừa Ma Trận Đếm Đường Đi
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Luy Thua Ma Tran Dem Duong Di**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Bản đồ du lịch của huyện có $n$ điểm tham quan nối với nhau bằng $m$ con đường hai chiều. Hội thi "phượt thủ" thách mỗi đội lên lịch trình đúng $k$ chặng đường đi từ điểm $u$ đến điểm $v$ (được quay lại điểm cũ), và ban tổ chức cần đếm xem có tất cả bao nhiêu lịch trình như vậy.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho đồ thị vô hướng gồm $n$ đỉnh, $m$ cạnh cùng hai đỉnh $u, v$ và độ dài $k$. Hãy lập trình đếm số đường đi (được phép lặp đỉnh, lặp cạnh) có độ dài đúng $k$ từ $u$ đến $v$ theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -2021,29 +1857,27 @@ Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Luy Thua Ma Tran Dem Duong Di.
 
 
 
-### Bài 18 [CPPB2-L02-18]: Tinh cap so nhan modulo hop so
+### Bài 18 [CPPB2-L02-18]: Tính Cấp Số Nhân theo modulo Hợp Số
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Tinh Cap So Nhan Modulo Hop So**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Cửa hàng xếp ly giấy thành chồng cao dần: tầng thứ $i$ có đúng $a^i$ chiếc ly, xếp tới tầng thứ $n$. Vì tổng số ly quá lớn, chủ cửa hàng chỉ ghi lại phần dư khi chia cho $m$ để ước lượng số thùng cần dùng.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ba số $a, n, m$. Hãy lập trình tính $S = 1 + a + a^2 + \dots + a^n$ theo modulo $m$.
 
 **Đầu vào (Input):**
 
@@ -2056,29 +1890,27 @@ Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tinh Cap So Nhan Modulo Hop So.
 
 
 
-### Bài 19 [CPPB2-L02-19]: Luy thua tang thap power tower
+### Bài 19 [CPPB2-L02-19]: Lũy Thừa Tầng Tháp (Power Tower)
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Luy Thua Tang Thap Power Tower**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Giải đấu cờ vua tính điểm thưởng theo "tháp lũy thừa" $a^{b^c}$: đội thắng nhận số điểm bằng phần dư của ngọn tháp khi chia cho $m$. Vì ngọn tháp phình to rất nhanh, trọng tài không thể tính trực tiếp mà phải rút gọn từng tầng một.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho bốn số $a, b, c, m$. Hãy lập trình tính tháp lũy thừa $a^{b^c} \bmod m$.
 
 **Đầu vào (Input):**
 
@@ -2091,29 +1923,27 @@ Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Luy Thua Tang Thap Power Tower.
 
 
 
-### Bài 20 [CPPB2-L02-20]: Can bac hai modulo tonelli shanks
+### Bài 20 [CPPB2-L02-20]: Căn Bậc Hai theo modulo bằng Tonelli-Shanks
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Can Bac Hai Modulo Tonelli Shanks**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Két sắt của phòng y tế mở bằng một số $x$ mà bình phương của nó chia cho số nguyên tố $p$ còn dư đúng $n$. Quy định của trường yêu cầu luôn ghi lại chiếc chìa nhỏ hơn trong cặp chìa đối nhau; nếu không có chiếc chìa nào mở được thì ghi $-1$.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho cặp $(n, p)$ với $p$ nguyên tố. Hãy lập trình tìm căn bậc hai của $n$ theo modulo $p$ (in nghiệm nhỏ hơn trong cặp nghiệm đối nhau); in `-1` nếu không tồn tại.
 
 **Đầu vào (Input):**
 
@@ -2126,29 +1956,27 @@ Hãy lập trình giải quyết bài toán Can Bac Hai Modulo Tonelli Shanks v�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Can Bac Hai Modulo Tonelli Shanks.
 
 
 
-### Bài 21 [CPPB2-L02-21]: Ma tran fibonacci tong doan
+### Bài 21 [CPPB2-L02-21]: Ma Trận Fibonacci Tổng Đoạn
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Ma Tran Fibonacci Tong Doan**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Vườn ươm của trường đánh số các luống cây từ $1$ trở đi, luống thứ $i$ trồng đúng $F_i$ cây con theo dãy Fibonacci. Cuối vụ, thầy phụ trách cần tổng số cây trên các luống từ $l$ đến $r$ (chỉ lấy phần dư khi chia cho $10^9+7$) để quyết toán tiền giống.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho đoạn $[l, r]$. Hãy lập trình tính tổng $F_l + F_{l+1} + \dots + F_r$ các số Fibonacci trong đoạn theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -2161,16 +1989,12 @@ Hãy lập trình giải quyết bài toán Ma Tran Fibonacci Tong Doan với đ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Ma Tran Fibonacci Tong Doan.
 
 
@@ -2183,7 +2007,7 @@ Dãy số Tribonacci được định nghĩa bởi hệ thức truy hồi bậc 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Số Tribonacci Thứ N Bằng Nhân Ma Trận 3x3 với độ phức tạp tối ưu nhất.
+Cho $T$ số nguyên không âm $N$. Hãy lập trình tính số Tribonacci thứ $N$ ($T_0 = 0, T_1 = T_2 = 1$, $T_n = T_{n-1} + T_{n-2} + T_{n-3}$) theo modulo $10^9+7$.
 
 **Đầu vào (Input):**
 
@@ -2196,22 +2020,12 @@ Hãy lập trình giải quyết bài toán Số Tribonacci Thứ N Bằng Nhân
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-0
-1
-3
-4
-```
-### Output
-```text
-0
-1
-2
-4
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>0<br/>1<br/>3<br/>4<br/>``` | ```text<br/>0<br/>1<br/>2<br/>4<br/>``` |
+
+**Giải thích:**
+
 * $T_0 = 0, T_1 = 1, T_2 = 1, T_3 = 0+1+1=2, T_4 = 1+1+2=4$.
 
 
@@ -2411,7 +2225,7 @@ Có $N$ cây gỗ có chiều cao $H_1, H_2, \dots, H_N$. Cần cưa ở độ c
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chặt Nhị Phân Cắt Gỗ (eko) với độ phức tạp tối ưu nhất.
+Cho số cây $N$, lượng gỗ cần $M$ và chiều cao từng cây $H_i$. Hãy lập trình tìm độ cao cưa $H$ lớn nhất sao cho tổng lượng gỗ thu được không nhỏ hơn $M$.
 
 **Đầu vào (Input):**
 
@@ -2423,15 +2237,15 @@ Hãy lập trình giải quyết bài toán Chặt Nhị Phân Cắt Gỗ (eko) 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4 7
-20 15 10 17
-```
-### Output
-```text
-15
-```
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4 7<br/>20 15 10 17<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
+* Thử cưa ở độ cao $H = 15$: cây cao $20$ cho $20 - 15 = 5$, cây cao $15$ cho $0$, cây cao $10$ cho $0$, cây cao $17$ cho $17 - 15 = 2$. Tổng gỗ thu được là $5 + 0 + 0 + 2 = 7$, vừa đủ lượng cần ($\ge 7$).
+
+* Thử nâng lưỡi cưa lên $H = 16$: chỉ còn $(20 - 16) + (17 - 16) = 4 + 1 = 5 < 7$, không đủ gỗ. Vì vậy $15$ là độ cao lớn nhất thỏa mãn.
 
 
 
@@ -2439,13 +2253,13 @@ Hãy lập trình giải quyết bài toán Chặt Nhị Phân Cắt Gỗ (eko) 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Bánh Pizza Đều Nhau** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: BS trên đáp án số thực.
+Lớp học tổ chức liên hoan cuối tuần với vài chiếc bánh pizza cỡ khác nhau. Cô giáo muốn cắt tất cả bánh thành những miếng bằng nhau sao cho mỗi bạn đều nhận được một miếng và phần bánh bỏ đi là ít nhất.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Các bạn háo hức đoán xem miếng bánh lớn nhất có thể chia đều được là bao nhiêu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chia Bánh Pizza Đều Nhau với độ phức tạp tối ưu nhất.
+Cho dữ liệu mô tả các chiếc bánh và số người cần chia. Hãy lập trình tìm kích thước miếng bánh lớn nhất có thể cắt đều cho mọi người sao cho phần dư ra là ít nhất.
 
 **Đầu vào (Input):**
 
@@ -2458,16 +2272,12 @@ Hãy lập trình giải quyết bài toán Chia Bánh Pizza Đều Nhau với �
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Bánh Pizza Đều Nhau.
 
 
@@ -2476,13 +2286,13 @@ Hãy lập trình giải quyết bài toán Chia Bánh Pizza Đều Nhau với �
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chuồng Bò Xa Nhau Nhất (Aggressive Cows)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Sắp xếp + BS khoảng cách cực đại.
+Một trang trại bò sữa có dãy chuồng đặt dọc theo con đường, mỗi chuồng ở một vị trí khác nhau. Bác nông dân muốn chọn ra một số chuồng để nhốt những chú bò hay húc nhau, sao cho hai chuồng được chọn gần nhau nhất cũng càng xa nhau càng tốt.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác đi dọc dãy chuồng, ghi lại vị trí từng chuồng và tính xem nên chọn chuồng nào cho hợp lý.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chuồng Bò Xa Nhau Nhất (aggressive Cows) với độ phức tạp tối ưu nhất.
+Cho vị trí các chuồng và số bò cần nhốt. Hãy lập trình tìm khoảng cách nhỏ nhất lớn nhất có thể giữa hai chuồng được chọn.
 
 **Đầu vào (Input):**
 
@@ -2495,16 +2305,12 @@ Hãy lập trình giải quyết bài toán Chuồng Bò Xa Nhau Nhất (aggress
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chuồng Bò Xa Nhau Nhất (Aggressive Cows).
 
 
@@ -2513,13 +2319,13 @@ Hãy lập trình giải quyết bài toán Chuồng Bò Xa Nhau Nhất (aggress
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Công Việc Thợ Sơn (Painter's Partition)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: BS tìm Min của Max tổng đoạn.
+Đội thợ sơn nhận sơn một dãy đoạn tường liền kề, mỗi đoạn tốn một khoảng thời gian khác nhau. Anh đội trưởng cần chia dãy tường thành các phần liên tiếp để giao cho các thợ, sao cho người làm lâu nhất cũng xong sớm nhất có thể.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Mọi người cùng bàn cách chia sao cho công việc cân đối, không ai phải chờ ai quá lâu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phân Chia Công Việc Thợ Sơn (painter's Partition) với độ phức tạp tối ưu nhất.
+Cho thời gian sơn từng đoạn tường và số thợ. Hãy lập trình tìm thời gian hoàn thành nhỏ nhất có thể của người làm lâu nhất khi chia công việc liên tiếp cho các thợ.
 
 **Đầu vào (Input):**
 
@@ -2532,16 +2338,12 @@ Hãy lập trình giải quyết bài toán Phân Chia Công Việc Thợ Sơn (
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phân Chia Công Việc Thợ Sơn (Painter's Partition).
 
 
@@ -2550,13 +2352,13 @@ Hãy lập trình giải quyết bài toán Phân Chia Công Việc Thợ Sơn (
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoàn Tàu Vận Chuyển Hàng Hóa** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tham lam kiểm tra tính khả thi trong $\text{check}(X)$.
+Ga hàng hóa có một đoàn tàu với sức chở giới hạn mỗi chuyến. Thủ kho cần xếp các kiện hàng nặng nhẹ khác nhau lên các chuyến tàu theo đúng thứ tự nhập kho, sao cho dùng ít chuyến nhất mà chuyến nào cũng không bị quá tải.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh thủ kho thử tính sức chở tối thiểu cần thiết để chở hết hàng trong số chuyến cho phép.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đoàn Tàu Vận Chuyển Hàng Hóa với độ phức tạp tối ưu nhất.
+Cho trọng lượng các kiện hàng theo thứ tự và sức chở của đoàn tàu. Hãy lập trình tìm sức chở tối thiểu (hoặc số chuyến tối thiểu) để vận chuyển hết hàng hóa.
 
 **Đầu vào (Input):**
 
@@ -2569,16 +2371,12 @@ Hãy lập trình giải quyết bài toán Đoàn Tàu Vận Chuyển Hàng Hó
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đoàn Tàu Vận Chuyển Hàng Hóa.
 
 
@@ -2587,13 +2385,13 @@ Hãy lập trình giải quyết bài toán Đoàn Tàu Vận Chuyển Hàng Hó
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Dây Cáp Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Chặt nhị phân số thực độ chính xác $10^{-6}$.
+Trên công trường, đội thi công cần mắc một đường dây cáp nối qua các vị trí cột đã cắm sẵn. Kỹ sư muốn chọn vị trí đặt các điểm nối sao cho đoạn dây ngắn nhất vẫn đủ dài, tránh bị căng quá mức.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Tổ kỹ thuật đo đạc khoảng cách giữa các cột rồi bàn nhau phương án đặt điểm nối hợp lý.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Khoảng Cách Dây Cáp Nhỏ Nhất với độ phức tạp tối ưu nhất.
+Cho vị trí các điểm cần nối dây cáp. Hãy lập trình tìm độ dài đoạn dây đáp ứng yêu cầu bài toán với độ chính xác $10^{-6}$.
 
 **Đầu vào (Input):**
 
@@ -2606,16 +2404,12 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Dây Cáp Nhỏ Nhấ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Khoảng Cách Dây Cáp Nhỏ Nhất.
 
 
@@ -2624,13 +2418,13 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Dây Cáp Nhỏ Nhấ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: BS số thực kết hợp Mảng tiền tố trừ $mid$.
+Cuối học kỳ, cô giáo muốn tìm một dãy ngày liên tiếp mà điểm trung bình của lớp đạt từ mức $K$ trở lên và là cao nhất có thể, để tuyên dương nỗ lực của cả lớp.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô ghi lại điểm số từng ngày rồi tìm xem giai đoạn nào lớp học tiến bộ nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$ với độ phức tạp tối ưu nhất.
+Cho dãy số và ngưỡng $K$. Hãy lập trình tìm giá trị trung bình đoạn con lớn nhất thỏa mãn không nhỏ hơn $K$.
 
 **Đầu vào (Input):**
 
@@ -2643,16 +2437,12 @@ Hãy lập trình giải quyết bài toán Trung Bình Cộng Đoạn Con Lớn
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$.
 
 
@@ -2661,13 +2451,13 @@ Hãy lập trình giải quyết bài toán Trung Bình Cộng Đoạn Con Lớn
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tìm kiếm tam phân (Ternary Search).
+Ủy ban xã muốn dựng một trạm phát sóng sao cho tổng chi phí kéo dây tới các hộ dân là thấp nhất. Vị trí trạm càng gần khu dân cư đông thì càng tiết kiệm, nhưng mặt bằng mỗi nơi lại có giá khác nhau.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cán bộ địa chính vẽ bản đồ các hộ dân rồi tính xem đặt trạm ở đâu thì tổng chi phí nhỏ nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng với độ phức tạp tối ưu nhất.
+Cho vị trí các hộ dân và hàm chi phí lắp trạm. Hãy lập trình tìm vị trí đặt trạm phát sóng sao cho tổng chi phí là nhỏ nhất.
 
 **Đầu vào (Input):**
 
@@ -2680,16 +2470,12 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Lắp Trạm
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng.
 
 
@@ -2698,13 +2484,13 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Lắp Trạm
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $N \times N$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BS trên giá trị, hàm check đếm $\mathcal{O}(N)$.
+Trong giờ học bảng cửu chương, bạn Nam viết ra bảng nhân $N \times N$ rồi đố bạn cùng bàn: nếu xếp tất cả các số trong bảng theo thứ tự từ nhỏ đến lớn thì số đứng thứ $K$ là số nào.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả hai cùng đếm thử với bảng nhỏ trước khi nghĩ cách trả lời nhanh với bảng lớn.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $n \times N$ với độ phức tạp tối ưu nhất.
+Cho kích thước bảng nhân $N \times N$ và số $K$. Hãy lập trình tìm phần tử nhỏ thứ $K$ khi xếp tất cả các số trong bảng theo thứ tự tăng dần.
 
 **Đầu vào (Input):**
 
@@ -2717,16 +2503,12 @@ Hãy lập trình giải quyết bài toán Tìm Phần Tử Nhỏ Thứ K Trong
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $N \times N$.
 
 
@@ -2735,13 +2517,13 @@ Hãy lập trình giải quyết bài toán Tìm Phần Tử Nhỏ Thứ K Trong
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: BS trên đáp án kết hợp 2D Prefix Sum & Greedy.
+Cô thủ thư muốn chia kho sách hình chữ nhật thành các khu vực để mỗi khu vực có tổng trọng lượng sách không vượt quá sức chịu của kệ. Cô cần biết sức chịu tối thiểu của kệ để có thể chia kho thành số khu vực đúng quy định.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô cân thử từng chồng sách rồi tính toán phương án chia kho hợp lý.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d với độ phức tạp tối ưu nhất.
+Cho ma trận trọng số và số khu vực cần chia. Hãy lập trình tìm ngưỡng trọng số tối thiểu thỏa mãn yêu cầu phân đoạn ma trận.
 
 **Đầu vào (Input):**
 
@@ -2754,16 +2536,12 @@ Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D.
 
 
@@ -2772,13 +2550,13 @@ Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Nghiệm Thực Của Phương Trình Phi Tuyến** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân số thực trên hàm đơn điệu ngặt.
+Trong phòng thí nghiệm vật lý, các bạn học sinh đo một đại lượng biến thiên liên tục theo một biến số và thấy đồ thị của nó luôn đi lên. Thầy giáo đố cả lớp tìm xem giá trị của biến số bằng bao nhiêu thì đại lượng đo được đúng bằng một mốc cho trước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả lớp ghi lại các lần đo rồi thu hẹp dần khoảng tìm kiếm quanh đáp án.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tìm Nghiệm Thực Của Phương Trình Phi Tuyến với độ phức tạp tối ưu nhất.
+Cho hàm số đơn điệu và khoảng tìm kiếm. Hãy lập trình tìm nghiệm thực của phương trình phi tuyến với độ chính xác $10^{-6}$.
 
 **Đầu vào (Input):**
 
@@ -2791,16 +2569,12 @@ Hãy lập trình giải quyết bài toán Tìm Nghiệm Thực Của Phương 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Nghiệm Thực Của Phương Trình Phi Tuyến.
 
 
@@ -2809,13 +2583,13 @@ Hãy lập trình giải quyết bài toán Tìm Nghiệm Thực Của Phương 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cặp $(A_i, B_j)$ Có Tổng Trong Khoảng $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `lower_bound` và `upper_bound` đếm số lượng.
+Hai đội văn nghệ mỗi đội chuẩn bị một danh sách tiết mục với thời lượng khác nhau. Ban tổ chức muốn ghép mỗi tiết mục của đội một với một tiết mục của đội hai sao cho tổng thời lượng của cặp ghép nằm trong khoảng thời gian cho phép của chương trình.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức liệt kê thời lượng từng tiết mục rồi đếm xem có bao nhiêu cặp ghép vừa khung giờ.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, B_j)$ Có Tổng Trong Khoảng $[l, R]$ với độ phức tạp tối ưu nhất.
+Cho hai dãy $A, B$ và khoảng $[L, R]$. Hãy lập trình đếm số cặp $(A_i, B_j)$ có tổng nằm trong khoảng $[L, R]$.
 
 **Đầu vào (Input):**
 
@@ -2828,16 +2602,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, B_j)$ Có T
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Cặp $(A_i, B_j)$ Có Tổng Trong Khoảng $[L, R]$.
 
 
@@ -2846,13 +2616,13 @@ Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, B_j)$ Có T
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân trong $\mathcal{O}(\log(\min(N, M)))$.
+Hai lớp học đều đã xếp hàng theo chiều cao từ thấp đến cao. Thầy thể dục muốn biết nếu gộp cả hai hàng thành một hàng chung vẫn giữ thứ tự chiều cao thì bạn đứng thứ $K$ cao bao nhiêu.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thầy không muốn bắt cả hai lớp xếp lại từ đầu mà chỉ so sánh từng nhóm nhỏ để tìm ra đáp án.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp với độ phức tạp tối ưu nhất.
+Cho hai mảng đã sắp xếp và số $K$. Hãy lập trình tìm phần tử nhỏ thứ $K$ của dãy hợp nhất hai mảng.
 
 **Đầu vào (Input):**
 
@@ -2865,16 +2635,12 @@ Hãy lập trình giải quyết bài toán Phần Tử Nhỏ Thứ K Của Hợ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp.
 
 
@@ -2883,13 +2649,13 @@ Hãy lập trình giải quyết bài toán Phần Tử Nhỏ Thứ K Của Hợ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: BS trên đáp án kết hợp 2D Prefix Sum & Greedy.
+Bác nông dân có một cánh đồng hình chữ nhật chia thành nhiều ô, mỗi ô cho năng suất khác nhau. Bác muốn khoanh các vùng trồng sao cho mỗi vùng có tổng năng suất đạt mức yêu cầu, với số vùng khoanh đúng như kế hoạch.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác ghi lại năng suất từng ô rồi tính mức năng suất tối thiểu mỗi vùng cần đạt.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d với độ phức tạp tối ưu nhất.
+Cho ma trận trọng số và số khu vực cần chia. Hãy lập trình tìm ngưỡng trọng số tối thiểu thỏa mãn yêu cầu phân đoạn ma trận.
 
 **Đầu vào (Input):**
 
@@ -2902,16 +2668,12 @@ Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D.
 
 
@@ -2920,13 +2682,13 @@ Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chặt Nhị Phân Song Song (Parallel Binary Search)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Kỹ thuật chặt nhị phân đồng thời cho $Q$ truy vấn.
+Trạm khí tượng có nhiều cảm biến gửi số liệu về theo từng đợt. Kỹ sư trực cần trả lời cùng lúc nhiều câu hỏi dạng: với ngưỡng cho trước, đợt đo thứ mấy thì số liệu tích lũy mới vượt ngưỡng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thay vì trả lời từng câu hỏi một, anh kỹ sư xử lý tất cả các câu hỏi song song theo từng đợt số liệu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chặt Nhị Phân Song Song (parallel Binary Search) với độ phức tạp tối ưu nhất.
+Cho dữ liệu các đợt đo và nhiều câu hỏi ngưỡng tích lũy. Hãy lập trình trả lời với mỗi câu hỏi đợt đo sớm nhất mà tổng tích lũy vượt ngưỡng.
 
 **Đầu vào (Input):**
 
@@ -2939,16 +2701,12 @@ Hãy lập trình giải quyết bài toán Chặt Nhị Phân Song Song (parall
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chặt Nhị Phân Song Song (Parallel Binary Search).
 
 
@@ -2957,13 +2715,13 @@ Hãy lập trình giải quyết bài toán Chặt Nhị Phân Song Song (parall
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Cực Trị Trên Đa Giác Lồi** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Ternary Search trên cấu trúc đa giác.
+Đội đo đạc vẽ lại bản đồ một khu đất hình đa giác lồi rồi cắm cọc tại các đỉnh. Chú kỹ sư muốn biết hai cọc nào đứng xa nhau nhất để đặt đường dây quan trắc chính xác.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Tổ đo đạc đi vòng quanh khu đất, ghi lại tọa độ từng cọc rồi so sánh các khoảng cách.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Khoảng Cách Cực Trị Trên Đa Giác Lồi với độ phức tạp tối ưu nhất.
+Cho tọa độ các đỉnh của đa giác lồi. Hãy lập trình tìm khoảng cách lớn nhất (hoặc nhỏ nhất theo yêu cầu) giữa hai đỉnh của đa giác.
 
 **Đầu vào (Input):**
 
@@ -2976,16 +2734,12 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Cực Trị Trên Đa
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Khoảng Cách Cực Trị Trên Đa Giác Lồi.
 
 
@@ -3012,21 +2766,16 @@ Với mỗi thiên thạch, hãy tìm mốc thời gian $t$ nhỏ nhất ($1 \le
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5 3
-10 20 30 40 50
-15 55 200
-```
-### Output
-```text
-2
-3
--1
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5 3<br/>10 20 30 40 50<br/>15 55 200<br/>``` | ```text<br/>2<br/>3<br/>-1<br/>``` |
+
+**Giải thích:**
+
 * Thiên thạch 1 cần $15$ năng lượng: tại mốc $t=1$ có $10$, tại mốc $t=2$ tích lũy tổng $30 \ge 15$, do đó đáp án là $2$.
+
 * Thiên thạch 2 cần $55$ năng lượng: tại $t=3$ tích lũy tổng $60 \ge 55$, đáp án là $3$.
+
 * Thiên thạch 3 cần $200$ năng lượng: sau cả $5$ mốc chỉ tích lũy được $150 < 200$, in ra `-1`.
 
 
@@ -3051,15 +2800,12 @@ Hãy sử dụng thuật toán Tìm kiếm tam phân (Ternary Search) trên tậ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-1 -4 4 0 5
-```
-### Output
-```text
-2.000000
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>1 -4 4 0 5<br/>``` | ```text<br/>2.000000<br/>``` |
+
+**Giải thích:**
+
 * Hàm số $f(x) = x^2 - 4x + 4 = (x - 2)^2$ đạt giá trị nhỏ nhất bằng $0$ tại điểm cực trị $x = -b / (2a) = 2.000000$ thuộc đoạn $[0, 5]$.
 
 
@@ -3086,17 +2832,12 @@ Hãy tìm trung vị của tập hợp tất cả các phần tử trong cả 2 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2 2
-1 3
-2 4
-```
-### Output
-```text
-2.5
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2 2<br/>1 3<br/>2 4<br/>``` | ```text<br/>2.5<br/>``` |
+
+**Giải thích:**
+
 * Dãy hợp nhất sau khi sắp xếp là $[1, 2, 3, 4]$. Tổng số phần tử chẵn ($4$), hai phần tử chính giữa là $2$ và $3$, trung vị là $(2 + 3) / 2 = 2.5$.
 
 
@@ -3122,32 +2863,27 @@ Hãy lập trình tìm diện tích lớn nhất của tam giác được tạo 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-0 0
-4 0
-4 3
-0 3
-```
-### Output
-```text
-6.0
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>0 0<br/>4 0<br/>4 3<br/>0 3<br/>``` | ```text<br/>6.0<br/>``` |
+
+**Giải thích:**
+
 * 4 đỉnh tạo thành hình chữ nhật kích thước $4 \times 3$. Chọn 3 đỉnh $(0,0), (4,0), (4,3)$ tạo thành tam giác vuông có diện tích $S = \frac{1}{2} \times 4 \times 3 = 6.0$.
 
 
 
-### Bài 21 [CPPB2-L03-21]: Chat nhi phan khoang cach k diem
+### Bài 21 [CPPB2-L03-21]: Chặt Nhị Phân Khoảng Cách K Điểm
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Chat Nhi Phan Khoang Cach K Diem**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Thầy giáo cắm $K$ cọc tiêu dọc sân trường để tổ chức trò chơi vận động. Thầy muốn chọn vị trí các cọc sao cho hai cọc gần nhau nhất cũng cách nhau càng xa càng tốt, để học sinh có chỗ chạy thoải mái.
+
+Thầy đo các vị trí có thể cắm cọc rồi tính cách chọn hợp lý nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho các vị trí có thể đặt và số điểm $K$ cần chọn. Hãy lập trình tìm khoảng cách nhỏ nhất lớn nhất có thể giữa hai điểm được chọn.
 
 **Đầu vào (Input):**
 
@@ -3160,29 +2896,27 @@ Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem v�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Chat Nhi Phan Khoang Cach K Diem.
 
 
 
-### Bài 22 [CPPB2-L03-22]: Chat nhi phan phan so toi gian
+### Bài 22 [CPPB2-L03-22]: Chặt Nhị Phân Phân Số Tối Giản
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Chat Nhi Phan Phan So Toi Gian**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Trong tiết học phân số, cô giáo viết lên bảng tất cả các phân số có thể tạo thành từ các số trong phạm vi cho phép rồi xếp chúng theo thứ tự tăng dần. Bạn Lan được hỏi phân số đứng thứ $K$ trong danh sách đó là phân số nào.
+
+Cả lớp cùng rút gọn từng phân số về dạng tối giản trước khi xếp hạng.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Phan So Toi Gian với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho phạm vi tạo phân số và số $K$. Hãy lập trình tìm phân số tối giản đứng thứ $K$ khi xếp tăng dần.
 
 **Đầu vào (Input):**
 
@@ -3195,16 +2929,12 @@ Hãy lập trình giải quyết bài toán Chat Nhi Phan Phan So Toi Gian với
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Chat Nhi Phan Phan So Toi Gian.
 
 
@@ -3349,7 +3079,7 @@ Cho ma trận $A$ kích thước $N \times M$. Có $Q$ truy vấn tính tổng h
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Truy Vấn Tổng Ma Trận Con 2d với độ phức tạp tối ưu nhất.
+Cho ma trận $A$ kích thước $N \times M$ và $Q$ truy vấn hình chữ nhật $(x_1, y_1)$ đến $(x_2, y_2)$. Hãy lập trình tính tổng các ô trong mỗi hình chữ nhật được hỏi.
 
 **Đầu vào (Input):**
 
@@ -3361,20 +3091,15 @@ Hãy lập trình giải quyết bài toán Truy Vấn Tổng Ma Trận Con 2d v
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3 3 2
-1 2 3
-4 5 6
-7 8 9
-1 1 2 2
-2 2 3 3
-```
-### Output
-```text
-12
-28
-```
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3 3 2<br/>1 2 3<br/>4 5 6<br/>7 8 9<br/>1 1 2 2<br/>2 2 3 3<br/>``` | ```text<br/>12<br/>28<br/>``` |
+
+**Giải thích:**
+
+* Truy vấn 1 $(1, 1)$ đến $(2, 2)$ gồm các ô $1, 2, 4, 5$ nên tổng là $1 + 2 + 4 + 5 = 12$.
+
+* Truy vấn 2 $(2, 2)$ đến $(3, 3)$ gồm các ô $5, 6, 8, 9$ nên tổng là $5 + 6 + 8 + 9 = 28$.
 
 
 
@@ -3382,13 +3107,13 @@ Hãy lập trình giải quyết bài toán Truy Vấn Tổng Ma Trận Con 2d v
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cập Nhật Hình Chữ Nhật Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt 2D Difference Array.
+Ban quản lý ký túc xá theo dõi bảng nội trú hình chữ nhật, mỗi ô ghi số sinh viên đang ở. Mỗi đợt, ban quản lý cộng thêm một số sinh viên vào tất cả các phòng trong một khu hình chữ nhật rồi cần biết nhanh số sinh viên của từng phòng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô quản lý ghi lại các đợt điều chuyển rồi cập nhật bảng số liệu sao cho kịp giờ điểm danh.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Cập Nhật Hình Chữ Nhật Ma Trận 2d với độ phức tạp tối ưu nhất.
+Cho ma trận ban đầu và các phép cộng trên hình chữ nhật con. Hãy lập trình tính giá trị cuối cùng của ma trận sau mọi phép cập nhật.
 
 **Đầu vào (Input):**
 
@@ -3401,16 +3126,12 @@ Hãy lập trình giải quyết bài toán Cập Nhật Hình Chữ Nhật Ma T
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cập Nhật Hình Chữ Nhật Ma Trận 2D.
 
 
@@ -3419,13 +3140,13 @@ Hãy lập trình giải quyết bài toán Cập Nhật Hình Chữ Nhật Ma T
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Ngắn Nhất Có Tổng $\ge S$** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cửa sổ trượt co giãn.
+Huấn luyện viên ghi lại số bước chạy của vận động viên mỗi ngày. Anh muốn tìm chuỗi ngày liên tiếp ngắn nhất mà tổng số bước đạt ít nhất mức $S$ để khen thưởng sự bứt phá.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh lật lại nhật ký luyện tập, mở rộng rồi thu hẹp từng cửa sổ ngày để tìm chuỗi ngắn nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Có Tổng $\ge S$ với độ phức tạp tối ưu nhất.
+Cho dãy số và ngưỡng $S$. Hãy lập trình tìm độ dài đoạn con liên tiếp ngắn nhất có tổng không nhỏ hơn $S$.
 
 **Đầu vào (Input):**
 
@@ -3438,16 +3159,12 @@ Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Có Tổng
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Ngắn Nhất Có Tổng $\ge S$.
 
 
@@ -3456,13 +3173,13 @@ Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Có Tổng
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: `sort` + `unique` + `lower_bound`.
+Trạm thu phí ghi lại biển số xe đi qua trong ngày, có những biển số rất lớn và thưa thớt. Nhân viên thống kê muốn gom các biển số về thứ hạng liên tiếp để đếm tần suất mỗi loại xe cho gọn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh nhân viên liệt kê tất cả biển số xuất hiện rồi đánh số lại từ đầu để dễ đếm.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn với độ phức tạp tối ưu nhất.
+Cho dãy tọa độ (có thể rất lớn) và các truy vấn đếm. Hãy lập trình nén tọa độ rồi trả lời tần suất xuất hiện của từng giá trị được hỏi.
 
 **Đầu vào (Input):**
 
@@ -3475,16 +3192,12 @@ Hãy lập trình giải quyết bài toán Nén Tọa Độ & Đếm Tần Su�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn.
 
 
@@ -3493,13 +3206,13 @@ Hãy lập trình giải quyết bài toán Nén Tọa Độ & Đếm Tần Su�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Two pointers kết hợp mảng tần suất.
+Cô giáo ghi lại màu áo học sinh xếp hàng vào lớp mỗi sáng. Cô muốn tìm đoạn hàng dài nhất mà trong đó số màu áo khác nhau không vượt quá $K$ để chụp ảnh kỷ niệm đồng đều.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô đi dọc hàng, nới rộng rồi thu hẹp đoạn quan sát sao cho số màu áo luôn trong giới hạn.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau với độ phức tạp tối ưu nhất.
+Cho dãy số và số $K$. Hãy lập trình tìm độ dài đoạn con liên tiếp dài nhất chứa không quá $K$ giá trị khác nhau.
 
 **Đầu vào (Input):**
 
@@ -3512,16 +3225,12 @@ Hãy lập trình giải quyết bài toán Đoạn Con Dài Nhất Có Không Q
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau.
 
 
@@ -3530,13 +3239,13 @@ Hãy lập trình giải quyết bài toán Đoạn Con Dài Nhất Có Không Q
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ma Trận Con Có Tổng Lớn Nhất (Maximum Submatrix Sum)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cố định 2 hàng + Thuật toán Kadane 1D.
+Bác nông dân có cánh đồng hình chữ nhật, mỗi ô có thể lãi hoặc lỗ tùy mùa vụ. Bác muốn khoanh một vùng hình chữ nhật có tổng lợi nhuận lớn nhất để tập trung chăm sóc.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác ghi lại lợi nhuận từng ô rồi so sánh các vùng có thể khoanh được.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Ma Trận Con Có Tổng Lớn Nhất (maximum Submatrix Sum) với độ phức tạp tối ưu nhất.
+Cho ma trận số nguyên. Hãy lập trình tìm tổng lớn nhất của một hình chữ nhật con bất kỳ trong ma trận.
 
 **Đầu vào (Input):**
 
@@ -3549,16 +3258,12 @@ Hãy lập trình giải quyết bài toán Ma Trận Con Có Tổng Lớn Nhấ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Ma Trận Con Có Tổng Lớn Nhất (Maximum Submatrix Sum).
 
 
@@ -3567,13 +3272,13 @@ Hãy lập trình giải quyết bài toán Ma Trận Con Có Tổng Lớn Nhấ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Nén tọa độ 2D kết hợp mảng hiệu 2D.
+Trên sân trường, các lớp dựng gian hàng hội chợ hình chữ nhật, gian nọ có thể chờm lên gian kia. Ban tổ chức muốn biết tổng diện tích mặt sân thực sự bị các gian hàng che phủ.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Các bạn vẽ lại vị trí từng gian hàng lên giấy kẻ ô rồi tính phần diện tích bị phủ ít nhất một lần.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc với độ phức tạp tối ưu nhất.
+Cho danh sách các hình chữ nhật rời rạc trên mặt phẳng. Hãy lập trình tính tổng diện tích bị phủ bởi ít nhất một hình chữ nhật.
 
 **Đầu vào (Input):**
 
@@ -3586,16 +3291,12 @@ Hãy lập trình giải quyết bài toán Diện Tích Phủ Bởi Các Hình 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc.
 
 
@@ -3604,13 +3305,13 @@ Hãy lập trình giải quyết bài toán Diện Tích Phủ Bởi Các Hình 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Nén tọa độ + Mảng hiệu 1D.
+Trên tuyến đường chạy, mỗi vận động viên đăng ký một đoạn đường mình sẽ chạy tiếp sức. Ban trọng tài muốn đếm có bao nhiêu cặp vận động viên có đoạn đường giao nhau để sắp xếp lịch xuất phát.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Tổ trọng tài ghi lại điểm đầu và điểm cuối của từng người rồi đếm các cặp chồng lấn.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau với độ phức tạp tối ưu nhất.
+Cho danh sách các đoạn thẳng trên trục số. Hãy lập trình đếm số cặp đoạn thẳng có phần giao nhau.
 
 **Đầu vào (Input):**
 
@@ -3623,16 +3324,12 @@ Hãy lập trình giải quyết bài toán Đếm Cặp Đoạn Thẳng Chồng
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau.
 
 
@@ -3641,13 +3338,13 @@ Hãy lập trình giải quyết bài toán Đếm Cặp Đoạn Thẳng Chồng
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sliding window duy trì vector tần suất 26 chữ cái.
+Trong trò chơi ô chữ, bạn Mai có một xâu chữ dài và một từ khóa cần tìm các phiên bản đảo chữ của nó. Bạn muốn đếm xem có bao nhiêu đoạn con trong xâu dài là một cách sắp xếp lại các chữ cái của từ khóa.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Mai trượt một khung cửa sổ dọc theo xâu chữ, mỗi lần so sánh tần suất chữ cái trong khung với từ khóa.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram với độ phức tạp tối ưu nhất.
+Cho xâu văn bản và từ khóa. Hãy lập trình đếm số đoạn con của văn bản là một hoán vị (anagram) của từ khóa.
 
 **Đầu vào (Input):**
 
@@ -3660,16 +3357,12 @@ Hãy lập trình giải quyết bài toán Cửa Sổ Trượt Đếm Số Lư�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cửa Sổ Trượt Đếm Số Lượng Xâu Anagram.
 
 
@@ -3678,13 +3371,13 @@ Hãy lập trình giải quyết bài toán Cửa Sổ Trượt Đếm Số Lư�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Hình Vuông Con Có Tổng Đúng Bằng K** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2D Prefix Sum + Hai con trỏ trên đường chéo.
+Cô giáo vẽ một bảng số hình vuông cho cả lớp. Nhóm bạn An được giao nhiệm vụ đếm xem có bao nhiêu ô vuông con trong bảng có tổng các số bên trong đúng bằng $K$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả nhóm kẻ khung vuông đủ mọi kích cỡ đặt lên bảng rồi cộng tổng từng khung để kiểm tra.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Hình Vuông Con Có Tổng Đúng Bằng K với độ phức tạp tối ưu nhất.
+Cho ma trận số và số $K$. Hãy lập trình đếm số hình vuông con có tổng các ô đúng bằng $K$.
 
 **Đầu vào (Input):**
 
@@ -3697,16 +3390,12 @@ Hãy lập trình giải quyết bài toán Đếm Hình Vuông Con Có Tổng �
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Hình Vuông Con Có Tổng Đúng Bằng K.
 
 
@@ -3715,13 +3404,13 @@ Hãy lập trình giải quyết bài toán Đếm Hình Vuông Con Có Tổng �
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khử Chiều 3-Sum & 4-Sum Hai Con Trỏ** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Khử chiều không gian từ $\mathcal{O}(N^3) \to \mathcal{O}(N^2)$.
+Trong buổi sinh hoạt câu lạc bộ toán, các bạn viết lên bảng một dãy số rồi đố nhau tìm các bộ ba (hoặc bộ bốn) có tổng đúng bằng một số cho trước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả nhóm sắp xếp dãy số rồi dùng hai đầu danh sách kẹp dần vào giữa để tìm các bộ số thỏa mãn.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Khử Chiều 3-sum & 4-sum Hai Con Trỏ với độ phức tạp tối ưu nhất.
+Cho dãy số và giá trị mục tiêu. Hãy lập trình liệt kê (đếm) các bộ ba (và bộ bốn) có tổng đúng bằng giá trị mục tiêu.
 
 **Đầu vào (Input):**
 
@@ -3734,16 +3423,12 @@ Hãy lập trình giải quyết bài toán Khử Chiều 3-sum & 4-sum Hai Con 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Khử Chiều 3-Sum & 4-Sum Hai Con Trỏ.
 
 
@@ -3752,13 +3437,13 @@ Hãy lập trình giải quyết bài toán Khử Chiều 3-sum & 4-sum Hai Con 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Two Pointers kết hợp 2 Deque đơn điệu.
+Thầy giáo ghi lại nhiệt độ phòng học mỗi giờ trong ngày. Thầy muốn đếm xem có bao nhiêu khoảng thời gian liên tiếp mà chênh lệch giữa nhiệt độ cao nhất và thấp nhất không vượt quá $K$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thầy trượt một cửa sổ thời gian dọc theo bảng ghi, mỗi lần ghi nhận nhiệt độ cao nhất và thấp nhất trong cửa sổ.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$ với độ phức tạp tối ưu nhất.
+Cho dãy số và số $K$. Hãy lập trình đếm số đoạn con liên tiếp có hiệu giữa phần tử lớn nhất và nhỏ nhất không vượt quá $K$.
 
 **Đầu vào (Input):**
 
@@ -3771,16 +3456,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Hiệu M
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$.
 
 
@@ -3789,13 +3470,13 @@ Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Hiệu M
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cửa sổ trượt co giãn duy trì biến đếm `unique_count`.
+Bạn Hoa chơi trò tìm đoạn văn ngắn nhất chứa đủ mọi chữ cái trong bảng chữ cái. Bạn có một xâu ký tự dài và muốn cắt ra đoạn liên tiếp ngắn nhất mà trong đó mỗi chữ cái đều xuất hiện ít nhất một lần.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hoa mở rộng khung chọn từng chút một, khi đã đủ chữ cái thì thu hẹp lại để tìm đoạn ngắn nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái với độ phức tạp tối ưu nhất.
+Cho xâu ký tự. Hãy lập trình tìm độ dài đoạn con liên tiếp ngắn nhất chứa đầy đủ mọi chữ cái trong bảng chữ cái.
 
 **Đầu vào (Input):**
 
@@ -3808,16 +3489,12 @@ Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Chứa Đ�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái.
 
 
@@ -3826,13 +3503,13 @@ Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Chứa Đ�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mảng Hiệu Trên Cây (Tree Difference Array)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cập nhật cộng trọng số trên đường đi $(u, v)$ qua LCA.
+Trường học trồng cây theo sơ đồ hình cây, mỗi phòng học là một nút. Mỗi đợt, nhà trường cộng thêm một lượng sách vào tất cả các phòng trên đường đi giữa hai phòng cho trước, cuối cùng cần biết mỗi phòng có bao nhiêu sách.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác thủ thư ghi lại từng đợt điều chuyển rồi tổng hợp số sách của mỗi phòng một lần.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Mảng Hiệu Trên Cây (tree Difference Array) với độ phức tạp tối ưu nhất.
+Cho cây với $N$ nút và các phép cộng trên đường đi $(u, v)$. Hãy lập trình tính giá trị cuối cùng của mỗi nút sau mọi phép cập nhật.
 
 **Đầu vào (Input):**
 
@@ -3845,16 +3522,12 @@ Hãy lập trình giải quyết bài toán Mảng Hiệu Trên Cây (tree Diffe
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Mảng Hiệu Trên Cây (Tree Difference Array).
 
 
@@ -3863,13 +3536,13 @@ Hãy lập trình giải quyết bài toán Mảng Hiệu Trên Cây (tree Diffe
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Two Pointers đếm tổ hợp bất đẳng thức tam giác.
+Câu lạc bộ thủ công có một bó que với đủ loại độ dài. Các bạn muốn đếm xem có bao nhiêu cách chọn ra ba que để ghép thành một hình tam giác đúng nghĩa.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả nhóm sắp xếp các que từ ngắn đến dài rồi thử từng cặp, đếm xem que thứ ba dài bao nhiêu thì ghép được.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ với độ phức tạp tối ưu nhất.
+Cho độ dài các que. Hãy lập trình đếm số bộ ba có thể ghép thành một tam giác không suy biến.
 
 **Đầu vào (Input):**
 
@@ -3882,16 +3555,12 @@ Hãy lập trình giải quyết bài toán Đếm Tam Giác Có Độ Dài Cạ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ.
 
 
@@ -3900,13 +3569,13 @@ Hãy lập trình giải quyết bài toán Đếm Tam Giác Có Độ Dài Cạ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Quét Đường Thẳng Nén Tọa Độ (Sweep-line Area 2D)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Sweep-line kết hợp Segment Tree tính diện tích hợp.
+Phường vẽ bản đồ các khu đất hình chữ nhật để tính tiền sử dụng đất. Cán bộ địa chính cần tính tổng diện tích bị phủ bởi ít nhất một khu đất, vì phần chồng lấn chỉ tính một lần.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh cán bộ kẻ các đường thẳng đứng qua mọi cạnh khu đất rồi tính diện tích từng dải một.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Quét Đường Thẳng Nén Tọa Độ (sweep-line Area 2d) với độ phức tạp tối ưu nhất.
+Cho danh sách các hình chữ nhật trên mặt phẳng. Hãy lập trình tính tổng diện tích hợp bị phủ bởi ít nhất một hình chữ nhật.
 
 **Đầu vào (Input):**
 
@@ -3919,16 +3588,12 @@ Hãy lập trình giải quyết bài toán Quét Đường Thẳng Nén Tọa �
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Quét Đường Thẳng Nén Tọa Độ (Sweep-line Area 2D).
 
 
@@ -3954,20 +3619,18 @@ Hãy tính tổng diện tích của phần mặt phẳng bị phủ bởi ít n
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-2
-10 10 20 20
-15 15 25 25
-```
-### Output
-```text
-175
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>2<br/>10 10 20 20<br/>15 15 25 25<br/>``` | ```text<br/>175<br/>``` |
+
+**Giải thích:**
+
 * Hình chữ nhật 1 có diện tích $10 \times 10 = 100$.
+
 * Hình chữ nhật 2 có diện tích $10 \times 10 = 100$.
+
 * Phần giao nhau là hình chữ nhật $[15, 20] \times [15, 20]$ có diện tích $5 \times 5 = 25$.
+
 * Tổng diện tích hợp phủ = $100 + 100 - 25 = 175$.
 
 
@@ -3993,31 +3656,29 @@ Hãy tìm giá trị lớn nhất trong toàn bộ lưới ô vuông $N \times N
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-3 2
-2 2 1 5
-1 1 0 3
-```
-### Output
-```text
-8
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>3 2<br/>2 2 1 5<br/>1 1 0 3<br/>``` | ```text<br/>8<br/>``` |
+
+**Giải thích:**
+
 * Phép cập nhật 1: Cộng $5$ vào vùng Manhattan bán kính $1$ quanh ô $(2, 2)$ gồm các ô $(2,2), (1,2), (3,2), (2,1), (2,3)$.
+
 * Phép cập nhật 2: Cộng $3$ vào riêng ô $(1, 1)$. Ô $(2, 2)$ đạt giá trị lớn nhất là $5$, hoặc ô $(1, 2)$ đạt $5$.
 
 
 
-### Bài 19 [CPPB2-L04-19]: Nen toa do da chieu 3d
+### Bài 19 [CPPB2-L04-19]: Nén Tọa Độ Đa Chiều 3D
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Nen Toa Do Da Chieu 3d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Trung tâm dữ liệu lưu trữ các sự kiện trong không gian ba chiều, mỗi chiều có tọa độ rất lớn và thưa. Kỹ sư muốn gom mỗi chiều về thứ hạng liên tiếp để lưu trữ và tra cứu cho gọn nhẹ.
+
+Anh liệt kê tất cả tọa độ xuất hiện trên từng chiều rồi đánh số lại từ đầu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho tập điểm trong không gian ba chiều với tọa độ lớn. Hãy lập trình nén tọa độ từng chiều rồi trả lời các truy vấn theo yêu cầu.
 
 **Đầu vào (Input):**
 
@@ -4030,16 +3691,12 @@ Hãy lập trình giải quyết bài toán Nen Toa Do Da Chieu 3d với độ p
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Nen Toa Do Da Chieu 3d.
 
 
@@ -4065,17 +3722,14 @@ Hãy đếm số lượng bộ ba chỉ số $(i, j, k)$ thỏa mãn điều ki�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-4 6 3 7
-```
-### Output
-```text
-3
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>4 6 3 7<br/>``` | ```text<br/>3<br/>``` |
+
+**Giải thích:**
+
 * Sắp xếp mảng: $[3, 4, 6, 7]$.
+
 * Các bộ ba tam giác hợp lệ: $(3, 4, 6)$ vì $3+4 > 6$, $(3, 6, 7)$ vì $3+6 > 7$, $(4, 6, 7)$ vì $4+6 > 7$. Tổng cộng có $3$ bộ ba.
 
 
@@ -4101,29 +3755,27 @@ Hãy đếm số lượng xâu con liên tiếp của $S$ chứa đúng $K$ ký 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-pqpqs
-2
-```
-### Output
-```text
-7
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>pqpqs<br/>2<br/>``` | ```text<br/>7<br/>``` |
+
+**Giải thích:**
+
 * Các xâu con có đúng 2 ký tự khác nhau: `pq` (vị trí 0..1), `pqp` (0..2), `pqpq` (0..3), `qp` (1..2), `qpq` (1..3), `pq` (2..3), `qs` (3..4). Tổng cộng có $7$ xâu.
 
 
 
-### Bài 22 [CPPB2-L04-22]: Ma tran tong lon nhat Kadane 2d
+### Bài 22 [CPPB2-L04-22]: Ma Trận Tổng Lớn Nhất (Kadane 2D)
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Ma Tran Tong Lon Nhat Kadane 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Bác nông dân có cánh đồng hình chữ nhật, mỗi ô có thể lãi hoặc lỗ tùy mùa vụ. Vụ này bác muốn khoanh một vùng hình chữ nhật có tổng lợi nhuận lớn nhất để tập trung đầu tư.
+
+Bác ghi lại lợi nhuận từng ô rồi so sánh các vùng có thể khoanh được.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Ma Tran Tong Lon Nhat Kadane 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ma trận số nguyên. Hãy lập trình tìm tổng lớn nhất của một hình chữ nhật con bất kỳ trong ma trận.
 
 **Đầu vào (Input):**
 
@@ -4136,16 +3788,12 @@ Hãy lập trình giải quyết bài toán Ma Tran Tong Lon Nhat Kadane 2d vớ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Ma Tran Tong Lon Nhat Kadane 2d.
 
 
@@ -4288,7 +3936,7 @@ Cho mảng $N$ phần tử. Đếm số cặp $(i, j)$ thỏa mãn $1 \le i < j 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Cặp Nghịch Thế với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình đếm số cặp $(i, j)$ thỏa mãn $1 \le i < j \le N$ và $A_i > A_j$, rồi in ra tổng số cặp đếm được.
 
 **Đầu vào (Input):**
 
@@ -4300,15 +3948,25 @@ Hãy lập trình giải quyết bài toán Đếm Cặp Nghịch Thế với đ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-2 4 1 3 5
-```
-### Output
-```text
-3
-```
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>2 4 1 3 5<br/>``` | ```text<br/>3<br/>``` |
+
+**Giải thích:**
+
+Với mảng $[2, 4, 1, 3, 5]$, xét lần lượt từng vị trí đứng trước:
+
+- Số $2$: trong các số đứng sau nó ($4, 1, 3, 5$), chỉ có $1$ nhỏ hơn $2$ nên đếm được $1$ cặp.
+
+- Số $4$: trong các số đứng sau nó ($1, 3, 5$), có $1$ và $3$ nhỏ hơn $4$ nên đếm được $2$ cặp.
+
+- Số $1$: không có số nào đứng sau nhỏ hơn $1$.
+
+- Số $3$: số đứng sau duy nhất là $5$ lớn hơn $3$ nên không đếm thêm.
+
+- Số $5$: là số cuối cùng nên không tạo cặp nào.
+
+Cộng lại: $1 + 2 = 3$. Vậy đáp án là $3$.
 
 
 
@@ -4316,13 +3974,13 @@ Hãy lập trình giải quyết bài toán Đếm Cặp Nghịch Thế với đ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Kích Thước Nhỏ (Knapsack $N \le 40$)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cài đặt Meet in the Middle cơ bản.
+Bác thủ kho cần xếp hàng lên một chuyến xe tải có sức chở giới hạn. Mỗi kiện hàng có khối lượng và giá trị khác nhau, mà số kiện thì khá nhiều (vài chục kiện) nên không thể thử hết mọi cách bằng tay.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác muốn chọn ra những kiện mang đi sao cho tổng giá trị cao nhất mà xe vẫn chở nổi.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Cái Túi Kích Thước Nhỏ (knapsack $n \le 40$) với độ phức tạp tối ưu nhất.
+Cho $N$ món đồ ($N \le 40$), mỗi món có khối lượng và giá trị, cùng sức chứa của chiếc túi. Hãy lập trình chọn ra một tập con các món đồ có tổng giá trị lớn nhất mà tổng khối lượng không vượt quá sức chứa.
 
 **Đầu vào (Input):**
 
@@ -4335,16 +3993,12 @@ Hãy lập trình giải quyết bài toán Cái Túi Kích Thước Nhỏ (knap
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Cái Túi Kích Thước Nhỏ (Knapsack $N \le 40$).
 
 
@@ -4353,13 +4007,13 @@ Hãy lập trình giải quyết bài toán Cái Túi Kích Thước Nhỏ (knap
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tập Con Có Tổng Gần S Nhất** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: MITM kết hợp `lower_bound`.
+Cô kế toán được giao một khoản tiền mục tiêu $S$ để mua sắm thiết bị. Mỗi món đồ có một mức giá riêng, và cô chỉ được mua mỗi món nhiều nhất một lần.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô cần chọn một nhóm món đồ sao cho tổng giá tiền gần với $S$ nhất có thể, để số tiền thừa hay thiếu là ít nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tập Con Có Tổng Gần S Nhất với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một số mục tiêu $S$. Hãy lập trình tìm một tập con có tổng gần với $S$ nhất, tức hiệu tuyệt đối giữa tổng của tập con và $S$ là nhỏ nhất.
 
 **Đầu vào (Input):**
 
@@ -4372,16 +4026,12 @@ Hãy lập trình giải quyết bài toán Tập Con Có Tổng Gần S Nhất 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tập Con Có Tổng Gần S Nhất.
 
 
@@ -4390,13 +4040,13 @@ Hãy lập trình giải quyết bài toán Tập Con Có Tổng Gần S Nhất 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Giải Phương Trình $4$ Ẩn Tuyến Tính (4-Sum MITM)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tách thành 2 cặp $(A+B)$ và $-(C+D)$.
+Trong ngày hội thể thao, ban tổ chức có bốn bảng danh sách điểm số của bốn đội. Mỗi bảng ghi điểm của các vận động viên đội mình.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức muốn biết có bao nhiêu cách chọn mỗi bảng đúng một con số sao cho tổng bốn số được chọn bằng $0$, để trao giải đồng đội cân bằng.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Giải Phương Trình $4$ Ẩn Tuyến Tính (4-sum Mitm) với độ phức tạp tối ưu nhất.
+Cho bốn dãy số $A, B, C, D$. Hãy lập trình đếm số bộ bốn $(a, b, c, d)$ với $a \in A, b \in B, c \in C, d \in D$ sao cho $a + b + c + d = 0$.
 
 **Đầu vào (Input):**
 
@@ -4409,16 +4059,12 @@ Hãy lập trình giải quyết bài toán Giải Phương Trình $4$ Ẩn Tuy�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Giải Phương Trình $4$ Ẩn Tuyến Tính (4-Sum MITM).
 
 
@@ -4427,13 +4073,13 @@ Hãy lập trình giải quyết bài toán Giải Phương Trình $4$ Ẩn Tuy�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tập Con Có XOR Bằng K** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: MITM với phép toán Bitwise XOR.
+Anh kỹ sư bảo mật giữ một chùm mảnh khóa, mỗi mảnh mang một con số. Mã mở két được tạo bằng cách lấy phép XOR của tất cả các mảnh trong tập con được chọn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh cần đếm xem có bao nhiêu tập con các mảnh ghép lại cho ra đúng mã mục tiêu $K$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Tập Con Có Xor Bằng K với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một số $K$. Hãy lập trình đếm số tập con có giá trị XOR của tất cả các phần tử trong tập con bằng $K$.
 
 **Đầu vào (Input):**
 
@@ -4446,16 +4092,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Tập Con Có Xor Bằng
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Tập Con Có XOR Bằng K.
 
 
@@ -4464,13 +4106,13 @@ Hãy lập trình giải quyết bài toán Đếm Số Tập Con Có Xor Bằng
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Giữa Hai Điểm Gần Nhất (Closest Pair)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chia để trị trên mặt phẳng 2D $\mathcal{O}(N \log N)$.
+Trên bản đồ cứu hộ có đánh dấu vị trí của $N$ trạm quan sát. Ban chỉ huy muốn nối hai trạm gần nhau nhất bằng một đường dây liên lạc dự phòng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãy giúp họ tìm ra hai trạm có khoảng cách gần nhau nhất trong tất cả các trạm.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Khoảng Cách Giữa Hai Điểm Gần Nhất (closest Pair) với độ phức tạp tối ưu nhất.
+Cho $N$ điểm trên mặt phẳng tọa độ. Hãy lập trình tìm khoảng cách Euclid nhỏ nhất giữa hai điểm phân biệt trong số đó.
 
 **Đầu vào (Input):**
 
@@ -4483,16 +4125,12 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Giữa Hai Điểm G�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Khoảng Cách Giữa Hai Điểm Gần Nhất (Closest Pair).
 
 
@@ -4501,13 +4139,13 @@ Hãy lập trình giải quyết bài toán Khoảng Cách Giữa Hai Điểm G�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bẻ Khóa Mật Mã Đổi Dấu (Subset Sum with Signs)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: MITM với 3 trạng thái mỗi phần tử (0, +1, -1).
+Chiếc két sắt có $N$ núm vặn, mỗi núm mang một con số. Người thợ có thể xoay mỗi núm sang trái (trừ đi con số), sang phải (cộng thêm con số) hoặc giữ nguyên (bỏ qua núm đó).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Người thợ cần biết có bao nhiêu cách vặn để con số hiển thị cuối cùng đúng bằng mật mã mục tiêu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bẻ Khóa Mật Mã Đổi Dấu (subset Sum With Signs) với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một giá trị mục tiêu $T$. Hãy lập trình đếm số cách gán mỗi phần tử vào một trong ba trạng thái (bỏ qua, cộng thêm, trừ đi) sao cho tổng thu được bằng $T$.
 
 **Đầu vào (Input):**
 
@@ -4520,16 +4158,12 @@ Hãy lập trình giải quyết bài toán Bẻ Khóa Mật Mã Đổi Dấu (s
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Bẻ Khóa Mật Mã Đổi Dấu (Subset Sum with Signs).
 
 
@@ -4538,13 +4172,13 @@ Hãy lập trình giải quyết bài toán Bẻ Khóa Mật Mã Đổi Dấu (s
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (Shortest Path with MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS 2 đầu gặp nhau ở giữa.
+Bản đồ thành phố gồm các ngã tư và những con đường nối chúng. Anh tài xế xe ôm công nghệ nhận một cuốc xe từ điểm đón $S$ tới điểm trả $T$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh cần tìm hành trình ngắn nhất từ $S$ tới $T$ để tiết kiệm xăng và thời gian cho khách.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path With Mitm) với độ phức tạp tối ưu nhất.
+Cho bản đồ gồm các địa điểm và những con đường nối chúng với độ dài đã biết, cùng điểm xuất phát $S$ và điểm đích $T$. Hãy lập trình tìm độ dài hành trình ngắn nhất từ $S$ tới $T$.
 
 **Đầu vào (Input):**
 
@@ -4557,16 +4191,12 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (Shortest Path with MITM).
 
 
@@ -4575,13 +4205,13 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trò Chơi Xếp Gạch Đa Diện (Puzzle MITM)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: MITM kết hợp Hash Table nén bộ nhớ.
+Em bé có một bộ đồ chơi xếp gạch nhiều mảnh đang ở trạng thái ban đầu lộn xộn. Trên hộp có in hình mẫu hoàn chỉnh mà bé muốn xếp thành.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bé muốn biết cần ít nhất bao nhiêu bước di chuyển để từ cách xếp ban đầu biến thành hình mẫu.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (puzzle Mitm) với độ phức tạp tối ưu nhất.
+Cho trạng thái ban đầu và trạng thái đích của bàn cờ xếp gạch. Hãy lập trình tìm số bước di chuyển ít nhất để biến trạng thái ban đầu thành trạng thái đích.
 
 **Đầu vào (Input):**
 
@@ -4594,16 +4224,12 @@ Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Trò Chơi Xếp Gạch Đa Diện (Puzzle MITM).
 
 
@@ -4612,13 +4238,13 @@ Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp $A_i > 2 A_j$ (Significant Inversions)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Biến thể Merge Sort đếm cặp điều kiện nâng cao.
+Cô giáo ghi lại điểm số của cả lớp theo đúng thứ tự chỗ ngồi. Cô muốn phát hiện những chênh lệch bất thường: một bạn ngồi phía trước nhưng điểm cao gấp hơn hai lần một bạn ngồi phía sau.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãy giúp cô đếm có bao nhiêu cặp bạn như vậy trong lớp.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Cặp $a_i > 2 A_j$ (significant Inversions) với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình đếm số cặp $(i, j)$ thỏa mãn $i < j$ và $A_i > 2 \cdot A_j$, rồi in ra tổng số cặp đếm được.
 
 **Đầu vào (Input):**
 
@@ -4631,16 +4257,12 @@ Hãy lập trình giải quyết bài toán Đếm Cặp $a_i > 2 A_j$ (signific
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Cặp $A_i > 2 A_j$ (Significant Inversions).
 
 
@@ -4649,13 +4271,13 @@ Hãy lập trình giải quyết bài toán Đếm Cặp $a_i > 2 A_j$ (signific
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Cấp Số Nhân Bằng Chia Để Trị** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Phân rã $S_N = S_{N/2} \times (1 + A^{N/2})$.
+Chị nhân viên ngân hàng cần tính tổng tiền gốc lẫn lãi sau nhiều kỳ gửi, khi mỗi kỳ số tiền được nhân lên theo cùng một hệ số. Số kỳ có thể rất lớn nên không thể cộng tay từng số hạng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Chị cần tính nhanh tổng của dãy cấp số nhân này để in sao kê cho khách.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân Bằng Chia Để Trị với độ phức tạp tối ưu nhất.
+Cho số $A$, số lượng số hạng $N$ và số chia $MOD$. Hãy lập trình tính tổng $S = A^0 + A^1 + \dots + A^{N-1}$ theo modulo $MOD$.
 
 **Đầu vào (Input):**
 
@@ -4668,16 +4290,12 @@ Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân Bằng Chia 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Cấp Số Nhân Bằng Chia Để Trị.
 
 
@@ -4686,13 +4304,13 @@ Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân Bằng Chia 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (Shortest Path MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS 2 đầu gặp nhau ở giữa.
+Nhóm phượt thủ lên lịch trình xuyên tỉnh: bản đồ có các thị trấn và những cung đường nối chúng với độ dài đã biết. Đoàn xuất phát từ thị trấn $S$ và phải tới thị trấn $T$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả nhóm muốn tìm cung đường ngắn nhất để chia xăng xe công bằng.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path Mitm) với độ phức tạp tối ưu nhất.
+Cho bản đồ gồm các địa điểm và những con đường nối chúng với độ dài đã biết, cùng điểm xuất phát $S$ và điểm đích $T$. Hãy lập trình tìm độ dài hành trình ngắn nhất từ $S$ tới $T$.
 
 **Đầu vào (Input):**
 
@@ -4705,16 +4323,12 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (Shortest Path MITM).
 
 
@@ -4723,13 +4337,13 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trò Chơi Xếp Gạch Đa Diện (15-Puzzle MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: MITM kết hợp Hash Table nén bộ nhớ.
+Bé An có chiếc bảng trượt số với $15$ ô số đang xếp lộn xộn và một ô trống. Mỗi bước bé trượt một ô số kề bên vào ô trống.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bé muốn biết cần ít nhất bao nhiêu bước trượt để đưa bảng về đúng thứ tự từ $1$ tới $15$.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (15-puzzle Mitm) với độ phức tạp tối ưu nhất.
+Cho trạng thái ban đầu của bảng trượt $15$ ô số và trạng thái đích (thứ tự đúng). Hãy lập trình tìm số bước trượt ít nhất để đưa bảng về trạng thái đích.
 
 **Đầu vào (Input):**
 
@@ -4742,16 +4356,12 @@ Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Trò Chơi Xếp Gạch Đa Diện (15-Puzzle MITM).
 
 
@@ -4760,13 +4370,13 @@ Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: MITM kết hợp tối ưu hóa bộ nhớ RAM.
+Hai anh em được chia gia tài gồm nhiều món đồ có giá trị khác nhau. Cả nhà muốn việc chia chác thật công bằng: mỗi người nhận một nhóm đồ có tổng giá trị bằng nhau chính xác.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãy giúp cả nhà xem liệu có cách chia như vậy hay không.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên. Hãy lập trình kiểm tra xem có thể chia các phần tử thành hai nhóm có tổng bằng nhau hay không, và đếm số cách chia thỏa mãn.
 
 **Đầu vào (Input):**
 
@@ -4779,16 +4389,12 @@ Hãy lập trình giải quyết bài toán Phân Chia Tập Hợp Thành Hai N�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau.
 
 
@@ -4797,13 +4403,13 @@ Hãy lập trình giải quyết bài toán Phân Chia Tập Hợp Thành Hai N�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đoạn Con Có Tổng Nằm Trong $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chia để trị trên mảng tiền tố $\mathcal{O}(N \log N)$.
+Chủ cửa hàng ghi lại doanh thu từng ngày liên tiếp. Cuối tháng, chị muốn thống kê có bao nhiêu chuỗi ngày liên tiếp mà tổng doanh thu nằm trong khoảng $[L, R]$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đó là những giai đoạn kinh doanh ổn định mà chị muốn khen thưởng nhân viên.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Tổng Nằm Trong $[l, R]$ với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên và hai ngưỡng $L, R$. Hãy lập trình đếm số đoạn con liên tiếp có tổng các phần tử nằm trong đoạn $[L, R]$.
 
 **Đầu vào (Input):**
 
@@ -4816,16 +4422,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Tổng N
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đoạn Con Có Tổng Nằm Trong $[L, R]$.
 
 
@@ -4834,13 +4436,13 @@ Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Tổng N
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Để Trị Trên Cây (Centroid Decomposition Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm trọng tâm cây đệ quy chia để trị.
+Hệ thống đường làng nối các thôn tạo thành một mạng cây, tức không hề có đường vòng. Huyện muốn trả lời nhanh nhiều câu hỏi của người dân về các tuyến đường trên mạng cây này.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Vì số thôn và số câu hỏi đều lớn, huyện cần một cách tổ chức dữ liệu thật khéo léo.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chia Để Trị Trên Cây (centroid Decomposition Cơ Bản) với độ phức tạp tối ưu nhất.
+Cho một cây gồm $N$ đỉnh và các truy vấn trên cây. Hãy lập trình trả lời đáp án cho từng truy vấn một cách chính xác.
 
 **Đầu vào (Input):**
 
@@ -4853,29 +4455,27 @@ Hãy lập trình giải quyết bài toán Chia Để Trị Trên Cây (centroi
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Để Trị Trên Cây (Centroid Decomposition Cơ Bản).
 
 
 
-### Bài 17 [CPPB2-L05-17]: Centroid decomposition co ban
+### Bài 17 [CPPB2-L05-17]: Centroid Decomposition Cơ Bản
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Centroid Decomposition Co Ban**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Công ty giao hàng nhanh quản lý một mạng lưới kho bãi nối với nhau thành một cây phân phối, mỗi kho là một đỉnh và mỗi tuyến đường là một cạnh. Mỗi ngày, tổng đài nhận hàng loạt truy vấn kiểu "kho nào gần đơn hàng nhất" hay "có bao nhiêu kho trong phạm vi phục vụ", đòi hỏi trả lời thật nhanh trên cây có tới hàng trăm nghìn đỉnh.
+
+Để không phải duyệt cả cây cho mỗi truy vấn, đội kỹ thuật chia nhỏ mạng lưới theo từng cụm cân bằng quanh các kho trung tâm, rồi xử lý truy vấn bằng cách leo dần qua các tầng cụm lồng nhau.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dữ liệu mô tả một cây gồm $N$ đỉnh và các yêu cầu truy vấn trên cây. Hãy lập trình xử lý và in ra đáp án cho từng truy vấn.
 
 **Đầu vào (Input):**
 
@@ -4888,29 +4488,27 @@ Hãy lập trình giải quyết bài toán Centroid Decomposition Co Ban với 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Centroid Decomposition Co Ban.
 
 
 
-### Bài 18 [CPPB2-L05-18]: Dem chu trinh 4 canh mitm
+### Bài 18 [CPPB2-L05-18]: Đếm Chu Trình 4 Cạnh bằng MITM
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Dem Chu Trinh 4 Canh Mitm**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Nhóm phân tích mạng xã hội muốn đo độ gắn kết của cộng đồng bằng cách đếm các nhóm bốn người khép kín thành vòng tròn bạn bè: mỗi người quen đúng hai người còn lại trong nhóm. Với đồ thị kết bạn lên tới hàng trăm nghìn mối quan hệ, việc liệt kê từng bộ bốn là bất khả thi.
+
+Nhóm kỹ thuật bèn chia đôi danh sách người dùng, liệt kê các cặp bạn chung trong từng nửa rồi ghép kết quả lại để suy ra tổng số vòng tròn bốn người mà không bỏ sót cũng không đếm trùng.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một đồ thị vô hướng. Hãy lập trình đếm số chu trình đơn có độ dài đúng $4$ cạnh trong đồ thị.
 
 **Đầu vào (Input):**
 
@@ -4923,29 +4521,27 @@ Hãy lập trình giải quyết bài toán Dem Chu Trinh 4 Canh Mitm với đ�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Chu Trinh 4 Canh Mitm.
 
 
 
-### Bài 19 [CPPB2-L05-19]: Chia de tri day con tong max
+### Bài 19 [CPPB2-L05-19]: Chia Để Trị Dãy Con Tổng Lớn Nhất
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Chia De Tri Day Con Tong Max**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Cửa hàng trực tuyến theo dõi lợi nhuận từng ngày trong tháng, có ngày lãi, có ngày lỗ. Chủ cửa hàng muốn biết đoạn ngày liên tiếp nào mang lại tổng lợi nhuận cao nhất để rút ra bài học về đợt kinh doanh thành công nhất.
+
+Thay vì thử mọi đoạn ngày một cách thủ công, bạn nhân viên tin học chia dãy ngày thành hai nửa, tìm đoạn tốt nhất nằm gọn mỗi bên và đoạn vắt qua giữa, rồi chọn ra đáp án tốt nhất trong ba ứng viên đó.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình tìm tổng lớn nhất trong tất cả các đoạn con liên tiếp của mảng.
 
 **Đầu vào (Input):**
 
@@ -4958,29 +4554,27 @@ Hãy lập trình giải quyết bài toán Chia De Tri Day Con Tong Max với �
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Chia De Tri Day Con Tong Max.
 
 
 
-### Bài 20 [CPPB2-L05-20]: Mitm dem nghiem nguyen tong bang 0
+### Bài 20 [CPPB2-L05-20]: MITM Đếm Nghiệm Nguyên Tổng Bằng 0
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Mitm Dem Nghiem Nguyen Tong Bang 0**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Thủ quỹ của câu lạc bộ có danh sách các khoản thu chi trong năm, gồm cả số dương lẫn số âm. Cuối năm, bạn ấy muốn biết có bao nhiêu nhóm khoản mục khác nhau mà tổng cộngbù nhau về đúng $0$, để đối chiếu sổ sách cho khớp.
+
+Vì số khoản mục quá nhiều để thử mọi tập con, thủ quỹ chia danh sách thành hai nửa, liệt kê tổng của mọi tập con trong từng nửa rồi ghép các tổng đối nhau lại để ra đáp án.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm $N$ số nguyên. Hãy lập trình đếm số tập con có tổng các phần tử bằng $0$.
 
 **Đầu vào (Input):**
 
@@ -4993,29 +4587,27 @@ Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 v
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Mitm Dem Nghiem Nguyen Tong Bang 0.
 
 
 
-### Bài 21 [CPPB2-L05-21]: Tim cap diem gan nhat 2d
+### Bài 21 [CPPB2-L05-21]: Tìm Cặp Điểm Gần Nhất 2D
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Tim Cap Diem Gan Nhat 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Trạm điều phối taxi bay lưu tọa độ của toàn bộ xe đang hoạt động trên bản đồ thành phố. Để tránh hai xe bay quá gần nhau gây mất an toàn, hệ thống cần liên tục tìm ra cặp xe có khoảng cách gần nhất và phát cảnh báo kịp thời.
+
+Thay vì đo khoảng cách từng đôi một, hệ thống sắp xếp các xe theo tọa độ rồi chia mặt phẳng thành từng dải hẹp, chỉ so sánh các xe thực sự có cơ hội là đáp án trong mỗi dải.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho $N$ điểm trên mặt phẳng tọa độ hai chiều. Hãy lập trình tìm khoảng cách nhỏ nhất giữa hai điểm phân biệt trong số đó.
 
 **Đầu vào (Input):**
 
@@ -5028,29 +4620,27 @@ Hãy lập trình giải quyết bài toán Tim Cap Diem Gan Nhat 2d với độ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tim Cap Diem Gan Nhat 2d.
 
 
 
-### Bài 22 [CPPB2-L05-22]: Dem nghich the 3 chieu cdq
+### Bài 22 [CPPB2-L05-22]: Đếm Nghịch Thế 3 Chiều bằng CDQ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Dem Nghich The 3 Chieu Cdq**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Phòng đào tạo lưu hồ sơ mỗi học viên dưới dạng một bộ ba chỉ số: thứ tự nộp bài cùng hai loại điểm thành phần. Thầy hiệu phó muốn đếm có bao nhiêu cặp học viên mà người nộp trước lại xếp sau ở cả hai loại điểm, để phát hiện những trường hợp tiến bộ vượt bậc.
+
+Với hàng trăm nghìn bộ ba, việc so sánh từng cặp là quá chậm, nên phòng kỹ thuật chia hồ sơ thành từng đợt theo thứ tự nộp bài rồi lần lượt gộp và đếm chéo giữa các đợt.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Nghich The 3 Chieu Cdq với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho tập gồm $N$ bộ ba số nguyên. Hãy lập trình đếm số cặp nghịch thế ba chiều, tức các cặp $(i, j)$ với $i < j$ thỏa mãn điều kiện thứ tự trên cả ba chiều.
 
 **Đầu vào (Input):**
 
@@ -5063,16 +4653,12 @@ Hãy lập trình giải quyết bài toán Dem Nghich The 3 Chieu Cdq với đ�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Nghich The 3 Chieu Cdq.
 
 
@@ -5187,7 +4773,7 @@ Cho ma trận khoảng cách giữa $N$ thành phố ($N \le 18$). Tìm chi phí
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp) với độ phức tạp tối ưu nhất.
+Cho số nguyên $N$ và ma trận khoảng cách $C$ kích thước $N \times N$ giữa các thành phố. Hãy lập trình tìm chi phí nhỏ nhất của hành trình xuất phát từ thành phố $0$, thăm mỗi thành phố đúng một lần rồi quay về $0$, rồi in ra chi phí đó.
 
 **Đầu vào (Input):**
 
@@ -5199,18 +4785,27 @@ Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp) 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-4
-0 10 15 20
-10 0 35 25
-15 35 0 30
-20 25 30 0
-```
-### Output
-```text
-80
-```
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>4<br/>0 10 15 20<br/>10 0 35 25<br/>15 35 0 30<br/>20 25 30 0<br/>``` | ```text<br/>80<br/>``` |
+
+**Giải thích:**
+
+Xuất phát từ thành phố $0$, liệt kê mọi hành trình thăm mỗi thành phố đúng một lần rồi quay về $0$ cùng tổng chi phí:
+
+- $0 \to 1 \to 2 \to 3 \to 0$: $10 + 35 + 30 + 20 = 95$.
+
+- $0 \to 1 \to 3 \to 2 \to 0$: $10 + 25 + 30 + 15 = 80$.
+
+- $0 \to 2 \to 1 \to 3 \to 0$: $15 + 35 + 25 + 20 = 95$.
+
+- $0 \to 2 \to 3 \to 1 \to 0$: $15 + 30 + 25 + 10 = 80$.
+
+- $0 \to 3 \to 1 \to 2 \to 0$: $20 + 25 + 35 + 15 = 95$.
+
+- $0 \to 3 \to 2 \to 1 \to 0$: $20 + 30 + 35 + 10 = 95$.
+
+Chi phí nhỏ nhất trong các hành trình trên là $80$. Vậy đáp án là $80$.
 
 
 
@@ -5218,13 +4813,13 @@ Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp) 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Phần Tử Bật Bit Chung (Bitwise AND)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Đếm bit độc lập theo từng cột $0 \dots 30$.
+Trường học phát cho mỗi học sinh một thẻ từ mang một mã số. Thầy giám thị muốn kiểm tra hệ thống quẹt thẻ: ở từng vị trí bit, có bao nhiêu thẻ đang bật bit đó.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thống kê này giúp thầy phát hiện những vị trí bit bị lỗi hàng loạt.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Bật Bit Chung (bitwise And) với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên. Với mỗi vị trí bit $b$ ($0 \le b \le 30$), hãy lập trình đếm có bao nhiêu phần tử trong dãy bật bit $b$.
 
 **Đầu vào (Input):**
 
@@ -5237,16 +4832,12 @@ Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Bật Bit Ch
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Phần Tử Bật Bit Chung (Bitwise AND).
 
 
@@ -5255,13 +4846,13 @@ Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Bật Bit Ch
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bài Toán Người Du Lịch (TSP Bitmask DP)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP trạng thái $dp[mask][u]$.
+Anh nhân viên giao hàng phải ghé qua mỗi địa chỉ đúng một lần rồi quay về kho. Giá cước di chuyển giữa từng cặp địa điểm đều đã biết trước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh cần một lịch trình khép kín có tổng chi phí rẻ nhất để kịp giờ giao hàng.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp Bitmask Dp) với độ phức tạp tối ưu nhất.
+Cho số thành phố $N$ (nhỏ) và ma trận khoảng cách giữa từng cặp thành phố. Hãy lập trình tìm chi phí nhỏ nhất của hành trình xuất phát từ thành phố $0$, thăm mỗi thành phố đúng một lần rồi quay về $0$.
 
 **Đầu vào (Input):**
 
@@ -5274,16 +4865,12 @@ Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp B
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Bài Toán Người Du Lịch (TSP Bitmask DP).
 
 
@@ -5292,13 +4879,13 @@ Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp B
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Công Việc Hoàn Hảo (Job Assignment)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Bitmask DP ghép cặp trọng số nhỏ nhất.
+Quản đốc có $N$ công nhân và $N$ công việc. Mỗi người làm mỗi việc tốn một chi phí (thời gian) khác nhau, và mỗi người chỉ làm đúng một việc.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Quản đốc cần phân công sao cho tổng chi phí của cả xưởng là thấp nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phân Chia Công Việc Hoàn Hảo (job Assignment) với độ phức tạp tối ưu nhất.
+Cho ma trận chi phí kích thước $N \times N$, trong đó ô $(i, j)$ là chi phí khi giao việc $j$ cho người $i$. Hãy lập trình phân công mỗi người đúng một việc sao cho tổng chi phí là nhỏ nhất.
 
 **Đầu vào (Input):**
 
@@ -5311,16 +4898,12 @@ Hãy lập trình giải quyết bài toán Phân Chia Công Việc Hoàn Hảo 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phân Chia Công Việc Hoàn Hảo (Job Assignment).
 
 
@@ -5329,13 +4912,13 @@ Hãy lập trình giải quyết bài toán Phân Chia Công Việc Hoàn Hảo 
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duyệt Tất Cả Submask Tính Tổng Phân Hoạch** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Vòng lặp `sub = (sub - 1) & mask`.
+Câu lạc bộ muốn lập mọi đội hình con có thể từ danh sách thành viên. Mỗi đội hình đã được chấm một số điểm, và ban chủ nhiệm cần cộng dồn điểm số theo từng cách gom nhóm.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Để làm được, trước hết phải liệt kê đầy đủ mọi tập con của danh sách thành viên.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Duyệt Tất Cả Submask Tính Tổng Phân Hoạch với độ phức tạp tối ưu nhất.
+Cho một mặt nạ $mask$ biểu diễn tập gồm $N$ phần tử và giá trị của từng tập con. Hãy lập trình liệt kê mọi tập con của $mask$ và tính tổng giá trị trên tất cả các tập con đó.
 
 **Đầu vào (Input):**
 
@@ -5348,16 +4931,12 @@ Hãy lập trình giải quyết bài toán Duyệt Tất Cả Submask Tính T�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Duyệt Tất Cả Submask Tính Tổng Phân Hoạch.
 
 
@@ -5366,13 +4945,13 @@ Hãy lập trình giải quyết bài toán Duyệt Tất Cả Submask Tính T�
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Hamilton Đếm Số Cách** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP Bitmask đếm số đường đi qua mọi đỉnh.
+Hướng dẫn viên du lịch muốn thiết kế tour đi qua mỗi điểm tham quan đúng một lần. Công ty muốn biết có tất cả bao nhiêu lộ trình như vậy để in thành nhiều gợi ý cho khách.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Mỗi lộ trình khác nhau cho khách một trải nghiệm mới mẻ.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đường Đi Hamilton Đếm Số Cách với độ phức tạp tối ưu nhất.
+Cho một đồ thị gồm $N$ đỉnh (nhỏ). Hãy lập trình đếm số đường đi Hamilton, tức số đường đi qua mỗi đỉnh đúng một lần.
 
 **Đầu vào (Input):**
 
@@ -5385,16 +4964,12 @@ Hãy lập trình giải quyết bài toán Đường Đi Hamilton Đếm Số C
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đường Đi Hamilton Đếm Số Cách.
 
 
@@ -5403,13 +4978,13 @@ Hãy lập trình giải quyết bài toán Đường Đi Hamilton Đếm Số C
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Đa Hóa Giá Trị XOR Đoạn Con Bằng Trie Bit** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Cây Trie nhị phân tìm Max XOR $\mathcal{O}(30N)$.
+Kỹ sư truyền thông mã hóa tín hiệu của mỗi đoạn đường truyền bằng phép XOR các con số trên đoạn đó. Anh muốn tìm ra đoạn có mã tín hiệu lớn nhất để ưu tiên nâng cấp băng thông.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đoạn mã càng lớn thì đường truyền càng xứng đáng được đầu tư.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Đa Hóa Giá Trị Xor Đoạn Con Bằng Trie Bit với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình tìm giá trị lớn nhất của phép XOR trên mọi đoạn con liên tiếp của mảng.
 
 **Đầu vào (Input):**
 
@@ -5422,16 +4997,12 @@ Hãy lập trình giải quyết bài toán Tối Đa Hóa Giá Trị Xor Đoạ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Đa Hóa Giá Trị XOR Đoạn Con Bằng Trie Bit.
 
 
@@ -5440,13 +5011,13 @@ Hãy lập trình giải quyết bài toán Tối Đa Hóa Giá Trị Xor Đoạ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Cặp Trọng Số Cực Đại (Maximum Matching Bitmask)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP khử chiều đối xứng.
+Ban tổ chức giải cầu lông cần ghép các vận động viên thành từng cặp thi đấu đôi. Mỗi cặp có một chỉ số ăn ý đã được huấn luyện viên chấm trước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức muốn cách ghép sao cho tổng chỉ số ăn ý của tất cả các cặp là lớn nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Ghép Cặp Trọng Số Cực Đại (maximum Matching Bitmask) với độ phức tạp tối ưu nhất.
+Cho $2N$ người và trọng số tương hợp của từng cặp. Hãy lập trình ghép thành $N$ cặp sao cho tổng trọng số của tất cả các cặp là lớn nhất.
 
 **Đầu vào (Input):**
 
@@ -5459,31 +5030,27 @@ Hãy lập trình giải quyết bài toán Ghép Cặp Trọng Số Cực Đạ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Ghép Cặp Trọng Số Cực Đại (Maximum Matching Bitmask).
 
 
 
-### Bài 09 [CPPB2-L06-09]: Sos DP (sum over subsets dynamic programming)
+### Bài 09 [CPPB2-L06-09]: SOS DP Tổng Trên Tập Con (Cộng Dồn Theo Nhóm)
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **SOS DP (Sum Over Subsets Dynamic Programming)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP tính tổng hàm trên mọi submask $\mathcal{O}(N 2^N)$.
+Phòng khảo sát lưu điểm số cho từng nhóm đối tượng, mỗi nhóm được biểu diễn bằng một tập con. Với mỗi nhóm lớn, phòng cần tính tổng điểm của mọi nhóm nhỏ nằm gọn trong nó.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Việc cộng dồn này phải làm cho tất cả các nhóm, nên cần cách tính thật gọn.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Programming) với độ phức tạp tối ưu nhất.
+Cho một hàm $F$ xác định trên mọi tập con của tập $N$ phần tử. Với mỗi mặt nạ $mask$, hãy lập trình tính tổng $F[sub]$ trên mọi tập con $sub$ của $mask$.
 
 **Đầu vào (Input):**
 
@@ -5496,16 +5063,12 @@ Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Pro
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán SOS DP (Sum Over Subsets Dynamic Programming).
 
 
@@ -5514,13 +5077,13 @@ Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Pro
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cặp $(A_i, A_j)$ Có Tích AND Bằng 0** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: SOS DP đếm số phần tử là submask.
+Thủ thư đánh số mỗi cuốn sách bằng một mã nhị phân. Hai cuốn sách được gọi là không chồng lấn nếu phép AND hai mã của chúng bằng $0$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thủ thư muốn đếm có bao nhiêu cặp sách không chồng lấn để xếp chúng lên cùng một kệ đặc biệt.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, A_j)$ Có Tích And Bằng 0 với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình đếm số cặp $(i, j)$ với $i < j$ sao cho $A_i \ \mathrm{AND}\  A_j = 0$.
 
 **Đầu vào (Input):**
 
@@ -5533,31 +5096,27 @@ Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, A_j)$ Có T
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Cặp $(A_i, A_j)$ Có Tích AND Bằng 0.
 
 
 
-### Bài 11 [CPPB2-L06-11]: Sos DP (sum over subsets dynamic programming)
+### Bài 11 [CPPB2-L06-11]: SOS DP Tổng Trên Tập Con (Ưu Đãi Theo Giỏ Hàng)
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **SOS DP (Sum Over Subsets Dynamic Programming)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP tính tổng hàm trên mọi submask $\mathcal{O}(N 2^N)$.
+Siêu thị phát hành nhiều combo ưu đãi, mỗi combo áp dụng cho một tập mặt hàng. Với mỗi giỏ hàng của khách, siêu thị cần cộng dồn ưu đãi của mọi combo nằm gọn trong giỏ.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Tổng ưu đãi phải được tính cho mọi giỏ hàng có thể, nên cần cách tính thật nhanh.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Programming) với độ phức tạp tối ưu nhất.
+Cho một hàm $F$ xác định trên mọi tập con của tập $N$ phần tử. Với mỗi mặt nạ $mask$, hãy lập trình tính tổng $F[sub]$ trên mọi tập con $sub$ của $mask$.
 
 **Đầu vào (Input):**
 
@@ -5570,16 +5129,12 @@ Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Pro
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán SOS DP (Sum Over Subsets Dynamic Programming).
 
 
@@ -5588,13 +5143,13 @@ Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Pro
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (Graph Coloring)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP trên tập độc lập cực đại (MIS).
+Nhà trường xếp lịch thi: hai môn có chung thí sinh không thể thi cùng một buổi. Mỗi buổi thi được coi là một màu tô cho môn đó.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trường muốn dùng ít buổi thi nhất mà vẫn không có xung đột nào.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (graph Coloring) với độ phức tạp tối ưu nhất.
+Cho một đồ thị vô hướng gồm $N$ đỉnh (nhỏ). Hãy lập trình tìm số màu ít nhất để tô mỗi đỉnh một màu sao cho hai đỉnh kề nhau luôn khác màu.
 
 **Đầu vào (Input):**
 
@@ -5607,16 +5162,12 @@ Hãy lập trình giải quyết bài toán Tô Màu Đồ Thị Số Lượng M
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (Graph Coloring).
 
 
@@ -5625,13 +5176,13 @@ Hãy lập trình giải quyết bài toán Tô Màu Đồ Thị Số Lượng M
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP kết hợp truy vết chu trình.
+Đoàn kiểm tra phải thăm mỗi chi nhánh đúng một lần rồi quay về trụ sở. Chi phí di chuyển giữa từng cặp chi nhánh đều đã biết.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đoàn cần một hành trình khép kín rẻ nhất để tiết kiệm ngân sách công tác.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất với độ phức tạp tối ưu nhất.
+Cho ma trận chi phí di chuyển giữa $N$ thành phố (nhỏ). Hãy lập trình tìm chu trình Hamilton có tổng chi phí nhỏ nhất, tức hành trình thăm mỗi thành phố đúng một lần rồi quay về điểm xuất phát.
 
 **Đầu vào (Input):**
 
@@ -5644,16 +5195,12 @@ Hãy lập trình giải quyết bài toán Tìm Chu Trình Hamilton Chi Phí Nh
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất.
 
 
@@ -5662,13 +5209,13 @@ Hãy lập trình giải quyết bài toán Tìm Chu Trình Hamilton Chi Phí Nh
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP Bitmask duyệt cấu hình không kề nhau.
+Huyện muốn chọn vị trí đặt trạm phát sóng, mỗi vị trí mang lại một lợi ích khác nhau. Hai vị trí kề nhau không thể cùng đặt trạm vì sẽ gây nhiễu sóng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Huyện cần chọn ra các vị trí không kề nhau sao cho tổng lợi ích là lớn nhất.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ với độ phức tạp tối ưu nhất.
+Cho một đồ thị vô hướng gồm $N$ đỉnh (nhỏ), mỗi đỉnh có một trọng số. Hãy lập trình chọn một tập độc lập (không có cạnh nối giữa hai đỉnh nào trong tập) có tổng trọng số lớn nhất.
 
 **Đầu vào (Input):**
 
@@ -5681,16 +5228,12 @@ Hãy lập trình giải quyết bài toán Tập Độc Lập Trọng Số Lớ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ.
 
 
@@ -5699,13 +5242,13 @@ Hãy lập trình giải quyết bài toán Tập Độc Lập Trọng Số Lớ
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Bitmask DP kiểm tra tính khả thi.
+Cô giáo cần chia lớp thành $K$ nhóm có tổng điểm năng lực bằng nhau để cuộc thi đấu được công bằng. Mỗi bạn chỉ thuộc đúng một nhóm.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô muốn biết liệu có cách chia như vậy hay không trước khi công bố danh sách.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một số nguyên $K$. Hãy lập trình kiểm tra xem có thể chia các phần tử thành $K$ nhóm có tổng bằng nhau hay không.
 
 **Đầu vào (Input):**
 
@@ -5718,16 +5261,12 @@ Hãy lập trình giải quyết bài toán Phân Hoạch Tập Hợp Thành K T
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau.
 
 
@@ -5736,13 +5275,13 @@ Hãy lập trình giải quyết bài toán Phân Hoạch Tập Hợp Thành K T
 
 **Bối cảnh & Nhiệm vụ:**
 
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Trò Chơi Nim Tổng Quát (Sprague-Grundy Bit)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Trò chơi toán học kết hợp phép toán XOR.
+Hai bạn nhỏ chơi trò bốc sỏi với nhiều đống sỏi và bộ luật bốc mở rộng: mỗi lượt được bốc theo một trong các cách cho phép. Bạn nào bốc viên sỏi cuối cùng thì thắng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả hai bạn đều chơi khôn ngoan nhất có thể, hãy xem ai sẽ thắng cuộc.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Trò Chơi Nim Tổng Quát (sprague-grundy Bit) với độ phức tạp tối ưu nhất.
+Cho mô tả các đống trong trò chơi Nim tổng quát và tập các nước đi hợp lệ. Hãy lập trình xác định người chơi đi trước thắng hay thua khi cả hai bên đều chơi tối ưu.
 
 **Đầu vào (Input):**
 
@@ -5755,29 +5294,27 @@ Hãy lập trình giải quyết bài toán Tối Ưu Hóa Trò Chơi Nim Tổng
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Trò Chơi Nim Tổng Quát (Sprague-Grundy Bit).
 
 
 
-### Bài 17 [CPPB2-L06-17]: Sos DP sum over subsets
+### Bài 17 [CPPB2-L06-17]: SOS DP Tổng Trên Tập Con Cơ Bản
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Sos Dp Sum Over Subsets**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Phòng khảo sát lưu điểm số cho từng nhóm đối tượng, mỗi nhóm được mã hóa thành một tập con của $N$ đặc trưng. Với mỗi nhóm lớn, phòng cần tính tổng điểm của mọi nhóm nhỏ nằm gọn trong nó để lập báo cáo cộng dồn.
+
+Vì số nhóm lên tới $2^N$, việc cộng lại từ đầu cho từng nhóm là không xuể, nên phòng cần một bảng cộng dồn lan dần theo từng đặc trưng để mỗi nhóm lớn đều tra được đáp án ngay.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một hàm $F$ xác định trên mọi tập con của tập $N$ phần tử. Với mỗi mặt nạ $mask$, hãy lập trình tính tổng $F[sub]$ trên mọi tập con $sub$ của $mask$.
 
 **Đầu vào (Input):**
 
@@ -5790,29 +5327,27 @@ Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Sos Dp Sum Over Subsets.
 
 
 
-### Bài 18 [CPPB2-L06-18]: Profile DP lat gach domino
+### Bài 18 [CPPB2-L06-18]: Profile DP Lát Gạch Domino
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Profile Dp Lat Gach Domino**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Bác thợ lát sàn nhận lát kín một căn phòng hình chữ nhật kích thước $N \times M$ bằng các viên gạch domino $1 \times 2$, có thể xoay dọc hoặc xoay ngang tùy ý. Trước khi mua gạch, bác muốn biết có tất cả bao nhiêu cách lát kín sàn để chuẩn bị phương án thi công.
+
+Bác lát thử từng hàng từ trái sang phải, ghi nhớ phần gạch còn thò xuống hàng dưới bằng một dãy ghi chú hẹp, rồi điền tiếp cho khớp cho đến khi kín cả sàn.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một bảng hình chữ nhật kích thước $N \times M$. Hãy lập trình đếm số cách lát kín bảng bằng các viên gạch domino $1 \times 2$ (được phép xoay dọc hoặc ngang).
 
 **Đầu vào (Input):**
 
@@ -5825,29 +5360,27 @@ Hãy lập trình giải quyết bài toán Profile Dp Lat Gach Domino với đ�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Profile Dp Lat Gach Domino.
 
 
 
-### Bài 19 [CPPB2-L06-19]: Bien doi FWT bitwise xor
+### Bài 19 [CPPB2-L06-19]: Biến Đổi FWT với Phép XOR Bitwise
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Bien Doi Fwt Bitwise Xor**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Trung tâm mã hóa cần trộn hai bảng tín hiệu $A$ và $B$ thành bảng $C$, trong đó mỗi ô của bảng kết quả được tổng hợp từ các cặp ô có chỉ số XOR với nhau đúng bằng chỉ số đó. Cách trộn ngây thơ duyệt mọi cặp ô nên chạy quá chậm khi bảng rất dài.
+
+Kỹ sư bèn đưa cả hai bảng qua một phép biến đổi nhanh theo từng bit, nhân từng cặp tương ứng rồi biến đổi ngược trở lại để thu được đúng bảng trộn cần tìm.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho hai dãy số $A$ và $B$ có độ dài bằng nhau (là lũy thừa của $2$). Hãy lập trình tính tích chập XOR của chúng, tức dãy $C$ trong đó mỗi phần tử được tổng hợp từ các cặp có XOR chỉ số tương ứng.
 
 **Đầu vào (Input):**
 
@@ -5860,29 +5393,27 @@ Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bien Doi Fwt Bitwise Xor.
 
 
 
-### Bài 20 [CPPB2-L06-20]: Dem tap doc lap cuc dai
+### Bài 20 [CPPB2-L06-20]: Đếm Tập Độc Lập Cực Đại
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Dem Tap Doc Lap Cuc Dai**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Ban tổ chức hội thảo có sơ đồ xung đột giữa các diễn giả: hai người có cạnh nối thì không thể xếp chung một phiên. Ban tổ chức muốn liệt kê mọi danh sách diễn giả "kín lịch", tức đôi một không xung đột và không thể mời thêm bất kỳ ai mà vẫn giữ được tính chất này.
+
+Vì số diễn giả tuy nhỏ nhưng số danh sách có thể bùng nổ, chương trình máy tính thử dần từng người theo kiểu quay lui, cắt bỏ sớm các nhánh chắc chắn trùng lặp để đếm đủ mọi danh sách kín lịch.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một đồ thị vô hướng gồm $N$ đỉnh (nhỏ). Hãy lập trình đếm số tập độc lập cực đại, tức các tập độc lập không thể thêm bất kỳ đỉnh nào mà vẫn giữ tính độc lập.
 
 **Đầu vào (Input):**
 
@@ -5895,29 +5426,27 @@ Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Tap Doc Lap Cuc Dai.
 
 
 
-### Bài 21 [CPPB2-L06-21]: Bitmask DP phan nhom k tap
+### Bài 21 [CPPB2-L06-21]: Bitmask DP Phân Nhóm K Tập
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Bitmask Dp Phan Nhom K Tap**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Huấn luyện viên có $N$ vận động viên và cần chia thành đúng $K$ đội, mỗi cách xếp đội đều tốn một chi phí cho trước tùy vào thành phần đội hình. Mục tiêu là tìm cách chia sao cho tổng chi phí của cả $K$ đội là nhỏ nhất.
+
+Vì số cách chia tăng rất nhanh, ban huấn luyện đánh số mỗi nhóm vận động viên bằng một mặt nạ bit rồi điền dần bảng phương án tốt nhất cho từng mặt nạ với từng số đội đã xếp.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho tập gồm $N$ phần tử, một số nguyên $K$ và cách tính chi phí của mỗi nhóm. Hãy lập trình chia tập đã cho thành đúng $K$ nhóm sao cho tổng chi phí là nhỏ nhất.
 
 **Đầu vào (Input):**
 
@@ -5930,29 +5459,27 @@ Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với đ�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bitmask Dp Phan Nhom K Tap.
 
 
 
-### Bài 22 [CPPB2-L06-22]: Xor basis vector khong gian tuyen tinh
+### Bài 22 [CPPB2-L06-22]: XOR Basis trong Không Gian Vectơ Tuyến Tính
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Xor Basis Vector Khong Gian Tuyen Tinh**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Phòng thí nghiệm tín hiệu thu được một dãy số nguyên từ các cảm biến, mỗi số được xem như một vectơ nhị phân. Kỹ sư muốn biết dãy này thực chất chứa bao nhiêu tín hiệu độc lập, tức hạng của cả họ vectơ trên trường $GF(2)$.
+
+Anh lần lượt đưa từng số vào một bộ khung cơ sở, khử dần các bit cao nhất đã có đại diện, và chỉ giữ lại những số mang thông tin thực sự mới cho bộ cơ sở.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Tinh với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm $N$ số nguyên. Hãy lập trình xây dựng cơ sở XOR của dãy và cho biết số vector độc lập tuyến tính tối đa (hạng của họ vector trên trường $GF(2)$).
 
 **Đầu vào (Input):**
 
@@ -5965,29 +5492,27 @@ Hãy lập trình giải quyết bài toán Xor Basis Vector Khong Gian Tuyen Ti
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Xor Basis Vector Khong Gian Tuyen Tinh.
 
 
 
-### Bài 23 [CPPB2-L06-23]: Bitmask ghep doi trong so cuc dai
+### Bài 23 [CPPB2-L06-23]: Bitmask Ghép Đôi Trọng Số Cực Đại
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Bitmask Ghep Doi Trong So Cuc Dai**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Câu lạc bộ khiêu vũ có $2N$ thành viên đăng ký đêm hội, mỗi cặp đôi tiềm năng đều có một điểm tương hợp cho trước. Ban tổ chức cần ghép toàn bộ thành $N$ cặp sao cho tổng điểm tương hợp của cả đêm hội là lớn nhất.
+
+Vì số cách ghép khổng lồ, chương trình máy tính ghi nhớ mặt nạ những người đã có đôi rồi thử từng bạn nhảy còn trống cho người đầu tiên chưa ghép, điền dần đáp án tốt nhất cho mọi mặt nạ.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho $2N$ người và trọng số tương hợp của từng cặp. Hãy lập trình ghép thành $N$ cặp sao cho tổng trọng số của tất cả các cặp là lớn nhất.
 
 **Đầu vào (Input):**
 
@@ -6000,29 +5525,27 @@ Hãy lập trình giải quyết bài toán Bitmask Ghep Doi Trong So Cuc Dai v�
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bitmask Ghep Doi Trong So Cuc Dai.
 
 
 
-### Bài 24 [CPPB2-L06-24]: Dem duong di hamilton bitmask
+### Bài 24 [CPPB2-L06-24]: Đếm Đường Đi Hamilton bằng Bitmask
 
 **Bối cảnh & Nhiệm vụ:**
 
-Cho dữ liệu bài toán liên quan đến **Dem Duong Di Hamilton Bitmask**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Công ty chuyển phát có $N$ điểm giao hàng và bản đồ đường đi một chiều giữa chúng. Chú tài xế muốn biết có bao nhiêu hành trình xuất phát từ một điểm, ghé mỗi điểm đúng một lần rồi kết thúc ở bất kỳ đâu, để lên kế hoạch chạy thử toàn tuyến.
+
+Vì số hành trình tăng theo giai thừa, hệ thống ghi nhớ từng trạng thái gồm tập điểm đã ghé và điểm đang đứng bằng mặt nạ bit, rồi mở rộng dần từng bước đi kế tiếp cho đến khi đủ $N$ điểm.
 
 **Bối cảnh & Nhiệm vụ:**
 
-Hãy lập trình giải quyết bài toán Dem Duong Di Hamilton Bitmask với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một đồ thị gồm $N$ đỉnh (nhỏ). Hãy lập trình đếm số đường đi Hamilton, tức số đường đi qua mỗi đỉnh đúng một lần.
 
 **Đầu vào (Input):**
 
@@ -6035,16 +5558,12 @@ Hãy lập trình giải quyết bài toán Dem Duong Di Hamilton Bitmask với 
 
 **Ví dụ mẫu:**
 
-### Input
-```text
-5
-1 2 3 4 5
-```
-### Output
-```text
-15
-```
-### Giải thích
+| Đầu vào (Input) | Đầu ra (Output) |
+|---|---|
+| ```text<br/>5<br/>1 2 3 4 5<br/>``` | ```text<br/>15<br/>``` |
+
+**Giải thích:**
+
 * Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dem Duong Di Hamilton Bitmask.
 
 
@@ -7442,7 +6961,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-19` — Can nguyen nguyen thuy primitive root
+### `CPPB2-L01-19` — Căn Nguyên Nguyên Thủy (Primitive Root)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7495,7 +7014,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-20` — Tinh uoc nguyen to lon nhat
+### `CPPB2-L01-20` — Tính Ước Nguyên Tố Lớn Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7532,7 +7051,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-21` — Phuong trinh pell co ban
+### `CPPB2-L01-21` — Phương Trình Pell Cơ Bản
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7567,7 +7086,7 @@ int main() {
 
 ```
 
-### `CPPB2-L01-22` — Phan tich Legendre nang cao
+### `CPPB2-L01-22` — Phân Tích Legendre Nâng Cao
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8343,7 +7862,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-17` — Luy thua ma tran dem duong di
+### `CPPB2-L02-17` — Lũy Thừa Ma Trận Đếm Đường Đi
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8396,7 +7915,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-18` — Tinh cap so nhan modulo hop so
+### `CPPB2-L02-18` — Tính Cấp Số Nhân theo modulo Hợp Số
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8438,7 +7957,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-19` — Luy thua tang thap power tower
+### `CPPB2-L02-19` — Lũy Thừa Tầng Tháp (Power Tower)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8469,7 +7988,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-20` — Can bac hai modulo tonelli shanks
+### `CPPB2-L02-20` — Căn Bậc Hai theo modulo bằng Tonelli-Shanks
 
 ```cpp
 #include <bits/stdc++.h>
@@ -8528,7 +8047,7 @@ int main() {
 
 ```
 
-### `CPPB2-L02-21` — Ma tran fibonacci tong doan
+### `CPPB2-L02-21` — Ma Trận Fibonacci Tổng Đoạn
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9517,7 +9036,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-21` — Chat nhi phan khoang cach k diem
+### `CPPB2-L03-21` — Chặt Nhị Phân Khoảng Cách K Điểm
 
 ```cpp
 #include <bits/stdc++.h>
@@ -9564,7 +9083,7 @@ int main() {
 
 ```
 
-### `CPPB2-L03-22` — Chat nhi phan phan so toi gian
+### `CPPB2-L03-22` — Chặt Nhị Phân Phân Số Tối Giản
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10388,7 +9907,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-19` — Nen toa do da chieu 3d
+### `CPPB2-L04-19` — Nén Tọa Độ Đa Chiều 3D
 
 ```cpp
 #include <bits/stdc++.h>
@@ -10532,7 +10051,7 @@ int main() {
 
 ```
 
-### `CPPB2-L04-22` — Ma tran tong lon nhat Kadane 2d
+### `CPPB2-L04-22` — Ma Trận Tổng Lớn Nhất (Kadane 2D)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11359,7 +10878,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-17` — Centroid decomposition co ban
+### `CPPB2-L05-17` — Centroid Decomposition Cơ Bản
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11421,7 +10940,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-18` — Dem chu trinh 4 canh mitm
+### `CPPB2-L05-18` — Đếm Chu Trình 4 Cạnh bằng MITM
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11471,7 +10990,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-19` — Chia de tri day con tong max
+### `CPPB2-L05-19` — Chia Để Trị Dãy Con Tổng Lớn Nhất
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11494,7 +11013,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-20` — Mitm dem nghiem nguyen tong bang 0
+### `CPPB2-L05-20` — MITM Đếm Nghiệm Nguyên Tổng Bằng 0
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11525,7 +11044,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-21` — Tim cap diem gan nhat 2d
+### `CPPB2-L05-21` — Tìm Cặp Điểm Gần Nhất 2D
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11551,7 +11070,7 @@ int main() {
 
 ```
 
-### `CPPB2-L05-22` — Dem nghich the 3 chieu cdq
+### `CPPB2-L05-22` — Đếm Nghịch Thế 3 Chiều bằng CDQ
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11893,7 +11412,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-09` — Sos DP (sum over subsets dynamic programming)
+### `CPPB2-L06-09` — SOS DP Tổng Trên Tập Con (Cộng Dồn Theo Nhóm)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -11973,7 +11492,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-11` — Sos DP (sum over subsets dynamic programming)
+### `CPPB2-L06-11` — SOS DP Tổng Trên Tập Con (Ưu Đãi Theo Giỏ Hàng)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12218,7 +11737,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-17` — Sos DP sum over subsets
+### `CPPB2-L06-17` — SOS DP Tổng Trên Tập Con Cơ Bản
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12242,7 +11761,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-18` — Profile DP lat gach domino
+### `CPPB2-L06-18` — Profile DP Lát Gạch Domino
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12291,7 +11810,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-19` — Bien doi FWT bitwise xor
+### `CPPB2-L06-19` — Biến Đổi FWT với Phép XOR Bitwise
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12344,7 +11863,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-20` — Dem tap doc lap cuc dai
+### `CPPB2-L06-20` — Đếm Tập Độc Lập Cực Đại
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12375,7 +11894,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-21` — Bitmask DP phan nhom k tap
+### `CPPB2-L06-21` — Bitmask DP Phân Nhóm K Tập
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12422,7 +11941,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-22` — Xor basis vector khong gian tuyen tinh
+### `CPPB2-L06-22` — XOR Basis trong Không Gian Vectơ Tuyến Tính
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12450,7 +11969,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-23` — Bitmask ghep doi trong so cuc dai
+### `CPPB2-L06-23` — Bitmask Ghép Đôi Trọng Số Cực Đại
 
 ```cpp
 #include <bits/stdc++.h>
@@ -12495,7 +12014,7 @@ int main() {
 
 ```
 
-### `CPPB2-L06-24` — Dem duong di hamilton bitmask
+### `CPPB2-L06-24` — Đếm Đường Đi Hamilton bằng Bitmask
 
 ```cpp
 #include <bits/stdc++.h>

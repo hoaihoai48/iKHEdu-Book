@@ -1,12 +1,14 @@
 # Đếm cặp đoạn thẳng chồng lấn nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Nén tọa độ + Mảng hiệu 1D.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trên tuyến đường chạy, mỗi vận động viên đăng ký một đoạn đường mình sẽ chạy tiếp sức. Ban trọng tài muốn đếm có bao nhiêu cặp vận động viên có đoạn đường giao nhau để sắp xếp lịch xuất phát.
+
+Tổ trọng tài ghi lại điểm đầu và điểm cuối của từng người rồi đếm các cặp chồng lấn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau với độ phức tạp tối ưu nhất.
+
+Cho danh sách các đoạn thẳng trên trục số. Hãy lập trình đếm số cặp đoạn thẳng có phần giao nhau.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

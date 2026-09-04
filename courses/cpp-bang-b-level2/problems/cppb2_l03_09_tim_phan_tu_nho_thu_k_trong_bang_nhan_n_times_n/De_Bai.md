@@ -1,12 +1,14 @@
 # Tìm phần tử nhỏ thứ k trong bảng nhân $n \times n$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $N \times N$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BS trên giá trị, hàm check đếm $\mathcal{O}(N)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trong giờ học bảng cửu chương, bạn Nam viết ra bảng nhân $N \times N$ rồi đố bạn cùng bàn: nếu xếp tất cả các số trong bảng theo thứ tự từ nhỏ đến lớn thì số đứng thứ $K$ là số nào.
+
+Cả hai cùng đếm thử với bảng nhỏ trước khi nghĩ cách trả lời nhanh với bảng lớn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $n \times N$ với độ phức tạp tối ưu nhất.
+
+Cho kích thước bảng nhân $N \times N$ và số $K$. Hãy lập trình tìm phần tử nhỏ thứ $K$ khi xếp tất cả các số trong bảng theo thứ tự tăng dần.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

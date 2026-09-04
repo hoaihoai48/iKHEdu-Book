@@ -1,12 +1,14 @@
 # Tối ưu hóa chi phí lắp trạm phát sóng
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Tìm kiếm tam phân (Ternary Search).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ủy ban xã muốn dựng một trạm phát sóng sao cho tổng chi phí kéo dây tới các hộ dân là thấp nhất. Vị trí trạm càng gần khu dân cư đông thì càng tiết kiệm, nhưng mặt bằng mỗi nơi lại có giá khác nhau.
+
+Cán bộ địa chính vẽ bản đồ các hộ dân rồi tính xem đặt trạm ở đâu thì tổng chi phí nhỏ nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Lắp Trạm Phát Sóng với độ phức tạp tối ưu nhất.
+
+Cho vị trí các hộ dân và hàm chi phí lắp trạm. Hãy lập trình tìm vị trí đặt trạm phát sóng sao cho tổng chi phí là nhỏ nhất.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

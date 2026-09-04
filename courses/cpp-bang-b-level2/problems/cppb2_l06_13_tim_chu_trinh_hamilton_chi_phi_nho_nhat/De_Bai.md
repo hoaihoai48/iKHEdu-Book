@@ -1,12 +1,12 @@
 # Tìm chu trình hamilton chi phí nhỏ nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP kết hợp truy vết chu trình.
+Đoàn kiểm tra phải thăm mỗi chi nhánh đúng một lần rồi quay về trụ sở. Chi phí di chuyển giữa từng cặp chi nhánh đều đã biết.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đoàn cần một hành trình khép kín rẻ nhất để tiết kiệm ngân sách công tác.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Chu Trình Hamilton Chi Phí Nhỏ Nhất với độ phức tạp tối ưu nhất.
+Cho ma trận chi phí di chuyển giữa $N$ thành phố (nhỏ). Hãy lập trình tìm chu trình Hamilton có tổng chi phí nhỏ nhất, tức hành trình thăm mỗi thành phố đúng một lần rồi quay về điểm xuất phát.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

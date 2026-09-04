@@ -1,12 +1,14 @@
 # Cập nhật hình chữ nhật ma trận 2d
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cập Nhật Hình Chữ Nhật Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt 2D Difference Array.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban quản lý ký túc xá theo dõi bảng nội trú hình chữ nhật, mỗi ô ghi số sinh viên đang ở. Mỗi đợt, ban quản lý cộng thêm một số sinh viên vào tất cả các phòng trong một khu hình chữ nhật rồi cần biết nhanh số sinh viên của từng phòng.
+
+Cô quản lý ghi lại các đợt điều chuyển rồi cập nhật bảng số liệu sao cho kịp giờ điểm danh.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cập Nhật Hình Chữ Nhật Ma Trận 2d với độ phức tạp tối ưu nhất.
+
+Cho ma trận ban đầu và các phép cộng trên hình chữ nhật con. Hãy lập trình tính giá trị cuối cùng của ma trận sau mọi phép cập nhật.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

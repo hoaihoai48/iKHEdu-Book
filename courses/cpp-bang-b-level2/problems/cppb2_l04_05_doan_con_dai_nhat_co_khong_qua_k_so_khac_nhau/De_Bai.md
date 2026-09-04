@@ -1,12 +1,14 @@
 # Đoạn con dài nhất có không quá k số khác nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Two pointers kết hợp mảng tần suất.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô giáo ghi lại màu áo học sinh xếp hàng vào lớp mỗi sáng. Cô muốn tìm đoạn hàng dài nhất mà trong đó số màu áo khác nhau không vượt quá $K$ để chụp ảnh kỷ niệm đồng đều.
+
+Cô đi dọc hàng, nới rộng rồi thu hẹp đoạn quan sát sao cho số màu áo luôn trong giới hạn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau với độ phức tạp tối ưu nhất.
+
+Cho dãy số và số $K$. Hãy lập trình tìm độ dài đoạn con liên tiếp dài nhất chứa không quá $K$ giá trị khác nhau.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

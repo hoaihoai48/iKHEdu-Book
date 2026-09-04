@@ -1,12 +1,12 @@
 # Đường đi hamilton đếm số cách
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Hamilton Đếm Số Cách** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP Bitmask đếm số đường đi qua mọi đỉnh.
+Hướng dẫn viên du lịch muốn thiết kế tour đi qua mỗi điểm tham quan đúng một lần. Công ty muốn biết có tất cả bao nhiêu lộ trình như vậy để in thành nhiều gợi ý cho khách.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Mỗi lộ trình khác nhau cho khách một trải nghiệm mới mẻ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đường Đi Hamilton Đếm Số Cách với độ phức tạp tối ưu nhất.
+Cho một đồ thị gồm $N$ đỉnh (nhỏ). Hãy lập trình đếm số đường đi Hamilton, tức số đường đi qua mỗi đỉnh đúng một lần.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

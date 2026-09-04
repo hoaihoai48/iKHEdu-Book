@@ -1,12 +1,14 @@
 # Đếm tam giác có độ dài cạnh hợp lệ
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Two Pointers đếm tổ hợp bất đẳng thức tam giác.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Câu lạc bộ thủ công có một bó que với đủ loại độ dài. Các bạn muốn đếm xem có bao nhiêu cách chọn ra ba que để ghép thành một hình tam giác đúng nghĩa.
+
+Cả nhóm sắp xếp các que từ ngắn đến dài rồi thử từng cặp, đếm xem que thứ ba dài bao nhiêu thì ghép được.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ với độ phức tạp tối ưu nhất.
+
+Cho độ dài các que. Hãy lập trình đếm số bộ ba có thể ghép thành một tam giác không suy biến.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

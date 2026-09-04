@@ -1,12 +1,12 @@
 # Khoảng cách giữa hai điểm gần nhất (closest pair)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Giữa Hai Điểm Gần Nhất (Closest Pair)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Chia để trị trên mặt phẳng 2D $\mathcal{O}(N \log N)$.
+Trên bản đồ cứu hộ có đánh dấu vị trí của $N$ trạm quan sát. Ban chỉ huy muốn nối hai trạm gần nhau nhất bằng một đường dây liên lạc dự phòng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãy giúp họ tìm ra hai trạm có khoảng cách gần nhau nhất trong tất cả các trạm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Khoảng Cách Giữa Hai Điểm Gần Nhất (closest Pair) với độ phức tạp tối ưu nhất.
+Cho $N$ điểm trên mặt phẳng tọa độ. Hãy lập trình tìm khoảng cách Euclid nhỏ nhất giữa hai điểm phân biệt trong số đó.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

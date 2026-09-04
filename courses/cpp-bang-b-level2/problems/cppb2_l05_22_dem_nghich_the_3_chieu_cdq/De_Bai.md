@@ -1,10 +1,12 @@
-# Dem nghich the 3 chieu cdq
+# Đếm Nghịch Thế 3 Chiều bằng CDQ
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dem Nghich The 3 Chieu Cdq**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Phòng đào tạo lưu hồ sơ mỗi học viên dưới dạng một bộ ba chỉ số: thứ tự nộp bài cùng hai loại điểm thành phần. Thầy hiệu phó muốn đếm có bao nhiêu cặp học viên mà người nộp trước lại xếp sau ở cả hai loại điểm, để phát hiện những trường hợp tiến bộ vượt bậc.
+
+Với hàng trăm nghìn bộ ba, việc so sánh từng cặp là quá chậm, nên phòng kỹ thuật chia hồ sơ thành từng đợt theo thứ tự nộp bài rồi lần lượt gộp và đếm chéo giữa các đợt.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dem Nghich The 3 Chieu Cdq với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho tập gồm $N$ bộ ba số nguyên. Hãy lập trình đếm số cặp nghịch thế ba chiều, tức các cặp $(i, j)$ với $i < j$ thỏa mãn điều kiện thứ tự trên cả ba chiều.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

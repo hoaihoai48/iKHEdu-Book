@@ -1,12 +1,14 @@
 # Đếm số cặp $(a_i, b_j)$ có tổng trong khoảng $[l, r]$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cặp $(A_i, B_j)$ Có Tổng Trong Khoảng $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `lower_bound` và `upper_bound` đếm số lượng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hai đội văn nghệ mỗi đội chuẩn bị một danh sách tiết mục với thời lượng khác nhau. Ban tổ chức muốn ghép mỗi tiết mục của đội một với một tiết mục của đội hai sao cho tổng thời lượng của cặp ghép nằm trong khoảng thời gian cho phép của chương trình.
+
+Ban tổ chức liệt kê thời lượng từng tiết mục rồi đếm xem có bao nhiêu cặp ghép vừa khung giờ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, B_j)$ Có Tổng Trong Khoảng $[l, R]$ với độ phức tạp tối ưu nhất.
+
+Cho hai dãy $A, B$ và khoảng $[L, R]$. Hãy lập trình đếm số cặp $(A_i, B_j)$ có tổng nằm trong khoảng $[L, R]$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

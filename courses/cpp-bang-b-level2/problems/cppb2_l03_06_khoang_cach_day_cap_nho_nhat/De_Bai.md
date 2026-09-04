@@ -1,12 +1,14 @@
 # Khoảng cách dây cáp nhỏ nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Dây Cáp Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Chặt nhị phân số thực độ chính xác $10^{-6}$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trên công trường, đội thi công cần mắc một đường dây cáp nối qua các vị trí cột đã cắm sẵn. Kỹ sư muốn chọn vị trí đặt các điểm nối sao cho đoạn dây ngắn nhất vẫn đủ dài, tránh bị căng quá mức.
+
+Tổ kỹ thuật đo đạc khoảng cách giữa các cột rồi bàn nhau phương án đặt điểm nối hợp lý.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Khoảng Cách Dây Cáp Nhỏ Nhất với độ phức tạp tối ưu nhất.
+
+Cho vị trí các điểm cần nối dây cáp. Hãy lập trình tìm độ dài đoạn dây đáp ứng yêu cầu bài toán với độ chính xác $10^{-6}$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

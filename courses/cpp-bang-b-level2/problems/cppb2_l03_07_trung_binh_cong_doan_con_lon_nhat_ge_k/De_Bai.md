@@ -1,12 +1,14 @@
 # Trung bình cộng đoạn con lớn nhất $\ge k$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: BS số thực kết hợp Mảng tiền tố trừ $mid$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cuối học kỳ, cô giáo muốn tìm một dãy ngày liên tiếp mà điểm trung bình của lớp đạt từ mức $K$ trở lên và là cao nhất có thể, để tuyên dương nỗ lực của cả lớp.
+
+Cô ghi lại điểm số từng ngày rồi tìm xem giai đoạn nào lớp học tiến bộ nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Trung Bình Cộng Đoạn Con Lớn Nhất $\ge K$ với độ phức tạp tối ưu nhất.
+
+Cho dãy số và ngưỡng $K$. Hãy lập trình tìm giá trị trung bình đoạn con lớn nhất thỏa mãn không nhỏ hơn $K$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

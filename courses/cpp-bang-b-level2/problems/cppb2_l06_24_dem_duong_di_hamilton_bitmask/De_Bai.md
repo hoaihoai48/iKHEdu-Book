@@ -1,10 +1,12 @@
-# Dem duong di hamilton bitmask
+# Đếm Đường Đi Hamilton bằng Bitmask
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dem Duong Di Hamilton Bitmask**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Công ty chuyển phát có $N$ điểm giao hàng và bản đồ đường đi một chiều giữa chúng. Chú tài xế muốn biết có bao nhiêu hành trình xuất phát từ một điểm, ghé mỗi điểm đúng một lần rồi kết thúc ở bất kỳ đâu, để lên kế hoạch chạy thử toàn tuyến.
+
+Vì số hành trình tăng theo giai thừa, hệ thống ghi nhớ từng trạng thái gồm tập điểm đã ghé và điểm đang đứng bằng mặt nạ bit, rồi mở rộng dần từng bước đi kế tiếp cho đến khi đủ $N$ điểm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dem Duong Di Hamilton Bitmask với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một đồ thị gồm $N$ đỉnh (nhỏ). Hãy lập trình đếm số đường đi Hamilton, tức số đường đi qua mỗi đỉnh đúng một lần.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

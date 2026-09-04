@@ -1,12 +1,12 @@
 # Tiền xử lý nghịch đảo tuyến tính $\mathcal{o}(n)$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Cài đặt mảng `inv[i]` trong $\mathcal{O}(N)$.
+Phòng thí nghiệm cần chuẩn bị sẵn một bảng tra cứu: với mỗi số $i$ từ $1$ đến $n$, ghi lại "số đảo" của $i$ theo modulo $10^9+7$ (số nhân với $i$ cho phần dư $1$). Bảng này được in một lần rồi dùng cho cả học kỳ, nên khâu chuẩn bị cần làm gọn trong một lượt duyệt duy nhất.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tiền Xử Lý Nghịch Đảo Tuyến Tính $\mathcal{o}(n)$ với độ phức tạp tối ưu nhất.
+Cho số nguyên $n$. Hãy lập trình tính nghịch đảo modulo $10^9+7$ của từng số $i$ với $1 \le i \le n$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

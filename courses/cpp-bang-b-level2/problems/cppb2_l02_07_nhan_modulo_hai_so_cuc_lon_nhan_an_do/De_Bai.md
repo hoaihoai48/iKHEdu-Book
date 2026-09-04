@@ -1,12 +1,12 @@
 # Nhân modulo hai số cực lớn (nhân ấn độ)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Modulo Hai Số Cực Lớn (Nhân Ấn Độ)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Xử lý chống tràn số khi $M$ lớn.
+Hai kho hàng điện tử cần đối soát số lượng linh kiện: mỗi bên có một con số cực lớn, và hệ thống chỉ lưu được phần dư của tích hai số đó khi chia cho $m$. Phép nhân trực tiếp sẽ làm tràn bộ nhớ máy quét cũ, nên người ta nhân từng phần rồi cộng dồn phần dư — giống cách nhân đặt cột mà học sinh vẫn làm trên giấy.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Nhân Modulo Hai Số Cực Lớn (nhân Ấn Độ) với độ phức tạp tối ưu nhất.
+Cho $T$ bộ $(a, b, m)$. Hãy lập trình tính $(a \cdot b) \bmod m$ mà không để xảy ra tràn số.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

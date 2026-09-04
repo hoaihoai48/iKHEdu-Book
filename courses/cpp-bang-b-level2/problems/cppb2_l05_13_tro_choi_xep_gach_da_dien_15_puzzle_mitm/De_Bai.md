@@ -1,12 +1,12 @@
 # Trò chơi xếp gạch đa diện (15-puzzle mitm)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trò Chơi Xếp Gạch Đa Diện (15-Puzzle MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: MITM kết hợp Hash Table nén bộ nhớ.
+Bé An có chiếc bảng trượt số với $15$ ô số đang xếp lộn xộn và một ô trống. Mỗi bước bé trượt một ô số kề bên vào ô trống.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bé muốn biết cần ít nhất bao nhiêu bước trượt để đưa bảng về đúng thứ tự từ $1$ tới $15$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (15-puzzle Mitm) với độ phức tạp tối ưu nhất.
+Cho trạng thái ban đầu của bảng trượt $15$ ô số và trạng thái đích (thứ tự đúng). Hãy lập trình tìm số bước trượt ít nhất để đưa bảng về trạng thái đích.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

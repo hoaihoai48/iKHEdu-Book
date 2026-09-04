@@ -1,12 +1,12 @@
 # Hàm phi Euler $\phi(n)$ nhanh với SPF
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, hàm phi euler $\phi(n)$ nhanh với spf là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Đếm số nguyên tố cùng nhau qua SPF.
+Trong giờ sinh hoạt của câu lạc bộ Toán, cô giáo viết lên bảng một số nguyên $n$ và đố cả lớp: có bao nhiêu số từ $1$ đến $n$ không có ước chung nào với $n$ ngoài $1$? Đó chính là số lượng phân số tối giản có mẫu số bằng $n$. Vì cả lớp thay nhau đọc số liên tục, cần một cách trả lời thật nhanh cho mỗi số được gọi tên.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hàm Phi Euler $\phi(n)$ Nhanh Với Spf với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $n$. Hãy lập trình tính $\phi(n)$ — số lượng số nguyên $k$ ($1 \le k \le n$) nguyên tố cùng nhau với $n$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

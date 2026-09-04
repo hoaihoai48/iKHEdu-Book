@@ -1,12 +1,12 @@
 # Lũy thừa số mũ lớn khi modulo là hợp số
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Áp dụng định lý Euler mở rộng $A^B \equiv A^{B \bmod \phi(M) + \phi(M)}$.
+Trạm quan trắc ghi chỉ số bụi mịn dưới dạng lũy thừa $a^b$, trong đó số mũ $b$ dài hàng nghìn chữ số và máy chỉ hiển thị phần dư khi chia cho $m$ (một hợp số). Kỹ thuật viên cần tính phần dư này mỗi giờ mà không thể nhập nổi số mũ khổng lồ vào máy tính bỏ túi.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số với độ phức tạp tối ưu nhất.
+Cho cơ số $a$, số mũ $b$ rất lớn (dạng chuỗi thập phân) và modulo $m$ là hợp số. Hãy lập trình tính $a^b \bmod m$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

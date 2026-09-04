@@ -1,12 +1,14 @@
 # Tìm nghiệm thực của phương trình phi tuyến
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Nghiệm Thực Của Phương Trình Phi Tuyến** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân số thực trên hàm đơn điệu ngặt.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trong phòng thí nghiệm vật lý, các bạn học sinh đo một đại lượng biến thiên liên tục theo một biến số và thấy đồ thị của nó luôn đi lên. Thầy giáo đố cả lớp tìm xem giá trị của biến số bằng bao nhiêu thì đại lượng đo được đúng bằng một mốc cho trước.
+
+Cả lớp ghi lại các lần đo rồi thu hẹp dần khoảng tìm kiếm quanh đáp án.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Nghiệm Thực Của Phương Trình Phi Tuyến với độ phức tạp tối ưu nhất.
+
+Cho hàm số đơn điệu và khoảng tìm kiếm. Hãy lập trình tìm nghiệm thực của phương trình phi tuyến với độ chính xác $10^{-6}$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -1,12 +1,12 @@
 # Tổng cấp số nhân bằng chia để trị
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Cấp Số Nhân Bằng Chia Để Trị** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Phân rã $S_N = S_{N/2} \times (1 + A^{N/2})$.
+Chị nhân viên ngân hàng cần tính tổng tiền gốc lẫn lãi sau nhiều kỳ gửi, khi mỗi kỳ số tiền được nhân lên theo cùng một hệ số. Số kỳ có thể rất lớn nên không thể cộng tay từng số hạng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Chị cần tính nhanh tổng của dãy cấp số nhân này để in sao kê cho khách.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tổng Cấp Số Nhân Bằng Chia Để Trị với độ phức tạp tối ưu nhất.
+Cho số $A$, số lượng số hạng $N$ và số chia $MOD$. Hãy lập trình tính tổng $S = A^0 + A^1 + \dots + A^{N-1}$ theo modulo $MOD$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

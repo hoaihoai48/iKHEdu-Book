@@ -1,12 +1,12 @@
 # Lũy thừa ma trận kích thước $k \times k$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Ma Trận Kích Thước $K \times K$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Giải bài toán quy hoạch động truy hồi qua ma trận.
+Mạng lưới giao thông giữa $k$ bến xe được ghi trong một bảng $k \times k$: ô $(i, j)$ cho biết có bao nhiêu chuyến xe đi thẳng từ bến $i$ đến bến $j$ trong một chặng. Để biết sau đúng $n$ chặng thì giữa các bến có bao nhiêu hành trình, người ta nhân bảng này với chính nó $n$ lần rồi lấy phần dư theo $10^9+7$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Lũy Thừa Ma Trận Kích Thước $k \times K$ với độ phức tạp tối ưu nhất.
+Cho ma trận vuông $A$ kích thước $k \times k$ và số mũ $n$. Hãy lập trình tính $A^n$ theo modulo $10^9+7$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

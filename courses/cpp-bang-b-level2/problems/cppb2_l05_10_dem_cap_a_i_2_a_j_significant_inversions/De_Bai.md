@@ -1,12 +1,12 @@
 # Đếm cặp $a_i > 2 a_j$ (significant inversions)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp $A_i > 2 A_j$ (Significant Inversions)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Biến thể Merge Sort đếm cặp điều kiện nâng cao.
+Cô giáo ghi lại điểm số của cả lớp theo đúng thứ tự chỗ ngồi. Cô muốn phát hiện những chênh lệch bất thường: một bạn ngồi phía trước nhưng điểm cao gấp hơn hai lần một bạn ngồi phía sau.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãy giúp cô đếm có bao nhiêu cặp bạn như vậy trong lớp.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Cặp $a_i > 2 A_j$ (significant Inversions) với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình đếm số cặp $(i, j)$ thỏa mãn $i < j$ và $A_i > 2 \cdot A_j$, rồi in ra tổng số cặp đếm được.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

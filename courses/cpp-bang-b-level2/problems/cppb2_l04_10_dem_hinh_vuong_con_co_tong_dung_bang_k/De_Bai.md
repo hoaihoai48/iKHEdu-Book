@@ -1,12 +1,14 @@
 # Đếm hình vuông con có tổng đúng bằng k
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Hình Vuông Con Có Tổng Đúng Bằng K** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2D Prefix Sum + Hai con trỏ trên đường chéo.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô giáo vẽ một bảng số hình vuông cho cả lớp. Nhóm bạn An được giao nhiệm vụ đếm xem có bao nhiêu ô vuông con trong bảng có tổng các số bên trong đúng bằng $K$.
+
+Cả nhóm kẻ khung vuông đủ mọi kích cỡ đặt lên bảng rồi cộng tổng từng khung để kiểm tra.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Hình Vuông Con Có Tổng Đúng Bằng K với độ phức tạp tối ưu nhất.
+
+Cho ma trận số và số $K$. Hãy lập trình đếm số hình vuông con có tổng các ô đúng bằng $K$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

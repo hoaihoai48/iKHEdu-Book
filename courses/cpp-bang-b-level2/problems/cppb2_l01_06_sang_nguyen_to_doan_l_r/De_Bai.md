@@ -8,7 +8,7 @@ Khi khoảng giá trị cần tìm số nguyên tố nằm rất xa gốc tọa 
 Cho hai số nguyên dương $L$ và $R$. Hãy đếm số lượng số nguyên tố nằm trong đoạn $[L, R]$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sàng Nguyên Tố Đoạn [l, R] với độ phức tạp tối ưu nhất.
+Cho hai số nguyên dương $L$ và $R$. Hãy lập trình đếm số lượng số nguyên tố nằm trong đoạn $[L, R]$.
 
 ## Input
 - Gồm một dòng duy nhất chứa hai số nguyên dương $L$ và $R$ ($1 \le L \le R \le 10^{12}$, $R - L \le 10^6$), cách nhau bởi một dấu cách.

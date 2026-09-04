@@ -1,12 +1,14 @@
 # Khử chiều 3-sum & 4-sum hai con trỏ
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khử Chiều 3-Sum & 4-Sum Hai Con Trỏ** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Khử chiều không gian từ $\mathcal{O}(N^3) \to \mathcal{O}(N^2)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trong buổi sinh hoạt câu lạc bộ toán, các bạn viết lên bảng một dãy số rồi đố nhau tìm các bộ ba (hoặc bộ bốn) có tổng đúng bằng một số cho trước.
+
+Cả nhóm sắp xếp dãy số rồi dùng hai đầu danh sách kẹp dần vào giữa để tìm các bộ số thỏa mãn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Khử Chiều 3-sum & 4-sum Hai Con Trỏ với độ phức tạp tối ưu nhất.
+
+Cho dãy số và giá trị mục tiêu. Hãy lập trình liệt kê (đếm) các bộ ba (và bộ bốn) có tổng đúng bằng giá trị mục tiêu.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

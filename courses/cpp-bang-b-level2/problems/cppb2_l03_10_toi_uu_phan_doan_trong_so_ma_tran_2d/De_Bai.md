@@ -1,12 +1,14 @@
 # Tối ưu phân đoạn trọng số ma trận 2d
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: BS trên đáp án kết hợp 2D Prefix Sum & Greedy.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô thủ thư muốn chia kho sách hình chữ nhật thành các khu vực để mỗi khu vực có tổng trọng lượng sách không vượt quá sức chịu của kệ. Cô cần biết sức chịu tối thiểu của kệ để có thể chia kho thành số khu vực đúng quy định.
+
+Cô cân thử từng chồng sách rồi tính toán phương án chia kho hợp lý.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2d với độ phức tạp tối ưu nhất.
+
+Cho ma trận trọng số và số khu vực cần chia. Hãy lập trình tìm ngưỡng trọng số tối thiểu thỏa mãn yêu cầu phân đoạn ma trận.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

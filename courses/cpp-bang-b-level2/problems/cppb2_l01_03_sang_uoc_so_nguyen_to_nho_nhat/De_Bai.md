@@ -6,7 +6,7 @@ Trong các bài toán xử lý số học nhiều truy vấn, việc tìm **ư�
 Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $X$ ($2 \le X \le 10^6$). Hãy tìm ước số nguyên tố nhỏ nhất của $X$ (ký hiệu là $\text{spf}[X]$).
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sàng Ước Số Nguyên Tố Nhỏ Nhất (spf) với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $X$. Hãy lập trình tìm ước số nguyên tố nhỏ nhất $\text{spf}[X]$ của mỗi số.
 
 ## Input
 - Dòng đầu tiên chứa số nguyên dương $Q$ ($1 \le Q \le 10^6$) — số lượng truy vấn.

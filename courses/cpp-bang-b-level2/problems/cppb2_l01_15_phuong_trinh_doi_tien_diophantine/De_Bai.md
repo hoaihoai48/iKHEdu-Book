@@ -4,7 +4,7 @@
 Một máy rút tiền chỉ có 2 loại mệnh giá tiền là $A$ đồng và $B$ đồng. Khách hàng muốn rút đúng $C$ đồng. Hãy đếm số cách chọn số lượng tờ tiền $(x, y)$ ($x \ge 0, y \ge 0$) sao cho $A \cdot x + B \cdot y = C$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Cách Đổi Tiền Bằng Phương Trình Diophantine với độ phức tạp tối ưu nhất.
+Cho ba số nguyên dương $A, B, C$. Hãy lập trình đếm số cặp $(x, y)$ không âm thỏa mãn $A\cdot x + B\cdot y = C$.
 
 ## Input
 - Một dòng chứa 3 số nguyên dương $A, B, C$ ($1 \le A, B \le 10^6, 1 \le C \le 10^{12}$).

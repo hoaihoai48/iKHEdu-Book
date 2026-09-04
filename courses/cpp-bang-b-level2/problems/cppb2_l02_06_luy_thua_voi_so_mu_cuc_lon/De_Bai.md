@@ -1,12 +1,12 @@
 # Lũy thừa với số mũ cực lớn
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Lũy Thừa Với Số Mũ Cực Lớn** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hạ bậc số mũ bằng định lý Fermat $B \bmod (M-1)$.
+Máy chủ của thư viện mã hóa mỗi lượt mượn sách bằng một lũy thừa $a^b$, trong đó số mũ $b$ dài tới hàng nghìn chữ số nên không thể nhập vào máy tính thông thường. Thủ thư chỉ cần biết phần dư của kết quả khi chia cho $10^9+7$ để in lên phiếu mượn.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Lũy Thừa Với Số Mũ Cực Lớn với độ phức tạp tối ưu nhất.
+Cho cơ số $a$ và số mũ $b$ rất lớn được cho dưới dạng chuỗi thập phân. Hãy lập trình tính $a^b \bmod (10^9+7)$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

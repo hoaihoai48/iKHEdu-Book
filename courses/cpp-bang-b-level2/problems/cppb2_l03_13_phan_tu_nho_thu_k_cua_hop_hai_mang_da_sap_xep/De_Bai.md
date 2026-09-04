@@ -1,12 +1,14 @@
 # Phần tử nhỏ thứ k của hợp hai mảng đã sắp xếp
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Chặt nhị phân trong $\mathcal{O}(\log(\min(N, M)))$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hai lớp học đều đã xếp hàng theo chiều cao từ thấp đến cao. Thầy thể dục muốn biết nếu gộp cả hai hàng thành một hàng chung vẫn giữ thứ tự chiều cao thì bạn đứng thứ $K$ cao bao nhiêu.
+
+Thầy không muốn bắt cả hai lớp xếp lại từ đầu mà chỉ so sánh từng nhóm nhỏ để tìm ra đáp án.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp với độ phức tạp tối ưu nhất.
+
+Cho hai mảng đã sắp xếp và số $K$. Hãy lập trình tìm phần tử nhỏ thứ $K$ của dãy hợp nhất hai mảng.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

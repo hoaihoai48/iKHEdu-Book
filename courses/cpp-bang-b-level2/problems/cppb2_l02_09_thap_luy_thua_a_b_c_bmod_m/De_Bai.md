@@ -1,12 +1,12 @@
 # Tháp lũy thừa $a^{b^c} \bmod m$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tháp Lũy Thừa $A^{B^C} \bmod M$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Áp dụng hạ bậc số mũ 2 tầng qua Euler.
+Trong cuộc thi xếp tháp số của lớp, mỗi đội dựng một "tháp lũy thừa" ba tầng $a^{b^c}$ rồi chỉ ghi lại phần dư của ngọn tháp khi chia cho $10^9+7$. Vì tầng trên cùng đã là một lũy thừa khổng lồ, không đội nào tính trực tiếp từ trên xuống được.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tháp Lũy Thừa $a^{b^c} \bmod M$ với độ phức tạp tối ưu nhất.
+Cho $T$ bộ $(a, b, c)$. Hãy lập trình tính tháp lũy thừa $a^{b^c} \bmod (10^9+7)$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

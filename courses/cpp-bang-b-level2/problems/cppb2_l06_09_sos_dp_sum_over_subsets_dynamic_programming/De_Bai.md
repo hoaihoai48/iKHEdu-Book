@@ -1,12 +1,12 @@
-# Sos DP (sum over subsets dynamic programming)
+# SOS DP Tổng Trên Tập Con (Cộng Dồn Theo Nhóm)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **SOS DP (Sum Over Subsets Dynamic Programming)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP tính tổng hàm trên mọi submask $\mathcal{O}(N 2^N)$.
+Phòng khảo sát lưu điểm số cho từng nhóm đối tượng, mỗi nhóm được biểu diễn bằng một tập con. Với mỗi nhóm lớn, phòng cần tính tổng điểm của mọi nhóm nhỏ nằm gọn trong nó.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Việc cộng dồn này phải làm cho tất cả các nhóm, nên cần cách tính thật gọn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Programming) với độ phức tạp tối ưu nhất.
+Cho một hàm $F$ xác định trên mọi tập con của tập $N$ phần tử. Với mỗi mặt nạ $mask$, hãy lập trình tính tổng $F[sub]$ trên mọi tập con $sub$ của $mask$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

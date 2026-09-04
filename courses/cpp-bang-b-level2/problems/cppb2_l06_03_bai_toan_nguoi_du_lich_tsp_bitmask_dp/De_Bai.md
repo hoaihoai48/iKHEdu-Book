@@ -1,12 +1,12 @@
 # Bài toán người du lịch (tsp bitmask DP)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bài Toán Người Du Lịch (TSP Bitmask DP)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP trạng thái $dp[mask][u]$.
+Anh nhân viên giao hàng phải ghé qua mỗi địa chỉ đúng một lần rồi quay về kho. Giá cước di chuyển giữa từng cặp địa điểm đều đã biết trước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh cần một lịch trình khép kín có tổng chi phí rẻ nhất để kịp giờ giao hàng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bài Toán Người Du Lịch (tsp Bitmask Dp) với độ phức tạp tối ưu nhất.
+Cho số thành phố $N$ (nhỏ) và ma trận khoảng cách giữa từng cặp thành phố. Hãy lập trình tìm chi phí nhỏ nhất của hành trình xuất phát từ thành phố $0$, thăm mỗi thành phố đúng một lần rồi quay về $0$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

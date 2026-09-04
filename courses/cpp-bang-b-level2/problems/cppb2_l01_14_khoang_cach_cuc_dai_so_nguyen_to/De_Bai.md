@@ -4,7 +4,7 @@
 Cho đoạn $[L, R]$ với $1 \le L \le R \le 10^9$ và $R - L \le 10^6$. Hãy tìm khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp nằm trong đoạn này. Nếu trong đoạn có ít hơn 2 số nguyên tố, in ra `-1`.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Khoảng Cách Lớn Nhất Giữa Hai Số Nguyên Tố Liên Tiếp với độ phức tạp tối ưu nhất.
+Cho đoạn $[L, R]$. Hãy lập trình tìm khoảng cách lớn nhất giữa hai số nguyên tố liên tiếp trong đoạn; in `-1` nếu đoạn có ít hơn $2$ số nguyên tố.
 
 ## Input
 - Một dòng duy nhất chứa hai số nguyên dương $L, R$ ($1 \le L \le R \le 10^9, R - L \le 10^6$).

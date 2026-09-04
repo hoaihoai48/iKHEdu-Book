@@ -4,7 +4,7 @@
 Cho hai số nguyên dương nguyên tố cùng nhau $A$ và $M$ ($\gcd(A, M) = 1$). Bậc của $A$ theo modulo $M$ (ký hiệu $\text{ord}_M(A)$) là số nguyên dương $k$ nhỏ nhất sao cho $A^k \equiv 1 \pmod M$. Theo định lý Euler, $k$ bắt buộc phải là một ước của $\phi(M)$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bậc Của Số Nguyên Theo Modulo M (multiplicative Order) với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(A, M)$ nguyên tố cùng nhau. Hãy lập trình tìm bậc $\text{ord}_M(A)$ — số nguyên dương $k$ nhỏ nhất sao cho $A^k \equiv 1 \pmod M$.
 
 ## Input
 - Dòng 1: Chứa số bộ test $T$ ($1 \le T \le 100$).

@@ -1,12 +1,12 @@
 # Duyệt tất cả submask tính tổng phân hoạch
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duyệt Tất Cả Submask Tính Tổng Phân Hoạch** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Vòng lặp `sub = (sub - 1) & mask`.
+Câu lạc bộ muốn lập mọi đội hình con có thể từ danh sách thành viên. Mỗi đội hình đã được chấm một số điểm, và ban chủ nhiệm cần cộng dồn điểm số theo từng cách gom nhóm.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Để làm được, trước hết phải liệt kê đầy đủ mọi tập con của danh sách thành viên.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Duyệt Tất Cả Submask Tính Tổng Phân Hoạch với độ phức tạp tối ưu nhất.
+Cho một mặt nạ $mask$ biểu diễn tập gồm $N$ phần tử và giá trị của từng tập con. Hãy lập trình liệt kê mọi tập con của $mask$ và tính tổng giá trị trên tất cả các tập con đó.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

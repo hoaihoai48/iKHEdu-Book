@@ -1,12 +1,14 @@
 # Chặt nhị phân song song (parallel binary search)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chặt Nhị Phân Song Song (Parallel Binary Search)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Kỹ thuật chặt nhị phân đồng thời cho $Q$ truy vấn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm khí tượng có nhiều cảm biến gửi số liệu về theo từng đợt. Kỹ sư trực cần trả lời cùng lúc nhiều câu hỏi dạng: với ngưỡng cho trước, đợt đo thứ mấy thì số liệu tích lũy mới vượt ngưỡng.
+
+Thay vì trả lời từng câu hỏi một, anh kỹ sư xử lý tất cả các câu hỏi song song theo từng đợt số liệu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chặt Nhị Phân Song Song (parallel Binary Search) với độ phức tạp tối ưu nhất.
+
+Cho dữ liệu các đợt đo và nhiều câu hỏi ngưỡng tích lũy. Hãy lập trình trả lời với mỗi câu hỏi đợt đo sớm nhất mà tổng tích lũy vượt ngưỡng.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

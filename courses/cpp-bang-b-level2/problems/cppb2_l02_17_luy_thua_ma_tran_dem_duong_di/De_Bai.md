@@ -1,10 +1,12 @@
-# Luy thua ma tran dem duong di
+# Lũy Thừa Ma Trận Đếm Đường Đi
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Luy Thua Ma Tran Dem Duong Di**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Bản đồ du lịch của huyện có $n$ điểm tham quan nối với nhau bằng $m$ con đường hai chiều. Hội thi "phượt thủ" thách mỗi đội lên lịch trình đúng $k$ chặng đường đi từ điểm $u$ đến điểm $v$ (được quay lại điểm cũ), và ban tổ chức cần đếm xem có tất cả bao nhiêu lịch trình như vậy.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Luy Thua Ma Tran Dem Duong Di với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho đồ thị vô hướng gồm $n$ đỉnh, $m$ cạnh cùng hai đỉnh $u, v$ và độ dài $k$. Hãy lập trình đếm số đường đi (được phép lặp đỉnh, lặp cạnh) có độ dài đúng $k$ từ $u$ đến $v$ theo modulo $10^9+7$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

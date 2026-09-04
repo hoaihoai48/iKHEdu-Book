@@ -1,12 +1,12 @@
 # Cái túi kích thước nhỏ (knapsack $n \le 40$)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi Kích Thước Nhỏ (Knapsack $N \le 40$)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cài đặt Meet in the Middle cơ bản.
+Bác thủ kho cần xếp hàng lên một chuyến xe tải có sức chở giới hạn. Mỗi kiện hàng có khối lượng và giá trị khác nhau, mà số kiện thì khá nhiều (vài chục kiện) nên không thể thử hết mọi cách bằng tay.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác muốn chọn ra những kiện mang đi sao cho tổng giá trị cao nhất mà xe vẫn chở nổi.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cái Túi Kích Thước Nhỏ (knapsack $n \le 40$) với độ phức tạp tối ưu nhất.
+Cho $N$ món đồ ($N \le 40$), mỗi món có khối lượng và giá trị, cùng sức chứa của chiếc túi. Hãy lập trình chọn ra một tập con các món đồ có tổng giá trị lớn nhất mà tổng khối lượng không vượt quá sức chứa.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

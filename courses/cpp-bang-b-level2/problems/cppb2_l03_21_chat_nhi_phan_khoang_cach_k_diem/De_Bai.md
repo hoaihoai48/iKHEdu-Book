@@ -1,10 +1,14 @@
-# Chat nhi phan khoang cach k diem
+# Chặt Nhị Phân Khoảng Cách K Điểm
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Chat Nhi Phan Khoang Cach K Diem**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Thầy giáo cắm $K$ cọc tiêu dọc sân trường để tổ chức trò chơi vận động. Thầy muốn chọn vị trí các cọc sao cho hai cọc gần nhau nhất cũng cách nhau càng xa càng tốt, để học sinh có chỗ chạy thoải mái.
+
+Thầy đo các vị trí có thể cắm cọc rồi tính cách chọn hợp lý nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chat Nhi Phan Khoang Cach K Diem với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho các vị trí có thể đặt và số điểm $K$ cần chọn. Hãy lập trình tìm khoảng cách nhỏ nhất lớn nhất có thể giữa hai điểm được chọn.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

@@ -4,7 +4,8 @@
 Cho ma trận $A$ kích thước $N \times M$. Có $Q$ truy vấn tính tổng hình chữ nhật từ $(x_1, y_1)$ đến $(x_2, y_2)$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Truy Vấn Tổng Ma Trận Con 2d với độ phức tạp tối ưu nhất.
+
+Cho ma trận $A$ kích thước $N \times M$ và $Q$ truy vấn hình chữ nhật $(x_1, y_1)$ đến $(x_2, y_2)$. Hãy lập trình tính tổng các ô trong mỗi hình chữ nhật được hỏi.
 
 ## Input
 - Dòng 1: $N, M, Q$ ($1 \le N, M \le 1000, 1 \le Q \le 10^5$). $N$ dòng tiếp theo chứa ma trận. $Q$ dòng sau: $x_1, y_1, x_2, y_2$.
@@ -27,6 +28,10 @@ Hãy lập trình giải quyết bài toán Truy Vấn Tổng Ma Trận Con 2d v
 12
 28
 ```
+
+### Giải thích
+* Truy vấn 1 $(1, 1)$ đến $(2, 2)$ gồm các ô $1, 2, 4, 5$ nên tổng là $1 + 2 + 4 + 5 = 12$.
+* Truy vấn 2 $(2, 2)$ đến $(3, 3)$ gồm các ô $5, 6, 8, 9$ nên tổng là $5 + 6 + 8 + 9 = 28$.
 
 ## Ràng buộc
 - $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.

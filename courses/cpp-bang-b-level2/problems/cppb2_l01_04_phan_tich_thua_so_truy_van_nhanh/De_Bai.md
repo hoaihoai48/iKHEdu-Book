@@ -8,7 +8,7 @@ là thao tác kinh điển trong số học. Khi cần phân tích số lượng
 Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$ ($2 \le N \le 10^6$). Hãy in ra dạng phân tích thừa số nguyên tố của $N$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phân Tích Thừa Số Truy Vấn Nhanh với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$. Hãy lập trình in ra dạng phân tích thừa số nguyên tố của $N$ dưới dạng `p^a`, các thừa số xếp theo thứ tự tăng dần.
 
 ## Input
 - Dòng đầu tiên chứa số nguyên dương $Q$ ($1 \le Q \le 10^5$) — số lượng truy vấn.

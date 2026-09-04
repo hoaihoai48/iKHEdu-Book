@@ -1,10 +1,12 @@
-# Tinh cap so nhan modulo hop so
+# Tính Cấp Số Nhân theo modulo Hợp Số
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Tinh Cap So Nhan Modulo Hop So**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Cửa hàng xếp ly giấy thành chồng cao dần: tầng thứ $i$ có đúng $a^i$ chiếc ly, xếp tới tầng thứ $n$. Vì tổng số ly quá lớn, chủ cửa hàng chỉ ghi lại phần dư khi chia cho $m$ để ước lượng số thùng cần dùng.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tinh Cap So Nhan Modulo Hop So với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ba số $a, n, m$. Hãy lập trình tính $S = 1 + a + a^2 + \dots + a^n$ theo modulo $m$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

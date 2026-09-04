@@ -1,12 +1,12 @@
 # Trò chơi xếp gạch đa diện (puzzle mitm)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Trò Chơi Xếp Gạch Đa Diện (Puzzle MITM)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: MITM kết hợp Hash Table nén bộ nhớ.
+Em bé có một bộ đồ chơi xếp gạch nhiều mảnh đang ở trạng thái ban đầu lộn xộn. Trên hộp có in hình mẫu hoàn chỉnh mà bé muốn xếp thành.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bé muốn biết cần ít nhất bao nhiêu bước di chuyển để từ cách xếp ban đầu biến thành hình mẫu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Trò Chơi Xếp Gạch Đa Diện (puzzle Mitm) với độ phức tạp tối ưu nhất.
+Cho trạng thái ban đầu và trạng thái đích của bàn cờ xếp gạch. Hãy lập trình tìm số bước di chuyển ít nhất để biến trạng thái ban đầu thành trạng thái đích.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

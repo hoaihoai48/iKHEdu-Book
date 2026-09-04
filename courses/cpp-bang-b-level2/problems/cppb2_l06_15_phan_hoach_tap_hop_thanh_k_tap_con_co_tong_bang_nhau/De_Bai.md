@@ -1,12 +1,12 @@
 # Phân hoạch tập hợp thành k tập con có tổng bằng nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Bitmask DP kiểm tra tính khả thi.
+Cô giáo cần chia lớp thành $K$ nhóm có tổng điểm năng lực bằng nhau để cuộc thi đấu được công bằng. Mỗi bạn chỉ thuộc đúng một nhóm.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô muốn biết liệu có cách chia như vậy hay không trước khi công bố danh sách.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phân Hoạch Tập Hợp Thành K Tập Con Có Tổng Bằng Nhau với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một số nguyên $K$. Hãy lập trình kiểm tra xem có thể chia các phần tử thành $K$ nhóm có tổng bằng nhau hay không.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

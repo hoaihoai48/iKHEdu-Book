@@ -1,12 +1,12 @@
 # Ghép cặp trọng số cực đại (maximum matching bitmask)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ghép Cặp Trọng Số Cực Đại (Maximum Matching Bitmask)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP khử chiều đối xứng.
+Ban tổ chức giải cầu lông cần ghép các vận động viên thành từng cặp thi đấu đôi. Mỗi cặp có một chỉ số ăn ý đã được huấn luyện viên chấm trước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức muốn cách ghép sao cho tổng chỉ số ăn ý của tất cả các cặp là lớn nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Ghép Cặp Trọng Số Cực Đại (maximum Matching Bitmask) với độ phức tạp tối ưu nhất.
+Cho $2N$ người và trọng số tương hợp của từng cặp. Hãy lập trình ghép thành $N$ cặp sao cho tổng trọng số của tất cả các cặp là lớn nhất.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

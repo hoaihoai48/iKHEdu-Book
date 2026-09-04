@@ -1,12 +1,12 @@
 # Tính tổ hợp $c_n^k \bmod (10^9+7)$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tính Tổ Hợp $C_n^k \bmod (10^9+7)$** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tiền xử lý giai thừa & nghịch đảo giai thừa.
+Đội văn nghệ của trường có $n$ bạn và cần chọn ra $k$ bạn vào đội hình biểu diễn. Số cách chọn có thể cực lớn nên thầy phụ trách chỉ cần biết phần dư của con số đó khi chia cho $10^9+7$. Vì danh sách đăng ký gửi về liên tục, thầy cần trả lời nhanh cho rất nhiều lượt hỏi khác nhau.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tính Tổ Hợp $c_n^k \bmod (10^9+7)$ với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm hai số nguyên $n, k$. Hãy lập trình tính tổ hợp $C_n^k \bmod (10^9+7)$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

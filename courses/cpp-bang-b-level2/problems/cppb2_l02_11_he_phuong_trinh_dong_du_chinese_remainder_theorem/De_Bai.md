@@ -1,12 +1,12 @@
 # Hệ phương trình đồng dư (chinese remainder theorem)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hệ Phương Trình Đồng Dư (Chinese Remainder Theorem)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Định lý phần dư Trung Hoa giải hệ đồng dư.
+Ba lớp trực nhật đếm số ghế trong hội trường theo ba cách khác nhau: lớp thì đếm dư theo nhóm $m_1$, lớp thì theo nhóm $m_2$, lớp thì theo nhóm $m_3$. Từ các số dư $r_1, r_2, r_3$ đó, ban tổ chức muốn suy ra tổng số ghế nhỏ nhất khớp với cả ba cách đếm.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hệ Phương Trình Đồng Dư (chinese Remainder Theorem) với độ phức tạp tối ưu nhất.
+Cho hệ $k$ phương trình đồng dư $x \equiv r_i \pmod{m_i}$. Hãy lập trình tìm nghiệm $x$ nhỏ nhất không âm thỏa mãn cả hệ.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

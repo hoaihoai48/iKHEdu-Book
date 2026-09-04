@@ -1,12 +1,12 @@
 # Đếm số cặp $(a_i, a_j)$ có tích and bằng 0
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Cặp $(A_i, A_j)$ Có Tích AND Bằng 0** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: SOS DP đếm số phần tử là submask.
+Thủ thư đánh số mỗi cuốn sách bằng một mã nhị phân. Hai cuốn sách được gọi là không chồng lấn nếu phép AND hai mã của chúng bằng $0$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thủ thư muốn đếm có bao nhiêu cặp sách không chồng lấn để xếp chúng lên cùng một kệ đặc biệt.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Cặp $(a_i, A_j)$ Có Tích And Bằng 0 với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình đếm số cặp $(i, j)$ với $i < j$ sao cho $A_i \ \mathrm{AND}\  A_j = 0$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

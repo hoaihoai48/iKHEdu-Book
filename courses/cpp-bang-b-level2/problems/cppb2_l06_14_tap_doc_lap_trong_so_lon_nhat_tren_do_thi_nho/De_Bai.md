@@ -1,12 +1,12 @@
 # Tập độc lập trọng số lớn nhất trên đồ thị nhỏ
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP Bitmask duyệt cấu hình không kề nhau.
+Huyện muốn chọn vị trí đặt trạm phát sóng, mỗi vị trí mang lại một lợi ích khác nhau. Hai vị trí kề nhau không thể cùng đặt trạm vì sẽ gây nhiễu sóng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Huyện cần chọn ra các vị trí không kề nhau sao cho tổng lợi ích là lớn nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tập Độc Lập Trọng Số Lớn Nhất Trên Đồ Thị Nhỏ với độ phức tạp tối ưu nhất.
+Cho một đồ thị vô hướng gồm $N$ đỉnh (nhỏ), mỗi đỉnh có một trọng số. Hãy lập trình chọn một tập độc lập (không có cạnh nối giữa hai đỉnh nào trong tập) có tổng trọng số lớn nhất.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

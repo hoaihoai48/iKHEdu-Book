@@ -1,12 +1,12 @@
 # Tối ưu hóa trò chơi nim tổng quát (sprague-grundy BIT)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Trò Chơi Nim Tổng Quát (Sprague-Grundy Bit)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Trò chơi toán học kết hợp phép toán XOR.
+Hai bạn nhỏ chơi trò bốc sỏi với nhiều đống sỏi và bộ luật bốc mở rộng: mỗi lượt được bốc theo một trong các cách cho phép. Bạn nào bốc viên sỏi cuối cùng thì thắng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả hai bạn đều chơi khôn ngoan nhất có thể, hãy xem ai sẽ thắng cuộc.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Trò Chơi Nim Tổng Quát (sprague-grundy Bit) với độ phức tạp tối ưu nhất.
+Cho mô tả các đống trong trò chơi Nim tổng quát và tập các nước đi hợp lệ. Hãy lập trình xác định người chơi đi trước thắng hay thua khi cả hai bên đều chơi tối ưu.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

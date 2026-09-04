@@ -1,10 +1,12 @@
-# Phan tich Legendre nang cao
+# Phân Tích Legendre Nâng Cao
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Phan Tich Legendre Nang Cao**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Thủ kho của cửa hàng đồ chơi xếp các hộp quà thành dãy dài đánh số từ $1$ đến $N$ rồi lại xếp thêm một dãy nữa đến $M$. Cô muốn biết trong tích tất cả các số của cả hai dãy có tất cả bao nhiêu thừa số nguyên tố $P$ — tức số mũ của $P$ trong $N!$ cộng với số mũ của $P$ trong $M!$ — mà không cần nhân trực tiếp các số khổng lồ này.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phan Tich Legendre Nang Cao với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ba số nguyên $N, M, P$ với $P$ là số nguyên tố. Hãy lập trình tính tổng số mũ của $P$ trong phân tích của $N!$ và $M!$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

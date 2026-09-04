@@ -1,12 +1,12 @@
 # Tập con có tổng gần s nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tập Con Có Tổng Gần S Nhất** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: MITM kết hợp `lower_bound`.
+Cô kế toán được giao một khoản tiền mục tiêu $S$ để mua sắm thiết bị. Mỗi món đồ có một mức giá riêng, và cô chỉ được mua mỗi món nhiều nhất một lần.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô cần chọn một nhóm món đồ sao cho tổng giá tiền gần với $S$ nhất có thể, để số tiền thừa hay thiếu là ít nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tập Con Có Tổng Gần S Nhất với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một số mục tiêu $S$. Hãy lập trình tìm một tập con có tổng gần với $S$ nhất, tức hiệu tuyệt đối giữa tổng của tập con và $S$ là nhỏ nhất.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

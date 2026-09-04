@@ -1,12 +1,12 @@
 # Nghịch đảo modulo tổng quát
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nghịch Đảo Modulo Tổng Quát** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Euclid mở rộng tìm nghịch đảo khi $M$ không nguyên tố.
+Trong trò chơi chia kẹo của lớp, cô giáo quy định mỗi viên kẹo ứng với một phép nhân theo vòng tròn modulo $m$. Để "hoàn tác" một lần chia, cả lớp cần tìm số $x$ sao cho $a \cdot x$ quay đúng một vòng trở về $1$. Có những số $a$ không thể hoàn tác được, khi đó cả lớp hô to $-1$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Nghịch Đảo Modulo Tổng Quát với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(a, m)$. Hãy lập trình tìm số nguyên $x$ nhỏ nhất không âm thỏa $a\cdot x \equiv 1 \pmod m$; in `-1` nếu không tồn tại.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

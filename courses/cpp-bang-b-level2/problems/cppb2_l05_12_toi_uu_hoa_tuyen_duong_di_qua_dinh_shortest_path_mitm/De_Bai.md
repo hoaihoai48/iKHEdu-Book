@@ -1,12 +1,12 @@
 # Tối ưu hóa tuyến đường đi qua đỉnh (shortest path mitm)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (Shortest Path MITM)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS 2 đầu gặp nhau ở giữa.
+Nhóm phượt thủ lên lịch trình xuyên tỉnh: bản đồ có các thị trấn và những cung đường nối chúng với độ dài đã biết. Đoàn xuất phát từ thị trấn $S$ và phải tới thị trấn $T$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cả nhóm muốn tìm cung đường ngắn nhất để chia xăng xe công bằng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Tuyến Đường Đi Qua Đỉnh (shortest Path Mitm) với độ phức tạp tối ưu nhất.
+Cho bản đồ gồm các địa điểm và những con đường nối chúng với độ dài đã biết, cùng điểm xuất phát $S$ và điểm đích $T$. Hãy lập trình tìm độ dài hành trình ngắn nhất từ $S$ tới $T$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -1,12 +1,12 @@
 # Chia để trị trên cây (centroid decomposition cơ bản)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Để Trị Trên Cây (Centroid Decomposition Cơ Bản)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm trọng tâm cây đệ quy chia để trị.
+Hệ thống đường làng nối các thôn tạo thành một mạng cây, tức không hề có đường vòng. Huyện muốn trả lời nhanh nhiều câu hỏi của người dân về các tuyến đường trên mạng cây này.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Vì số thôn và số câu hỏi đều lớn, huyện cần một cách tổ chức dữ liệu thật khéo léo.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chia Để Trị Trên Cây (centroid Decomposition Cơ Bản) với độ phức tạp tối ưu nhất.
+Cho một cây gồm $N$ đỉnh và các truy vấn trên cây. Hãy lập trình trả lời đáp án cho từng truy vấn một cách chính xác.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

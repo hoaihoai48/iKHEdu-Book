@@ -1,12 +1,12 @@
 # Đếm dãy ngoặc đúng (số Catalan modulo)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Dãy Ngoặc Đúng (Số Catalan Modulo)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Công thức $C_n = \frac{1}{n+1} C_{2n}^n \bmod M$.
+Cô giáo mỹ thuật yêu cầu cả lớp vẽ các dãy ngoặc tròn mở và đóng sao cho mỗi ngoặc đóng đều khớp đúng với một ngoặc mở trước đó. Với $n$ cặp ngoặc, số dãy vẽ đúng có thể rất lớn nên lớp trưởng chỉ ghi lại phần dư khi chia cho $10^9+7$ để báo cáo.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Dãy Ngoặc Đúng (số Catalan Modulo) với độ phức tạp tối ưu nhất.
+Cho $T$ truy vấn, mỗi truy vấn gồm một số nguyên không âm $n$. Hãy lập trình đếm số dãy ngoặc đúng gồm $n$ cặp ngoặc (số Catalan thứ $n$) theo modulo $10^9+7$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

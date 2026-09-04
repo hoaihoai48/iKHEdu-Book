@@ -1,12 +1,14 @@
 # Diện tích phủ bởi các hình chữ nhật rời rạc
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Nén tọa độ 2D kết hợp mảng hiệu 2D.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trên sân trường, các lớp dựng gian hàng hội chợ hình chữ nhật, gian nọ có thể chờm lên gian kia. Ban tổ chức muốn biết tổng diện tích mặt sân thực sự bị các gian hàng che phủ.
+
+Các bạn vẽ lại vị trí từng gian hàng lên giấy kẻ ô rồi tính phần diện tích bị phủ ít nhất một lần.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Diện Tích Phủ Bởi Các Hình Chữ Nhật Rời Rạc với độ phức tạp tối ưu nhất.
+
+Cho danh sách các hình chữ nhật rời rạc trên mặt phẳng. Hãy lập trình tính tổng diện tích bị phủ bởi ít nhất một hình chữ nhật.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

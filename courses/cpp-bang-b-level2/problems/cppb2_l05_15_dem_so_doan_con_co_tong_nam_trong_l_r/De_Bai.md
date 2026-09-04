@@ -1,12 +1,12 @@
 # Đếm số đoạn con có tổng nằm trong $[l, r]$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đoạn Con Có Tổng Nằm Trong $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chia để trị trên mảng tiền tố $\mathcal{O}(N \log N)$.
+Chủ cửa hàng ghi lại doanh thu từng ngày liên tiếp. Cuối tháng, chị muốn thống kê có bao nhiêu chuỗi ngày liên tiếp mà tổng doanh thu nằm trong khoảng $[L, R]$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đó là những giai đoạn kinh doanh ổn định mà chị muốn khen thưởng nhân viên.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Tổng Nằm Trong $[l, R]$ với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên và hai ngưỡng $L, R$. Hãy lập trình đếm số đoạn con liên tiếp có tổng các phần tử nằm trong đoạn $[L, R]$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

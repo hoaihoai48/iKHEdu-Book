@@ -202,6 +202,30 @@ def remove_top_header_and_metadata(lines):
         i += 1
     return result
 
+def _split_sample_blocks(v):
+    """Tách khối Sample thành Input / Output / Giải thích theo các dòng ###."""
+    blocks = {"input": [], "output": [], "giaithich": [], "other": []}
+    cur = "other"
+    for line in v.split("\n"):
+        s = line.strip()
+        if re.match(r"^#{1,4}\s*Input\b", s, re.IGNORECASE):
+            cur = "input"
+            continue
+        if re.match(r"^#{1,4}\s*Output\b", s, re.IGNORECASE):
+            cur = "output"
+            continue
+        if re.match(r"^#{1,4}\s*Giải thích\b", s, re.IGNORECASE):
+            cur = "giaithich"
+            continue
+        if re.match(r"^#{1,4}\s*\S", s):
+            cur = "other"
+        blocks[cur].append(line)
+    return blocks
+
+def _md_table_cell(lines):
+    cleaned = [l.strip().replace("|", "\\|") for l in lines if l.strip() != ""]
+    return "<br/>".join(cleaned) if cleaned else ""
+
 def format_problem_statement(statement, code, idx=1):
     lines = statement.strip().split("\n")
     title = ""
@@ -243,7 +267,17 @@ def format_problem_statement(statement, code, idx=1):
         elif "Đầu Ra" in k or "Output" in k:
             out.append(f"**Đầu ra (Output):**\n\n{v}\n")
         elif "Ví Dụ" in k or "Sample" in k:
-            out.append(f"**Ví dụ mẫu:**\n\n{v}\n")
+            sb = _split_sample_blocks(v)
+            cell_in = _md_table_cell(sb["input"])
+            cell_out = _md_table_cell(sb["output"])
+            out.append("**Ví dụ mẫu:**\n\n| Đầu vào (Input) | Đầu ra (Output) |\n|---|---|\n"
+                       f"| {cell_in} | {cell_out} |\n")
+            gt_lines = [l.strip() for l in sb["giaithich"] if l.strip() != ""]
+            if gt_lines:
+                out.append("**Giải thích:**\n\n" + "\n\n".join(gt_lines) + "\n")
+            other_lines = [l for l in sb["other"] if l.strip() != ""]
+            if other_lines:
+                out.append("\n".join(other_lines) + "\n")
         elif "Ràng Buộc" in k or "Constraints" in k:
             clean_rb = "\n".join([l for l in v.split("\n") if not re.search(r"Thời gian|Bộ nhớ", l, re.IGNORECASE)])
             if clean_rb.strip():
@@ -481,10 +515,9 @@ def preprocess_markdown_for_volume(volume=1):
         book_title = "Khoá học C++ Bảng B (Level 2)"
         book_subtitle = "Nâng cao tư duy, Cấu trúc dữ liệu & Kỹ thuật thi đấu"
 
+    # B2.1: KHÔNG sinh trang bìa — bỏ title/subtitle/author khỏi YAML
+    # để pandoc không phát sinh title block (sách mở đầu thẳng vào Lời nói đầu).
     final_md = f"""---
-title: "{book_title}"
-subtitle: "{book_subtitle}"
-author: "{BOOK_AUTHOR}"
 lang: vi
 documentclass: report
 geometry: "a4paper, margin=2.5cm"
@@ -541,17 +574,56 @@ def build_with_pandoc(markdown_content, output_file):
     print(f"  ✅ Pandoc thành công!")
     return True
 
+WATERMARK_LOGO = BASE_DIR / "watermark_logo.jpeg"  # tách từ image13.jpeg Quyển 1 chuẩn
+
+def _add_vml_watermark(header, logo_path):
+    """B3.1: Chèn Watermark VML (logo mờ 286pt, căn giữa trang, nằm dưới chữ)."""
+    from docx.shared import Pt
+    from docx.oxml import parse_xml
+    from docx.oxml.ns import nsdecls, qn
+    p = header.add_paragraph()
+    run = p.add_run()
+    run.add_picture(str(logo_path), width=Pt(286))
+    drawing = run._r.find(qn('w:drawing'))
+    if drawing is None:
+        return
+    blip = drawing.find('.//{http://schemas.openxmlformats.org/drawingml/2006/main}blip')
+    if blip is None:
+        return
+    rId = blip.get(qn('r:embed'))
+    vml_ns = (
+        'xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" '
+        'xmlns:v="urn:schemas-microsoft-com:vml" '
+        'xmlns:o="urn:schemas-microsoft-com:office:office" '
+        'xmlns:w10="urn:schemas-microsoft-com:office:word" '
+        'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"'
+    )
+    pict = parse_xml(
+        f'<w:pict {vml_ns}>'
+        '<v:shape id="WordPictureWatermark" type="#_x0000_t75" '
+        'style="position:absolute;margin-left:0;margin-top:0;width:286pt;height:286pt;'
+        'z-index:-251656192;mso-position-horizontal:center;'
+        'mso-position-horizontal-relative:margin;mso-position-vertical:center;'
+        'mso-position-vertical-relative:margin" o:allowincell="f">'
+        f'<v:imagedata r:id="{rId}" o:title="logo_ikh" gain="19661f" blacklevel="22938f"/>'
+        '<w10:wrap anchorx="margin" anchory="margin"/>'
+        '</v:shape></w:pict>')
+    drawing.addprevious(pict)
+    drawing.getparent().remove(drawing)
+
 def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
     print(f"\n🎨 Đang áp dụng Design System xuất bản chuyên nghiệp cho {output_file.name}...")
 
     from docx import Document
     from docx.shared import Pt, Inches, Cm, RGBColor
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT
     from docx.enum.table import WD_TABLE_ALIGNMENT
     from docx.oxml import parse_xml, OxmlElement
     from docx.oxml.ns import nsdecls, qn
 
     doc = Document(str(output_file))
+    # B3.1: bật evenAndOddHeaders để Word tôn trọng header trang chẵn
+    doc.settings.odd_and_even_pages_header_footer = True
 
     # ============================================================
     # 1. PAGE SETUP & MARGINS (Đồng bộ chuẩn 100% Level 1)
@@ -559,22 +631,32 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
     for section in doc.sections:
         section.page_width = Cm(21)
         section.page_height = Cm(29.7)
-        section.top_margin = Cm(2.0)
-        section.bottom_margin = Cm(2.0)
-        section.left_margin = Cm(2.2)
-        section.right_margin = Cm(2.0)
+        # B2.4: Margins chuẩn in — Top/Bottom/Right 36pt, Left (gáy) 64.35pt
+        section.top_margin = Pt(36)
+        section.bottom_margin = Pt(36)
+        section.left_margin = Pt(64.35)
+        section.right_margin = Pt(36)
         section.different_first_page_header_footer = True
 
-        # Header for page 2+
-        header = section.header
-        p_head = header.paragraphs[0] if header.paragraphs else header.add_paragraph()
-        p_head.text = f"{book_title}  •  {BOOK_AUTHOR}"
-        p_head.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        for run in p_head.runs:
-            run.font.name = "Times New Roman"
-            run.font.size = Pt(9)
-            run.font.italic = True
-            run.font.color.rgb = RGBColor(0x64, 0x74, 0x8B)
+        # Header text cho default + even (Spec §2.2: trái iKHEDU / phải tên sách, 9.5pt italic)
+        for hdr in (section.header, section.even_page_header):
+            p_head = hdr.paragraphs[0] if hdr.paragraphs else hdr.add_paragraph()
+            p_head.text = ""
+            p_head.paragraph_format.tab_stops.add_tab_stop(Cm(17.46), WD_TAB_ALIGNMENT.RIGHT)
+            r_hleft = p_head.add_run("iKHEDU")
+            p_head.add_run("\t")
+            r_hright = p_head.add_run(book_title)
+            for run in (r_hleft, p_head.runs[1], r_hright):
+                run.font.name = "Times New Roman"
+                run.font.size = Pt(9.5)
+                run.font.italic = True
+                run.font.color.rgb = RGBColor(0x64, 0x74, 0x8B)
+
+        # B3.1: Watermark VML logo mờ 286pt giữa trang cho cả 3 header
+        # (first / default / even) — Spec §2.1
+        _add_vml_watermark(section.first_page_header, WATERMARK_LOGO)
+        _add_vml_watermark(section.header, WATERMARK_LOGO)
+        _add_vml_watermark(section.even_page_header, WATERMARK_LOGO)
 
         pBdr = parse_xml(f'<w:pBdr {nsdecls("w")}><w:bottom w:val="single" w:sz="4" w:space="4" w:color="CBD5E1"/></w:pBdr>')
         p_head._p.get_or_add_pPr().append(pBdr)
@@ -611,65 +693,8 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             st.paragraph_format.space_after = Pt(2)
 
     # ============================================================
-    # 3. COVER PAGE TRANSFORMATION (Đồng bộ chuẩn 100% Level 1)
+    # 3. (B2.1) KHÔNG CÒN TRANG BÌA — sách mở đầu thẳng vào Lời nói đầu.
     # ============================================================
-    if len(doc.paragraphs) >= 3:
-        p0 = doc.paragraphs[0]
-        p1 = doc.paragraphs[1]
-        p2 = doc.paragraphs[2]
-
-        vol_badge = "GIÁO TRÌNH LẬP TRÌNH THI ĐẤU  •  C++ BẢNG B (LEVEL 2)"
-        main_title = "KHOÁ HỌC C++ BẢNG B (LEVEL 2)"
-        vol_sub_title = f"QUYỂN {volume}: {book_subtitle.upper()}" if volume in [1, 2] else "NÂNG CAO TƯ DUY, CẤU TRÚC DỮ LIỆU & KỸ THUẬT THI ĐẤU"
-
-        if volume == 1:
-            tagline = "Chương 01 - 03 (Bài 01-06) & 134 Bài toán thực hành có lời giải chi tiết"
-        elif volume == 2:
-            tagline = "Chương 04 - 06 (Bài 07-15) & 212 Bài toán thực hành có lời giải chi tiết"
-        else:
-            tagline = "Giáo trình 6 Chương trọng tâm & 346 Bài toán thực hành có lời giải chi tiết"
-
-        p0.text = vol_badge
-        p0.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p0.paragraph_format.space_before = Pt(40)
-        p0.paragraph_format.space_after = Pt(90)
-        if p0.runs:
-            p0.runs[0].font.name = "Times New Roman"
-            p0.runs[0].font.size = Pt(10.5)
-            p0.runs[0].font.bold = True
-            p0.runs[0].font.color.rgb = RGBColor(0x1A, 0x4A, 0x6B)
-
-        p1.text = main_title
-        p1.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p1.paragraph_format.space_before = Pt(0)
-        p1.paragraph_format.space_after = Pt(10)
-        if p1.runs:
-            p1.runs[0].font.name = "Times New Roman"
-            p1.runs[0].font.size = Pt(28)
-            p1.runs[0].font.bold = True
-            p1.runs[0].font.color.rgb = RGBColor(0x0F, 0x2A, 0x44)
-
-        p2.text = vol_sub_title
-        p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p2.paragraph_format.space_before = Pt(0)
-        p2.paragraph_format.space_after = Pt(14)
-        if p2.runs:
-            p2.runs[0].font.name = "Times New Roman"
-            p2.runs[0].font.size = Pt(13)
-            p2.runs[0].font.bold = True
-            p2.runs[0].font.color.rgb = RGBColor(0x2E, 0x5E, 0x8A)
-
-        p_div = parse_xml(f'<w:p {nsdecls("w")}><w:pPr><w:jc w:val="center"/><w:spacing w:before="0" w:after="200"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:sz w:val="16"/><w:color w:val="94A3B8"/></w:rPr><w:t>──────────────────────────────────────────</w:t></w:r></w:p>')
-        p2._p.addnext(p_div)
-
-        p_tag = parse_xml(f'<w:p {nsdecls("w")}><w:pPr><w:jc w:val="center"/><w:spacing w:before="0" w:after="4200"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:sz w:val="21"/><w:color w:val="475569"/></w:rPr><w:t>{html.escape(tagline)}</w:t></w:r></w:p>')
-        p_div.addnext(p_tag)
-
-        p_auth = parse_xml(f'<w:p {nsdecls("w")}><w:pPr><w:jc w:val="center"/><w:spacing w:before="0" w:after="100"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:b/><w:sz w:val="26"/><w:color w:val="0F2A44"/></w:rPr><w:t>TRUNG TÂM TIN HỌC iKH</w:t></w:r></w:p>')
-        p_tag.addnext(p_auth)
-
-        p_ver = parse_xml(f'<w:p {nsdecls("w")}><w:pPr><w:jc w:val="center"/><w:spacing w:before="0" w:after="0"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/><w:sz w:val="18"/><w:color w:val="64748B"/></w:rPr><w:t>Phiên bản xuất bản 2026  •  Tài liệu lưu hành nội bộ</w:t></w:r></w:p>')
-        p_auth.addnext(p_ver)
 
     # ============================================================
     # 4. BOOKMARKS & PARAGRAPHS STYLING (Đồng bộ chuẩn 100% Level 1)
@@ -677,13 +702,21 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
     toc_headings = []
     bm_counter = 1
     p_toc_heading = None
+    in_preface = False      # B2.5: đang trong khối thân Lời nói đầu
+    in_giaithich = False    # Khối dòng Giải thích của đề bài → căn trái, cấm Justify
 
     for idx, para in enumerate(doc.paragraphs):
         style_name = para.style.name if para.style else ""
         text = para.text.strip()
 
-        if idx < 3:
-            continue
+        # --- State machine cho Preface & Giải thích ---
+        if style_name.startswith("Heading"):
+            in_preface = False
+            in_giaithich = False
+        elif text.startswith("Giải thích:"):
+            in_giaithich = True
+        elif text.startswith(("Bối cảnh", "Đầu vào", "Đầu ra", "Ví dụ mẫu:", "Ràng buộc", "Bài ")):
+            in_giaithich = False
 
         # --- A. HEADINGS ---
         if style_name == "Heading 1":
@@ -696,16 +729,24 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             prev_text = doc.paragraphs[idx - 1].text.strip() if idx > 0 else ""
             is_first_lesson_in_chapter = is_lesson and prev_text.startswith("CHƯƠNG")
 
-            para.paragraph_format.space_before = Pt(18) if is_chapter else (Pt(10) if is_first_lesson_in_chapter else Pt(16))
-            para.paragraph_format.space_after = Pt(5) if is_chapter else Pt(4)
+            # B2.5: P0 Lời nói đầu Center 14pt Bold, space_before 6pt
+            if is_preface:
+                para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                para.paragraph_format.space_before = Pt(6)
+                para.paragraph_format.space_after = Pt(4)
+                in_preface = True
+            else:
+                para.alignment = WD_ALIGN_PARAGRAPH.CENTER if is_chapter else WD_ALIGN_PARAGRAPH.LEFT
+                para.paragraph_format.space_before = Pt(18) if is_chapter else (Pt(10) if is_first_lesson_in_chapter else Pt(16))
+                para.paragraph_format.space_after = Pt(5) if is_chapter else Pt(4)
             para.paragraph_format.keep_with_next = True
-            
-            if not is_first_lesson_in_chapter:
+
+            if not is_first_lesson_in_chapter and not is_preface:
                 para._p.get_or_add_pPr().append(parse_xml(f'<w:pageBreakBefore {nsdecls("w")}/>'))
 
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(18) if is_chapter else Pt(15.5)
+                r.font.size = Pt(14) if is_preface else (Pt(18) if is_chapter else Pt(15.5))
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
@@ -732,11 +773,13 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
             para.paragraph_format.space_before = Pt(11)
             para.paragraph_format.space_after = Pt(3)
             para.paragraph_format.keep_with_next = True
+            # B2.6: "Bài tập thực hành" → đỏ #FF0000 Bold 14pt
+            h2_color = RGBColor(0xFF, 0x00, 0x00) if "Bài tập thực hành" in text else RGBColor(0x1E, 0x29, 0x3B)
             for r in para.runs:
                 r.font.name = "Times New Roman"
                 r.font.size = Pt(14)
                 r.font.bold = True
-                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+                r.font.color.rgb = h2_color
 
         elif style_name == "Heading 3":
             para.paragraph_format.space_before = Pt(9)
@@ -759,7 +802,9 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
         # --- B. TABLE CAPTION (Ví dụ/Bảng) - nổi bật, phân cấp rõ ràng ---
-        elif text.startswith("Ví dụ minh họa") or text.startswith("Bảng ") or text.startswith("Hình "):
+        # Chỉ nhận caption đánh số (Hình 4.1...), tránh nuốt dòng nội dung
+        # bắt đầu bằng "Hình/Bảng" (vd: "Hình chữ nhật..." trong Giải thích)
+        elif text.startswith("Ví dụ minh họa") or re.match(r"^(Bảng|Hình)\s+\d", text):
             para.paragraph_format.space_before = Pt(3)
             para.paragraph_format.space_after = Pt(2)
             for r in para.runs:
@@ -770,6 +815,12 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
 
         # --- C. CODE BLOCKS ---
         elif "Code" in style_name or style_name == "Source Code":
+            # B2.8: code Consolas 9pt / line 252, CĂN TRÁI tuyệt đối, xóa numPr rác
+            para.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            for numPr in list(para._p.findall('.//' + qn('w:numPr'))):
+                parent = numPr.getparent()
+                if parent is not None:
+                    parent.remove(numPr)
             para.paragraph_format.space_before = Pt(0)
             para.paragraph_format.space_after = Pt(0)
             para.paragraph_format.line_spacing = 1.05
@@ -859,14 +910,44 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
 
         # --- F. NORMAL TEXT (Fallback) ---
         else:
-            if para.paragraph_format.space_after is None or para.paragraph_format.space_after.pt < 1:
-                para.paragraph_format.space_after = Pt(2)
-            para.paragraph_format.line_spacing = 1.1
-            for r in para.runs:
-                if not r.font.name:
-                    r.font.name = "Times New Roman"
-                r.font.size = Pt(12.5)
-                r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+            if in_preface:
+                # B2.5: thân Lời nói đầu Justify 14pt / 1.5
+                para.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+                para.paragraph_format.line_spacing = 1.5
+                for r in para.runs:
+                    if not r.font.name:
+                        r.font.name = "Times New Roman"
+                    r.font.size = Pt(14)
+                    r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+            elif in_giaithich:
+                # Dòng Giải thích: căn trái tự nhiên mọi style, cấm Justify (Spec §6.1)
+                # (bao gồm cả List Paragraph kẻo dính Justify từ style gốc)
+                para.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                para.paragraph_format.line_spacing = 1.1
+                for r in para.runs:
+                    if not r.font.name:
+                        r.font.name = "Times New Roman"
+                    r.font.size = Pt(12.5)
+                    r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+            elif style_name in ("Body Text", "First Paragraph", "Compact", "Block Text"):
+                # B2.7: Justify đúng 4 style này — CẤM Justify Normal
+                # (Source Code kế thừa Normal, Justify sẽ làm dãn chữ code)
+                para.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+                para.paragraph_format.line_spacing = 1.15
+                for r in para.runs:
+                    if not r.font.name:
+                        r.font.name = "Times New Roman"
+                    r.font.size = Pt(12.5)
+                    r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+            else:
+                if para.paragraph_format.space_after is None or para.paragraph_format.space_after.pt < 1:
+                    para.paragraph_format.space_after = Pt(2)
+                para.paragraph_format.line_spacing = 1.1
+                for r in para.runs:
+                    if not r.font.name:
+                        r.font.name = "Times New Roman"
+                    r.font.size = Pt(12.5)
+                    r.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
 
     # ============================================================
     # 5. BUILD INTERACTIVE HYPERLINKED TOC AT END (Đồng bộ 100%)
@@ -981,6 +1062,12 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
         </w:tblBorders>''')
         tblPr.append(tblBorders)
 
+        # B3.2: xóa triệt để tblHeader (chống lặp tiêu đề khi ngắt trang)
+        for th in table._tbl.findall('.//' + qn('w:tblHeader')):
+            th_parent = th.getparent()
+            if th_parent is not None:
+                th_parent.remove(th)
+
         for r_idx, row in enumerate(table.rows):
             is_header = (r_idx == 0)
             trPr = row._tr.get_or_add_trPr()
@@ -1040,8 +1127,147 @@ def postprocess_docx(output_file, book_title, book_subtitle, volume=1):
                 tcMar = parse_xml(f'<w:tcMar {nsdecls("w")}><w:top w:w="40" w:type="dxa"/><w:bottom w:w="40" w:type="dxa"/><w:left w:w="60" w:type="dxa"/><w:right w:w="60" w:type="dxa"/></w:tcMar>')
                 tcPr.append(tcMar)
 
+    # ============================================================
+    # 7. BẢNG SAMPLE IO — B2.3 + Spec §5.3 (pass riêng sau style chung)
+    # ============================================================
+    print("  → Đang chuẩn hóa bảng Sample Input/Output (tblW 6800, Dynamic Indent)...")
+    n_sample = 0
+    for table in doc.tables:
+        if len(table.rows) == 0 or len(table.rows[0].cells) != 2:
+            continue
+        if "Đầu vào (Input)" not in table.rows[0].cells[0].text:
+            continue
+        n_sample += 1
+
+        tblPr = table._tbl.tblPr
+        for tw in tblPr.findall(qn('w:tblW')):
+            tblPr.remove(tw)
+        tblPr.append(parse_xml(f'<w:tblW {nsdecls("w")} w:w="6800" w:type="dxa"/>'))
+
+        for r_idx, row in enumerate(table.rows):
+            for cell in row.cells:
+                tcPr = cell._tc.get_or_add_tcPr()
+                for tcw in tcPr.findall(qn('w:tcW')):
+                    tcPr.remove(tcw)
+                tcPr.append(parse_xml(f'<w:tcW {nsdecls("w")} w:w="3400" w:type="dxa"/>'))
+
+            if r_idx == 0:
+                # Hàng tiêu đề: Consolas 11 Bold, căn giữa, nền F1F5F9
+                for cell in row.cells:
+                    for p in cell.paragraphs:
+                        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                        for run in p.runs:
+                            run.font.name = "Consolas"
+                            run.font.size = Pt(11)
+                            run.font.bold = True
+                            run.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+            else:
+                # Hàng dữ liệu: tách <w:br/> → từng <w:p> độc lập (B2.3)
+                for cell in row.cells:
+                    for p in list(cell.paragraphs):
+                        _split_para_at_br(p._p)
+                # Dynamic Indent theo dòng dài nhất của hàng
+                max_len = 0
+                for cell in row.cells:
+                    for p in cell.paragraphs:
+                        if p.text.strip():
+                            max_len = max(max_len, len(p.text.rstrip()))
+                indent = max(10.0, 72.0 - max(0, max_len - 4) * 3.25)
+                for c_idx, cell in enumerate(row.cells):
+                    for p_idx, p in enumerate(cell.paragraphs):
+                        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                        p.paragraph_format.line_spacing = 1.15
+                        p.paragraph_format.space_before = Pt(2) if p_idx == 0 else Pt(0)
+                        p.paragraph_format.space_after = Pt(1)
+                        p.paragraph_format.left_indent = Pt(indent)
+                        for run in p.runs:
+                            run.font.name = "Consolas"
+                            run.font.size = Pt(11)
+                            run.font.color.rgb = RGBColor(0x1E, 0x29, 0x3B)
+    print(f"  → Đã chuẩn hóa {n_sample} bảng Sample.")
+
+    # ============================================================
+    # 8. B3.3 — MATH 12pt TOÀN TÀI LIỆU + BẢNG PHỤ LỤC A 12pt
+    # ============================================================
+    math_ns = "http://schemas.openxmlformats.org/officeDocument/2006/math"
+    n_math = 0
+    for mr in doc.element.findall(f'.//{{{math_ns}}}r'):
+        rPr = mr.find(qn('w:rPr'))
+        if rPr is None:
+            rPr = parse_xml(f'<w:rPr {nsdecls("w")}/>')
+            mr.insert(0, rPr)
+        for tag in ('w:sz', 'w:szCs'):
+            el = rPr.find(qn(tag))
+            if el is None:
+                el = parse_xml(f'<{tag} {nsdecls("w")} w:val="24"/>')
+                rPr.append(el)
+            else:
+                el.set(qn('w:val'), '24')
+        n_math += 1
+    print(f"  → Đã ép {n_math} run công thức toán về 12pt.")
+
+    # Bảng Phụ lục A → toàn bộ chữ 12pt (chạy sau pass Sample để override)
+    in_app_a = False
+    app_a_tables = set()
+    for child in doc.element.body:
+        if child.tag == qn('w:p'):
+            t = (child.find(qn('w:pPr')) is not None)
+            style_el = child.find(qn('w:pPr') + '/' + qn('w:pStyle')) if t else None
+            is_h1 = style_el is not None and style_el.get(qn('w:val'), '').startswith('Heading1')
+            if is_h1:
+                txt = ''.join(n.text or '' for n in child.findall('.//' + qn('w:t')))
+                in_app_a = txt.strip().startswith('Phụ lục A')
+        elif child.tag == qn('w:tbl') and in_app_a:
+            app_a_tables.add(child)
+    n_app = 0
+    for table in doc.tables:
+        if table._tbl not in app_a_tables:
+            continue
+        n_app += 1
+        for row in table.rows:
+            for cell in row.cells:
+                for p in cell.paragraphs:
+                    for run in p.runs:
+                        run.font.name = "Times New Roman"
+                        run.font.size = Pt(12)
+    print(f"  → Đã đồng bộ {n_app} bảng Phụ lục A về 12pt.")
+
     doc.save(str(output_file))
     print(f"  ✅ Post-process Design System hoàn tất cho {output_file.name}!")
+
+
+def _split_para_at_br(p_el):
+    """B2.3: Tách một <w:p> thành nhiều <w:p> độc lập tại các run chỉ chứa <w:br/>."""
+    from copy import deepcopy
+    from docx.oxml.ns import qn as _qn
+    groups = [[]]
+    for child in list(p_el):
+        if child.tag == _qn('w:pPr'):
+            continue
+        if child.tag == _qn('w:r') and child.find(_qn('w:br')) is not None and child.find(_qn('w:t')) is None:
+            groups.append([])
+        else:
+            groups[-1].append(child)
+    if len(groups) <= 1:
+        return [p_el]
+    for child in list(p_el):
+        if child.tag != _qn('w:pPr'):
+            p_el.remove(child)
+    for child in groups[0]:
+        p_el.append(child)
+    result = [p_el]
+    prev = p_el
+    for g in groups[1:]:
+        new_p = deepcopy(p_el)
+        for child in list(new_p):
+            if child.tag != _qn('w:pPr'):
+                new_p.remove(child)
+        for child in g:
+            new_p.append(deepcopy(child))
+        prev.addnext(new_p)
+        prev = new_p
+        result.append(new_p)
+    return result
 
 
 # ============================================================

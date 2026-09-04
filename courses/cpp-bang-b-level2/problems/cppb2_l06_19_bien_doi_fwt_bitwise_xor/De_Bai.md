@@ -1,10 +1,12 @@
-# Bien doi FWT bitwise xor
+# Biến Đổi FWT với Phép XOR Bitwise
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Bien Doi Fwt Bitwise Xor**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Trung tâm mã hóa cần trộn hai bảng tín hiệu $A$ và $B$ thành bảng $C$, trong đó mỗi ô của bảng kết quả được tổng hợp từ các cặp ô có chỉ số XOR với nhau đúng bằng chỉ số đó. Cách trộn ngây thơ duyệt mọi cặp ô nên chạy quá chậm khi bảng rất dài.
+
+Kỹ sư bèn đưa cả hai bảng qua một phép biến đổi nhanh theo từng bit, nhân từng cặp tương ứng rồi biến đổi ngược trở lại để thu được đúng bảng trộn cần tìm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bien Doi Fwt Bitwise Xor với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho hai dãy số $A$ và $B$ có độ dài bằng nhau (là lũy thừa của $2$). Hãy lập trình tính tích chập XOR của chúng, tức dãy $C$ trong đó mỗi phần tử được tổng hợp từ các cặp có XOR chỉ số tương ứng.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

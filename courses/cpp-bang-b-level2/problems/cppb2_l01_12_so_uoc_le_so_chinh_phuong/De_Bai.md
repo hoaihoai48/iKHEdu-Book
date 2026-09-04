@@ -4,7 +4,7 @@
 Trong số học, một số nguyên dương $X$ có số lượng ước nguyên dương là một số lẻ khi và chỉ khi $X$ là một **số chính phương** ($X = k^2$). Cho đoạn $[L, R]$, hãy đếm xem có bao nhiêu số có số lượng ước nguyên dương là số lẻ trong đoạn này.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Có Số Lượng Ước Là Số Lẻ Trong Đoạn với độ phức tạp tối ưu nhất.
+Cho đoạn $[L, R]$. Hãy lập trình đếm các số trong đoạn có số lượng ước nguyên dương là số lẻ.
 
 ## Input
 - Một dòng duy nhất chứa hai số nguyên dương $L, R$ ($1 \le L \le R \le 10^{18}$).

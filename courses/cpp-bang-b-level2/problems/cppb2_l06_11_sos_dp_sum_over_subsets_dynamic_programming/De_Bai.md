@@ -1,12 +1,12 @@
-# Sos DP (sum over subsets dynamic programming)
+# SOS DP Tổng Trên Tập Con (Ưu Đãi Theo Giỏ Hàng)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **SOS DP (Sum Over Subsets Dynamic Programming)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: DP tính tổng hàm trên mọi submask $\mathcal{O}(N 2^N)$.
+Siêu thị phát hành nhiều combo ưu đãi, mỗi combo áp dụng cho một tập mặt hàng. Với mỗi giỏ hàng của khách, siêu thị cần cộng dồn ưu đãi của mọi combo nằm gọn trong giỏ.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Tổng ưu đãi phải được tính cho mọi giỏ hàng có thể, nên cần cách tính thật nhanh.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sos Dp (sum Over Subsets Dynamic Programming) với độ phức tạp tối ưu nhất.
+Cho một hàm $F$ xác định trên mọi tập con của tập $N$ phần tử. Với mỗi mặt nạ $mask$, hãy lập trình tính tổng $F[sub]$ trên mọi tập con $sub$ của $mask$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

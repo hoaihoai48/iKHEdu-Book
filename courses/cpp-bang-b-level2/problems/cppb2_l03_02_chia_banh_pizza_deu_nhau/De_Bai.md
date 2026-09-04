@@ -1,12 +1,14 @@
 # Chia bánh pizza đều nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Bánh Pizza Đều Nhau** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: BS trên đáp án số thực.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Lớp học tổ chức liên hoan cuối tuần với vài chiếc bánh pizza cỡ khác nhau. Cô giáo muốn cắt tất cả bánh thành những miếng bằng nhau sao cho mỗi bạn đều nhận được một miếng và phần bánh bỏ đi là ít nhất.
+
+Các bạn háo hức đoán xem miếng bánh lớn nhất có thể chia đều được là bao nhiêu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chia Bánh Pizza Đều Nhau với độ phức tạp tối ưu nhất.
+
+Cho dữ liệu mô tả các chiếc bánh và số người cần chia. Hãy lập trình tìm kích thước miếng bánh lớn nhất có thể cắt đều cho mọi người sao cho phần dư ra là ít nhất.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

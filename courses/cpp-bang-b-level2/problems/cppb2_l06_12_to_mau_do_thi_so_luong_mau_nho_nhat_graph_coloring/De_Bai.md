@@ -1,12 +1,12 @@
 # Tô màu đồ thị số lượng màu nhỏ nhất (graph coloring)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (Graph Coloring)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bitmask DP trên tập độc lập cực đại (MIS).
+Nhà trường xếp lịch thi: hai môn có chung thí sinh không thể thi cùng một buổi. Mỗi buổi thi được coi là một màu tô cho môn đó.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trường muốn dùng ít buổi thi nhất mà vẫn không có xung đột nào.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tô Màu Đồ Thị Số Lượng Màu Nhỏ Nhất (graph Coloring) với độ phức tạp tối ưu nhất.
+Cho một đồ thị vô hướng gồm $N$ đỉnh (nhỏ). Hãy lập trình tìm số màu ít nhất để tô mỗi đỉnh một màu sao cho hai đỉnh kề nhau luôn khác màu.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -1,10 +1,12 @@
-# Mitm dem nghiem nguyen tong bang 0
+# MITM Đếm Nghiệm Nguyên Tổng Bằng 0
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Mitm Dem Nghiem Nguyen Tong Bang 0**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Thủ quỹ của câu lạc bộ có danh sách các khoản thu chi trong năm, gồm cả số dương lẫn số âm. Cuối năm, bạn ấy muốn biết có bao nhiêu nhóm khoản mục khác nhau mà tổng cộngbù nhau về đúng $0$, để đối chiếu sổ sách cho khớp.
+
+Vì số khoản mục quá nhiều để thử mọi tập con, thủ quỹ chia danh sách thành hai nửa, liệt kê tổng của mọi tập con trong từng nửa rồi ghép các tổng đối nhau lại để ra đáp án.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Mitm Dem Nghiem Nguyen Tong Bang 0 với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm $N$ số nguyên. Hãy lập trình đếm số tập con có tổng các phần tử bằng $0$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

@@ -1,12 +1,14 @@
 # Khoảng cách cực trị trên đa giác lồi
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khoảng Cách Cực Trị Trên Đa Giác Lồi** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Ternary Search trên cấu trúc đa giác.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đội đo đạc vẽ lại bản đồ một khu đất hình đa giác lồi rồi cắm cọc tại các đỉnh. Chú kỹ sư muốn biết hai cọc nào đứng xa nhau nhất để đặt đường dây quan trắc chính xác.
+
+Tổ đo đạc đi vòng quanh khu đất, ghi lại tọa độ từng cọc rồi so sánh các khoảng cách.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Khoảng Cách Cực Trị Trên Đa Giác Lồi với độ phức tạp tối ưu nhất.
+
+Cho tọa độ các đỉnh của đa giác lồi. Hãy lập trình tìm khoảng cách lớn nhất (hoặc nhỏ nhất theo yêu cầu) giữa hai đỉnh của đa giác.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

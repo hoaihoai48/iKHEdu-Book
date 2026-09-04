@@ -1,12 +1,12 @@
 # Phân chia tập hợp thành hai nửa có tổng bằng nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: MITM kết hợp tối ưu hóa bộ nhớ RAM.
+Hai anh em được chia gia tài gồm nhiều món đồ có giá trị khác nhau. Cả nhà muốn việc chia chác thật công bằng: mỗi người nhận một nhóm đồ có tổng giá trị bằng nhau chính xác.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãy giúp cả nhà xem liệu có cách chia như vậy hay không.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phân Chia Tập Hợp Thành Hai Nửa Có Tổng Bằng Nhau với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên. Hãy lập trình kiểm tra xem có thể chia các phần tử thành hai nhóm có tổng bằng nhau hay không, và đếm số cách chia thỏa mãn.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

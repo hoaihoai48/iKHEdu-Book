@@ -1,12 +1,12 @@
 # Phân chia công việc hoàn hảo (job assignment)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phân Chia Công Việc Hoàn Hảo (Job Assignment)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Bitmask DP ghép cặp trọng số nhỏ nhất.
+Quản đốc có $N$ công nhân và $N$ công việc. Mỗi người làm mỗi việc tốn một chi phí (thời gian) khác nhau, và mỗi người chỉ làm đúng một việc.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Quản đốc cần phân công sao cho tổng chi phí của cả xưởng là thấp nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phân Chia Công Việc Hoàn Hảo (job Assignment) với độ phức tạp tối ưu nhất.
+Cho ma trận chi phí kích thước $N \times N$, trong đó ô $(i, j)$ là chi phí khi giao việc $j$ cho người $i$. Hãy lập trình phân công mỗi người đúng một việc sao cho tổng chi phí là nhỏ nhất.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -1,12 +1,12 @@
 # Tối đa hóa giá trị xor đoạn con bằng Trie BIT
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Đa Hóa Giá Trị XOR Đoạn Con Bằng Trie Bit** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Cây Trie nhị phân tìm Max XOR $\mathcal{O}(30N)$.
+Kỹ sư truyền thông mã hóa tín hiệu của mỗi đoạn đường truyền bằng phép XOR các con số trên đoạn đó. Anh muốn tìm ra đoạn có mã tín hiệu lớn nhất để ưu tiên nâng cấp băng thông.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đoạn mã càng lớn thì đường truyền càng xứng đáng được đầu tư.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Đa Hóa Giá Trị Xor Đoạn Con Bằng Trie Bit với độ phức tạp tối ưu nhất.
+Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình tìm giá trị lớn nhất của phép XOR trên mọi đoạn con liên tiếp của mảng.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

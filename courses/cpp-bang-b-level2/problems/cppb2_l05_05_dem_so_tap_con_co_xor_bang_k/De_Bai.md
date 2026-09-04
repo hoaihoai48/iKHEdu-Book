@@ -1,12 +1,12 @@
 # Đếm số tập con có xor bằng k
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tập Con Có XOR Bằng K** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: MITM với phép toán Bitwise XOR.
+Anh kỹ sư bảo mật giữ một chùm mảnh khóa, mỗi mảnh mang một con số. Mã mở két được tạo bằng cách lấy phép XOR của tất cả các mảnh trong tập con được chọn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Anh cần đếm xem có bao nhiêu tập con các mảnh ghép lại cho ra đúng mã mục tiêu $K$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Tập Con Có Xor Bằng K với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên và một số $K$. Hãy lập trình đếm số tập con có giá trị XOR của tất cả các phần tử trong tập con bằng $K$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

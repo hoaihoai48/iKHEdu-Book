@@ -1,10 +1,12 @@
-# Luy thua tang thap power tower
+# Lũy Thừa Tầng Tháp (Power Tower)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Luy Thua Tang Thap Power Tower**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Giải đấu cờ vua tính điểm thưởng theo "tháp lũy thừa" $a^{b^c}$: đội thắng nhận số điểm bằng phần dư của ngọn tháp khi chia cho $m$. Vì ngọn tháp phình to rất nhanh, trọng tài không thể tính trực tiếp mà phải rút gọn từng tầng một.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Luy Thua Tang Thap Power Tower với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho bốn số $a, b, c, m$. Hãy lập trình tính tháp lũy thừa $a^{b^c} \bmod m$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

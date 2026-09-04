@@ -1,12 +1,14 @@
 # Ma trận con có tổng lớn nhất (maximum submatrix sum)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ma Trận Con Có Tổng Lớn Nhất (Maximum Submatrix Sum)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Cố định 2 hàng + Thuật toán Kadane 1D.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bác nông dân có cánh đồng hình chữ nhật, mỗi ô có thể lãi hoặc lỗ tùy mùa vụ. Bác muốn khoanh một vùng hình chữ nhật có tổng lợi nhuận lớn nhất để tập trung chăm sóc.
+
+Bác ghi lại lợi nhuận từng ô rồi so sánh các vùng có thể khoanh được.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Ma Trận Con Có Tổng Lớn Nhất (maximum Submatrix Sum) với độ phức tạp tối ưu nhất.
+
+Cho ma trận số nguyên. Hãy lập trình tìm tổng lớn nhất của một hình chữ nhật con bất kỳ trong ma trận.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -1,12 +1,14 @@
 # Nén tọa độ & đếm tần suất trên dải lớn
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: `sort` + `unique` + `lower_bound`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm thu phí ghi lại biển số xe đi qua trong ngày, có những biển số rất lớn và thưa thớt. Nhân viên thống kê muốn gom các biển số về thứ hạng liên tiếp để đếm tần suất mỗi loại xe cho gọn.
+
+Anh nhân viên liệt kê tất cả biển số xuất hiện rồi đánh số lại từ đầu để dễ đếm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn với độ phức tạp tối ưu nhất.
+
+Cho dãy tọa độ (có thể rất lớn) và các truy vấn đếm. Hãy lập trình nén tọa độ rồi trả lời tần suất xuất hiện của từng giá trị được hỏi.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

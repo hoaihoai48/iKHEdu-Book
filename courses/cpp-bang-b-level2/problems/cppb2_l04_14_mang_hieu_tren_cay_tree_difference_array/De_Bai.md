@@ -1,12 +1,14 @@
 # Mảng hiệu trên cây (Tree difference array)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mảng Hiệu Trên Cây (Tree Difference Array)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Cập nhật cộng trọng số trên đường đi $(u, v)$ qua LCA.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trường học trồng cây theo sơ đồ hình cây, mỗi phòng học là một nút. Mỗi đợt, nhà trường cộng thêm một lượng sách vào tất cả các phòng trên đường đi giữa hai phòng cho trước, cuối cùng cần biết mỗi phòng có bao nhiêu sách.
+
+Bác thủ thư ghi lại từng đợt điều chuyển rồi tổng hợp số sách của mỗi phòng một lần.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Mảng Hiệu Trên Cây (tree Difference Array) với độ phức tạp tối ưu nhất.
+
+Cho cây với $N$ nút và các phép cộng trên đường đi $(u, v)$. Hãy lập trình tính giá trị cuối cùng của mỗi nút sau mọi phép cập nhật.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

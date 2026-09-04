@@ -1,12 +1,12 @@
 # Logarit rời rạc (baby-step giant-step)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Logarit Rời Rạc (Baby-step Giant-step)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ nhỏ nhất thỏa $A^X \equiv B \pmod M$ trong $\mathcal{O}(\sqrt{M})$.
+Trò chơi tìm mật mã của đội hướng đạo quy định: xuất phát từ $1$, mỗi lượt nhân tiếp với $a$ rồi lấy phần dư theo $m$; đội nào tìm được số lượt đi $x$ ít nhất để chạm đúng số $b$ sẽ thắng. Có những số $b$ không bao giờ chạm tới được, khi đó trọng tài ghi $-1$.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Logarit Rời Rạc (baby-step Giant-step) với độ phức tạp tối ưu nhất.
+Cho ba số $a, b, m$. Hãy lập trình tìm số mũ $x$ nhỏ nhất không âm thỏa $a^x \equiv b \pmod m$; in `-1` nếu không tồn tại.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

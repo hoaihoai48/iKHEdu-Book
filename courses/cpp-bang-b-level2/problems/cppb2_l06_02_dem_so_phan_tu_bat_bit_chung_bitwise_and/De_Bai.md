@@ -1,12 +1,12 @@
 # Đếm số phần tử bật BIT chung (bitwise and)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Phần Tử Bật Bit Chung (Bitwise AND)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Đếm bit độc lập theo từng cột $0 \dots 30$.
+Trường học phát cho mỗi học sinh một thẻ từ mang một mã số. Thầy giám thị muốn kiểm tra hệ thống quẹt thẻ: ở từng vị trí bit, có bao nhiêu thẻ đang bật bit đó.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thống kê này giúp thầy phát hiện những vị trí bit bị lỗi hàng loạt.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Bật Bit Chung (bitwise And) với độ phức tạp tối ưu nhất.
+Cho dãy gồm $N$ số nguyên. Với mỗi vị trí bit $b$ ($0 \le b \le 30$), hãy lập trình đếm có bao nhiêu phần tử trong dãy bật bit $b$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

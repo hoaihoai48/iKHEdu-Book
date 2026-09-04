@@ -1,10 +1,12 @@
-# Sos DP sum over subsets
+# SOS DP Tổng Trên Tập Con Cơ Bản
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Sos Dp Sum Over Subsets**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Phòng khảo sát lưu điểm số cho từng nhóm đối tượng, mỗi nhóm được mã hóa thành một tập con của $N$ đặc trưng. Với mỗi nhóm lớn, phòng cần tính tổng điểm của mọi nhóm nhỏ nằm gọn trong nó để lập báo cáo cộng dồn.
+
+Vì số nhóm lên tới $2^N$, việc cộng lại từ đầu cho từng nhóm là không xuể, nên phòng cần một bảng cộng dồn lan dần theo từng đặc trưng để mỗi nhóm lớn đều tra được đáp án ngay.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sos Dp Sum Over Subsets với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một hàm $F$ xác định trên mọi tập con của tập $N$ phần tử. Với mỗi mặt nạ $mask$, hãy lập trình tính tổng $F[sub]$ trên mọi tập con $sub$ của $mask$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

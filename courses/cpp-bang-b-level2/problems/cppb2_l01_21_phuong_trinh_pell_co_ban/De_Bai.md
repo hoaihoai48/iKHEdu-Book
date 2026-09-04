@@ -1,10 +1,12 @@
-# Phuong trinh pell co ban
+# Phương Trình Pell Cơ Bản
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Phuong Trinh Pell Co Ban**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Câu lạc bộ cờ của trường tổ chức trò chơi tìm cặp số nguyên $(x, y)$ thỏa mãn đẳng thức $x^2 - d\cdot y^2 = 1$ với số $d$ cho trước. Đội nào tìm được cặp nghiệm dương nhỏ nhất sẽ thắng, vì đó là "chìa khóa" mở ra mọi nghiệm còn lại của đẳng thức này.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phuong Trinh Pell Co Ban với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho số nguyên dương $d$. Hãy lập trình tìm nghiệm nguyên dương nhỏ nhất $(x, y)$ của phương trình $x^2 - d\cdot y^2 = 1$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

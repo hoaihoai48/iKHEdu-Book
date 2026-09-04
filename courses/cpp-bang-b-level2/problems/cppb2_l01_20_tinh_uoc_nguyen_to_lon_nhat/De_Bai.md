@@ -1,10 +1,12 @@
-# Tinh uoc nguyen to lon nhat
+# Tính Ước Nguyên Tố Lớn Nhất
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Tinh Uoc Nguyen To Lon Nhat**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Xưởng tái chế của khu phố nhận về một lô kiện hàng, mỗi kiện dán một con số. Máy phân loại sẽ tách mỗi con số thành các thừa số nguyên tố, và kiện nào có thừa số nguyên tố lớn nhất thì được đưa vào dây chuyền xử lý đặc biệt. Người quản đốc cần biết con số lớn nhất mà máy sẽ gặp trong cả lô hàng hôm nay.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tinh Uoc Nguyen To Lon Nhat với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho $n$ số nguyên. Hãy lập trình tìm ước nguyên tố lớn nhất của mỗi số, rồi in ra giá trị lớn nhất trong số đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

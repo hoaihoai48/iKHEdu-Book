@@ -1,10 +1,12 @@
-# Can nguyen nguyen thuy primitive root
+# Căn Nguyên Nguyên Thủy (Primitive Root)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Can Nguyen Nguyen Thuy Primitive Root**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Để tạo mật khẩu dùng một lần cho hệ thống điểm danh của trường, thầy tin học chọn một số nguyên tố $p$ rồi tìm một "số sinh" $g$: chỉ cần nhân $g$ với chính nó nhiều lần rồi lấy phần dư theo $p$, ta sẽ lần lượt tạo ra mọi số từ $1$ đến $p - 1$. Số sinh nhỏ nhất như vậy giúp thiết bị điểm danh đời cũ tính toán nhẹ nhàng nhất.
+
+Dữ liệu đầu vào của bài toán thỏa mãn các ràng buộc đã cho. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Can Nguyen Nguyen Thuy Primitive Root với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một số nguyên tố $p$. Hãy lập trình tìm căn nguyên thủy nhỏ nhất của $p$, tức số nguyên $g \ge 2$ nhỏ nhất mà các lũy thừa của $g$ sinh ra mọi số $1, 2, \dots, p-1$ theo modulo $p$.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

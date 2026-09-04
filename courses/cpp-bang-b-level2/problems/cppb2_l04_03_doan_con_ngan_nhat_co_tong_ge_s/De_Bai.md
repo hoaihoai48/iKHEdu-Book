@@ -1,12 +1,14 @@
 # Đoạn con ngắn nhất có tổng $\ge s$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Ngắn Nhất Có Tổng $\ge S$** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cửa sổ trượt co giãn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Huấn luyện viên ghi lại số bước chạy của vận động viên mỗi ngày. Anh muốn tìm chuỗi ngày liên tiếp ngắn nhất mà tổng số bước đạt ít nhất mức $S$ để khen thưởng sự bứt phá.
+
+Anh lật lại nhật ký luyện tập, mở rộng rồi thu hẹp từng cửa sổ ngày để tìm chuỗi ngắn nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đoạn Con Ngắn Nhất Có Tổng $\ge S$ với độ phức tạp tối ưu nhất.
+
+Cho dãy số và ngưỡng $S$. Hãy lập trình tìm độ dài đoạn con liên tiếp ngắn nhất có tổng không nhỏ hơn $S$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

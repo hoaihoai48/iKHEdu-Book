@@ -1,10 +1,12 @@
-# Bitmask DP phan nhom k tap
+# Bitmask DP Phân Nhóm K Tập
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Bitmask Dp Phan Nhom K Tap**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Huấn luyện viên có $N$ vận động viên và cần chia thành đúng $K$ đội, mỗi cách xếp đội đều tốn một chi phí cho trước tùy vào thành phần đội hình. Mục tiêu là tìm cách chia sao cho tổng chi phí của cả $K$ đội là nhỏ nhất.
+
+Vì số cách chia tăng rất nhanh, ban huấn luyện đánh số mỗi nhóm vận động viên bằng một mặt nạ bit rồi điền dần bảng phương án tốt nhất cho từng mặt nạ với từng số đội đã xếp.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bitmask Dp Phan Nhom K Tap với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho tập gồm $N$ phần tử, một số nguyên $K$ và cách tính chi phí của mỗi nhóm. Hãy lập trình chia tập đã cho thành đúng $K$ nhóm sao cho tổng chi phí là nhỏ nhất.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

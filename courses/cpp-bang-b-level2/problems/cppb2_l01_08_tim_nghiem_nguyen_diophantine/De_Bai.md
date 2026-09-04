@@ -10,7 +10,7 @@ Theo **Định lý Bézout**, phương trình trên có nghiệm nguyên khi và
 Cho $T$ bộ dữ liệu, mỗi bộ gồm ba số nguyên $A, B, C$. Hãy kiểm tra phương trình $Ax + By = C$ có nghiệm nguyên hay không. Nếu có, in ra một cặp nghiệm $(x_0, y_0)$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Nghiệm Nguyên Phương Trình Diophantine với độ phức tạp tối ưu nhất.
+Cho $T$ bộ ba số nguyên $A, B, C$. Hãy lập trình kiểm tra phương trình $Ax + By = C$ có nghiệm nguyên hay không; nếu có, in ra một cặp nghiệm $(x_0, y_0)$.
 
 ## Input
 - Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^5$).

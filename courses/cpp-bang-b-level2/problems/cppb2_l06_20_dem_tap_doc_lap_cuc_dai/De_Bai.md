@@ -1,10 +1,12 @@
-# Dem tap doc lap cuc dai
+# Đếm Tập Độc Lập Cực Đại
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dem Tap Doc Lap Cuc Dai**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+Ban tổ chức hội thảo có sơ đồ xung đột giữa các diễn giả: hai người có cạnh nối thì không thể xếp chung một phiên. Ban tổ chức muốn liệt kê mọi danh sách diễn giả "kín lịch", tức đôi một không xung đột và không thể mời thêm bất kỳ ai mà vẫn giữ được tính chất này.
+
+Vì số diễn giả tuy nhỏ nhưng số danh sách có thể bùng nổ, chương trình máy tính thử dần từng người theo kiểu quay lui, cắt bỏ sớm các nhánh chắc chắn trùng lặp để đếm đủ mọi danh sách kín lịch.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dem Tap Doc Lap Cuc Dai với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một đồ thị vô hướng gồm $N$ đỉnh (nhỏ). Hãy lập trình đếm số tập độc lập cực đại, tức các tập độc lập không thể thêm bất kỳ đỉnh nào mà vẫn giữ tính độc lập.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

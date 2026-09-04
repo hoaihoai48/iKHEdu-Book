@@ -1,12 +1,14 @@
 # Đếm số đoạn con có hiệu max - min $\le k$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Two Pointers kết hợp 2 Deque đơn điệu.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thầy giáo ghi lại nhiệt độ phòng học mỗi giờ trong ngày. Thầy muốn đếm xem có bao nhiêu khoảng thời gian liên tiếp mà chênh lệch giữa nhiệt độ cao nhất và thấp nhất không vượt quá $K$.
+
+Thầy trượt một cửa sổ thời gian dọc theo bảng ghi, mỗi lần ghi nhận nhiệt độ cao nhất và thấp nhất trong cửa sổ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Đoạn Con Có Hiệu Max - Min $\le K$ với độ phức tạp tối ưu nhất.
+
+Cho dãy số và số $K$. Hãy lập trình đếm số đoạn con liên tiếp có hiệu giữa phần tử lớn nhất và nhỏ nhất không vượt quá $K$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

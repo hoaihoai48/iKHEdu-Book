@@ -9,7 +9,7 @@ Sử dụng phân tích thừa số nguyên tố qua mảng SPF: nếu $N = p_1^
 $$d(N) = \prod_{i=1}^k (a_i + 1) \qquad \sigma(N) = \prod_{i=1}^k \frac{p_i^{a_i + 1} - 1}{p_i - 1}$$
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Ước Số & Tổng Ước Số Nhanh với độ phức tạp tối ưu nhất.
+Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $N$. Hãy lập trình tính số lượng ước $d(N)$ và tổng các ước $\sigma(N)$ của mỗi số.
 
 ## Input
 - Dòng đầu tiên chứa số nguyên dương $Q$ ($1 \le Q \le 10^5$).

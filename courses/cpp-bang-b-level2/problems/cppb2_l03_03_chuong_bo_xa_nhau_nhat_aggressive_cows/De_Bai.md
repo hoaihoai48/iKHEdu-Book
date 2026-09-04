@@ -1,12 +1,14 @@
 # Chuồng bò xa nhau nhất (aggressive cows)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chuồng Bò Xa Nhau Nhất (Aggressive Cows)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Sắp xếp + BS khoảng cách cực đại.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Một trang trại bò sữa có dãy chuồng đặt dọc theo con đường, mỗi chuồng ở một vị trí khác nhau. Bác nông dân muốn chọn ra một số chuồng để nhốt những chú bò hay húc nhau, sao cho hai chuồng được chọn gần nhau nhất cũng càng xa nhau càng tốt.
+
+Bác đi dọc dãy chuồng, ghi lại vị trí từng chuồng và tính xem nên chọn chuồng nào cho hợp lý.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chuồng Bò Xa Nhau Nhất (aggressive Cows) với độ phức tạp tối ưu nhất.
+
+Cho vị trí các chuồng và số bò cần nhốt. Hãy lập trình tìm khoảng cách nhỏ nhất lớn nhất có thể giữa hai chuồng được chọn.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -11,7 +11,7 @@ Một phân số $\frac{A}{B}$ được gọi là tối giản chuẩn khi:
 Cho $N$ phân số, mỗi phân số có dạng $\frac{A_i}{B_i}$ ($B_i \ne 0$). Hãy rút gọn từng phân số về dạng tối giản chuẩn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Rút Gọn Mảng Phân Số Lớn với độ phức tạp tối ưu nhất.
+Cho $N$ phân số $A_i/B_i$. Hãy lập trình rút gọn mỗi phân số về dạng tối giản chuẩn: mẫu số dương, tử và mẫu nguyên tố cùng nhau, riêng phân số $0$ luôn viết thành `0 1`.
 
 ## Input
 - Dòng đầu tiên chứa số nguyên dương $N$ ($1 \le N \le 10^5$) — số lượng phân số cần rút gọn.

@@ -1,12 +1,12 @@
 # Căn bậc hai modulo nguyên tố (thuật toán tonelli-shanks)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Căn Bậc Hai Modulo Nguyên Tố (Thuật Toán Tonelli-Shanks)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tìm $X$ thỏa $X^2 \equiv A \pmod P$.
+Ổ khóa số của phòng dụng cụ mở ra khi nhập đúng số $x$ mà bình phương của nó chia cho số nguyên tố $p$ còn dư đúng $n$. Có những con số $n$ mà không chiếc chìa nào mở được, khi đó người trực phải báo $-1$ để đổi ổ khác.
 
 Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Căn Bậc Hai Modulo Nguyên Tố (thuật Toán Tonelli-shanks) với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(n, p)$ với $p$ nguyên tố. Hãy lập trình tìm $x$ sao cho $x^2 \equiv n \pmod p$; in `-1` nếu không tồn tại.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

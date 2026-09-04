@@ -1,12 +1,12 @@
 # Giải phương trình $4$ ẩn tuyến tính (4-sum mitm)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Giải Phương Trình $4$ Ẩn Tuyến Tính (4-Sum MITM)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Tách thành 2 cặp $(A+B)$ và $-(C+D)$.
+Trong ngày hội thể thao, ban tổ chức có bốn bảng danh sách điểm số của bốn đội. Mỗi bảng ghi điểm của các vận động viên đội mình.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức muốn biết có bao nhiêu cách chọn mỗi bảng đúng một con số sao cho tổng bốn số được chọn bằng $0$, để trao giải đồng đội cân bằng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Giải Phương Trình $4$ Ẩn Tuyến Tính (4-sum Mitm) với độ phức tạp tối ưu nhất.
+Cho bốn dãy số $A, B, C, D$. Hãy lập trình đếm số bộ bốn $(a, b, c, d)$ với $a \in A, b \in B, c \in C, d \in D$ sao cho $a + b + c + d = 0$.
 
 ## Input
 - Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.

@@ -4,7 +4,7 @@
 Tính $A^B \bmod (10^9+7)$ với $A, B \le 10^{18}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Lũy Thừa Nhanh Cơ Bản với độ phức tạp tối ưu nhất.
+Cho $T$ cặp $(A, B)$. Hãy lập trình tính $A^B \bmod (10^9+7)$ cho mỗi cặp.
 
 ## Input
 - Dòng 1 chứa $T$ ($T \le 10^5$). $T$ dòng tiếp theo mỗi dòng chứa $A, B$.
