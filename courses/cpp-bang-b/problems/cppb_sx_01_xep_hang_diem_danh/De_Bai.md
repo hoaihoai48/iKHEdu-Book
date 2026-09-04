@@ -24,6 +24,11 @@ Cho danh sách chiều cao của $N$ bạn học sinh. Hãy in ra danh sách chi
 1420 1500 1550 1600 1680
 ```
 
+### Giải thích
+Chiều cao ban đầu của 5 bạn học sinh lần lượt là: $1550, 1420, 1680, 1500, 1600$ (đơn vị: mm).
+Sau khi sắp xếp theo thứ tự chiều cao tăng dần từ thấp đến cao, thứ tự đứng vào hàng chuẩn xác sẽ là:
+$1420 \le 1500 \le 1550 \le 1600 \le 1680$.
+
 ## Ràng buộc
 - $100\%$ số test có $1 \le N \le 1000, 1 \le A_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

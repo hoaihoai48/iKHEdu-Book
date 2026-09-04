@@ -1,30 +1,40 @@
 # Tìm Kiếm Trên Mảng Sắp Xếp Bị Xoay Vòng (Rotated Array)
 
 ## Bối cảnh
-Cho một mảng $N$ số nguyên phân biệt ban đầu đã sắp xếp tăng dần, nhưng bị xoay vòng tại một điểm bất kỳ không rõ (ví dụ: $[0, 1, 2, 4, 5, 6, 7]$ xoay vòng thành $[4, 5, 6, 7, 0, 1, 2]$). Có $Q$ câu hỏi, mỗi câu hỏi cho một số $X$, yêu cầu tìm vị trí của $X$ trong mảng (đánh số từ 1 đến $N$). Nếu không tồn tại, in ra `-1`.
+Trong bộ nhớ vòng (ring buffer) của một hệ thống xử lý camera an ninh, danh sách N chỉ số thời gian ban đầu được sắp xếp tăng dần nhưng sau một số chu kỳ ghi đè đã bị xoay vòng tại một trục xoay k nào đó. Hệ thống nhận Q yêu cầu tra cứu mã mốc thời gian X xem nó nằm ở vị trí nào trong bộ nhớ.
+
+## Nhiệm vụ
+Cho mảng N số nguyên phân biệt bị xoay vòng tại một trục không xác định. Có Q truy vấn tìm vị trí xuất hiện (0-indexed) của số nguyên X. Nếu không tìm thấy, in ra -1.
 
 ## Input
-- Dòng 1: Gồm 2 số nguyên $N, Q$ ($1 \le N, Q \le 10^5$).
-- Dòng 2: $N$ số nguyên phân biệt của mảng xoay vòng $A_1, A_2, \dots, A_N$ ($|A_i| \le 10^9$).
-- $Q$ dòng tiếp theo: Mỗi dòng gồm một số nguyên $X$ ($|X| \le 10^9$).
+- Dòng 1: Chứa 2 số nguyên $N$ và $Q$ ($1 \le N, Q \le 10^5$).
+- Dòng 2: Chứa $N$ số nguyên phân biệt bị xoay vòng.
+- $Q$ dòng tiếp theo: Mỗi dòng chứa một số nguyên $X$.
 
 ## Output
-- In ra $Q$ dòng, mỗi dòng là vị trí của $X$ (1-based) hoặc `-1`.
+- In ra $Q$ dòng, mỗi dòng là chỉ số (0-indexed) của $X$, hoặc `-1`.
 
 ## Sample 1
 ### Input
 ```text
-7 2
+7 3
 4 5 6 7 0 1 2
 0
 3
+5
 ```
 ### Output
 ```text
-5
+4
 -1
+1
 ```
+### Giải thích
+Mảng bị xoay vòng [4, 5, 6, 7, 0, 1, 2]:
+- Số 0 ở vị trí chỉ số 4.
+- Số 3 không tồn tại -> -1.
+- Số 5 ở vị trí chỉ số 1.
 
 ## Ràng buộc
 - $100\%$ số test có $N, Q \le 10^5$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

@@ -3,13 +3,16 @@
 **Phân loại bài toán:** `Core Foundation`
 
 ## Bối cảnh
-Cho 2 số nguyên $N, K$ ($1 \le K \le N \le 16$). Hãy sinh tất cả các tổ hợp chập $K$ của $\{1, 2, \dots, N\}$ theo thứ tự từ điển bằng thuật toán Quay Lui.
+Để chuẩn bị cho kỳ thi Olympic Tin học quốc tế, ban huấn luyện gồm $N$ chuyên gia xuất sắc (được đánh số từ $1$ đến $N$). Trong mỗi vòng phỏng vấn chuyên sâu, hội đồng cần thành lập một tiểu ban gồm đúng $K$ chuyên gia để trực tiếp chấm vấn đáp học sinh. Để đảm bảo tính khách quan và xoay tua công việc, thư ký hội đồng cần lập danh sách tất cả các phương án thành lập tiểu ban $K$ người theo thứ tự từ điển chuẩn.
+
+## Nhiệm vụ
+Cho hai số nguyên dương $N$ và $K$ ($1 \le K \le N \le 16$). Hãy sử dụng thuật toán Quay lui có điều kiện chặn dưới tăng dần để sinh và in ra tất cả các tổ hợp chập $K$ của tập $\{1, 2, \dots, N\}$ theo thứ tự từ điển tăng dần.
 
 ## Input
-- Một dòng duy nhất chứa 2 số nguyên $N, K$ ($1 \le K \le N \le 16$).
+- Một dòng duy nhất chứa hai số nguyên dương $N$ và $K$ ($1 \le K \le N \le 16$).
 
 ## Output
-- In ra tất cả các tổ hợp chập $K$, mỗi tổ hợp trên một dòng cách nhau bởi dấu cách.
+- In ra tất cả các tổ hợp chập $K$, mỗi tổ hợp trên một dòng, các phần tử cách nhau bởi dấu cách.
 
 ## Sample 1
 ### Input
@@ -26,7 +29,7 @@ Cho 2 số nguyên $N, K$ ($1 \le K \le N \le 16$). Hãy sinh tất cả các t�
 3 4
 ```
 ### Giải thích
-Có đúng C(4, 2) = 6 tổ hợp chập 2 của {1, 2, 3, 4}.
+Số lượng tổ hợp chập 2 của 4 chuyên gia là $C(4, 2) = \frac{4!}{2!2!} = 6$ tiểu ban. Các tiểu ban được liệt kê lần lượt theo thứ tự từ điển: `1 2`, `1 3`, `1 4`, `2 3`, `2 4`, `3 4`.
 
 ## Ràng buộc
 - 100% số test có $1 \le K \le N \le 16$.

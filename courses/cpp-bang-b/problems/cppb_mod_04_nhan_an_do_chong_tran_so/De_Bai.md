@@ -1,27 +1,29 @@
 # Nhân Ấn Độ Chống Tràn Số 64-bit
 
-**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
-Cho 3 số nguyên $A, B, M$ ($0 \le A, B, M \le 10^{18}, M > 0$). Hãy tính $(A \times B) \pmod M$ mà không bị tràn số.
+Khi thực hiện phép nhân hai số nguyên 64-bit A và B dưới một modulo M cũng lên tới 10^18, phép nhân thông thường A * B sẽ vượt quá giới hạn 2^63 - 1 gây tràn số âm nghiêm trọng. Thuật toán nhân Ấn Độ (tương tự lũy thừa nhị phân bằng phép cộng) giúp nhân an toàn hai số 64-bit mà không bị tràn.
+
+## Nhiệm vụ
+Cho 3 số nguyên A, B, M (0 <= A, B, M <= 10^18, M > 0). Hãy tính (A * B) mod M bằng thuật toán nhân Ấn Độ chống tràn số.
 
 ## Input
-- Một dòng duy nhất chứa 3 số nguyên $A, B, M$.
+- Một dòng chứa 3 số nguyên $A, B, M$ ($0 \le A, B \le 10^{18}, 1 \le M \le 10^{18}$).
 
 ## Output
-- In ra một số nguyên là kết quả $(A \times B) \pmod M$.
+- In ra giá trị $(A \times B) \pmod M$.
 
 ## Sample 1
 ### Input
 ```text
-1000000000000000000 1000000000000000000 1000000000000000007
+1000000000000000000 2 1000000000000000007
 ```
 ### Output
 ```text
-49
+999999999999999986
 ```
 ### Giải thích
-A = -7 mod M, B = -7 mod M -> A * B = 49 mod M.
+A = 10^18. Tích 2 * 10^18 = 2000000000000000000. Chia lấy dư cho M = 10^18 + 7: 2000000000000000000 - (10^18 + 7) = 999999999999999986.
 
 ## Ràng buộc
 - $100\%$ số test có $A, B, M \le 10^{18}$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

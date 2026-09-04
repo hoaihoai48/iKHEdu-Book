@@ -1,36 +1,33 @@
 # Tìm Kiếm Trên Ma Trận 2D Đã Sắp Xếp (Matrix Search)
 
 ## Bối cảnh
-Cho ma trận $A$ kích thước $N \times M$ với các tính chất:
-1. Các số trên mỗi hàng được sắp xếp theo thứ tự tăng dần từ trái sang phải.
-2. Số đầu tiên của mỗi hàng luôn nghiêm ngặt lớn hơn số cuối cùng của hàng ngay trước nó.
+Một bảng cơ sở dữ liệu dạng ma trận kích thước N x M ô chứa các bản ghi mã định danh tài khoản, trong đó mỗi hàng được sắp xếp tăng dần từ trái qua phải, và phần tử đầu tiên của mỗi hàng lớn hơn phần tử cuối cùng của hàng trước đó. Hãy kiểm tra xem tài khoản có mã X có tồn tại trong cơ sở dữ liệu hay không.
 
-Có $Q$ truy vấn, mỗi truy vấn cho một số nguyên $X$. Hãy kiểm tra xem $X$ có xuất hiện trong ma trận hay không.
+## Nhiệm vụ
+Cho ma trận N x M đã sắp xếp theo quy tắc trên và số nguyên X. Hãy kiểm tra xem X có tồn tại trong ma trận không. In YES nếu có, ngược lại in NO.
 
 ## Input
-- Dòng 1: Gồm 3 số nguyên $N, M, Q$ ($1 \le N, M \le 1000, 1 \le Q \le 10^5$).
-- $N$ dòng tiếp theo: Mỗi dòng gồm $M$ số nguyên $A_{i, j}$ ($|A_{i, j}| \le 10^9$).
-- $Q$ dòng tiếp theo: Mỗi dòng gồm một số nguyên $X$ ($|X| \le 10^9$).
+- Dòng 1: Chứa 3 số nguyên $N, M, X$ ($1 \le N, M \le 1000, -10^9 \le X \le 10^9$).
+- $N$ dòng tiếp theo: Mỗi dòng gồm $M$ số nguyên đã sắp xếp.
 
 ## Output
-- In ra $Q$ dòng, mỗi dòng in `YES` nếu tìm thấy, ngược lại in `NO`.
+- In ra `YES` hoặc `NO`.
 
 ## Sample 1
 ### Input
 ```text
-3 4 2
+3 4 3
 1 3 5 7
 10 11 16 20
 23 30 34 60
-3
-13
 ```
 ### Output
 ```text
 YES
-NO
 ```
+### Giải thích
+Số X = 3 nằm ở hàng 1, cột 2 của ma trận -> in YES.
 
 ## Ràng buộc
-- $100\%$ số test có $N, M \le 1000, Q \le 10^5$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $N, M \le 1000$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

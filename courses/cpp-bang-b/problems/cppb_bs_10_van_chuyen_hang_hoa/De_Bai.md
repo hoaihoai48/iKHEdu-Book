@@ -1,30 +1,37 @@
 # Vận Chuyển Hàng Hóa Qua Phà Trong D Ngày
 
 ## Bối cảnh
-Có $N$ kiện hàng được xếp thành một hàng dọc với trọng lượng lần lượt là $W_1, W_2, \dots, W_N$. Một chiếc phà cần vận chuyển toàn bộ $N$ kiện hàng này theo đúng thứ tự ban đầu qua sông trong không quá $D$ ngày. Mỗi ngày phà chỉ chở được một khối lượng hàng có tổng trọng lượng không vượt quá tải trọng $C$ của phà.
+Tại một bến cảng trung chuyển đường thủy, có N kiện hàng được xếp thành một hàng dài trên băng chuyền theo thứ tự nghiêm ngặt với trọng lượng W1, W2, ..., Wn. Chiếc phà vận tải phải chở hết toàn bộ các kiện hàng này sang bờ bên kia trong thời gian đúng D ngày (mỗi ngày phà chỉ bốc xếp một chuỗi các kiện hàng liên tiếp nhau theo thứ tự băng tải). Hãy tính tải trọng tối thiểu của phà để hoàn thành nhiệm vụ trong đúng D ngày.
 
 ## Nhiệm vụ
-Hãy tìm tải trọng $C$ nhỏ nhất của phà để hoàn thành công việc đúng hạn trong $D$ ngày.
+Cho trọng lượng N kiện hàng và số ngày D. Tìm tải trọng nhỏ nhất của phà để chở hết hàng trong D ngày.
 
 ## Input
-- Dòng 1: Gồm 2 số nguyên $N, D$ ($1 \le D \le N \le 10^5$).
-- Dòng 2: $N$ số nguyên dương $W_1, W_2, \dots, W_N$ ($1 \le W_i \le 10^9$).
+- Dòng 1: Chứa 2 số nguyên $N$ và $D$ ($1 \le D \le N \le 10^5$).
+- Dòng 2: Chứa $N$ số nguyên dương $W_1, W_2, \dots, W_N$ ($1 \le W_i \le 10^9$).
 
 ## Output
-- In ra một số nguyên duy nhất là tải trọng tối thiểu của phà.
+- In ra tải trọng tối thiểu của phà.
 
 ## Sample 1
 ### Input
 ```text
-6 3
-3 2 2 4 1 4
+10 5
+1 2 3 4 5 6 7 8 9 10
 ```
 ### Output
 ```text
-6
+15
 ```
-*(Giải thích: Ngày 1 chở kiện $[3, 2]$ (nặng 5), ngày 2 chở $[2, 4]$ (nặng 6), ngày 3 chở $[1, 4]$ (nặng 5)).*
+### Giải thích
+Với tải trọng 15:
+- Ngày 1: chở [1, 2, 3, 4, 5] (tổng 15)
+- Ngày 2: chở [6, 7] (tổng 13)
+- Ngày 3: chở [8] (tổng 8)
+- Ngày 4: chở [9] (tổng 9)
+- Ngày 5: chở [10] (tổng 10)
+Tổng cộng 5 ngày chở hết 10 kiện hàng. Tải trọng nhỏ nhất là 15.
 
 ## Ràng buộc
-- $100\%$ số test có $N \le 10^5, W_i \le 10^9$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $N \le 10^5, D \le N$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

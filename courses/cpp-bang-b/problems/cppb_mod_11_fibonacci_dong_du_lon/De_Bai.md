@@ -1,11 +1,13 @@
 # Dãy Fibonacci Đồng Dư Lớn
 
-**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
-Cho số nguyên $N$. Hãy tìm số Fibonacci thứ $N$ ($F_N$) theo modulo $10^9 + 7$ (với $F_0 = 0, F_1 = 1, F_2 = 1, \dots$).
+Trong mô hình tăng trưởng quần thể sinh học, số lượng cá thể ở chu kỳ thứ N tuân theo dãy số Fibonacci F(N). Với N có thể lên tới 10^18, thuật toán nhân ma trận kết hợp lũy thừa nhị phân ma trận cho phép tìm số F(N) mod (10^9 + 7) trong thời gian O(log N).
+
+## Nhiệm vụ
+Cho số nguyên dương N (1 <= N <= 10^18). Hãy tìm số Fibonacci thứ N (với F(1) = 1, F(2) = 1, F(3) = 2, ...) theo modulo 10^9 + 7.
 
 ## Input
-- Một dòng duy nhất chứa số nguyên $N$ ($0 \le N \le 10^{18}$).
+- Một dòng chứa số nguyên dương $N$ ($1 \le N \le 10^{18}$).
 
 ## Output
 - In ra $F_N \pmod{10^9 + 7}$.
@@ -13,15 +15,15 @@ Cho số nguyên $N$. Hãy tìm số Fibonacci thứ $N$ ($F_N$) theo modulo $10
 ## Sample 1
 ### Input
 ```text
-10
+6
 ```
 ### Output
 ```text
-55
+8
 ```
 ### Giải thích
-F(10) = 55.
+Dãy số Fibonacci: F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5, F(6)=8. Kết quả in ra: 8.
 
 ## Ràng buộc
 - $100\%$ số test có $N \le 10^{18}$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

@@ -3,14 +3,17 @@
 **Phân loại bài toán:** `Core Foundation`
 
 ## Bối cảnh
-Cho $N$ mệnh giá tiền xu $C_1, C_2, \dots, C_N$ (số lượng mỗi loại không giới hạn) và số tiền cần đổi $S$. Hãy tìm số lượng đồng xu ít nhất để đổi đúng số tiền $S$ bằng thuật toán Nhánh Cận (Branch and Bound). Nếu không đổi được, in `-1`.
+Một cây ATM thông minh tại sân bay quốc tế được nạp $N$ loại tiền xu có mệnh giá khác nhau $C_1, C_2, \dots, C_N$ (số lượng mỗi loại xu trong kho không hạn chế). Khi một du khách yêu cầu đổi một lượng tiền lẻ bằng đúng $S$, hệ thống cần chi trả sao cho tổng số đồng xu trao cho khách là ít nhất có thể để tiết kiệm dung lượng khay xuất tiền.
+
+## Nhiệm vụ
+Cho $N$ mệnh giá tiền xu $C_1, C_2, \dots, C_N$ và số tiền cần đổi $S$. Hãy áp dụng thuật toán Nhánh Cận (Branch and Bound) với hàm cận dưới tối ưu để tìm số lượng đồng xu ít nhất cần dùng để đổi đúng số tiền $S$. Nếu không có phương án đổi tiền nào hợp lệ, in ra `-1`.
 
 ## Input
-- Dòng 1: Hai số nguyên $N, S$ ($1 \le N \le 15, 1 \le S \le 100$).
-- Dòng 2: $N$ số nguyên dương $C_1, \dots, C_N$ ($1 \le C_i \le 100$).
+- Dòng 1: Hai số nguyên dương $N$ và $S$ ($1 \le N \le 15, 1 \le S \le 100$).
+- Dòng 2: $N$ số nguyên dương $C_1, C_2, \dots, C_N$ ($1 \le C_i \le 100$).
 
 ## Output
-- In ra số đồng xu ít nhất, hoặc `-1`.
+- In ra số lượng đồng xu ít nhất cần dùng, hoặc in `-1` nếu không thể đổi được.
 
 ## Sample 1
 ### Input
@@ -23,8 +26,8 @@ Cho $N$ mệnh giá tiền xu $C_1, C_2, \dots, C_N$ (số lượng mỗi loại
 3
 ```
 ### Giải thích
-11 = 5 + 5 + 1 (dùng đúng 3 đồng xu).
+Với số tiền $S = 11$ và các mệnh giá $\{1, 2, 5\}$, phương án tối ưu nhất là chọn hai đồng mệnh giá 5 và một đồng mệnh giá 1 ($5 + 5 + 1 = 11$). Tổng số đồng xu sử dụng là 3 đồng.
 
 ## Ràng buộc
-- 100% số test có $N \le 15, S \le 100$.
+- 100% số test có $1 \le N \le 15, 1 \le S \le 100$.
 - Thời gian: 1.0s, Bộ nhớ: 256MB.

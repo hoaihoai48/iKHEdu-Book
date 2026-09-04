@@ -1,28 +1,29 @@
 # Thuật Toán Euclid Tính GCD & LCM Bằng Đệ Quy
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho 2 số nguyên dương $A, B$. Hãy tính ước chung lớn nhất $\gcd(A, B)$ và bội chung nhỏ nhất $\text{lcm}(A, B)$ bằng thuật toán Euclid đệ quy.
+Thuật toán Euclid cổ đại phát biểu dưới dạng đệ quy một dòng gcd(A, B) = (B == 0) ? A : gcd(B, A % B) là một trong những thuật toán đẹp đẽ và hiệu quả nhất lịch sử toán học. Hãy dùng hàm đệ quy này để tính ước chung lớn nhất và bội chung nhỏ nhất.
+
+## Nhiệm vụ
+Cho 2 số nguyên dương A, B. Hãy tính ước chung lớn nhất gcd(A, B) và bội chung nhỏ nhất lcm(A, B) bằng hàm đệ quy Euclid.
 
 ## Input
-- Một dòng duy nhất chứa 2 số nguyên dương $A, B$ ($1 \le A, B \le 10^{18}$).
+- Một dòng chứa 2 số nguyên dương $A$ và $B$ ($1 \le A, B \le 10^{12}$).
 
 ## Output
-- In ra 2 số $\gcd(A, B)$ và $\text{lcm}(A, B)$ cách nhau bởi dấu cách. (Nếu LCM tràn số 64-bit, dùng `__int128`).
+- In ra $\gcd(A, B)$ và $\text{lcm}(A, B)$ cách nhau bởi khoảng trắng.
 
 ## Sample 1
 ### Input
 ```text
-12 18
+24 36
 ```
 ### Output
 ```text
-6 36
+12 72
 ```
 ### Giải thích
-gcd(12, 18) = 6, lcm(12, 18) = 36.
+gcd(24, 36) = 12 và lcm(24, 36) = (24 * 36) / 12 = 72.
 
 ## Ràng buộc
-- 100% số test có $1 \le A, B \le 10^{18}$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $A, B \le 10^{12}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

@@ -1,7 +1,10 @@
 # Cặp Số Tối Ưu Với Chênh Lệch Cực Hạn
 
 ## Bối cảnh
-Cho 2 dãy số nguyên $A$ gồm $N$ phần tử và $B$ gồm $M$ phần tử. Hãy tìm một phần tử $A_i$ và một phần tử $B_j$ sao cho độ chênh lệch $|A_i - B_j|$ là nhỏ nhất có thể.
+Tại một trạm quan trắc địa chấn liên vùng, hai trạm cảm biến đặt ở hai thung lũng ghi nhận N xung địa chấn dãy A và M xung địa chấn dãy B (với biên độ có thể lên tới 10^18). Để đồng bộ pha tín hiệu giữa hai trạm, các nhà địa chấn học cần tìm một xung địa chấn Ai từ trạm A và một xung địa chấn Bj từ trạm B sao cho độ lệch biên độ tuyệt đối giữa chúng |Ai - Bj| là nhỏ nhất có thể.
+
+## Nhiệm vụ
+Cho 2 dãy số nguyên A gồm N phần tử và B gồm M phần tử. Hãy tìm một phần tử A[i] và một phần tử B[j] sao cho độ chênh lệch |A[i] - B[j]| là nhỏ nhất có thể.
 
 ## Input
 - Dòng 1: 2 số nguyên $N$ và $M$ ($1 \le N, M \le 2 \cdot 10^5$).
@@ -23,8 +26,8 @@ Cho 2 dãy số nguyên $A$ gồm $N$ phần tử và $B$ gồm $M$ phần tử.
 1
 ```
 ### Giải thích
-Chọn $A_1 = 1, B_1 = 2$ có chênh lệch $|1 - 2| = 1$.
+Dãy A = [1, 5, 10] và dãy B = [2, 8, 14]. So sánh các cặp phần tử: chọn A[0] = 1 và B[0] = 2 cho độ chênh lệch |1 - 2| = 1. Đây là mức chênh lệch nhỏ nhất có thể đạt được giữa hai dãy.
 
 ## Ràng buộc
 - $100\%$ số test có $N, M \le 2 \cdot 10^5$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

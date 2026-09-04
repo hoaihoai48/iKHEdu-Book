@@ -1,14 +1,16 @@
 # Nghịch Đảo Tuyến Tính 1..N Trong O(N)
 
-**Phân loại bài toán:** `Advanced Challenge` (Thử thách mở rộng)
 ## Bối cảnh
-Cho số nguyên $N$ và $M = 10^9 + 7$. Hãy tính nghịch đảo modulo của tất cả các số từ $1$ đến $N$ trong thời gian $\mathcal{O}(N)$.
+Khi cần tính nghịch đảo modulo cho toàn bộ các số từ 1 đến N (với N lên tới 10^6) theo modulo M = 10^9 + 7, nếu tính riêng lẻ bằng lũy thừa nhị phân Fermat sẽ tốn O(N log M) dễ bị vượt quá thời gian. Công thức nghịch đảo tuyến tính cho phép tính trước toàn bộ mảng nghịch đảo chỉ trong đúng O(N).
+
+## Nhiệm vụ
+Cho số nguyên N và M = 10^9 + 7. Hãy tính và in ra nghịch đảo modulo của tất cả các số từ 1 đến N theo modulo M trong thời gian O(N).
 
 ## Input
-- Một dòng duy nhất chứa số nguyên $N$ ($1 \le N \le 10^7$).
+- Một dòng chứa số nguyên dương $N$ ($1 \le N \le 10^6$).
 
 ## Output
-- In ra tổng của tất cả các nghịch đảo modulo $\sum_{i=1}^N i^{-1} \pmod M$.
+- In ra $N$ số nguyên cách nhau bởi khoảng trắng là nghịch đảo modulo tương ứng của các số từ $1$ đến $N$.
 
 ## Sample 1
 ### Input
@@ -17,11 +19,13 @@ Cho số nguyên $N$ và $M = 10^9 + 7$. Hãy tính nghịch đảo modulo của
 ```
 ### Output
 ```text
-833333341
+1 500000004 333333336
 ```
 ### Giải thích
-inv(1) = 1, inv(2) = 500000004, inv(3) = 333333336 -> Tổng mod M = 833333341.
+- inv(1) = 1.
+- inv(2) = 500000004 (vì 2 * 500000004 = 1 mod M).
+- inv(3) = 333333336 (vì 3 * 333333336 = 1000000008 = 1 mod M).
 
 ## Ràng buộc
-- $100\%$ số test có $N \le 10^7$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $N \le 10^6$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

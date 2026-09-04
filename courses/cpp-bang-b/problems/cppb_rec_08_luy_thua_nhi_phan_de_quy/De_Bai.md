@@ -1,28 +1,29 @@
 # Lũy Thừa Nhị Phân Đệ Quy A^B mod M
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho 3 số nguyên $A, B, M$. Hãy tính $A^B \pmod M$ bằng thuật toán Lũy thừa nhị phân đệ quy $\mathcal{O}(\log B)$ (chú ý chỉ gọi đệ quy 1 lần vào biến tạm `half` để tránh nổ thời gian).
+Bản chất toán học của lũy thừa nhị phân là hệ thức đệ quy: nếu B chẵn thì A^B = (A^(B/2))^2, nếu B lẻ thì A^B = A * A^(B - 1). Hãy cài đặt thuật toán lũy thừa nhị phân bằng hàm đệ quy thuần túy.
+
+## Nhiệm vụ
+Cho 3 số nguyên A, B, M. Hãy tính A^B mod M bằng hàm đệ quy.
 
 ## Input
-- Một dòng duy nhất chứa 3 số nguyên $A, B, M$ ($0 \le A, B \le 10^{18}, 1 \le M \le 10^9 + 7$).
+- Một dòng chứa 3 số nguyên $A, B, M$ ($0 \le A, B \le 10^{18}, 1 \le M \le 10^9$).
 
 ## Output
-- In ra một số nguyên duy nhất là kết quả $A^B \pmod M$.
+- In ra giá trị $A^B \pmod M$.
 
 ## Sample 1
 ### Input
 ```text
-3 13 1000
+3 5 100
 ```
 ### Output
 ```text
-323
+43
 ```
 ### Giải thích
-3^13 = 1594323 -> 1594323 % 1000 = 323.
+3^5 = 243. 243 mod 100 = 43. Kết quả in ra: 43.
 
 ## Ràng buộc
-- 100% số test có $A, B \le 10^{18}, M \le 10^9 + 7$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $A, B \le 10^{18}, 1 \le M \le 10^9$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

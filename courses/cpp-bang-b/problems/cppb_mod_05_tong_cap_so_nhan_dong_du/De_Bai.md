@@ -1,14 +1,16 @@
 # Tính Tổng Cấp Số Nhân Đồng Dư
 
-**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
-Cho $A, N$ và $M = 10^9 + 7$. Hãy tính tổng $S = 1 + A + A^2 + \cdots + A^N \pmod M$.
+Trong tính toán lãi suất kép liên tục qua N chu kỳ kinh tế với hệ số sinh lời A, tổng giá trị tích lũy tạo thành một chuỗi cấp số nhân S = 1 + A + A^2 + ... + A^N. Để tránh tràn số, giá trị này cần được tính đồng dư theo modulo M = 10^9 + 7 bằng kỹ thuật chia để trị O(log N).
+
+## Nhiệm vụ
+Cho A, N và M = 10^9 + 7. Hãy tính tổng S = 1 + A + A^2 + ... + A^N mod M.
 
 ## Input
-- Một dòng duy nhất chứa 2 số nguyên $A, N$ ($0 \le A \le 10^9, 0 \le N \le 10^{18}$).
+- Một dòng chứa 2 số nguyên $A$ và $N$ ($0 \le A, N \le 10^9$).
 
 ## Output
-- In ra tổng $S \pmod{10^9 + 7}$.
+- In ra giá trị tổng $S \pmod{10^9 + 7}$.
 
 ## Sample 1
 ### Input
@@ -20,8 +22,8 @@ Cho $A, N$ và $M = 10^9 + 7$. Hãy tính tổng $S = 1 + A + A^2 + \cdots + A^N
 15
 ```
 ### Giải thích
-S = 1 + 2 + 4 + 8 = 15.
+S = 1 + 2 + 2^2 + 2^3 = 1 + 2 + 4 + 8 = 15. Kết quả in ra: 15.
 
 ## Ràng buộc
-- $100\%$ số test có $A \le 10^9, N \le 10^{18}$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $A, N \le 10^9$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

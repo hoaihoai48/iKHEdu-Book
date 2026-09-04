@@ -1,14 +1,17 @@
 # Chia Tập Hợp Thành 2 Phần Có Tổng Chênh Lệch Nhỏ Nhất
 
 ## Bối cảnh
-Cho $N$ quả táo với khối lượng lần lượt là $P_1, P_2, \dots, P_N$. Bạn muốn chia $N$ quả táo này vào 2 giỏ sao cho độ chênh lệch khối lượng giữa 2 giỏ là **nhỏ nhất có thể**.
+Có N kiện hàng với khối lượng lần lượt là P1, P2, ..., Pn cần chia cho hai chiếc xe tải cùng loại để vận chuyển đường dài. Hãy tìm cách phân chia toàn bộ N kiện hàng thành hai phần sao cho độ chênh lệch khối lượng hàng hóa giữa hai xe tải là nhỏ nhất có thể.
+
+## Nhiệm vụ
+Cho N quả táo với khối lượng P1, P2, ..., Pn. Hãy chia táo vào 2 rổ sao cho độ chênh lệch tổng khối lượng giữa hai rổ là nhỏ nhất có thể.
 
 ## Input
 - Dòng 1: Số nguyên dương $N$ ($1 \le N \le 20$).
 - Dòng 2: $N$ số nguyên dương $P_1, P_2, \dots, P_N$ ($1 \le P_i \le 10^9$).
 
 ## Output
-- In ra một số nguyên duy nhất là độ chênh lệch khối lượng nhỏ nhất tìm được.
+- In ra độ chênh lệch nhỏ nhất giữa hai phần.
 
 ## Sample 1
 ### Input
@@ -20,8 +23,9 @@ Cho $N$ quả táo với khối lượng lần lượt là $P_1, P_2, \dots, P_N
 ```text
 1
 ```
-*(Giải thích: Giỏ 1: $[2, 7]$ (tổng 9), Giỏ 2: $[3, 4, 1]$ (tổng 8). Hiệu là $|9 - 8| = 1$).*
+### Giải thích
+Tổng khối lượng 5 quả táo là 3 + 2 + 7 + 4 + 1 = 17. Chia thành hai nhóm: nhóm 1 gồm {2, 7} có tổng 9; nhóm 2 gồm {3, 4, 1} có tổng 8. Độ chênh lệch giữa hai nhóm là |9 - 8| = 1. Đây là mức chênh lệch nhỏ nhất.
 
 ## Ràng buộc
-- $100\%$ số test có $N \le 20, P_i \le 10^9$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $N \le 20$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

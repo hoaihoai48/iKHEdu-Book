@@ -1,32 +1,33 @@
 # Cập Nhật Cộng Hình Chữ Nhật (Mảng Hiệu 2D)
 
 ## Bối cảnh
-Cho ma trận kích thước $N \times M$ ban đầu toàn số 0. Có $Q$ thao tác, mỗi thao tác gồm 5 số nguyên $x_1, y_1, x_2, y_2, V$ yêu cầu cộng giá trị $V$ vào tất cả các ô trong hình chữ nhật từ $(x_1, y_1)$ đến $(x_2, y_2)$.
+Trong một trò chơi chiến thuật, bản đồ kích thước N x M ô ban đầu có mức phòng thủ bằng 0. Các người chơi lần lượt kích hoạt Q lá bùa gia cố, mỗi lá bùa cộng thêm X điểm phòng thủ cho một khu vực hình chữ nhật từ tọa độ (r1, c1) đến (r2, c2). Hãy xác định bảng điểm phòng thủ cuối cùng của toàn bộ bản đồ sau khi kết thúc Q đợt kích hoạt bùa.
 
 ## Nhiệm vụ
-Hãy in ra ma trận kết quả sau khi hoàn thành $Q$ thao tác.
+Cho ma trận N x M ban đầu toàn số 0. Thực hiện Q thao tác cộng giá trị X vào hình chữ nhật từ (r1, c1) đến (r2, c2). Hãy in ra ma trận kết quả sau Q thao tác bằng Mảng hiệu 2D.
 
 ## Input
-- Dòng 1: Gồm 3 số nguyên $N, M, Q$ ($1 \le N, M \le 1000, 1 \le Q \le 10^5$).
-- $Q$ dòng tiếp theo: Mỗi dòng gồm 5 số $x_1, y_1, x_2, y_2, V$ ($1 \le x_1 \le x_2 \le N, 1 \le y_1 \le y_2 \le M, |V| \le 10^9$).
+- Dòng 1: Chứa 3 số nguyên $N, M, Q$ ($1 \le N, M \le 1000, 1 \le Q \le 10^5$).
+- $Q$ dòng tiếp theo: Mỗi dòng gồm 5 số nguyên $r_1, c_1, r_2, c_2, X$.
 
 ## Output
-- In ra $N$ dòng, mỗi dòng gồm $M$ số nguyên biểu diễn ma trận cuối cùng.
+- In ra ma trận $N \times M$ sau khi hoàn tất toàn bộ $Q$ thao tác.
 
 ## Sample 1
 ### Input
 ```text
-3 3 2
-1 1 2 2 3
-2 2 3 3 2
+3 3 1
+1 1 2 2 5
 ```
 ### Output
 ```text
-3 3 0
-3 5 2
-0 2 2
+5 5 0
+5 5 0
+0 0 0
 ```
+### Giải thích
+Thao tác cộng 5 vào hình chữ nhật từ (1, 1) đến (2, 2) làm cho 4 ô ở góc trên bên trái đều có giá trị 5, các ô còn lại giữ nguyên giá trị 0.
 
 ## Ràng buộc
 - $100\%$ số test có $N, M \le 1000, Q \le 10^5$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

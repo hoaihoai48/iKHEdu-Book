@@ -1,13 +1,14 @@
 # Thuật Toán QuickSelect Tìm K-th Element
 
-**Phân loại bài toán:** `Advanced`
-
 ## Bối cảnh
-Cho mảng số nguyên $A$ gồm $N$ phần tử và số nguyên $K$ ($1 \le K \le N$). Hãy tìm phần tử nhỏ thứ $K$ trong mảng bằng thuật toán QuickSelect Chia Để Trị đạt thời gian trung bình $\mathcal{O}(N)$.
+Khi cần tìm phần tử nhỏ thứ K trong một danh sách N số mà không muốn tốn thời gian sắp xếp toàn bộ mảng O(N log N), thuật toán QuickSelect của Hoare sử dụng cơ chế chia để trị phân hoạch ngẫu nhiên Pivot để tìm ra phần tử thứ K trong thời gian trung bình tuyến tính O(N).
+
+## Nhiệm vụ
+Cho mảng N số nguyên và số nguyên K (1 <= K <= N). Hãy tìm giá trị của phần tử nhỏ thứ K bằng thuật toán QuickSelect.
 
 ## Input
-- Dòng 1: Hai số nguyên $N, K$ ($1 \le K \le N \le 10^5$).
-- Dòng 2: $N$ số nguyên $A_1, \dots, A_N$ ($|A_i| \le 10^9$).
+- Dòng 1: Chứa 2 số nguyên $N$ và $K$ ($1 \le K \le N \le 10^5$).
+- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$).
 
 ## Output
 - In ra giá trị của phần tử nhỏ thứ $K$.
@@ -16,15 +17,15 @@ Cho mảng số nguyên $A$ gồm $N$ phần tử và số nguyên $K$ ($1 \le K
 ### Input
 ```text
 6 3
-7 10 4 3 20 15
+3 2 1 5 6 4
 ```
 ### Output
 ```text
-7
+3
 ```
 ### Giải thích
-Mảng sau khi sắp xếp: [3, 4, 7, 10, 15, 20]. Phần tử nhỏ thứ 3 là 7.
+Mảng có thứ tự: [1, 2, 3, 4, 5, 6]. Phần tử nhỏ thứ K = 3 là số 3. Kết quả in ra: 3.
 
 ## Ràng buộc
-- 100% số test có $N \le 10^5, |A_i| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

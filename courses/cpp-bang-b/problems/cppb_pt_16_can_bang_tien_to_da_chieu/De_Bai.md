@@ -1,27 +1,29 @@
 # Cân Bằng Tiền Tố Đa Chiều
 
 ## Bối cảnh
-Cho một chuỗi gồm $N$ ký tự chỉ gồm các chữ cái `'A'`, `'B'`, `'C'`. Hãy tìm độ dài của đoạn con liên tiếp dài nhất chứa số lượng ký tự `'A'`, `'B'`, `'C'` bằng nhau từng đôi một.
+Trong chuỗi mã hóa di truyền sinh học gồm N phân tử thuộc ba loại 'A', 'B', 'C', các nhà sinh học phân tử cần tìm một đoạn gen liên tiếp dài nhất mà trong đó số lượng các phân tử loại 'A', 'B' và 'C' xuất hiện hoàn toàn bằng nhau.
+
+## Nhiệm vụ
+Cho một chuỗi gồm N ký tự chỉ gồm các chữ cái 'A', 'B', 'C'. Hãy tìm độ dài lớn nhất của một đoạn con liên tiếp có số lượng ký tự 'A', 'B' và 'C' bằng nhau.
 
 ## Input
-- Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
-- Dòng 2: Chuỗi $S$ gồm $N$ ký tự thuộc $\{'A', 'B', 'C'\}$.
+- Dòng 1: Chuỗi ký tự $S$ có độ dài $N$ ($1 \le N \le 10^5$).
 
 ## Output
-- In ra một số nguyên duy nhất là độ dài lớn nhất của đoạn con cân bằng. Nếu không có, in `0`.
+- In ra độ dài lớn nhất của chuỗi con thỏa mãn, hoặc `0` nếu không có đoạn nào.
 
 ## Sample 1
 ### Input
 ```text
-7
-ABACABA
+ABACBC
 ```
 ### Output
 ```text
-3
+6
 ```
-*(Giải thích: Đoạn `BAC` hoặc `CAB` có độ dài 3 chứa đúng 1 ký tự A, 1 ký tự B, 1 ký tự C).*
+### Giải thích
+Chuỗi 'ABACBC' có độ dài 6 chứa đúng hai ký tự 'A', hai ký tự 'B' và hai ký tự 'C' (số lượng bằng nhau = 2). Vì vậy độ dài lớn nhất là 6.
 
 ## Ràng buộc
 - $100\%$ số test có $N \le 10^5$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

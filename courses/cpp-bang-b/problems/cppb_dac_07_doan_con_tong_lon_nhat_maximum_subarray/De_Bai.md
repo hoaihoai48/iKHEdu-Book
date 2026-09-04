@@ -1,16 +1,17 @@
 # Đoạn Con Tổng Lớn Nhất (Maximum Subarray D&C)
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho mảng số nguyên $A$ gồm $N$ phần tử (có thể chứa số âm). Hãy tìm tổng lớn nhất của một đoạn con liên tiếp khác rỗng bằng thuật toán Chia Để Trị $\mathcal{O}(N \log N)$ (`max(Left, Right, Crossing)`).
+Bài toán tìm đoạn con liên tiếp có tổng lớn nhất trong một chuỗi số tài chính (có cả số âm và số dương) được giải quyết bằng chia để trị: đoạn con tối ưu có thể nằm hoàn toàn ở nửa trái, nằm hoàn toàn ở nửa phải, hoặc bắt qua điểm chính giữa (Crossing Subarray).
+
+## Nhiệm vụ
+Cho mảng N số nguyên. Hãy tìm tổng lớn nhất của một đoạn con liên tiếp khác rỗng bằng thuật toán Chia để trị.
 
 ## Input
 - Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
-- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($|A_i| \le 10^9$).
+- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$).
 
 ## Output
-- In ra một số nguyên duy nhất là tổng lớn nhất của đoạn con liên tiếp.
+- In ra tổng lớn nhất của đoạn con.
 
 ## Sample 1
 ### Input
@@ -23,8 +24,8 @@ Cho mảng số nguyên $A$ gồm $N$ phần tử (có thể chứa số âm). H
 7
 ```
 ### Giải thích
-Đoạn con [4, -1, -2, 1, 5] có tổng lớn nhất = 7.
+Đoạn con [4, -1, -2, 1, 5] từ vị trí 3 đến vị trí 7 có tổng là 4 - 1 - 2 + 1 + 5 = 7. Đây là đoạn con có tổng lớn nhất.
 
 ## Ràng buộc
-- 100% số test có $1 \le N \le 10^5, |A_i| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

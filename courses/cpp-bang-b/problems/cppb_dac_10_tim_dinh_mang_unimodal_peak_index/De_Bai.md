@@ -1,30 +1,31 @@
 # Tìm Điểm Cực Đại Mảng Unimodal (Peak Index)
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Một mảng $A$ được gọi là Unimodal (mảng đỉnh núi) nếu nó tăng nghiêm ngặt đến một vị trí đỉnh $p$ rồi sau đó giảm nghiêm ngặt ($A_1 < A_2 < \dots < A_p > A_{p+1} > \dots > A_N$). Hãy tìm giá trị cực đại $A_p$ trong $\mathcal{O}(\log N)$ bằng Chia Để Trị.
+Một mảng Unimodal (mảng đỉnh núi) tăng nghiêm ngặt đến một điểm cực đại rồi giảm nghiêm ngặt về sau. Kỹ thuật chia để trị so sánh A[Mid] và A[Mid + 1] cho phép xác định sườn dốc đang leo lên hay trượt xuống, từ đó tìm điểm cực đại trong O(log N).
+
+## Nhiệm vụ
+Cho mảng Unimodal gồm N phần tử. Hãy tìm chỉ số (0-indexed) của phần tử cực đại.
 
 ## Input
 - Dòng 1: Số nguyên dương $N$ ($3 \le N \le 10^5$).
-- Dòng 2: $N$ số nguyên của mảng Unimodal $A_1, \dots, A_N$ ($|A_i| \le 10^9$).
+- Dòng 2: $N$ số nguyên mô tả mảng Unimodal.
 
 ## Output
-- In ra giá trị cực đại $A_p$.
+- In ra chỉ số (0-indexed) của điểm cực đại.
 
 ## Sample 1
 ### Input
 ```text
-7
-1 3 8 12 9 4 2
+4
+0 2 1 0
 ```
 ### Output
 ```text
-12
+1
 ```
 ### Giải thích
-Đỉnh của mảng là 12.
+Điểm cực đại là 2 tại chỉ số 1 (0-indexed).
 
 ## Ràng buộc
-- 100% số test có $3 \le N \le 10^5, |A_i| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

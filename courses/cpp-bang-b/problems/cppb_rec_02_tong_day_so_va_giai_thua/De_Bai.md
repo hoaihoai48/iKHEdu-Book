@@ -1,28 +1,29 @@
 # Tính Tổng Dãy Số & Giai Thừa Bằng Đệ Quy
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho số nguyên dương $N$. Hãy tính tổng $S = 1 + 2 + \cdots + N$ và tích giai thừa $P = N! = 1 \times 2 \times \cdots \times N$ bằng các hàm đệ quy có giá trị trả về.
+Hai công thức toán học cơ bản nhất phản ánh tính chất đệ quy tự nhiên: tổng dãy số nguyên liên tiếp S(N) = S(N - 1) + N và giai thừa N! = (N - 1)! * N. Hãy cài đặt hai hàm đệ quy này để tính toán giá trị đồng thời.
+
+## Nhiệm vụ
+Cho số nguyên dương N (1 <= N <= 20). Hãy tính tổng S = 1 + 2 + ... + N và giai thừa N! bằng hàm đệ quy.
 
 ## Input
 - Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 20$).
 
 ## Output
-- In ra 2 số nguyên $S$ và $P$ trên cùng một dòng, cách nhau bởi dấu cách.
+- In ra 2 số nguyên cách nhau bởi khoảng trắng: tổng $S$ và giai thừa $N!$.
 
 ## Sample 1
 ### Input
 ```text
-4
+5
 ```
 ### Output
 ```text
-10 24
+15 120
 ```
 ### Giải thích
-S = 1 + 2 + 3 + 4 = 10, P = 1 * 2 * 3 * 4 = 24.
+S(5) = 1 + 2 + 3 + 4 + 5 = 15; 5! = 1 * 2 * 3 * 4 * 5 = 120. Kết quả in ra: 15 120.
 
 ## Ràng buộc
-- 100% số test có $1 \le N \le 20$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 20$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

@@ -1,37 +1,32 @@
 # Tháp Hà Nội Có Ràng Buộc Nước Đi
 
-**Phân loại bài toán:** `Advanced Challenge`
-
 ## Bối cảnh
-Cho $N$ đĩa trên cọc $A$. Quy tắc: **Cấm tuyệt đối mọi nước đi trực tiếp giữa cọc A và cọc C** (mọi đĩa muốn đi từ $A \to C$ hoặc $C \to A$ bắt buộc phải đi qua cọc trung gian $B$). Hãy in ra số bước di chuyển tối thiểu $K = 3^N - 1$ và danh sách các bước di chuyển hợp lệ.
+Trong một biến thể nâng cao của trò chơi Tháp Hà Nội, giữa cọc A và cọc C có một vách ngăn ngăn cách: cấm tuyệt đối mọi nước đi trực tiếp giữa cọc A và cọc C. Mọi chiếc đĩa muốn chuyển từ A sang C hoặc ngược lại bắt buộc phải đi trung chuyển qua cọc B (A <-> B <-> C).
+
+## Nhiệm vụ
+Cho N đĩa trên cọc A với quy tắc chuyển qua cọc trung gian B. Hãy tính số bước di chuyển tối thiểu và in ra danh sách các bước đi để chuyển hết N đĩa từ A sang C.
 
 ## Input
-- Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 10$).
+- Một dòng chứa số nguyên dương $N$ ($1 \le N \le 10$).
 
 ## Output
-- Dòng 1: Số bước di chuyển tối thiểu $K = 3^N - 1$.
-- $K$ dòng tiếp theo: Mỗi dòng in theo định dạng `X -> Y`.
+- Dòng 1: In số bước chuyển tối thiểu $3^N - 1$.
+- Các dòng tiếp theo: Mỗi dòng in một bước chuyển dạng `X -> Y`.
 
 ## Sample 1
 ### Input
 ```text
-2
+1
 ```
 ### Output
 ```text
-8
-A -> B
-B -> C
-A -> B
-C -> B
-B -> A
-B -> C
+2
 A -> B
 B -> C
 ```
 ### Giải thích
-Với N = 2 đĩa và cấm A <-> C trực tiếp, cần đúng 3^2 - 1 = 8 bước.
+Với 1 đĩa không được đi trực tiếp A -> C nên phải đi qua B: A -> B rồi B -> C. Tổng cộng 2 bước.
 
 ## Ràng buộc
-- 100% số test có $1 \le N \le 10$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

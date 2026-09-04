@@ -3,13 +3,16 @@
 **Phân loại bài toán:** `Core Foundation`
 
 ## Bối cảnh
-Cho bảng Sudoku $9 \times 9$ với các ô trống mang giá trị `0`. Hãy điền các số từ $1$ đến $9$ vào các ô trống sao cho mỗi hàng, mỗi cột và mỗi khối vuông con $3 \times 3$ đều chứa đủ các chữ số từ $1$ đến $9$ không trùng lặp bằng thuật toán Quay Lui.
+Tại vòng chung kết cuộc thi Trí tuệ Logic học sinh giỏi, các thí sinh nhận được một bảng Sudoku kích thước tiêu chuẩn $9 \times 9$ trong đó một số ô đã có sẵn số từ $1$ đến $9$, còn các ô trống được ký hiệu bằng số `0`. Để tự động hóa khâu chấm thi và kiểm tra đáp án, ban giám khảo cần một chương trình tự động giải quyết bàn cờ Sudoku này dựa trên các quy tắc chuẩn quốc tế.
+
+## Nhiệm vụ
+Cho bảng Sudoku $9 \times 9$ với các ô trống mang giá trị `0`. Hãy sử dụng thuật toán Quay lui để điền các chữ số từ $1$ đến $9$ vào các ô trống sao cho: mỗi hàng, mỗi cột và mỗi khối vuông con $3 \times 3$ đều chứa đủ 9 chữ số từ $1$ đến $9$ không lặp lại. Đảm bảo dữ liệu đầu vào luôn có nghiệm duy nhất.
 
 ## Input
-- 9 dòng, mỗi dòng chứa 9 số nguyên từ $0$ đến $9$.
+- Gồm 9 dòng, mỗi dòng chứa 9 số nguyên từ $0$ đến $9$ cách nhau bởi dấu cách biểu diễn bảng Sudoku ban đầu.
 
 ## Output
-- In ra bảng Sudoku hoàn chỉnh sau khi điền 9 dòng, mỗi dòng 9 số cách nhau bởi dấu cách.
+- In ra bảng Sudoku hoàn chỉnh sau khi điền gồm 9 dòng, mỗi dòng 9 số cách nhau bởi dấu cách.
 
 ## Sample 1
 ### Input
@@ -37,8 +40,8 @@ Cho bảng Sudoku $9 \times 9$ với các ô trống mang giá trị `0`. Hãy �
 7 4 5 2 8 6 3 1 9
 ```
 ### Giải thích
-Bảng Sudoku giải hoàn chỉnh duy nhất.
+Tất cả các số 0 được thay thế bằng các chữ số từ 1 đến 9 thỏa mãn trọn vẹn quy tắc: hàng ngang, cột dọc và các phân vùng $3 \times 3$ đều không có số nào bị lặp lại.
 
 ## Ràng buộc
-- Đảm bảo bảng đầu vào có lời giải duy nhất.
+- Dữ liệu đầu vào luôn hợp lệ và đảm bảo có đúng 1 lời giải duy nhất.
 - Thời gian: 1.0s, Bộ nhớ: 256MB.

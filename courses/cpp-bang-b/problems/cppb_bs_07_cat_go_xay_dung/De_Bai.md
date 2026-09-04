@@ -1,17 +1,17 @@
 # Cắt Gỗ Xây Dựng (Woodcutting / EKO)
 
 ## Bối cảnh
-Bác thợ mộc cần lấy ít nhất $M$ mét gỗ. Khu rừng có $N$ cái cây với chiều cao lần lượt là $A_1, A_2, \dots, A_N$. Bác sử dụng một máy cắt có thể điều chỉnh độ cao lưỡi cưa tại mức $H$. Máy sẽ cắt ngang tất cả các cây có chiều cao lớn hơn $H$, phần ngọn bị cắt rời (chiều cao $A_i - H$) sẽ được gom lại làm gỗ. Các cây có chiều cao $\le H$ sẽ giữ nguyên vẹn.
+Bác thợ mộc nhận hợp đồng cung ứng gỗ xây dựng trường học vùng cao và cần thu hoạch ít nhất M mét gỗ. Khu rừng có N cây cổ thụ với chiều cao lần lượt là H1, H2, ..., Hn. Máy cắt gỗ công nghiệp có thể thiết lập độ cao cưa H: tất cả các cây có chiều cao lớn hơn H sẽ bị cưa phần ngọn thừa ra (chiều dài gỗ thu được từ mỗi cây là Hi - H nếu Hi > H). Để bảo vệ tài nguyên rừng, bác thợ mộc muốn đặt độ cao cưa H lớn nhất có thể sao cho tổng lượng gỗ thu được vẫn đạt ít nhất M mét.
 
 ## Nhiệm vụ
-Hãy tìm độ cao $H$ nguyên lớn nhất để bác thợ mộc thu được ít nhất $M$ mét gỗ.
+Cho chiều cao N cây gỗ và lượng gỗ tối thiểu cần lấy M. Hãy tìm độ cao cắt H lớn nhất của máy cưa.
 
 ## Input
-- Dòng 1: Gồm 2 số nguyên $N, M$ ($1 \le N \le 10^5, 1 \le M \le 10^{14}$).
-- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($1 \le A_i \le 10^9$).
+- Dòng 1: Chứa 2 số nguyên $N$ và $M$ ($1 \le N \le 10^6, 1 \le M \le 2 \cdot 10^9$).
+- Dòng 2: Chứa $N$ số nguyên dương $H_1, H_2, \dots, H_N$ ($1 \le H_i \le 10^9$).
 
 ## Output
-- In ra một số nguyên duy nhất là độ cao $H$ lớn nhất.
+- In ra một số nguyên duy nhất là độ cao cắt $H$ lớn nhất.
 
 ## Sample 1
 ### Input
@@ -23,8 +23,14 @@ Hãy tìm độ cao $H$ nguyên lớn nhất để bác thợ mộc thu được
 ```text
 15
 ```
-*(Giải thích: Cắt ở độ cao 15: Cây 20 cho 5m, cây 17 cho 2m, tổng là $5 + 2 = 7\text{m}$ gỗ).*
+### Giải thích
+Khi đặt độ cao cắt H = 15:
+- Cây 20m cắt được: 20 - 15 = 5m.
+- Cây 15m cắt được: 15 - 15 = 0m.
+- Cây 10m không bị cắt: 0m.
+- Cây 17m cắt được: 17 - 15 = 2m.
+Tổng gỗ thu được là 5 + 0 + 0 + 2 = 7 mét đúng bằng M. Đây là độ cao H lớn nhất.
 
 ## Ràng buộc
-- $100\%$ số test có $N \le 10^5, M \le 10^{14}$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $N \le 10^6, M \le 2 \cdot 10^9$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

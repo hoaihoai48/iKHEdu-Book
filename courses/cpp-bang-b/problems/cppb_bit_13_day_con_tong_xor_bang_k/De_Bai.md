@@ -1,27 +1,31 @@
 # Tìm Dãy Con Có Tổng XOR Bằng K
 
 ## Bối cảnh
-Cho một tập hợp gồm $N$ số nguyên dương $A_1, A_2, \dots, A_N$ và một số nguyên $K$. Hãy đếm số lượng tập con khác rỗng có tích XOR của tất cả các phần tử đúng bằng $K$.
+Trong một giao thức mã kiểm tra dư thừa nhị phân, máy thu nhận được N khối dữ liệu A1, A2, ..., An. Người nhận cần kiểm tra xem có tồn tại một tập con khác rỗng nào các khối dữ liệu có tích lũy phép toán XOR đúng bằng mã chứng thực K hay không.
+
+## Nhiệm vụ
+Cho tập hợp gồm N số nguyên dương và số nguyên K. Hãy kiểm tra xem có tồn tại một dãy con khác rỗng có tổng XOR bằng K hay không. In YES nếu có, ngược lại in NO.
 
 ## Input
-- Dòng 1: Gồm 2 số nguyên $N, K$ ($1 \le N \le 20, 0 \le K \le 10^9$).
-- Dòng 2: $N$ số nguyên dương $A_1, A_2, \dots, A_N$ ($1 \le A_i \le 10^9$).
+- Dòng 1: Chứa 2 số nguyên $N$ và $K$ ($1 \le N \le 20, 0 \le K \le 10^9$).
+- Dòng 2: Chứa $N$ số nguyên dương $A_1, A_2, \dots, A_N$ ($1 \le A_i \le 10^9$).
 
 ## Output
-- In ra một số nguyên duy nhất là số lượng tập con thỏa mãn.
+- In ra `YES` hoặc `NO`.
 
 ## Sample 1
 ### Input
 ```text
-3 3
-1 2 3
+4 7
+1 2 4 8
 ```
 ### Output
 ```text
-2
+YES
 ```
-*(Giải thích: Tập $\{3\}$ có $\text{XOR} = 3$; Tập $\{1, 2\}$ có $1 \oplus 2 = 3$. Tổng cộng 2 tập).*
+### Giải thích
+Chọn tập con gồm 3 phần tử {1, 2, 4} có tổng XOR là 1 ^ 2 ^ 4 = 7 đúng bằng K. Kết quả in ra: YES.
 
 ## Ràng buộc
 - $100\%$ số test có $N \le 20$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

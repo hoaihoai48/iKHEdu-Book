@@ -1,32 +1,33 @@
 # Gộp Hai Mảng Đã Sắp Xếp (Merge Step)
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho 2 dãy số nguyên $A$ (gồm $N$ phần tử) và $B$ (gồm $M$ phần tử) đều đã được sắp xếp tăng dần. Hãy cài đặt bước gộp `merge()` bằng kỹ thuật 2 con trỏ trong $\mathcal{O}(N + M)$ để gộp $A$ và $B$ thành một dãy số tăng dần duy nhất.
+Thao tác gộp (Merge) hai mảng đã có thứ tự thành một mảng có thứ tự duy nhất là bước kết hợp (Combine) nền tảng của thuật toán kinh điển Merge Sort. Kỹ thuật hai con trỏ cho phép gộp hai mảng kích thước N và M trong đúng O(N + M).
+
+## Nhiệm vụ
+Cho 2 mảng tăng dần A (kích thước N) và B (kích thước M). Hãy gộp hai mảng thành một dãy tăng dần duy nhất.
 
 ## Input
-- Dòng 1: Hai số nguyên $N, M$ ($1 \le N, M \le 10^5$).
-- Dòng 2: $N$ số nguyên $A_1, \dots, A_N$ đã sắp xếp tăng dần ($|A_i| \le 10^9$).
-- Dòng 3: $M$ số nguyên $B_1, \dots, B_M$ đã sắp xếp tăng dần ($|B_j| \le 10^9$).
+- Dòng 1: 2 số nguyên dương $N$ và $M$ ($1 \le N, M \le 10^5$).
+- Dòng 2: $N$ số nguyên tăng dần của mảng $A$.
+- Dòng 3: $M$ số nguyên tăng dần của mảng $B$.
 
 ## Output
-- In ra $N + M$ số nguyên của mảng sau khi gộp, cách nhau bởi dấu cách.
+- In ra $N + M$ số nguyên theo thứ tự tăng dần sau khi gộp.
 
 ## Sample 1
 ### Input
 ```text
-3 4
-1 5 8
-2 3 6 9
+3 3
+1 4 7
+2 5 6
 ```
 ### Output
 ```text
-1 2 3 5 6 8 9
+1 2 4 5 6 7
 ```
 ### Giải thích
-Mảng sau khi gộp tăng dần: 1 2 3 5 6 8 9.
+Gộp hai mảng [1, 4, 7] và [2, 5, 6] ta được mảng tăng dần hoàn chỉnh: 1 2 4 5 6 7.
 
 ## Ràng buộc
-- 100% số test có $N, M \le 10^5, |A_i|, |B_j| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N, M \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

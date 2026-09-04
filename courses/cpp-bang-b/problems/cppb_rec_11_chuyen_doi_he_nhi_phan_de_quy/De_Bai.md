@@ -1,12 +1,13 @@
 # Chuyển Đổi Hệ Cơ Số 10 Sang Nhị Phân Bằng Đệ Quy
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho số nguyên không âm $N$. Hãy in ra biểu diễn nhị phân của $N$ bằng đệ quy (tận dụng pha Unwinding để in đúng thứ tự mà không cần đảo chuỗi).
+Cơ chế ngăn xếp gọi hàm đệ quy tự nhiên đảo ngược thứ tự các số dư khi chia liên tiếp cho 2, giúp in ra biểu diễn nhị phân của số nguyên N từ bit có trọng số lớn nhất đến bit 0 một cách tự nhiên mà không cần mảng phụ.
+
+## Nhiệm vụ
+Cho số nguyên không âm N. Hãy in ra biểu diễn nhị phân của N bằng hàm đệ quy.
 
 ## Input
-- Một dòng duy nhất chứa số nguyên $N$ ($0 \le N \le 10^{18}$).
+- Một dòng chứa số nguyên không âm $N$ ($0 \le N \le 10^{18}$).
 
 ## Output
 - In ra chuỗi nhị phân của $N$.
@@ -14,15 +15,15 @@ Cho số nguyên không âm $N$. Hãy in ra biểu diễn nhị phân của $N$ 
 ## Sample 1
 ### Input
 ```text
-13
+10
 ```
 ### Output
 ```text
-1101
+1010
 ```
 ### Giải thích
-13 = 1101_2.
+Số 10 trong hệ thập phân chuyển sang nhị phân là 1010_2.
 
 ## Ràng buộc
-- 100% số test có $0 \le N \le 10^{18}$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^{18}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

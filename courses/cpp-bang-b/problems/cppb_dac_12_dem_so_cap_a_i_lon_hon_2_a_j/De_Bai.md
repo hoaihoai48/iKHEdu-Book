@@ -1,16 +1,17 @@
 # Đếm Số Cặp A_i > 2 * A_j (Significant Inversions)
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho mảng số nguyên $A$ gồm $N$ phần tử. Hãy đếm số cặp chỉ số $(i, j)$ thỏa mãn $1 \le i < j \le N$ và $A_i > 2 \times A_j$ bằng biến thể Merge Sort Chia Để Trị trong $\mathcal{O}(N \log N)$.
+Trong phân tích sai lệch dữ liệu tài chính quy mô lớn, một nghịch thế có ý nghĩa thống kê (Significant Inversion) là cặp chỉ số i < j thỏa mãn A[i] > 2 * A[j]. Thuật toán Merge Sort nâng cao cho phép đếm số lượng cặp này trong O(N log N).
+
+## Nhiệm vụ
+Cho mảng N số nguyên. Hãy đếm số cặp chỉ số (i, j) với 1 <= i < j <= N thỏa mãn A[i] > 2 * A[j].
 
 ## Input
 - Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
-- Dòng 2: $N$ số nguyên $A_1, \dots, A_N$ ($|A_i| \le 10^9$).
+- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$).
 
 ## Output
-- In ra số lượng cặp thỏa mãn điều kiện.
+- In ra số lượng cặp nghịch thế có ý nghĩa.
 
 ## Sample 1
 ### Input
@@ -23,8 +24,8 @@ Cho mảng số nguyên $A$ gồm $N$ phần tử. Hãy đếm số cặp chỉ 
 2
 ```
 ### Giải thích
-Có 2 cặp thỏa mãn: (3, 1) tại vị trí (2, 5) và (3, 1) tại vị trí (4, 5).
+Các cặp thỏa mãn là: (3, 1) tại vị trí (2, 5) vì 3 > 2*1; và (3, 1) tại vị trí (4, 5) vì 3 > 2*1. Tổng cộng có 2 cặp.
 
 ## Ràng buộc
-- 100% số test có $N \le 10^5, |A_i| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

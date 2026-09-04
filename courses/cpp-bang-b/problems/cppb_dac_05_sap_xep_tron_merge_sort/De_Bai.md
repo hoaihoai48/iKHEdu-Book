@@ -1,30 +1,31 @@
 # Thuật Toán Sắp Xếp Trộn (Merge Sort)
 
-**Phân loại bài toán:** `Core Foundation`
-
 ## Bối cảnh
-Cho mảng số nguyên $A$ gồm $N$ phần tử. Hãy tự cài đặt hoàn chỉnh thuật toán Sắp Xếp Trộn (Merge Sort) theo mô hình Chia Để Trị để sắp xếp mảng $A$ theo thứ tự tăng dần.
+Thuật toán sắp xếp trộn Merge Sort do John von Neumann phát minh năm 1945 là biểu tượng kinh điển của phương pháp chia để trị, đảm bảo độ phức tạp thời gian O(N log N) trong mọi trường hợp (kể cả trường hợp xấu nhất) và là thuật toán sắp xếp ổn định (Stable Sort).
+
+## Nhiệm vụ
+Cho mảng N số nguyên. Hãy tự cài đặt hoàn chỉnh thuật toán Merge Sort chia để trị để sắp xếp mảng theo thứ tự tăng dần.
 
 ## Input
 - Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
-- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($|A_i| \le 10^9$).
+- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$).
 
 ## Output
-- In ra $N$ phần tử của mảng sau khi sắp xếp tăng dần, cách nhau bởi dấu cách.
+- In ra dãy số sau khi sắp xếp tăng dần.
 
 ## Sample 1
 ### Input
 ```text
-7
-38 27 43 3 9 82 10
+5
+4 2 1 5 3
 ```
 ### Output
 ```text
-3 9 10 27 38 43 82
+1 2 3 4 5
 ```
 ### Giải thích
-Mảng sau khi sắp xếp tăng dần: 3 9 10 27 38 43 82.
+Mảng sau khi sắp xếp tăng dần bằng Merge Sort là: 1 2 3 4 5.
 
 ## Ràng buộc
-- 100% số test có $1 \le N \le 10^5, |A_i| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

@@ -1,16 +1,16 @@
 # Sinh Xâu Nhị Phân Không Chứa Hai Số 1 Liền Kề
 
-**Phân loại bài toán:** `Advanced Challenge`
-
 ## Bối cảnh
-Cho số nguyên dương $N$. Hãy sinh tất cả các xâu nhị phân độ dài $N$ theo thứ tự từ điển sao cho không có 2 ký tự `'1'` nào đứng cạnh nhau bằng hàm đệ quy phân nhánh trạng thái.
+Trong kỹ thuật mã hóa kênh truyền chống can nhiễu từ trường (Run-length Limited RLL), một chuỗi bit nhị phân an toàn không được phép chứa hai bit 1 nằm kề nhau (tránh xung đột điện áp). Hãy sinh ra tất cả các xâu nhị phân độ dài N thỏa mãn điều kiện này theo thứ tự từ điển.
+
+## Nhiệm vụ
+Cho số nguyên dương N (1 <= N <= 20). Hãy sinh tất cả các xâu nhị phân độ dài N không chứa chuỗi '11' theo thứ tự từ điển.
 
 ## Input
 - Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 20$).
 
 ## Output
-- Dòng 1: Số lượng xâu thỏa mãn (bằng số Fibonacci $F_{N+2}$).
-- Các dòng tiếp theo: Mỗi dòng in ra một xâu nhị phân thỏa mãn.
+- In ra các xâu nhị phân thỏa mãn, mỗi xâu trên một dòng.
 
 ## Sample 1
 ### Input
@@ -19,7 +19,6 @@ Cho số nguyên dương $N$. Hãy sinh tất cả các xâu nhị phân độ d
 ```
 ### Output
 ```text
-5
 000
 001
 010
@@ -27,8 +26,8 @@ Cho số nguyên dương $N$. Hãy sinh tất cả các xâu nhị phân độ d
 101
 ```
 ### Giải thích
-Với N = 3, có 5 xâu hợp lệ: 000, 001, 010, 100, 101.
+Các xâu nhị phân độ dài 3 không có '11' gồm: 000, 001, 010, 100, 101. Tổng cộng có 5 xâu.
 
 ## Ràng buộc
-- 100% số test có $1 \le N \le 20$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 20$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

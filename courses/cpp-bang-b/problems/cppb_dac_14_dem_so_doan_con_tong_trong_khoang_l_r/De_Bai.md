@@ -1,13 +1,14 @@
 # Đếm Số Đoạn Con Tổng Trong Đoạn [L, R]
 
-**Phân loại bài toán:** `Advanced`
-
 ## Bối cảnh
-Cho mảng số nguyên $A$ gồm $N$ phần tử và hai số nguyên $Lower, Upper$. Hãy đếm số lượng đoạn con liên tiếp khác rỗng $A[i..j]$ ($1 \le i \le j \le N$) có tổng $\sum_{k=i}^j A_k$ nằm trong đoạn $[Lower, Upper]$ bằng Chia Để Trị trên mảng tiền tố (Prefix Sum Merge Count) trong $\mathcal{O}(N \log N)$.
+Bài toán đếm số lượng đoạn con liên tiếp có tổng nằm trong phạm vi [Lower, Upper] được chuyển hóa về bài toán đếm nghịch thế trên mảng tiền tố bằng phương pháp chia để trị trong O(N log N).
+
+## Nhiệm vụ
+Cho mảng N số nguyên và hai ngưỡng Lower, Upper. Hãy đếm số lượng đoạn con liên tiếp có tổng nằm trong đoạn [Lower, Upper].
 
 ## Input
-- Dòng 1: 3 số nguyên $N, Lower, Upper$ ($1 \le N \le 10^5, -10^{14} \le Lower \le Upper \le 10^{14}$).
-- Dòng 2: $N$ số nguyên $A_1, \dots, A_N$ ($|A_i| \le 10^9$).
+- Dòng 1: Chứa 3 số nguyên $N, Lower, Upper$ ($1 \le N \le 10^5, -10^{14} \le Lower \le Upper \le 10^{14}$).
+- Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$).
 
 ## Output
 - In ra số lượng đoạn con thỏa mãn.
@@ -16,15 +17,15 @@ Cho mảng số nguyên $A$ gồm $N$ phần tử và hai số nguyên $Lower, U
 ### Input
 ```text
 3 -2 2
-0 -3 1
+0 -3 -3
 ```
 ### Output
 ```text
-3
+1
 ```
 ### Giải thích
-Các đoạn con thỏa mãn: [0] (tổng 0), [1] (tổng 1), [0, -3, 1] (tổng -2).
+Đoạn con [0] ở vị trí 1 có tổng là 0 nằm trong khoảng [-2, 2]. Tổng cộng có 1 đoạn con thỏa mãn.
 
 ## Ràng buộc
-- 100% số test có $N \le 10^5, |A_i| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

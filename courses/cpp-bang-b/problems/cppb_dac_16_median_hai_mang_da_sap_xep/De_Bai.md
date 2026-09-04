@@ -1,32 +1,33 @@
 # Median Của Hai Mảng Đã Sắp Xếp
 
-**Phân loại bài toán:** `Challenge`
-
 ## Bối cảnh
-Cho 2 mảng số nguyên $A$ (gồm $N$ phần tử) và $B$ (gồm $M$ phần tử) đều đã được sắp xếp tăng dần. Hãy tìm phần tử trung vị (Median) của tập hợp hợp nhất $A \cup B$ trong thời gian tối ưu $\mathcal{O}(\log(\min(N, M)))$ bằng kỹ thuật Chia đôi không gian phân hoạch.
+Hợp nhất hai luồng dữ liệu thống kê đã có thứ tự để tìm giá trị trung vị trong thời gian tối ưu O(log(min(N, M))) là bài toán đỉnh cao về chia để trị kết hợp tìm kiếm nhị phân trên đường phân hoạch.
+
+## Nhiệm vụ
+Cho 2 mảng tăng dần A (kích thước N) và B (kích thước M). Hãy tìm giá trị trung vị của mảng hợp nhất với độ chính xác 1 chữ số thập phân trong thời gian O(log(min(N, M))).
 
 ## Input
-- Dòng 1: Hai số nguyên $N, M$ ($1 \le N, M \le 10^5$).
-- Dòng 2: $N$ số nguyên $A_1, \dots, A_N$ ($|A_i| \le 10^9$).
-- Dòng 3: $M$ số nguyên $B_1, \dots, B_M$ ($|B_j| \le 10^9$).
+- Dòng 1: 2 số nguyên $N$ và $M$ ($1 \le N, M \le 10^5$).
+- Dòng 2: $N$ số nguyên tăng dần của mảng $A$.
+- Dòng 3: $M$ số nguyên tăng dần của mảng $B$.
 
 ## Output
-- In ra giá trị trung vị (nếu tổng số phần tử $N + M$ chẵn, in phần tử thứ $(N+M)/2$ theo thứ tự 1-based làm tròn dưới).
+- In ra giá trị trung vị làm tròn 1 chữ số sau dấu phẩy.
 
 ## Sample 1
 ### Input
 ```text
-2 2
+2 1
 1 3
-2 4
+2
 ```
 ### Output
 ```text
-2
+2.0
 ```
 ### Giải thích
-Mảng gộp: [1, 2, 3, 4], phần tử thứ 4/2 = 2 là 2.
+Mảng hợp nhất: [1, 2, 3] có 3 phần tử, phần tử ở giữa là 2. Trung vị là 2.0.
 
 ## Ràng buộc
-- 100% số test có $N, M \le 10^5, |A_i|, |B_j| \le 10^9$.
-- Thời gian: 1.0s, Bộ nhớ: 256MB.
+- $100\%$ số test có $N, M \le 10^5$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

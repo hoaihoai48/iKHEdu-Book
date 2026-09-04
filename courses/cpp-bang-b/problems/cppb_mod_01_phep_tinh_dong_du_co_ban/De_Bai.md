@@ -1,27 +1,32 @@
 # Phép Tính Đồng Dư Cơ Bản (+, -, *)
 
-**Phân loại bài toán:** `Core Foundation` (Bắt buộc)
 ## Bối cảnh
-Cho 2 số nguyên $A, B$ và số nguyên dương $M = 10^9 + 7$. Hãy tính $(A + B) \pmod M$, $(A - B) \pmod M$ và $(A \times B) \pmod M$ sao cho kết quả luôn thuộc $[0, M - 1]$.
+Trong kỹ thuật mã hóa dữ liệu đối xứng, các phép toán cộng, trừ, nhân trên số nguyên lớn đòi hỏi phải luôn được thu hẹp về vành số nguyên hữu hạn Z_M với M = 10^9 + 7 để tránh hoàn toàn hiện tượng tràn số nguyên 64-bit và duy trì tính khép kín của thuật toán.
+
+## Nhiệm vụ
+Cho 2 số nguyên A, B và số nguyên dương M = 10^9 + 7. Hãy tính (A + B) mod M, (A - B) mod M và (A * B) mod M sao cho kết quả luôn thuộc [0, M - 1].
 
 ## Input
-- Một dòng duy nhất chứa 2 số nguyên $A, B$ ($0 \le A, B \le 10^{18}$).
+- Một dòng duy nhất chứa 2 số nguyên $A$ và $B$ ($0 \le A, B \le 10^{18}$).
 
 ## Output
-- In ra 3 số nguyên cách nhau bởi dấu cách lần lượt là $(A + B) \pmod M$, $(A - B) \pmod M$ và $(A \times B) \pmod M$.
+- In ra 3 số nguyên cách nhau bởi khoảng trắng lần lượt là tổng, hiệu và tích theo modulo $M = 10^9 + 7$.
 
 ## Sample 1
 ### Input
 ```text
-1000000008 3
+10 15
 ```
 ### Output
 ```text
-4 1000000005 3
+25 1000000002 150
 ```
 ### Giải thích
-1000000008 % M = 1. (1 + 3) % M = 4. (1 - 3 + M) % M = 1000000005. (1 * 3) % M = 3.
+Với M = 10^9 + 7:
+- Tổng: (10 + 15) mod M = 25.
+- Hiệu: (10 - 15) mod M = -5 mod M = 10^9 + 7 - 5 = 1000000002.
+- Tích: (10 * 15) mod M = 150.
 
 ## Ràng buộc
 - $100\%$ số test có $A, B \le 10^{18}$.
-- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.

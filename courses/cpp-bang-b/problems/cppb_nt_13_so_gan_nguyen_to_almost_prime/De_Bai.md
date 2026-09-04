@@ -1,13 +1,16 @@
 # Số Gần Nguyên Tố (Almost Prime)
 
 ## Bối cảnh
-Một số nguyên dương được gọi là 'gần nguyên tố' nếu nó có đúng 2 ước nguyên tố phân biệt. Cho số $N$, hãy đếm số lượng số gần nguyên tố $\le N$.
+Trong lý thuyết sàng lọc số học, một số nguyên dương được gọi là 'gần nguyên tố' (2-Almost Prime) nếu nó có đúng 2 ước số nguyên tố phân biệt (ví dụ 6 = 2 * 3, 18 = 2 * 3^2). Hãy đếm xem trong khoảng từ 1 đến N có bao nhiêu số gần nguyên tố.
+
+## Nhiệm vụ
+Cho số nguyên dương N. Hãy đếm số lượng số nguyên trong đoạn [1, N] có đúng 2 ước số nguyên tố phân biệt.
 
 ## Input
-- Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 10^7$).
+- Một dòng chứa số nguyên dương $N$ ($1 \le N \le 3000$).
 
 ## Output
-- In ra số lượng số gần nguyên tố $\le N$.
+- In ra số lượng số gần nguyên tố.
 
 ## Sample 1
 ### Input
@@ -19,7 +22,8 @@ Một số nguyên dương được gọi là 'gần nguyên tố' nếu nó có
 2
 ```
 ### Giải thích
-Các số gần nguyên tố <= 10 là {6 (2*3), 10 (2*5)} -> 2 số.
+Trong đoạn [1, 10], các số có đúng 2 ước nguyên tố phân biệt là: 6 (ước 2, 3) và 10 (ước 2, 5). Tổng cộng có 2 số.
 
 ## Ràng buộc
-- $100\%$ số test có $N \le 10^7$.\n- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
+- $100\%$ số test có $N \le 3000$.
+- Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}.
