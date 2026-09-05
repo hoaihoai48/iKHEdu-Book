@@ -41,10 +41,3 @@ Có 6 chữ số.
 
 Số 0 có đúng 1 chữ số.
 * **Lưu ý:** Chú ý xử lý trường hợp đặc biệt $N = 0$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

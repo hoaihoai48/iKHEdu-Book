@@ -1,4 +1,4 @@
-# ALGORITHM PATTERNS — PYTHON BẢNG A LEVEL 1
+# ALGORITHM PATTERNS — PYTHON LEVEL 1
 
 Các mẫu dưới đây là thẻ nhớ dùng xuyên suốt khóa học. Học sinh cần nhận ra mẫu, hiểu điều kiện dùng và tự thay đổi phần điều kiện hoặc phép cập nhật.
 

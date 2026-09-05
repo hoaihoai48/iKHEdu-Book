@@ -34,12 +34,3 @@ In ra số báo danh thắng cuộc.
 ### Giải thích
 
 Tổng chữ số của 12 là 3, của 99 là 18, của 45 là 9, của 100 là 1, của 38 là 11. Tổng lớn nhất là 18 của số 99.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 1000$, $A_i \le 9999$.
-
-* Subtask 2 (50% số điểm): $1000 < N \le 10^5$, $A_i \le 10^{18}$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

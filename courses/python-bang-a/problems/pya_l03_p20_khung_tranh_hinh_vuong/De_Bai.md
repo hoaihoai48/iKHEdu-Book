@@ -28,9 +28,3 @@ In ra 2 số nguyên cách nhau một khoảng trắng: Chu vi và Diện tích.
 ### Giải thích
 
 Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được tính bằng $4 \times 6 = 24$. Kết quả in ra là `24`.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

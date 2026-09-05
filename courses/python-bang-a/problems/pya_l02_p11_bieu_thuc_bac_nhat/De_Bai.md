@@ -24,7 +24,3 @@ In ra giá trị của biểu thức.
 ```
 ### Giải thích
 $3 \times 4 + 5 = 17$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

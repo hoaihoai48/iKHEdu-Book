@@ -28,8 +28,3 @@ In ra số lượng tế bào sau $n$ giờ ($2^n$).
 ### Giải thích
 
 Sau 4 giờ: $2^4 = 16$ tế bào.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

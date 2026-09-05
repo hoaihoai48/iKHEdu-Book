@@ -27,11 +27,3 @@ hELLO wORLD 123
 ### Giải thích
 
 Với dữ liệu đầu vào là `Hello World 123`, kết quả thu được tương ứng là `hELLO wORLD 123`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

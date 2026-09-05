@@ -146,7 +146,7 @@ $$\implies \text{Kết quả in ra màn hình sau vòng lặp: } \mathbf{10}$$
 >       tong += i
 >       print(tong)  # Bị thụt lề vào trong vòng lặp!
 >   ```
-> * **Hậu quả:** Thay vì in ra 1 dòng kết quả duy nhất ở cuối, chương trình sẽ in ra $N$ dòng kết quả trung gian sau mỗi vòng lặp $\implies$ Bị máy chấm chấm lỗi **Wrong Answer** ngay lập tức!
+> * **Hậu quả:** Thay vì in ra 1 dòng kết quả duy nhất ở cuối, chương trình sẽ in ra $N$ dòng kết quả trung gian sau mỗi vòng lặp $\implies$ Bị chương trình kiểm tra chấm lỗi **kết quả sai** ngay lập tức!
 > * **Quy tắc:** Lệnh in kết quả cuối cùng phải được **lùi ra ngoài ngang hàng với từ khóa `for`**.
 
 > ❌ **BẪY LỖI 2: KHỞI TẠO BIẾN TÍCH BẰNG 0**
@@ -158,7 +158,7 @@ $$\implies \text{Kết quả in ra màn hình sau vòng lặp: } \mathbf{10}$$
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ```python
 # Mẫu tính tổng các số chẵn trong đoạn [A, B]
@@ -362,10 +362,10 @@ print(p)
 - **D.** 120
 > *Giải thích:* $p = 1 \times 2 \times 3 \times 4 = 24$.
 
-#### Câu 20 (Quy tắc tối ưu trong thi đấu):
-Khi cần tính tổng $S = 1 + 2 + \dots + N$ với $N = 10^9$, cách nào sau đây chạy nhanh nhất và không bị quá thời gian (TLE)?
+#### Câu 20 (Quy tắc tối ưu trong thực tế):
+Khi cần tính tổng $S = 1 + 2 + \dots + N$ với $N = 10^9$, cách nào sau đây chạy nhanh nhất?
 - **A.** Dùng vòng lặp `for i in range(1, N + 1):`
 - **B.** **[Đáp án đúng]** Áp dụng công thức toán học $\mathcal{O}(1)$: `S = N * (N + 1) // 2`
 - **C.** Dùng vòng lặp `while`
 - **D.** Đệ quy
-> *Giải thích:* Vòng lặp $10^9$ bước sẽ chạy mất vài giây và bị TLE. Công thức toán $\mathcal{O}(1)$ tính ngay lập tức trong $0.0001\text{s}$.
+> *Giải thích:* Vòng lặp $10^9$ bước sẽ chạy mất vài giây. Công thức toán tính ngay lập tức.

@@ -23,7 +23,3 @@ In ra chiều dài hàng rào.
 ```
 ### Giải thích
 Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{m} \implies 70 - 3 = 67\text{m}$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

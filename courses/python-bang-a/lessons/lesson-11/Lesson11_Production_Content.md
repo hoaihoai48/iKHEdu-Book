@@ -62,7 +62,7 @@ print(a)       # In ra: [1, 99, 3]
 
 ---
 
-## 3. Nhập danh sách từ bàn phím — Cú pháp chuẩn thi đấu
+## 3. Nhập danh sách từ bàn phím — Cú pháp phổ biến
 
 ### 3.1. Nhập danh sách số nguyên trên một dòng
 
@@ -292,7 +292,7 @@ print(a)  # [1, 3, 4]
 
 ---
 
-## 9. Mẫu code chuẩn thi đấu
+## 9. Mẫu code thường gặp
 
 ### 9.1. Tìm giá trị lớn nhất trong danh sách (không dùng `max()`)
 
@@ -362,7 +362,7 @@ print(*a[::-1])
 - **D.** Đảo ngược danh sách
 - > *Giải thích:* `pop()` mặc định loại bỏ phần tử cuối cùng.
 
-#### Câu 6: Cú pháp nhập mảng số nguyên chuẩn thi đấu là:
+#### Câu 6: Cú pháp nhập mảng số nguyên phổ biến là:
 - **A.** `a = input()`
 - **B.** `a = int(input())`
 - **C.** **[Đáp án đúng]** `a = list(map(int, input().split()))`

@@ -31,8 +31,3 @@ DA TRUNG THUONG!
 ```
 ### Giải thích
 Sau khi nhập hai số 10 và 25, số thứ ba nhập vào là 7 nên vòng lặp dừng và in ra thông báo `DA TRUNG THUONG!`.
-
-## Ràng buộc
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

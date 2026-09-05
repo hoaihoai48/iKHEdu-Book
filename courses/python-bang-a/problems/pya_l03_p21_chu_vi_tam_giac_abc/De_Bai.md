@@ -28,10 +28,3 @@ In ra một số tự nhiên duy nhất là chu vi tam giác.
 ### Giải thích
 
 Chu vi: $3 + 4 + 5 = 12$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

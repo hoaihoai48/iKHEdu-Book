@@ -28,10 +28,3 @@ Dãy số sau khi xoay phải.
 ### Giải thích
 
 Hai phần tử cuối là 4, 5 được đưa lên đầu.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

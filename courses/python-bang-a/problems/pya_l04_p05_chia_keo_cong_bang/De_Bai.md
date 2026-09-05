@@ -41,10 +41,3 @@ NO
 ### Giải thích
 
 20 không chia hết cho 6 (dư 2).
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

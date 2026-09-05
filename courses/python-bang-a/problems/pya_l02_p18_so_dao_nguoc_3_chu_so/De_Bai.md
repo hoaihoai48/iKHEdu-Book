@@ -24,7 +24,3 @@ In ra số đảo ngược.
 ```
 ### Giải thích
 Tách trăm $= 4$, chục $= 7$, đơn vị $= 2$. Số đảo ngược là $2 \times 100 + 7 \times 10 + 4 = 274$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -34,8 +34,3 @@ Diện tích thực tế của bồn hoa.
 - Luống dọc: $3 \times 10 = 30$.
 - Phần giao nhau ở giữa: $3 \times 3 = 9$.
 - Diện tích bồn hoa: $30 + 30 - 9 = 51$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

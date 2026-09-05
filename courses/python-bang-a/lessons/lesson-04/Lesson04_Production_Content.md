@@ -2,7 +2,7 @@
 
 ## 1. Bản chất của cấu trúc rẽ nhánh trong khoa học máy tính
 
-Trong chương trình tuần tự, các dòng lệnh được máy tính nạp vào và thực thi từ trên xuống dưới một cách máy móc. Tuy nhiên, trong thế giới thực cũng như trong các bài toán thi đấu, máy tính cần có khả năng **ra quyết định**: *Nếu điều kiện này đúng thì thực hiện công việc A, nếu sai thì chuyển sang thực hiện công việc B*.
+Trong chương trình tuần tự, các dòng lệnh được máy tính nạp vào và thực thi từ trên xuống dưới một cách máy móc. Tuy nhiên, trong thế giới thực cũng như trong các bài toán thực tế, máy tính cần có khả năng **ra quyết định**: *Nếu điều kiện này đúng thì thực hiện công việc A, nếu sai thì chuyển sang thực hiện công việc B*.
 
 Cấu trúc cho phép máy tính thay đổi dòng chảy thực thi dựa trên điều kiện được gọi là **Cấu trúc rẽ nhánh**.
 
@@ -113,7 +113,7 @@ Khi điều kiện quyết định cần kết hợp nhiều yếu tố phức t
 
 ---
 
-## 6. Các bài toán thuật toán kinh điển trong phòng thi
+## 6. Các bài toán thuật toán kinh điển khi làm bài
 
 ### 6.1. Tìm số lớn nhất giữa 2 số
 ```python
@@ -197,7 +197,7 @@ $$\implies \text{Kết quả cuối cùng lưu trong biến } loai = \text{"KHA"
 > * Viết `if x > 0` $\implies$ Báo lỗi `SyntaxError: expected ':'`.
 
 > ❌ **BẪY LỖI 2: THỤT LỀ KHÔNG ĐỒNG ĐỀU (`IndentationError`)**
-> * Dòng trên thụt 4 dấu cách, dòng dưới thụt 2 dấu cách trong cùng một khối lệnh sẽ bị máy chấm dừng ngay lập tức: `IndentationError: unindent does not match any outer indentation level`.
+> * Dòng trên thụt 4 dấu cách, dòng dưới thụt 2 dấu cách trong cùng một khối lệnh sẽ bị chương trình kiểm tra dừng ngay lập tức: `IndentationError: unindent does not match any outer indentation level`.
 
 > ❌ **BẪY LỖI 3: DÙNG NHIỀU `if` ĐỘC LẬP THAY VÌ CHUỖI `elif`**
 > * Hãy xem đoạn code sai lầm sau:
@@ -212,7 +212,7 @@ $$\implies \text{Kết quả cuối cùng lưu trong biến } loai = \text{"KHA"
 
 ---
 
-## 9. Mẫu code chuẩn thi đấu
+## 9. Mẫu code thường gặp
 
 ```python
 # Mẫu kiểm tra số chẵn lẻ và số âm dương
@@ -460,7 +460,7 @@ Từ khóa `pass` trong khối lệnh `if` có tác dụng gì?
 - **D.** Đổi điều kiện thành `True`.
 > *Giải thích:* `pass` là câu lệnh rỗng, dùng khi cú pháp đòi hỏi có khối lệnh nhưng logic chưa cần làm gì.
 
-#### Câu 24 (Tư duy phòng thi lập trình):
+#### Câu 24 (Tư duy khi làm bài):
 Khi so sánh tìm số lớn nhất giữa 3 số `a, b, c`, cách viết nào tối ưu và ít bị lỗi nhánh nhất?
 - **A.** Liệt kê tất cả các cặp bằng nhiều câu lệnh `if a > b and a > c: ... elif b > a and b > c: ...`
 - **B.** **[Đáp án đúng]** Dùng kỹ thuật Lính canh: Khởi tạo `max_val = a`, sau đó lần lượt so sánh với `b` và `c`.

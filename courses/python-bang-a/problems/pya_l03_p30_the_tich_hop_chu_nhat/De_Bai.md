@@ -31,9 +31,3 @@ Thể tích của hình hộp chữ nhật (số nguyên).
 ### Giải thích
 
 - Thể tích hộp: $5 \times 3 \times 2 = 30$.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le d, r, c \le 1000$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

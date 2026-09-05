@@ -24,7 +24,3 @@ In ra giá trị số nguyên $T$.
 ```
 ### Giải thích
 $(5 + 3) \times (10 - 6) = 8 \times 4 = 32$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -25,7 +25,3 @@ Hai dòng lần lượt là thương nguyên và số kẹo dư.
 ```
 ### Giải thích
 Mỗi bạn được 6 kẹo, thừa lại 1 kẹo.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

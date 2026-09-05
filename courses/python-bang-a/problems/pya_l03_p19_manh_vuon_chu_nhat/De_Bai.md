@@ -27,8 +27,3 @@ In ra trên một dòng 2 số nguyên cách nhau một dấu cách lần lượ
 ### Giải thích
 
 Chu vi: $(10 + 6) \times 2 = 32$. Diện tích: $10 \times 6 = 60$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

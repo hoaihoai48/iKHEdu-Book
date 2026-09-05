@@ -30,8 +30,3 @@ Một số tự nhiên duy nhất là độ dài của thước tính theo đơn
 ### Giải thích
 
 $2\text{ cm} = 20\text{ mm}$. Tổng cộng là: $20 + 5 = 25\text{ mm}$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

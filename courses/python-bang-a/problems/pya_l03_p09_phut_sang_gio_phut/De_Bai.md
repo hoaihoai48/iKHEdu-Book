@@ -24,7 +24,3 @@ In ra định dạng `X gio Y phut`.
 ```
 ### Giải thích
 $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

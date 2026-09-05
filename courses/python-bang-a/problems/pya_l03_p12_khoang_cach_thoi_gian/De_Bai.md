@@ -23,7 +23,3 @@ In ra số phút chênh lệch.
 ```
 ### Giải thích
 Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

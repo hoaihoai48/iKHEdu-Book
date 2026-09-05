@@ -39,8 +39,3 @@ $3 + 3 = 6$, $3 - 3 = 0$, $3 \times 3 = 9$. Số lớn nhất là 9.
 ### Giải thích
 
 $1 + 1 = 2$, $1 - 1 = 0$, $1 \times 1 = 1$. Số lớn nhất là 2!
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -39,10 +39,3 @@ Với dữ liệu đầu vào là `12321`, kết quả thu được tương ứn
 ```text
 NO
 ```
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

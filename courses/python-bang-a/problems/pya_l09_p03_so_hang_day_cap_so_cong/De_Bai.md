@@ -28,10 +28,3 @@ Một số nguyên là số hạng thứ $N$.
 
 Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19.
 * **Công thức toán học:** $u_N = u_1 + (N - 1) \times d$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

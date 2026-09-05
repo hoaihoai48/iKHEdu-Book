@@ -1,13 +1,13 @@
-# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 6 CHƯƠNG
+# iKHEDU PYTHON — TỔNG HỢP NỘI DUNG 5 CHƯƠNG
 
-> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python Bảng A — Level 1.
+> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python — Level 1.
 > Nguồn canonical vẫn là các file trong `lessons/`; không chỉnh sửa trực tiếp file này.
 
 ## MỤC LỤC TỔNG QUAN
 
 ### Chương 1: TÍNH TOÁN CƠ BẢN
 - Bài 01: Lệnh xuất nhập, biến số và kiểu dữ liệu
-- Bài 02: Toán tử số học và biểu thức toán học
+- Bài 02: Toán tử và biểu thức
 - Bài 03: Phép chia nguyên, chia dư và lũy thừa
 ### Chương 2: CẤU TRÚC RẼ NHÁNH & CẤU TRÚC VÒNG LẶP
 - Bài 04: Cấu trúc rẽ nhánh và điều kiện logic
@@ -24,19 +24,16 @@
 ### Chương 5: XỬ LÝ CHUỖI KÝ TỰ
 - Bài 13: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự
 - Bài 14: Duyệt chuỗi, biến đổi ký tự và tách từ
-### Chương 6: LUYỆN THI
-- Bài 15: Chiến lược giải đề thi lập trình Python
-- Bài 16: Tổng ôn kiến thức và Đề thi thử
 
 ================================================================================
 # PHẦN I — CURRICULUM AUDIT VÀ ALGORITHM PATTERNS
 ================================================================================
 
-# CURRICULUM AUDIT — PYTHON BẢNG A LEVEL 1
+# CURRICULUM AUDIT — PYTHON LEVEL 1
 
 ## Quyết định phạm vi
 
-Khóa học giữ nguyên **6 chương / 16 bài**, tập trung vào Python 3 và tư duy giải bài cho Python Bảng A. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
+Khóa học giữ nguyên **5 chương / 14 bài**, tập trung vào Python 3 và tư duy giải bài cho Python. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
 
 Các nội dung như `def`, `return`, `dict`, `set`, tuple, module, file I/O, exception nâng cao và comprehension không phải chuẩn bắt buộc của Level 1. Có thể giới thiệu ở Level 2 hoặc phụ lục khi cần.
 
@@ -55,7 +52,7 @@ Các nội dung như `def`, `return`, `dict`, `set`, tuple, module, file I/O, ex
 | Bài | Prerequisite | Bắt buộc Knowledge | Algorithm Pattern | Practice Coverage | Exit Skill |
 |:---:|---|---|---|---|---|
 | 01 | Không | `print`, `input`, biến, kiểu dữ liệu | Input → process → output | Cơ bản đến luyện tập | Viết chương trình nhập, tính và in kết quả |
-| 02 | Bài 01 | Toán tử, `//`, `%`, `**` | Công thức trực tiếp, modulo | Cơ bản đến vận dụng | Chọn đúng phép toán cho bài toán |
+| 02 | Bài 01 | Toán tử số học, so sánh, logic, gán; biểu thức toán học; tháp ưu tiên | Công thức trực tiếp, modulo | Cơ bản đến vận dụng | Chọn đúng phép toán cho bài toán |
 | 03 | Bài 02 | Hình học, đổi đơn vị/thời gian, làm tròn | Tách đại lượng và ghép công thức | Cơ bản đến vận dụng | Mô hình hóa bài toán thực tế bằng công thức |
 | 04 | Bài 01–03 | So sánh, Boolean, `if/elif/else`, `and/or/not` | Decision + Classification + Boolean expression | Cơ bản đến thử thách | Viết rẽ nhánh nhiều hướng và điều kiện ghép đúng |
 | 05 | Bài 02 | `for`, `range` | Sum / accumulator | Cơ bản đến thử thách | Duyệt một khoảng và tích lũy kết quả |
@@ -68,8 +65,6 @@ Các nội dung như `def`, `return`, `dict`, `set`, tuple, module, file I/O, ex
 | 12 | Bài 11 | Thống kê, sắp xếp, trùng lặp | Statistics / ordering | Bắt buộc và thử thách | Tóm tắt và sắp xếp dữ liệu |
 | 13 | Bài 01 | Index, slice, chuỗi là sequence | Sequence access | Cơ bản đến vận dụng | Lấy và cắt đúng phần chuỗi |
 | 14 | Bài 13 | Duyệt, biến đổi ký tự, `split/join`, `ord/chr` | String traversal + Tokenize → transform → join | Cơ bản đến vận dụng | Duyệt và biến đổi chuỗi theo quy tắc |
-| 15 | Bài 01–14 | Đọc đề, test biên, chiến lược thi | Pattern selection | Cơ bản đến vận dụng | Chọn mô hình giải và tự kiểm thử |
-| 16 | Bài 01–15 | Đề contest giấu pattern, subtask, phân bổ thời gian | Pattern selection + vét điểm subtask | Đề thi thử (đang biên soạn) | Tự làm đề thi thử trong giới hạn thời gian |
 
 ## Mức độ bài tập
 
@@ -86,7 +81,7 @@ Các pattern chuẩn được đặt trong [`ALGORITHM_PATTERNS.md`](ALGORITHM_P
 
 Phạm vi kiến thức đủ để chốt Level 1. Giai đoạn tiếp theo là chuẩn hóa ví dụ, giảm claim không có nguồn, đánh dấu Core/Thử thách và kiểm tra từng bài theo ma trận trên; không mở rộng thêm chương.
 
-# ALGORITHM PATTERNS — PYTHON BẢNG A LEVEL 1
+# ALGORITHM PATTERNS — PYTHON LEVEL 1
 
 Các mẫu dưới đây là thẻ nhớ dùng xuyên suốt khóa học. Học sinh cần nhận ra mẫu, hiểu điều kiện dùng và tự thay đổi phần điều kiện hoặc phép cập nhật.
 
@@ -213,11 +208,11 @@ Trước khi chọn vòng lặp, luôn hỏi: $N$ lớn đến đâu và số l�
 
 ## 1. Bản chất chương trình máy tính & Luồng dữ liệu I/O
 
-Trong khoa học máy tính và lập trình thi đấu, một chương trình máy tính thực chất là một **chuỗi các chỉ thị có trật tự** điều khiển phần cứng thực thi để biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
+Trong khoa học máy tính và lập trình, một chương trình máy tính thực chất là một **chuỗi các chỉ thị có trật tự** điều khiển phần cứng thực thi để biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
 
 Mọi bài toán trong các kỳ thi lập trình đều vận hành nghiêm ngặt theo **luồng dữ liệu 3 bước khép kín (Đầu vào $\to$ Xử lý $\to$ Đầu ra)**:
 
-![Mô hình luồng xử lý I/O](assets/l01_io_pipeline.svg)
+![Mô hình luồng xử lý I/O](assets/l01_io_pipeline.svg?v=1788575106)
 
 1. **Đầu vào:** Nhận dữ liệu do đề bài cung cấp từ bàn phím (luồng dữ liệu chuẩn `stdin`) thông qua lệnh `input()`.
 2. **Xử lý:** Dữ liệu được nạp vào bộ nhớ RAM dưới dạng các **biến số**. Bộ vi xử lý (CPU) áp dụng các công thức tính toán, phép biến đổi dữ liệu hoặc thuật toán để tính ra kết quả.
@@ -264,7 +259,7 @@ Diem thi lap trinh cua Minh la: 10 diem.
 
 ### 2.3. Hai tham số điều khiển cao cấp: `sep` và `end`
 
-Lệnh `print()` cung cấp hai tham số tùy chỉnh cực kỳ quan trọng thường xuyên gặp trong lập trình thi đấu:
+Lệnh `print()` cung cấp hai tham số tùy chỉnh cực kỳ quan trọng thường xuyên gặp trong lập trình:
 
 | Tham Số | Giá Trị Mặc Định | Ý Nghĩa Kỹ Thuật | Ví Dụ Cài Đặt | Kết Quả Hiển Thị |
 |---|:---:|---|---|---|
@@ -292,7 +287,7 @@ Lệnh `print()` cung cấp hai tham số tùy chỉnh cực kỳ quan trọng t
 
 Biến số không phải là một con số cố định. Trong khoa học máy tính, **Biến số là tên định danh gán cho một ô nhớ trong bộ nhớ RAM** dùng để lưu trữ dữ liệu trong suốt quá trình chương trình vận hành.
 
-![Bản chất biến số trong RAM](assets/l01_variable_ram.svg)
+![Bản chất biến số trong RAM](assets/l01_variable_ram.svg?v=1788575106)
 
 * **Cú pháp khai báo và gán giá trị:**
   ```python
@@ -367,9 +362,9 @@ Máy tính cần biết dữ liệu thuộc loại nào để phân bổ dung l�
 
 Lệnh `input()` tạm dừng chương trình và chờ người dùng nhập một dòng văn bản từ bàn phím, kết thúc khi nhấn phím `Enter`.
 
-![Bí mật đổi kiểu dữ liệu](assets/l01_type_casting.svg)
+![Bí mật đổi kiểu dữ liệu](assets/l01_type_casting.svg?v=1788575106)
 
-> ❌ **TỬ HUYỆT PHÒNG THI KINH ĐIỂN CỦA HỌC SINH:**
+> ❌ **LỖI KINH ĐIỂN CỦA HỌC SINH:**
 > Nếu viết mã như sau:
 > ```python
 > a = input()  # Học sinh nhập số 5 từ bàn phím
@@ -446,14 +441,14 @@ tong = a + b
 
 ## 7. Tử huyệt và Các bẫy lỗi lập trình kinh điển
 
-> ❌ **BẪY LỖI 1: IN THỪA CÂU CHỮ TRONG LẬP TRÌNH THI ĐẤU**
+> ❌ **BẪY LỖI 1: IN THỪA CÂU CHỮ TRONG lập trình**
 > * **Đoạn code sai lầm:**
 >   ```python
 >   n = int(input("Moi ban nhap vao so n: "))
 >   print("Ket qua la:", n * 2)
 >   ```
-> * **Hậu quả trên máy chấm:** Máy chấm tự động (Themis/DKOJ) so sánh từng ký tự đầu ra. Việc in các thông báo như `"Moi ban nhap..."` hoặc `"Ket qua la: "` sẽ khiến kết quả bị sai lệch và nhận ngay kết quả **Wrong Answer (WA) - 0 điểm**.
-> * **Cách viết đúng chuẩn mực thi đấu:**
+> * **Hậu quả:** chương trình so sánh từng ký tự đầu ra. Việc in các thông báo như `"Moi ban nhap..."` hoặc `"Ket qua la: "` sẽ khiến kết quả bị sai lệch và nhận ngay 0 điểm.
+> * **Cách viết đúng phổ biến:**
 >   ```python
 >   n = int(input())
 >   print(n * 2)
@@ -469,7 +464,7 @@ tong = a + b
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ```python
 # Mẫu 1: Nhập 2 số trên 2 dòng riêng biệt và in tổng
@@ -632,8 +627,8 @@ print(chuoi * 3)
 - **D.** `9`
 > *Giải thích:* Trong Python, toán tử `*` giữa chuỗi và số nguyên dương sẽ nhân bản chuỗi đó nhiều lần liên tiếp.
 
-#### Câu 15 (Tư duy lập trình thi đấu):
-Khi làm bài thi lập trình, nếu đề bài yêu cầu in ra tổng của 2 số, cách viết nào sau đây là chuẩn mực nhất để nộp bài lên máy chấm DKOJ/Themis?
+#### Câu 15 (Tư duy lập trình):
+Khi đề bài yêu cầu in ra tổng của 2 số, cách viết nào sau đây là gọn gàng nhất?
 - **A.** `print("Tong 2 so la:", a + b)`
 - **B.** `print("Ket qua =", a + b)`
 - **C.** **[Đáp án đúng]** `print(a + b)`
@@ -670,8 +665,6 @@ Xin chao cac ban! Toi la Robot Python.
 ```
 ### Giải thích
 In chính xác câu chào ra màn hình theo đúng quy định.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -695,8 +688,6 @@ Van su nhu y
 ```
 ### Giải thích
 Sử dụng hai lệnh `print()` liên tiếp để in trên hai dòng riêng biệt.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -717,8 +708,6 @@ Sử dụng hai lệnh `print()` liên tiếp để in trên hai dòng riêng bi
 ```
 ### Giải thích
 Nhập vào số 2026 và in lại đúng số 2026.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -739,8 +728,6 @@ Nhập vào số 2026 và in lại đúng số 2026.
 ```
 ### Giải thích
 Các số từ 1 đến 5 được in cách nhau bằng dấu `-`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -761,8 +748,6 @@ Các số từ 1 đến 5 được in cách nhau bằng dấu `-`.
 ```
 ### Giải thích
 Gấp đôi của 75 là $75 \times 2 = 150$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -783,8 +768,6 @@ Lap trinh rat vui!
 ```
 ### Giải thích
 Lệnh thứ nhất in `Lap trinh ` có `end=" "`, lệnh thứ hai in `rat vui!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -806,8 +789,6 @@ Lệnh thứ nhất in `Lap trinh ` có `end=" "`, lệnh thứ hai in `rat vui!
 ```
 ### Giải thích
 Ban đầu $A = 10, B = 99$. Sau khi đổi chỗ, $A = 99$ và $B = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -830,8 +811,6 @@ Ban đầu $A = 10, B = 99$. Sau khi đổi chỗ, $A = 99$ và $B = 10$.
 ```
 ### Giải thích
 Tổng $15 + 25 = 40$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -853,8 +832,6 @@ Tổng $15 + 25 = 40$.
 ```
 ### Giải thích
 Vải còn lại là $100 - 35 = 65$ mét.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -876,8 +853,6 @@ Vải còn lại là $100 - 35 = 65$ mét.
 ```
 ### Giải thích
 Tổng số kẹo là $12 \times 8 = 96$ chiếc.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -899,8 +874,6 @@ Tổng số kẹo là $12 \times 8 = 96$ chiếc.
 ### Giải thích
 
 Giá trị đầu vào là $15$. Khi nhân đôi, ta có: $15 \times 2 = 30$. Do đó, kết quả in ra màn hình là `30`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -922,8 +895,6 @@ Giá trị đầu vào là $15$. Khi nhân đôi, ta có: $15 \times 2 = 30$. Do
 ### Giải thích
 
 Học sinh 8 tuổi, sau 5 năm nữa nhỏ: $8 + 5 = 13$ tuổi
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -946,8 +917,6 @@ Chuc mung sinh nhat Nam, ban tron 10 tuoi!
 ```
 ### Giải thích
 Ghép tên và tuổi vào đúng vị trí của câu chúc.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -970,8 +939,6 @@ Ghép tên và tuổi vào đúng vị trí của câu chúc.
 ### Giải thích
 
 Ban đầu $A=7, B=12$. Sau khi đổi: $A=12, B=7$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -993,8 +960,6 @@ Xin chao ban Nam!
 ### Giải thích
 
 Với tên nhập vào là `"Nam"`, chương trình ghép chuỗi `"Xin chao ban "` với `"Nam"` và thêm dấu chấm than `!` ở cuối, tạo thành dòng chữ `Xin chao ban Nam!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1017,8 +982,6 @@ Với tên nhập vào là `"Nam"`, chương trình ghép chuỗi `"Xin chao ban
 ### Giải thích
 
 Mua 5 chiếc bánh, mỗi chiếc 12 nghìn đồng: $12 \times 5 = 60$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1040,8 +1003,6 @@ Mua 5 chiếc bánh, mỗi chiếc 12 nghìn đồng: $12 \times 5 = 60$.
 ```
 ### Giải thích
 Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1062,8 +1023,6 @@ Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
 ```
 ### Giải thích
 Đọc bằng `map(int, input().split())` và in ra $45 + 55 = 100$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1087,8 +1046,6 @@ Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
 ### Giải thích
 
 $2\text{ cm} = 20\text{ mm}$. Tổng cộng là: $20 + 5 = 25\text{ mm}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1109,8 +1066,6 @@ $2\text{ cm} = 20\text{ mm}$. Tổng cộng là: $20 + 5 = 25\text{ mm}$.
 ```
 ### Giải thích
 Tận dụng lệnh `print(d, m, y, sep="/")`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1139,8 +1094,6 @@ Bác loay hoay mãi với cuốn sổ ghi chép. Hãy giúp bác trưởng ga l�
 
 Dòng 1 ghép chữ: `"25" + "30" = "2530"`.
 Dòng 2 cộng số: $25 + 30 = 55$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1161,8 +1114,6 @@ Anh hon em 5 tuoi.
 ```
 ### Giải thích
 Hiệu số tuổi $12 - 7 = 5$. In ra `Anh hon em 5 tuoi.`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1185,8 +1136,6 @@ Hiệu số tuổi $12 - 7 = 5$. In ra `Anh hon em 5 tuoi.`.
 ```
 ### Giải thích
 $8 + 5 = 13$, $8 - 5 = 3$, $8 \times 5 = 40$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1215,8 +1164,6 @@ $8 + 5 = 13$, $8 - 5 = 3$, $8 \times 5 = 40$.
 - Tuổi Bố: $10 + 30 = 40$.
 - Tuổi Ông: $40 + 25 = 65$.
 - Tổng cả 3 người: $10 + 40 + 65 = 115$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1250,273 +1197,535 @@ Cô hướng dẫn viên cần tính tiền để mua vé cho cả đoàn. Hãy 
 - Tiền thuyền: $6 \times 20 + 4 \times 10 = 120 + 40 = 160$.
 - Tiền cáp treo: $6 \times 50 + 4 \times 30 = 300 + 120 = 420$.
 - Tổng tiền: $160 + 420 = 580$ nghìn đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
 
 --------------------------------------------------------------------------------
-<!-- Bài 02: Toán tử số học và biểu thức toán học -->
+<!-- Bài 02: Toán tử và biểu thức -->
 --------------------------------------------------------------------------------
 
 ## Lý thuyết và Concept Quiz
 
-# Bài 02: Toán tử số học và biểu thức toán học
+# Bài 02: Toán tử và biểu thức
 
-## 1. Bản chất của tính toán số học trong khoa học máy tính
+## 1. Toán tử số học
 
-Mọi chương trình máy tính, từ chiếc máy tính bỏ túi đơn giản cho đến những hệ thống điều khiển tàu vũ trụ, đều khởi nguồn từ việc thực hiện các **phép tính số học**. Máy tính có thể thực hiện hàng tỷ phép tính mỗi giây với độ chính xác tuyệt đối, nhưng để máy tính cho ra kết quả đúng như mong muốn, người lập trình cần hiểu rõ:
-* Bản chất của các phép toán cơ bản: cộng, trừ, nhân, chia.
-* Sự khác biệt sống còn của **phép chia thực `/`** trong bộ nhớ máy tính.
-* Cơ chế phân rã và tính toán một **biểu thức toán học** theo **tháp thứ tự ưu tiên**.
-* Vai trò của **cặp dấu ngoặc tròn `()`** khi chuyển đổi các phân số đại số phức tạp sang dòng lệnh máy tính.
+Python cho chúng ta tới **7 phép tính số học** cơ bản. Làm quen với chúng là bước đầu tiên để viết được chương trình hay ho!
+
+### Bảng 7 toán tử số học
+
+| Ký hiệu | Tên gọi | Ví dụ | Kết quả | Ghi chú |
+|:---:|---|---|:---:|---|
+| **`+`** | Phép cộng | `5 + 3` | `8` | Cộng hai số |
+| **`-`** | Phép trừ | `10 - 4` | `6` | Trừ hai số |
+| **`*`** | Phép nhân | `6 * 7` | `42` | Nhân hai số |
+| **`/`** | Phép chia | `8 / 2` | `4.0` | **Luôn trả về số thực (`float`)** |
+| **`%`** | Phép chia lấy dư | `7 % 2` | `1` | Số dư còn lại sau khi chia |
+| **`//`** | Phép chia nguyên | `7 // 2` | `3` | Lấy phần nguyên, bỏ phần dư |
+| <code>**</code> | Phép lũy thừa | `2 ** 3` | `8` | 2 mũ 3 = 2 × 2 × 2 |
+
+### Một số chi tiết quan trọng
+
+**Phép chia `/` luôn trả về số thực (`float`)**
+Đây là bẫy lớn nhất mà mọi người mới học hay gặp. Dù 8 chia 2 hết đi nữa, Python vẫn trả về `4.0` (có số thập phân), chứ không phải `4`.
+
+```python
+print(8 / 2)    # Kết quả: 4.0 (float)
+print(10 / 5)   # Kết quả: 2.0 (float)
+print(7 / 2)    # Kết quả: 3.5 (float)
+```
+
+**Phép chia nguyên `//` lấy phần nguyên**
+Nếu muốn kết quả là số nguyên (không có số thập phân), dùng `//`:
+
+```python
+print(7 // 2)   # Kết quả: 3 (bỏ phần dư)
+print(10 // 3)  # Kết quả: 3
+```
+
+**Phép chia lấy dư `%` — "chia lấy dư"**
+Phép này cho ta phần dư còn lại sau khi chia. Ví dụ: 7 chia 2 được 3 phần dư 1, nên `7 % 2 = 1`.
+
+```python
+print(7 % 2)    # Kết quả: 1 (7 = 3×2 + 1)
+print(10 % 3)   # Kết quả: 1 (10 = 3×3 + 1)
+print(8 % 4)    # Kết quả: 0 (chia hết, không dư)
+```
+
+**Phép lũy thừa `**`**
+Đừng dùng dấu `^` nhé! `^` trong Python là phép XOR (một phép tính khác), không phải lũy thừa. Phép lũy thừa dùng hai dấu sao `**`.
+
+```python
+print(2 ** 3)   # Kết quả: 8 (2 × 2 × 2)
+print(5 ** 2)   # Kết quả: 25 (5 × 5)
+```
+
+### Mô phỏng: Phân tách số 257 thành từng chữ số
+
+Giả sử ta có số `257` và muốn tách từng chữ số (đơn vị, chục, trăm). Ta dùng phép chia lấy dư `%` và chia nguyên `//`:
+
+| Bước | Biến `n` | Phép tính | Kết quả | Ý nghĩa |
+|:---:|:---:|---|:---:|---|
+| Ban đầu | 257 | — | — | Số cần phân tách |
+| 1 | 257 | `don_vi = n % 10` | `don_vi = 7` | Lấy chữ số hàng đơn vị |
+| 2 | 257 | `n = n // 10` | `n = 25` | Bỏ chữ số đơn vị đi |
+| 3 | 25 | `chuc = n % 10` | `chuc = 5` | Lấy chữ số hàng chục |
+| 4 | 25 | `n = n // 10` | `n = 2` | Bỏ chữ số chục đi |
+| 5 | 2 | `tram = n % 10` | `tram = 2` | Lấy chữ số hàng trăm |
+
+Kết quả: số 257 có chữ số hàng trăm = 2, hàng chục = 5, hàng đơn vị = 7. Hay quá phải không?
 
 ---
 
-## 2. Bốn toán tử số học cơ bản
+## 2. Biểu thức và thứ tự ưu tiên
 
-Python cung cấp 4 toán tử tính toán cơ bản thao tác trên số nguyên (`int`) và số thực (`float`):
+### 2.1. Biểu thức là gì?
 
-| Ký hiệu | Tên phép toán | Cú pháp | Ví dụ cụ thể | Kết quả trả về | Kiểu dữ liệu kết quả |
-|:---:|---|---|:---:|:---:|:---:|
-| **`+`** | Phép cộng | `a + b` | `15 + 7` | `22` | `int` (hoặc `float`) |
-| **`-`** | Phép trừ | `a - b` | `20 - 6` | `14` | `int` (hoặc `float`) |
-| **`*`** | Phép nhân | `a * b` | `6 * 7` | `42` | `int` (hoặc `float`) |
-| **`/`** | Phép chia thực | `a / b` | `7 / 2` | `3.5` | **Luôn luôn là `float`** |
+**Biểu thức** là sự kết hợp giữa **toán hạng** (số, biến) và **toán tử** (dấu phép tính) để tạo ra một giá trị.
 
-> ⚠️ **TỬ HUYỆT BẮT BUỘC PHẢI NHỚ: PHÉP CHIA THỰC `/` LUÔN TRẢ VỀ SỐ THỰC (`float`)**
-> * Trong Python, kết quả của phép chia `/` **luôn luôn mang kiểu số thực (`float`)**, kể cả khi phép chia hoàn toàn chia hết không có dư!
-> * Ví dụ: `8 / 2` cho kết quả hiển thị là `4.0` (có dấu chấm thập phân, không phải số nguyên `4`).
-> * Nếu đề thi yêu cầu in ra một số nguyên, học sinh dùng `a / b` sẽ in ra `4.0` và bị máy chấm tự động đánh lỗi kết quả sai (**Wrong Answer**). Khi cần kết quả là số nguyên trong phép chia hết, ta phải dùng phép chia nguyên `a // b`.
+Ví dụ:
+- `5 + 3` → giá trị `8`
+- `a * 2 + 1` → giá trị tùy vào `a`
+- `(diem_thu + diem_tin) / 2` → điểm trung bình
 
----
+Máy tính sẽ tính toán biểu thức và trả về **một giá trị duy nhất**.
 
-## 3. Biểu thức toán học & Tháp thứ tự ưu tiên
+### 2.2. Tháp thứ tự ưu tiên
 
-### 3.1. Khái niệm biểu thức toán học
-Một **biểu thức toán học** là sự kết hợp có quy tắc giữa:
-* **Toán hạng:** Hằng số (`5`, `10`), biến số (`a`, `b`) hoặc kết quả của các hàm số.
-* **Toán tử:** Các dấu phép tính `+`, `-`, `*`, `/`.
+Khi có nhiều phép tính trong một dòng, máy tính không tính bừa từ trái sang phải. Máy tính tuân thủ **thứ tự ưu tiên** nghiêm ngặt:
 
-Biểu thức sau khi được CPU xử lý sẽ luôn tính ra một **giá trị duy nhất** để gán vào một biến hoặc in trực tiếp ra màn hình.
+| Ưu tiên | Toán tử | Mô tả |
+|:---:|---|---|
+| **Cao nhất** | `( )` | Ngoặc tròn — tính trước hết |
+| **Thứ 2** | `**` | Lũy thừa |
+| **Thứ 3** | `* / // %` | Nhân, chia, chia nguyên, lấy dư — tính từ trái sang phải |
+| **Thấp nhất** | `+ -` | Cộng, trừ — tính từ trái sang phải |
 
-### 3.2. Tháp thứ tự ưu tiên tính toán
+> **Mẹo nhớ:** Ngoặc tròn là vua! Khi không chắc chắn, cứ dùng ngoặc tròn cho rõ ràng.
 
-Khi trong một dòng lệnh xuất hiện nhiều phép tính đan xen, máy tính không tính bừa bãi từ trái sang phải mà tuân thủ nghiêm ngặt **tháp thứ tự ưu tiên từ trên xuống dưới**:
+### 2.3. Chuyển phân số toán học sang Python
 
-![Tháp thứ tự ưu tiên toán tử](assets/l02_operator_precedence.svg)
+Trong sách giáo khoa, phân số có gạch ngang ở giữa. Khi viết Python, mình phải dùng ngoặc tròn để máy tính hiểu đúng:
 
-1. **Cấp 1 (Ưu tiên tuyệt đối):** Cặp ngoặc tròn `( )`. Mọi biểu thức nằm bên trong ngoặc luôn được máy tính giải quyết trước tiên.
-2. **Cấp 2:** Phép Nhân `*` và Phép Chia `/`. Hai phép này có cùng bậc ưu tiên, được tính lần lượt từ **trái qua phải**.
-3. **Cấp 3 (Ưu tiên thấp nhất):** Phép Cộng `+` và Phép Trừ `-`. Tính lần lượt từ **trái qua phải**.
+| Biểu thức toán học | Cách viết SAI | Cách viết ĐÚNG |
+|:---:|:---:|:---:|
+| $\frac{a + b}{c}$ | `a + b / c` | `(a + b) / c` |
+| $\frac{a + b}{c + d}$ | `a + b / c + d` | `(a + b) / (c + d)` |
+| $\frac{a \times b}{c \times d}$ | `a * b / c * d` | `(a * b) / (c * d)` |
+| $2a + 3b$ | `2a + 3b` | `2 * a + 3 * b` |
 
-### 3.3. Kỹ thuật chuyển đổi biểu thức toán học sang mã Python
+### 2.4. Dry-run: Truy vết biểu thức phức tạp
 
-Trong sách giáo khoa toán học, biểu thức thường được viết dưới dạng phân số có gạch ngang nằm ở giữa. Khi lập trình, tất cả các thành phần phải được viết thẳng hàng trên một dòng ngang. 
+Xem máy tính xử lý biểu thức này như thế nào:
 
-Nếu không sử dụng cặp ngoặc tròn `()` để bao bọc, máy tính sẽ hiểu sai ý định của người lập trình:
-
-| Biểu thức toán học | Cách viết SAI ❌ | Vì sao sai? | Cách viết ĐÚNG chuẩn mực ✅ |
-|:---:|:---:|---|:---:|
-| $\frac{a + b}{c}$ | `a + b / c` | Máy tính sẽ chia `b / c` trước, rồi mới lấy `a` cộng vào. | `(a + b) / c` |
-| $\frac{a + b}{c + d}$ | `(a + b) / c + d` | Máy tính lấy tổng `(a + b)` chia cho `c` xong rồi mới cộng `d`. | `(a + b) / (c + d)` |
-| $\frac{a \times b}{c \times d}$ | `a * b / c * d` | Máy tính nhân `a * b`, chia `c`, rồi lại nhân kết quả đó với `d`. | `(a * b) / (c * d)` |
-| $2a + 3b$ | `2a + 3b` | Lỗi cú pháp! Python không hiểu phép nhân ngầm. | `2 * a + 3 * b` |
-
----
-
-## 4. Bảng mô phỏng từng bước tính biểu thức phức tạp
-
-Xét đoạn chương trình tính biểu thức:
 ```python
 a = 8
 b = 2
 c = 5
-ans = (a + 4) / (b + 1) + c * 3 - 6 / 2
+ket_qua = (a + 4) / (b + 1) + c * 3 - 6 / 2
 ```
 
-### Bảng phân rã từng bước thực thi của CPU theo tháp ưu tiên:
+| Bước | Phép tính ưu tiên | Biểu thức còn lại | Kết quả bước này |
+|:---:|---|---|:---:|
+| Gốc | `(8 + 4) / (2 + 1) + 5 * 3 - 6 / 2` | — | — |
+| 1 | Ngoặc `(8 + 4)` | `12 / (2 + 1) + 5 * 3 - 6 / 2` | 12 |
+| 2 | Ngoặc `(2 + 1)` | `12 / 3 + 5 * 3 - 6 / 2` | 3 |
+| 3 | Chia `12 / 3` | `4.0 + 5 * 3 - 6 / 2` | 4.0 |
+| 4 | Nhân `5 * 3` | `4.0 + 15 - 6 / 2` | 15 |
+| 5 | Chia `6 / 2` | `4.0 + 15 - 3.0` | 3.0 |
+| 6 | Cộng `4.0 + 15` | `19.0 - 3.0` | 19.0 |
+| 7 | Trừ `19.0 - 3.0` | `16.0` | 16.0 |
 
-| Bước | Phép tính được ưu tiên | Biểu thức sau khi tính | Giải thích lý do |
-|:---:|:---:|:---:|---|
-| **Gốc** | `(8 + 4) / (2 + 1) + 5 * 3 - 6 / 2` | | Nạp biểu thức ban đầu vào bộ xử lý CPU |
-| **1** | Ngoặc 1: `(8 + 4)` | `12 / (2 + 1) + 5 * 3 - 6 / 2` | Ngoặc tròn thứ nhất có độ ưu tiên cao nhất $\implies 12$ |
-| **2** | Ngoặc 2: `(2 + 1)` | `12 / 3 + 5 * 3 - 6 / 2` | Ngoặc tròn thứ hai được tính tiếp theo $\implies 3$ |
-| **3** | Chia: `12 / 3` | `4.0 + 5 * 3 - 6 / 2` | Phép chia thực hiện từ trái sang phải $\implies 4.0$ |
-| **4** | Nhân: `5 * 3` | `4.0 + 15 - 6 / 2` | Phép nhân tiếp theo $\implies 15$ |
-| **5** | Chia: `6 / 2` | `4.0 + 15 - 3.0` | Phép chia cuối cùng $\implies 3.0$ |
-| **6** | Cộng: `4.0 + 15` | `19.0 - 3.0` | Phép cộng từ trái sang phải $\implies 19.0$ |
-| **7** | Trừ: `19.0 - 3.0` | `16.0` | Phép trừ cuối cùng $\implies 16.0$ |
-| **Kết thúc** | Gán kết quả | `ans = 16.0` | Lưu giá trị `16.0` vào biến `ans` trong RAM |
+Kết quả cuối: `ket_qua = 16.0`
 
----
+### 2.5. Biểu thức chuỗi — cộng và nhân chữ
 
-## 5. Tử huyệt và bẫy lỗi lập trình kinh điển
+Không chỉ số mới tính được! Chuỗi ký tự cũng có biểu thức riêng:
+* **Dấu `+` nối hai chuỗi lại với nhau** (gọi là ghép chuỗi).
+* **Dấu `*` lặp lại một chuỗi nhiều lần.**
 
-> ❌ **BẪY LỖI 1: LỖI CHIA CHO SỐ KHÔNG (`ZeroDivisionError`)**
-> * Trong toán học và lập trình, phép chia cho số 0 là không xác định.
-> * Nếu mẫu số bằng 0 (ví dụ `x / 0` hoặc `(a + b) / (c - d)` khi `c == d`), chương trình sẽ bị dừng khẩn cấp với thông báo lỗi: `ZeroDivisionError: division by zero`.
-> * **Cách phòng tránh:** Luôn kiểm tra điều kiện mẫu số phải khác 0 trước khi thực hiện phép chia.
-
-> ❌ **BẪY LỖI 2: QUÊN DẤU NHÂN `*` TRONG ĐẠI SỐ**
-> * Trong toán học, ta hay viết $2x$ hoặc $3(a + b)$.
-> * Trong Python, nếu viết `2x` hay `3(a + b)`, máy tính sẽ báo lỗi cú pháp: `SyntaxError: invalid syntax`.
-> * **Quy tắc:** Mọi phép nhân bắt buộc phải có dấu sao `*`: `2 * x` hoặc `3 * (a + b)`.
-
-> ❌ **BẪY LỖI 3: DÙNG DẤU PHẨY `,` THAY CHO DẤU CHẤM THẬP PHÂN `.`**
-> * Trong tiếng Việt, ta quen viết $3,5$. Nhưng trong Python, số thực bắt buộc dùng dấu chấm: `3.5`.
-> * Nếu viết `x = 3,5`, Python sẽ hiểu biến `x` là một bộ hai phần tử `(3, 5)`, dẫn đến kết quả sai hoàn toàn!
-
----
-
-## 6. Mẫu code chuẩn thi đấu
-
-### 6.1. Tính giá trị biểu thức phân số đại số
 ```python
-a, b, c = map(int, input().split())
-# Tính biểu thức: (a + b) / c
-ket_qua = (a + b) / c
-print(ket_qua)
+print("Ha" + "Noi")      # Kết quả: HaNoi (ghép dính lại)
+print("Ha" + " " + "Noi")  # Kết quả: Ha Noi (thêm dấu cách ở giữa)
+print("A" * 3)           # Kết quả: AAA (lặp chữ A 3 lần)
+print("Ho" * 2)          # Kết quả: HoHo
 ```
 
-### 6.2. Tính giá trị đa thức bậc hai
+> **Nhớ nhé:** `+` với số là phép cộng (`2 + 3 = 5`), nhưng `+` với chuỗi là phép ghép (`"2" + "3" = "23"`). Cùng một dấu mà ý nghĩa khác nhau tùy kiểu dữ liệu!
+
+---
+
+## 3. Toán tử gán
+
+Ngoài phép gán đơn giản `=`, Python còn cho phép **cộng rồi gán**, **trừ rồi gán**... rất tiện lợi!
+
+| Toán tử | Ví dụ | Tương đương | Giải thích |
+|:---:|---|---|---|
+| `=` | `a = 10` | — | Gán giá trị |
+| `+=` | `a += 5` | `a = a + 5` | Cộng 5 rồi gán lại |
+| `-=` | `a -= 3` | `a = a - 3` | Trừ 3 rồi gán lại |
+| `*=` | `a *= 2` | `a = a * 2` | Nhân 2 rồi gán lại |
+| `/=` | `a /= 4` | `a = a / 4` | Chia 4 rồi gán lại |
+| `%=` | `a %= 3` | `a = a % 3` | Chia lấy dư 3 rồi gán lại |
+| `//=` | `a //= 2` | `a = a // 2` | Chia nguyên 2 rồi gán lại |
+
+Ví dụ minh họa:
+
 ```python
-# Tính giá trị y = a*x^2 + b*x + c
-a, b, c, x = map(int, input().split())
-y = a * (x * x) + b * x + c
-print(y)
+a = 10
+print(a)     # 10
+
+a += 5       # a = 10 + 5 = 15
+print(a)     # 15
+
+a -= 3       # a = 15 - 3 = 12
+print(a)     # 12
+
+a *= 2       # a = 12 * 2 = 24
+print(a)     # 24
+```
+
+Những toán tử gán này rất hữu ích khi mình muốn **thay đổi giá trị biến dần dần** trong quá trình tính toán, ví dụ đếm điểm, cộng dồn tiền, ...
+
+---
+
+## 4. Toán tử so sánh
+
+Toán tử so sánh dùng để **so sánh hai giá trị** với nhau. Kết quả luôn là `True` (đúng) hoặc `False` (sai) — chính là kiểu `bool` mà chúng ta đã học ở bài 1!
+
+| Toán tử | Ý nghĩa | Ví dụ | Kết quả |
+|:---:|---|---|:---:|
+| `==` | Bằng nhau? | `5 == 5` | `True` |
+| `!=` | Khác nhau? | `5 != 3` | `True` |
+| `>` | Lớn hơn? | `7 > 3` | `True` |
+| `<` | Nhỏ hơn? | `4 < 2` | `False` |
+| `>=` | Lớn hơn hoặc bằng? | `5 >= 5` | `True` |
+| `<=` | Nhỏ hơn hoặc bằng? | `3 <= 8` | `True` |
+
+### Dry-run: So sánh trong thực tế
+
+Giả sử điểm của Minh là 8, điểm của Lan là 9:
+
+```python
+diem_minh = 8
+diem_lan = 9
+
+print(diem_minh == diem_lan)   # False (8 khác 9)
+print(diem_minh != diem_lan)   # True (8 khác 9)
+print(diem_minh > diem_lan)    # False (8 không lớn hơn 9)
+print(diem_minh < diem_lan)    # True (8 nhỏ hơn 9)
+print(diem_minh >= 8)          # True (8 bằng 8, nên >= là đúng)
+```
+
+> **Lưu ý:** Dấu `=` là phép gán, dấu `==` mới là phép so sánh "bằng nhau" nhé!
+
+---
+
+## 5. Toán tử logic
+
+Toán tử logic dùng để **kết hợp nhiều điều kiện** lại với nhau. Kết quả cũng chỉ là `True` hoặc `False`.
+
+| Toán tử | Ý nghĩa | Kết quả |
+|---|---|---|
+| `and` | **VÀ** — cả hai điều kiện đều phải đúng | True chỉ khi cả hai đều True |
+| `or` | **HOẶC** — chỉ cần một điều kiện đúng | True khi ít nhất một điều đúng |
+| `not` | **KHÔNG PHẢI** — đảo ngược kết quả | True biến thành False, và ngược lại |
+
+### Ví dụ đời thường
+
+**Điều kiện được chơi game:** Phải làm bài xong **VÀ** phải ăn cơm xong.
+
+```python
+lam_bai_xong = True
+an_com_xong = True
+
+cho_phep_choi = lam_bai_xong and an_com_xong
+print(cho_phep_choi)   # True — cả hai đều xong, được chơi!
+```
+
+Nếu chỉ ăn cơm xong mà chưa làm bài?
+
+```python
+lam_bai_xong = False
+an_com_xong = True
+
+cho_phep_choi = lam_bai_xong and an_com_xong
+print(cho_phep_choi)   # False — chưa làm bài, không được chơi!
+```
+
+**Điều kiện được ăn bánh:** Được mẹ mua cho **HOẶC** được ông bà cho.
+
+```python
+me_mua = False
+ong_ba_cho = True
+
+duoc_an_banh = me_mua or ong_ba_cho
+print(duoc_an_banh)    # True — dù mẹ không mua, ông bà cho thì vẫn được ăn!
+```
+
+**Phủ định:** `not` đảo ngược kết quả.
+
+```python
+da_hoc_xong = True
+print(not da_hoc_xong)   # False — "chưa học xong" là sai
+```
+
+> **Nhìn trước:** Sau này khi học về chuỗi ký tự và danh sách, các em sẽ gặp thêm hai toán tử rất hay là `in` (có nằm trong không?) và `is` (có phải cùng một thứ không?). Bài này mình làm quen với 4 nhóm trên trước đã nhé!
+
+---
+
+## 6. Lỗi hay gặp và cách tránh
+
+### Bẫy 1: Phép chia `/` luôn trả về số thực
+
+Đây là lỗi "kinh điển" nhất. Các em đang viết chương trình in điểm integer, nhưng dùng `/` nên bị in ra `8.0` thay vì `8`.
+
+```python
+# SAI — in ra 4.0 thay vì 4
+ket_qua = 8 / 2
+print(ket_qua)    # 4.0
+
+# ĐÚNG — dùng // để lấy phần nguyên
+ket_qua = 8 // 2
+print(ket_qua)    # 4
+```
+
+### Bẫy 2: Chia cho số không — ZeroDivisionError
+
+Phép chia cho 0 là **không hợp lệ**. Chương trình sẽ bị dừng ngay lập tức!
+
+```python
+print(10 / 0)   # ZeroDivisionError: division by zero
+```
+
+> **Cách tránh:** Luôn kiểm tra mẫu số khác 0 trước khi chia.
+
+### Bẫy 3: Quên dấu `*` trong phép nhân
+
+Trong toán học, mình hay viết `2x` hoặc `3(a+b)`. Nhưng Python **không hiểu** kiểu viết đó!
+
+```python
+ket_qua = 2 * x    # ĐÚNG — luôn viết dấu * rõ ràng
+ket_qua = 2x       # SAI — SyntaxError! Máy tính không hiểu
+ket_qua = 3 * (a + b)  # ĐÚNG
+```
+
+> **Quy tắc:** Phép nhân luôn phải có dấu `*`.
+
+### Bẫy 4: Dùng dấu phẩy `,` thay dấu chấm `.`
+
+Trong tiếng Việt, mình hay viết số thực bằng dấu phẩy: `3,5`. Nhưng Python bắt buộc dùng dấu chấm!
+
+```python
+# SAI — Python hiểu là tuple (3, 5)
+diem = 3,5
+
+# ĐÚNG
+diem = 3.5
+```
+
+### Bẫy 5: Dùng `^` thay `**`
+
+Dấu `^` trong Python là phép XOR (bitwise), **không phải** lũy thừa!
+
+```python
+# SAI — XOR, không phải 2 lũy thừa 3
+print(2 ^ 3)    # 1 (không phải 8!)
+
+# ĐÚNG — lũy thừa
+print(2 ** 3)   # 8
 ```
 
 ---
 
-## 7. Concept Quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 7. Ví dụ minh họa
+
+### 7.1. Tính diện tích hình chữ nhật
+
+```python
+dai = 7
+rong = 3
+dien_tich = dai * rong
+print("Dien tich hinh chu nhat la:", dien_tich)
+# Kết quả: Dien tich hinh chu nhat la: 21
+```
+
+### 7.2. Đổi phút sang giờ và phút
+
+```python
+tong_phut = 125
+gio = tong_phut // 60       # 125 // 60 = 2 (phần giờ)
+phut_con_lai = tong_phut % 60  # 125 % 60 = 5 (phần phút còn lại)
+print(tong_phut, "phut =", gio, "gio", phut_con_lai, "phut")
+# Kết quả: 125 phut = 2 gio 5 phut
+```
+
+### 7.3. Tính tiền thừa khi mua bánh
+
+```python
+tien_du = 50000
+gia_banh = 12000
+tien_tra = 3 * gia_banh     # Mua 3 bánh
+tien_thua = tien_du - tien_tra
+print("Tien mua:", tien_tra, "dong")
+print("Tien thua:", tien_thua, "dong")
+# Kết quả: Tien mua: 36000 dong
+#          Tien thua: 14000 dong
+```
+
+### 7.4. Tính phần dư để biết chẵn hay lẻ
+
+```python
+so = 17
+kiem_tra = so % 2
+print(kiem_tra)
+# Kết quả: 1 (dư 1 nghĩa là số lẻ, dư 0 nghĩa là số chẵn)
+```
+
+---
+
+## 8. Concept Quiz: 20 câu trắc nghiệm
 
 #### Câu 1: Phép chia `10 / 2` trong Python trả về kết quả nào?
-- **A.** `5` (kiểu `int`)
-- **B.** **[Đáp án đúng]** `5.0` (kiểu `float`)
+- **A.** `5` (kiểu int)
+- **B.** **[Đáp án đúng]** `5.0` (kiểu float)
 - **C.** `5.00`
 - **D.** Báo lỗi
-- > *Giải thích:* Phép chia `/` trong Python luôn luôn trả về kiểu số thực `float`.
+- > *Giải thích:* Phép chia `/` trong Python **luôn luôn** trả về kiểu số thực `float`, kể cả khi chia hết.
 
 #### Câu 2: Biểu thức `2 + 3 * 4` có kết quả là bao nhiêu?
 - **A.** 20
 - **B.** **[Đáp án đúng]** 14
 - **C.** 24
 - **D.** 10
-- > *Giải thích:* Phép nhân có độ ưu tiên cao hơn phép cộng, nên máy tính tính `3 * 4 = 12` trước, sau đó `2 + 12 = 14`.
+- > *Giải thích:* Phép nhân `*` được tính trước: `3 * 4 = 12`, rồi `2 + 12 = 14`.
 
-#### Câu 3: Muốn biểu diễn phân số đại số $\frac{a + b}{c + d}$ trong Python, cách viết nào sau đây là chuẩn mực nhất?
+#### Câu 3: Để viết phân số $\frac{a + b}{c + d}$ trong Python, cách nào đúng?
 - **A.** `a + b / c + d`
 - **B.** `(a + b) / c + d`
 - **C.** `a + b / (c + d)`
 - **D.** **[Đáp án đúng]** `(a + b) / (c + d)`
-- > *Giải thích:* Cần đặt cả tử số và mẫu số trong cặp ngoặc tròn để máy tính tính toán tổng trước khi chia.
+- > *Giải thích:* Cần ngoặc tròn bọc cả tử và mẫu để máy tính tính tổng trước khi chia.
 
-#### Câu 4: Khi thực hiện lệnh `print(10 / 0)`, hiện tượng gì sẽ xảy ra?
+#### Câu 4: Khi chạy `print(10 / 0)`, điều gì xảy ra?
 - **A.** In ra `0`
-- **B.** In ra giá trị vô cùng (`inf`)
-- **C.** **[Đáp án đúng]** Báo lỗi `ZeroDivisionError: division by zero`
-- **D.** Chương trình tự động bỏ qua
-- > *Giải thích:* Trong toán học và máy tính, phép chia cho 0 là không hợp lệ và gây lỗi ngắt chương trình.
+- **B.** In ra `inf`
+- **C.** **[Đáp án đúng]** Báo lỗi `ZeroDivisionError`
+- **D.** Chương trình tự bỏ qua
+- > *Giải thích:* Chia cho 0 là không hợp lệ, gây lỗi dừng chương trình.
 
-#### Câu 5: Trong Python, ký hiệu nào được dùng cho phép nhân?
-- **A.** `x`
-- **B.** `.`
-- **C.** `:`
-- **D.** **[Đáp án đúng]** `*`
-- > *Giải thích:* Dấu sao `*` là toán tử nhân chuẩn mực trong hầu hết các ngôn ngữ lập trình.
+#### Câu 5: Biểu thức `"Ho" * 2` trong Python cho kết quả là?
+- **A.** `"Ho2"`
+- **B.** `"2Ho"`
+- **C.** **[Đáp án đúng]** `"HoHo"`
+- **D.** Báo lỗi
+- > *Giải thích:* Dấu `*` giữa chuỗi và số nguyên lặp lại chuỗi đó: `"Ho"` lặp 2 lần thành `"HoHo"`.
 
-#### Câu 6: Biểu thức `(10 - 2) * (3 + 1)` cho kết quả bằng:
+#### Câu 6: Biểu thức `(10 - 2) * (3 + 1)` cho kết quả bằng?
 - **A.** 16
 - **B.** 22
 - **C.** **[Đáp án đúng]** 32
 - **D.** 28
-- > *Giải thích:* Các biểu thức trong ngoặc được tính trước: `8 * 4 = 32`.
+- > *Giải thích:* Tính ngoặc trước: `8 * 4 = 32`.
 
-#### Câu 7: Khi viết `x = 2(a + b)` trong Python, máy tính sẽ phản hồi như thế nào?
-- **A.** Tự động hiểu là nhân 2 với tổng
-- **B.** **[Đáp án đúng]** Báo lỗi cú pháp `SyntaxError: invalid syntax`
+#### Câu 7: Khi viết `x = 2(a + b)` trong Python, máy tính sẽ báo lỗi?
+- **A.** Tự động hiểu là nhân
+- **B.** **[Đáp án đúng]** Báo lỗi cú pháp `SyntaxError`
 - **C.** In ra kết quả bình thường
-- **D.** Gán giá trị 2 vào biến
-- > *Giải thích:* Python không hỗ trợ phép nhân ngầm, bắt buộc phải viết `2 * (a + b)`.
+- **D.** Gán 2 vào x
+- > *Giải thích:* Python không hỗ trợ phép nhân ngầm, phải viết `2 * (a + b)`.
 
-#### Câu 8: Biểu thức `12 / 4 / 3` được máy tính tính toán như thế nào?
-- **A.** Tính `4 / 3` trước rồi lấy `12` chia cho kết quả đó
-- **B.** **[Đáp án đúng]** Tính từ trái sang phải: `(12 / 4) / 3 = 3.0 / 3 = 1.0`
-- **C.** Báo lỗi vì có 2 dấu chia liên tiếp
-- **D.** Kết quả là 9.0
-- > *Giải thích:* Các phép chia có cùng bậc ưu tiên và được thực hiện kết hợp từ trái sang phải.
+#### Câu 8: `7 % 2` cho kết quả bằng bao nhiêu?
+- **A.** 3
+- **B.** **[Đáp án đúng]** 1
+- **C.** 3.5
+- **D.** 2
+- > *Giải thích:* 7 chia 2 được 3 phần dư 1, nên `7 % 2 = 1`.
 
-#### Câu 9: Trong biểu thức `10 - 4 + 2`, thứ tự tính toán đúng là:
-- **A.** Tính `4 + 2 = 6` trước rồi lấy `10 - 6 = 4`
-- **B.** **[Đáp án đúng]** Tính từ trái sang phải: `10 - 4 = 6`, sau đó `6 + 2 = 8`
-- **C.** Tính tùy ý vì cộng và trừ như nhau
-- **D.** Kết quả là 4
-- > *Giải thích:* Phép cộng và trừ có cùng độ ưu tiên, được tính lần lượt từ trái sang phải.
+#### Câu 9: `2 ** 4` cho kết quả bằng bao nhiêu?
+- **A.** 8
+- **B.** 6
+- **C.** **[Đáp án đúng]** 16
+- **D.** 24
+- > *Giải thích:* `2 ** 4 = 2 × 2 × 2 × 2 = 16`.
 
-#### Câu 10: Số thực `3.14` nếu viết nhầm thành `3,14` trong Python sẽ thành:
-- **A.** Số thực `3.14` bình thường
-- **B.** **[Đáp án đúng]** Một bộ dữ liệu (tuple) gồm 2 số `3` và `14`
-- **C.** Báo lỗi cú pháp
-- **D.** Số nguyên 3
-- > *Giải thích:* Dấu phẩy `,` trong Python dùng để phân tách các phần tử.
+#### Câu 10: Biểu thức `10 - 3 * 2` có kết quả là?
+- **A.** 14
+- **B.** **[Đáp án đúng]** 4
+- **C.** 7
+- **D.** 24
+- > *Giải thích:* Nhân trước: `3 * 2 = 6`, rồi `10 - 6 = 4`.
 
-#### Câu 11: Giá trị của biểu thức `5 * 2 ** 1` nếu chỉ xét các phép tính cơ bản nhân và cộng sẽ bằng:
-- **A.** **[Đáp án đúng]** 10
-- **B.** 20
-- **C.** 5
+#### Câu 11: `8 // 3` cho kết quả bằng bao nhiêu?
+- **A.** 2.666
+- **B.** **[Đáp án đúng]** 2
+- **C.** 3
 - **D.** 1
-- > *Giải thích:* $5 \times 2 = 10$.
+- > *Giải thích:* Phép chia nguyên `//` lấy phần nguyên, bỏ dư: `8 // 3 = 2`.
 
-#### Câu 12: Biểu thức `20 / (5 - 5)` sẽ dẫn đến lỗi gì?
+#### Câu 12: Biểu thức `20 / (5 - 5)` sẽ gây ra lỗi gì?
 - **A.** `ValueError`
 - **B.** `TypeError`
 - **C.** **[Đáp án đúng]** `ZeroDivisionError`
 - **D.** Không có lỗi
-- > *Giải thích:* `5 - 5 = 0`, phép chia biến thành `20 / 0` gây chia cho 0.
+- > *Giải thích:* `5 - 5 = 0`, rồi `20 / 0` gây lỗi chia cho 0.
 
-#### Câu 13: Để đổi dấu một số $x$ từ dương sang âm, ta viết:
-- **A.** `-x`
-- **B.** `0 - x`
-- **C.** `x * (-1)`
-- **D.** **[Đáp án đúng]** Cả A, B, C đều đúng
-- > *Giải thích:* Cả 3 cách đều cho ra số đối dấu của $x$.
-
-#### Câu 14: Biểu thức nào sau đây cho kết quả là số thực?
+#### Câu 13: Biểu thức nào sau đây cho kết quả là số thực (float)?
 - **A.** `5 + 3`
 - **B.** `10 - 2`
 - **C.** `4 * 2`
 - **D.** **[Đáp án đúng]** `8 / 4`
-- > *Giải thích:* Chỉ có phép chia `/` luôn luôn trả về kiểu `float`.
+- > *Giải thích:* Chỉ có phép chia `/` luôn trả về `float`.
 
-#### Câu 15: Kết quả của `(6 + 2) / 2` là:
+#### Câu 14: Kết quả `(6 + 2) / 2` là?
 - **A.** 7
 - **B.** **[Đáp án đúng]** 4.0
 - **C.** 4
 - **D.** 7.0
-- > *Giải thích:* `(6 + 2) = 8`, `8 / 2 = 4.0`.
+- > *Giải thích:* Tính ngoặc trước: `8 / 2 = 4.0` (float vì là phép chia `/`).
 
-#### Câu 16: Biểu thức `6 + 2 / 2` là:
+#### Câu 15: Biểu thức `6 + 2 / 2` cho kết quả là?
 - **A.** 4.0
 - **B.** **[Đáp án đúng]** 7.0
 - **C.** 7
 - **D.** 4
-- > *Giải thích:* Không có ngoặc nên `2 / 2 = 1.0` tính trước, `6 + 1.0 = 7.0`.
+- > *Giải thích:* Chia trước: `2 / 2 = 1.0`, rồi `6 + 1.0 = 7.0`.
 
-#### Câu 17: Cặp ngoặc nào được dùng để gom nhóm ưu tiên trong biểu thức toán học của Python?
-- **A.** Cặp ngoặc vuông `[ ]`
-- **B.** Cặp ngoặc nhọn `{ }`
-- **C.** **[Đáp án đúng]** Cặp ngoặc tròn `( )`
-- **D.** Cặp ngoặc nhọn `< >`
-- > *Giải thích:* Python chỉ sử dụng ngoặc tròn `()` cho biểu thức toán học.
+#### Câu 16: `a = 10`, sau đó `a += 7`. Giá trị mới của `a` là?
+- **A.** 7
+- **B.** 10
+- **C.** **[Đáp án đúng]** 17
+- **D.** 107
+- > *Giải thích:* `a += 7` nghĩa là `a = a + 7 = 10 + 7 = 17`.
 
-#### Câu 18: Kết quả của `(100 - 50) * (20 - 10) / 10` là:
-- **A.** 50
-- **B.** **[Đáp án đúng]** 50.0
-- **C.** 500
-- **D.** 500.0
-- > *Giải thích:* $50 \times 10 / 10 = 500 / 10 = 50.0$.
+#### Câu 17: Kết quả so sánh `5 == 5.0` trong Python là?
+- **A.** `False`
+- **B.** **[Đáp án đúng]** `True`
+- **C.** Báo lỗi
+- **D.** `5`
+- > *Giải thích:* Python so sánh giá trị, 5 và 5.0 là bằng nhau nên trả về `True`.
+
+#### Câu 18: Biểu thức `True and False` có kết quả là?
+- **A.** `True`
+- **B.** **[Đáp án đúng]** `False`
+- **C.** `None`
+- **D.** Báo lỗi
+- > *Giải thích:* `and` yêu cầu cả hai đều True mới cho True. Một trong hai False → kết quả False.
+
+#### Câu 19: `not True` cho kết quả là?
+- **A.** `True`
+- **B.** **[Đáp án đúng]** `False`
+- **C.** `0`
+- **D.** Báo lỗi
+- > *Giải thích:* `not` đảo ngược giá trị bool: `True` biến thành `False`.
+
+#### Câu 20: Cho `x = 5`. Biểu thức nào sau đây đúng để kiểm tra x có lớn hơn 3 không?
+- **A.** `x > 3 = True`
+- **B.** `x >> 3`
+- **C.** **[Đáp án đúng]** `x > 3`
+- **D.** `x => 3`
+- > *Giải thích:* Toán tử so sánh "lớn hơn" là `>`. Kết quả `x > 3` sẽ là `True`.
 
 ## Bài tập lesson
 
@@ -1548,8 +1757,6 @@ print(y)
 ```
 ### Giải thích
 $8^2 = 64$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1570,8 +1777,6 @@ $8^2 = 64$.
 ```
 ### Giải thích
 $5^3 = 125$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1592,8 +1797,6 @@ $5^3 = 125$.
 ```
 ### Giải thích
 $2026 \% 10 = 6$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1614,8 +1817,6 @@ $2026 \% 10 = 6$.
 ```
 ### Giải thích
 $1945 \% 100 = 45$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1636,8 +1837,6 @@ $1945 \% 100 = 45$.
 ```
 ### Giải thích
 $3 \times 4 + 5 = 17$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1658,8 +1857,6 @@ $3 \times 4 + 5 = 17$.
 ```
 ### Giải thích
 $3458 // 10 = 345$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1680,8 +1877,6 @@ $3458 // 10 = 345$.
 ```
 ### Giải thích
 15 bạn xếp được 7 bàn đôi đầy đủ, còn 1 bạn ngồi riêng 1 bàn $\implies$ Cần 8 bàn. Công thức: `(N + 1) // 2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1704,9 +1899,6 @@ $3458 // 10 = 345$.
 ### Giải thích
 
 $3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang có 81 khối gỗ.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a \le 10$, $0 \le n \le 10$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1727,8 +1919,6 @@ $3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang c
 ```
 ### Giải thích
 $50 // 6 = 8$ hộp, dư $50 \% 6 = 2$ bánh lẻ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1749,8 +1939,6 @@ $50 // 6 = 8$ hộp, dư $50 \% 6 = 2$ bánh lẻ.
 ```
 ### Giải thích
 Bỏ chữ số tận cùng: $378 // 10 = 37$. Lấy chữ số cuối của 37: $37 \% 10 = 7$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1772,9 +1960,6 @@ Bỏ chữ số tận cùng: $378 // 10 = 37$. Lấy chữ số cuối của 37:
 ### Giải thích
 
 $135$ phút $= 2$ giờ trọn vẹn ($2 \times 60 = 120$ phút) và còn dư $135 - 120 = 15$ phút.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $0 \le T \le 10000$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1796,8 +1981,6 @@ $135$ phút $= 2$ giờ trọn vẹn ($2 \times 60 = 120$ phút) và còn dư $1
 ### Giải thích
 
 Sau 4 giờ: $2^4 = 16$ tế bào.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1821,8 +2004,6 @@ Sau 4 giờ: $2^4 = 16$ tế bào.
 ### Giải thích
 
 $250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét thứ 50.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1846,8 +2027,6 @@ $250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét t
 
 Cạnh $1\text{ dm} = 10\text{ cm}$. Chu vi bảng hình vuông là $10 \times 4 = 40\text{ cm}$.
 Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 5 = 8$ bóng đèn.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1870,9 +2049,6 @@ Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 
 ### Giải thích
 
 $250 = 4 \times 60 + 10$. Sóc Nâu đã đi được 4 vòng trọn vẹn và đang ở phút thứ 10 của vòng thứ năm.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le N, C \le 10^9$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1895,8 +2071,6 @@ $250 = 4 \times 60 + 10$. Sóc Nâu đã đi được 4 vòng trọn vẹn và �
 ### Giải thích
 
 Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lượng còn dư không chia hết là 2.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1917,8 +2091,6 @@ Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lư�
 ```
 ### Giải thích
 Áp dụng định lý bất biến phép chia: $A = B \times Q + R = 6 \times 8 + 3 = 51$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1939,8 +2111,6 @@ Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lư�
 ```
 ### Giải thích
 $2 \times (3^2) - 4 \times 3 + 9 = 2 \times 9 - 12 + 9 = 15$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1963,8 +2133,6 @@ $2 \times (3^2) - 4 \times 3 + 9 = 2 \times 9 - 12 + 9 = 15$.
 ### Giải thích
 
 Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng cộng có 4 cây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -1988,9 +2156,6 @@ Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng c
 ### Giải thích
 
 Ưu tiên lũy thừa trước: $c^2 = 4^2 = 16$. Tiếp theo nhân: $b \times 16 = 3 \times 16 = 48$. Cuối cùng cộng: $2 + 48 = 50$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a, b, c \le 100$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2015,8 +2180,6 @@ Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng c
 ### Giải thích
 
 $1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2040,8 +2203,6 @@ $1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây.
 ### Giải thích
 
 Chữ số hàng đơn vị là 7, hàng chục là 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2063,8 +2224,6 @@ Chữ số hàng đơn vị là 7, hàng chục là 5.
 ### Giải thích
 
 Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2085,8 +2244,6 @@ Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94.
 ```
 ### Giải thích
 $(5 + 3) \times (10 - 6) = 8 \times 4 = 32$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2107,8 +2264,6 @@ $(5 + 3) \times (10 - 6) = 8 \times 4 = 32$.
 ```
 ### Giải thích
 $20 + 10 = 30$ giờ. $30 \% 24 = 6$ giờ sáng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2129,8 +2284,6 @@ $20 + 10 = 30$ giờ. $30 \% 24 = 6$ giờ sáng.
 ```
 ### Giải thích
 Thứ Hai là ngày 1. Sau 10 ngày nữa: $(1 + 10) \% 7 = 11 \% 7 = 4$ (tức Thứ Năm).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2153,8 +2306,6 @@ Thứ Hai là ngày 1. Sau 10 ngày nữa: $(1 + 10) \% 7 = 11 \% 7 = 4$ (tức 
 ### Giải thích
 
 $17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2176,8 +2327,6 @@ $17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh.
 ```
 ### Giải thích
 Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm một xe.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2198,8 +2347,6 @@ Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm
 ```
 ### Giải thích
 4 xe chở được 40 em, còn 1 em vẫn cần thêm 1 xe nữa $\implies$ Cần 5 xe. Công thức làm tròn lên chuẩn: `(N + K - 1) // K`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2220,8 +2367,6 @@ Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm
 ```
 ### Giải thích
 $17 // 5 = 3$ và $17 \% 5 = 2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2244,8 +2389,6 @@ $17 // 5 = 3$ và $17 \% 5 = 2$.
 ### Giải thích
 
 Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tương ứng số 3.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2267,8 +2410,6 @@ Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tươn
 ```
 ### Giải thích
 Mỗi bạn được 6 kẹo, thừa lại 1 kẹo.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2299,8 +2440,6 @@ Hàng 1: 1, 2, 3, 4
 Hàng 2: 5, 6, 7, 8
 Hàng 3: 9, 10, 11, 12.
 Ô số 11 nằm ở Hàng 3, Cột 3.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2321,8 +2460,6 @@ Hàng 3: 9, 10, 11, 12.
 ```
 ### Giải thích
 Chữ số hàng trăm $385 // 100 = 3$. Chữ số hàng chục $(385 // 10) \% 10 = 8$. Chữ số hàng đơn vị $385 \% 10 = 5$. Tổng $= 3 + 8 + 5 = 16$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2343,8 +2480,6 @@ Chữ số hàng trăm $385 // 100 = 3$. Chữ số hàng chục $(385 // 10) \%
 ```
 ### Giải thích
 $(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2365,8 +2500,6 @@ $(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
 ```
 ### Giải thích
 Tách trăm $= 4$, chục $= 7$, đơn vị $= 2$. Số đảo ngược là $2 \times 100 + 7 \times 10 + 4 = 274$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2379,246 +2512,394 @@ Tách trăm $= 4$, chục $= 7$, đơn vị $= 2$. Số đảo ngược là $2 \
 
 # Bài 03: Phép chia nguyên, chia dư và lũy thừa
 
-## 1. Bản chất của phép chia nguyên, chia dư và lũy thừa
+## 1. Phép chia lấy phần nguyên `//`
 
-Trong số học thi đấu, nếu như các phép cộng, trừ, nhân, chia cơ bản giúp ta xử lý các tính toán định lượng thông thường, thì bộ ba công cụ **chia lấy phần nguyên (`//`)**, **chia lấy phần dư (`%`)** và **phép lũy thừa (`**`)** chính là chiếc chìa khóa vạn năng để bóc tách cấu trúc số học:
-* Phép chia nguyên `//` giải quyết bài toán chia đồ vật, đóng thùng, tính số chuyến xe.
-* Phép chia dư `%` giải quyết bài toán kiểm tra chẵn lẻ, chia hết, chu kỳ đồng hồ và bóc tách từng chữ số.
-* Phép lũy thừa `**` tính tích của các thừa số bằng nhau và là tử huyệt số 1 khi học sinh gõ nhầm dấu mũ `^`.
+### 1.1. Hiểu đơn giản phép chia nguyên
+Ký hiệu `//` thực hiện phép chia giữa hai số rồi **bỏ hết phần lẻ thập phân, chỉ giữ phần nguyên**:
 
----
+* `17 // 5` nghĩa là: 17 chia 5 được 3,4 → bỏ phần `,4` đi → còn `3`.
+* Nói cách khác: `//` cho biết "chia được mấy phần trọn vẹn".
 
-## 2. Phép chia lấy phần nguyên `//`
+| Biểu thức | Kết quả | Kiểu dữ liệu | Giải thích chi tiết |
+|:---------:|:-------:|:------------:|---------------------|
+| `17 // 5` | `3` | `int` | $17$ chia $5$ được $3.4$, phần nguyên trọn vẹn là $3$ |
+| `20 // 4` | `5` | `int` | $20$ chia hết cho $4$, kết quả là số nguyên $5$ (không có `.0`) |
+| `7 // 2`  | `3` | `int` | $7$ chia $2$ được $3.5$, phần nguyên là $3$ |
+| `5 // 10` | `0` | `int` | Số bị chia nhỏ hơn số chia, không chia trọn vẹn được lần nào |
 
-### 2.1. Định nghĩa toán học
-* Ký hiệu `//` thực hiện phép chia và lấy **phần nguyên lớn nhất không vượt quá thương số**:
-  $$A // B = \lfloor \frac{A}{B} \rfloor$$
-* Ví dụ:
-  - `7 // 2 = 3` (Vì $7 = 2 \times 3 + 1$).
-  - `17 // 5 = 3` (17 chia 5 được 3 dư 2).
-  - `20 // 4 = 5` (Chia hết, kết quả là số nguyên `5`).
-
-### 2.2. Ý nghĩa thực tế trong các bài toán đố
-* **Bài toán chia kẹo:** Có $17$ chiếc kẹo chia đều cho $5$ bạn nhỏ. Hỏi mỗi bạn nhận được trọn vẹn bao nhiêu chiếc kẹo?
-  $$\text{so\_keo} = 17 // 5 = 3 \text{ (chiếc)}$$
-* **Bài toán xếp xe chở học sinh:** Có $100$ học sinh, mỗi xe chở được đúng $30$ em. Hỏi có bao nhiêu chuyến xe chở đủ kín chỗ?
-  $$\text{so\_chuyen\_day} = 100 // 30 = 3 \text{ (chuyến)}$$
+### 1.2. Cẩn thận khi chia nguyên với số âm
+Với số âm, phép `//` luôn **làm tròn xuống** (lấy số nguyên nhỏ hơn):
+* `(-7) // 2` cho kết quả là `-4` (vì $-7 / 2 = -3.5$, làm tròn xuống thành $-4$, không phải $-3$).
+* `(-10) // 3` cho kết quả là `-4` (vì $-10 / 3$ xấp xỉ $-3.33$, làm tròn xuống thành $-4$).
 
 ---
 
-## 3. Phép chia lấy phần dư `%`
+## 2. Phép chia lấy phần dư `%`
 
-### 3.1. Định nghĩa toán học
-* Ký hiệu `%` trả về **phần còn dư lại** sau khi đã chia hết thành các phần nguyên:
-  - `7 % 2 = 1` (Phần dư khi 7 chia 2).
-  - `17 % 5 = 2` (Phần dư khi 17 chia 5).
-  - `20 % 4 = 0` (Chia hết thì phần dư luôn bằng 0).
+### 2.1. Định nghĩa và ý nghĩa thực tế
+Toán tử `%` trả về **phần còn dư lại** sau khi đã chia hết thành các phần nguyên:
 
-### 3.2. Mối quan hệ vàng bất biến của phép chia
-Trong khoa học máy tính và số học, với hai số tự nhiên $A$ và $B$ ($B > 0$), luôn tồn tại một **đẳng thức bất biến**:
-$$\mathbf{A = (A // B) \times B + (A \% B)} \quad \text{với} \quad 0 \le (A \% B) < B$$
+```python
+print(17 % 5)  # Kết quả: 2 (vì 17 = 5 * 3 + 2)
+print(20 % 4)  # Kết quả: 0 (chia hết, không còn phần dư)
+print(7 % 2)   # Kết quả: 1 (7 chia 2 dư 1)
+print(5 % 10)  # Kết quả: 5 (5 chia 10 được 0 lần, còn nguyên 5)
+```
 
-* **Thử lại với ví dụ $A = 17, B = 5$:**
-  $$(17 // 5) \times 5 + (17 \% 5) = 3 \times 5 + 2 = 15 + 2 = 17 \quad (\text{Chính xác tuyệt đối!})$$
+### 2.2. Công thức luôn đúng của phép chia
+Với hai số tự nhiên $A$ và $B$ ($B > 0$), ta luôn có công thức:
 
-![Bản chất phép chia nguyên và chia dư](assets/l02_modulo_visual.svg)
+$$\mathbf{A = (A // B) \times B + (A \% B)}$$
 
----
+Nói bằng lời: **số bị chia = (thương nguyên × số chia) + số dư**. Phần dư luôn nhỏ hơn số chia.
 
-## 4. Bốn ứng dụng cốt lõi của Modulo trong lập trình thi đấu
+* **Thử với $A = 17, B = 5$:**
+  $$(17 // 5) \times 5 + (17 \% 5) = 3 \times 5 + 2 = 15 + 2 = 17 \quad (\text{Đúng y số ban đầu!})$$
 
-### 4.1. Kiểm tra tính chẵn lẻ của một số
-* Một số nguyên $N$ là **số chẵn** khi chia hết cho 2: `N % 2 == 0`.
-* Một số nguyên $N$ là **số lẻ** khi chia 2 dư 1: `N % 2 == 1`.
-
-### 4.2. Kiểm tra tính chia hết
-* Số $A$ chia hết cho số $B$ khi và chỉ khi phần dư bằng 0: `A % B == 0`.
-* Số $A$ không chia hết cho số $B$: `A % B != 0`.
-
-### 4.3. Lấy và cắt bỏ chữ số hàng đơn vị
-* **Lấy chữ số hàng đơn vị:** Phép chia cho 10 lấy dư luôn trả về chữ số cuối cùng:
-  $$\text{chu\_so\_cuoi} = N \% 10$$
-  *(Ví dụ: $2026 \% 10 = 6$)*
-* **Cắt bỏ chữ số hàng đơn vị:** Phép chia nguyên cho 10 sẽ vứt bỏ chữ số cuối cùng:
-  $$\text{phan\_con\_lai} = N // 10$$
-  *(Ví dụ: $2026 // 10 = 202$)*
-
-### 4.4. Bài toán chu kỳ thời gian và tuần hoàn (Đồng hồ)
-* Một ngày có 24 giờ. Nếu bây giờ là 10 giờ sáng, hỏi sau 50 giờ nữa là mấy giờ?
-* Thay vì phải cộng trừ thủ công, ta dùng phép chia dư cho chu kỳ 24:
-  $$\text{gio\_moi} = (10 + 50) \% 24 = 60 \% 24 = 12 \text{ (Tức 12 giờ trưa)}$$
-* Một tuần có 7 ngày (từ thứ Hai đến Chủ nhật). Bài toán tìm ngày trong tuần sau $K$ ngày nữa cũng áp dụng phép tính `% 7`.
+![Bản chất phép chia nguyên và chia dư](assets/l02_modulo_visual.svg?v=1788575106)
 
 ---
 
-## 5. Phép nâng lên lũy thừa `**`
+## 3. Các bài toán ứng dụng thực tế kinh điển
 
-Toán tử `**` dùng để tính lũy thừa $A^B$ ($B$ thừa số $A$ nhân với nhau):
+### 3.1. Nhận diện tính chẵn lẻ và tính chia hết
+* **Kiểm tra chẵn lẻ:** Một số nguyên $N$ là số chẵn khi chia cho 2 dư 0 (`N % 2 == 0`), và là số lẻ khi chia cho 2 dư 1 (`N % 2 != 0` hoặc `N % 2 == 1`).
+* **Kiểm tra tính chia hết:** Số $A$ chia hết cho $B$ khi và chỉ khi phần dư bằng 0: `A % B == 0`.
+* **Ví dụ thực tế:**
+  ```python
+  n = int(input())
+  print(n % 2)
+  # Nhập 8 in ra 0 (dư 0 nghĩa là số chẵn)
+  # Nhập 7 in ra 1 (dư 1 nghĩa là số lẻ)
+  ```
+
+### 3.2. Kỹ thuật bóc tách từng chữ số của một số nguyên
+Đây là kỹ thuật rất hay, dùng được trong nhiều bài toán (tính tổng các chữ số, tìm chữ số lớn nhất, kiểm tra số đọc xuôi ngược giống nhau):
+* **Lấy chữ số hàng đơn vị (chữ số cuối cùng):** `chu_so_cuoi = n % 10`
+* **Cắt bỏ chữ số hàng đơn vị:** `n = n // 10`
+
+![Mô hình bóc tách từng chữ số](assets/l03_digit_extraction.svg?v=1788575106)
+
+* **Code minh họa bóc tách số có 3 chữ số $N = 257$:**
+  ```python
+  n = 257
+  don_vi = n % 10       # 257 % 10 = 7
+  n = n // 10           # 257 // 10 = 25 (cắt bỏ số 7)
+  chuc = n % 10          # 25 % 10 = 5
+  n = n // 10           # 25 // 10 = 2 (cắt bỏ số 5)
+  tram = n % 10          # 2 % 10 = 2
+  print(f"Chữ số: Trăm={tram}, Chục={chuc}, Đơn vị={don_vi}")
+  ```
+
+### 3.3. Bài toán chu kỳ thời gian và tuần hoàn lịch
+* **Chu kỳ 24 giờ của đồng hồ:** Hiện tại là $H$ giờ, sau $X$ giờ nữa đồng hồ sẽ chỉ:
+  $$\text{gio\_moi} = (H + X) \% 24$$
+* **Chu kỳ 7 ngày trong tuần:** Quy ước thứ Hai là $0$, thứ Ba là $1$, ..., Chủ nhật là $6$. Nếu hôm nay là ngày $D$, sau $K$ ngày nữa sẽ là ngày:
+  $$\text{ngay\_moi} = (D + K) \% 7$$
+
+![Ứng dụng phép chia dư chu kỳ thời gian và lịch](assets/l03_clock_cycle.svg?v=1788575106)
+
+* **Ví dụ thực tế:**
+  ```python
+  # Hiện tại 9 giờ sáng, sau 50 giờ nữa là mấy giờ?
+  gio_hien_tai = 9
+  gio_sau_50h = (gio_hien_tai + 50) % 24
+  print(f"Sau 50 giờ là: {gio_sau_50h} giờ")  # In ra: 11 giờ
+
+  # Hôm nay là thứ Ba (mã 1), sau 100 ngày nữa là thứ mấy?
+  thu_hien_tai = 1
+  thu_sau_100_ngay = (thu_hien_tai + 100) % 7
+  print(f"Mã thứ sau 100 ngày: {thu_sau_100_ngay}")  # In ra: 3 (tức thứ Năm)
+  ```
+
+### 3.4. Quy đổi thời gian từ tổng số giây sang Giờ - Phút - Giây
+* $1\text{ giờ} = 3600\text{ giây}$.
+* $1\text{ phút} = 60\text{ giây}$.
+
+![Mô hình quy đổi thời gian](assets/l03_time_conversion.svg?v=1788575106)
+
+* **Các bước tính:**
+  ```python
+  T = 3725
+  gio = T // 3600              # 3725 // 3600 = 1 giờ
+  so_giay_con_lai = T % 3600   # 3725 % 3600 = 125 giây
+  phut = so_giay_con_lai // 60 # 125 // 60 = 2 phút
+  giay = so_giay_con_lai % 60  # 125 % 60 = 5 giây
+  print(f"{T} giây = {gio} giờ {phut} phút {giay} giây")
+  # Kết quả: 3725 giây = 1 giờ 2 phút 5 giây
+  ```
+
+### 3.5. Bài toán đóng gói, xếp hàng và chia đều
+* **Đóng thùng hàng:** Có $M$ sản phẩm, mỗi thùng chứa tối đa $K$ sản phẩm.
+  * Số thùng được đóng đầy: `so_thung_day = M // K`
+  * Số sản phẩm bị lẻ thừa ra: `so_san_pham_thua = M % K`
+  * Số thùng ít nhất để chở hết toàn bộ sản phẩm (kể cả thùng chưa đầy):
+    $$\text{tong\_so\_thung} = (M + K - 1) // K$$
+
+* **Ví dụ cụ thể — chia kẹo:** Cô giáo có 100 cái kẹo, chia đều cho 35 bạn trong lớp.
+  ```python
+  keo = 100
+  ban = 35
+  moi_ban = keo // ban   # 100 // 35 = 2 (mỗi bạn được 2 cái nguyên)
+  thua = keo % ban       # 100 % 35 = 30 (còn thừa 30 cái)
+  print("Moi ban duoc:", moi_ban, "cai")
+  print("So keo thua:", thua, "cai")
+  # Kết quả: Moi ban duoc: 2 cai
+  #          So keo thua: 30 cai
+  ```
+  Thử lại bằng công thức ở mục 2.2: $2 \times 35 + 30 = 70 + 30 = 100$ — đúng y số kẹo ban đầu!
+
+---
+
+## 4. Phép nâng lên lũy thừa `**`
+
+### 4.1. Lũy thừa là gì?
+Toán tử `**` tính lũy thừa $A^B$ (lấy $B$ thừa số $A$ nhân với nhau):
+
 ```python
 print(2 ** 3)   # 2 * 2 * 2 = 8
 print(10 ** 4)  # 10000
 print(5 ** 0)   # 1 (Mọi số khác 0 có số mũ 0 đều bằng 1)
+print(9 ** 0.5) # 3.0 (Lũy thừa 0.5 chính là căn bậc hai của 9)
 ```
 
-> ❌ **TỬ HUYỆT PHÒNG THI BẮT BUỘC PHẢI NHỚ: TOÁN TỬ `^` KHÔNG PHẢI LÀ LŨY THỪA!**
-> * Trong toán học, ta hay quen tay gõ `2 ^ 3` để biểu diễn $2^3$.
-> * Tuy nhiên trong Python, ký hiệu `^` là **phép toán logic trên bit**:
->   - Lệnh `print(2 ^ 3)` sẽ in ra số `1` (do $0010_2 \oplus 0011_2 = 0001_2$).
->   - Rất nhiều học sinh gõ `a ^ 2` để tính $a^2$ và nhận kết quả sai hoàn toàn mà không hiểu vì sao!
-> * **Quy tắc vàng:** Trong Python, tính lũy thừa **bắt buộc dùng hai dấu sao liền nhau: `**`**.
+### 4.2. Tính chất kết hợp từ phải sang trái
+Khác với các phép tính khác được tính lần lượt từ trái sang phải, phép lũy thừa trong Python có thứ tự ưu tiên **tính từ phải sang trái**:
+* Biểu thức `2 ** 3 ** 2` sẽ được máy tính tính `3 ** 2 = 9` trước, sau đó mới tính `2 ** 9 = 512`.
+* Nếu muốn tính $(2^3)^2$, ta bắt buộc phải dùng dấu ngoặc: `(2 ** 3) ** 2 = 8 ** 2 = 64`.
+
+### 4.3. Cẩn thận: Ký hiệu `^` không phải là lũy thừa!
+> ❌ **LỖI NHIỀU BẠN MẮC NHẤT:**
+> * Trong vở toán, mình hay viết $2^3$. Nhiều bạn quen tay gõ `2 ^ 3` vào máy.
+> * Nhưng trong Python, dấu `^` là một phép tính hoàn toàn khác, cho ra kết quả rất lạ!
+>   - Lệnh `print(2 ^ 3)` sẽ in ra số `1` (chứ không phải `8` đâu nhé!).
+>   - Nếu viết `s = a ^ 2` để tính diện tích hình vuông cạnh $a$, kết quả sẽ sai hoàn toàn.
+> * **Quy tắc nhớ:** Tính lũy thừa trong Python **phải dùng hai dấu sao liền nhau: `**`**.
 
 ---
 
-## 6. Bảng mô phỏng biến thiên ô nhớ
+## 5. Bảng mô phỏng biến thiên ô nhớ
 
-Xét đoạn chương trình xử lý một số nguyên:
+### Mô phỏng chi tiết: Bóc tách chữ số của số nguyên $N = 257$
+
 ```python
 n = 257
 don_vi = n % 10
 n = n // 10
 chuc = n % 10
-tram = n // 10
+n = n // 10
+tram = n % 10
 ```
 
-### Bảng theo dõi giá trị các biến trong bộ nhớ RAM:
-
-| Dòng lệnh | Thao tác máy tính thực hiện | `n` | `don_vi` | `chuc` | `tram` |
+| Dòng lệnh thực thi | Thao tác máy tính thực hiện | Giá trị biến `n` | Giá trị `don_vi` | Giá trị `chuc` | Giá trị `tram` |
 |---|---|:---:|:---:|:---:|:---:|
-| `n = 257` | Nạp số ban đầu vào ô nhớ `n` | **257** | Chưa có | Chưa có | Chưa có |
-| `don_vi = n % 10` | Lấy phần dư $257 \% 10 = 7$ | 257 | **7** | Chưa có | Chưa có |
-| `n = n // 10` | Cắt bỏ chữ số cuối: $257 // 10 = 25$ | **25** | 7 | Chưa có | Chưa có |
-| `chuc = n % 10` | Lấy phần dư $25 \% 10 = 5$ | 25 | 7 | **5** | Chưa có |
-| `tram = n // 10` | Cắt tiếp lấy hàng trăm: $25 // 10 = 2$ | 25 | 7 | 5 | **2** |
+| `n = 257` | Khởi tạo giá trị ban đầu vào ô nhớ `n` | **257** | — | — | — |
+| `don_vi = n % 10` | Lấy phần dư $257 \% 10$ | 257 | **7** | — | — |
+| `n = n // 10` | Cắt bỏ chữ số cuối: $257 // 10$ | **25** | 7 | — | — |
+| `chuc = n % 10` | Lấy phần dư $25 \% 10$ | 25 | 7 | **5** | — |
+| `n = n // 10` | Cắt bỏ chữ số cuối: $25 // 10$ | **2** | 7 | 5 | — |
+| `tram = n % 10` | Lấy phần dư $2 \% 10$ | 2 | 7 | 5 | **2** |
+
+> **Kết luận sau khi chạy vết:** Từ số $257$ ban đầu, qua các bước chia nguyên và chia dư, ta đã trích xuất thành công 3 biến độc lập: `tram = 2`, `chuc = 5`, `don_vi = 7`.
+
+### Mô phỏng chi tiết: Đổi $T = 3725$ giây ra Giờ - Phút - Giây
+
+```python
+T = 3725
+gio = T // 3600
+so_giay_con_lai = T % 3600
+phut = so_giay_con_lai // 60
+giay = so_giay_con_lai % 60
+```
+
+| Dòng lệnh thực thi | Thao tác máy tính thực hiện | Giá trị `gio` | Giá trị `so_giay_con_lai` | Giá trị `phut` | Giá trị `giay` |
+|---|:---:|:---:|:---:|:---:|:---:|
+| `T = 3725` | Khởi tạo tổng số giây | — | — | — | — |
+| `gio = T // 3600` | $3725 // 3600$ (mỗi 3600 giây được 1 giờ) | **1** | — | — | — |
+| `so_giay_con_lai = T % 3600` | $3725 \% 3600$ (giây còn thừa sau khi trừ giờ) | 1 | **125** | — | — |
+| `phut = so_giay_con_lai // 60` | $125 // 60$ (mỗi 60 giây được 1 phút) | 1 | 125 | **2** | — |
+| `giay = so_giay_con_lai % 60` | $125 \% 60$ (giây lẻ còn lại) | 1 | 125 | 2 | **5** |
+
+> **Kết luận:** $3725$ giây = **1 giờ 2 phút 5 giây**.
 
 ---
 
-## 7. Concept Quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 6. Lỗi hay gặp và cách tránh
+
+### Lỗi 1: Nhầm lẫn giữa chia thực `/` và chia nguyên `//`
+* Khi đề bài hỏi số lượng nguyên (mấy cái bánh, mấy chiếc xe), nếu dùng `/` sẽ in ra số có phần thập phân `.0` (ví dụ `4.0` thay vì `4`), nhìn rất sai!
+* Luôn dùng `//` khi đáp án phải là số nguyên.
+
+### Lỗi 2: Lỗi chia cho số không (`ZeroDivisionError`)
+* Cả hai phép tính `//` và `%` đều không chấp nhận số chia bằng $0$.
+* Lệnh `10 // 0` hoặc `10 % 0` sẽ lập tức làm chương trình gặp sự cố dừng khẩn cấp.
+* Luôn kiểm tra số chia phải khác 0 trước khi thực hiện phép tính.
+
+### Lỗi 3: Quên bọc ngoặc khi tính công thức chia lấy trần
+* Để tính số xe cần thiết chở $N$ người với mỗi xe chở $K$ người:
+  * **Cách viết đúng:** `(n + k - 1) // k`
+  * **Cách viết sai:** `n + k - 1 // k` (Do `//` có thứ tự ưu tiên cao hơn `+` và `-` nên máy tính sẽ lấy `1 // k` trước!).
+
+---
+
+## 7. Mẫu code áp dụng thực tế
+
+### Mẫu 1: Nhập vào tổng số giây, đổi ra Giờ - Phút - Giây
+```python
+t = int(input())
+gio = t // 3600
+phut = (t % 3600) // 60
+giay = t % 60
+print(f"{gio} gio {phut} phut {giay} giay")
+```
+
+### Mẫu 2: Tính tổng các chữ số của một số có 3 chữ số
+```python
+n = int(input())
+don_vi = n % 10
+chuc = (n // 10) % 10
+tram = n // 100
+tong = tram + chuc + don_vi
+print(tong)
+```
+
+### Mẫu 3: Tính số lượng xe chở học sinh đi dã ngoại
+```python
+# Mỗi xe chở tối đa 45 bạn, tính số xe ít nhất cần thuê
+n = int(input())
+so_xe = (n + 45 - 1) // 45
+print(so_xe)
+```
+
+---
+
+## 8. Concept Quiz: 18 câu hỏi trắc nghiệm kiểm tra khái niệm
 
 #### Câu 1: Phép tính `17 // 4` trong Python cho kết quả là:
 - **A.** 4.25
 - **B.** **[Đáp án đúng]** 4
 - **C.** 1
 - **D.** 4.0
-- > *Giải thích:* Phép chia nguyên `//` lấy thương nguyên, $17 = 4 \times 4 + 1$ nên thương nguyên là 4.
+- > *Giải thích:* Phép chia `//` chỉ lấy phần thương nguyên. $17 = 4 \times 4 + 1$ nên kết quả là số nguyên `4`.
 
 #### Câu 2: Phép tính `17 % 4` trong Python cho kết quả là:
 - **A.** 4
 - **B.** **[Đáp án đúng]** 1
 - **C.** 4.25
 - **D.** 0
-- > *Giải thích:* $17$ chia $4$ dư $1$.
+- > *Giải thích:* $17$ chia cho $4$ được $4$ phần trọn vẹn và còn dư $1$.
 
-#### Câu 3: Toán tử nào dùng để tính lũy thừa $A^B$ trong Python?
-- **A.** `^`
-- **B.** `*`
-- **C.** **[Đáp án đúng]** `**`
-- **D.** `exp`
-- > *Giải thích:* Trong Python, lũy thừa là hai dấu sao liền nhau `**`.
+#### Câu 3: Để tính lũy thừa $3^4$ trong Python, cú pháp nào sau đây là chính xác?
+- **A.** `3 ^ 4`
+- **B.** `3 * 4`
+- **C.** **[Đáp án đúng]** `3 ** 4`
+- **D.** `3 pow 4`
+- > *Giải thích:* Trong Python, phép lũy thừa bắt buộc dùng hai dấu sao liền nhau: `**`.
 
-#### Câu 4: Khi chạy lệnh `print(2 ^ 3)` trong Python, màn hình sẽ hiển thị:
+#### Câu 4: Khi chạy lệnh `print(2 ^ 3)`, kết quả in ra màn hình là:
 - **A.** 8
 - **B.** 6
 - **C.** **[Đáp án đúng]** 1
 - **D.** Báo lỗi cú pháp
-- > *Giải thích:* Dấu `^` là phép toán bitwise XOR, $2 \oplus 3 = 1$.
+- > *Giải thích:* Dấu `^` trong Python không phải lũy thừa mà là một phép tính khác, cho ra `1`. Muốn lũy thừa phải dùng `**`.
 
-#### Câu 5: Để lấy chữ số hàng đơn vị của số nguyên dương $N$, ta dùng công thức:
+#### Câu 5: Muốn trích xuất chữ số hàng đơn vị của số nguyên dương $N$, ta dùng biểu thức:
 - **A.** `N // 10`
 - **B.** **[Đáp án đúng]** `N % 10`
 - **C.** `N / 10`
 - **D.** `N * 10`
-- > *Giải thích:* Phần dư khi chia cho 10 chính là chữ số hàng đơn vị.
+- > *Giải thích:* Phần dư khi chia cho 10 luôn luôn là chữ số tận cùng bên phải của số đó.
 
-#### Câu 6: Để cắt bỏ chữ số hàng đơn vị của số $N$, ta dùng công thức:
+#### Câu 6: Muốn cắt bỏ chữ số hàng đơn vị của số nguyên $N$, ta dùng biểu thức:
 - **A.** `N % 10`
 - **B.** **[Đáp án đúng]** `N // 10`
 - **C.** `N - 10`
 - **D.** `N / 10`
-- > *Giải thích:* Chia nguyên cho 10 sẽ làm mất chữ số cuối cùng.
+- > *Giải thích:* Phép chia nguyên cho 10 làm mất đi chữ số cuối cùng (ví dụ $257 // 10 = 25$).
 
-#### Câu 7: Điều kiện nào kiểm tra số tự nhiên $N$ là số chẵn?
+#### Câu 7: Biểu thức điều kiện nào kiểm tra số nguyên $N$ là số chẵn?
 - **A.** `N % 2 == 1`
 - **B.** `N // 2 == 0`
 - **C.** **[Đáp án đúng]** `N % 2 == 0`
 - **D.** `N / 2 == 0`
-- > *Giải thích:* Số chẵn là số chia hết cho 2 (phần dư bằng 0).
+- > *Giải thích:* Số chẵn là số chia hết cho 2, nghĩa là phần dư khi chia cho 2 bằng 0.
 
-#### Câu 8: Hiện tại là 8 giờ sáng, sau 30 giờ nữa là mấy giờ?
+#### Câu 8: Hiện tại là 8 giờ sáng. Sau đúng 30 giờ nữa, đồng hồ sẽ chỉ mấy giờ?
 - **A.** 10 giờ sáng
 - **B.** **[Đáp án đúng]** 14 giờ (2 giờ chiều)
 - **C.** 38 giờ
 - **D.** 6 giờ chiều
-- > *Giải thích:* $(8 + 30) \% 24 = 38 \% 24 = 14$.
+- > *Giải thích:* Áp dụng chu kỳ 24 giờ: $(8 + 30) \% 24 = 38 \% 24 = 14$.
 
-#### Câu 9: Biểu thức `10 ** 0` có giá trị bằng:
+#### Câu 9: Biểu thức `10 ** 0` cho kết quả bằng bao nhiêu?
 - **A.** 0
 - **B.** **[Đáp án đúng]** 1
 - **C.** 10
 - **D.** Báo lỗi
-- > *Giải thích:* Bất kỳ số nào khác 0 nâng lên lũy thừa 0 đều bằng 1.
+- > *Giải thích:* Trong toán học và máy tính, bất kỳ số nào khác 0 nâng lên lũy thừa 0 đều bằng 1.
 
-#### Câu 10: Cho $A = 26, B = 6$. Kết quả của `(A // B) * B + (A % B)` là:
+#### Câu 10: Cho hai số $A = 26$ và $B = 6$. Biểu thức `(A // B) * B + (A % B)` cho kết quả là:
 - **A.** 24
 - **B.** **[Đáp án đúng]** 26
 - **C.** 2
 - **D.** 30
-- > *Giải thích:* Theo định lý bất biến phép chia, biểu thức luôn trả về chính số bị chia $A$.
+- > *Giải thích:* Theo định lý bất biến phép chia, biểu thức $(A // B) \times B + (A \% B)$ luôn luôn trả về chính xác giá trị ban đầu của số bị chia $A$.
 
-#### Câu 11: Phép tính `5 // 10` có kết quả là:
+#### Câu 11: Phép tính `5 // 10` trong Python trả về:
 - **A.** 0.5
 - **B.** **[Đáp án đúng]** 0
 - **C.** 5
 - **D.** 1
-- > *Giải thích:* $5 < 10$ nên thương nguyên là 0.
+- > *Giải thích:* Vì $5 < 10$ nên $5$ không chia trọn vẹn được cho $10$ lần nào, phần thương nguyên bằng 0.
 
-#### Câu 12: Phép tính `5 % 10` có kết quả là:
+#### Câu 12: Phép tính `5 % 10` trong Python trả về:
 - **A.** 0
 - **B.** **[Đáp án đúng]** 5
 - **C.** 0.5
 - **D.** 2
-- > *Giải thích:* $5$ chia $10$ được $0$ dư $5$.
+- > *Giải thích:* $5$ chia $10$ được thương bằng $0$ và còn dư nguyên vẹn $5$.
 
-#### Câu 13: Kết quả của `2 ** 3 ** 2` là:
+#### Câu 13: Biểu thức `2 ** 3 ** 2` có giá trị là bao nhiêu?
 - **A.** 64
 - **B.** **[Đáp án đúng]** 512
 - **C.** 12
 - **D.** 36
-- > *Giải thích:* Phép lũy thừa kết hợp từ phải qua trái: `3 ** 2 = 9`, sau đó `2 ** 9 = 512`.
+- > *Giải thích:* Phép lũy thừa có tính kết hợp từ phải qua trái: Máy tính tính `3 ** 2 = 9` trước, sau đó mới tính `2 ** 9 = 512`.
 
-#### Câu 14: Biểu thức `100 % 25` bằng:
+#### Câu 14: Biểu thức `100 % 25` có giá trị là:
 - **A.** 4
 - **B.** **[Đáp án đúng]** 0
 - **C.** 25
 - **D.** 1
-- > *Giải thích:* 100 chia hết cho 25 nên phần dư bằng 0.
+- > *Giải thích:* $100$ chia hết cho $25$ nên phần dư bằng 0.
 
-#### Câu 15: Một hộp kẹo có 20 chiếc kẹo chia cho 6 bạn. Số kẹo còn thừa lại là:
+#### Câu 15: Có 20 chiếc kẹo chia đều cho 6 bạn. Số kẹo còn thừa lại được tính bằng:
 - **A.** `20 // 6`
 - **B.** **[Đáp án đúng]** `20 % 6`
 - **C.** `20 / 6`
 - **D.** `20 - 6`
-- > *Giải thích:* Số kẹo thừa chính là phần dư của phép chia: $20 \% 6 = 2$.
+- > *Giải thích:* Số kẹo thừa chính là phần dư của phép chia: $20 \% 6 = 2$ chiếc.
 
-#### Câu 16: Phép tính `4 ** 0.5` cho kết quả là:
+#### Câu 16: Biểu thức `4 ** 0.5` trong Python trả về giá trị:
 - **A.** **[Đáp án đúng]** 2.0
 - **B.** 2
 - **C.** 1.0
 - **D.** 8.0
-- > *Giải thích:* Lũy thừa $0.5$ chính là căn bậc hai: $\sqrt{4} = 2.0$.
+- > *Giải thích:* Lũy thừa $0.5$ tương đương căn bậc hai: $\sqrt{4} = 2.0$ (kết quả mang kiểu `float`).
 
-#### Câu 17: Phép tính `(-7) // 2` trong Python làm tròn xuống nên cho kết quả là:
+#### Câu 17: Phép tính `(-7) // 2` trong Python trả về:
 - **A.** -3
 - **B.** **[Đáp án đúng]** -4
 - **C.** -3.5
 - **D.** 3
-- > *Giải thích:* Phép chia `//` trong Python là floor division (làm tròn xuống số nguyên nhỏ hơn), $-3.5$ làm tròn xuống là $-4$.
+- > *Giải thích:* Python làm tròn xuống số nguyên nhỏ hơn gần nhất trên trục số: $-3.5$ làm tròn xuống là $-4$.
 
-#### Câu 18: Cho số nguyên dương $N$. Biểu thức `(N // 10) % 10` dùng để lấy:
+#### Câu 18: Cho số nguyên dương $N$. Biểu thức `(N // 10) % 10` dùng để trích xuất:
 - **A.** Chữ số hàng đơn vị
 - **B.** **[Đáp án đúng]** Chữ số hàng chục
 - **C.** Chữ số hàng trăm
 - **D.** Tổng các chữ số
-- > *Giải thích:* Cắt bỏ hàng đơn vị (`N // 10`), sau đó lấy phần dư chia 10 sẽ được chữ số hàng chục.
+- > *Giải thích:* `N // 10` cắt bỏ chữ số hàng đơn vị, sau đó lấy `% 10` sẽ thu được chữ số hàng chục.
 
 ## Bài tập lesson
 
@@ -2652,9 +2933,6 @@ tram = n // 10
 
 - Mỗi đô la đổi được $25000$ đồng.
 - $4$ đô la đổi được: $4 \times 25000 = 100000$ đồng.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le D \le 10^6$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2675,8 +2953,6 @@ tram = n // 10
 ```
 ### Giải thích
 Chu vi $6 \times 4 = 24$, Diện tích $6 \times 6 = 36$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2697,8 +2973,6 @@ Chu vi $6 \times 4 = 24$, Diện tích $6 \times 6 = 36$.
 ```
 ### Giải thích
 $3\text{m} = 300\text{cm} = 3000\text{mm}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2720,8 +2994,6 @@ $3\text{m} = 300\text{cm} = 3000\text{mm}$.
 ### Giải thích
 
 Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được tính bằng $4 \times 6 = 24$. Kết quả in ra là `24`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2743,9 +3015,6 @@ Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được t
 ### Giải thích
 
 - Đổi sang độ F: $30 \times 9 : 5 + 32 = 270 : 5 + 32 = 54 + 32 = 86$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $-50 \le C \le 50$, $C$ chia hết cho $5$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2768,8 +3037,6 @@ Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được t
 ### Giải thích
 
 Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2793,9 +3060,6 @@ Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
 
 - Tích hai cạnh góc vuông: $6 \times 4 = 24$.
 - Diện tích tam giác: $24 : 2 = 12$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a, h \le 1000$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2819,8 +3083,6 @@ Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
 ### Giải thích
 
 Chu vi: $3 + 4 + 5 = 12$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2844,9 +3106,6 @@ Chu vi: $3 + 4 + 5 = 12$.
 ### Giải thích
 
 - Thể tích hộp: $5 \times 3 \times 2 = 30$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le d, r, c \le 1000$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2869,8 +3128,6 @@ Chu vi: $3 + 4 + 5 = 12$.
 ### Giải thích
 
 Chu vi: $(10 + 6) \times 2 = 32$. Diện tích: $10 \times 6 = 60$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2900,8 +3157,6 @@ Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần g
 - Luống dọc: $3 \times 10 = 30$.
 - Phần giao nhau ở giữa: $3 \times 3 = 9$.
 - Diện tích bồn hoa: $30 + 30 - 9 = 51$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2928,8 +3183,6 @@ Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần g
 
 Khoảng cách giữa 2 bạn: $70 - 10 = 60\text{ km}$.
 Thời gian gặp nhau: $60 : 15 = 4$ giờ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2954,8 +3207,6 @@ Thời gian gặp nhau: $60 : 15 = 4$ giờ.
 
 Diện tích hồ: $10 \times 10 = 100$. Diện tích đảo: $3 \times 4 = 12$.
 Mặt nước còn lại: $100 - 12 = 88$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2976,8 +3227,6 @@ Mặt nước còn lại: $100 - 12 = 88$.
 ```
 ### Giải thích
 Chu vi $= 5 + 7 + 8 = 20$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -2998,8 +3247,6 @@ Chu vi $= 5 + 7 + 8 = 20$.
 ```
 ### Giải thích
 $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3023,9 +3270,6 @@ $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
 
 - Vận tốc: $100 : 6 = 16.666\ldots$.
 - Làm tròn đến $2$ chữ số thập phân được $16.67$ km/h.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le D, T \le 10^4$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3050,8 +3294,6 @@ $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
 
 Diện tích sân: $20 \times 10 = 200$. Diện tích 1 viên gạch: $2 \times 2 = 4$.
 Số gạch cần: $200 : 4 = 50$ viên.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3079,8 +3321,6 @@ Bác đã chuẩn bị tiền nhưng chưa biết có đủ không. Hãy giúp b
 Chu vi cả vườn: $(12 + 8) \times 2 = 40\text{ m}$.
 Độ dài rào cần mua: $40 - 2 = 38\text{ m}$.
 Số tiền: $38 \times 15 = 570$ nghìn đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3101,8 +3341,6 @@ Số tiền: $38 \times 15 = 570$ nghìn đồng.
 ```
 ### Giải thích
 Chu vi $2 \times (10 + 6) = 32$, Diện tích $10 \times 6 = 60$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3123,8 +3361,6 @@ Chu vi $2 \times (10 + 6) = 32$, Diện tích $10 \times 6 = 60$.
 ```
 ### Giải thích
 $5\text{ tạ} = 500\text{kg}$, $3\text{ yến} = 30\text{kg}$. Tổng $= 500 + 30 = 530\text{kg}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3145,8 +3381,6 @@ $5\text{ tạ} = 500\text{kg}$, $3\text{ yến} = 30\text{kg}$. Tổng $= 500 + 
 ```
 ### Giải thích
 Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{m} \implies 70 - 3 = 67\text{m}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3167,8 +3401,6 @@ Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{
 ```
 ### Giải thích
 Vận tốc tiếp cận $= 2 + 3 = 5\text{m/s}$. Thời gian gặp nhau $= 150 / 5 = 30.0$ giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3189,8 +3421,6 @@ Vận tốc tiếp cận $= 2 + 3 = 5\text{m/s}$. Thời gian gặp nhau $= 150 
 ```
 ### Giải thích
 Diện tích $= (5 \times 7) / 2 = 17.5$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3211,8 +3441,6 @@ Diện tích $= (5 \times 7) / 2 = 17.5$.
 ```
 ### Giải thích
 $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3233,8 +3461,6 @@ $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
 ```
 ### Giải thích
 Diện tích tường $= 6 \times 3 = 18\text{m}^2$. Diện tích cửa sổ $= 2 \times 1 = 2\text{m}^2$. Diện tích cần sơn $= 18 - 2 = 16\text{m}^2$. Tổng tiền $= 16 \times 50000 = 800000$ đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3255,8 +3481,6 @@ Diện tích tường $= 6 \times 3 = 18\text{m}^2$. Diện tích cửa sổ $= 
 ```
 ### Giải thích
 Diện tích $= ((12 + 8) \times 5) / 2 = 50.0$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3277,8 +3501,6 @@ Diện tích $= ((12 + 8) \times 5) / 2 = 50.0$.
 ```
 ### Giải thích
 $100 / 3 \approx 33.3333... \implies 33.33$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3300,8 +3522,6 @@ $100 / 3 \approx 33.3333... \implies 33.33$.
 ### Giải thích
 
 3665 giây = 1 giờ (3600s) + 1 phút (60s) + 5 giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3322,8 +3542,6 @@ $100 / 3 \approx 33.3333... \implies 33.33$.
 ```
 ### Giải thích
 Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3344,8 +3562,6 @@ Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
 ```
 ### Giải thích
 Đổi $L = 600\text{cm}, W = 400\text{cm}$. Diện tích sàn $= 600 \times 400 = 240000\text{cm}^2$. Diện tích 1 viên gạch $= 50 \times 50 = 2500\text{cm}^2$. Số gạch $= 240000 // 2500 = 96$ viên.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3366,8 +3582,6 @@ Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
 ```
 ### Giải thích
 1 giờ 1 phút 5 giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3388,8 +3602,6 @@ Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
 ```
 ### Giải thích
 $(8.5 + 9.0 + 7.5) / 3 = 25.0 / 3 \approx 8.3333... \implies 8.33$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3410,8 +3622,6 @@ $(8.5 + 9.0 + 7.5) / 3 = 25.0 / 3 \approx 8.3333... \implies 8.33$.
 ```
 ### Giải thích
 Kích thước cả hồ và lối đi là $(10 + 2 \times 2) = 14\text{m}$ và $(8 + 2 \times 2) = 12\text{m}$. Diện tích toàn phần $= 14 \times 12 = 168\text{m}^2$. Diện tích hồ $= 10 \times 8 = 80\text{m}^2$. Diện tích lối đi $= 168 - 80 = 88\text{m}^2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3431,11 +3641,11 @@ Kích thước cả hồ và lối đi là $(10 + 2 \times 2) = 14\text{m}$ và 
 
 ## 1. Bản chất của cấu trúc rẽ nhánh trong khoa học máy tính
 
-Trong chương trình tuần tự, các dòng lệnh được máy tính nạp vào và thực thi từ trên xuống dưới một cách máy móc. Tuy nhiên, trong thế giới thực cũng như trong các bài toán thi đấu, máy tính cần có khả năng **ra quyết định**: *Nếu điều kiện này đúng thì thực hiện công việc A, nếu sai thì chuyển sang thực hiện công việc B*.
+Trong chương trình tuần tự, các dòng lệnh được máy tính nạp vào và thực thi từ trên xuống dưới một cách máy móc. Tuy nhiên, trong thế giới thực cũng như trong các bài toán thực tế, máy tính cần có khả năng **ra quyết định**: *Nếu điều kiện này đúng thì thực hiện công việc A, nếu sai thì chuyển sang thực hiện công việc B*.
 
 Cấu trúc cho phép máy tính thay đổi dòng chảy thực thi dựa trên điều kiện được gọi là **Cấu trúc rẽ nhánh**.
 
-![Sơ đồ luồng rẽ nhánh if-else](assets/l04_branching_visual.svg)
+![Sơ đồ luồng rẽ nhánh if-else](assets/l04_branching_visual.svg?v=1788575106)
 
 ---
 
@@ -3542,7 +3752,7 @@ Khi điều kiện quyết định cần kết hợp nhiều yếu tố phức t
 
 ---
 
-## 6. Các bài toán thuật toán kinh điển trong phòng thi
+## 6. Các bài toán thuật toán kinh điển khi làm bài
 
 ### 6.1. Tìm số lớn nhất giữa 2 số
 ```python
@@ -3626,7 +3836,7 @@ $$\implies \text{Kết quả cuối cùng lưu trong biến } loai = \text{"KHA"
 > * Viết `if x > 0` $\implies$ Báo lỗi `SyntaxError: expected ':'`.
 
 > ❌ **BẪY LỖI 2: THỤT LỀ KHÔNG ĐỒNG ĐỀU (`IndentationError`)**
-> * Dòng trên thụt 4 dấu cách, dòng dưới thụt 2 dấu cách trong cùng một khối lệnh sẽ bị máy chấm dừng ngay lập tức: `IndentationError: unindent does not match any outer indentation level`.
+> * Dòng trên thụt 4 dấu cách, dòng dưới thụt 2 dấu cách trong cùng một khối lệnh sẽ bị chương trình kiểm tra dừng ngay lập tức: `IndentationError: unindent does not match any outer indentation level`.
 
 > ❌ **BẪY LỖI 3: DÙNG NHIỀU `if` ĐỘC LẬP THAY VÌ CHUỖI `elif`**
 > * Hãy xem đoạn code sai lầm sau:
@@ -3641,7 +3851,7 @@ $$\implies \text{Kết quả cuối cùng lưu trong biến } loai = \text{"KHA"
 
 ---
 
-## 9. Mẫu code chuẩn thi đấu
+## 9. Mẫu code thường gặp
 
 ```python
 # Mẫu kiểm tra số chẵn lẻ và số âm dương
@@ -3889,7 +4099,7 @@ Từ khóa `pass` trong khối lệnh `if` có tác dụng gì?
 - **D.** Đổi điều kiện thành `True`.
 > *Giải thích:* `pass` là câu lệnh rỗng, dùng khi cú pháp đòi hỏi có khối lệnh nhưng logic chưa cần làm gì.
 
-#### Câu 24 (Tư duy phòng thi lập trình):
+#### Câu 24 (Tư duy khi làm bài):
 Khi so sánh tìm số lớn nhất giữa 3 số `a, b, c`, cách viết nào tối ưu và ít bị lỗi nhánh nhất?
 - **A.** Liệt kê tất cả các cặp bằng nhiều câu lệnh `if a > b and a > c: ... elif b > a and b > c: ...`
 - **B.** **[Đáp án đúng]** Dùng kỹ thuật Lính canh: Khởi tạo `max_val = a`, sau đó lần lượt so sánh với `b` và `c`.
@@ -3929,8 +4139,6 @@ Khi so sánh tìm số lớn nhất giữa 3 số `a, b, c`, cách viết nào t
 ### Giải thích
 
 Hai số đầu vào là $25$ và $42$. Số lớn hơn là $42$. Kết quả in ra: `42`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3952,8 +4160,6 @@ Hai số đầu vào là $25$ và $42$. Số lớn hơn là $42$. Kết quả in
 ### Giải thích
 
 Số đầu vào là $-15$. Giá trị tuyệt đối của $-15$ là $|-15| = 15$. Kết quả in ra: `15`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3975,8 +4181,6 @@ VE NGUOI LON
 ### Giải thích
 
 Chiều cao đo được là $135\text{ cm}$. Do $135 \ge 130$, khách hàng cần áp dụng mức vé người lớn. Kết quả in ra: `VE NGUOI LON`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -3998,8 +4202,6 @@ CHAN
 ### Giải thích
 
 Số đầu vào là $18$. Vì $18$ chia hết cho $2$ ($18 \% 2 = 0$), nên đây là số chẵn. Kết quả in ra: `CHAN`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4021,8 +4223,6 @@ Số đầu vào là $18$. Vì $18$ chia hết cho $2$ ($18 \% 2 = 0$), nên đ�
 ### Giải thích
 
 $3 + 3 = 6$, $3 - 3 = 0$, $3 \times 3 = 9$. Số lớn nhất là 9.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4044,8 +4244,6 @@ $3 + 3 = 6$, $3 - 3 = 0$, $3 \times 3 = 9$. Số lớn nhất là 9.
 ### Giải thích
 
 Được giảm 50 nghìn: $620 - 50 = 570$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4066,8 +4264,6 @@ NGHI
 ```
 ### Giải thích
 Ngày 7 là thứ Bảy nên được nghỉ học.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4090,8 +4286,6 @@ Minh
 ### Giải thích
 
 Chiều cao của Minh là $142\text{ cm}$ và Nam là $138\text{ cm}$. Vì $142 > 138$, bạn Minh cao hơn. Kết quả in ra: `Minh`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4113,8 +4307,6 @@ YES
 ### Giải thích
 
 24 là số chẵn và có 2 chữ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4139,8 +4331,6 @@ YES
 ### Giải thích
 
 Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công chúa có 3 năng lượng đi được $3 // 2 = 1$ bậc. Tổng số bậc đi được là $3 + 1 = 4 \ge 4 \implies$ Gặp nhau!
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4164,9 +4354,6 @@ Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công ch�
 - $100$ số đầu: $100 \times 2000 = 200000$ đồng.
 - $20$ số còn lại: $20 \times 3500 = 70000$ đồng.
 - Tổng cộng: $200000 + 70000 = 270000$ đồng.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le N \le 10^6$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4189,8 +4376,6 @@ Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công ch�
 ### Giải thích
 
 Thanh gỗ dài $17\text{ cm}$ cưa thành các đoạn $5\text{ cm}$. Số đoạn cưa được là $17 // 5 = 3$ đoạn, phần gỗ vụn còn thừa là $17 \% 5 = 2\text{ cm}$. Kết quả in ra: `3 2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4211,8 +4396,6 @@ TRONG
 ```
 ### Giải thích
 Điểm (2, 3) nằm trọn vẹn bên trong hình chữ nhật từ (0, 0) đến (5, 5).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4233,8 +4416,6 @@ YES
 ```
 ### Giải thích
 Số 15 vừa chia hết cho 3 vừa chia hết cho 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4258,8 +4439,6 @@ HOP LE
 ### Giải thích
 
 $3+4>5$, $3+5>4$, $4+5>3$ đều đúng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4282,8 +4461,6 @@ NAM NHUAN
 ### Giải thích
 
 Với dữ liệu đầu vào là `2024`, kết quả thu được tương ứng là `NAM NHUAN`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4304,8 +4481,6 @@ TRUNG THUONG
 ```
 ### Giải thích
 Số 14 chia hết cho 7 nên chiếc thẻ trúng thưởng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4331,8 +4506,6 @@ Số 14 chia hết cho 7 nên chiếc thẻ trúng thưởng.
 Với dữ liệu đầu vào là `15
 28
 9`, kết quả thu được tương ứng là `28`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4356,8 +4529,6 @@ AM
 ```
 ### Giải thích
 Số -15 nhỏ hơn 0 nên in ra AM.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4383,8 +4554,6 @@ XE DAP
 ```
 ### Giải thích
 Vận tốc 15 km/h nằm trong khoảng từ 10 đến 30 km/h nên Thuận đi xe đạp.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4405,8 +4574,6 @@ Vận tốc 15 km/h nằm trong khoảng từ 10 đến 30 km/h nên Thuận đi
 ```
 ### Giải thích
 Mua 25 chiếc (từ 20 chiếc trở lên) được giá 4000 đ/chiếc: 25 x 4000 = 100000 đ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4430,8 +4597,6 @@ Mua 25 chiếc (từ 20 chiếc trở lên) được giá 4000 đ/chiếc: 25 x 
 ### Giải thích
 
 Đã có 2 cạnh bằng 3, vậy cạnh còn lại phải là 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4454,8 +4619,6 @@ YES
 ### Giải thích
 
 20 chia hết cho 4, mỗi bạn 5 cái kẹo.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4477,8 +4640,6 @@ THU 2
 ```
 ### Giải thích
 Ngày thứ 2 trong tuần là Thứ Hai.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4502,8 +4663,6 @@ DEU
 ```
 ### Giải thích
 Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4525,8 +4684,6 @@ Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
 ### Giải thích
 
 Đúng 1 km đầu: 10 nghìn.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4551,8 +4708,6 @@ GIOI
 ```
 ### Giải thích
 Điểm 8.5 thuộc thang điểm giỏi (từ 8.0 trở lên).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4580,8 +4735,6 @@ GIOI
 
 Với dữ liệu đầu vào là `2
 2024`, kết quả thu được tương ứng là `29`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4605,8 +4758,6 @@ CUNG DAU
 ```
 ### Giải thích
 Cả hai số 5 và 10 đều là số dương nên cùng dấu.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4630,8 +4781,6 @@ a NHO HON b
 ```
 ### Giải thích
 Số 15 nhỏ hơn số 28 nên in ra a NHO HON b.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4654,8 +4803,6 @@ TI THANG
 ### Giải thích
 
 Tí ra Búa (1), Tèo ra Kéo (2) $\to$ Tí thắng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4679,8 +4826,6 @@ DUNG LAI
 ```
 ### Giải thích
 Màu đèn là "do" nên in ra thông báo DUNG LAI.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4707,8 +4852,6 @@ GIAO NHAU 2
 ### Giải thích
 
 Đoạn giao nhau từ 4 đến 6, độ dài: $6 - 4 = 2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4729,8 +4872,6 @@ xe may
 ```
 ### Giải thích
 Phương tiện gửi là xe máy có mức phí 5000 đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4753,8 +4894,6 @@ HA
 ```
 ### Giải thích
 Tháng 4 thuộc mùa hạ (mùa hè).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4778,8 +4917,6 @@ VUONG
 ### Giải thích
 
 $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4803,8 +4940,6 @@ $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.
 ### Giải thích
 
 Ngày cuối năm chuyển sang ngày đầu năm mới!
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -4831,7 +4966,7 @@ Khi ta đã **biết trước chính xác số lần lặp**, công cụ chuẩn
 
 Hàm `range()` là một trong những hàm đặc biệt nhất của Python. Nó không tạo ra một danh sách chứa sẵn toàn bộ các số trong bộ nhớ RAM, mà đóng vai trò như một **bộ sinh số tự động**: Mỗi lần vòng lặp cần một con số tiếp theo, `range()` mới tính toán và cung cấp con số đó.
 
-![Chiếc thước đo range](assets/l05_range_ruler.svg)
+![Chiếc thước đo range](assets/l05_range_ruler.svg?v=1788575106)
 
 ### 2.1. Ba dạng sử dụng của hàm `range()`
 
@@ -4963,7 +5098,7 @@ $$\implies \text{Kết quả in ra màn hình sau vòng lặp: } \mathbf{10}$$
 >       tong += i
 >       print(tong)  # Bị thụt lề vào trong vòng lặp!
 >   ```
-> * **Hậu quả:** Thay vì in ra 1 dòng kết quả duy nhất ở cuối, chương trình sẽ in ra $N$ dòng kết quả trung gian sau mỗi vòng lặp $\implies$ Bị máy chấm chấm lỗi **Wrong Answer** ngay lập tức!
+> * **Hậu quả:** Thay vì in ra 1 dòng kết quả duy nhất ở cuối, chương trình sẽ in ra $N$ dòng kết quả trung gian sau mỗi vòng lặp $\implies$ Bị chương trình kiểm tra chấm lỗi **kết quả sai** ngay lập tức!
 > * **Quy tắc:** Lệnh in kết quả cuối cùng phải được **lùi ra ngoài ngang hàng với từ khóa `for`**.
 
 > ❌ **BẪY LỖI 2: KHỞI TẠO BIẾN TÍCH BẰNG 0**
@@ -4975,7 +5110,7 @@ $$\implies \text{Kết quả in ra màn hình sau vòng lặp: } \mathbf{10}$$
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ```python
 # Mẫu tính tổng các số chẵn trong đoạn [A, B]
@@ -5179,13 +5314,13 @@ print(p)
 - **D.** 120
 > *Giải thích:* $p = 1 \times 2 \times 3 \times 4 = 24$.
 
-#### Câu 20 (Quy tắc tối ưu trong thi đấu):
-Khi cần tính tổng $S = 1 + 2 + \dots + N$ với $N = 10^9$, cách nào sau đây chạy nhanh nhất và không bị quá thời gian (TLE)?
+#### Câu 20 (Quy tắc tối ưu trong thực tế):
+Khi cần tính tổng $S = 1 + 2 + \dots + N$ với $N = 10^9$, cách nào sau đây chạy nhanh nhất?
 - **A.** Dùng vòng lặp `for i in range(1, N + 1):`
 - **B.** **[Đáp án đúng]** Áp dụng công thức toán học $\mathcal{O}(1)$: `S = N * (N + 1) // 2`
 - **C.** Dùng vòng lặp `while`
 - **D.** Đệ quy
-> *Giải thích:* Vòng lặp $10^9$ bước sẽ chạy mất vài giây và bị TLE. Công thức toán $\mathcal{O}(1)$ tính ngay lập tức trong $0.0001\text{s}$.
+> *Giải thích:* Vòng lặp $10^9$ bước sẽ chạy mất vài giây. Công thức toán tính ngay lập tức.
 
 ## Bài tập lesson
 
@@ -5218,8 +5353,6 @@ Khi cần tính tổng $S = 1 + 2 + \dots + N$ với $N = 10^9$, cách nào sau 
 ### Giải thích
 
 Với dữ liệu đầu vào là `1000000000`, kết quả thu được tương ứng là `500000000500000000`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5241,8 +5374,6 @@ Với dữ liệu đầu vào là `1000000000`, kết quả thu được tương
 ### Giải thích
 
 Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 3 4 5`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5270,8 +5401,6 @@ Với dữ liệu đầu vào là `3`, kết quả thu được tương ứng l�
 2
 1
 PHONG!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5293,8 +5422,6 @@ PHONG!`.
 ### Giải thích
 
 $1 + 2 + 3 + 4 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5326,8 +5453,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 **
 ***
 ****`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5355,8 +5480,6 @@ Với dữ liệu đầu vào là `3
 5`, kết quả thu được tương ứng là `*****
 *****
 *****`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5380,8 +5503,6 @@ Hôm nay khách đông quá, Tý tính không kịp. Hãy giúp Tý tính nhanh 
 ### Giải thích
 
 $1 \times 2 \times 3 \times 4 \times 5 = 120$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5404,8 +5525,6 @@ $1 \times 2 \times 3 \times 4 \times 5 = 120$.
 ### Giải thích
 
 $1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5445,8 +5564,6 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 5 x 8 = 40
 5 x 9 = 45
 5 x 10 = 50`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5469,8 +5586,6 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Các số chẵn là: 4, 6, 8. Tổng: $4 + 6 + 8 = 18$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5496,8 +5611,6 @@ Hoa háo hức muốn biết mình đọc hết truyện sau mấy ngày. Hãy �
 ### Giải thích
 
 Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngày 4: 4 trang (tổng 10 $\ge 10$). Sau 4 ngày đọc xong.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5523,8 +5636,6 @@ Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngà
 Với dữ liệu đầu vào là `2
 3
 5`, kết quả thu được tương ứng là `2 5 8 11 14`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5548,8 +5659,6 @@ Với dữ liệu đầu vào là `2
 ### Giải thích
 
 Gồm các số: 3, 6, 9. Tổng cộng 3 số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5571,8 +5680,6 @@ Gồm các số: 3, 6, 9. Tổng cộng 3 số.
 ### Giải thích
 
 Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -5595,7 +5702,7 @@ Nếu như vòng lặp `for` là công cụ tối ưu khi ta **đã biết trư�
 
 Trong tất cả các bài toán trên, điều kiện dừng không phụ thuộc vào một chiếc thước đo cố định, mà phụ thuộc vào **một điều kiện logic**. Công cụ điều khiển chuẩn mực trong trường hợp này chính là **Vòng lặp `while` (Lặp khi điều kiện còn đúng)**.
 
-![Chu trình vòng lặp while](assets/l06_while_loop.svg)
+![Chu trình vòng lặp while](assets/l06_while_loop.svg?v=1788575106)
 
 ---
 
@@ -5633,7 +5740,7 @@ while i <= 5:
 >     # QUÊN LỆNH: i += 1 !
 > ```
 > * **Hiện tượng:** Biến `i` mãi mãi giữ giá trị bằng `1`. Điều kiện `1 <= 5` luôn luôn là `True` trong mọi thời điểm!
-> * **Hậu quả:** Chương trình sẽ in ra số `1` liên tục hàng triệu lần, máy tính bị treo, quạt tản nhiệt quay ầm ầm. Khi nộp bài lên hệ thống thi đấu DKOJ/Themis, máy chấm sẽ dừng chương trình và đánh lỗi **Time Limit Exceeded (TLE) - Tràn giới hạn thời gian**.
+> * **Hậu quả:** Chương trình sẽ in ra số `1` liên tục không bao giờ dừng, máy tính bị treo, quạt tản nhiệt quay ầm ầm.
 > * **Quy tắc an toàn:** Mỗi khi viết lệnh `while`, điều đầu tiên cần tự hỏi bản thân là: *"Câu lệnh nào bên trong vòng lặp sẽ làm cho điều kiện này trở thành False để thoát ra?"*
 
 ---
@@ -5762,7 +5869,7 @@ $$\implies \text{Tổng các chữ số thu được: } 8 + 5 + 2 = \mathbf{15}$
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ```python
 # Mẫu đếm số chữ số của một số nguyên dương N
@@ -5906,7 +6013,7 @@ while a <= 2:
         b += 1
     a += 1
 ```
-- **A.** `1 2 2 4 `
+- **A.** `1 1 2 2 `
 - **B.** **[Đáp án đúng]** `1 2 2 4 `
 - **C.** `1 2 3 4 `
 - **D.** `2 4 `
@@ -5993,7 +6100,7 @@ Khi dùng `while n > 0:` kết hợp `chu_so = n % 10` và `n //= 10`, các ch�
 - **D.** Tăng dần theo giá trị
 > *Giải thích:* Phép chia dư `% 10` luôn bóc tách chữ số hàng đơn vị trước tiên.
 
-#### Câu 20 (Quy tắc phòng thi lập trình):
+#### Câu 20 (Quy tắc khi làm bài):
 Khi một bài toán có thể giải bằng cả công thức toán $\mathcal{O}(1)$ và vòng lặp `while`, thí sinh nên chọn cách nào?
 - **A.** Dùng vòng lặp `while` vì dễ viết hơn
 - **B.** **[Đáp án đúng]** Áp dụng công thức toán $\mathcal{O}(1)$ để đạt tốc độ chạy tức thì và tránh nguy cơ lặp vô tận
@@ -6032,8 +6139,6 @@ Khi một bài toán có thể giải bằng cả công thức toán $\mathcal{O
 ### Giải thích
 
 Lũy thừa của 2 gồm 1, 2, 4, 8, 16... Số nhỏ nhất $> 10$ là 16.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6055,8 +6160,6 @@ Lũy thừa của 2 gồm 1, 2, 4, 8, 16... Số nhỏ nhất $> 10$ là 16.
 ### Giải thích
 
 Lần 1: 2mm, lần 2: 4mm, lần 3: 8mm, lần 4: 16mm ($\ge 10$). Cần 4 lần.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6082,8 +6185,6 @@ Mỗi tối bác đều lắc heo nghe kêu leng keng rất vui. Hãy giúp bác
 ### Giải thích
 
 Ngày 1: 1k, ngày 2: 2k (tổng 3k), ngày 3: 3k (tổng 6k), ngày 4: 4k (tổng 10k), ngày 5: 5k (tổng 15k $\ge 15$). Sau 5 ngày.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6105,8 +6206,6 @@ Ngày 1: 1k, ngày 2: 2k (tổng 3k), ngày 3: 3k (tổng 6k), ngày 4: 4k (tổ
 ### Giải thích
 
 Với dữ liệu đầu vào là `2026`, kết quả thu được tương ứng là `4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6134,8 +6233,6 @@ Với dữ liệu đầu vào là `2026`, kết quả thu được tương ứng
 ```
 ### Giải thích
 In các số từ 1 đến 5 trên một dòng cách nhau khoảng trắng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6160,8 +6257,6 @@ In các số từ 1 đến 5 trên một dòng cách nhau khoảng trắng.
 ### Giải thích
 
 Có 3 số: 5, 12, 8 đã được nhập trước khi gặp 0.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6186,8 +6281,6 @@ Có 3 số: 5, 12, 8 đã được nhập trước khi gặp 0.
 ### Giải thích
 
 $10 + 20 + 5 = 35$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6209,8 +6302,6 @@ $10 + 20 + 5 = 35$.
 ### Giải thích
 
 Các bước: $8 \to 4 \to 2 \to 1$ (cần 4 bước).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6233,8 +6324,6 @@ DA TRUNG THUONG!
 ```
 ### Giải thích
 Sau khi nhập hai số 10 và 25, số thứ ba nhập vào là 7 nên vòng lặp dừng và in ra thông báo `DA TRUNG THUONG!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6260,8 +6349,6 @@ Tí khoe với cả lớp mà chưa bạn nào đếm đúng số bước. Hãy 
 ### Giải thích
 
 Dãy biến đổi: $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$ (qua 8 bước biến đổi).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6287,8 +6374,6 @@ Dãy biến đổi: $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$ (qua 8
 ### Giải thích
 
 Có 3 số chẵn là 4, 8, 12.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6317,8 +6402,6 @@ Các bạn kiến đứng dưới cổ vũ ầm ĩ. Hãy giúp chú ốc sên t�
 
 Ngày 1: leo lên 3m, đêm tụt 1m còn 2m.
 Ngày 2: từ 2m leo thêm 3m lên 5m (chạm đỉnh ngay trong ngày!). Vậy mất 2 ngày.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6336,13 +6419,13 @@ Ngày 2: từ 2m leo thêm 3m lên 5m (chạm đỉnh ngay trong ngày!). Vậy 
 
 # Bài 07: Quy luật dãy số và tam giác số
 
-## 1. Khái niệm & Bản chất của bài toán Dãy số trong lập trình thi đấu
+## 1. Khái niệm & Bản chất của bài toán Dãy số trong lập trình
 
 Trong các kỳ thi lập trình, dạng bài **Dãy số & Tam giác số** chiếm tỉ trọng rất lớn. Mục tiêu cốt lõi của dạng toán này là rèn luyện cho học sinh:
 * **Tư duy quy nạp toán học:** Nhìn vào các phần tử mẫu ban đầu để tìm ra quy luật biến thiên $u_n = f(u_{n-1})$ hoặc quy luật vị trí $u_n = f(n)$.
 * **Kỹ thuật biến cuốn chiếu:** Tính toán trạng thái mới từ các trạng thái trước mà không cần cấp phát mảng bộ nhớ khổng lồ.
 * **Cấu trúc vòng lặp lồng nhau:** Khám phá không gian 2 chiều qua việc điều khiển hàng và cột.
-* **Tối ưu hóa độ phức tạp:** Nhận diện các bài toán có thể giải bằng công thức toán học $\mathcal{O}(1)$ thay vì chạy vòng lặp ngây thơ $\mathcal{O}(N)$ dẫn đến quá thời gian (TLE).
+* **Tối ưu hóa độ phức tạp:** Nhận diện các bài toán có thể giải bằng công thức toán học thay vì chạy vòng lặp ngây thơ tốn nhiều thời gian.
 
 ---
 
@@ -6556,12 +6639,12 @@ $$\implies \text{Kết quả: Số hạng thứ 5 của dãy Fibonacci là } F_5
 > * Nếu quên dòng `print()` ở cuối vòng lặp ngoài, tất cả các số của các hàng trong tam giác sẽ dồn hết thành một hàng ngang dài ngoặc duy nhất.
 
 > ❌ **BẪY LỖI 3: DÙNG VÒNG LẶP CHO BÀI TOÁN CÓ THỂ TÍNH BẰNG CÔNG THỨC $\mathcal{O}(1)$**
-> * Với $N = 10^{12}$, nếu viết vòng lặp `for i in range(1, n + 1): s += i` chương trình chắc chắn bị lỗi `Time Limit Exceeded` (Quá thời gian 1.0 giây).
+> * Với $N = 10^{12}$, nếu viết vòng lặp `for i in range(1, n + 1): s += i` chương trình chắc chắn bị lỗi `vượt quá thời gian cho phép` (Quá thời gian 1.0 giây).
 > * **Quy tắc:** Với cấp số cộng và dãy đan dấu, luôn ưu tiên dùng công thức toán học đóng.
 
 ---
 
-## 6. Mẫu code chuẩn thi đấu
+## 6. Mẫu code thường gặp
 
 ### Mẫu 1: In tam giác Floyd kích thước $N$
 ```python
@@ -6758,8 +6841,6 @@ Số hạng thứ 7 của dãy Fibonacci $1, 1, 2, 3, 5, 8, \dots$ là:
 ### Giải thích
 
 Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6782,8 +6863,6 @@ Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
 
 Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19.
 * **Công thức toán học:** $u_N = u_1 + (N - 1) \times d$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6805,8 +6884,6 @@ Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19.
 ### Giải thích
 
 Dãy là 1, 1, 2, 3, 5, 8. Số thứ 6 là 8.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6829,8 +6906,6 @@ Dãy là 1, 1, 2, 3, 5, 8. Số thứ 6 là 8.
 ### Giải thích
 
 $1 \times 2 + 2 \times 3 + 3 \times 4 = 2 + 6 + 12 = 20$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6858,8 +6933,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 1 2
 1 2 3
 1 2 3 4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6887,8 +6960,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 0 1 0 1
 1 0 1 0
 0 1 0 1`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6910,8 +6981,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 4 8 16`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6934,8 +7003,6 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 ### Giải thích
 
 $1 - 2 + 3 - 4 + 5 = 3$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6962,8 +7029,6 @@ $1 - 2 + 3 - 4 + 5 = 3$.
 Với dữ liệu đầu vào là `3`, kết quả thu được tương ứng là `*
  ***
 *****`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -6990,8 +7055,6 @@ YES 4
 ### Giải thích
 
 Với dữ liệu đầu vào là `10`, kết quả thu được tương ứng là `YES 4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7015,8 +7078,6 @@ Các bạn xúm lại đọc to từng chữ số, vừa đọc vừa cười kh
 ### Giải thích
 
 Ký tự thứ 7 là số 7.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7044,8 +7105,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 2 3
 4 5 6
 7 8 9 10`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7067,8 +7126,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng là `3 5 6 9 10 12`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7092,8 +7149,6 @@ Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7106,7 +7161,7 @@ Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$.
 
 # Bài 08: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while
 
-## 1. Khái niệm & Tầm quan trọng của Xử lý chữ số trong lập trình thi đấu
+## 1. Khái niệm & Tầm quan trọng của Xử lý chữ số trong lập trình
 
 Trong các kỳ thi lập trình, các bài toán xoay quanh **chữ số của một số nguyên** xuất hiện với tần suất dày đặc:
 * Tính tổng, tích các chữ số.
@@ -7285,11 +7340,11 @@ $$\implies \text{Kết quả: Số đảo ngược của } 375 \text{ là } \mat
 > * **Khắc phục:** Thêm kiểm tra đầu vào: `if n == 0: print(1)`.
 
 > ❌ **BẪY LỖI 3: DÙNG KIỂU CHUỖI ĐỂ TÍNH TOÁN SỐ HỌC KHI ĐỀ YÊU CẦU THUẬT TOÁN SỐ**
-> * Dù có thể viết `s = str(n)` để làm việc với chuỗi, nhưng việc làm chủ cặp phép toán `//` và `%` là chuẩn mực tư duy thuật toán cốt lõi của lập trình thi đấu, giúp code chạy nhanh hơn và sẵn sàng chuyển giao sang các ngôn ngữ khác (C++, Java).
+> * Dù có thể viết `s = str(n)` để làm việc với chuỗi, nhưng việc làm chủ cặp phép toán `//` và `%` là chuẩn mực tư duy thuật toán cốt lõi của lập trình, giúp code chạy nhanh hơn và sẵn sàng chuyển giao sang các ngôn ngữ khác (C++, Java).
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ### Mẫu 1: Tìm chữ số đầu tiên bên trái (hàng cao nhất) của số $N$
 ```python
@@ -7507,8 +7562,6 @@ Số nguyên $N$ có độ dài $d$ chữ số. Vòng lặp `while n > 0: n //= 
 ### Giải thích
 
 Với dữ liệu đầu vào là `47`, kết quả thu được tương ứng là `4 7`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7530,8 +7583,6 @@ Với dữ liệu đầu vào là `47`, kết quả thu được tương ứng l
 ### Giải thích
 
 $3 + 5 + 8 = 16$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7553,8 +7604,6 @@ $3 + 5 + 8 = 16$.
 ### Giải thích
 
 $2 + 0 + 2 + 4 = 8$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7576,8 +7625,6 @@ $2 + 0 + 2 + 4 = 8$.
 ### Giải thích
 
 Đảo ngược các chữ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7599,8 +7646,6 @@ $2 + 0 + 2 + 4 = 8$.
 ### Giải thích
 
 Bỏ qua chữ số 0, tích là $2 \times 5 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7622,8 +7667,6 @@ Bỏ qua chữ số 0, tích là $2 \times 5 = 10$.
 ### Giải thích
 
 Có 6 chữ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7645,8 +7688,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `12321`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7669,8 +7710,6 @@ Với dữ liệu đầu vào là `12321`, kết quả thu được tương ứn
 ### Giải thích
 
 Với dữ liệu đầu vào là `9875`, kết quả thu được tương ứng là `2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7692,8 +7731,6 @@ Với dữ liệu đầu vào là `9875`, kết quả thu được tương ứng
 ### Giải thích
 
 Chữ số lớn nhất là 9, nhỏ nhất là 1.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7715,8 +7752,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `372`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7738,8 +7773,6 @@ Với dữ liệu đầu vào là `372`, kết quả thu được tương ứng 
 ### Giải thích
 
 Chữ số chẵn: 2, 0 (2 số). Chữ số lẻ: 3, 5 (2 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7763,8 +7796,6 @@ TANG
 ### Giải thích
 
 Với dữ liệu đầu vào là `1379`, kết quả thu được tương ứng là `TANG`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7786,8 +7817,6 @@ TOAN CHAN
 ### Giải thích
 
 Với dữ liệu đầu vào là `2468`, kết quả thu được tương ứng là `TOAN CHAN`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7809,8 +7838,6 @@ Với dữ liệu đầu vào là `2468`, kết quả thu được tương ứng
 ### Giải thích
 
 Các số đối xứng là: 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 (tổng cộng 10 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -7823,15 +7850,15 @@ Các số đối xứng là: 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 (tổng cộng 10 s�
 
 # Bài 09: Ước số, Bội số và Số nguyên tố
 
-## 1. Khái niệm & Nền tảng Số học trong Lập trình thi đấu
+## 1. Khái niệm & Nền tảng Số học trong lập trình
 
-Trong cấu trúc đề thi Bảng A và lập trình thuật toán, các khái niệm **Ước số**, **Bội số**, **Số nguyên tố** và **Số chính phương** tạo nên trục kiến thức toán - tin trọng yếu.
+Trong cấu trúc đề thi và lập trình thuật toán, các khái niệm **Ước số**, **Bội số**, **Số nguyên tố** và **Số chính phương** tạo nên trục kiến thức toán - tin trọng yếu.
 
 Mục tiêu cốt lõi của bài học:
 * Hiểu sâu sắc bản chất toán học của phép chia hết: $A \vdots B \iff A \% B == 0$.
-* Tối ưu hóa thuật toán từ tư duy ngây thơ $\mathcal{O}(N)$ sang thuật toán căn bậc hai $\mathcal{O}(\sqrt{N})$ để không bị quá thời gian (TLE).
+* Tối ưu hóa thuật toán từ tư duy ngây thơ sang thuật toán căn bậc hai $\mathcal{O}(\sqrt{N})$ để chạy nhanh hơn.
 * Khai thác triệt để mối quan hệ giữa Ước chung lớn nhất ($\gcd$) và Bội chung nhỏ nhất ($\text{lcm}$).
-* Cài đặt thành thạo các hàm kiểm tra nguyên tố, phân tích thừa số nguyên tố chuẩn mực thi đấu.
+* Cài đặt thành thạo các hàm kiểm tra nguyên tố, phân tích thừa số nguyên tố phổ biến.
 
 ---
 
@@ -7844,11 +7871,11 @@ Mục tiêu cốt lõi của bài học:
 
 ### 2.2. Định lý Căn bậc hai
 * **Ý tưởng ngây thơ $\mathcal{O}(N)$:** Duyệt tất cả các số $i$ từ $2$ đến $N - 1$. Nếu $N$ chia hết cho bất kỳ số nào thì $N$ không phải nguyên tố.
-  $\implies$ Nếu $N = 10^9$, thuật toán tốn $10^9$ phép tính $\approx 10$ giây (chắc chắn bị TLE!).
+  $\implies$ Nếu $N = 10^9$, thuật toán tốn $10^9$ phép tính, chạy mất khoảng 10 giây — quá chậm!
 * **Định lý toán học:** Nếu một số tự nhiên $N$ là hợp số, nó luôn có thể phân tích thành tích của hai thừa số: $N = a \times b$. Khi đó, **chắc chắn phải có ít nhất một thừa số nhỏ hơn hoặc bằng $\sqrt{N}$** (bởi vì nếu cả $a > \sqrt{N}$ và $b > \sqrt{N}$ thì $a \times b > N$, mâu thuẫn!).
 * $\implies$ Để kiểm tra tính nguyên tố của $N$, ta **chỉ cần duyệt $i$ từ $2$ đến $\lfloor\sqrt{N}\rfloor$** (tương đương điều kiện $i \times i \le N$). Nếu không tìm thấy ước nào trong đoạn này thì $N$ chắc chắn là số nguyên tố!
 
-#### Cài đặt kiểm tra nguyên tố chuẩn thi đấu:
+#### Cài đặt kiểm tra nguyên tố phổ biến:
 ```python
 def la_so_nguyen_to(n):
     if n < 2:
@@ -8003,7 +8030,7 @@ $$\implies \text{Kết quả phân tích: } 60 = 2 \times 2 \times 3 \times 5$$
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ### Mẫu 1: Đếm số lượng số nguyên tố trong đoạn $[A, B]$
 ```python
@@ -8209,8 +8236,6 @@ Nếu dùng thuật toán $\mathcal{O}(\sqrt{N})$ để kiểm tra tính nguyên
 ### Giải thích
 
 $\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8232,8 +8257,6 @@ $\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$.
 ### Giải thích
 
 Số 10 có 4 ước: 1, 2, 5, 10.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8255,8 +8278,6 @@ Số 10 có 4 ước: 1, 2, 5, 10.
 ### Giải thích
 
 Các ước là 1, 2, 3, 6 $\implies 1 + 2 + 3 + 6 = 12$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8278,8 +8299,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `8 9`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8301,8 +8320,6 @@ Với dữ liệu đầu vào là `8 9`, kết quả thu được tương ứng 
 ### Giải thích
 
 Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8324,8 +8341,6 @@ Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng l
 ### Giải thích
 
 Các ước của 12 là: 1, 2, 3, 4, 6, 12. Trong đó các ước chẵn là: 2, 4, 6, 12 (có 4 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8347,8 +8362,6 @@ Các ước của 12 là: 1, 2, 3, 4, 6, 12. Trong đó các ước chẵn là: 
 ### Giải thích
 
 Ước lớn nhất là 24, lớn thứ hai là 12.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8370,8 +8383,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `25`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8393,8 +8404,6 @@ Với dữ liệu đầu vào là `25`, kết quả thu được tương ứng l
 ### Giải thích
 
 Với dữ liệu đầu vào là `60`, kết quả thu được tương ứng là `2 * 2 * 3 * 5`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8416,8 +8425,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `7`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8439,8 +8446,6 @@ Với dữ liệu đầu vào là `7`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Có 4 số nguyên tố: 11, 13, 17, 19.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8462,8 +8467,6 @@ Có 4 số nguyên tố: 11, 13, 17, 19.
 ### Giải thích
 
 Có 3 số là: 4 ($2^2$), 9 ($3^2$), 25 ($5^2$).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8489,8 +8492,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `239`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8516,8 +8517,6 @@ Với dữ liệu đầu vào là `239`, kết quả thu được tương ứng 
 Với dữ liệu đầu vào là `15`, kết quả thu được tương ứng là `3 5
 5 7
 11 13`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8532,7 +8531,7 @@ Với dữ liệu đầu vào là `15`, kết quả thu được tương ứng l
 
 ## 1. Bài toán đếm — Nền tảng tư duy thuật toán
 
-Trong lập trình thi đấu, bài toán **đếm** là một trong những dạng xuất hiện nhiều nhất. Mục tiêu luôn là: *cho một tập hợp số, hãy đếm xem có bao nhiêu số thỏa mãn điều kiện nhất định*.
+Trong lập trình, bài toán **đếm** là một trong những dạng xuất hiện nhiều nhất. Mục tiêu luôn là: *cho một tập hợp số, hãy đếm xem có bao nhiêu số thỏa mãn điều kiện nhất định*.
 
 Có hai phương pháp tiếp cận chính:
 - **Phương pháp duyệt:** Dùng vòng lặp `for` kiểm tra từng số một. Đơn giản nhưng chậm khi tập số lớn.
@@ -8772,7 +8771,7 @@ count_or = n // 2 + n // 3 - n // 6
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ### 7.1. Liệt kê tất cả số hoàn hảo nhỏ hơn $N$
 
@@ -8953,8 +8952,6 @@ print(count)
 ### Giải thích
 
 Có 6 số: 3, 6, 9, 12, 15, 18.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8976,8 +8973,6 @@ Có 6 số: 3, 6, 9, 12, 15, 18.
 ### Giải thích
 
 Các số là: 2, 3, 4, 6, 8, 9, 10 (có 7 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -8999,8 +8994,6 @@ Các số là: 2, 3, 4, 6, 8, 9, 10 (có 7 số).
 ### Giải thích
 
 Có 3 số lẻ là: 3, 5, 7.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9022,8 +9015,6 @@ Có 3 số lẻ là: 3, 5, 7.
 ### Giải thích
 
 Với dữ liệu đầu vào là `1 30`, kết quả thu được tương ứng là `8`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9045,8 +9036,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `153`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9071,8 +9060,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `1634`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9094,8 +9081,6 @@ Với dữ liệu đầu vào là `1634`, kết quả thu được tương ứng
 ### Giải thích
 
 Từ 1 đến 15 chỉ có duy nhất số 10 chứa chữ số 0. Vậy có $15 - 1 = 14$ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9117,8 +9102,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9140,8 +9123,6 @@ Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Có 3 số chính phương là 9, 16, 25.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9163,8 +9144,6 @@ Có 3 số chính phương là 9, 16, 25.
 ### Giải thích
 
 Với dữ liệu đầu vào là `30`, kết quả thu được tương ứng là `6 28`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9186,8 +9165,6 @@ Với dữ liệu đầu vào là `30`, kết quả thu được tương ứng l
 ### Giải thích
 
 Với dữ liệu đầu vào là `20`, kết quả thu được tương ứng là `12 18 20`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9209,8 +9186,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `220 284`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9290,7 +9265,7 @@ print(a)       # In ra: [1, 99, 3]
 
 ---
 
-## 3. Nhập danh sách từ bàn phím — Cú pháp chuẩn thi đấu
+## 3. Nhập danh sách từ bàn phím — Cú pháp phổ biến
 
 ### 3.1. Nhập danh sách số nguyên trên một dòng
 
@@ -9520,7 +9495,7 @@ print(a)  # [1, 3, 4]
 
 ---
 
-## 9. Mẫu code chuẩn thi đấu
+## 9. Mẫu code thường gặp
 
 ### 9.1. Tìm giá trị lớn nhất trong danh sách (không dùng `max()`)
 
@@ -9590,7 +9565,7 @@ print(*a[::-1])
 - **D.** Đảo ngược danh sách
 - > *Giải thích:* `pop()` mặc định loại bỏ phần tử cuối cùng.
 
-#### Câu 6: Cú pháp nhập mảng số nguyên chuẩn thi đấu là:
+#### Câu 6: Cú pháp nhập mảng số nguyên phổ biến là:
 - **A.** `a = input()`
 - **B.** `a = int(input())`
 - **C.** **[Đáp án đúng]** `a = list(map(int, input().split()))`
@@ -9707,12 +9682,9 @@ print(len(c))
 ### Giải thích
 
 $1 + 2 + 3 + 4 + 5 = 15$ sao.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 10^4$. Cộng từng quyển vẫn kịp giờ.
 
 * Subtask 2 (50% số điểm): $10^4 < N \le 10^{12}$. Cộng từng quyển sẽ không kịp, cần công thức tính nhanh.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9738,12 +9710,9 @@ YES
 ### Giải thích
 
 Số 121 đọc xuôi là 121, đọc ngược cũng là 121 nên đây là ghế vàng.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 9999$.
 
 * Subtask 2 (50% số điểm): $10000 \le N \le 10^{18}$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9768,8 +9737,6 @@ Số 121 đọc xuôi là 121, đọc ngược cũng là 121 nên đây là gh�
 
 Với dữ liệu đầu vào là `5 7
 3 5 7 9 7`, kết quả thu được tương ứng là `2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9794,8 +9761,6 @@ Với dữ liệu đầu vào là `5 7
 
 Với dữ liệu đầu vào là `5
 10 25 3 47 99`, kết quả thu được tương ứng là `10 99`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9820,8 +9785,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `4
 10 20 30 40`, kết quả thu được tương ứng là `100`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9846,8 +9809,6 @@ Với dữ liệu đầu vào là `4
 
 Với dữ liệu đầu vào là `5
 12 5 89 3 45`, kết quả thu được tương ứng là `89 3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9872,8 +9833,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `4
 1 2 3 4`, kết quả thu được tương ứng là `4 3 2 1`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9898,8 +9857,6 @@ Với dữ liệu đầu vào là `4
 
 Với dữ liệu đầu vào là `6 5
 5 2 5 7 5 9`, kết quả thu được tương ứng là `3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9924,8 +9881,6 @@ Với dữ liệu đầu vào là `6 5
 
 Với dữ liệu đầu vào là `5
 3 -5 8 -2 0`, kết quả thu được tương ứng là `3 0 8 0 0`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9951,12 +9906,9 @@ Với dữ liệu đầu vào là `5
 ### Giải thích
 
 5 ngày, mỗi ngày 10 đồng được 50 đồng. Các ngày chẵn là ngày 2 và ngày 4, được thưởng thêm $2 \times 3 = 6$ đồng. Tổng cộng $50 + 6 = 56$ đồng.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$. Vòng lặp từng ngày vẫn chạy kịp.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^6$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -9981,8 +9933,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `5
 2 5 8 10 13`, kết quả thu được tương ứng là `3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10007,8 +9957,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `8 9 7 10
 9`, kết quả thu được tương ứng là `8 9 7 10 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10036,8 +9984,6 @@ Với dữ liệu đầu vào là `8 9 7 10
 Với dữ liệu đầu vào là `4
 10 20 30 40
 99 1`, kết quả thu được tương ứng là `10 99 20 30 40`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10063,12 +10009,9 @@ Abc123x
 ### Giải thích
 
 Trong chuỗi `Abc123x` có 3 ký tự là chữ số: `1`, `2` và `3`.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le |S| \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < |S| \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10095,12 +10038,9 @@ Trong chuỗi `Abc123x` có 3 ký tự là chữ số: `1`, `2` và `3`.
 ### Giải thích
 
 Sắp xếp 5 chiều cao từ thấp đến cao được dãy 150 155 160 165 175.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10125,8 +10065,6 @@ Sắp xếp 5 chiều cao từ thấp đến cao được dãy 150 155 160 165 1
 
 Với dữ liệu đầu vào là `5 3
 1 3 5 3 7`, kết quả thu được tương ứng là `1 5 3 7`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10150,8 +10088,6 @@ Với dữ liệu đầu vào là `5 3
 ### Giải thích
 
 Hai phần tử cuối là 4, 5 được đưa lên đầu.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10179,8 +10115,6 @@ Hai phần tử cuối là 4, 5 được đưa lên đầu.
 Với dữ liệu đầu vào là `6
 1 4 7 8 2 9`, kết quả thu được tương ứng là `4 8 2
 1 7 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10207,12 +10141,9 @@ Hom nay Bin di hoc cung ban Na
 ### Giải thích
 
 Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài 4 ký tự, lớn hơn 3 nên đáp án là 1.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $|S| \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < |S| \le 10^4$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10241,12 +10172,9 @@ Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài
 ### Giải thích
 
 Điểm cao nhất là 10, thấp nhất là 6. Trung bình là $(8 + 7 + 10 + 6 + 9) / 5 = 8.0$.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10271,8 +10199,6 @@ Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài
 ### Giải thích
 
 Có 2 cặp là $(2, 8)$ và $(4, 6)$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10298,12 +10224,9 @@ NO
 ### Giải thích
 
 Tổng các chữ số là $1 + 2 + 3 + 4 = 10$. Vì 10 không chia hết cho 7 nên đáp án là `NO`. (Ví dụ vé số $16$ có tổng là 7 nên đáp án là `YES`.)
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 9999$ (tối đa 4 chữ số).
 
 * Subtask 2 (50% số điểm): $10000 \le N \le 10^{18}$ (tối đa 19 chữ số).
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10330,12 +10253,9 @@ Tổng các chữ số là $1 + 2 + 3 + 4 = 10$. Vì 10 không chia hết cho 7 
 ### Giải thích
 
 Các kỷ lục mới là 1, 3, 5 rồi 7, tổng cộng 4 lần reo.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10362,12 +10282,9 @@ Các kỷ lục mới là 1, 3, 5 rồi 7, tổng cộng 4 lần reo.
 ### Giải thích
 
 Tổng chữ số của 12 là 3, của 99 là 18, của 45 là 9, của 100 là 1, của 38 là 11. Tổng lớn nhất là 18 của số 99.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$, $A_i \le 9999$.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^5$, $A_i \le 10^{18}$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10394,12 +10311,9 @@ Tổng chữ số của 12 là 3, của 99 là 18, của 45 là 9, của 100 là
 ### Giải thích
 
 Các số chẵn là 2, 4, 6 (3 gói). Các số lẻ là 1, 3, 5 (3 gói).
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10425,12 +10339,9 @@ Các số chẵn là 2, 4, 6 (3 gói). Các số lẻ là 1, 3, 5 (3 gói).
 ### Giải thích
 
 Từ 1 đến 10 có 4 số nguyên tố là 2, 3, 5 và 7.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$. Kiểm tra từng số vẫn kịp.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^6$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10576,7 +10487,7 @@ print(unique)  # [1, 2, 3, 4, 5, 6, 9]
 
 ---
 
-## 5. Ứng dụng thống kê và sắp xếp trong bài toán thi đấu
+## 5. Ứng dụng thống kê và sắp xếp trong bài toán thực tế
 
 ### 5.1. Tìm phần tử lớn thứ 2
 
@@ -10682,7 +10593,7 @@ print(len(a))        # 5 — Tổng số phần tử trong danh sách
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ### 8.1. Nhập mảng, in max, min và mảng sắp xếp tăng dần
 
@@ -10798,10 +10709,10 @@ print(len(a))
 
 #### Câu 11: Để tạo bản sao độc lập của danh sách `a`, cách nào đúng?
 - **A.** `b = a`
-- **B.** **[Đáp án đúng]** `b = a[:]` hoặc `b = list(a)` hoặc `b = a.copy()`
+- **B.** `b = a[:]` hoặc `b = list(a)` hoặc `b = a.copy()`
 - **C.** `b = a + []`
-- **D.** Cả B và C đều đúng
-- > *Giải thích:* `a[:]` tạo bản sao nông độc lập. `a + []` cũng tạo bản sao nhưng không phổ biến.
+- **D.** **[Đáp án đúng]** Cả B và C đều đúng
+- > *Giải thích:* `a[:]` tạo bản sao độc lập. `a + []` cũng tạo bản sao mới, nên cả B và C đều đúng.
 
 #### Câu 12: Cho `a = [4, 7, 2, 9]`. Cách tìm phần tử lớn thứ 2 nào đúng nhất?
 - **A.** `max(a) - 1`
@@ -10819,10 +10730,10 @@ print(len(a))
 
 #### Câu 14: Cho `a = [5, 2, 8, 2, 1]`. Sau `a.sort()`, `a[2]` bằng:
 - **A.** 8
-- **B.** 2
-- **C.** **[Đáp án đúng]** 5
+- **B.** **[Đáp án đúng]** 2
+- **C.** 5
 - **D.** 1
-- > *Giải thích:* Sau sort: `[1, 2, 2, 5, 8]`. Phần tử `a[2]` (index 2) = 2. Đáp án đúng thực tế phải là 2.
+- > *Giải thích:* Sau sort: `[1, 2, 2, 5, 8]`. Phần tử `a[2]` (chỉ số 2) = 2.
 
 #### Câu 15: Đoạn code sau in ra gì?
 ```python
@@ -10869,8 +10780,6 @@ print(sorted(a) == a)
 
 Với dữ liệu đầu vào là `5
 80 95 60 100 75`, kết quả thu được tương ứng là `100 60`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10895,8 +10804,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `7
 3 1 4 1 5 9 2`, kết quả thu được tương ứng là `1 2 3 4 5 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10921,8 +10828,6 @@ apple banana grape orange
 
 Với dữ liệu đầu vào là `4
 orange apple banana grape`, kết quả thu được tương ứng là `apple banana grape orange`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10950,8 +10855,6 @@ orange apple banana grape`, kết quả thu được tương ứng là `apple ba
 Với dữ liệu đầu vào là `3 4
 1 4 7
 2 3 5 8`, kết quả thu được tương ứng là `1 2 3 4 5 7 8`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -10975,8 +10878,6 @@ Với dữ liệu đầu vào là `3 4
 ### Giải thích
 
 Điểm TB: $(8+6+10+4)/4 = 7.0$. Các bạn có điểm $\ge 7$ là 8 và 10 (có 2 bạn).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11001,8 +10902,6 @@ Với dữ liệu đầu vào là `3 4
 
 Với dữ liệu đầu vào là `5
 9 2 7 1 5`, kết quả thu được tương ứng là `1 2 5 7 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11027,8 +10926,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `5
 20 80 40 100 60`, kết quả thu được tương ứng là `100 80 60 40 20`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11052,8 +10949,6 @@ Với dữ liệu đầu vào là `5
 ### Giải thích
 
 Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11077,8 +10972,6 @@ Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6.
 ### Giải thích
 
 Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11102,8 +10995,6 @@ Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15.
 ### Giải thích
 
 $(8 + 9 + 7 + 10) / 4 = 8.5$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11127,8 +11018,6 @@ $(8 + 9 + 7 + 10) / 4 = 8.5$.
 ### Giải thích
 
 Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11153,8 +11042,6 @@ Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $
 
 Với dữ liệu đầu vào là `7
 2 3 5 2 3 7 2`, kết quả thu được tương ứng là `2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11178,8 +11065,6 @@ Với dữ liệu đầu vào là `7
 ### Giải thích
 
 Bỏ min là 6.0, bỏ max là 10.0. Còn lại: 7.0, 8.0, 9.0. Trung bình là 8.00.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11207,8 +11092,6 @@ Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt l�
 - Bạn 2 chờ $1 + 2 = 3$ phút.
 - Bạn 3 chờ $1 + 2 + 3 = 6$ phút.
 Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11234,7 +11117,7 @@ Mỗi ký tự trong chuỗi được gắn một vị trí cố định gọi l
 * **Chỉ số dương (Chỉ số xuôi):** Bắt đầu từ $0$ tại ký tự đầu tiên bên trái, tăng dần đến $\text{len}(s) - 1$ ở ký tự cuối cùng.
 * **Chỉ số âm (Chỉ số ngược):** Bắt đầu từ $-1$ tại ký tự cuối cùng bên phải, giảm dần về $-\text{len}(s)$ ở ký tự đầu tiên.
 
-![Hệ thống chỉ số dương và âm của chuỗi ký tự](assets/l13_string_indexing.svg)
+![Hệ thống chỉ số dương và âm của chuỗi ký tự](assets/l13_string_indexing.svg?v=1788575106)
 
 ### Bảng tra cứu chỉ số chuỗi với ví dụ `s = "PYTHON"`:
 
@@ -11274,7 +11157,7 @@ $$\mathbf{s[\text{start} : \text{stop} : \text{step}]}$$
 * `stop`: Vị trí chỉ số kết thúc (nhưng **luôn bị loại trừ**, tức chỉ lấy đến chỉ số $\text{stop} - 1$).
 * `step`: Bước nhảy (mặc định là $1$ nếu để trống). Bước nhảy âm mang ý nghĩa duyệt lùi.
 
-### Bảng các mẫu cắt lát kinh điển trong phòng thi:
+### Bảng các mẫu cắt lát kinh điển khi làm bài:
 
 | Cú pháp cắt lát | Quy tắc trích xuất | Ví dụ với `s = "ABCDEFGH"` | Chuỗi con kết quả |
 |---|---|---|:---:|
@@ -11411,7 +11294,7 @@ else:
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ### 7.1. Mẫu kiểm tra chuỗi đối xứng
 ```python
@@ -11526,11 +11409,11 @@ print(dem)
 - > *Giải thích:* Đây là quy ước của Python giúp phân biệt với vị trí 0 (đầu chuỗi).
 
 #### Câu 12: Biểu thức `"HA NOI"[::2]` trả về chuỗi nào?
-- **A.** `"H NO"`
-- **B.** **[Đáp án đúng]** `"H OI"`
+- **A.** **[Đáp án đúng]** `"H O"`
+- **B.** `"H OI"`
 - **C.** `"A NI"`
 - **D.** `"HA NOI"`
-- > *Giải thích:* Lấy các ký tự tại chỉ số chẵn 0, 2, 4, 6: `'H'`, `' '`, `'O'`, `'I'` $\implies$ `"H OI"`.
+- > *Giải thích:* Chuỗi `"HA NOI"` dài 6 ký tự (chỉ số 0 đến 5). Lấy bước nhảy 2: chỉ số 0 (`'H'`), 2 (`' '`), 4 (`'O'`) $\implies$ `"H O"`.
 
 #### Câu 13: Đoạn code sau in ra gì?
 ```python
@@ -11538,11 +11421,11 @@ s = "A"
 s = s * 3
 print(s)
 ```
-- **A.** `AAA`
-- **B.** **[Đáp án đúng]** `AAA`
-- **C.** Báo lỗi kiểu dữ liệu
+- **A.** `AAAA`
+- **B.** `AA`
+- **C.** **[Đáp án đúng]** `AAA`
 - **D.** `3A`
-- > *Giải thích:* Toán tử nhân `*` giữa chuỗi và số nguyên thực hiện phép lặp lại chuỗi đó.
+- > *Giải thích:* Toán tử nhân `*` giữa chuỗi và số nguyên thực hiện phép lặp lại chuỗi đó: `"A" * 3` = `"AAA"`.
 
 #### Câu 14: Chuỗi `s = "12321"` có phải là chuỗi đối xứng không?
 - **A.** Không
@@ -11589,8 +11472,6 @@ Python
 ### Giải thích
 
 Với dữ liệu đầu vào là `Python`, kết quả thu được tương ứng là `6`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11612,8 +11493,6 @@ VIE
 ### Giải thích
 
 Với dữ liệu đầu vào là `VIETNAM`, kết quả thu được tương ứng là `VIE`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11635,8 +11514,6 @@ NOMEAROD
 ### Giải thích
 
 Với dữ liệu đầu vào là `DORAEMON`, kết quả thu được tương ứng là `NOMEAROD`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11658,8 +11535,6 @@ ACE
 ### Giải thích
 
 Lấy các vị trí 0 ('A'), 2 ('C'), 4 ('E').
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11681,8 +11556,6 @@ ikhedu.vn
 ### Giải thích
 
 Với dữ liệu đầu vào là `hocsinh@ikhedu.vn`, kết quả thu được tương ứng là `ikhedu.vn`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11704,8 +11577,6 @@ P N
 ### Giải thích
 
 Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `P N`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11731,8 +11602,6 @@ CDEAB
 
 Với dữ liệu đầu vào là `ABCDE
 2`, kết quả thu được tương ứng là `CDEAB`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11756,8 +11625,6 @@ HON
 
 Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `PYT
 HON`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11779,8 +11646,6 @@ DEFABC
 ### Giải thích
 
 Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứng là `DEFABC`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11803,8 +11668,6 @@ PYHON
 ### Giải thích
 
 Xóa ký tự tại index 2 là chữ 'T'.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11826,8 +11689,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `RADAR`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11849,8 +11710,6 @@ ABCBADE
 ### Giải thích
 
 Chuỗi con đối xứng dài nhất là `ABCBA` có độ dài 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -11865,7 +11724,7 @@ Chuỗi con đối xứng dài nhất là `ABCBA` có độ dài 5.
 
 ## 1. Khái niệm & Bản chất của Xử lý chuỗi nâng cao
 
-Trong bài trước, ta đã làm quen với việc đánh chỉ số và cắt lát chuỗi (`s[i]`, `s[a:b]`). Tuy nhiên, trong các bài toán lập trình thi đấu thực tế, chuỗi ký tự thường là dữ liệu văn bản phức tạp: mật mã, câu văn, danh sách từ ngữ, dữ liệu số lẫn lộn chữ cái. 
+Trong bài trước, ta đã làm quen với việc đánh chỉ số và cắt lát chuỗi (`s[i]`, `s[a:b]`). Tuy nhiên, trong các bài toán lập trình thực tế, chuỗi ký tự thường là dữ liệu văn bản phức tạp: mật mã, câu văn, danh sách từ ngữ, dữ liệu số lẫn lộn chữ cái. 
 
 Để giải quyết triệt để các dạng toán này, ta cần làm chủ 4 kỹ năng cốt lõi:
 1. **Duyệt từng ký tự**: Kiểm tra từng ký tự trong chuỗi xem là chữ cái, chữ số hay ký tự đặc biệt.
@@ -11873,7 +11732,7 @@ Trong bài trước, ta đã làm quen với việc đánh chỉ số và cắt 
 3. **Bản chất mã ASCII**: Hiểu rõ mối liên hệ giữa ký tự và mã số nguyên trong bộ nhớ máy tính (`ord` và `chr`).
 4. **Tách từ và chuẩn hóa văn bản**: Sử dụng `split()` và `join()` để bóc tách từ ngữ từ một câu văn hoàn chỉnh.
 
-![Bản chất xử lý chuỗi nâng cao](assets/l14_string_ascii_methods.svg)
+![Bản chất xử lý chuỗi nâng cao](assets/l14_string_ascii_methods.svg?v=1788575106)
 
 ---
 
@@ -11965,7 +11824,7 @@ print(chr(ord('A') + 1)) # In ra: 'B' (Ký tự kế tiếp)
 
 ## 5. Tách từ (`split`) và Ghép từ (`join`) — Chuẩn hóa câu văn
 
-Xử lý từ ngữ là một trong những dạng toán thi đấu kinh điển: đếm số từ, tìm từ dài nhất, đảo ngược từ trong câu.
+Xử lý từ ngữ là một trong những dạng toán kinh điển: đếm số từ, tìm từ dài nhất, đảo ngược từ trong câu.
 
 ### 5.1. Phương thức `s.split()` thần thánh
 * Khi gọi `s.split()` không truyền tham số, Python sẽ:
@@ -12041,7 +11900,7 @@ print(tong)
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ### 8.1. Đếm số lượng chữ cái in hoa, in thường và chữ số
 ```python
@@ -12103,10 +11962,10 @@ print(" ".join(tu_chuan))
 
 #### Câu 5: Phương thức `s.count('a')` trên chuỗi `s = "Ha Noi Mua Thu"` trả về kết quả bằng bao nhiêu?
 - **A.** 0
-- **B.** **[Đáp án đúng]** 1 (Bẫy chữ hoa / chữ thường!)
-- **C.** 2
+- **B.** 1
+- **C.** **[Đáp án đúng]** 2
 - **D.** 3
-- > *Giải thích:* Python phân biệt chữ hoa và chữ thường! Chữ `'H'` trong `"Ha"` đi kèm với chữ `'a'` thường (1 chữ). Trong chuỗi không còn chữ `'a'` thường nào khác.
+- > *Giải thích:* Python phân biệt chữ hoa và chữ thường! Chữ `'a'` thường xuất hiện ở vị trí `H[a]` trong `"Ha"` và `M[a]` trong `"Mua"` → tổng cộng 2 lần. Chữ `'A'` in hoa trong `"Ha"` không được tính.
 
 #### Câu 6: Phương thức `ch.isalpha()` trả về `True` khi nào?
 - **A.** Khi `ch` là một số
@@ -12288,9 +12147,9 @@ print(max_len)
 ```
 - **A.** 3
 - **B.** 4
-- **C.** **[Đáp án đúng]** 5
-- **D.** 6
-- > *Giải thích:* Độ dài các từ: 'lap' (3), 'trinh' (5), 'tin' (3), 'hoc' (3), 'tre' (3). Từ dài nhất có độ dài 5.
+- **C.** 5
+- **D.** **[Đáp án đúng]** 6
+- > *Giải thích:* Độ dài các từ: 'lap' (3), 'trinh' (5), 'python' (6), 'nang' (4), 'cao' (3). Từ dài nhất là 'python' có độ dài 6.
 
 ## Bài tập lesson
 
@@ -12323,8 +12182,6 @@ IKHEDU VIETNAM
 ### Giải thích
 
 Với dữ liệu đầu vào là `ikhedu vietnam`, kết quả thu được tương ứng là `IKHEDU VIETNAM`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12346,8 +12203,6 @@ hoc_lap_trinh_de_vui
 ### Giải thích
 
 Với dữ liệu đầu vào là `hoc lap trinh de vui`, kết quả thu được tương ứng là `hoc_lap_trinh_de_vui`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12369,8 +12224,6 @@ LapTrinhPythonBangA
 ### Giải thích
 
 Với dữ liệu đầu vào là `Lap Trinh Python Bang A`, kết quả thu được tương ứng là `LapTrinhPythonBangA`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12392,8 +12245,6 @@ A
 ### Giải thích
 
 Với dữ liệu đầu vào là `A`, kết quả thu được tương ứng là `65`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12415,8 +12266,6 @@ Với dữ liệu đầu vào là `A`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Có 4 từ: 'Chuc', 'mung', 'nam', 'moi'.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12438,8 +12287,6 @@ trinh
 ### Giải thích
 
 Từ 'trinh' có 5 chữ cái (dài nhất).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12461,8 +12308,6 @@ D
 ### Giải thích
 
 Với dữ liệu đầu vào là `C`, kết quả thu được tương ứng là `D`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12486,8 +12331,6 @@ vui
 
 Với dữ liệu đầu vào là `Hoc Python cuc vui`, kết quả thu được tương ứng là `Hoc
 vui`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12509,8 +12352,6 @@ Python rat la tuyet
 ### Giải thích
 
 Với dữ liệu đầu vào là `Python rat la tuyet`, kết quả thu được tương ứng là `Python rat la tuyet`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12536,8 +12377,6 @@ T
 Với dữ liệu đầu vào là `CAT`, kết quả thu được tương ứng là `C
 A
 T`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12559,8 +12398,6 @@ Nguyen Van An
 ### Giải thích
 
 Với dữ liệu đầu vào là `nguyen van an`, kết quả thu được tương ứng là `Nguyen Van An`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12582,8 +12419,6 @@ ioT uey teiV maN
 ### Giải thích
 
 'Toi' -> 'ioT', 'yeu' -> 'uey'...
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12607,8 +12442,6 @@ YES
 
 Với dữ liệu đầu vào là `listen
 silent`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12630,8 +12463,6 @@ cam 3
 ### Giải thích
 
 Với dữ liệu đầu vào là `cam quyt mit dua cam xoai cam dua`, kết quả thu được tương ứng là `cam 3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12653,8 +12484,6 @@ EDUCATION
 ### Giải thích
 
 Các nguyên âm: E, U, A, I, O (có 5 nguyên âm).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12676,8 +12505,6 @@ An va Ba hoc bai
 ### Giải thích
 
 Gồm chữ 'A' (1 lần) và 'a' (3 lần trong 'va', 'Ba', 'bai').
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12699,8 +12526,6 @@ A1B2C3D4
 ### Giải thích
 
 $1 + 2 + 3 + 4 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12722,8 +12547,6 @@ Toi sinh nam 2014 vao thang 08
 ### Giải thích
 
 Với dữ liệu đầu vào là `Toi sinh nam 2014 vao thang 08`, kết quả thu được tương ứng là `201408`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12747,8 +12570,6 @@ A3B2C4
 ### Giải thích
 
 Với dữ liệu đầu vào là `AAABBCCCC`, kết quả thu được tương ứng là `A3B2C4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12770,8 +12591,6 @@ Lap Trinh Python
 ### Giải thích
 
 Chữ in hoa: 'L', 'T', 'P' (3 chữ).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12795,8 +12614,6 @@ DEFABC
 
 'A'->'D', 'B'->'E', 'X'->'A', 'Y'->'B', 'Z'->'C'.
 * **Công thức toán học:** `chr((ord(ch) - ord('A') + k) % 26 + ord('A'))`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12820,8 +12637,6 @@ ABCXYZ
 
 Với dữ liệu đầu vào là `DEFABC
 3`, kết quả thu được tương ứng là `ABCXYZ`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12843,8 +12658,6 @@ hELLO wORLD 123
 ### Giải thích
 
 Với dữ liệu đầu vào là `Hello World 123`, kết quả thu được tương ứng là `hELLO wORLD 123`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -12866,1166 +12679,5 @@ Lop 5A co 38 hoc sinh va 105 quyen sach
 ### Giải thích
 
 Các con số xuất hiện là: 5, 38, 105. Số lớn nhất là 105.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
-
-
-================================================================================
-# CHƯƠNG 06: LUYỆN THI
-================================================================================
-
-
---------------------------------------------------------------------------------
-<!-- Bài 15: Chiến lược giải đề thi lập trình Python -->
---------------------------------------------------------------------------------
-
-## Lý thuyết và Concept Quiz
-
-# Bài 15: Chiến lược giải đề thi lập trình Python
-
-## 1. Bản đồ 5 bước tác chiến trong phòng thi
-
-Trong bất kỳ kỳ thi lập trình nào, từ cấp trường đến cấp quốc gia, thí sinh cần tuân thủ **quy trình 5 bước** để tối đa hóa điểm số và giảm thiểu lỗi sai:
-
-### Bước 1: Đọc đề cẩn thận (Tối thiểu 2 lần)
-
-- Lần 1: Đọc lướt toàn bộ để nắm bức tranh tổng quan.
-- Lần 2: Đọc kỹ từng dòng, **gạch chân**: giới hạn dữ liệu ($N \le ?$), định dạng Input/Output, các trường hợp đặc biệt.
-
-> ⚠️ **Lưu ý:** Nhiều thí sinh mất điểm oan vì đọc lướt bỏ qua chi tiết nhỏ: "in ra **trên cùng một dòng**", "cách nhau **một dấu cách**", "kết quả là **số nguyên**"...
-
-### Bước 2: Nháp thuật toán và Dry Run trên giấy
-
-- Xác định rõ: **Input là gì? Output cần gì? Công thức/Logic xử lý?**
-- Mô phỏng tay với dữ liệu Sample trước khi chạm bàn phím.
-- Nếu thuật toán chạy đúng trên Sample, mới bắt đầu viết code.
-
-### Bước 3: Liệt kê các trường hợp biên
-
-Trường hợp biên là những giá trị đặc biệt thường gây lỗi:
-
-| Dạng bài | Edge Cases cần kiểm tra |
-|---|---|
-| Số nguyên | $N = 0$, $N = 1$, $N$ âm, $N$ rất lớn |
-| Mảng/Danh sách | Mảng rỗng, mảng 1 phần tử, tất cả phần tử giống nhau |
-| Chuỗi | Chuỗi rỗng `""`, chuỗi 1 ký tự, chuỗi toàn khoảng trắng |
-| Chia | Chia cho 0, chia hết hoàn toàn, chia dư |
-
-### Bước 4: Lập trình sạch sẽ, đúng cú pháp
-
-- Đặt tên biến có ý nghĩa: `tong`, `dem`, `lon_nhat` thay vì `x`, `y`, `z`.
-- Kiểm tra kỹ kiểu dữ liệu: `int(input())` hay `float(input())`?
-- In đúng format: hoa/thường, có dấu cách hay không, có xuống dòng hay không.
-
-### Bước 5: Tự kiểm thử (Self-Testing) trước khi nộp
-
-- Chạy thử với **test mẫu** trong đề.
-- Tự tạo **test biên**: giá trị nhỏ nhất, lớn nhất theo ràng buộc.
-- Tự tạo **test bẫy**: giá trị = 0, giá trị âm, mảng rỗng...
-
----
-
-## 2. Các tử huyệt làm mất điểm oan trong phòng thi
-
-### 2.1. In thừa chữ dẫn dắt → Wrong Answer (WA)
-
-Đây là lỗi **phổ biến nhất** ở thí sinh mới:
-
-```python
-# ❌ SAI: Đề chỉ yêu cầu in số 15
-print("Ket qua la:", 15)  # Output: "Ket qua la: 15" → WA!
-
-# ✅ ĐÚNG:
-print(15)  # Output: "15" → Accepted!
-```
-
-> ⚠️ **Nguyên tắc vàng:** Hệ thống chấm tự động so sánh **từng ký tự** giữa output của thí sinh và đáp án chuẩn. Mọi ký tự thừa hay thiếu đều bị coi là sai.
-
-### 2.2. Không để ý giới hạn dữ liệu → Time Limit Exceeded (TLE)
-
-| Giới hạn $N$ | Độ phức tạp cho phép | Phương pháp |
-|---|---|---|
-| $N \le 10^3$ | $\mathcal{O}(N^2)$ | Vòng lặp lồng nhau |
-| $N \le 10^5$ | $\mathcal{O}(N \log N)$ hoặc $\mathcal{O}(N)$ | Sắp xếp + duyệt |
-| $N \le 10^9$ | $\mathcal{O}(\sqrt{N})$ hoặc $\mathcal{O}(\log N)$ | Công thức toán học |
-| $N \le 10^{18}$ | $\mathcal{O}(1)$ | Công thức giải tích |
-
-### 2.3. Lỗi sai số khi dùng số thực (float)
-
-```python
-# ❌ Nguy hiểm: Kiểm tra chính phương bằng float
-import math
-n = 10**18 + 7
-if math.sqrt(n) == int(math.sqrt(n)):  # SAI do sai số!
-
-# ✅ An toàn: Dùng phép nhân số nguyên
-k = int(n ** 0.5)
-if k * k == n or (k+1) * (k+1) == n:  # Kiểm tra cả k và k+1
-```
-
-### 2.4. Quên xử lý trường hợp $N = 0$ hoặc $N = 1$
-
-```python
-# Tính giai thừa: n = 0 → kết quả phải là 1
-n = int(input())
-gt = 1
-for i in range(2, n + 1):
-    gt *= i
-print(gt)  # n = 0 → vòng lặp không chạy → gt = 1 ✅
-```
-
-### 2.5. Nhầm lẫn `//` và `/` khi đề yêu cầu số nguyên
-
-```python
-# Đề yêu cầu "in số nguyên"
-a, b = 7, 2
-print(a / b)   # 3.5 → WA nếu đề cần in 3
-print(a // b)  # 3   → Đúng
-```
-
----
-
-## 3. Phân tích đề mẫu theo quy trình 5 bước
-
-### 3.1. Ví dụ: Bài toán "Tổng chữ số"
-
-**Đề bài:** Cho số nguyên dương $N$ ($1 \le N \le 10^9$). Tính tổng các chữ số của $N$.
-
-**Bước 1 — Đọc đề:**
-- Input: Một số nguyên $N$.
-- Output: Tổng các chữ số.
-- Giới hạn: $N \le 10^9$ → tối đa 10 chữ số → vòng lặp `while` an toàn.
-
-**Bước 2 — Thuật toán:**
-- Lặp: Lấy chữ số cuối `N % 10`, cộng vào tổng, rồi bỏ chữ số cuối `N //= 10`.
-- Dừng khi $N = 0$.
-
-**Bước 3 — Edge Cases:**
-- $N = 0$: Tổng = 0.
-- $N = 1$: Tổng = 1.
-- $N = 999999999$: Tổng = 81 (9 chữ số 9).
-
-**Bước 4 — Code:**
-
-```python
-n = int(input())
-tong = 0
-while n > 0:
-    tong += n % 10
-    n //= 10
-print(tong)
-```
-
-**Bước 5 — Kiểm thử:**
-
-| Input | Expected Output | Kiểm tra |
-|:---:|:---:|:---:|
-| `123` | `6` | $1 + 2 + 3 = 6$ ✅ |
-| `9` | `9` | ✅ |
-| `1000` | `1` | $1 + 0 + 0 + 0 = 1$ ✅ |
-
-### 3.2. Dry Run: $N = 4567$
-
-| Vòng | `n` | `n % 10` | `tong` | `n //= 10` |
-|:---:|:---:|:---:|:---:|:---:|
-| Ban đầu | $4567$ | — | $0$ | — |
-| 1 | $4567$ | $7$ | $7$ | $456$ |
-| 2 | $456$ | $6$ | $13$ | $45$ |
-| 3 | $45$ | $5$ | $18$ | $4$ |
-| 4 | $4$ | $4$ | $22$ | $0$ |
-| Kết thúc | $0$ | — | **In: $22$** | — |
-
----
-
-## 4. Mẫu code chuẩn thi đấu theo dạng bài
-
-### 4.1. Dạng "Kiểm tra tính chất"
-
-```python
-# Kiểm tra số nguyên tố
-n = int(input())
-if n < 2:
-    print("NO")
-else:
-    nguyen_to = True
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            nguyen_to = False
-            break
-    print("YES" if nguyen_to else "NO")
-```
-
-### 4.2. Dạng "Đếm phần tử thỏa điều kiện"
-
-```python
-# Đếm số nguyên tố trong đoạn [A, B]
-a, b = map(int, input().split())
-dem = 0
-for n in range(a, b + 1):
-    if n < 2:
-        continue
-    ok = True
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            ok = False
-            break
-    if ok:
-        dem += 1
-print(dem)
-```
-
-### 4.3. Dạng "Xử lý chuỗi"
-
-```python
-# Đếm từ trong câu
-s = input().split()
-print(len(s))
-```
-
-### 4.4. Dạng "Tối ưu bằng công thức"
-
-```python
-# Tổng 1 + 2 + ... + N
-n = int(input())
-print(n * (n + 1) // 2)
-```
-
----
-
-## 5. Concept Quiz: 15 câu trắc nghiệm bắt bẫy củng cố khái niệm
-
-#### Câu 1: Khi đề chỉ yêu cầu "in ra kết quả", nếu in thêm `"Ket qua la:"` thì hệ thống chấm sẽ:
-- **A.** Vẫn được điểm tối đa
-- **B.** Được cộng điểm thưởng
-- **C.** **[Đáp án đúng]** Chấm `Wrong Answer` (0 điểm)
-- **D.** Được nửa điểm
-- > *Giải thích:* Hệ thống so sánh từng ký tự. Mọi ký tự thừa đều bị coi là sai.
-
-#### Câu 2: Với $N \le 10^9$, vòng lặp `for i in range(N)` sẽ:
-- **A.** Chạy nhanh
-- **B.** **[Đáp án đúng]** Quá chậm, gây Time Limit Exceeded (TLE)
-- **C.** Gây lỗi cú pháp
-- **D.** Chạy bình thường
-- > *Giải thích:* $10^9$ vòng lặp mất khoảng 10-30 giây trong Python, vượt xa giới hạn 1-2 giây.
-
-#### Câu 3: Bước đầu tiên khi nhận đề thi là:
-- **A.** Viết code ngay
-- **B.** **[Đáp án đúng]** Đọc đề cẩn thận ít nhất 2 lần
-- **C.** Hỏi giám thị
-- **D.** Chạy code mẫu
-- > *Giải thích:* Đọc kỹ giúp phát hiện các chi tiết quan trọng và tránh hiểu sai yêu cầu.
-
-#### Câu 4: "Edge Case" trong lập trình thi đấu là:
-- **A.** Trường hợp dễ nhất
-- **B.** **[Đáp án đúng]** Các giá trị biên hoặc đặc biệt thường gây lỗi ($N = 0$, $N = 1$, mảng rỗng...)
-- **C.** Trường hợp không cần xét
-- **D.** Test cuối cùng
-- > *Giải thích:* Edge cases là "bẫy" do ban tổ chức cài đặt để phân loại thí sinh.
-
-#### Câu 5: `7 / 2` và `7 // 2` trong Python lần lượt cho kết quả:
-- **A.** 3 và 3
-- **B.** **[Đáp án đúng]** 3.5 và 3
-- **C.** 3.5 và 3.5
-- **D.** 3 và 3.5
-- > *Giải thích:* `/` là chia thực (luôn float), `//` là chia lấy phần nguyên.
-
-#### Câu 6: Khi đề yêu cầu in số nguyên nhưng code in ra `3.0`, hệ thống chấm sẽ:
-- **A.** Chấp nhận
-- **B.** **[Đáp án đúng]** Chấm Wrong Answer vì `3.0` khác `3`
-- **C.** Tự động làm tròn
-- **D.** Bỏ qua phần `.0`
-- > *Giải thích:* `"3.0"` và `"3"` là hai chuỗi ký tự khác nhau.
-
-#### Câu 7: Để tính $1 + 2 + \dots + N$ với $N = 10^{18}$, cách nào khả thi?
-- **A.** Vòng lặp `for`
-- **B.** Vòng lặp `while`
-- **C.** **[Đáp án đúng]** Công thức $N \times (N + 1) / 2$
-- **D.** Không tính được
-- > *Giải thích:* Với $N = 10^{18}$, vòng lặp mất hàng tỷ giây. Công thức cho kết quả tức thì $\mathcal{O}(1)$.
-
-#### Câu 8: Dry Run (mô phỏng tay) giúp ích gì?
-- **A.** Làm đẹp code
-- **B.** Tăng tốc chương trình
-- **C.** **[Đáp án đúng]** Phát hiện lỗi logic trước khi code, kiểm tra thuật toán đúng hay sai
-- **D.** Giảm dung lượng file
-- > *Giải thích:* Chạy tay trên giấy giúp phát hiện lỗi thuật toán sớm hơn nhiều so với debug code.
-
-#### Câu 9: Biến `ok = True` trong code kiểm tra nguyên tố đóng vai trò gì?
-- **A.** Đếm số ước
-- **B.** **[Đáp án đúng]** Cờ đánh dấu trạng thái: `True` = vẫn có thể là nguyên tố, `False` = chắc chắn không phải
-- **C.** Lưu kết quả chia
-- **D.** Đếm vòng lặp
-- > *Giải thích:* Biến cờ là kỹ thuật phổ biến để theo dõi trạng thái.
-
-#### Câu 10: Lệnh `break` trong vòng lặp kiểm tra nguyên tố có tác dụng gì?
-- **A.** Thoát chương trình
-- **B.** **[Đáp án đúng]** Thoát vòng lặp ngay lập tức khi đã tìm thấy ước, tránh kiểm tra thừa
-- **C.** In kết quả
-- **D.** Chuyển sang vòng lặp tiếp
-- > *Giải thích:* `break` giúp tối ưu hiệu suất — không cần kiểm tra thêm khi đã biết không phải nguyên tố.
-
-#### Câu 11: Kiểm tra nguyên tố chỉ cần duyệt đến $\sqrt{N}$ vì:
-- **A.** Python chạy nhanh hơn
-- **B.** **[Đáp án đúng]** Nếu $N$ có ước $d > \sqrt{N}$ thì chắc chắn tồn tại ước $N/d < \sqrt{N}$ đã được kiểm tra
-- **C.** Ước số luôn nhỏ hơn $\sqrt{N}$
-- **D.** Quy ước toán học
-- > *Giải thích:* Các ước luôn đi theo cặp $(d, N/d)$, một bên $\le \sqrt{N}$, bên kia $\ge \sqrt{N}$.
-
-#### Câu 12: Đoạn code sau có lỗi gì?
-```python
-n = int(input())
-if n == 1:
-    print("YES")
-for i in range(2, int(n**0.5) + 1):
-    if n % i == 0:
-        print("NO")
-        break
-else:
-    print("YES")
-```
-- **A.** Lỗi cú pháp
-- **B.** **[Đáp án đúng]** Số 1 bị in "YES" rồi lại in "YES" lần nữa (thiếu `else` cho trường hợp $n = 1$)
-- **C.** Không có lỗi
-- **D.** Vòng lặp sai
-- > *Giải thích:* $n = 1$ in "YES" ở dòng `if`, sau đó `range(2, 2)` rỗng nên `else` của `for` cũng in "YES". Số 1 **không phải** nguyên tố.
-
-#### Câu 13: `continue` trong vòng lặp `for` có tác dụng:
-- **A.** Thoát vòng lặp
-- **B.** **[Đáp án đúng]** Bỏ qua phần còn lại của lần lặp hiện tại, nhảy đến lần lặp kế tiếp
-- **C.** Dừng chương trình
-- **D.** Lặp lại lần lặp hiện tại
-- > *Giải thích:* `continue` khác `break`: `break` thoát hẳn vòng lặp, `continue` chỉ bỏ qua 1 lần.
-
-#### Câu 14: Khi code chạy đúng với Sample nhưng vẫn bị WA, nguyên nhân thường gặp nhất là:
-- **A.** Máy chấm bị lỗi
-- **B.** **[Đáp án đúng]** Code chưa xử lý đúng Edge Case (trường hợp biên)
-- **C.** Ngôn ngữ Python bị cấm
-- **D.** Sample sai
-- > *Giải thích:* Sample thường là test đơn giản. Test ẩn của ban tổ chức mới có edge cases phức tạp.
-
-#### Câu 15: Thứ tự ưu tiên giải bài trong phòng thi nên là:
-- **A.** Giải bài khó trước để gây ấn tượng
-- **B.** **[Đáp án đúng]** Giải bài dễ trước lấy điểm chắc, bài khó giải sau
-- **C.** Giải ngẫu nhiên
-- **D.** Giải bài cuối trước
-- > *Giải thích:* Chiến lược "dễ trước khó sau" đảm bảo tối đa hóa tổng điểm trong thời gian có hạn.
-
-## Bài tập lesson
-
-# Danh Sách Bài Tập Thực Hành: Bài 15: Chiến lược giải đề thi
-
-> Nguồn problems: l18 | Tổng 12 bài (sắp từ dễ đến khó theo rubric độ khó).
-
-## Ma Trận Phân Tầng
-* P0 (Khởi động): Bài 1-3
-* P1 (Cơ bản): Bài 4-6
-* P2 (Luyện tập): Bài 7-9
-* P3 (Vận dụng): Bài 10-12
----
-
-### Bài 1 (P0): Chú kiến tha mồi về tổ
-* **Mã bài toán:** `pya_l18_p04_chu_kien_tha_moi_ve_to`
-* **Độ khó:** P0 (Khởi động)
-* **Bối cảnh:** Trong vườn nhà bạn Tí có một chú kiến nhỏ chăm chỉ đứng tại tọa độ $0$ trên một con đường thẳng. Hôm nay, chú ngửi thấy mùi bánh thơm ở vị trí $X$ nên muốn bò đến đó. Mỗi bước, chú kiến có thể nhảy dài tùy ý từ $1$ đến $5$ mét ($1, 2, 3, 4$ hoặc $5$). Chú kiến nhỏ xíu nên muốn đi ít bước nhất cho đỡ mệt, hãy chú tìm đường đi ngắn nhất.
-* **Nhiệm vụ:** Hãy tìm số bước nhảy ít nhất để chú kiến đến được đúng vị trí $X$.
-* **Input:** Một số nguyên dương $X$ ($1 \le X \le 10^9$).
-* **Output:** Số bước nhảy tối thiểu.
-* **Sample:** ### Input
-```text
-12
-```
-### Output
-```text
-3
-```
-### Giải thích
-
-Nhảy $5 + 5 + 2 = 12$ mét (cần 3 bước).
-
-
-### PHẦN 2: ĐỀ THI THỬ SỐ 02 (MÔ PHỎNG ĐỀ lập trình LÂM ĐỒNG / ĐÀ LẠT)
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 2 (P0): Đếm số lần xuất hiện của tên bạn thân
-* **Mã bài toán:** `pya_l18_p07_dem_so_lan_xuat_hien_cua_ten_ban_than`
-* **Độ khó:** P0 (Khởi động)
-* **Bối cảnh:** An vừa viết một bài văn miêu tả kỷ niệm tuổi học trò thật dễ thương để tặng bạn thân tên là `BIN`. Học sinh tò mò muốn đếm xem tên của người bạn thân ấy xuất hiện bao nhiêu lần trong bài văn (không phân biệt chữ in hoa hay in thường: `Bin`, `BIN`, `bin` đều được tính). Bài văn dài quá nên đếm mãi mà cứ nhầm. Hãy đếm thật chính xác.
-* **Nhiệm vụ:** Cho chuỗi văn bản $S$. Hãy đếm số lần từ `bin` xuất hiện như một từ độc lập.
-* **Input:** Dòng văn bản $S$ ($1 \le |S| \le 10^4$).
-* **Output:** Số lần xuất hiện.
-* **Sample:** ### Input
-```text
-Hom nay Bin va bin di choi cung ban BIN
-```
-### Output
-```text
-3
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `Hom nay Bin va bin di choi cung ban BIN`, kết quả thu được tương ứng là `3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 3 (P0): Chuẩn hóa mã thí sinh
-* **Mã bài toán:** `pya_l18_p03_chuan_hoa_ma_thi_sinh`
-* **Độ khó:** P0 (Khởi động)
-* **Bối cảnh:** Trường em tổ chức hội thi vẽ tranh nên mỗi người dùng được phát một mã thí sinh gồm 2 phần: chữ cái viết tắt của tỉnh và số báo danh (ví dụ: `HN025`, `DN007`). Hôm nay, cô văn thư nhập liệu vội quá nên gõ nhầm chữ thường và để sót các khoảng trắng thừa như thế này: ` hn 25 `. Cô đang lo các thẻ dự thi bị xấu, hãy cô sửa lại các mã thí sinh cho thật ngay ngắn.
-* **Nhiệm vụ:** Cho chuỗi nhập liệu gồm chữ viết tắt và số. Hãy chuẩn hóa thành chuỗi viết hoa, bỏ mọi khoảng trắng và nếu phần số có ít hơn 3 chữ số thì thêm các chữ số 0 vào trước để phần số luôn đủ 3 chữ số.
-* **Input:** Một dòng văn bản gồm chữ cái và số nguyên $K$.
-* **Output:** Mã thí sinh chuẩn hóa.
-* **Sample:** ### Input
-```text
-hn 5
-```
-### Output
-```text
-HN005
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `hn 5`, kết quả thu được tương ứng là `HN005`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 4 (P1): Thu hoạch dâu tây đà lạt
-* **Mã bài toán:** `pya_l18_p05_thu_hoach_dau_tay_da_lat`
-* **Độ khó:** P1 (Cơ bản)
-* **Bối cảnh:** Cuối tuần, gia đình bạn Mai lên thăm nông trại dâu tây ở Đà Lạt và thấy bác nông dân vừa thu hoạch được $K$ kg dâu chín mọng. Dâu được đóng vào 2 loại hộp xinh xắn: hộp lớn chứa được $5\text{ kg}$ và hộp nhỏ chứa được $1\text{ kg}$. Để tiết kiệm chi phí đóng gói, bác chủ nông trại muốn dùng nhiều hộp lớn nhất có thể. Hãy giúp bác chia dâu vào các hộp.
-* **Nhiệm vụ:** Cho số nguyên $K$. Hãy in ra số hộp lớn và số hộp nhỏ cần dùng.
-* **Input:** Một số nguyên $K$ ($1 \le K \le 10^6$).
-* **Output:** Hai số nguyên: số hộp lớn trước, số hộp nhỏ sau.
-* **Sample:** ### Input
-```text
-23
-```
-### Output
-```text
-4 3
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `23`, kết quả thu được tương ứng là `4 3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 5 (P1): Cặp số bạn bè
-* **Mã bài toán:** `pya_l18_p02_cap_so_ban_be`
-* **Độ khó:** P1 (Cơ bản)
-* **Bối cảnh:** Bi và Bo là đôi bạn thân hay chơi trò các con số cùng nhau. Hai bạn đặt ra luật riêng: hai số tự nhiên được gọi là "Cặp số bạn bè" nếu tổng các chữ số của chúng bằng nhau. Ví dụ: $25$ ($2+5=7$) và $34$ ($3+4=7$) là một cặp số bạn bè vì cả hai cùng có tổng bằng 7. Hai bạn đố nhau mãi không phân thắng bại, hãy hai bạn kiểm tra các cặp số.
-* **Nhiệm vụ:** Cho hai số nguyên dương $A$ và $B$. Hãy kiểm tra xem $A$ và $B$ có phải là cặp số bạn bè không. In `YES` nếu đúng, ngược lại in `NO`.
-* **Input:** Hai số nguyên $A, B$ ($1 \le A, B \le 10^{18}$).
-* **Output:** `YES` hoặc `NO`.
-* **Sample:** ### Input
-```text
-123 51
-```
-### Output
-```text
-YES
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `123 51`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 6 (P1): Bảng điểm thi khảo sát năng khiếu
-* **Mã bài toán:** `pya_l18_p11_bang_diem_thi_khao_sat_nang_khieu`
-* **Độ khó:** P1 (Cơ bản)
-* **Bối cảnh:** Trường em vừa tổ chức kỳ thi khảo sát năng khiếu thật sôi nổi với $N$ người dùng cùng tham gia. Mỗi bạn có một điểm số nguyên từ 0 đến 100 được cô giáo ghi cẩn thận lên bảng vàng. Ban giám khảo quyết định chọn ra $K$ bạn có điểm cao nhất để vào đội tuyển chính thức đi thi cấp thành phố. Cả sân trường đang hồi hộp chờ kết quả, hãy ban giám khảo chọn ra các bạn xuất sắc nhất.
-* **Nhiệm vụ:** Cho danh sách điểm của $N$ bạn và số $K$. Hãy in ra điểm số của $K$ bạn được chọn theo thứ tự giảm dần từ cao xuống thấp.
-* **Input:** * Dòng 1: Hai số $N$ và $K$ ($1 \le K \le N \le 10^5$).
- * Dòng 2: $N$ số nguyên là điểm của các thí sinh.
-* **Output:** $K$ điểm số cao nhất cách nhau bởi khoảng trắng.
-* **Sample:** ### Input
-```text
-6 3
-70 95 85 60 90 85
-```
-### Output
-```text
-95 90 85
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `6 3
-70 95 85 60 90 85`, kết quả thu được tương ứng là `95 90 85`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 7 (P2): Đồng hồ cát kỳ diệu
-* **Mã bài toán:** `pya_l18_p09_dong_ho_cat_ky_dieu`
-* **Độ khó:** P2 (Luyện tập)
-* **Bối cảnh:** Bạn Tèo được tặng một chiếc đồng hồ cát kỳ diệu có thể đo được các khoảng thời gian thật hay. Tối nay, bạn cùng bố quan sát bầu trời đầy sao, bắt đầu từ $0$ giờ $0$ phút $0$ giây. Sau đúng $S$ giây ngắm sao, buổi quan sát kết thúc và hai bố con muốn ghi lại giờ giấc thật đẹp. Hãy giúp hai bố con đổi số giây thành giờ phút giây.
-* **Nhiệm vụ:** Hãy đổi $S$ giây thành định dạng chuẩn: `HH:MM:SS` (Giờ:Phút:Giây), mỗi thành phần luôn có 2 chữ số (ví dụ: `05:08:09`).
-* **Input:** Một số nguyên $S$ ($0 \le S < 86400$).
-* **Output:** Chuỗi giờ phút giây định dạng `HH:MM:SS`.
-* **Sample:** ### Input
-```text
-3665
-```
-### Output
-```text
-01:01:05
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `3665`, kết quả thu được tương ứng là `01:01:05`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 8 (P2): Mua bút tặng bạn
-* **Mã bài toán:** `pya_l18_p01_mua_but_tang_ban`
-* **Độ khó:** P2 (Luyện tập)
-* **Bối cảnh:** Đầu năm học mới, bạn Lan rủ mẹ đi mua bút để tặng các bạn trong lớp. Cửa hàng văn phòng phẩm có chương trình khuyến mãi thật hay: mỗi chiếc bút có giá $P$ đồng. Nếu mua từ 5 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $10\%$. Nếu mua từ 10 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $20\%$. Mẹ nhờ Lan tính nhanh số tiền phải trả, hãy bạn Lan tính.
-* **Nhiệm vụ:** Cho số lượng bút cần mua $N$ và đơn giá $P$. Hãy tính tổng số tiền bạn Lan phải trả (kết quả là số nguyên).
-* **Input:** Hai số nguyên dương $N$ và $P$ ($1 \le N \le 1000, 1000 \le P \le 100000$).
-* **Output:** Tổng số tiền phải thanh toán.
-* **Sample:** ### Input
-```text
-6 10000
-```
-### Output
-```text
-54000
-```
-### Giải thích
-
-Mua 6 chiếc ($\ge 5$), giá mỗi chiếc là $9000$ đ. Tổng tiền: $6 \times 9000 = 54000$ đ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 9 (P2): Số đặc biệt chia hết cho tổng chữ số
-* **Mã bài toán:** `pya_l18_p06_so_dac_biet_chia_het_cho_tong_chu_so_harshad`
-* **Độ khó:** P2 (Luyện tập)
-* **Bối cảnh:** Bạn Tí rất thích sưu tầm các con số kỳ lạ trong cuốn sổ tay toán học của mình. Hôm nay, bạn phát hiện một loại số đặc biệt: một số tự nhiên $N$ được gọi là số Harshad nếu nó chia hết cho chính tổng các chữ số của nó. Ví dụ: số 18 có tổng các chữ số là $1 + 8 = 9$. Vì 18 chia hết cho 9 nên 18 là số Harshad. Bạn Tí đố cả lớp tìm thêm các số như vậy, hãy cả lớp kiểm tra.
-* **Nhiệm vụ:** Cho số $N$. In `YES` nếu $N$ là số Harshad, ngược lại in `NO`.
-* **Input:** Số nguyên $N$ ($1 \le N \le 10^9$).
-* **Output:** `YES` hoặc `NO`.
-* **Sample:** ### Input
-```text
-18
-```
-### Output
-```text
-YES
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `18`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 10 (P3): Dãy con liên tiếp tăng dài nhất
-* **Mã bài toán:** `pya_l18_p12_day_con_lien_tiep_tang_dai_nhat`
-* **Độ khó:** P3 (Vận dụng)
-* **Bối cảnh:** Các người dùng lớp 4A đang chơi trò xếp thẻ số thành một hàng dài gồm $N$ số nguyên. Các bạn phát hiện một trò rất vui gọi là "dãy con liên tiếp tăng": đó là một đoạn các phần tử đứng cạnh nhau mà phần tử đứng sau luôn lớn hơn phần tử đứng ngay trước nó ($A_i < A_{i+1} < A_{i+2} \dots$). Ai tìm được đoạn dài nhất sẽ thắng, hãy các bạn tìm xem đoạn dài nhất có bao nhiêu thẻ số.
-* **Nhiệm vụ:** Hãy tìm độ dài của dãy con liên tiếp tăng dài nhất trong dãy số đã cho.
-* **Input:** * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
- * Dòng 2: $N$ số nguyên ($|A_i| \le 10^9$).
-* **Output:** Một số nguyên duy nhất là độ dài lớn nhất tìm được.
-* **Sample:** ### Input
-```text
-6
-1 3 5 2 4 7
-```
-### Output
-```text
-3
-```
-### Giải thích
-
-Dãy con tăng dài nhất có độ dài 3 (đoạn `1 3 5` hoặc `2 4 7`).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 11 (P3): Dãy số bội chung của 3 và 5 đẹp mắt
-* **Mã bài toán:** `pya_l18_p08_day_so_boi_chung_cua_3_va_5_dep_mat`
-* **Độ khó:** P3 (Vận dụng)
-* **Bối cảnh:** Bạn Na có một hộp bi màu rất đẹp và bạn đánh số lên từng viên bi theo quy tắc riêng: chỉ chọn các số chia hết cho 3 HOẶC chia hết cho 5 rồi xếp tăng dần thành một dãy: $3, 5, 6, 9, 10, 12, 15, 18, 20 \dots$. Bạn Na muốn biết viên bi thứ mấy mang số nào mà đếm hoài không xuể. Hãy giúp bạn Na tìm nhanh.
-* **Nhiệm vụ:** Cho số nguyên dương $K$ ($1 \le K \le 10^5$). Hãy tìm số hạng thứ $K$ của dãy số này.
-* **Input:** Một số nguyên $K$.
-* **Output:** Giá trị số hạng thứ $K$.
-* **Sample:** ### Input
-```text
-7
-```
-### Output
-```text
-15
-```
-### Giải thích
-
-Số thứ 7 là 15.
-
-
-### PHẦN 3: ĐỀ THI THỬ SỐ 03 (MÔ PHỎNG VÒNG CHUNG KẾT TOÀN QUỐC BẢNG A)
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-### Bài 12 (P3): Số nguyên tố đối xứng
-* **Mã bài toán:** `pya_l18_p10_so_nguyen_to_doi_xung`
-* **Độ khó:** P3 (Vận dụng)
-* **Bối cảnh:** Mi có một chiếc gương thần mà mỗi lần soi một con số, số đó hiện ra giống hệt khi đọc xuôi hay đọc ngược. Học sinh gọi những số đặc biệt này là số đối xứng, và một số tự nhiên được gọi là "Nguyên tố đối xứng" nếu nó vừa là số nguyên tố, vừa là số đối xứng (ví dụ: $11, 101, 131, 151, 181, 191, \dots$). Mi muốn tìm các số kỳ diệu này, hãy nhỏ.
-* **Nhiệm vụ:** Cho số nguyên dương $N$. Hãy tìm số nguyên tố đối xứng nhỏ nhất nhưng **lớn hơn hoặc bằng** $N$.
-* **Input:** Một số nguyên $N$ ($1 \le N \le 10^5$).
-* **Output:** Số nguyên tố đối xứng tìm được.
-* **Sample:** ### Input
-```text
-100
-```
-### Output
-```text
-101
-```
-### Giải thích
-
-Với dữ liệu đầu vào là `100`, kết quả thu được tương ứng là `101`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
-
----
-
-
---------------------------------------------------------------------------------
-<!-- Bài 16: Tổng ôn kiến thức và Đề thi thử -->
---------------------------------------------------------------------------------
-
-## Lý thuyết và Concept Quiz
-
-# Bài 16: Tổng ôn kiến thức và Đề thi thử
-
-## 1. Bản đồ tổng ôn toàn bộ kiến thức Python Bảng A
-
-Bài cuối cùng của khóa học là bài **tổng ôn** — hệ thống hóa lại toàn bộ kiến thức đã học từ Bài 01 đến Bài 15, kết hợp với các **đề thi thử mô phỏng** để luyện tập thực chiến.
-
-### 1.1. Bản đồ kiến thức theo chương
-
-| Chương | Nội dung cốt lõi | Kỹ năng then chốt |
-|:---:|---|---|
-| **CH.1** | Nhập/Xuất, Biến, Kiểu dữ liệu, Toán tử | `input()`, `print()`, `int()`, `float()`, `//`, `%` |
-| **CH.2** | Rẽ nhánh `if-elif-else`, Vòng lặp `for`, `while` | Điều kiện logic, `range()`, `break`, `continue` |
-| **CH.3** | Số học: Ước, Bội, Nguyên tố, Tách chữ số | `n % 10`, `n // 10`, `sqrt(n)` |
-| **CH.4** | Danh sách, Thống kê, Sắp xếp | `list()`, `append()`, `sort()`, `max()`, `min()` |
-| **CH.5** | Chuỗi ký tự, ASCII | `s[::-1]`, `ord()`, `chr()`, `split()`, `join()` |
-| **CH.6** | Chiến lược thi đấu, Đề thi thử | Quy trình 5 bước, Edge Cases, Tối ưu |
-
-### 1.2. Checklist kiểm tra trước khi vào phòng thi
-
-- [ ] Thuộc lòng cú pháp nhập mảng: `a = list(map(int, input().split()))`
-- [ ] Phân biệt rõ `//` (chia nguyên) và `/` (chia thực)
-- [ ] Biết cách kiểm tra nguyên tố bằng duyệt đến $\sqrt{N}$
-- [ ] Biết tách từng chữ số bằng `% 10` và `// 10`
-- [ ] Biết đảo ngược chuỗi/danh sách bằng `[::-1]`
-- [ ] Biết dùng `set()` để loại trùng
-- [ ] Nhớ kiểm tra Edge Cases: $N = 0$, $N = 1$, mảng rỗng, chuỗi rỗng
-
----
-
-## 2. Bảng tổng hợp công thức và mẫu code quan trọng
-
-### 2.1. Công thức toán học
-
-| Công thức | Cú pháp Python | Ứng dụng |
-|---|---|---|
-| Tổng $1 + 2 + \dots + N$ | `n * (n + 1) // 2` | Tính tổng dãy số |
-| Đếm bội $K$ trong $[A, B]$ | `b // k - (a - 1) // k` | Đếm số chia hết |
-| Kiểm tra chính phương | `int(n**0.5)**2 == n` | Số học |
-| Giai thừa $N!$ | Vòng lặp `for` | Tổ hợp |
-
-### 2.2. Kỹ thuật lập trình thường gặp
-
-| Kỹ thuật | Mẫu code | Khi nào dùng |
-|---|---|---|
-| Biến đếm | `dem += 1` | Đếm phần tử thỏa điều kiện |
-| Biến tích lũy | `tong += x` | Tính tổng |
-| Biến cờ | `ok = True` → `ok = False` | Kiểm tra tính chất |
-| Cuốn chiếu | `a, b = b, a + b` | Fibonacci, dãy số |
-| Tách chữ số | `n % 10`, `n //= 10` | Xử lý từng chữ số |
-
----
-
-## 3. Đề thi thử số 01 — Mô phỏng đề thi thành phố (90 phút, 4 bài)
-
-### Bài 1 (30 điểm): Mua dụng cụ học tập
-
-**Đề bài:** Mua $N$ quyển vở giá $P$ đồng/quyển. Mua từ 10 quyển trở lên giảm $10\%$. Tính số tiền phải trả (số nguyên).
-
-**Input:** Một dòng chứa hai số nguyên $N$ và $P$ ($1 \le N \le 1000$, $1 \le P \le 100000$).
-
-**Output:** Một số nguyên duy nhất — tổng số tiền phải trả.
-
-**Code mẫu:**
-```python
-n, p = map(int, input().split())
-tong = n * p
-if n >= 10:
-    tong = int(tong * 0.9)
-print(tong)
-```
-
-**Phân tích:** Bài cơ bản, chỉ cần `if-else` và phép nhân. Lưu ý ép kiểu `int()` vì $0.9$ tạo ra số thực.
-
----
-
-### Bài 2 (30 điểm): Số lộc phát đối xứng
-
-**Đề bài:** Số lộc phát đối xứng là số đối xứng (palindrome) và chỉ chứa các chữ số $6$ hoặc $8$. Cho số $N$, kiểm tra xem có phải số lộc phát đối xứng không.
-
-**Input:** Một dòng chứa số nguyên dương $N$ ($1 \le N \le 10^{18}$).
-
-**Output:** `YES` hoặc `NO`.
-
-**Code mẫu:**
-```python
-s = input()
-if s == s[::-1] and all(c in "68" for c in s):
-    print("YES")
-else:
-    print("NO")
-```
-
-**Phân tích:** Đọc $N$ dưới dạng chuỗi (vì $N$ có thể rất lớn). Kiểm tra đối xứng bằng `s[::-1]`, kiểm tra chữ số bằng `all()`.
-
----
-
-### Bài 3 (25 điểm): Đếm từ độc nhất trong văn bản
-
-**Đề bài:** Cho một câu văn. Đếm số lượng từ khác nhau xuất hiện (không phân biệt hoa thường).
-
-**Input:** Một dòng chuỗi ký tự.
-
-**Output:** Một số nguyên — số lượng từ khác nhau.
-
-**Code mẫu:**
-```python
-s = input().lower()
-tu = s.split()
-print(len(set(tu)))
-```
-
-**Phân tích:** Chuyển thành chữ thường `.lower()`, tách từ `.split()`, loại trùng `set()`, đếm `len()`.
-
----
-
-### Bài 4 (15 điểm — Phân loại): Bước nhảy chú cào cào
-
-**Đề bài:** Chú cào cào xuất phát từ vị trí $0$, cần nhảy đến vị trí $X$. Mỗi bước nhảy xa tối đa $K$ mét. Tìm số bước nhảy ít nhất.
-
-**Input:** Một dòng chứa hai số nguyên $X$ và $K$ ($1 \le X, K \le 10^9$).
-
-**Output:** Một số nguyên — số bước nhảy ít nhất.
-
-**Code mẫu:**
-```python
-x, k = map(int, input().split())
-ans = (x + k - 1) // k
-print(ans)
-```
-
-**Phân tích:** Đây là bài toán chia lấy trần. Công thức: $\lceil X / K \rceil = (X + K - 1) \mathbin{//} K$.
-
----
-
-## 4. Đề thi thử số 02 — Nâng cao (90 phút, 4 bài)
-
-### Bài 1 (25 điểm): Tổng chữ số của $N$
-
-**Đề bài:** Cho số nguyên dương $N$. Tính tổng các chữ số.
-
-**Input:** Số nguyên $N$ ($1 \le N \le 10^{18}$).
-
-**Output:** Tổng chữ số.
-
-```python
-s = input()
-tong = 0
-for ch in s:
-    tong += int(ch)
-print(tong)
-```
-
----
-
-### Bài 2 (25 điểm): Số hoàn hảo trong đoạn
-
-**Đề bài:** Cho hai số $A, B$. Liệt kê tất cả các số hoàn hảo trong đoạn $[A, B]$.
-
-**Input:** Hai số $A, B$ ($1 \le A \le B \le 10000$).
-
-**Output:** Các số hoàn hảo trên các dòng riêng. Nếu không có, in `KHONG CO`.
-
-```python
-a, b = map(int, input().split())
-found = False
-for n in range(a, b + 1):
-    if n < 2:
-        continue
-    tong_uoc = 0
-    for i in range(1, n):
-        if n % i == 0:
-            tong_uoc += i
-    if tong_uoc == n:
-        print(n)
-        found = True
-if not found:
-    print("KHONG CO")
-```
-
----
-
-### Bài 3 (30 điểm): Chuỗi đối xứng dài nhất
-
-**Đề bài:** Cho chuỗi $S$ chỉ chứa chữ cái thường. Tìm chuỗi con liên tiếp đối xứng (palindrome) dài nhất.
-
-**Input:** Chuỗi $S$ ($1 \le |S| \le 1000$).
-
-**Output:** Độ dài chuỗi con đối xứng dài nhất.
-
-```python
-s = input()
-max_len = 1
-for i in range(len(s)):
-    for j in range(i + 1, len(s) + 1):
-        sub = s[i:j]
-        if sub == sub[::-1]:
-            max_len = max(max_len, len(sub))
-print(max_len)
-```
-
----
-
-### Bài 4 (20 điểm — Phân loại): Dãy Fibonacci chia hết
-
-**Đề bài:** Đếm có bao nhiêu số Fibonacci $\le N$ chia hết cho $K$.
-
-**Input:** Hai số $N, K$ ($1 \le N \le 10^{18}$, $2 \le K \le 100$).
-
-**Output:** Số lượng số Fibonacci thỏa mãn.
-
-```python
-n, k = map(int, input().split())
-a, b = 1, 1
-dem = 0
-while a <= n:
-    if a % k == 0:
-        dem += 1
-    a, b = b, a + b
-print(dem)
-```
-
----
-
-## 5. Concept Quiz: 15 câu trắc nghiệm tổng ôn toàn diện
-
-#### Câu 1: `input()` trong Python luôn trả về kiểu dữ liệu gì?
-- **A.** `int`
-- **B.** `float`
-- **C.** **[Đáp án đúng]** `str`
-- **D.** Phụ thuộc vào dữ liệu nhập
-- > *Giải thích:* `input()` luôn đọc dưới dạng chuỗi. Cần ép kiểu bằng `int()` hoặc `float()`.
-
-#### Câu 2: `17 // 5` và `17 % 5` lần lượt cho kết quả:
-- **A.** 3.4 và 2
-- **B.** **[Đáp án đúng]** 3 và 2
-- **C.** 3 và 0
-- **D.** 4 và 2
-- > *Giải thích:* $17 = 5 \times 3 + 2$. Phần nguyên = 3, phần dư = 2.
-
-#### Câu 3: Kiểm tra $N$ chẵn hay lẻ dùng biểu thức nào?
-- **A.** `N / 2 == 0`
-- **B.** **[Đáp án đúng]** `N % 2 == 0`
-- **C.** `N // 2 == 0`
-- **D.** `N == 2`
-- > *Giải thích:* `N % 2` trả về phần dư khi chia cho 2. Nếu = 0 thì chẵn.
-
-#### Câu 4: `range(5, 0, -1)` tạo ra dãy số:
-- **A.** `5, 4, 3, 2, 1, 0`
-- **B.** **[Đáp án đúng]** `5, 4, 3, 2, 1`
-- **C.** `0, 1, 2, 3, 4, 5`
-- **D.** `1, 2, 3, 4, 5`
-- > *Giải thích:* `range(5, 0, -1)` đếm ngược từ 5 xuống 1, không bao gồm 0.
-
-#### Câu 5: `[1, 2, 3] + [4, 5]` cho kết quả:
-- **A.** `[5, 7]`
-- **B.** `[1, 2, 3, 4, 5]`
-- **C.** **[Đáp án đúng]** `[1, 2, 3, 4, 5]`
-- **D.** Báo lỗi
-- > *Giải thích:* Phép `+` trên danh sách nối hai danh sách thành một.
-
-#### Câu 6: Để đảo ngược chuỗi `s`, cú pháp đúng là:
-- **A.** `s.reverse()`
-- **B.** **[Đáp án đúng]** `s[::-1]`
-- **C.** `reverse(s)`
-- **D.** `s[-1:0]`
-- > *Giải thích:* `[::-1]` là slicing với bước nhảy -1. `reverse()` chỉ dùng cho List.
-
-#### Câu 7: `ord('a') - ord('A')` bằng:
-- **A.** 26
-- **B.** **[Đáp án đúng]** 32
-- **C.** 0
-- **D.** 97
-- > *Giải thích:* $97 - 65 = 32$.
-
-#### Câu 8: Kiểm tra nguyên tố chỉ cần duyệt đến:
-- **A.** $N$
-- **B.** $N / 2$
-- **C.** **[Đáp án đúng]** $\sqrt{N}$
-- **D.** $N - 1$
-- > *Giải thích:* Nếu $N$ có ước $d > \sqrt{N}$ thì $N/d < \sqrt{N}$ đã được kiểm tra.
-
-#### Câu 9: `"hello".upper()` trả về:
-- **A.** `"hello"`
-- **B.** `"Hello"`
-- **C.** **[Đáp án đúng]** `"HELLO"`
-- **D.** `"hELLO"`
-- > *Giải thích:* `upper()` chuyển toàn bộ thành chữ in hoa.
-
-#### Câu 10: `len(set([1, 1, 2, 2, 3]))` bằng:
-- **A.** 5
-- **B.** 2
-- **C.** **[Đáp án đúng]** 3
-- **D.** 0
-- > *Giải thích:* `set()` loại trùng: `{1, 2, 3}` có 3 phần tử.
-
-#### Câu 11: Công thức chia lấy trần $\lceil A / B \rceil$ trong Python là:
-- **A.** `A / B`
-- **B.** `A // B`
-- **C.** **[Đáp án đúng]** `(A + B - 1) // B`
-- **D.** `A % B`
-- > *Giải thích:* Thêm $B - 1$ trước khi chia nguyên để "làm tròn lên".
-
-#### Câu 12: `a.sort()` trả về giá trị gì?
-- **A.** Danh sách đã sắp
-- **B.** `True`
-- **C.** **[Đáp án đúng]** `None`
-- **D.** Số phần tử
-- > *Giải thích:* `sort()` thay đổi danh sách tại chỗ, trả về `None`.
-
-#### Câu 13: Biến cờ thường dùng để:
-- **A.** Đếm số lần lặp
-- **B.** **[Đáp án đúng]** Đánh dấu trạng thái True/False trong quá trình duyệt
-- **C.** Lưu giá trị lớn nhất
-- **D.** In kết quả
-- > *Giải thích:* Flag chuyển từ `True` sang `False` (hoặc ngược lại) khi gặp điều kiện.
-
-#### Câu 14: `"abc" * 3` cho kết quả:
-- **A.** `"abc3"`
-- **B.** `"aabbcc"`
-- **C.** **[Đáp án đúng]** `"abcabcabc"`
-- **D.** Báo lỗi
-- > *Giải thích:* Phép nhân chuỗi với số nguyên lặp lại chuỗi.
-
-#### Câu 15: Trong phòng thi, nên giải bài theo thứ tự nào?
-- **A.** Bài khó trước
-- **B.** **[Đáp án đúng]** Bài dễ trước lấy điểm chắc, bài khó giải sau
-- **C.** Bài cuối trước
-- **D.** Ngẫu nhiên
-- > *Giải thích:* Chiến lược "dễ trước khó sau" tối đa hóa tổng điểm.
-
-## Bài tập lesson
-
-# Hệ thống bài tập thực hành — bài 16: Đề thi thử lập trình Python
-
----
-
-## Ma trận 12 bài thi thử (phong cách contest: giấu pattern, có subtask)
-
-| STT | Mã bài | Tên | Cấp độ | Ràng buộc | Mục tiêu |
-|---|---|---|---|---|---|
-| 01 | PYA-L16-P15 | Heo Đất Tiết Kiệm | Dễ | $N \le 10^6$ | Rèn vòng lặp có điều kiện và phép đếm ngày chẵn |
-| 02 | PYA-L16-P16 | Vé Số May Mắn | Dễ | $N \le 10^{18}$ | Rèn tách chữ số và kiểm tra chia hết |
-| 03 | PYA-L16-P17 | Bảng Điểm Lớp Học | Dễ | $N \le 10^5$ | Rèn đọc danh sách và thống kê cơ bản |
-| 04 | PYA-L16-P18 | Mật Khẩu Bị Ẩn | Dễ | $\|S\| \le 10^5$ | Rèn duyệt chuỗi và phân loại ký tự |
-| 05 | PYA-L16-P19 | Đếm Kẹo Chẵn Lẻ | Dễ | $N \le 10^5$ | Rèn phép chia dư và bộ đếm đôi |
-| 06 | PYA-L16-P20 | Tổng Chữ Số Lớn Nhất | Trung bình | $N \le 10^5$ | Rèn tổng chữ số và chọn cực trị có điều kiện phụ |
-| 07 | PYA-L16-P21 | Số Ghế Đối Xứng | Trung bình | $N \le 10^{18}$ | Rèn đảo ngược số và so sánh chuỗi |
-| 08 | PYA-L16-P22 | Xếp Hàng Chiều Cao | Trung bình | $N \le 10^5$ | Rèn sắp xếp danh sách |
-| 09 | PYA-L16-P23 | Thưởng Đọc Sách | Trung bình | $N \le 10^{12}$ | Rèn công thức toán thay vòng lặp chậm |
-| 10 | PYA-L16-P24 | Đếm Từ Dài | Trung bình | $\|S\| \le 10^4$ | Rèn tách từ bằng split và so sánh độ dài |
-| 11 | PYA-L16-P25 | Đếm Sao Nguyên Tố | Khó | $N \le 10^6$ | Rèn kiểm tra nguyên tố và vét điểm subtask nhỏ |
-| 12 | PYA-L16-P26 | Chuyến Tàu Vượt Đèo | Khó | $N \le 10^5$ | Rèn giữ giá trị lớn nhất hiện tại trong một lượt duyệt |
-
----
-
-### Bài 1 (Dễ): Heo Đất Tiết Kiệm (PYA-L16-P15)
-
-* **Bối cảnh:** Bé Na bỏ vào heo mỗi ngày $A$ đồng, riêng các ngày chẵn được mẹ thưởng thêm $B$ đồng. Sau $N$ ngày, trong heo có bao nhiêu tiền?
-* **Yêu cầu:** Cho $N, A, B$. Tính tổng số tiền sau $N$ ngày.
-* **Input:** Ba số nguyên $N, A, B$ ($1 \le N \le 10^6$).
-* **Output:** Tổng số tiền.
-* **Ví dụ mẫu:**
-
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5 10 3` | `56` | $5 \times 10 + 2 \times 3 = 56$. |
-
-### Bài 2 (Dễ): Vé Số May Mắn (PYA-L16-P16)
-
-* **Bối cảnh:** Vé số được gọi là may mắn nếu tổng các chữ số của nó chia hết cho $7$. Tấm vé $1234$ có trúng thưởng không?
-* **Yêu cầu:** Cho số $N$. In `YES` nếu là vé may mắn, ngược lại in `NO`.
-* **Input:** Số tự nhiên $N$ ($1 \le N \le 10^{18}$).
-* **Output:** `YES` hoặc `NO`.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `1234` | `NO` |
-
-### Bài 3 (Dễ): Bảng Điểm Lớp Học (PYA-L16-P17)
-
-* **Bối cảnh:** Cô giáo nhờ bé Na tìm điểm cao nhất, điểm thấp nhất và điểm trung bình của $N$ bạn để ghi vào sổ thi đua.
-* **Yêu cầu:** Cho điểm của $N$ bạn. In điểm cao nhất, thấp nhất và trung bình (1 chữ số thập phân).
-* **Input:**
-  * Dòng 1: số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên ($0 \le A_i \le 10$).
-* **Output:** 3 dòng: điểm cao nhất, điểm thấp nhất, điểm trung bình.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `5`<br>`8 7 10 6 9` | `10`<br>`6`<br>`8.0` |
-
-### Bài 4 (Dễ): Mật Khẩu Bị Ẩn (PYA-L16-P18)
-
-* **Bối cảnh:** Mật khẩu nhật ký của bé Bo gồm chữ cái và chữ số như `Abc123x`. Có bao nhiêu ký tự là chữ số?
-* **Yêu cầu:** Cho chuỗi $S$. Đếm ký tự là chữ số từ `0` đến `9`.
-* **Input:** Chuỗi $S$ ($1 \le \|S\| \le 10^5$).
-* **Output:** Số lượng chữ số.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `Abc123x` | `3` |
-
-### Bài 5 (Dễ): Đếm Kẹo Chẵn Lẻ (PYA-L16-P19)
-
-* **Bối cảnh:** Cô giáo chia $N$ gói kẹo thành mâm gói chẵn và mâm gói lẻ. Mỗi mâm có bao nhiêu gói?
-* **Yêu cầu:** Cho $N$ số nguyên. Đếm số chẵn và số lẻ, in trên một dòng.
-* **Input:**
-  * Dòng 1: số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên ($0 \le A_i \le 10^9$).
-* **Output:** Hai số: số lượng số chẵn trước, số lượng số lẻ sau.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `6`<br>`1 2 3 4 5 6` | `3 3` |
-
-### Bài 6 (Trung bình): Tổng Chữ Số Lớn Nhất (PYA-L16-P20)
-
-* **Bối cảnh:** Bạn nào có tổng các chữ số của số báo danh lớn nhất sẽ làm lớp trưởng. Nếu hòa thì bạn có số báo danh nhỏ hơn thắng.
-* **Yêu cầu:** Cho $N$ số báo danh. Tìm số của bạn thắng cuộc.
-* **Input:**
-  * Dòng 1: số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số tự nhiên ($0 \le A_i \le 10^{18}$).
-* **Output:** Số báo danh thắng cuộc.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `5`<br>`12 99 45 100 38` | `99` |
-
-### Bài 7 (Trung bình): Số Ghế Đối Xứng (PYA-L16-P21)
-
-* **Bối cảnh:** Ghế vàng trong rạp xiếc mang số đối xứng (đọc xuôi ngược đều giống nhau như 121). Ghế số $N$ có phải ghế vàng không?
-* **Yêu cầu:** Cho số $N$. In `YES` nếu đối xứng, ngược lại in `NO`.
-* **Input:** Số tự nhiên $N$ ($1 \le N \le 10^{18}$).
-* **Output:** `YES` hoặc `NO`.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `121` | `YES` |
-
-### Bài 8 (Trung bình): Xếp Hàng Chiều Cao (PYA-L16-P22)
-
-* **Bối cảnh:** Thầy thể dục nhờ bé Na xếp $N$ bạn thành hàng từ thấp đến cao để tập đội hình.
-* **Yêu cầu:** Cho chiều cao của $N$ bạn. In ra theo thứ tự tăng dần.
-* **Input:**
-  * Dòng 1: số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên ($100 \le A_i \le 200$).
-* **Output:** $N$ số tăng dần trên một dòng.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `5`<br>`160 150 175 165 155` | `150 155 160 165 175` |
-
-### Bài 9 (Trung bình): Thưởng Đọc Sách (PYA-L16-P23)
-
-* **Bối cảnh:** Đọc hết $N$ quyển sách sẽ được thưởng sao: quyển thứ 1 được 1 sao, quyển thứ 2 được 2 sao, tới quyển thứ $N$ được $N$ sao. Tổng cộng được bao nhiêu sao?
-* **Yêu cầu:** Cho $N$. Tính tổng từ 1 đến $N$.
-* **Input:** Số nguyên $N$ ($1 \le N \le 10^{12}$).
-* **Output:** Tổng số sao.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `5` | `15` |
-
-### Bài 10 (Trung bình): Đếm Từ Dài (PYA-L16-P24)
-
-* **Bối cảnh:** Cô giáo đố: trong câu văn $S$ có bao nhiêu từ dài hơn $K$ ký tự? Từ là nhóm ký tự liền nhau, cách nhau bởi dấu cách.
-* **Yêu cầu:** Cho $K$ và câu $S$. Đếm số từ có độ dài lớn hơn $K$.
-* **Input:**
-  * Dòng 1: số nguyên $K$ ($0 \le K \le 100$).
-  * Dòng 2: câu văn $S$ ($1 \le \|S\| \le 10^4$).
-* **Output:** Số từ thỏa mãn.
-* **Ví dụ mẫu:**
-
-  | Input | Output |
-  |---|---|
-  | `3`<br>`Hom nay Bin di hoc cung ban Na` | `1` |
-
-### Bài 11 (Khó): Đếm Sao Nguyên Tố (PYA-L16-P25)
-
-* **Bối cảnh:** Trên bầu trời giấy có $N$ ngôi sao đánh số từ 1 đến $N$. Có bao nhiêu ngôi sao mang số nguyên tố? (Số 1 không phải số nguyên tố.)
-* **Yêu cầu:** Cho $N$. Đếm số nguyên tố từ 1 đến $N$.
-* **Input:** Số nguyên $N$ ($1 \le N \le 10^6$).
-* **Output:** Số lượng số nguyên tố.
-* **Ví dụ mẫu:**
-
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10` | `4` | Các số 2, 3, 5, 7. |
-
-### Bài 12 (Khó): Chuyến Tàu Vượt Đèo (PYA-L16-P26)
-
-* **Bối cảnh:** Tàu đồ chơi chạy qua $N$ ngọn đèo cao $A_i$ mét. Bé lái tàu reo lên mỗi khi chinh phục ngọn đèo cao hơn tất cả các ngọn đã qua (ngọn đầu tiên luôn được reo một lần). Bé reo tất cả bao nhiêu lần?
-* **Yêu cầu:** Cho dãy $N$ số. Đếm số lần phần tử lớn hơn mọi phần tử đứng trước nó.
-* **Input:**
-  * Dòng 1: số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên ($\|A_i\| \le 10^9$).
-* **Output:** Số lần reo.
-* **Ví dụ mẫu:**
-
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `6`<br>`1 3 5 2 4 7` | `4` | Các kỷ lục là 1, 3, 5, 7. |

@@ -1,14 +1,14 @@
 # Bài 09: Ước số, Bội số và Số nguyên tố
 
-## 1. Khái niệm & Nền tảng Số học trong Lập trình thi đấu
+## 1. Khái niệm & Nền tảng Số học trong lập trình
 
-Trong cấu trúc đề thi Bảng A và lập trình thuật toán, các khái niệm **Ước số**, **Bội số**, **Số nguyên tố** và **Số chính phương** tạo nên trục kiến thức toán - tin trọng yếu.
+Trong cấu trúc đề thi và lập trình thuật toán, các khái niệm **Ước số**, **Bội số**, **Số nguyên tố** và **Số chính phương** tạo nên trục kiến thức toán - tin trọng yếu.
 
 Mục tiêu cốt lõi của bài học:
 * Hiểu sâu sắc bản chất toán học của phép chia hết: $A \vdots B \iff A \% B == 0$.
-* Tối ưu hóa thuật toán từ tư duy ngây thơ $\mathcal{O}(N)$ sang thuật toán căn bậc hai $\mathcal{O}(\sqrt{N})$ để không bị quá thời gian (TLE).
+* Tối ưu hóa thuật toán từ tư duy ngây thơ sang thuật toán căn bậc hai $\mathcal{O}(\sqrt{N})$ để chạy nhanh hơn.
 * Khai thác triệt để mối quan hệ giữa Ước chung lớn nhất ($\gcd$) và Bội chung nhỏ nhất ($\text{lcm}$).
-* Cài đặt thành thạo các hàm kiểm tra nguyên tố, phân tích thừa số nguyên tố chuẩn mực thi đấu.
+* Cài đặt thành thạo các hàm kiểm tra nguyên tố, phân tích thừa số nguyên tố phổ biến.
 
 ---
 
@@ -21,11 +21,11 @@ Mục tiêu cốt lõi của bài học:
 
 ### 2.2. Định lý Căn bậc hai
 * **Ý tưởng ngây thơ $\mathcal{O}(N)$:** Duyệt tất cả các số $i$ từ $2$ đến $N - 1$. Nếu $N$ chia hết cho bất kỳ số nào thì $N$ không phải nguyên tố.
-  $\implies$ Nếu $N = 10^9$, thuật toán tốn $10^9$ phép tính $\approx 10$ giây (chắc chắn bị TLE!).
+  $\implies$ Nếu $N = 10^9$, thuật toán tốn $10^9$ phép tính, chạy mất khoảng 10 giây — quá chậm!
 * **Định lý toán học:** Nếu một số tự nhiên $N$ là hợp số, nó luôn có thể phân tích thành tích của hai thừa số: $N = a \times b$. Khi đó, **chắc chắn phải có ít nhất một thừa số nhỏ hơn hoặc bằng $\sqrt{N}$** (bởi vì nếu cả $a > \sqrt{N}$ và $b > \sqrt{N}$ thì $a \times b > N$, mâu thuẫn!).
 * $\implies$ Để kiểm tra tính nguyên tố của $N$, ta **chỉ cần duyệt $i$ từ $2$ đến $\lfloor\sqrt{N}\rfloor$** (tương đương điều kiện $i \times i \le N$). Nếu không tìm thấy ước nào trong đoạn này thì $N$ chắc chắn là số nguyên tố!
 
-#### Cài đặt kiểm tra nguyên tố chuẩn thi đấu:
+#### Cài đặt kiểm tra nguyên tố phổ biến:
 ```python
 def la_so_nguyen_to(n):
     if n < 2:
@@ -180,7 +180,7 @@ $$\implies \text{Kết quả phân tích: } 60 = 2 \times 2 \times 3 \times 5$$
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ### Mẫu 1: Đếm số lượng số nguyên tố trong đoạn $[A, B]$
 ```python

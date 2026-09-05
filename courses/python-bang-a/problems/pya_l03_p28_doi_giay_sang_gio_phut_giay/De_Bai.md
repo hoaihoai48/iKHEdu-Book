@@ -23,7 +23,3 @@ In ra chuỗi `H:M:S` (với $H$ là giờ, $M$ là phút, $S$ là giây).
 ```
 ### Giải thích
 1 giờ 1 phút 5 giây.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

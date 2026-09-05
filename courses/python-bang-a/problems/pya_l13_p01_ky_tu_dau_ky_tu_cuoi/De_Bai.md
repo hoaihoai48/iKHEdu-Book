@@ -27,11 +27,3 @@ P N
 ### Giải thích
 
 Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `P N`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

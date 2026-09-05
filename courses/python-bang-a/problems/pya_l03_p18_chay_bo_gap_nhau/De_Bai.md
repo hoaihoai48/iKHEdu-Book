@@ -23,7 +23,3 @@ In ra thời gian gặp nhau dạng `f"{t:.1f}"`.
 ```
 ### Giải thích
 Vận tốc tiếp cận $= 2 + 3 = 5\text{m/s}$. Thời gian gặp nhau $= 150 / 5 = 30.0$ giây.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

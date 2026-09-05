@@ -28,10 +28,3 @@ VUONG
 ### Giải thích
 
 $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -24,7 +24,3 @@ Một dòng in ra $A // B$ và $A \% B$.
 ```
 ### Giải thích
 $17 // 5 = 3$ và $17 \% 5 = 2$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

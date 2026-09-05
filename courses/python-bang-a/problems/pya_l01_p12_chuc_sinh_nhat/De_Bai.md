@@ -25,7 +25,3 @@ Chuc mung sinh nhat Nam, ban tron 10 tuoi!
 ```
 ### Giải thích
 Ghép tên và tuổi vào đúng vị trí của câu chúc.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -31,11 +31,3 @@ T
 Với dữ liệu đầu vào là `CAT`, kết quả thu được tương ứng là `C
 A
 T`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

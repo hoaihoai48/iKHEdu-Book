@@ -29,10 +29,3 @@ Cho danh sách điểm kiểm tra của $N$ bài thi. Hãy tính điểm trung b
 ### Giải thích
 
 $(8 + 9 + 7 + 10) / 4 = 8.5$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

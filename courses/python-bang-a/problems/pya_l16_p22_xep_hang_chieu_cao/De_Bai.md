@@ -34,12 +34,3 @@ In ra $N$ số theo thứ tự tăng dần trên một dòng.
 ### Giải thích
 
 Sắp xếp 5 chiều cao từ thấp đến cao được dãy 150 155 160 165 175.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 100$.
-
-* Subtask 2 (50% số điểm): $100 < N \le 10^5$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -29,9 +29,3 @@ Nhiệt độ tính bằng độ F (số nguyên).
 ### Giải thích
 
 - Đổi sang độ F: $30 \times 9 : 5 + 32 = 270 : 5 + 32 = 54 + 32 = 86$.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $-50 \le C \le 50$, $C$ chia hết cho $5$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

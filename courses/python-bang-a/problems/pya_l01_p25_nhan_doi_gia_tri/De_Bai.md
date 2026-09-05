@@ -24,7 +24,3 @@ In ra giá trị $N \times 2$.
 ```
 ### Giải thích
 Gấp đôi của 75 là $75 \times 2 = 150$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

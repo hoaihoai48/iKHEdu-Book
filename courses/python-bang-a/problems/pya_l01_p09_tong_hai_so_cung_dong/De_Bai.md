@@ -23,7 +23,3 @@ In ra tổng $A + B$.
 ```
 ### Giải thích
 Đọc bằng `map(int, input().split())` và in ra $45 + 55 = 100$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -20,9 +20,9 @@
 
 ---
 
-## 2. Chuẩn hóa cấu trúc 6 chương & 16 bài học (Chuẩn kỹ thuật)
+## 2. Chuẩn hóa cấu trúc 5 chương & 14 bài học (Chuẩn kỹ thuật)
 
-Cấu trúc toàn bộ khóa học được tổ chức thành **6 chương logic** và **16 bài học chuyên sâu**, đồng bộ hoàn hảo với hệ thống 299 bài tập thực hành (`problem packages`):
+Cấu trúc toàn bộ khóa học được tổ chức thành **5 chương logic** và **14 bài học chuyên sâu**, đồng bộ hoàn hảo với hệ thống 287 bài tập thực hành (`problem packages`):
 
 * **Chương 1: Tính toán cơ bản**
   * **Bài 01**: Lệnh xuất nhập, biến số và kiểu dữ liệu
@@ -37,16 +37,14 @@ Cấu trúc toàn bộ khóa học được tổ chức thành **6 chương logi
   * **Bài 08**: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while
   * **Bài 09**: Ước số, bội số và số nguyên tố
   * **Bài 10**: Đếm số theo quy luật và số đặc biệt
-* **Chương 4: Danh sách & Thống kê**
+* **Chương 4: Cấu trúc dữ liệu danh sách (List) & Thống kê**
   * **Bài 11**: Danh sách và thao tác cơ bản
   * **Bài 12**: Thống kê danh sách và sắp xếp
-* **Chương 5: Xử lý chuỗi ký tự** *(Chương riêng biệt cho chuyên đề chuỗi ký tự)*
+* **Chương 5: Xử lý chuỗi ký tự (2 bài)**
   * **Bài 13**: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự
   * **Bài 14**: Duyệt chuỗi, biến đổi ký tự và tách từ
-* **Chương 6: Luyện thi** *(Chương luyện thi và tổng ôn đề thi)*
-  * **Bài 15**: Chiến lược giải đề thi lập trình Python
-  * **Bài 16**: Tổng ôn kiến thức và đề thi thử
 
+> 💡 **Lưu ý về nội dung luyện thi / đề thi thử:** Toàn bộ phần luyện thi, chiến lược giải đề và đề thi thử đã được loại bỏ khỏi chương trình chính để giữ đúng cấu trúc chuẩn 5 chương, 14 bài học nền tảng.
 > 💡 **Lưu ý về nội dung hình học & đổi đơn vị:** Kiến thức về công thức hình học (chu vi, diện tích), quy đổi đơn vị (chiều dài, thời gian) và định dạng f-string đã được quy hoạch độc lập vào file tra cứu [reference/KIEN_THUC_TRONG_TAM_CAN_NHO.md](file:///Users/vu/Developer/ikhEdu_lessons/courses/python-bang-a/reference/KIEN_THUC_TRONG_TAM_CAN_NHO.md), không chiếm một bài học lý thuyết riêng lẻ trong khung chương trình chính.
 
 ---
@@ -127,39 +125,31 @@ Cấu trúc toàn bộ khóa học được tổ chức thành **6 chương logi
 
 ---
 
-### 🔹 Chương 5: Xử lý chuỗi ký tự
+### 🔹 Chương 5: Xử lý chuỗi ký tự (2 bài)
 - **Bài 13**: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự (tính chất bất biến, chỉ số hai chiều, cắt lát `s[start:stop:step]`, đảo chuỗi `s[::-1]`, duyệt từng ký tự).
 - **Bài 14**: Duyệt chuỗi, biến đổi ký tự và tách từ (kiểm tra `isdigit()`, `isalpha()`, biến đổi `upper()`, `lower()`, bản chất mã ASCII với `ord()` và `chr()`, hằng số chênh lệch 32, kỹ thuật tách từ `split()` và ghép từ `join()`).
 
 ---
 
-### 🔹 Chương 6: Luyện thi
-- **Bài 15**: Chiến lược giải đề thi lập trình Python (kỹ thuật đọc đề, phân bổ thời gian, nhận diện bẫy test biên, kỹ thuật vét điểm từng phần theo subtask).
-- **Bài 16**: Tổng ôn kiến thức và đề thi thử (hệ thống đề thi tổng hợp phong cách contest thực chiến, tổng ôn toàn bộ kỹ năng).
-
----
-
-## 4. Bảng phân phối bài học, Quiz và hệ thống 299 bài tập thực hành
+## 4. Bảng phân phối bài học, Quiz và hệ thống 287 bài tập thực hành
 
 | Chương | Bài | Mã bài | Tên bài học chuẩn kỹ thuật | Concept Quiz | Bài tập thực hành |
 |:---:|:---:|:---:|---|:---:|:---:|
-| **1** | 01 | `PY-L01` | Lệnh xuất nhập, biến số và kiểu dữ liệu | 15 câu | 25 bài (`pya_l01_p01` $\to$ `p16`...) |
-| | 02 | `PY-L02` | Toán tử số học và biểu thức toán học | 18 câu | 36 bài (`pya_l02_p01` $\to$ `p20`...) |
-| | 03 | `PY-L03` | Phép chia nguyên, chia dư và lũy thừa | 18 câu | 34 bài (`pya_l03_p01` $\to$ `p18`...) |
-| **2** | 04 | `PY-L04` | Cấu trúc rẽ nhánh và điều kiện logic | 24 câu | 36 bài (`PYA-L04-P01` $\to$ `L06-P12`) |
-| | 05 | `PY-L05` | Vòng lặp for và hàm range | 20 câu | 14 bài (`PYA-L07-P01` $\to$ `L07-P14`) |
-| | 06 | `PY-L06` | Vòng lặp while, biến cờ và điều khiển vòng lặp | 20 câu | 12 bài (`PYA-L08-P01` $\to$ `L08-P12`) |
-| **3** | 07 | `PY-L07` | Quy luật dãy số và tam giác số | 15 câu | 14 bài (`PYA-L09-P01` $\to$ `L09-P14`) |
-| | 08 | `PY-L08` | Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while | 16 câu | 14 bài (`PYA-L10-P01` $\to$ `L10-P14`) |
-| | 09 | `PY-L09` | Ước số, bội số và số nguyên tố | 16 câu | 14 bài (`PYA-L11-P01` $\to$ `L11-P14`) |
-| | 10 | `PY-L10` | Đếm số theo quy luật và số đặc biệt | 15 câu | 12 bài (`PYA-L12-P01` $\to$ `L12-P12`) |
-| **4** | 11 | `PY-L11` | Danh sách và thao tác cơ bản | 15 câu | 14 bài (`PYA-L16-P01` $\to$ `L16-P14`) |
-| | 12 | `PY-L12` | Thống kê danh sách và sắp xếp | 15 câu | 14 bài (`PYA-L17-P01` $\to$ `L17-P14`) |
-| **5** | 13 | `PY-L13` | Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự | 15 câu | 12 bài (`PYA-L13-P01` $\to$ `L13-P12`) |
-| | 14 | `PY-L14` | Duyệt chuỗi, biến đổi ký tự và tách từ | 26 câu | 24 bài (`PYA-L14-P01` $\to$ `L15-P12`) |
-| **6** | 15 | `PY-L15` | Chiến lược giải đề thi lập trình Python | 15 câu | 12 bài (`PYA-L18-P01` $\to$ `L18-P12`) |
-| | 16 | `PY-L16` | Tổng ôn kiến thức và đề thi thử | 15 câu | 12 bài (`PYA-L16-P15` $\to$ `L16-P26`) |
-| **Tổng** | **16 bài** | | | **278 câu** | **299 bài tập** |
+| **1** | 01 | `PY-L01` | Lệnh xuất nhập, biến số và kiểu dữ liệu | 15 câu | 25 bài |
+| | 02 | `PY-L02` | Toán tử số học và biểu thức toán học | 20 câu | 36 bài |
+| | 03 | `PY-L03` | Phép chia nguyên, chia dư và lũy thừa | 18 câu | 33 bài |
+| **2** | 04 | `PY-L04` | Cấu trúc rẽ nhánh và điều kiện logic | 24 câu | 37 bài |
+| | 05 | `PY-L05` | Vòng lặp for và hàm range | 20 câu | 14 bài |
+| | 06 | `PY-L06` | Vòng lặp while, biến cờ và điều khiển vòng lặp | 20 câu | 12 bài |
+| **3** | 07 | `PY-L07` | Quy luật dãy số và tam giác số | 15 câu | 14 bài |
+| | 08 | `PY-L08` | Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while | 16 câu | 14 bài |
+| | 09 | `PY-L09` | Ước số, bội số và số nguyên tố | 16 câu | 14 bài |
+| | 10 | `PY-L10` | Đếm số theo quy luật và số đặc biệt | 15 câu | 12 bài |
+| **4** | 11 | `PY-L11` | Danh sách và thao tác cơ bản | 15 câu | 26 bài |
+| | 12 | `PY-L12` | Thống kê danh sách và sắp xếp | 15 câu | 14 bài |
+| **5** | 13 | `PY-L13` | Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự | 15 câu | 12 bài |
+| | 14 | `PY-L14` | Duyệt chuỗi, biến đổi ký tự và tách từ | 26 câu | 24 bài |
+| **Tổng** | **14 bài** | | | **250 câu** | **287 bài tập** |
 
 ---
 

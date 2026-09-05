@@ -1,7 +1,7 @@
 # Số tự mãn (Narcissistic number K chữ số)
 
 
-*(Đề thi lập trình Quốc gia Bảng A)*
+*(Đề thi lập trình Quốc gia)*
 
 ## Bối cảnh
 
@@ -42,9 +42,3 @@ Với dữ liệu đầu vào là `1634`, kết quả thu được tương ứng
 ```text
 NO
 ```
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

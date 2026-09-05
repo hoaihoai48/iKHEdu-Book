@@ -29,10 +29,3 @@ Giá trị $T_N$.
 ### Giải thích
 
 Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

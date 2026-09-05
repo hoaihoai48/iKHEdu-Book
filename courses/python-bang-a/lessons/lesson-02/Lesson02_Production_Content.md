@@ -1,255 +1,519 @@
-# Bài 02: Toán tử số học và biểu thức toán học
+# Bài 02: Toán tử và biểu thức
 
-## 1. Bản chất của tính toán số học trong khoa học máy tính
+## 1. Toán tử số học
 
-Mọi chương trình máy tính, từ chiếc máy tính bỏ túi đơn giản cho đến những hệ thống điều khiển tàu vũ trụ, đều khởi nguồn từ việc thực hiện các **phép tính số học**. Máy tính có thể thực hiện hàng tỷ phép tính mỗi giây với độ chính xác tuyệt đối, nhưng để máy tính cho ra kết quả đúng như mong muốn, người lập trình cần hiểu rõ:
-* Bản chất của các phép toán cơ bản: cộng, trừ, nhân, chia.
-* Sự khác biệt sống còn của **phép chia thực `/`** trong bộ nhớ máy tính.
-* Cơ chế phân rã và tính toán một **biểu thức toán học** theo **tháp thứ tự ưu tiên**.
-* Vai trò của **cặp dấu ngoặc tròn `()`** khi chuyển đổi các phân số đại số phức tạp sang dòng lệnh máy tính.
+Python cho chúng ta tới **7 phép tính số học** cơ bản. Làm quen với chúng là bước đầu tiên để viết được chương trình hay ho!
+
+### Bảng 7 toán tử số học
+
+| Ký hiệu | Tên gọi | Ví dụ | Kết quả | Ghi chú |
+|:---:|---|---|:---:|---|
+| **`+`** | Phép cộng | `5 + 3` | `8` | Cộng hai số |
+| **`-`** | Phép trừ | `10 - 4` | `6` | Trừ hai số |
+| **`*`** | Phép nhân | `6 * 7` | `42` | Nhân hai số |
+| **`/`** | Phép chia | `8 / 2` | `4.0` | **Luôn trả về số thực (`float`)** |
+| **`%`** | Phép chia lấy dư | `7 % 2` | `1` | Số dư còn lại sau khi chia |
+| **`//`** | Phép chia nguyên | `7 // 2` | `3` | Lấy phần nguyên, bỏ phần dư |
+| <code>**</code> | Phép lũy thừa | `2 ** 3` | `8` | 2 mũ 3 = 2 × 2 × 2 |
+
+### Một số chi tiết quan trọng
+
+**Phép chia `/` luôn trả về số thực (`float`)**
+Đây là bẫy lớn nhất mà mọi người mới học hay gặp. Dù 8 chia 2 hết đi nữa, Python vẫn trả về `4.0` (có số thập phân), chứ không phải `4`.
+
+```python
+print(8 / 2)    # Kết quả: 4.0 (float)
+print(10 / 5)   # Kết quả: 2.0 (float)
+print(7 / 2)    # Kết quả: 3.5 (float)
+```
+
+**Phép chia nguyên `//` lấy phần nguyên**
+Nếu muốn kết quả là số nguyên (không có số thập phân), dùng `//`:
+
+```python
+print(7 // 2)   # Kết quả: 3 (bỏ phần dư)
+print(10 // 3)  # Kết quả: 3
+```
+
+**Phép chia lấy dư `%` — "chia lấy dư"**
+Phép này cho ta phần dư còn lại sau khi chia. Ví dụ: 7 chia 2 được 3 phần dư 1, nên `7 % 2 = 1`.
+
+```python
+print(7 % 2)    # Kết quả: 1 (7 = 3×2 + 1)
+print(10 % 3)   # Kết quả: 1 (10 = 3×3 + 1)
+print(8 % 4)    # Kết quả: 0 (chia hết, không dư)
+```
+
+**Phép lũy thừa `**`**
+Đừng dùng dấu `^` nhé! `^` trong Python là phép XOR (một phép tính khác), không phải lũy thừa. Phép lũy thừa dùng hai dấu sao `**`.
+
+```python
+print(2 ** 3)   # Kết quả: 8 (2 × 2 × 2)
+print(5 ** 2)   # Kết quả: 25 (5 × 5)
+```
+
+### Mô phỏng: Phân tách số 257 thành từng chữ số
+
+Giả sử ta có số `257` và muốn tách từng chữ số (đơn vị, chục, trăm). Ta dùng phép chia lấy dư `%` và chia nguyên `//`:
+
+| Bước | Biến `n` | Phép tính | Kết quả | Ý nghĩa |
+|:---:|:---:|---|:---:|---|
+| Ban đầu | 257 | — | — | Số cần phân tách |
+| 1 | 257 | `don_vi = n % 10` | `don_vi = 7` | Lấy chữ số hàng đơn vị |
+| 2 | 257 | `n = n // 10` | `n = 25` | Bỏ chữ số đơn vị đi |
+| 3 | 25 | `chuc = n % 10` | `chuc = 5` | Lấy chữ số hàng chục |
+| 4 | 25 | `n = n // 10` | `n = 2` | Bỏ chữ số chục đi |
+| 5 | 2 | `tram = n % 10` | `tram = 2` | Lấy chữ số hàng trăm |
+
+Kết quả: số 257 có chữ số hàng trăm = 2, hàng chục = 5, hàng đơn vị = 7. Hay quá phải không?
 
 ---
 
-## 2. Bốn toán tử số học cơ bản
+## 2. Biểu thức và thứ tự ưu tiên
 
-Python cung cấp 4 toán tử tính toán cơ bản thao tác trên số nguyên (`int`) và số thực (`float`):
+### 2.1. Biểu thức là gì?
 
-| Ký hiệu | Tên phép toán | Cú pháp | Ví dụ cụ thể | Kết quả trả về | Kiểu dữ liệu kết quả |
-|:---:|---|---|:---:|:---:|:---:|
-| **`+`** | Phép cộng | `a + b` | `15 + 7` | `22` | `int` (hoặc `float`) |
-| **`-`** | Phép trừ | `a - b` | `20 - 6` | `14` | `int` (hoặc `float`) |
-| **`*`** | Phép nhân | `a * b` | `6 * 7` | `42` | `int` (hoặc `float`) |
-| **`/`** | Phép chia thực | `a / b` | `7 / 2` | `3.5` | **Luôn luôn là `float`** |
+**Biểu thức** là sự kết hợp giữa **toán hạng** (số, biến) và **toán tử** (dấu phép tính) để tạo ra một giá trị.
 
-> ⚠️ **TỬ HUYỆT BẮT BUỘC PHẢI NHỚ: PHÉP CHIA THỰC `/` LUÔN TRẢ VỀ SỐ THỰC (`float`)**
-> * Trong Python, kết quả của phép chia `/` **luôn luôn mang kiểu số thực (`float`)**, kể cả khi phép chia hoàn toàn chia hết không có dư!
-> * Ví dụ: `8 / 2` cho kết quả hiển thị là `4.0` (có dấu chấm thập phân, không phải số nguyên `4`).
-> * Nếu đề thi yêu cầu in ra một số nguyên, học sinh dùng `a / b` sẽ in ra `4.0` và bị máy chấm tự động đánh lỗi kết quả sai (**Wrong Answer**). Khi cần kết quả là số nguyên trong phép chia hết, ta phải dùng phép chia nguyên `a // b`.
+Ví dụ:
+- `5 + 3` → giá trị `8`
+- `a * 2 + 1` → giá trị tùy vào `a`
+- `(diem_thu + diem_tin) / 2` → điểm trung bình
 
----
+Máy tính sẽ tính toán biểu thức và trả về **một giá trị duy nhất**.
 
-## 3. Biểu thức toán học & Tháp thứ tự ưu tiên
+### 2.2. Tháp thứ tự ưu tiên
 
-### 3.1. Khái niệm biểu thức toán học
-Một **biểu thức toán học** là sự kết hợp có quy tắc giữa:
-* **Toán hạng:** Hằng số (`5`, `10`), biến số (`a`, `b`) hoặc kết quả của các hàm số.
-* **Toán tử:** Các dấu phép tính `+`, `-`, `*`, `/`.
+Khi có nhiều phép tính trong một dòng, máy tính không tính bừa từ trái sang phải. Máy tính tuân thủ **thứ tự ưu tiên** nghiêm ngặt:
 
-Biểu thức sau khi được CPU xử lý sẽ luôn tính ra một **giá trị duy nhất** để gán vào một biến hoặc in trực tiếp ra màn hình.
+| Ưu tiên | Toán tử | Mô tả |
+|:---:|---|---|
+| **Cao nhất** | `( )` | Ngoặc tròn — tính trước hết |
+| **Thứ 2** | `**` | Lũy thừa |
+| **Thứ 3** | `* / // %` | Nhân, chia, chia nguyên, lấy dư — tính từ trái sang phải |
+| **Thấp nhất** | `+ -` | Cộng, trừ — tính từ trái sang phải |
 
-### 3.2. Tháp thứ tự ưu tiên tính toán
+> **Mẹo nhớ:** Ngoặc tròn là vua! Khi không chắc chắn, cứ dùng ngoặc tròn cho rõ ràng.
 
-Khi trong một dòng lệnh xuất hiện nhiều phép tính đan xen, máy tính không tính bừa bãi từ trái sang phải mà tuân thủ nghiêm ngặt **tháp thứ tự ưu tiên từ trên xuống dưới**:
+### 2.3. Chuyển phân số toán học sang Python
 
-![Tháp thứ tự ưu tiên toán tử](../../assets/l02_operator_precedence.svg?v=1788575106)
+Trong sách giáo khoa, phân số có gạch ngang ở giữa. Khi viết Python, mình phải dùng ngoặc tròn để máy tính hiểu đúng:
 
-1. **Cấp 1 (Ưu tiên tuyệt đối):** Cặp ngoặc tròn `( )`. Mọi biểu thức nằm bên trong ngoặc luôn được máy tính giải quyết trước tiên.
-2. **Cấp 2:** Phép Nhân `*` và Phép Chia `/`. Hai phép này có cùng bậc ưu tiên, được tính lần lượt từ **trái qua phải**.
-3. **Cấp 3 (Ưu tiên thấp nhất):** Phép Cộng `+` và Phép Trừ `-`. Tính lần lượt từ **trái qua phải**.
+| Biểu thức toán học | Cách viết SAI | Cách viết ĐÚNG |
+|:---:|:---:|:---:|
+| $\frac{a + b}{c}$ | `a + b / c` | `(a + b) / c` |
+| $\frac{a + b}{c + d}$ | `a + b / c + d` | `(a + b) / (c + d)` |
+| $\frac{a \times b}{c \times d}$ | `a * b / c * d` | `(a * b) / (c * d)` |
+| $2a + 3b$ | `2a + 3b` | `2 * a + 3 * b` |
 
-### 3.3. Kỹ thuật chuyển đổi biểu thức toán học sang mã Python
+### 2.4. Dry-run: Truy vết biểu thức phức tạp
 
-Trong sách giáo khoa toán học, biểu thức thường được viết dưới dạng phân số có gạch ngang nằm ở giữa. Khi lập trình, tất cả các thành phần phải được viết thẳng hàng trên một dòng ngang. 
+Xem máy tính xử lý biểu thức này như thế nào:
 
-Nếu không sử dụng cặp ngoặc tròn `()` để bao bọc, máy tính sẽ hiểu sai ý định của người lập trình:
-
-| Biểu thức toán học | Cách viết SAI ❌ | Vì sao sai? | Cách viết ĐÚNG chuẩn mực ✅ |
-|:---:|:---:|---|:---:|
-| $\frac{a + b}{c}$ | `a + b / c` | Máy tính sẽ chia `b / c` trước, rồi mới lấy `a` cộng vào. | `(a + b) / c` |
-| $\frac{a + b}{c + d}$ | `(a + b) / c + d` | Máy tính lấy tổng `(a + b)` chia cho `c` xong rồi mới cộng `d`. | `(a + b) / (c + d)` |
-| $\frac{a \times b}{c \times d}$ | `a * b / c * d` | Máy tính nhân `a * b`, chia `c`, rồi lại nhân kết quả đó với `d`. | `(a * b) / (c * d)` |
-| $2a + 3b$ | `2a + 3b` | Lỗi cú pháp! Python không hiểu phép nhân ngầm. | `2 * a + 3 * b` |
-
----
-
-## 4. Bảng mô phỏng từng bước tính biểu thức phức tạp
-
-Xét đoạn chương trình tính biểu thức:
 ```python
 a = 8
 b = 2
 c = 5
-ans = (a + 4) / (b + 1) + c * 3 - 6 / 2
+ket_qua = (a + 4) / (b + 1) + c * 3 - 6 / 2
 ```
 
-### Bảng phân rã từng bước thực thi của CPU theo tháp ưu tiên:
+| Bước | Phép tính ưu tiên | Biểu thức còn lại | Kết quả bước này |
+|:---:|---|---|:---:|
+| Gốc | `(8 + 4) / (2 + 1) + 5 * 3 - 6 / 2` | — | — |
+| 1 | Ngoặc `(8 + 4)` | `12 / (2 + 1) + 5 * 3 - 6 / 2` | 12 |
+| 2 | Ngoặc `(2 + 1)` | `12 / 3 + 5 * 3 - 6 / 2` | 3 |
+| 3 | Chia `12 / 3` | `4.0 + 5 * 3 - 6 / 2` | 4.0 |
+| 4 | Nhân `5 * 3` | `4.0 + 15 - 6 / 2` | 15 |
+| 5 | Chia `6 / 2` | `4.0 + 15 - 3.0` | 3.0 |
+| 6 | Cộng `4.0 + 15` | `19.0 - 3.0` | 19.0 |
+| 7 | Trừ `19.0 - 3.0` | `16.0` | 16.0 |
 
-| Bước | Phép tính được ưu tiên | Biểu thức sau khi tính | Giải thích lý do |
-|:---:|:---:|:---:|---|
-| **Gốc** | `(8 + 4) / (2 + 1) + 5 * 3 - 6 / 2` | | Nạp biểu thức ban đầu vào bộ xử lý CPU |
-| **1** | Ngoặc 1: `(8 + 4)` | `12 / (2 + 1) + 5 * 3 - 6 / 2` | Ngoặc tròn thứ nhất có độ ưu tiên cao nhất $\implies 12$ |
-| **2** | Ngoặc 2: `(2 + 1)` | `12 / 3 + 5 * 3 - 6 / 2` | Ngoặc tròn thứ hai được tính tiếp theo $\implies 3$ |
-| **3** | Chia: `12 / 3` | `4.0 + 5 * 3 - 6 / 2` | Phép chia thực hiện từ trái sang phải $\implies 4.0$ |
-| **4** | Nhân: `5 * 3` | `4.0 + 15 - 6 / 2` | Phép nhân tiếp theo $\implies 15$ |
-| **5** | Chia: `6 / 2` | `4.0 + 15 - 3.0` | Phép chia cuối cùng $\implies 3.0$ |
-| **6** | Cộng: `4.0 + 15` | `19.0 - 3.0` | Phép cộng từ trái sang phải $\implies 19.0$ |
-| **7** | Trừ: `19.0 - 3.0` | `16.0` | Phép trừ cuối cùng $\implies 16.0$ |
-| **Kết thúc** | Gán kết quả | `ans = 16.0` | Lưu giá trị `16.0` vào biến `ans` trong RAM |
+Kết quả cuối: `ket_qua = 16.0`
 
----
+### 2.5. Biểu thức chuỗi — cộng và nhân chữ
 
-## 5. Tử huyệt và bẫy lỗi lập trình kinh điển
+Không chỉ số mới tính được! Chuỗi ký tự cũng có biểu thức riêng:
+* **Dấu `+` nối hai chuỗi lại với nhau** (gọi là ghép chuỗi).
+* **Dấu `*` lặp lại một chuỗi nhiều lần.**
 
-> ❌ **BẪY LỖI 1: LỖI CHIA CHO SỐ KHÔNG (`ZeroDivisionError`)**
-> * Trong toán học và lập trình, phép chia cho số 0 là không xác định.
-> * Nếu mẫu số bằng 0 (ví dụ `x / 0` hoặc `(a + b) / (c - d)` khi `c == d`), chương trình sẽ bị dừng khẩn cấp với thông báo lỗi: `ZeroDivisionError: division by zero`.
-> * **Cách phòng tránh:** Luôn kiểm tra điều kiện mẫu số phải khác 0 trước khi thực hiện phép chia.
-
-> ❌ **BẪY LỖI 2: QUÊN DẤU NHÂN `*` TRONG ĐẠI SỐ**
-> * Trong toán học, ta hay viết $2x$ hoặc $3(a + b)$.
-> * Trong Python, nếu viết `2x` hay `3(a + b)`, máy tính sẽ báo lỗi cú pháp: `SyntaxError: invalid syntax`.
-> * **Quy tắc:** Mọi phép nhân bắt buộc phải có dấu sao `*`: `2 * x` hoặc `3 * (a + b)`.
-
-> ❌ **BẪY LỖI 3: DÙNG DẤU PHẨY `,` THAY CHO DẤU CHẤM THẬP PHÂN `.`**
-> * Trong tiếng Việt, ta quen viết $3,5$. Nhưng trong Python, số thực bắt buộc dùng dấu chấm: `3.5`.
-> * Nếu viết `x = 3,5`, Python sẽ hiểu biến `x` là một bộ hai phần tử `(3, 5)`, dẫn đến kết quả sai hoàn toàn!
-
----
-
-## 6. Mẫu code chuẩn thi đấu
-
-### 6.1. Tính giá trị biểu thức phân số đại số
 ```python
-a, b, c = map(int, input().split())
-# Tính biểu thức: (a + b) / c
-ket_qua = (a + b) / c
-print(ket_qua)
+print("Ha" + "Noi")      # Kết quả: HaNoi (ghép dính lại)
+print("Ha" + " " + "Noi")  # Kết quả: Ha Noi (thêm dấu cách ở giữa)
+print("A" * 3)           # Kết quả: AAA (lặp chữ A 3 lần)
+print("Ho" * 2)          # Kết quả: HoHo
 ```
 
-### 6.2. Tính giá trị đa thức bậc hai
+> **Nhớ nhé:** `+` với số là phép cộng (`2 + 3 = 5`), nhưng `+` với chuỗi là phép ghép (`"2" + "3" = "23"`). Cùng một dấu mà ý nghĩa khác nhau tùy kiểu dữ liệu!
+
+---
+
+## 3. Toán tử gán
+
+Ngoài phép gán đơn giản `=`, Python còn cho phép **cộng rồi gán**, **trừ rồi gán**... rất tiện lợi!
+
+| Toán tử | Ví dụ | Tương đương | Giải thích |
+|:---:|---|---|---|
+| `=` | `a = 10` | — | Gán giá trị |
+| `+=` | `a += 5` | `a = a + 5` | Cộng 5 rồi gán lại |
+| `-=` | `a -= 3` | `a = a - 3` | Trừ 3 rồi gán lại |
+| `*=` | `a *= 2` | `a = a * 2` | Nhân 2 rồi gán lại |
+| `/=` | `a /= 4` | `a = a / 4` | Chia 4 rồi gán lại |
+| `%=` | `a %= 3` | `a = a % 3` | Chia lấy dư 3 rồi gán lại |
+| `//=` | `a //= 2` | `a = a // 2` | Chia nguyên 2 rồi gán lại |
+
+Ví dụ minh họa:
+
 ```python
-# Tính giá trị y = a*x^2 + b*x + c
-a, b, c, x = map(int, input().split())
-y = a * (x * x) + b * x + c
-print(y)
+a = 10
+print(a)     # 10
+
+a += 5       # a = 10 + 5 = 15
+print(a)     # 15
+
+a -= 3       # a = 15 - 3 = 12
+print(a)     # 12
+
+a *= 2       # a = 12 * 2 = 24
+print(a)     # 24
+```
+
+Những toán tử gán này rất hữu ích khi mình muốn **thay đổi giá trị biến dần dần** trong quá trình tính toán, ví dụ đếm điểm, cộng dồn tiền, ...
+
+---
+
+## 4. Toán tử so sánh
+
+Toán tử so sánh dùng để **so sánh hai giá trị** với nhau. Kết quả luôn là `True` (đúng) hoặc `False` (sai) — chính là kiểu `bool` mà chúng ta đã học ở bài 1!
+
+| Toán tử | Ý nghĩa | Ví dụ | Kết quả |
+|:---:|---|---|:---:|
+| `==` | Bằng nhau? | `5 == 5` | `True` |
+| `!=` | Khác nhau? | `5 != 3` | `True` |
+| `>` | Lớn hơn? | `7 > 3` | `True` |
+| `<` | Nhỏ hơn? | `4 < 2` | `False` |
+| `>=` | Lớn hơn hoặc bằng? | `5 >= 5` | `True` |
+| `<=` | Nhỏ hơn hoặc bằng? | `3 <= 8` | `True` |
+
+### Dry-run: So sánh trong thực tế
+
+Giả sử điểm của Minh là 8, điểm của Lan là 9:
+
+```python
+diem_minh = 8
+diem_lan = 9
+
+print(diem_minh == diem_lan)   # False (8 khác 9)
+print(diem_minh != diem_lan)   # True (8 khác 9)
+print(diem_minh > diem_lan)    # False (8 không lớn hơn 9)
+print(diem_minh < diem_lan)    # True (8 nhỏ hơn 9)
+print(diem_minh >= 8)          # True (8 bằng 8, nên >= là đúng)
+```
+
+> **Lưu ý:** Dấu `=` là phép gán, dấu `==` mới là phép so sánh "bằng nhau" nhé!
+
+---
+
+## 5. Toán tử logic
+
+Toán tử logic dùng để **kết hợp nhiều điều kiện** lại với nhau. Kết quả cũng chỉ là `True` hoặc `False`.
+
+| Toán tử | Ý nghĩa | Kết quả |
+|---|---|---|
+| `and` | **VÀ** — cả hai điều kiện đều phải đúng | True chỉ khi cả hai đều True |
+| `or` | **HOẶC** — chỉ cần một điều kiện đúng | True khi ít nhất một điều đúng |
+| `not` | **KHÔNG PHẢI** — đảo ngược kết quả | True biến thành False, và ngược lại |
+
+### Ví dụ đời thường
+
+**Điều kiện được chơi game:** Phải làm bài xong **VÀ** phải ăn cơm xong.
+
+```python
+lam_bai_xong = True
+an_com_xong = True
+
+cho_phep_choi = lam_bai_xong and an_com_xong
+print(cho_phep_choi)   # True — cả hai đều xong, được chơi!
+```
+
+Nếu chỉ ăn cơm xong mà chưa làm bài?
+
+```python
+lam_bai_xong = False
+an_com_xong = True
+
+cho_phep_choi = lam_bai_xong and an_com_xong
+print(cho_phep_choi)   # False — chưa làm bài, không được chơi!
+```
+
+**Điều kiện được ăn bánh:** Được mẹ mua cho **HOẶC** được ông bà cho.
+
+```python
+me_mua = False
+ong_ba_cho = True
+
+duoc_an_banh = me_mua or ong_ba_cho
+print(duoc_an_banh)    # True — dù mẹ không mua, ông bà cho thì vẫn được ăn!
+```
+
+**Phủ định:** `not` đảo ngược kết quả.
+
+```python
+da_hoc_xong = True
+print(not da_hoc_xong)   # False — "chưa học xong" là sai
+```
+
+> **Nhìn trước:** Sau này khi học về chuỗi ký tự và danh sách, các em sẽ gặp thêm hai toán tử rất hay là `in` (có nằm trong không?) và `is` (có phải cùng một thứ không?). Bài này mình làm quen với 4 nhóm trên trước đã nhé!
+
+---
+
+## 6. Lỗi hay gặp và cách tránh
+
+### Bẫy 1: Phép chia `/` luôn trả về số thực
+
+Đây là lỗi "kinh điển" nhất. Các em đang viết chương trình in điểm integer, nhưng dùng `/` nên bị in ra `8.0` thay vì `8`.
+
+```python
+# SAI — in ra 4.0 thay vì 4
+ket_qua = 8 / 2
+print(ket_qua)    # 4.0
+
+# ĐÚNG — dùng // để lấy phần nguyên
+ket_qua = 8 // 2
+print(ket_qua)    # 4
+```
+
+### Bẫy 2: Chia cho số không — ZeroDivisionError
+
+Phép chia cho 0 là **không hợp lệ**. Chương trình sẽ bị dừng ngay lập tức!
+
+```python
+print(10 / 0)   # ZeroDivisionError: division by zero
+```
+
+> **Cách tránh:** Luôn kiểm tra mẫu số khác 0 trước khi chia.
+
+### Bẫy 3: Quên dấu `*` trong phép nhân
+
+Trong toán học, mình hay viết `2x` hoặc `3(a+b)`. Nhưng Python **không hiểu** kiểu viết đó!
+
+```python
+ket_qua = 2 * x    # ĐÚNG — luôn viết dấu * rõ ràng
+ket_qua = 2x       # SAI — SyntaxError! Máy tính không hiểu
+ket_qua = 3 * (a + b)  # ĐÚNG
+```
+
+> **Quy tắc:** Phép nhân luôn phải có dấu `*`.
+
+### Bẫy 4: Dùng dấu phẩy `,` thay dấu chấm `.`
+
+Trong tiếng Việt, mình hay viết số thực bằng dấu phẩy: `3,5`. Nhưng Python bắt buộc dùng dấu chấm!
+
+```python
+# SAI — Python hiểu là tuple (3, 5)
+diem = 3,5
+
+# ĐÚNG
+diem = 3.5
+```
+
+### Bẫy 5: Dùng `^` thay `**`
+
+Dấu `^` trong Python là phép XOR (bitwise), **không phải** lũy thừa!
+
+```python
+# SAI — XOR, không phải 2 lũy thừa 3
+print(2 ^ 3)    # 1 (không phải 8!)
+
+# ĐÚNG — lũy thừa
+print(2 ** 3)   # 8
 ```
 
 ---
 
-## 7. Concept Quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 7. Ví dụ minh họa
+
+### 7.1. Tính diện tích hình chữ nhật
+
+```python
+dai = 7
+rong = 3
+dien_tich = dai * rong
+print("Dien tich hinh chu nhat la:", dien_tich)
+# Kết quả: Dien tich hinh chu nhat la: 21
+```
+
+### 7.2. Đổi phút sang giờ và phút
+
+```python
+tong_phut = 125
+gio = tong_phut // 60       # 125 // 60 = 2 (phần giờ)
+phut_con_lai = tong_phut % 60  # 125 % 60 = 5 (phần phút còn lại)
+print(tong_phut, "phut =", gio, "gio", phut_con_lai, "phut")
+# Kết quả: 125 phut = 2 gio 5 phut
+```
+
+### 7.3. Tính tiền thừa khi mua bánh
+
+```python
+tien_du = 50000
+gia_banh = 12000
+tien_tra = 3 * gia_banh     # Mua 3 bánh
+tien_thua = tien_du - tien_tra
+print("Tien mua:", tien_tra, "dong")
+print("Tien thua:", tien_thua, "dong")
+# Kết quả: Tien mua: 36000 dong
+#          Tien thua: 14000 dong
+```
+
+### 7.4. Tính phần dư để biết chẵn hay lẻ
+
+```python
+so = 17
+kiem_tra = so % 2
+print(kiem_tra)
+# Kết quả: 1 (dư 1 nghĩa là số lẻ, dư 0 nghĩa là số chẵn)
+```
+
+---
+
+## 8. Concept Quiz: 20 câu trắc nghiệm
 
 #### Câu 1: Phép chia `10 / 2` trong Python trả về kết quả nào?
-- **A.** `5` (kiểu `int`)
-- **B.** **[Đáp án đúng]** `5.0` (kiểu `float`)
+- **A.** `5` (kiểu int)
+- **B.** **[Đáp án đúng]** `5.0` (kiểu float)
 - **C.** `5.00`
 - **D.** Báo lỗi
-- > *Giải thích:* Phép chia `/` trong Python luôn luôn trả về kiểu số thực `float`.
+- > *Giải thích:* Phép chia `/` trong Python **luôn luôn** trả về kiểu số thực `float`, kể cả khi chia hết.
 
 #### Câu 2: Biểu thức `2 + 3 * 4` có kết quả là bao nhiêu?
 - **A.** 20
 - **B.** **[Đáp án đúng]** 14
 - **C.** 24
 - **D.** 10
-- > *Giải thích:* Phép nhân có độ ưu tiên cao hơn phép cộng, nên máy tính tính `3 * 4 = 12` trước, sau đó `2 + 12 = 14`.
+- > *Giải thích:* Phép nhân `*` được tính trước: `3 * 4 = 12`, rồi `2 + 12 = 14`.
 
-#### Câu 3: Muốn biểu diễn phân số đại số $\frac{a + b}{c + d}$ trong Python, cách viết nào sau đây là chuẩn mực nhất?
+#### Câu 3: Để viết phân số $\frac{a + b}{c + d}$ trong Python, cách nào đúng?
 - **A.** `a + b / c + d`
 - **B.** `(a + b) / c + d`
 - **C.** `a + b / (c + d)`
 - **D.** **[Đáp án đúng]** `(a + b) / (c + d)`
-- > *Giải thích:* Cần đặt cả tử số và mẫu số trong cặp ngoặc tròn để máy tính tính toán tổng trước khi chia.
+- > *Giải thích:* Cần ngoặc tròn bọc cả tử và mẫu để máy tính tính tổng trước khi chia.
 
-#### Câu 4: Khi thực hiện lệnh `print(10 / 0)`, hiện tượng gì sẽ xảy ra?
+#### Câu 4: Khi chạy `print(10 / 0)`, điều gì xảy ra?
 - **A.** In ra `0`
-- **B.** In ra giá trị vô cùng (`inf`)
-- **C.** **[Đáp án đúng]** Báo lỗi `ZeroDivisionError: division by zero`
-- **D.** Chương trình tự động bỏ qua
-- > *Giải thích:* Trong toán học và máy tính, phép chia cho 0 là không hợp lệ và gây lỗi ngắt chương trình.
+- **B.** In ra `inf`
+- **C.** **[Đáp án đúng]** Báo lỗi `ZeroDivisionError`
+- **D.** Chương trình tự bỏ qua
+- > *Giải thích:* Chia cho 0 là không hợp lệ, gây lỗi dừng chương trình.
 
-#### Câu 5: Trong Python, ký hiệu nào được dùng cho phép nhân?
-- **A.** `x`
-- **B.** `.`
-- **C.** `:`
-- **D.** **[Đáp án đúng]** `*`
-- > *Giải thích:* Dấu sao `*` là toán tử nhân chuẩn mực trong hầu hết các ngôn ngữ lập trình.
+#### Câu 5: Biểu thức `"Ho" * 2` trong Python cho kết quả là?
+- **A.** `"Ho2"`
+- **B.** `"2Ho"`
+- **C.** **[Đáp án đúng]** `"HoHo"`
+- **D.** Báo lỗi
+- > *Giải thích:* Dấu `*` giữa chuỗi và số nguyên lặp lại chuỗi đó: `"Ho"` lặp 2 lần thành `"HoHo"`.
 
-#### Câu 6: Biểu thức `(10 - 2) * (3 + 1)` cho kết quả bằng:
+#### Câu 6: Biểu thức `(10 - 2) * (3 + 1)` cho kết quả bằng?
 - **A.** 16
 - **B.** 22
 - **C.** **[Đáp án đúng]** 32
 - **D.** 28
-- > *Giải thích:* Các biểu thức trong ngoặc được tính trước: `8 * 4 = 32`.
+- > *Giải thích:* Tính ngoặc trước: `8 * 4 = 32`.
 
-#### Câu 7: Khi viết `x = 2(a + b)` trong Python, máy tính sẽ phản hồi như thế nào?
-- **A.** Tự động hiểu là nhân 2 với tổng
-- **B.** **[Đáp án đúng]** Báo lỗi cú pháp `SyntaxError: invalid syntax`
+#### Câu 7: Khi viết `x = 2(a + b)` trong Python, máy tính sẽ báo lỗi?
+- **A.** Tự động hiểu là nhân
+- **B.** **[Đáp án đúng]** Báo lỗi cú pháp `SyntaxError`
 - **C.** In ra kết quả bình thường
-- **D.** Gán giá trị 2 vào biến
-- > *Giải thích:* Python không hỗ trợ phép nhân ngầm, bắt buộc phải viết `2 * (a + b)`.
+- **D.** Gán 2 vào x
+- > *Giải thích:* Python không hỗ trợ phép nhân ngầm, phải viết `2 * (a + b)`.
 
-#### Câu 8: Biểu thức `12 / 4 / 3` được máy tính tính toán như thế nào?
-- **A.** Tính `4 / 3` trước rồi lấy `12` chia cho kết quả đó
-- **B.** **[Đáp án đúng]** Tính từ trái sang phải: `(12 / 4) / 3 = 3.0 / 3 = 1.0`
-- **C.** Báo lỗi vì có 2 dấu chia liên tiếp
-- **D.** Kết quả là 9.0
-- > *Giải thích:* Các phép chia có cùng bậc ưu tiên và được thực hiện kết hợp từ trái sang phải.
+#### Câu 8: `7 % 2` cho kết quả bằng bao nhiêu?
+- **A.** 3
+- **B.** **[Đáp án đúng]** 1
+- **C.** 3.5
+- **D.** 2
+- > *Giải thích:* 7 chia 2 được 3 phần dư 1, nên `7 % 2 = 1`.
 
-#### Câu 9: Trong biểu thức `10 - 4 + 2`, thứ tự tính toán đúng là:
-- **A.** Tính `4 + 2 = 6` trước rồi lấy `10 - 6 = 4`
-- **B.** **[Đáp án đúng]** Tính từ trái sang phải: `10 - 4 = 6`, sau đó `6 + 2 = 8`
-- **C.** Tính tùy ý vì cộng và trừ như nhau
-- **D.** Kết quả là 4
-- > *Giải thích:* Phép cộng và trừ có cùng độ ưu tiên, được tính lần lượt từ trái sang phải.
+#### Câu 9: `2 ** 4` cho kết quả bằng bao nhiêu?
+- **A.** 8
+- **B.** 6
+- **C.** **[Đáp án đúng]** 16
+- **D.** 24
+- > *Giải thích:* `2 ** 4 = 2 × 2 × 2 × 2 = 16`.
 
-#### Câu 10: Kết quả của biểu thức `7 / 2` trong Python là:
-- **A.** `3`
-- **B.** **[Đáp án đúng]** `3.5`
-- **C.** Báo lỗi vì 7 không chia hết cho 2
-- **D.** `3` (phần nguyên)
-- > *Giải thích:* Phép chia `/` trong Python **luôn luôn trả về số thực (`float`)**, kể cả khi chia hết: `4 / 2` cũng cho ra `2.0` chứ không phải `2`.
-
-#### Câu 11: Giá trị của biểu thức `10 - 3 * 2` là:
+#### Câu 10: Biểu thức `10 - 3 * 2` có kết quả là?
 - **A.** 14
 - **B.** **[Đáp án đúng]** 4
 - **C.** 7
 - **D.** 24
-- > *Giải thích:* Toán tử `*` có độ ưu tiên cao hơn `-`, nên `3 * 2 = 6` được tính trước, sau đó mới trừ từ 10: `10 - 6 = 4`.
+- > *Giải thích:* Nhân trước: `3 * 2 = 6`, rồi `10 - 6 = 4`.
 
-#### Câu 12: Biểu thức `20 / (5 - 5)` sẽ dẫn đến lỗi gì?
+#### Câu 11: `8 // 3` cho kết quả bằng bao nhiêu?
+- **A.** 2.666
+- **B.** **[Đáp án đúng]** 2
+- **C.** 3
+- **D.** 1
+- > *Giải thích:* Phép chia nguyên `//` lấy phần nguyên, bỏ dư: `8 // 3 = 2`.
+
+#### Câu 12: Biểu thức `20 / (5 - 5)` sẽ gây ra lỗi gì?
 - **A.** `ValueError`
 - **B.** `TypeError`
 - **C.** **[Đáp án đúng]** `ZeroDivisionError`
 - **D.** Không có lỗi
-- > *Giải thích:* `5 - 5 = 0`, phép chia biến thành `20 / 0` gây chia cho 0.
+- > *Giải thích:* `5 - 5 = 0`, rồi `20 / 0` gây lỗi chia cho 0.
 
-#### Câu 13: Để đổi dấu một số $x$ từ dương sang âm, ta viết:
-- **A.** `-x`
-- **B.** `0 - x`
-- **C.** `x * (-1)`
-- **D.** **[Đáp án đúng]** Cả A, B, C đều đúng
-- > *Giải thích:* Cả 3 cách đều cho ra số đối dấu của $x$.
-
-#### Câu 14: Biểu thức nào sau đây cho kết quả là số thực?
+#### Câu 13: Biểu thức nào sau đây cho kết quả là số thực (float)?
 - **A.** `5 + 3`
 - **B.** `10 - 2`
 - **C.** `4 * 2`
 - **D.** **[Đáp án đúng]** `8 / 4`
-- > *Giải thích:* Chỉ có phép chia `/` luôn luôn trả về kiểu `float`.
+- > *Giải thích:* Chỉ có phép chia `/` luôn trả về `float`.
 
-#### Câu 15: Kết quả của `(6 + 2) / 2` là:
+#### Câu 14: Kết quả `(6 + 2) / 2` là?
 - **A.** 7
 - **B.** **[Đáp án đúng]** 4.0
 - **C.** 4
 - **D.** 7.0
-- > *Giải thích:* `(6 + 2) = 8`, `8 / 2 = 4.0`.
+- > *Giải thích:* Tính ngoặc trước: `8 / 2 = 4.0` (float vì là phép chia `/`).
 
-#### Câu 16: Biểu thức `6 + 2 / 2` là:
+#### Câu 15: Biểu thức `6 + 2 / 2` cho kết quả là?
 - **A.** 4.0
 - **B.** **[Đáp án đúng]** 7.0
 - **C.** 7
 - **D.** 4
-- > *Giải thích:* Không có ngoặc nên `2 / 2 = 1.0` tính trước, `6 + 1.0 = 7.0`.
+- > *Giải thích:* Chia trước: `2 / 2 = 1.0`, rồi `6 + 1.0 = 7.0`.
 
-#### Câu 17: Cặp ngoặc nào được dùng để gom nhóm ưu tiên trong biểu thức toán học của Python?
-- **A.** Cặp ngoặc vuông `[ ]`
-- **B.** Cặp ngoặc nhọn `{ }`
-- **C.** **[Đáp án đúng]** Cặp ngoặc tròn `( )`
-- **D.** Cặp ngoặc nhọn `< >`
-- > *Giải thích:* Python chỉ sử dụng ngoặc tròn `()` cho biểu thức toán học.
+#### Câu 16: `a = 10`, sau đó `a += 7`. Giá trị mới của `a` là?
+- **A.** 7
+- **B.** 10
+- **C.** **[Đáp án đúng]** 17
+- **D.** 107
+- > *Giải thích:* `a += 7` nghĩa là `a = a + 7 = 10 + 7 = 17`.
 
-#### Câu 18: Kết quả của `(100 - 50) * (20 - 10) / 10` là:
-- **A.** 50
-- **B.** **[Đáp án đúng]** 50.0
-- **C.** 500
-- **D.** 500.0
-- > *Giải thích:* $50 \times 10 / 10 = 500 / 10 = 50.0$.
+#### Câu 17: Kết quả so sánh `5 == 5.0` trong Python là?
+- **A.** `False`
+- **B.** **[Đáp án đúng]** `True`
+- **C.** Báo lỗi
+- **D.** `5`
+- > *Giải thích:* Python so sánh giá trị, 5 và 5.0 là bằng nhau nên trả về `True`.
+
+#### Câu 18: Biểu thức `True and False` có kết quả là?
+- **A.** `True`
+- **B.** **[Đáp án đúng]** `False`
+- **C.** `None`
+- **D.** Báo lỗi
+- > *Giải thích:* `and` yêu cầu cả hai đều True mới cho True. Một trong hai False → kết quả False.
+
+#### Câu 19: `not True` cho kết quả là?
+- **A.** `True`
+- **B.** **[Đáp án đúng]** `False`
+- **C.** `0`
+- **D.** Báo lỗi
+- > *Giải thích:* `not` đảo ngược giá trị bool: `True` biến thành `False`.
+
+#### Câu 20: Cho `x = 5`. Biểu thức nào sau đây đúng để kiểm tra x có lớn hơn 3 không?
+- **A.** `x > 3 = True`
+- **B.** `x >> 3`
+- **C.** **[Đáp án đúng]** `x > 3`
+- **D.** `x => 3`
+- > *Giải thích:* Toán tử so sánh "lớn hơn" là `>`. Kết quả `x > 3` sẽ là `True`.

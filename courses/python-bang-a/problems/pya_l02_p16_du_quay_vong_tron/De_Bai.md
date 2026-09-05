@@ -30,9 +30,3 @@ In ra hai số nguyên trên một dòng cách nhau một dấu cách: số vòn
 ### Giải thích
 
 $250 = 4 \times 60 + 10$. Sóc Nâu đã đi được 4 vòng trọn vẹn và đang ở phút thứ 10 của vòng thứ năm.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le N, C \le 10^9$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

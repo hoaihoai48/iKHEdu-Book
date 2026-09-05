@@ -53,8 +53,3 @@ NO
 ### Giải thích
 
 35 có 2 chữ số nhưng là số lẻ.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

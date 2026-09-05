@@ -24,7 +24,3 @@ In ra số nguyên là kết quả của $A - B$.
 ```
 ### Giải thích
 Vải còn lại là $100 - 35 = 65$ mét.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

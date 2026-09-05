@@ -27,10 +27,3 @@ Chữ số lớn nhất, theo sau là chữ số nhỏ nhất, cách nhau một 
 ### Giải thích
 
 Chữ số lớn nhất là 9, nhỏ nhất là 1.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

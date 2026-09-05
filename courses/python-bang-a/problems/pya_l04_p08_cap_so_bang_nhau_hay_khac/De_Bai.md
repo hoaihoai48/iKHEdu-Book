@@ -30,9 +30,3 @@ a NHO HON b
 ```
 ### Giải thích
 Số 15 nhỏ hơn số 28 nên in ra a NHO HON b.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

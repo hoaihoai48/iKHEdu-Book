@@ -23,7 +23,3 @@ In ra số nguyên $N$.
 ```
 ### Giải thích
 Nhập vào số 2026 và in lại đúng số 2026.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

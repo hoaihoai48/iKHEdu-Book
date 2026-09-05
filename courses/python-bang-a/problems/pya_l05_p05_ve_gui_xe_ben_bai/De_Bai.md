@@ -26,9 +26,3 @@ xe may
 ```
 ### Giải thích
 Phương tiện gửi là xe máy có mức phí 5000 đồng.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

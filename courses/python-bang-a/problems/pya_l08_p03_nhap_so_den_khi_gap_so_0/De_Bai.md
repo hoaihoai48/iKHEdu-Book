@@ -30,10 +30,3 @@ Một số nguyên duy nhất là số lượng các số đã nhập trước s
 ### Giải thích
 
 Có 3 số: 5, 12, 8 đã được nhập trước khi gặp 0.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

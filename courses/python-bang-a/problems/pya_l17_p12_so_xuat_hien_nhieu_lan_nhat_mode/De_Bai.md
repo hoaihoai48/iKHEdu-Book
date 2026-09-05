@@ -30,11 +30,3 @@ Số xuất hiện nhiều nhất.
 
 Với dữ liệu đầu vào là `7
 2 3 5 2 3 7 2`, kết quả thu được tương ứng là `2`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -41,8 +41,3 @@ Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tươn
 ### Giải thích
 
 Lúc 9 giờ, sau 3 giờ nữa là 12 giờ.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -28,8 +28,3 @@ Một số tự nhiên $N$ ($10 \le N \le 10^9$).
 ### Giải thích
 
 Chữ số hàng đơn vị là 7, hàng chục là 5.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

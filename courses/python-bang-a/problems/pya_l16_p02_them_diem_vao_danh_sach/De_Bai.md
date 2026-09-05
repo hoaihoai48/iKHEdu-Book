@@ -29,11 +29,3 @@ Danh sách các số sau khi thêm $X$, cách nhau bởi khoảng trắng.
 
 Với dữ liệu đầu vào là `8 9 7 10
 9`, kết quả thu được tương ứng là `8 9 7 10 9`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

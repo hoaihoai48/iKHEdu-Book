@@ -38,8 +38,3 @@ In ra một số nguyên duy nhất là tổng số tiền cần chuẩn bị.
 - Tiền thuyền: $6 \times 20 + 4 \times 10 = 120 + 40 = 160$.
 - Tiền cáp treo: $6 \times 50 + 4 \times 30 = 300 + 120 = 420$.
 - Tổng tiền: $160 + 420 = 580$ nghìn đồng.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

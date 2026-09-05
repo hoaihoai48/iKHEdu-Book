@@ -33,10 +33,3 @@ Số ngày để ốc sên chạm đỉnh.
 
 Ngày 1: leo lên 3m, đêm tụt 1m còn 2m.
 Ngày 2: từ 2m leo thêm 3m lên 5m (chạm đỉnh ngay trong ngày!). Vậy mất 2 ngày.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

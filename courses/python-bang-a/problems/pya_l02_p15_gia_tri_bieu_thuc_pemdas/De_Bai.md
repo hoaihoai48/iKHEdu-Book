@@ -31,9 +31,3 @@ In ra một số nguyên duy nhất là giá trị của biểu thức.
 ### Giải thích
 
 Ưu tiên lũy thừa trước: $c^2 = 4^2 = 16$. Tiếp theo nhân: $b \times 16 = 3 \times 16 = 48$. Cuối cùng cộng: $2 + 48 = 50$.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le a, b, c \le 100$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

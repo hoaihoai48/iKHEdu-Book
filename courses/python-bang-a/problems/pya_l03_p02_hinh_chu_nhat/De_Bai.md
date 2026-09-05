@@ -24,7 +24,3 @@ In ra chu vi và diện tích.
 ```
 ### Giải thích
 Chu vi $2 \times (10 + 6) = 32$, Diện tích $10 \times 6 = 60$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

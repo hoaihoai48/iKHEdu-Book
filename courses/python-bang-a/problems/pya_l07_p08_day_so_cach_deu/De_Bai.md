@@ -30,11 +30,3 @@ Dãy số gồm $n$ phần tử.
 Với dữ liệu đầu vào là `2
 3
 5`, kết quả thu được tương ứng là `2 5 8 11 14`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

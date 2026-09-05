@@ -26,11 +26,3 @@ Dãy các số phong phú tăng dần trên một dòng.
 ### Giải thích
 
 Với dữ liệu đầu vào là `20`, kết quả thu được tương ứng là `12 18 20`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

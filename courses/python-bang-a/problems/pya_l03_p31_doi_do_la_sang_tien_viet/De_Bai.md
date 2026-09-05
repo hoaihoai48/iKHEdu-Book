@@ -30,9 +30,3 @@ Số tiền Việt Nam tính bằng đồng (số nguyên).
 
 - Mỗi đô la đổi được $25000$ đồng.
 - $4$ đô la đổi được: $4 \times 25000 = 100000$ đồng.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le D \le 10^6$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

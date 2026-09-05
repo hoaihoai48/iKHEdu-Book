@@ -24,7 +24,3 @@ In ra giá trị số thực dạng `f"{S:.2f}"`.
 ```
 ### Giải thích
 $(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

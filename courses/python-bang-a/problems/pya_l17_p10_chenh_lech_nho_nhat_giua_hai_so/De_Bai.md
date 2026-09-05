@@ -31,10 +31,3 @@ Cho dãy $N$ số nguyên đôi một khác nhau. Hãy tìm độ chênh lệch 
 ### Giải thích
 
 Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

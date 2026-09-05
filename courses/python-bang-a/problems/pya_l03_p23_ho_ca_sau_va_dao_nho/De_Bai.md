@@ -29,8 +29,3 @@ Một số nguyên duy nhất là diện tích mặt nước còn lại.
 
 Diện tích hồ: $10 \times 10 = 100$. Diện tích đảo: $3 \times 4 = 12$.
 Mặt nước còn lại: $100 - 12 = 88$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

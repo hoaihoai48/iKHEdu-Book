@@ -31,9 +31,3 @@ GIOI
 ```
 ### Giải thích
 Điểm 8.5 thuộc thang điểm giỏi (từ 8.0 trở lên).
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

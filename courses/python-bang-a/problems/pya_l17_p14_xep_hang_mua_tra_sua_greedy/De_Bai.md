@@ -1,7 +1,7 @@
 # Xếp hàng mua trà sữa (Greedy)
 
 
-*(Đề thi lập trình Quốc gia Bảng A)*
+*(Đề thi lập trình Quốc gia)*
 
 ## Bối cảnh
 
@@ -34,9 +34,3 @@ Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt l�
 - Bạn 2 chờ $1 + 2 = 3$ phút.
 - Bạn 3 chờ $1 + 2 + 3 = 6$ phút.
 Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

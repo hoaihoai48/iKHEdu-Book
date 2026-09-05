@@ -30,9 +30,3 @@ DUNG LAI
 ```
 ### Giải thích
 Màu đèn là "do" nên in ra thông báo DUNG LAI.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

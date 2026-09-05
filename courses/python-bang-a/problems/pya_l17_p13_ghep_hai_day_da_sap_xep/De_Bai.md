@@ -33,11 +33,3 @@ Dãy hợp nhất gồm $(N + M)$ phần tử tăng dần trên một dòng.
 Với dữ liệu đầu vào là `3 4
 1 4 7
 2 3 5 8`, kết quả thu được tương ứng là `1 2 3 4 5 7 8`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

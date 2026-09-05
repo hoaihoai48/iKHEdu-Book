@@ -30,9 +30,3 @@ CUNG DAU
 ```
 ### Giải thích
 Cả hai số 5 và 10 đều là số dương nên cùng dấu.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -27,8 +27,6 @@
 ### Giải thích
 
 Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -51,8 +49,6 @@ Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
 
 Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19.
 * **Công thức toán học:** $u_N = u_1 + (N - 1) \times d$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -74,8 +70,6 @@ Dãy số là: 3, 7, 11, 15, 19. Số thứ 5 là 19.
 ### Giải thích
 
 Dãy là 1, 1, 2, 3, 5, 8. Số thứ 6 là 8.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -98,8 +92,6 @@ Dãy là 1, 1, 2, 3, 5, 8. Số thứ 6 là 8.
 ### Giải thích
 
 $1 \times 2 + 2 \times 3 + 3 \times 4 = 2 + 6 + 12 = 20$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -127,8 +119,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 1 2
 1 2 3
 1 2 3 4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -156,8 +146,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 0 1 0 1
 1 0 1 0
 0 1 0 1`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -179,8 +167,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 4 8 16`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -203,8 +189,6 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 ### Giải thích
 
 $1 - 2 + 3 - 4 + 5 = 3$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -231,8 +215,6 @@ $1 - 2 + 3 - 4 + 5 = 3$.
 Với dữ liệu đầu vào là `3`, kết quả thu được tương ứng là `*
  ***
 *****`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -259,8 +241,6 @@ YES 4
 ### Giải thích
 
 Với dữ liệu đầu vào là `10`, kết quả thu được tương ứng là `YES 4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -284,8 +264,6 @@ Các bạn xúm lại đọc to từng chữ số, vừa đọc vừa cười kh
 ### Giải thích
 
 Ký tự thứ 7 là số 7.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -313,8 +291,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 2 3
 4 5 6
 7 8 9 10`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -336,8 +312,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng là `3 5 6 9 10 12`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -361,7 +335,5 @@ Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

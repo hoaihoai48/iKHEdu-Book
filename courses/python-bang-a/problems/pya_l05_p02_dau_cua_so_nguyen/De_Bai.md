@@ -30,9 +30,3 @@ AM
 ```
 ### Giải thích
 Số -15 nhỏ hơn 0 nên in ra AM.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

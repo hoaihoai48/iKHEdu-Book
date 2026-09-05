@@ -2,7 +2,7 @@
 
 ## 1. Bài toán đếm — Nền tảng tư duy thuật toán
 
-Trong lập trình thi đấu, bài toán **đếm** là một trong những dạng xuất hiện nhiều nhất. Mục tiêu luôn là: *cho một tập hợp số, hãy đếm xem có bao nhiêu số thỏa mãn điều kiện nhất định*.
+Trong lập trình, bài toán **đếm** là một trong những dạng xuất hiện nhiều nhất. Mục tiêu luôn là: *cho một tập hợp số, hãy đếm xem có bao nhiêu số thỏa mãn điều kiện nhất định*.
 
 Có hai phương pháp tiếp cận chính:
 - **Phương pháp duyệt:** Dùng vòng lặp `for` kiểm tra từng số một. Đơn giản nhưng chậm khi tập số lớn.
@@ -242,7 +242,7 @@ count_or = n // 2 + n // 3 - n // 6
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ### 7.1. Liệt kê tất cả số hoàn hảo nhỏ hơn $N$
 

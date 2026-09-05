@@ -27,8 +27,3 @@ In ra hai số $A$ và $B$ sau khi hoán đổi trên cùng một dòng.
 ### Giải thích
 
 Ban đầu $A=7, B=12$. Sau khi đổi: $A=12, B=7$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

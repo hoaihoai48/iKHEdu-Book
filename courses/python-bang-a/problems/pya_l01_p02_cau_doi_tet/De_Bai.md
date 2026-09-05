@@ -28,7 +28,3 @@ Van su nhu y
 ```
 ### Giải thích
 Sử dụng hai lệnh `print()` liên tiếp để in trên hai dòng riêng biệt.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

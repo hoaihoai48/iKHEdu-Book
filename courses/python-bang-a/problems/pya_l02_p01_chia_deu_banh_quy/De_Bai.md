@@ -29,8 +29,3 @@ In ra 2 số trên một dòng cách nhau một dấu cách: số bánh trên m�
 ### Giải thích
 
 $17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

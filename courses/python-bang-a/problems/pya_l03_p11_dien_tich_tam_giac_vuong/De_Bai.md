@@ -31,9 +31,3 @@ Diện tích của hình tam giác vuông (số nguyên).
 
 - Tích hai cạnh góc vuông: $6 \times 4 = 24$.
 - Diện tích tam giác: $24 : 2 = 12$.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le a, h \le 1000$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

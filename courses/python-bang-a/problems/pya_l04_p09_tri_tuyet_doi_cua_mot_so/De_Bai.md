@@ -39,10 +39,3 @@ Số đầu vào là $-15$. Giá trị tuyệt đối của $-15$ là $|-15| = 1
 ```text
 10
 ```
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

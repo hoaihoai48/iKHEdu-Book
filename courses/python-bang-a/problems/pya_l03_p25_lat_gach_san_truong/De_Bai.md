@@ -29,8 +29,3 @@ Một số nguyên duy nhất là số viên gạch.
 
 Diện tích sân: $20 \times 10 = 200$. Diện tích 1 viên gạch: $2 \times 2 = 4$.
 Số gạch cần: $200 : 4 = 50$ viên.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

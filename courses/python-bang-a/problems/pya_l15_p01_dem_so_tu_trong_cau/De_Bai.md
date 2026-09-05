@@ -27,10 +27,3 @@ Số lượng từ trong câu.
 ### Giải thích
 
 Có 4 từ: 'Chuc', 'mung', 'nam', 'moi'.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

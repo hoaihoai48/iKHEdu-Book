@@ -26,10 +26,3 @@ Số bước đoán tối đa.
 ### Giải thích
 
 Các bước: $8 \to 4 \to 2 \to 1$ (cần 4 bước).
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

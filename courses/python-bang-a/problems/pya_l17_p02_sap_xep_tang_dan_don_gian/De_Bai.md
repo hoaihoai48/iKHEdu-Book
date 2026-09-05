@@ -30,11 +30,3 @@ Dãy số sau khi sắp xếp tăng dần, cách nhau bởi khoảng trắng.
 
 Với dữ liệu đầu vào là `5
 9 2 7 1 5`, kết quả thu được tương ứng là `1 2 5 7 9`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -23,7 +23,3 @@ In ra số tạo bởi 2 chữ số cuối (Ví dụ: `2026` in ra `26`, `105` i
 ```
 ### Giải thích
 $1945 \% 100 = 45$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

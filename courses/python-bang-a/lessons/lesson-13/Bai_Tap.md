@@ -27,8 +27,6 @@ Python
 ### Giải thích
 
 Với dữ liệu đầu vào là `Python`, kết quả thu được tương ứng là `6`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ VIE
 ### Giải thích
 
 Với dữ liệu đầu vào là `VIETNAM`, kết quả thu được tương ứng là `VIE`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +69,6 @@ NOMEAROD
 ### Giải thích
 
 Với dữ liệu đầu vào là `DORAEMON`, kết quả thu được tương ứng là `NOMEAROD`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -96,8 +90,6 @@ ACE
 ### Giải thích
 
 Lấy các vị trí 0 ('A'), 2 ('C'), 4 ('E').
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -119,8 +111,6 @@ ikhedu.vn
 ### Giải thích
 
 Với dữ liệu đầu vào là `hocsinh@ikhedu.vn`, kết quả thu được tương ứng là `ikhedu.vn`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -142,8 +132,6 @@ P N
 ### Giải thích
 
 Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `P N`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -169,8 +157,6 @@ CDEAB
 
 Với dữ liệu đầu vào là `ABCDE
 2`, kết quả thu được tương ứng là `CDEAB`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -194,8 +180,6 @@ HON
 
 Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `PYT
 HON`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -217,8 +201,6 @@ DEFABC
 ### Giải thích
 
 Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứng là `DEFABC`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -241,8 +223,6 @@ PYHON
 ### Giải thích
 
 Xóa ký tự tại index 2 là chữ 'T'.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -264,8 +244,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `RADAR`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -287,7 +265,5 @@ ABCBADE
 ### Giải thích
 
 Chuỗi con đối xứng dài nhất là `ABCBA` có độ dài 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

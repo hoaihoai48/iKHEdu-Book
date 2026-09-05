@@ -23,7 +23,3 @@ Anh hon em 5 tuoi.
 ```
 ### Giải thích
 Hiệu số tuổi $12 - 7 = 5$. In ra `Anh hon em 5 tuoi.`.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

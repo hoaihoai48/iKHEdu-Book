@@ -27,10 +27,3 @@ In hai số nguyên cách nhau một khoảng trắng: số lượng chữ số 
 ### Giải thích
 
 Chữ số chẵn: 2, 0 (2 số). Chữ số lẻ: 3, 5 (2 số).
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

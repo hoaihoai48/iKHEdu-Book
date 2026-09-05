@@ -27,8 +27,6 @@
 ### Giải thích
 
 Có 6 số: 3, 6, 9, 12, 15, 18.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ Có 6 số: 3, 6, 9, 12, 15, 18.
 ### Giải thích
 
 Các số là: 2, 3, 4, 6, 8, 9, 10 (có 7 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +69,6 @@ Các số là: 2, 3, 4, 6, 8, 9, 10 (có 7 số).
 ### Giải thích
 
 Có 3 số lẻ là: 3, 5, 7.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -96,8 +90,6 @@ Có 3 số lẻ là: 3, 5, 7.
 ### Giải thích
 
 Với dữ liệu đầu vào là `1 30`, kết quả thu được tương ứng là `8`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -119,8 +111,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `153`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -145,8 +135,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `1634`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -168,8 +156,6 @@ Với dữ liệu đầu vào là `1634`, kết quả thu được tương ứng
 ### Giải thích
 
 Từ 1 đến 15 chỉ có duy nhất số 10 chứa chữ số 0. Vậy có $15 - 1 = 14$ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -191,8 +177,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -214,8 +198,6 @@ Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Có 3 số chính phương là 9, 16, 25.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -237,8 +219,6 @@ Có 3 số chính phương là 9, 16, 25.
 ### Giải thích
 
 Với dữ liệu đầu vào là `30`, kết quả thu được tương ứng là `6 28`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -260,8 +240,6 @@ Với dữ liệu đầu vào là `30`, kết quả thu được tương ứng l
 ### Giải thích
 
 Với dữ liệu đầu vào là `20`, kết quả thu được tương ứng là `12 18 20`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -283,7 +261,5 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `220 284`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

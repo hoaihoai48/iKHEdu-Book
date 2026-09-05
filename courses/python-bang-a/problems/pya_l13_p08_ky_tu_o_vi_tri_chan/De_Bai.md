@@ -27,10 +27,3 @@ ACE
 ### Giải thích
 
 Lấy các vị trí 0 ('A'), 2 ('C'), 4 ('E').
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

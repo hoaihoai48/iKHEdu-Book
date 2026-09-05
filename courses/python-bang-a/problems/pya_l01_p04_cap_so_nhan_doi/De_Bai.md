@@ -39,8 +39,3 @@ Giá trị đầu vào là $15$. Khi nhân đôi, ta có: $15 \times 2 = 30$. Do
 ```text
 0
 ```
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

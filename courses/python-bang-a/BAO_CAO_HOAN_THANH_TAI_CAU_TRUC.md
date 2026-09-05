@@ -1,4 +1,4 @@
-# Báo Cáo Hoàn Thành: Tái Cấu Trúc Khóa Học Python Bảng A
+# Báo Cáo Hoàn Thành: Tái Cấu Trúc Khóa Học Python
 
 Đã hoàn thành toàn bộ các yêu cầu tái cấu trúc và đồng bộ hóa khóa học `courses/python-bang-a` theo chuẩn giáo trình học thuật chuẩn mực, trực diện và khắt khe.
 

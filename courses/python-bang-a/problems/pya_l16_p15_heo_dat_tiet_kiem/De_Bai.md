@@ -33,12 +33,3 @@ In ra một số nguyên duy nhất là tổng số tiền.
 ### Giải thích
 
 5 ngày, mỗi ngày 10 đồng được 50 đồng. Các ngày chẵn là ngày 2 và ngày 4, được thưởng thêm $2 \times 3 = 6$ đồng. Tổng cộng $50 + 6 = 56$ đồng.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 1000$. Vòng lặp từng ngày vẫn chạy kịp.
-
-* Subtask 2 (50% số điểm): $1000 < N \le 10^6$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -33,12 +33,3 @@ In ra một số nguyên duy nhất là tổng số sao.
 ### Giải thích
 
 $1 + 2 + 3 + 4 + 5 = 15$ sao.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 10^4$. Cộng từng quyển vẫn kịp giờ.
-
-* Subtask 2 (50% số điểm): $10^4 < N \le 10^{12}$. Cộng từng quyển sẽ không kịp, cần công thức tính nhanh.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

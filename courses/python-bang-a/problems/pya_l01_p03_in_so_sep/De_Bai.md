@@ -23,7 +23,3 @@ In ra dòng chữ `1-2-3-4-5` bằng cách tận dụng tham số `sep`.
 ```
 ### Giải thích
 Các số từ 1 đến 5 được in cách nhau bằng dấu `-`.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

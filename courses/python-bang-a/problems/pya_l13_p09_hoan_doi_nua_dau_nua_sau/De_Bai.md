@@ -27,11 +27,3 @@ DEFABC
 ### Giải thích
 
 Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứng là `DEFABC`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

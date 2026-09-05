@@ -39,8 +39,3 @@ Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94.
 ### Giải thích
 
 Hàng chục là 5, đơn vị là 0 $\to$ Đảo lại thành $0 \times 10 + 5 = 5$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

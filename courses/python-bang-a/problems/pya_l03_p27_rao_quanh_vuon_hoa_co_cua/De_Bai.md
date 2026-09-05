@@ -32,8 +32,3 @@ Một số nguyên là số tiền (nghìn đồng).
 Chu vi cả vườn: $(12 + 8) \times 2 = 40\text{ m}$.
 Độ dài rào cần mua: $40 - 2 = 38\text{ m}$.
 Số tiền: $38 \times 15 = 570$ nghìn đồng.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

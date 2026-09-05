@@ -30,11 +30,3 @@ Mỗi dòng in một cặp số nguyên tố sinh đôi cách nhau bởi khoản
 Với dữ liệu đầu vào là `15`, kết quả thu được tương ứng là `3 5
 5 7
 11 13`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

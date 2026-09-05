@@ -1,6 +1,6 @@
 # Bài 08: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while
 
-## 1. Khái niệm & Tầm quan trọng của Xử lý chữ số trong lập trình thi đấu
+## 1. Khái niệm & Tầm quan trọng của Xử lý chữ số trong lập trình
 
 Trong các kỳ thi lập trình, các bài toán xoay quanh **chữ số của một số nguyên** xuất hiện với tần suất dày đặc:
 * Tính tổng, tích các chữ số.
@@ -179,11 +179,11 @@ $$\implies \text{Kết quả: Số đảo ngược của } 375 \text{ là } \mat
 > * **Khắc phục:** Thêm kiểm tra đầu vào: `if n == 0: print(1)`.
 
 > ❌ **BẪY LỖI 3: DÙNG KIỂU CHUỖI ĐỂ TÍNH TOÁN SỐ HỌC KHI ĐỀ YÊU CẦU THUẬT TOÁN SỐ**
-> * Dù có thể viết `s = str(n)` để làm việc với chuỗi, nhưng việc làm chủ cặp phép toán `//` và `%` là chuẩn mực tư duy thuật toán cốt lõi của lập trình thi đấu, giúp code chạy nhanh hơn và sẵn sàng chuyển giao sang các ngôn ngữ khác (C++, Java).
+> * Dù có thể viết `s = str(n)` để làm việc với chuỗi, nhưng việc làm chủ cặp phép toán `//` và `%` là chuẩn mực tư duy thuật toán cốt lõi của lập trình, giúp code chạy nhanh hơn và sẵn sàng chuyển giao sang các ngôn ngữ khác (C++, Java).
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ### Mẫu 1: Tìm chữ số đầu tiên bên trái (hàng cao nhất) của số $N$
 ```python

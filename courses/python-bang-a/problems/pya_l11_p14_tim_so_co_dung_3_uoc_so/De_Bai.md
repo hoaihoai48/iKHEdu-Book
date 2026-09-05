@@ -1,7 +1,7 @@
 # Tìm số có đúng 3 ước số
 
 
-*(Đề thi lập trình Quốc gia Bảng A)*
+*(Đề thi lập trình Quốc gia)*
 
 ## Bối cảnh
 
@@ -28,9 +28,3 @@ Số lượng các số có đúng 3 ước số $\le N$.
 ### Giải thích
 
 Có 3 số là: 4 ($2^2$), 9 ($3^2$), 25 ($5^2$).
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

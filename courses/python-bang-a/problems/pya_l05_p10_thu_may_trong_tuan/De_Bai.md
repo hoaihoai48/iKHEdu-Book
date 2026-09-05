@@ -27,9 +27,3 @@ THU 2
 ```
 ### Giải thích
 Ngày thứ 2 trong tuần là Thứ Hai.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

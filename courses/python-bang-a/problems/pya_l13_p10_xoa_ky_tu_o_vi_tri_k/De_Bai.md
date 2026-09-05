@@ -27,10 +27,3 @@ PYHON
 ### Giải thích
 
 Xóa ký tự tại index 2 là chữ 'T'.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

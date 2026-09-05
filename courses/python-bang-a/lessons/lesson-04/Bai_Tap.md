@@ -28,8 +28,6 @@
 ### Giải thích
 
 Hai số đầu vào là $25$ và $42$. Số lớn hơn là $42$. Kết quả in ra: `42`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -51,8 +49,6 @@ Hai số đầu vào là $25$ và $42$. Số lớn hơn là $42$. Kết quả in
 ### Giải thích
 
 Số đầu vào là $-15$. Giá trị tuyệt đối của $-15$ là $|-15| = 15$. Kết quả in ra: `15`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -74,8 +70,6 @@ VE NGUOI LON
 ### Giải thích
 
 Chiều cao đo được là $135\text{ cm}$. Do $135 \ge 130$, khách hàng cần áp dụng mức vé người lớn. Kết quả in ra: `VE NGUOI LON`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -97,8 +91,6 @@ CHAN
 ### Giải thích
 
 Số đầu vào là $18$. Vì $18$ chia hết cho $2$ ($18 \% 2 = 0$), nên đây là số chẵn. Kết quả in ra: `CHAN`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -120,8 +112,6 @@ Số đầu vào là $18$. Vì $18$ chia hết cho $2$ ($18 \% 2 = 0$), nên đ�
 ### Giải thích
 
 $3 + 3 = 6$, $3 - 3 = 0$, $3 \times 3 = 9$. Số lớn nhất là 9.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -143,8 +133,6 @@ $3 + 3 = 6$, $3 - 3 = 0$, $3 \times 3 = 9$. Số lớn nhất là 9.
 ### Giải thích
 
 Được giảm 50 nghìn: $620 - 50 = 570$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -165,8 +153,6 @@ NGHI
 ```
 ### Giải thích
 Ngày 7 là thứ Bảy nên được nghỉ học.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -189,8 +175,6 @@ Minh
 ### Giải thích
 
 Chiều cao của Minh là $142\text{ cm}$ và Nam là $138\text{ cm}$. Vì $142 > 138$, bạn Minh cao hơn. Kết quả in ra: `Minh`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -212,8 +196,6 @@ YES
 ### Giải thích
 
 24 là số chẵn và có 2 chữ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -238,8 +220,6 @@ YES
 ### Giải thích
 
 Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công chúa có 3 năng lượng đi được $3 // 2 = 1$ bậc. Tổng số bậc đi được là $3 + 1 = 4 \ge 4 \implies$ Gặp nhau!
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -263,9 +243,6 @@ Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công ch�
 - $100$ số đầu: $100 \times 2000 = 200000$ đồng.
 - $20$ số còn lại: $20 \times 3500 = 70000$ đồng.
 - Tổng cộng: $200000 + 70000 = 270000$ đồng.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le N \le 10^6$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -288,8 +265,6 @@ Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công ch�
 ### Giải thích
 
 Thanh gỗ dài $17\text{ cm}$ cưa thành các đoạn $5\text{ cm}$. Số đoạn cưa được là $17 // 5 = 3$ đoạn, phần gỗ vụn còn thừa là $17 \% 5 = 2\text{ cm}$. Kết quả in ra: `3 2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -310,8 +285,6 @@ TRONG
 ```
 ### Giải thích
 Điểm (2, 3) nằm trọn vẹn bên trong hình chữ nhật từ (0, 0) đến (5, 5).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -332,8 +305,6 @@ YES
 ```
 ### Giải thích
 Số 15 vừa chia hết cho 3 vừa chia hết cho 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -357,8 +328,6 @@ HOP LE
 ### Giải thích
 
 $3+4>5$, $3+5>4$, $4+5>3$ đều đúng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -381,8 +350,6 @@ NAM NHUAN
 ### Giải thích
 
 Với dữ liệu đầu vào là `2024`, kết quả thu được tương ứng là `NAM NHUAN`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -403,8 +370,6 @@ TRUNG THUONG
 ```
 ### Giải thích
 Số 14 chia hết cho 7 nên chiếc thẻ trúng thưởng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -430,8 +395,6 @@ Số 14 chia hết cho 7 nên chiếc thẻ trúng thưởng.
 Với dữ liệu đầu vào là `15
 28
 9`, kết quả thu được tương ứng là `28`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -455,8 +418,6 @@ AM
 ```
 ### Giải thích
 Số -15 nhỏ hơn 0 nên in ra AM.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -482,8 +443,6 @@ XE DAP
 ```
 ### Giải thích
 Vận tốc 15 km/h nằm trong khoảng từ 10 đến 30 km/h nên Thuận đi xe đạp.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -504,8 +463,6 @@ Vận tốc 15 km/h nằm trong khoảng từ 10 đến 30 km/h nên Thuận đi
 ```
 ### Giải thích
 Mua 25 chiếc (từ 20 chiếc trở lên) được giá 4000 đ/chiếc: 25 x 4000 = 100000 đ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -529,8 +486,6 @@ Mua 25 chiếc (từ 20 chiếc trở lên) được giá 4000 đ/chiếc: 25 x 
 ### Giải thích
 
 Đã có 2 cạnh bằng 3, vậy cạnh còn lại phải là 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -553,8 +508,6 @@ YES
 ### Giải thích
 
 20 chia hết cho 4, mỗi bạn 5 cái kẹo.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -576,8 +529,6 @@ THU 2
 ```
 ### Giải thích
 Ngày thứ 2 trong tuần là Thứ Hai.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -601,8 +552,6 @@ DEU
 ```
 ### Giải thích
 Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -624,8 +573,6 @@ Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
 ### Giải thích
 
 Đúng 1 km đầu: 10 nghìn.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -650,8 +597,6 @@ GIOI
 ```
 ### Giải thích
 Điểm 8.5 thuộc thang điểm giỏi (từ 8.0 trở lên).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -679,8 +624,6 @@ GIOI
 
 Với dữ liệu đầu vào là `2
 2024`, kết quả thu được tương ứng là `29`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -704,8 +647,6 @@ CUNG DAU
 ```
 ### Giải thích
 Cả hai số 5 và 10 đều là số dương nên cùng dấu.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -729,8 +670,6 @@ a NHO HON b
 ```
 ### Giải thích
 Số 15 nhỏ hơn số 28 nên in ra a NHO HON b.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -753,8 +692,6 @@ TI THANG
 ### Giải thích
 
 Tí ra Búa (1), Tèo ra Kéo (2) $\to$ Tí thắng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -778,8 +715,6 @@ DUNG LAI
 ```
 ### Giải thích
 Màu đèn là "do" nên in ra thông báo DUNG LAI.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -806,8 +741,6 @@ GIAO NHAU 2
 ### Giải thích
 
 Đoạn giao nhau từ 4 đến 6, độ dài: $6 - 4 = 2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -828,8 +761,6 @@ xe may
 ```
 ### Giải thích
 Phương tiện gửi là xe máy có mức phí 5000 đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -852,8 +783,6 @@ HA
 ```
 ### Giải thích
 Tháng 4 thuộc mùa hạ (mùa hè).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -877,8 +806,6 @@ VUONG
 ### Giải thích
 
 $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -902,7 +829,5 @@ $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.
 ### Giải thích
 
 Ngày cuối năm chuyển sang ngày đầu năm mới!
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

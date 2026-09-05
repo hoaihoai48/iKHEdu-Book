@@ -27,10 +27,3 @@ Tích các chữ số khác 0.
 ### Giải thích
 
 Bỏ qua chữ số 0, tích là $2 \times 5 = 10$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

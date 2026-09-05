@@ -27,11 +27,3 @@ Các số hoàn hảo, cách nhau bởi khoảng trắng.
 ### Giải thích
 
 Với dữ liệu đầu vào là `30`, kết quả thu được tương ứng là `6 28`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -24,7 +24,3 @@ Một dòng in ra giá trị mới của $A$ và $B$ cách nhau dấu cách.
 ```
 ### Giải thích
 Ban đầu $A = 10, B = 99$. Sau khi đổi chỗ, $A = 99$ và $B = 10$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

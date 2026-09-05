@@ -31,12 +31,9 @@
 ### Giải thích
 
 $1 + 2 + 3 + 4 + 5 = 15$ sao.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 10^4$. Cộng từng quyển vẫn kịp giờ.
 
 * Subtask 2 (50% số điểm): $10^4 < N \le 10^{12}$. Cộng từng quyển sẽ không kịp, cần công thức tính nhanh.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -62,12 +59,9 @@ YES
 ### Giải thích
 
 Số 121 đọc xuôi là 121, đọc ngược cũng là 121 nên đây là ghế vàng.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 9999$.
 
 * Subtask 2 (50% số điểm): $10000 \le N \le 10^{18}$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -92,8 +86,6 @@ Số 121 đọc xuôi là 121, đọc ngược cũng là 121 nên đây là gh�
 
 Với dữ liệu đầu vào là `5 7
 3 5 7 9 7`, kết quả thu được tương ứng là `2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -118,8 +110,6 @@ Với dữ liệu đầu vào là `5 7
 
 Với dữ liệu đầu vào là `5
 10 25 3 47 99`, kết quả thu được tương ứng là `10 99`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -144,8 +134,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `4
 10 20 30 40`, kết quả thu được tương ứng là `100`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -170,8 +158,6 @@ Với dữ liệu đầu vào là `4
 
 Với dữ liệu đầu vào là `5
 12 5 89 3 45`, kết quả thu được tương ứng là `89 3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -196,8 +182,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `4
 1 2 3 4`, kết quả thu được tương ứng là `4 3 2 1`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -222,8 +206,6 @@ Với dữ liệu đầu vào là `4
 
 Với dữ liệu đầu vào là `6 5
 5 2 5 7 5 9`, kết quả thu được tương ứng là `3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -248,8 +230,6 @@ Với dữ liệu đầu vào là `6 5
 
 Với dữ liệu đầu vào là `5
 3 -5 8 -2 0`, kết quả thu được tương ứng là `3 0 8 0 0`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -275,12 +255,9 @@ Với dữ liệu đầu vào là `5
 ### Giải thích
 
 5 ngày, mỗi ngày 10 đồng được 50 đồng. Các ngày chẵn là ngày 2 và ngày 4, được thưởng thêm $2 \times 3 = 6$ đồng. Tổng cộng $50 + 6 = 56$ đồng.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$. Vòng lặp từng ngày vẫn chạy kịp.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^6$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -305,8 +282,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `5
 2 5 8 10 13`, kết quả thu được tương ứng là `3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -331,8 +306,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `8 9 7 10
 9`, kết quả thu được tương ứng là `8 9 7 10 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -360,8 +333,6 @@ Với dữ liệu đầu vào là `8 9 7 10
 Với dữ liệu đầu vào là `4
 10 20 30 40
 99 1`, kết quả thu được tương ứng là `10 99 20 30 40`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -387,12 +358,9 @@ Abc123x
 ### Giải thích
 
 Trong chuỗi `Abc123x` có 3 ký tự là chữ số: `1`, `2` và `3`.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le |S| \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < |S| \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -419,12 +387,9 @@ Trong chuỗi `Abc123x` có 3 ký tự là chữ số: `1`, `2` và `3`.
 ### Giải thích
 
 Sắp xếp 5 chiều cao từ thấp đến cao được dãy 150 155 160 165 175.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -449,8 +414,6 @@ Sắp xếp 5 chiều cao từ thấp đến cao được dãy 150 155 160 165 1
 
 Với dữ liệu đầu vào là `5 3
 1 3 5 3 7`, kết quả thu được tương ứng là `1 5 3 7`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -474,8 +437,6 @@ Với dữ liệu đầu vào là `5 3
 ### Giải thích
 
 Hai phần tử cuối là 4, 5 được đưa lên đầu.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -503,8 +464,6 @@ Hai phần tử cuối là 4, 5 được đưa lên đầu.
 Với dữ liệu đầu vào là `6
 1 4 7 8 2 9`, kết quả thu được tương ứng là `4 8 2
 1 7 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -531,12 +490,9 @@ Hom nay Bin di hoc cung ban Na
 ### Giải thích
 
 Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài 4 ký tự, lớn hơn 3 nên đáp án là 1.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $|S| \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < |S| \le 10^4$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -565,12 +521,9 @@ Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài
 ### Giải thích
 
 Điểm cao nhất là 10, thấp nhất là 6. Trung bình là $(8 + 7 + 10 + 6 + 9) / 5 = 8.0$.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 100$.
 
 * Subtask 2 (50% số điểm): $100 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -595,8 +548,6 @@ Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài
 ### Giải thích
 
 Có 2 cặp là $(2, 8)$ và $(4, 6)$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -622,12 +573,9 @@ NO
 ### Giải thích
 
 Tổng các chữ số là $1 + 2 + 3 + 4 = 10$. Vì 10 không chia hết cho 7 nên đáp án là `NO`. (Ví dụ vé số $16$ có tổng là 7 nên đáp án là `YES`.)
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 9999$ (tối đa 4 chữ số).
 
 * Subtask 2 (50% số điểm): $10000 \le N \le 10^{18}$ (tối đa 19 chữ số).
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -654,12 +602,9 @@ Tổng các chữ số là $1 + 2 + 3 + 4 = 10$. Vì 10 không chia hết cho 7 
 ### Giải thích
 
 Các kỷ lục mới là 1, 3, 5 rồi 7, tổng cộng 4 lần reo.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -686,12 +631,9 @@ Các kỷ lục mới là 1, 3, 5 rồi 7, tổng cộng 4 lần reo.
 ### Giải thích
 
 Tổng chữ số của 12 là 3, của 99 là 18, của 45 là 9, của 100 là 1, của 38 là 11. Tổng lớn nhất là 18 của số 99.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$, $A_i \le 9999$.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^5$, $A_i \le 10^{18}$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -718,12 +660,9 @@ Tổng chữ số của 12 là 3, của 99 là 18, của 45 là 9, của 100 là
 ### Giải thích
 
 Các số chẵn là 2, 4, 6 (3 gói). Các số lẻ là 1, 3, 5 (3 gói).
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^5$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -749,11 +688,8 @@ Các số chẵn là 2, 4, 6 (3 gói). Các số lẻ là 1, 3, 5 (3 gói).
 ### Giải thích
 
 Từ 1 đến 10 có 4 số nguyên tố là 2, 3, 5 và 7.
-* **Ràng buộc:** Subtask 1 (50% số điểm): $1 \le N \le 1000$. Kiểm tra từng số vẫn kịp.
 
 * Subtask 2 (50% số điểm): $1000 < N \le 10^6$.
 
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

@@ -31,8 +31,3 @@ Số giờ để Thuận gặp Ánh.
 
 Khoảng cách giữa 2 bạn: $70 - 10 = 60\text{ km}$.
 Thời gian gặp nhau: $60 : 15 = 4$ giờ.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

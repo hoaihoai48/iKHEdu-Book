@@ -45,11 +45,3 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 5 x 8 = 40
 5 x 9 = 45
 5 x 10 = 50`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -24,7 +24,3 @@ In ra chữ số tận cùng của $N$.
 ```
 ### Giải thích
 $2026 \% 10 = 6$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

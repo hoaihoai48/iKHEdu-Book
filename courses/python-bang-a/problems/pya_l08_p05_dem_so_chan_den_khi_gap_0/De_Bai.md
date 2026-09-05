@@ -31,10 +31,3 @@ Số lượng số chẵn.
 ### Giải thích
 
 Có 3 số chẵn là 4, 8, 12.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

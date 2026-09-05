@@ -30,11 +30,3 @@ Các số độc nhất sắp xếp tăng dần trên một dòng.
 
 Với dữ liệu đầu vào là `7
 3 1 4 1 5 9 2`, kết quả thu được tương ứng là `1 2 3 4 5 9`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

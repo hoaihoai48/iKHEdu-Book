@@ -1,7 +1,7 @@
 # Tìm vị trí trong dãy tự nhiên dài
 
 
-*(Đề thi lập trình Quốc gia Bảng A)*
+*(Đề thi lập trình Quốc gia)*
 
 ## Bối cảnh
 
@@ -43,9 +43,3 @@ Ký tự thứ 7 là số 7.
 ### Giải thích
 
 Ký tự thứ 10 là '1', ký tự thứ 11 là '0' (của số 10).
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -27,8 +27,6 @@ IKHEDU VIETNAM
 ### Giải thích
 
 Với dữ liệu đầu vào là `ikhedu vietnam`, kết quả thu được tương ứng là `IKHEDU VIETNAM`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ hoc_lap_trinh_de_vui
 ### Giải thích
 
 Với dữ liệu đầu vào là `hoc lap trinh de vui`, kết quả thu được tương ứng là `hoc_lap_trinh_de_vui`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +69,6 @@ LapTrinhPythonBangA
 ### Giải thích
 
 Với dữ liệu đầu vào là `Lap Trinh Python Bang A`, kết quả thu được tương ứng là `LapTrinhPythonBangA`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -96,8 +90,6 @@ A
 ### Giải thích
 
 Với dữ liệu đầu vào là `A`, kết quả thu được tương ứng là `65`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -119,8 +111,6 @@ Với dữ liệu đầu vào là `A`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Có 4 từ: 'Chuc', 'mung', 'nam', 'moi'.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -142,8 +132,6 @@ trinh
 ### Giải thích
 
 Từ 'trinh' có 5 chữ cái (dài nhất).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -165,8 +153,6 @@ D
 ### Giải thích
 
 Với dữ liệu đầu vào là `C`, kết quả thu được tương ứng là `D`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -190,8 +176,6 @@ vui
 
 Với dữ liệu đầu vào là `Hoc Python cuc vui`, kết quả thu được tương ứng là `Hoc
 vui`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -213,8 +197,6 @@ Python rat la tuyet
 ### Giải thích
 
 Với dữ liệu đầu vào là `Python rat la tuyet`, kết quả thu được tương ứng là `Python rat la tuyet`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -240,8 +222,6 @@ T
 Với dữ liệu đầu vào là `CAT`, kết quả thu được tương ứng là `C
 A
 T`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -263,8 +243,6 @@ Nguyen Van An
 ### Giải thích
 
 Với dữ liệu đầu vào là `nguyen van an`, kết quả thu được tương ứng là `Nguyen Van An`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -286,8 +264,6 @@ ioT uey teiV maN
 ### Giải thích
 
 'Toi' -> 'ioT', 'yeu' -> 'uey'...
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -311,8 +287,6 @@ YES
 
 Với dữ liệu đầu vào là `listen
 silent`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -334,8 +308,6 @@ cam 3
 ### Giải thích
 
 Với dữ liệu đầu vào là `cam quyt mit dua cam xoai cam dua`, kết quả thu được tương ứng là `cam 3`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -357,8 +329,6 @@ EDUCATION
 ### Giải thích
 
 Các nguyên âm: E, U, A, I, O (có 5 nguyên âm).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -380,8 +350,6 @@ An va Ba hoc bai
 ### Giải thích
 
 Gồm chữ 'A' (1 lần) và 'a' (3 lần trong 'va', 'Ba', 'bai').
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -403,8 +371,6 @@ A1B2C3D4
 ### Giải thích
 
 $1 + 2 + 3 + 4 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -426,8 +392,6 @@ Toi sinh nam 2014 vao thang 08
 ### Giải thích
 
 Với dữ liệu đầu vào là `Toi sinh nam 2014 vao thang 08`, kết quả thu được tương ứng là `201408`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -451,8 +415,6 @@ A3B2C4
 ### Giải thích
 
 Với dữ liệu đầu vào là `AAABBCCCC`, kết quả thu được tương ứng là `A3B2C4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -474,8 +436,6 @@ Lap Trinh Python
 ### Giải thích
 
 Chữ in hoa: 'L', 'T', 'P' (3 chữ).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -499,8 +459,6 @@ DEFABC
 
 'A'->'D', 'B'->'E', 'X'->'A', 'Y'->'B', 'Z'->'C'.
 * **Công thức toán học:** `chr((ord(ch) - ord('A') + k) % 26 + ord('A'))`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -524,8 +482,6 @@ ABCXYZ
 
 Với dữ liệu đầu vào là `DEFABC
 3`, kết quả thu được tương ứng là `ABCXYZ`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -547,8 +503,6 @@ hELLO wORLD 123
 ### Giải thích
 
 Với dữ liệu đầu vào là `Hello World 123`, kết quả thu được tương ứng là `hELLO wORLD 123`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -570,7 +524,5 @@ Lop 5A co 38 hoc sinh va 105 quyen sach
 ### Giải thích
 
 Các con số xuất hiện là: 5, 38, 105. Số lớn nhất là 105.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

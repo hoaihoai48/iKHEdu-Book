@@ -2,7 +2,7 @@
 
 ## 1. Bản chất chương trình máy tính & Luồng dữ liệu I/O
 
-Trong khoa học máy tính và lập trình thi đấu, một chương trình máy tính thực chất là một **chuỗi các chỉ thị có trật tự** điều khiển phần cứng thực thi để biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
+Trong khoa học máy tính và lập trình, một chương trình máy tính thực chất là một **chuỗi các chỉ thị có trật tự** điều khiển phần cứng thực thi để biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
 
 Mọi bài toán trong các kỳ thi lập trình đều vận hành nghiêm ngặt theo **luồng dữ liệu 3 bước khép kín (Đầu vào $\to$ Xử lý $\to$ Đầu ra)**:
 
@@ -53,7 +53,7 @@ Diem thi lap trinh cua Minh la: 10 diem.
 
 ### 2.3. Hai tham số điều khiển cao cấp: `sep` và `end`
 
-Lệnh `print()` cung cấp hai tham số tùy chỉnh cực kỳ quan trọng thường xuyên gặp trong lập trình thi đấu:
+Lệnh `print()` cung cấp hai tham số tùy chỉnh cực kỳ quan trọng thường xuyên gặp trong lập trình:
 
 | Tham Số | Giá Trị Mặc Định | Ý Nghĩa Kỹ Thuật | Ví Dụ Cài Đặt | Kết Quả Hiển Thị |
 |---|:---:|---|---|---|
@@ -158,7 +158,7 @@ Lệnh `input()` tạm dừng chương trình và chờ người dùng nhập m�
 
 ![Bí mật đổi kiểu dữ liệu](../../assets/l01_type_casting.svg?v=1788575106)
 
-> ❌ **TỬ HUYỆT PHÒNG THI KINH ĐIỂN CỦA HỌC SINH:**
+> ❌ **LỖI KINH ĐIỂN CỦA HỌC SINH:**
 > Nếu viết mã như sau:
 > ```python
 > a = input()  # Học sinh nhập số 5 từ bàn phím
@@ -235,14 +235,14 @@ tong = a + b
 
 ## 7. Tử huyệt và Các bẫy lỗi lập trình kinh điển
 
-> ❌ **BẪY LỖI 1: IN THỪA CÂU CHỮ TRONG LẬP TRÌNH THI ĐẤU**
+> ❌ **BẪY LỖI 1: IN THỪA CÂU CHỮ TRONG lập trình**
 > * **Đoạn code sai lầm:**
 >   ```python
 >   n = int(input("Moi ban nhap vao so n: "))
 >   print("Ket qua la:", n * 2)
 >   ```
-> * **Hậu quả trên máy chấm:** Máy chấm tự động (Themis/DKOJ) so sánh từng ký tự đầu ra. Việc in các thông báo như `"Moi ban nhap..."` hoặc `"Ket qua la: "` sẽ khiến kết quả bị sai lệch và nhận ngay kết quả **Wrong Answer (WA) - 0 điểm**.
-> * **Cách viết đúng chuẩn mực thi đấu:**
+> * **Hậu quả:** chương trình so sánh từng ký tự đầu ra. Việc in các thông báo như `"Moi ban nhap..."` hoặc `"Ket qua la: "` sẽ khiến kết quả bị sai lệch và nhận ngay 0 điểm.
+> * **Cách viết đúng phổ biến:**
 >   ```python
 >   n = int(input())
 >   print(n * 2)
@@ -258,7 +258,7 @@ tong = a + b
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ```python
 # Mẫu 1: Nhập 2 số trên 2 dòng riêng biệt và in tổng
@@ -421,8 +421,8 @@ print(chuoi * 3)
 - **D.** `9`
 > *Giải thích:* Trong Python, toán tử `*` giữa chuỗi và số nguyên dương sẽ nhân bản chuỗi đó nhiều lần liên tiếp.
 
-#### Câu 15 (Tư duy lập trình thi đấu):
-Khi làm bài thi lập trình, nếu đề bài yêu cầu in ra tổng của 2 số, cách viết nào sau đây là chuẩn mực nhất để nộp bài lên máy chấm DKOJ/Themis?
+#### Câu 15 (Tư duy lập trình):
+Khi đề bài yêu cầu in ra tổng của 2 số, cách viết nào sau đây là gọn gàng nhất?
 - **A.** `print("Tong 2 so la:", a + b)`
 - **B.** `print("Ket qua =", a + b)`
 - **C.** **[Đáp án đúng]** `print(a + b)`

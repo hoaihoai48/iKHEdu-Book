@@ -27,10 +27,3 @@ Số lượng số nguyên tố trong đoạn $[A, B]$.
 ### Giải thích
 
 Có 4 số nguyên tố: 11, 13, 17, 19.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

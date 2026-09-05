@@ -29,10 +29,3 @@ Một số nguyên duy nhất là tổng số giây.
 ### Giải thích
 
 $1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

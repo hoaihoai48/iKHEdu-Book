@@ -27,8 +27,6 @@
 ### Giải thích
 
 Với dữ liệu đầu vào là `1000000000`, kết quả thu được tương ứng là `500000000500000000`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ Với dữ liệu đầu vào là `1000000000`, kết quả thu được tương
 ### Giải thích
 
 Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 3 4 5`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -79,8 +75,6 @@ Với dữ liệu đầu vào là `3`, kết quả thu được tương ứng l�
 2
 1
 PHONG!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -102,8 +96,6 @@ PHONG!`.
 ### Giải thích
 
 $1 + 2 + 3 + 4 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -135,8 +127,6 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 **
 ***
 ****`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -164,8 +154,6 @@ Với dữ liệu đầu vào là `3
 5`, kết quả thu được tương ứng là `*****
 *****
 *****`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -189,8 +177,6 @@ Hôm nay khách đông quá, Tý tính không kịp. Hãy giúp Tý tính nhanh 
 ### Giải thích
 
 $1 \times 2 \times 3 \times 4 \times 5 = 120$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -213,8 +199,6 @@ $1 \times 2 \times 3 \times 4 \times 5 = 120$.
 ### Giải thích
 
 $1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -254,8 +238,6 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 5 x 8 = 40
 5 x 9 = 45
 5 x 10 = 50`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -278,8 +260,6 @@ Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Các số chẵn là: 4, 6, 8. Tổng: $4 + 6 + 8 = 18$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -305,8 +285,6 @@ Hoa háo hức muốn biết mình đọc hết truyện sau mấy ngày. Hãy �
 ### Giải thích
 
 Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngày 4: 4 trang (tổng 10 $\ge 10$). Sau 4 ngày đọc xong.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -332,8 +310,6 @@ Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngà
 Với dữ liệu đầu vào là `2
 3
 5`, kết quả thu được tương ứng là `2 5 8 11 14`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -357,8 +333,6 @@ Với dữ liệu đầu vào là `2
 ### Giải thích
 
 Gồm các số: 3, 6, 9. Tổng cộng 3 số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -380,7 +354,5 @@ Gồm các số: 3, 6, 9. Tổng cộng 3 số.
 ### Giải thích
 
 Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

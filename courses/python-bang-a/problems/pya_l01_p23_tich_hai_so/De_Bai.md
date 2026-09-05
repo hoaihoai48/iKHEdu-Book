@@ -25,7 +25,3 @@ In ra số nguyên là tích $A \times B$.
 ```
 ### Giải thích
 Tổng số kẹo là $12 \times 8 = 96$ chiếc.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -40,10 +40,3 @@ Một số tự nhiên $N$ ($2 \le N \le 10^9$).
 ### Giải thích
 
 Ước của 7 là 1 và 7, lớn thứ hai là 1.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

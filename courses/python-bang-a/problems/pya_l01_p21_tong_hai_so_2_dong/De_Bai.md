@@ -25,7 +25,3 @@ In ra một số nguyên duy nhất là tổng $A + B$.
 ```
 ### Giải thích
 Tổng $15 + 25 = 40$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

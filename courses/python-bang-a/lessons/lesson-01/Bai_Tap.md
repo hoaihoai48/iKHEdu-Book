@@ -26,8 +26,6 @@ Xin chao cac ban! Toi la Robot Python.
 ```
 ### Giải thích
 In chính xác câu chào ra màn hình theo đúng quy định.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -51,8 +49,6 @@ Van su nhu y
 ```
 ### Giải thích
 Sử dụng hai lệnh `print()` liên tiếp để in trên hai dòng riêng biệt.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +69,6 @@ Sử dụng hai lệnh `print()` liên tiếp để in trên hai dòng riêng bi
 ```
 ### Giải thích
 Nhập vào số 2026 và in lại đúng số 2026.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -95,8 +89,6 @@ Nhập vào số 2026 và in lại đúng số 2026.
 ```
 ### Giải thích
 Các số từ 1 đến 5 được in cách nhau bằng dấu `-`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -117,8 +109,6 @@ Các số từ 1 đến 5 được in cách nhau bằng dấu `-`.
 ```
 ### Giải thích
 Gấp đôi của 75 là $75 \times 2 = 150$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -139,8 +129,6 @@ Lap trinh rat vui!
 ```
 ### Giải thích
 Lệnh thứ nhất in `Lap trinh ` có `end=" "`, lệnh thứ hai in `rat vui!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -162,8 +150,6 @@ Lệnh thứ nhất in `Lap trinh ` có `end=" "`, lệnh thứ hai in `rat vui!
 ```
 ### Giải thích
 Ban đầu $A = 10, B = 99$. Sau khi đổi chỗ, $A = 99$ và $B = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -186,8 +172,6 @@ Ban đầu $A = 10, B = 99$. Sau khi đổi chỗ, $A = 99$ và $B = 10$.
 ```
 ### Giải thích
 Tổng $15 + 25 = 40$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -209,8 +193,6 @@ Tổng $15 + 25 = 40$.
 ```
 ### Giải thích
 Vải còn lại là $100 - 35 = 65$ mét.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -232,8 +214,6 @@ Vải còn lại là $100 - 35 = 65$ mét.
 ```
 ### Giải thích
 Tổng số kẹo là $12 \times 8 = 96$ chiếc.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -255,8 +235,6 @@ Tổng số kẹo là $12 \times 8 = 96$ chiếc.
 ### Giải thích
 
 Giá trị đầu vào là $15$. Khi nhân đôi, ta có: $15 \times 2 = 30$. Do đó, kết quả in ra màn hình là `30`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -278,8 +256,6 @@ Giá trị đầu vào là $15$. Khi nhân đôi, ta có: $15 \times 2 = 30$. Do
 ### Giải thích
 
 Học sinh 8 tuổi, sau 5 năm nữa nhỏ: $8 + 5 = 13$ tuổi
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -302,8 +278,6 @@ Chuc mung sinh nhat Nam, ban tron 10 tuoi!
 ```
 ### Giải thích
 Ghép tên và tuổi vào đúng vị trí của câu chúc.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -326,8 +300,6 @@ Ghép tên và tuổi vào đúng vị trí của câu chúc.
 ### Giải thích
 
 Ban đầu $A=7, B=12$. Sau khi đổi: $A=12, B=7$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -349,8 +321,6 @@ Xin chao ban Nam!
 ### Giải thích
 
 Với tên nhập vào là `"Nam"`, chương trình ghép chuỗi `"Xin chao ban "` với `"Nam"` và thêm dấu chấm than `!` ở cuối, tạo thành dòng chữ `Xin chao ban Nam!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -373,8 +343,6 @@ Với tên nhập vào là `"Nam"`, chương trình ghép chuỗi `"Xin chao ban
 ### Giải thích
 
 Mua 5 chiếc bánh, mỗi chiếc 12 nghìn đồng: $12 \times 5 = 60$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -396,8 +364,6 @@ Mua 5 chiếc bánh, mỗi chiếc 12 nghìn đồng: $12 \times 5 = 60$.
 ```
 ### Giải thích
 Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -418,8 +384,6 @@ Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
 ```
 ### Giải thích
 Đọc bằng `map(int, input().split())` và in ra $45 + 55 = 100$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -443,8 +407,6 @@ Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
 ### Giải thích
 
 $2\text{ cm} = 20\text{ mm}$. Tổng cộng là: $20 + 5 = 25\text{ mm}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -465,8 +427,6 @@ $2\text{ cm} = 20\text{ mm}$. Tổng cộng là: $20 + 5 = 25\text{ mm}$.
 ```
 ### Giải thích
 Tận dụng lệnh `print(d, m, y, sep="/")`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -495,8 +455,6 @@ Bác loay hoay mãi với cuốn sổ ghi chép. Hãy giúp bác trưởng ga l�
 
 Dòng 1 ghép chữ: `"25" + "30" = "2530"`.
 Dòng 2 cộng số: $25 + 30 = 55$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -517,8 +475,6 @@ Anh hon em 5 tuoi.
 ```
 ### Giải thích
 Hiệu số tuổi $12 - 7 = 5$. In ra `Anh hon em 5 tuoi.`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -541,8 +497,6 @@ Hiệu số tuổi $12 - 7 = 5$. In ra `Anh hon em 5 tuoi.`.
 ```
 ### Giải thích
 $8 + 5 = 13$, $8 - 5 = 3$, $8 \times 5 = 40$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -571,8 +525,6 @@ $8 + 5 = 13$, $8 - 5 = 3$, $8 \times 5 = 40$.
 - Tuổi Bố: $10 + 30 = 40$.
 - Tuổi Ông: $40 + 25 = 65$.
 - Tổng cả 3 người: $10 + 40 + 65 = 115$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -606,7 +558,5 @@ Cô hướng dẫn viên cần tính tiền để mua vé cho cả đoàn. Hãy 
 - Tiền thuyền: $6 \times 20 + 4 \times 10 = 120 + 40 = 160$.
 - Tiền cáp treo: $6 \times 50 + 4 \times 30 = 300 + 120 = 420$.
 - Tổng tiền: $160 + 420 = 580$ nghìn đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

@@ -27,8 +27,6 @@
 ### Giải thích
 
 Lũy thừa của 2 gồm 1, 2, 4, 8, 16... Số nhỏ nhất $> 10$ là 16.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ Lũy thừa của 2 gồm 1, 2, 4, 8, 16... Số nhỏ nhất $> 10$ là 16.
 ### Giải thích
 
 Lần 1: 2mm, lần 2: 4mm, lần 3: 8mm, lần 4: 16mm ($\ge 10$). Cần 4 lần.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -77,8 +73,6 @@ Mỗi tối bác đều lắc heo nghe kêu leng keng rất vui. Hãy giúp bác
 ### Giải thích
 
 Ngày 1: 1k, ngày 2: 2k (tổng 3k), ngày 3: 3k (tổng 6k), ngày 4: 4k (tổng 10k), ngày 5: 5k (tổng 15k $\ge 15$). Sau 5 ngày.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -100,8 +94,6 @@ Ngày 1: 1k, ngày 2: 2k (tổng 3k), ngày 3: 3k (tổng 6k), ngày 4: 4k (tổ
 ### Giải thích
 
 Với dữ liệu đầu vào là `2026`, kết quả thu được tương ứng là `4`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -129,8 +121,6 @@ Với dữ liệu đầu vào là `2026`, kết quả thu được tương ứng
 ```
 ### Giải thích
 In các số từ 1 đến 5 trên một dòng cách nhau khoảng trắng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -155,8 +145,6 @@ In các số từ 1 đến 5 trên một dòng cách nhau khoảng trắng.
 ### Giải thích
 
 Có 3 số: 5, 12, 8 đã được nhập trước khi gặp 0.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -181,8 +169,6 @@ Có 3 số: 5, 12, 8 đã được nhập trước khi gặp 0.
 ### Giải thích
 
 $10 + 20 + 5 = 35$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -204,8 +190,6 @@ $10 + 20 + 5 = 35$.
 ### Giải thích
 
 Các bước: $8 \to 4 \to 2 \to 1$ (cần 4 bước).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -228,8 +212,6 @@ DA TRUNG THUONG!
 ```
 ### Giải thích
 Sau khi nhập hai số 10 và 25, số thứ ba nhập vào là 7 nên vòng lặp dừng và in ra thông báo `DA TRUNG THUONG!`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -255,8 +237,6 @@ Tí khoe với cả lớp mà chưa bạn nào đếm đúng số bước. Hãy 
 ### Giải thích
 
 Dãy biến đổi: $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$ (qua 8 bước biến đổi).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -282,8 +262,6 @@ Dãy biến đổi: $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$ (qua 8
 ### Giải thích
 
 Có 3 số chẵn là 4, 8, 12.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -312,7 +290,5 @@ Các bạn kiến đứng dưới cổ vũ ầm ĩ. Hãy giúp chú ốc sên t�
 
 Ngày 1: leo lên 3m, đêm tụt 1m còn 2m.
 Ngày 2: từ 2m leo thêm 3m lên 5m (chạm đỉnh ngay trong ngày!). Vậy mất 2 ngày.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

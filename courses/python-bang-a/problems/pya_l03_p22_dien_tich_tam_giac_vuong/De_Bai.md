@@ -24,7 +24,3 @@ In ra diện tích định dạng `f"{S:.1f}"`.
 ```
 ### Giải thích
 Diện tích $= (5 \times 7) / 2 = 17.5$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

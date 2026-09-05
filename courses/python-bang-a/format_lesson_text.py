@@ -18,7 +18,6 @@ PROPER_TERMS = {
     "fibonacci": "Fibonacci",
     "caesar": "Caesar",
     "ascii": "ASCII",
-    "bảng a": "Bảng A",
     "phổ thông": "phổ thông",
     "level 1": "Level 1",
     "tập a": "Tập A",

@@ -27,10 +27,3 @@ A1B2C3D4
 ### Giải thích
 
 $1 + 2 + 3 + 4 = 10$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

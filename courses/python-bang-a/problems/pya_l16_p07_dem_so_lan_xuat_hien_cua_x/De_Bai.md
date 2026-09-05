@@ -30,11 +30,3 @@ Số lần xuất hiện của $X$.
 
 Với dữ liệu đầu vào là `6 5
 5 2 5 7 5 9`, kết quả thu được tương ứng là `3`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

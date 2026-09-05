@@ -27,8 +27,3 @@ Một số nguyên duy nhất là số cây trồng được.
 ### Giải thích
 
 Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng cộng có 4 cây.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

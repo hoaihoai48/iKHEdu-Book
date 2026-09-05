@@ -23,7 +23,3 @@ In ra mã số ngày trong tuần (từ 0 đến 6).
 ```
 ### Giải thích
 Thứ Hai là ngày 1. Sau 10 ngày nữa: $(1 + 10) \% 7 = 11 \% 7 = 4$ (tức Thứ Năm).
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

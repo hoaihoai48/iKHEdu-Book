@@ -24,7 +24,3 @@ In ra giá trị của $P(x)$.
 ```
 ### Giải thích
 $2 \times (3^2) - 4 \times 3 + 9 = 2 \times 9 - 12 + 9 = 15$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

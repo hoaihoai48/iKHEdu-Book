@@ -35,8 +35,3 @@ Gồm 3 dòng tương ứng với 3 yêu cầu của bài toán.
 - Tuổi Bố: $10 + 30 = 40$.
 - Tuổi Ông: $40 + 25 = 65$.
 - Tổng cả 3 người: $10 + 40 + 65 = 115$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

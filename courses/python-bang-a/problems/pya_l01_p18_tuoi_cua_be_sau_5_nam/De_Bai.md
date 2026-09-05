@@ -28,8 +28,3 @@ Một số nguyên duy nhất là số tuổi của Bo sau 5 năm.
 ### Giải thích
 
 Học sinh 8 tuổi, sau 5 năm nữa nhỏ: $8 + 5 = 13$ tuổi
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

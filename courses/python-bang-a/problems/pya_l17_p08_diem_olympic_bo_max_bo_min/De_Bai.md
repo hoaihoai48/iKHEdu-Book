@@ -28,10 +28,3 @@ Cho $N$ điểm số. Hãy tính điểm chính thức của vận động viên
 ### Giải thích
 
 Bỏ min là 6.0, bỏ max là 10.0. Còn lại: 7.0, 8.0, 9.0. Trung bình là 8.00.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

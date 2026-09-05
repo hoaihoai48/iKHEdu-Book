@@ -33,12 +33,3 @@ Abc123x
 ### Giải thích
 
 Trong chuỗi `Abc123x` có 3 ký tự là chữ số: `1`, `2` và `3`.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le |S| \le 100$.
-
-* Subtask 2 (50% số điểm): $100 < |S| \le 10^5$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

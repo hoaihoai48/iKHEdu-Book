@@ -40,10 +40,3 @@ $2 + 0 + 2 + 4 = 8$.
 ### Giải thích
 
 Chữ số 0 có tổng bằng 0.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

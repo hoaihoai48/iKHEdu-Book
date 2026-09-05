@@ -34,12 +34,3 @@ Hom nay Bin di hoc cung ban Na
 ### Giải thích
 
 Các từ là: Hom, nay, Bin, di, hoc, cung, ban, Na. Chỉ có từ `cung` dài 4 ký tự, lớn hơn 3 nên đáp án là 1.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $|S| \le 100$.
-
-* Subtask 2 (50% số điểm): $100 < |S| \le 10^4$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

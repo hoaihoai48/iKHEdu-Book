@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 310" width="100%" height="100%">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="860" height="310" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="858" height="308" rx="15" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+
+  <!-- Main Title -->
+  <text x="430" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    MÔ HÌNH BÓC TÁCH TỪNG CHỮ SỐ BẰNG // VÀ % (VÍ DỤ VỚI SỐ N = 257)
+  </text>
+
+  <!-- Step 1: Extract Unit Digit (7) - x=35, w=230, right=265 -->
+  <g transform="translate(35, 60)" filter="url(#cardShadow)">
+    <rect width="230" height="225" rx="12" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="2"/>
+    <rect width="230" height="38" rx="12" fill="#0284C7"/>
+    <rect y="24" width="230" height="14" fill="#0284C7"/>
+    <text x="115" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">BƯỚC 1: HÀNG ĐƠN VỊ</text>
+    
+    <text x="115" y="68" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#64748B">Ban đầu: n = 257</text>
+    
+    <rect x="15" y="80" width="200" height="42" rx="8" fill="#F0F9FF" stroke="#BAE6FD"/>
+    <text x="115" y="106" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#0369A1">don_vi = n % 10 = 7</text>
+
+    <rect x="15" y="132" width="200" height="42" rx="8" fill="#FEF2F2" stroke="#FECACA"/>
+    <text x="115" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#DC2626">n = n // 10 = 25</text>
+
+    <text x="115" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#059669" font-weight="bold">→ Đã lấy số 7, còn 25</text>
+  </g>
+
+  <!-- Arrow 1: Gap from 265 to 315 (center 290) -->
+  <path d="M 272 172 L 302 172" stroke="#0284C7" stroke-width="3" fill="none"/>
+  <polygon points="302,166 312,172 302,178" fill="#0284C7"/>
+
+  <!-- Step 2: Extract Tens Digit (5) - x=315, w=230, right=545 -->
+  <g transform="translate(315, 60)" filter="url(#cardShadow)">
+    <rect width="230" height="225" rx="12" fill="url(#cardGrad)" stroke="#F59E0B" stroke-width="2"/>
+    <rect width="230" height="38" rx="12" fill="#D97706"/>
+    <rect y="24" width="230" height="14" fill="#D97706"/>
+    <text x="115" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">BƯỚC 2: HÀNG CHỤC</text>
+    
+    <text x="115" y="68" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#64748B">Hiện tại: n = 25</text>
+    
+    <rect x="15" y="80" width="200" height="42" rx="8" fill="#FEF3C7" stroke="#FDE68A"/>
+    <text x="115" y="106" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#B45309">chuc = n % 10 = 5</text>
+
+    <rect x="15" y="132" width="200" height="42" rx="8" fill="#FEF2F2" stroke="#FECACA"/>
+    <text x="115" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#DC2626">n = n // 10 = 2</text>
+
+    <text x="115" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#059669" font-weight="bold">→ Đã lấy số 5, còn 2</text>
+  </g>
+
+  <!-- Arrow 2: Gap from 545 to 595 (center 570) -->
+  <path d="M 552 172 L 582 172" stroke="#D97706" stroke-width="3" fill="none"/>
+  <polygon points="582,166 592,172 582,178" fill="#D97706"/>
+
+  <!-- Step 3: Extract Hundreds Digit (2) - x=595, w=230, right=825 (Left margin = Right margin = 35) -->
+  <g transform="translate(595, 60)" filter="url(#cardShadow)">
+    <rect width="230" height="225" rx="12" fill="url(#cardGrad)" stroke="#10B981" stroke-width="2"/>
+    <rect width="230" height="38" rx="12" fill="#059669"/>
+    <rect y="24" width="230" height="14" fill="#059669"/>
+    <text x="115" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">BƯỚC 3: HÀNG TRĂM</text>
+    
+    <text x="115" y="68" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#64748B">Hiện tại: n = 2</text>
+    
+    <rect x="15" y="80" width="200" height="42" rx="8" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="115" y="106" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#047857">tram = n % 10 = 2</text>
+
+    <rect x="15" y="132" width="200" height="42" rx="8" fill="#F3F4F6" stroke="#E5E7EB"/>
+    <text x="115" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#4B5563">n = n // 10 = 0</text>
+
+    <text x="115" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#047857" font-weight="bold">→ n = 0: Hoàn tất!</text>
+  </g>
+</svg>

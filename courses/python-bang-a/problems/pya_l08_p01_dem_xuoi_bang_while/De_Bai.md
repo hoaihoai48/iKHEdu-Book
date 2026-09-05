@@ -34,9 +34,3 @@ Dãy số từ 1 đến $N$.
 ```
 ### Giải thích
 In các số từ 1 đến 5 trên một dòng cách nhau khoảng trắng.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

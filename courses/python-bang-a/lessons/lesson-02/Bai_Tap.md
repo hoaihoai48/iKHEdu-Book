@@ -26,8 +26,6 @@
 ```
 ### Giải thích
 $8^2 = 64$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -48,8 +46,6 @@ $8^2 = 64$.
 ```
 ### Giải thích
 $5^3 = 125$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -70,8 +66,6 @@ $5^3 = 125$.
 ```
 ### Giải thích
 $2026 \% 10 = 6$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -92,8 +86,6 @@ $2026 \% 10 = 6$.
 ```
 ### Giải thích
 $1945 \% 100 = 45$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -114,8 +106,6 @@ $1945 \% 100 = 45$.
 ```
 ### Giải thích
 $3 \times 4 + 5 = 17$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -136,8 +126,6 @@ $3 \times 4 + 5 = 17$.
 ```
 ### Giải thích
 $3458 // 10 = 345$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -158,8 +146,6 @@ $3458 // 10 = 345$.
 ```
 ### Giải thích
 15 bạn xếp được 7 bàn đôi đầy đủ, còn 1 bạn ngồi riêng 1 bàn $\implies$ Cần 8 bàn. Công thức: `(N + 1) // 2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -182,9 +168,6 @@ $3458 // 10 = 345$.
 ### Giải thích
 
 $3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang có 81 khối gỗ.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a \le 10$, $0 \le n \le 10$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -205,8 +188,6 @@ $3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang c
 ```
 ### Giải thích
 $50 // 6 = 8$ hộp, dư $50 \% 6 = 2$ bánh lẻ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -227,8 +208,6 @@ $50 // 6 = 8$ hộp, dư $50 \% 6 = 2$ bánh lẻ.
 ```
 ### Giải thích
 Bỏ chữ số tận cùng: $378 // 10 = 37$. Lấy chữ số cuối của 37: $37 \% 10 = 7$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -250,9 +229,6 @@ Bỏ chữ số tận cùng: $378 // 10 = 37$. Lấy chữ số cuối của 37:
 ### Giải thích
 
 $135$ phút $= 2$ giờ trọn vẹn ($2 \times 60 = 120$ phút) và còn dư $135 - 120 = 15$ phút.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $0 \le T \le 10000$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -274,8 +250,6 @@ $135$ phút $= 2$ giờ trọn vẹn ($2 \times 60 = 120$ phút) và còn dư $1
 ### Giải thích
 
 Sau 4 giờ: $2^4 = 16$ tế bào.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -299,8 +273,6 @@ Sau 4 giờ: $2^4 = 16$ tế bào.
 ### Giải thích
 
 $250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét thứ 50.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -324,8 +296,6 @@ $250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét t
 
 Cạnh $1\text{ dm} = 10\text{ cm}$. Chu vi bảng hình vuông là $10 \times 4 = 40\text{ cm}$.
 Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 5 = 8$ bóng đèn.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -348,9 +318,6 @@ Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 
 ### Giải thích
 
 $250 = 4 \times 60 + 10$. Sóc Nâu đã đi được 4 vòng trọn vẹn và đang ở phút thứ 10 của vòng thứ năm.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le N, C \le 10^9$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -373,8 +340,6 @@ $250 = 4 \times 60 + 10$. Sóc Nâu đã đi được 4 vòng trọn vẹn và �
 ### Giải thích
 
 Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lượng còn dư không chia hết là 2.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -395,8 +360,6 @@ Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lư�
 ```
 ### Giải thích
 Áp dụng định lý bất biến phép chia: $A = B \times Q + R = 6 \times 8 + 3 = 51$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -417,8 +380,6 @@ Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lư�
 ```
 ### Giải thích
 $2 \times (3^2) - 4 \times 3 + 9 = 2 \times 9 - 12 + 9 = 15$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -441,8 +402,6 @@ $2 \times (3^2) - 4 \times 3 + 9 = 2 \times 9 - 12 + 9 = 15$.
 ### Giải thích
 
 Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng cộng có 4 cây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -466,9 +425,6 @@ Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng c
 ### Giải thích
 
 Ưu tiên lũy thừa trước: $c^2 = 4^2 = 16$. Tiếp theo nhân: $b \times 16 = 3 \times 16 = 48$. Cuối cùng cộng: $2 + 48 = 50$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a, b, c \le 100$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -493,8 +449,6 @@ Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng c
 ### Giải thích
 
 $1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -518,8 +472,6 @@ $1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây.
 ### Giải thích
 
 Chữ số hàng đơn vị là 7, hàng chục là 5.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -541,8 +493,6 @@ Chữ số hàng đơn vị là 7, hàng chục là 5.
 ### Giải thích
 
 Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -563,8 +513,6 @@ Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94.
 ```
 ### Giải thích
 $(5 + 3) \times (10 - 6) = 8 \times 4 = 32$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -585,8 +533,6 @@ $(5 + 3) \times (10 - 6) = 8 \times 4 = 32$.
 ```
 ### Giải thích
 $20 + 10 = 30$ giờ. $30 \% 24 = 6$ giờ sáng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -607,8 +553,6 @@ $20 + 10 = 30$ giờ. $30 \% 24 = 6$ giờ sáng.
 ```
 ### Giải thích
 Thứ Hai là ngày 1. Sau 10 ngày nữa: $(1 + 10) \% 7 = 11 \% 7 = 4$ (tức Thứ Năm).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -631,8 +575,6 @@ Thứ Hai là ngày 1. Sau 10 ngày nữa: $(1 + 10) \% 7 = 11 \% 7 = 4$ (tức 
 ### Giải thích
 
 $17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -654,8 +596,6 @@ $17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh.
 ```
 ### Giải thích
 Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm một xe.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -676,8 +616,6 @@ Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm
 ```
 ### Giải thích
 4 xe chở được 40 em, còn 1 em vẫn cần thêm 1 xe nữa $\implies$ Cần 5 xe. Công thức làm tròn lên chuẩn: `(N + K - 1) // K`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -698,8 +636,6 @@ Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm
 ```
 ### Giải thích
 $17 // 5 = 3$ và $17 \% 5 = 2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -722,8 +658,6 @@ $17 // 5 = 3$ và $17 \% 5 = 2$.
 ### Giải thích
 
 Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tương ứng số 3.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -745,8 +679,6 @@ Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tươn
 ```
 ### Giải thích
 Mỗi bạn được 6 kẹo, thừa lại 1 kẹo.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -777,8 +709,6 @@ Hàng 1: 1, 2, 3, 4
 Hàng 2: 5, 6, 7, 8
 Hàng 3: 9, 10, 11, 12.
 Ô số 11 nằm ở Hàng 3, Cột 3.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -799,8 +729,6 @@ Hàng 3: 9, 10, 11, 12.
 ```
 ### Giải thích
 Chữ số hàng trăm $385 // 100 = 3$. Chữ số hàng chục $(385 // 10) \% 10 = 8$. Chữ số hàng đơn vị $385 \% 10 = 5$. Tổng $= 3 + 8 + 5 = 16$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -821,8 +749,6 @@ Chữ số hàng trăm $385 // 100 = 3$. Chữ số hàng chục $(385 // 10) \%
 ```
 ### Giải thích
 $(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -843,7 +769,5 @@ $(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
 ```
 ### Giải thích
 Tách trăm $= 4$, chục $= 7$, đơn vị $= 2$. Số đảo ngược là $2 \times 100 + 7 \times 10 + 4 = 274$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

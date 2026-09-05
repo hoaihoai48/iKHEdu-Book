@@ -23,7 +23,3 @@ In ra một số nguyên là tổng số giây.
 ```
 ### Giải thích
 $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

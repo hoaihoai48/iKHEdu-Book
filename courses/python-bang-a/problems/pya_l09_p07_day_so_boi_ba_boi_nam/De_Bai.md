@@ -27,11 +27,3 @@ $N$ số đầu tiên của dãy trên một dòng, cách nhau bởi dấu cách
 ### Giải thích
 
 Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng là `3 5 6 9 10 12`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -27,10 +27,3 @@ Một số nguyên duy nhất là số lượng ước số của $N$.
 ### Giải thích
 
 Số 10 có 4 ước: 1, 2, 5, 10.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -30,10 +30,3 @@ DEFABC
 
 'A'->'D', 'B'->'E', 'X'->'A', 'Y'->'B', 'Z'->'C'.
 * **Công thức toán học:** `chr((ord(ch) - ord('A') + k) % 26 + ord('A'))`.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

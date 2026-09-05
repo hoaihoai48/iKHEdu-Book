@@ -33,12 +33,3 @@ YES
 ### Giải thích
 
 Số 121 đọc xuôi là 121, đọc ngược cũng là 121 nên đây là ghế vàng.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 9999$.
-
-* Subtask 2 (50% số điểm): $10000 \le N \le 10^{18}$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

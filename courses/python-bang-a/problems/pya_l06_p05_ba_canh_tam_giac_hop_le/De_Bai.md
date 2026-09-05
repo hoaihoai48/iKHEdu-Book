@@ -44,10 +44,3 @@ KHONG HOP LE
 ### Giải thích
 
 $2 + 3 = 5 < 6$ (Sai bất đẳng thức tam giác).
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

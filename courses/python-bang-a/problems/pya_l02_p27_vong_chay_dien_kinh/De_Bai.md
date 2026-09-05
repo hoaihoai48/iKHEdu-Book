@@ -28,8 +28,3 @@ Hai số nguyên trên một dòng cách nhau dấu cách lần lượt là số
 ### Giải thích
 
 $250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét thứ 50.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

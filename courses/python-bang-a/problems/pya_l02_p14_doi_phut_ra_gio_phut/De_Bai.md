@@ -29,9 +29,3 @@ In ra hai số nguyên trên một dòng cách nhau một dấu cách: số gi�
 ### Giải thích
 
 $135$ phút $= 2$ giờ trọn vẹn ($2 \times 60 = 120$ phút) và còn dư $135 - 120 = 15$ phút.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $0 \le T \le 10000$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

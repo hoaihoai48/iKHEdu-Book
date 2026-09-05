@@ -30,11 +30,3 @@ Bảng điểm sắp xếp giảm dần trên một dòng.
 
 Với dữ liệu đầu vào là `5
 20 80 40 100 60`, kết quả thu được tương ứng là `100 80 60 40 20`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

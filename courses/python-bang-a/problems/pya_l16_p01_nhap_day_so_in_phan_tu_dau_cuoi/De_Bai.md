@@ -30,11 +30,3 @@ In phần tử đầu tiên và phần tử cuối cùng trên một dòng, các
 
 Với dữ liệu đầu vào là `5
 10 25 3 47 99`, kết quả thu được tương ứng là `10 99`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

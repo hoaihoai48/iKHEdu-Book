@@ -34,12 +34,3 @@ In ra một số nguyên duy nhất là số lần reo.
 ### Giải thích
 
 Các kỷ lục mới là 1, 3, 5 rồi 7, tổng cộng 4 lần reo.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 1000$.
-
-* Subtask 2 (50% số điểm): $1000 < N \le 10^5$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

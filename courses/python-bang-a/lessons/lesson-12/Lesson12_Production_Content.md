@@ -133,7 +133,7 @@ print(unique)  # [1, 2, 3, 4, 5, 6, 9]
 
 ---
 
-## 5. Ứng dụng thống kê và sắp xếp trong bài toán thi đấu
+## 5. Ứng dụng thống kê và sắp xếp trong bài toán thực tế
 
 ### 5.1. Tìm phần tử lớn thứ 2
 
@@ -239,7 +239,7 @@ print(len(a))        # 5 — Tổng số phần tử trong danh sách
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ### 8.1. Nhập mảng, in max, min và mảng sắp xếp tăng dần
 
@@ -355,10 +355,10 @@ print(len(a))
 
 #### Câu 11: Để tạo bản sao độc lập của danh sách `a`, cách nào đúng?
 - **A.** `b = a`
-- **B.** **[Đáp án đúng]** `b = a[:]` hoặc `b = list(a)` hoặc `b = a.copy()`
+- **B.** `b = a[:]` hoặc `b = list(a)` hoặc `b = a.copy()`
 - **C.** `b = a + []`
-- **D.** Cả B và C đều đúng
-- > *Giải thích:* `a[:]` tạo bản sao nông độc lập. `a + []` cũng tạo bản sao nhưng không phổ biến.
+- **D.** **[Đáp án đúng]** Cả B và C đều đúng
+- > *Giải thích:* `a[:]` tạo bản sao độc lập. `a + []` cũng tạo bản sao mới, nên cả B và C đều đúng.
 
 #### Câu 12: Cho `a = [4, 7, 2, 9]`. Cách tìm phần tử lớn thứ 2 nào đúng nhất?
 - **A.** `max(a) - 1`
@@ -376,10 +376,10 @@ print(len(a))
 
 #### Câu 14: Cho `a = [5, 2, 8, 2, 1]`. Sau `a.sort()`, `a[2]` bằng:
 - **A.** 8
-- **B.** 2
-- **C.** **[Đáp án đúng]** 5
+- **B.** **[Đáp án đúng]** 2
+- **C.** 5
 - **D.** 1
-- > *Giải thích:* Sau sort: `[1, 2, 2, 5, 8]`. Phần tử `a[2]` (index 2) = 2. Đáp án đúng thực tế phải là 2.
+- > *Giải thích:* Sau sort: `[1, 2, 2, 5, 8]`. Phần tử `a[2]` (chỉ số 2) = 2.
 
 #### Câu 15: Đoạn code sau in ra gì?
 ```python

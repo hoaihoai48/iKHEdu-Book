@@ -1,6 +1,6 @@
-# iKHEDU PYTHON BẢNG A — NỘI DUNG BÀI HỌC (LEVEL 1)
+# iKHEDU PYTHON — NỘI DUNG BÀI HỌC (LEVEL 1)
 
-> Tài liệu nội dung bài học dành cho học sinh Phổ thông ôn luyện kỳ thi Python Bảng A.
+> Tài liệu nội dung bài học dành cho học sinh Phổ thông ôn luyện kỳ thi Python.
 > Cấu trúc chuẩn hóa: Kiến thức trọng tâm, Bảng công thức ghi nhớ, Bẫy lỗi phòng thi, Code mẫu chuẩn và Hệ thống bài tập phân tầng.
 
 ---
@@ -25,17 +25,12 @@
 - **Bài 09:** Ước số, bội số và số nguyên tố
 - **Bài 10:** Đếm số theo quy luật và số đặc biệt
 
-### Chương 5: DANH SÁCH (LIST)
+### Chương 5: DANH SÁCH (LIST), XỬ LÝ CHUỖI & LUYỆN THI
 - **Bài 11:** Danh sách và thao tác cơ bản
 - **Bài 12:** Thống kê danh sách và sắp xếp
-
-### Chương 6: XỬ LÝ CHUỖI & KÝ TỰ
 - **Bài 13:** Chỉ số và cắt lát chuỗi (Indexing & Slicing)
 - **Bài 14:** Duyệt chuỗi, biến đổi ký tự và xử lý từ
-
-### Chương 7: LUYỆN ĐỀ THI
 - **Bài 15:** Chiến lược làm bài, phân tích test biên & tối ưu thời gian
-- **Bài 16:** Bộ đề thi thử Python Bảng A chuẩn cấu trúc quốc gia
 
 ---
 
@@ -56,7 +51,7 @@
 
 ---
 
-# PHẦN II: NỘI DUNG CHI TIẾT 7 CHƯƠNG BÀI HỌC
+# PHẦN II: NỘI DUNG CHI TIẾT 5 CHƯƠNG BÀI HỌC
 
 ---
 
@@ -153,7 +148,7 @@ $$	ext{Ngoặc } () \longrightarrow 	ext{Lũy thừa } ** \longrightarrow 	ext{N
 #### Kỹ thuật 4: Kỹ thuật làm tròn lên (Ceiling Division)
 - *Bài toán:* Có $N$ học sinh, cần thuê xe chở học sinh, mỗi xe chở được $K$ bạn. Cần ít nhất bao nhiêu xe để không bạn nào bị bỏ lại?
 - Nếu dùng `N // K`, với $N = 25, K = 10$ sẽ ra $2$ (thiếu 1 xe chở 5 bạn còn lại!).
-- **Công thức làm tròn lên chuẩn thi đấu:**
+- **Công thức làm tròn lên chuẩn:**
   $$\mathbf{so\_xe = (N + K - 1) // K}$$
   *Kiểm tra:* $(25 + 10 - 1) // 10 = 34 // 10 = 3$ xe (Tuyệt đối chính xác!).
 
@@ -269,7 +264,7 @@ Cho trước $S$ giây, quy trình phân rã gồm 3 bước:
 
 #### D. Kỹ thuật in số thập phân và làm tròn
 - Làm tròn 2 chữ số thập phân: `round(x, 2)`.
-- **In chuẩn định dạng thi đấu bằng f-string:** `print(f"{x:.2f}")` (Đảm bảo số `5` sẽ in ra đủ `5.00`).
+- **In chuẩn định dạng bằng f-string:** `print(f"{x:.2f}")` (Đảm bảo số `5` sẽ in ra đủ `5.00`).
 - **In bù số 0 ở đầu (Ví dụ: in 5 giây thành `05`):** `print(f"{giay:02d}")`.
 
 ### 2. Bảng công thức quy đổi đơn vị đo lường cần thuộc lòng
@@ -559,16 +554,12 @@ print("YES" if la_nt else "NO")
 
 ---
 
-# CHƯƠNG 5: DANH SÁCH (LIST)
-
----
-
 ## BÀI 11: DANH SÁCH VÀ THAO TÁC CƠ BẢN
 
 ### 1. Tóm tắt kiến thức trọng tâm
 - Danh sách (List) là tập hợp nhiều phần tử lưu trong dấu ngoặc vuông `[]`.
 - Cho phép thay đổi giá trị tại từng vị trí (Mutable): `a[0] = 100`.
-- **Cú pháp nhập danh sách số trên 1 dòng chuẩn thi đấu:**
+- **Cú pháp nhập danh sách số trên 1 dòng:**
   ```python
   a = list(map(int, input().split()))
   ```
@@ -604,7 +595,7 @@ print("Sap xep:", *a)
 
 ---
 
-# CHƯƠNG 6: XỬ LÝ CHUỖI & KÝ TỰ
+# CHƯƠNG 5: DANH SÁCH (LIST), XỬ LÝ CHUỖI & LUYỆN THI
 
 ---
 
@@ -638,10 +629,6 @@ print("Sap xep:", *a)
 
 ---
 
-# CHƯƠNG 7: LUYỆN ĐỀ THI
-
----
-
 ## BÀI 15: CHIẾN LƯỢC LÀM BÀI, PHÂN TÍCH TEST BIÊN & TỐI ƯU THỜI GIAN
 
 ### 1. Bản đồ 5 bước tác chiến trong phòng thi
@@ -663,50 +650,3 @@ BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên 
 
 ---
 
-## BÀI 16: BỘ ĐỀ THI THỬ PYTHON BẢNG A CHUẨN CẤU TRÚC QUỐC GIA
-
-Mỗi đề thi chuẩn gồm 4 bài toán phân bổ theo thời gian 90 phút:
-
-### ĐỀ THI THỬ SỐ 01 (MÔ PHỎNG ĐỀ PYA THÀNH PHỐ)
-
-#### Bài 1 (30 điểm): Mua dụng cụ học tập
-- **Yêu cầu:** Mua $N$ quyển vở giá $P$ đồng/quyển. Mua từ 10 quyển trở lên giảm $10\%$. Tính số tiền phải trả (số nguyên).
-- **Code mẫu:**
-  ```python
-  n, p = map(int, input().split())
-  tong = n * p
-  if n >= 10:
-      tong = int(tong * 0.9)
-  print(tong)
-  ```
-
-#### Bài 2 (30 điểm): Số lộc phát đối xứng
-- **Yêu cầu:** Số lộc phát đối xứng là số đối xứng và chỉ chứa các chữ số 6 hoặc 8. Kiểm tra số $N$.
-- **Code mẫu:**
-  ```python
-  s = input()
-  if s == s[::-1] and all(c in '68' for c in s):
-      print("YES")
-  else:
-      print("NO")
-  ```
-
-#### Bài 3 (25 điểm): Đếm từ độc nhất trong văn bản
-- **Yêu cầu:** Cho câu văn. Đếm xem có bao nhiêu từ khác nhau xuất hiện (không phân biệt hoa thường).
-- **Code mẫu:**
-  ```python
-  s = input().lower()
-  tu = s.split()
-  print(len(set(tu)))
-  ```
-
-#### Bài 4 (15 điểm - Phân loại): Bước nhảy chú cào cào
-- **Yêu cầu:** Chú cào cào xuất phát từ 0 nhảy đến vị trí $X$. Mỗi bước nhảy xa tối đa $K$ mét. Hỏi số bước nhảy ít nhất?
-- **Code mẫu:**
-  ```python
-  x, k = map(int, input().split())
-  ans = (x + k - 1) // k
-  print(ans)
-  ```
-
----

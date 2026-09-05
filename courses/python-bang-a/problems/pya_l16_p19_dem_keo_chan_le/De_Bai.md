@@ -34,12 +34,3 @@ In ra hai số trên một dòng: số lượng số chẵn trước, số lư�
 ### Giải thích
 
 Các số chẵn là 2, 4, 6 (3 gói). Các số lẻ là 1, 3, 5 (3 gói).
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 1000$.
-
-* Subtask 2 (50% số điểm): $1000 < N \le 10^5$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

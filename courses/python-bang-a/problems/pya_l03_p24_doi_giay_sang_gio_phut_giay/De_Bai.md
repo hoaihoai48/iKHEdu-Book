@@ -26,8 +26,3 @@ In ra ba số nguyên $H, M, S$ cách nhau một khoảng trắng.
 ### Giải thích
 
 3665 giây = 1 giờ (3600s) + 1 phút (60s) + 5 giây.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

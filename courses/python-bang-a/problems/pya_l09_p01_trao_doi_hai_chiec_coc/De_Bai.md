@@ -26,10 +26,3 @@ Giá trị mới của $A$ và $B$ sau khi hoán đổi.
 ### Giải thích
 
 Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -27,10 +27,3 @@ Số lượng số đối xứng trong đoạn $[A, B]$.
 ### Giải thích
 
 Các số đối xứng là: 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 (tổng cộng 10 số).
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

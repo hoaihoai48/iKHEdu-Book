@@ -35,8 +35,3 @@ Hàng 1: 1, 2, 3, 4
 Hàng 2: 5, 6, 7, 8
 Hàng 3: 9, 10, 11, 12.
 Ô số 11 nằm ở Hàng 3, Cột 3.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -58,10 +58,3 @@ Năm 2024 là năm nhuận nên tháng 2 có ngày 29.
 ### Giải thích
 
 Năm 2023 thường nên sau 28/2 là sang 1/3.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

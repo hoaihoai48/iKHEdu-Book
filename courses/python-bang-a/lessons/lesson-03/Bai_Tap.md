@@ -28,9 +28,6 @@
 
 - Mỗi đô la đổi được $25000$ đồng.
 - $4$ đô la đổi được: $4 \times 25000 = 100000$ đồng.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le D \le 10^6$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -51,8 +48,6 @@
 ```
 ### Giải thích
 Chu vi $6 \times 4 = 24$, Diện tích $6 \times 6 = 36$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +68,6 @@ Chu vi $6 \times 4 = 24$, Diện tích $6 \times 6 = 36$.
 ```
 ### Giải thích
 $3\text{m} = 300\text{cm} = 3000\text{mm}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -96,8 +89,6 @@ $3\text{m} = 300\text{cm} = 3000\text{mm}$.
 ### Giải thích
 
 Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được tính bằng $4 \times 6 = 24$. Kết quả in ra là `24`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -119,9 +110,6 @@ Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được t
 ### Giải thích
 
 - Đổi sang độ F: $30 \times 9 : 5 + 32 = 270 : 5 + 32 = 54 + 32 = 86$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $-50 \le C \le 50$, $C$ chia hết cho $5$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -144,8 +132,6 @@ Cạnh hình vuông có độ dài $a = 6$. Chu vi của hình vuông được t
 ### Giải thích
 
 Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -169,9 +155,6 @@ Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
 
 - Tích hai cạnh góc vuông: $6 \times 4 = 24$.
 - Diện tích tam giác: $24 : 2 = 12$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a, h \le 1000$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -195,8 +178,6 @@ Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
 ### Giải thích
 
 Chu vi: $3 + 4 + 5 = 12$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -220,9 +201,6 @@ Chu vi: $3 + 4 + 5 = 12$.
 ### Giải thích
 
 - Thể tích hộp: $5 \times 3 \times 2 = 30$.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le d, r, c \le 1000$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -245,8 +223,6 @@ Chu vi: $3 + 4 + 5 = 12$.
 ### Giải thích
 
 Chu vi: $(10 + 6) \times 2 = 32$. Diện tích: $10 \times 6 = 60$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -276,8 +252,6 @@ Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần g
 - Luống dọc: $3 \times 10 = 30$.
 - Phần giao nhau ở giữa: $3 \times 3 = 9$.
 - Diện tích bồn hoa: $30 + 30 - 9 = 51$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -304,8 +278,6 @@ Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần g
 
 Khoảng cách giữa 2 bạn: $70 - 10 = 60\text{ km}$.
 Thời gian gặp nhau: $60 : 15 = 4$ giờ.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -330,8 +302,6 @@ Thời gian gặp nhau: $60 : 15 = 4$ giờ.
 
 Diện tích hồ: $10 \times 10 = 100$. Diện tích đảo: $3 \times 4 = 12$.
 Mặt nước còn lại: $100 - 12 = 88$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -352,8 +322,6 @@ Mặt nước còn lại: $100 - 12 = 88$.
 ```
 ### Giải thích
 Chu vi $= 5 + 7 + 8 = 20$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -374,8 +342,6 @@ Chu vi $= 5 + 7 + 8 = 20$.
 ```
 ### Giải thích
 $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -399,9 +365,6 @@ $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
 
 - Vận tốc: $100 : 6 = 16.666\ldots$.
 - Làm tròn đến $2$ chữ số thập phân được $16.67$ km/h.
-* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le D, T \le 10^4$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -426,8 +389,6 @@ $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
 
 Diện tích sân: $20 \times 10 = 200$. Diện tích 1 viên gạch: $2 \times 2 = 4$.
 Số gạch cần: $200 : 4 = 50$ viên.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -455,8 +416,6 @@ Bác đã chuẩn bị tiền nhưng chưa biết có đủ không. Hãy giúp b
 Chu vi cả vườn: $(12 + 8) \times 2 = 40\text{ m}$.
 Độ dài rào cần mua: $40 - 2 = 38\text{ m}$.
 Số tiền: $38 \times 15 = 570$ nghìn đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -477,8 +436,6 @@ Số tiền: $38 \times 15 = 570$ nghìn đồng.
 ```
 ### Giải thích
 Chu vi $2 \times (10 + 6) = 32$, Diện tích $10 \times 6 = 60$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -499,8 +456,6 @@ Chu vi $2 \times (10 + 6) = 32$, Diện tích $10 \times 6 = 60$.
 ```
 ### Giải thích
 $5\text{ tạ} = 500\text{kg}$, $3\text{ yến} = 30\text{kg}$. Tổng $= 500 + 30 = 530\text{kg}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -521,8 +476,6 @@ $5\text{ tạ} = 500\text{kg}$, $3\text{ yến} = 30\text{kg}$. Tổng $= 500 + 
 ```
 ### Giải thích
 Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{m} \implies 70 - 3 = 67\text{m}$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -543,8 +496,6 @@ Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{
 ```
 ### Giải thích
 Vận tốc tiếp cận $= 2 + 3 = 5\text{m/s}$. Thời gian gặp nhau $= 150 / 5 = 30.0$ giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -565,8 +516,6 @@ Vận tốc tiếp cận $= 2 + 3 = 5\text{m/s}$. Thời gian gặp nhau $= 150 
 ```
 ### Giải thích
 Diện tích $= (5 \times 7) / 2 = 17.5$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -587,8 +536,6 @@ Diện tích $= (5 \times 7) / 2 = 17.5$.
 ```
 ### Giải thích
 $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -609,8 +556,6 @@ $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
 ```
 ### Giải thích
 Diện tích tường $= 6 \times 3 = 18\text{m}^2$. Diện tích cửa sổ $= 2 \times 1 = 2\text{m}^2$. Diện tích cần sơn $= 18 - 2 = 16\text{m}^2$. Tổng tiền $= 16 \times 50000 = 800000$ đồng.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -631,8 +576,6 @@ Diện tích tường $= 6 \times 3 = 18\text{m}^2$. Diện tích cửa sổ $= 
 ```
 ### Giải thích
 Diện tích $= ((12 + 8) \times 5) / 2 = 50.0$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -653,8 +596,6 @@ Diện tích $= ((12 + 8) \times 5) / 2 = 50.0$.
 ```
 ### Giải thích
 $100 / 3 \approx 33.3333... \implies 33.33$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -676,8 +617,6 @@ $100 / 3 \approx 33.3333... \implies 33.33$.
 ### Giải thích
 
 3665 giây = 1 giờ (3600s) + 1 phút (60s) + 5 giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -698,8 +637,6 @@ $100 / 3 \approx 33.3333... \implies 33.33$.
 ```
 ### Giải thích
 Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -720,8 +657,6 @@ Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
 ```
 ### Giải thích
 Đổi $L = 600\text{cm}, W = 400\text{cm}$. Diện tích sàn $= 600 \times 400 = 240000\text{cm}^2$. Diện tích 1 viên gạch $= 50 \times 50 = 2500\text{cm}^2$. Số gạch $= 240000 // 2500 = 96$ viên.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -742,8 +677,6 @@ Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
 ```
 ### Giải thích
 1 giờ 1 phút 5 giây.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -764,8 +697,6 @@ Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
 ```
 ### Giải thích
 $(8.5 + 9.0 + 7.5) / 3 = 25.0 / 3 \approx 8.3333... \implies 8.33$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -786,7 +717,5 @@ $(8.5 + 9.0 + 7.5) / 3 = 25.0 / 3 \approx 8.3333... \implies 8.33$.
 ```
 ### Giải thích
 Kích thước cả hồ và lối đi là $(10 + 2 \times 2) = 14\text{m}$ và $(8 + 2 \times 2) = 12\text{m}$. Diện tích toàn phần $= 14 \times 12 = 168\text{m}^2$. Diện tích hồ $= 10 \times 8 = 80\text{m}^2$. Diện tích lối đi $= 168 - 80 = 88\text{m}^2$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

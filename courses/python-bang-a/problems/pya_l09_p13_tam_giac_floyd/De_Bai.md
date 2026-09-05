@@ -32,11 +32,3 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 2 3
 4 5 6
 7 8 9 10`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -43,10 +43,3 @@ Ngày 1: 1 trang; ngày 2: 2 trang (tổng 3); ngày 3: 3 trang (tổng 6); ngà
 ### Giải thích
 
 Sau 4 ngày mới đọc 10 trang, phải sang ngày thứ 5 mới đọc hết.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

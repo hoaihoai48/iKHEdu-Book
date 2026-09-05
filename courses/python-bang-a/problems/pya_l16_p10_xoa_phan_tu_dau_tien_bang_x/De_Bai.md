@@ -30,11 +30,3 @@ Dãy số sau khi xóa, hoặc `KHONG CO`.
 
 Với dữ liệu đầu vào là `5 3
 1 3 5 3 7`, kết quả thu được tương ứng là `1 5 3 7`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -27,8 +27,6 @@
 ### Giải thích
 
 $\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ $\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$.
 ### Giải thích
 
 Số 10 có 4 ước: 1, 2, 5, 10.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +69,6 @@ Số 10 có 4 ước: 1, 2, 5, 10.
 ### Giải thích
 
 Các ước là 1, 2, 3, 6 $\implies 1 + 2 + 3 + 6 = 12$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -96,8 +90,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `8 9`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -119,8 +111,6 @@ Với dữ liệu đầu vào là `8 9`, kết quả thu được tương ứng 
 ### Giải thích
 
 Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -142,8 +132,6 @@ Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng l
 ### Giải thích
 
 Các ước của 12 là: 1, 2, 3, 4, 6, 12. Trong đó các ước chẵn là: 2, 4, 6, 12 (có 4 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -165,8 +153,6 @@ Các ước của 12 là: 1, 2, 3, 4, 6, 12. Trong đó các ước chẵn là: 
 ### Giải thích
 
 Ước lớn nhất là 24, lớn thứ hai là 12.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -188,8 +174,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `25`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -211,8 +195,6 @@ Với dữ liệu đầu vào là `25`, kết quả thu được tương ứng l
 ### Giải thích
 
 Với dữ liệu đầu vào là `60`, kết quả thu được tương ứng là `2 * 2 * 3 * 5`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -234,8 +216,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `7`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -257,8 +237,6 @@ Với dữ liệu đầu vào là `7`, kết quả thu được tương ứng l�
 ### Giải thích
 
 Có 4 số nguyên tố: 11, 13, 17, 19.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -280,8 +258,6 @@ Có 4 số nguyên tố: 11, 13, 17, 19.
 ### Giải thích
 
 Có 3 số là: 4 ($2^2$), 9 ($3^2$), 25 ($5^2$).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -307,8 +283,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `239`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -334,7 +308,5 @@ Với dữ liệu đầu vào là `239`, kết quả thu được tương ứng 
 Với dữ liệu đầu vào là `15`, kết quả thu được tương ứng là `3 5
 5 7
 11 13`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

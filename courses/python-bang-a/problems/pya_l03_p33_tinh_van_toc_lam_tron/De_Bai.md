@@ -31,9 +31,3 @@ Vận tốc trung bình làm tròn đến $2$ chữ số thập phân.
 
 - Vận tốc: $100 : 6 = 16.666\ldots$.
 - Làm tròn đến $2$ chữ số thập phân được $16.67$ km/h.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le D, T \le 10^4$
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

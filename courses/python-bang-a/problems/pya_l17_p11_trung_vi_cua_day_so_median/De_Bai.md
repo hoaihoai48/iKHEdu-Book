@@ -28,10 +28,3 @@ Giá trị trung vị.
 ### Giải thích
 
 Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

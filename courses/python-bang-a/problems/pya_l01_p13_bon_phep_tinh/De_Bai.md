@@ -25,7 +25,3 @@ Một dòng chứa hai số nguyên $A$ và $B$ cách nhau dấu cách ($-10^4 \
 ```
 ### Giải thích
 $8 + 5 = 13$, $8 - 5 = 3$, $8 \times 5 = 40$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

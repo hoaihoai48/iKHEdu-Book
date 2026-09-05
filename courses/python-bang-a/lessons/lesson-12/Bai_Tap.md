@@ -30,8 +30,6 @@
 
 Với dữ liệu đầu vào là `5
 80 95 60 100 75`, kết quả thu được tương ứng là `100 60`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -56,8 +54,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `7
 3 1 4 1 5 9 2`, kết quả thu được tương ứng là `1 2 3 4 5 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -82,8 +78,6 @@ apple banana grape orange
 
 Với dữ liệu đầu vào là `4
 orange apple banana grape`, kết quả thu được tương ứng là `apple banana grape orange`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -111,8 +105,6 @@ orange apple banana grape`, kết quả thu được tương ứng là `apple ba
 Với dữ liệu đầu vào là `3 4
 1 4 7
 2 3 5 8`, kết quả thu được tương ứng là `1 2 3 4 5 7 8`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -136,8 +128,6 @@ Với dữ liệu đầu vào là `3 4
 ### Giải thích
 
 Điểm TB: $(8+6+10+4)/4 = 7.0$. Các bạn có điểm $\ge 7$ là 8 và 10 (có 2 bạn).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -162,8 +152,6 @@ Với dữ liệu đầu vào là `3 4
 
 Với dữ liệu đầu vào là `5
 9 2 7 1 5`, kết quả thu được tương ứng là `1 2 5 7 9`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -188,8 +176,6 @@ Với dữ liệu đầu vào là `5
 
 Với dữ liệu đầu vào là `5
 20 80 40 100 60`, kết quả thu được tương ứng là `100 80 60 40 20`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -213,8 +199,6 @@ Với dữ liệu đầu vào là `5
 ### Giải thích
 
 Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -238,8 +222,6 @@ Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6.
 ### Giải thích
 
 Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -263,8 +245,6 @@ Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15.
 ### Giải thích
 
 $(8 + 9 + 7 + 10) / 4 = 8.5$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -288,8 +268,6 @@ $(8 + 9 + 7 + 10) / 4 = 8.5$.
 ### Giải thích
 
 Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -314,8 +292,6 @@ Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $
 
 Với dữ liệu đầu vào là `7
 2 3 5 2 3 7 2`, kết quả thu được tương ứng là `2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -339,8 +315,6 @@ Với dữ liệu đầu vào là `7
 ### Giải thích
 
 Bỏ min là 6.0, bỏ max là 10.0. Còn lại: 7.0, 8.0, 9.0. Trung bình là 8.00.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -368,7 +342,5 @@ Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt l�
 - Bạn 2 chờ $1 + 2 = 3$ phút.
 - Bạn 3 chờ $1 + 2 + 3 = 6$ phút.
 Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

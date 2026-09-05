@@ -24,7 +24,3 @@ In ra điểm trung bình dạng `f"{dtb:.2f}"`.
 ```
 ### Giải thích
 $(8.5 + 9.0 + 7.5) / 3 = 25.0 / 3 \approx 8.3333... \implies 8.33$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

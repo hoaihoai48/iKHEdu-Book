@@ -1,12 +1,12 @@
 # Bài 07: Quy luật dãy số và tam giác số
 
-## 1. Khái niệm & Bản chất của bài toán Dãy số trong lập trình thi đấu
+## 1. Khái niệm & Bản chất của bài toán Dãy số trong lập trình
 
 Trong các kỳ thi lập trình, dạng bài **Dãy số & Tam giác số** chiếm tỉ trọng rất lớn. Mục tiêu cốt lõi của dạng toán này là rèn luyện cho học sinh:
 * **Tư duy quy nạp toán học:** Nhìn vào các phần tử mẫu ban đầu để tìm ra quy luật biến thiên $u_n = f(u_{n-1})$ hoặc quy luật vị trí $u_n = f(n)$.
 * **Kỹ thuật biến cuốn chiếu:** Tính toán trạng thái mới từ các trạng thái trước mà không cần cấp phát mảng bộ nhớ khổng lồ.
 * **Cấu trúc vòng lặp lồng nhau:** Khám phá không gian 2 chiều qua việc điều khiển hàng và cột.
-* **Tối ưu hóa độ phức tạp:** Nhận diện các bài toán có thể giải bằng công thức toán học $\mathcal{O}(1)$ thay vì chạy vòng lặp ngây thơ $\mathcal{O}(N)$ dẫn đến quá thời gian (TLE).
+* **Tối ưu hóa độ phức tạp:** Nhận diện các bài toán có thể giải bằng công thức toán học thay vì chạy vòng lặp ngây thơ tốn nhiều thời gian.
 
 ---
 
@@ -220,12 +220,12 @@ $$\implies \text{Kết quả: Số hạng thứ 5 của dãy Fibonacci là } F_5
 > * Nếu quên dòng `print()` ở cuối vòng lặp ngoài, tất cả các số của các hàng trong tam giác sẽ dồn hết thành một hàng ngang dài ngoặc duy nhất.
 
 > ❌ **BẪY LỖI 3: DÙNG VÒNG LẶP CHO BÀI TOÁN CÓ THỂ TÍNH BẰNG CÔNG THỨC $\mathcal{O}(1)$**
-> * Với $N = 10^{12}$, nếu viết vòng lặp `for i in range(1, n + 1): s += i` chương trình chắc chắn bị lỗi `Time Limit Exceeded` (Quá thời gian 1.0 giây).
+> * Với $N = 10^{12}$, nếu viết vòng lặp `for i in range(1, n + 1): s += i` chương trình chắc chắn bị lỗi `vượt quá thời gian cho phép` (Quá thời gian 1.0 giây).
 > * **Quy tắc:** Với cấp số cộng và dãy đan dấu, luôn ưu tiên dùng công thức toán học đóng.
 
 ---
 
-## 6. Mẫu code chuẩn thi đấu
+## 6. Mẫu code thường gặp
 
 ### Mẫu 1: In tam giác Floyd kích thước $N$
 ```python

@@ -24,7 +24,3 @@ In ra hai số nguyên cách nhau dấu cách.
 ```
 ### Giải thích
 $3\text{m} = 300\text{cm} = 3000\text{mm}$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

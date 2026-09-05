@@ -33,12 +33,3 @@ NO
 ### Giải thích
 
 Tổng các chữ số là $1 + 2 + 3 + 4 = 10$. Vì 10 không chia hết cho 7 nên đáp án là `NO`. (Ví dụ vé số $16$ có tổng là 7 nên đáp án là `YES`.)
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 9999$ (tối đa 4 chữ số).
-
-* Subtask 2 (50% số điểm): $10000 \le N \le 10^{18}$ (tối đa 19 chữ số).
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

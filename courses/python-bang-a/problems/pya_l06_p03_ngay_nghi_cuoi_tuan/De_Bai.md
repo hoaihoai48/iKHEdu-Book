@@ -26,9 +26,3 @@ NGHI
 ```
 ### Giải thích
 Ngày 7 là thứ Bảy nên được nghỉ học.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

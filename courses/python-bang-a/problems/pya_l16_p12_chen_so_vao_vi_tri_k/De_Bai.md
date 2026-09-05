@@ -33,11 +33,3 @@ Dãy số sau khi chèn.
 Với dữ liệu đầu vào là `4
 10 20 30 40
 99 1`, kết quả thu được tương ứng là `10 99 20 30 40`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

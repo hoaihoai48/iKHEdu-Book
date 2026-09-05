@@ -27,10 +27,3 @@ Tổng các ước số của $N$.
 ### Giải thích
 
 Các ước là 1, 2, 3, 6 $\implies 1 + 2 + 3 + 6 = 12$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

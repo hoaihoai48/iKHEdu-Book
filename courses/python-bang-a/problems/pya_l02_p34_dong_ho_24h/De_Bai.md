@@ -23,7 +23,3 @@ In ra giờ mới.
 ```
 ### Giải thích
 $20 + 10 = 30$ giờ. $30 \% 24 = 6$ giờ sáng.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

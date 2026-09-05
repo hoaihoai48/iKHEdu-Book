@@ -48,7 +48,7 @@ while i <= 5:
 >     # QUÊN LỆNH: i += 1 !
 > ```
 > * **Hiện tượng:** Biến `i` mãi mãi giữ giá trị bằng `1`. Điều kiện `1 <= 5` luôn luôn là `True` trong mọi thời điểm!
-> * **Hậu quả:** Chương trình sẽ in ra số `1` liên tục hàng triệu lần, máy tính bị treo, quạt tản nhiệt quay ầm ầm. Khi nộp bài lên hệ thống thi đấu DKOJ/Themis, máy chấm sẽ dừng chương trình và đánh lỗi **Time Limit Exceeded (TLE) - Tràn giới hạn thời gian**.
+> * **Hậu quả:** Chương trình sẽ in ra số `1` liên tục không bao giờ dừng, máy tính bị treo, quạt tản nhiệt quay ầm ầm.
 > * **Quy tắc an toàn:** Mỗi khi viết lệnh `while`, điều đầu tiên cần tự hỏi bản thân là: *"Câu lệnh nào bên trong vòng lặp sẽ làm cho điều kiện này trở thành False để thoát ra?"*
 
 ---
@@ -177,7 +177,7 @@ $$\implies \text{Tổng các chữ số thu được: } 8 + 5 + 2 = \mathbf{15}$
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ```python
 # Mẫu đếm số chữ số của một số nguyên dương N
@@ -321,7 +321,7 @@ while a <= 2:
         b += 1
     a += 1
 ```
-- **A.** `1 2 2 4 `
+- **A.** `1 1 2 2 `
 - **B.** **[Đáp án đúng]** `1 2 2 4 `
 - **C.** `1 2 3 4 `
 - **D.** `2 4 `
@@ -408,7 +408,7 @@ Khi dùng `while n > 0:` kết hợp `chu_so = n % 10` và `n //= 10`, các ch�
 - **D.** Tăng dần theo giá trị
 > *Giải thích:* Phép chia dư `% 10` luôn bóc tách chữ số hàng đơn vị trước tiên.
 
-#### Câu 20 (Quy tắc phòng thi lập trình):
+#### Câu 20 (Quy tắc khi làm bài):
 Khi một bài toán có thể giải bằng cả công thức toán $\mathcal{O}(1)$ và vòng lặp `while`, thí sinh nên chọn cách nào?
 - **A.** Dùng vòng lặp `while` vì dễ viết hơn
 - **B.** **[Đáp án đúng]** Áp dụng công thức toán $\mathcal{O}(1)$ để đạt tốc độ chạy tức thì và tránh nguy cơ lặp vô tận

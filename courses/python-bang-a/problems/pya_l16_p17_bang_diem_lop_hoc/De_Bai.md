@@ -36,12 +36,3 @@ In ra 3 dòng: dòng 1 là điểm cao nhất, dòng 2 là điểm thấp nhất
 ### Giải thích
 
 Điểm cao nhất là 10, thấp nhất là 6. Trung bình là $(8 + 7 + 10 + 6 + 9) / 5 = 8.0$.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 100$.
-
-* Subtask 2 (50% số điểm): $100 < N \le 10^5$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

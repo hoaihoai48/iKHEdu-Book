@@ -28,9 +28,3 @@ HA
 ```
 ### Giải thích
 Tháng 4 thuộc mùa hạ (mùa hè).
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

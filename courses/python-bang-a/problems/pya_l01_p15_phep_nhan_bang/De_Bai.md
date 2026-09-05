@@ -24,7 +24,3 @@ In ra dòng phép tính theo đúng mẫu, các thành phần cách nhau bởi d
 ```
 ### Giải thích
 Tính $7 \times 9 = 63$ và in theo mẫu `7 x 9 = 63`.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -33,11 +33,3 @@ Cho dãy $N$ số nguyên. Hãy tách dãy thành 2 danh sách: một danh sách
 Với dữ liệu đầu vào là `6
 1 4 7 8 2 9`, kết quả thu được tương ứng là `4 8 2
 1 7 9`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

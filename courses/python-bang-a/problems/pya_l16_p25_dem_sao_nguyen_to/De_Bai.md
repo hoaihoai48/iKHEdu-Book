@@ -33,12 +33,3 @@ In ra một số nguyên duy nhất là số lượng số nguyên tố.
 ### Giải thích
 
 Từ 1 đến 10 có 4 số nguyên tố là 2, 3, 5 và 7.
-
-## Ràng buộc
-
-Subtask 1 (50% số điểm): $1 \le N \le 1000$. Kiểm tra từng số vẫn kịp.
-
-* Subtask 2 (50% số điểm): $1000 < N \le 10^6$.
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

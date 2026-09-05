@@ -28,10 +28,3 @@ Tổng $S$.
 ### Giải thích
 
 $1 \times 2 + 2 \times 3 + 3 \times 4 = 2 + 6 + 12 = 20$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -33,8 +33,3 @@ Nhập 2 số tự nhiên $a, b$ ($1 \le a, b \le 100$) trên 2 dòng.
 
 Dòng 1 ghép chữ: `"25" + "30" = "2530"`.
 Dòng 2 cộng số: $25 + 30 = 55$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

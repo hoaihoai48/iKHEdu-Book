@@ -27,11 +27,3 @@ Một chữ số duy nhất (từ 1 đến 9).
 ### Giải thích
 
 Với dữ liệu đầu vào là `9875`, kết quả thu được tương ứng là `2`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

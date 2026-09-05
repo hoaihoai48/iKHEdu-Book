@@ -24,7 +24,3 @@ In ra chu vi hình tam giác.
 ```
 ### Giải thích
 Chu vi $= 5 + 7 + 8 = 20$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

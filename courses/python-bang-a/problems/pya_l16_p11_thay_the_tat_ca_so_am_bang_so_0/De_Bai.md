@@ -30,11 +30,3 @@ Dãy số sau khi thay thế.
 
 Với dữ liệu đầu vào là `5
 3 -5 8 -2 0`, kết quả thu được tương ứng là `3 0 8 0 0`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

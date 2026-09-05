@@ -27,8 +27,3 @@ Một số tự nhiên là độ dài cạnh còn lại.
 ### Giải thích
 
 Nửa chu vi là: $30 : 2 = 15$. Cạnh còn lại: $15 - 5 = 10$.
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -24,7 +24,3 @@ In ra chu vi và diện tích cách nhau một dấu cách.
 ```
 ### Giải thích
 Chu vi $6 \times 4 = 24$, Diện tích $6 \times 6 = 36$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

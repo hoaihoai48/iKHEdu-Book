@@ -24,7 +24,3 @@ In ra diện tích định dạng `f"{S:.1f}"`.
 ```
 ### Giải thích
 Diện tích $= ((12 + 8) \times 5) / 2 = 50.0$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

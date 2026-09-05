@@ -39,8 +39,3 @@ Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm
 ```text
 3
 ```
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

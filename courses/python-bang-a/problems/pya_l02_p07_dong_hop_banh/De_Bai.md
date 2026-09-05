@@ -24,7 +24,3 @@ Hai số nguyên cách nhau một dấu cách.
 ```
 ### Giải thích
 $50 // 6 = 8$ hộp, dư $50 \% 6 = 2$ bánh lẻ.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

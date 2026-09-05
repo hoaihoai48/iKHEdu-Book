@@ -25,7 +25,3 @@ Xin chao cac ban! Toi la Robot Python.
 ```
 ### Giải thích
 In chính xác câu chào ra màn hình theo đúng quy định.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

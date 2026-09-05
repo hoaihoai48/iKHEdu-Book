@@ -1,7 +1,7 @@
 # Trích xuất số lớn nhất trong văn bản
 
 
-*(Đề thi lập trình cấp Tỉnh/Thành phố Bảng A)*
+*(Đề thi lập trình cấp Tỉnh/Thành phố)*
 
 ## Bối cảnh
 
@@ -28,9 +28,3 @@ Lop 5A co 38 hoc sinh va 105 quyen sach
 ### Giải thích
 
 Các con số xuất hiện là: 5, 38, 105. Số lớn nhất là 105.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

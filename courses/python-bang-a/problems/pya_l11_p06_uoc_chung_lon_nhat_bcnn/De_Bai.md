@@ -27,10 +27,3 @@ Hai số nguyên: $\text{GCD}$ trước, $\text{LCM}$ sau, cách nhau một kho�
 ### Giải thích
 
 $\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

@@ -24,7 +24,3 @@ In ra $A^3$.
 ```
 ### Giải thích
 $5^3 = 125$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

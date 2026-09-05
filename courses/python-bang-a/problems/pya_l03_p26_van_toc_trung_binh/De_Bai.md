@@ -24,7 +24,3 @@ In ra vận tốc dạng `f"{v:.2f}"` (đơn vị $\text{km/h}$).
 ```
 ### Giải thích
 $100 / 3 \approx 33.3333... \implies 33.33$.
-
-## Ràng buộc
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

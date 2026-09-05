@@ -27,11 +27,3 @@ Dãy $N$ số, cách nhau bởi dấu cách.
 ### Giải thích
 
 Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 4 8 16`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

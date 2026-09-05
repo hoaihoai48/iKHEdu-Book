@@ -29,9 +29,3 @@ DEU
 ```
 ### Giải thích
 Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

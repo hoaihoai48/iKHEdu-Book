@@ -32,9 +32,3 @@ Số lượng cặp thỏa mãn.
 ### Giải thích
 
 Có 2 cặp là $(2, 8)$ và $(4, 6)$.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

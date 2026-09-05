@@ -1,6 +1,6 @@
-# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 7 CHƯƠNG
+# iKHEDU PYTHON — TỔNG HỢP NỘI DUNG 7 CHƯƠNG
 
-> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python Bảng A — Level 1.
+> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python — Level 1.
 > Nguồn canonical vẫn là các file trong `lessons/`; không chỉnh sửa trực tiếp file này.
 
 ## MỤC LỤC TỔNG QUAN
@@ -33,11 +33,11 @@
 # PHẦN I — CURRICULUM AUDIT VÀ ALGORITHM PATTERNS
 ================================================================================
 
-# CURRICULUM AUDIT — PYTHON BẢNG A LEVEL 1
+# CURRICULUM AUDIT — PYTHON LEVEL 1
 
 ## Quyết định phạm vi
 
-Khóa học giữ nguyên **6 chương / 18 bài**, tập trung vào Python 3 và tư duy giải bài cho Python Bảng A. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
+Khóa học giữ nguyên **6 chương / 18 bài**, tập trung vào Python 3 và tư duy giải bài cho Python. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
 
 Các nội dung như `def`, `return`, `dict`, `set`, tuple, module, file I/O, exception nâng cao và comprehension không phải chuẩn bắt buộc của Level 1. Có thể giới thiệu ở Level 2 hoặc phụ lục khi cần.
 
@@ -87,7 +87,7 @@ Các pattern chuẩn được đặt trong [`ALGORITHM_PATTERNS.md`](ALGORITHM_P
 
 Phạm vi kiến thức đủ để chốt Level 1. Giai đoạn tiếp theo là chuẩn hóa ví dụ, giảm claim không có nguồn, đánh dấu Core/Thử thách và kiểm tra từng bài theo ma trận trên; không mở rộng thêm chương.
 
-# ALGORITHM PATTERNS — PYTHON BẢNG A LEVEL 1
+# ALGORITHM PATTERNS — PYTHON LEVEL 1
 
 Các mẫu dưới đây là thẻ nhớ dùng xuyên suốt khóa học. Học sinh cần nhận ra mẫu, hiểu điều kiện dùng và tự thay đổi phần điều kiện hoặc phép cập nhật.
 
@@ -4023,7 +4023,7 @@ print(max_cs)
 ---
 
 ### Bài 9 (Luyện tập): Kiểm tra số đối xứng (palindrome) (`PYA-L10-P09`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Bối cảnh:** Một số được gọi là số đối xứng (Palindrome) nếu đọc từ trái sang phải hay từ phải sang trái đều thu được số giống hệt nhau (ví dụ: $121$, $1331$, $5$, $88$).
 * **Yêu cầu:** Nhập vào số tự nhiên $N$. Kiểm tra xem $N$ có phải số đối xứng không. Nếu có in `YES`, ngược lại in `NO`.
@@ -4427,7 +4427,7 @@ else:
 ---
 
 ### Bài 12 (Vận dụng): Số siêu nguyên tố (super prime) (`PYA-L11-P12`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Bối cảnh:** Một số tự nhiên được gọi là "Siêu nguyên tố" nếu bản thân nó là số nguyên tố, và khi ta lần lượt xóa bớt chữ số tận cùng bên phải thì các số thu được vẫn luôn là số nguyên tố!
   * Ví dụ: Số $239$ là số nguyên tố.
@@ -4751,7 +4751,7 @@ print(count)
 ---
 
 ### Bài 11 (Vận dụng): Đếm số chính phương trong đoạn (`PYA-L12-P11`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^{14}$). Hãy đếm xem có bao nhiêu số chính phương nằm trong đoạn từ $A$ đến $B$.
 * **Input:** Hai số nguyên $A, B$ trên cùng một dòng.
@@ -5143,7 +5143,7 @@ print(len(c))
 ---
 
 ### Bài 14 (Thử thách): Cặp số có tổng bằng s (`PYA-L16-P14`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Yêu cầu:** Cho dãy gồm $N$ số nguyên đôi một khác nhau và một số nguyên mục tiêu $S$. Hãy đếm xem có bao nhiêu cặp chỉ số $(i, j)$ với $i < j$ thỏa mãn:
   $$A_i + A_j = S$$
@@ -5459,7 +5459,7 @@ print(sum(a) - max(a) - min(a))
 ---
 
 ### Bài 10 (Luyện tập): Chênh lệch nhỏ nhất giữa hai số (`PYA-L17-P10`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Yêu cầu:** Cho dãy $N$ số nguyên đôi một khác nhau. Hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử bất kỳ trong dãy (tức là giá trị $|A_i - A_j|$ nhỏ nhất với $i \ne j$).
 * **Input:**
@@ -5738,7 +5738,7 @@ Kết quả in ra là gì?
 ---
 
 ### Bài 5 (Cơ bản): Kiểm tra từ đối xứng (palindrome) (`PYA-L13-P05`)
-*(Bài toán kinh điển Python Bảng A)*
+*(Bài toán kinh điển Python)*
 
 * **Bối cảnh:** Một từ được gọi là từ đối xứng nếu đọc xuôi hay đọc ngược đều hoàn toàn giống nhau (ví dụ: `radar`, `level`, `madam`, `noon`).
 * **Yêu cầu:** Cho một từ $S$. Kiểm tra xem $S$ có phải từ đối xứng không. In `YES` nếu đúng, ngược lại in `NO`.
@@ -6249,7 +6249,7 @@ print(max_len)
 ---
 
 ### Bài 11 (Vận dụng): Nén chuỗi ký tự (run-length encoding) (`PYA-L14-P11`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Bối cảnh:** Thuật toán nén chuỗi đơn giản thay thế một dãy các ký tự giống nhau liên tiếp bằng ký tự đó kèm theo số lần lặp lại.
   Ví dụ: `AAABBC` nén thành `A3B2C1`.
@@ -6376,7 +6376,7 @@ print(max_len)
 ---
 
 ### Bài 21 (Luyện tập): Mật mã Caesar dịch chuyển K (`PYA-L15-P09`)
-*(Bài toán kinh điển Python Bảng A)*
+*(Bài toán kinh điển Python)*
 
 * **Bối cảnh:** Hoàng đế Caesar mã hóa bức thư gồm các chữ cái in hoa (`'A'` đến `'Z'`) bằng cách dịch chuyển mỗi chữ cái sang phải $K$ bước theo vòng tròn 26 chữ cái ($A \to B \dots Z \to A$).
 * **Yêu cầu:** Cho chuỗi $S$ chỉ gồm các chữ cái in hoa và số nguyên $K$ ($1 \le K \le 25$). Hãy in ra bản mật mã sau khi mã hóa.
@@ -6415,7 +6415,7 @@ print(max_len)
 ---
 
 ### Bài 24 (Thử thách): Mật mã thay thế hoán vị (anagram) (`PYA-L15-P12`)
-*(Đề thi Python Bảng A)*
+*(Đề thi Python)*
 
 * **Bối cảnh:** Hai từ được gọi là "Anagram" (hoán vị ký tự của nhau) nếu chúng có thể tạo thành từ nhau bằng cách xáo trộn lại thứ tự các chữ cái (ví dụ: `silent` và `listen`, `heart` và `earth`).
 * **Yêu cầu:** Cho 2 từ $S_1$ và $S_2$. Kiểm tra xem chúng có phải là Anagram của nhau không. In `YES` nếu đúng, ngược lại in `NO`.
@@ -6440,7 +6440,7 @@ print(max_len)
 
 ## Lý thuyết và Concept Quiz
 
-# Bài 15: Chiến lược giải đề Python Bảng A
+# Bài 15: Chiến lược giải đề Python
 
 ## 1. Bản đồ 5 bước tác chiến trong phòng thi
 ```
@@ -6547,13 +6547,13 @@ BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên 
 
 ## Bài tập lesson
 
-# Hệ thống bài tập thực hành — bài 15: Chiến lược giải đề Python Bảng A
+# Hệ thống bài tập thực hành — bài 15: Chiến lược giải đề Python
 
 ---
 
-## 3 bộ đề thi thử Python Bảng A toàn diện (12 bài toán phân tầng chuẩn đề thi quốc gia)
+## 3 bộ đề thi thử Python toàn diện (12 bài toán phân tầng chuẩn đề thi quốc gia)
 
-Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài của kỳ thi Python Bảng A (Phổ thông): thời gian 90 phút, gồm 4 bài toán từ khởi động đến phân loại học sinh giỏi.
+Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài của kỳ thi Python (Phổ thông): thời gian 90 phút, gồm 4 bài toán từ khởi động đến phân loại học sinh giỏi.
 
 ---
 
@@ -6725,7 +6725,7 @@ Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài c�
 
 ## Lý thuyết và Concept Quiz
 
-# Bài 16: Đề thi thử Python Bảng A
+# Bài 16: Đề thi thử Python
 
 Mỗi đề thi chuẩn gồm 4 bài toán phân bổ theo thời gian 90 phút:
 
@@ -6773,7 +6773,7 @@ Mỗi đề thi chuẩn gồm 4 bài toán phân bổ theo thời gian 90 phút:
 
 ## Bài tập lesson
 
-# Hệ thống bài tập thực hành — bài 16: Đề thi thử Python Bảng A
+# Hệ thống bài tập thực hành — bài 16: Đề thi thử Python
 
 ---
 

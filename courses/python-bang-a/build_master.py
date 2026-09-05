@@ -49,9 +49,9 @@ def build_master():
         key=lesson_number,
     )
     output = [
-        "# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 6 CHƯƠNG",
+        "# iKHEDU PYTHON — TỔNG HỢP NỘI DUNG 5 CHƯƠNG",
         "",
-        "> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python Bảng A — Level 1.",
+        "> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python — Level 1.",
         "> Nguồn canonical vẫn là các file trong `lessons/`; không chỉnh sửa trực tiếp file này.",
         "",
         "## MỤC LỤC TỔNG QUAN",
@@ -64,11 +64,10 @@ def build_master():
         3: "BÀI TOÁN SỐ HỌC & TÁCH CHỮ SỐ",
         4: "DANH SÁCH (LIST) & THỐNG KÊ",
         5: "XỬ LÝ CHUỖI KÝ TỰ",
-        6: "LUYỆN THI",
     }
     lesson_chapter = {
         1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3,
-        9: 3, 10: 3, 11: 4, 12: 4, 13: 5, 14: 5, 15: 6, 16: 6,
+        9: 3, 10: 3, 11: 4, 12: 4, 13: 5, 14: 5,
     }
     for chapter_number, chapter_title in chapters.items():
         output.append(f"### Chương {chapter_number}: {chapter_title}")

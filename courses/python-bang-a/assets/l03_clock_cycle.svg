@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" width="100%" height="100%">
+  <defs>
+    <filter id="shadowBox" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="920" height="400" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="918" height="398" rx="15" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+
+  <!-- Main Title Header -->
+  <text x="460" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#0F172A">
+    BẢN ĐỒ CHU KỲ TUẦN HOÀN: BÀI TOÁN THỜI GIAN VÀ THỨ TRONG TUẦN
+  </text>
+
+  <!-- ================= TOP SECTION: 24-HOUR CLOCK CYCLE ================= -->
+  <g transform="translate(30, 54)" filter="url(#shadowBox)">
+    <rect width="860" height="152" rx="12" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+    <path d="M 0 12 Q 0 0 12 0 L 848 0 Q 860 0 860 12 L 860 36 L 0 36 Z" fill="#2563EB"/>
+    <text x="24" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">
+      1. CHU KỲ 24 GIỜ (ĐỒNG HỒ) : (GIỜ_GỐC + SỐ_GIỜ_TRÔI_QUA) % 24
+    </text>
+
+    <!-- Timeline Container -->
+    <g transform="translate(24, 48)">
+      <rect width="556" height="92" rx="8" fill="#F0F7FF" stroke="#BFDBFE"/>
+      
+      <!-- Milestone 0: 0h -->
+      <rect x="16" y="20" width="75" height="52" rx="6" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+      <text x="53.5" y="42" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1E40AF">0h</text>
+      <text x="53.5" y="60" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10.5" fill="#64748B">Nửa đêm</text>
+
+      <!-- Connecting Arrow 1 -->
+      <path d="M 98 46 L 122 46" stroke="#93C5FD" stroke-width="2" stroke-dasharray="3,2"/>
+      <polygon points="122,46 116,42 116,50" fill="#93C5FD"/>
+
+      <!-- Milestone 1: 9h (Start point) -->
+      <rect x="128" y="14" width="112" height="64" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+      <text x="184" y="40" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1D4ED8">9h Sáng</text>
+      <rect x="144" y="50" width="80" height="20" rx="4" fill="#2563EB"/>
+      <text x="184" y="64" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">MỐC HIỆN TẠI</text>
+
+      <!-- Jump Arrow +50h: straight horizontal dashed red line -->
+      <path d="M 248 46 L 416 46" stroke="#DC2626" stroke-width="2.5" stroke-dasharray="4,2"/>
+      <polygon points="416,46 408,41 408,51" fill="#DC2626"/>
+
+      <!-- Badge above arrow -->
+      <rect x="254" y="14" width="154" height="24" rx="5" fill="#FEE2E2" stroke="#DC2626" stroke-width="1"/>
+      <text x="331" y="30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#B91C1C">
+        +50h (quay 2 vòng, dư 2h)
+      </text>
+
+      <!-- Milestone 2: 11h (Target Result) -->
+      <rect x="424" y="14" width="116" height="64" rx="6" fill="#FEF08A" stroke="#CA8A04" stroke-width="2"/>
+      <text x="482" y="40" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#854D0E">★ 11h Trưa</text>
+      <rect x="440" y="50" width="84" height="20" rx="4" fill="#CA8A04"/>
+      <text x="482" y="64" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">KẾT QUẢ CUỐI</text>
+    </g>
+
+    <!-- Calculation Box -->
+    <g transform="translate(600, 48)">
+      <rect width="236" height="92" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="118" y="24" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#64748B">
+        Hiện tại: <tspan font-weight="bold" fill="#0F172A">9h</tspan> | Thêm: <tspan font-weight="bold" fill="#DC2626">+50h</tspan>
+      </text>
+      <rect x="16" y="34" width="204" height="46" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+      <text x="118" y="54" text-anchor="middle" font-family="Consolas, monospace" font-size="14.5" font-weight="bold" fill="#1D4ED8">
+        (9 + 50) % 24 = 11
+      </text>
+      <text x="118" y="71" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">
+        → Đáp số: 11 giờ trưa
+      </text>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM SECTION: 7-DAY WEEK CYCLE ================= -->
+  <g transform="translate(30, 216)" filter="url(#shadowBox)">
+    <rect width="860" height="172" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <path d="M 0 12 Q 0 0 12 0 L 848 0 Q 860 0 860 12 L 860 36 L 0 36 Z" fill="#059669"/>
+    <text x="24" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">
+      2. CHU KỲ 7 NGÀY (LỊCH TUẦN) : (MÃ_HÔM_NAY + SỐ_NGÀY) % 7
+    </text>
+
+    <!-- Jump Arch Banner: Drawn cleanly above the cards -->
+    <!-- T3 center: 24 + 80 + 37 = 141. T5 center: 24 + 240 + 37 = 301. -->
+    <path d="M 141 68 C 175 42, 267 42, 298 66" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="4,2"/>
+    <polygon points="301,70 293,62 300,58" fill="#DC2626"/>
+
+    <!-- Jump Badge directly in the arch crest -->
+    <rect x="145" y="38" width="152" height="22" rx="5" fill="#FEF08A" stroke="#CA8A04" stroke-width="1.5"/>
+    <text x="221" y="53" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" font-weight="bold" fill="#854D0E">
+      +100 ngày (quay 14 tuần, dư 2)
+    </text>
+
+    <!-- Linear 7 Days Strip (Cards placed at y=84) -->
+    <g transform="translate(24, 84)">
+      <!-- Day 0: T2 -->
+      <g transform="translate(0, 0)">
+        <rect width="74" height="66" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#334155">Thứ 2</text>
+        <rect x="18" y="38" width="38" height="19" rx="4" fill="#E2E8F0"/>
+        <text x="37" y="52" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#475569">mã 0</text>
+      </g>
+
+      <!-- Day 1: T3 (Start - Blue highlight) -->
+      <g transform="translate(80, 0)">
+        <rect width="74" height="66" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8">Thứ 3</text>
+        <rect x="10" y="38" width="54" height="19" rx="4" fill="#2563EB"/>
+        <text x="37" y="52" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF">HÔM NAY</text>
+      </g>
+
+      <!-- Day 2: T4 -->
+      <g transform="translate(160, 0)">
+        <rect width="74" height="66" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#334155">Thứ 4</text>
+        <rect x="18" y="38" width="38" height="19" rx="4" fill="#E2E8F0"/>
+        <text x="37" y="52" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#475569">mã 2</text>
+      </g>
+
+      <!-- Day 3: T5 (Result - Yellow/Amber highlight) -->
+      <g transform="translate(240, 0)">
+        <rect width="74" height="66" rx="8" fill="#FEF08A" stroke="#CA8A04" stroke-width="2"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#854D0E">Thứ 5</text>
+        <rect x="8" y="38" width="58" height="19" rx="4" fill="#CA8A04"/>
+        <text x="37" y="52" text-anchor="middle" font-family="Consolas, monospace" font-size="10" font-weight="bold" fill="#FFFFFF">★ MÃ 3</text>
+      </g>
+
+      <!-- Day 4: T6 -->
+      <g transform="translate(320, 0)">
+        <rect width="74" height="66" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#334155">Thứ 6</text>
+        <rect x="18" y="38" width="38" height="19" rx="4" fill="#E2E8F0"/>
+        <text x="37" y="52" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#475569">mã 4</text>
+      </g>
+
+      <!-- Day 5: T7 -->
+      <g transform="translate(400, 0)">
+        <rect width="74" height="66" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#334155">Thứ 7</text>
+        <rect x="18" y="38" width="38" height="19" rx="4" fill="#E2E8F0"/>
+        <text x="37" y="52" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#475569">mã 5</text>
+      </g>
+
+      <!-- Day 6: CN -->
+      <g transform="translate(480, 0)">
+        <rect width="74" height="66" rx="8" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.5"/>
+        <text x="37" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#E11D48">Chủ Nhật</text>
+        <rect x="18" y="38" width="38" height="19" rx="4" fill="#FECDD3"/>
+        <text x="37" y="52" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#9F1239">mã 6</text>
+      </g>
+    </g>
+
+    <!-- Calculation Box -->
+    <g transform="translate(600, 48)">
+      <rect width="236" height="102" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="118" y="24" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#64748B">
+        Hôm nay: <tspan font-weight="bold" fill="#0F172A">Thứ 3 (mã 1)</tspan>
+      </text>
+      <text x="118" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#64748B">
+        Sau: <tspan font-weight="bold" fill="#DC2626">+100 ngày nữa</tspan>
+      </text>
+
+      <rect x="16" y="50" width="204" height="42" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+      <text x="118" y="69" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#047857">
+        (1 + 100) % 7 = 3
+      </text>
+      <text x="118" y="85" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#059669">
+        → Mã 3: Thứ 5
+      </text>
+    </g>
+  </g>
+</svg>

@@ -30,9 +30,3 @@ In ra một số nguyên duy nhất là giá trị của $a^n$.
 ### Giải thích
 
 $3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang có 81 khối gỗ.
-
-## Ràng buộc
-
-* **Giới hạn dữ liệu:** $1 \le a \le 10$, $0 \le n \le 10$.
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

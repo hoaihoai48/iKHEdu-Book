@@ -33,11 +33,3 @@ Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng l�
 1 2
 1 2 3
 1 2 3 4`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

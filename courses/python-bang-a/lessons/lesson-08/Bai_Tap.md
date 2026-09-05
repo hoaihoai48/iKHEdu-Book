@@ -27,8 +27,6 @@
 ### Giải thích
 
 Với dữ liệu đầu vào là `47`, kết quả thu được tương ứng là `4 7`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -50,8 +48,6 @@ Với dữ liệu đầu vào là `47`, kết quả thu được tương ứng l
 ### Giải thích
 
 $3 + 5 + 8 = 16$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -73,8 +69,6 @@ $3 + 5 + 8 = 16$.
 ### Giải thích
 
 $2 + 0 + 2 + 4 = 8$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -96,8 +90,6 @@ $2 + 0 + 2 + 4 = 8$.
 ### Giải thích
 
 Đảo ngược các chữ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -119,8 +111,6 @@ $2 + 0 + 2 + 4 = 8$.
 ### Giải thích
 
 Bỏ qua chữ số 0, tích là $2 \times 5 = 10$.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -142,8 +132,6 @@ Bỏ qua chữ số 0, tích là $2 \times 5 = 10$.
 ### Giải thích
 
 Có 6 chữ số.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -165,8 +153,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `12321`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -189,8 +175,6 @@ Với dữ liệu đầu vào là `12321`, kết quả thu được tương ứn
 ### Giải thích
 
 Với dữ liệu đầu vào là `9875`, kết quả thu được tương ứng là `2`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -212,8 +196,6 @@ Với dữ liệu đầu vào là `9875`, kết quả thu được tương ứng
 ### Giải thích
 
 Chữ số lớn nhất là 9, nhỏ nhất là 1.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -235,8 +217,6 @@ YES
 ### Giải thích
 
 Với dữ liệu đầu vào là `372`, kết quả thu được tương ứng là `YES`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -258,8 +238,6 @@ Với dữ liệu đầu vào là `372`, kết quả thu được tương ứng 
 ### Giải thích
 
 Chữ số chẵn: 2, 0 (2 số). Chữ số lẻ: 3, 5 (2 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -283,8 +261,6 @@ TANG
 ### Giải thích
 
 Với dữ liệu đầu vào là `1379`, kết quả thu được tương ứng là `TANG`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -306,8 +282,6 @@ TOAN CHAN
 ### Giải thích
 
 Với dữ liệu đầu vào là `2468`, kết quả thu được tương ứng là `TOAN CHAN`.
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
@@ -329,7 +303,5 @@ Với dữ liệu đầu vào là `2468`, kết quả thu được tương ứng
 ### Giải thích
 
 Các số đối xứng là: 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 (tổng cộng 10 số).
-* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---

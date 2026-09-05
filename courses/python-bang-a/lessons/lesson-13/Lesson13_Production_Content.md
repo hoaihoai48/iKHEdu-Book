@@ -48,7 +48,7 @@ $$\mathbf{s[\text{start} : \text{stop} : \text{step}]}$$
 * `stop`: Vị trí chỉ số kết thúc (nhưng **luôn bị loại trừ**, tức chỉ lấy đến chỉ số $\text{stop} - 1$).
 * `step`: Bước nhảy (mặc định là $1$ nếu để trống). Bước nhảy âm mang ý nghĩa duyệt lùi.
 
-### Bảng các mẫu cắt lát kinh điển trong phòng thi:
+### Bảng các mẫu cắt lát kinh điển khi làm bài:
 
 | Cú pháp cắt lát | Quy tắc trích xuất | Ví dụ với `s = "ABCDEFGH"` | Chuỗi con kết quả |
 |---|---|---|:---:|
@@ -185,7 +185,7 @@ else:
 
 ---
 
-## 7. Mẫu code chuẩn thi đấu
+## 7. Mẫu code thường gặp
 
 ### 7.1. Mẫu kiểm tra chuỗi đối xứng
 ```python
@@ -300,11 +300,11 @@ print(dem)
 - > *Giải thích:* Đây là quy ước của Python giúp phân biệt với vị trí 0 (đầu chuỗi).
 
 #### Câu 12: Biểu thức `"HA NOI"[::2]` trả về chuỗi nào?
-- **A.** `"H NO"`
-- **B.** **[Đáp án đúng]** `"H OI"`
+- **A.** **[Đáp án đúng]** `"H O"`
+- **B.** `"H OI"`
 - **C.** `"A NI"`
 - **D.** `"HA NOI"`
-- > *Giải thích:* Lấy các ký tự tại chỉ số chẵn 0, 2, 4, 6: `'H'`, `' '`, `'O'`, `'I'` $\implies$ `"H OI"`.
+- > *Giải thích:* Chuỗi `"HA NOI"` dài 6 ký tự (chỉ số 0 đến 5). Lấy bước nhảy 2: chỉ số 0 (`'H'`), 2 (`' '`), 4 (`'O'`) $\implies$ `"H O"`.
 
 #### Câu 13: Đoạn code sau in ra gì?
 ```python
@@ -312,7 +312,7 @@ s = "A"
 s = s * 3
 print(s)
 ```
-- **A.** `AAA`
+- **A.** `AAAA`
 - **B.** `AA`
 - **C.** **[Đáp án đúng]** `AAA`
 - **D.** `3A`

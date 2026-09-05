@@ -27,11 +27,3 @@ Chữ số hàng chục, tiếp theo là chữ số hàng đơn vị.
 ### Giải thích
 
 Với dữ liệu đầu vào là `47`, kết quả thu được tương ứng là `4 7`.
-
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

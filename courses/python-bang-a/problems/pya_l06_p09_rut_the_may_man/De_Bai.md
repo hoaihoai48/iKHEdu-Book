@@ -26,9 +26,3 @@ TRUNG THUONG
 ```
 ### Giải thích
 Số 14 chia hết cho 7 nên chiếc thẻ trúng thưởng.
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$

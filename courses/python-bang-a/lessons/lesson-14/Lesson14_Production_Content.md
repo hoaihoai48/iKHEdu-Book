@@ -2,7 +2,7 @@
 
 ## 1. Khái niệm & Bản chất của Xử lý chuỗi nâng cao
 
-Trong bài trước, ta đã làm quen với việc đánh chỉ số và cắt lát chuỗi (`s[i]`, `s[a:b]`). Tuy nhiên, trong các bài toán lập trình thi đấu thực tế, chuỗi ký tự thường là dữ liệu văn bản phức tạp: mật mã, câu văn, danh sách từ ngữ, dữ liệu số lẫn lộn chữ cái. 
+Trong bài trước, ta đã làm quen với việc đánh chỉ số và cắt lát chuỗi (`s[i]`, `s[a:b]`). Tuy nhiên, trong các bài toán lập trình thực tế, chuỗi ký tự thường là dữ liệu văn bản phức tạp: mật mã, câu văn, danh sách từ ngữ, dữ liệu số lẫn lộn chữ cái. 
 
 Để giải quyết triệt để các dạng toán này, ta cần làm chủ 4 kỹ năng cốt lõi:
 1. **Duyệt từng ký tự**: Kiểm tra từng ký tự trong chuỗi xem là chữ cái, chữ số hay ký tự đặc biệt.
@@ -102,7 +102,7 @@ print(chr(ord('A') + 1)) # In ra: 'B' (Ký tự kế tiếp)
 
 ## 5. Tách từ (`split`) và Ghép từ (`join`) — Chuẩn hóa câu văn
 
-Xử lý từ ngữ là một trong những dạng toán thi đấu kinh điển: đếm số từ, tìm từ dài nhất, đảo ngược từ trong câu.
+Xử lý từ ngữ là một trong những dạng toán kinh điển: đếm số từ, tìm từ dài nhất, đảo ngược từ trong câu.
 
 ### 5.1. Phương thức `s.split()` thần thánh
 * Khi gọi `s.split()` không truyền tham số, Python sẽ:
@@ -178,7 +178,7 @@ print(tong)
 
 ---
 
-## 8. Mẫu code chuẩn thi đấu
+## 8. Mẫu code thường gặp
 
 ### 8.1. Đếm số lượng chữ cái in hoa, in thường và chữ số
 ```python

@@ -29,10 +29,3 @@ Số lượng số chia hết cho $K$.
 ### Giải thích
 
 Gồm các số: 3, 6, 9. Tổng cộng 3 số.
-
-
-## Ràng buộc
-
-
-* **Giới hạn thời gian:** $1.0\text{s}$
-* **Giới hạn bộ nhớ:** $256\text{MB}$
