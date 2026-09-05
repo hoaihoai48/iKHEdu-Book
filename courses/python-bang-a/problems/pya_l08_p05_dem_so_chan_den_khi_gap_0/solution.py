@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L08-P05: Đếm Số Chẵn Đến Khi Gặp 0
-# Cài đặt code chuẩn Python 3
+count = 0
+while True:
+    x = int(input())
+    if x == 0:
+        break
+    if x % 2 == 0:
+        count = count + 1
+print(count)

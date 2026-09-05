@@ -23,7 +23,7 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
 1. Muốn tính $3^4$ em sẽ viết phép nhân dài thế nào? Có cách viết ngắn gọn trong Python không?
 2. Ký hiệu `^` trong Python có phải là lũy thừa không? Vì sao cô lại cấm dùng nó?
-3. Khi số mũ bằng 0 thì kết quả là bao nhiêu? Em thử đoán rồi kiểm tra bằng máy tính nhé?
+3. Khi số mũ bằng 0 thì kết quả là bao nhiêu? Em thử đoán rồi kiểm tra bằng máy tính?
 
 ---
 

@@ -1,12 +1,14 @@
-# Cặp Số Nhân Đôi
+# Cặp số nhân đôi
 
 
 ## Bối cảnh
 
-Trong buổi biểu diễn ảo thuật ở sân trường, chú ảo thuật đặt một số nguyên $A$ vào chiếc hộp ma thuật. Các bạn nhỏ hồi hộp nín thở chờ xem điều kỳ diệu xảy ra. Khi mở hộp ra, số lượng viên ngọc sẽ được nhân lên gấp đôi. Em hãy giúp chú ảo thuật đếm xem trong hộp có bao nhiêu viên ngọc nhé!
+Trong module xử lý tín hiệu số, mạch khuếch đại nhận một tín hiệu đầu vào có biên độ $A$ và nhân đôi biên độ đó lên gấp 2 lần.
+
 ## Nhiệm vụ
 
-Nhập vào số nguyên $A$. Hãy in ra số lượng viên ngọc sau khi được nhân đôi.
+Nhập vào số nguyên $A$. Hãy tính và in ra giá trị của tín hiệu sau khi nhân đôi ($A \times 2$).
+
 ## Input
 
 Gồm một số tự nhiên $A$ ($0 \le A \le 10^6$).
@@ -23,6 +25,10 @@ In ra một số nguyên là kết quả nhân đôi ($A \times 2$).
 ```text
 30
 ```
+### Giải thích
+
+Giá trị đầu vào là $15$. Khi nhân đôi, ta có: $15 \times 2 = 30$. Do đó, kết quả in ra màn hình là `30`.
+
 ## Sample 2
 
 ### Input

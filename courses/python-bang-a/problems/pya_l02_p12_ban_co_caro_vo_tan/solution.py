@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L02-P12: Bàn Cờ Ca-rô Vô Tận
-# Cài đặt code chuẩn Python 3
+k = int(input())
+w = int(input())
+hang = (k - 1) // w + 1
+cot = (k - 1) % w + 1
+print(hang, cot)

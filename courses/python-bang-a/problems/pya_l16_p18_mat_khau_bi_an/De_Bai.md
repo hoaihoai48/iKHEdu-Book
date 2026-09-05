@@ -1,8 +1,8 @@
-# Mật Khẩu Bị Ẩn
+# Mật khẩu bị ẩn
 
 ## Bối cảnh
 
-Bé Bo đặt mật khẩu cho nhật ký điện tử của mình bằng một chuỗi gồm chữ cái và chữ số, ví dụ như `Abc123x`. Để kiểm tra độ mạnh, bé muốn biết mật khẩu của mình chứa bao nhiêu ký tự là chữ số. Em hãy giúp bé Bo đếm nhé!
+Bo đặt mật khẩu cho nhật ký điện tử của mình bằng một chuỗi gồm chữ cái và chữ số, ví dụ như `Abc123x`. Để kiểm tra độ mạnh, nhỏ muốn biết mật khẩu của mình chứa bao nhiêu ký tự là chữ số. Hãy đếm.
 
 ## Nhiệm vụ
 

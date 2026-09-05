@@ -1,8 +1,8 @@
-# Xếp Hàng Chiều Cao
+# Xếp hàng chiều cao
 
 ## Bối cảnh
 
-Giờ thể dục, thầy giáo yêu cầu $N$ bạn nhỏ xếp thành một hàng từ thấp đến cao để tập đội hình đội ngũ. Thầy đọc chiều cao của từng bạn và nhờ bé Na xếp lại giúp. Em hãy giúp bé Na in ra chiều cao của các bạn theo thứ tự tăng dần nhé!
+Giờ thể dục, thầy giáo yêu cầu $N$ người dùng xếp thành một hàng từ thấp đến cao để tập đội hình đội ngũ. Thầy đọc chiều cao của từng bạn và nhờ Na xếp lại giúp. Hãy in ra chiều cao của các bạn theo thứ tự tăng dần.
 
 ## Nhiệm vụ
 

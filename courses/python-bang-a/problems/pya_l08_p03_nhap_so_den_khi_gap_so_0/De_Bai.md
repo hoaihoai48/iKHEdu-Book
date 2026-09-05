@@ -1,7 +1,9 @@
-# Nhập Số Đến Khi Gặp Số 0
+# Nhập số đến khi gặp số 0
 
 
-*(Lấy cảm hứng từ Bài 6 Đề thi THT Đà Lạt - Lâm Đồng)*
+## Bối cảnh
+
+Trò chơi nhập số: Người chơi nhập liên tục các số, chương trình đếm tổng số lượng số đã nhập cho đến khi gặp số 0 thì dừng lại.
 
 ## Nhiệm vụ
 

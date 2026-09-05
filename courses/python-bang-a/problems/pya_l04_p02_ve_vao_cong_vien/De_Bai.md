@@ -1,12 +1,14 @@
-# Vé Vào Công Viên
+# Vé vào công viên
 
 
 ## Bối cảnh
 
-Cuối tuần này, lớp của bé Na rủ nhau đi chơi công viên nước thật vui. Ở cổng soát vé, cô bán vé cười tươi và dặn: các bạn nhỏ có chiều cao từ $130\text{ cm}$ trở lên phải mua vé người lớn (`VE NGUOI LON`), còn bạn nào dưới $130\text{ cm}$ thì mua vé trẻ em (`VE TRE EM`). Bé Na hồi hộp đứng lên thước đo, không biết mình thuộc loại vé nào. Em hãy giúp bé Na xem với chiều cao của mình thì phải mua loại vé nào nhé!
+Tại trạm kiểm soát tự động của công viên nước, hệ thống cảm biến quang học đo chiều cao $h$ (cm) của khách hàng để phân loại vé hợp lệ.
+
 ## Nhiệm vụ
 
-Nhập vào chiều cao $h$ (cm) của bạn nhỏ. In ra loại vé tương ứng.
+Nếu chiều cao $h \ge 130\text{ cm}$, in ra `VE NGUOI LON`. Nếu $h < 130\text{ cm}$, in ra `VE TRE EM`.
+
 ## Input
 
 Một số nguyên $h$ ($1 \le h \le 200$).
@@ -23,6 +25,10 @@ Một số nguyên $h$ ($1 \le h \le 200$).
 ```text
 VE NGUOI LON
 ```
+### Giải thích
+
+Chiều cao đo được là $135\text{ cm}$. Do $135 \ge 130$, khách hàng cần áp dụng mức vé người lớn. Kết quả in ra: `VE NGUOI LON`.
+
 ## Sample 2
 
 ### Input

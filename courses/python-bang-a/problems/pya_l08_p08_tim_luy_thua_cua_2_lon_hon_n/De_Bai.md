@@ -1,5 +1,9 @@
-# Tìm Lũy Thừa Của 2 Lớn Hơn N
+# Tìm lũy thừa của 2 lớn hơn N
 
+
+## Bối cảnh
+
+Tìm lũy thừa nhỏ nhất của 2 mà lớn hơn hoặc bằng số $N$ cho trước. Đây là bài toán cơ bản trong khoa học máy tính liên quan đến cấp phát bộ nhớ.
 
 ## Nhiệm vụ
 

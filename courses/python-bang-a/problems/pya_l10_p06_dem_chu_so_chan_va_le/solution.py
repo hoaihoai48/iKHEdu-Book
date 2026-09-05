@@ -1,2 +1,11 @@
-# Gợi ý mã nguồn cho PYA-L10-P06: Đếm Chữ Số Chẵn Và Lẻ
-# Cài đặt code chuẩn Python 3
+n = int(input())
+chan = 0
+le = 0
+while n > 0:
+    d = n % 10
+    if d % 2 == 0:
+        chan = chan + 1
+    else:
+        le = le + 1
+    n = n // 10
+print(chan, le)

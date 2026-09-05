@@ -1,2 +1,4 @@
-# Gợi ý mã nguồn cho PYA-L03-P08: Thuận Đi Gặp Ánh
-# Cài đặt code chuẩn Python 3
+x = int(input())
+y = int(input())
+v = int(input())
+print((y - x) // v)

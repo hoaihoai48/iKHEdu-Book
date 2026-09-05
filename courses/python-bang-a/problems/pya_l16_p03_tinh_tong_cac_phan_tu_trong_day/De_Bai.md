@@ -1,13 +1,17 @@
-# Tính Tổng Các Phần Tử Trong Dãy
+# Tính tổng các phần tử trong dãy
 
+
+## Bối cảnh
+
+Trong bài kiểm tra, người dùng cần tính nhanh tổng một dãy số. Hãy viết chương trình hỗ trợ tính toán.
 
 ## Nhiệm vụ
 
 Cho một dãy gồm $N$ số nguyên. Hãy tính tổng tất cả các phần tử trong dãy số.
 ## Input
 
-  * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên ($|A_i| \le 10^9$).
+ * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên ($|A_i| \le 10^9$).
 ## Output
 
 Tổng các phần tử trong dãy.
@@ -22,6 +26,11 @@ Tổng các phần tử trong dãy.
 ```text
 100
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `4
+10 20 30 40`, kết quả thu được tương ứng là `100`.
+
 
 
 ## Ràng buộc

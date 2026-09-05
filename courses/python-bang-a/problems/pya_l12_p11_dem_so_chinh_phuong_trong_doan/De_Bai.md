@@ -1,7 +1,11 @@
-# Đếm Số Chính Phương Trong Đoạn
+# Đếm số chính phương trong đoạn
 
 
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi lập trình)*
+
+## Bối cảnh
+
+Xác định số lượng số chính phương trong một phạm vi lớn là bài toán tối ưu quan trọng, yêu cầu chuyển đổi từ duyệt từng phần tử sang phương pháp tính giải tích bằng căn bậc hai.
 
 ## Nhiệm vụ
 

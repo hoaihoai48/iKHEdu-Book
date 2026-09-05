@@ -1,5 +1,9 @@
-# Đếm Ký Tự 'A' (Cả Hoa Lẫn Thường)
+# Đếm ký tự 'A' (cả hoa lẫn thường)
 
+
+## Bối cảnh
+
+Thống kê tần suất xuất hiện của một chữ cái cụ thể (không phân biệt hoa thường) là thao tác căn bản trong phân tích văn bản ngôn ngữ.
 
 ## Nhiệm vụ
 

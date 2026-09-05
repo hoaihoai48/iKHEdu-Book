@@ -1,5 +1,9 @@
-# Liệt Kê Tất Cả Ước Số
+# Liệt kê tất cả ước số
 
+
+## Bối cảnh
+
+Xác định toàn bộ các ước số nguyên dương của một số nguyên là phép phân tích cơ bản trong số học, giúp giải quyết các bài toán chia đều tài nguyên và phân nhóm phần tử.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Dãy các ước số của $N$.
 ```text
 1 2 3 4 6 12
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
+
 
 
 ## Ràng buộc

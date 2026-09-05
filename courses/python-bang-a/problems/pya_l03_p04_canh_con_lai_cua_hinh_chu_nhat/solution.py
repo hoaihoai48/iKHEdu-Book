@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L03-P04: Cạnh Còn Lại Của Hình Chữ Nhật
-# Cài đặt code chuẩn Python 3
+p = int(input())
+a = int(input())
+print(p // 2 - a)

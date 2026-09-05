@@ -1,8 +1,8 @@
-# Đếm Kẹo Chẵn Lẻ
+# Đếm kẹo chẵn lẻ
 
 ## Bối cảnh
 
-Liên hoan cuối năm, cô giáo mua $N$ gói kẹo, mỗi gói có $A_i$ viên kẹo. Cô muốn chia các gói kẹo thành hai mâm: mâm gói chẵn (số kẹo là số chẵn) và mâm gói lẻ (số kẹo là số lẻ). Em hãy giúp cô đếm xem mỗi mâm có bao nhiêu gói nhé!
+Liên hoan cuối năm, cô giáo mua $N$ gói kẹo, mỗi gói có $A_i$ viên kẹo. Cô muốn chia các gói kẹo thành hai mâm: mâm gói chẵn (số kẹo là số chẵn) và mâm gói lẻ (số kẹo là số lẻ). Hãy giúp cô đếm xem mỗi mâm có bao nhiêu gói.
 
 ## Nhiệm vụ
 

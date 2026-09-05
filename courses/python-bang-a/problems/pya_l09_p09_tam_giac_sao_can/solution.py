@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L09-P09: Tam Giác Sao Cân
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+for i in range(1, n + 1):
+    spaces = " " * (n - i)
+    stars = "*" * (2 * i - 1)
+    print(spaces + stars)

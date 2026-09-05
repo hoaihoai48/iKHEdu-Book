@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L09-P12: Ma Trận Số Bàn Cờ Đan Xen
-# Cài đặt code chuẩn Python 3
+n = int(input())
+for i in range(n):
+    print(" ".join(str((i + j + 1) % 2) for j in range(n)))

@@ -1,5 +1,9 @@
-# Tổng Các Chữ Số Của N
+# Tổng các chữ số của N
 
+
+## Bối cảnh
+
+Trong bài kiểm tra, người dùng cần tính nhanh tổng một dãy số. Hãy viết chương trình hỗ trợ tính toán.
 
 ## Nhiệm vụ
 

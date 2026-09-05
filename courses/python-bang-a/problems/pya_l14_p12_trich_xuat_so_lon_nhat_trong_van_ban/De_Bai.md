@@ -1,11 +1,11 @@
-# Trích Xuất Số Lớn Nhất Trong Văn Bản
+# Trích xuất số lớn nhất trong văn bản
 
 
-*(Đề thi Tin học trẻ cấp Tỉnh/Thành phố Bảng A)*
+*(Đề thi lập trình cấp Tỉnh/Thành phố Bảng A)*
 
 ## Bối cảnh
 
-Lớp trưởng ghi một bài báo cáo, trong đó có các con số nằm rải rác giữa các câu chữ. Một con số có thể có nhiều chữ số liên tiếp nhau. Cả lớp muốn biết con số nào to nhất để khen bạn được điểm cao. Em hãy giúp lớp trưởng tìm ra con số lớn nhất trong bài báo cáo nhé.
+Lớp trưởng ghi một bài báo cáo, trong đó có các con số nằm rải rác giữa các câu chữ. Một con số có thể có nhiều chữ số liên tiếp nhau. Cả lớp muốn biết con số nào to nhất để khen bạn được điểm cao. Hãy giúp lớp trưởng tìm ra con số lớn nhất trong bài báo cáo.
 ## Nhiệm vụ
 
 Cho chuỗi văn bản $S$. Hãy tìm và in ra giá trị của **con số nguyên lớn nhất** xuất hiện trong chuỗi đó. Dữ liệu đảm bảo có ít nhất 1 chữ số.

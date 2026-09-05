@@ -1,5 +1,9 @@
-# Số Đảo Ngược
+# Số đảo ngược
 
+
+## Bối cảnh
+
+Thao tác đảo ngược thứ tự các chữ số là nền tảng quan trọng trong các bài toán kiểm tra tính đối xứng và biến đổi số học.
 
 ## Nhiệm vụ
 

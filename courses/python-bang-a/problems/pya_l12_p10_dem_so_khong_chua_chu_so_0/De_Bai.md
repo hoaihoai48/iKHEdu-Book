@@ -1,5 +1,9 @@
-# Đếm Số Không Chứa Chữ Số 0
+# Đếm số không chứa chữ số 0
 
+
+## Bối cảnh
+
+Trong thiết kế hệ thống hiển thị số không hỗ trợ ký tự 0, các số chỉ tạo bởi các chữ số từ 1 đến 9 được coi là số hợp lệ cần được thống kê chính xác.
 
 ## Nhiệm vụ
 

@@ -1,15 +1,13 @@
-# Ống Heo Mua Xe Máy
+# Ống heo mua xe máy
 
-
-*(Lấy cảm hứng từ Bài 51 Đề thi Scratch THT Toàn quốc)*
 
 ## Bối cảnh
 
 Bác Nam có một chú heo đất thật xinh đặt ở góc nhà. Bác muốn tiết kiệm tiền để mua một chiếc xe máy có giá $P$ nghìn đồng cho cả gia đình đi chơi.
-  * Ngày thứ nhất bác bỏ vào ống heo 1 nghìn đồng.
-  * Ngày thứ hai bác bỏ vào 2 nghìn đồng.
-  * Ngày thứ $k$ bác bỏ vào đúng $k$ nghìn đồng.
-Mỗi tối bác đều lắc heo nghe kêu leng keng rất vui. Em hãy giúp bác Nam đếm xem sau mấy ngày thì đủ tiền nhé!
+ * Ngày thứ nhất bác bỏ vào ống heo 1 nghìn đồng.
+ * Ngày thứ hai bác bỏ vào 2 nghìn đồng.
+ * Ngày thứ $k$ bác bỏ vào đúng $k$ nghìn đồng.
+Mỗi tối bác đều lắc heo nghe kêu leng keng rất vui. Hãy giúp bác Nam đếm xem sau mấy ngày thì đủ tiền.
 ## Nhiệm vụ
 
 Hỏi sau bao nhiêu ngày thì tổng số tiền trong ống heo của bác Nam đạt hoặc vượt quá $P$ nghìn đồng?

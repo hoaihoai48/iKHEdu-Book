@@ -1,5 +1,9 @@
-# Đảo Ngược Từng Từ Trong Câu
+# Đảo ngược từng từ trong câu
 
+
+## Bối cảnh
+
+Đảo ngược các ký tự nội bộ của từng từ trong khi vẫn bảo toàn thứ tự các từ trong câu là bài toán rèn luyện kỹ năng kết hợp tách từ và cắt lát chuỗi.
 
 ## Nhiệm vụ
 

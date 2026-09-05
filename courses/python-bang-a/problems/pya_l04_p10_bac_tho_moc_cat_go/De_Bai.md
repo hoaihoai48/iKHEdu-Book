@@ -1,13 +1,14 @@
-# Bác Thợ Mộc Cắt Gỗ
+# Bác thợ mộc cắt gỗ
 
 
 ## Bối cảnh
 
-Ở đầu làng có một bác thợ mộc rất khéo tay. Hôm nay, bác có một thanh gỗ dài $L\text{ cm}$ và cần cắt ra các đoạn gỗ nhỏ dài $K\text{ cm}$ để đóng bàn ghế tặng lớp học. Bé Tí đứng bên cạnh phụ bác giữ thước, hồi hộp không biết cắt được mấy đoạn. Em hãy giúp bé Tí tính giúp bác thợ mộc nhé!
+Trong xưởng gia công nội thất, một thanh gỗ có chiều dài $L$ được cưa thành các đoạn nhỏ có chiều dài đúng bằng $k$.
+
 ## Nhiệm vụ
 
-  * Nếu thanh gỗ đủ dài để cắt được ít nhất một đoạn (nghĩa là $L \ge K$), hãy in ra số đoạn gỗ cắt được và phần gỗ thừa còn lại.
-  * Nếu thanh gỗ quá ngắn ($L < K$), in ra chữ `KHONG DU`.
+Cho hai số nguyên dương $L$ và $k$. Hãy tính số đoạn gỗ cưa được và phần chiều dài gỗ vụn còn thừa.
+
 ## Input
 
 Hai số tự nhiên $L$ và $K$ trên 2 dòng ($1 \le L, K \le 10^9$).
@@ -25,6 +26,10 @@ Hai số cách nhau dấu cách `so_doan go_thua` hoặc in chữ `KHONG DU`.
 ```text
 3 2
 ```
+### Giải thích
+
+Thanh gỗ dài $17\text{ cm}$ cưa thành các đoạn $5\text{ cm}$. Số đoạn cưa được là $17 // 5 = 3$ đoạn, phần gỗ vụn còn thừa là $17 \% 5 = 2\text{ cm}$. Kết quả in ra: `3 2`.
+
 ## Sample 2
 
 ### Input

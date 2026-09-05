@@ -1,5 +1,9 @@
-# Tích Các Chữ Số Khác Không
+# Tích các chữ số khác không
 
+
+## Bối cảnh
+
+Trong một số thuật toán tạo mã băm và mã kiểm tra dữ liệu, tích của các chữ số có nghĩa (khác số 0) thường được dùng để tạo khóa đại diện cho số nguyên ban đầu.
 
 ## Nhiệm vụ
 

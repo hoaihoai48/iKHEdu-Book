@@ -1,9 +1,9 @@
-# Thu Hoạch Dâu Tây Đà Lạt
+# Thu hoạch dâu tây đà lạt
 
 
 ## Bối cảnh
 
-Cuối tuần, gia đình bạn Mai lên thăm nông trại dâu tây ở Đà Lạt và thấy bác nông dân vừa thu hoạch được $K$ kg dâu chín mọng. Dâu được đóng vào 2 loại hộp xinh xắn: hộp lớn chứa được $5\text{ kg}$ và hộp nhỏ chứa được $1\text{ kg}$. Để tiết kiệm chi phí đóng gói, bác chủ nông trại muốn dùng nhiều hộp lớn nhất có thể. Em hãy giúp bác chia dâu vào các hộp nhé!
+Cuối tuần, gia đình bạn Mai lên thăm nông trại dâu tây ở Đà Lạt và thấy bác nông dân vừa thu hoạch được $K$ kg dâu chín mọng. Dâu được đóng vào 2 loại hộp xinh xắn: hộp lớn chứa được $5\text{ kg}$ và hộp nhỏ chứa được $1\text{ kg}$. Để tiết kiệm chi phí đóng gói, bác chủ nông trại muốn dùng nhiều hộp lớn nhất có thể. Hãy giúp bác chia dâu vào các hộp.
 ## Nhiệm vụ
 
 Cho số nguyên $K$. Hãy in ra số hộp lớn và số hộp nhỏ cần dùng.
@@ -23,6 +23,10 @@ Hai số nguyên: số hộp lớn trước, số hộp nhỏ sau.
 ```text
 4 3
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `23`, kết quả thu được tương ứng là `4 3`.
+
 
 
 ## Ràng buộc

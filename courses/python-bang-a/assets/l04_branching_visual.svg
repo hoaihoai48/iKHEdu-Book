@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="condGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="trueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="falseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <filter id="shadowBranch" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="320" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="798" height="318" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    SƠ ĐỒ DÒNG CHẢY RẼ NHÁNH: CẤU TRÚC IF - ELSE TRONG PYTHON
+  </text>
+
+  <!-- Diamond Decision Box -->
+  <g transform="translate(310, 65)" filter="url(#shadowBranch)">
+    <polygon points="90,0 180,45 90,90 0,45" fill="url(#condGrad)"/>
+    <text x="90" y="42" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">ĐIỀU KIỆN</text>
+    <text x="90" y="60" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#FEF08A">diem >= 5</text>
+  </g>
+
+  <!-- Left Branch: TRUE -->
+  <path d="M 310 110 L 160 110 L 160 160" stroke="#10B981" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <polygon points="155,160 160,170 165,160" fill="#10B981"/>
+  <rect x="195" y="90" width="80" height="26" rx="6" fill="#D1FAE5" stroke="#10B981"/>
+  <text x="235" y="108" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold" fill="#065F46">ĐÚNG (True)</text>
+
+  <g transform="translate(60, 175)" filter="url(#shadowBranch)">
+    <rect width="200" height="75" rx="10" fill="url(#trueGrad)"/>
+    <text x="100" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Khối lệnh nhánh IF</text>
+    <text x="100" y="55" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#A7F3D0">print("DO!")</text>
+  </g>
+
+  <!-- Right Branch: FALSE -->
+  <path d="M 490 110 L 640 110 L 640 160" stroke="#EF4444" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <polygon points="635,160 640,170 645,160" fill="#EF4444"/>
+  <rect x="525" y="90" width="80" height="26" rx="6" fill="#FEE2E2" stroke="#EF4444"/>
+  <text x="565" y="108" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold" fill="#991B1B">SAI (False)</text>
+
+  <g transform="translate(540, 175)" filter="url(#shadowBranch)">
+    <rect width="200" height="75" rx="10" fill="url(#falseGrad)"/>
+    <text x="100" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Khối lệnh nhánh ELSE</text>
+    <text x="100" y="55" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#FECACA">print("HOC LAI!")</text>
+  </g>
+
+  <!-- Merge paths -->
+  <path d="M 160 250 L 160 280 L 400 280" stroke="#94A3B8" stroke-width="2" fill="none"/>
+  <path d="M 640 250 L 640 280 L 400 280" stroke="#94A3B8" stroke-width="2" fill="none"/>
+  <circle cx="400" cy="280" r="6" fill="#475569"/>
+
+  <!-- Footer note -->
+  <text x="400" y="306" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-style="italic" fill="#64748B">
+    Hai nhánh loại trừ nhau: Chương trình chỉ thực thi 1 trong 2 khối lệnh tùy thuộc vào tính đúng sai của điều kiện.
+  </text>
+</svg>

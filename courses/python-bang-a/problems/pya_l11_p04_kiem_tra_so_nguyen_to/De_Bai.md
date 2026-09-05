@@ -1,7 +1,11 @@
-# Kiểm Tra Số Nguyên Tố
+# Kiểm tra số nguyên tố
 
 
-*(Bài toán nền tảng thi Tin học trẻ)*
+*(Bài toán nền tảng thi lập trình)*
+
+## Bối cảnh
+
+Trong giờ lập trình, thầy giáo đưa ra một bài toán kiểm tra tính chất của số. Hãy viết chương trình kiểm tra tự động.
 
 ## Nhiệm vụ
 
@@ -22,6 +26,10 @@ Một số nguyên $N$ ($0 \le N \le 10^7$).
 ```text
 YES
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `7`, kết quả thu được tương ứng là `YES`.
+
 ## Sample 2
 
 ### Input

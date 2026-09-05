@@ -1,5 +1,9 @@
-# Số Fibonacci Thứ N
+# Số Fibonacci thứ N
 
+
+## Bối cảnh
+
+Dãy Fibonacci: $1, 1, 2, 3, 5, 8, 13, \dots$ — mỗi số bằng tổng hai số liền trước. Đây là dãy số kỳ diệu xuất hiện khắp nơi trong tự nhiên, từ cánh hoa hướng dương đến vỏ ốc biển.
 
 ## Nhiệm vụ
 

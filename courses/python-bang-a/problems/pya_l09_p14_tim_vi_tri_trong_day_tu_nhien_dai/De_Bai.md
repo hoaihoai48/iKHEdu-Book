@@ -1,13 +1,13 @@
-# Tìm Vị Trí Trong Dãy Tự Nhiên Dài
+# Tìm vị trí trong dãy tự nhiên dài
 
 
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+*(Đề thi lập trình Quốc gia Bảng A)*
 
 ## Bối cảnh
 
-Giờ học vui, bé An lấy phấn viết liên tiếp các số tự nhiên bắt đầu từ 1 thành một dải số dài vô tận khắp sân trường:
-  `123456789101112131415161718192021...`
-Các bạn xúm lại đọc to từng chữ số, vừa đọc vừa cười khanh khách. Đến chữ số ở xa thì không ai đếm nổi bằng mắt nữa. Em hãy giúp bé An tìm nhanh chữ số đó nhé!
+Giờ học vui, An lấy phấn viết liên tiếp các số tự nhiên bắt đầu từ 1 thành một dải số dài vô tận khắp sân trường:
+ `123456789101112131415161718192021...`
+Các bạn xúm lại đọc to từng chữ số, vừa đọc vừa cười khanh khách. Đến chữ số ở xa thì không ai đếm nổi bằng mắt nữa. Hãy tìm nhanh chữ số đó.
 ## Nhiệm vụ
 
 Cho số nguyên dương $K$ ($1 \le K \le 10^5$). Hãy xác định chữ số thứ $K$ trong dải số trên là chữ số nào?

@@ -1,5 +1,9 @@
-# Đếm Số Chia Hết Cho 2 Hoặc 3
+# Đếm số chia hết cho 2 hoặc 3
 
+
+## Bối cảnh
+
+Bài toán đếm số lượng phần tử thỏa mãn ít nhất một trong hai điều kiện chia hết là bài toán mẫu mực áp dụng Nguyên lý Bao hàm – Loại trừ (Inclusion-Exclusion).
 
 ## Nhiệm vụ
 

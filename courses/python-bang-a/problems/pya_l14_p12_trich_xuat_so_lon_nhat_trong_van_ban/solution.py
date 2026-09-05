@@ -1,2 +1,12 @@
-# Gợi ý mã nguồn cho PYA-L14-P12: Trích Xuất Số Lớn Nhất Trong Văn Bản
-# Cài đặt code chuẩn Python 3
+s = input()
+lon_nhat = -1
+so_hien_tai = ''
+for ch in s + ' ':
+    if ch.isdigit():
+        so_hien_tai = so_hien_tai + ch
+    else:
+        if so_hien_tai != '':
+            if int(so_hien_tai) > lon_nhat:
+                lon_nhat = int(so_hien_tai)
+            so_hien_tai = ''
+print(lon_nhat)

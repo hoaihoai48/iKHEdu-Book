@@ -1,5 +1,9 @@
-# Hàng Cột Dấu Sao
+# Hàng cột dấu sao
 
+
+## Bối cảnh
+
+Trong giờ tin học, thầy giáo yêu cầu vẽ một hình chữ nhật bằng dấu sao `*`. Hãy viết chương trình vẽ hình.
 
 ## Nhiệm vụ
 
@@ -23,6 +27,13 @@ Hình chữ nhật dấu `*`.
 *****
 *****
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `3
+5`, kết quả thu được tương ứng là `*****
+*****
+*****`.
+
 
 
 ## Ràng buộc

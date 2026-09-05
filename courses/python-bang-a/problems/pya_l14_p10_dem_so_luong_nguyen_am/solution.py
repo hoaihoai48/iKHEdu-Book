@@ -1,2 +1,6 @@
-# Gợi ý mã nguồn cho PYA-L14-P10: Đếm Số Lượng Nguyên Âm
-# Cài đặt code chuẩn Python 3
+s = input()
+dem = 0
+for ch in s:
+    if ch in 'AEIOUaeiou':
+        dem = dem + 1
+print(dem)

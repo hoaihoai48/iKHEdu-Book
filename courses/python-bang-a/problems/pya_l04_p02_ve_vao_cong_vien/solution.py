@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L04-P02: Vé Vào Công Viên
-# Cài đặt code chuẩn Python 3
+h = int(input())
+if h >= 130:
+    print("VE NGUOI LON")
+else:
+    print("VE TRE EM")

@@ -1,2 +1,9 @@
-# Gợi ý mã nguồn cho PYA-L10-P13: Căn Bậc Số Học (Digital Root)
-# Cài đặt code chuẩn Python 3
+n = int(input())
+while n >= 10:
+    tong = 0
+    temp = n
+    while temp > 0:
+        tong = tong + temp % 10
+        temp = temp // 10
+    n = tong
+print(n)

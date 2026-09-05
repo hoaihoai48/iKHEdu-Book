@@ -1,9 +1,9 @@
-# Mua Bút Tặng Bạn
+# Mua bút tặng bạn
 
 
 ## Bối cảnh
 
-Đầu năm học mới, bạn Lan rủ mẹ đi mua bút để tặng các bạn trong lớp. Cửa hàng văn phòng phẩm có chương trình khuyến mãi thật hay: mỗi chiếc bút có giá $P$ đồng. Nếu mua từ 5 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $10\%$. Nếu mua từ 10 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $20\%$. Mẹ nhờ Lan tính nhanh số tiền phải trả, em hãy giúp bạn Lan tính nhé!
+Đầu năm học mới, bạn Lan rủ mẹ đi mua bút để tặng các bạn trong lớp. Cửa hàng văn phòng phẩm có chương trình khuyến mãi thật hay: mỗi chiếc bút có giá $P$ đồng. Nếu mua từ 5 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $10\%$. Nếu mua từ 10 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $20\%$. Mẹ nhờ Lan tính nhanh số tiền phải trả, hãy bạn Lan tính.
 ## Nhiệm vụ
 
 Cho số lượng bút cần mua $N$ và đơn giá $P$. Hãy tính tổng số tiền bạn Lan phải trả (kết quả là số nguyên).

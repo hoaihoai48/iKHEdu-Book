@@ -11,7 +11,7 @@ PROPER_TERMS = {
     "python": "Python",
     "ikhedu": "iKHEDU",
     "thta": "THTA",
-    "tin học trẻ": "Tin học trẻ",
+    "lập trình Python": "Lập trình Python",
     "olympic": "Olympic",
     "doraemon": "Doraemon",
     "mario": "Mario",
@@ -19,10 +19,10 @@ PROPER_TERMS = {
     "caesar": "Caesar",
     "ascii": "ASCII",
     "bảng a": "Bảng A",
-    "tiểu học": "tiểu học",
+    "phổ thông": "phổ thông",
     "level 1": "Level 1",
     "tập a": "Tập A",
-    "tht": "THT",
+    "tht": "PYA",
     "gcd": "GCD",
 }
 

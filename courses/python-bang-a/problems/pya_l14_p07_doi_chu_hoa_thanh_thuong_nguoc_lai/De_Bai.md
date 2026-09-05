@@ -1,5 +1,9 @@
-# Đổi Chữ Hoa Thành Thường & Ngược Lại
+# Đổi chữ hoa thành thường & ngược lại
 
+
+## Bối cảnh
+
+Đảo ngược trạng thái viết hoa và viết thường trên toàn bộ văn bản là thao tác chuyển đổi định dạng thường gặp trong các trình biên tập mã nguồn.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Hello World 123
 ```text
 hELLO wORLD 123
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `Hello World 123`, kết quả thu được tương ứng là `hELLO wORLD 123`.
+
 
 
 ## Ràng buộc

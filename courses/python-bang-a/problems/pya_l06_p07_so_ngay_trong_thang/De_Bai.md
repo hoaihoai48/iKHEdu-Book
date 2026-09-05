@@ -1,15 +1,17 @@
-# Số Ngày Trong Tháng
+# Số ngày trong tháng
 
 
-*(Lấy cảm hứng từ Bài 114, 115 Đề thi THT Bắc Giang)*
+## Bối cảnh
+
+Bạn Lan muốn biết tháng sinh nhật của mình có bao nhiêu ngày. Mỗi tháng trong năm có số ngày khác nhau, đặc biệt tháng 2 còn phụ thuộc vào năm nhuận. Hãy giúp Lan.
 
 ## Nhiệm vụ
 
 Nhập vào tháng $M$ ($1 \le M \le 12$) và năm $Y$ ($1 \le Y \le 10^5$). Hãy in ra số lượng ngày của tháng đó trong năm $Y$.
 * **Biết rằng:**
-  * Tháng 1, 3, 5, 7, 8, 10, 12 có đúng 31 ngày.
-  * Tháng 4, 6, 9, 11 có đúng 30 ngày.
-  * Tháng 2: có 29 ngày nếu $Y$ là năm nhuận, có 28 ngày nếu $Y$ là năm thường.
+ * Tháng 1, 3, 5, 7, 8, 10, 12 có đúng 31 ngày.
+ * Tháng 4, 6, 9, 11 có đúng 30 ngày.
+ * Tháng 2: có 29 ngày nếu $Y$ là năm nhuận, có 28 ngày nếu $Y$ là năm thường.
 ## Input
 
 Hai dòng lần lượt là $M$ và $Y$.
@@ -27,6 +29,11 @@ Một số nguyên duy nhất là số ngày của tháng.
 ```text
 29
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `2
+2024`, kết quả thu được tương ứng là `29`.
+
 ## Sample 2
 
 ### Input

@@ -1,5 +1,9 @@
-# Cắt Ba Ký Tự Đầu Tiên
+# Cắt ba ký tự đầu tiên
 
+
+## Bối cảnh
+
+Trong các hệ thống phân loại mã bưu chính hoặc mã vùng, ba ký tự đầu tiên thường đại diện cho mã quốc gia hoặc mã tiền tố phân luồng.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ VIETNAM
 ```text
 VIE
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `VIETNAM`, kết quả thu được tương ứng là `VIE`.
+
 
 
 ## Ràng buộc

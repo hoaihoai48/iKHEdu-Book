@@ -6,7 +6,7 @@ Chuyên đề: **Bí Mật Tách Chữ Số (// 10 và % 10)**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đếm Số Lượng Chữ Số** (`PYA-L10-P04`) bằng Python.
 * **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu Tin học trẻ Bảng A (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
 
 ---
 
@@ -23,7 +23,7 @@ Chuyên đề: **Bí Mật Tách Chữ Số (// 10 và % 10)**
 ## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
 1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
 2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh tiểu học hay mắc phải nhất ở bài toán này?
+3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
 
 ---
 
@@ -77,4 +77,4 @@ Chuyên đề: **Bí Mật Tách Chữ Số (// 10 và % 10)**
 
 ## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
 * **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi Tin học trẻ các năm trước.
+* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

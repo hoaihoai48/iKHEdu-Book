@@ -1,2 +1,7 @@
-# Gợi ý mã nguồn cho PYA-L08-P04: Tổng Dãy Số Kết Thúc Bằng 0
-# Cài đặt code chuẩn Python 3
+tong = 0
+while True:
+    x = int(input())
+    if x == 0:
+        break
+    tong = tong + x
+print(tong)

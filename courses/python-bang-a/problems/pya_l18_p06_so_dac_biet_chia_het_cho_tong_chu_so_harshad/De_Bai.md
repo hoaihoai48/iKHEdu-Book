@@ -1,9 +1,9 @@
-# Số Đặc Biệt Chia Hết Cho Tổng Chữ Số (Harshad Number)
+# Số đặc biệt chia hết cho tổng chữ số (Harshad number)
 
 
 ## Bối cảnh
 
-Bạn Tí rất thích sưu tầm các con số kỳ lạ trong cuốn sổ tay toán học của mình. Hôm nay, bạn phát hiện một loại số đặc biệt: một số tự nhiên $N$ được gọi là số Harshad nếu nó chia hết cho chính tổng các chữ số của nó. Ví dụ: số 18 có tổng các chữ số là $1 + 8 = 9$. Vì 18 chia hết cho 9 nên 18 là số Harshad. Bạn Tí đố cả lớp tìm thêm các số như vậy, em hãy giúp cả lớp kiểm tra nhé!
+Bạn Tí rất thích sưu tầm các con số kỳ lạ trong cuốn sổ tay toán học của mình. Hôm nay, bạn phát hiện một loại số đặc biệt: một số tự nhiên $N$ được gọi là số Harshad nếu nó chia hết cho chính tổng các chữ số của nó. Ví dụ: số 18 có tổng các chữ số là $1 + 8 = 9$. Vì 18 chia hết cho 9 nên 18 là số Harshad. Bạn Tí đố cả lớp tìm thêm các số như vậy, hãy cả lớp kiểm tra.
 ## Nhiệm vụ
 
 Cho số $N$. In `YES` nếu $N$ là số Harshad, ngược lại in `NO`.
@@ -23,6 +23,10 @@ Số nguyên $N$ ($1 \le N \le 10^9$).
 ```text
 YES
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `18`, kết quả thu được tương ứng là `YES`.
+
 ## Sample 2
 
 ### Input

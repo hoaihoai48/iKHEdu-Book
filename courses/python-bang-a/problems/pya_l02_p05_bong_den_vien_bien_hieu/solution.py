@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L02-P05: Bóng Đèn Viền Biển Hiệu
-# Cài đặt code chuẩn Python 3
+a = int(input())
+canh_cm = a * 10
+print(canh_cm * 4 // 5)

@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L02-P01: Chia Đều Bánh Quy
-# Cài đặt code chuẩn Python 3
+a = int(input().strip())
+b = int(input().strip())
+print(a // b, a % b)

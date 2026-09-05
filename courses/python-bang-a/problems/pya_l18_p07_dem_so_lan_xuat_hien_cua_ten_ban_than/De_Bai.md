@@ -1,9 +1,9 @@
-# Đếm Số Lần Xuất Hiện Của Tên Bạn Thân
+# Đếm số lần xuất hiện của tên bạn thân
 
 
 ## Bối cảnh
 
-Bé An vừa viết một bài văn miêu tả kỷ niệm tuổi học trò thật dễ thương để tặng bạn thân tên là `BIN`. Bé tò mò muốn đếm xem tên của người bạn thân ấy xuất hiện bao nhiêu lần trong bài văn (không phân biệt chữ in hoa hay in thường: `Bin`, `BIN`, `bin` đều được tính). Bài văn dài quá nên bé đếm mãi mà cứ nhầm. Em hãy giúp bé An đếm thật chính xác nhé!
+An vừa viết một bài văn miêu tả kỷ niệm tuổi học trò thật dễ thương để tặng bạn thân tên là `BIN`. Học sinh tò mò muốn đếm xem tên của người bạn thân ấy xuất hiện bao nhiêu lần trong bài văn (không phân biệt chữ in hoa hay in thường: `Bin`, `BIN`, `bin` đều được tính). Bài văn dài quá nên đếm mãi mà cứ nhầm. Hãy đếm thật chính xác.
 ## Nhiệm vụ
 
 Cho chuỗi văn bản $S$. Hãy đếm số lần từ `bin` xuất hiện như một từ độc lập.
@@ -23,6 +23,10 @@ Hom nay Bin va bin di choi cung ban BIN
 ```text
 3
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `Hom nay Bin va bin di choi cung ban BIN`, kết quả thu được tương ứng là `3`.
+
 
 
 ## Ràng buộc

@@ -1,2 +1,12 @@
-# Gợi ý mã nguồn cho PYA-L11-P13: Phân Tích Ra Thừa Số Nguyên Tố
-# Cài đặt code chuẩn Python 3
+n = int(input())
+thua_so = []
+temp = n
+d = 2
+while d * d <= temp:
+    while temp % d == 0:
+        thua_so.append(str(d))
+        temp = temp // d
+    d = d + 1
+if temp > 1:
+    thua_so.append(str(temp))
+print(" * ".join(thua_so))

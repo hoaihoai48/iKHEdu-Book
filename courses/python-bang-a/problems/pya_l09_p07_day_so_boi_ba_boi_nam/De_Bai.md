@@ -1,5 +1,9 @@
-# Dãy Số Bội Ba Bội Năm
+# Dãy số bội ba bội năm
 
+
+## Bối cảnh
+
+Liệt kê các số từ 1 đến $N$ chia hết cho 3 hoặc chia hết cho 5. Đây là bài toán kinh điển rèn luyện điều kiện logic phức hợp.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ $N$ số đầu tiên của dãy trên một dòng, cách nhau bởi dấu cách
 ```text
 3 5 6 9 10 12
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `6`, kết quả thu được tương ứng là `3 5 6 9 10 12`.
+
 
 
 ## Ràng buộc

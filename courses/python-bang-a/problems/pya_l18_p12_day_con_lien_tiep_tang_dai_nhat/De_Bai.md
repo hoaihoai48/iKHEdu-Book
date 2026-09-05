@@ -1,18 +1,18 @@
-# Dãy Con Liên Tiếp Tăng Dài Nhất
+# Dãy con liên tiếp tăng dài nhất
 
 
 *(Bài toán phân loại Huy chương Vàng Bảng A toàn quốc)*
 
 ## Bối cảnh
 
-Các bạn nhỏ lớp 4A đang chơi trò xếp thẻ số thành một hàng dài gồm $N$ số nguyên. Các bạn phát hiện một trò rất vui gọi là "dãy con liên tiếp tăng": đó là một đoạn các phần tử đứng cạnh nhau mà phần tử đứng sau luôn lớn hơn phần tử đứng ngay trước nó ($A_i < A_{i+1} < A_{i+2} \dots$). Ai tìm được đoạn dài nhất sẽ thắng, em hãy giúp các bạn tìm xem đoạn dài nhất có bao nhiêu thẻ số nhé!
+Các người dùng lớp 4A đang chơi trò xếp thẻ số thành một hàng dài gồm $N$ số nguyên. Các bạn phát hiện một trò rất vui gọi là "dãy con liên tiếp tăng": đó là một đoạn các phần tử đứng cạnh nhau mà phần tử đứng sau luôn lớn hơn phần tử đứng ngay trước nó ($A_i < A_{i+1} < A_{i+2} \dots$). Ai tìm được đoạn dài nhất sẽ thắng, hãy các bạn tìm xem đoạn dài nhất có bao nhiêu thẻ số.
 ## Nhiệm vụ
 
 Hãy tìm độ dài của dãy con liên tiếp tăng dài nhất trong dãy số đã cho.
 ## Input
 
-  * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên ($|A_i| \le 10^9$).
+ * Dòng 1: Số nguyên dương $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên ($|A_i| \le 10^9$).
 ## Output
 
 Một số nguyên duy nhất là độ dài lớn nhất tìm được.

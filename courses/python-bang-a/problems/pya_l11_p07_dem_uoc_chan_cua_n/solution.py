@@ -1,2 +1,6 @@
-# Gợi ý mã nguồn cho PYA-L11-P07: Đếm Ước Chẵn Của N
-# Cài đặt code chuẩn Python 3
+n = int(input())
+dem = 0
+for i in range(1, n + 1):
+    if n % i == 0 and i % 2 == 0:
+        dem = dem + 1
+print(dem)

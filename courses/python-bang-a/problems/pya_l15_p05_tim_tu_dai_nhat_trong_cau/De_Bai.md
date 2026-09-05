@@ -1,5 +1,9 @@
-# Tìm Từ Dài Nhất Trong Câu
+# Tìm từ dài nhất trong câu
 
+
+## Bối cảnh
+
+Thí sinh đang tìm kiếm một giá trị đặc biệt trong tập dữ liệu. Hãy viết chương trình tìm kiếm hiệu quả.
 
 ## Nhiệm vụ
 

@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L09-P13: Tam Giác Floyd
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+cur = 1
+for i in range(1, n + 1):
+    row = []
+    for _ in range(i):
+        row.append(str(cur))
+        cur += 1
+    print(" ".join(row))

@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L13-P10: Xóa Ký Tự Ở Vị Trí K
-# Cài đặt code chuẩn Python 3
+s = input()
+k = int(input())
+print(s[:k] + s[k + 1:])

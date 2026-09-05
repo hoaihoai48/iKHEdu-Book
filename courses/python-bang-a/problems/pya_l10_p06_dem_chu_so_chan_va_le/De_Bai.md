@@ -1,5 +1,9 @@
-# Đếm Chữ Số Chẵn Và Lẻ
+# Đếm chữ số chẵn và lẻ
 
+
+## Bối cảnh
+
+Phân tích cấu trúc chẵn lẻ của các chữ số là bước kiểm định tính cân bằng số học trong các hệ thống mã hóa và kiểm thử dữ liệu đầu vào.
 
 ## Nhiệm vụ
 

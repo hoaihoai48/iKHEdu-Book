@@ -1,5 +1,9 @@
-# Tìm Tất Cả Số Hoàn Hảo Nhỏ Hơn N
+# Tìm tất cả số hoàn hảo nhỏ hơn N
 
+
+## Bối cảnh
+
+Thí sinh đang tìm kiếm một giá trị đặc biệt trong tập dữ liệu. Hãy viết chương trình tìm kiếm hiệu quả.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Các số hoàn hảo, cách nhau bởi khoảng trắng.
 ```text
 6 28
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `30`, kết quả thu được tương ứng là `6 28`.
+
 
 
 ## Ràng buộc

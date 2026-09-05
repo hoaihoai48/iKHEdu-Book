@@ -1,5 +1,9 @@
-# Tổng Chữ Số Của Số 3 Chữ Số
+# Tổng chữ số của số 3 chữ số
 
+
+## Bối cảnh
+
+Trong bài kiểm tra, người dùng cần tính nhanh tổng một dãy số. Hãy viết chương trình hỗ trợ tính toán.
 
 ## Nhiệm vụ
 

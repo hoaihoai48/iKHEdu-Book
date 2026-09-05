@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L06-P06: Kiểm Tra Năm Nhuận
-# Cài đặt code chuẩn Python 3
+y = int(input())
+if y % 400 == 0 or (y % 4 == 0 and y % 100 != 0):
+    print("NAM NHUAN")
+else:
+    print("NAM THUONG")

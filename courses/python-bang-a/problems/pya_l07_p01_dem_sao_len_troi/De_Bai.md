@@ -1,5 +1,9 @@
-# Đếm Sao Lên Trời
+# Đếm sao lên trời
 
+
+## Bối cảnh
+
+Đêm hè, người dùng ngước nhìn bầu trời đầy sao và bắt đầu đếm: 1, 2, 3... Hãy giúp in dãy số đếm sao từ 1 đến $N$.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Dãy số từ 1 đến $N$.
 ```text
 1 2 3 4 5
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 3 4 5`.
+
 
 
 ## Ràng buộc

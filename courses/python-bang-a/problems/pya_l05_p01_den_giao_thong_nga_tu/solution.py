@@ -1,7 +1,7 @@
-den = input().strip().lower()
-if den == "do":
+den = input().strip().upper()
+if den == "D" or den == "DO":
     print("DUNG LAI")
-elif den == "vang":
+elif den == "V" or den == "VANG":
     print("DI CHAM")
-elif den == "xanh":
+elif den == "X" or den == "XANH":
     print("DUOC DI")

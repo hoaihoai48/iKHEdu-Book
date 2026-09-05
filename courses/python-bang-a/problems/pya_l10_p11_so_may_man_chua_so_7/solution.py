@@ -1,2 +1,10 @@
-# Gợi ý mã nguồn cho PYA-L10-P11: Số May Mắn Chứa Số 7
-# Cài đặt code chuẩn Python 3
+n = int(input())
+tim_thay = False
+while n > 0:
+    if n % 10 == 7:
+        tim_thay = True
+    n = n // 10
+if tim_thay:
+    print("YES")
+else:
+    print("NO")

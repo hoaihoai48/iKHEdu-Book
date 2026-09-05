@@ -1,2 +1,7 @@
-# Gợi ý mã nguồn cho PYA-L05-P07: Tính Cước Taxi Bậc Thang
-# Cài đặt code chuẩn Python 3
+n = int(input())
+if n <= 1:
+    print(10)
+elif n <= 10:
+    print(10 + (n - 1) * 8)
+else:
+    print(10 + 9 * 8 + (n - 10) * 6)

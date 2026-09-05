@@ -1,285 +1,849 @@
-# Hệ thống bài tập thực hành — bài 02: Phép toán số học, chia nguyên và chia dư
+# Danh Sách Bài Tập Thực Hành: Bài 02
+
+> Nguồn problems: l02 | Tổng 36 bài (sắp từ dễ đến khó theo rubric độ khó).
+
+## Ma Trận Phân Tầng
+* P0 (Khởi động): Bài 1-9
+* P1 (Cơ bản): Bài 10-18
+* P2 (Luyện tập): Bài 19-27
+* P3 (Vận dụng): Bài 28-36
+---
+
+### Bài 1 (P0): Lũy thừa bậc hai
+* **Mã bài toán:** `pya_l02_p02_luy_thua_bac_hai`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Trong buổi học toán về hình học không gian, cô giáo Lan yêu cầu học sinh tính diện tích của một mặt bàn hình vuông có cạnh dài $A$ xen-ti-mét. Công thức diện tích hình vuông chính là $A^2$ — hay còn gọi là "bình phương" của $A$. Em hãy giúp các bạn viết chương trình tự động hóa phép tính này để kiểm tra đáp số nhanh chóng.
+* **Nhiệm vụ:** Nhập số nguyên $N$. In ra giá trị bình phương $N^2$ bằng cách dùng toán tử `**`.
+* **Input:** Một dòng chứa số nguyên $N$ ($-10^4 \le N \le 10^4$).
+* **Output:** In ra $N^2$.
+* **Sample:** ### Input
+```text
+8
+```
+### Output
+```text
+64
+```
+### Giải thích
+$8^2 = 64$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-## Bảng ma trận bài tập (16 bài tập phân tầng cơ bản → vận dụng)
-
-| STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
-|:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L02-P01` | Chia đều bánh quy | `Cơ bản` | $1 \le a, b \le 1000$ | Thành thạo phép chia nguyên `//` và chia dư `%` |
-| 02 | `PYA-L02-P02` | Nhân đôi lũy thừa | `Cơ bản` | $1 \le n \le 30$ | Lũy thừa `**` cơ số 2 |
-| 03 | `PYA-L02-P03` | Số kẹo còn thừa | `Cơ bản` | $1 \le N, K \le 10^9$ | Phép modulo `%`, xử lý số nguyên lớn |
-| 04 | `PYA-L02-P04` | Đổi giờ ra phút giây | `Cơ bản` | $0 \le H, M, S \le 59$ | Biểu thức nhân cộng liên hoàn |
-| 05 | `PYA-L02-P05` | Bóng đèn viền biển hiệu | `Luyện tập` | $1 \le a \le 10^7$ | Phép nhân chia đổi đơn vị (THT đà nẵng) |
-| 06 | `PYA-L02-P06` | Trồng cây đại lộ | `Luyện tập` | $1 \le N, K \le 10^6$ | Phép chia khoảng cách cộng 1 ở đầu mút |
-| 07 | `PYA-L02-P07` | Vòng chạy điền kinh | `Luyện tập` | $1 \le N \le 10^9$ | Chu kỳ vòng lặp sân thể thao qua modulo |
-| 08 | `PYA-L02-P08` | Kim đồng hồ 12 giờ | `Luyện tập` | $1 \le H \le 12, 1 \le K \le 10^9$ | Phép chia dư xử lý chu kỳ đồng hồ |
-| 09 | `PYA-L02-P09` | Tách chữ số tận cùng | `Luyện tập` | $10 \le N \le 10^9$ | Tách hàng đơn vị `% 10` và hàng chục |
-| 10 | `PYA-L02-P10` | Đảo ngược số 2 chữ số | `Luyện tập` | $10 \le N \le 99$ | Hoán vị vị trí chữ số bằng `//` và `%` |
-| 11 | `PYA-L02-P11` | Xe buýt chở học sinh | `Luyện tập` | $1 \le N, K \le 10^6$ | Kỹ thuật làm tròn lên: `(N + K - 1) // K` |
-| 12 | `PYA-L02-P12` | Bàn cờ ca-rô vô tận | `Vận dụng` | $1 \le K, W \le 10^6$ | Xác định tọa độ hàng cột $(row, col)$ từ số thứ tự |
-| 13 | `PYA-L02-P13` | Lũy thừa cầu thang | `Luyện tập` | $1 \le a \le 10, 0 \le n \le 10$ | Lũy thừa tổng quát `a ** n` |
-| 14 | `PYA-L02-P14` | Đổi phút ra giờ phút | `Luyện tập` | $0 \le T \le 10000$ | Đổi đơn vị thời gian bằng `// 60` và `% 60` |
-| 15 | `PYA-L02-P15` | Giá trị biểu thức PEMDAS | `Vận dụng` | $1 \le a, b, c \le 100$ | Thứ tự ưu tiên mũ nhân cộng `a + b * c ** 2` |
-| 16 | `PYA-L02-P16` | Đu quay vòng tròn | `Vận dụng` | $1 \le N, C \le 10^9$ | Chu kỳ vòng tròn tổng quát `N // C`, `N % C` |
-
----
-
-### Bài 1 (Cơ bản): Chia đều bánh quy (`PYA-L02-P01`)
-
-* **Bối cảnh:** Mẹ làm được $a$ chiếc bánh quy và muốn chia đều vào $b$ chiếc đĩa.
-* **Yêu cầu:** Em hãy tính xem mỗi chiếc đĩa có bao nhiêu chiếc bánh, và còn dư lại bao nhiêu chiếc bánh không đủ chia đều.
-* **Đầu vào (Input):** Nhập vào 2 số nguyên dương $a$ và $b$ trên 2 dòng ($1 \le a, b \le 1000$).
-* **Đầu ra (Output):** In ra 2 số trên một dòng cách nhau một dấu cách: số bánh trên mỗi đĩa và số bánh còn dư.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `17`<br>`5` | `3 2` | $17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh. |
-* **Gợi ý thuật toán:** `print(a // b, a % b)`.
+### Bài 2 (P0): Lập phương của một số
+* **Mã bài toán:** `pya_l02_p03_lap_phuong`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Xưởng gia công gỗ nghệ thuật Phú Quý nhận được đơn đặt hàng một lô hộp quà tặng cao cấp hình lập phương. Mỗi hộp có cạnh dài đúng $A$ xen-ti-mét. Để ước lượng nguyên vật liệu và chi phí vận chuyển, bộ phận kỹ thuật cần tính chính xác thể tích bên trong mỗi chiếc hộp. Em hãy lập trình tính thể tích khối lập phương với cạnh cho trước.
+* **Nhiệm vụ:** Nhập số nguyên dương $A$. In ra giá trị $A^3$.
+* **Input:** Một dòng chứa số nguyên $A$ ($1 \le A \le 1000$).
+* **Output:** In ra $A^3$.
+* **Sample:** ### Input
+```text
+5
+```
+### Output
+```text
+125
+```
+### Giải thích
+$5^3 = 125$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 2 (Cơ bản): Nhân đôi lũy thừa (`PYA-L02-P02`)
-
-* **Bối cảnh:** Trong một thí nghiệm vi sinh vật, ban đầu có 1 tế bào. Cứ sau mỗi giờ, số lượng tế bào lại nhân đôi một lần ($2^1, 2^2, 2^3, \dots$).
-* **Yêu cầu:** Hỏi sau $n$ giờ thì có tất cả bao nhiêu tế bào?
-* **Đầu vào (Input):** Một số tự nhiên $n$ ($1 \le n \le 30$).
-* **Đầu ra (Output):** In ra số lượng tế bào sau $n$ giờ ($2^n$).
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `4` | `16` | Sau 4 giờ: $2^4 = 16$ tế bào. |
-* **Gợi ý thuật toán:** `n = int(input()); print(2 ** n)`.
-
----
-
-### Bài 3 (Cơ bản): Số kẹo còn thừa (`PYA-L02-P03`)
-*(Lấy cảm hứng từ Bài 9 Đề thi THT Toàn quốc)*
-
-* **Bối cảnh:** Nhà máy sản xuất bánh kẹo vừa đóng gói được $N$ viên kẹo. Người ta đóng các viên kẹo này vào các hộp quà, mỗi hộp quà chứa đúng $K$ viên kẹo. Những viên kẹo còn thừa lại không đủ đóng thành một hộp quà sẽ được tặng cho các em nhỏ đi tham quan nhà máy.
-* **Yêu cầu:** Hãy tính số kẹo được tặng cho các em nhỏ.
-* **Đầu vào (Input):** Gồm 2 dòng lần lượt chứa hai số tự nhiên $N$ và $K$ ($1 \le N, K \le 10^9$).
-* **Đầu ra (Output):** In ra số viên kẹo còn thừa.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `100`<br>`8` | `4` |
-* **Gợi ý thuật toán:** `print(N % K)`. Nhờ Python hỗ trợ số lớn, $N = 10^9$ vẫn chạy tức thì trong 0.001 giây!
+### Bài 3 (P0): Lấy chữ số tận cùng
+* **Mã bài toán:** `pya_l02_p04_chu_so_tan_cung`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Tại hội chợ Xuân, mỗi du khách được phát một tấm vé số may mắn mang một số nguyên dương. Theo luật chơi, giải thưởng phụ thuộc vào chữ số cuối cùng (hàng đơn vị) của tấm vé: nếu tận cùng là 0 hoặc 5 thì trúng quà, còn lại thì không. Hệ thống cần trích xuất chính xác chữ số hàng đơn vị từ số trên tấm vé để tự động phân loại trúng thưởng.
+* **Nhiệm vụ:** Nhập số nguyên dương $N$. In ra chữ số hàng đơn vị của $N$.
+* **Input:** Một dòng chứa số nguyên $N$ ($1 \le N \le 10^9$).
+* **Output:** In ra chữ số tận cùng của $N$.
+* **Sample:** ### Input
+```text
+2026
+```
+### Output
+```text
+6
+```
+### Giải thích
+$2026 \% 10 = 6$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 4 (Cơ bản): Đổi giờ ra phút giây (`PYA-L02-P04`)
-
-* **Bối cảnh:** Đồng hồ điện tử hiển thị thời gian gồm $H$ giờ, $M$ phút và $S$ giây.
-* **Yêu cầu:** Em hãy tính xem tổng cộng khoảng thời gian đó tương đương với bao nhiêu giây?
-* **Biết rằng:** $1\text{ giờ} = 60\text{ phút} = 3600\text{ giây}$, $1\text{ phút} = 60\text{ giây}$.
-* **Đầu vào (Input):** Ba dòng lần lượt chứa 3 số tự nhiên $H, M, S$ ($0 \le H \le 23, 0 \le M, S \le 59$).
-* **Đầu ra (Output):** Một số nguyên duy nhất là tổng số giây.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `1`<br>`20`<br>`15` | `4815` | $1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây. |
+### Bài 4 (P0): Lấy hai chữ số tận cùng
+* **Mã bài toán:** `pya_l02_p09_hai_chu_so_cuoi`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Để xét giải khuyến khích số may mắn, người ta cần lấy 2 chữ số tận cùng của mã vé.
+* **Nhiệm vụ:** Nhập số nguyên $N$ ($N \ge 100$). In ra giá trị của hai chữ số tận cùng của $N$.
+* **Input:** Một dòng chứa số nguyên $N$ ($100 \le N \le 10^9$).
+* **Output:** In ra số tạo bởi 2 chữ số cuối (Ví dụ: `2026` in ra `26`, `105` in ra `5`).
+* **Sample:** ### Input
+```text
+1945
+```
+### Output
+```text
+45
+```
+### Giải thích
+$1945 \% 100 = 45$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 5 (Luyện tập): Bóng đèn viền biển hiệu (`PYA-L02-P05`)
-*(Lấy cảm hứng từ Bài 1 THT Sơn Trà - Đà Nẵng)*
+### Bài 5 (P0): Giá trị biểu thức bậc nhất
+* **Mã bài toán:** `pya_l02_p11_bieu_thuc_bac_nhat`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Trong bài kiểm tra toán học cuối kỳ, đề thi yêu cầu học sinh tính giá trị của hàm số bậc nhất $y = 3x + 5$ tại nhiều điểm $x$ khác nhau. Thay vì tính bằng tay từng trường hợp, bạn Linh nảy ra ý tưởng viết một chương trình Python để tự động hóa: chỉ cần nhập giá trị $x$, máy sẽ trả về ngay kết quả $y$ tương ứng. Em hãy giúp Linh hoàn thành chương trình này.
+* **Nhiệm vụ:** Nhập số nguyên $x$. In ra giá trị của $y = 3x + 5$.
+* **Input:** Một dòng chứa số nguyên $x$ ($-10^6 \le x \le 10^6$).
+* **Output:** In ra giá trị của biểu thức.
+* **Sample:** ### Input
+```text
+4
+```
+### Output
+```text
+17
+```
+### Giải thích
+$3 \times 4 + 5 = 17$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
-* **Bối cảnh:** Người ta muốn mắc các bóng đèn màu trang trí xung quanh viền của một bảng quảng cáo hình vuông. Bảng quảng cáo có chiều dài cạnh là $a\text{ dm}$. Các bóng đèn được mắc liên tiếp nhau và cách nhau đúng $5\text{ cm}$ dọc theo chu vi hình vuông (bao gồm cả các góc).
-* **Yêu cầu:** Em hãy tính số lượng bóng đèn cần mắc.
+---
+
+### Bài 6 (P0): Xóa chữ số tận cùng
+* **Mã bài toán:** `pya_l02_p25_xoa_chu_so_cuoi`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Bạn Hùng đang nhập liệu bảng thống kê sĩ số các lớp trên máy tính thì vô tình bấm thêm một chữ số thừa ở cuối. Thay vì nhập $12$ thì Hùng đã gõ thành $123$. May mắn thay, thao tác "xóa lùi" sẽ loại bỏ chữ số cuối cùng và trả lại số ban đầu. Em hãy mô phỏng thao tác này bằng chương trình: cho một số nguyên dương, hãy trả về số mới sau khi xóa đi chữ số cuối cùng.
+* **Nhiệm vụ:** Nhập số nguyên dương $N$ ($N \ge 10$). In ra số $N$ sau khi đã cắt bỏ chữ số hàng đơn vị.
+* **Input:** Một dòng chứa số nguyên $N$ ($10 \le N \le 10^9$).
+* **Output:** In ra số $N$ sau khi bỏ chữ số cuối.
+* **Sample:** ### Input
+```text
+3458
+```
+### Output
+```text
+345
+```
+### Giải thích
+$3458 // 10 = 345$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 7 (P0): Xếp hàng vào bàn học
+* **Mã bài toán:** `pya_l02_p28_xep_ban_hoc`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Phòng thi Olympic Tin học cấp thành phố được bố trí toàn bộ bàn đôi — mỗi bàn ngồi đúng 2 thí sinh. Năm nay có $N$ thí sinh đăng ký dự thi. Ban tổ chức cần tính toán số lượng bàn tối thiểu phải chuẩn bị sao cho tất cả thí sinh đều có chỗ ngồi, kể cả trường hợp số thí sinh là số lẻ thì bàn cuối cùng vẫn phải kê ra dù chỉ ngồi 1 người.
+* **Nhiệm vụ:** Có $N$ bạn thí sinh. Hỏi cần ít nhất bao nhiêu bàn đôi để tất cả các bạn đều có chỗ ngồi? (Nếu lẻ 1 bạn vẫn cần thêm 1 bàn).
+* **Input:** Một dòng chứa số nguyên dương $N$ ($1 \le N \le 10^6$).
+* **Output:** In ra số bàn học tối thiểu cần dùng.
+* **Sample:** ### Input
+```text
+15
+```
+### Output
+```text
+8
+```
+### Giải thích
+15 bạn xếp được 7 bàn đôi đầy đủ, còn 1 bạn ngồi riêng 1 bàn $\implies$ Cần 8 bàn. Công thức: `(N + 1) // 2`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 8 (P0): Lũy thừa cầu thang
+* **Mã bài toán:** `pya_l02_p13_luy_thua_cau_thang`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Bạn Thỏ Nâu rất thích xếp các khối gỗ thành một chiếc cầu thang toán học. Tầng đầu tiên cần $a$ khối gỗ, mỗi tầng tiếp theo lại gấp $a$ lần số khối của tầng trước đó. Thỏ Nâu đếm được chiếc cầu thang của mình có tất cả $n$ tầng. Hãy giúp bạn Thỏ tính xem tầng cao nhất có bao nhiêu khối gỗ.
+* **Nhiệm vụ:** Cho hai số nguyên $a$ và $n$, em hãy tính giá trị lũy thừa $a^n$.
+* **Input:** Gồm 2 dòng, mỗi dòng một số nguyên: dòng đầu là cơ số $a$, dòng sau là số mũ $n$ ($1 \le a \le 10$, $0 \le n \le 10$).
+* **Output:** In ra một số nguyên duy nhất là giá trị của $a^n$.
+* **Sample:** ### Input
+```text
+3
+4
+```
+### Output
+```text
+81
+```
+### Giải thích
+
+$3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang có 81 khối gỗ.
+* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a \le 10$, $0 \le n \le 10$.
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 9 (P0): Đóng hộp bánh ngọt
+* **Mã bài toán:** `pya_l02_p07_dong_hop_banh`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Xưởng bánh Hương Quê vừa sản xuất xong một mẻ gồm $M$ chiếc bánh quy bơ thơm ngon. Theo quy cách đóng gói, mỗi hộp quà tặng chứa cố định đúng 6 chiếc bánh. Bộ phận kho vận cần biết chính xác hai thông tin: cần bao nhiêu hộp đầy đủ để đóng gói, và sau khi đóng xong thì còn dư bao nhiêu chiếc bánh lẻ chưa đủ một hộp.
+* **Nhiệm vụ:** Nhập số nguyên dương $M$. In ra số hộp bánh đóng được đầy đủ và số bánh lẻ còn sót lại.
+* **Input:** Một dòng chứa số nguyên $M$ ($1 \le M \le 10^6$).
+* **Output:** Hai số nguyên cách nhau một dấu cách.
+* **Sample:** ### Input
+```text
+50
+```
+### Output
+```text
+8 2
+```
+### Giải thích
+$50 // 6 = 8$ hộp, dư $50 \% 6 = 2$ bánh lẻ.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 10 (P1): Chữ số hàng chục
+* **Mã bài toán:** `pya_l02_p10_chu_so_hang_chuc`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Tại trạm kiểm soát tốc độ trên quốc lộ, camera ghi nhận biển số xe dưới dạng một số nguyên. Để phân loại phương tiện theo nhóm, hệ thống cần trích xuất chữ số ở hàng chục (vị trí thứ hai từ phải sang) của số đó. Ví dụ: số $1234$ có chữ số hàng chục là $3$, số $507$ có chữ số hàng chục là $0$. Em hãy lập trình giải quyết bài toán trích xuất này.
+* **Nhiệm vụ:** Nhập số nguyên $N$ ($N \ge 10$). In ra chữ số hàng chục của $N$.
+* **Input:** Một dòng chứa số nguyên $N$ ($10 \le N \le 10^9$).
+* **Output:** In ra chữ số hàng chục.
+* **Sample:** ### Input
+```text
+378
+```
+### Output
+```text
+7
+```
+### Giải thích
+Bỏ chữ số tận cùng: $378 // 10 = 37$. Lấy chữ số cuối của 37: $37 \% 10 = 7$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 11 (P1): Đổi phút ra giờ phút
+* **Mã bài toán:** `pya_l02_p14_doi_phut_ra_gio_phut`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Bạn Mèo Cam vừa bấm giờ chạy bộ quanh công viên và chiếc đồng hồ chỉ tổng cộng $T$ phút. Mèo Cam muốn khoe với cả lớp rằng mình đã chạy được mấy giờ mấy phút cho thật oai. Nhưng bạn ấy chỉ biết cộng trừ đơn giản, chưa biết cách đổi phút ra giờ. Hãy giúp Mèo Cam đổi số phút thành giờ và phút.
+* **Nhiệm vụ:** Cho tổng số phút $T$, em hãy tính số giờ trọn vẹn và số phút còn lẻ.
+* **Input:** Một số nguyên duy nhất $T$ trên một dòng ($0 \le T \le 10000$).
+* **Output:** In ra hai số nguyên trên một dòng cách nhau một dấu cách: số giờ và số phút còn dư.
+* **Sample:** ### Input
+```text
+135
+```
+### Output
+```text
+2 15
+```
+### Giải thích
+
+$135$ phút $= 2$ giờ trọn vẹn ($2 \times 60 = 120$ phút) và còn dư $135 - 120 = 15$ phút.
+* **Ràng buộc:** * **Giới hạn dữ liệu:** $0 \le T \le 10000$.
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 12 (P1): Nhân đôi lũy thừa
+* **Mã bài toán:** `pya_l02_p22_nhan_doi_luy_thua`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Trong mô hình sinh trưởng tế bào vi sinh, số lượng cá thể ban đầu là $1$ và nhân đôi sau mỗi chu kỳ thời gian.
+* **Nhiệm vụ:** Cho số nguyên $N$ ($0 \le N \le 30$). Hãy tính số lượng cá thể sau $N$ chu kỳ nhân đôi ($2^N$).
+* **Input:** Một số tự nhiên $n$ ($1 \le n \le 30$).
+* **Output:** In ra số lượng tế bào sau $n$ giờ ($2^n$).
+* **Sample:** ### Input
+```text
+4
+```
+### Output
+```text
+16
+```
+### Giải thích
+
+Sau 4 giờ: $2^4 = 16$ tế bào.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 13 (P1): Vòng chạy điền kinh
+* **Mã bài toán:** `pya_l02_p27_vong_chay_dien_kinh`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Hội khỏe trường em tổ chức chạy điền kinh thật vui. Sân vận động có một đường chạy hình chữ nhật có chu vi đúng $100\text{ mét}$. Vận động viên An xuất phát từ vạch số 0 và chạy liên tục theo một chiều dọc theo mép sân được tổng quãng đường là $N\text{ mét}$. Các bạn cổ vũ reo hò mà chưa biết An đã chạy được mấy vòng. Hãy giúp tổ trọng tài tính giúp An.
+* **Nhiệm vụ:** Hãy cho biết:
+ 1. An đã chạy được bao nhiêu vòng sân trọn vẹn?
+ 2. Hiện tại An đang dừng lại ở vị trí cách vạch xuất phát bao nhiêu mét?
+* **Input:** Một số nguyên $N$ ($1 \le N \le 10^9$).
+* **Output:** Hai số nguyên trên một dòng cách nhau dấu cách lần lượt là số vòng chạy trọn vẹn và khoảng cách tính từ vạch xuất phát.
+* **Sample:** ### Input
+```text
+250
+```
+### Output
+```text
+2 50
+```
+### Giải thích
+
+$250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét thứ 50.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 14 (P1): Bóng đèn viền biển hiệu
+* **Mã bài toán:** `pya_l02_p05_bong_den_vien_bien_hieu`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Phố phường sắp đến hội hoa đăng, người ta muốn mắc các bóng đèn màu rực rỡ trang trí xung quanh viền của một bảng quảng cáo hình vuông. Bảng quảng cáo có chiều dài cạnh là $a\text{ dm}$. Các bóng đèn được mắc liên tiếp nhau và cách nhau đúng $5\text{ cm}$ dọc theo chu vi hình vuông (bao gồm cả các góc). Bác thợ điện leo thang mà chưa biết cần bao nhiêu bóng. Hãy giúp bác tính số bóng đèn cần mắc.
+* **Nhiệm vụ:** Hãy tính số lượng bóng đèn cần mắc.
 * **Biết rằng:** $1\text{ dm} = 10\text{ cm}$.
-* **Đầu vào (Input):** Một số nguyên dương $a$ ($1 \le a \le 10^7$).
-* **Đầu ra (Output):** Một số nguyên duy nhất là số bóng đèn cần mắc.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `1` | `8` | Cạnh $1\text{ dm} = 10\text{ cm}$. Chu vi bảng hình vuông là $10 \times 4 = 40\text{ cm}$.<br>Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 5 = 8$ bóng đèn. |
-* **Gợi ý thuật toán:**
-  * Đổi cạnh sang cm: `canh_cm = a * 10`
-  * Chu vi viền: `chu_vi = canh_cm * 4`
-  * Số bóng đèn: `chu_vi // 5`
+* **Input:** Một số nguyên dương $a$ ($1 \le a \le 10^7$).
+* **Output:** Một số nguyên duy nhất là số bóng đèn cần mắc.
+* **Sample:** ### Input
+```text
+1
+```
+### Output
+```text
+8
+```
+### Giải thích
+
+Cạnh $1\text{ dm} = 10\text{ cm}$. Chu vi bảng hình vuông là $10 \times 4 = 40\text{ cm}$.
+Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 5 = 8$ bóng đèn.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 6 (Luyện tập): Trồng cây đại lộ (`PYA-L02-P06`)
-*(Lấy cảm hứng từ Bài 7 Đề thi THT Toàn quốc)*
+### Bài 15 (P1): Đu quay vòng tròn
+* **Mã bài toán:** `pya_l02_p16_du_quay_vong_tron`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Khu vui chơi vừa mở một chiếc đu quay khổng lồ, mỗi vòng quay trọn vẹn kéo dài đúng $C$ phút. Bạn Sóc Nâu ngồi trên đu quay suốt $N$ phút không chịu xuống vì mải ngắm thành phố từ trên cao. Bác quản trò muốn biết Sóc Nâu đã đi được bao nhiêu vòng trọn vẹn và đang dở dang bao nhiêu phút của vòng hiện tại. Hãy giúp bác quản trò tính nhanh.
+* **Nhiệm vụ:** Cho tổng thời gian $N$ và thời gian một vòng $C$, em hãy tính số vòng quay trọn vẹn và số phút dư.
+* **Input:** Gồm 2 dòng, mỗi dòng một số nguyên: $N$ ($1 \le N \le 10^9$) và $C$ ($1 \le C \le 10^9$).
+* **Output:** In ra hai số nguyên trên một dòng cách nhau một dấu cách: số vòng trọn vẹn và số phút dư.
+* **Sample:** ### Input
+```text
+250
+60
+```
+### Output
+```text
+4 10
+```
+### Giải thích
 
-* **Bối cảnh:** Trên một đại lộ thẳng tắp có chiều dài $N$ mét, người ta cần trồng các cây xanh thẳng hàng ở một bên đường để tạo bóng mát. Bắt đầu trồng một cây ngay tại điểm xuất phát (mét thứ 0), và cứ sau mỗi khoảng cách đúng $K$ mét lại trồng tiếp một cây.
-* **Yêu cầu:** Hãy tính tổng số lượng cây xanh được trồng trên đoạn đường từ mét thứ 0 đến mét thứ $N$.
-* **Đầu vào (Input):** Gồm 2 số tự nhiên $N$ và $K$ ($1 \le N, K \le 10^6$) mỗi số trên một dòng.
-* **Đầu ra (Output):** Một số nguyên duy nhất là số cây trồng được.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10`<br>`3` | `4` | Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng cộng có 4 cây. |
-* **Gợi ý thuật toán:**
-  * Số khoảng cách $K$ mét trọn vẹn là: `N // K`.
-  * Do có thêm 1 cây ở điểm mút đầu tiên (vị trí 0), nên số cây trồng được là: `(N // K) + 1`.
-
----
-
-### Bài 7 (Luyện tập): Vòng chạy điền kinh (`PYA-L02-P07`)
-*(Lấy cảm hứng từ Bài 8 Đề thi THT Bắc Giang)*
-
-* **Bối cảnh:** Một đường chạy thể thao hình chữ nhật có chu vi đúng $100\text{ mét}$. Vận động viên An xuất phát từ vạch số 0 và chạy liên tục theo một chiều dọc theo mép sân được tổng quãng đường là $N\text{ mét}$.
-* **Yêu cầu:** Em hãy cho biết:
-  1. An đã chạy được bao nhiêu vòng sân trọn vẹn?
-  2. Hiện tại An đang dừng lại ở vị trí cách vạch xuất phát bao nhiêu mét?
-* **Đầu vào (Input):** Một số nguyên $N$ ($1 \le N \le 10^9$).
-* **Đầu ra (Output):** Hai số nguyên trên một dòng cách nhau dấu cách lần lượt là số vòng chạy trọn vẹn và khoảng cách tính từ vạch xuất phát.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `250` | `2 50` | $250 = 2 \times 100 + 50$. Đã chạy 2 vòng trọn vẹn và đang ở mét thứ 50. |
-* **Gợi ý thuật toán:** `print(N // 100, N % 100)`.
+$250 = 4 \times 60 + 10$. Sóc Nâu đã đi được 4 vòng trọn vẹn và đang ở phút thứ 10 của vòng thứ năm.
+* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le N, C \le 10^9$.
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 8 (Luyện tập): Kim đồng hồ 12 giờ (`PYA-L02-P08`)
+### Bài 16 (P1): Số kẹo còn thừa
+* **Mã bài toán:** `pya_l02_p23_so_keo_con_thua`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Trong bài toán chia tài nguyên máy chủ, một lượng gồm $a$ gói tài nguyên được chia đều cho $b$ tiến trình đang xử lý.
+* **Nhiệm vụ:** Cho hai số nguyên dương $a$ và $b$. Hãy xác định lượng tài nguyên dư thừa không thể chia đều cho các tiến trình.
+* **Input:** Gồm 2 dòng lần lượt chứa hai số tự nhiên $N$ và $K$ ($1 \le N, K \le 10^9$).
+* **Output:** In ra số viên kẹo còn thừa.
+* **Sample:** ### Input
+```text
+100
+8
+```
+### Output
+```text
+4
+```
+### Giải thích
 
-* **Bối cảnh:** Đồng hồ kim treo tường có 12 số đánh dấu từ 1 đến 12. Hiện tại kim giờ đang chỉ vào đúng số $H$.
-* **Yêu cầu:** Sau đúng $K$ giờ nữa, hỏi kim giờ sẽ chỉ vào số mấy?
-* **Đầu vào (Input):** Nhập vào 2 số nguyên $H$ ($1 \le H \le 12$) và $K$ ($1 \le K \le 10^9$).
-* **Đầu ra (Output):** In ra một số nguyên từ 1 đến 12 là số mà kim giờ đang chỉ.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `10`<br>`5` | `3` | Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tương ứng số 3. |
-  | `9`<br>`3` | `12` | Lúc 9 giờ, sau 3 giờ nữa là 12 giờ. |
-* **Gợi ý thuật toán:**
-  * Lưu ý bẫy số 12: Khi tính chia dư, số 12 chia 12 dư 0.
-  * Công thức chuẩn: `gio_moi = (H + K) % 12`. Nếu `gio_moi == 0` thì kết quả là `12`! Hoặc dùng mẹo: `(H + K - 1) % 12 + 1`.
-
----
-
-### Bài 9 (Luyện tập): Tách chữ số tận cùng (`PYA-L02-P09`)
-
-* **Bối cảnh:** Bé Na có một mã số may mắn là một số tự nhiên $N$. Na muốn tìm ra chữ số hàng đơn vị và chữ số hàng chục của số này.
-* **Yêu cầu:** Nhập vào số tự nhiên $N$ ($10 \le N \le 10^9$). Hãy in ra:
-  * Dòng 1: Chữ số hàng đơn vị của $N$.
-  * Dòng 2: Chữ số hàng chục của $N$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `857` | `7`<br>`5` | Chữ số hàng đơn vị là 7, hàng chục là 5. |
-* **Gợi ý thuật toán:**
-  * Chữ số hàng đơn vị: `don_vi = N % 10`
-  * Chữ số hàng chục: Bỏ hàng đơn vị đi `tam = N // 10`, rồi lấy chữ số cuối của phần còn lại `chuc = tam % 10` (hoặc gộp lại `(N // 10) % 10`).
+Với $a = 17$ và $b = 5$, phép chia dư cho kết quả: $17 \% 5 = 2$. Lượng còn dư không chia hết là 2.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 10 (Luyện tập): Đảo ngược số 2 chữ số (`PYA-L02-P10`)
-
-* **Bối cảnh:** Trong một mật thư thám tử, các con số 2 chữ số đã bị đảo ngược vị trí hai chữ số cho nhau (ví dụ số 27 bị biến thành 72).
-* **Yêu cầu:** Nhập vào một số tự nhiên $N$ có đúng 2 chữ số ($10 \le N \le 99$). Hãy in ra số sau khi đảo ngược hai chữ số.
-* **Đầu vào (Input):** Một số tự nhiên $N$.
-* **Đầu ra (Output):** Số nguyên sau khi đảo ngược. (Lưu ý: Nếu số là 30 thì đảo lại là 3).
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `49` | `94` | Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94. |
-  | `50` | `5` | Hàng chục là 5, đơn vị là 0 $\to$ Đảo lại thành $0 \times 10 + 5 = 5$. |
-* **Gợi ý thuật toán:**
-  ```python
-  N = int(input())
-  chuc = N // 10
-  don_vi = N % 10
-  dao_nguoc = don_vi * 10 + chuc
-  print(dao_nguoc)
-  ```
-
----
-
-### Bài 11 (Luyện tập): Xe buýt chở học sinh (`PYA-L02-P11`)
-
-* **Bối cảnh:** Một trường tiểu học tổ chức dã ngoại cho $N$ học sinh. Nhà trường thuê các xe buýt loại $K$ chỗ ngồi. Mỗi xe buýt chở được tối đa $K$ bạn học sinh.
-* **Yêu cầu:** Hỏi nhà trường cần thuê **ít nhất bao nhiêu xe buýt** để chở hết toàn bộ $N$ học sinh (không để bạn nào phải ở lại trường)?
-* **Đầu vào (Input):** Nhập vào 2 số nguyên dương $N$ và $K$ ($1 \le N, K \le 10^6$).
-* **Đầu ra (Output):** Một số nguyên duy nhất là số lượng xe buýt tối thiểu cần thuê.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `25`<br>`10` | `3` | 2 xe đầu chở được 20 bạn, còn 5 bạn nữa bắt buộc phải thuê thêm 1 xe thứ ba. |
-  | `30`<br>`10` | `3` | 3 xe chở vừa khít 30 bạn. |
-* **Gợi ý thuật toán (Kỹ thuật làm tròn lên kinh điển trong lập trình):**
-  * Nếu dùng `N // K`: khi $N = 25, K = 10 \implies 25 // 10 = 2$ (bị thiếu 1 xe!).
-  * Công thức làm tròn lên chuẩn mực thi đấu: `so_xe = (N + K - 1) // K`.
-  * Thử lại: $(25 + 10 - 1) // 10 = 34 // 10 = 3$ (Đúng!).
-  * Thử lại: $(30 + 10 - 1) // 10 = 39 // 10 = 3$ (Vẫn đúng!).
+### Bài 17 (P1): Bất biến chia kẹo và phục hồi số bị chia
+* **Mã bài toán:** `pya_l02_p20_phuc_hoi_so_bi_chia`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Nam đem một số kẹo bí mật chia cho $B$ bạn thì mỗi bạn được $Q$ chiếc kẹo và Nam còn thừa lại $R$ chiếc kẹo.
+* **Nhiệm vụ:** Nhập 3 số nguyên $B, Q, R$ trên cùng 1 dòng ($B > R \ge 0$, $Q \ge 0$). Hãy tìm lại tổng số kẹo ban đầu mà Nam có.
+* **Input:** Một dòng chứa 3 số nguyên $B, Q, R$ ($1 \le B, Q \le 10^6$, $0 \le R < B$).
+* **Output:** In ra số kẹo ban đầu.
+* **Sample:** ### Input
+```text
+6 8 3
+```
+### Output
+```text
+51
+```
+### Giải thích
+Áp dụng định lý bất biến phép chia: $A = B \times Q + R = 6 \times 8 + 3 = 51$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 12 (Vận dụng): Bàn cờ ca-rô vô tận (`PYA-L02-P12`)
-
-* **Bối cảnh:** Một bàn cờ ô vuông vô tận được chia thành các hàng, mỗi hàng có đúng $W$ ô vuông. Các ô vuông được đánh số liên tiếp bắt đầu từ $1$:
-  * Hàng 1 gồm các ô: $1, 2, \dots, W$.
-  * Hàng 2 gồm các ô: $W+1, W+2, \dots, 2W$.
-  * Cứ như vậy tiếp tục cho các hàng tiếp theo.
-* **Yêu cầu:** Cho biết số thứ tự của một ô là $K$. Em hãy xác định xem ô đó nằm ở **Hàng thứ mấy** và **Cột thứ mấy** (Cột tính từ 1 đến $W$)?
-* **Đầu vào (Input):** Gồm hai số tự nhiên $K$ và $W$ ($1 \le K, W \le 10^6$) mỗi số trên một dòng.
-* **Đầu ra (Output):** In ra hai số nguyên trên một dòng cách nhau dấu cách: `hang cot`.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `11`<br>`4` | `3 3` | Mỗi hàng có 4 ô.<br>Hàng 1: 1, 2, 3, 4<br>Hàng 2: 5, 6, 7, 8<br>Hàng 3: 9, 10, 11, 12.<br>Ô số 11 nằm ở Hàng 3, Cột 3. |
-* **Gợi ý thuật toán:**
-  * Chuyển về chỉ số bắt đầu từ 0: `idx = K - 1`
-  * Hàng (tính từ 1): `hang = (idx // W) + 1`
-  * Cột (tính từ 1): `cot = (idx % W) + 1`
-  * In: `print(hang, cot)`.
-
----
-
-### Bài 13 (Luyện tập): Lũy thừa cầu thang (`PYA-L02-P13`)
-
-* **Bối cảnh:** Bạn Thỏ Nâu xếp các khối gỗ thành cầu thang toán học, mỗi tầng gấp $a$ lần tầng trước, cả cầu thang có $n$ tầng.
-* **Yêu cầu:** Tính số khối gỗ ở tầng cao nhất, tức giá trị $a^n$.
-* **Đầu vào (Input):** Hai dòng lần lượt là cơ số $a$ và số mũ $n$ ($1 \le a \le 10, 0 \le n \le 10$).
-* **Đầu ra (Output):** Một số nguyên duy nhất là $a^n$.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `3`<br>`4` | `81` | $3^4 = 3 \times 3 \times 3 \times 3 = 81$. |
-* **Gợi ý thuật toán:** `print(a ** n)`. Nhớ `**` mới là lũy thừa, `^` là phép XOR bit!
+### Bài 18 (P1): Đa thức bậc hai
+* **Mã bài toán:** `pya_l02_p32_da_thuc_bac_hai`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Giáo sư Nguyễn đang nghiên cứu quỹ đạo bay của một quả bóng tennis được ném lên cao. Vị trí độ cao tại thời điểm $x$ giây được mô tả bởi đa thức bậc hai $P(x) = 2x^2 - 4x + 9$ (đơn vị: mét). Để phục vụ việc phân tích dữ liệu thí nghiệm, giáo sư cần tính nhanh giá trị $P(x)$ với nhiều mốc thời gian khác nhau. Em hãy lập trình giúp giáo sư.
+* **Nhiệm vụ:** Nhập số nguyên $x$. In ra giá trị của đa thức.
+* **Input:** Một dòng chứa số nguyên $x$ ($-1000 \le x \le 1000$).
+* **Output:** In ra giá trị của $P(x)$.
+* **Sample:** ### Input
+```text
+3
+```
+### Output
+```text
+15
+```
+### Giải thích
+$2 \times (3^2) - 4 \times 3 + 9 = 2 \times 9 - 12 + 9 = 15$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 14 (Luyện tập): Đổi phút ra giờ phút (`PYA-L02-P14`)
+### Bài 19 (P2): Trồng cây đại lộ
+* **Mã bài toán:** `pya_l02_p26_trong_cay_dai_lo`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Thành phố vừa khánh thành một đại lộ thẳng tắp dài $N$ mét. Mùa hè sắp đến, để có bóng mát cho người đi bộ, đội cây xanh quyết định trồng một hàng cây ngay ngắn ở một bên đường. Cây đầu tiên được trồng ngay tại điểm xuất phát (mét thứ 0), rồi cứ cách đúng $K$ mét lại trồng tiếp một cây nữa. Trước khi ra quân, đội trưởng muốn biết chính xác cần chuẩn bị bao nhiêu cây, và em chính là người giúp đội tính con số đó!
+* **Nhiệm vụ:** Hãy tính tổng số lượng cây xanh được trồng trên đoạn đường từ mét thứ 0 đến mét thứ $N$.
+* **Input:** Gồm 2 số tự nhiên $N$ và $K$ ($1 \le N, K \le 10^6$) mỗi số trên một dòng.
+* **Output:** Một số nguyên duy nhất là số cây trồng được.
+* **Sample:** ### Input
+```text
+10
+3
+```
+### Output
+```text
+4
+```
+### Giải thích
 
-* **Bối cảnh:** Bạn Mèo Cam bấm giờ chạy bộ được tổng cộng $T$ phút và muốn khoe thành tích theo dạng mấy giờ mấy phút.
-* **Yêu cầu:** Đổi tổng số phút $T$ thành số giờ trọn vẹn và số phút lẻ.
-* **Đầu vào (Input):** Một số nguyên $T$ ($0 \le T \le 10000$).
-* **Đầu ra (Output):** Hai số nguyên trên một dòng cách nhau dấu cách: giờ và phút dư.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `135` | `2 15` | $135 = 2 \times 60 + 15$. Được 2 giờ và dư 15 phút. |
-* **Gợi ý thuật toán:** `print(T // 60, T % 60)`.
-
----
-
-### Bài 15 (Vận dụng): Giá trị biểu thức PEMDAS (`PYA-L02-P15`)
-
-* **Bối cảnh:** Cô giáo viết biểu thức bí mật $a + b \times c^2$ lên bảng, bạn nào tính đúng thứ tự ưu tiên sẽ thắng cuộc thi tính nhẩm.
-* **Yêu cầu:** Cho ba số $a, b, c$, hãy tính giá trị biểu thức $a + b \times c^2$ (lũy thừa trước, nhân trước, cộng sau).
-* **Đầu vào (Input):** Ba dòng lần lượt là $a, b, c$ ($1 \le a, b, c \le 100$).
-* **Đầu ra (Output):** Một số nguyên duy nhất là giá trị biểu thức.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `2`<br>`3`<br>`4` | `50` | $4^2 = 16$, $3 \times 16 = 48$, $2 + 48 = 50$. |
-* **Gợi ý thuật toán:** `print(a + b * c ** 2)`. Không được thêm ngoặc sai thành `(a + b) * c ** 2`!
+Các cây được trồng tại các vị trí mét thứ: 0, 3, 6, 9. Tổng cộng có 4 cây.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 16 (Vận dụng): Đu quay vòng tròn (`PYA-L02-P16`)
+### Bài 20 (P2): Giá trị biểu thức PEMDAS
+* **Mã bài toán:** `pya_l02_p15_gia_tri_bieu_thuc_pemdas`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Lớp học của bạn Ong Vàng hôm nay thi xem ai là nhà tính nhẩm nhanh nhất. Cô giáo viết lên bảng một biểu thức bí mật gồm ba con số $a$, $b$, $c$ với quy tắc tính là $a + b \times c^2$. Bạn nào tính đúng thứ tự ưu tiên ngoặc, mũ, nhân chia rồi mới cộng trừ sẽ giành chiến thắng. Hãy giúp bạn Ong Vàng tính giá trị biểu thức này thật chính xác.
+* **Nhiệm vụ:** Cho ba số nguyên $a$, $b$, $c$, em hãy tính giá trị của biểu thức $a + b \times c^2$.
+* **Input:** Gồm 3 dòng, mỗi dòng một số nguyên: $a$, $b$, $c$ ($1 \le a, b, c \le 100$).
+* **Output:** In ra một số nguyên duy nhất là giá trị của biểu thức.
+* **Sample:** ### Input
+```text
+2
+3
+4
+```
+### Output
+```text
+50
+```
+### Giải thích
 
-* **Bối cảnh:** Chiếc đu quay mỗi vòng mất đúng $C$ phút, bạn Sóc Nâu ngồi liên tục $N$ phút để ngắm thành phố.
-* **Yêu cầu:** Tính số vòng quay trọn vẹn và số phút dở dang của vòng hiện tại.
-* **Đầu vào (Input):** Hai dòng lần lượt là $N$ và $C$ ($1 \le N, C \le 10^9$).
-* **Đầu ra (Output):** Hai số nguyên trên một dòng cách nhau dấu cách: số vòng trọn và số phút dư.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `250`<br>`60` | `4 10` | $250 = 4 \times 60 + 10$. Đi được 4 vòng và dư 10 phút. |
-* **Gợi ý thuật toán:** `print(N // C, N % C)`. Kiểm tra lại bằng $N = \text{vòng} \times C + \text{dư}$.
+Ưu tiên lũy thừa trước: $c^2 = 4^2 = 16$. Tiếp theo nhân: $b \times 16 = 3 \times 16 = 48$. Cuối cùng cộng: $2 + 48 = 50$.
+* **Ràng buộc:** * **Giới hạn dữ liệu:** $1 \le a, b, c \le 100$.
+* **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 21 (P2): Đổi giờ ra phút giây
+* **Mã bài toán:** `pya_l02_p24_doi_gio_ra_phut_giay`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Bạn Tít được tặng một chiếc đồng hồ điện tử xinh xắn hiển thị thời gian gồm $H$ giờ, $M$ phút và $S$ giây. Tít khoe với bạn thân và đố bạn đoán xem cả khoảng thời gian đó là bao nhiêu giây. Hai bạn đếm xuôi đếm ngược mãi chưa ra. Hãy giúp hai bạn đổi thời gian ra giây.
+* **Nhiệm vụ:** Hãy tính xem tổng cộng khoảng thời gian đó tương đương với bao nhiêu giây?
+* **Biết rằng:** $1\text{ giờ} = 60\text{ phút} = 3600\text{ giây}$, $1\text{ phút} = 60\text{ giây}$.
+* **Input:** Ba dòng lần lượt chứa 3 số tự nhiên $H, M, S$ ($0 \le H \le 23, 0 \le M, S \le 59$).
+* **Output:** Một số nguyên duy nhất là tổng số giây.
+* **Sample:** ### Input
+```text
+1
+20
+15
+```
+### Output
+```text
+4815
+```
+### Giải thích
+
+$1 \times 3600 + 20 \times 60 + 15 = 3600 + 1200 + 15 = 4815$ giây.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 22 (P2): Tách chữ số tận cùng
+* **Mã bài toán:** `pya_l02_p29_tach_chu_so_tan_cung`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Na có một mã số may mắn là một số tự nhiên $N$ viết trên chiếc vòng tay. Hôm nay Na chơi trò thám tử cùng bạn thân, muốn tìm ra chữ số hàng đơn vị và chữ số hàng chục của số này để mở chiếc hộp bí mật. Hai bạn xoay chiếc vòng mãi mà chưa tách được. Hãy giúp Na tách hai chữ số đó ra.
+* **Nhiệm vụ:** Cho số tự nhiên $N$, hãy tách và in ra chữ số hàng đơn vị và chữ số hàng chục của $N$.
+* **Input:** Một số tự nhiên $N$ ($10 \le N \le 10^9$).
+* **Output:** * Dòng 1: Chữ số hàng đơn vị của $N$.
+ * Dòng 2: Chữ số hàng chục của $N$.
+* **Sample:** ### Input
+```text
+857
+```
+### Output
+```text
+7
+5
+```
+### Giải thích
+
+Chữ số hàng đơn vị là 7, hàng chục là 5.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 23 (P2): Đảo ngược số 2 chữ số
+* **Mã bài toán:** `pya_l02_p30_dao_nguoc_so_2_chu_so`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Câu lạc bộ thám tử nhí vừa nhận được một mật thư bí ẩn, trong đó các con số 2 chữ số đã bị đảo ngược vị trí hai chữ số cho nhau (ví dụ số 27 bị biến thành 72). Đội trưởng đố cả đội giải mã được con số thật. Các thám tử nhí soi kính lúp mà vẫn bối rối. Hãy giúp đội thám tử đảo ngược con số về đúng vị trí.
+* **Nhiệm vụ:** Nhập vào một số tự nhiên $N$ có đúng 2 chữ số ($10 \le N \le 99$). Hãy in ra số sau khi đảo ngược hai chữ số.
+* **Input:** Một số tự nhiên $N$.
+* **Output:** Số nguyên sau khi đảo ngược. (Lưu ý: Nếu số là 30 thì đảo lại là 3).
+* **Sample:** ### Input
+```text
+49
+```
+### Output
+```text
+94
+```
+### Giải thích
+
+Hàng chục là 4, hàng đơn vị là 9 $\to$ Đảo lại thành 94.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 24 (P2): Biểu thức có dấu ngoặc
+* **Mã bài toán:** `pya_l02_p33_tich_hai_tong`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Trong giờ thực hành đại số, cô giáo đưa ra bài toán ứng dụng: cho bốn số nguyên $a$, $b$, $c$, $d$, hãy tính tích của hai tổng $T = (a + b) \times (c - d)$. Đây là phép toán kết hợp giữa cộng, trừ và nhân — đòi hỏi học sinh phải hiểu rõ thứ tự ưu tiên phép tính khi viết biểu thức trong Python. Em hãy viết chương trình tính giá trị $T$ từ bốn số nhập vào.
+* **Nhiệm vụ:** Nhập 4 số nguyên $a, b, c, d$ trên cùng 1 dòng cách nhau dấu cách. In ra giá trị của $T$.
+* **Input:** Một dòng chứa 4 số nguyên $a, b, c, d$ ($-10^4 \le a, b, c, d \le 10^4$).
+* **Output:** In ra giá trị số nguyên $T$.
+* **Sample:** ### Input
+```text
+5 3 10 6
+```
+### Output
+```text
+32
+```
+### Giải thích
+$(5 + 3) \times (10 - 6) = 8 \times 4 = 32$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 25 (P2): Đồng hồ 24 giờ
+* **Mã bài toán:** `pya_l02_p34_dong_ho_24h`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Hiện tại đồng hồ đang chỉ $H$ giờ. Cần xác định xem sau $K$ giờ nữa thì đồng hồ chỉ mấy giờ?
+* **Nhiệm vụ:** Nhập hai số nguyên $H$ và $K$ trên 1 dòng ($0 \le H \le 23$, $0 \le K \le 10^9$). In ra số giờ mà đồng hồ sẽ hiển thị (từ 0 đến 23).
+* **Input:** Một dòng chứa $H$ và $K$.
+* **Output:** In ra giờ mới.
+* **Sample:** ### Input
+```text
+20 10
+```
+### Output
+```text
+6
+```
+### Giải thích
+$20 + 10 = 30$ giờ. $30 \% 24 = 6$ giờ sáng.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 26 (P2): Ngày trong tuần
+* **Mã bài toán:** `pya_l02_p35_ngay_trong_tuan`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Quy ước Chủ Nhật là ngày 0, Thứ Hai là ngày 1, ..., Thứ Bảy là ngày 6. Hôm nay là ngày $D$.
+* **Nhiệm vụ:** Nhập ngày hiện tại $D$ ($0 \le D \le 6$) và số ngày trôi qua $N$ ($0 \le N \le 10^9$). In ra thứ tương ứng sau $N$ ngày.
+* **Input:** Một dòng chứa hai số nguyên $D$ và $N$.
+* **Output:** In ra mã số ngày trong tuần (từ 0 đến 6).
+* **Sample:** ### Input
+```text
+1 10
+```
+### Output
+```text
+4
+```
+### Giải thích
+Thứ Hai là ngày 1. Sau 10 ngày nữa: $(1 + 10) \% 7 = 11 \% 7 = 4$ (tức Thứ Năm).
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 27 (P2): Chia đều bánh quy
+* **Mã bài toán:** `pya_l02_p01_chia_deu_banh_quy`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Tiệm bánh Hạnh Phúc vừa ra lò một mẻ gồm $a$ chiếc bánh quy bơ thơm phức. Cô chủ tiệm muốn chia đều số bánh vào $b$ đĩa trưng bày để phục vụ khách, sao cho mỗi đĩa có số bánh bằng nhau và nhiều nhất có thể. Những chiếc bánh còn dư không đủ xếp thêm một đĩa nữa sẽ được cất riêng vào hộp giữ tươi.
+* **Nhiệm vụ:** Cho hai số nguyên dương $a$ (tổng số bánh) và $b$ (số đĩa). Hãy lập trình tính số bánh trên mỗi đĩa (phần nguyên của phép chia $a : b$) và số bánh còn dư lại.
+* **Input:** Nhập vào 2 số nguyên dương $a$ và $b$ trên 2 dòng ($1 \le a, b \le 1000$).
+* **Output:** In ra 2 số trên một dòng cách nhau một dấu cách: số bánh trên mỗi đĩa và số bánh còn dư.
+* **Sample:** ### Input
+```text
+17
+5
+```
+### Output
+```text
+3 2
+```
+### Giải thích
+
+$17 : 5 = 3$ dư $2$. Mỗi đĩa 3 cái, còn dư 2 cái bánh.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 28 (P3): Xe buýt chở học sinh
+* **Mã bài toán:** `pya_l02_p31_xe_buyt_cho_hoc_sinh`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trường học sinh tổ chức một chuyến dã ngoại thật vui cho $N$ học sinh. Nhà trường thuê các xe buýt loại $K$ chỗ ngồi, mỗi xe buýt chở được tối đa $K$ bạn học sinh. Sáng khởi hành, các bạn xếp hàng ngay ngắn, tay vẫy cờ đỏ sao vàng. Thầy hiệu trưởng muốn không bạn nào bị ở lại trường. Hãy giúp thầy tính số xe buýt cần thuê.
+* **Nhiệm vụ:** Hỏi nhà trường cần thuê **ít nhất bao nhiêu xe buýt** để chở hết toàn bộ $N$ học sinh (không để bạn nào phải ở lại trường)?
+* **Input:** Nhập vào 2 số nguyên dương $N$ và $K$ ($1 \le N, K \le 10^6$).
+* **Output:** Một số nguyên duy nhất là số lượng xe buýt tối thiểu cần thuê.
+* **Sample:** ### Input
+```text
+25
+10
+```
+### Output
+```text
+3
+```
+### Giải thích
+Hai xe đầu chở được 20 bạn, còn 5 bạn nữa nên cần thuê thêm một xe.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 29 (P3): Tính số chuyến xe cần thiết
+* **Mã bài toán:** `pya_l02_p19_chuyen_xe_hoc_sinh`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trường trung học cơ sở Ngôi Sao Sáng tổ chức chuyến dã ngoại tham quan bảo tàng cho $N$ học sinh. Nhà trường thuê xe khách loại nhỏ, mỗi xe chở tối đa $K$ em. Ban tổ chức cần tính chính xác số xe tối thiểu phải thuê sao cho tất cả học sinh đều có chỗ ngồi, kể cả khi xe cuối cùng không chở đủ $K$ em vẫn phải thuê nguyên chiếc.
+* **Nhiệm vụ:** Nhập hai số nguyên dương $N$ và $K$ trên 1 dòng. In ra số lượng xe tối thiểu cần thuê để chở hết tất cả học sinh.
+* **Input:** Một dòng chứa hai số nguyên dương $N, K$ ($1 \le N, K \le 10^9$).
+* **Output:** In ra số xe tối thiểu.
+* **Sample:** ### Input
+```text
+41 10
+```
+### Output
+```text
+5
+```
+### Giải thích
+4 xe chở được 40 em, còn 1 em vẫn cần thêm 1 xe nữa $\implies$ Cần 5 xe. Công thức làm tròn lên chuẩn: `(N + K - 1) // K`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 30 (P3): Phép chia nguyên và chia dư cơ bản
+* **Mã bài toán:** `pya_l02_p21_chia_nguyen_chia_du`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trong giờ thực hành lập trình tại phòng máy tính của trường, thầy giáo Minh giao cho học sinh bài tập thú vị: cho hai số nguyên dương bất kỳ, hãy tính đồng thời kết quả phép chia nguyên (phần nguyên) và phép chia lấy dư (phần dư). Hai phép toán này là nền tảng quan trọng trong rất nhiều bài toán tin học, từ tách chữ số đến kiểm tra tính chẵn lẻ.
+* **Nhiệm vụ:** Nhập hai số nguyên dương $A$ và $B$ trên 1 dòng. In ra thương nguyên $A // B$ và phần dư $A \% B$ trên cùng một dòng cách nhau dấu cách.
+* **Input:** Một dòng chứa hai số nguyên dương $A, B$ ($1 \le B \le A \le 10^9$).
+* **Output:** Một dòng in ra $A // B$ và $A \% B$.
+* **Sample:** ### Input
+```text
+17 5
+```
+### Output
+```text
+3 2
+```
+### Giải thích
+$17 // 5 = 3$ và $17 \% 5 = 2$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 31 (P3): Kim đồng hồ 12 giờ
+* **Mã bài toán:** `pya_l02_p08_kim_dong_ho_12_gio`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trên tường lớp học treo một chiếc đồng hồ kim tròn xinh có 12 số đánh dấu từ 1 đến 12. Hiện tại kim giờ đang chỉ vào đúng số $H$. Cô giáo đố cả lớp: nếu chờ thêm đúng $K$ giờ nữa thì kim giờ sẽ nhích tới số mấy. Các bạn ngó nghiêng mãi chưa chắc chắn. Hãy giúp cả lớp tìm câu trả lời.
+* **Nhiệm vụ:** Sau đúng $K$ giờ nữa, hỏi kim giờ sẽ chỉ vào số mấy?
+* **Input:** Nhập vào 2 số nguyên $H$ ($1 \le H \le 12$) và $K$ ($1 \le K \le 10^9$).
+* **Output:** In ra một số nguyên từ 1 đến 12 là số mà kim giờ đang chỉ.
+* **Sample:** ### Input
+```text
+10
+5
+```
+### Output
+```text
+3
+```
+### Giải thích
+
+Lúc 10 giờ, sau 5 giờ nữa là 15 giờ. Trên đồng hồ 12 số tương ứng số 3.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 32 (P3): Chia kẹo cho các bạn
+* **Mã bài toán:** `pya_l02_p06_chia_keo_hoc_sinh`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Nhân dịp tổng kết cuối năm, cô giáo chủ nhiệm lớp 6A mua $N$ chiếc kẹo sô-cô-la để thưởng cho $K$ bạn học sinh xuất sắc. Cô muốn chia đều kẹo cho các bạn sao cho mỗi bạn nhận được số kẹo bằng nhau, phần kẹo dư ra (nếu có) cô sẽ giữ lại để lần sau. Em hãy tính xem mỗi bạn được bao nhiêu chiếc kẹo và còn dư lại bao nhiêu chiếc.
+* **Nhiệm vụ:** Nhập hai số nguyên dương $N$ và $K$ trên 1 dòng. In ra 2 dòng:
+* **Input:** Một dòng chứa hai số nguyên dương $N, K$ ($1 \le N, K \le 10^9$).
+* **Output:** Hai dòng lần lượt là thương nguyên và số kẹo dư.
+* **Sample:** ### Input
+```text
+25 4
+```
+### Output
+```text
+6
+1
+```
+### Giải thích
+Mỗi bạn được 6 kẹo, thừa lại 1 kẹo.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 33 (P3): Bàn cờ Ca-rô vô tận
+* **Mã bài toán:** `pya_l02_p12_ban_co_caro_vo_tan`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Giờ giải lao, hai bạn Bi và Bo rủ nhau chơi trên một bàn cờ ô vuông vô tận được chia thành các hàng, mỗi hàng có đúng $W$ ô vuông. Các ô vuông được đánh số liên tiếp bắt đầu từ $1$:
+ * Hàng 1 gồm các ô: $1, 2, \dots, W$.
+ * Hàng 2 gồm các ô: $W+1, W+2, \dots, 2W$.
+ * Cứ như vậy tiếp tục cho các hàng tiếp theo.
+Đến lượt đi, Bi chỉ vào một ô và đố Bo tìm vị trí của nó. Hãy tìm xem ô đó ở hàng mấy, cột mấy.
+* **Nhiệm vụ:** Cho biết số thứ tự của một ô là $K$. Hãy xác định xem ô đó nằm ở **Hàng thứ mấy** và **Cột thứ mấy** (Cột tính từ 1 đến $W$)?
+* **Input:** Gồm hai số tự nhiên $K$ và $W$ ($1 \le K, W \le 10^6$) mỗi số trên một dòng.
+* **Output:** In ra hai số nguyên trên một dòng cách nhau dấu cách: `hang cot`.
+* **Sample:** ### Input
+```text
+11
+4
+```
+### Output
+```text
+3 3
+```
+### Giải thích
+
+Mỗi hàng có 4 ô.
+Hàng 1: 1, 2, 3, 4
+Hàng 2: 5, 6, 7, 8
+Hàng 3: 9, 10, 11, 12.
+Ô số 11 nằm ở Hàng 3, Cột 3.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 34 (P3): Tổng các chữ số của số có 3 chữ số
+* **Mã bài toán:** `pya_l02_p17_tong_ba_chu_so`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Bạn Tâm tham gia cuộc thi đố vui toán học với thử thách: nhìn vào một số nguyên dương có đúng 3 chữ số, phải nhanh chóng cộng tổng cả ba chữ số lại. Ví dụ với số $496$, tổng các chữ số là $4 + 9 + 6 = 19$. Thay vì tính nhẩm, Tâm muốn viết một chương trình Python giúp tự động tách ba chữ số hàng trăm, hàng chục, hàng đơn vị rồi cộng lại.
+* **Nhiệm vụ:** Nhập số nguyên $N$ ($100 \le N \le 999$). In ra tổng của 3 chữ số hàng trăm, hàng chục và hàng đơn vị.
+* **Input:** Một dòng chứa số nguyên $N$.
+* **Output:** In ra tổng các chữ số.
+* **Sample:** ### Input
+```text
+385
+```
+### Output
+```text
+16
+```
+### Giải thích
+Chữ số hàng trăm $385 // 100 = 3$. Chữ số hàng chục $(385 // 10) \% 10 = 8$. Chữ số hàng đơn vị $385 \% 10 = 5$. Tổng $= 3 + 8 + 5 = 16$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 35 (P3): Tính phân số đại số
+* **Mã bài toán:** `pya_l02_p36_phan_so_dai_so`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trong phòng thí nghiệm vật lý, hai nhóm học sinh đo được các thông số $a$, $b$, $c$, $d$ từ thí nghiệm đo quang phổ. Công thức tổng hợp kết quả cuối cùng là một biểu thức phân số: $S = \frac{a + b}{c + d}$. Thầy giáo yêu cầu mỗi nhóm viết chương trình Python để tính tự động giá trị $S$, đảm bảo kết quả là số thực (phép chia thực) chứ không phải phép chia nguyên.
+* **Nhiệm vụ:** Nhập 4 số nguyên $a, b, c, d$ trên 1 dòng. In ra giá trị $S$ (làm tròn 2 chữ số thập phân).
+* **Input:** Một dòng chứa 4 số nguyên ($c + d \ne 0$).
+* **Output:** In ra giá trị số thực dạng `f"{S:.2f}"`.
+* **Sample:** ### Input
+```text
+7 8 2 3
+```
+### Output
+```text
+3.00
+```
+### Giải thích
+$(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 36 (P3): Số đảo ngược 3 chữ số
+* **Mã bài toán:** `pya_l02_p18_so_dao_nguoc_3_chu_so`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trong trò chơi "Gương thần kỳ diệu" tại lễ hội trường, mỗi thí sinh viết một số nguyên dương có đúng 3 chữ số lên bảng. Tấm gương ma thuật sẽ "phản chiếu" số đó — tức là đảo ngược thứ tự các chữ số. Ví dụ: số $123$ qua gương trở thành $321$, số $400$ trở thành $004$ (tức là $4$). Em hãy lập trình mô phỏng tấm gương thần này.
+* **Nhiệm vụ:** Nhập số nguyên $N$ gồm 3 chữ số ($100 \le N \le 999$, chữ số tận cùng khác 0). In ra số đảo ngược của $N$.
+* **Input:** Một dòng chứa số $N$.
+* **Output:** In ra số đảo ngược.
+* **Sample:** ### Input
+```text
+472
+```
+### Output
+```text
+274
+```
+### Giải thích
+Tách trăm $= 4$, chục $= 7$, đơn vị $= 2$. Số đảo ngược là $2 \times 100 + 7 \times 10 + 4 = 274$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---

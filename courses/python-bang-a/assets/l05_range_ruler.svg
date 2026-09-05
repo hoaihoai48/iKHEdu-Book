@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 290" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="shadowRuler" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="880" height="290" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="878" height="288" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="440" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    CHIẾC THƯỚC ĐO RANGE(START, STOP, STEP) VÀ CẬN TRÊN BỊ LOẠI TRỪ
+  </text>
+
+  <!-- Visual Example: range(2, 8, 2) -->
+  <text x="440" y="70" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#2563EB">
+    Ví dụ: range(2, 8, 2)  →  Các giá trị i lần lượt nhận: 2, 4, 6 (Dừng trước 8!)
+  </text>
+
+  <!-- Number Line / Ruler -->
+  <g transform="translate(40, 95)" filter="url(#shadowRuler)">
+    <!-- Ruler body: 800px wide, plenty of room for all markers and labels -->
+    <rect width="800" height="105" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    
+    <!-- Step markers -->
+    <!-- Point 0 -->
+    <line x1="50" y1="30" x2="50" y2="80" stroke="#94A3B8" stroke-width="2"/>
+    <text x="50" y="94" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#64748B">0</text>
+
+    <!-- Point 1 -->
+    <line x1="140" y1="45" x2="140" y2="65" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="140" y="86" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#94A3B8">1</text>
+
+    <!-- Point 2 (START) -->
+    <circle cx="230" cy="55" r="20" fill="#10B981"/>
+    <text x="230" y="62" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#FFFFFF">2</text>
+    <text x="230" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#059669">START (Bắt đầu)</text>
+
+    <!-- Point 3 -->
+    <line x1="320" y1="45" x2="320" y2="65" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="320" y="86" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#94A3B8">3</text>
+
+    <!-- Point 4 (STEP) -->
+    <circle cx="410" cy="55" r="20" fill="#3B82F6"/>
+    <text x="410" y="62" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#FFFFFF">4</text>
+    <!-- Curve 2 -> 4 -->
+    <path d="M 250 40 Q 320 12 390 40" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="4,2"/>
+    <text x="320" y="18" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#2563EB">+step (2)</text>
+
+    <!-- Point 5 -->
+    <line x1="500" y1="45" x2="500" y2="65" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="500" y="86" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#94A3B8">5</text>
+
+    <!-- Point 6 (STEP) -->
+    <circle cx="590" cy="55" r="20" fill="#3B82F6"/>
+    <text x="590" y="62" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#FFFFFF">6</text>
+    <!-- Curve 4 -> 6 -->
+    <path d="M 430 40 Q 500 12 570 40" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="4,2"/>
+    <text x="500" y="18" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#2563EB">+step (2)</text>
+
+    <!-- Point 7 -->
+    <line x1="670" y1="45" x2="670" y2="65" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="670" y="86" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#94A3B8">7</text>
+
+    <!-- Point 8 (STOP) EXCLUDED -->
+    <circle cx="735" cy="55" r="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+    <line x1="725" y1="45" x2="745" y2="65" stroke="#EF4444" stroke-width="2.5"/>
+    <line x1="745" y1="45" x2="725" y2="65" stroke="#EF4444" stroke-width="2.5"/>
+    <text x="735" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">STOP (Loại trừ!)</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="440" y="258" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-style="italic" fill="#64748B">
+    Quy tắc tử huyệt: Hàm range luôn luôn dừng trước giá trị stop. range(1, 10) chỉ chạy đến số 9!
+  </text>
+</svg>

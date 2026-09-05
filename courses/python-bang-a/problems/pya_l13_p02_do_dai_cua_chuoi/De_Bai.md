@@ -1,5 +1,9 @@
-# Độ Dài Của Chuỗi
+# Độ dài của chuỗi
 
+
+## Bối cảnh
+
+Độ dài chuỗi ký tự là thông số cơ bản nhất để kiểm soát giới hạn bộ đệm và tính hợp lệ của dữ liệu chuỗi đầu vào.
 
 ## Nhiệm vụ
 
@@ -14,12 +18,16 @@ Một số nguyên là độ dài chuỗi.
 
 ### Input
 ```text
-Tin hoc tre
+Python
 ```
 ### Output
 ```text
-11
+6
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `Python`, kết quả thu được tương ứng là `6`.
+
 
 
 ## Ràng buộc

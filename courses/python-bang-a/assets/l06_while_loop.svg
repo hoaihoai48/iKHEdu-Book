@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="whileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="shadowWhile" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="320" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="798" height="318" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    CHU TRÌNH VÒNG LẶP WHILE VÀ CƠ CHẾ ĐIỀU KHIỂN BREAK / CONTINUE
+  </text>
+
+  <!-- Step 1: Init Variable -->
+  <g transform="translate(60, 110)" filter="url(#shadowWhile)">
+    <rect width="150" height="80" rx="10" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2"/>
+    <text x="75" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8">1. Khởi tạo biến</text>
+    <text x="75" y="55" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#0F172A">i = 1</text>
+  </g>
+
+  <!-- Arrow to Condition -->
+  <path d="M 210 150 L 260 150" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="260,145 270,150 260,155" fill="#3B82F6"/>
+
+  <!-- Step 2: Diamond Condition -->
+  <g transform="translate(270, 105)" filter="url(#shadowWhile)">
+    <polygon points="80,0 160,45 80,90 0,45" fill="#8B5CF6"/>
+    <text x="80" y="40" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">2. KIỂM TRA</text>
+    <text x="80" y="58" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#FEF08A">i &lt;= 5 ?</text>
+  </g>
+
+  <!-- Branch TRUE: Loop Body -->
+  <path d="M 430 150 L 490 150" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="490,145 500,150 490,155" fill="#10B981"/>
+  <text x="465" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#059669">ĐÚNG</text>
+
+  <!-- Step 3: Loop Body -->
+  <g transform="translate(500, 70)" filter="url(#shadowWhile)">
+    <rect width="240" height="150" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="32" rx="10" fill="#10B981"/>
+    <rect x="0" y="18" width="240" height="14" fill="#10B981"/>
+    <text x="120" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">3. Thân Vòng Lặp</text>
+    
+    <text x="120" y="55" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#0F172A">print(i)</text>
+    <rect x="20" y="70" width="200" height="30" rx="6" fill="#EFF6FF" stroke="#3B82F6"/>
+    <text x="120" y="90" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#2563EB">i += 1  # Bắt buộc!</text>
+    <text x="120" y="125" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#DC2626">Quên i += 1 → Lặp vô tận!</text>
+  </g>
+
+  <!-- Loop Back Arrow -->
+  <path d="M 620 220 L 620 260 L 350 260 L 350 195" stroke="#10B981" stroke-width="2.5" stroke-dasharray="5,3" fill="none"/>
+  <polygon points="345,195 350,185 355,195" fill="#10B981"/>
+  <text x="480" y="278" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#059669">Quay lại kiểm tra điều kiện cho vòng lặp mới</text>
+
+  <!-- Branch FALSE: Exit Loop -->
+  <path d="M 350 105 L 350 65" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="345,65 350,55 355,65" fill="#EF4444"/>
+  <text x="350" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">SAI (Thoát lặp)</text>
+</svg>

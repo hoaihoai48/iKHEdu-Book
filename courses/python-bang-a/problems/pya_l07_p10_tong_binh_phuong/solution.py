@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L07-P10: Tổng Bình Phương
-# Cài đặt code chuẩn Python 3
+n = int(input())
+s = 0
+for i in range(1, n + 1):
+    s = s + i * i
+print(s)

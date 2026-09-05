@@ -1,2 +1,6 @@
-# Gợi ý mã nguồn cho PYA-L11-P02: Đếm Số Lượng Ước Số
-# Cài đặt code chuẩn Python 3
+n = int(input())
+dem = 0
+for i in range(1, n + 1):
+    if n % i == 0:
+        dem = dem + 1
+print(dem)

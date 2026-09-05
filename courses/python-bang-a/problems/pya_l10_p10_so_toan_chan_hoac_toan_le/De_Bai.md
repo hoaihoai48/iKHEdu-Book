@@ -1,9 +1,9 @@
-# Số Toàn Chẵn Hoặc Toàn Lẻ
+# Số toàn chẵn hoặc toàn lẻ
 
 
 ## Bối cảnh
 
-Lớp của bé Bi chia thành hai đội chơi xếp số rất vui. Đội Chẵn chỉ thích những số "Toàn chẵn", tức là số mà mọi chữ số của nó đều là số chẵn. Đội Lẻ lại mê những số "Toàn lẻ", tức là số mà mọi chữ số của nó đều là số lẻ. Trọng tài Tí nhờ em giúp phân xử thật nhanh mỗi con số, em hãy giúp bạn ấy nhé!
+Lớp của Bi chia thành hai đội chơi xếp số rất vui. Đội Chẵn chỉ thích những số "Toàn chẵn", tức là số mà mọi chữ số của nó đều là số chẵn. Đội Lẻ lại mê những số "Toàn lẻ", tức là số mà mọi chữ số của nó đều là số lẻ. Trọng tài Tí nhờ em giúp phân xử mỗi con số, hãy bạn ấy.
 ## Nhiệm vụ
 
 Nhập số nguyên dương $N$. In ra `TOAN CHAN` nếu $N$ là số toàn chẵn, in `TOAN LE` nếu $N$ toàn lẻ, ngược lại in `BINH THUONG`.
@@ -23,6 +23,10 @@ Một số tự nhiên $N$ ($1 \le N \le 10^{15}$).
 ```text
 TOAN CHAN
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `2468`, kết quả thu được tương ứng là `TOAN CHAN`.
+
 ## Sample 2
 
 ### Input

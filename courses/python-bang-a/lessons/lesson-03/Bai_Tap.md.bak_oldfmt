@@ -1,0 +1,277 @@
+# Danh Sách Bài Tập Thực Hành: Bài 03
+
+## Ma Trận Phân Tầng Bài Tập
+* **Nhóm Khởi Động (P0 - Hình học cơ bản vuông / chữ nhật):** P01, P02, P03, P04
+* **Nhóm Cơ Bản (P1 - Tam giác, hình thang & Đổi đơn vị đo chiều dài):** P05, P06, P07, P08
+* **Nhóm Luyện Tập (P2 - Đổi đơn vị thời gian & Làm tròn số thực):** P09, P10, P11, P12, P13
+* **Nhóm Vận Dụng & Thử Thách (P3/P4 - Bài toán đố thực tế hàng rào, lát gạch, hồ nước):** P14, P15, P16, P17, P18
+
+---
+
+### Bài 1 (P0): Chu vi và diện tích hình vuông
+* **Mã bài toán:** `pya_l03_p01_hinh_vuong`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Bác thợ mộc cần làm một mặt bàn hình vuông có cạnh dài $A$ mét.
+* **Nhiệm vụ:** Nhập một số nguyên dương $A$ là cạnh hình vuông. In ra chu vi và diện tích của hình vuông trên cùng một dòng cách nhau dấu cách.
+* **Input:** Một dòng chứa số nguyên dương $A$ ($1 \le A \le 10^4$).
+* **Output:** In ra chu vi và diện tích cách nhau một dấu cách.
+* **Sample 1:**
+  * **Input:** `6`
+  * **Output:** `24 36`
+  * **Giải thích:** Chu vi $6 \times 4 = 24$, Diện tích $6 \times 6 = 36$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 2 (P0): Chu vi và diện tích hình chữ nhật
+* **Mã bài toán:** `pya_l03_p02_hinh_chu_nhat`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Sân bóng rổ của trường học có chiều dài $A$ mét và chiều rộng $B$ mét.
+* **Nhiệm vụ:** Nhập hai số nguyên dương $A$ và $B$ trên cùng 1 dòng. In ra chu vi và diện tích của sân bóng rổ trên cùng một dòng cách nhau dấu cách.
+* **Input:** Một dòng chứa hai số nguyên dương $A, B$ ($1 \le B \le A \le 10^4$).
+* **Output:** In ra chu vi và diện tích.
+* **Sample 1:**
+  * **Input:** `10 6`
+  * **Output:** `32 60`
+  * **Giải thích:** Chu vi $2 \times (10 + 6) = 32$, Diện tích $10 \times 6 = 60$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 3 (P0): Chu vi hình tam giác
+* **Mã bài toán:** `pya_l03_p03_chu_vi_tam_giac`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Một bồn hoa có hình tam giác với độ dài 3 cạnh lần lượt là $A, B, C$.
+* **Nhiệm vụ:** Nhập 3 số nguyên dương $A, B, C$ trên cùng một dòng. In ra chu vi của bồn hoa đó.
+* **Input:** Một dòng chứa 3 số nguyên dương $A, B, C$ ($1 \le A, B, C \le 10^4$).
+* **Output:** In ra chu vi hình tam giác.
+* **Sample 1:**
+  * **Input:** `5 7 8`
+  * **Output:** `20`
+  * **Giải thích:** Chu vi $= 5 + 7 + 8 = 20$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 4 (P0): Diện tích tam giác vuông
+* **Mã bài toán:** `pya_l03_p04_dien_tich_tam_giac_vuong`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Một lá cờ hình tam giác vuông có hai cạnh góc vuông là $A$ và $B$.
+* **Nhiệm vụ:** Nhập hai số nguyên dương $A, B$ trên cùng 1 dòng. In ra diện tích lá cờ dưới dạng số thực lấy đúng 1 chữ số thập phân.
+* **Input:** Một dòng chứa hai số nguyên $A, B$ ($1 \le A, B \le 10^4$).
+* **Output:** In ra diện tích định dạng `f"{S:.1f}"`.
+* **Sample 1:**
+  * **Input:** `5 7`
+  * **Output:** `17.5`
+  * **Giải thích:** Diện tích $= (5 \times 7) / 2 = 17.5$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 5 (P1): Diện tích hình thang
+* **Mã bài toán:** `pya_l03_p05_dien_tich_hinh_thang`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Thửa ruộng hình thang có đáy lớn $A$, đáy bé $B$ và chiều cao $H$.
+* **Nhiệm vụ:** Nhập 3 số nguyên dương $A, B, H$ trên cùng một dòng. In ra diện tích thửa ruộng dưới dạng số thực lấy đúng 1 chữ số thập phân.
+* **Input:** Một dòng chứa 3 số nguyên $A, B, H$ ($1 \le B \le A \le 10^4$, $1 \le H \le 10^4$).
+* **Output:** In ra diện tích định dạng `f"{S:.1f}"`.
+* **Sample 1:**
+  * **Input:** `12 8 5`
+  * **Output:** `50.0`
+  * **Giải thích:** Diện tích $= ((12 + 8) \times 5) / 2 = 50.0$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 6 (P1): Đổi mét sang centimet và milimet
+* **Mã bài toán:** `pya_l03_p06_doi_don_vi_dai`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Trong giờ thực hành đo đạc, học sinh đo được độ dài một cây gậy bằng $M$ mét.
+* **Nhiệm vụ:** Nhập số nguyên dương $M$ (đơn vị mét). In ra 2 số trên 1 dòng cách nhau dấu cách: độ dài tương ứng theo centimet ($\text{cm}$) và milimet ($\text{mm}$).
+* **Input:** Một dòng chứa số nguyên $M$ ($1 \le M \le 1000$).
+* **Output:** In ra hai số nguyên cách nhau dấu cách.
+* **Sample 1:**
+  * **Input:** `3`
+  * **Output:** `300 3000`
+  * **Giải thích:** $3\text{m} = 300\text{cm} = 3000\text{mm}$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 7 (P1): Đổi tạ và yến sang kilogram
+* **Mã bài toán:** `pya_l03_p07_doi_khoi_luong`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Bác nông dân thu hoạch được $T$ tạ thóc và $Y$ yến thóc.
+* **Nhiệm vụ:** Nhập hai số nguyên $T$ và $Y$ trên cùng 1 dòng. In ra tổng khối lượng thóc tính bằng kilogram ($\text{kg}$).
+* **Input:** Một dòng chứa hai số nguyên $T, Y$ ($0 \le T, Y \le 1000$).
+* **Output:** In ra tổng khối lượng theo $\text{kg}$.
+* **Sample 1:**
+  * **Input:** `5 3`
+  * **Output:** `530`
+  * **Giải thích:** $5\text{ tạ} = 500\text{kg}$, $3\text{ yến} = 30\text{kg}$. Tổng $= 500 + 30 = 530\text{kg}$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 8 (P1): Tính vận tốc trung bình
+* **Mã bài toán:** `pya_l03_p08_van_toc_trung_binh`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Một chiếc xe ô tô đi quãng đường dài $S$ kilomet trong thời gian $T$ giờ.
+* **Nhiệm vụ:** Nhập hai số nguyên $S$ và $T$ ($1 \le T \le 100$, $1 \le S \le 10^5$). In ra vận tốc trung bình của ô tô làm tròn 2 chữ số thập phân.
+* **Input:** Một dòng chứa $S$ và $T$.
+* **Output:** In ra vận tốc dạng `f"{v:.2f}"` (đơn vị $\text{km/h}$).
+* **Sample 1:**
+  * **Input:** `100 3`
+  * **Output:** `33.33`
+  * **Giải thích:** $100 / 3 \approx 33.3333... \implies 33.33$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 9 (P2): Đổi phút sang Giờ và Phút
+* **Mã bài toán:** `pya_l03_p09_phut_sang_gio_phut`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Thời lượng một bộ phim hoạt hình là $M$ phút.
+* **Nhiệm vụ:** Nhập số nguyên dương $M$ ($1 \le M \le 10^6$). In ra định dạng `X gio Y phut`.
+* **Input:** Một dòng chứa số nguyên $M$.
+* **Output:** In ra định dạng `X gio Y phut`.
+* **Sample 1:**
+  * **Input:** `135`
+  * **Output:** `2 gio 15 phut`
+  * **Giải thích:** $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 10 (P2): Đổi tổng số giây sang Giờ, Phút, Giây
+* **Mã bài toán:** `pya_l03_p10_doi_giay_sang_gio_phut_giay`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Đồng hồ bấm giờ trong cuộc thi chạy marathon ghi nhận tổng thời gian là $T$ giây.
+* **Nhiệm vụ:** Nhập số nguyên dương $T$ ($1 \le T \le 10^9$). In ra theo định dạng `H:M:S`.
+* **Input:** Một dòng chứa số nguyên $T$.
+* **Output:** In ra chuỗi `H:M:S` (với $H$ là giờ, $M$ là phút, $S$ là giây).
+* **Sample 1:**
+  * **Input:** `3665`
+  * **Output:** `1:1:5`
+  * **Giải thích:** 1 giờ 1 phút 5 giây.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 11 (P2): Đổi Giờ - Phút - Giây sang tổng số giây
+* **Mã bài toán:** `pya_l03_p11_doi_sang_tong_giay`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Bài toán ngược lại: Cần quy đổi thời gian hiển thị `H giờ M phút S giây` về một số giây duy nhất để máy tính dễ so sánh.
+* **Nhiệm vụ:** Nhập 3 số nguyên $H, M, S$ trên cùng 1 dòng ($0 \le H \le 1000$, $0 \le M, S < 60$). In ra tổng số giây.
+* **Input:** Một dòng chứa 3 số nguyên $H, M, S$.
+* **Output:** In ra một số nguyên là tổng số giây.
+* **Sample 1:**
+  * **Input:** `2 15 30`
+  * **Output:** `8130`
+  * **Giải thích:** $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 12 (P2): Khoảng thời gian giữa hai thời điểm trong ngày
+* **Mã bài toán:** `pya_l03_p12_khoang_cach_thoi_gian`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Bạn Minh bắt đầu học bài lúc $H_1$ giờ $M_1$ phút và kết thúc lúc $H_2$ giờ $M_2$ phút (trong cùng một ngày).
+* **Nhiệm vụ:** Nhập 4 số nguyên $H_1, M_1, H_2, M_2$ trên 1 dòng. In ra khoảng thời gian học tính theo đơn vị phút.
+* **Input:** Một dòng chứa 4 số nguyên ($0 \le H_1 \le H_2 \le 23$, $0 \le M_1, M_2 < 60$, thời điểm 2 không sớm hơn thời điểm 1).
+* **Output:** In ra số phút chênh lệch.
+* **Sample 1:**
+  * **Input:** `8 30 10 15`
+  * **Output:** `105`
+  * **Giải thích:** Từ 8h30 đến 10h15 là 1 giờ 45 phút $= 60 + 45 = 105$ phút.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 13 (P2): Điểm trung bình môn học
+* **Mã bài toán:** `pya_l03_p13_diem_trung_binh`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Điểm học kỳ gồm 3 môn Toán, Tiếng Việt, Tiếng Anh.
+* **Nhiệm vụ:** Nhập 3 số thực là điểm của 3 môn trên cùng 1 dòng. In ra điểm trung bình cộng làm tròn đúng 2 chữ số thập phân.
+* **Input:** Một dòng chứa 3 số thực ($0 \le d_1, d_2, d_3 \le 10$).
+* **Output:** In ra điểm trung bình dạng `f"{dtb:.2f}"`.
+* **Sample 1:**
+  * **Input:** `8.5 9.0 7.5`
+  * **Output:** `8.33`
+  * **Giải thích:** $(8.5 + 9.0 + 7.5) / 3 = 25.0 / 3 \approx 8.3333... \implies 8.33$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 14 (P3): Hàng rào quanh mảnh đất
+* **Mã bài toán:** `pya_l03_p14_hang_rao_manh_dat`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Bác Năm có mảnh vườn hình chữ nhật dài $A$ mét, rộng $B$ mét. Bác muốn làm hàng rào lưới thép xung quanh, chừa lại một cổng ra vào rộng $C$ mét.
+* **Nhiệm vụ:** Nhập 3 số nguyên $A, B, C$ trên cùng 1 dòng ($C < 2 \times (A + B)$). In ra tổng chiều dài hàng rào lưới thép cần mua.
+* **Input:** Một dòng chứa 3 số nguyên $A, B, C$ ($1 \le A, B \le 10^4$, $1 \le C \le 100$).
+* **Output:** In ra chiều dài hàng rào.
+* **Sample 1:**
+  * **Input:** `20 15 3`
+  * **Output:** `67`
+  * **Giải thích:** Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{m} \implies 70 - 3 = 67\text{m}$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 15 (P3): Lát nền phòng học
+* **Mã bài toán:** `pya_l03_p15_lat_gach_nen_nha`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Phòng học hình chữ nhật có chiều dài $L$ mét và chiều rộng $W$ mét. Người ta dùng các viên gạch hoa hình vuông cạnh $D$ centimet để lát nền.
+* **Nhiệm vụ:** Nhập 3 số nguyên dương $L, W, D$ trên cùng 1 dòng ($L, W$ tính bằng mét, $D$ tính bằng centimet). Giả sử phòng học vừa khít các viên gạch, hãy in ra tổng số viên gạch cần dùng.
+* **Input:** Một dòng chứa 3 số nguyên $L, W, D$ ($1 \le L, W \le 100$, $10 \le D \le 100$).
+* **Output:** In ra số viên gạch cần dùng.
+* **Sample 1:**
+  * **Input:** `6 4 50`
+  * **Output:** `96`
+  * **Giải thích:** Đổi $L = 600\text{cm}, W = 400\text{cm}$. Diện tích sàn $= 600 \times 400 = 240000\text{cm}^2$. Diện tích 1 viên gạch $= 50 \times 50 = 2500\text{cm}^2$. Số gạch $= 240000 // 2500 = 96$ viên.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 16 (P3): Diện tích lối đi quanh hồ nước
+* **Mã bài toán:** `pya_l03_p16_loi_di_quanh_ho`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Trong công viên có một hồ nước hình chữ nhật kích thước dài $A$ mét, rộng $B$ mét. Xung quanh hồ, người ta làm một lối đi dạo có bề rộng đồng đều là $D$ mét.
+* **Nhiệm vụ:** Nhập 3 số nguyên $A, B, D$ trên cùng 1 dòng. Hãy tính diện tích của lối đi dạo đó.
+* **Input:** Một dòng chứa 3 số nguyên $A, B, D$ ($1 \le A, B \le 10^4$, $1 \le D \le 100$).
+* **Output:** In ra diện tích lối đi.
+* **Sample 1:**
+  * **Input:** `10 8 2`
+  * **Output:** `88`
+  * **Giải thích:** Kích thước cả hồ và lối đi là $(10 + 2 \times 2) = 14\text{m}$ và $(8 + 2 \times 2) = 12\text{m}$. Diện tích toàn phần $= 14 \times 12 = 168\text{m}^2$. Diện tích hồ $= 10 \times 8 = 80\text{m}^2$. Diện tích lối đi $= 168 - 80 = 88\text{m}^2$.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 17 (P4): Tính tiền mua sơn quét tường
+* **Mã bài toán:** `pya_l03_p17_son_tuong_phong`
+* **Độ khó:** P4 (Thử thách)
+* **Bối cảnh:** Một bức tường hình chữ nhật có chiều dài $A$ mét và chiều cao $H$ mét. Trên tường có một cửa sổ hình chữ nhật kích thước $X \times Y$ mét không cần quét sơn. Biết mỗi mét vuông tường tốn $G$ đồng tiền sơn.
+* **Nhiệm vụ:** Nhập 5 số nguyên $A, H, X, Y, G$ trên cùng 1 dòng. In ra tổng số tiền sơn cần chuẩn bị.
+* **Input:** Một dòng chứa 5 số nguyên dương ($X < A, Y < H$, $1 \le A, H \le 100$, $1 \le G \le 10^5$).
+* **Output:** In ra tổng số tiền sơn.
+* **Sample 1:**
+  * **Input:** `6 3 2 1 50000`
+  * **Output:** `800000`
+  * **Giải thích:** Diện tích tường $= 6 \times 3 = 18\text{m}^2$. Diện tích cửa sổ $= 2 \times 1 = 2\text{m}^2$. Diện tích cần sơn $= 18 - 2 = 16\text{m}^2$. Tổng tiền $= 16 \times 50000 = 800000$ đồng.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.
+
+---
+
+### Bài 18 (P4): Bài toán chạy bộ hai người ngược chiều
+* **Mã bài toán:** `pya_l03_p18_chay_bo_gap_nhau`
+* **Độ khó:** P4 (Thử thách)
+* **Bối cảnh:** Hai bạn An và Bình ở hai đầu một con đường thẳng dài $S$ mét. Cùng lúc, hai bạn chạy lại phía nhau: An chạy với vận tốc $V_1$ mét/giây, Bình chạy với vận tốc $V_2$ mét/giây.
+* **Nhiệm vụ:** Nhập 3 số nguyên $S, V_1, V_2$ trên cùng 1 dòng. In ra thời gian (tính bằng giây) kể từ lúc bắt đầu chạy cho đến khi hai bạn gặp nhau, làm tròn 1 chữ số thập phân.
+* **Input:** Một dòng chứa 3 số nguyên dương $S, V_1, V_2$ ($1 \le S \le 10^5$, $1 \le V_1, V_2 \le 100$).
+* **Output:** In ra thời gian gặp nhau dạng `f"{t:.1f}"`.
+* **Sample 1:**
+  * **Input:** `150 2 3`
+  * **Output:** `30.0`
+  * **Giải thích:** Vận tốc tiếp cận $= 2 + 3 = 5\text{m/s}$. Thời gian gặp nhau $= 150 / 5 = 30.0$ giây.
+* **Ràng buộc:** Thời gian $1.0\text{s}$, Bộ nhớ $256\text{MB}$.

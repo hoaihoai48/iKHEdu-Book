@@ -1,13 +1,17 @@
-# Số Xuất Hiện Nhiều Lần Nhất (Mode)
+# Số xuất hiện nhiều lần nhất (Mode)
 
+
+## Bối cảnh
+
+Tìm giá trị có tần số xuất hiện cao nhất (giá trị mốt - mode) là bài toán thống kê đặc trưng để nhận diện xu hướng dữ liệu phổ biến nhất.
 
 ## Nhiệm vụ
 
 Cho dãy $N$ số nguyên. Hãy tìm số xuất hiện nhiều lần nhất trong dãy. Nếu có nhiều số có cùng số lần xuất hiện nhiều nhất, hãy in ra số có giá trị nhỏ nhất trong các số đó.
 ## Input
 
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
+ * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
 ## Output
 
 Số xuất hiện nhiều nhất.
@@ -22,6 +26,11 @@ Số xuất hiện nhiều nhất.
 ```text
 2
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `7
+2 3 5 2 3 7 2`, kết quả thu được tương ứng là `2`.
+
 
 
 ## Ràng buộc

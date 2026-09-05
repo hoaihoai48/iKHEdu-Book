@@ -1,9 +1,9 @@
-# Kiểm Tra Số Chính Phương
+# Kiểm tra số chính phương
 
 
 ## Bối cảnh
 
-Giờ xếp hình, bé Bo xếp các viên gạch thành một ô vuông thật ngay ngắn. Cô giáo cười và bảo những số gạch xếp được thành hình vuông như vậy gọi là số chính phương: số bằng bình phương của một số tự nhiên (ví dụ: $0, 1, 4, 9, 16, 25, \dots$). Bo có một đống gạch mà chưa biết có xếp vuông được không, em hãy giúp bạn ấy kiểm tra nhé!
+Giờ xếp hình, Bo xếp các viên gạch thành một ô vuông thật ngay ngắn. Cô giáo cười và bảo những số gạch xếp được thành hình vuông như vậy gọi là số chính phương: số bằng bình phương của một số tự nhiên (ví dụ: $0, 1, 4, 9, 16, 25, \dots$). Bo có một đống gạch mà chưa biết có xếp vuông được không, hãy bạn ấy kiểm tra.
 ## Nhiệm vụ
 
 Nhập số nguyên dương $N$. Kiểm tra $N$ có phải số chính phương không. Nếu đúng in `YES`, ngược lại in `NO`.
@@ -23,6 +23,10 @@ Một số nguyên $N$ ($1 \le N \le 10^9$).
 ```text
 YES
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `25`, kết quả thu được tương ứng là `YES`.
+
 ## Sample 2
 
 ### Input

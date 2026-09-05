@@ -1,5 +1,9 @@
-# Chữ Số Lớn Nhất & Nhỏ Nhất
+# Chữ số lớn nhất & nhỏ nhất
 
+
+## Bối cảnh
+
+Thí sinh cần tìm giá trị lớn nhất hoặc nhỏ nhất trong một tập dữ liệu. Hãy viết chương trình tìm kiếm.
 
 ## Nhiệm vụ
 

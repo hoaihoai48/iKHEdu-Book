@@ -1,11 +1,11 @@
-# Mật Mã Thay Thế Hoán Vị (Anagram)
+# Mật mã thay thế hoán vị (anagram)
 
 
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi lập trình)*
 
 ## Bối cảnh
 
-Trong giờ thủ công, hai bạn cùng xáo trộn các thẻ chữ cái để xếp thành từ mới. Hai từ được gọi là "Anagram" (hoán vị ký tự của nhau) nếu chúng có thể tạo thành từ nhau bằng cách xáo trộn lại thứ tự các chữ cái (ví dụ: `silent` và `listen`, `heart` và `earth`). Cả lớp thi xem ai xếp được cặp từ trùng khớp nhau. Em hãy giúp các bạn kiểm tra xem hai từ có phải Anagram không nhé.
+Trong giờ thủ công, hai bạn cùng xáo trộn các thẻ chữ cái để xếp thành từ mới. Hai từ được gọi là "Anagram" (hoán vị ký tự của nhau) nếu chúng có thể tạo thành từ nhau bằng cách xáo trộn lại thứ tự các chữ cái (ví dụ: `silent` và `listen`, `heart` và `earth`). Cả lớp thi xem ai xếp được cặp từ trùng khớp nhau. Hãy giúp các bạn kiểm tra xem hai từ có phải Anagram không.
 ## Nhiệm vụ
 
 Cho 2 từ $S_1$ và $S_2$. Kiểm tra xem chúng có phải là Anagram của nhau không. In `YES` nếu đúng, ngược lại in `NO`.
@@ -26,6 +26,11 @@ silent
 ```text
 YES
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `listen
+silent`, kết quả thu được tương ứng là `YES`.
+
 ## Sample 2
 
 ### Input

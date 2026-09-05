@@ -1,2 +1,7 @@
-# Gợi ý mã nguồn cho PYA-L04-P06: Điền Phép Tính Lớn Nhất
-# Cài đặt code chuẩn Python 3
+a = int(input())
+cong = a + a
+nhan = a * a
+if nhan >= cong:
+    print(nhan)
+else:
+    print(cong)

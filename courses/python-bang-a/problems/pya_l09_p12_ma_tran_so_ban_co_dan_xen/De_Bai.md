@@ -1,5 +1,9 @@
-# Ma Trận Số Bàn Cờ Đan Xen
+# Ma trận số bàn cờ đan xen
 
+
+## Bối cảnh
+
+In bảng số $N \times M$ với các giá trị xen kẽ theo quy luật bàn cờ: ô đen ô trắng luân phiên.
 
 ## Nhiệm vụ
 
@@ -23,6 +27,13 @@ Ma trận vuông $N \times N$ đúng quy luật trên, mỗi dòng in $N$ số c
 1 0 1 0
 0 1 0 1
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `4`, kết quả thu được tương ứng là `1 0 1 0
+0 1 0 1
+1 0 1 0
+0 1 0 1`.
+
 
 
 ## Ràng buộc

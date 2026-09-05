@@ -1,2 +1,9 @@
-# Gợi ý mã nguồn cho PYA-L14-P04: Đếm Chữ Cái In Hoa & In Thường
-# Cài đặt code chuẩn Python 3
+s = input()
+hoa = 0
+thuong = 0
+for ch in s:
+    if ch.isupper():
+        hoa = hoa + 1
+    elif ch.islower():
+        thuong = thuong + 1
+print(str(hoa) + ' ' + str(thuong))

@@ -1,5 +1,9 @@
-# Tổng Dãy Số Kết Thúc Bằng 0
+# Tổng dãy số kết thúc bằng 0
 
+
+## Bối cảnh
+
+Thí sinh nhập liên tiếp các số nguyên. Khi nhập số 0, chương trình dừng lại và in ra tổng tất cả các số đã nhập trước đó.
 
 ## Nhiệm vụ
 

@@ -1,5 +1,9 @@
-# Tính Tổng Các Ước Số
+# Tính tổng các ước số
 
+
+## Bối cảnh
+
+Trong bài kiểm tra, người dùng cần tính nhanh tổng một dãy số. Hãy viết chương trình hỗ trợ tính toán.
 
 ## Nhiệm vụ
 

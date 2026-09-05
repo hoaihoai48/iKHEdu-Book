@@ -1,5 +1,9 @@
-# Cắt Đôi Chuỗi Ký Tự
+# Cắt đôi chuỗi ký tự
 
+
+## Bối cảnh
+
+Kỹ thuật chia đôi văn bản là bước khởi đầu trong nhiều thuật toán nén dữ liệu và mã hóa hai nửa đối xứng.
 
 ## Nhiệm vụ
 
@@ -21,6 +25,11 @@ PYTHON
 PYT
 HON
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `PYT
+HON`.
+
 
 
 ## Ràng buộc

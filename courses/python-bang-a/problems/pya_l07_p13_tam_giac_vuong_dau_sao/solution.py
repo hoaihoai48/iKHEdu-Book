@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L07-P13: Tam Giác Vuông Dấu Sao
-# Cài đặt code chuẩn Python 3
+n = int(input())
+for i in range(1, n + 1):
+    print('*' * i)

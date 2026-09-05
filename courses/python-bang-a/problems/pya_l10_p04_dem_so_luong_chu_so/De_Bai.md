@@ -1,5 +1,9 @@
-# Đếm Số Lượng Chữ Số
+# Đếm số lượng chữ số
 
+
+## Bối cảnh
+
+Trong lưu trữ dữ liệu số học, việc xác định độ dài số lượng chữ số của một số nguyên giúp hệ thống cấp phát bộ nhớ và căn chỉnh bảng biểu một cách chính xác.
 
 ## Nhiệm vụ
 

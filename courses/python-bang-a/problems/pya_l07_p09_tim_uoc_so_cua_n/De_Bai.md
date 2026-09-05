@@ -1,5 +1,9 @@
-# Tìm Ước Số Của N
+# Tìm ước số của N
 
+
+## Bối cảnh
+
+Thí sinh đang học về ước số trong giờ Toán. Hãy viết chương trình liệt kê tất cả các ước số của một số $N$ cho trước.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Các ước số của $N$ cách nhau một dấu cách.
 ```text
 1 2 3 4 6 12
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
+
 
 
 ## Ràng buộc

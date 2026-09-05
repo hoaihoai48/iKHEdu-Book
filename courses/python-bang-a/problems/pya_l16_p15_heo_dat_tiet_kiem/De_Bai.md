@@ -1,8 +1,8 @@
-# Heo Đất Tiết Kiệm
+# Heo đất tiết kiệm
 
 ## Bối cảnh
 
-Bé Na có một chú heo đất màu hồng rất xinh. Mỗi ngày, bé bỏ vào heo $A$ đồng tiền ăn sáng để dành. Đặc biệt, cứ vào các ngày chẵn (ngày thứ 2, 4, 6, ...) bé còn được mẹ thưởng thêm $B$ đồng vì chăm ngoan. Sau $N$ ngày, bé Na hồi hộp muốn biết trong heo có tất cả bao nhiêu tiền.
+Na có một chú heo đất màu hồng rất xinh. Mỗi ngày, nhỏ bỏ vào heo $A$ đồng tiền ăn sáng để dành. Đặc biệt, cứ vào các ngày chẵn (ngày thứ 2, 4, 6, ...) nhỏ còn được mẹ thưởng thêm $B$ đồng vì chăm ngoan. Sau $N$ ngày, Na hồi hộp muốn biết trong heo có tất cả bao nhiêu tiền.
 
 ## Nhiệm vụ
 

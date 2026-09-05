@@ -20,17 +20,26 @@ def read_markdown(path):
     return path.read_text(encoding="utf-8").strip()
 
 
+def lesson_title(path):
+    content_file = next(path.glob("Lesson*_Production_Content.md"), None)
+    if content_file and content_file.exists():
+        for line in content_file.read_text(encoding="utf-8").splitlines():
+            if line.startswith("# Bài"):
+                return line[2:].strip()
+    return path.name
+
+
+def normalize_assets(content):
+    # lessons dùng "assets/..." (relative lesson dir, vốn gãy) hoặc
+    # "../../assets/..." (đúng relative lesson dir);
+    # master nằm cùng cấp assets/ nên chuẩn hóa về "assets/..."
+    content = content.replace("../../assets/", "assets/")
+    return content
+
+
 def student_content(content):
-    replacements = {
-        "P0": "Cơ bản",
-        "P1": "Cơ bản",
-        "P2": "Luyện tập",
-        "P3": "Luyện tập",
-        "P4": "Vận dụng",
-        "P5": "Thử thách",
-    }
-    for source, target in replacements.items():
-        content = re.sub(rf"(?<![A-Z0-9]){source}(?![A-Z0-9])", target, content)
+    # GIỮ NGUYÊN mã P0..P5 (tránh nhãn kép "Cơ bản (Khởi động)").
+    # Chỉ chuẩn hóa thuật ngữ Anh -> Việt.
     return content.replace("Core ", "Bắt buộc ").replace("Challenge ", "Thử thách ")
 
 
@@ -40,7 +49,7 @@ def build_master():
         key=lesson_number,
     )
     output = [
-        "# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 7 CHƯƠNG",
+        "# iKHEDU PYTHON BẢNG A — TỔNG HỢP NỘI DUNG 6 CHƯƠNG",
         "",
         "> File tổng hợp tự động toàn bộ nội dung lesson của khóa Python Bảng A — Level 1.",
         "> Nguồn canonical vẫn là các file trong `lessons/`; không chỉnh sửa trực tiếp file này.",
@@ -51,22 +60,21 @@ def build_master():
 
     chapters = {
         1: "TÍNH TOÁN CƠ BẢN",
-        2: "TƯ DUY RẼ NHÁNH & ĐIỀU KIỆN LOGIC",
-        3: "VÒNG LẶP",
-        4: "BÀI TOÁN SỐ HỌC",
-        5: "DANH SÁCH (LIST)",
-        6: "XỬ LÝ CHUỖI & KÝ TỰ",
-        7: "LUYỆN ĐỀ THI",
+        2: "CẤU TRÚC RẼ NHÁNH & CẤU TRÚC VÒNG LẶP",
+        3: "BÀI TOÁN SỐ HỌC & TÁCH CHỮ SỐ",
+        4: "DANH SÁCH (LIST) & THỐNG KÊ",
+        5: "XỬ LÝ CHUỖI KÝ TỰ",
+        6: "LUYỆN THI",
     }
     lesson_chapter = {
-        1: 1, 2: 1, 3: 1, 4: 2, 5: 3, 6: 3, 7: 4, 8: 4,
-        9: 4, 10: 4, 11: 5, 12: 5, 13: 6, 14: 6, 15: 7, 16: 7,
+        1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3,
+        9: 3, 10: 3, 11: 4, 12: 4, 13: 5, 14: 5, 15: 6, 16: 6,
     }
     for chapter_number, chapter_title in chapters.items():
         output.append(f"### Chương {chapter_number}: {chapter_title}")
         for lesson in lessons:
             if lesson_chapter.get(lesson_number(lesson)) == chapter_number:
-                output.append(f"- Bài {lesson_number(lesson):02d}: {lesson.name}")
+                output.append(f"- {lesson_title(lesson)}")
 
     output.extend(
         [
@@ -112,7 +120,7 @@ def build_master():
             [
                 "",
                 "-" * 80,
-                f"<!-- Bài {lesson_number(lesson):02d}: {lesson.name} -->",
+                f"<!-- {lesson_title(lesson)} -->",
                 "-" * 80,
                 "",
             ]
@@ -122,7 +130,7 @@ def build_master():
                 [
                     "## Lý thuyết và Concept Quiz",
                     "",
-                    student_content(read_markdown(content_file)),
+                    normalize_assets(student_content(read_markdown(content_file))),
                     "",
                 ]
             )
@@ -131,7 +139,7 @@ def build_master():
                 [
                     "## Bài tập lesson",
                     "",
-                    student_content(read_markdown(exercise_file)),
+                    normalize_assets(student_content(read_markdown(exercise_file))),
                     "",
                 ]
             )

@@ -1,226 +1,374 @@
-# Hệ thống bài tập thực hành — bài 12: Thống kê danh sách và sắp xếp
+# Danh Sách Bài Tập Thực Hành: Bài 12: Thống kê danh sách và sắp xếp
 
+> Nguồn problems: l17 | Tổng 14 bài (sắp từ dễ đến khó theo rubric độ khó).
+
+## Ma Trận Phân Tầng
+* P0 (Khởi động): Bài 1-3
+* P1 (Cơ bản): Bài 4-6
+* P2 (Luyện tập): Bài 7-9
+* P3 (Vận dụng): Bài 10-14
 ---
 
-## Bảng ma trận bài tập (14 bài tập phân tầng cơ bản → thử thách)
-
-| STT | Mã bài | Tên bài toán | Cấp độ | Ràng buộc dữ liệu | Mục tiêu rèn luyện |
-|:---:|:---:|---|:---:|---|---|
-| 01 | `PYA-L17-P01` | Điểm số cao nhất & thấp nhất | `Cơ bản` | $N \le 1000$ | Dùng hàm `max()` và `min()` |
-| 02 | `PYA-L17-P02` | Sắp xếp tăng dần đơn giản | `Cơ bản` | $N \le 1000$ | Sử dụng `a.sort()` |
-| 03 | `PYA-L17-P03` | Điểm trung bình môn học | `Cơ bản` | $N \le 1000$ | Tính `sum(a) / len(a)` làm tròn 2 chữ số |
-| 04 | `PYA-L17-P04` | Sắp xếp giảm dần bảng xếp hạng | `Cơ bản` | $N \le 10^5$ | Sử dụng `a.sort(reverse=True)` |
-| 05 | `PYA-L17-P05` | Tìm số lớn thứ nhì trong mảng | `Cơ bản` | $N \le 10^5$ | Tìm số lớn thứ hai (loại trừ các số bằng max) |
-| 06 | `PYA-L17-P06` | Đếm số lượng học sinh trên điểm trung bình | `Luyện tập` | $N \le 10^5$ | So sánh từng phần tử với giá trị trung bình |
-| 07 | `PYA-L17-P07` | Lọc bỏ các số trùng lặp | `Luyện tập` | $N \le 10^5$ | Giữ lại các số độc nhất tăng dần |
-| 08 | `PYA-L17-P08` | Điểm Olympic bỏ max bỏ min | `Luyện tập` | $N \ge 3, N \le 1000$ | Bỏ 1 điểm cao nhất và 1 điểm thấp nhất |
-| 09 | `PYA-L17-P09` | Sắp xếp tên theo thứ tự bảng chữ cái | `Luyện tập` | $N \le 1000$ từ | Sắp xếp mảng chuỗi |
-| 10 | `PYA-L17-P10` | Chênh lệch nhỏ nhất giữa hai số | `Luyện tập` | $N \le 10^5$ | Sắp xếp mảng rồi tìm $\min(A_{i+1} - A_i)$ |
-| 11 | `PYA-L17-P11` | Trung vị của dãy số (median) | `Luyện tập` | $N \le 10^5$ | Tìm phần tử chính giữa sau khi sắp xếp |
-| 12 | `PYA-L17-P12` | Số xuất hiện nhiều lần nhất (mode) | `Vận dụng` | $N \le 10^5$ | Thống kê tần số xuất hiện cực đại |
-| 13 | `PYA-L17-P13` | Ghép hai dãy đã sắp xếp | `Vận dụng` | $N, M \le 10^5$ | Hợp nhất 2 mảng tăng dần thành mảng tăng dần |
-| 14 | `PYA-L17-P14` | Xếp hàng mua trà sữa (tổng thời gian chờ ít nhất) | `Thử thách` | $N \le 10^5$ | Thuật toán tham lam (greedy) bằng sắp xếp |
-
----
-
-### Bài 1 (Cơ bản): Điểm số cao nhất & thấp nhất (`PYA-L17-P01`)
-
-* **Yêu cầu:** Cho danh sách điểm thi của $N$ bạn học sinh. Hãy in ra điểm số cao nhất và điểm số thấp nhất trong danh sách.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
-  * Dòng 2: $N$ số nguyên là điểm của các bạn ($0 \le A_i \le 100$).
+### Bài 1 (P0): Điểm số cao nhất & thấp nhất
+* **Mã bài toán:** `pya_l17_p01_diem_so_cao_nhat_thap_nhat`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Xác định giá trị cực đại và cực tiểu trong tập số liệu điểm số là chỉ số đánh giá tổng quan phổ điểm của một đợt khảo sát.
+* **Nhiệm vụ:** Cho danh sách điểm thi của $N$ bạn học sinh. Hãy in ra điểm số cao nhất và điểm số thấp nhất trong danh sách.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+ * Dòng 2: $N$ số nguyên là điểm của các bạn ($0 \le A_i \le 100$).
 * **Output:** Điểm cao nhất, theo sau là điểm thấp nhất.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `5`<br>`80 95 60 100 75` | `100 60` |
+* **Sample:** ### Input
+```text
+5
+80 95 60 100 75
+```
+### Output
+```text
+100 60
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `5
+80 95 60 100 75`, kết quả thu được tương ứng là `100 60`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 2 (Cơ bản): Sắp xếp tăng dần đơn giản (`PYA-L17-P02`)
-
-* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy sắp xếp dãy số theo thứ tự tăng dần và in ra màn hình trên một dòng.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
-  * Dòng 2: $N$ số nguyên.
-* **Output:** Dãy số sau khi sắp xếp tăng dần, cách nhau bởi khoảng trắng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `5`<br>`9 2 7 1 5` | `1 2 5 7 9` |
-
----
-
-### Bài 3 (Cơ bản): Điểm trung bình môn học (`PYA-L17-P03`)
-
-* **Yêu cầu:** Cho danh sách điểm kiểm tra của $N$ bài thi. Hãy tính điểm trung bình cộng của các bài thi và in ra với đúng 2 chữ số sau dấu phẩy.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
-  * Dòng 2: $N$ số thực hoặc số nguyên là điểm các bài thi.
-* **Output:** Điểm trung bình cộng (định dạng `f"{tb:.2f}"`).
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `4`<br>`8 9 7 10` | `8.50` | $(8 + 9 + 7 + 10) / 4 = 8.5$. |
-
----
-
-### Bài 4 (Cơ bản): Sắp xếp giảm dần bảng xếp hạng (`PYA-L17-P04`)
-
-* **Yêu cầu:** Cho danh sách điểm số của $N$ thí sinh tham gia cuộc thi. Hãy sắp xếp bảng điểm theo thứ tự từ cao xuống thấp (giảm dần) để trao giải.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
-* **Output:** Bảng điểm sắp xếp giảm dần trên một dòng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `5`<br>`20 80 40 100 60` | `100 80 60 40 20` |
-
----
-
-### Bài 5 (Cơ bản): Tìm số lớn thứ nhì trong mảng (`PYA-L17-P05`)
-
-* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy tìm giá trị lớn thứ nhì trong dãy số (nghĩa là giá trị lớn nhất trong số các phần tử nhỏ hơn giá trị cực đại). Nếu tất cả các phần tử trong mảng đều bằng nhau, in ra `KHONG CO`.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($2 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
-* **Output:** Giá trị lớn thứ nhì, hoặc `KHONG CO`.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5`<br>`10 20 20 15 5` | `15` | Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15. |
-  | `3`<br>`5 5 5` | `KHONG CO` | Tất cả bằng nhau. |
-
----
-
-### Bài 6 (Luyện tập): Đếm số lượng học sinh trên điểm trung bình (`PYA-L17-P06`)
-
-* **Yêu cầu:** Cho điểm thi của $N$ học sinh. Hãy đếm xem có bao nhiêu bạn học sinh có điểm số lớn hơn hoặc bằng điểm trung bình cộng của cả lớp.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số thực.
-* **Output:** Số lượng học sinh đạt điểm $\ge$ điểm trung bình.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `4`<br>`8 6 10 4` | `2` | Điểm TB: $(8+6+10+4)/4 = 7.0$. Các bạn có điểm $\ge 7$ là 8 và 10 (có 2 bạn). |
-
----
-
-### Bài 7 (Luyện tập): Lọc bỏ các số trùng lặp (`PYA-L17-P07`)
-
-* **Yêu cầu:** Cho dãy gồm $N$ số nguyên có thể chứa nhiều số bị trùng lặp. Hãy lọc bỏ các phần tử trùng lặp và in ra các số độc nhất theo thứ tự tăng dần.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
+### Bài 2 (P0): Lọc bỏ các số trùng lặp
+* **Mã bài toán:** `pya_l17_p07_loc_bo_cac_so_trung_lap`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Loại bỏ các phần tử trùng lặp và sắp xếp lại tập hợp là bước tiền xử lý quan trọng trong làm sạch dữ liệu.
+* **Nhiệm vụ:** Cho dãy gồm $N$ số nguyên có thể chứa nhiều số bị trùng lặp. Hãy lọc bỏ các phần tử trùng lặp và in ra các số độc nhất theo thứ tự tăng dần.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
 * **Output:** Các số độc nhất sắp xếp tăng dần trên một dòng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `7`<br>`3 1 4 1 5 9 2` | `1 2 3 4 5 9` |
+* **Sample:** ### Input
+```text
+7
+3 1 4 1 5 9 2
+```
+### Output
+```text
+1 2 3 4 5 9
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `7
+3 1 4 1 5 9 2`, kết quả thu được tương ứng là `1 2 3 4 5 9`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 8 (Luyện tập): Điểm Olympic bỏ max bỏ min (`PYA-L17-P08`)
-
-* **Bối cảnh:** Trong hội thi Bơi lội Olympic, có $N$ giám khảo chấm điểm ($N \ge 3$). Để đảm bảo công bằng tuyệt đối, điểm số chính thức của vận động viên là trung bình cộng sau khi đã **bỏ đi một điểm cao nhất và một điểm thấp nhất**.
-* **Yêu cầu:** Cho $N$ điểm số. Hãy tính điểm chính thức của vận động viên (làm tròn 2 chữ số thập phân).
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($3 \le N \le 1000$).
-  * Dòng 2: $N$ số thực cách nhau bởi khoảng trắng.
-* **Output:** Điểm trung bình sau khi loại bỏ 1 điểm max và 1 điểm min.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5`<br>`7.0 9.0 8.0 10.0 6.0` | `8.00` | Bỏ min là 6.0, bỏ max là 10.0. Còn lại: 7.0, 8.0, 9.0. Trung bình là 8.00. |
-
----
-
-### Bài 9 (Luyện tập): Sắp xếp tên theo thứ tự bảng chữ cái (`PYA-L17-P09`)
-
-* **Yêu cầu:** Cho danh sách gồm $N$ từ tiếng Anh. Hãy sắp xếp danh sách từ theo thứ tự từ điển A-Z (tăng dần).
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
-  * Dòng 2: $N$ từ viết thường cách nhau bởi khoảng trắng.
+### Bài 3 (P0): Sắp xếp tên theo thứ tự bảng chữ cái
+* **Mã bài toán:** `pya_l17_p09_sap_xep_ten_theo_thu_tu_bang_chu_cai`
+* **Độ khó:** P0 (Khởi động)
+* **Bối cảnh:** Cô giáo cần sắp xếp lại danh sách điểm số của học sinh theo thứ tự. Hãy viết chương trình sắp xếp.
+* **Nhiệm vụ:** Cho danh sách gồm $N$ từ tiếng Anh. Hãy sắp xếp danh sách từ theo thứ tự từ điển A-Z (tăng dần).
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+ * Dòng 2: $N$ từ viết thường cách nhau bởi khoảng trắng.
 * **Output:** Danh sách từ sau khi sắp xếp trên một dòng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `4`<br>`orange apple banana grape` | `apple banana grape orange` |
+* **Sample:** ### Input
+```text
+4
+orange apple banana grape
+```
+### Output
+```text
+apple banana grape orange
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `4
+orange apple banana grape`, kết quả thu được tương ứng là `apple banana grape orange`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 10 (Luyện tập): Chênh lệch nhỏ nhất giữa hai số (`PYA-L17-P10`)
-*(Đề thi Tin học trẻ Bảng A)*
-
-* **Yêu cầu:** Cho dãy $N$ số nguyên đôi một khác nhau. Hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử bất kỳ trong dãy (tức là giá trị $|A_i - A_j|$ nhỏ nhất với $i \ne j$).
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($2 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
-* **Output:** Độ chênh lệch nhỏ nhất.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `4`<br>`10 1 8 15` | `2` | Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $|10 - 8| = 2$ (nhỏ nhất). |
-
----
-
-### Bài 11 (Luyện tập): Trung vị của dãy số (median) (`PYA-L17-P11`)
-
-* **Bối cảnh:** Cho một dãy gồm $N$ số nguyên lẻ phần tử ($N$ là số lẻ). Trung vị của dãy là phần tử nằm chính giữa sau khi dãy đã được sắp xếp tăng dần.
-* **Yêu cầu:** Cho dãy $N$ số nguyên ($N$ lẻ). Hãy tìm số trung vị của dãy số.
-* **Input:**
-  * Dòng 1: Số nguyên lẻ $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
-* **Output:** Giá trị trung vị.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `5`<br>`10 2 8 4 6` | `6` | Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6. |
-
----
-
-### Bài 12 (Vận dụng): Số xuất hiện nhiều lần nhất (mode) (`PYA-L17-P12`)
-
-* **Yêu cầu:** Cho dãy $N$ số nguyên. Hãy tìm số xuất hiện nhiều lần nhất trong dãy. Nếu có nhiều số có cùng số lần xuất hiện nhiều nhất, hãy in ra số có giá trị nhỏ nhất trong các số đó.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
-* **Output:** Số xuất hiện nhiều nhất.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `7`<br>`2 3 5 2 3 7 2` | `2` |
-
----
-
-### Bài 13 (Vận dụng): Ghép hai dãy đã sắp xếp (`PYA-L17-P13`)
-
-* **Yêu cầu:** Cho hai dãy số nguyên $A$ (gồm $N$ phần tử) và $B$ (gồm $M$ phần tử) đều đã được sắp xếp tăng dần. Hãy ghép hai dãy lại thành một dãy duy nhất gồm $(N + M)$ phần tử cũng được sắp xếp tăng dần.
-* **Input:**
-  * Dòng 1: Hai số $N$ và $M$ ($1 \le N, M \le 10^5$).
-  * Dòng 2: $N$ số nguyên của dãy $A$.
-  * Dòng 3: $M$ số nguyên của dãy $B$.
+### Bài 4 (P1): Ghép hai dãy đã sắp xếp
+* **Mã bài toán:** `pya_l17_p13_ghep_hai_day_da_sap_xep`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Cô giáo cần sắp xếp lại danh sách điểm số của học sinh theo thứ tự. Hãy viết chương trình sắp xếp.
+* **Nhiệm vụ:** Cho hai dãy số nguyên $A$ (gồm $N$ phần tử) và $B$ (gồm $M$ phần tử) đều đã được sắp xếp tăng dần. Hãy ghép hai dãy lại thành một dãy duy nhất gồm $(N + M)$ phần tử cũng được sắp xếp tăng dần.
+* **Input:** * Dòng 1: Hai số $N$ và $M$ ($1 \le N, M \le 10^5$).
+ * Dòng 2: $N$ số nguyên của dãy $A$.
+ * Dòng 3: $M$ số nguyên của dãy $B$.
 * **Output:** Dãy hợp nhất gồm $(N + M)$ phần tử tăng dần trên một dòng.
-* **Ví dụ mẫu:**
-  | Input | Output |
-  |---|---|
-  | `3 4`<br>`1 4 7`<br>`2 3 5 8` | `1 2 3 4 5 7 8` |
+* **Sample:** ### Input
+```text
+3 4
+1 4 7
+2 3 5 8
+```
+### Output
+```text
+1 2 3 4 5 7 8
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `3 4
+1 4 7
+2 3 5 8`, kết quả thu được tương ứng là `1 2 3 4 5 7 8`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
 
 ---
 
-### Bài 14 (Thử thách): Xếp hàng mua trà sữa (greedy) (`PYA-L17-P14`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+### Bài 5 (P1): Đếm số lượng học sinh trên điểm trung bình
+* **Mã bài toán:** `pya_l17_p06_dem_so_luong_hoc_sinh_tren_diem_trung_binh`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** So sánh từng phần tử với giá trị trung bình của cả tập hợp giúp đánh giá độ phân tán và chất lượng của các chỉ số thành phần.
+* **Nhiệm vụ:** Cho điểm thi của $N$ học sinh. Hãy đếm xem có bao nhiêu bạn học sinh có điểm số lớn hơn hoặc bằng điểm trung bình cộng của cả lớp.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số thực.
+* **Output:** Số lượng học sinh đạt điểm $\ge$ điểm trung bình.
+* **Sample:** ### Input
+```text
+4
+8 6 10 4
+```
+### Output
+```text
+2
+```
+### Giải thích
 
-* **Bối cảnh:** Có $N$ bạn học sinh cùng xếp hàng mua trà sữa. Bạn thứ $i$ cần $T_i$ phút để người bán hàng pha chế xong cốc trà sữa của mình.
-  Tổng thời gian chờ đợi của tất cả các bạn sẽ là tổng thời gian mà mỗi bạn phải đứng xếp hàng chờ cho đến khi nhận được trà sữa.
-* **Yêu cầu:** Hãy tìm cách sắp xếp thứ tự các bạn vào mua trà sữa sao cho **tổng thời gian chờ đợi của tất cả các bạn là NHỎ NHẤT CÓ THỂ**. Hãy in ra tổng thời gian chờ đợi nhỏ nhất đó.
-* **Input:**
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên $T_i$ ($1 \le T_i \le 1000$).
+Điểm TB: $(8+6+10+4)/4 = 7.0$. Các bạn có điểm $\ge 7$ là 8 và 10 (có 2 bạn).
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 6 (P1): Sắp xếp tăng dần đơn giản
+* **Mã bài toán:** `pya_l17_p02_sap_xep_tang_dan_don_gian`
+* **Độ khó:** P1 (Cơ bản)
+* **Bối cảnh:** Cô giáo cần sắp xếp lại danh sách điểm số của học sinh theo thứ tự. Yêu cầu sắp xếp dãy số tăng dần để phục vụ thống kê và tra cứu.
+* **Nhiệm vụ:** Cho dãy $N$ số nguyên. Hãy sắp xếp dãy số theo thứ tự tăng dần và in ra màn hình trên một dòng.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+ * Dòng 2: $N$ số nguyên.
+* **Output:** Dãy số sau khi sắp xếp tăng dần, cách nhau bởi khoảng trắng.
+* **Sample:** ### Input
+```text
+5
+9 2 7 1 5
+```
+### Output
+```text
+1 2 5 7 9
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `5
+9 2 7 1 5`, kết quả thu được tương ứng là `1 2 5 7 9`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 7 (P2): Sắp xếp giảm dần bảng xếp hạng
+* **Mã bài toán:** `pya_l17_p04_sap_xep_giam_dan_bang_xep_hang`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Cô giáo cần sắp xếp lại danh sách điểm số của học sinh theo thứ tự. Hãy viết chương trình sắp xếp.
+* **Nhiệm vụ:** Cho danh sách điểm số của $N$ thí sinh tham gia cuộc thi. Hãy sắp xếp bảng điểm theo thứ tự từ cao xuống thấp (giảm dần) để trao giải.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
+* **Output:** Bảng điểm sắp xếp giảm dần trên một dòng.
+* **Sample:** ### Input
+```text
+5
+20 80 40 100 60
+```
+### Output
+```text
+100 80 60 40 20
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `5
+20 80 40 100 60`, kết quả thu được tương ứng là `100 80 60 40 20`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 8 (P2): Trung vị của dãy số
+* **Mã bài toán:** `pya_l17_p11_trung_vi_cua_day_so_median`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Giờ ra chơi, các người dùng xếp thành một hàng dọc gồm $N$ bạn, trong đó $N$ là số lẻ. Cô giáo muốn tìm bạn đứng chính giữa sau khi cả hàng đã xếp theo chiều cao tăng dần, và bạn đó được gọi là trung vị của dãy: tức là phần tử nằm chính giữa sau khi dãy đã được sắp xếp tăng dần. Các bạn cứ nhốn nháo đổi chỗ mãi không xong. Hãy giúp cô tìm ra bạn đứng ở vị trí chính giữa.
+* **Nhiệm vụ:** Cho dãy $N$ số nguyên ($N$ lẻ). Hãy tìm số trung vị của dãy số.
+* **Input:** * Dòng 1: Số nguyên lẻ $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
+* **Output:** Giá trị trung vị.
+* **Sample:** ### Input
+```text
+5
+10 2 8 4 6
+```
+### Output
+```text
+6
+```
+### Giải thích
+
+Sắp xếp: [2, 4, 6, 8, 10]. Số chính giữa là 6.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 9 (P2): Tìm số lớn thứ nhì trong mảng
+* **Mã bài toán:** `pya_l17_p05_tim_so_lon_thu_nhi_trong_mang`
+* **Độ khó:** P2 (Luyện tập)
+* **Bối cảnh:** Thí sinh đang tìm kiếm một giá trị đặc biệt trong tập dữ liệu. Hãy viết chương trình tìm kiếm hiệu quả.
+* **Nhiệm vụ:** Cho dãy $N$ số nguyên. Hãy tìm giá trị lớn thứ nhì trong dãy số (nghĩa là giá trị lớn nhất trong số các phần tử nhỏ hơn giá trị cực đại). Nếu tất cả các phần tử trong mảng đều bằng nhau, in ra `KHONG CO`.
+* **Input:** * Dòng 1: Số nguyên $N$ ($2 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
+* **Output:** Giá trị lớn thứ nhì, hoặc `KHONG CO`.
+* **Sample:** ### Input
+```text
+5
+10 20 20 15 5
+```
+### Output
+```text
+15
+```
+### Giải thích
+
+Số lớn nhất là 20. Số lớn thứ hai nhỏ hơn 20 là 15.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 10 (P3): Điểm trung bình môn học
+* **Mã bài toán:** `pya_l17_p03_diem_trung_binh_mon_hoc`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Tính trung bình cộng của một tập hợp giá trị đo lường là phép toán thống kê cơ bản nhất trong xử lý số liệu thực nghiệm.
+* **Nhiệm vụ:** Cho danh sách điểm kiểm tra của $N$ bài thi. Hãy tính điểm trung bình cộng của các bài thi và in ra với đúng 2 chữ số sau dấu phẩy.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 1000$).
+ * Dòng 2: $N$ số thực hoặc số nguyên là điểm các bài thi.
+* **Output:** Điểm trung bình cộng (định dạng `f"{tb:.2f}"`).
+* **Sample:** ### Input
+```text
+4
+8 9 7 10
+```
+### Output
+```text
+8.50
+```
+### Giải thích
+
+$(8 + 9 + 7 + 10) / 4 = 8.5$.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 11 (P3): Chênh lệch nhỏ nhất giữa hai số
+* **Mã bài toán:** `pya_l17_p10_chenh_lech_nho_nhat_giua_hai_so`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Thí sinh cần tìm giá trị lớn nhất hoặc nhỏ nhất trong một tập dữ liệu. Hãy viết chương trình tìm kiếm.
+* **Nhiệm vụ:** Cho dãy $N$ số nguyên đôi một khác nhau. Hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử bất kỳ trong dãy (tức là giá trị $|A_i - A_j|$ nhỏ nhất với $i \ne j$).
+* **Input:** * Dòng 1: Số nguyên $N$ ($2 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
+* **Output:** Độ chênh lệch nhỏ nhất.
+* **Sample:** ### Input
+```text
+4
+10 1 8 15
+```
+### Output
+```text
+2
+```
+### Giải thích
+
+Sắp xếp: [1, 8, 10, 15]. Chênh lệch giữa 8 và 10 là $
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 12 (P3): Số xuất hiện nhiều lần nhất
+* **Mã bài toán:** `pya_l17_p12_so_xuat_hien_nhieu_lan_nhat_mode`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Tìm giá trị có tần số xuất hiện cao nhất (giá trị mốt - mode) là bài toán thống kê đặc trưng để nhận diện xu hướng dữ liệu phổ biến nhất.
+* **Nhiệm vụ:** Cho dãy $N$ số nguyên. Hãy tìm số xuất hiện nhiều lần nhất trong dãy. Nếu có nhiều số có cùng số lần xuất hiện nhiều nhất, hãy in ra số có giá trị nhỏ nhất trong các số đó.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
+* **Output:** Số xuất hiện nhiều nhất.
+* **Sample:** ### Input
+```text
+7
+2 3 5 2 3 7 2
+```
+### Output
+```text
+2
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `7
+2 3 5 2 3 7 2`, kết quả thu được tương ứng là `2`.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 13 (P3): Điểm olympic bỏ max bỏ min
+* **Mã bài toán:** `pya_l17_p08_diem_olympic_bo_max_bo_min`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Cuối tuần này, trường em tổ chức hội thi Bơi lội Olympic thật vui nhộn. Có $N$ giám khảo cùng ngồi chấm điểm cho mỗi người dùng ($N \ge 3$). Để cho thật công bằng, điểm số chính thức của vận động viên sẽ là trung bình cộng sau khi đã **bỏ đi một điểm cao nhất và một điểm thấp nhất**. Trọng tài đang lúng túng với đống bảng điểm nên hãy bác ấy tính điểm thật chính xác.
+* **Nhiệm vụ:** Cho $N$ điểm số. Hãy tính điểm chính thức của vận động viên (làm tròn 2 chữ số thập phân).
+* **Input:** * Dòng 1: Số nguyên $N$ ($3 \le N \le 1000$).
+ * Dòng 2: $N$ số thực cách nhau bởi khoảng trắng.
+* **Output:** Điểm trung bình sau khi loại bỏ 1 điểm max và 1 điểm min.
+* **Sample:** ### Input
+```text
+5
+7.0 9.0 8.0 10.0 6.0
+```
+### Output
+```text
+8.00
+```
+### Giải thích
+
+Bỏ min là 6.0, bỏ max là 10.0. Còn lại: 7.0, 8.0, 9.0. Trung bình là 8.00.
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---
+
+### Bài 14 (P3): Xếp hàng mua trà sữa
+* **Mã bài toán:** `pya_l17_p14_xep_hang_mua_tra_sua_greedy`
+* **Độ khó:** P3 (Vận dụng)
+* **Bối cảnh:** Giờ tan học, có $N$ bạn học sinh cùng ríu rít xếp hàng mua trà sữa ở căng tin trường. Bạn thứ $i$ cần $T_i$ phút để người bán hàng pha chế xong cốc trà sữa của mình. Tổng thời gian chờ đợi của tất cả các bạn sẽ là tổng thời gian mà mỗi bạn phải đứng xếp hàng chờ cho đến khi nhận được trà sữa. Nhìn hàng dài mà các bạn ai cũng mỏi chân, hãy cô bán hàng tìm cách xếp hàng sao cho mọi người chờ ít nhất.
+* **Nhiệm vụ:** Hãy tìm cách sắp xếp thứ tự các bạn vào mua trà sữa sao cho **tổng thời gian chờ đợi của tất cả các bạn là NHỎ NHẤT CÓ THỂ**. Hãy in ra tổng thời gian chờ đợi nhỏ nhất đó.
+* **Input:** * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên $T_i$ ($1 \le T_i \le 1000$).
 * **Output:** Một số nguyên duy nhất là tổng thời gian chờ đợi nhỏ nhất.
-* **Ví dụ mẫu:**
-  | Input | Output | Giải thích |
-  |---|---|---|
-  | `3`<br>`3 1 2` | `10` | Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt là 1, 2, 3.<br>- Bạn 1 chờ 1 phút.<br>- Bạn 2 chờ $1 + 2 = 3$ phút.<br>- Bạn 3 chờ $1 + 2 + 3 = 6$ phút.<br>Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất). |
+* **Sample:** ### Input
+```text
+3
+3 1 2
+```
+### Output
+```text
+10
+```
+### Giải thích
+
+Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt là 1, 2, 3.
+- Bạn 1 chờ 1 phút.
+- Bạn 2 chờ $1 + 2 = 3$ phút.
+- Bạn 3 chờ $1 + 2 + 3 = 6$ phút.
+Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
+* **Ràng buộc:** * **Giới hạn thời gian:** $1.0\text{s}$
+* **Giới hạn bộ nhớ:** $256\text{MB}$
+
+---

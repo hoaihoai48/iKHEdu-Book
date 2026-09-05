@@ -1,23 +1,31 @@
-# Lời Chào Robot
-
+# Lời chào robot
 
 ## Bối cảnh
 
-Sáng nay, phòng thí nghiệm iKHEDU rộn ràng hẳn lên. Các bạn nhỏ từ trường Tiểu học kéo đến tham quan, ai cũng háo hức muốn gặp bạn Robot thông minh nổi tiếng. Bạn Robot vừa được khởi động xong, đôi mắt đèn còn chớp chớp làm quen với mọi người xung quanh. Để chào đón các bạn nhỏ, em hãy giúp Robot cất lên lời chào đầu tiên thật to và rõ ràng nhé!
+Khi một hệ thống tự hành hoặc robot công nghiệp được khởi động trong phòng thực hành lập trình, hệ thống cần gửi thông điệp chào mừng đầu tiên ra thiết bị đầu ra tiêu chuẩn.
+
 ## Nhiệm vụ
 
-Viết chương trình in ra chính xác dòng chữ sau trên một dòng:
-  ```text
-  Xin chao cac ban! Toi la Robot Python.
-  ```
+Viết chương trình in ra chính xác dòng thông điệp: `Xin chao cac ban! Toi la Robot Python.`
+
 ## Input
-
 Không có dữ liệu vào.
+
 ## Output
+In ra một dòng chứa câu chào đúng mẫu.
 
-In ra một dòng chứa câu chào theo đúng mẫu.
+## Sample 1
+### Input
+```text
+
+```
+### Output
+```text
+Xin chao cac ban! Toi la Robot Python.
+```
+### Giải thích
+In chính xác câu chào ra màn hình theo đúng quy định.
+
 ## Ràng buộc
-
-
 * **Giới hạn thời gian:** $1.0\text{s}$
 * **Giới hạn bộ nhớ:** $256\text{MB}$

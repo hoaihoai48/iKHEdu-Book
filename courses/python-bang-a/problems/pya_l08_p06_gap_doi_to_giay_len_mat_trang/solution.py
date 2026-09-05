@@ -1,2 +1,7 @@
-# Gợi ý mã nguồn cho PYA-L08-P06: Gấp Đôi Tờ Giấy Lên Mặt Trăng
-# Cài đặt code chuẩn Python 3
+h = int(input())
+day = 1
+count = 0
+while day < h:
+    day = day * 2
+    count = count + 1
+print(count)

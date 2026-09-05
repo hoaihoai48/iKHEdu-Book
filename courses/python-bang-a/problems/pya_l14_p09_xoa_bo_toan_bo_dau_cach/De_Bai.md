@@ -1,5 +1,9 @@
-# Xóa Bỏ Toàn Bộ Dấu Cách
+# Xóa bỏ toàn bộ dấu cách
 
+
+## Bối cảnh
+
+Loại bỏ toàn bộ khoảng trắng thừa giúp nén kích thước chuỗi và chuẩn hóa dữ liệu khóa tìm kiếm.
 
 ## Nhiệm vụ
 
@@ -14,12 +18,16 @@ Chuỗi viết liền không còn khoảng trắng.
 
 ### Input
 ```text
-Tin Hoc Tre Bang A
+Lap Trinh Python Bang A
 ```
 ### Output
 ```text
-TinHocTreBangA
+LapTrinhPythonBangA
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `Lap Trinh Python Bang A`, kết quả thu được tương ứng là `LapTrinhPythonBangA`.
+
 
 
 ## Ràng buộc

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" width="100%" height="100%">
+  <defs>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="shadowClock" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="290" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="798" height="288" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    MÔ HÌNH QUY ĐỔI THỜI GIAN: TỪ GIÂY SANG GIỜ - PHÚT - GIÂY
+  </text>
+
+  <!-- Input: Total Seconds T -->
+  <g transform="translate(40, 70)" filter="url(#shadowClock)">
+    <rect width="180" height="150" rx="12" fill="url(#secGrad)"/>
+    <text x="90" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">TỔNG SỐ GIÂY T</text>
+    <rect x="15" y="50" width="150" height="85" rx="8" fill="#FFFFFF" fill-opacity="0.15"/>
+    <text x="90" y="80" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="bold" fill="#FDE047">T = 3665s</text>
+    <text x="90" y="112" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#DBEAFE">Thời gian đầu vào</text>
+  </g>
+
+  <!-- Step 1: Extract Hours -->
+  <g transform="translate(250, 70)" filter="url(#shadowClock)">
+    <rect width="160" height="150" rx="12" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <rect x="0" y="0" width="160" height="36" rx="12" fill="#10B981"/>
+    <rect x="0" y="20" width="160" height="16" fill="#10B981"/>
+    <text x="80" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">BƯỚC 1: TÁCH GIỜ</text>
+    
+    <text x="80" y="65" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#047857">gio = T // 3600</text>
+    <text x="80" y="90" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="bold" fill="#059669">1 GIỜ</text>
+    <line x1="20" y1="105" x2="140" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="80" y="125" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#64748B">Dư: 3665 % 3600 = 65s</text>
+  </g>
+
+  <!-- Step 2: Extract Minutes & Seconds -->
+  <g transform="translate(440, 70)" filter="url(#shadowClock)">
+    <rect width="160" height="150" rx="12" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="160" height="36" rx="12" fill="#F59E0B"/>
+    <rect x="0" y="20" width="160" height="16" fill="#F59E0B"/>
+    <text x="80" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">BƯỚC 2: PHÚT</text>
+    
+    <text x="80" y="65" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#B45309">phut = 65 // 60</text>
+    <text x="80" y="90" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="bold" fill="#D97706">1 PHÚT</text>
+    <line x1="20" y1="105" x2="140" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="80" y="125" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#64748B">Dư: 65 % 60 = 5s</text>
+  </g>
+
+  <!-- Result: Output -->
+  <g transform="translate(630, 70)" filter="url(#shadowClock)">
+    <rect width="130" height="150" rx="12" fill="#FFFFFF" stroke="#EF4444" stroke-width="2"/>
+    <rect x="0" y="0" width="130" height="36" rx="12" fill="#EF4444"/>
+    <rect x="0" y="20" width="130" height="16" fill="#EF4444"/>
+    <text x="65" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">BƯỚC 3: GIÂY</text>
+    
+    <text x="65" y="65" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#DC2626">giay = 5</text>
+    <text x="65" y="90" text-anchor="middle" font-family="Consolas, monospace" font-size="18" font-weight="bold" fill="#EF4444">5 GIÂY</text>
+    <line x1="15" y1="105" x2="115" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="65" y="125" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#64748B">Phần dư cuối</text>
+  </g>
+
+  <!-- Bottom Formula -->
+  <text x="400" y="260" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1E293B">
+    Kết quả: 3665 giây = 1 giờ : 1 phút : 5 giây (1:1:5)
+  </text>
+</svg>

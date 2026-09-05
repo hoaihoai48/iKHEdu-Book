@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L09-P07: Dãy Số Bội Ba Bội Năm
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+res = []
+num = 1
+while len(res) < n:
+    if num % 3 == 0 or num % 5 == 0:
+        res.append(str(num))
+    num += 1
+print(" ".join(res))

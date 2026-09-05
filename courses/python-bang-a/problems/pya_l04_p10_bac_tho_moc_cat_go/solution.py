@@ -1,10 +1,6 @@
-line = input().split()
-if len(line) == 2:
-    l, k = map(int, line)
-else:
-    l = int(line[0])
-    k = int(input().strip())
-if l >= k:
-    print(l // k, l % k)
-else:
+l = int(input())
+k = int(input())
+if l < k:
     print("KHONG DU")
+else:
+    print(l // k, l % k)

@@ -1,4 +1,4 @@
-# Tổng Chữ Số Lớn Nhất
+# Tổng chữ số lớn nhất
 
 ## Bối cảnh
 

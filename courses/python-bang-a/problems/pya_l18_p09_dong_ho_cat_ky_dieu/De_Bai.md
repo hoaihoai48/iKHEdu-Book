@@ -1,9 +1,9 @@
-# Đồng Hồ Cát Kỳ Diệu
+# Đồng hồ cát kỳ diệu
 
 
 ## Bối cảnh
 
-Bạn Tèo được tặng một chiếc đồng hồ cát kỳ diệu có thể đo được các khoảng thời gian thật hay. Tối nay, bạn cùng bố quan sát bầu trời đầy sao, bắt đầu từ $0$ giờ $0$ phút $0$ giây. Sau đúng $S$ giây ngắm sao, buổi quan sát kết thúc và hai bố con muốn ghi lại giờ giấc thật đẹp. Em hãy giúp hai bố con đổi số giây thành giờ phút giây nhé!
+Bạn Tèo được tặng một chiếc đồng hồ cát kỳ diệu có thể đo được các khoảng thời gian thật hay. Tối nay, bạn cùng bố quan sát bầu trời đầy sao, bắt đầu từ $0$ giờ $0$ phút $0$ giây. Sau đúng $S$ giây ngắm sao, buổi quan sát kết thúc và hai bố con muốn ghi lại giờ giấc thật đẹp. Hãy giúp hai bố con đổi số giây thành giờ phút giây.
 ## Nhiệm vụ
 
 Hãy đổi $S$ giây thành định dạng chuẩn: `HH:MM:SS` (Giờ:Phút:Giây), mỗi thành phần luôn có 2 chữ số (ví dụ: `05:08:09`).
@@ -23,6 +23,10 @@ Chuỗi giờ phút giây định dạng `HH:MM:SS`.
 ```text
 01:01:05
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `3665`, kết quả thu được tương ứng là `01:01:05`.
+
 
 
 ## Ràng buộc

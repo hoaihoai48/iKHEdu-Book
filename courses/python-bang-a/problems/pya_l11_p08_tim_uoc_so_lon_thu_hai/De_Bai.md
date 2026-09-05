@@ -1,5 +1,9 @@
-# Tìm Ước Số Lớn Thứ Hai
+# Tìm ước số lớn thứ hai
 
+
+## Bối cảnh
+
+Thí sinh đang tìm kiếm một giá trị đặc biệt trong tập dữ liệu. Hãy viết chương trình tìm kiếm hiệu quả.
 
 ## Nhiệm vụ
 

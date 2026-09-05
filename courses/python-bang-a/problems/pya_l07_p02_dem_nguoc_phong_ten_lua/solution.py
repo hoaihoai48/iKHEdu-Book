@@ -1,2 +1,4 @@
-# Gợi ý mã nguồn cho PYA-L07-P02: Đếm Ngược Phóng Tên Lửa
-# Cài đặt code chuẩn Python 3
+n = int(input())
+for i in range(n, 0, -1):
+    print(i)
+print("PHONG!")

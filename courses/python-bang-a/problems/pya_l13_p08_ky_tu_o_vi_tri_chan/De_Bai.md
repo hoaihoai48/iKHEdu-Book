@@ -1,5 +1,9 @@
-# Ký Tự Ở Vị Trí Chẵn
+# Ký tự Ở vị trí chẵn
 
+
+## Bối cảnh
+
+Trích xuất các ký tự tại các vị trí chỉ số chẵn là phương pháp lấy mẫu tín hiệu rời rạc phổ biến trong xử lý chuỗi văn bản.
 
 ## Nhiệm vụ
 

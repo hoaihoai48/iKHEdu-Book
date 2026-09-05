@@ -37,7 +37,7 @@
 
 ## Quyết định phạm vi
 
-Khóa học giữ nguyên **6 chương / 18 bài**, tập trung vào Python 3 và tư duy giải bài cho Tin học trẻ Bảng A. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
+Khóa học giữ nguyên **6 chương / 18 bài**, tập trung vào Python 3 và tư duy giải bài cho Python Bảng A. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
 
 Các nội dung như `def`, `return`, `dict`, `set`, tuple, module, file I/O, exception nâng cao và comprehension không phải chuẩn bắt buộc của Level 1. Có thể giới thiệu ở Level 2 hoặc phụ lục khi cần.
 
@@ -460,7 +460,7 @@ Một bài toán yêu cầu: *"Nhập vào số lượng học sinh $N$, sau đ�
 ---
 
 ### Bài 5 (Cơ bản): Đổi thước kẻ milimet (`PYA-L01-P05`)
-*(Lấy cảm hứng từ Bài 2 Đề thi Tin học trẻ TP Bắc Ninh)*
+*(Lấy cảm hứng từ Bài 2 Đề thi Lập trình Python TP Bắc Ninh)*
 
 * **Bối cảnh:** Bạn An có một chiếc thước kẻ dài $a\text{ cm}$ và thêm một đoạn nhỏ dài $b\text{ mm}$. Em hãy giúp An đổi toàn bộ chiều dài chiếc thước đó ra đơn vị milimet ($\text{mm}$).
 * **Biết rằng:** $1\text{ cm} = 10\text{ mm}$.
@@ -537,7 +537,7 @@ Một bài toán yêu cầu: *"Nhập vào số lượng học sinh $N$, sau đ�
 ---
 
 ### Bài 9 (Luyện tập): Vé tham quan chùa hương (`PYA-L01-P09`)
-*(Lấy cảm hứng từ Bài 4 Đề thi Tin học trẻ Thị xã Thái Hòa - Nghệ An)*
+*(Lấy cảm hứng từ Bài 4 Đề thi Lập trình Python Thị xã Thái Hòa - Nghệ An)*
 
 * **Bối cảnh:** Một đoàn khách chuẩn bị đi tham quan Chùa Hương Tích. Để lên chùa, đoàn phải đi thuyền và đi cáp treo:
   * Vé thuyền: người lớn $a$ nghìn đồng/người, trẻ em $b$ nghìn đồng/người.
@@ -596,8 +596,8 @@ Một bài toán yêu cầu: *"Nhập vào số lượng học sinh $N$, sau đ�
 
 # Bài 02: Phép toán số học, chia nguyên và chia dư
 
-## 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
-Python cung cấp 7 phép toán số học. Trong đó, bộ đôi **Chia lấy phần nguyên (`//`)** và **Chia lấy phần dư (`%`)** là nền tảng cốt lõi của mọi bài thi Tin học trẻ:
+## 1. Kiến thức chuyên sâu dành cho học sinh Phổ thông
+Python cung cấp 7 phép toán số học. Trong đó, bộ đôi **Chia lấy phần nguyên (`//`)** và **Chia lấy phần dư (`%`)** là nền tảng cốt lõi của mọi bài thi Lập trình Python:
 
 ```
 Phép chia: A : B  (Ví dụ: 17 chia cho 5)
@@ -621,7 +621,7 @@ Phép chia: A : B  (Ví dụ: 17 chia cho 5)
 - **Ý nghĩa:** Trả lời câu hỏi *"Sau khi chia đều hết mức có thể, còn thừa ra bao nhiêu?"*.
 - `19 % 4 = 3` (vì $4 	\times 4 = 16$, còn dư $19 - 16 = 3$).
 
-### D. Định lý chia có dư Toán Tiểu học trong Python
+### D. Định lý chia có dư Toán Phổ thông trong Python
 $$\mathbf{A} = (\mathbf{A} // \mathbf{B}) 	\times \mathbf{B} + (\mathbf{A} \% \mathbf{B})$$
 
 ### E. Thứ tự ưu tiên tính toán (Quy tắc PEMDAS)
@@ -830,7 +830,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 | 02 | `PYA-L02-P02` | Nhân đôi lũy thừa | `Cơ bản` | $1 \le n \le 30$ | Lũy thừa `**` cơ số 2 |
 | 03 | `PYA-L02-P03` | Số kẹo còn thừa | `Cơ bản` | $1 \le N, K \le 10^9$ | Phép modulo `%`, xử lý số nguyên lớn |
 | 04 | `PYA-L02-P04` | Đổi giờ ra phút giây | `Cơ bản` | $0 \le H, M, S \le 59$ | Biểu thức nhân cộng liên hoàn |
-| 05 | `PYA-L02-P05` | Bóng đèn viền biển hiệu | `Luyện tập` | $1 \le a \le 10^7$ | Phép nhân chia đổi đơn vị (THT đà nẵng) |
+| 05 | `PYA-L02-P05` | Bóng đèn viền biển hiệu | `Luyện tập` | $1 \le a \le 10^7$ | Phép nhân chia đổi đơn vị (PYA đà nẵng) |
 | 06 | `PYA-L02-P06` | Trồng cây đại lộ | `Luyện tập` | $1 \le N, K \le 10^6$ | Phép chia khoảng cách cộng 1 ở đầu mút |
 | 07 | `PYA-L02-P07` | Vòng chạy điền kinh | `Luyện tập` | $1 \le N \le 10^9$ | Chu kỳ vòng lặp sân thể thao qua modulo |
 | 08 | `PYA-L02-P08` | Kim đồng hồ 12 giờ | `Luyện tập` | $1 \le H \le 12, 1 \le K \le 10^9$ | Phép chia dư xử lý chu kỳ đồng hồ |
@@ -874,7 +874,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 ---
 
 ### Bài 3 (Cơ bản): Số kẹo còn thừa (`PYA-L02-P03`)
-*(Lấy cảm hứng từ Bài 9 Đề thi THT Toàn quốc)*
+*(Lấy cảm hứng từ Bài 9 Đề thi PYA Toàn quốc)*
 
 * **Bối cảnh:** Nhà máy sản xuất bánh kẹo vừa đóng gói được $N$ viên kẹo. Người ta đóng các viên kẹo này vào các hộp quà, mỗi hộp quà chứa đúng $K$ viên kẹo. Những viên kẹo còn thừa lại không đủ đóng thành một hộp quà sẽ được tặng cho các em nhỏ đi tham quan nhà máy.
 * **Yêu cầu:** Hãy tính số kẹo được tặng cho các em nhỏ.
@@ -903,7 +903,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 ---
 
 ### Bài 5 (Luyện tập): Bóng đèn viền biển hiệu (`PYA-L02-P05`)
-*(Lấy cảm hứng từ Bài 1 THT Sơn Trà - Đà Nẵng)*
+*(Lấy cảm hứng từ Bài 1 PYA Sơn Trà - Đà Nẵng)*
 
 * **Bối cảnh:** Người ta muốn mắc các bóng đèn màu trang trí xung quanh viền của một bảng quảng cáo hình vuông. Bảng quảng cáo có chiều dài cạnh là $a\text{ dm}$. Các bóng đèn được mắc liên tiếp nhau và cách nhau đúng $5\text{ cm}$ dọc theo chu vi hình vuông (bao gồm cả các góc).
 * **Yêu cầu:** Em hãy tính số lượng bóng đèn cần mắc.
@@ -922,7 +922,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 ---
 
 ### Bài 6 (Luyện tập): Trồng cây đại lộ (`PYA-L02-P06`)
-*(Lấy cảm hứng từ Bài 7 Đề thi THT Toàn quốc)*
+*(Lấy cảm hứng từ Bài 7 Đề thi PYA Toàn quốc)*
 
 * **Bối cảnh:** Trên một đại lộ thẳng tắp có chiều dài $N$ mét, người ta cần trồng các cây xanh thẳng hàng ở một bên đường để tạo bóng mát. Bắt đầu trồng một cây ngay tại điểm xuất phát (mét thứ 0), và cứ sau mỗi khoảng cách đúng $K$ mét lại trồng tiếp một cây.
 * **Yêu cầu:** Hãy tính tổng số lượng cây xanh được trồng trên đoạn đường từ mét thứ 0 đến mét thứ $N$.
@@ -939,7 +939,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 ---
 
 ### Bài 7 (Luyện tập): Vòng chạy điền kinh (`PYA-L02-P07`)
-*(Lấy cảm hứng từ Bài 8 Đề thi THT Bắc Giang)*
+*(Lấy cảm hứng từ Bài 8 Đề thi PYA Bắc Giang)*
 
 * **Bối cảnh:** Một đường chạy thể thao hình chữ nhật có chu vi đúng $100\text{ mét}$. Vận động viên An xuất phát từ vạch số 0 và chạy liên tục theo một chiều dọc theo mép sân được tổng quãng đường là $N\text{ mét}$.
 * **Yêu cầu:** Em hãy cho biết:
@@ -1012,7 +1012,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 
 ### Bài 11 (Luyện tập): Xe buýt chở học sinh (`PYA-L02-P11`)
 
-* **Bối cảnh:** Một trường tiểu học tổ chức dã ngoại cho $N$ học sinh. Nhà trường thuê các xe buýt loại $K$ chỗ ngồi. Mỗi xe buýt chở được tối đa $K$ bạn học sinh.
+* **Bối cảnh:** Một trường phổ thông tổ chức dã ngoại cho $N$ học sinh. Nhà trường thuê các xe buýt loại $K$ chỗ ngồi. Mỗi xe buýt chở được tối đa $K$ bạn học sinh.
 * **Yêu cầu:** Hỏi nhà trường cần thuê **ít nhất bao nhiêu xe buýt** để chở hết toàn bộ $N$ học sinh (không để bạn nào phải ở lại trường)?
 * **Đầu vào (Input):** Nhập vào 2 số nguyên dương $N$ và $K$ ($1 \le N, K \le 10^6$).
 * **Đầu ra (Output):** Một số nguyên duy nhất là số lượng xe buýt tối thiểu cần thuê.
@@ -1113,7 +1113,7 @@ Kết quả của biểu thức `2 ** 3 ** 2` trong Python là bao nhiêu?
 
 # Bài 03: Công thức tính toán, hình học và đổi đơn vị
 
-## 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
+## 1. Kiến thức chuyên sâu dành cho học sinh Phổ thông
 
 ### A. Các công thức hình học nền tảng
 * **Hình chữ nhật:**
@@ -1333,12 +1333,12 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 |:---:|:---:|---|:---:|---|---|
 | 01 | `PYA-L03-P01` | Mảnh vườn chữ nhật | `Cơ bản` | $1 \le a, b \le 10^4$ | Tính chu vi và diện tích hình chữ nhật |
 | 02 | `PYA-L03-P02` | Khung tranh hình vuông | `Cơ bản` | $1 \le a \le 10^4$ | Tính chu vi và diện tích hình vuông |
-| 03 | `PYA-L03-P03` | Chu vi tam giác abc | `Cơ bản` | $1 \le a, b, c \le 10^8$ | Tổng 3 cạnh tam giác, số lớn (THT hà tĩnh) |
-| 04 | `PYA-L03-P04` | Cạnh còn lại của hình chữ nhật | `Cơ bản` | $10 < P \le 10^6, a < P // 2$ | Tìm cạnh từ chu vi và một cạnh (THT bắc giang) |
-| 05 | `PYA-L03-P05` | Hồ cá sấu và đảo nhỏ | `Luyện tập` | $1 \le A, B, C \le 10^4$ | Hiệu hai diện tích hình học lồng nhau (THT lâm đồng) |
+| 03 | `PYA-L03-P03` | Chu vi tam giác abc | `Cơ bản` | $1 \le a, b, c \le 10^8$ | Tổng 3 cạnh tam giác, số lớn (PYA hà tĩnh) |
+| 04 | `PYA-L03-P04` | Cạnh còn lại của hình chữ nhật | `Cơ bản` | $10 < P \le 10^6, a < P // 2$ | Tìm cạnh từ chu vi và một cạnh (PYA bắc giang) |
+| 05 | `PYA-L03-P05` | Hồ cá sấu và đảo nhỏ | `Luyện tập` | $1 \le A, B, C \le 10^4$ | Hiệu hai diện tích hình học lồng nhau (PYA lâm đồng) |
 | 06 | `PYA-L03-P06` | Đổi giây sang giờ phút giây | `Luyện tập` | $0 \le S \le 10^8$ | Phân rã thời gian ngược dùng `// 3600`, `% 3600` |
 | 07 | `PYA-L03-P07` | Lát gạch sân trường | `Luyện tập` | $1 \le D, R, K \le 1000$ | Số viên gạch lát diện tích hình chữ nhật |
-| 08 | `PYA-L03-P08` | Thuận đi gặp ánh | `Luyện tập` | $0 \le x, y \le 10^9, 1 \le v \le 10^9$ | Vận tốc, khoảng cách và thời gian (THT từ sơn) |
+| 08 | `PYA-L03-P08` | Thuận đi gặp ánh | `Luyện tập` | $0 \le x, y \le 10^9, 1 \le v \le 10^9$ | Vận tốc, khoảng cách và thời gian (PYA từ sơn) |
 | 09 | `PYA-L03-P09` | Rào quanh vườn hoa có cửa | `Luyện tập` | $1 \le a, b \le 10^4, 1 \le c < a$ | Chu vi trừ đi độ rộng lối vào cửa |
 | 10 | `PYA-L03-P10` | Diện tích bồn hoa chữ thập | `Vận dụng` | $1 \le a, b \le 10^4$ | Phân tích hình học ghép, trừ phần giao nhau |
 | 11 | `PYA-L03-P11` | Diện tích tam giác vuông | `Luyện tập` | $1 \le a, h \le 1000, (a \times h)$ chẵn | Diện tích tam giác vuông $(a \times h) : 2$ |
@@ -1385,7 +1385,7 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 ---
 
 ### Bài 3 (Cơ bản): Chu vi tam giác abc (`PYA-L03-P03`)
-*(Lấy cảm hứng từ Bài 3 Đề thi Tin học trẻ tỉnh Hà Tĩnh)*
+*(Lấy cảm hứng từ Bài 3 Đề thi Lập trình Python tỉnh Hà Tĩnh)*
 
 * **Bối cảnh:** Trong giờ học hình học, thầy giáo cho 3 số tự nhiên $a, b, c$ lần lượt là độ dài 3 cạnh của một tam giác $ABC$.
 * **Yêu cầu:** Em hãy lập trình tính và đưa ra chu vi của tam giác $ABC$.
@@ -1399,7 +1399,7 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 ---
 
 ### Bài 4 (Cơ bản): Cạnh còn lại của hình chữ nhật (`PYA-L03-P04`)
-*(Lấy cảm hứng từ Bài 6 Đề thi Tin học trẻ tỉnh Bắc Giang)*
+*(Lấy cảm hứng từ Bài 6 Đề thi Lập trình Python tỉnh Bắc Giang)*
 
 * **Bối cảnh:** Một cái ao hình chữ nhật có một cạnh bằng $a\text{ mét}$ và có chu vi là $P\text{ mét}$ ($P$ là số chẵn).
 * **Yêu cầu:** Em hãy tính và in ra độ dài của cạnh còn lại của hình chữ nhật.
@@ -1414,7 +1414,7 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 ---
 
 ### Bài 5 (Luyện tập): Hồ cá sấu và đảo nhỏ (`PYA-L03-P05`)
-*(Lấy cảm hứng từ Bài 2 Đề thi Tin học trẻ tỉnh Lâm Đồng)*
+*(Lấy cảm hứng từ Bài 2 Đề thi Lập trình Python tỉnh Lâm Đồng)*
 
 * **Bối cảnh:** Một trang trại nuôi cá sấu có một hồ nước hình vuông cạnh $A$. Ở chính giữa hồ, người ta xây một hòn đảo nhỏ hình chữ nhật có kích thước $B \times C$ để cá sấu bò lên phơi nắng (hòn đảo nằm trọn trong hồ nước và không chạm vào bờ hồ).
 * **Yêu cầu:** Hãy tính diện tích phần mặt nước còn lại sau khi đã xây hòn đảo nhỏ.
@@ -1429,7 +1429,7 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 ---
 
 ### Bài 6 (Luyện tập): Đổi giây sang giờ phút giây (`PYA-L03-P06`)
-*(Lấy cảm hứng từ Bài 7 Đề thi Tin học trẻ tỉnh Đồng Nai)*
+*(Lấy cảm hứng từ Bài 7 Đề thi Lập trình Python tỉnh Đồng Nai)*
 
 * **Bối cảnh:** Một vệ tinh bay quanh trái đất hết $S$ giây. Nhân vật Robot muốn thông báo khoảng thời gian này dưới dạng dễ hiểu: gồm bao nhiêu Giờ, bao nhiêu Phút và bao nhiêu Giây.
 * **Yêu cầu:** Nhập vào tổng số giây $S$. Hãy phân rã thành $H$ giờ, $M$ phút, $S$ giây.
@@ -1453,7 +1453,7 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 
 ### Bài 7 (Luyện tập): Lát gạch sân trường (`PYA-L03-P07`)
 
-* **Bối cảnh:** Sân trường của trường Tiểu học iKHEDU có hình chữ nhật dài $D\text{ mét}$ và rộng $R\text{ mét}$. Nhà trường muốn lát gạch men cho toàn bộ sân trường bằng các viên gạch hình vuông có cạnh là $K\text{ mét}$ ($D$ và $R$ đều chia hết cho $K$).
+* **Bối cảnh:** Sân trường của trường Phổ thông iKHEDU có hình chữ nhật dài $D\text{ mét}$ và rộng $R\text{ mét}$. Nhà trường muốn lát gạch men cho toàn bộ sân trường bằng các viên gạch hình vuông có cạnh là $K\text{ mét}$ ($D$ và $R$ đều chia hết cho $K$).
 * **Yêu cầu:** Tính số lượng viên gạch men cần dùng để lát kín mặt sân.
 * **Đầu vào (Input):** Ba dòng lần lượt chứa 3 số tự nhiên $D, R, K$ ($1 \le K \le R \le D \le 1000$).
 * **Đầu ra (Output):** Một số nguyên duy nhất là số viên gạch.
@@ -1466,7 +1466,7 @@ Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập 
 ---
 
 ### Bài 8 (Luyện tập): Thuận đi gặp ánh (`PYA-L03-P08`)
-*(Lấy cảm hứng từ Bài 5 Đề thi Tin học trẻ Huyện Từ Sơn - Bắc Ninh)*
+*(Lấy cảm hứng từ Bài 5 Đề thi Lập trình Python Huyện Từ Sơn - Bắc Ninh)*
 
 * **Bối cảnh:** Thuận và Ánh sống trên một con đường thẳng có các mốc tọa độ tính bằng kilomet. Thuận đang đứng ở vị trí $x$, còn Ánh đang đứng ở vị trí $y$ ($x < y$). Thuận bắt đầu đi xe đạp về phía nhà Ánh với vận tốc không đổi là $v\text{ km/h}$.
 * **Biết rằng:** Khoảng cách $y - x$ chia hết cho vận tốc $v$.
@@ -2082,24 +2082,24 @@ else:
 | 03 | `PYA-L04-P03` | Ai cao hơn? | `Cơ bản` | $50 \le a, b \le 200$ | So sánh 2 số, in tên bạn cao hơn |
 | 04 | `PYA-L04-P04` | Số lớn nhất trong hai số | `Cơ bản` | $-10^9 \le a, b \le 10^9$ | Tìm max giữa 2 số nguyên bất kỳ |
 | 05 | `PYA-L04-P05` | Chia kẹo công bằng | `Cơ bản` | $1 \le a, b \le 10^6$ | Kiểm tra tính chia hết `a % b == 0` |
-| 06 | `PYA-L04-P06` | Điền phép tính lớn nhất | `Luyện tập` | $0 \le A \le 100$ | So sánh kết quả các phép tính (THT bắc giang) |
+| 06 | `PYA-L04-P06` | Điền phép tính lớn nhất | `Luyện tập` | $0 \le A \le 100$ | So sánh kết quả các phép tính (PYA bắc giang) |
 | 07 | `PYA-L04-P07` | Giảm giá siêu thị | `Luyện tập` | $1 \le N \le 10^6$ | Điều kiện giảm giá khi tổng tiền $\ge 500$K |
 | 08 | `PYA-L04-P08` | Cặp số bằng nhau hay khác? | `Luyện tập` | $0 \le a, b \le 10^9$ | Ba trường hợp: Lớn hơn, nhỏ hơn hay bằng nhau |
 | 09 | `PYA-L04-P09` | Trị tuyệt đối của một số | `Luyện tập` | $-10^9 \le N \le 10^9$ | Tự cài đặt hàm trị tuyệt đối đổi dấu số âm |
 | 10 | `PYA-L04-P10` | Bác thợ mộc cắt gỗ | `Luyện tập` | $1 \le L, K \le 10^9$ | So sánh xem thanh gỗ có đủ dài để cắt không |
-| 11 | `PYA-L04-P11` | Cạnh thứ tư hình chữ nhật | `Luyện tập` | $1 \le A, B, C \le 1000$ | Nhận diện 2 cặp cạnh bằng nhau (THT miền bắc) |
+| 11 | `PYA-L04-P11` | Cạnh thứ tư hình chữ nhật | `Luyện tập` | $1 \le A, B, C \le 1000$ | Nhận diện 2 cặp cạnh bằng nhau (PYA miền bắc) |
 | 12 | `PYA-L04-P12` | Trò chơi oẳn tù tì | `Vận dụng` | $a, b \in \{1, 2, 3\}$ | Logic thắng thua vòng tròn quy ước số |
 | 13 | `PYA-L05-P01` | Đèn giao thông ngã tư | `Cơ bản` | Ký tự `D, V, X` | Cấu trúc 3 nhánh `if - elif - else` cơ bản |
 | 14 | `PYA-L05-P02` | Dấu của số nguyên | `Cơ bản` | $-10^9 \le N \le 10^9$ | Phân biệt: Dương (`DUONG`), âm (`AM`), không (`KHONG`) |
 | 15 | `PYA-L05-P03` | Số lớn nhất trong ba số | `Cơ bản` | $-10^9 \le a, b, c \le 10^9$ | Kỹ thuật tìm max 3 số hoặc dùng lính canh |
 | 16 | `PYA-L05-P04` | Xếp loại học lực | `Cơ bản` | $0.0 \le diem \le 10.0$ | Phân loại bậc thang điểm số số thực |
 | 17 | `PYA-L05-P05` | Vé gửi xe bến bãi | `Cơ bản` | Loại xe $1, 2, 3$ | Tính tiền gửi xe theo từng mức quy định |
-| 18 | `PYA-L05-P06` | Mario cứu công chúa | `Luyện tập` | $1 \le K, P, N \le 1000$ | Mô phỏng di chuyển năng lượng (THT củ chi) |
+| 18 | `PYA-L05-P06` | Mario cứu công chúa | `Luyện tập` | $1 \le K, P, N \le 1000$ | Mô phỏng di chuyển năng lượng (PYA củ chi) |
 | 19 | `PYA-L05-P07` | Tính cước taxi bậc thang | `Luyện tập` | $1 \le km \le 100$ | Bài toán tính cước lũy tiến kinh điển |
 | 20 | `PYA-L05-P08` | Phân loại tam giác | `Luyện tập` | $1 \le a, b, c \le 1000$ | Phân biệt tam giác đều, cân hay thường |
-| 21 | `PYA-L05-P09` | Thuận đi tìm ánh đa vận tốc | `Luyện tập` | $0 \le x, y \le 10^9, v \ge 0$ | Bắt bẫy $x == y$ hoặc $v == 0$ (THT từ sơn) |
+| 21 | `PYA-L05-P09` | Thuận đi tìm ánh đa vận tốc | `Luyện tập` | $0 \le x, y \le 10^9, v \ge 0$ | Bắt bẫy $x == y$ hoặc $v == 0$ (PYA từ sơn) |
 | 22 | `PYA-L05-P10` | Thứ mấy trong tuần? | `Luyện tập` | $1 \le k \le 365$ | Đổi số ngày sang thứ hai đến chủ nhật |
-| 23 | `PYA-L05-P11` | Cửa hàng bánh bột lọc khuyến mãi | `Luyện tập` | $1 \le N \le 1000$ | Bài toán mua theo gói bậc thang (THT Bảng A) |
+| 23 | `PYA-L05-P11` | Cửa hàng bánh bột lọc khuyến mãi | `Luyện tập` | $1 \le N \le 1000$ | Bài toán mua theo gói bậc thang (PYA Bảng A) |
 | 24 | `PYA-L05-P12` | Bốn mùa trong năm | `Vận dụng` | $1 \le thang \le 12$ | Gom nhóm nhiều giá trị vào các mùa xuân, hạ, thu, đông |
 | 25 | `PYA-L06-P01` | Số chẵn có hai chữ số | `Cơ bản` | $1 \le N \le 1000$ | Điều kiện kết hợp `and`: $10 \le N \le 99$ và chẵn |
 | 26 | `PYA-L06-P02` | Bội chung của 3 và 5 | `Cơ bản` | $1 \le N \le 10^9$ | Chia hết đồng thời cho cả 3 và 5 |
@@ -2107,7 +2107,7 @@ else:
 | 28 | `PYA-L06-P04` | Điểm nằm trong hình chữ nhật | `Cơ bản` | $0 \le x, y \le 100$ | Kiểm tra tọa độ kẹp: $0 \le x \le W$ và $0 \le y \le H$ |
 | 29 | `PYA-L06-P05` | Ba cạnh tam giác hợp lệ | `Cơ bản` | $1 \le a, b, c \le 10^9$ | Bất đẳng thức tam giác 3 điều kiện `and` |
 | 30 | `PYA-L06-P06` | Kiểm tra năm nhuận | `Luyện tập` | $1 \le Y \le 10^5$ | Quy tắc năm nhuận thiên văn học kết hợp `and`/`or` |
-| 31 | `PYA-L06-P07` | Số ngày trong tháng | `Luyện tập` | $1 \le M \le 12, 1 \le Y \le 10^5$ | Xác định 28, 29, 30 hay 31 ngày (THT bắc giang) |
+| 31 | `PYA-L06-P07` | Số ngày trong tháng | `Luyện tập` | $1 \le M \le 12, 1 \le Y \le 10^5$ | Xác định 28, 29, 30 hay 31 ngày (PYA bắc giang) |
 | 32 | `PYA-L06-P08` | Tam giác vuông hay không? | `Luyện tập` | $1 \le a, b, c \le 10^4$ | Định lý pytago kết hợp 3 trường hợp cạnh huyền |
 | 33 | `PYA-L06-P09` | Rút thẻ may mắn | `Luyện tập` | $1 \le N \le 10^9$ | Thẻ trúng thưởng chia hết cho 7 hoặc tận cùng bằng 7 |
 | 34 | `PYA-L06-P10` | Ngày kế tiếp trong năm | `Luyện tập` | Ngày, tháng, năm hợp lệ | Xử lý chuyển ngày cuối tháng, cuối năm nhuận |
@@ -2184,7 +2184,7 @@ else:
 ---
 
 ### Bài 6 (Luyện tập): Điền phép tính lớn nhất (`PYA-L04-P06`)
-*(Lấy cảm hứng từ Bài 1 Đề thi THT tỉnh Bắc Giang)*
+*(Lấy cảm hứng từ Bài 1 Đề thi PYA tỉnh Bắc Giang)*
 
 * **Bối cảnh:** Cho số tự nhiên $A$ và biểu thức sau: $A \text{ ? } A = B$.
 * **Yêu cầu:** Hãy dùng một trong các phép tính $+$, $-$, $\times$ điền vào dấu $?$ để giá trị $B$ đạt được là **lớn nhất**. In ra số $B$ lớn nhất tìm được.
@@ -2356,7 +2356,7 @@ else:
 ---
 
 ### Bài 18 (Luyện tập): Mario cứu công chúa (`PYA-L05-P06`)
-*(Lấy cảm hứng từ Bài 3 Đề thi THT Huyện Củ Chi - TP.HCM)*
+*(Lấy cảm hứng từ Bài 3 Đề thi PYA Huyện Củ Chi - TP.HCM)*
 
 * **Bối cảnh:** Mario có $K$ năng lượng, Công chúa có $P$ năng lượng. Chiếc cầu thang ngăn cách giữa hai người có đỉnh cao $N$ bậc: Mario đứng ở chân cầu thang bên trái (cần đi lên $N$ bậc và đi xuống $N$ bậc), Công chúa đứng ở chân cầu thang bên phải (cần đi lên $N$ bậc).
   * Mỗi bậc thang Mario đi tốn $1$ năng lượng.
@@ -2408,7 +2408,7 @@ else:
 ---
 
 ### Bài 21 (Luyện tập): Thuận đi tìm ánh đa vận tốc (`PYA-L05-P09`)
-*(Lấy cảm hứng từ Bài 5 Đề thi THT Huyện Từ Sơn)*
+*(Lấy cảm hứng từ Bài 5 Đề thi PYA Huyện Từ Sơn)*
 
 * **Bối cảnh:** Thuận đứng ở vị trí $x$, Ánh đứng ở vị trí $y$. Thuận đi về phía Ánh với vận tốc $v\text{ km/h}$.
 * **Yêu cầu:** Hãy phân tích các tình huống:
@@ -2503,7 +2503,7 @@ else:
 ---
 
 ### Bài 29 (Cơ bản): Ba cạnh tam giác hợp lệ (`PYA-L06-P05`)
-*(Lấy cảm hứng từ Bài 11 Đề thi THT Toàn quốc)*
+*(Lấy cảm hứng từ Bài 11 Đề thi PYA Toàn quốc)*
 
 * **Yêu cầu:** Nhập vào 3 số tự nhiên $a, b, c$ trên 3 dòng. Kiểm tra xem 3 số này có thể tạo thành độ dài 3 cạnh của một tam giác hay không? Nếu có in `HOP LE`, ngược lại in `KHONG HOP LE`.
 * **Input:** Ba số tự nhiên $a, b, c$ ($1 \le a, b, c \le 10^9$).
@@ -2532,7 +2532,7 @@ else:
 ---
 
 ### Bài 31 (Luyện tập): Số ngày trong tháng (`PYA-L06-P07`)
-*(Lấy cảm hứng từ Bài 114, 115 Đề thi THT Bắc Giang)*
+*(Lấy cảm hứng từ Bài 114, 115 Đề thi PYA Bắc Giang)*
 
 * **Yêu cầu:** Nhập vào tháng $M$ ($1 \le M \le 12$) và năm $Y$ ($1 \le Y \le 10^5$). Hãy in ra số lượng ngày của tháng đó trong năm $Y$.
 * **Biết rằng:**
@@ -2564,7 +2564,7 @@ else:
 ---
 
 ### Bài 33 (Luyện tập): Rút thẻ may mắn (`PYA-L06-P09`)
-*(Lấy cảm hứng từ Bài 113 Đề thi THT Nghệ An – Khánh Hòa)*
+*(Lấy cảm hứng từ Bài 113 Đề thi PYA Nghệ An – Khánh Hòa)*
 
 * **Bối cảnh:** Trong hội chợ xuân, mỗi bạn nhỏ được bốc một chiếc thẻ có ghi một số tự nhiên $N$. Chiếc thẻ được coi là "Thẻ Trúng Thưởng" nếu:
   * Số $N$ chia hết cho 7, **HOẶC**
@@ -2814,7 +2814,7 @@ print(dem)
 | 08 | `PYA-L07-P08` | Dãy số cách đều | `Luyện tập` | $1 \le a \le 100, 1 \le d \le 10, 1 \le n \le 100$ | In $n$ số hạng đầu tiên của cấp số cộng |
 | 09 | `PYA-L07-P09` | Tìm ước số của N | `Luyện tập` | $1 \le N \le 10^4$ | Duyệt từ 1 đến $N$ tìm các số $N \% i == 0$ |
 | 10 | `PYA-L07-P10` | Tổng bình phương | `Luyện tập` | $1 \le N \le 1000$ | Tính $S = 1^2 + 2^2 + \dots + N^2$ |
-| 11 | `PYA-L07-P11` | Đọc sách mỗi ngày | `Luyện tập` | $1 \le N \le 10^4$ | Mô phỏng số trang sách đọc tăng dần (THT Bảng A) |
+| 11 | `PYA-L07-P11` | Đọc sách mỗi ngày | `Luyện tập` | $1 \le N \le 10^4$ | Mô phỏng số trang sách đọc tăng dần (PYA Bảng A) |
 | 12 | `PYA-L07-P12` | Hàng cột dấu sao | `Luyện tập` | $1 \le R, C \le 50$ | Vòng lặp lồng nhau in hình chữ nhật dấu `*` |
 | 13 | `PYA-L07-P13` | Tam giác vuông dấu sao | `Vận dụng` | $1 \le N \le 50$ | In tam giác vuông chiều cao $N$ dòng |
 | 14 | `PYA-L07-P14` | Tổng dãy siêu lớn không lặp | `Thử thách` | $1 \le N \le 10^9$ | Tối ưu thuật toán từ $\mathcal{O}(N)$ sang $\mathcal{O}(1)$ bằng công thức |
@@ -2948,7 +2948,7 @@ print(dem)
 ---
 
 ### Bài 11 (Luyện tập): Đọc sách mỗi ngày (`PYA-L07-P11`)
-*(Lấy cảm hứng từ Bài 52 Đề thi Scratch THT Toàn quốc)*
+*(Lấy cảm hứng từ Bài 52 Đề thi Scratch PYA Toàn quốc)*
 
 * **Bối cảnh:** Bạn Hoa quyết tâm rèn luyện thói quen đọc sách trong dịp hè. Cuốn sách có tổng cộng $N$ trang.
   * Ngày thứ nhất Hoa đọc được 1 trang.
@@ -2997,7 +2997,7 @@ print(dem)
 
 ### Bài 14 (Thử thách): Tổng dãy siêu lớn không lặp (`PYA-L07-P14`)
 
-* **Bối cảnh:** Trong kỳ thi Tin học trẻ, ban giám khảo cho số $N$ cực lớn lên tới $10^9$ ($1$ tỷ). Nếu em dùng vòng lặp `for i in range(1, N + 1):` thì chương trình sẽ bị chạy quá thời gian quy định (Time Limit Exceeded - TLE) vì máy tính phải lặp 1 tỷ lần mất hơn 10 giây!
+* **Bối cảnh:** Trong kỳ thi Lập trình Python, ban giám khảo cho số $N$ cực lớn lên tới $10^9$ ($1$ tỷ). Nếu em dùng vòng lặp `for i in range(1, N + 1):` thì chương trình sẽ bị chạy quá thời gian quy định (Time Limit Exceeded - TLE) vì máy tính phải lặp 1 tỷ lần mất hơn 10 giây!
 * **Yêu cầu:** Hãy tính tổng $S = 1 + 2 + \dots + N$ với thời gian chạy tức thì ($< 0.001$ giây) bằng công thức toán học.
 * **Input:** Một số nguyên $N$ ($1 \le N \le 10^9$).
 * **Output:** Giá trị tổng $S$.
@@ -3189,11 +3189,11 @@ while x > 0:
 |:---:|:---:|---|:---:|---|---|
 | 01 | `PYA-L08-P01` | Đếm xuôi bằng while | `Cơ bản` | $1 \le N \le 100$ | Cú pháp `while` cơ bản với biến tăng `i = i + 1` |
 | 02 | `PYA-L08-P02` | Rút thăm đến khi trúng | `Cơ bản` | Dãy số kết thúc bằng 7 | Lặp cho đến khi gặp số mục tiêu |
-| 03 | `PYA-L08-P03` | Nhập số đến khi gặp số 0 | `Cơ bản` | Số lượng phần tử $\le 1000$ | Đếm số lượng số đã nhập (THT đà lạt) |
+| 03 | `PYA-L08-P03` | Nhập số đến khi gặp số 0 | `Cơ bản` | Số lượng phần tử $\le 1000$ | Đếm số lượng số đã nhập (PYA đà lạt) |
 | 04 | `PYA-L08-P04` | Tổng dãy số kết thúc bằng 0 | `Cơ bản` | Mỗi số $\le 10^6$ | Tính tổng các số đã nhập trước khi gặp 0 |
-| 05 | `PYA-L08-P05` | Đếm số chẵn đến khi gặp 0 | `Cơ bản` | Số nguyên $\le 10^6$ | Lọc và đếm số chẵn trong luồng nhập (THT lâm đồng) |
+| 05 | `PYA-L08-P05` | Đếm số chẵn đến khi gặp 0 | `Cơ bản` | Số nguyên $\le 10^6$ | Lọc và đếm số chẵn trong luồng nhập (PYA lâm đồng) |
 | 06 | `PYA-L08-P06` | Gấp đôi tờ giấy lên mặt trăng | `Luyện tập` | $1 \le H \le 10^9$ | Đếm số lần nhân đôi $2 \times 2 \dots$ vượt ngưỡng $H$ |
-| 07 | `PYA-L08-P07` | Ống heo mua xe máy | `Luyện tập` | $1 \le P \le 10^7$ | Tiết kiệm tiền mỗi ngày tăng dần đến khi đủ tiền (THT) |
+| 07 | `PYA-L08-P07` | Ống heo mua xe máy | `Luyện tập` | $1 \le P \le 10^7$ | Tiết kiệm tiền mỗi ngày tăng dần đến khi đủ tiền (PYA) |
 | 08 | `PYA-L08-P08` | Tìm lũy thừa của 2 lớn hơn N | `Luyện tập` | $1 \le N \le 10^9$ | Vòng lặp tìm số $2^k > N$ nhỏ nhất |
 | 09 | `PYA-L08-P09` | Chú ốc sên leo cột cờ | `Luyện tập` | $1 \le H, A, B \le 10^6 (A > B)$ | Ban ngày leo lên $A$, ban đêm tụt $B$ đến đỉnh $H$ |
 | 10 | `PYA-L08-P10` | Đếm số lượng chữ số của N | `Luyện tập` | $1 \le N \le 10^{18}$ | Kỹ thuật chia nguyên liên tiếp `N = N // 10` |
@@ -3228,7 +3228,7 @@ while x > 0:
 ---
 
 ### Bài 3 (Cơ bản): Nhập số đến khi gặp số 0 (`PYA-L08-P03`)
-*(Lấy cảm hứng từ Bài 6 Đề thi THT Đà Lạt - Lâm Đồng)*
+*(Lấy cảm hứng từ Bài 6 Đề thi PYA Đà Lạt - Lâm Đồng)*
 
 * **Yêu cầu:** Viết chương trình nhập liên tiếp các số nguyên từ bàn phím. Việc nhập kết thúc khi người dùng nhập số 0. Hãy đếm xem người dùng đã nhập **bao nhiêu số** (không tính số 0 cuối cùng).
 * **Input:** Một dãy các số nguyên, kết thúc bằng số 0.
@@ -3278,7 +3278,7 @@ while x > 0:
 ---
 
 ### Bài 7 (Luyện tập): Ống heo mua xe máy (`PYA-L08-P07`)
-*(Lấy cảm hứng từ Bài 51 Đề thi Scratch THT Toàn quốc)*
+*(Lấy cảm hứng từ Bài 51 Đề thi Scratch PYA Toàn quốc)*
 
 * **Bối cảnh:** Bác Nam muốn tiết kiệm tiền để mua một chiếc xe máy có giá $P$ nghìn đồng.
   * Ngày thứ nhất bác bỏ vào ống heo 1 nghìn đồng.
@@ -3407,7 +3407,7 @@ for i in range(1, n + 1):
 - **B.** **[Đáp án đúng]** Fibonacci
 - **C.** Pythagoras
 - **D.** Archimedes
-- > *Giải thích:* Đây là dãy số Fibonacci huyền thoại xuất hiện nhiều trong tự nhiên và đề thi tin học trẻ.
+- > *Giải thích:* Đây là dãy số Fibonacci huyền thoại xuất hiện nhiều trong tự nhiên và đề thi lập trình Python.
 
 #### Câu 2: Trong Python, câu lệnh `x, y = 10, 20` có ý nghĩa gì?
 - **A.** `x` và `y` đều nhận giá trị 10
@@ -3723,7 +3723,7 @@ print(s)
 ---
 
 ### Bài 14 (Thử thách): Tìm vị trí trong dãy tự nhiên dài (`PYA-L09-P14`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+*(Đề thi Lập trình Python Quốc gia Bảng A)*
 
 * **Bối cảnh:** Bé An viết liên tiếp các số tự nhiên bắt đầu từ 1 thành một dải số vô tận:
   `123456789101112131415161718192021...`
@@ -4023,7 +4023,7 @@ print(max_cs)
 ---
 
 ### Bài 9 (Luyện tập): Kiểm tra số đối xứng (palindrome) (`PYA-L10-P09`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Bối cảnh:** Một số được gọi là số đối xứng (Palindrome) nếu đọc từ trái sang phải hay từ phải sang trái đều thu được số giống hệt nhau (ví dụ: $121$, $1331$, $5$, $88$).
 * **Yêu cầu:** Nhập vào số tự nhiên $N$. Kiểm tra xem $N$ có phải số đối xứng không. Nếu có in `YES`, ngược lại in `NO`.
@@ -4092,7 +4092,7 @@ print(max_cs)
 ---
 
 ### Bài 14 (Thử thách): Số tăng giảm đẹp (`PYA-L10-P14`)
-*(Đề thi Tin học trẻ cấp Tỉnh/Thành phố)*
+*(Đề thi Lập trình Python cấp Tỉnh/Thành phố)*
 
 * **Bối cảnh:** Một số tự nhiên được gọi là:
   * **Số tăng dần:** Nếu mỗi chữ số đứng sau luôn lớn hơn chữ số đứng trước nó (ví dụ: $1379, 258$).
@@ -4322,7 +4322,7 @@ else:
 ---
 
 ### Bài 4 (Cơ bản): Kiểm tra số nguyên tố (`PYA-L11-P04`)
-*(Bài toán nền tảng thi Tin học trẻ)*
+*(Bài toán nền tảng thi Lập trình Python)*
 
 * **Yêu cầu:** Nhập vào số nguyên $N$. Hãy kiểm tra xem $N$ có phải là số nguyên tố hay không. Nếu có in `YES`, nếu không in `NO`.
 * **Input:** Một số nguyên $N$ ($0 \le N \le 10^7$).
@@ -4427,7 +4427,7 @@ else:
 ---
 
 ### Bài 12 (Vận dụng): Số siêu nguyên tố (super prime) (`PYA-L11-P12`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Bối cảnh:** Một số tự nhiên được gọi là "Siêu nguyên tố" nếu bản thân nó là số nguyên tố, và khi ta lần lượt xóa bớt chữ số tận cùng bên phải thì các số thu được vẫn luôn là số nguyên tố!
   * Ví dụ: Số $239$ là số nguyên tố.
@@ -4460,7 +4460,7 @@ else:
 ---
 
 ### Bài 14 (Thử thách): Tìm số có đúng 3 ước số (`PYA-L11-P14`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+*(Đề thi Lập trình Python Quốc gia Bảng A)*
 
 * **Bối cảnh:** Một số tự nhiên $X$ có đúng 3 ước số nguyên dương khi và chỉ khi $X$ là bình phương của một số nguyên tố ($X = P^2$, ví dụ: $4 = 2^2, 9 = 3^2, 25 = 5^2, 49 = 7^2$).
 * **Yêu cầu:** Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu số nhỏ hơn hoặc bằng $N$ mà có **đúng 3 ước số**.
@@ -4751,7 +4751,7 @@ print(count)
 ---
 
 ### Bài 11 (Vận dụng): Đếm số chính phương trong đoạn (`PYA-L12-P11`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Yêu cầu:** Cho 2 số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^{14}$). Hãy đếm xem có bao nhiêu số chính phương nằm trong đoạn từ $A$ đến $B$.
 * **Input:** Hai số nguyên $A, B$ trên cùng một dòng.
@@ -4765,7 +4765,7 @@ print(count)
 ---
 
 ### Bài 12 (Thử thách): Số tự mãn (narcissistic number K chữ số) (`PYA-L12-P12`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+*(Đề thi Lập trình Python Quốc gia Bảng A)*
 
 * **Bối cảnh:** Một số tự nhiên $N$ có $K$ chữ số được gọi là "Số tự mãn" (Narcissistic number) nếu tổng lũy thừa bậc $K$ của các chữ số của nó đúng bằng chính số $N$.
   Ví dụ:
@@ -5143,7 +5143,7 @@ print(len(c))
 ---
 
 ### Bài 14 (Thử thách): Cặp số có tổng bằng s (`PYA-L16-P14`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Yêu cầu:** Cho dãy gồm $N$ số nguyên đôi một khác nhau và một số nguyên mục tiêu $S$. Hãy đếm xem có bao nhiêu cặp chỉ số $(i, j)$ với $i < j$ thỏa mãn:
   $$A_i + A_j = S$$
@@ -5459,7 +5459,7 @@ print(sum(a) - max(a) - min(a))
 ---
 
 ### Bài 10 (Luyện tập): Chênh lệch nhỏ nhất giữa hai số (`PYA-L17-P10`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Yêu cầu:** Cho dãy $N$ số nguyên đôi một khác nhau. Hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử bất kỳ trong dãy (tức là giá trị $|A_i - A_j|$ nhỏ nhất với $i \ne j$).
 * **Input:**
@@ -5518,7 +5518,7 @@ print(sum(a) - max(a) - min(a))
 ---
 
 ### Bài 14 (Thử thách): Xếp hàng mua trà sữa (greedy) (`PYA-L17-P14`)
-*(Đề thi Tin học trẻ Quốc gia Bảng A)*
+*(Đề thi Lập trình Python Quốc gia Bảng A)*
 
 * **Bối cảnh:** Có $N$ bạn học sinh cùng xếp hàng mua trà sữa. Bạn thứ $i$ cần $T_i$ phút để người bán hàng pha chế xong cốc trà sữa của mình.
   Tổng thời gian chờ đợi của tất cả các bạn sẽ là tổng thời gian mà mỗi bạn phải đứng xếp hàng chờ cho đến khi nhận được trà sữa.
@@ -5707,7 +5707,7 @@ Kết quả in ra là gì?
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `Tin hoc tre` | `11` |
+  | `Lap trinh` | `11` |
 
 ---
 
@@ -5738,7 +5738,7 @@ Kết quả in ra là gì?
 ---
 
 ### Bài 5 (Cơ bản): Kiểm tra từ đối xứng (palindrome) (`PYA-L13-P05`)
-*(Bài toán kinh điển Tin học trẻ Bảng A)*
+*(Bài toán kinh điển Python Bảng A)*
 
 * **Bối cảnh:** Một từ được gọi là từ đối xứng nếu đọc xuôi hay đọc ngược đều hoàn toàn giống nhau (ví dụ: `radar`, `level`, `madam`, `noon`).
 * **Yêu cầu:** Cho một từ $S$. Kiểm tra xem $S$ có phải từ đối xứng không. In `YES` nếu đúng, ngược lại in `NO`.
@@ -6073,7 +6073,7 @@ print(ds[-1])
 
 #### Câu 26: Đoạn code sau in ra màn hình giá trị gì?
 ```python
-cau = "lap trinh tin hoc tre"
+cau = "lap trinh lap trinh Python"
 ds = cau.split()
 max_len = 0
 for tu in ds:
@@ -6231,7 +6231,7 @@ print(max_len)
 * **Ví dụ mẫu:**
   | Input | Output |
   |---|---|
-  | `Tin Hoc Tre Bang A` | `TinHocTreBangA` |
+  | `Lap Trinh Python Bang A` | `LapTrinhPythonBangA` |
 
 ---
 
@@ -6249,7 +6249,7 @@ print(max_len)
 ---
 
 ### Bài 11 (Vận dụng): Nén chuỗi ký tự (run-length encoding) (`PYA-L14-P11`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Bối cảnh:** Thuật toán nén chuỗi đơn giản thay thế một dãy các ký tự giống nhau liên tiếp bằng ký tự đó kèm theo số lần lặp lại.
   Ví dụ: `AAABBC` nén thành `A3B2C1`.
@@ -6264,7 +6264,7 @@ print(max_len)
 ---
 
 ### Bài 12 (Thử thách): Trích xuất số lớn nhất trong văn bản (`PYA-L14-P12`)
-*(Đề thi Tin học trẻ cấp Tỉnh/Thành phố Bảng A)*
+*(Đề thi Lập trình Python cấp Tỉnh/Thành phố Bảng A)*
 
 * **Bối cảnh:** Trong một bài báo cáo có các con số nằm rải rác giữa các câu chữ. Một con số có thể có nhiều chữ số liên tiếp nhau.
 * **Yêu cầu:** Cho chuỗi văn bản $S$. Hãy tìm và in ra giá trị của **con số nguyên lớn nhất** xuất hiện trong chuỗi đó. Dữ liệu đảm bảo có ít nhất 1 chữ số.
@@ -6376,7 +6376,7 @@ print(max_len)
 ---
 
 ### Bài 21 (Luyện tập): Mật mã Caesar dịch chuyển K (`PYA-L15-P09`)
-*(Bài toán kinh điển Tin học trẻ Bảng A)*
+*(Bài toán kinh điển Python Bảng A)*
 
 * **Bối cảnh:** Hoàng đế Caesar mã hóa bức thư gồm các chữ cái in hoa (`'A'` đến `'Z'`) bằng cách dịch chuyển mỗi chữ cái sang phải $K$ bước theo vòng tròn 26 chữ cái ($A \to B \dots Z \to A$).
 * **Yêu cầu:** Cho chuỗi $S$ chỉ gồm các chữ cái in hoa và số nguyên $K$ ($1 \le K \le 25$). Hãy in ra bản mật mã sau khi mã hóa.
@@ -6415,7 +6415,7 @@ print(max_len)
 ---
 
 ### Bài 24 (Thử thách): Mật mã thay thế hoán vị (anagram) (`PYA-L15-P12`)
-*(Đề thi Tin học trẻ Bảng A)*
+*(Đề thi Python Bảng A)*
 
 * **Bối cảnh:** Hai từ được gọi là "Anagram" (hoán vị ký tự của nhau) nếu chúng có thể tạo thành từ nhau bằng cách xáo trộn lại thứ tự các chữ cái (ví dụ: `silent` và `listen`, `heart` và `earth`).
 * **Yêu cầu:** Cho 2 từ $S_1$ và $S_2$. Kiểm tra xem chúng có phải là Anagram của nhau không. In `YES` nếu đúng, ngược lại in `NO`.
@@ -6440,7 +6440,7 @@ print(max_len)
 
 ## Lý thuyết và Concept Quiz
 
-# Bài 15: Chiến lược giải đề Tin học trẻ Bảng A
+# Bài 15: Chiến lược giải đề Python Bảng A
 
 ## 1. Bản đồ 5 bước tác chiến trong phòng thi
 ```
@@ -6501,7 +6501,7 @@ BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên 
 - **B.** Có, tối đa là $9 \times 10^{18}$
 - **C.** **[Đáp án đúng]** Không, Python hỗ trợ số nguyên lớn (Arbitrary-precision integers) có thể chứa hàng nghìn chữ số mà không bao giờ bị tràn số
 - **D.** Tối đa 100 chữ số
-- > *Giải thích:* Đây là lợi thế cực lớn của Python so với các ngôn ngữ khác trong kỳ thi Tin học trẻ Tiểu học: Không bao giờ lo bị tràn số!
+- > *Giải thích:* Đây là lợi thế cực lớn của Python so với các ngôn ngữ khác trong kỳ thi Lập trình Python Phổ thông: Không bao giờ lo bị tràn số!
 
 #### Câu 7: Khi gặp một bài toán khó chưa nghĩ ra cách làm tối ưu $\mathcal{O}(1)$ hay $\mathcal{O}(N)$, chiến thuật khôn ngoan nhất trong phòng thi là gì?
 - **A.** Bỏ bài đó để đi về sớm
@@ -6538,7 +6538,7 @@ BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên 
 - **D.** Sửa đổi các biến số
 - > *Giải thích:* Rất nhiều thí sinh bị mất điểm vì quên xóa các dòng `print("debug: ...")` dẫn đến bị máy chấm bắt lỗi output thừa.
 
-#### Câu 12: Phẩm chất quan trọng nhất của một tuyển thủ Tin học trẻ xuất sắc là gì?
+#### Câu 12: Phẩm chất quan trọng nhất của một tuyển thủ Lập trình Python xuất sắc là gì?
 - **A.** Gõ bàn phím thật nhanh
 - **B.** **[Đáp án đúng]** Tính kiên trì, tư duy cẩn trọng, đọc kỹ đề bài và không bao giờ bỏ cuộc
 - **C.** Thuộc lòng code mẫu
@@ -6547,17 +6547,17 @@ BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên 
 
 ## Bài tập lesson
 
-# Hệ thống bài tập thực hành — bài 15: Chiến lược giải đề Tin học trẻ Bảng A
+# Hệ thống bài tập thực hành — bài 15: Chiến lược giải đề Python Bảng A
 
 ---
 
-## 3 bộ đề thi thử Tin học trẻ Bảng A toàn diện (12 bài toán phân tầng chuẩn đề thi quốc gia)
+## 3 bộ đề thi thử Python Bảng A toàn diện (12 bài toán phân tầng chuẩn đề thi quốc gia)
 
-Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài của kỳ thi Tin học trẻ Bảng A (Tiểu học): thời gian 90 phút, gồm 4 bài toán từ khởi động đến phân loại học sinh giỏi.
+Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài của kỳ thi Python Bảng A (Phổ thông): thời gian 90 phút, gồm 4 bài toán từ khởi động đến phân loại học sinh giỏi.
 
 ---
 
-### Phần 1: Đề thi thử số 01 (mô phỏng đề THT thành phố hà nội / tp. Hồ chí minh)
+### Phần 1: Đề thi thử số 01 (mô phỏng đề PYA thành phố hà nội / tp. Hồ chí minh)
 
 #### Bài 1 (30 điểm): Mua bút tặng bạn (`PYA-L18-P01`)
 * **Bối cảnh:** Đầu năm học mới, cửa hàng văn phòng phẩm có chương trình khuyến mãi: Mỗi chiếc bút có giá $P$ đồng. Nếu mua từ 5 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $10\%$. Nếu mua từ 10 chiếc bút trở lên, mỗi chiếc bút sẽ được giảm giá $20\%$.
@@ -6611,7 +6611,7 @@ Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài c�
 
 ---
 
-### Phần 2: Đề thi thử số 02 (mô phỏng đề THT lâm đồng / đà lạt)
+### Phần 2: Đề thi thử số 02 (mô phỏng đề PYA lâm đồng / đà lạt)
 
 #### Bài 1 (30 điểm): Thu hoạch dâu tây đà lạt (`PYA-L18-P05`)
 * **Bối cảnh:** Nông trại dâu tây thu hoạch được $K$ kg dâu. Dâu được đóng vào 2 loại hộp: Hộp lớn chứa được $5\text{ kg}$ và Hộp nhỏ chứa được $1\text{ kg}$. Để tiết kiệm chi phí đóng gói, chủ nông trại muốn dùng nhiều hộp lớn nhất có thể.
@@ -6725,11 +6725,11 @@ Mỗi đề thi mô phỏng chính xác cấu trúc và thời gian làm bài c�
 
 ## Lý thuyết và Concept Quiz
 
-# Bài 16: Đề thi thử Tin học trẻ Bảng A
+# Bài 16: Đề thi thử Python Bảng A
 
 Mỗi đề thi chuẩn gồm 4 bài toán phân bổ theo thời gian 90 phút:
 
-## ĐỀ THI THỬ SỐ 01 (MÔ PHỎNG ĐỀ THT THÀNH PHỐ)
+## ĐỀ THI THỬ SỐ 01 (MÔ PHỎNG ĐỀ PYA THÀNH PHỐ)
 
 ### Bài 1 (30 điểm): Mua dụng cụ học tập
 - **Yêu cầu:** Mua $N$ quyển vở giá $P$ đồng/quyển. Mua từ 10 quyển trở lên giảm $10\%$. Tính số tiền phải trả (số nguyên).
@@ -6773,7 +6773,7 @@ Mỗi đề thi chuẩn gồm 4 bài toán phân bổ theo thời gian 90 phút:
 
 ## Bài tập lesson
 
-# Hệ thống bài tập thực hành — bài 16: Đề thi thử Tin học trẻ Bảng A
+# Hệ thống bài tập thực hành — bài 16: Đề thi thử Python Bảng A
 
 ---
 

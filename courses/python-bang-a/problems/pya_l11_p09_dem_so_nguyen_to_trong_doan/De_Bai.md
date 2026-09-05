@@ -1,5 +1,9 @@
-# Đếm Số Nguyên Tố Trong Đoạn
+# Đếm số nguyên tố trong đoạn
 
+
+## Bối cảnh
+
+Đếm số lượng số nguyên tố trong một khoảng giá trị cho trước là dạng toán kinh điển đánh giá hiệu quả của các thuật toán sàng lọc và kiểm tra số nguyên tố.
 
 ## Nhiệm vụ
 

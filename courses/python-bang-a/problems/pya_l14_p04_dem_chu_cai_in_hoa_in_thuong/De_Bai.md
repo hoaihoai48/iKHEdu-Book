@@ -1,5 +1,9 @@
-# Đếm Chữ Cái In Hoa & In Thường
+# Đếm chữ cái in hoa & in thường
 
+
+## Bối cảnh
+
+Đo lường tỉ lệ giữa chữ cái in hoa và in thường giúp hệ thống tự động đánh giá độ phức tạp và độ an toàn của mật khẩu.
 
 ## Nhiệm vụ
 

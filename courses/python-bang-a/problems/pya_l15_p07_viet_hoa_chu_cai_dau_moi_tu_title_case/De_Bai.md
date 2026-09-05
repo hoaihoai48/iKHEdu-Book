@@ -1,5 +1,9 @@
-# Viết Hoa Chữ Cái Đầu Mỗi Từ (Title Case)
+# Viết hoa chữ cái đầu mỗi từ (title case)
 
+
+## Bối cảnh
+
+Quy tắc viết hoa chữ cái đầu mỗi từ là chuẩn mực định dạng bắt buộc khi lưu trữ danh tính người dùng trong hệ thống cơ sở dữ liệu.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ nguyen van an
 ```text
 Nguyen Van An
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `nguyen van an`, kết quả thu được tương ứng là `Nguyen Van An`.
+
 
 
 ## Ràng buộc

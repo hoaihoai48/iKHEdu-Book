@@ -1,5 +1,9 @@
-# Từ Xuất Hiện Nhiều Nhất Trong Đoạn
+# Từ xuất hiện nhiều nhất trong đoạn
 
+
+## Bối cảnh
+
+Tìm từ xuất hiện với tần suất cao nhất trong một văn bản là bài toán quan trọng trong trích xuất từ khóa và khai phá dữ liệu văn bản.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ cam quyt mit dua cam xoai cam dua
 ```text
 cam 3
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `cam quyt mit dua cam xoai cam dua`, kết quả thu được tương ứng là `cam 3`.
+
 
 
 ## Ràng buộc

@@ -1,7 +1,7 @@
-hp = int(input().strip())
-if hp > 50:
-    print("MANH ME")
-elif hp >= 20:
-    print("TRUNG BINH")
+k = int(input())
+p = int(input())
+n = int(input())
+if k + p >= 2 * n:
+    print("YES")
 else:
-    print("NGUY HIEM")
+    print("NO")

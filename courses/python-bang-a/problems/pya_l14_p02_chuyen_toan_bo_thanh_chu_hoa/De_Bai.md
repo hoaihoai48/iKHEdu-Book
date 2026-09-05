@@ -1,5 +1,9 @@
-# Chuyển Toàn Bộ Thành Chữ Hoa
+# Chuyển toàn bộ thành chữ hoa
 
+
+## Bối cảnh
+
+Chuẩn hóa toàn bộ văn bản sang dạng chữ in hoa giúp việc đối sánh chuỗi trong các cơ sở dữ liệu không bị ảnh hưởng bởi quy cách gõ phím.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ ikhedu vietnam
 ```text
 IKHEDU VIETNAM
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `ikhedu vietnam`, kết quả thu được tương ứng là `IKHEDU VIETNAM`.
+
 
 
 ## Ràng buộc

@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L11-P06: Ước Chung Lớn Nhất & BCNN
-# Cài đặt code chuẩn Python 3
+a, b = map(int, input().split())
+x = a
+y = b
+while y != 0:
+    x, y = y, x % y
+gcd = x
+lcm = a // gcd * b
+print(gcd, lcm)

@@ -1,4 +1,4 @@
-# Hệ thống bài tập thực hành — bài 16: Đề thi thử Tin học trẻ Bảng A
+# Hệ thống bài tập thực hành — bài 16: Đề thi thử lập trình Python
 
 ---
 

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="candyBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="candyRem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <filter id="shadowCandy" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="280" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="798" height="278" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    TRỰC QUAN HÓA: CHIA NGUYÊN ( // ) VÀ CHIA DƯ ( % ) VỚI 17 VIÊN KẸO CHO 5 BẠN
+  </text>
+
+  <!-- 3 Full Groups -->
+  <g transform="translate(60, 65)">
+    <!-- Friend 1 -->
+    <g transform="translate(0, 0)" filter="url(#shadowCandy)">
+      <rect width="125" height="135" rx="10" fill="url(#candyBox)"/>
+      <text x="62" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Bạn 1: 3 kẹo</text>
+      <circle cx="35" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="90" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="62" cy="100" r="14" fill="#FDE047"/>
+    </g>
+    <!-- Friend 2 -->
+    <g transform="translate(135, 0)" filter="url(#shadowCandy)">
+      <rect width="125" height="135" rx="10" fill="url(#candyBox)"/>
+      <text x="62" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Bạn 2: 3 kẹo</text>
+      <circle cx="35" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="90" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="62" cy="100" r="14" fill="#FDE047"/>
+    </g>
+    <!-- Friend 3 -->
+    <g transform="translate(270, 0)" filter="url(#shadowCandy)">
+      <rect width="125" height="135" rx="10" fill="url(#candyBox)"/>
+      <text x="62" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Bạn 3: 3 kẹo</text>
+      <circle cx="35" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="90" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="62" cy="100" r="14" fill="#FDE047"/>
+    </g>
+    <!-- Friend 4 -->
+    <g transform="translate(405, 0)" filter="url(#shadowCandy)">
+      <rect width="125" height="135" rx="10" fill="url(#candyBox)"/>
+      <text x="62" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Bạn 4: 3 kẹo</text>
+      <circle cx="35" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="90" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="62" cy="100" r="14" fill="#FDE047"/>
+    </g>
+    <!-- Friend 5 -->
+    <g transform="translate(540, 0)" filter="url(#shadowCandy)">
+      <rect width="125" height="135" rx="10" fill="url(#candyBox)"/>
+      <text x="62" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Bạn 5: 3 kẹo</text>
+      <circle cx="35" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="90" cy="65" r="14" fill="#FDE047"/>
+      <circle cx="62" cy="100" r="14" fill="#FDE047"/>
+    </g>
+  </g>
+
+  <!-- Leftover (Modulo) Box -->
+  <g transform="translate(60, 215)">
+    <rect width="665" height="50" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="180" y="31" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1E3A8A">
+      17 // 5 = 3 (Mỗi bạn 3 chiếc)
+    </text>
+    <line x1="330" y1="10" x2="330" y2="40" stroke="#FECACA" stroke-width="2"/>
+    <text x="490" y="31" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#DC2626">
+      17 % 5 = 2 (Còn thừa lại 2 chiếc kẹo)
+    </text>
+  </g>
+</svg>

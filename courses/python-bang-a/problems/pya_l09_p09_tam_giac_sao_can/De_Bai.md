@@ -1,5 +1,9 @@
-# Tam Giác Sao Cân
+# Tam giác sao cân
 
+
+## Bối cảnh
+
+Vẽ tam giác cân bằng dấu sao `*` với chiều cao $N$. Mỗi hàng cần tính số khoảng trắng và số sao phù hợp để hình tam giác cân đối.
 
 ## Nhiệm vụ
 
@@ -23,6 +27,12 @@ Tháp sao tam giác cân có $N$ dòng đúng quy luật trên.
  ***
 *****
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `3`, kết quả thu được tương ứng là `*
+ ***
+*****`.
+
 
 
 ## Ràng buộc

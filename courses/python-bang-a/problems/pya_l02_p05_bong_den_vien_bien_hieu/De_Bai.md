@@ -1,14 +1,12 @@
-# Bóng Đèn Viền Biển Hiệu
+# Bóng đèn viền biển hiệu
 
-
-*(Lấy cảm hứng từ Bài 1 THT Sơn Trà - Đà Nẵng)*
 
 ## Bối cảnh
 
-Phố phường sắp đến hội hoa đăng, người ta muốn mắc các bóng đèn màu rực rỡ trang trí xung quanh viền của một bảng quảng cáo hình vuông. Bảng quảng cáo có chiều dài cạnh là $a\text{ dm}$. Các bóng đèn được mắc liên tiếp nhau và cách nhau đúng $5\text{ cm}$ dọc theo chu vi hình vuông (bao gồm cả các góc). Bác thợ điện leo thang mà chưa biết cần bao nhiêu bóng. Em hãy giúp bác tính số bóng đèn cần mắc nhé!
+Phố phường sắp đến hội hoa đăng, người ta muốn mắc các bóng đèn màu rực rỡ trang trí xung quanh viền của một bảng quảng cáo hình vuông. Bảng quảng cáo có chiều dài cạnh là $a\text{ dm}$. Các bóng đèn được mắc liên tiếp nhau và cách nhau đúng $5\text{ cm}$ dọc theo chu vi hình vuông (bao gồm cả các góc). Bác thợ điện leo thang mà chưa biết cần bao nhiêu bóng. Hãy giúp bác tính số bóng đèn cần mắc.
 ## Nhiệm vụ
 
-Em hãy tính số lượng bóng đèn cần mắc.
+Hãy tính số lượng bóng đèn cần mắc.
 * **Biết rằng:** $1\text{ dm} = 10\text{ cm}$.
 ## Input
 

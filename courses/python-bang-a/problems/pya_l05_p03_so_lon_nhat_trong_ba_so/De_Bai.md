@@ -1,5 +1,9 @@
-# Số Lớn Nhất Trong Ba Số
+# Số lớn nhất trong ba số
 
+
+## Bối cảnh
+
+Ba bạn học sinh thi chạy 100 mét. Mỗi bạn chạy được một thành tích khác nhau. Hãy tìm bạn có thành tích tốt nhất (số lớn nhất).
 
 ## Nhiệm vụ
 
@@ -22,6 +26,12 @@ Một số nguyên duy nhất là số lớn nhất.
 ```text
 28
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `15
+28
+9`, kết quả thu được tương ứng là `28`.
+
 ## Ràng buộc
 
 

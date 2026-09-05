@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L09-P04: Số Fibonacci Thứ N
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+a, b = 1, 1
+for _ in range(n - 1):
+    a, b = b, a + b
+print(a)

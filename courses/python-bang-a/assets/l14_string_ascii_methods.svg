@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="100%" stop-color="#EDE9FE"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECFDF5"/>
+      <stop offset="100%" stop-color="#D1FAE5"/>
+    </linearGradient>
+    <filter id="shadowCard" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="800" height="320" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="798" height="318" rx="15" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+
+  <!-- Title Section -->
+  <text x="400" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="bold" fill="#0F172A">
+    BẢN CHẤT XỬ LÝ CHUỖI: BỘ BA PHƯƠNG THỨC, MÃ SỐ ASCII &amp; BẤT BIẾN
+  </text>
+
+  <!-- Column 1: Character Inspection -->
+  <g transform="translate(30, 60)" filter="url(#shadowCard)">
+    <rect width="225" height="235" rx="12" fill="url(#cardGrad1)" stroke="#3B82F6" stroke-width="2"/>
+    <rect width="225" height="36" rx="12" fill="#2563EB"/>
+    <rect y="20" width="225" height="16" fill="#2563EB"/>
+    <text x="112" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">1. PHÂN LOẠI KÝ TỰ</text>
+    
+    <text x="20" y="65" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1E40AF">ch.isdigit()</text>
+    <text x="140" y="65" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#334155">→ Là chữ số?</text>
+    
+    <text x="20" y="95" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1E40AF">ch.isalpha()</text>
+    <text x="140" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#334155">→ Là chữ cái?</text>
+    
+    <text x="20" y="125" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1E40AF">ch.isupper()</text>
+    <text x="140" y="125" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#334155">→ In hoa?</text>
+    
+    <text x="20" y="155" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1E40AF">ch.islower()</text>
+    <text x="140" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#334155">→ In thường?</text>
+    
+    <text x="20" y="185" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1E40AF">ch.isspace()</text>
+    <text x="140" y="185" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#334155">→ Khoảng trắng?</text>
+
+    <!-- Note -->
+    <rect x="12" y="200" width="201" height="24" rx="6" fill="#BFDBFE"/>
+    <text x="112" y="216" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#1E3A8A">Trả về True / False</text>
+  </g>
+
+  <!-- Column 2: ASCII Mapping -->
+  <g transform="translate(285, 60)" filter="url(#shadowCard)">
+    <rect width="230" height="235" rx="12" fill="url(#cardGrad2)" stroke="#8B5CF6" stroke-width="2"/>
+    <rect width="230" height="36" rx="12" fill="#7C3AED"/>
+    <rect y="20" width="230" height="16" fill="#7C3AED"/>
+    <text x="115" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">2. CẦU NỐI ASCII (ord - chr)</text>
+
+    <g transform="translate(20, 52)">
+      <rect width="75" height="42" rx="8" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="37" y="26" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#6D28D9">'A'</text>
+      
+      <!-- Arrow Right -->
+      <path d="M 85 21 L 115 21" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="115,18 122,21 115,24" fill="#7C3AED"/>
+      <text x="103" y="14" text-anchor="middle" font-family="Consolas, monospace" font-size="10" font-weight="bold" fill="#6D28D9">ord('A')</text>
+
+      <rect x="125" y="0" width="65" height="42" rx="8" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="157" y="26" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#047857">65</text>
+    </g>
+
+    <g transform="translate(20, 108)">
+      <rect width="65" height="42" rx="8" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="32" y="26" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#047857">97</text>
+      
+      <!-- Arrow Right -->
+      <path d="M 75 21 L 105 21" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="105,18 112,21 105,24" fill="#7C3AED"/>
+      <text x="93" y="14" text-anchor="middle" font-family="Consolas, monospace" font-size="10" font-weight="bold" fill="#6D28D9">chr(97)</text>
+
+      <rect x="115" y="0" width="75" height="42" rx="8" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="152" y="26" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#6D28D9">'a'</text>
+    </g>
+
+    <!-- Key rule -->
+    <rect x="12" y="165" width="206" height="58" rx="8" fill="#DDD6FE"/>
+    <text x="115" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#4C1D95">Quy tắc tịnh tiến chữ liền sau:</text>
+    <text x="115" y="205" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#5B21B6">next_ch = chr(ord(c) + 1)</text>
+  </g>
+
+  <!-- Column 3: Split and Join -->
+  <g transform="translate(545, 60)" filter="url(#shadowCard)">
+    <rect width="225" height="235" rx="12" fill="url(#cardGrad3)" stroke="#10B981" stroke-width="2"/>
+    <rect width="225" height="36" rx="12" fill="#059669"/>
+    <rect y="20" width="225" height="16" fill="#059669"/>
+    <text x="112" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">3. TÁCH &amp; NỐI TỪ (split / join)</text>
+
+    <text x="15" y="62" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#065F46">Chuỗi văn bản gốc:</text>
+    <rect x="15" y="68" width="195" height="28" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1"/>
+    <text x="112" y="87" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#0F172A">"Hoc  Lap   Trinh"</text>
+
+    <!-- Arrow down split -->
+    <text x="112" y="112" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#047857">s.split()</text>
+    <path d="M 112 116 L 112 126" stroke="#059669" stroke-width="2"/>
+    <polygon points="109,126 112,131 115,126" fill="#059669"/>
+
+    <text x="15" y="145" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#065F46">Danh sách từ đã lọc sạch:</text>
+    <rect x="15" y="151" width="195" height="32" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1"/>
+    <text x="112" y="172" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#1E40AF">['Hoc', 'Lap', 'Trinh']</text>
+
+    <!-- Join -->
+    <rect x="15" y="195" width="195" height="28" rx="6" fill="#A7F3D0"/>
+    <text x="112" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#064E3B">" ".join(ds) → Nối lại</text>
+  </g>
+</svg>

@@ -1,5 +1,9 @@
-# Đếm Số Chẵn Đến Khi Gặp 0
+# Đếm số chẵn đến khi gặp 0
 
+
+## Bối cảnh
+
+Trong trò chơi đếm số, người dùng nhập các số liên tục. Chương trình đếm xem có bao nhiêu số chẵn đã được nhập, cho đến khi gặp số 0 thì dừng.
 
 ## Nhiệm vụ
 

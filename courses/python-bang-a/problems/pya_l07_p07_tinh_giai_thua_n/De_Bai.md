@@ -1,11 +1,11 @@
-# Tính Giai Thừa $N!$
+# Tính giai thừa $N!$
 
 
 ## Bối cảnh
 
 Cuối tuần, bạn Tý mở một gian hàng kẹo nhỏ trước cổng trường. Tý xếp kẹo thành từng hàng vui nhộn: hàng có số tự nhiên $N$ thì Tý nhân tất cả các số tự nhiên từ 1 đến $N$ với nhau. Cách nhân dồn này được gọi là giai thừa, ký hiệu là $N!$, và được tính bằng công thức:
-  $$N! = 1 \times 2 \times 3 \times \dots \times N$$
-Hôm nay khách đông quá, Tý tính không kịp. Em hãy giúp Tý tính nhanh giá trị $N!$ nhé!
+ $$N! = 1 \times 2 \times 3 \times \dots \times N$$
+Hôm nay khách đông quá, Tý tính không kịp. Hãy giúp Tý tính nhanh giá trị $N!$.
 ## Nhiệm vụ
 
 Nhập số tự nhiên $N$ ($1 \le N \le 20$). Hãy tính và in ra giá trị $N!$.

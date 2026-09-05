@@ -1,12 +1,12 @@
-# Diện Tích Tam Giác Vuông
+# Diện tích tam giác vuông
 
 ## Bối cảnh
 
-Bé Na có một miếng bánh hình tam giác vuông rất xinh. Hai cạnh góc vuông của miếng bánh dài $a\text{ cm}$ và $h\text{ cm}$. Tích $a \times h$ luôn là số chẵn. Bé Na muốn biết miếng bánh của mình rộng bao nhiêu để khoe với cả lớp. Em hãy giúp bé Na tính diện tích miếng bánh nhé!
+Na có một miếng bánh hình tam giác vuông rất xinh. Hai cạnh góc vuông của miếng bánh dài $a\text{ cm}$ và $h\text{ cm}$. Tích $a \times h$ luôn là số chẵn. Na muốn biết miếng bánh của mình rộng bao nhiêu để khoe với cả lớp. Hãy tính diện tích miếng bánh.
 
 ## Nhiệm vụ
 
-Em hãy tính diện tích của hình tam giác vuông có hai cạnh góc vuông là $a$ và $h$.
+Hãy tính diện tích của hình tam giác vuông có hai cạnh góc vuông là $a$ và $h$.
 
 ## Input
 

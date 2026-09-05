@@ -1,16 +1,16 @@
-# Bàn Cờ Ca-rô Vô Tận
+# Bàn cờ Ca-rô vô tận
 
 
 ## Bối cảnh
 
 Giờ giải lao, hai bạn Bi và Bo rủ nhau chơi trên một bàn cờ ô vuông vô tận được chia thành các hàng, mỗi hàng có đúng $W$ ô vuông. Các ô vuông được đánh số liên tiếp bắt đầu từ $1$:
-  * Hàng 1 gồm các ô: $1, 2, \dots, W$.
-  * Hàng 2 gồm các ô: $W+1, W+2, \dots, 2W$.
-  * Cứ như vậy tiếp tục cho các hàng tiếp theo.
-Đến lượt đi, Bi chỉ vào một ô và đố Bo tìm vị trí của nó. Em hãy giúp Bo tìm xem ô đó ở hàng mấy, cột mấy nhé!
+ * Hàng 1 gồm các ô: $1, 2, \dots, W$.
+ * Hàng 2 gồm các ô: $W+1, W+2, \dots, 2W$.
+ * Cứ như vậy tiếp tục cho các hàng tiếp theo.
+Đến lượt đi, Bi chỉ vào một ô và đố Bo tìm vị trí của nó. Hãy tìm xem ô đó ở hàng mấy, cột mấy.
 ## Nhiệm vụ
 
-Cho biết số thứ tự của một ô là $K$. Em hãy xác định xem ô đó nằm ở **Hàng thứ mấy** và **Cột thứ mấy** (Cột tính từ 1 đến $W$)?
+Cho biết số thứ tự của một ô là $K$. Hãy xác định xem ô đó nằm ở **Hàng thứ mấy** và **Cột thứ mấy** (Cột tính từ 1 đến $W$)?
 ## Input
 
 Gồm hai số tự nhiên $K$ và $W$ ($1 \le K, W \le 10^6$) mỗi số trên một dòng.

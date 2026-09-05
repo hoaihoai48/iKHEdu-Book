@@ -1,5 +1,9 @@
-# Đếm Bội Số Của K
+# Đếm bội số của K
 
+
+## Bối cảnh
+
+Cô giáo hỏi: "Trong đoạn từ $A$ đến $B$, có bao nhiêu số chia hết cho $K$?". Hãy viết chương trình đếm nhanh.
 
 ## Nhiệm vụ
 

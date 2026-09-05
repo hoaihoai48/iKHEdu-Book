@@ -1,5 +1,9 @@
-# Ước Chung Lớn Nhất & BCNN
+# Ước chung lớn nhất & BCNN
 
+
+## Bối cảnh
+
+Thí sinh cần tìm giá trị lớn nhất hoặc nhỏ nhất trong một tập dữ liệu. Hãy viết chương trình tìm kiếm.
 
 ## Nhiệm vụ
 

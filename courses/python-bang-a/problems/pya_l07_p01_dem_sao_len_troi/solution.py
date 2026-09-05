@@ -1,2 +1,2 @@
-# Gợi ý mã nguồn cho PYA-L07-P01: Đếm Sao Lên Trời
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+print(" ".join(str(i) for i in range(1, n + 1)))

@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L08-P11: Trò Chơi Đoán Số Nhị Phân
-# Cài đặt code chuẩn Python 3
+n = int(input())
+count = 0
+while True:
+    count = count + 1
+    if n == 1:
+        break
+    n = n // 2
+print(count)

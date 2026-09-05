@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="boxGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4B5563"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="280" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="798" height="278" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    MÔ HÌNH LUỒNG XỬ LÝ DỮ LIỆU CỦA CHƯƠNG TRÌNH MÁY TÍNH
+  </text>
+
+  <!-- STEP 1: INPUT -->
+  <g transform="translate(40, 70)" filter="url(#shadow)">
+    <rect width="190" height="150" rx="12" fill="url(#boxGrad1)"/>
+    <text x="95" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">1. INPUT (ĐẦU VÀO)</text>
+    <rect x="15" y="50" width="160" height="85" rx="8" fill="#FFFFFF" fill-opacity="0.15"/>
+    <text x="95" y="75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#EFF6FF">Thiết bị: Bàn phím</text>
+    <text x="95" y="98" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#FDE047">input()</text>
+    <text x="95" y="120" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#DBEAFE">Đọc chuỗi ký tự (str)</text>
+  </g>
+
+  <!-- ARROW 1 -> 2 -->
+  <line x1="240" y1="145" x2="295" y2="145" stroke="#4B5563" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="268" y="132" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="bold" fill="#2563EB">int()</text>
+
+  <!-- STEP 2: PROCESS -->
+  <g transform="translate(305, 70)" filter="url(#shadow)">
+    <rect width="190" height="150" rx="12" fill="url(#boxGrad2)"/>
+    <text x="95" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">2. PROCESS (XỬ LÝ)</text>
+    <rect x="15" y="50" width="160" height="85" rx="8" fill="#FFFFFF" fill-opacity="0.15"/>
+    <text x="95" y="75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#ECFDF5">Bộ nhớ RAM &amp; CPU</text>
+    <text x="95" y="98" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#A7F3D0">tong = a + b</text>
+    <text x="95" y="120" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#D1FAE5">Tính toán &amp; Lưu biến</text>
+  </g>
+
+  <!-- ARROW 2 -> 3 -->
+  <line x1="505" y1="145" x2="560" y2="145" stroke="#4B5563" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+
+  <!-- STEP 3: OUTPUT -->
+  <g transform="translate(570, 70)" filter="url(#shadow)">
+    <rect width="190" height="150" rx="12" fill="url(#boxGrad3)"/>
+    <text x="95" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">3. OUTPUT (ĐẦU RA)</text>
+    <rect x="15" y="50" width="160" height="85" rx="8" fill="#FFFFFF" fill-opacity="0.15"/>
+    <text x="95" y="75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#FEF3C7">Thiết bị: Màn hình</text>
+    <text x="95" y="98" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#FEF08A">print(tong)</text>
+    <text x="95" y="120" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FDE68A">Hiển thị kết quả</text>
+  </g>
+
+  <!-- Bottom Caption -->
+  <text x="400" y="255" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-style="italic" fill="#64748B">
+    Mọi chương trình giải bài toán thi đấu đều vận hành nghiêm ngặt theo chu trình khép kín 3 bước này.
+  </text>
+</svg>

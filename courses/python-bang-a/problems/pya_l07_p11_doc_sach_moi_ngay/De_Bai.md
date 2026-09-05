@@ -1,15 +1,13 @@
-# Đọc Sách Mỗi Ngày
+# Đọc sách mỗi ngày
 
-
-*(Lấy cảm hứng từ Bài 52 Đề thi Scratch THT Toàn quốc)*
 
 ## Bối cảnh
 
 Nghỉ hè, bạn Hoa mượn ở thư viện một cuốn truyện thật dày có tổng cộng $N$ trang để rèn thói quen đọc sách mỗi ngày. Ngày thứ nhất Hoa đọc được 1 trang thật ngon lành.
-  * Ngày thứ hai Hoa đọc được 2 trang.
-  * Ngày thứ ba Hoa đọc được 3 trang.
-  * Cứ như vậy, ngày thứ $k$ Hoa đọc được $k$ trang.
-Hoa háo hức muốn biết mình đọc hết truyện sau mấy ngày. Em hãy giúp Hoa đếm số ngày nhé!
+ * Ngày thứ hai Hoa đọc được 2 trang.
+ * Ngày thứ ba Hoa đọc được 3 trang.
+ * Cứ như vậy, ngày thứ $k$ Hoa đọc được $k$ trang.
+Hoa háo hức muốn biết mình đọc hết truyện sau mấy ngày. Hãy đếm số ngày.
 ## Nhiệm vụ
 
 Hỏi sau đúng bao nhiêu ngày thì Hoa sẽ đọc hết (hoặc vượt quá) $N$ trang của cuốn sách?

@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L09-P08: Tam Giác Số Đơn Giản
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+for i in range(1, n + 1):
+    print(" ".join(str(j) for j in range(1, i + 1)))

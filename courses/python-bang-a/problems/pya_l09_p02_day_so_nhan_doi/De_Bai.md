@@ -1,5 +1,9 @@
-# Dãy Số Nhân Đôi
+# Dãy số nhân đôi
 
+
+## Bối cảnh
+
+Thí sinh viết dãy số: bắt đầu từ 1, mỗi số tiếp theo gấp đôi số trước. Hãy in ra $N$ số đầu tiên của dãy.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Dãy $N$ số, cách nhau bởi dấu cách.
 ```text
 1 2 4 8 16
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `5`, kết quả thu được tương ứng là `1 2 4 8 16`.
+
 
 
 ## Ràng buộc

@@ -1,5 +1,9 @@
-# Số Chẵn Có Hai Chữ Số
+# Số chẵn có hai chữ số
 
+
+## Bối cảnh
+
+Bạn Minh đang sưu tập các số chẵn có đúng hai chữ số để trang trí bảng tin lớp học. Hãy giúp Minh liệt kê tất cả các số đó.
 
 ## Nhiệm vụ
 

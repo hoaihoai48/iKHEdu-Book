@@ -1,8 +1,8 @@
-# Vé Số May Mắn
+# Vé số may mắn
 
 ## Bối cảnh
 
-Hội chợ trường em tổ chức trò chơi quay số trúng thưởng. Mỗi bạn nhỏ được phát một tấm vé in một số tự nhiên $N$. Ban tổ chức gọi đó là vé may mắn nếu tổng các chữ số của $N$ chia hết cho $7$. Bé Tí cầm vé số $1234$ trên tay, hồi hộp không biết mình có trúng thưởng không.
+Hội chợ trường em tổ chức trò chơi quay số trúng thưởng. Mỗi người dùng được phát một tấm vé in một số tự nhiên $N$. Ban tổ chức gọi đó là vé may mắn nếu tổng các chữ số của $N$ chia hết cho $7$. Một khối hộp cầm vé số $1234$ trên tay, hồi hộp không biết mình có trúng thưởng không.
 
 ## Nhiệm vụ
 

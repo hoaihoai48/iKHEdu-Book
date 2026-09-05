@@ -1,2 +1,6 @@
-# Gợi ý mã nguồn cho PYA-L10-P02: Tổng Chữ Số Của Số 3 Chữ Số
-# Cài đặt code chuẩn Python 3
+n = int(input())
+tong = 0
+while n > 0:
+    tong = tong + n % 10
+    n = n // 10
+print(tong)

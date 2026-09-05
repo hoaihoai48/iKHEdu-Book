@@ -1,19 +1,14 @@
-# Cỗ Máy Thời Gian 3 Thế Hệ
+# Cỗ máy thời gian 3 thế hệ
 
 
 ## Bối cảnh
 
-Cuối tuần, bạn Nam lôi ra một chiếc album ảnh cũ của gia đình có 3 thế hệ: Nam, Bố của Nam và Ông nội của Nam. Nam tò mò đọc từng trang và thấy ghi lại:
-  * Nam năm nay $a$ tuổi.
-  * Bố hơn Nam $b$ tuổi.
-  * Ông nội hơn Bố $c$ tuổi.
-Nam muốn khoe với cả lớp về ba thế hệ nhà mình. Em hãy giúp bạn Nam tính tuổi của Bố, của Ông và tổng số tuổi của cả ba người nhé!
+Trong bài toán phân tích nhân khẩu học, tuổi của ba thành viên trong một gia đình thuộc ba thế hệ liên tiếp được ghi nhận.
+
 ## Nhiệm vụ
 
-Nhập vào 3 số tự nhiên $a, b, c$ lần lượt trên 3 dòng. Hãy tính và in ra:
-  * Dòng 1: Tuổi của Bố.
-  * Dòng 2: Tuổi của Ông nội.
-  * Dòng 3: Tổng số tuổi của cả ba người.
+Cho số tuổi của người con là $a$, người bố hơn con $b$ tuổi, và người ông hơn bố $c$ tuổi. Hãy tính tuổi của bố, tuổi của ông và tổng tuổi của cả ba người.
+
 ## Input
 
 Ba dòng lần lượt chứa 3 số nguyên $a, b, c$ ($1 \le a \le 20, 20 \le b \le 40, 20 \le c \le 40$).

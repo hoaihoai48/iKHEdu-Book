@@ -1,5 +1,9 @@
-# Hoán Đổi Nửa Đầu Nửa Sau
+# Hoán đổi nửa đầu nửa sau
 
+
+## Bối cảnh
+
+Phép tráo đổi hai nửa của một chuỗi dữ liệu có độ dài chẵn thường được ứng dụng trong các giao thức hoán vị thông tin cơ bản.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ ABCDEF
 ```text
 DEFABC
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứng là `DEFABC`.
+
 
 
 ## Ràng buộc

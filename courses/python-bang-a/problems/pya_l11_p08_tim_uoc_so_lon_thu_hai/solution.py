@@ -1,2 +1,7 @@
-# Gợi ý mã nguồn cho PYA-L11-P08: Tìm Ước Số Lớn Thứ Hai
-# Cài đặt code chuẩn Python 3
+n = int(input())
+ket_qua = 1
+for i in range(2, int(n ** 0.5) + 1):
+    if n % i == 0:
+        ket_qua = n // i
+        break
+print(ket_qua)

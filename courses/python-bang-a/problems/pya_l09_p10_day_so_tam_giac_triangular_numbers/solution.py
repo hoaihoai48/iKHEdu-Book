@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L09-P10: Dãy Số Tam Giác (Triangular Numbers)
-# Cài đặt code chuẩn Python 3
+k = int(input())
+n = 1
+while n * (n + 1) // 2 < k:
+    n += 1
+if n * (n + 1) // 2 == k:
+    print("YES", n)
+else:
+    print("NO")

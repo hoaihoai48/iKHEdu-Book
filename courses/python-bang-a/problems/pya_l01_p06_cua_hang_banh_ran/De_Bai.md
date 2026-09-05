@@ -1,12 +1,14 @@
-# Cửa Hàng Bánh Rán
+# Cửa hàng bánh rán
 
 
 ## Bối cảnh
 
-Chiều tan học, chú mèo máy Doraemon tung tăng đi mua bánh rán ở cửa hàng đầu ngõ. Mỗi chiếc bánh rán có giá $a$ nghìn đồng, thơm phức mùi mật ong. Doraemon muốn mua đúng $b$ chiếc bánh rán để chia cho các bạn. Em hãy giúp Doraemon tính số tiền cần trả cho cô bán hàng nhé!
+Hệ thống máy tính tiền tự động tại căng-tin cần tính tổng giá trị hóa đơn khi khách hàng mua nhiều sản phẩm cùng loại với đơn giá cố định.
+
 ## Nhiệm vụ
 
-Hãy tính số tiền (nghìn đồng) mà Doraemon cần phải trả cho người bán hàng.
+Nhập vào đơn giá mỗi sản phẩm $a$ (nghìn đồng) và số lượng sản phẩm $b$. Hãy tính tổng số tiền (nghìn đồng) cần thanh toán.
+
 ## Input
 
 Nhập vào 2 số tự nhiên $a$ và $b$ mỗi số trên một dòng ($1 \le a \le 100, 1 \le b \le 100$).

@@ -1,5 +1,9 @@
-# Ký Tự Kế Tiếp Trong Bảng Chữ Cái
+# Ký tự kế tiếp trong bảng chữ cái
 
+
+## Bối cảnh
+
+Xác định ký tự liền sau trong bảng chữ cái dựa trên phép tịnh tiến mã số ASCII là nền tảng của nhiều thuật toán sinh khóa và mã hóa cổ điển.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ C
 ```text
 D
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `C`, kết quả thu được tương ứng là `D`.
+
 
 
 ## Ràng buộc

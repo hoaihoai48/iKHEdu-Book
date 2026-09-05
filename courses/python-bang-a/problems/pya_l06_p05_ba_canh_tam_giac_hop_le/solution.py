@@ -1,5 +1,7 @@
-a, b, c = map(int, input().split())
+a = int(input())
+b = int(input())
+c = int(input())
 if a + b > c and a + c > b and b + c > a:
-    print("YES")
+    print("HOP LE")
 else:
-    print("NO")
+    print("KHONG HOP LE")

@@ -1,5 +1,9 @@
-# Tính Tổng Các Chữ Số Trong Chuỗi
+# Tính tổng các chữ số trong chuỗi
 
+
+## Bối cảnh
+
+Trong bài kiểm tra, người dùng cần tính nhanh tổng một dãy số. Hãy viết chương trình hỗ trợ tính toán.
 
 ## Nhiệm vụ
 

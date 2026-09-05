@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L06-P01: Số Chẵn Có Hai Chữ Số
-# Cài đặt code chuẩn Python 3
+n = int(input())
+if n >= 10 and n <= 99 and n % 2 == 0:
+    print("YES")
+else:
+    print("NO")

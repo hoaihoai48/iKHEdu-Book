@@ -1,5 +1,9 @@
-# Đếm Số Lượng Số Đối Xứng Trong Đoạn
+# Đếm số lượng số đối xứng trong đoạn
 
+
+## Bối cảnh
+
+Các số đối xứng (palindrome) sở hữu tính cân bằng cấu trúc đặc biệt và xuất hiện thường xuyên trong bài toán sinh mã định danh và nén số liệu.
 
 ## Nhiệm vụ
 

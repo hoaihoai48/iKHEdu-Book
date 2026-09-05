@@ -1,2 +1,3 @@
-# Gợi ý mã nguồn cho PYA-L13-P09: Hoán Đổi Nửa Đầu Nửa Sau
-# Cài đặt code chuẩn Python 3
+s = input()
+n = len(s) // 2
+print(s[n:] + s[:n])

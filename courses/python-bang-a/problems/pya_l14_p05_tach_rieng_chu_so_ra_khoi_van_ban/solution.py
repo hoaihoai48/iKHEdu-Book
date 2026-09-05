@@ -1,2 +1,9 @@
-# Gợi ý mã nguồn cho PYA-L14-P05: Tách Riêng Chữ Số Ra Khỏi Văn Bản
-# Cài đặt code chuẩn Python 3
+s = input()
+kq = ''
+for ch in s:
+    if ch.isdigit():
+        kq = kq + ch
+if kq == '':
+    print('KHONG CO')
+else:
+    print(kq)

@@ -1,9 +1,9 @@
-# Tráo Đổi Hai Chiếc Cốc
+# Tráo đổi hai chiếc cốc
 
 
 ## Bối cảnh
 
-Giờ ăn trưa ở căng-tin, bạn Bo bưng ra hai chiếc cốc mát lạnh: cốc $A$ đựng nước cam vàng ươm và cốc $B$ đựng nước dưa hấu đỏ ngọt. Bo hí hửng khoe với bạn bè rồi nảy ra ý định vui: Bo muốn đổi nội dung trong 2 cốc cho nhau để mời các bạn nếm thử. Các bạn vỗ tay cổ vũ ầm ĩ. Em hãy giúp Bo tráo đổi hai chiếc cốc này nhé!
+Trong bài toán quản lý bộ nhớ, hai biến lưu trữ giá trị $A$ và $B$ cần được hoán đổi nội dung cho nhau. Bài toán yêu cầu tráo đổi dữ liệu của hai biến và xuất ra màn hình theo đúng thứ tự mới.
 ## Nhiệm vụ
 
 Nhập vào 2 số nguyên $A$ và $B$. Hãy hoán đổi giá trị của chúng và in ra theo thứ tự $A$ trước, $B$ sau.

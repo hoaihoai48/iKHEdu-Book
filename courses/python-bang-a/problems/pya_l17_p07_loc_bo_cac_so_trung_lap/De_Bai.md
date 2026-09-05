@@ -1,13 +1,17 @@
-# Lọc Bỏ Các Số Trùng Lặp
+# Lọc bỏ các số trùng lặp
 
+
+## Bối cảnh
+
+Loại bỏ các phần tử trùng lặp và sắp xếp lại tập hợp là bước tiền xử lý quan trọng trong làm sạch dữ liệu.
 
 ## Nhiệm vụ
 
 Cho dãy gồm $N$ số nguyên có thể chứa nhiều số bị trùng lặp. Hãy lọc bỏ các phần tử trùng lặp và in ra các số độc nhất theo thứ tự tăng dần.
 ## Input
 
-  * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
-  * Dòng 2: $N$ số nguyên.
+ * Dòng 1: Số nguyên $N$ ($1 \le N \le 10^5$).
+ * Dòng 2: $N$ số nguyên.
 ## Output
 
 Các số độc nhất sắp xếp tăng dần trên một dòng.
@@ -22,6 +26,11 @@ Các số độc nhất sắp xếp tăng dần trên một dòng.
 ```text
 1 2 3 4 5 9
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `7
+3 1 4 1 5 9 2`, kết quả thu được tương ứng là `1 2 3 4 5 9`.
+
 
 
 ## Ràng buộc

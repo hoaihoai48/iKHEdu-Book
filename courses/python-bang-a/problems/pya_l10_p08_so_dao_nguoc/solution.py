@@ -1,2 +1,6 @@
-# Gợi ý mã nguồn cho PYA-L10-P08: Số Đảo Ngược
-# Cài đặt code chuẩn Python 3
+n = int(input())
+dao = 0
+while n > 0:
+    dao = dao * 10 + n % 10
+    n = n // 10
+print(dao)

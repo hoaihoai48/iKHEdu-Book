@@ -1,5 +1,9 @@
-# In Từng Chữ Cái Xuống Dòng
+# In từng chữ cái xuống dòng
 
+
+## Bối cảnh
+
+Duyệt tuần tự qua từng ký tự của văn bản là thao tác nền tảng để phân tích cú pháp và kiểm định luồng dữ liệu ký tự.
 
 ## Nhiệm vụ
 
@@ -22,6 +26,12 @@ C
 A
 T
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `CAT`, kết quả thu được tương ứng là `C
+A
+T`.
+
 
 
 ## Ràng buộc

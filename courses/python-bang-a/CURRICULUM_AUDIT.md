@@ -2,7 +2,7 @@
 
 ## Quyết định phạm vi
 
-Khóa học giữ nguyên **6 chương / 18 bài**, tập trung vào Python 3 và tư duy giải bài cho Tin học trẻ Bảng A. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
+Khóa học giữ nguyên **6 chương / 16 bài**, tập trung vào Python 3 và tư duy giải bài cho Python Bảng A. Đây là khóa Python định hướng thuật toán, không phải khóa Python tổng quát.
 
 Các nội dung như `def`, `return`, `dict`, `set`, tuple, module, file I/O, exception nâng cao và comprehension không phải chuẩn bắt buộc của Level 1. Có thể giới thiệu ở Level 2 hoặc phụ lục khi cần.
 

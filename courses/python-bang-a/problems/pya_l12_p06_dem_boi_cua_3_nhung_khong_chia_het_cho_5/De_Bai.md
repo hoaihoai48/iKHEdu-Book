@@ -1,5 +1,9 @@
-# Đếm Bội Của 3 Nhưng Không Chia Hết Cho 5
+# Đếm bội của 3 nhưng không chia hết cho 5
 
+
+## Bối cảnh
+
+Trong lý thuyết tập hợp, bài toán xác định các phần tử thuộc tập này nhưng không thuộc tập khác đòi hỏi kỹ thuật trừ tập hợp chính xác để tránh đếm lặp.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Số lượng số thỏa mãn.
 ```text
 8
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `1 30`, kết quả thu được tương ứng là `8`.
+
 
 
 ## Ràng buộc

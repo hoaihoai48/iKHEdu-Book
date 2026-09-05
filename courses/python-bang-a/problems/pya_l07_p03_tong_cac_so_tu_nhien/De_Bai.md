@@ -1,5 +1,9 @@
-# Tổng Các Số Tự Nhiên
+# Tổng các số tự nhiên
 
+
+## Bối cảnh
+
+Nhà toán học Gauss khi còn đã tìm ra cách tính nhanh tổng các số từ 1 đến 100. Hãy viết chương trình tính tổng $1 + 2 + \dots + N$.
 
 ## Nhiệm vụ
 

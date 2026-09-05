@@ -1,5 +1,9 @@
-# Đếm Số Lượng Ước Số
+# Đếm số lượng ước số
 
+
+## Bối cảnh
+
+Số lượng ước số là chỉ số quan trọng phản ánh tính chia hết của một số nguyên, đồng thời là cơ sở nhận biết số nguyên tố và số chính phương.
 
 ## Nhiệm vụ
 

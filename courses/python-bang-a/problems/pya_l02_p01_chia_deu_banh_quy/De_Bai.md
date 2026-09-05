@@ -1,12 +1,14 @@
-# Chia Đều Bánh Quy
+# Chia đều bánh quy
 
 
 ## Bối cảnh
 
-Chiều chủ nhật thơm mùi bơ, mẹ làm được $a$ chiếc bánh quy giòn rụm và muốn chia đều vào $b$ chiếc đĩa xinh xắn. Các bé ngồi quanh bàn, mắt tròn xoe chờ được chia phần. Mẹ muốn mỗi đĩa có số bánh bằng nhau, xem còn dư chiếc nào không. Em hãy giúp mẹ chia bánh thật công bằng nhé!
+Tiệm bánh Hạnh Phúc vừa ra lò một mẻ gồm $a$ chiếc bánh quy bơ thơm phức. Cô chủ tiệm muốn chia đều số bánh vào $b$ đĩa trưng bày để phục vụ khách, sao cho mỗi đĩa có số bánh bằng nhau và nhiều nhất có thể. Những chiếc bánh còn dư không đủ xếp thêm một đĩa nữa sẽ được cất riêng vào hộp giữ tươi.
+
 ## Nhiệm vụ
 
-Em hãy tính xem mỗi chiếc đĩa có bao nhiêu chiếc bánh, và còn dư lại bao nhiêu chiếc bánh không đủ chia đều.
+Cho hai số nguyên dương $a$ (tổng số bánh) và $b$ (số đĩa). Hãy lập trình tính số bánh trên mỗi đĩa (phần nguyên của phép chia $a : b$) và số bánh còn dư lại.
+
 ## Input
 
 Nhập vào 2 số nguyên dương $a$ và $b$ trên 2 dòng ($1 \le a, b \le 1000$).

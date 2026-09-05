@@ -1,2 +1,7 @@
-# Gợi ý mã nguồn cho PYA-L08-P07: Ống Heo Mua Xe Máy
-# Cài đặt code chuẩn Python 3
+p = int(input())
+tong = 0
+ngay = 0
+while tong < p:
+    ngay = ngay + 1
+    tong = tong + ngay
+print(ngay)

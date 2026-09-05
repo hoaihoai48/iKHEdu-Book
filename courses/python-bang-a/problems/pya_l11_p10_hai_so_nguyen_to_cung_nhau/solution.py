@@ -1,2 +1,9 @@
-# Gợi ý mã nguồn cho PYA-L11-P10: Hai Số Nguyên Tố Cùng Nhau
-# Cài đặt code chuẩn Python 3
+a, b = map(int, input().split())
+x = a
+y = b
+while y != 0:
+    x, y = y, x % y
+if x == 1:
+    print("YES")
+else:
+    print("NO")

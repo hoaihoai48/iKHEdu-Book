@@ -1,8 +1,8 @@
-# Số Ghế Đối Xứng
+# Số ghế đối xứng
 
 ## Bối cảnh
 
-Rạp xiếc trong thành phố có một hàng ghế đặc biệt: những ghế mang số đối xứng (đọc từ trái sang phải hay từ phải sang trái đều giống nhau, như 121 hay 44) được gọi là ghế vàng và ngồi xem rất rõ. Bé Mi mua được vé ghế số $N$ và muốn biết ghế của mình có phải ghế vàng không.
+Rạp xiếc trong thành phố có một hàng ghế đặc biệt: những ghế mang số đối xứng (đọc từ trái sang phải hay từ phải sang trái đều giống nhau, như 121 hay 44) được gọi là ghế vàng và ngồi xem rất rõ. Mi mua được vé ghế số $N$ và muốn biết ghế của mình có phải ghế vàng không.
 
 ## Nhiệm vụ
 

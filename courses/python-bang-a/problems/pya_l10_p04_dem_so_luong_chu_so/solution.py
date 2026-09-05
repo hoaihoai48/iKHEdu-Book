@@ -1,2 +1,10 @@
-# Gợi ý mã nguồn cho PYA-L10-P04: Đếm Số Lượng Chữ Số
-# Cài đặt code chuẩn Python 3
+n = int(input())
+if n == 0:
+    print(1)
+else:
+    dem = 0
+    while n > 0:
+        du = n % 10
+        dem = dem + 1
+        n = n // 10
+    print(dem)

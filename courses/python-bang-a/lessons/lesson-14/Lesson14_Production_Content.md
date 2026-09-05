@@ -1,20 +1,214 @@
 # Bài 14: Duyệt chuỗi, biến đổi ký tự và tách từ
 
-## 1. Tóm tắt kiến thức trọng tâm
-- Duyệt từng ký tự: `for ch in s:`
-- **Hàm kiểm tra:** `ch.isdigit()` (chữ số), `ch.isalpha()` (chữ cái), `ch.isupper()` (chữ hoa), `ch.islower()` (chữ thường).
-- **Hàm biến đổi:** `s.upper()` (chuyển sang chữ hoa), `s.lower()` (chuyển sang chữ thường), `s.replace(old, new)`.
-- **Tách từ và ghép từ:**
-  - Tách các từ trong câu (tự động xóa dấu cách thừa): `danh_sach_tu = s.split()`
-  - Ghép lại bằng 1 khoảng trắng: `" ".join(danh_sach_tu)`
-- **Mã ASCII (`ord` và `chr`):**
-  - `ord('A') == 65`, `ord('a') == 97`, `ord('0') == 48`.
-  - `chr(65) == 'A'`.
+## 1. Khái niệm & Bản chất của Xử lý chuỗi nâng cao
+
+Trong bài trước, ta đã làm quen với việc đánh chỉ số và cắt lát chuỗi (`s[i]`, `s[a:b]`). Tuy nhiên, trong các bài toán lập trình thi đấu thực tế, chuỗi ký tự thường là dữ liệu văn bản phức tạp: mật mã, câu văn, danh sách từ ngữ, dữ liệu số lẫn lộn chữ cái. 
+
+Để giải quyết triệt để các dạng toán này, ta cần làm chủ 4 kỹ năng cốt lõi:
+1. **Duyệt từng ký tự**: Kiểm tra từng ký tự trong chuỗi xem là chữ cái, chữ số hay ký tự đặc biệt.
+2. **Biến đổi ký tự**: Chuyển đổi qua lại giữa chữ hoa và chữ thường, thay thế ký tự.
+3. **Bản chất mã ASCII**: Hiểu rõ mối liên hệ giữa ký tự và mã số nguyên trong bộ nhớ máy tính (`ord` và `chr`).
+4. **Tách từ và chuẩn hóa văn bản**: Sử dụng `split()` và `join()` để bóc tách từ ngữ từ một câu văn hoàn chỉnh.
+
+![Bản chất xử lý chuỗi nâng cao](../../assets/l14_string_ascii_methods.svg?v=1788575106)
 
 ---
 
+## 2. Kiểm tra và phân loại ký tự
 
-## 2. Concept quiz: 26 câu trắc nghiệm bắt bẫy củng cố khái niệm
+Python cung cấp sẵn các phương thức kiểm tra ký tự cực kỳ mạnh mẽ, trả về giá trị kiểu Logic (`True` hoặc `False`):
+
+| Phương thức | Ý nghĩa kỹ thuật | Ví dụ kiểm tra | Kết quả |
+|---|---|---|:---:|
+| `ch.isdigit()` | Ký tự `ch` có phải là chữ số (`'0'` đến `'9'`) không? | `'7'.isdigit()` | `True` |
+| `ch.isalpha()` | Ký tự `ch` có phải là chữ cái (`'a'-'z'`, `'A'-'Z'`) không? | `'k'.isalpha()` | `True` |
+| `ch.isupper()` | Ký tự `ch` có phải là chữ cái in hoa không? | `'A'.isupper()` | `True` |
+| `ch.islower()` | Ký tự `ch` có phải là chữ cái in thường không? | `'b'.islower()` | `True` |
+| `ch.isspace()` | Ký tự `ch` có phải là khoảng trắng (space, tab, enter) không? | `' '.isspace()` | `True` |
+
+> ⚠️ **Lưu ý tử huyệt:** Các phương thức trên chỉ hoạt động chính xác khi `ch` là một ký tự đơn hoặc một chuỗi con không chứa ký tự khác loại. Nếu chuỗi rỗng `""`, tất cả các hàm trên đều trả về `False`. Khoảng trắng `' '` không phải là chữ cái cũng không phải là chữ số!
+
+### Ứng dụng: Lọc và trích xuất chữ số từ văn bản hỗn hợp
+```python
+s = input()
+chu_so = ""
+for ch in s:
+    if ch.isdigit():
+        chu_so += ch
+print(chu_so)
+```
+
+---
+
+## 3. Biến đổi ký tự và chuỗi
+
+Vì chuỗi trong Python mang tính chất **bất biến**, các hàm biến đổi **không bao giờ làm thay đổi chuỗi gốc**, mà luôn trả về một **chuỗi mới hoàn toàn**:
+
+### 3.1. Chuyển đổi hoa — thường
+* `s.upper()`: Tạo chuỗi mới với toàn bộ chữ cái được chuyển thành **in hoa**.
+* `s.lower()`: Tạo chuỗi mới với toàn bộ chữ cái được chuyển thành **in thường**.
+* `s.swapcase()`: Đảo ngược trạng thái: chữ hoa hóa thường, chữ thường hóa hoa.
+
+```python
+s = "Python 2026"
+print(s.upper())     # "PYTHON 2026"
+print(s.lower())     # "python 2026"
+print(s.swapcase())  # "pYTHON 2026"
+print(s)             # Vẫn là "Python 2026" (chuỗi gốc không đổi)
+```
+
+### 3.2. Thay thế chuỗi con với `s.replace(old, new)`
+* Cú pháp: `s.replace(chuoi_cu, chuoi_moi)`
+* Thay thế tất cả các lần xuất hiện của `chuoi_cu` bằng `chuoi_moi`:
+```python
+s = "lap-trinh-python"
+s_moi = s.replace("-", " ")
+print(s_moi)  # "lap trinh python"
+```
+
+---
+
+## 4. Bản chất mã ASCII: Cầu nối giữa Chữ cái và Con số
+
+Trong bộ nhớ máy tính, mỗi ký tự đều được biểu diễn bởi một số nguyên từ $0$ đến $127$ (gọi là mã ASCII — American Standard Code for Information Interchange).
+
+### 4.1. Bảng mã ASCII chuẩn mực cần nhớ nằm lòng
+
+| Ký tự | Mã ASCII (`ord`) | Quy luật & Ứng dụng |
+|:---:|:---:|---|
+| `'0'` đến `'9'` | $48$ đến $57$ | Muốn đổi ký tự số sang số nguyên: `int(ch)` hoặc `ord(ch) - 48` |
+| `'A'` đến `'Z'` | $65$ đến $90$ | Chữ hoa liên tiếp cách nhau đúng 1 đơn vị |
+| `'a'` đến `'z'` | $97$ đến $122$ | Chữ thường liên tiếp cách nhau đúng 1 đơn vị |
+| `' '` (space) | $32$ | Khoảng trắng |
+
+> 💡 **Hằng số vàng 32:** 
+> $$\mathbf{ord('a') - ord('A') = 97 - 65 = 32}$$
+> Chữ thường luôn có mã ASCII lớn hơn chữ hoa tương ứng đúng **32 đơn vị**. 
+> Do đó:
+> * Đổi hoa sang thường: `chr(ord(ch) + 32)`
+> * Đổi thường sang hoa: `chr(ord(ch) - 32)`
+
+### 4.2. Hai hàm chuyển đổi: `ord()` và `chr()`
+* `ord(ch)`: Nhận vào **1 ký tự**, trả về **mã số nguyên ASCII** của nó.
+* `chr(code)`: Nhận vào **mã số nguyên**, trả về **ký tự** tương ứng.
+
+```python
+print(ord('A'))         # In ra: 65
+print(chr(65))          # In ra: 'A'
+print(chr(ord('A') + 1)) # In ra: 'B' (Ký tự kế tiếp)
+```
+
+---
+
+## 5. Tách từ (`split`) và Ghép từ (`join`) — Chuẩn hóa câu văn
+
+Xử lý từ ngữ là một trong những dạng toán thi đấu kinh điển: đếm số từ, tìm từ dài nhất, đảo ngược từ trong câu.
+
+### 5.1. Phương thức `s.split()` thần thánh
+* Khi gọi `s.split()` không truyền tham số, Python sẽ:
+  1. Tự động tìm tất cả các cụm khoảng trắng (bao gồm 1 khoảng trắng, nhiều khoảng trắng liên tiếp, dấu cách ở đầu/đuôi).
+  2. Bóc tách câu thành một **danh sách (`list`) các từ riêng biệt**.
+
+```python
+s = "   Ha    Noi   mua    thu   "
+danh_sach_tu = s.split()
+print(danh_sach_tu)      # ['Ha', 'Noi', 'mua', 'thu']
+print(len(danh_sach_tu)) # In ra: 4 (Đếm số từ cực kỳ chính xác!)
+```
+
+### 5.2. Phương thức ghép chuỗi `sep.join(list)`
+* Nối tất cả các chuỗi trong một danh sách lại với nhau, phân cách bằng chuỗi `sep`:
+```python
+tu = ['Python', 'la', 'ngon', 'ngu', 'tuyet', 'voi']
+cau = " ".join(tu)
+print(cau)  # "Python la ngon ngu tuyet voi"
+```
+
+---
+
+## 6. Bảng mô phỏng biến thiên ô nhớ
+
+### Chương trình: Tính tổng các chữ số xuất hiện trong một chuỗi hỗn hợp
+
+```python
+s = "A3B7C2"
+tong = 0
+for ch in s:
+    if ch.isdigit():
+        tong += int(ch)
+print(tong)
+```
+
+| Bước | Vòng lặp `ch` | `ch.isdigit()`? | Thao tác thực hiện | Giá trị `tong` trong RAM |
+|:---:|:---:|:---:|---|:---:|
+| Khởi tạo | — | — | Khởi tạo biến tích lũy `tong = 0` | $0$ |
+| $1$ | `'A'` | `False` | Không phải số, bỏ qua | $0$ |
+| $2$ | `'3'` | `True` | `tong += int('3')` $\implies 0 + 3 = 3$ | $3$ |
+| $3$ | `'B'` | `False` | Không phải số, bỏ qua | $3$ |
+| $4$ | `'7'` | `True` | `tong += int('7')` $\implies 3 + 7 = 10$ | $10$ |
+| $5$ | `'C'` | `False` | Không phải số, bỏ qua | $10$ |
+| $6$ | `'2'` | `True` | `tong += int('2')` $\implies 10 + 2 = 12$ | $12$ |
+| **Kết thúc** | — | — | In giá trị `tong` ra màn hình | **In: $12$** |
+
+---
+
+## 7. Tử huyệt và Bẫy lỗi lập trình kinh điển
+
+> ❌ **BẪY LỖI 1: NỐI CHUỖI THAY VÌ CỘNG SỐ**
+> * Khi duyệt qua các ký tự số, nếu viết:
+>   ```python
+>   tong += ch  # ch vẫn là kiểu chuỗi '3', '7'
+>   ```
+>   Thì máy tính sẽ thực hiện phép ghép chuỗi: `"0" + "3" + "7" = "037"`, không phải phép cộng số học!
+> * **Cách viết an toàn:** Luôn ép kiểu `int(ch)` trước khi cộng: `tong += int(ch)`.
+
+> ❌ **BẪY LỖI 2: ĐẾM SỐ TỪ BẰNG CÁCH ĐẾM DẤU CÁCH**
+> * Nhiều học sinh ngây thơ dùng thuật toán: `so_tu = s.count(' ') + 1`.
+> * Nếu văn bản có 2 dấu cách liên tiếp `"Ha  Noi"`, thuật toán trên đếm ra 3 từ $\implies$ **SAI HOÀN TOÀN!**
+> * **Quy tắc vàng:** Luôn dùng `len(s.split())` để đếm từ chuẩn xác 100%.
+
+> ❌ **BẪY LỖI 3: QUÊN RẰNG `s.upper()` KHÔNG LÀM ĐỔI CHUỖI GỐC**
+> * Viết:
+>   ```python
+>   s = "abc"
+>   s.upper()
+>   print(s)  # Vẫn in ra: "abc"
+>   ```
+> * **Bắt buộc gán lại:** `s = s.upper()`.
+
+---
+
+## 8. Mẫu code chuẩn thi đấu
+
+### 8.1. Đếm số lượng chữ cái in hoa, in thường và chữ số
+```python
+s = input()
+hoa = 0
+thuong = 0
+so = 0
+
+for ch in s:
+    if ch.isupper():
+        hoa += 1
+    elif ch.islower():
+        thuong += 1
+    elif ch.isdigit():
+        so += 1
+
+print(hoa, thuong, so)
+```
+
+### 8.2. Chuẩn hóa câu văn (Xóa khoảng trắng thừa, viết hoa chữ cái đầu)
+```python
+s = input()
+tu = s.split()
+tu_chuan = [w.capitalize() for w in tu]
+print(" ".join(tu_chuan))
+```
+
+---
+
+## 9. Concept Quiz: 26 câu trắc nghiệm bắt bẫy củng cố khái niệm
 
 #### Câu 1: Vòng lặp `for ch in "ABC":` sẽ lặp lại bao nhiêu lần?
 - **A.** 1 lần
@@ -46,10 +240,10 @@
 
 #### Câu 5: Phương thức `s.count('a')` trên chuỗi `s = "Ha Noi Mua Thu"` trả về kết quả bằng bao nhiêu?
 - **A.** 0
-- **B.** **[Đáp án đúng]** 1 (Bẫy chữ hoa / chữ thường!)
-- **C.** 2
+- **B.** 1
+- **C.** **[Đáp án đúng]** 2
 - **D.** 3
-- > *Giải thích:* Python phân biệt chữ hoa và chữ thường! Chữ `'H'` trong `"Ha"` đi kèm với chữ `'a'` thường (1 chữ). Trong chuỗi không còn chữ `'a'` thường nào khác.
+- > *Giải thích:* Python phân biệt chữ hoa và chữ thường! Chữ `'a'` thường xuất hiện ở vị trí `H[a]` trong `"Ha"` và `M[a]` trong `"Mua"` → tổng cộng 2 lần. Chữ `'A'` in hoa trong `"Ha"` không được tính.
 
 #### Câu 6: Phương thức `ch.isalpha()` trả về `True` khi nào?
 - **A.** Khi `ch` là một số
@@ -221,7 +415,7 @@ print(ds[-1])
 
 #### Câu 26: Đoạn code sau in ra màn hình giá trị gì?
 ```python
-cau = "lap trinh tin hoc tre"
+cau = "lap trinh python nang cao"
 ds = cau.split()
 max_len = 0
 for tu in ds:
@@ -231,6 +425,6 @@ print(max_len)
 ```
 - **A.** 3
 - **B.** 4
-- **C.** **[Đáp án đúng]** 5
-- **D.** 6
-- > *Giải thích:* Độ dài các từ: 'lap' (3), 'trinh' (5), 'tin' (3), 'hoc' (3), 'tre' (3). Từ dài nhất có độ dài 5.
+- **C.** 5
+- **D.** **[Đáp án đúng]** 6
+- > *Giải thích:* Độ dài các từ: 'lap' (3), 'trinh' (5), 'python' (6), 'nang' (4), 'cao' (3). Từ dài nhất là 'python' có độ dài 6.

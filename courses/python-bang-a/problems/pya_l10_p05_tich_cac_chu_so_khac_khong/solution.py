@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L10-P05: Tích Các Chữ Số Khác Không
-# Cài đặt code chuẩn Python 3
+n = int(input())
+tich = 1
+while n > 0:
+    d = n % 10
+    if d != 0:
+        tich = tich * d
+    n = n // 10
+print(tich)

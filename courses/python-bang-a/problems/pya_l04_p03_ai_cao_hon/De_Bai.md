@@ -1,12 +1,14 @@
-# Ai Cao Hơn?
+# Ai cao hơn?
 
 
 ## Bối cảnh
 
-Giờ ra chơi, hai bạn thân Minh và Nam đứng tựa lưng vào nhau để so xem ai cao hơn. Cô y tế đo giúp: bạn Minh cao $a\text{ cm}$, bạn Nam cao $b\text{ cm}$. Cả lớp đều biết chiều cao của hai bạn không bằng nhau, nhưng cãi nhau ồn ào chưa ngã ngũ. Em hãy giúp cô giáo gọi tên bạn cao hơn nhé!
+Trong hệ thống dữ liệu kiểm tra thể lực, số đo chiều cao của hai ứng viên Minh ($a\text{ cm}$) và Nam ($b\text{ cm}$) được ghi nhận.
+
 ## Nhiệm vụ
 
-Hãy in ra tên của bạn cao hơn (`Minh` hoặc `Nam`).
+Biết rằng $a \ne b$, hãy xác định và in ra tên của người có chiều cao lớn hơn (`Minh` hoặc `Nam`).
+
 ## Input
 
 Hai số tự nhiên $a$ và $b$ trên 2 dòng ($50 \le a, b \le 200, a \ne b$).
@@ -24,7 +26,9 @@ Tên bạn cao hơn.
 ```text
 Minh
 ```
+### Giải thích
 
+Chiều cao của Minh là $142\text{ cm}$ và Nam là $138\text{ cm}$. Vì $142 > 138$, bạn Minh cao hơn. Kết quả in ra: `Minh`.
 
 ## Ràng buộc
 

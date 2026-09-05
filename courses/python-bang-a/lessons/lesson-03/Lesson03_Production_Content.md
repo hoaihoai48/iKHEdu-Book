@@ -1,209 +1,242 @@
-# Bài 03: Công thức tính toán, hình học và đổi đơn vị
+# Bài 03: Phép chia nguyên, chia dư và lũy thừa
 
-## 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
+## 1. Bản chất của phép chia nguyên, chia dư và lũy thừa
 
-### A. Các công thức hình học nền tảng
-* **Hình chữ nhật:**
-  - Chu vi: $P = (a + b) 	\times 2 \implies$ Code: `(a + b) * 2` *(Bắt buộc phải có dấu ngoặc tròn)*.
-  - Diện tích: $S = a 	\times b \implies$ Code: `a * b`.
-  - Nửa chu vi: $P_{nua} = P // 2$.
-  - Tìm một cạnh khi biết chu vi $P$ và một cạnh $a$: $b = (P // 2) - a$.
-* **Hình vuông:**
-  - Chu vi: $P = a 	\times 4 \implies$ Code: `a * 4`.
-  - Cạnh hình vuông từ chu vi: $a = P // 4$.
-  - Diện tích: $S = a 	\times a = a^2 \implies$ Code: `a * a` hoặc `a ** 2`.
-* **Tam giác vuông:**
-  - Diện tích khi biết 2 cạnh góc vuông $a$ và $b$: $S = \frac{a 	\times b}{2} \implies$ Code: `(a * b) // 2` (nếu tích chia hết cho 2).
-* **Hình thang:**
-  - Diện tích: $S = \frac{(a + b) 	\times h}{2} \implies$ Code: `((a + b) * h) // 2`.
+Trong số học thi đấu, nếu như các phép cộng, trừ, nhân, chia cơ bản giúp ta xử lý các tính toán định lượng thông thường, thì bộ ba công cụ **chia lấy phần nguyên (`//`)**, **chia lấy phần dư (`%`)** và **phép lũy thừa (`**`)** chính là chiếc chìa khóa vạn năng để bóc tách cấu trúc số học:
+* Phép chia nguyên `//` giải quyết bài toán chia đồ vật, đóng thùng, tính số chuyến xe.
+* Phép chia dư `%` giải quyết bài toán kiểm tra chẵn lẻ, chia hết, chu kỳ đồng hồ và bóc tách từng chữ số.
+* Phép lũy thừa `**` tính tích của các thừa số bằng nhau và là tử huyệt số 1 khi học sinh gõ nhầm dấu mũ `^`.
 
-### B. Bài toán diện tích hình học lồng ghép (Trừ phần giao / Phần còn lại)
-* *Mô hình:* Có một khu đất lớn diện tích $S_1$, bên trong xây một công trình có diện tích $S_2$. Diện tích đất còn lại là:
-  $$\mathbf{S_{con\_lai} = S_1 - S_2}$$
-* *Bài toán bờ hồ & hòn đảo:* Hồ hình vuông cạnh $A$, đảo hình chữ nhật $B 	\times C$:
-  `mat_nuoc = (A * A) - (B * C)`.
+---
 
-### C. Thuật toán phân rã đơn vị thời gian (Từ giây sang Giờ — Phút — Giây)
-Biết rằng: $1	\text{ giờ} = 60	\text{ phút} = 3600	\text{ giây}$, $1	\text{ phút} = 60	\text{ giây}$.
-Cho trước $S$ giây, quy trình phân rã gồm 3 bước:
-1. **Tính số giờ:** `gio = S // 3600`
-2. **Lấy số giây còn dư sau khi tính giờ:** `giay_du = S % 3600`
-3. **Tính số phút và giây từ phần dư:**
-   - `phut = giay_du // 60`
-   - `giay = giay_du % 60`
+## 2. Phép chia lấy phần nguyên `//`
 
-### D. Kỹ thuật in số thập phân và làm tròn
-- Làm tròn 2 chữ số thập phân: `round(x, 2)`.
-- **In chuẩn định dạng thi đấu bằng f-string:** `print(f"{x:.2f}")` (Đảm bảo số `5` sẽ in ra đủ `5.00`).
-- **In bù số 0 ở đầu (Ví dụ: in 5 giây thành `05`):** `print(f"{giay:02d}")`.
+### 2.1. Định nghĩa toán học
+* Ký hiệu `//` thực hiện phép chia và lấy **phần nguyên lớn nhất không vượt quá thương số**:
+  $$A // B = \lfloor \frac{A}{B} \rfloor$$
+* Ví dụ:
+  - `7 // 2 = 3` (Vì $7 = 2 \times 3 + 1$).
+  - `17 // 5 = 3` (17 chia 5 được 3 dư 2).
+  - `20 // 4 = 5` (Chia hết, kết quả là số nguyên `5`).
 
-## 2. Bảng công thức quy đổi đơn vị đo lường cần thuộc lòng
-| Tên đơn vị | Quy đổi xuôi | Lưu ý khi tính diện tích |
-|---|---|---|
-| Độ dài | $1	\text{ m} = 10	\text{ dm} = 100	\text{ cm} = 1000	\text{ mm}$ | $1	\text{ km} = 1000	\text{ m}$ |
-| Diện tích | $1	\text{ m}^2 = 100	\text{ dm}^2 = 10,000	\text{ cm}^2$ | **Độ dài nhân 10 thì diện tích nhân 100!** |
-| Khối lượng | $1	\text{ tấn} = 10	\text{ tạ} = 1000	\text{ kg}$; $1	\text{ kg} = 1000	\text{ g}$ | Luôn đổi về cùng đơn vị nhỏ nhất trước |
+### 2.2. Ý nghĩa thực tế trong các bài toán đố
+* **Bài toán chia kẹo:** Có $17$ chiếc kẹo chia đều cho $5$ bạn nhỏ. Hỏi mỗi bạn nhận được trọn vẹn bao nhiêu chiếc kẹo?
+  $$\text{so\_keo} = 17 // 5 = 3 \text{ (chiếc)}$$
+* **Bài toán xếp xe chở học sinh:** Có $100$ học sinh, mỗi xe chở được đúng $30$ em. Hỏi có bao nhiêu chuyến xe chở đủ kín chỗ?
+  $$\text{so\_chuyen\_day} = 100 // 30 = 3 \text{ (chuyến)}$$
 
-## 3. Bẫy lỗi phòng thi
-- ❌ **Quên đổi về cùng đơn vị:** Dài $2	\text{ m}$, rộng $30	\text{ cm}$ mà tính diện tích $2 	\times 30 = 60$ là sai! Phải đổi $2	\text{ m} = 200	\text{ cm}$, diện tích là $200 	\times 30 = 6000	\text{ cm}^2$.
-- ❌ **Thiếu ngoặc phép tính nửa chu vi:** Viết `P // 2 - a` thì đúng, nhưng viết `P - a // 2` là sai hoàn toàn!
+---
 
-## 4. Concept quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
+## 3. Phép chia lấy phần dư `%`
 
-#### Câu 1 (công thức chu vi hình chữ nhật):
-Cho chiều dài `a` và chiều rộng `b`. Biểu thức Python nào tính đúng chu vi hình chữ nhật?
-- **A.** `P = a + b * 2`
-- **B.** **[Đáp án đúng]** `P = (a + b) * 2`
-- **C.** `P = a * b * 2`
-- **D.** `P = (a * b) // 2`
-> *Giải thích:* Chu vi bằng tổng chiều dài và chiều rộng rồi nhân đôi. Cần có dấu ngoặc `(a + b)` để thực hiện phép cộng trước phép nhân.
+### 3.1. Định nghĩa toán học
+* Ký hiệu `%` trả về **phần còn dư lại** sau khi đã chia hết thành các phần nguyên:
+  - `7 % 2 = 1` (Phần dư khi 7 chia 2).
+  - `17 % 5 = 2` (Phần dư khi 17 chia 5).
+  - `20 % 4 = 0` (Chia hết thì phần dư luôn bằng 0).
 
-#### Câu 2 (tìm cạnh hình chữ nhật):
-Một hình chữ nhật có chu vi là `P` và chiều rộng là `w`. Chiều dài của hình chữ nhật đó được tính bằng công thức:
-- **A.** `P - w`
-- **B.** `P // 2 + w`
-- **C.** **[Đáp án đúng]** `P // 2 - w`
-- **D.** `(P - w) // 2`
-> *Giải thích:* Nửa chu vi là $P // 2$. Chiều dài bằng nửa chu vi trừ đi chiều rộng: `P // 2 - w`.
+### 3.2. Mối quan hệ vàng bất biến của phép chia
+Trong khoa học máy tính và số học, với hai số tự nhiên $A$ và $B$ ($B > 0$), luôn tồn tại một **đẳng thức bất biến**:
+$$\mathbf{A = (A // B) \times B + (A \% B)} \quad \text{với} \quad 0 \le (A \% B) < B$$
 
-#### Câu 3 (đổi đơn vị thời gian):
-Một giờ có bao nhiêu giây?
-- **A.** 60 giây
-- **B.** 360 giây
-- **C.** **[Đáp án đúng]** 3600 giây
-- **D.** 6000 giây
-> *Giải thích:* $1\text{ giờ} = 60\text{ phút} = 60 \times 60 = 3600\text{ giây}$.
+* **Thử lại với ví dụ $A = 17, B = 5$:**
+  $$(17 // 5) \times 5 + (17 \% 5) = 3 \times 5 + 2 = 15 + 2 = 17 \quad (\text{Chính xác tuyệt đối!})$$
 
-#### Câu 4 (dự đoán output — phân rã thời gian):
-Đoạn code sau in ra kết quả gì?
+![Bản chất phép chia nguyên và chia dư](../../assets/l02_modulo_visual.svg?v=1788575106)
+
+---
+
+## 4. Bốn ứng dụng cốt lõi của Modulo trong lập trình thi đấu
+
+### 4.1. Kiểm tra tính chẵn lẻ của một số
+* Một số nguyên $N$ là **số chẵn** khi chia hết cho 2: `N % 2 == 0`.
+* Một số nguyên $N$ là **số lẻ** khi chia 2 dư 1: `N % 2 == 1`.
+
+### 4.2. Kiểm tra tính chia hết
+* Số $A$ chia hết cho số $B$ khi và chỉ khi phần dư bằng 0: `A % B == 0`.
+* Số $A$ không chia hết cho số $B$: `A % B != 0`.
+
+### 4.3. Lấy và cắt bỏ chữ số hàng đơn vị
+* **Lấy chữ số hàng đơn vị:** Phép chia cho 10 lấy dư luôn trả về chữ số cuối cùng:
+  $$\text{chu\_so\_cuoi} = N \% 10$$
+  *(Ví dụ: $2026 \% 10 = 6$)*
+* **Cắt bỏ chữ số hàng đơn vị:** Phép chia nguyên cho 10 sẽ vứt bỏ chữ số cuối cùng:
+  $$\text{phan\_con\_lai} = N // 10$$
+  *(Ví dụ: $2026 // 10 = 202$)*
+
+### 4.4. Bài toán chu kỳ thời gian và tuần hoàn (Đồng hồ)
+* Một ngày có 24 giờ. Nếu bây giờ là 10 giờ sáng, hỏi sau 50 giờ nữa là mấy giờ?
+* Thay vì phải cộng trừ thủ công, ta dùng phép chia dư cho chu kỳ 24:
+  $$\text{gio\_moi} = (10 + 50) \% 24 = 60 \% 24 = 12 \text{ (Tức 12 giờ trưa)}$$
+* Một tuần có 7 ngày (từ thứ Hai đến Chủ nhật). Bài toán tìm ngày trong tuần sau $K$ ngày nữa cũng áp dụng phép tính `% 7`.
+
+---
+
+## 5. Phép nâng lên lũy thừa `**`
+
+Toán tử `**` dùng để tính lũy thừa $A^B$ ($B$ thừa số $A$ nhân với nhau):
 ```python
-s = 125
-phut = s // 60
-giay = s % 60
-print(phut, giay)
+print(2 ** 3)   # 2 * 2 * 2 = 8
+print(10 ** 4)  # 10000
+print(5 ** 0)   # 1 (Mọi số khác 0 có số mũ 0 đều bằng 1)
 ```
-- **A.** `2 5`
-- **B.** **[Đáp án đúng]** `2 5`
-- **C.** `1 65`
-- **D.** `12 5`
-> *Giải thích:* $125 : 60 = 2$ dư $5$. Vậy in ra `2 5` (2 phút 5 giây).
 
-#### Câu 5 (hình học lồng nhau):
-Một bức tường hình vuông cạnh $a = 10\text{m}$. Người ta khoét một cửa sổ hình vuông cạnh $b = 2\text{m}$. Diện tích phần tường còn lại là:
-- **A.** 16
-- **B.** 80
-- **C.** **[Đáp án đúng]** 96
-- **D.** 100
-> *Giải thích:* $S_{tuong} = 10 \times 10 = 100$. $S_{cua} = 2 \times 2 = 4$. Diện tích còn lại: $100 - 4 = 96\text{ m}^2$.
+> ❌ **TỬ HUYỆT PHÒNG THI BẮT BUỘC PHẢI NHỚ: TOÁN TỬ `^` KHÔNG PHẢI LÀ LŨY THỪA!**
+> * Trong toán học, ta hay quen tay gõ `2 ^ 3` để biểu diễn $2^3$.
+> * Tuy nhiên trong Python, ký hiệu `^` là **phép toán logic trên bit**:
+>   - Lệnh `print(2 ^ 3)` sẽ in ra số `1` (do $0010_2 \oplus 0011_2 = 0001_2$).
+>   - Rất nhiều học sinh gõ `a ^ 2` để tính $a^2$ và nhận kết quả sai hoàn toàn mà không hiểu vì sao!
+> * **Quy tắc vàng:** Trong Python, tính lũy thừa **bắt buộc dùng hai dấu sao liền nhau: `**`**.
 
-#### Câu 6 (bắt bẫy đơn vị đo lường):
-Cạnh hình vuông $a = 2\text{ m}$. Diện tích hình vuông đó tính theo đơn vị $\text{cm}^2$ là:
-- **A.** $4\text{ cm}^2$
-- **B.** $400\text{ cm}^2$
-- **C.** **[Đáp án đúng]** $40000\text{ cm}^2$
-- **D.** $20000\text{ cm}^2$
-> *Giải thích:* $2\text{ m} = 200\text{ cm}$. Diện tích là $200 \times 200 = 40000\text{ cm}^2$. Rất nhiều học sinh nhầm chỉ nhân thêm 100!
+---
 
-#### Câu 7 (làm tròn số thập phân):
-Kết quả của lệnh `round(4.5678, 2)` là:
-- **A.** `4.56`
-- **B.** **[Đáp án đúng]** `4.57`
-- **C.** `4.6`
-- **D.** `5`
-> *Giải thích:* Chữ số thứ ba sau dấu phẩy là 7 ($\ge 5$), do đó làm tròn lên thành `4.57`.
+## 6. Bảng mô phỏng biến thiên ô nhớ
 
-#### Câu 8 (tính vận tốc — thời gian gặp nhau):
-Hai người đứng cách nhau khoảng cách $D$ (km). Người thứ nhất đi về phía người thứ hai với vận tốc $V$ (km/h). Thời gian (giờ) để hai người gặp nhau là:
-- **A.** `D * V`
-- **B.** `V / D`
-- **C.** **[Đáp án đúng]** `D / V`
-- **D.** `D - V`
-> *Giải thích:* Thời gian = Quãng đường : Vận tốc $\implies D / V$.
+Xét đoạn chương trình xử lý một số nguyên:
+```python
+n = 257
+don_vi = n % 10
+n = n // 10
+chuc = n % 10
+tram = n // 10
+```
 
-#### Câu 9 (bắt bẫy phép chia diện tích tam giác):
-Cho tam giác có đáy $a = 5$ và chiều cao $h = 3$. Lệnh `dien_tich = a * h / 2` sẽ cho kết quả thuộc kiểu dữ liệu nào?
-- **A.** `int`
-- **B.** **[Đáp án đúng]** `float` (kết quả `7.5`)
-- **C.** `str`
+### Bảng theo dõi giá trị các biến trong bộ nhớ RAM:
+
+| Dòng lệnh | Thao tác máy tính thực hiện | `n` | `don_vi` | `chuc` | `tram` |
+|---|---|:---:|:---:|:---:|:---:|
+| `n = 257` | Nạp số ban đầu vào ô nhớ `n` | **257** | Chưa có | Chưa có | Chưa có |
+| `don_vi = n % 10` | Lấy phần dư $257 \% 10 = 7$ | 257 | **7** | Chưa có | Chưa có |
+| `n = n // 10` | Cắt bỏ chữ số cuối: $257 // 10 = 25$ | **25** | 7 | Chưa có | Chưa có |
+| `chuc = n % 10` | Lấy phần dư $25 \% 10 = 5$ | 25 | 7 | **5** | Chưa có |
+| `tram = n // 10` | Cắt tiếp lấy hàng trăm: $25 // 10 = 2$ | 25 | 7 | 5 | **2** |
+
+---
+
+## 7. Concept Quiz: 18 câu trắc nghiệm bắt bẫy củng cố khái niệm
+
+#### Câu 1: Phép tính `17 // 4` trong Python cho kết quả là:
+- **A.** 4.25
+- **B.** **[Đáp án đúng]** 4
+- **C.** 1
+- **D.** 4.0
+- > *Giải thích:* Phép chia nguyên `//` lấy thương nguyên, $17 = 4 \times 4 + 1$ nên thương nguyên là 4.
+
+#### Câu 2: Phép tính `17 % 4` trong Python cho kết quả là:
+- **A.** 4
+- **B.** **[Đáp án đúng]** 1
+- **C.** 4.25
+- **D.** 0
+- > *Giải thích:* $17$ chia $4$ dư $1$.
+
+#### Câu 3: Toán tử nào dùng để tính lũy thừa $A^B$ trong Python?
+- **A.** `^`
+- **B.** `*`
+- **C.** **[Đáp án đúng]** `**`
+- **D.** `exp`
+- > *Giải thích:* Trong Python, lũy thừa là hai dấu sao liền nhau `**`.
+
+#### Câu 4: Khi chạy lệnh `print(2 ^ 3)` trong Python, màn hình sẽ hiển thị:
+- **A.** 8
+- **B.** 6
+- **C.** **[Đáp án đúng]** 1
+- **D.** Báo lỗi cú pháp
+- > *Giải thích:* Dấu `^` là phép toán bitwise XOR, $2 \oplus 3 = 1$.
+
+#### Câu 5: Để lấy chữ số hàng đơn vị của số nguyên dương $N$, ta dùng công thức:
+- **A.** `N // 10`
+- **B.** **[Đáp án đúng]** `N % 10`
+- **C.** `N / 10`
+- **D.** `N * 10`
+- > *Giải thích:* Phần dư khi chia cho 10 chính là chữ số hàng đơn vị.
+
+#### Câu 6: Để cắt bỏ chữ số hàng đơn vị của số $N$, ta dùng công thức:
+- **A.** `N % 10`
+- **B.** **[Đáp án đúng]** `N // 10`
+- **C.** `N - 10`
+- **D.** `N / 10`
+- > *Giải thích:* Chia nguyên cho 10 sẽ làm mất chữ số cuối cùng.
+
+#### Câu 7: Điều kiện nào kiểm tra số tự nhiên $N$ là số chẵn?
+- **A.** `N % 2 == 1`
+- **B.** `N // 2 == 0`
+- **C.** **[Đáp án đúng]** `N % 2 == 0`
+- **D.** `N / 2 == 0`
+- > *Giải thích:* Số chẵn là số chia hết cho 2 (phần dư bằng 0).
+
+#### Câu 8: Hiện tại là 8 giờ sáng, sau 30 giờ nữa là mấy giờ?
+- **A.** 10 giờ sáng
+- **B.** **[Đáp án đúng]** 14 giờ (2 giờ chiều)
+- **C.** 38 giờ
+- **D.** 6 giờ chiều
+- > *Giải thích:* $(8 + 30) \% 24 = 38 \% 24 = 14$.
+
+#### Câu 9: Biểu thức `10 ** 0` có giá trị bằng:
+- **A.** 0
+- **B.** **[Đáp án đúng]** 1
+- **C.** 10
 - **D.** Báo lỗi
-> *Giải thích:* Vì có dấu chia thực `/`, kết quả luôn là kiểu `float`, giá trị là `7.5`.
+- > *Giải thích:* Bất kỳ số nào khác 0 nâng lên lũy thừa 0 đều bằng 1.
 
-#### Câu 10 (chu vi hình vuông từ diện tích):
-Một hình vuông có diện tích là $S = 64$. Chu vi hình vuông đó là bao nhiêu?
-- **A.** 16
-- **B.** **[Đáp án đúng]** 32
-- **C.** 64
-- **D.** 256
-> *Giải thích:* Cạnh hình vuông là $\sqrt{64} = 8$. Chu vi là $8 \times 4 = 32$.
+#### Câu 10: Cho $A = 26, B = 6$. Kết quả của `(A // B) * B + (A % B)` là:
+- **A.** 24
+- **B.** **[Đáp án đúng]** 26
+- **C.** 2
+- **D.** 30
+- > *Giải thích:* Theo định lý bất biến phép chia, biểu thức luôn trả về chính số bị chia $A$.
 
-#### Câu 11 (ghép gạch lát sân):
-Một sân hình chữ nhật kích thước $6\text{m} \times 4\text{m}$. Người ta dùng các viên gạch hình vuông cạnh $1\text{m}$ để lát kín sân. Cần bao nhiêu viên gạch?
-- **A.** 10 viên
-- **B.** 20 viên
-- **C.** **[Đáp án đúng]** 24 viên
-- **D.** 48 viên
-> *Giải thích:* Diện tích sân: $6 \times 4 = 24\text{ m}^2$. Mỗi viên gạch diện tích $1 \times 1 = 1\text{ m}^2$. Số viên gạch là $24 : 1 = 24$ viên.
+#### Câu 11: Phép tính `5 // 10` có kết quả là:
+- **A.** 0.5
+- **B.** **[Đáp án đúng]** 0
+- **C.** 5
+- **D.** 1
+- > *Giải thích:* $5 < 10$ nên thương nguyên là 0.
 
-#### Câu 12 (format chuỗi thời gian đẹp):
-Lệnh nào sau đây in ra số phút và số giây luôn có 2 chữ số (ví dụ: phút 5 in ra `05`, giây 9 in ra `09`)?
-- **A.** `print(f"{phut}:{giay}")`
-- **B.** **[Đáp án đúng]** `print(f"{phut:02d}:{giay:02d}")`
-- **C.** `print(round(phut, 2), round(giay, 2))`
-- **D.** `print("0" + phut + "0" + giay)`
-> *Giải thích:* Cú pháp `:02d` trong `f-string` của Python tự động bù thêm số 0 ở đằng trước nếu số đó có ít hơn 2 chữ số.
+#### Câu 12: Phép tính `5 % 10` có kết quả là:
+- **A.** 0
+- **B.** **[Đáp án đúng]** 5
+- **C.** 0.5
+- **D.** 2
+- > *Giải thích:* $5$ chia $10$ được $0$ dư $5$.
 
-#### Câu 13 (diện tích tam giác vuông):
-Một miếng bánh hình tam giác vuông có hai cạnh góc vuông dài $6\text{ cm}$ và $4\text{ cm}$. Diện tích miếng bánh đó là:
-- **A.** $10\text{ cm}^2$
-- **B.** $20\text{ cm}^2$
-- **C.** **[Đáp án đúng]** $12\text{ cm}^2$
-- **D.** $24\text{ cm}^2$
-> *Giải thích:* Diện tích tam giác vuông bằng tích hai cạnh góc vuông chia cho 2: $(6 \times 4) : 2 = 24 : 2 = 12\text{ cm}^2$.
+#### Câu 13: Kết quả của `2 ** 3 ** 2` là:
+- **A.** 64
+- **B.** **[Đáp án đúng]** 512
+- **C.** 12
+- **D.** 36
+- > *Giải thích:* Phép lũy thừa kết hợp từ phải qua trái: `3 ** 2 = 9`, sau đó `2 ** 9 = 512`.
 
-#### Câu 14 (thể tích hộp chữ nhật):
-Một hộp sữa có chiều dài $3\text{ cm}$, chiều rộng $2\text{ cm}$ và chiều cao $4\text{ cm}$. Thể tích của hộp sữa đó là:
-- **A.** $9\text{ cm}^3$
-- **B.** $14\text{ cm}^3$
-- **C.** **[Đáp án đúng]** $24\text{ cm}^3$
-- **D.** $29\text{ cm}^3$
-> *Giải thích:* Thể tích hộp chữ nhật bằng dài nhân rộng nhân cao: $3 \times 2 \times 4 = 24\text{ cm}^3$.
+#### Câu 14: Biểu thức `100 % 25` bằng:
+- **A.** 4
+- **B.** **[Đáp án đúng]** 0
+- **C.** 25
+- **D.** 1
+- > *Giải thích:* 100 chia hết cho 25 nên phần dư bằng 0.
 
-#### Câu 15 (đổi đơn vị thời gian xuôi):
-Bạn Bi chạy bộ trong $2$ giờ $15$ phút. Hỏi bạn Bi đã chạy tổng cộng bao nhiêu giây?
-- **A.** $215$ giây
-- **B.** $2250$ giây
-- **C.** **[Đáp án đúng]** $8100$ giây
-- **D.** $135$ giây
-> *Giải thích:* $2$ giờ $= 2 \times 3600 = 7200$ giây. $15$ phút $= 15 \times 60 = 900$ giây. Tổng cộng: $7200 + 900 = 8100$ giây.
+#### Câu 15: Một hộp kẹo có 20 chiếc kẹo chia cho 6 bạn. Số kẹo còn thừa lại là:
+- **A.** `20 // 6`
+- **B.** **[Đáp án đúng]** `20 % 6`
+- **C.** `20 / 6`
+- **D.** `20 - 6`
+- > *Giải thích:* Số kẹo thừa chính là phần dư của phép chia: $20 \% 6 = 2$.
 
-#### Câu 16 (dự đoán output — phân rã giờ phút giây):
-Đoạn code sau in ra kết quả gì?
-```python
-s = 7325
-gio = s // 3600
-du = s % 3600
-phut = du // 60
-giay = du % 60
-print(gio, phut, giay)
-```
-- **A.** `1 62 5`
-- **B.** `7 3 25`
-- **C.** **[Đáp án đúng]** `2 2 5`
-- **D.** `2 3 5`
-> *Giải thích:* $7325 : 3600 = 2$ dư $125$. Từ $125$ giây dư: $125 : 60 = 2$ phút dư $5$ giây. Vậy in ra `2 2 5` (2 giờ 2 phút 5 giây).
+#### Câu 16: Phép tính `4 ** 0.5` cho kết quả là:
+- **A.** **[Đáp án đúng]** 2.0
+- **B.** 2
+- **C.** 1.0
+- **D.** 8.0
+- > *Giải thích:* Lũy thừa $0.5$ chính là căn bậc hai: $\sqrt{4} = 2.0$.
 
-#### Câu 17 (làm tròn với `round()`):
-Kết quả của lệnh `round(5.678, 2)` là:
-- **A.** `5.67`
-- **B.** **[Đáp án đúng]** `5.68`
-- **C.** `5.6`
-- **D.** `6`
-> *Giải thích:* Chữ số thứ ba sau dấu phẩy là 8 ($\ge 5$) nên làm tròn lên: `5.678` thành `5.68`.
+#### Câu 17: Phép tính `(-7) // 2` trong Python làm tròn xuống nên cho kết quả là:
+- **A.** -3
+- **B.** **[Đáp án đúng]** -4
+- **C.** -3.5
+- **D.** 3
+- > *Giải thích:* Phép chia `//` trong Python là floor division (làm tròn xuống số nguyên nhỏ hơn), $-3.5$ làm tròn xuống là $-4$.
 
-#### Câu 18 (làm tròn với `f-string`):
-Cho `x = 7.456`. Lệnh nào in ra `7.5` (làm tròn đến 1 chữ số thập phân)?
-- **A.** `print(round(x))`
-- **B.** `print(f"{x:.2f}")`
-- **C.** **[Đáp án đúng]** `print(f"{x:.1f}")`
-- **D.** `print(x // 10)`
-> *Giải thích:* Cú pháp `:.1f` trong `f-string` nghĩa là làm tròn và hiển thị đúng 1 chữ số sau dấu phẩy, nên `7.456` thành `7.5`.
+#### Câu 18: Cho số nguyên dương $N$. Biểu thức `(N // 10) % 10` dùng để lấy:
+- **A.** Chữ số hàng đơn vị
+- **B.** **[Đáp án đúng]** Chữ số hàng chục
+- **C.** Chữ số hàng trăm
+- **D.** Tổng các chữ số
+- > *Giải thích:* Cắt bỏ hàng đơn vị (`N // 10`), sau đó lấy phần dư chia 10 sẽ được chữ số hàng chục.

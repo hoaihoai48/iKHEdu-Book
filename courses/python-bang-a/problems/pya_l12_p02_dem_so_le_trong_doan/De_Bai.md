@@ -1,5 +1,9 @@
-# Đếm Số Lẻ Trong Đoạn
+# Đếm số lẻ trong đoạn
 
+
+## Bối cảnh
+
+Trong thống kê dữ liệu liên tục, việc xác định số lượng phần tử lẻ trong một đoạn đóng vai trò kiểm tra tính phân bố đều của tập số liệu.
 
 ## Nhiệm vụ
 

@@ -1,2 +1,10 @@
-# Gợi ý mã nguồn cho PYA-L14-P07: Đổi Chữ Hoa Thành Thường & Ngược Lại
-# Cài đặt code chuẩn Python 3
+s = input()
+kq = ''
+for ch in s:
+    if ch.isupper():
+        kq = kq + ch.lower()
+    elif ch.islower():
+        kq = kq + ch.upper()
+    else:
+        kq = kq + ch
+print(kq)

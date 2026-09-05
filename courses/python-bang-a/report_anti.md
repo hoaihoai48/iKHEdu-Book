@@ -1,6 +1,6 @@
 # iKHEDU PYTHON BẢNG A — NỘI DUNG BÀI HỌC (LEVEL 1)
 
-> Tài liệu nội dung bài học dành cho học sinh Tiểu học ôn luyện kỳ thi Tin học trẻ Bảng A.
+> Tài liệu nội dung bài học dành cho học sinh Phổ thông ôn luyện kỳ thi Python Bảng A.
 > Cấu trúc chuẩn hóa: Kiến thức trọng tâm, Bảng công thức ghi nhớ, Bẫy lỗi phòng thi, Code mẫu chuẩn và Hệ thống bài tập phân tầng.
 
 ---
@@ -35,7 +35,7 @@
 
 ### Chương 7: LUYỆN ĐỀ THI
 - **Bài 15:** Chiến lược làm bài, phân tích test biên & tối ưu thời gian
-- **Bài 16:** Bộ đề thi thử Tin học trẻ Bảng A chuẩn cấu trúc quốc gia
+- **Bài 16:** Bộ đề thi thử Python Bảng A chuẩn cấu trúc quốc gia
 
 ---
 
@@ -104,8 +104,8 @@ print(tong)
 
 ## BÀI 02: PHÉP TOÁN SỐ HỌC, CHIA NGUYÊN VÀ CHIA DƯ *(BÀI TRỌNG TÂM CHI TIẾT)*
 
-### 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
-Python cung cấp 7 phép toán số học. Trong đó, bộ đôi **Chia lấy phần nguyên (`//`)** và **Chia lấy phần dư (`%`)** là nền tảng cốt lõi của mọi bài thi Tin học trẻ:
+### 1. Kiến thức chuyên sâu dành cho học sinh Phổ thông
+Python cung cấp 7 phép toán số học. Trong đó, bộ đôi **Chia lấy phần nguyên (`//`)** và **Chia lấy phần dư (`%`)** là nền tảng cốt lõi của mọi bài thi Lập trình Python:
 
 ```
 Phép chia: A : B  (Ví dụ: 17 chia cho 5)
@@ -129,7 +129,7 @@ Phép chia: A : B  (Ví dụ: 17 chia cho 5)
 - **Ý nghĩa:** Trả lời câu hỏi *"Sau khi chia đều hết mức có thể, còn thừa ra bao nhiêu?"*.
 - `19 % 4 = 3` (vì $4 	imes 4 = 16$, còn dư $19 - 16 = 3$).
 
-#### D. Định lý chia có dư Toán Tiểu học trong Python
+#### D. Định lý chia có dư Toán Phổ thông trong Python
 $$\mathbf{A} = (\mathbf{A} // \mathbf{B}) 	imes \mathbf{B} + (\mathbf{A} \% \mathbf{B})$$
 
 #### E. Thứ tự ưu tiên tính toán (Quy tắc PEMDAS)
@@ -235,7 +235,7 @@ ightarrow$ *Output:* `3` (Áp dụng làm tròn lên: `(20 + 8 - 1) // 8 = 3`).
 
 ## BÀI 03: CÔNG THỨC TÍNH TOÁN, HÌNH HỌC VÀ ĐỔI ĐƠN VỊ *(BÀI TRỌNG TÂM CHI TIẾT)*
 
-### 1. Kiến thức chuyên sâu dành cho học sinh Tiểu học
+### 1. Kiến thức chuyên sâu dành cho học sinh Phổ thông
 
 #### A. Các công thức hình học nền tảng
 * **Hình chữ nhật:**
@@ -663,11 +663,11 @@ BƯỚC 5: Tự kiểm thử (Self-Testing) với test nhỏ nhất, test biên 
 
 ---
 
-## BÀI 16: BỘ ĐỀ THI THỬ TIN HỌC TRẺ BẢNG A CHUẨN CẤU TRÚC QUỐC GIA
+## BÀI 16: BỘ ĐỀ THI THỬ PYTHON BẢNG A CHUẨN CẤU TRÚC QUỐC GIA
 
 Mỗi đề thi chuẩn gồm 4 bài toán phân bổ theo thời gian 90 phút:
 
-### ĐỀ THI THỬ SỐ 01 (MÔ PHỎNG ĐỀ THT THÀNH PHỐ)
+### ĐỀ THI THỬ SỐ 01 (MÔ PHỎNG ĐỀ PYA THÀNH PHỐ)
 
 #### Bài 1 (30 điểm): Mua dụng cụ học tập
 - **Yêu cầu:** Mua $N$ quyển vở giá $P$ đồng/quyển. Mua từ 10 quyển trở lên giảm $10\%$. Tính số tiền phải trả (số nguyên).

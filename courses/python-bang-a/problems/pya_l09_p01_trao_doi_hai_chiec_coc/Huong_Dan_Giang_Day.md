@@ -6,7 +6,7 @@ Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tráo Đổi Hai Chiếc Cốc** (`PYA-L09-P01`) bằng Python.
 * **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu Tin học trẻ Bảng A (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
 
 ---
 
@@ -23,7 +23,7 @@ Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 ## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
 1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
 2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh tiểu học hay mắc phải nhất ở bài toán này?
+3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
 
 ---
 
@@ -46,11 +46,11 @@ Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 ```
 * **Giải thích:** Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
 
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
+| Bước | Dòng lệnh thực thi | Giá trị biến trong RAM | Xuất màn hình |
 | :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
+| **1** | `a, b = map(int, input().split())` | `a = 5`, `b = 12` | *(Chưa xuất)* |
+| **2** | Phép gán hoán đổi `a, b = b, a` | `a = 12`, `b = 5` | *(Chưa xuất)* |
+| **3** | `print(a, b)` | `a = 12`, `b = 5` | `12 5` |
 
 ---
 
@@ -69,12 +69,12 @@ Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 
 ## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
-# Gợi ý mã nguồn cho PYA-L09-P01: Tráo Đổi Hai Chiếc Cốc
-# Cài đặt code chuẩn Python 3
+a, b = map(int, input().split())
+print(b, a)
 ```
 
 ---
 
 ## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
 * **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi Tin học trẻ các năm trước.
+* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

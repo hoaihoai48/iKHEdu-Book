@@ -1,5 +1,9 @@
-# Giải Mã Mật Thư Caesar
+# Giải mã mật thư Caesar
 
+
+## Bối cảnh
+
+Mật mã Caesar là một trong những phương pháp mã hóa thay thế lâu đời nhất, hoạt động bằng cách dịch chuyển từng chữ cái trong bảng mã theo một bước nhảy cố định.
 
 ## Nhiệm vụ
 
@@ -21,6 +25,11 @@ DEFABC
 ```text
 ABCXYZ
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `DEFABC
+3`, kết quả thu được tương ứng là `ABCXYZ`.
+
 
 
 ## Ràng buộc

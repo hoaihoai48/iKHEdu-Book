@@ -1,9 +1,14 @@
-# Số Lớn Nhất Trong Hai Số
+# Số lớn nhất trong hai số
 
+
+## Bối cảnh
+
+Bộ vi xử lý cần thực hiện thao tác so sánh logic giữa hai thanh ghi dữ liệu $A$ và $B$ để giữ lại giá trị cực đại phục vụ tính toán tiếp theo.
 
 ## Nhiệm vụ
 
-Nhập vào hai số nguyên $a$ và $b$. Hãy in ra số lớn hơn trong hai số đó. Nếu hai số bằng nhau thì in ra giá trị đó.
+Cho hai số nguyên $A$ và $B$. Hãy tìm và in ra giá trị lớn nhất trong hai số đó.
+
 ## Input
 
 Hai số nguyên $a, b$ ($-10^9 \le a, b \le 10^9$).
@@ -21,7 +26,9 @@ Một số nguyên là giá trị lớn nhất.
 ```text
 8
 ```
+### Giải thích
 
+Hai số đầu vào là $25$ và $42$. Số lớn hơn là $42$. Kết quả in ra: `42`.
 
 ## Ràng buộc
 

@@ -1,9 +1,9 @@
-# Kim Đồng Hồ 12 Giờ
+# Kim đồng hồ 12 giờ
 
 
 ## Bối cảnh
 
-Trên tường lớp học treo một chiếc đồng hồ kim tròn xinh có 12 số đánh dấu từ 1 đến 12. Hiện tại kim giờ đang chỉ vào đúng số $H$. Cô giáo đố cả lớp: nếu chờ thêm đúng $K$ giờ nữa thì kim giờ sẽ nhích tới số mấy. Các bạn ngó nghiêng mãi chưa chắc chắn. Em hãy giúp cả lớp tìm câu trả lời nhé!
+Trên tường lớp học treo một chiếc đồng hồ kim tròn xinh có 12 số đánh dấu từ 1 đến 12. Hiện tại kim giờ đang chỉ vào đúng số $H$. Cô giáo đố cả lớp: nếu chờ thêm đúng $K$ giờ nữa thì kim giờ sẽ nhích tới số mấy. Các bạn ngó nghiêng mãi chưa chắc chắn. Hãy giúp cả lớp tìm câu trả lời.
 ## Nhiệm vụ
 
 Sau đúng $K$ giờ nữa, hỏi kim giờ sẽ chỉ vào số mấy?

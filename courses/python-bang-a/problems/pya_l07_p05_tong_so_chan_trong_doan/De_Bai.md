@@ -1,5 +1,9 @@
-# Tổng Số Chẵn Trong Đoạn
+# Tổng số chẵn trong đoạn
 
+
+## Bối cảnh
+
+Thí sinh muốn tính tổng tất cả các số chẵn nằm trong đoạn từ $A$ đến $B$. Hãy giúp bạn ấy viết chương trình tính nhanh.
 
 ## Nhiệm vụ
 

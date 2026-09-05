@@ -1,5 +1,9 @@
-# Đếm Số Lượng Chữ Số Của N
+# Đếm số lượng chữ số của N
 
+
+## Bối cảnh
+
+Cho một số nguyên dương $N$. Hãy đếm xem số đó có bao nhiêu chữ số. Ví dụ: $12345$ có $5$ chữ số.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ Số lượng chữ số của $N$.
 ```text
 4
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `2026`, kết quả thu được tương ứng là `4`.
+
 ## Ràng buộc
 
 

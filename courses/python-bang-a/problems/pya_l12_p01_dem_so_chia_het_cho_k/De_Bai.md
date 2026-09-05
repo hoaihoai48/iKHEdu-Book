@@ -1,5 +1,9 @@
-# Đếm Số Chia Hết Cho K
+# Đếm số chia hết cho K
 
+
+## Bối cảnh
+
+Bài toán đếm số phần tử chia hết cho một số nguyên $K$ trong một khoảng số liên tiếp là nền tảng xây dựng các thuật toán tối ưu thời gian $\mathcal{O}(1)$.
 
 ## Nhiệm vụ
 

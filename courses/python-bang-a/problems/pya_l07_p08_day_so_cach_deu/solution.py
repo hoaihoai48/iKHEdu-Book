@@ -1,2 +1,8 @@
-# Gợi ý mã nguồn cho PYA-L07-P08: Dãy Số Cách Đều
-# Cài đặt code chuẩn Python 3
+a = int(input())
+d = int(input())
+n = int(input())
+for i in range(n):
+    print(a + i * d, end='')
+    if i < n - 1:
+        print(' ', end='')
+print()

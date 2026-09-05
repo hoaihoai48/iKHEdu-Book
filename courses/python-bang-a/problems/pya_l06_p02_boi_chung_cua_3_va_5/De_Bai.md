@@ -1,5 +1,9 @@
-# Bội Chung Của 3 Và 5
+# Bội chung của 3 và 5
 
+
+## Bối cảnh
+
+Trong trò chơi FizzBuzz phổ biến trên toàn thế giới, người chơi cần nhận biết các số chia hết cho 3, cho 5 hoặc cho cả hai. Hãy lập trình kiểm tra.
 
 ## Nhiệm vụ
 
@@ -11,6 +15,18 @@ Một số tự nhiên $N$ ($1 \le N \le 10^9$).
 
 `FIZZBUZZ` hoặc `KHONG`.
 
+## Sample 1
+
+### Input
+```text
+15
+```
+### Output
+```text
+YES
+```
+### Giải thích
+Số 15 vừa chia hết cho 3 vừa chia hết cho 5.
 
 ## Ràng buộc
 

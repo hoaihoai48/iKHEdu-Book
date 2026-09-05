@@ -1,5 +1,9 @@
-# Đếm Số Từ Trong Câu
+# Đếm số từ trong câu
 
+
+## Bối cảnh
+
+Đếm số lượng từ trong một đoạn văn bản là chỉ số cơ bản nhất của các phần mềm xử lý soạn thảo và phân tích ngôn ngữ tự nhiên.
 
 ## Nhiệm vụ
 
@@ -14,7 +18,7 @@ Số lượng từ trong câu.
 
 ### Input
 ```text
-  Chuc   mung nam   moi   
+ Chuc mung nam moi 
 ```
 ### Output
 ```text

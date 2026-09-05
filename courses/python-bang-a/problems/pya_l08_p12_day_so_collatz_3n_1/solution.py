@@ -1,2 +1,9 @@
-# Gợi ý mã nguồn cho PYA-L08-P12: Dãy Số Collatz (3n + 1)
-# Cài đặt code chuẩn Python 3
+n = int(input())
+count = 0
+while n != 1:
+    if n % 2 == 0:
+        n = n // 2
+    else:
+        n = 3 * n + 1
+    count = count + 1
+print(count)

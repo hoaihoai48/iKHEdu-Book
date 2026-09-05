@@ -1,5 +1,9 @@
-# Đếm Ước Chẵn Của N
+# Đếm ước chẵn của N
 
+
+## Bối cảnh
+
+Trong phân tích chia nhóm chẵn lẻ, việc xác định các ước số chẵn giúp tối ưu hóa việc phân chia tài nguyên thành các phần có kích thước chia hết cho 2.
 
 ## Nhiệm vụ
 

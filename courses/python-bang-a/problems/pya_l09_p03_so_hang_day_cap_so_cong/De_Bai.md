@@ -1,5 +1,9 @@
-# Số Hạng Dãy Cấp Số Cộng
+# Số hạng dãy cấp số cộng
 
+
+## Bối cảnh
+
+Cấp số cộng là dãy số mà hiệu giữa hai số liên tiếp luôn bằng nhau. Cho số hạng đầu $u_1$ và công sai $d$, tìm số hạng thứ $N$.
 
 ## Nhiệm vụ
 

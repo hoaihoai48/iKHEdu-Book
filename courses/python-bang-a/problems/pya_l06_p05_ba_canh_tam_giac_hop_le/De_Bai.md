@@ -1,7 +1,9 @@
-# Ba Cạnh Tam Giác Hợp Lệ
+# Ba cạnh tam giác hợp lệ
 
 
-*(Lấy cảm hứng từ Bài 11 Đề thi THT Toàn quốc)*
+## Bối cảnh
+
+Thí sinh có ba que tính với các độ dài khác nhau. Bạn ấy muốn biết liệu ba que tính đó có thể ghép thành một hình tam giác hay không. Hãy giúp kiểm tra.
 
 ## Nhiệm vụ
 

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pyr1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="pyr2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="pyr3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="pyr4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="shadowPyr" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="400" rx="16" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="958" height="398" rx="15" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">
+    THÁP THỨ TỰ ƯU TIÊN TOÁN TỬ TRONG PYTHON
+  </text>
+
+  <!-- Level 1 (Top): Parentheses -->
+  <!-- Triangle center=480, top=60, bottom=118, left=330, right=630 (w=300) -->
+  <g filter="url(#shadowPyr)">
+    <polygon points="480,58 630,118 330,118" fill="url(#pyr1)"/>
+    <text x="480" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">1. Cặp ngoặc ( )</text>
+  </g>
+
+  <!-- Level 2: Power ** -->
+  <!-- Trapezoid top: 320 to 640 (w=320), bottom: 220 to 740 (w=520) -->
+  <g filter="url(#shadowPyr)">
+    <polygon points="320,124 640,124 740,184 220,184" fill="url(#pyr2)"/>
+    <text x="480" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">2. Lũy thừa **</text>
+    <text x="480" y="173" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#FEF3C7">(Tính từ phải qua trái)</text>
+  </g>
+
+  <!-- Level 3: Multiply, Divide, Floor Div, Modulo -->
+  <!-- Trapezoid top: 210 to 750 (w=540), bottom: 100 to 860 (w=760) -->
+  <g filter="url(#shadowPyr)">
+    <polygon points="210,190 750,190 860,250 100,250" fill="url(#pyr3)"/>
+    <text x="480" y="216" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">3. Nhân / Chia: * , / , // , %</text>
+    <text x="480" y="239" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#DBEAFE">(Tính từ trái qua phải)</text>
+  </g>
+
+  <!-- Level 4: Add, Subtract -->
+  <!-- Trapezoid top: 90 to 870 (w=780), bottom: 20 to 940 (w=920) -->
+  <g filter="url(#shadowPyr)">
+    <polygon points="90,256 870,256 940,316 20,316" fill="url(#pyr4)"/>
+    <text x="480" y="282" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">4. Cộng / Trừ: + , -</text>
+    <text x="480" y="305" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#D1FAE5">(Tính từ trái qua phải)</text>
+  </g>
+
+  <!-- Side Callout note -->
+  <text x="480" y="362" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-style="italic" fill="#64748B">
+    Quy tắc vàng phân số: Muốn tính mẫu số gồm phép toán, bắt buộc phải bọc trong ngoặc tròn: (a + b) / (c + d).
+  </text>
+</svg>

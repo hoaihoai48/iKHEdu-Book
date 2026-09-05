@@ -1,5 +1,9 @@
-# Ký Tự Đầu & Ký Tự Cuối
+# Ký tự đầu & ký tự cuối
 
+
+## Bối cảnh
+
+Trong xử lý văn bản, việc trích xuất ký tự mở đầu và kết thúc của một từ mã giúp hệ thống nhanh chóng kiểm tra định dạng khung truyền tin.
 
 ## Nhiệm vụ
 
@@ -20,6 +24,10 @@ PYTHON
 ```text
 P N
 ```
+### Giải thích
+
+Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `P N`.
+
 
 
 ## Ràng buộc

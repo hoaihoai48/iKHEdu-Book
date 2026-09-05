@@ -1,2 +1,5 @@
-# Gợi ý mã nguồn cho PYA-L09-P05: Dãy Số Đan Dấu
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+if n % 2 == 0:
+    print(-n // 2)
+else:
+    print((n + 1) // 2)
