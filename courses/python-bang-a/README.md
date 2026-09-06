@@ -31,7 +31,7 @@ PROGRAM: Python (Level 1)
  │    └── Bài 03: Phép chia nguyên, chia dư và lũy thừa
  │
  ├── CHƯƠNG 2: CẤU TRÚC RẼ NHÁNH & CẤU TRÚC VÒNG LẶP (Bài 04 – 06)
- │    ├── Bài 04: Cấu trúc rẽ nhánh và điều kiện logic
+ │    ├── Bài 04: Cấu trúc rẽ nhánh
  │    ├── Bài 05: Vòng lặp for và hàm range
  │    └── Bài 06: Vòng lặp while, biến cờ và điều khiển vòng lặp
  │

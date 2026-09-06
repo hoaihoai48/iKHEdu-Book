@@ -1,4 +1,4 @@
-# Bài 04: Cấu trúc rẽ nhánh và điều kiện logic
+# Bài 04: Cấu trúc rẽ nhánh
 
 ## 1. Bản chất của cấu trúc rẽ nhánh trong khoa học máy tính
 
@@ -10,22 +10,21 @@ Cấu trúc cho phép máy tính thay đổi dòng chảy thực thi dựa trên
 
 ---
 
-## 2. Phép toán so sánh & Kiểu dữ liệu Boolean
+## 2. Thiết lập điều kiện so sánh trong câu lệnh `if`
 
-Để đưa ra quyết định, máy tính dựa vào kết quả của các **phép so sánh**. Kết quả của một phép so sánh luôn chỉ có thể là Đúng (`True`) hoặc Sai (`False`) — thuộc kiểu dữ liệu `bool` **.
+Ở Bài 02, chúng ta đã làm quen với các phép toán so sánh trả về kết quả Đúng (`True`) hoặc Sai (`False`). Trong cấu trúc rẽ nhánh, biểu thức so sánh đóng vai trò là **"người gác cổng"** quyết định máy tính có bước vào thực thi khối lệnh hay không:
 
-### 2.1. Bảng 6 toán tử so sánh trong Python
-
-| Toán Tử | Tên Phép So Sánh | Cú Pháp | Ví Dụ ĐÚNG (`True`) | Ví Dụ SAI (`False`) |
-|:---:|---|---|:---:|:---:|
-| **`==`** | Bằng nhau | `a == b` | `5 == 5` | `5 == 7` |
-| **`!=`** | Khác nhau (Không bằng) | `a != b` | `5 != 7` | `5 != 5` |
-| **`>`** | Lớn hơn | `a > b` | `10 > 3` | `3 > 10` |
-| **`<`** | Nhỏ hơn | `a < b` | `3 < 10` | `10 < 3` |
-| **`>=`** | Lớn hơn hoặc bằng | `a >= b` | `10 >= 10`, `12 >= 10` | `8 >= 10` |
-| **`<=`** | Nhỏ hơn hoặc bằng | `a <= b` | `5 <= 5`, `3 <= 5` | `7 <= 5` |
+| Phép so sánh | Ký hiệu | Cú pháp trong `if` | Ý nghĩa điều kiện |
+|:---:|:---:|---|---|
+| **Bằng nhau** | `==` | `if n == 0:` | Đúng khi giá trị của `n` bằng 0 |
+| **Khác nhau** | `!=` | `if n != 0:` | Đúng khi giá trị của `n` khác 0 |
+| **Lớn hơn** | `>` | `if diem > 5:` | Đúng khi `diem` lớn hơn 5 |
+| **Nhỏ hơn** | `<` | `if diem < 5:` | Đúng khi `diem` nhỏ hơn 5 |
+| **Lớn hơn hoặc bằng** | `>=` | `if tuoi >= 18:` | Đúng khi `tuoi` từ 18 trở lên |
+| **Nhỏ hơn hoặc bằng** | `<=` | `if tuoi <= 10:` | Đúng khi `tuoi` từ 10 trở xuống |
 
 > ❌ **TỬ HUYỆT BẮT BUỘC PHẢI NHỚ: NHẦM LẪN GIỮA DẤU GÁN `=` VÀ DẤU SO SÁNH `==`**
+>
 > * Dấu `=` (Một dấu bằng): Là **phép gán giá trị** từ vế phải vào biến ở vế trái (`x = 10`).
 > * Dấu `==` (Hai dấu bằng liền nhau): Là **phép so sánh bằng**, trả về `True` hoặc `False`.
 > * Nếu viết `if a = 5:` $\implies$ Máy tính sẽ báo lỗi cú pháp ngay lập tức: `SyntaxError: invalid syntax`.
@@ -94,22 +93,22 @@ else:
 
 ---
 
-## 5. Toán tử logic: `and`, `or`, `not`
+## 5. Kỹ thuật ghép nhiều điều kiện: `and`, `or`, `not`
 
-Khi điều kiện quyết định cần kết hợp nhiều yếu tố phức tạp, ta sử dụng 3 toán tử logic:
+Khi một quyết định trong câu lệnh rẽ nhánh đòi hỏi kết hợp nhiều yếu tố, ta sử dụng các liên từ logic đã học ở Bài 02 để kết nối các biểu thức điều kiện:
 
-| Toán Tử | Tên Logic | Điều Kiện Trả Về `True` | Ví Dụ Thực Tế |
+| Liên từ | Ý nghĩa trong `if` | Khi nào nhánh `if` được chạy? | Ví dụ thực tế |
 |:---:|---|---|---|
-| **`and`** | VÀ (Đồng thời) | **TẤT CẢ** các điều kiện con đều phải đúng (`True`). Chỉ cần 1 điều kiện sai là cả biểu thức sai. | `tuoi >= 6 and tuoi <= 11` *(Độ tuổi học sinh)* |
-| **`or`** | HOẶC (Một trong hai) | **CHỈ CẦN ÍT NHẤT 1** điều kiện con đúng (`True`). Biểu thức chỉ sai khi tất cả đều sai. | `thu == 7 or thu == 0` *(Ngày cuối tuần)* |
-| **`not`** | PHỦ ĐỊNH (Đảo ngược) | Đảo ngược giá trị: `not True = False`, `not False = True`. | `not (diem < 5)` *(Tương đương diem >= 5)* |
+| **`and`** | **ĐỒNG THỜI** (Và) | Khi **tất cả** các điều kiện con đều đúng | `if diem >= 8 and hanh_kiem == "Tot":` |
+| **`or`** | **HOẶC** (Ít nhất một) | Khi **có ít nhất một** điều kiện con đúng | `if thu == "Bay" or thu == "Chu Nhat":` |
+| **`not`** | **PHỦ ĐỊNH** (Đảo ngược) | Khi điều kiện bên trong bị sai | `if not hop_le:` |
 
 ### Thứ tự ưu tiên logic:
 1. Phép so sánh số học: `>`, `<`, `==`, ...
 2. `not`
 3. `and`
 4. `or`
-* **Lời khuyên an toàn:** Luôn dùng cặp ngoặc tròn `( )` để gom nhóm các điều kiện logic phức tạp, giúp code trong sáng và không bị hiểu nhầm thứ tự ưu tiên.
+* **Lời khuyên an toàn:** Luôn dùng cặp ngoặc tròn `( )` để gom nhóm các điều kiện logic phức tạp, giúp code trong sáng và không bị hiểu nhầm thứ tự ưu tiên (ví dụ: `if (a > 0 and b > 0) or c > 0:`).
 
 ---
 
