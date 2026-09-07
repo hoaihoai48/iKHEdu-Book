@@ -1,74 +1,69 @@
-# Hướng Dẫn Giảng Dạy: Tìm Vị Trí Đầu Tiên Của X
+# Hướng Dẫn Giảng Dạy: Tìm vị trí đầu tiên của X
 Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tìm Vị Trí Đầu Tiên Của X** (`PYA-L16-P08`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là quét dãy từ trái sang phải và dừng ngay khi gặp số `X` lần đầu, vị trí đếm từ 0.
+- Với số mẫu `N = 5`, `X = 7`, dãy `3 5 7 9 7`: vị trí 0 là 3, vị trí 1 là 5, vị trí 2 là 7 nên đáp án là `2` (số 7 ở cuối không tính vì đã thấy ở vị trí 2).
+- Quy trình trong lời giải với các biến `line`, `n`, `x`, `a`:
+  - Tách dòng đầu `line` thành `n = 5`, `x = 7`.
+  - Đọc dãy `a = [3, 5, 7, 9, 7]`.
+  - Gọi `a.index(7)` được `2` rồi in `2`; nếu `X` vắng mặt thì `index` báo lỗi, phần `except ValueError` in `-1`.
+- Giá trị biên cụ thể: `X` nằm ngay vị trí 0 thì in `0`; `X` không có trong dãy (mẫu phụ `4 10` và `1 2 3 4`) thì in `-1`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 7 / 3 5 7 9 7)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Tách dòng 1 `line = input().split()` | `["5", "7"]` |
+| 2 | Lấy `n`, `x` | `n = 5`, `x = 7` |
+| 3 | Đọc dãy `a` | `a = [3, 5, 7, 9, 7]` |
+| 4 | Gọi `a.index(7)` | `2` (phần tử 7 đầu tiên ở vị trí 2) |
+| 5 | In kết quả | màn hình hiện `2` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `2`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5 7
-3 5 7 9 7
+- Bẫy 1 — đếm vị trí từ 1 thay vì từ 0:
+```python
+line = input().split()
+n, x = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+print(a.index(x) + 1)
 ```
-* **Output:**
-```text
-2
+Với mẫu trên in ra `3`, không khớp đáp án mẫu `2`. Cách sửa: in nguyên `a.index(x)`, không cộng 1.
+- Bẫy 2 — quên xử lý khi `X` vắng mặt:
+```python
+line = input().split()
+n, x = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+print(a.index(x))
 ```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+Với mẫu phụ `4 10` và dãy `1 2 3 4`, lệnh `index` gây lỗi và chương trình dừng đột ngột thay vì in `-1`. Cách sửa: bọc trong `try ... except ValueError: print(-1)`.
+- Bẫy 3 — quét hết dãy mà không dừng ở lần gặp đầu:
+```python
+line = input().split()
+n, x = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+vitri = -1
+for i in range(n):
+    if a[i] == x:
+        vitri = i
+print(vitri)
+```
+Với mẫu trên vòng lặp ghi đè tới số 7 cuối cùng nên in ra `4` sai. Cách sửa: dừng ngay khi gặp lần đầu hoặc dùng `a.index(x)`.
 
 ---
 
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
+
 ```python
 line = input().split()
 n, x = int(line[0]), int(line[1])
@@ -78,9 +73,3 @@ try:
 except ValueError:
     print(-1)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

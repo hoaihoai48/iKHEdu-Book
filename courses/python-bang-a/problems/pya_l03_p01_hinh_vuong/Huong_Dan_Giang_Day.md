@@ -1,64 +1,36 @@
-# Hướng Dẫn Giảng Dạy: Chu Vi Và Diện Tích Hình Vuông
+# Hướng Dẫn Giảng Dạy: Chu vi và diện tích hình vuông
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Chu Vi Và Diện Tích Hình Vuông** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất hình học: hình vuông cạnh `a` có chu vi `4 * a` và diện tích `a * a`, cả hai đều tính từ cùng một số đọc vào.
+- Quy trình trong lời giải: đọc biến `a` bằng `int(input())`, rồi in `4 * a` và `a * a` trên cùng một dòng; với mẫu `a = 6` thì chu vi `4 * 6 = 24` và diện tích `6 * 6 = 36`.
+- Xử lý biên: `A` nhỏ nhất là 1 cho ra `4 1`, `A` lớn nhất là 10000 cho ra `40000 100000000`, đều là số nguyên vừa khít.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6)
+Với số mẫu `6`, chương trình phải in ra `24 36`.
+
+| Bước | Hành động | Giá trị biến | Kết quả |
+|---|---|---|---|
+| 1 | Đọc `a = int(input())` | `a = 6` | cạnh bằng 6 |
+| 2 | Tính `4 * a` | `4 * 6 = 24` | chu vi 24 |
+| 3 | Tính `a * a` | `6 * 6 = 36` | diện tích 36 |
+| 4 | In kết quả | xuất `24 36` | khớp kết quả mẫu `24 36` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — nhầm công thức chu vi: viết `print(2 * a, a * a)` thì với mẫu in ra `12 36` thay vì `24 36`; cách sửa là nhân chu vi với 4.
+- Bẫy 2 — in mỗi thứ một dòng: dùng hai lệnh in riêng thì với mẫu ra hai dòng thay vì một dòng `24 36`; cách sửa là in một lần `print(4 * a, a * a)`.
+- Bẫy 3 — quên đổi kiểu: viết `a = input()` thì `4 * a` với mẫu lặp chuỗi cho ra kết quả lạ thay vì `24 36`; cách sửa là bọc `int(input())`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 a = int(input())
 print(4 * a, a * a)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

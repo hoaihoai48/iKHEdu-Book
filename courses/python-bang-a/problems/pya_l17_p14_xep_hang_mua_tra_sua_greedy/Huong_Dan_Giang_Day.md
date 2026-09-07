@@ -1,85 +1,103 @@
-# Hướng Dẫn Giảng Dạy: Xếp Hàng Mua Trà Sữa (Greedy)
+# Hướng Dẫn Giảng Dạy: Xếp hàng mua trà sữa (Greedy)
 Chuyên đề: **Thống Kê Danh Sách & Sắp Xếp Nâng Cao**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Xếp Hàng Mua Trà Sữa (Greedy)** (`PYA-L17-P14`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là cho bạn pha nhanh lên mua trước thì cả hàng chờ ít nhất, vì mỗi phút pha xong sớm giúp mọi bạn đứng sau bớt chờ.
+- Với số mẫu `N = 3`, các thời gian `3 1 2`: xếp lại thành `1 2 3`. Bạn thứ nhất chờ `1` phút, bạn thứ hai chờ `1 + 2 = 3` phút, bạn thứ ba chờ `1 + 2 + 3 = 6` phút; tổng thời gian chờ là `1 + 3 + 6 = 10`.
+- Quy trình trong lời giải với các biến `n`, `cac_so`, `tong`, `da_cho`, `t`:
+  - Đọc `n = 3`, gom `cac_so = [3, 1, 2]` rồi xếp thành `[1, 2, 3]`, đặt `tong = 0`, `da_cho = 0`.
+  - Xét `t = 1`: `da_cho = 1`, `tong = 1`. Xét `t = 2`: `da_cho = 3`, `tong = 4`. Xét `t = 3`: `da_cho = 6`, `tong = 10`.
+  - In `10`.
+- Giá trị biên cụ thể: `N = 1` thì tổng chờ bằng đúng thời gian của bạn duy nhất đó; `T` tới `1000` và `N` tới `10^5` nên tổng vừa trong số nguyên thường.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 / 3 1 2)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n`, gom `cac_so` | `n = 3`, `cac_so = [3, 1, 2]` |
+| 2 | Xếp `sorted` | `cac_so = [1, 2, 3]`, `tong = 0`, `da_cho = 0` |
+| 3 | Xét `t = 1` | `da_cho = 1`, `tong = 1` |
+| 4 | Xét `t = 2` | `da_cho = 3`, `tong = 4` |
+| 5 | Xét `t = 3` | `da_cho = 6`, `tong = 10` |
+| 6 | In kết quả | màn hình hiện `10` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `10`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-3
-3 1 2
-```
-* **Output:**
-```text
-10
-```
-* **Giải thích:** Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt là 1, 2, 3.
-- Bạn 1 chờ 1 phút.
-- Bạn 2 chờ $1 + 2 = 3$ phút.
-- Bạn 3 chờ $1 + 2 + 3 = 6$ phút.
-Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1 — giữ nguyên thứ tự nhập mà không xếp:
 ```python
-# Gợi ý mã nguồn cho PYA-L17-P14: Xếp Hàng Mua Trà Sữa (Greedy)
-# Cài đặt code chuẩn Python 3
+n = int(input().split()[0])
+cac_so = []
+while len(cac_so) < n:
+    try:
+        cac_so.extend(map(int, input().split()))
+    except EOFError:
+        break
+tong = 0
+da_cho = 0
+for t in cac_so:
+    da_cho = da_cho + t
+    tong = tong + da_cho
+print(tong)
 ```
+Với mẫu `3 1 2`, thời gian chờ từng bạn thành `3`, `4`, `6`, tổng `13` lớn hơn đáp án tối ưu `10`. Cách sửa: xếp `cac_so = sorted(cac_so)` trước vòng lặp.
+- Bẫy 2 — cộng tổng thời gian pha thay vì tổng thời gian chờ:
+```python
+n = int(input().split()[0])
+cac_so = []
+while len(cac_so) < n:
+    try:
+        cac_so.extend(map(int, input().split()))
+    except EOFError:
+        break
+cac_so = sorted(cac_so)
+print(sum(cac_so))
+```
+Với mẫu trên in ra `1 + 2 + 3 = 6` sai. Cách sửa: cộng dồn `da_cho` của từng bạn vào `tong`.
+- Bẫy 3 — xếp ngược bạn pha lâu lên trước:
+```python
+n = int(input().split()[0])
+cac_so = []
+while len(cac_so) < n:
+    try:
+        cac_so.extend(map(int, input().split()))
+    except EOFError:
+        break
+cac_so = sorted(cac_so, reverse=True)
+tong = 0
+da_cho = 0
+for t in cac_so:
+    da_cho = da_cho + t
+    tong = tong + da_cho
+print(tong)
+```
+Với mẫu trên, thứ tự `3 2 1` cho thời gian chờ `3`, `5`, `6`, tổng `14` sai. Cách sửa: xếp tăng dần để bạn nhanh lên trước.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+n = int(input().split()[0])
+cac_so = []
+while len(cac_so) < n:
+    try:
+        cac_so.extend(map(int, input().split()))
+    except EOFError:
+        break
+cac_so = sorted(cac_so)
+tong = 0
+da_cho = 0
+for t in cac_so:
+    da_cho = da_cho + t
+    tong = tong + da_cho
+print(tong)
+```

@@ -1,80 +1,51 @@
-# Hướng Dẫn Giảng Dạy: Kiểm Tra Số Chính Phương
+# Hướng Dẫn Giảng Dạy: Kiểm tra số chính phương
 Chuyên đề: **Ước Số, Bội Số & Số Nguyên Tố Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Kiểm Tra Số Chính Phương** (`PYA-L11-P05`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: số chính phương là số mà căn bậc hai của nó là số tự nhiên; `25 = 5 * 5` nên đáp án là `YES`.
+- Chương trình đoán `r = int(25 ** 0.5) = 5`, rồi hiệu chỉnh lên xuống hai vòng lặp để `r` thành căn nguyên chính xác của `25`.
+- Vì `5 * 5 == 25` nên điều kiện `r * r == n` đúng và in `YES`.
+- Hai vòng hiệu chỉnh giúp tránh sai số của phép tính căn với số lớn tới `10^9`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 25)
+| Bước | `r` | Kiểm tra | Ghi chú |
+| --- | --- | --- | --- |
+| Đoán đầu | 5 | `int(25 ** 0.5)` | |
+| Hiệu chỉnh lên | 5 | `(5 + 1) * (5 + 1) = 36 > 25` | không tăng |
+| Hiệu chỉnh xuống | 5 | `5 * 5 = 25`, không lớn hơn `25` | không giảm |
+| So sánh | 5 | `5 * 5 == 25` đúng | in `YES` |
+
+Kết quả in ra: `YES`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-25
-```
-* **Output:**
-```text
-YES
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: so sánh số thực trực tiếp:
 ```python
-# Gợi ý mã nguồn cho PYA-L11-P05: Kiểm Tra Số Chính Phương
-# Cài đặt code chuẩn Python 3
+import math
+if math.sqrt(25) == int(math.sqrt(25)):
+    print("YES")
 ```
+với số lớn tới `10^9` phép căn có thể lệch một chút ở phần thập phân, cho kết quả sai. Sửa lại: hiệu chỉnh `r` rồi so `r * r == n` như bài giải.
+- Bẫy 2: quên hiệu chỉnh, chỉ lấy `r = int(n ** 0.5)`. Với một số mẫu lớn, `r` có thể lệch 1 đơn vị và kết luận sai. Sửa lại: giữ nguyên hai vòng lặp hiệu chỉnh của bài giải.
+- Bẫy 3: in `True`/`False` thay vì `YES`/`NO`. Với mẫu `25` sẽ in `True`, chương trình kiểm tra không chấp nhận. Sửa lại: `print("YES")` và `print("NO")`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+```python
+n = int(input())
+r = int(n ** 0.5)
+while (r + 1) * (r + 1) <= n:
+    r = r + 1
+while r * r > n:
+    r = r - 1
+if r * r == n:
+    print("YES")
+else:
+    print("NO")
+```

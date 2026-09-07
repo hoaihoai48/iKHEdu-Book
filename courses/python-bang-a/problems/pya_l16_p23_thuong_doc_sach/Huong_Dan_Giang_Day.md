@@ -1,53 +1,63 @@
-# Hướng Dẫn Giảng Dạy — Thưởng Đọc Sách (`PYA-L16-P09`)
+# Hướng Dẫn Giảng Dạy: Thưởng đọc sách
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Trung bình trong 90 phút thi thử.
-- Rèn pattern ẩn: **số học (tổng 1..N bằng công thức, tránh lặp N lần)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn phát hiện vòng lặp chậm và dùng công thức toán.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là tính tổng các số từ quyển 1 đến quyển `N`, tức là tổng `1 + 2 + ... + N`.
+- Với số mẫu `N = 5`, tổng sao là `1 + 2 + 3 + 4 + 5 = 15`.
+- Quy trình trong lời giải với biến `n`:
+  - Đọc `n` từ bàn phím, mẫu đọc được `n = 5`.
+  - Áp dụng công thức ghép cặp: `n * (n + 1) // 2`, với mẫu là `5 * 6 // 2 = 30 // 2 = 15`.
+  - In ra `15`.
+- Giá trị biên cụ thể: `N = 1` thì đáp án là `1`; `N = 10^12` thì đáp án là `500000000000500000000000`, Python tính trực tiếp phép nhân số nguyên lớn nên không lo tràn số, cũng không cần cộng từng quyển một.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $N \le 10^{12}$.
-- Trường hợp biên: N = 1; N lớn nhất 10^12 (kết quả vừa trong số nguyên Python).
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n = int(input())` | `n = 5` |
+| 2 | Tính `n + 1` | `6` |
+| 3 | Tính `n * (n + 1)` | `5 * 6 = 30` |
+| 4 | Chia nguyên `30 // 2` | `15` |
+| 5 | In kết quả | màn hình hiện `15` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `15`.
 
-- Bất biến: Tổng 1..N luôn bằng N x (N + 1) // 2.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- N = 5: 5 x 6 // 2 = 15.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — cộng từng quyển bằng vòng lặp tới `N = 10^12`:
+```python
+n = int(input())
+tong = 0
+for i in range(1, n + 1):
+    tong = tong + i
+print(tong)
+```
+Với mẫu `5` vẫn ra `15` nhưng với `N` lớn tới `10^12` vòng lặp chạy gần như không bao giờ xong. Cách sửa: dùng công thức `print(n * (n + 1) // 2)`.
+- Bẫy 2 — dùng phép chia `/` thay vì chia nguyên `//`:
+```python
+n = int(input())
+print(n * (n + 1) / 2)
+```
+Với mẫu `5` in ra `15.0` có dấu chấm, không khớp đáp án mẫu `15`. Cách sửa: dùng `//` để ra số nguyên `15`.
+- Bẫy 3 — quên đổi kiểu khi đọc:
+```python
+n = input()
+print(n * (n + 1) // 2)
+```
+Với mẫu `5`, `n` là chuỗi nên `n + 1` gây lỗi chương trình. Cách sửa: đọc bằng `n = int(input())`.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- Dùng vòng lặp cộng 1..N sẽ quá chậm ở subtask 2; dùng phép chia thực / gây sai số.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 n = int(input())
 print(n * (n + 1) // 2)
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.

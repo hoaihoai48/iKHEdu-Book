@@ -1,80 +1,63 @@
-# Hướng Dẫn Giảng Dạy: Trò Chơi Đoán Số Nhị Phân
+# Hướng Dẫn Giảng Dạy: Trò chơi đoán số nhị phân
 Chuyên đề: **Vòng Lặp while & Người Lính Canh**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Trò Chơi Đoán Số Nhị Phân** (`PYA-L08-P11`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: mỗi lượt đoán thì khoảng tìm kiếm còn một nửa (`n = n // 2`). Đếm xem chặt đôi mấy lần thì khoảng còn đúng 1 số.
+- Quy trình trong lời giải: đọc `n`, đặt `count = 0`; `while True` thì tăng `count` thêm 1, nếu `n == 1` thì dừng, ngược lại chặt đôi `n = n // 2`; cuối cùng in `count`.
+- Xử lý biên: với N nhỏ nhất là 1 thì chỉ cần 1 lượt nên in `1`; với N tới 1 000 000 000 thì chặt đôi khoảng 30 lần.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 8)
+| Lượt lặp | `n` đầu lượt | `count` sau khi tăng | Hành động |
+|---|---|---|---|
+| 1 | 8 | 1 | chưa bằng 1, n thành 4 |
+| 2 | 4 | 2 | chưa bằng 1, n thành 2 |
+| 3 | 2 | 3 | chưa bằng 1, n thành 1 |
+| 4 | 1 | 4 | bằng 1, dừng |
+
+In ra `4` (đường đi `8 -> 4 -> 2 -> 1`), khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-8
-```
-* **Output:**
-```text
-4
-```
-* **Giải thích:** Các bước: $8 \to 4 \to 2 \to 1$ (cần 4 bước).
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — tăng `count` sau khi kiểm tra:
 ```python
-# Gợi ý mã nguồn cho PYA-L08-P11: Trò Chơi Đoán Số Nhị Phân
-# Cài đặt code chuẩn Python 3
+n = int(input())
+count = 0
+while True:
+    if n == 1:
+        break
+    n = n // 2
+    count = count + 1
+print(count)
 ```
+Với mẫu `8` sẽ in ra `3` thay vì `4` vì lượt cuối không được đếm. Cách sửa: tăng `count` ngay đầu vòng lặp như lời giải.
+- Bẫy 2 — dùng chia `/`:
+```python
+n = int(input())
+count = 0
+while True:
+    count = count + 1
+    if n == 1:
+        break
+    n = n / 2
+print(count)
+```
+Với mẫu `8` thì n thành 4.0, 2.0, 1.0 rồi so sánh vẫn đúng, nhưng với N lớn số thực mất chính xác. Cách sửa: dùng `n = n // 2`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.
+## 4. Lời giải tham khảo
+```python
+n = int(input())
+count = 0
+while True:
+    count = count + 1
+    if n == 1:
+        break
+    n = n // 2
+print(count)
+```

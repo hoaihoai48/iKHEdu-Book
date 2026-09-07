@@ -1,66 +1,37 @@
-# Hướng Dẫn Giảng Dạy: Hoán Đổi Hai Biến
+# Hướng Dẫn Giảng Dạy: Hoán đổi vị trí hai biến
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Hoán Đổi Hai Biến** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là hai bạn An và Bình đổi thẻ cho nhau: thẻ `A = 10` sang tay bạn kia và thẻ `B = 99` sang tay bạn này. Thầy cô ví lệnh `a, b = b, a` như hai bàn tay bắt chéo nhau đổi thẻ cùng một lúc.
+- Quy trình gồm ba bước với hai biến `a` và `b` trong lời giải: đọc `10` vào `a` và `99` vào `b` bằng hai lệnh `int(input())`, đổi chỗ cùng lúc bằng `a, b = b, a` để được `a = 99` và `b = 10`, rồi `print(a, b)` in ra `99 10`.
+- Xử lý biên: ràng buộc cho `A, B` từ `-10^9` tới `10^9`. Thầy cô cho các con thử cặp biên `-1000000000` và `1000000000` để thấy lệnh đổi chỗ vẫn đúng cả với số âm.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10 và 99)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a = int(input())` với dòng 1 gõ `10` | `a = 10` | (chưa in gì) |
+| 2 | `b = int(input())` với dòng 2 gõ `99` | `b = 99` | (chưa in gì) |
+| 3 | `a, b = b, a` | `a = 99`, `b = 10` | (chưa in gì) |
+| 4 | `print(a, b)` | `a = 99`, `b = 10` | `99 10` |
+| 5 | Kết thúc chương trình | — | Kết quả cuối cùng: `99 10`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: đổi từng dòng lệch thứ tự như `a = b` rồi `b = a` thì sau dòng đầu `a` đã thành `99`, dòng sau `b` cũng thành `99` nên in ra `99 99` thay vì `99 10`. Cách sửa: đổi cùng lúc bằng `a, b = b, a`.
+- Bẫy 2: quên đổi mà in luôn, viết `print(a, b)` ngay sau khi đọc thì với mẫu `10` và `99` màn hình hiện `10 99` thay vì `99 10`. Cách sửa: thêm dòng `a, b = b, a` trước lệnh in.
+- Bẫy 3: in mỗi số một dòng bằng hai lệnh `print(a)` và `print(b)` thì màn hình hiện `99` rồi `10` xuống hai dòng thay vì `99 10` trên một dòng. Cách sửa: viết gọn `print(a, b)` trên một lệnh.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 a = int(input())
 b = int(input())
 a, b = b, a
 print(a, b)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

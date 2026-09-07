@@ -1,87 +1,41 @@
-# Hướng Dẫn Giảng Dạy: Mario Cứu Công Chúa
+# Hướng Dẫn Giảng Dạy: Mario cứu công chúa
 Chuyên đề: **Lựa Chọn Nhiều Hướng (if - elif - else)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Mario Cứu Công Chúa** (`PYA-L05-P06`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này rất gọn: bài mẫu cộng tổng năng lượng `k + p` rồi so với quãng đường `2 * n`. Đủ sức đi hết quãng đường thì gặp nhau.
+- Cách làm của lời giải mẫu: đọc `k`, `p`, `n` mỗi số một dòng, nếu `k + p >= 2 * n` thì in `YES`, ngược lại in `NO`. Với mẫu `k = 3, p = 3, n = 2`: `3 + 3 = 6`, `2 * n = 4`, vì `6 >= 4` nên in `YES`.
+- Xử lý biên: ràng buộc `1 <= K, P, N <= 1000`. Thầy cô cho thử `k = 1, p = 1, n = 2` thì `1 + 1 = 2 < 4` nên in `NO`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 rồi 3 rồi 2)
+Sample 1 với input mẫu: `3` rồi `3` rồi `2`.
+| Bước | Việc làm | Giá trị các biến | In ra |
+|---|---|---|---|
+| 1 | Đọc dòng một | `k = 3` | — |
+| 2 | Đọc dòng hai | `p = 3` | — |
+| 3 | Đọc dòng ba | `n = 2` | — |
+| 4 | Tính `k + p = 6`, `2 * n = 4`; `6 >= 4` đúng | rẽ nhánh `if` | — |
+| 5 | In kết quả | — | `YES` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — quên nhân đôi: bạn nhỏ viết `if k + p >= n`. Với `k = 1, p = 1, n = 2` sẽ tính `2 >= 2` rồi in `YES`, sai vì quãng đường thật là `4`. Cách sửa: so với `2 * n`.
+- Bẫy 2 — đọc ba số trên một dòng mà không tách: nếu chỉ gọi `int(input())` một lần cho input `3 3 2` thì chương trình lỗi. Cách sửa: đọc ba dòng như lời giải mẫu.
+- Bẫy 3 — in chữ thường `yes`: bạn nhỏ in `yes`. Với mẫu trên, chương trình kiểm tra sẽ báo kết quả sai. Cách sửa: in đúng `YES` và `NO` viết hoa toàn bộ.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-3
-3
-2
-```
-* **Output:**
-```text
-YES
-```
-* **Giải thích:** Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công chúa có 3 năng lượng đi được $3 // 2 = 1$ bậc. Tổng số bậc đi được là $3 + 1 = 4 \ge 4 \implies$ Gặp nhau!
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-hp = int(input().strip())
-if hp > 50:
- print("MANH ME")
-elif hp >= 20:
- print("TRUNG BINH")
+k = int(input())
+p = int(input())
+n = int(input())
+if k + p >= 2 * n:
+    print("YES")
 else:
- print("NGUY HIEM")
+    print("NO")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

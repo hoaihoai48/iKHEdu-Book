@@ -1,74 +1,72 @@
-# Hướng Dẫn Giảng Dạy: Xóa Phần Tử Đầu Tiên Bằng X
+# Hướng Dẫn Giảng Dạy: Xóa phần tử đầu tiên bằng X
 Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Xóa Phần Tử Đầu Tiên Bằng X** (`PYA-L16-P10`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là tìm số `X` đầu tiên trong dãy rồi gạch nó đi, các số còn lại giữ nguyên thứ tự.
+- Với số mẫu `N = 5`, `X = 3`, dãy `1 3 5 3 7`: số 3 đầu tiên ở vị trí 1 bị xóa, còn lại `1 5 3 7` (số 3 thứ hai vẫn ở lại).
+- Quy trình trong lời giải với các biến `line`, `n`, `x`, `a`:
+  - Tách dòng đầu thành `n = 5`, `x = 3`.
+  - Đọc dãy `a = [1, 3, 5, 3, 7]`.
+  - Vì `3` có trong dãy nên gọi `a.remove(3)` xóa đúng phần tử 3 đầu tiên, còn `[1, 5, 3, 7]` rồi in ra; nếu `X` vắng mặt thì in `KHONG CO`.
+- Giá trị biên cụ thể: `X` nằm ở cuối dãy thì xóa xong dãy ngắn đi 1 ở đuôi; `X` không có trong dãy thì in đúng chữ `KHONG CO`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 / 1 3 5 3 7)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Tách dòng 1 | `["5", "3"]` |
+| 2 | Lấy `n`, `x` | `n = 5`, `x = 3` |
+| 3 | Đọc dãy `a` | `a = [1, 3, 5, 3, 7]` |
+| 4 | Kiểm tra `x in a` | `3` có mặt nên xóa |
+| 5 | Gọi `a.remove(3)` | `a = [1, 5, 3, 7]` (mất số 3 đầu tiên) |
+| 6 | In kết quả | màn hình hiện `1 5 3 7` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `1 5 3 7`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5 3
-1 3 5 3 7
+- Bẫy 1 — xóa hết mọi số bằng `X`:
+```python
+line = input().split()
+n, x = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+a = [v for v in a if v != x]
+print(*a)
 ```
-* **Output:**
-```text
-1 5 3 7
+Với mẫu trên in ra `1 5 7` (mất cả hai số 3), không khớp đáp án mẫu `1 5 3 7`. Cách sửa: chỉ xóa một phần tử đầu bằng `a.remove(x)`.
+- Bẫy 2 — dùng `pop(x)` nhầm giá trị với vị trí:
+```python
+line = input().split()
+n, x = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+if x in a:
+    a.pop(x)
+    print(*a)
+else:
+    print("KHONG CO")
 ```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
+Với mẫu trên, `a.pop(3)` xóa phần tử ở vị trí 3 (số `3` thứ hai) nên in ra `1 3 5 7` sai. Cách sửa: xóa theo giá trị bằng `a.remove(x)`.
+- Bẫy 3 — xóa mà không kiểm tra trước:
+```python
+line = input().split()
+n, x = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+a.remove(x)
+print(*a)
+```
+Với mẫu trên vẫn ra `1 5 3 7`, nhưng khi `X` vắng mặt thì `remove` gây lỗi và không in được `KHONG CO`. Cách sửa: kiểm tra `if x in a` trước khi xóa.
 
 ---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+## 4. Lời giải tham khảo
 
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
 line = input().split()
 n, x = int(line[0]), int(line[1])
@@ -79,9 +77,3 @@ if x in a:
 else:
     print("KHONG CO")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

@@ -3,81 +3,53 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững toán tử lũy thừa `**` trong Python qua bài toán tính $a^n$ (`PYA-L02-P13`).
-* **Tư duy thuật toán:** Hiểu lũy thừa là phép nhân lặp lại, phân biệt `**` với `^` và `*`.
-* **Chuẩn code chuẩn:** Đọc 2 số bằng `input()`, ép kiểu `int`, in đúng một số bằng `print()`.
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất là lũy thừa tổng quát: với `a = 3`, `n = 4` thì `3 ** 4 = 81`, tức tầng cao nhất có `81` khối gỗ.
+- Quy trình trong lời giải: đọc `a` dòng 1, đọc `n` dòng 2, rồi in `a ** n`.
+- Xử lý biên: `n = 0` luôn cho `1` (ví dụ `10 ** 0 = 1`); `a = 1` luôn cho `1`; `a = 10, n = 10` cho `10000000000`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Cơ số $a$ ($1 \le a \le 10$), số mũ $n$ ($0 \le n \le 10$). Kết quả tối đa $10^{10}$ vừa trong số nguyên Python.
-* **Bản chất toán học:** $a^n = a \times a \times \dots \times a$ ($n$ lần). Quy ước $a^0 = 1$.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * $n = 0$: kết quả luôn là $1$ (kể cả $a$ bất kỳ).
- * $a = 1$: kết quả luôn là $1$.
- * $n = 1$: kết quả bằng chính $a$.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 và 4 (hai dòng))
+
+| Bước | Diễn giải | Giá trị |
+|------|-----------|---------|
+| 1 | Đọc dòng 1, biến `a` nhận giá trị | `a = 3` |
+| 2 | Đọc dòng 2, biến `n` nhận giá trị | `n = 4` |
+| 3 | Tính `a ** n` | `3 ** 4 = 81` |
+| 4 | In kết quả | `81` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Muốn tính $3^4$ em sẽ viết phép nhân dài thế nào? Có cách viết ngắn gọn trong Python không?
-2. Ký hiệu `^` trong Python có phải là lũy thừa không? Vì sao cô lại cấm dùng nó?
-3. Khi số mũ bằng 0 thì kết quả là bao nhiêu? Em thử đoán rồi kiểm tra bằng máy tính?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
+**Bẫy 1: Dùng `a ^ n`.**
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Tính trực tiếp bằng toán tử `**` với độ phức tạp $\mathcal{O}(1)$, không cần vòng lặp vì $n \le 10$.
-* **Bất biến thuật toán (Invariant):**
- > Biểu thức `a ** n` luôn bằng tích của $n$ thừa số $a$, và quy ước tích rỗng ($n = 0$) bằng $1$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-3
-4
+```python
+print(a ^ n)
 ```
-* **Output:**
-```text
-81
+
+Với số liệu mẫu trên, đoạn này cho `3` và `4` cho `7` thay vì `81`.
+
+Cách sửa: toán tử mũ là `**`.
+
+**Bẫy 2: Dùng `a * n`.**
+
+```python
+print(a * n)
 ```
-* **Giải thích:** $3^4 = 3 \times 3 \times 3 \times 3 = 81$. Tầng cao nhất của cầu thang có 81 khối gỗ.
 
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Đọc cơ số | `a = 3` | Khởi tạo cơ số |
-| **2** | Đọc số mũ | `n = 4` | Khởi tạo số mũ |
-| **3** | Tính `a ** n` | `3 ** 4 = 81` | Ra kết quả 81 |
-| **4** | In kết quả | `print(81)` | Đúng Sample Output |
+Với số liệu mẫu trên, đoạn này cho `3` và `4` cho `12` thay vì `81`.
+
+Cách sửa: dùng `a ** n`.
 
 ---
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
+## 4. Lời giải tham khảo
 
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **Dùng `^` thay cho `**`:** `3 ^ 4 = 7` (phép XOR bit), không phải $81$.
-2. **Quên ép kiểu:** Dùng trực tiếp chuỗi từ `input()` để tính `**` gây lỗi `TypeError`.
-3. **In thừa giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in `ans` gây `kết quả sai`.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
 a = int(input())
 n = int(input())
 print(a ** n)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Tính tổng các tầng cầu thang $a^1 + a^2 + \dots + a^n$ (chuẩn bị cho vòng lặp Bài 7).
-* **Mở rộng 2:** So sánh $2^{10}$ với $10^3$ để cảm nhận tốc độ tăng của lũy thừa cơ số 2.

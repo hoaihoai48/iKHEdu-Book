@@ -1,83 +1,65 @@
-# Hướng Dẫn Giảng Dạy: Chú Ốc Sên Leo Cột Cờ
+# Hướng Dẫn Giảng Dạy: Chú ốc sên leo cột cờ
 Chuyên đề: **Vòng Lặp while & Người Lính Canh**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Chú Ốc Sên Leo Cột Cờ** (`PYA-L08-P09`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: mỗi ngày leo lên A mét, nếu chưa chạm đỉnh thì đêm tụt B mét. Ngày chạm hoặc vượt đỉnh thì dừng ngay, không tụt nữa.
+- Quy trình trong lời giải: đọc `h`, `a`, `b`; đặt `cao = 0` và `ngay = 0`; mỗi vòng tăng `ngay`, cộng `cao = cao + a`, kiểm tra `cao >= h` thì dừng, chưa đủ thì trừ `cao = cao - b`.
+- Xử lý biên: nếu A đã lớn hơn hoặc bằng H (ví dụ H = 5, A = 5) thì ngày 1 đã xong; đề đảm bảo B < A nên mỗi ngày tiến thêm `A - B` mét, vòng lặp chắc chắn dừng.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 / 3 / 1)
+| Ngày (`ngay`) | `cao` sau khi leo (+3) | Chạm đỉnh (`>= 5`)? | `cao` sau đêm (-1) |
+|---|---|---|---|
+| đầu | 0 | — | — |
+| 1 | 3 | chưa | 2 |
+| 2 | 5 | đủ, dừng | — |
+
+In ra `2`, khớp với kết quả mẫu (ngày 1 còn 2m, ngày 2 chạm 5m).
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5
-3
-1
-```
-* **Output:**
-```text
-2
-```
-* **Giải thích:** Ngày 1: leo lên 3m, đêm tụt 1m còn 2m.
-Ngày 2: từ 2m leo thêm 3m lên 5m (chạm đỉnh ngay trong ngày!). Vậy mất 2 ngày.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — trừ B trước khi kiểm tra đỉnh:
 ```python
-# Gợi ý mã nguồn cho PYA-L08-P09: Chú Ốc Sên Leo Cột Cờ
-# Cài đặt code chuẩn Python 3
+h = int(input())
+a = int(input())
+b = int(input())
+cao = 0
+ngay = 0
+while True:
+    ngay = ngay + 1
+    cao = cao + a - b
+    if cao >= h:
+        break
+print(ngay)
 ```
+Với mẫu `5 / 3 / 1` thì ngày 2 tính thành 4 nên phải sang ngày 3, in ra `3` thay vì `2`. Cách sửa: cộng A rồi kiểm tra đỉnh trước, chỉ trừ B khi chưa chạm đỉnh.
+- Bẫy 2 — công thức một dòng bỏ qua đêm cuối:
+```python
+h = int(input())
+a = int(input())
+b = int(input())
+print((h + (a - b) - 1) // (a - b))
+```
+Với mẫu `5 / 3 / 1` cho `(5 + 1) // 2 = 3` thay vì `2` vì đêm cuối không bị tụt. Cách sửa: mô phỏng từng ngày bằng vòng lặp như lời giải.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.
+## 4. Lời giải tham khảo
+```python
+h = int(input())
+a = int(input())
+b = int(input())
+cao = 0
+ngay = 0
+while True:
+    ngay = ngay + 1
+    cao = cao + a
+    if cao >= h:
+        break
+    cao = cao - b
+print(ngay)
+```

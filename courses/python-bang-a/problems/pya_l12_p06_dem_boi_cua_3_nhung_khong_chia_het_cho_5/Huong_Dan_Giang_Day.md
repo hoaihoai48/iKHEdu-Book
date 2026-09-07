@@ -1,80 +1,43 @@
-# Hướng Dẫn Giảng Dạy: Đếm Bội Của 3 Nhưng Không Chia Hết Cho 5
+# Hướng Dẫn Giảng Dạy: Đếm bội của 3 nhưng không chia hết cho 5
 Chuyên đề: **Đếm Số Theo Quy Luật & Các Con Số Đặc Biệt**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đếm Bội Của 3 Nhưng Không Chia Hết Cho 5** (`PYA-L12-P06`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: đếm bội của `3` trong đoạn `[1, 30]` rồi trừ đi những số vừa là bội của `3` vừa là bội của `5` (tức bội của `15`).
+- Số bội của `3`: `30 // 3 - 0 // 3 = 10 - 0 = 10` (`3, 6, 9, 12, 15, 18, 21, 24, 27, 30`).
+- Số bội của `15`: `30 // 15 - 0 // 15 = 2 - 0 = 2` (`15, 30`).
+- Đáp án là `10 - 2 = 8`.
+- Thầy cô cho các em gạch bỏ `15` và `30` khỏi danh sách bội của `3` để thấy còn đúng `8` số.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1 30)
+| Nhóm | Phép tính | Kết quả |
+| --- | --- | --- |
+| Bội của 3 trong `1..30` | `30 // 3 - 0 // 3` | `10` |
+| Bội của 15 trong `1..30` | `30 // 15 - 0 // 15` | `2` (`15, 30`) |
+| Thỏa mãn | `10 - 2` | `8` |
+
+Kết quả in ra: `8`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-1 30
-```
-* **Output:**
-```text
-8
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: chỉ đếm bội của `3` mà quên trừ bội của `15`:
 ```python
-# Gợi ý mã nguồn cho PYA-L12-P06: Đếm Bội Của 3 Nhưng Không Chia Hết Cho 5
-# Cài đặt code chuẩn Python 3
+print(b // 3 - (a - 1) // 3)
 ```
+với mẫu `1 30` sẽ ra `10` thay vì `8`. Sửa lại: lấy `dem3 - dem15` như bài giải.
+- Bẫy 2: trừ bội của `5` thay vì bội của `15`. Với mẫu `1 30` bội của `5` có `6` số nên ra `10 - 6 = 4`, là kết quả sai (loại cả những số không phải bội của `3`). Sửa lại: phần trừ là `dem15`.
+- Bẫy 3: quên `(a - 1)` mà dùng `a // 3`. Với mẫu `1 30` thì trùng cờ vẫn ra `8`, nhưng với đoạn `3 30` sẽ tính sai mốc đầu. Sửa lại: `b // 3 - (a - 1) // 3`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+```python
+a, b = map(int, input().split())
+dem3 = b // 3 - (a - 1) // 3
+dem15 = b // 15 - (a - 1) // 15
+print(dem3 - dem15)
+```

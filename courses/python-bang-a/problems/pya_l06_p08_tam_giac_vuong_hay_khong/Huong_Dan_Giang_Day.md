@@ -1,82 +1,45 @@
-# Hướng Dẫn Giảng Dạy: Tam Giác Vuông Hay Không?
+# Hướng Dẫn Giảng Dạy: Tam giác vuông hay không?
 Chuyên đề: **Liên Minh Điều Kiện (and - or - not)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tam Giác Vuông Hay Không?** (`PYA-L06-P08`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là kiểm tra đẳng thức bình phương ba cạnh: `a * a + b * b == c * c` hoặc `a * a + c * c == b * b` hoặc `b * b + c * c == a * a`, đúng một vế là vuông.
+- Cách làm của lời giải mẫu: đọc `a, b, c` linh hoạt cả hai kiểu input rồi kiểm tra cả ba vế nối bằng `or`. Với mẫu `3, 4, 5`: `3*3 + 4*4 = 25`, `5*5 = 25`, vế một đúng nên in `VUONG`.
+- Xử lý biên: ràng buộc `1 <= a, b, c <= 10^4`, bình phương lên tới `10^8` vẫn vừa số nguyên. Thầy cô cho thử `a = 3, b = 4, c = 6` (`9 + 16 = 25` khác `36`, cả ba vế sai, in `KHONG VUONG`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 rồi 4 rồi 5)
+Sample 1 với input mẫu: `3` rồi `4` rồi `5`.
+| Bước | Việc làm | Giá trị các biến | In ra |
+|---|---|---|---|
+| 1 | Đọc các số | `a = 3, b = 4, c = 5` | — |
+| 2 | Tính `3*3 + 4*4 = 25`, `5*5 = 25`; `25 == 25` đúng | cả cụm `or` đúng | — |
+| 3 | In kết quả | — | `VUONG` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — chỉ kiểm tra một vế: bạn nhỏ viết `if a * a + b * b == c * c`. Với `a = 5, b = 3, c = 4` (cạnh huyền nằm ở `a`) sẽ in `KHONG VUONG`, sai. Cách sửa: giữ đủ ba vế nối bằng `or`.
+- Bẫy 2 — dùng căn bậc hai: bạn nhỏ tính `c == (a*a + b*b) ** 0.5` rồi so số thực. Với số lớn dễ lệch dấu chấm động. Cách sửa: so bình phương nguyên như lời giải mẫu.
+- Bẫy 3 — quên số mũ: bạn nhỏ viết `a + b == c`. Với mẫu `3, 4, 5` thì `7 == 5` sai nên in `KHONG VUONG`, sai. Cách sửa: nhân mỗi cạnh với chính nó trước khi cộng.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-3
-4
-5
-```
-* **Output:**
-```text
-VUONG
-```
-* **Giải thích:** $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L06-P08: Tam Giác Vuông Hay Không?
-# Cài đặt code chuẩn Python 3
+dong1 = input().split()
+if len(dong1) >= 3:
+    a = int(dong1[0])
+    b = int(dong1[1])
+    c = int(dong1[2])
+else:
+    a = int(dong1[0])
+    b = int(input().split()[0])
+    c = int(input().split()[0])
+if a * a + b * b == c * c or a * a + c * c == b * b or b * b + c * c == a * a:
+    print("VUONG")
+else:
+    print("KHONG VUONG")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

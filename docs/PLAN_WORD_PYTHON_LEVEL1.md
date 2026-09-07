@@ -140,9 +140,9 @@ Mổ trực tiếp `c++-level-1-quyen-1.docx` (3.802 đoạn, 233 bảng, 12 ả
 - [x] **S3. Viết Phụ lục A Python XONG** (`reference/Phu_Luc_A_Python.md`, 329 dòng, 11 H2, code compile OK, 0 từ cấm).
 - [x] **Lời nói đầu Q1 + Q2 XONG** (`reference/Loi_Noi_Dau_Quyen1.md`, `Loi_Noi_Dau_Quyen2.md`, theo khung C++, không từ thi cử).
 - [ ] **S4. Build Word (antigravity, đọc `word_build_manifest.json` làm nguồn khóa duy nhất):** clone khuôn `quyen-1.docx` (giữ styles/header/watermark/TOC), nạp Lời nói đầu mới → Chương → Bài (từ `*_Print.md`) → đề bài (khối H3, **không** Ràng buộc; mỗi Sample 1 bảng riêng) → Phụ lục A → Phụ lục B (solutions chia quyển) → Mục lục field tự động cuối sách. Format căn chỉnh y hệt 2 file C++ (mục 4). Manifest đã verify: Q1 157 + Q2 130 = 287 đề, 0 thiếu.
-- [ ] **S5. Build FULL Quyển 1** → audit → bạn duyệt in thử. Vòng 2 (15:47): ảnh treo đã xóa ✅; màu heading Q1 đúng (inherit Normal 1E293B) ✅; tên file đúng quy ước ✅. Còn lỗi thật: (1) câu TLE tự chế VẪN CÒN (chứng minh: không tồn tại trong cả Print lẫn Production); (2) bảng vẫn fixed-layout, 0 autofit (Hình 2 chưa sửa).
+- [ ] **S5. Build FULL Quyển 1** → audit → bạn duyệt in thử. Vòng 2 (15:47): ảnh treo đã xóa ✅; màu heading Q1 đúng ✅; tên file đúng ✅. Vụ TLE: đã đính chính — câu đó CÓ trong nguồn (`pya_l07_p14`), đã viết lại giọng tiểu học, patch thẳng Word Q1 + đồng bộ `De_Bai.md`/`Bai_Tap.md` (kết luận "anti bịa" trước đây là sai). Còn lỗi thật: bảng vẫn fixed-layout, 0 autofit (Hình 2 chưa sửa).
 - [ ] **S6. Build full Quyển 2** (L07–L14, 130 đề + lời giải) → audit tương tự → bàn giao 2 file `.docx`.
-- [ ] **S6. Build full Quyển 2** (L07–L14, 130 đề + lời giải) → audit tương tự → bàn giao 2 file `.docx`.
+- [x] **S7. Sách giáo viên Quyển 1 XONG** (`python-giaovien-quyen-1.docx`): đề 157 + lời giải 157 + guide 1413 mục H4, media chỉ logo, 0 quiz/Ràng buộc/Bảng A/DKOJ. Lời nói đầu do user yêu cầu — GIỮ. Câu TLE trong đề pya_l07_p14: user quyết GIỮ NGUYÊN (sách đã in, không sửa).
 
 ---
 *S0 đã chốt hết từ 2 file C++. Không còn mục treo.*

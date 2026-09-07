@@ -1,0 +1,2136 @@
+{
+ "volume": 1,
+ "kind": "teacher-solutions",
+ "header_book": "Giáo trình Python - Sách giáo viên",
+ "output": "python-giaovien-full.docx",
+ "template": "courses/cpp-bang-b/c++-level-1-quyen-1.docx",
+ "lessons": [
+  {
+   "lesson": 1,
+   "chapter": 1,
+   "title": "Bài 01: Lệnh xuất nhập, biến số và kiểu dữ liệu",
+   "problems": [
+    {
+     "code": "pya_l01_p01_loi_chao_robot",
+     "title": "Lời chào robot",
+     "de_bai": "problems/pya_l01_p01_loi_chao_robot/De_Bai.md",
+     "solution": "problems/pya_l01_p01_loi_chao_robot/solution.py",
+     "guide": "problems/pya_l01_p01_loi_chao_robot/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p02_cau_doi_tet",
+     "title": "Câu đối ngày tết",
+     "de_bai": "problems/pya_l01_p02_cau_doi_tet/De_Bai.md",
+     "solution": "problems/pya_l01_p02_cau_doi_tet/solution.py",
+     "guide": "problems/pya_l01_p02_cau_doi_tet/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p05_doc_in_so_nguyen",
+     "title": "Đọc và in số nguyên",
+     "de_bai": "problems/pya_l01_p05_doc_in_so_nguyen/De_Bai.md",
+     "solution": "problems/pya_l01_p05_doc_in_so_nguyen/solution.py",
+     "guide": "problems/pya_l01_p05_doc_in_so_nguyen/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p03_in_so_sep",
+     "title": "In số trên một hàng với sep",
+     "de_bai": "problems/pya_l01_p03_in_so_sep/De_Bai.md",
+     "solution": "problems/pya_l01_p03_in_so_sep/solution.py",
+     "guide": "problems/pya_l01_p03_in_so_sep/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p25_nhan_doi_gia_tri",
+     "title": "Nhân đôi giá trị",
+     "de_bai": "problems/pya_l01_p25_nhan_doi_gia_tri/De_Bai.md",
+     "solution": "problems/pya_l01_p25_nhan_doi_gia_tri/solution.py",
+     "guide": "problems/pya_l01_p25_nhan_doi_gia_tri/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p19_in_end_cung_dong",
+     "title": "In không xuống dòng với end",
+     "de_bai": "problems/pya_l01_p19_in_end_cung_dong/De_Bai.md",
+     "solution": "problems/pya_l01_p19_in_end_cung_dong/solution.py",
+     "guide": "problems/pya_l01_p19_in_end_cung_dong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p11_hoan_doi_hai_bien",
+     "title": "Hoán đổi vị trí hai biến",
+     "de_bai": "problems/pya_l01_p11_hoan_doi_hai_bien/De_Bai.md",
+     "solution": "problems/pya_l01_p11_hoan_doi_hai_bien/solution.py",
+     "guide": "problems/pya_l01_p11_hoan_doi_hai_bien/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p21_tong_hai_so_2_dong",
+     "title": "Tổng hai số nguyên 2 dòng",
+     "de_bai": "problems/pya_l01_p21_tong_hai_so_2_dong/De_Bai.md",
+     "solution": "problems/pya_l01_p21_tong_hai_so_2_dong/solution.py",
+     "guide": "problems/pya_l01_p21_tong_hai_so_2_dong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p22_hieu_hai_so",
+     "title": "Hiệu hai số nguyên",
+     "de_bai": "problems/pya_l01_p22_hieu_hai_so/De_Bai.md",
+     "solution": "problems/pya_l01_p22_hieu_hai_so/solution.py",
+     "guide": "problems/pya_l01_p22_hieu_hai_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p23_tich_hai_so",
+     "title": "Tích hai số nguyên",
+     "de_bai": "problems/pya_l01_p23_tich_hai_so/De_Bai.md",
+     "solution": "problems/pya_l01_p23_tich_hai_so/solution.py",
+     "guide": "problems/pya_l01_p23_tich_hai_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p04_cap_so_nhan_doi",
+     "title": "Cặp số nhân đôi",
+     "de_bai": "problems/pya_l01_p04_cap_so_nhan_doi/De_Bai.md",
+     "solution": "problems/pya_l01_p04_cap_so_nhan_doi/solution.py",
+     "guide": "problems/pya_l01_p04_cap_so_nhan_doi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p18_tuoi_cua_be_sau_5_nam",
+     "title": "Tuổi của bé sau 5 năm",
+     "de_bai": "problems/pya_l01_p18_tuoi_cua_be_sau_5_nam/De_Bai.md",
+     "solution": "problems/pya_l01_p18_tuoi_cua_be_sau_5_nam/solution.py",
+     "guide": "problems/pya_l01_p18_tuoi_cua_be_sau_5_nam/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p12_chuc_sinh_nhat",
+     "title": "Lời chúc sinh nhật cá nhân hóa",
+     "de_bai": "problems/pya_l01_p12_chuc_sinh_nhat/De_Bai.md",
+     "solution": "problems/pya_l01_p12_chuc_sinh_nhat/solution.py",
+     "guide": "problems/pya_l01_p12_chuc_sinh_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p07_chiec_hop_hoan_doi_bi_mat",
+     "title": "Chiếc hộp hoán đổi bí mật",
+     "de_bai": "problems/pya_l01_p07_chiec_hop_hoan_doi_bi_mat/De_Bai.md",
+     "solution": "problems/pya_l01_p07_chiec_hop_hoan_doi_bi_mat/solution.py",
+     "guide": "problems/pya_l01_p07_chiec_hop_hoan_doi_bi_mat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p17_tam_danh_thiep_thong_minh",
+     "title": "Tấm danh thiếp thông minh",
+     "de_bai": "problems/pya_l01_p17_tam_danh_thiep_thong_minh/De_Bai.md",
+     "solution": "problems/pya_l01_p17_tam_danh_thiep_thong_minh/solution.py",
+     "guide": "problems/pya_l01_p17_tam_danh_thiep_thong_minh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p06_cua_hang_banh_ran",
+     "title": "Cửa hàng bánh rán",
+     "de_bai": "problems/pya_l01_p06_cua_hang_banh_ran/De_Bai.md",
+     "solution": "problems/pya_l01_p06_cua_hang_banh_ran/solution.py",
+     "guide": "problems/pya_l01_p06_cua_hang_banh_ran/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p15_phep_nhan_bang",
+     "title": "In bảng phép nhân cơ bản",
+     "de_bai": "problems/pya_l01_p15_phep_nhan_bang/De_Bai.md",
+     "solution": "problems/pya_l01_p15_phep_nhan_bang/solution.py",
+     "guide": "problems/pya_l01_p15_phep_nhan_bang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p09_tong_hai_so_cung_dong",
+     "title": "Tổng hai số trên cùng 1 dòng",
+     "de_bai": "problems/pya_l01_p09_tong_hai_so_cung_dong/De_Bai.md",
+     "solution": "problems/pya_l01_p09_tong_hai_so_cung_dong/solution.py",
+     "guide": "problems/pya_l01_p09_tong_hai_so_cung_dong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p20_doi_thuoc_ke_milimet",
+     "title": "Đổi thước kẻ milimet",
+     "de_bai": "problems/pya_l01_p20_doi_thuoc_ke_milimet/De_Bai.md",
+     "solution": "problems/pya_l01_p20_doi_thuoc_ke_milimet/solution.py",
+     "guide": "problems/pya_l01_p20_doi_thuoc_ke_milimet/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p14_ghep_ngay_thang_nam",
+     "title": "Ghép ngày tháng năm định dạng chuẩn",
+     "de_bai": "problems/pya_l01_p14_ghep_ngay_thang_nam/De_Bai.md",
+     "solution": "problems/pya_l01_p14_ghep_ngay_thang_nam/solution.py",
+     "guide": "problems/pya_l01_p14_ghep_ngay_thang_nam/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p08_doan_tau_toa_xe_ghep_so",
+     "title": "Đoàn tàu toa xe ghép số",
+     "de_bai": "problems/pya_l01_p08_doan_tau_toa_xe_ghep_so/De_Bai.md",
+     "solution": "problems/pya_l01_p08_doan_tau_toa_xe_ghep_so/solution.py",
+     "guide": "problems/pya_l01_p08_doan_tau_toa_xe_ghep_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p16_chenh_lech_tuoi",
+     "title": "Chênh lệch tuổi của hai anh em",
+     "de_bai": "problems/pya_l01_p16_chenh_lech_tuoi/De_Bai.md",
+     "solution": "problems/pya_l01_p16_chenh_lech_tuoi/solution.py",
+     "guide": "problems/pya_l01_p16_chenh_lech_tuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p13_bon_phep_tinh",
+     "title": "Bốn phép tính đồng thời",
+     "de_bai": "problems/pya_l01_p13_bon_phep_tinh/De_Bai.md",
+     "solution": "problems/pya_l01_p13_bon_phep_tinh/solution.py",
+     "guide": "problems/pya_l01_p13_bon_phep_tinh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p10_co_may_thoi_gian_3_the_he",
+     "title": "Cỗ máy thời gian 3 thế hệ",
+     "de_bai": "problems/pya_l01_p10_co_may_thoi_gian_3_the_he/De_Bai.md",
+     "solution": "problems/pya_l01_p10_co_may_thoi_gian_3_the_he/solution.py",
+     "guide": "problems/pya_l01_p10_co_may_thoi_gian_3_the_he/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l01_p24_ve_tham_quan_chua_huong",
+     "title": "Vé tham quan chùa hương",
+     "de_bai": "problems/pya_l01_p24_ve_tham_quan_chua_huong/De_Bai.md",
+     "solution": "problems/pya_l01_p24_ve_tham_quan_chua_huong/solution.py",
+     "guide": "problems/pya_l01_p24_ve_tham_quan_chua_huong/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 2,
+   "chapter": 1,
+   "title": "Bài 02: Toán tử và biểu thức",
+   "problems": [
+    {
+     "code": "pya_l02_p02_luy_thua_bac_hai",
+     "title": "Lũy thừa bậc hai",
+     "de_bai": "problems/pya_l02_p02_luy_thua_bac_hai/De_Bai.md",
+     "solution": "problems/pya_l02_p02_luy_thua_bac_hai/solution.py",
+     "guide": "problems/pya_l02_p02_luy_thua_bac_hai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p03_lap_phuong",
+     "title": "Lập phương của một số",
+     "de_bai": "problems/pya_l02_p03_lap_phuong/De_Bai.md",
+     "solution": "problems/pya_l02_p03_lap_phuong/solution.py",
+     "guide": "problems/pya_l02_p03_lap_phuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p04_chu_so_tan_cung",
+     "title": "Lấy chữ số tận cùng",
+     "de_bai": "problems/pya_l02_p04_chu_so_tan_cung/De_Bai.md",
+     "solution": "problems/pya_l02_p04_chu_so_tan_cung/solution.py",
+     "guide": "problems/pya_l02_p04_chu_so_tan_cung/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p09_hai_chu_so_cuoi",
+     "title": "Lấy hai chữ số tận cùng",
+     "de_bai": "problems/pya_l02_p09_hai_chu_so_cuoi/De_Bai.md",
+     "solution": "problems/pya_l02_p09_hai_chu_so_cuoi/solution.py",
+     "guide": "problems/pya_l02_p09_hai_chu_so_cuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p11_bieu_thuc_bac_nhat",
+     "title": "Giá trị biểu thức bậc nhất",
+     "de_bai": "problems/pya_l02_p11_bieu_thuc_bac_nhat/De_Bai.md",
+     "solution": "problems/pya_l02_p11_bieu_thuc_bac_nhat/solution.py",
+     "guide": "problems/pya_l02_p11_bieu_thuc_bac_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p25_xoa_chu_so_cuoi",
+     "title": "Xóa chữ số tận cùng",
+     "de_bai": "problems/pya_l02_p25_xoa_chu_so_cuoi/De_Bai.md",
+     "solution": "problems/pya_l02_p25_xoa_chu_so_cuoi/solution.py",
+     "guide": "problems/pya_l02_p25_xoa_chu_so_cuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p28_xep_ban_hoc",
+     "title": "Xếp hàng vào bàn học",
+     "de_bai": "problems/pya_l02_p28_xep_ban_hoc/De_Bai.md",
+     "solution": "problems/pya_l02_p28_xep_ban_hoc/solution.py",
+     "guide": "problems/pya_l02_p28_xep_ban_hoc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p13_luy_thua_cau_thang",
+     "title": "Lũy thừa cầu thang",
+     "de_bai": "problems/pya_l02_p13_luy_thua_cau_thang/De_Bai.md",
+     "solution": "problems/pya_l02_p13_luy_thua_cau_thang/solution.py",
+     "guide": "problems/pya_l02_p13_luy_thua_cau_thang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p07_dong_hop_banh",
+     "title": "Đóng hộp bánh ngọt",
+     "de_bai": "problems/pya_l02_p07_dong_hop_banh/De_Bai.md",
+     "solution": "problems/pya_l02_p07_dong_hop_banh/solution.py",
+     "guide": "problems/pya_l02_p07_dong_hop_banh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p10_chu_so_hang_chuc",
+     "title": "Chữ số hàng chục",
+     "de_bai": "problems/pya_l02_p10_chu_so_hang_chuc/De_Bai.md",
+     "solution": "problems/pya_l02_p10_chu_so_hang_chuc/solution.py",
+     "guide": "problems/pya_l02_p10_chu_so_hang_chuc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p14_doi_phut_ra_gio_phut",
+     "title": "Đổi phút ra giờ phút",
+     "de_bai": "problems/pya_l02_p14_doi_phut_ra_gio_phut/De_Bai.md",
+     "solution": "problems/pya_l02_p14_doi_phut_ra_gio_phut/solution.py",
+     "guide": "problems/pya_l02_p14_doi_phut_ra_gio_phut/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p22_nhan_doi_luy_thua",
+     "title": "Nhân đôi lũy thừa",
+     "de_bai": "problems/pya_l02_p22_nhan_doi_luy_thua/De_Bai.md",
+     "solution": "problems/pya_l02_p22_nhan_doi_luy_thua/solution.py",
+     "guide": "problems/pya_l02_p22_nhan_doi_luy_thua/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p27_vong_chay_dien_kinh",
+     "title": "Vòng chạy điền kinh",
+     "de_bai": "problems/pya_l02_p27_vong_chay_dien_kinh/De_Bai.md",
+     "solution": "problems/pya_l02_p27_vong_chay_dien_kinh/solution.py",
+     "guide": "problems/pya_l02_p27_vong_chay_dien_kinh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p05_bong_den_vien_bien_hieu",
+     "title": "Bóng đèn viền biển hiệu",
+     "de_bai": "problems/pya_l02_p05_bong_den_vien_bien_hieu/De_Bai.md",
+     "solution": "problems/pya_l02_p05_bong_den_vien_bien_hieu/solution.py",
+     "guide": "problems/pya_l02_p05_bong_den_vien_bien_hieu/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p16_du_quay_vong_tron",
+     "title": "Đu quay vòng tròn",
+     "de_bai": "problems/pya_l02_p16_du_quay_vong_tron/De_Bai.md",
+     "solution": "problems/pya_l02_p16_du_quay_vong_tron/solution.py",
+     "guide": "problems/pya_l02_p16_du_quay_vong_tron/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p23_so_keo_con_thua",
+     "title": "Số kẹo còn thừa",
+     "de_bai": "problems/pya_l02_p23_so_keo_con_thua/De_Bai.md",
+     "solution": "problems/pya_l02_p23_so_keo_con_thua/solution.py",
+     "guide": "problems/pya_l02_p23_so_keo_con_thua/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p20_phuc_hoi_so_bi_chia",
+     "title": "Bất biến chia kẹo và phục hồi số bị chia",
+     "de_bai": "problems/pya_l02_p20_phuc_hoi_so_bi_chia/De_Bai.md",
+     "solution": "problems/pya_l02_p20_phuc_hoi_so_bi_chia/solution.py",
+     "guide": "problems/pya_l02_p20_phuc_hoi_so_bi_chia/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p32_da_thuc_bac_hai",
+     "title": "Đa thức bậc hai",
+     "de_bai": "problems/pya_l02_p32_da_thuc_bac_hai/De_Bai.md",
+     "solution": "problems/pya_l02_p32_da_thuc_bac_hai/solution.py",
+     "guide": "problems/pya_l02_p32_da_thuc_bac_hai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p26_trong_cay_dai_lo",
+     "title": "Trồng cây đại lộ",
+     "de_bai": "problems/pya_l02_p26_trong_cay_dai_lo/De_Bai.md",
+     "solution": "problems/pya_l02_p26_trong_cay_dai_lo/solution.py",
+     "guide": "problems/pya_l02_p26_trong_cay_dai_lo/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p15_gia_tri_bieu_thuc_pemdas",
+     "title": "Giá trị biểu thức PEMDAS",
+     "de_bai": "problems/pya_l02_p15_gia_tri_bieu_thuc_pemdas/De_Bai.md",
+     "solution": "problems/pya_l02_p15_gia_tri_bieu_thuc_pemdas/solution.py",
+     "guide": "problems/pya_l02_p15_gia_tri_bieu_thuc_pemdas/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p24_doi_gio_ra_phut_giay",
+     "title": "Đổi giờ ra phút giây",
+     "de_bai": "problems/pya_l02_p24_doi_gio_ra_phut_giay/De_Bai.md",
+     "solution": "problems/pya_l02_p24_doi_gio_ra_phut_giay/solution.py",
+     "guide": "problems/pya_l02_p24_doi_gio_ra_phut_giay/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p29_tach_chu_so_tan_cung",
+     "title": "Tách chữ số tận cùng",
+     "de_bai": "problems/pya_l02_p29_tach_chu_so_tan_cung/De_Bai.md",
+     "solution": "problems/pya_l02_p29_tach_chu_so_tan_cung/solution.py",
+     "guide": "problems/pya_l02_p29_tach_chu_so_tan_cung/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p30_dao_nguoc_so_2_chu_so",
+     "title": "Đảo ngược số 2 chữ số",
+     "de_bai": "problems/pya_l02_p30_dao_nguoc_so_2_chu_so/De_Bai.md",
+     "solution": "problems/pya_l02_p30_dao_nguoc_so_2_chu_so/solution.py",
+     "guide": "problems/pya_l02_p30_dao_nguoc_so_2_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p33_tich_hai_tong",
+     "title": "Biểu thức có dấu ngoặc",
+     "de_bai": "problems/pya_l02_p33_tich_hai_tong/De_Bai.md",
+     "solution": "problems/pya_l02_p33_tich_hai_tong/solution.py",
+     "guide": "problems/pya_l02_p33_tich_hai_tong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p34_dong_ho_24h",
+     "title": "Đồng hồ 24 giờ",
+     "de_bai": "problems/pya_l02_p34_dong_ho_24h/De_Bai.md",
+     "solution": "problems/pya_l02_p34_dong_ho_24h/solution.py",
+     "guide": "problems/pya_l02_p34_dong_ho_24h/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p35_ngay_trong_tuan",
+     "title": "Ngày trong tuần",
+     "de_bai": "problems/pya_l02_p35_ngay_trong_tuan/De_Bai.md",
+     "solution": "problems/pya_l02_p35_ngay_trong_tuan/solution.py",
+     "guide": "problems/pya_l02_p35_ngay_trong_tuan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p01_chia_deu_banh_quy",
+     "title": "Chia đều bánh quy",
+     "de_bai": "problems/pya_l02_p01_chia_deu_banh_quy/De_Bai.md",
+     "solution": "problems/pya_l02_p01_chia_deu_banh_quy/solution.py",
+     "guide": "problems/pya_l02_p01_chia_deu_banh_quy/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p31_xe_buyt_cho_hoc_sinh",
+     "title": "Xe buýt chở học sinh",
+     "de_bai": "problems/pya_l02_p31_xe_buyt_cho_hoc_sinh/De_Bai.md",
+     "solution": "problems/pya_l02_p31_xe_buyt_cho_hoc_sinh/solution.py",
+     "guide": "problems/pya_l02_p31_xe_buyt_cho_hoc_sinh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p19_chuyen_xe_hoc_sinh",
+     "title": "Tính số chuyến xe cần thiết",
+     "de_bai": "problems/pya_l02_p19_chuyen_xe_hoc_sinh/De_Bai.md",
+     "solution": "problems/pya_l02_p19_chuyen_xe_hoc_sinh/solution.py",
+     "guide": "problems/pya_l02_p19_chuyen_xe_hoc_sinh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p21_chia_nguyen_chia_du",
+     "title": "Phép chia nguyên và chia dư cơ bản",
+     "de_bai": "problems/pya_l02_p21_chia_nguyen_chia_du/De_Bai.md",
+     "solution": "problems/pya_l02_p21_chia_nguyen_chia_du/solution.py",
+     "guide": "problems/pya_l02_p21_chia_nguyen_chia_du/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p08_kim_dong_ho_12_gio",
+     "title": "Kim đồng hồ 12 giờ",
+     "de_bai": "problems/pya_l02_p08_kim_dong_ho_12_gio/De_Bai.md",
+     "solution": "problems/pya_l02_p08_kim_dong_ho_12_gio/solution.py",
+     "guide": "problems/pya_l02_p08_kim_dong_ho_12_gio/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p06_chia_keo_hoc_sinh",
+     "title": "Chia kẹo cho các bạn",
+     "de_bai": "problems/pya_l02_p06_chia_keo_hoc_sinh/De_Bai.md",
+     "solution": "problems/pya_l02_p06_chia_keo_hoc_sinh/solution.py",
+     "guide": "problems/pya_l02_p06_chia_keo_hoc_sinh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p12_ban_co_caro_vo_tan",
+     "title": "Bàn cờ Ca-rô vô tận",
+     "de_bai": "problems/pya_l02_p12_ban_co_caro_vo_tan/De_Bai.md",
+     "solution": "problems/pya_l02_p12_ban_co_caro_vo_tan/solution.py",
+     "guide": "problems/pya_l02_p12_ban_co_caro_vo_tan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p17_tong_ba_chu_so",
+     "title": "Tổng các chữ số của số có 3 chữ số",
+     "de_bai": "problems/pya_l02_p17_tong_ba_chu_so/De_Bai.md",
+     "solution": "problems/pya_l02_p17_tong_ba_chu_so/solution.py",
+     "guide": "problems/pya_l02_p17_tong_ba_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p36_phan_so_dai_so",
+     "title": "Tính phân số đại số",
+     "de_bai": "problems/pya_l02_p36_phan_so_dai_so/De_Bai.md",
+     "solution": "problems/pya_l02_p36_phan_so_dai_so/solution.py",
+     "guide": "problems/pya_l02_p36_phan_so_dai_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l02_p18_so_dao_nguoc_3_chu_so",
+     "title": "Số đảo ngược 3 chữ số",
+     "de_bai": "problems/pya_l02_p18_so_dao_nguoc_3_chu_so/De_Bai.md",
+     "solution": "problems/pya_l02_p18_so_dao_nguoc_3_chu_so/solution.py",
+     "guide": "problems/pya_l02_p18_so_dao_nguoc_3_chu_so/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 3,
+   "chapter": 1,
+   "title": "Bài 03: Phép chia nguyên, chia dư và lũy thừa",
+   "problems": [
+    {
+     "code": "pya_l03_p31_doi_do_la_sang_tien_viet",
+     "title": "Đổi đô la sang tiền việt",
+     "de_bai": "problems/pya_l03_p31_doi_do_la_sang_tien_viet/De_Bai.md",
+     "solution": "problems/pya_l03_p31_doi_do_la_sang_tien_viet/solution.py",
+     "guide": "problems/pya_l03_p31_doi_do_la_sang_tien_viet/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p01_hinh_vuong",
+     "title": "Chu vi và diện tích hình vuông",
+     "de_bai": "problems/pya_l03_p01_hinh_vuong/De_Bai.md",
+     "solution": "problems/pya_l03_p01_hinh_vuong/solution.py",
+     "guide": "problems/pya_l03_p01_hinh_vuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p06_doi_don_vi_dai",
+     "title": "Đổi mét sang centimet và milimet",
+     "de_bai": "problems/pya_l03_p06_doi_don_vi_dai/De_Bai.md",
+     "solution": "problems/pya_l03_p06_doi_don_vi_dai/solution.py",
+     "guide": "problems/pya_l03_p06_doi_don_vi_dai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p20_khung_tranh_hinh_vuong",
+     "title": "Khung tranh hình vuông",
+     "de_bai": "problems/pya_l03_p20_khung_tranh_hinh_vuong/De_Bai.md",
+     "solution": "problems/pya_l03_p20_khung_tranh_hinh_vuong/solution.py",
+     "guide": "problems/pya_l03_p20_khung_tranh_hinh_vuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p14_doi_do_c_sang_do_f",
+     "title": "Đổi độ C sang độ F",
+     "de_bai": "problems/pya_l03_p14_doi_do_c_sang_do_f/De_Bai.md",
+     "solution": "problems/pya_l03_p14_doi_do_c_sang_do_f/solution.py",
+     "guide": "problems/pya_l03_p14_doi_do_c_sang_do_f/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p04_canh_con_lai_cua_hinh_chu_nhat",
+     "title": "Cạnh còn lại của hình chữ nhật",
+     "de_bai": "problems/pya_l03_p04_canh_con_lai_cua_hinh_chu_nhat/De_Bai.md",
+     "solution": "problems/pya_l03_p04_canh_con_lai_cua_hinh_chu_nhat/solution.py",
+     "guide": "problems/pya_l03_p04_canh_con_lai_cua_hinh_chu_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p11_dien_tich_tam_giac_vuong",
+     "title": "Diện tích tam giác vuông",
+     "de_bai": "problems/pya_l03_p11_dien_tich_tam_giac_vuong/De_Bai.md",
+     "solution": "problems/pya_l03_p11_dien_tich_tam_giac_vuong/solution.py",
+     "guide": "problems/pya_l03_p11_dien_tich_tam_giac_vuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p21_chu_vi_tam_giac_abc",
+     "title": "Chu vi tam giác ABC",
+     "de_bai": "problems/pya_l03_p21_chu_vi_tam_giac_abc/De_Bai.md",
+     "solution": "problems/pya_l03_p21_chu_vi_tam_giac_abc/solution.py",
+     "guide": "problems/pya_l03_p21_chu_vi_tam_giac_abc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p30_the_tich_hop_chu_nhat",
+     "title": "Thể tích hộp chữ nhật",
+     "de_bai": "problems/pya_l03_p30_the_tich_hop_chu_nhat/De_Bai.md",
+     "solution": "problems/pya_l03_p30_the_tich_hop_chu_nhat/solution.py",
+     "guide": "problems/pya_l03_p30_the_tich_hop_chu_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p19_manh_vuon_chu_nhat",
+     "title": "Mảnh vườn chữ nhật",
+     "de_bai": "problems/pya_l03_p19_manh_vuon_chu_nhat/De_Bai.md",
+     "solution": "problems/pya_l03_p19_manh_vuon_chu_nhat/solution.py",
+     "guide": "problems/pya_l03_p19_manh_vuon_chu_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p10_dien_tich_bon_hoa_chu_thap",
+     "title": "Diện tích bồn hoa chữ thập",
+     "de_bai": "problems/pya_l03_p10_dien_tich_bon_hoa_chu_thap/De_Bai.md",
+     "solution": "problems/pya_l03_p10_dien_tich_bon_hoa_chu_thap/solution.py",
+     "guide": "problems/pya_l03_p10_dien_tich_bon_hoa_chu_thap/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p08_thuan_di_gap_anh",
+     "title": "Thuận đi gặp ánh",
+     "de_bai": "problems/pya_l03_p08_thuan_di_gap_anh/De_Bai.md",
+     "solution": "problems/pya_l03_p08_thuan_di_gap_anh/solution.py",
+     "guide": "problems/pya_l03_p08_thuan_di_gap_anh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p23_ho_ca_sau_va_dao_nho",
+     "title": "Hồ cá sấu và đảo nhỏ",
+     "de_bai": "problems/pya_l03_p23_ho_ca_sau_va_dao_nho/De_Bai.md",
+     "solution": "problems/pya_l03_p23_ho_ca_sau_va_dao_nho/solution.py",
+     "guide": "problems/pya_l03_p23_ho_ca_sau_va_dao_nho/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p03_chu_vi_tam_giac",
+     "title": "Chu vi hình tam giác",
+     "de_bai": "problems/pya_l03_p03_chu_vi_tam_giac/De_Bai.md",
+     "solution": "problems/pya_l03_p03_chu_vi_tam_giac/solution.py",
+     "guide": "problems/pya_l03_p03_chu_vi_tam_giac/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p09_phut_sang_gio_phut",
+     "title": "Đổi phút sang giờ và phút",
+     "de_bai": "problems/pya_l03_p09_phut_sang_gio_phut/De_Bai.md",
+     "solution": "problems/pya_l03_p09_phut_sang_gio_phut/solution.py",
+     "guide": "problems/pya_l03_p09_phut_sang_gio_phut/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p33_tinh_van_toc_lam_tron",
+     "title": "Tính vận tốc làm tròn",
+     "de_bai": "problems/pya_l03_p33_tinh_van_toc_lam_tron/De_Bai.md",
+     "solution": "problems/pya_l03_p33_tinh_van_toc_lam_tron/solution.py",
+     "guide": "problems/pya_l03_p33_tinh_van_toc_lam_tron/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p25_lat_gach_san_truong",
+     "title": "Lát gạch sân trường",
+     "de_bai": "problems/pya_l03_p25_lat_gach_san_truong/De_Bai.md",
+     "solution": "problems/pya_l03_p25_lat_gach_san_truong/solution.py",
+     "guide": "problems/pya_l03_p25_lat_gach_san_truong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p27_rao_quanh_vuon_hoa_co_cua",
+     "title": "Rào quanh vườn hoa có cửa",
+     "de_bai": "problems/pya_l03_p27_rao_quanh_vuon_hoa_co_cua/De_Bai.md",
+     "solution": "problems/pya_l03_p27_rao_quanh_vuon_hoa_co_cua/solution.py",
+     "guide": "problems/pya_l03_p27_rao_quanh_vuon_hoa_co_cua/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p02_hinh_chu_nhat",
+     "title": "Chu vi và diện tích hình chữ nhật",
+     "de_bai": "problems/pya_l03_p02_hinh_chu_nhat/De_Bai.md",
+     "solution": "problems/pya_l03_p02_hinh_chu_nhat/solution.py",
+     "guide": "problems/pya_l03_p02_hinh_chu_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p07_doi_khoi_luong",
+     "title": "Đổi tạ và yến sang kilogram",
+     "de_bai": "problems/pya_l03_p07_doi_khoi_luong/De_Bai.md",
+     "solution": "problems/pya_l03_p07_doi_khoi_luong/solution.py",
+     "guide": "problems/pya_l03_p07_doi_khoi_luong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p32_hang_rao_manh_dat",
+     "title": "Hàng rào quanh mảnh đất",
+     "de_bai": "problems/pya_l03_p32_hang_rao_manh_dat/De_Bai.md",
+     "solution": "problems/pya_l03_p32_hang_rao_manh_dat/solution.py",
+     "guide": "problems/pya_l03_p32_hang_rao_manh_dat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p18_chay_bo_gap_nhau",
+     "title": "Bài toán chạy bộ hai người ngược chiều",
+     "de_bai": "problems/pya_l03_p18_chay_bo_gap_nhau/De_Bai.md",
+     "solution": "problems/pya_l03_p18_chay_bo_gap_nhau/solution.py",
+     "guide": "problems/pya_l03_p18_chay_bo_gap_nhau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p22_dien_tich_tam_giac_vuong",
+     "title": "Diện tích tam giác vuông",
+     "de_bai": "problems/pya_l03_p22_dien_tich_tam_giac_vuong/De_Bai.md",
+     "solution": "problems/pya_l03_p22_dien_tich_tam_giac_vuong/solution.py",
+     "guide": "problems/pya_l03_p22_dien_tich_tam_giac_vuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p29_doi_sang_tong_giay",
+     "title": "Đổi giờ - phút - giây sang tổng số giây",
+     "de_bai": "problems/pya_l03_p29_doi_sang_tong_giay/De_Bai.md",
+     "solution": "problems/pya_l03_p29_doi_sang_tong_giay/solution.py",
+     "guide": "problems/pya_l03_p29_doi_sang_tong_giay/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p17_son_tuong_phong",
+     "title": "Tính tiền mua sơn quét tường",
+     "de_bai": "problems/pya_l03_p17_son_tuong_phong/De_Bai.md",
+     "solution": "problems/pya_l03_p17_son_tuong_phong/solution.py",
+     "guide": "problems/pya_l03_p17_son_tuong_phong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p05_dien_tich_hinh_thang",
+     "title": "Diện tích hình thang",
+     "de_bai": "problems/pya_l03_p05_dien_tich_hinh_thang/De_Bai.md",
+     "solution": "problems/pya_l03_p05_dien_tich_hinh_thang/solution.py",
+     "guide": "problems/pya_l03_p05_dien_tich_hinh_thang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p26_van_toc_trung_binh",
+     "title": "Tính vận tốc trung bình",
+     "de_bai": "problems/pya_l03_p26_van_toc_trung_binh/De_Bai.md",
+     "solution": "problems/pya_l03_p26_van_toc_trung_binh/solution.py",
+     "guide": "problems/pya_l03_p26_van_toc_trung_binh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p24_doi_giay_sang_gio_phut_giay",
+     "title": "Đổi giây sang giờ phút giây",
+     "de_bai": "problems/pya_l03_p24_doi_giay_sang_gio_phut_giay/De_Bai.md",
+     "solution": "problems/pya_l03_p24_doi_giay_sang_gio_phut_giay/solution.py",
+     "guide": "problems/pya_l03_p24_doi_giay_sang_gio_phut_giay/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p12_khoang_cach_thoi_gian",
+     "title": "Khoảng thời gian giữa hai thời điểm trong ngày",
+     "de_bai": "problems/pya_l03_p12_khoang_cach_thoi_gian/De_Bai.md",
+     "solution": "problems/pya_l03_p12_khoang_cach_thoi_gian/solution.py",
+     "guide": "problems/pya_l03_p12_khoang_cach_thoi_gian/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p15_lat_gach_nen_nha",
+     "title": "Lát nền phòng học",
+     "de_bai": "problems/pya_l03_p15_lat_gach_nen_nha/De_Bai.md",
+     "solution": "problems/pya_l03_p15_lat_gach_nen_nha/solution.py",
+     "guide": "problems/pya_l03_p15_lat_gach_nen_nha/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p28_doi_giay_sang_gio_phut_giay",
+     "title": "Đổi tổng số giây sang giờ, phút, giây",
+     "de_bai": "problems/pya_l03_p28_doi_giay_sang_gio_phut_giay/De_Bai.md",
+     "solution": "problems/pya_l03_p28_doi_giay_sang_gio_phut_giay/solution.py",
+     "guide": "problems/pya_l03_p28_doi_giay_sang_gio_phut_giay/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p13_diem_trung_binh",
+     "title": "Điểm trung bình môn học",
+     "de_bai": "problems/pya_l03_p13_diem_trung_binh/De_Bai.md",
+     "solution": "problems/pya_l03_p13_diem_trung_binh/solution.py",
+     "guide": "problems/pya_l03_p13_diem_trung_binh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l03_p16_loi_di_quanh_ho",
+     "title": "Diện tích lối đi quanh hồ nước",
+     "de_bai": "problems/pya_l03_p16_loi_di_quanh_ho/De_Bai.md",
+     "solution": "problems/pya_l03_p16_loi_di_quanh_ho/solution.py",
+     "guide": "problems/pya_l03_p16_loi_di_quanh_ho/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 4,
+   "chapter": 2,
+   "title": "Bài 04: Cấu trúc rẽ nhánh",
+   "problems": [
+    {
+     "code": "pya_l04_p04_so_lon_nhat_trong_hai_so",
+     "title": "Số lớn nhất trong hai số",
+     "de_bai": "problems/pya_l04_p04_so_lon_nhat_trong_hai_so/De_Bai.md",
+     "solution": "problems/pya_l04_p04_so_lon_nhat_trong_hai_so/solution.py",
+     "guide": "problems/pya_l04_p04_so_lon_nhat_trong_hai_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p09_tri_tuyet_doi_cua_mot_so",
+     "title": "Trị tuyệt đối của một số",
+     "de_bai": "problems/pya_l04_p09_tri_tuyet_doi_cua_mot_so/De_Bai.md",
+     "solution": "problems/pya_l04_p09_tri_tuyet_doi_cua_mot_so/solution.py",
+     "guide": "problems/pya_l04_p09_tri_tuyet_doi_cua_mot_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p02_ve_vao_cong_vien",
+     "title": "Vé vào công viên",
+     "de_bai": "problems/pya_l04_p02_ve_vao_cong_vien/De_Bai.md",
+     "solution": "problems/pya_l04_p02_ve_vao_cong_vien/solution.py",
+     "guide": "problems/pya_l04_p02_ve_vao_cong_vien/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p01_kiem_tra_so_chan_le",
+     "title": "Kiểm tra số chẵn lẻ",
+     "de_bai": "problems/pya_l04_p01_kiem_tra_so_chan_le/De_Bai.md",
+     "solution": "problems/pya_l04_p01_kiem_tra_so_chan_le/solution.py",
+     "guide": "problems/pya_l04_p01_kiem_tra_so_chan_le/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p06_dien_phep_tinh_lon_nhat",
+     "title": "Điền phép tính lớn nhất",
+     "de_bai": "problems/pya_l04_p06_dien_phep_tinh_lon_nhat/De_Bai.md",
+     "solution": "problems/pya_l04_p06_dien_phep_tinh_lon_nhat/solution.py",
+     "guide": "problems/pya_l04_p06_dien_phep_tinh_lon_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p07_giam_gia_sieu_thi",
+     "title": "Giảm giá siêu thị",
+     "de_bai": "problems/pya_l04_p07_giam_gia_sieu_thi/De_Bai.md",
+     "solution": "problems/pya_l04_p07_giam_gia_sieu_thi/solution.py",
+     "guide": "problems/pya_l04_p07_giam_gia_sieu_thi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p03_ngay_nghi_cuoi_tuan",
+     "title": "Ngày nghỉ cuối tuần",
+     "de_bai": "problems/pya_l06_p03_ngay_nghi_cuoi_tuan/De_Bai.md",
+     "solution": "problems/pya_l06_p03_ngay_nghi_cuoi_tuan/solution.py",
+     "guide": "problems/pya_l06_p03_ngay_nghi_cuoi_tuan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p03_ai_cao_hon",
+     "title": "Ai cao hơn?",
+     "de_bai": "problems/pya_l04_p03_ai_cao_hon/De_Bai.md",
+     "solution": "problems/pya_l04_p03_ai_cao_hon/solution.py",
+     "guide": "problems/pya_l04_p03_ai_cao_hon/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p01_so_chan_co_hai_chu_so",
+     "title": "Số chẵn có hai chữ số",
+     "de_bai": "problems/pya_l06_p01_so_chan_co_hai_chu_so/De_Bai.md",
+     "solution": "problems/pya_l06_p01_so_chan_co_hai_chu_so/solution.py",
+     "guide": "problems/pya_l06_p01_so_chan_co_hai_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p06_mario_cuu_cong_chua",
+     "title": "Mario cứu công chúa",
+     "de_bai": "problems/pya_l05_p06_mario_cuu_cong_chua/De_Bai.md",
+     "solution": "problems/pya_l05_p06_mario_cuu_cong_chua/solution.py",
+     "guide": "problems/pya_l05_p06_mario_cuu_cong_chua/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p13_tien_dien_bac_thang",
+     "title": "Tiền điện bậc thang",
+     "de_bai": "problems/pya_l06_p13_tien_dien_bac_thang/De_Bai.md",
+     "solution": "problems/pya_l06_p13_tien_dien_bac_thang/solution.py",
+     "guide": "problems/pya_l06_p13_tien_dien_bac_thang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p10_bac_tho_moc_cat_go",
+     "title": "Bác thợ mộc cắt gỗ",
+     "de_bai": "problems/pya_l04_p10_bac_tho_moc_cat_go/De_Bai.md",
+     "solution": "problems/pya_l04_p10_bac_tho_moc_cat_go/solution.py",
+     "guide": "problems/pya_l04_p10_bac_tho_moc_cat_go/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p04_diem_nam_trong_hinh_chu_nhat",
+     "title": "Điểm nằm trong hình chữ nhật",
+     "de_bai": "problems/pya_l06_p04_diem_nam_trong_hinh_chu_nhat/De_Bai.md",
+     "solution": "problems/pya_l06_p04_diem_nam_trong_hinh_chu_nhat/solution.py",
+     "guide": "problems/pya_l06_p04_diem_nam_trong_hinh_chu_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p02_boi_chung_cua_3_va_5",
+     "title": "Bội chung của 3 và 5",
+     "de_bai": "problems/pya_l06_p02_boi_chung_cua_3_va_5/De_Bai.md",
+     "solution": "problems/pya_l06_p02_boi_chung_cua_3_va_5/solution.py",
+     "guide": "problems/pya_l06_p02_boi_chung_cua_3_va_5/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p05_ba_canh_tam_giac_hop_le",
+     "title": "Ba cạnh tam giác hợp lệ",
+     "de_bai": "problems/pya_l06_p05_ba_canh_tam_giac_hop_le/De_Bai.md",
+     "solution": "problems/pya_l06_p05_ba_canh_tam_giac_hop_le/solution.py",
+     "guide": "problems/pya_l06_p05_ba_canh_tam_giac_hop_le/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p06_kiem_tra_nam_nhuan",
+     "title": "Kiểm tra năm nhuận",
+     "de_bai": "problems/pya_l06_p06_kiem_tra_nam_nhuan/De_Bai.md",
+     "solution": "problems/pya_l06_p06_kiem_tra_nam_nhuan/solution.py",
+     "guide": "problems/pya_l06_p06_kiem_tra_nam_nhuan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p09_rut_the_may_man",
+     "title": "Rút thẻ may mắn",
+     "de_bai": "problems/pya_l06_p09_rut_the_may_man/De_Bai.md",
+     "solution": "problems/pya_l06_p09_rut_the_may_man/solution.py",
+     "guide": "problems/pya_l06_p09_rut_the_may_man/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p03_so_lon_nhat_trong_ba_so",
+     "title": "Số lớn nhất trong ba số",
+     "de_bai": "problems/pya_l05_p03_so_lon_nhat_trong_ba_so/De_Bai.md",
+     "solution": "problems/pya_l05_p03_so_lon_nhat_trong_ba_so/solution.py",
+     "guide": "problems/pya_l05_p03_so_lon_nhat_trong_ba_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p02_dau_cua_so_nguyen",
+     "title": "Dấu của số nguyên",
+     "de_bai": "problems/pya_l05_p02_dau_cua_so_nguyen/De_Bai.md",
+     "solution": "problems/pya_l05_p02_dau_cua_so_nguyen/solution.py",
+     "guide": "problems/pya_l05_p02_dau_cua_so_nguyen/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p09_thuan_di_tim_anh_da_van_toc",
+     "title": "Thuận đi tìm ánh đa vận tốc",
+     "de_bai": "problems/pya_l05_p09_thuan_di_tim_anh_da_van_toc/De_Bai.md",
+     "solution": "problems/pya_l05_p09_thuan_di_tim_anh_da_van_toc/solution.py",
+     "guide": "problems/pya_l05_p09_thuan_di_tim_anh_da_van_toc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p11_cua_hang_banh_bot_loc_khuyen_mai",
+     "title": "Cửa hàng bánh bột lọc khuyến mãi",
+     "de_bai": "problems/pya_l05_p11_cua_hang_banh_bot_loc_khuyen_mai/De_Bai.md",
+     "solution": "problems/pya_l05_p11_cua_hang_banh_bot_loc_khuyen_mai/solution.py",
+     "guide": "problems/pya_l05_p11_cua_hang_banh_bot_loc_khuyen_mai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p11_canh_thu_tu_hinh_chu_nhat",
+     "title": "Cạnh thứ tư hình chữ nhật",
+     "de_bai": "problems/pya_l04_p11_canh_thu_tu_hinh_chu_nhat/De_Bai.md",
+     "solution": "problems/pya_l04_p11_canh_thu_tu_hinh_chu_nhat/solution.py",
+     "guide": "problems/pya_l04_p11_canh_thu_tu_hinh_chu_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p05_chia_keo_cong_bang",
+     "title": "Chia kẹo công bằng",
+     "de_bai": "problems/pya_l04_p05_chia_keo_cong_bang/De_Bai.md",
+     "solution": "problems/pya_l04_p05_chia_keo_cong_bang/solution.py",
+     "guide": "problems/pya_l04_p05_chia_keo_cong_bang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p10_thu_may_trong_tuan",
+     "title": "Thứ mấy trong tuần?",
+     "de_bai": "problems/pya_l05_p10_thu_may_trong_tuan/De_Bai.md",
+     "solution": "problems/pya_l05_p10_thu_may_trong_tuan/solution.py",
+     "guide": "problems/pya_l05_p10_thu_may_trong_tuan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p08_phan_loai_tam_giac",
+     "title": "Phân loại tam giác",
+     "de_bai": "problems/pya_l05_p08_phan_loai_tam_giac/De_Bai.md",
+     "solution": "problems/pya_l05_p08_phan_loai_tam_giac/solution.py",
+     "guide": "problems/pya_l05_p08_phan_loai_tam_giac/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p07_tinh_cuoc_taxi_bac_thang",
+     "title": "Tính cước taxi bậc thang",
+     "de_bai": "problems/pya_l05_p07_tinh_cuoc_taxi_bac_thang/De_Bai.md",
+     "solution": "problems/pya_l05_p07_tinh_cuoc_taxi_bac_thang/solution.py",
+     "guide": "problems/pya_l05_p07_tinh_cuoc_taxi_bac_thang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p04_xep_loai_hoc_luc",
+     "title": "Xếp loại học lực",
+     "de_bai": "problems/pya_l05_p04_xep_loai_hoc_luc/De_Bai.md",
+     "solution": "problems/pya_l05_p04_xep_loai_hoc_luc/solution.py",
+     "guide": "problems/pya_l05_p04_xep_loai_hoc_luc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p07_so_ngay_trong_thang",
+     "title": "Số ngày trong tháng",
+     "de_bai": "problems/pya_l06_p07_so_ngay_trong_thang/De_Bai.md",
+     "solution": "problems/pya_l06_p07_so_ngay_trong_thang/solution.py",
+     "guide": "problems/pya_l06_p07_so_ngay_trong_thang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p11_cap_doi_cung_dau_hay_trai_dau",
+     "title": "Cặp đôi cùng dấu hay trái dấu",
+     "de_bai": "problems/pya_l06_p11_cap_doi_cung_dau_hay_trai_dau/De_Bai.md",
+     "solution": "problems/pya_l06_p11_cap_doi_cung_dau_hay_trai_dau/solution.py",
+     "guide": "problems/pya_l06_p11_cap_doi_cung_dau_hay_trai_dau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p08_cap_so_bang_nhau_hay_khac",
+     "title": "Cặp số bằng nhau hay khác?",
+     "de_bai": "problems/pya_l04_p08_cap_so_bang_nhau_hay_khac/De_Bai.md",
+     "solution": "problems/pya_l04_p08_cap_so_bang_nhau_hay_khac/solution.py",
+     "guide": "problems/pya_l04_p08_cap_so_bang_nhau_hay_khac/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l04_p12_tro_choi_oan_tu_ti",
+     "title": "Trò chơi oẳn tù tì",
+     "de_bai": "problems/pya_l04_p12_tro_choi_oan_tu_ti/De_Bai.md",
+     "solution": "problems/pya_l04_p12_tro_choi_oan_tu_ti/solution.py",
+     "guide": "problems/pya_l04_p12_tro_choi_oan_tu_ti/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p01_den_giao_thong_nga_tu",
+     "title": "Đèn giao thông ngã tư",
+     "de_bai": "problems/pya_l05_p01_den_giao_thong_nga_tu/De_Bai.md",
+     "solution": "problems/pya_l05_p01_den_giao_thong_nga_tu/solution.py",
+     "guide": "problems/pya_l05_p01_den_giao_thong_nga_tu/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p12_giao_nhau_cua_hai_doan_thang",
+     "title": "Giao nhau của hai đoạn thẳng",
+     "de_bai": "problems/pya_l06_p12_giao_nhau_cua_hai_doan_thang/De_Bai.md",
+     "solution": "problems/pya_l06_p12_giao_nhau_cua_hai_doan_thang/solution.py",
+     "guide": "problems/pya_l06_p12_giao_nhau_cua_hai_doan_thang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p05_ve_gui_xe_ben_bai",
+     "title": "Vé gửi xe bến bãi",
+     "de_bai": "problems/pya_l05_p05_ve_gui_xe_ben_bai/De_Bai.md",
+     "solution": "problems/pya_l05_p05_ve_gui_xe_ben_bai/solution.py",
+     "guide": "problems/pya_l05_p05_ve_gui_xe_ben_bai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l05_p12_bon_mua_trong_nam",
+     "title": "Bốn mùa trong năm",
+     "de_bai": "problems/pya_l05_p12_bon_mua_trong_nam/De_Bai.md",
+     "solution": "problems/pya_l05_p12_bon_mua_trong_nam/solution.py",
+     "guide": "problems/pya_l05_p12_bon_mua_trong_nam/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p08_tam_giac_vuong_hay_khong",
+     "title": "Tam giác vuông hay không?",
+     "de_bai": "problems/pya_l06_p08_tam_giac_vuong_hay_khong/De_Bai.md",
+     "solution": "problems/pya_l06_p08_tam_giac_vuong_hay_khong/solution.py",
+     "guide": "problems/pya_l06_p08_tam_giac_vuong_hay_khong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l06_p10_ngay_ke_tiep_trong_nam",
+     "title": "Ngày kế tiếp trong năm",
+     "de_bai": "problems/pya_l06_p10_ngay_ke_tiep_trong_nam/De_Bai.md",
+     "solution": "problems/pya_l06_p10_ngay_ke_tiep_trong_nam/solution.py",
+     "guide": "problems/pya_l06_p10_ngay_ke_tiep_trong_nam/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 5,
+   "chapter": 2,
+   "title": "Bài 05: Vòng lặp for và hàm range",
+   "problems": [
+    {
+     "code": "pya_l07_p14_tong_day_sieu_lon_khong_lap",
+     "title": "Tổng dãy siêu lớn không lặp",
+     "de_bai": "problems/pya_l07_p14_tong_day_sieu_lon_khong_lap/De_Bai.md",
+     "solution": "problems/pya_l07_p14_tong_day_sieu_lon_khong_lap/solution.py",
+     "guide": "problems/pya_l07_p14_tong_day_sieu_lon_khong_lap/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p01_dem_sao_len_troi",
+     "title": "Đếm sao lên trời",
+     "de_bai": "problems/pya_l07_p01_dem_sao_len_troi/De_Bai.md",
+     "solution": "problems/pya_l07_p01_dem_sao_len_troi/solution.py",
+     "guide": "problems/pya_l07_p01_dem_sao_len_troi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p02_dem_nguoc_phong_ten_lua",
+     "title": "Đếm ngược phóng tên lửa",
+     "de_bai": "problems/pya_l07_p02_dem_nguoc_phong_ten_lua/De_Bai.md",
+     "solution": "problems/pya_l07_p02_dem_nguoc_phong_ten_lua/solution.py",
+     "guide": "problems/pya_l07_p02_dem_nguoc_phong_ten_lua/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p03_tong_cac_so_tu_nhien",
+     "title": "Tổng các số tự nhiên",
+     "de_bai": "problems/pya_l07_p03_tong_cac_so_tu_nhien/De_Bai.md",
+     "solution": "problems/pya_l07_p03_tong_cac_so_tu_nhien/solution.py",
+     "guide": "problems/pya_l07_p03_tong_cac_so_tu_nhien/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p13_tam_giac_vuong_dau_sao",
+     "title": "Tam giác vuông dấu sao",
+     "de_bai": "problems/pya_l07_p13_tam_giac_vuong_dau_sao/De_Bai.md",
+     "solution": "problems/pya_l07_p13_tam_giac_vuong_dau_sao/solution.py",
+     "guide": "problems/pya_l07_p13_tam_giac_vuong_dau_sao/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p12_hang_cot_dau_sao",
+     "title": "Hàng cột dấu sao",
+     "de_bai": "problems/pya_l07_p12_hang_cot_dau_sao/De_Bai.md",
+     "solution": "problems/pya_l07_p12_hang_cot_dau_sao/solution.py",
+     "guide": "problems/pya_l07_p12_hang_cot_dau_sao/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p07_tinh_giai_thua_n",
+     "title": "Tính giai thừa $N!$",
+     "de_bai": "problems/pya_l07_p07_tinh_giai_thua_n/De_Bai.md",
+     "solution": "problems/pya_l07_p07_tinh_giai_thua_n/solution.py",
+     "guide": "problems/pya_l07_p07_tinh_giai_thua_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p10_tong_binh_phuong",
+     "title": "Tổng bình phương",
+     "de_bai": "problems/pya_l07_p10_tong_binh_phuong/De_Bai.md",
+     "solution": "problems/pya_l07_p10_tong_binh_phuong/solution.py",
+     "guide": "problems/pya_l07_p10_tong_binh_phuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p04_bang_cuu_chuong",
+     "title": "Bảng cửu chương",
+     "de_bai": "problems/pya_l07_p04_bang_cuu_chuong/De_Bai.md",
+     "solution": "problems/pya_l07_p04_bang_cuu_chuong/solution.py",
+     "guide": "problems/pya_l07_p04_bang_cuu_chuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p05_tong_so_chan_trong_doan",
+     "title": "Tổng số chẵn trong đoạn",
+     "de_bai": "problems/pya_l07_p05_tong_so_chan_trong_doan/De_Bai.md",
+     "solution": "problems/pya_l07_p05_tong_so_chan_trong_doan/solution.py",
+     "guide": "problems/pya_l07_p05_tong_so_chan_trong_doan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p11_doc_sach_moi_ngay",
+     "title": "Đọc sách mỗi ngày",
+     "de_bai": "problems/pya_l07_p11_doc_sach_moi_ngay/De_Bai.md",
+     "solution": "problems/pya_l07_p11_doc_sach_moi_ngay/solution.py",
+     "guide": "problems/pya_l07_p11_doc_sach_moi_ngay/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p08_day_so_cach_deu",
+     "title": "Dãy số cách đều",
+     "de_bai": "problems/pya_l07_p08_day_so_cach_deu/De_Bai.md",
+     "solution": "problems/pya_l07_p08_day_so_cach_deu/solution.py",
+     "guide": "problems/pya_l07_p08_day_so_cach_deu/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p06_dem_boi_so_cua_k",
+     "title": "Đếm bội số của K",
+     "de_bai": "problems/pya_l07_p06_dem_boi_so_cua_k/De_Bai.md",
+     "solution": "problems/pya_l07_p06_dem_boi_so_cua_k/solution.py",
+     "guide": "problems/pya_l07_p06_dem_boi_so_cua_k/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l07_p09_tim_uoc_so_cua_n",
+     "title": "Tìm ước số của N",
+     "de_bai": "problems/pya_l07_p09_tim_uoc_so_cua_n/De_Bai.md",
+     "solution": "problems/pya_l07_p09_tim_uoc_so_cua_n/solution.py",
+     "guide": "problems/pya_l07_p09_tim_uoc_so_cua_n/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 6,
+   "chapter": 2,
+   "title": "Bài 06: Vòng lặp while và biến cờ",
+   "problems": [
+    {
+     "code": "pya_l08_p08_tim_luy_thua_cua_2_lon_hon_n",
+     "title": "Tìm lũy thừa của 2 lớn hơn N",
+     "de_bai": "problems/pya_l08_p08_tim_luy_thua_cua_2_lon_hon_n/De_Bai.md",
+     "solution": "problems/pya_l08_p08_tim_luy_thua_cua_2_lon_hon_n/solution.py",
+     "guide": "problems/pya_l08_p08_tim_luy_thua_cua_2_lon_hon_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p06_gap_doi_to_giay_len_mat_trang",
+     "title": "Gấp đôi tờ giấy lên mặt trăng",
+     "de_bai": "problems/pya_l08_p06_gap_doi_to_giay_len_mat_trang/De_Bai.md",
+     "solution": "problems/pya_l08_p06_gap_doi_to_giay_len_mat_trang/solution.py",
+     "guide": "problems/pya_l08_p06_gap_doi_to_giay_len_mat_trang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p07_ong_heo_mua_xe_may",
+     "title": "Ống heo mua xe máy",
+     "de_bai": "problems/pya_l08_p07_ong_heo_mua_xe_may/De_Bai.md",
+     "solution": "problems/pya_l08_p07_ong_heo_mua_xe_may/solution.py",
+     "guide": "problems/pya_l08_p07_ong_heo_mua_xe_may/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p10_dem_so_luong_chu_so_cua_n",
+     "title": "Đếm số lượng chữ số của N",
+     "de_bai": "problems/pya_l08_p10_dem_so_luong_chu_so_cua_n/De_Bai.md",
+     "solution": "problems/pya_l08_p10_dem_so_luong_chu_so_cua_n/solution.py",
+     "guide": "problems/pya_l08_p10_dem_so_luong_chu_so_cua_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p01_dem_xuoi_bang_while",
+     "title": "Đếm xuôi bằng while",
+     "de_bai": "problems/pya_l08_p01_dem_xuoi_bang_while/De_Bai.md",
+     "solution": "problems/pya_l08_p01_dem_xuoi_bang_while/solution.py",
+     "guide": "problems/pya_l08_p01_dem_xuoi_bang_while/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p03_nhap_so_den_khi_gap_so_0",
+     "title": "Nhập số đến khi gặp số 0",
+     "de_bai": "problems/pya_l08_p03_nhap_so_den_khi_gap_so_0/De_Bai.md",
+     "solution": "problems/pya_l08_p03_nhap_so_den_khi_gap_so_0/solution.py",
+     "guide": "problems/pya_l08_p03_nhap_so_den_khi_gap_so_0/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p04_tong_day_so_ket_thuc_bang_0",
+     "title": "Tổng dãy số kết thúc bằng 0",
+     "de_bai": "problems/pya_l08_p04_tong_day_so_ket_thuc_bang_0/De_Bai.md",
+     "solution": "problems/pya_l08_p04_tong_day_so_ket_thuc_bang_0/solution.py",
+     "guide": "problems/pya_l08_p04_tong_day_so_ket_thuc_bang_0/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p11_tro_choi_doan_so_nhi_phan",
+     "title": "Trò chơi đoán số nhị phân",
+     "de_bai": "problems/pya_l08_p11_tro_choi_doan_so_nhi_phan/De_Bai.md",
+     "solution": "problems/pya_l08_p11_tro_choi_doan_so_nhi_phan/solution.py",
+     "guide": "problems/pya_l08_p11_tro_choi_doan_so_nhi_phan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p02_rut_tham_den_khi_trung",
+     "title": "Rút thăm đến khi trúng",
+     "de_bai": "problems/pya_l08_p02_rut_tham_den_khi_trung/De_Bai.md",
+     "solution": "problems/pya_l08_p02_rut_tham_den_khi_trung/solution.py",
+     "guide": "problems/pya_l08_p02_rut_tham_den_khi_trung/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p12_day_so_collatz_3n_1",
+     "title": "Dãy số Collatz (3n + 1)",
+     "de_bai": "problems/pya_l08_p12_day_so_collatz_3n_1/De_Bai.md",
+     "solution": "problems/pya_l08_p12_day_so_collatz_3n_1/solution.py",
+     "guide": "problems/pya_l08_p12_day_so_collatz_3n_1/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p05_dem_so_chan_den_khi_gap_0",
+     "title": "Đếm số chẵn đến khi gặp 0",
+     "de_bai": "problems/pya_l08_p05_dem_so_chan_den_khi_gap_0/De_Bai.md",
+     "solution": "problems/pya_l08_p05_dem_so_chan_den_khi_gap_0/solution.py",
+     "guide": "problems/pya_l08_p05_dem_so_chan_den_khi_gap_0/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l08_p09_chu_oc_sen_leo_cot_co",
+     "title": "Chú ốc sên leo cột cờ",
+     "de_bai": "problems/pya_l08_p09_chu_oc_sen_leo_cot_co/De_Bai.md",
+     "solution": "problems/pya_l08_p09_chu_oc_sen_leo_cot_co/solution.py",
+     "guide": "problems/pya_l08_p09_chu_oc_sen_leo_cot_co/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 7,
+   "chapter": 3,
+   "title": "Bài 07: Quy luật dãy số và tam giác số",
+   "print_file": "lessons/lesson-07/Lesson07_Print.md",
+   "images": [],
+   "problems": [
+    {
+     "code": "pya_l09_p01_trao_doi_hai_chiec_coc",
+     "title": "Tráo đổi hai chiếc cốc",
+     "de_bai": "problems/pya_l09_p01_trao_doi_hai_chiec_coc/De_Bai.md",
+     "solution": "problems/pya_l09_p01_trao_doi_hai_chiec_coc/solution.py",
+     "guide": "problems/pya_l09_p01_trao_doi_hai_chiec_coc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p03_so_hang_day_cap_so_cong",
+     "title": "Số hạng dãy cấp số cộng",
+     "de_bai": "problems/pya_l09_p03_so_hang_day_cap_so_cong/De_Bai.md",
+     "solution": "problems/pya_l09_p03_so_hang_day_cap_so_cong/solution.py",
+     "guide": "problems/pya_l09_p03_so_hang_day_cap_so_cong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p04_so_fibonacci_thu_n",
+     "title": "Số Fibonacci thứ N",
+     "de_bai": "problems/pya_l09_p04_so_fibonacci_thu_n/De_Bai.md",
+     "solution": "problems/pya_l09_p04_so_fibonacci_thu_n/solution.py",
+     "guide": "problems/pya_l09_p04_so_fibonacci_thu_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p06_tong_tich_hai_so_lien_nhau",
+     "title": "Tổng tích hai số liền nhau",
+     "de_bai": "problems/pya_l09_p06_tong_tich_hai_so_lien_nhau/De_Bai.md",
+     "solution": "problems/pya_l09_p06_tong_tich_hai_so_lien_nhau/solution.py",
+     "guide": "problems/pya_l09_p06_tong_tich_hai_so_lien_nhau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p08_tam_giac_so_don_gian",
+     "title": "Tam giác số đơn giản",
+     "de_bai": "problems/pya_l09_p08_tam_giac_so_don_gian/De_Bai.md",
+     "solution": "problems/pya_l09_p08_tam_giac_so_don_gian/solution.py",
+     "guide": "problems/pya_l09_p08_tam_giac_so_don_gian/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p12_ma_tran_so_ban_co_dan_xen",
+     "title": "Ma trận số bàn cờ đan xen",
+     "de_bai": "problems/pya_l09_p12_ma_tran_so_ban_co_dan_xen/De_Bai.md",
+     "solution": "problems/pya_l09_p12_ma_tran_so_ban_co_dan_xen/solution.py",
+     "guide": "problems/pya_l09_p12_ma_tran_so_ban_co_dan_xen/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p02_day_so_nhan_doi",
+     "title": "Dãy số nhân đôi",
+     "de_bai": "problems/pya_l09_p02_day_so_nhan_doi/De_Bai.md",
+     "solution": "problems/pya_l09_p02_day_so_nhan_doi/solution.py",
+     "guide": "problems/pya_l09_p02_day_so_nhan_doi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p05_day_so_dan_dau",
+     "title": "Dãy số đan dấu",
+     "de_bai": "problems/pya_l09_p05_day_so_dan_dau/De_Bai.md",
+     "solution": "problems/pya_l09_p05_day_so_dan_dau/solution.py",
+     "guide": "problems/pya_l09_p05_day_so_dan_dau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p09_tam_giac_sao_can",
+     "title": "Tam giác sao cân",
+     "de_bai": "problems/pya_l09_p09_tam_giac_sao_can/De_Bai.md",
+     "solution": "problems/pya_l09_p09_tam_giac_sao_can/solution.py",
+     "guide": "problems/pya_l09_p09_tam_giac_sao_can/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p10_day_so_tam_giac_triangular_numbers",
+     "title": "Dãy số tam giác (triangular numbers)",
+     "de_bai": "problems/pya_l09_p10_day_so_tam_giac_triangular_numbers/De_Bai.md",
+     "solution": "problems/pya_l09_p10_day_so_tam_giac_triangular_numbers/solution.py",
+     "guide": "problems/pya_l09_p10_day_so_tam_giac_triangular_numbers/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p14_tim_vi_tri_trong_day_tu_nhien_dai",
+     "title": "Tìm vị trí trong dãy tự nhiên dài",
+     "de_bai": "problems/pya_l09_p14_tim_vi_tri_trong_day_tu_nhien_dai/De_Bai.md",
+     "solution": "problems/pya_l09_p14_tim_vi_tri_trong_day_tu_nhien_dai/solution.py",
+     "guide": "problems/pya_l09_p14_tim_vi_tri_trong_day_tu_nhien_dai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p13_tam_giac_floyd",
+     "title": "Tam giác Floyd",
+     "de_bai": "problems/pya_l09_p13_tam_giac_floyd/De_Bai.md",
+     "solution": "problems/pya_l09_p13_tam_giac_floyd/solution.py",
+     "guide": "problems/pya_l09_p13_tam_giac_floyd/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p07_day_so_boi_ba_boi_nam",
+     "title": "Dãy số bội ba bội năm",
+     "de_bai": "problems/pya_l09_p07_day_so_boi_ba_boi_nam/De_Bai.md",
+     "solution": "problems/pya_l09_p07_day_so_boi_ba_boi_nam/solution.py",
+     "guide": "problems/pya_l09_p07_day_so_boi_ba_boi_nam/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l09_p11_day_so_tribonacci",
+     "title": "Dãy số Tribonacci",
+     "de_bai": "problems/pya_l09_p11_day_so_tribonacci/De_Bai.md",
+     "solution": "problems/pya_l09_p11_day_so_tribonacci/solution.py",
+     "guide": "problems/pya_l09_p11_day_so_tribonacci/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 8,
+   "chapter": 3,
+   "title": "Bài 08: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while",
+   "print_file": "lessons/lesson-08/Lesson08_Print.md",
+   "images": [],
+   "problems": [
+    {
+     "code": "pya_l10_p01_lay_chu_so_don_vi_chuc",
+     "title": "Lấy chữ số đơn vị & chục",
+     "de_bai": "problems/pya_l10_p01_lay_chu_so_don_vi_chuc/De_Bai.md",
+     "solution": "problems/pya_l10_p01_lay_chu_so_don_vi_chuc/solution.py",
+     "guide": "problems/pya_l10_p01_lay_chu_so_don_vi_chuc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p02_tong_chu_so_cua_so_3_chu_so",
+     "title": "Tổng chữ số của số 3 chữ số",
+     "de_bai": "problems/pya_l10_p02_tong_chu_so_cua_so_3_chu_so/De_Bai.md",
+     "solution": "problems/pya_l10_p02_tong_chu_so_cua_so_3_chu_so/solution.py",
+     "guide": "problems/pya_l10_p02_tong_chu_so_cua_so_3_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p03_tong_cac_chu_so_cua_n",
+     "title": "Tổng các chữ số của N",
+     "de_bai": "problems/pya_l10_p03_tong_cac_chu_so_cua_n/De_Bai.md",
+     "solution": "problems/pya_l10_p03_tong_cac_chu_so_cua_n/solution.py",
+     "guide": "problems/pya_l10_p03_tong_cac_chu_so_cua_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p08_so_dao_nguoc",
+     "title": "Số đảo ngược",
+     "de_bai": "problems/pya_l10_p08_so_dao_nguoc/De_Bai.md",
+     "solution": "problems/pya_l10_p08_so_dao_nguoc/solution.py",
+     "guide": "problems/pya_l10_p08_so_dao_nguoc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p05_tich_cac_chu_so_khac_khong",
+     "title": "Tích các chữ số khác không",
+     "de_bai": "problems/pya_l10_p05_tich_cac_chu_so_khac_khong/De_Bai.md",
+     "solution": "problems/pya_l10_p05_tich_cac_chu_so_khac_khong/solution.py",
+     "guide": "problems/pya_l10_p05_tich_cac_chu_so_khac_khong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p04_dem_so_luong_chu_so",
+     "title": "Đếm số lượng chữ số",
+     "de_bai": "problems/pya_l10_p04_dem_so_luong_chu_so/De_Bai.md",
+     "solution": "problems/pya_l10_p04_dem_so_luong_chu_so/solution.py",
+     "guide": "problems/pya_l10_p04_dem_so_luong_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p09_kiem_tra_so_doi_xung_palindrome",
+     "title": "Kiểm tra số đối xứng (palindrome)",
+     "de_bai": "problems/pya_l10_p09_kiem_tra_so_doi_xung_palindrome/De_Bai.md",
+     "solution": "problems/pya_l10_p09_kiem_tra_so_doi_xung_palindrome/solution.py",
+     "guide": "problems/pya_l10_p09_kiem_tra_so_doi_xung_palindrome/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p13_can_bac_so_hoc_digital_root",
+     "title": "Căn bậc số học (digital root)",
+     "de_bai": "problems/pya_l10_p13_can_bac_so_hoc_digital_root/De_Bai.md",
+     "solution": "problems/pya_l10_p13_can_bac_so_hoc_digital_root/solution.py",
+     "guide": "problems/pya_l10_p13_can_bac_so_hoc_digital_root/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p07_chu_so_lon_nhat_nho_nhat",
+     "title": "Chữ số lớn nhất & nhỏ nhất",
+     "de_bai": "problems/pya_l10_p07_chu_so_lon_nhat_nho_nhat/De_Bai.md",
+     "solution": "problems/pya_l10_p07_chu_so_lon_nhat_nho_nhat/solution.py",
+     "guide": "problems/pya_l10_p07_chu_so_lon_nhat_nho_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p11_so_may_man_chua_so_7",
+     "title": "Số may mắn chứa số 7",
+     "de_bai": "problems/pya_l10_p11_so_may_man_chua_so_7/De_Bai.md",
+     "solution": "problems/pya_l10_p11_so_may_man_chua_so_7/solution.py",
+     "guide": "problems/pya_l10_p11_so_may_man_chua_so_7/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p06_dem_chu_so_chan_va_le",
+     "title": "Đếm chữ số chẵn và lẻ",
+     "de_bai": "problems/pya_l10_p06_dem_chu_so_chan_va_le/De_Bai.md",
+     "solution": "problems/pya_l10_p06_dem_chu_so_chan_va_le/solution.py",
+     "guide": "problems/pya_l10_p06_dem_chu_so_chan_va_le/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p14_so_tang_giam_dep",
+     "title": "Số tăng giảm đẹp",
+     "de_bai": "problems/pya_l10_p14_so_tang_giam_dep/De_Bai.md",
+     "solution": "problems/pya_l10_p14_so_tang_giam_dep/solution.py",
+     "guide": "problems/pya_l10_p14_so_tang_giam_dep/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p10_so_toan_chan_hoac_toan_le",
+     "title": "Số toàn chẵn hoặc toàn lẻ",
+     "de_bai": "problems/pya_l10_p10_so_toan_chan_hoac_toan_le/De_Bai.md",
+     "solution": "problems/pya_l10_p10_so_toan_chan_hoac_toan_le/solution.py",
+     "guide": "problems/pya_l10_p10_so_toan_chan_hoac_toan_le/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l10_p12_dem_so_luong_so_doi_xung_trong_doan",
+     "title": "Đếm số lượng số đối xứng trong đoạn",
+     "de_bai": "problems/pya_l10_p12_dem_so_luong_so_doi_xung_trong_doan/De_Bai.md",
+     "solution": "problems/pya_l10_p12_dem_so_luong_so_doi_xung_trong_doan/solution.py",
+     "guide": "problems/pya_l10_p12_dem_so_luong_so_doi_xung_trong_doan/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 9,
+   "chapter": 3,
+   "title": "Bài 09: Ước số, Bội số và Số nguyên tố",
+   "print_file": "lessons/lesson-09/Lesson09_Print.md",
+   "images": [],
+   "problems": [
+    {
+     "code": "pya_l11_p06_uoc_chung_lon_nhat_bcnn",
+     "title": "Ước chung lớn nhất & BCNN",
+     "de_bai": "problems/pya_l11_p06_uoc_chung_lon_nhat_bcnn/De_Bai.md",
+     "solution": "problems/pya_l11_p06_uoc_chung_lon_nhat_bcnn/solution.py",
+     "guide": "problems/pya_l11_p06_uoc_chung_lon_nhat_bcnn/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p02_dem_so_luong_uoc_so",
+     "title": "Đếm số lượng ước số",
+     "de_bai": "problems/pya_l11_p02_dem_so_luong_uoc_so/De_Bai.md",
+     "solution": "problems/pya_l11_p02_dem_so_luong_uoc_so/solution.py",
+     "guide": "problems/pya_l11_p02_dem_so_luong_uoc_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p03_tinh_tong_cac_uoc_so",
+     "title": "Tính tổng các ước số",
+     "de_bai": "problems/pya_l11_p03_tinh_tong_cac_uoc_so/De_Bai.md",
+     "solution": "problems/pya_l11_p03_tinh_tong_cac_uoc_so/solution.py",
+     "guide": "problems/pya_l11_p03_tinh_tong_cac_uoc_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p10_hai_so_nguyen_to_cung_nhau",
+     "title": "Hai số nguyên tố cùng nhau",
+     "de_bai": "problems/pya_l11_p10_hai_so_nguyen_to_cung_nhau/De_Bai.md",
+     "solution": "problems/pya_l11_p10_hai_so_nguyen_to_cung_nhau/solution.py",
+     "guide": "problems/pya_l11_p10_hai_so_nguyen_to_cung_nhau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p01_liet_ke_tat_ca_uoc_so",
+     "title": "Liệt kê tất cả ước số",
+     "de_bai": "problems/pya_l11_p01_liet_ke_tat_ca_uoc_so/De_Bai.md",
+     "solution": "problems/pya_l11_p01_liet_ke_tat_ca_uoc_so/solution.py",
+     "guide": "problems/pya_l11_p01_liet_ke_tat_ca_uoc_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p07_dem_uoc_chan_cua_n",
+     "title": "Đếm ước chẵn của N",
+     "de_bai": "problems/pya_l11_p07_dem_uoc_chan_cua_n/De_Bai.md",
+     "solution": "problems/pya_l11_p07_dem_uoc_chan_cua_n/solution.py",
+     "guide": "problems/pya_l11_p07_dem_uoc_chan_cua_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p08_tim_uoc_so_lon_thu_hai",
+     "title": "Tìm ước số lớn thứ hai",
+     "de_bai": "problems/pya_l11_p08_tim_uoc_so_lon_thu_hai/De_Bai.md",
+     "solution": "problems/pya_l11_p08_tim_uoc_so_lon_thu_hai/solution.py",
+     "guide": "problems/pya_l11_p08_tim_uoc_so_lon_thu_hai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p05_kiem_tra_so_chinh_phuong",
+     "title": "Kiểm tra số chính phương",
+     "de_bai": "problems/pya_l11_p05_kiem_tra_so_chinh_phuong/De_Bai.md",
+     "solution": "problems/pya_l11_p05_kiem_tra_so_chinh_phuong/solution.py",
+     "guide": "problems/pya_l11_p05_kiem_tra_so_chinh_phuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p13_phan_tich_ra_thua_so_nguyen_to",
+     "title": "Phân tích ra thừa số nguyên tố",
+     "de_bai": "problems/pya_l11_p13_phan_tich_ra_thua_so_nguyen_to/De_Bai.md",
+     "solution": "problems/pya_l11_p13_phan_tich_ra_thua_so_nguyen_to/solution.py",
+     "guide": "problems/pya_l11_p13_phan_tich_ra_thua_so_nguyen_to/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p04_kiem_tra_so_nguyen_to",
+     "title": "Kiểm tra số nguyên tố",
+     "de_bai": "problems/pya_l11_p04_kiem_tra_so_nguyen_to/De_Bai.md",
+     "solution": "problems/pya_l11_p04_kiem_tra_so_nguyen_to/solution.py",
+     "guide": "problems/pya_l11_p04_kiem_tra_so_nguyen_to/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p09_dem_so_nguyen_to_trong_doan",
+     "title": "Đếm số nguyên tố trong đoạn",
+     "de_bai": "problems/pya_l11_p09_dem_so_nguyen_to_trong_doan/De_Bai.md",
+     "solution": "problems/pya_l11_p09_dem_so_nguyen_to_trong_doan/solution.py",
+     "guide": "problems/pya_l11_p09_dem_so_nguyen_to_trong_doan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p14_tim_so_co_dung_3_uoc_so",
+     "title": "Tìm số có đúng 3 ước số",
+     "de_bai": "problems/pya_l11_p14_tim_so_co_dung_3_uoc_so/De_Bai.md",
+     "solution": "problems/pya_l11_p14_tim_so_co_dung_3_uoc_so/solution.py",
+     "guide": "problems/pya_l11_p14_tim_so_co_dung_3_uoc_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p12_so_sieu_nguyen_to_super_prime",
+     "title": "Số siêu nguyên tố (super prime)",
+     "de_bai": "problems/pya_l11_p12_so_sieu_nguyen_to_super_prime/De_Bai.md",
+     "solution": "problems/pya_l11_p12_so_sieu_nguyen_to_super_prime/solution.py",
+     "guide": "problems/pya_l11_p12_so_sieu_nguyen_to_super_prime/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l11_p11_cap_so_nguyen_to_sinh_doi",
+     "title": "Cặp số nguyên tố sinh đôi",
+     "de_bai": "problems/pya_l11_p11_cap_so_nguyen_to_sinh_doi/De_Bai.md",
+     "solution": "problems/pya_l11_p11_cap_so_nguyen_to_sinh_doi/solution.py",
+     "guide": "problems/pya_l11_p11_cap_so_nguyen_to_sinh_doi/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 10,
+   "chapter": 3,
+   "title": "Bài 10: Đếm số theo quy luật và số đặc biệt",
+   "print_file": "lessons/lesson-10/Lesson10_Print.md",
+   "images": [],
+   "problems": [
+    {
+     "code": "pya_l12_p01_dem_so_chia_het_cho_k",
+     "title": "Đếm số chia hết cho K",
+     "de_bai": "problems/pya_l12_p01_dem_so_chia_het_cho_k/De_Bai.md",
+     "solution": "problems/pya_l12_p01_dem_so_chia_het_cho_k/solution.py",
+     "guide": "problems/pya_l12_p01_dem_so_chia_het_cho_k/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p07_dem_so_chia_het_cho_2_hoac_3",
+     "title": "Đếm số chia hết cho 2 hoặc 3",
+     "de_bai": "problems/pya_l12_p07_dem_so_chia_het_cho_2_hoac_3/De_Bai.md",
+     "solution": "problems/pya_l12_p07_dem_so_chia_het_cho_2_hoac_3/solution.py",
+     "guide": "problems/pya_l12_p07_dem_so_chia_het_cho_2_hoac_3/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p02_dem_so_le_trong_doan",
+     "title": "Đếm số lẻ trong đoạn",
+     "de_bai": "problems/pya_l12_p02_dem_so_le_trong_doan/De_Bai.md",
+     "solution": "problems/pya_l12_p02_dem_so_le_trong_doan/solution.py",
+     "guide": "problems/pya_l12_p02_dem_so_le_trong_doan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p06_dem_boi_cua_3_nhung_khong_chia_het_cho_5",
+     "title": "Đếm bội của 3 nhưng không chia hết cho 5",
+     "de_bai": "problems/pya_l12_p06_dem_boi_cua_3_nhung_khong_chia_het_cho_5/De_Bai.md",
+     "solution": "problems/pya_l12_p06_dem_boi_cua_3_nhung_khong_chia_het_cho_5/solution.py",
+     "guide": "problems/pya_l12_p06_dem_boi_cua_3_nhung_khong_chia_het_cho_5/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p04_so_armstrong_ba_chu_so",
+     "title": "Số Armstrong ba chữ số",
+     "de_bai": "problems/pya_l12_p04_so_armstrong_ba_chu_so/De_Bai.md",
+     "solution": "problems/pya_l12_p04_so_armstrong_ba_chu_so/solution.py",
+     "guide": "problems/pya_l12_p04_so_armstrong_ba_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p12_so_tu_man_narcissistic_number_k_chu_so",
+     "title": "Số tự mãn (Narcissistic number K chữ số)",
+     "de_bai": "problems/pya_l12_p12_so_tu_man_narcissistic_number_k_chu_so/De_Bai.md",
+     "solution": "problems/pya_l12_p12_so_tu_man_narcissistic_number_k_chu_so/solution.py",
+     "guide": "problems/pya_l12_p12_so_tu_man_narcissistic_number_k_chu_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p10_dem_so_khong_chua_chu_so_0",
+     "title": "Đếm số không chứa chữ số 0",
+     "de_bai": "problems/pya_l12_p10_dem_so_khong_chua_chu_so_0/De_Bai.md",
+     "solution": "problems/pya_l12_p10_dem_so_khong_chua_chu_so_0/solution.py",
+     "guide": "problems/pya_l12_p10_dem_so_khong_chua_chu_so_0/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p03_kiem_tra_so_hoan_hao",
+     "title": "Kiểm tra số hoàn hảo",
+     "de_bai": "problems/pya_l12_p03_kiem_tra_so_hoan_hao/De_Bai.md",
+     "solution": "problems/pya_l12_p03_kiem_tra_so_hoan_hao/solution.py",
+     "guide": "problems/pya_l12_p03_kiem_tra_so_hoan_hao/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p11_dem_so_chinh_phuong_trong_doan",
+     "title": "Đếm số chính phương trong đoạn",
+     "de_bai": "problems/pya_l12_p11_dem_so_chinh_phuong_trong_doan/De_Bai.md",
+     "solution": "problems/pya_l12_p11_dem_so_chinh_phuong_trong_doan/solution.py",
+     "guide": "problems/pya_l12_p11_dem_so_chinh_phuong_trong_doan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p05_tim_tat_ca_so_hoan_hao_nho_hon_n",
+     "title": "Tìm tất cả số hoàn hảo nhỏ hơn N",
+     "de_bai": "problems/pya_l12_p05_tim_tat_ca_so_hoan_hao_nho_hon_n/De_Bai.md",
+     "solution": "problems/pya_l12_p05_tim_tat_ca_so_hoan_hao_nho_hon_n/solution.py",
+     "guide": "problems/pya_l12_p05_tim_tat_ca_so_hoan_hao_nho_hon_n/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p09_so_phong_phu_abundant_number",
+     "title": "Số phong phú (abundant number)",
+     "de_bai": "problems/pya_l12_p09_so_phong_phu_abundant_number/De_Bai.md",
+     "solution": "problems/pya_l12_p09_so_phong_phu_abundant_number/solution.py",
+     "guide": "problems/pya_l12_p09_so_phong_phu_abundant_number/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l12_p08_cap_so_than_thiet",
+     "title": "Cặp số thân thiết",
+     "de_bai": "problems/pya_l12_p08_cap_so_than_thiet/De_Bai.md",
+     "solution": "problems/pya_l12_p08_cap_so_than_thiet/solution.py",
+     "guide": "problems/pya_l12_p08_cap_so_than_thiet/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 11,
+   "chapter": 4,
+   "title": "Bài 11: Danh sách và thao tác cơ bản",
+   "print_file": "lessons/lesson-11/Lesson11_Print.md",
+   "images": [],
+   "problems": [
+    {
+     "code": "pya_l16_p23_thuong_doc_sach",
+     "title": "Thưởng đọc sách",
+     "de_bai": "problems/pya_l16_p23_thuong_doc_sach/De_Bai.md",
+     "solution": "problems/pya_l16_p23_thuong_doc_sach/solution.py",
+     "guide": "problems/pya_l16_p23_thuong_doc_sach/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p21_so_ghe_doi_xung",
+     "title": "Số ghế đối xứng",
+     "de_bai": "problems/pya_l16_p21_so_ghe_doi_xung/De_Bai.md",
+     "solution": "problems/pya_l16_p21_so_ghe_doi_xung/solution.py",
+     "guide": "problems/pya_l16_p21_so_ghe_doi_xung/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p08_tim_vi_tri_dau_tien_cua_x",
+     "title": "Tìm vị trí đầu tiên của X",
+     "de_bai": "problems/pya_l16_p08_tim_vi_tri_dau_tien_cua_x/De_Bai.md",
+     "solution": "problems/pya_l16_p08_tim_vi_tri_dau_tien_cua_x/solution.py",
+     "guide": "problems/pya_l16_p08_tim_vi_tri_dau_tien_cua_x/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p01_nhap_day_so_in_phan_tu_dau_cuoi",
+     "title": "Nhập dãy số & in phần tử đầu - cuối",
+     "de_bai": "problems/pya_l16_p01_nhap_day_so_in_phan_tu_dau_cuoi/De_Bai.md",
+     "solution": "problems/pya_l16_p01_nhap_day_so_in_phan_tu_dau_cuoi/solution.py",
+     "guide": "problems/pya_l16_p01_nhap_day_so_in_phan_tu_dau_cuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p03_tinh_tong_cac_phan_tu_trong_day",
+     "title": "Tính tổng các phần tử trong dãy",
+     "de_bai": "problems/pya_l16_p03_tinh_tong_cac_phan_tu_trong_day/De_Bai.md",
+     "solution": "problems/pya_l16_p03_tinh_tong_cac_phan_tu_trong_day/solution.py",
+     "guide": "problems/pya_l16_p03_tinh_tong_cac_phan_tu_trong_day/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p05_tim_so_lon_nhat_nho_nhat",
+     "title": "Tìm số lớn nhất & nhỏ nhất",
+     "de_bai": "problems/pya_l16_p05_tim_so_lon_nhat_nho_nhat/De_Bai.md",
+     "solution": "problems/pya_l16_p05_tim_so_lon_nhat_nho_nhat/solution.py",
+     "guide": "problems/pya_l16_p05_tim_so_lon_nhat_nho_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p06_in_day_so_theo_thu_tu_dao_nguoc",
+     "title": "In dãy số theo thứ tự đảo ngược",
+     "de_bai": "problems/pya_l16_p06_in_day_so_theo_thu_tu_dao_nguoc/De_Bai.md",
+     "solution": "problems/pya_l16_p06_in_day_so_theo_thu_tu_dao_nguoc/solution.py",
+     "guide": "problems/pya_l16_p06_in_day_so_theo_thu_tu_dao_nguoc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p07_dem_so_lan_xuat_hien_cua_x",
+     "title": "Đếm số lần xuất hiện của X",
+     "de_bai": "problems/pya_l16_p07_dem_so_lan_xuat_hien_cua_x/De_Bai.md",
+     "solution": "problems/pya_l16_p07_dem_so_lan_xuat_hien_cua_x/solution.py",
+     "guide": "problems/pya_l16_p07_dem_so_lan_xuat_hien_cua_x/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p11_thay_the_tat_ca_so_am_bang_so_0",
+     "title": "Thay thế tất cả số âm bằng số 0",
+     "de_bai": "problems/pya_l16_p11_thay_the_tat_ca_so_am_bang_so_0/De_Bai.md",
+     "solution": "problems/pya_l16_p11_thay_the_tat_ca_so_am_bang_so_0/solution.py",
+     "guide": "problems/pya_l16_p11_thay_the_tat_ca_so_am_bang_so_0/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p15_heo_dat_tiet_kiem",
+     "title": "Heo đất tiết kiệm",
+     "de_bai": "problems/pya_l16_p15_heo_dat_tiet_kiem/De_Bai.md",
+     "solution": "problems/pya_l16_p15_heo_dat_tiet_kiem/solution.py",
+     "guide": "problems/pya_l16_p15_heo_dat_tiet_kiem/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p04_dem_so_luong_so_chan_trong_mang",
+     "title": "Đếm số lượng số chẵn trong mảng",
+     "de_bai": "problems/pya_l16_p04_dem_so_luong_so_chan_trong_mang/De_Bai.md",
+     "solution": "problems/pya_l16_p04_dem_so_luong_so_chan_trong_mang/solution.py",
+     "guide": "problems/pya_l16_p04_dem_so_luong_so_chan_trong_mang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p02_them_diem_vao_danh_sach",
+     "title": "Thêm điểm vào danh sách",
+     "de_bai": "problems/pya_l16_p02_them_diem_vao_danh_sach/De_Bai.md",
+     "solution": "problems/pya_l16_p02_them_diem_vao_danh_sach/solution.py",
+     "guide": "problems/pya_l16_p02_them_diem_vao_danh_sach/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p12_chen_so_vao_vi_tri_k",
+     "title": "Chèn số vào vị trí K",
+     "de_bai": "problems/pya_l16_p12_chen_so_vao_vi_tri_k/De_Bai.md",
+     "solution": "problems/pya_l16_p12_chen_so_vao_vi_tri_k/solution.py",
+     "guide": "problems/pya_l16_p12_chen_so_vao_vi_tri_k/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p18_mat_khau_bi_an",
+     "title": "Mật khẩu bị ẩn",
+     "de_bai": "problems/pya_l16_p18_mat_khau_bi_an/De_Bai.md",
+     "solution": "problems/pya_l16_p18_mat_khau_bi_an/solution.py",
+     "guide": "problems/pya_l16_p18_mat_khau_bi_an/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p22_xep_hang_chieu_cao",
+     "title": "Xếp hàng chiều cao",
+     "de_bai": "problems/pya_l16_p22_xep_hang_chieu_cao/De_Bai.md",
+     "solution": "problems/pya_l16_p22_xep_hang_chieu_cao/solution.py",
+     "guide": "problems/pya_l16_p22_xep_hang_chieu_cao/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p10_xoa_phan_tu_dau_tien_bang_x",
+     "title": "Xóa phần tử đầu tiên bằng X",
+     "de_bai": "problems/pya_l16_p10_xoa_phan_tu_dau_tien_bang_x/De_Bai.md",
+     "solution": "problems/pya_l16_p10_xoa_phan_tu_dau_tien_bang_x/solution.py",
+     "guide": "problems/pya_l16_p10_xoa_phan_tu_dau_tien_bang_x/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p13_xoay_vong_danh_sach_sang_phai",
+     "title": "Xoay vòng danh sách sang phải",
+     "de_bai": "problems/pya_l16_p13_xoay_vong_danh_sach_sang_phai/De_Bai.md",
+     "solution": "problems/pya_l16_p13_xoay_vong_danh_sach_sang_phai/solution.py",
+     "guide": "problems/pya_l16_p13_xoay_vong_danh_sach_sang_phai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p09_tach_mang_chan_va_mang_le",
+     "title": "Tách mảng chẵn và mảng lẻ",
+     "de_bai": "problems/pya_l16_p09_tach_mang_chan_va_mang_le/De_Bai.md",
+     "solution": "problems/pya_l16_p09_tach_mang_chan_va_mang_le/solution.py",
+     "guide": "problems/pya_l16_p09_tach_mang_chan_va_mang_le/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p24_dem_tu_dai",
+     "title": "Đếm từ dài",
+     "de_bai": "problems/pya_l16_p24_dem_tu_dai/De_Bai.md",
+     "solution": "problems/pya_l16_p24_dem_tu_dai/solution.py",
+     "guide": "problems/pya_l16_p24_dem_tu_dai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p17_bang_diem_lop_hoc",
+     "title": "Bảng điểm lớp học",
+     "de_bai": "problems/pya_l16_p17_bang_diem_lop_hoc/De_Bai.md",
+     "solution": "problems/pya_l16_p17_bang_diem_lop_hoc/solution.py",
+     "guide": "problems/pya_l16_p17_bang_diem_lop_hoc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p14_cap_so_co_tong_bang_s",
+     "title": "Cặp số có tổng bằng S",
+     "de_bai": "problems/pya_l16_p14_cap_so_co_tong_bang_s/De_Bai.md",
+     "solution": "problems/pya_l16_p14_cap_so_co_tong_bang_s/solution.py",
+     "guide": "problems/pya_l16_p14_cap_so_co_tong_bang_s/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p16_ve_so_may_man",
+     "title": "Vé số may mắn",
+     "de_bai": "problems/pya_l16_p16_ve_so_may_man/De_Bai.md",
+     "solution": "problems/pya_l16_p16_ve_so_may_man/solution.py",
+     "guide": "problems/pya_l16_p16_ve_so_may_man/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p26_chuyen_tau_vuot_deo",
+     "title": "Chuyến tàu vượt đèo",
+     "de_bai": "problems/pya_l16_p26_chuyen_tau_vuot_deo/De_Bai.md",
+     "solution": "problems/pya_l16_p26_chuyen_tau_vuot_deo/solution.py",
+     "guide": "problems/pya_l16_p26_chuyen_tau_vuot_deo/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p20_tong_chu_so_lon_nhat",
+     "title": "Tổng chữ số lớn nhất",
+     "de_bai": "problems/pya_l16_p20_tong_chu_so_lon_nhat/De_Bai.md",
+     "solution": "problems/pya_l16_p20_tong_chu_so_lon_nhat/solution.py",
+     "guide": "problems/pya_l16_p20_tong_chu_so_lon_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p19_dem_keo_chan_le",
+     "title": "Đếm kẹo chẵn lẻ",
+     "de_bai": "problems/pya_l16_p19_dem_keo_chan_le/De_Bai.md",
+     "solution": "problems/pya_l16_p19_dem_keo_chan_le/solution.py",
+     "guide": "problems/pya_l16_p19_dem_keo_chan_le/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l16_p25_dem_sao_nguyen_to",
+     "title": "Đếm sao nguyên tố",
+     "de_bai": "problems/pya_l16_p25_dem_sao_nguyen_to/De_Bai.md",
+     "solution": "problems/pya_l16_p25_dem_sao_nguyen_to/solution.py",
+     "guide": "problems/pya_l16_p25_dem_sao_nguyen_to/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 12,
+   "chapter": 4,
+   "title": "Bài 12: Thống kê danh sách và sắp xếp",
+   "print_file": "lessons/lesson-12/Lesson12_Print.md",
+   "images": [],
+   "problems": [
+    {
+     "code": "pya_l17_p01_diem_so_cao_nhat_thap_nhat",
+     "title": "Điểm số cao nhất & thấp nhất",
+     "de_bai": "problems/pya_l17_p01_diem_so_cao_nhat_thap_nhat/De_Bai.md",
+     "solution": "problems/pya_l17_p01_diem_so_cao_nhat_thap_nhat/solution.py",
+     "guide": "problems/pya_l17_p01_diem_so_cao_nhat_thap_nhat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p07_loc_bo_cac_so_trung_lap",
+     "title": "Lọc bỏ các số trùng lặp",
+     "de_bai": "problems/pya_l17_p07_loc_bo_cac_so_trung_lap/De_Bai.md",
+     "solution": "problems/pya_l17_p07_loc_bo_cac_so_trung_lap/solution.py",
+     "guide": "problems/pya_l17_p07_loc_bo_cac_so_trung_lap/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p09_sap_xep_ten_theo_thu_tu_bang_chu_cai",
+     "title": "Sắp xếp tên theo thứ tự bảng chữ cái",
+     "de_bai": "problems/pya_l17_p09_sap_xep_ten_theo_thu_tu_bang_chu_cai/De_Bai.md",
+     "solution": "problems/pya_l17_p09_sap_xep_ten_theo_thu_tu_bang_chu_cai/solution.py",
+     "guide": "problems/pya_l17_p09_sap_xep_ten_theo_thu_tu_bang_chu_cai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p13_ghep_hai_day_da_sap_xep",
+     "title": "Ghép hai dãy đã sắp xếp",
+     "de_bai": "problems/pya_l17_p13_ghep_hai_day_da_sap_xep/De_Bai.md",
+     "solution": "problems/pya_l17_p13_ghep_hai_day_da_sap_xep/solution.py",
+     "guide": "problems/pya_l17_p13_ghep_hai_day_da_sap_xep/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p06_dem_so_luong_hoc_sinh_tren_diem_trung_binh",
+     "title": "Đếm số lượng học sinh trên điểm trung bình",
+     "de_bai": "problems/pya_l17_p06_dem_so_luong_hoc_sinh_tren_diem_trung_binh/De_Bai.md",
+     "solution": "problems/pya_l17_p06_dem_so_luong_hoc_sinh_tren_diem_trung_binh/solution.py",
+     "guide": "problems/pya_l17_p06_dem_so_luong_hoc_sinh_tren_diem_trung_binh/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p02_sap_xep_tang_dan_don_gian",
+     "title": "Sắp xếp tăng dần đơn giản",
+     "de_bai": "problems/pya_l17_p02_sap_xep_tang_dan_don_gian/De_Bai.md",
+     "solution": "problems/pya_l17_p02_sap_xep_tang_dan_don_gian/solution.py",
+     "guide": "problems/pya_l17_p02_sap_xep_tang_dan_don_gian/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p04_sap_xep_giam_dan_bang_xep_hang",
+     "title": "Sắp xếp giảm dần bảng xếp hạng",
+     "de_bai": "problems/pya_l17_p04_sap_xep_giam_dan_bang_xep_hang/De_Bai.md",
+     "solution": "problems/pya_l17_p04_sap_xep_giam_dan_bang_xep_hang/solution.py",
+     "guide": "problems/pya_l17_p04_sap_xep_giam_dan_bang_xep_hang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p11_trung_vi_cua_day_so_median",
+     "title": "Trung vị của dãy số (Median)",
+     "de_bai": "problems/pya_l17_p11_trung_vi_cua_day_so_median/De_Bai.md",
+     "solution": "problems/pya_l17_p11_trung_vi_cua_day_so_median/solution.py",
+     "guide": "problems/pya_l17_p11_trung_vi_cua_day_so_median/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p05_tim_so_lon_thu_nhi_trong_mang",
+     "title": "Tìm số lớn thứ nhì trong mảng",
+     "de_bai": "problems/pya_l17_p05_tim_so_lon_thu_nhi_trong_mang/De_Bai.md",
+     "solution": "problems/pya_l17_p05_tim_so_lon_thu_nhi_trong_mang/solution.py",
+     "guide": "problems/pya_l17_p05_tim_so_lon_thu_nhi_trong_mang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p03_diem_trung_binh_mon_hoc",
+     "title": "Điểm trung bình môn học",
+     "de_bai": "problems/pya_l17_p03_diem_trung_binh_mon_hoc/De_Bai.md",
+     "solution": "problems/pya_l17_p03_diem_trung_binh_mon_hoc/solution.py",
+     "guide": "problems/pya_l17_p03_diem_trung_binh_mon_hoc/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p10_chenh_lech_nho_nhat_giua_hai_so",
+     "title": "Chênh lệch nhỏ nhất giữa hai số",
+     "de_bai": "problems/pya_l17_p10_chenh_lech_nho_nhat_giua_hai_so/De_Bai.md",
+     "solution": "problems/pya_l17_p10_chenh_lech_nho_nhat_giua_hai_so/solution.py",
+     "guide": "problems/pya_l17_p10_chenh_lech_nho_nhat_giua_hai_so/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p12_so_xuat_hien_nhieu_lan_nhat_mode",
+     "title": "Số xuất hiện nhiều lần nhất (Mode)",
+     "de_bai": "problems/pya_l17_p12_so_xuat_hien_nhieu_lan_nhat_mode/De_Bai.md",
+     "solution": "problems/pya_l17_p12_so_xuat_hien_nhieu_lan_nhat_mode/solution.py",
+     "guide": "problems/pya_l17_p12_so_xuat_hien_nhieu_lan_nhat_mode/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p08_diem_olympic_bo_max_bo_min",
+     "title": "Điểm olympic bỏ max bỏ min",
+     "de_bai": "problems/pya_l17_p08_diem_olympic_bo_max_bo_min/De_Bai.md",
+     "solution": "problems/pya_l17_p08_diem_olympic_bo_max_bo_min/solution.py",
+     "guide": "problems/pya_l17_p08_diem_olympic_bo_max_bo_min/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l17_p14_xep_hang_mua_tra_sua_greedy",
+     "title": "Xếp hàng mua trà sữa (Greedy)",
+     "de_bai": "problems/pya_l17_p14_xep_hang_mua_tra_sua_greedy/De_Bai.md",
+     "solution": "problems/pya_l17_p14_xep_hang_mua_tra_sua_greedy/solution.py",
+     "guide": "problems/pya_l17_p14_xep_hang_mua_tra_sua_greedy/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 13,
+   "chapter": 5,
+   "title": "Bài 13: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự",
+   "print_file": "lessons/lesson-13/Lesson13_Print.md",
+   "images": [
+    "assets/l13_string_indexing.svg"
+   ],
+   "problems": [
+    {
+     "code": "pya_l13_p02_do_dai_cua_chuoi",
+     "title": "Độ dài của chuỗi",
+     "de_bai": "problems/pya_l13_p02_do_dai_cua_chuoi/De_Bai.md",
+     "solution": "problems/pya_l13_p02_do_dai_cua_chuoi/solution.py",
+     "guide": "problems/pya_l13_p02_do_dai_cua_chuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p03_cat_ba_ky_tu_dau_tien",
+     "title": "Cắt ba ký tự đầu tiên",
+     "de_bai": "problems/pya_l13_p03_cat_ba_ky_tu_dau_tien/De_Bai.md",
+     "solution": "problems/pya_l13_p03_cat_ba_ky_tu_dau_tien/solution.py",
+     "guide": "problems/pya_l13_p03_cat_ba_ky_tu_dau_tien/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p04_dao_nguoc_ten_rieng",
+     "title": "Đảo ngược tên riêng",
+     "de_bai": "problems/pya_l13_p04_dao_nguoc_ten_rieng/De_Bai.md",
+     "solution": "problems/pya_l13_p04_dao_nguoc_ten_rieng/solution.py",
+     "guide": "problems/pya_l13_p04_dao_nguoc_ten_rieng/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p08_ky_tu_o_vi_tri_chan",
+     "title": "Ký tự Ở vị trí chẵn",
+     "de_bai": "problems/pya_l13_p08_ky_tu_o_vi_tri_chan/De_Bai.md",
+     "solution": "problems/pya_l13_p08_ky_tu_o_vi_tri_chan/solution.py",
+     "guide": "problems/pya_l13_p08_ky_tu_o_vi_tri_chan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p07_rut_trich_ten_mien_email",
+     "title": "Rút trích tên miền email",
+     "de_bai": "problems/pya_l13_p07_rut_trich_ten_mien_email/De_Bai.md",
+     "solution": "problems/pya_l13_p07_rut_trich_ten_mien_email/solution.py",
+     "guide": "problems/pya_l13_p07_rut_trich_ten_mien_email/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p01_ky_tu_dau_ky_tu_cuoi",
+     "title": "Ký tự đầu & ký tự cuối",
+     "de_bai": "problems/pya_l13_p01_ky_tu_dau_ky_tu_cuoi/De_Bai.md",
+     "solution": "problems/pya_l13_p01_ky_tu_dau_ky_tu_cuoi/solution.py",
+     "guide": "problems/pya_l13_p01_ky_tu_dau_ky_tu_cuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p11_dich_chuyen_vong_quanh_left_rotation",
+     "title": "Dịch chuyển vòng quanh (left rotation)",
+     "de_bai": "problems/pya_l13_p11_dich_chuyen_vong_quanh_left_rotation/De_Bai.md",
+     "solution": "problems/pya_l13_p11_dich_chuyen_vong_quanh_left_rotation/solution.py",
+     "guide": "problems/pya_l13_p11_dich_chuyen_vong_quanh_left_rotation/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p06_cat_doi_chuoi_ky_tu",
+     "title": "Cắt đôi chuỗi ký tự",
+     "de_bai": "problems/pya_l13_p06_cat_doi_chuoi_ky_tu/De_Bai.md",
+     "solution": "problems/pya_l13_p06_cat_doi_chuoi_ky_tu/solution.py",
+     "guide": "problems/pya_l13_p06_cat_doi_chuoi_ky_tu/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p09_hoan_doi_nua_dau_nua_sau",
+     "title": "Hoán đổi nửa đầu nửa sau",
+     "de_bai": "problems/pya_l13_p09_hoan_doi_nua_dau_nua_sau/De_Bai.md",
+     "solution": "problems/pya_l13_p09_hoan_doi_nua_dau_nua_sau/solution.py",
+     "guide": "problems/pya_l13_p09_hoan_doi_nua_dau_nua_sau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p10_xoa_ky_tu_o_vi_tri_k",
+     "title": "Xóa ký tự ở vị trí K",
+     "de_bai": "problems/pya_l13_p10_xoa_ky_tu_o_vi_tri_k/De_Bai.md",
+     "solution": "problems/pya_l13_p10_xoa_ky_tu_o_vi_tri_k/solution.py",
+     "guide": "problems/pya_l13_p10_xoa_ky_tu_o_vi_tri_k/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p05_kiem_tra_tu_doi_xung_palindrome",
+     "title": "Kiểm tra từ đối xứng (palindrome)",
+     "de_bai": "problems/pya_l13_p05_kiem_tra_tu_doi_xung_palindrome/De_Bai.md",
+     "solution": "problems/pya_l13_p05_kiem_tra_tu_doi_xung_palindrome/solution.py",
+     "guide": "problems/pya_l13_p05_kiem_tra_tu_doi_xung_palindrome/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l13_p12_chuoi_con_doi_xung_dai_nhat",
+     "title": "Chuỗi con đối xứng dài nhất",
+     "de_bai": "problems/pya_l13_p12_chuoi_con_doi_xung_dai_nhat/De_Bai.md",
+     "solution": "problems/pya_l13_p12_chuoi_con_doi_xung_dai_nhat/solution.py",
+     "guide": "problems/pya_l13_p12_chuoi_con_doi_xung_dai_nhat/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  },
+  {
+   "lesson": 14,
+   "chapter": 5,
+   "title": "Bài 14: Duyệt chuỗi, biến đổi ký tự và tách từ",
+   "print_file": "lessons/lesson-14/Lesson14_Print.md",
+   "images": [
+    "assets/l14_string_ascii_methods.svg"
+   ],
+   "problems": [
+    {
+     "code": "pya_l14_p02_chuyen_toan_bo_thanh_chu_hoa",
+     "title": "Chuyển toàn bộ thành chữ hoa",
+     "de_bai": "problems/pya_l14_p02_chuyen_toan_bo_thanh_chu_hoa/De_Bai.md",
+     "solution": "problems/pya_l14_p02_chuyen_toan_bo_thanh_chu_hoa/solution.py",
+     "guide": "problems/pya_l14_p02_chuyen_toan_bo_thanh_chu_hoa/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p08_thay_the_ky_tu_bi_mat",
+     "title": "Thay thế ký tự bí mật",
+     "de_bai": "problems/pya_l14_p08_thay_the_ky_tu_bi_mat/De_Bai.md",
+     "solution": "problems/pya_l14_p08_thay_the_ky_tu_bi_mat/solution.py",
+     "guide": "problems/pya_l14_p08_thay_the_ky_tu_bi_mat/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p09_xoa_bo_toan_bo_dau_cach",
+     "title": "Xóa bỏ toàn bộ dấu cách",
+     "de_bai": "problems/pya_l14_p09_xoa_bo_toan_bo_dau_cach/De_Bai.md",
+     "solution": "problems/pya_l14_p09_xoa_bo_toan_bo_dau_cach/solution.py",
+     "guide": "problems/pya_l14_p09_xoa_bo_toan_bo_dau_cach/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p03_ma_ascii_cua_ky_tu",
+     "title": "Mã ASCII của ký tự",
+     "de_bai": "problems/pya_l15_p03_ma_ascii_cua_ky_tu/De_Bai.md",
+     "solution": "problems/pya_l15_p03_ma_ascii_cua_ky_tu/solution.py",
+     "guide": "problems/pya_l15_p03_ma_ascii_cua_ky_tu/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p01_dem_so_tu_trong_cau",
+     "title": "Đếm số từ trong câu",
+     "de_bai": "problems/pya_l15_p01_dem_so_tu_trong_cau/De_Bai.md",
+     "solution": "problems/pya_l15_p01_dem_so_tu_trong_cau/solution.py",
+     "guide": "problems/pya_l15_p01_dem_so_tu_trong_cau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p05_tim_tu_dai_nhat_trong_cau",
+     "title": "Tìm từ dài nhất trong câu",
+     "de_bai": "problems/pya_l15_p05_tim_tu_dai_nhat_trong_cau/De_Bai.md",
+     "solution": "problems/pya_l15_p05_tim_tu_dai_nhat_trong_cau/solution.py",
+     "guide": "problems/pya_l15_p05_tim_tu_dai_nhat_trong_cau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p04_ky_tu_ke_tiep_trong_bang_chu_cai",
+     "title": "Ký tự kế tiếp trong bảng chữ cái",
+     "de_bai": "problems/pya_l15_p04_ky_tu_ke_tiep_trong_bang_chu_cai/De_Bai.md",
+     "solution": "problems/pya_l15_p04_ky_tu_ke_tiep_trong_bang_chu_cai/solution.py",
+     "guide": "problems/pya_l15_p04_ky_tu_ke_tiep_trong_bang_chu_cai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p02_tu_dau_tien_tu_cuoi_cung",
+     "title": "Từ đầu tiên & từ cuối cùng",
+     "de_bai": "problems/pya_l15_p02_tu_dau_tien_tu_cuoi_cung/De_Bai.md",
+     "solution": "problems/pya_l15_p02_tu_dau_tien_tu_cuoi_cung/solution.py",
+     "guide": "problems/pya_l15_p02_tu_dau_tien_tu_cuoi_cung/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p06_chuan_hoa_khoang_trang",
+     "title": "Chuẩn hóa khoảng trắng",
+     "de_bai": "problems/pya_l15_p06_chuan_hoa_khoang_trang/De_Bai.md",
+     "solution": "problems/pya_l15_p06_chuan_hoa_khoang_trang/solution.py",
+     "guide": "problems/pya_l15_p06_chuan_hoa_khoang_trang/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p01_in_tung_chu_cai_xuong_dong",
+     "title": "In từng chữ cái xuống dòng",
+     "de_bai": "problems/pya_l14_p01_in_tung_chu_cai_xuong_dong/De_Bai.md",
+     "solution": "problems/pya_l14_p01_in_tung_chu_cai_xuong_dong/solution.py",
+     "guide": "problems/pya_l14_p01_in_tung_chu_cai_xuong_dong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p07_viet_hoa_chu_cai_dau_moi_tu_title_case",
+     "title": "Viết hoa chữ cái đầu mỗi từ (title case)",
+     "de_bai": "problems/pya_l15_p07_viet_hoa_chu_cai_dau_moi_tu_title_case/De_Bai.md",
+     "solution": "problems/pya_l15_p07_viet_hoa_chu_cai_dau_moi_tu_title_case/solution.py",
+     "guide": "problems/pya_l15_p07_viet_hoa_chu_cai_dau_moi_tu_title_case/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p08_dao_nguoc_tung_tu_trong_cau",
+     "title": "Đảo ngược từng từ trong câu",
+     "de_bai": "problems/pya_l15_p08_dao_nguoc_tung_tu_trong_cau/De_Bai.md",
+     "solution": "problems/pya_l15_p08_dao_nguoc_tung_tu_trong_cau/solution.py",
+     "guide": "problems/pya_l15_p08_dao_nguoc_tung_tu_trong_cau/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p12_mat_ma_thay_the_hoan_vi_anagram",
+     "title": "Mật mã thay thế hoán vị (anagram)",
+     "de_bai": "problems/pya_l15_p12_mat_ma_thay_the_hoan_vi_anagram/De_Bai.md",
+     "solution": "problems/pya_l15_p12_mat_ma_thay_the_hoan_vi_anagram/solution.py",
+     "guide": "problems/pya_l15_p12_mat_ma_thay_the_hoan_vi_anagram/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p11_tu_xuat_hien_nhieu_nhat_trong_doan",
+     "title": "Từ xuất hiện nhiều nhất trong đoạn",
+     "de_bai": "problems/pya_l15_p11_tu_xuat_hien_nhieu_nhat_trong_doan/De_Bai.md",
+     "solution": "problems/pya_l15_p11_tu_xuat_hien_nhieu_nhat_trong_doan/solution.py",
+     "guide": "problems/pya_l15_p11_tu_xuat_hien_nhieu_nhat_trong_doan/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p10_dem_so_luong_nguyen_am",
+     "title": "Đếm số lượng nguyên âm",
+     "de_bai": "problems/pya_l14_p10_dem_so_luong_nguyen_am/De_Bai.md",
+     "solution": "problems/pya_l14_p10_dem_so_luong_nguyen_am/solution.py",
+     "guide": "problems/pya_l14_p10_dem_so_luong_nguyen_am/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p03_dem_ky_tu_a_ca_hoa_lan_thuong",
+     "title": "Đếm ký tự 'A' (cả hoa lẫn thường)",
+     "de_bai": "problems/pya_l14_p03_dem_ky_tu_a_ca_hoa_lan_thuong/De_Bai.md",
+     "solution": "problems/pya_l14_p03_dem_ky_tu_a_ca_hoa_lan_thuong/solution.py",
+     "guide": "problems/pya_l14_p03_dem_ky_tu_a_ca_hoa_lan_thuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p06_tinh_tong_cac_chu_so_trong_chuoi",
+     "title": "Tính tổng các chữ số trong chuỗi",
+     "de_bai": "problems/pya_l14_p06_tinh_tong_cac_chu_so_trong_chuoi/De_Bai.md",
+     "solution": "problems/pya_l14_p06_tinh_tong_cac_chu_so_trong_chuoi/solution.py",
+     "guide": "problems/pya_l14_p06_tinh_tong_cac_chu_so_trong_chuoi/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p05_tach_rieng_chu_so_ra_khoi_van_ban",
+     "title": "Tách riêng chữ số ra khỏi văn bản",
+     "de_bai": "problems/pya_l14_p05_tach_rieng_chu_so_ra_khoi_van_ban/De_Bai.md",
+     "solution": "problems/pya_l14_p05_tach_rieng_chu_so_ra_khoi_van_ban/solution.py",
+     "guide": "problems/pya_l14_p05_tach_rieng_chu_so_ra_khoi_van_ban/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p11_nen_chuoi_ky_tu_runlength_encoding",
+     "title": "Nén chuỗi ký tự (Run-Length encoding)",
+     "de_bai": "problems/pya_l14_p11_nen_chuoi_ky_tu_runlength_encoding/De_Bai.md",
+     "solution": "problems/pya_l14_p11_nen_chuoi_ky_tu_runlength_encoding/solution.py",
+     "guide": "problems/pya_l14_p11_nen_chuoi_ky_tu_runlength_encoding/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p04_dem_chu_cai_in_hoa_in_thuong",
+     "title": "Đếm chữ cái in hoa & in thường",
+     "de_bai": "problems/pya_l14_p04_dem_chu_cai_in_hoa_in_thuong/De_Bai.md",
+     "solution": "problems/pya_l14_p04_dem_chu_cai_in_hoa_in_thuong/solution.py",
+     "guide": "problems/pya_l14_p04_dem_chu_cai_in_hoa_in_thuong/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p09_mat_ma_caesar_dich_chuyen_k",
+     "title": "Mật mã Caesar dịch chuyển K",
+     "de_bai": "problems/pya_l15_p09_mat_ma_caesar_dich_chuyen_k/De_Bai.md",
+     "solution": "problems/pya_l15_p09_mat_ma_caesar_dich_chuyen_k/solution.py",
+     "guide": "problems/pya_l15_p09_mat_ma_caesar_dich_chuyen_k/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l15_p10_giai_ma_mat_thu_caesar",
+     "title": "Giải mã mật thư Caesar",
+     "de_bai": "problems/pya_l15_p10_giai_ma_mat_thu_caesar/De_Bai.md",
+     "solution": "problems/pya_l15_p10_giai_ma_mat_thu_caesar/solution.py",
+     "guide": "problems/pya_l15_p10_giai_ma_mat_thu_caesar/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p07_doi_chu_hoa_thanh_thuong_nguoc_lai",
+     "title": "Đổi chữ hoa thành thường & ngược lại",
+     "de_bai": "problems/pya_l14_p07_doi_chu_hoa_thanh_thuong_nguoc_lai/De_Bai.md",
+     "solution": "problems/pya_l14_p07_doi_chu_hoa_thanh_thuong_nguoc_lai/solution.py",
+     "guide": "problems/pya_l14_p07_doi_chu_hoa_thanh_thuong_nguoc_lai/Huong_Dan_Giang_Day.md"
+    },
+    {
+     "code": "pya_l14_p12_trich_xuat_so_lon_nhat_trong_van_ban",
+     "title": "Trích xuất số lớn nhất trong văn bản",
+     "de_bai": "problems/pya_l14_p12_trich_xuat_so_lon_nhat_trong_van_ban/De_Bai.md",
+     "solution": "problems/pya_l14_p12_trich_xuat_so_lon_nhat_trong_van_ban/solution.py",
+     "guide": "problems/pya_l14_p12_trich_xuat_so_lon_nhat_trong_van_ban/Huong_Dan_Giang_Day.md"
+    }
+   ]
+  }
+ ]
+}

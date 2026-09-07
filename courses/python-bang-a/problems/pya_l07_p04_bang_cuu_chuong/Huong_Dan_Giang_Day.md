@@ -1,83 +1,54 @@
-# Hướng Dẫn Giảng Dạy: Bảng Cửu Chương
+# Hướng Dẫn Giảng Dạy: Bảng cửu chương
 Chuyên đề: **Vòng Lặp for & Chiếc Thước Đo range()**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Bảng Cửu Chương** (`PYA-L07-P04`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: in 10 dòng bảng nhân của số K, dòng thứ `i` có dạng `K x i = K*i`. Vòng lặp cho `i` chạy từ 1 tới 10.
+- Quy trình trong lời giải: đọc `n`, vòng lặp `for i in range(1, 11)`, mỗi lượt `print(f"{n} x {i} = {n * i}")` tự tính tích `n * i`.
+- Xử lý biên: với K nhỏ nhất là 1 thì dòng cuối là `1 x 10 = 10`; với K lớn nhất là 9 thì dòng cuối là `9 x 10 = 90`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5)
+| Lượt lặp | Giá trị của `i` | Tích `5 * i` | Dòng in ra |
+|---|---|---|---|
+| 1 | 1 | 5 | 5 x 1 = 5 |
+| 2 | 2 | 10 | 5 x 2 = 10 |
+| 3 | 3 | 15 | 5 x 3 = 15 |
+| 4 | 4 | 20 | 5 x 4 = 20 |
+| 5 | 5 | 25 | 5 x 5 = 25 |
+| 6 | 6 | 30 | 5 x 6 = 30 |
+| 7 | 7 | 35 | 5 x 7 = 35 |
+| 8 | 8 | 40 | 5 x 8 = 40 |
+| 9 | 9 | 45 | 5 x 9 = 45 |
+| 10 | 10 | 50 | 5 x 10 = 50 |
+
+Đủ 10 dòng như kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5
-```
-* **Output:**
-```text
-5 x 1 = 5
-5 x 2 = 10
-...
-5 x 10 = 50
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — dùng `range(1, 10)`:
 ```python
-# Gợi ý mã nguồn cho PYA-L07-P04: Bảng Cửu Chương
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+for i in range(1, 10):
+    print(f"{n} x {i} = {n * i}")
 ```
+Với mẫu `5` chỉ in 9 dòng, thiếu dòng `5 x 10 = 50`. Cách sửa: dùng `range(1, 11)`.
+- Bẫy 2 — sai định dạng khoảng trắng:
+```python
+n = int(input().strip())
+for i in range(1, 11):
+    print(f"{n}x{i}={n * i}")
+```
+Với mẫu `5` dòng đầu thành `5x1=5` thay vì `5 x 1 = 5`, chương trình kiểm tra báo kết quả sai. Cách sửa: giữ đúng mẫu `f"{n} x {i} = {n * i}"`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.
+## 4. Lời giải tham khảo
+```python
+n = int(input().strip())
+for i in range(1, 11):
+    print(f"{n} x {i} = {n * i}")
+```

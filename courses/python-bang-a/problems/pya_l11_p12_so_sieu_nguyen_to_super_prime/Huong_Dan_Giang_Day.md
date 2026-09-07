@@ -1,80 +1,58 @@
-# Hướng Dẫn Giảng Dạy: Số Siêu Nguyên Tố (Super Prime)
+# Hướng Dẫn Giảng Dạy: Số siêu nguyên tố (super prime)
 Chuyên đề: **Ước Số, Bội Số & Số Nguyên Tố Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Số Siêu Nguyên Tố (Super Prime)** (`PYA-L11-P12`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: số siêu nguyên tố là số mà bản thân nó và từng số cắt đuôi bên phải đều là số nguyên tố; với `239` cần kiểm tra `239`, `23`, `2`.
+- Biến `temp` đi từ `239` xuống `23` rồi `2`, mỗi nấc thử chia từ `2` tới căn bậc hai; cả ba nấc đều vượt qua nên cờ `sieu` giữ nguyên `True`.
+- Phép cắt đuôi là `temp = temp // 10`: `239 // 10 = 23`, `23 // 10 = 2`, `2 // 10 = 0` thì dừng.
+- Thầy cô cho các em kiểm tra tay: `239` không chia hết cho số nào tới `15`, `23` không chia hết cho số nào tới `4`, `2` là số nguyên tố nhỏ nhất.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 239)
+| `temp` | Thử chia | Kết luận nấc |
+| --- | --- | --- |
+| 239 | thử 2..15, `239 % 2 = 1`, `% 3 = 2`, `% 5 = 4`, `% 7 = 1`, `% 11 = 8`, `% 13 = 5` | nguyên tố, cắt tiếp |
+| 23 | thử 2..4, `23 % 2 = 1`, `% 3 = 2`, `% 4 = 3` | nguyên tố, cắt tiếp |
+| 2 | `range(2, 2)` rỗng | nguyên tố, cắt tiếp |
+| 0 | dừng vòng lặp | xong |
+
+Vì cả ba nấc đều đạt nên in ra `YES`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: chỉ kiểm tra số gốc `239` mà quên các nấc cắt đuôi. Với `27` cách làm sai vẫn thấy `27` là hợp số nên trùng cờ ra `NO`, nhưng với `23` thì thiếu kiểm tra nấc `2`. Sửa lại: giữ vòng lặp `while temp > 0` cắt đuôi như bài giải.
+- Bẫy 2: cắt đuôi bằng `temp / 10` (chia thực). Với mẫu `239` sẽ được `23.9` rồi lỗi ở phép chia lấy dư. Sửa lại: `temp = temp // 10`.
+- Bẫy 3: quên loại số nhỏ hơn `2`. Với `N = 1` vòng lặp không chạy mà cờ `sieu` vẫn `True` nên in nhầm `YES`. Sửa lại: giữ nhánh `if n < 2: sieu = False` như bài giải.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-239
-```
-* **Output:**
-```text
-YES
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L11-P12: Số Siêu Nguyên Tố (Super Prime)
-# Cài đặt code chuẩn Python 3
+n = int(input())
+sieu = True
+if n < 2:
+    sieu = False
+else:
+    temp = n
+    while temp > 0:
+        if temp < 2:
+            sieu = False
+            break
+        la_snt = True
+        for i in range(2, int(temp ** 0.5) + 1):
+            if temp % i == 0:
+                la_snt = False
+                break
+        if not la_snt:
+            sieu = False
+            break
+        temp = temp // 10
+if sieu:
+    print("YES")
+else:
+    print("NO")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

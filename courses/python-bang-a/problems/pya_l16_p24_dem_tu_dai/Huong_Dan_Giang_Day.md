@@ -1,46 +1,75 @@
-# Hướng Dẫn Giảng Dạy — Đếm Từ Dài (`PYA-L16-P10`)
+# Hướng Dẫn Giảng Dạy: Đếm từ dài
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Trung bình trong 90 phút thi thử.
-- Rèn pattern ẩn: **chuỗi (tách từ + rẽ nhánh theo độ dài)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn tách từ bằng split và so sánh độ dài.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là cắt câu thành từng từ rồi đếm các từ dài hơn `K` ký tự.
+- Với số mẫu `K = 3`, câu `Hom nay Bin di hoc cung ban Na`: các từ dài lần lượt là 3, 3, 3, 2, 3, 4, 3, 2; chỉ có từ `cung` dài 4, lớn hơn 3 nên đáp án là `1`.
+- Quy trình trong lời giải với các biến `k`, `s`, `c`, `w`:
+  - Đọc `k = 3`, tách câu thành `s = ["Hom", "nay", "Bin", "di", "hoc", "cung", "ban", "Na"]`, đặt `c = 0`.
+  - Với mỗi từ `w`, nếu `len(w) > 3` thì tăng `c`: chỉ mỗi `cung` đạt nên `c = 1`.
+  - In `1`.
+- Giá trị biên cụ thể: `K = 0` thì mọi từ không rỗng đều được đếm; câu chỉ có 1 từ thì đáp án là `1` hoặc `0`.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $|S| \le 10^4$.
-- Trường hợp biên: K = 0 (mọi từ đều được đếm); câu có nhiều dấu cách liên tiếp.
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 / Hom nay Bin di hoc cung ban Na)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `k` | `k = 3` |
+| 2 | Tách câu thành `s` | 8 từ: Hom, nay, Bin, di, hoc, cung, ban, Na |
+| 3 | Xét `Hom`, `nay`, `Bin` | dài 3, không lớn hơn 3 nên bỏ |
+| 4 | Xét `di` | dài 2 nên bỏ |
+| 5 | Xét `hoc` | dài 3 nên bỏ |
+| 6 | Xét `cung` | dài 4, lớn hơn 3 nên `c = 1` |
+| 7 | Xét `ban`, `Na` | dài 3 và 2 nên bỏ |
+| 8 | In kết quả | màn hình hiện `1` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `1`.
 
-- Bất biến: Mỗi từ trong câu được xét đúng một lần.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- Từ cung dài 4 > 3 nên đếm 1.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — dùng `>=` thay vì `>`:
+```python
+k = int(input())
+s = input().split()
+c = 0
+for w in s:
+    if len(w) >= k:
+        c += 1
+print(c)
+```
+Với mẫu trên, các từ `Hom`, `nay`, `Bin`, `hoc`, `ban` dài đúng 3 cũng bị đếm nên in ra `6`, không khớp đáp án mẫu `1`. Cách sửa: điều kiện đúng là `len(w) > k`.
+- Bẫy 2 — đếm ký tự thay vì đếm từ:
+```python
+k = int(input())
+s = input()
+c = 0
+for w in s:
+    if len(w) > k:
+        c += 1
+print(c)
+```
+Với mẫu trên, mỗi `w` là một ký tự đơn nên không ký tự nào dài hơn 3, in ra `0` sai. Cách sửa: tách câu thành từ bằng `s = input().split()`.
+- Bẫy 3 — quên đọc dòng `K`:
+```python
+s = input().split()
+c = 0
+for w in s:
+    if len(w) > 3:
+        c += 1
+print(c)
+```
+Lệnh đọc đầu tiên lấy nhầm dòng `3` làm câu, tách được `["3"]` dài 1 nên in ra `0` sai. Cách sửa: đọc `k = int(input())` trước rồi mới đọc câu.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- Quên split mà đếm ký tự; nhầm lớn hơn với lớn hơn hoặc bằng.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 k = int(input())
@@ -51,8 +80,3 @@ for w in s:
         c += 1
 print(c)
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.

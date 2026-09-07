@@ -1,74 +1,84 @@
-# Hướng Dẫn Giảng Dạy: Cặp Số Có Tổng Bằng S
+# Hướng Dẫn Giảng Dạy: Cặp số có tổng bằng S
 Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Cặp Số Có Tổng Bằng S** (`PYA-L16-P14`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Lưu ý cho thầy cô: phần Bối cảnh trong đề bài viết chung chung về tính tổng, nhưng Nhiệm vụ và lời giải đều làm việc khác là đếm cặp có tổng bằng `S`. Khi dạy, bám theo Nhiệm vụ và lời giải.
+- Bản chất của bài này là đếm các cặp vị trí `i < j` sao cho hai số cộng lại bằng `S`.
+- Với số mẫu `N = 5`, `S = 10`, dãy `2 4 6 8 3`: các cặp đạt là `(2, 8)` và `(4, 6)` nên đáp án là `2`.
+- Quy trình trong lời giải với các biến `line`, `n`, `s`, `a`, `seen`, `cnt`, `x`:
+  - Tách dòng đầu thành `n = 5`, `s = 10`; đọc dãy `a = [2, 4, 6, 8, 3]`; đặt `seen` rỗng, `cnt = 0`.
+  - Xét `2`: cần `8` chưa thấy nên ghi `2` vào `seen`. Xét `4`: cần `6` chưa thấy nên ghi `4`. Xét `6`: cần `4` đã thấy nên `cnt = 1`. Xét `8`: cần `2` đã thấy nên `cnt = 2`. Xét `3`: cần `7` chưa thấy.
+  - In `2`.
+- Giá trị biên cụ thể: dãy chỉ có 1 số thì không có cặp nào nên in `0`; đề bài cho các số đôi một khác nhau nên mỗi cặp chỉ bị đếm một lần.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 10 / 2 4 6 8 3)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Tách dòng 1 | `n = 5`, `s = 10` |
+| 2 | Đọc dãy `a` | `a = [2, 4, 6, 8, 3]`, `seen = {}`, `cnt = 0` |
+| 3 | Xét `x = 2` | cần `8` chưa thấy, ghi `2`, `cnt = 0` |
+| 4 | Xét `x = 4` | cần `6` chưa thấy, ghi `4`, `cnt = 0` |
+| 5 | Xét `x = 6` | cần `4` đã thấy nên `cnt = 1` |
+| 6 | Xét `x = 8` | cần `2` đã thấy nên `cnt = 2` |
+| 7 | Xét `x = 3` | cần `7` chưa thấy, `cnt` vẫn `2` |
+| 8 | In kết quả | màn hình hiện `2` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `2`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5 10
-2 4 6 8 3
+- Bẫy 1 — đếm cả cặp một số với chính nó:
+```python
+line = input().split()
+n, s = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+cnt = 0
+for i in range(n):
+    for j in range(n):
+        if a[i] + a[j] == s:
+            cnt += 1
+print(cnt // 2)
 ```
-* **Output:**
-```text
-2
+Với mẫu trên vẫn ra `2`, nhưng nếu dãy chứa số bằng `s / 2` (ví dụ `5` khi `s = 10`) thì cặp `(5, 5)` bị tính oan. Cách sửa: chỉ xét `j` đứng sau `i`, hoặc ghi nhớ các số đã thấy như lời giải.
+- Bẫy 2 — đếm mỗi cặp hai lần:
+```python
+line = input().split()
+n, s = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+cnt = 0
+for i in range(n):
+    for j in range(n):
+        if i != j and a[i] + a[j] == s:
+            cnt += 1
+print(cnt)
 ```
-* **Giải thích:** Có 2 cặp là $(2, 8)$ và $(4, 6)$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+Với mẫu trên in ra `4` vì `(2, 8)` và `(8, 2)` bị tính riêng. Cách sửa: mỗi cặp chỉ đếm một lần, ví dụ ghi `seen` rồi mới kiểm tra như lời giải.
+- Bẫy 3 — so hai vòng lặp với `N = 10^4`:
+```python
+line = input().split()
+n, s = int(line[0]), int(line[1])
+a = list(map(int, input().split()))
+cnt = 0
+for i in range(n):
+    for j in range(i + 1, n):
+        if a[i] + a[j] == s:
+            cnt += 1
+print(cnt)
+```
+Với mẫu 5 số vẫn ra `2`, nhưng với `N = 10^4` thì hai vòng lặp chạy tới năm chục triệu lượt, quá chậm. Cách sửa: duyệt một lượt kết hợp ghi nhớ `seen` như lời giải.
 
 ---
 
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
+
 ```python
 line = input().split()
 n, s = int(line[0]), int(line[1])
@@ -81,9 +91,3 @@ for x in a:
     seen.add(x)
 print(cnt)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

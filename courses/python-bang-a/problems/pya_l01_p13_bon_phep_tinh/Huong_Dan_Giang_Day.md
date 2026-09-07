@@ -1,66 +1,37 @@
-# Hướng Dẫn Giảng Dạy: Bốn Phép Tính Đồng Thời
+# Hướng Dẫn Giảng Dạy: Bốn phép tính đồng thời
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Bốn Phép Tính Đồng Thời** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là từ hai số `A = 8` và `B = 5` tính ra ba kết quả: tổng `8 + 5 = 13`, hiệu `8 - 5 = 3`, tích `8 * 5 = 40`, mỗi kết quả nằm trên một dòng. Thầy cô ví như máy tính bỏ túi bấm một lần hiện đủ ba đáp số.
+- Quy trình gồm hai bước với hai biến `a` và `b` trong lời giải: dùng `map(int, input().split())` để cắt dòng `8 5` thành `8` và `5` rồi cất vào `a` và `b`, sau đó in ba dòng `print(a + b)`, `print(a - b)`, `print(a * b)` cho ra `13`, `3`, `40`.
+- Xử lý biên: ràng buộc cho `A, B` từ `-10^4` tới `10^4`. Thầy cô cho các con thử cặp biên `-10000 -10000` cho ra `-20000`, `0`, `100000000`, và cặp `10000 10000` cho ra `20000`, `0`, `100000000`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 8 5)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a, b = map(int, input().split())` với bàn phím gõ `8 5` | `a = 8`, `b = 5` | (chưa in gì) |
+| 2 | `print(a + b)` tức `print(8 + 5)` | `a = 8`, `b = 5` | `13` |
+| 3 | `print(a - b)` tức `print(8 - 5)` | `a = 8`, `b = 5` | `3` |
+| 4 | `print(a * b)` tức `print(8 * 5)` | `a = 8`, `b = 5` | `40` |
+| 5 | Kết thúc chương trình | — | Kết quả cuối cùng đúng ba dòng `13`, `3`, `40`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: in cả ba kết quả trên một dòng như `print(a + b, a - b, a * b)` thì với mẫu `8 5` màn hình hiện `13 3 40` chung một dòng thay vì ba dòng riêng. Cách sửa: viết ba lệnh `print` riêng.
+- Bẫy 2: sai thứ tự các dòng, ví dụ in tích trước tổng thì ba dòng hiện `40`, `3`, `13` bị đảo chỗ. Cách sửa: giữ đúng thứ tự tổng rồi hiệu rồi tích.
+- Bẫy 3: quên `int()` khi cắt dòng, viết `a, b = input().split()` rồi `print(a + b)` thì với mẫu `8 5` máy nối chữ thành `85` thay vì `13`. Cách sửa: bọc `map(int, ...)` để đổi thành số.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 a, b = map(int, input().split())
 print(a + b)
 print(a - b)
 print(a * b)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

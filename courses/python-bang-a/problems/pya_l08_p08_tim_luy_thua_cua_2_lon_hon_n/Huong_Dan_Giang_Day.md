@@ -1,80 +1,55 @@
-# Hướng Dẫn Giảng Dạy: Tìm Lũy Thừa Của 2 Lớn Hơn N
+# Hướng Dẫn Giảng Dạy: Tìm lũy thừa của 2 lớn hơn N
 Chuyên đề: **Vòng Lặp while & Người Lính Canh**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tìm Lũy Thừa Của 2 Lớn Hơn N** (`PYA-L08-P08`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: dãy lũy thừa của 2 là 1, 2, 4, 8, 16, ... Mỗi bước nhân đôi `lt = lt * 2` cho tới khi vượt qua N.
+- Quy trình trong lời giải: đọc `n`, đặt `lt = 1`; chừng nào `lt <= n` thì nhân đôi `lt`; khi thoát vòng lặp thì `lt` là số cần tìm, đem in ra.
+- Xử lý biên: với N nhỏ nhất là 1 thì `lt` đi 1 thành 2 nên in `2`; với N tới 1 000 000 000 thì nhân đôi khoảng 30 lần là xong.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10)
+| Lần kiểm tra | Giá trị của `lt` | `lt <= 10`? | Hành động |
+|---|---|---|---|
+| đầu | 1 | đúng | lt thành 2 |
+| 2 | 2 | đúng | lt thành 4 |
+| 3 | 4 | đúng | lt thành 8 |
+| 4 | 8 | đúng | lt thành 16 |
+| 5 | 16 | sai | dừng, in 16 |
+
+In ra `16` là lũy thừa của 2 nhỏ nhất mà lớn hơn 10, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-10
-```
-* **Output:**
-```text
-16
-```
-* **Giải thích:** Lũy thừa của 2 gồm 1, 2, 4, 8, 16... Số nhỏ nhất $> 10$ là 16.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — điều kiện dừng sai thành `lt < n`:
 ```python
-# Gợi ý mã nguồn cho PYA-L08-P08: Tìm Lũy Thừa Của 2 Lớn Hơn N
-# Cài đặt code chuẩn Python 3
+n = int(input())
+lt = 1
+while lt < n:
+    lt = lt * 2
+print(lt)
 ```
+Nếu N bản thân là lũy thừa của 2 (ví dụ N = 8) sẽ in ra `8` thay vì `16`. Cách sửa: điều kiện đúng là `while lt <= n`.
+- Bẫy 2 — quên nhân đôi bên trong vòng lặp:
+```python
+n = int(input())
+lt = 1
+while lt <= n:
+    lt = lt + 1
+print(lt)
+```
+Với mẫu `10` sẽ in ra `11` thay vì `16`. Cách sửa: mỗi bước phải nhân đôi `lt = lt * 2`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.
+## 4. Lời giải tham khảo
+```python
+n = int(input())
+lt = 1
+while lt <= n:
+    lt = lt * 2
+print(lt)
+```

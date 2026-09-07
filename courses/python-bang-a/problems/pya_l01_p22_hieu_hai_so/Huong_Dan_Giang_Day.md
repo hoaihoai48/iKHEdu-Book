@@ -1,65 +1,35 @@
-# Hướng Dẫn Giảng Dạy: Hiệu Hai Số Nguyên
+# Hướng Dẫn Giảng Dạy: Hiệu hai số nguyên
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Hiệu Hai Số Nguyên** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là tính vải còn lại: cuộn vải dài `A = 100` mét trừ đi `B = 35` mét đã cắt, còn `65` mét. Thầy cô cho các con hình dung cắt bớt một đoạn thì độ dài ngắn lại.
+- Quy trình gồm ba bước với hai biến `a` và `b` trong lời giải: đọc `100` vào `a`, đọc `35` vào `b`, rồi tính `a - b` tức `100 - 35 = 65` và in ra.
+- Xử lý biên: ràng buộc cho `0 <= B <= A <= 10^9` nên hiệu không bao giờ âm. Thầy cô cho các con thử cặp biên bằng nhau như `100` và `100` cho ra `0`, và cặp `1000000000` và `0` cho ra `1000000000`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 100 và 35)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a = int(input())` với dòng 1 gõ `100` | `a = 100` | (chưa in gì) |
+| 2 | `b = int(input())` với dòng 2 gõ `35` | `b = 35` | (chưa in gì) |
+| 3 | `print(a - b)` tức `print(100 - 35)` | `a = 100`, `b = 35` | `65` |
+| 4 | Kết thúc chương trình | — | Kết quả cuối cùng: `65`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: viết ngược thứ tự `print(b - a)` thì với mẫu `100` và `35` màn hình hiện `-65` thay vì `65`. Cách sửa: nhớ lấy số lớn trừ số nhỏ, viết `a - b`.
+- Bẫy 2: cộng thay vì trừ, viết `print(a + b)` thì với mẫu `100` và `35` màn hình hiện `135` thay vì `65`. Cách sửa: bài hỏi phần còn lại nên viết dấu `-`.
+- Bẫy 3: quên `int()` khiến `a - b` báo lỗi vì không trừ được chữ. Cách sửa: viết `a = int(input())` và `b = int(input())`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 a = int(input())
 b = int(input())
 print(a - b)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

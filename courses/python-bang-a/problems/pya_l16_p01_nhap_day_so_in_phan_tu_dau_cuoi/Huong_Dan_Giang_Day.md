@@ -1,82 +1,64 @@
-# Hướng Dẫn Giảng Dạy: Nhập Dãy Số & In Phần Tử Đầu - Cuối
+# Hướng Dẫn Giảng Dạy: Nhập dãy số & in phần tử đầu - cuối
 Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Nhập Dãy Số & In Phần Tử Đầu - Cuối** (`PYA-L16-P01`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là lấy hai phần tử ở hai đầu của danh sách: phần tử đầu tiên và phần tử cuối cùng.
+- Với số mẫu `N = 5`, dãy `10 25 3 47 99`: phần tử đầu là `10`, phần tử cuối là `99` nên đáp án là `10 99`.
+- Quy trình trong lời giải với các biến `n`, `a`:
+  - Đọc `n = 5`.
+  - Đọc dãy `a = [10, 25, 3, 47, 99]`.
+  - Lấy `a[0]` được `10` và `a[-1]` được `99`, in ra `10 99`.
+- Giá trị biên cụ thể: `N = 1` thì phần tử đầu và cuối là cùng một số (ví dụ dãy `7` thì in `7 7`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 / 10 25 3 47 99)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n` | `n = 5` |
+| 2 | Đọc dãy `a` | `a = [10, 25, 3, 47, 99]` |
+| 3 | Lấy `a[0]` | `10` |
+| 4 | Lấy `a[-1]` | `99` |
+| 5 | In kết quả | màn hình hiện `10 99` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `10 99`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5
-10 25 3 47 99
+- Bẫy 1 — lấy vị trí cuối bằng `a[n]`:
+```python
+n = int(input().strip())
+a = list(map(int, input().split()))
+print(a[0], a[n])
 ```
-* **Output:**
-```text
-10 99
+Với mẫu `n = 5`, `a[5]` vượt khỏi dãy (vị trí cuối là `a[4]`) nên chương trình báo lỗi. Cách sửa: dùng `a[-1]` hoặc `a[n - 1]`.
+- Bẫy 2 — in mỗi số một dòng:
+```python
+n = int(input().strip())
+a = list(map(int, input().split()))
+print(a[0])
+print(a[-1])
 ```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
+Với mẫu trên in ra hai dòng `10` rồi `99`, không khớp đáp án mẫu `10 99` trên một dòng. Cách sửa: in chung một lệnh `print(a[0], a[-1])`.
+- Bẫy 3 — quên đọc dòng `N` nên đọc nhầm dãy:
+```python
+a = list(map(int, input().split()))
+print(a[0], a[-1])
+```
+Với mẫu trên, lệnh đọc đầu tiên lấy nhầm dòng `5` thành dãy `[5]` rồi in ra `5 5` sai. Cách sửa: đọc `n` trước rồi mới đọc dãy `a`.
 
 ---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+## 4. Lời giải tham khảo
 
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
 n = int(input().strip())
 a = list(map(int, input().split()))
 print(a[0], a[-1])
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

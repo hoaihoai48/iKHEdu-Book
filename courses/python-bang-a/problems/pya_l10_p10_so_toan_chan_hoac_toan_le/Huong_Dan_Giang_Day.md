@@ -1,80 +1,112 @@
-# Hướng Dẫn Giảng Dạy: Số Toàn Chẵn Hoặc Toàn Lẻ
+# Hướng Dẫn Giảng Dạy: Số toàn chẵn hoặc toàn lẻ
 Chuyên đề: **Bí Mật Tách Chữ Số (// 10 và % 10)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Số Toàn Chẵn Hoặc Toàn Lẻ** (`PYA-L10-P10`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là lướt từng chữ số của `N`: thấy một chữ số lẻ thì đội Chẵn thua, thấy một chữ số chẵn thì đội Lẻ thua; đội nào còn đứng vững tới cuối thì thắng.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: `n = int(input())` đọc số. Với mẫu, `n = 2468`.
+  - Bước 2: cắm hai cờ `toan_chan = True` và `toan_le = True`.
+  - Bước 3: lặp `while n > 0`, mỗi lần lấy `d = n % 10`; nếu `d` chẵn thì hạ cờ `toan_le = False`, ngược lại hạ cờ `toan_chan = False`; rồi gọt `n = n // 10`.
+  - Bước 4: nếu `toan_chan` còn đúng thì in `TOAN CHAN`, ngược lại nếu `toan_le` còn đúng thì in `TOAN LE`, còn lại in `BINH THUONG`.
+- Giá trị biên cụ thể: với mẫu `2468` cả bốn chữ số 2, 4, 6, 8 đều chẵn nên in `TOAN CHAN`; số như 1395 toàn lẻ nên in `TOAN LE`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2468)
+
+| Lần lặp | `n` trước | `d = n % 10` | Chẵn hay lẻ | `toan_chan` sau | `toan_le` sau | `n` sau |
+|---|---|---|---|---|---|---|
+| Khởi đầu | 2468 | — | — | True | True | 2468 |
+| 1 | 2468 | 8 | chẵn | True | False | 246 |
+| 2 | 246 | 6 | chẵn | True | False | 24 |
+| 3 | 24 | 4 | chẵn | True | False | 2 |
+| 4 | 2 | 2 | chẵn | True | False | 0 |
+
+- Vòng lặp dừng, `toan_chan` còn True nên in `TOAN CHAN`, trùng kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-2468
-```
-* **Output:**
-```text
-TOAN CHAN
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1: hạ nhầm cờ, viết chữ số chẵn thì hạ `toan_chan`. Với mẫu `2468` toàn chữ số chẵn mà cờ `toan_chan` bị hạ hết, cuối cùng in `BINH THUONG`, là kết quả sai. Cách sửa: chữ số chẵn hạ `toan_le`, chữ số lẻ hạ `toan_chan`.
 ```python
-# Gợi ý mã nguồn cho PYA-L10-P10: Số Toàn Chẵn Hoặc Toàn Lẻ
-# Cài đặt code chuẩn Python 3
+n = int(input())
+toan_chan = True
+toan_le = True
+while n > 0:
+    d = n % 10
+    if d % 2 == 0:
+        toan_chan = False
+    else:
+        toan_le = False
+    n = n // 10
+if toan_chan:
+    print("TOAN CHAN")
+elif toan_le:
+    print("TOAN LE")
+else:
+    print("BINH THUONG")
+```
+- Bẫy 2: quên gọt `n` trong vòng lặp, `n` mãi bằng 2468 nên lặp vô tận. Cách sửa: cuối mỗi lần lặp phải `n = n // 10`.
+```python
+n = int(input())
+toan_chan = True
+toan_le = True
+while n > 0:
+    d = n % 10
+    if d % 2 == 0:
+        toan_le = False
+    else:
+        toan_chan = False
+if toan_chan:
+    print("TOAN CHAN")
+elif toan_le:
+    print("TOAN LE")
+else:
+    print("BINH THUONG")
+```
+- Bẫy 3: kiểm tra cờ `toan_le` trước `toan_chan`. Với số toàn chẵn hoặc toàn lẻ thì chỉ một cờ còn đúng nên không sao, nhưng số như 2418 cả hai cờ đều bị hạ và phải in `BINH THUONG`; thứ tự sai không gây lỗi ở đây, lỗi thật sự hay gặp là in thiếu chữ, ví dụ `TOANCHAN` không có dấu cách. Với mẫu sẽ in `TOANCHAN`, là kết quả sai. Cách sửa: in đúng `TOAN CHAN` có dấu cách ở giữa.
+```python
+n = int(input())
+toan_chan = True
+toan_le = True
+while n > 0:
+    d = n % 10
+    if d % 2 == 0:
+        toan_le = False
+    else:
+        toan_chan = False
+    n = n // 10
+if toan_chan:
+    print("TOANCHAN")
+elif toan_le:
+    print("TOANLE")
+else:
+    print("BINHTHUONG")
 ```
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+n = int(input())
+toan_chan = True
+toan_le = True
+while n > 0:
+    d = n % 10
+    if d % 2 == 0:
+        toan_le = False
+    else:
+        toan_chan = False
+    n = n // 10
+if toan_chan:
+    print("TOAN CHAN")
+elif toan_le:
+    print("TOAN LE")
+else:
+    print("BINH THUONG")
+```

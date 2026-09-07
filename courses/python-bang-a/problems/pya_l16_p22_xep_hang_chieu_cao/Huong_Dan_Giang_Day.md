@@ -1,46 +1,69 @@
-# Hướng Dẫn Giảng Dạy — Xếp Hàng Chiều Cao (`PYA-L16-P08`)
+# Hướng Dẫn Giảng Dạy: Xếp hàng chiều cao
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Trung bình trong 90 phút thi thử.
-- Rèn pattern ẩn: **list (sắp xếp tăng dần)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn sắp xếp danh sách.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là sắp xếp các chiều cao từ thấp đến cao.
+- Với số mẫu `N = 5`, các chiều cao `160 150 175 165 155`: xếp lại thành `150 155 160 165 175`.
+- Quy trình trong lời giải với các biến `n`, `data`:
+  - Đọc `n = 5`.
+  - Gom đủ 5 số vào `data = [160, 150, 175, 165, 155]` (vòng lặp gom đề phòng các số nằm rải rác nhiều dòng).
+  - Gọi `sorted` được `[150, 155, 160, 165, 175]` rồi in ra cách nhau bởi dấu cách.
+- Giá trị biên cụ thể: `N = 1` thì in nguyên chiều cao đó; `N` tới `10^5` vẫn sắp xếp kịp.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $N \le 10^5$.
-- Trường hợp biên: N = 1; mọi chiều cao bằng nhau.
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 / 160 150 175 165 155)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n` | `n = 5` |
+| 2 | Gom `data` | `data = [160, 150, 175, 165, 155]` |
+| 3 | Gọi `sorted` | `[150, 155, 160, 165, 175]` |
+| 4 | In kết quả | màn hình hiện `150 155 160 165 175` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `150 155 160 165 175`.
 
-- Bất biến: Sau khi sắp xếp, mỗi phần tử không lớn hơn phần tử đứng sau nó.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- 160 150 175 165 155 sắp xếp thành 150 155 160 165 175.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — sắp giảm dần thay vì tăng dần:
+```python
+n = int(input())
+data = []
+while len(data) < n:
+    data += list(map(int, input().split()))
+data = sorted(data[:n], reverse=True)
+print(" ".join(map(str, data)))
+```
+Với mẫu trên in ra `175 165 160 155 150` sai. Cách sửa: sắp tăng dần mặc định, không dùng `reverse=True`.
+- Bẫy 2 — in cả danh sách kèm ngoặc:
+```python
+n = int(input())
+data = []
+while len(data) < n:
+    data += list(map(int, input().split()))
+data = sorted(data[:n])
+print(data)
+```
+Với mẫu trên in ra `[150, 155, 160, 165, 175]` có ngoặc và dấu phẩy, không khớp đáp án mẫu. Cách sửa: in bằng `" ".join(map(str, data))`.
+- Bẫy 3 — loại trùng bằng tập hợp:
+```python
+n = int(input())
+data = []
+while len(data) < n:
+    data += list(map(int, input().split()))
+data = sorted(set(data))
+print(" ".join(map(str, data)))
+```
+Nếu hai bạn cao bằng nhau thì một bạn bị mất khỏi hàng. Cách sửa: sắp trực tiếp danh sách, không dùng `set`.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- In mỗi số trên một dòng; quên chuyển số thành chuỗi khi nối.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 n = int(input())
@@ -50,8 +73,3 @@ while len(data) < n:
 data = sorted(data[:n])
 print(" ".join(map(str, data)))
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.

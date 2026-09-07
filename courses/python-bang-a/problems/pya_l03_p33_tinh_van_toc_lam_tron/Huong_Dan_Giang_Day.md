@@ -1,83 +1,36 @@
-# Hướng Dẫn Giảng Dạy: Tính Vận Tốc Làm Tròn
+# Hướng Dẫn Giảng Dạy: Tính vận tốc làm tròn
 Chuyên đề: **Quãng đường – Vận tốc – Thời gian + Làm tròn**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tính Vận Tốc Làm Tròn** (`PYA-L03-P15`) bằng Python ở mức `Vận dụng`.
-* **Tư duy thuật toán:** Rèn luyện phản xạ dùng phép chia thực $V = D / T$ rồi định dạng `f-string` `:.2f`.
-* **Chuẩn code chuẩn:** Đọc 2 số nguyên, chia thực, in đúng 2 chữ số thập phân kể cả số 0 ở cuối.
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất vận tốc trung bình: quãng đường `d` chia thời gian `t`, rồi làm tròn đúng 2 chữ số sau dấu chấm.
+- Quy trình trong lời giải: đọc `d` dòng 1 và `t` dòng 2, rồi in `d / t` với 2 chữ số thập phân; với mẫu `d = 100` và `t = 6` thì `100 / 6 = 16.666...` làm tròn thành `16.67`.
+- Xử lý biên: `D` và `T` đều từ 1 đến 10000, vận tốc nhỏ nhất là 0.0001, lớn nhất là 10000, luôn in đủ 2 chữ số kể cả số tròn.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Hai số nguyên $D, T$ ($1 \le D, T \le 10^4$), kết quả là số thực cần làm tròn 2 chữ số.
-* **Bản chất toán học:** Vận tốc trung bình bằng quãng đường chia thời gian; phần thập phân vô hạn cần làm tròn.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Chia hết: $D = 100, T = 4$ phải in `25.00` chứ không phải `25.0` hay `25`.
- * Số lớn: $D = T = 10000$ cho `1.00`.
- * Học sinh dễ dùng `//` ra số nguyên hoặc `round()` thiếu số 0 đệm.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 100\n6)
+Với số mẫu dòng 1 là `100` và dòng 2 là `6`, chương trình phải in ra `16.67`.
+
+| Bước | Hành động | Giá trị biến | Kết quả |
+|---|---|---|---|
+| 1 | Đọc `d` | `d = 100` | quãng đường 100 |
+| 2 | Đọc `t` | `t = 6` | thời gian 6 |
+| 3 | Tính `d / t` | `100 / 6 = 16.666...` | làm tròn `16.67` khớp mẫu |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Vận tốc bằng quãng đường chia hay nhân thời gian? $100 : 6$ được khoảng bao nhiêu?
-2. Vì sao phải dùng `/` mà không dùng `//` ở bài này?
-3. `f"{x:.2f}"` có nghĩa là gì? Nếu kết quả là `25` thì máy in ra mấy chữ số sau dấu chấm?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — dùng chia nguyên: viết `print(d // t)` thì với mẫu ra `16` thay vì `16.67`; cách sửa là chia thực `d / t` rồi làm tròn 2 chữ số.
+- Bẫy 2 — in thô không làm tròn: viết `print(d / t)` thì với mẫu ra `16.666666666666668` thay vì `16.67`; cách sửa là ghi định dạng 2 chữ số thập phân.
+- Bẫy 3 — đọc hai số một dòng: viết `d, t = map(int, input().split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Đọc $D, T$; tính $D / T$ kiểu `float`; in bằng `f"{v:.2f}"` $\mathcal{O}(1)$.
-* **Bất biến thuật toán (Invariant):**
- > Chuỗi in ra luôn có đúng 2 chữ số sau dấu chấm, là dạng làm tròn gần nhất của thương $D : T$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-100
-6
-```
-* **Output:**
-```text
-16.67
-```
-* **Giải thích:** $100 : 6 = 16.666\ldots$, làm tròn 2 chữ số được $16.67$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Đọc `d, t` | `d=100, t=6` | Quãng đường và thời gian |
-| **2** | Tính `d / t` | `16.6666...` | Thương số thực |
-| **3** | Định dạng `:.2f` | `"16.67"` | Làm tròn 2 chữ số |
-| **4** | `print("16.67")` | Xuất kết quả | Khớp Sample Output |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.1\text{s}$ (vượt xa giới hạn $1.0\text{s}$).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, hai biến số trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **Dùng `//`:** Ra `16` thay vì `16.67` vì chia nguyên bỏ phần dư.
-2. **Dùng `round()` trần:** `print(round(v, 2))` in `25.0` thay vì `25.00` khi chia hết.
-3. **Quên ép kiểu:** Chia hai chuỗi `"100" / "6"` báo lỗi `TypeError`.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 d = int(input())
 t = int(input())
 print(f"{d / t:.2f}")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Tính quãng đường $S = V \times T$ khi biết vận tốc thập phân và thời gian.
-* **Mở rộng 2:** So sánh vận tốc hai bạn nhỏ và cho biết bạn nào nhanh hơn bao nhiêu km/h (làm tròn 2 chữ số).

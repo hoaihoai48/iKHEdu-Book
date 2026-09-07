@@ -1,81 +1,47 @@
-# Hướng Dẫn Giảng Dạy: Trò Chơi Oẳn Tù Tì
+# Hướng Dẫn Giảng Dạy: Trò chơi oẳn tù tì
 Chuyên đề: **Ngã Rẽ Quyết Định (if - else)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Trò Chơi Oẳn Tù Tì** (`PYA-L04-P12`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là luật thắng vòng tròn: `1` (Búa) thắng `2` (Kéo), `2` (Kéo) thắng `3` (Bao), `3` (Bao) thắng `1` (Búa); ra cùng số thì `HOA`.
+- Cách làm của lời giải mẫu: đọc `ti` và `teo` linh hoạt cả hai kiểu input; nếu `ti == teo` in `HOA`, nếu `(ti == 1 and teo == 2) or (ti == 2 and teo == 3) or (ti == 3 and teo == 1)` thì in `TI THANG`, còn lại in `TEO THANG`. Với mẫu `1` và `2`: cặp `(1, 2)` nằm trong nhóm Tí thắng nên in `TI THANG`.
+- Xử lý biên: mỗi lựa chọn chỉ là `1, 2, 3`. Thầy cô cho thử `1` và `3` (Bao thắng Búa, in `TEO THANG`) và `2` và `2` (in `HOA`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1 rồi 2)
+Sample 1 với input mẫu: `1` rồi `2`.
+| Bước | Việc làm | Giá trị các biến | In ra |
+|---|---|---|---|
+| 1 | Đọc dòng một | `ti = 1` (dòng một chỉ một số) | — |
+| 2 | Đọc dòng hai | `teo = 2` | — |
+| 3 | Kiểm tra `1 == 2`? Sai | xuống kiểm tra thắng | — |
+| 4 | Cặp `(1, 2)` thuộc nhóm Tí thắng? Đúng | rẽ nhánh hai | — |
+| 5 | In kết quả | — | `TI THANG` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — quên nhánh hòa: bạn nhỏ chỉ viết nhánh Tí thắng và còn lại Tèo thắng. Với `2` và `2` sẽ in `TEO THANG`, sai. Cách sửa: kiểm tra `ti == teo` trước tiên như lời giải mẫu.
+- Bẫy 2 — liệt thiếu cặp thắng: bạn nhỏ chỉ viết hai cặp `(1, 2)` và `(2, 3)` mà quên `(3, 1)`. Với `ti = 3, teo = 1` sẽ in `TEO THANG`, sai. Cách sửa: giữ đủ ba cặp nối bằng `or`.
+- Bẫy 3 — đọc cứng hai dòng: bạn nhỏ gọi `input()` hai lần mà không tách. Với input `1 2` trên một dòng sẽ thiếu. Cách sửa: tách dòng đầu rồi mới đọc tiếp như lời giải mẫu.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-1
-2
-```
-* **Output:**
-```text
-TI THANG
-```
-* **Giải thích:** Tí ra Búa (1), Tèo ra Kéo (2) $\to$ Tí thắng.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L04-P12: Trò Chơi Oẳn Tù Tì
-# Cài đặt code chuẩn Python 3
+dong1 = input().split()
+if len(dong1) >= 2:
+    ti = int(dong1[0])
+    teo = int(dong1[1])
+else:
+    ti = int(dong1[0])
+    teo = int(input().split()[0])
+if ti == teo:
+    print("HOA")
+elif (ti == 1 and teo == 2) or (ti == 2 and teo == 3) or (ti == 3 and teo == 1):
+    print("TI THANG")
+else:
+    print("TEO THANG")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

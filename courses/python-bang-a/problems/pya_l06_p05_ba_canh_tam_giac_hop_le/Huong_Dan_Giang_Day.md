@@ -1,85 +1,41 @@
-# Hướng Dẫn Giảng Dạy: Ba Cạnh Tam Giác Hợp Lệ
+# Hướng Dẫn Giảng Dạy: Ba cạnh tam giác hợp lệ
 Chuyên đề: **Liên Minh Điều Kiện (and - or - not)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Ba Cạnh Tam Giác Hợp Lệ** (`PYA-L06-P05`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là quy tắc tam giác: tổng hai cạnh bất kỳ phải lớn hơn cạnh còn lại, cả ba cặp đều phải đúng.
+- Cách làm của lời giải mẫu: đọc `a, b, c` mỗi số một dòng, nếu `a + b > c and a + c > b and b + c > a` thì in `HOP LE`, ngược lại in `KHONG HOP LE`. Với mẫu `3, 4, 5`: `3 + 4 = 7 > 5` đúng, `3 + 5 = 8 > 4` đúng, `4 + 5 = 9 > 3` đúng nên in `HOP LE`.
+- Xử lý biên: ràng buộc `1 <= a, b, c <= 10^9`. Thầy cô cho thử `2, 3, 6`: `2 + 3 = 5` không lớn hơn `6` nên in `KHONG HOP LE`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 rồi 4 rồi 5)
+Sample 1 với input mẫu: `3` rồi `4` rồi `5`.
+| Bước | Việc làm | Giá trị các biến | In ra |
+|---|---|---|---|
+| 1 | Đọc ba dòng | `a = 3, b = 4, c = 5` | — |
+| 2 | Kiểm tra `3 + 4 > 5`? `7 > 5` đúng | tiếp tục | — |
+| 3 | Kiểm tra `3 + 5 > 4`? `8 > 4` đúng | tiếp tục | — |
+| 4 | Kiểm tra `4 + 5 > 3`? `9 > 3` đúng, cả ba đúng | rẽ nhánh `if` | — |
+| 5 | In kết quả | — | `HOP LE` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — chỉ kiểm tra một cặp: bạn nhỏ viết `if a + b > c`. Với `2, 3, 6` thì `2 + 3 = 5 > 6` sai nên trùng cờ vẫn đúng, nhưng với `a = 10, b = 2, c = 3` thì `10 + 2 > 3` đúng mà tam giác vẫn sai. Cách sửa: kiểm tra đủ cả ba cặp nối bằng `and`.
+- Bẫy 2 — dùng `>=` thay vì `>`: bạn nhỏ viết `a + b >= c`. Với `2, 3, 5` (ba que thẳng hàng) sẽ in `HOP LE`, sai vì tổng phải lớn hơn hẳn. Cách sửa: dùng `>` như lời giải mẫu.
+- Bẫy 3 — in sai chữ: bạn nhỏ in `HOPLE` liền nhau. Với mẫu `3, 4, 5`, chương trình kiểm tra sẽ báo kết quả sai. Cách sửa: in đúng `HOP LE` có khoảng trắng ở giữa.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-3
-4
-5
-```
-* **Output:**
-```text
-HOP LE
-```
-* **Giải thích:** $3+4>5$, $3+5>4$, $4+5>3$ đều đúng.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-a, b, c = map(int, input().split())
+a = int(input())
+b = int(input())
+c = int(input())
 if a + b > c and a + c > b and b + c > a:
- print("YES")
+    print("HOP LE")
 else:
- print("NO")
+    print("KHONG HOP LE")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

@@ -1,80 +1,79 @@
-# Hướng Dẫn Giảng Dạy: Dãy Số Tam Giác (Triangular Numbers)
+# Hướng Dẫn Giảng Dạy: Dãy số tam giác (triangular numbers)
 Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Dãy Số Tam Giác (Triangular Numbers)** (`PYA-L09-P10`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là kiểm tra số sỏi `K` có xếp được thành hình tam giác không, tức có tồn tại `N` sao cho `N*(N+1)//2 = K` hay không.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: `k = int(input())` đọc số sỏi. Với mẫu, `k = 10`.
+  - Bước 2: đặt `n = 1` rồi lặp `while n * (n + 1) // 2 < k`, mỗi lần tăng `n` thêm 1 cho tới khi số tam giác đạt hoặc vượt `k`.
+  - Bước 3: nếu `n * (n + 1) // 2 == k` thì in `YES` kèm `n`, ngược lại in `NO`.
+- Giá trị biên cụ thể: với `k = 10` thì dừng ở `n = 4` vì `4*5//2 = 10`; đề bài cho `K` tới 1000000000 nên `n` lớn nhất khoảng 44720.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10)
+
+| Lần kiểm tra | `n` | `n * (n + 1) // 2` | So với `k = 10` | Việc làm |
+|---|---|---|---|---|
+| Khởi đầu | 1 | `1` | `1 < 10` | tăng `n` lên 2 |
+| 2 | 2 | `3` | `3 < 10` | tăng `n` lên 3 |
+| 3 | 3 | `6` | `6 < 10` | tăng `n` lên 4 |
+| 4 | 4 | `10` | `10 < 10` sai, dừng lặp | kiểm tra bằng nhau |
+
+- Vì `10 == 10` nên in ra `YES 4`, trùng kết quả mẫu (xếp được tam giác 4 tầng).
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-10
-```
-* **Output:**
-```text
-YES 4
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1: dùng điều kiện lặp `<=` thay vì `<`, vòng lặp chạy lố một bước. Với mẫu `k = 10` thì `n` thành 5 rồi kiểm tra `15 == 10` sai nên in `NO`, là kết quả sai. Cách sửa: lặp khi `< k`.
 ```python
-# Gợi ý mã nguồn cho PYA-L09-P10: Dãy Số Tam Giác (Triangular Numbers)
-# Cài đặt code chuẩn Python 3
+k = int(input())
+n = 1
+while n * (n + 1) // 2 <= k:
+    n += 1
+if n * (n + 1) // 2 == k:
+    print("YES", n)
+else:
+    print("NO")
+```
+- Bẫy 2: quên in kèm `n` khi đúng, chỉ in `YES`. Với mẫu sẽ in `YES` thiếu số `4`, là kết quả sai. Cách sửa: in `print("YES", n)`.
+```python
+k = int(input())
+n = 1
+while n * (n + 1) // 2 < k:
+    n += 1
+if n * (n + 1) // 2 == k:
+    print("YES")
+else:
+    print("NO")
+```
+- Bẫy 3: khởi đầu `n = 0` rồi kiểm tra bằng nhau ngay mà không xét đúng, với `k = 10` vẫn ra đúng nhưng với số tam giác nhỏ như `k = 1` vòng lặp không chạy và so `0 == 1` sai. Cách sửa: đặt `n = 1` như lời giải.
+```python
+k = int(input())
+n = 0
+while n * (n + 1) // 2 < k:
+    n += 1
+if n * (n + 1) // 2 == k:
+    print("YES", n)
+else:
+    print("NO")
 ```
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+k = int(input())
+n = 1
+while n * (n + 1) // 2 < k:
+    n += 1
+if n * (n + 1) // 2 == k:
+    print("YES", n)
+else:
+    print("NO")
+```

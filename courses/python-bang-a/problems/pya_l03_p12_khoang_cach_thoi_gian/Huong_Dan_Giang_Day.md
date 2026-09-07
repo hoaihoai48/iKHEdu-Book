@@ -1,66 +1,38 @@
-# Hướng Dẫn Giảng Dạy: Khoảng Cách Thời Gian
+# Hướng Dẫn Giảng Dạy: Khoảng thời gian giữa hai thời điểm trong ngày
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Khoảng Cách Thời Gian** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất khoảng cách thời gian: đổi mỗi thời điểm về phút rồi trừ nhau, tức `(h2 * 60 + m2) - (h1 * 60 + m1)`.
+- Quy trình trong lời giải: đọc một dòng rồi tách thành `h1, m1, h2, m2`, đặt `t1 = h1 * 60 + m1` và `t2 = h2 * 60 + m2` rồi in `t2 - t1`; với mẫu `8 30 10 15` thì `t1 = 8 * 60 + 30 = 510`, `t2 = 10 * 60 + 15 = 615`, hiệu `615 - 510 = 105`.
+- Xử lý biên: đề cho thời điểm sau không sớm hơn thời điểm trước trong cùng một ngày, hiệu nhỏ nhất là 0.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 8 30 10 15)
+Với số mẫu một dòng `8 30 10 15`, chương trình phải in ra `105`.
+
+| Bước | Hành động | Giá trị biến | Kết quả |
+|---|---|---|---|
+| 1 | Đọc `h1, m1, h2, m2` | `8, 30, 10, 15` | đủ bốn số |
+| 2 | Tính `t1 = 8 * 60 + 30` | `t1 = 510` | bắt đầu phút 510 |
+| 3 | Tính `t2 = 10 * 60 + 15` | `t2 = 615` | kết thúc phút 615 |
+| 4 | Tính `615 - 510` | `105` | khớp kết quả mẫu `105` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — chỉ trừ giờ: viết `print(h2 - h1)` thì với mẫu `8 30 10 15` ra `2` thay vì `105`; cách sửa là đổi cả hai thời điểm về phút `t1 = 510`, `t2 = 615` rồi trừ `t2 - t1`.
+- Bẫy 2 — trừ ngược: viết `print(t1 - t2)` thì với mẫu ra `-105` thay vì `105`; cách sửa là lấy thời điểm sau trừ thời điểm trước.
+- Bẫy 3 — đọc bốn dòng riêng: dùng bốn lần `input()` thì với mẫu một dòng sẽ bị treo chờ; cách sửa là tách một dòng bằng `split()`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 h1, m1, h2, m2 = map(int, input().split())
 t1 = h1 * 60 + m1
 t2 = h2 * 60 + m2
 print(t2 - t1)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

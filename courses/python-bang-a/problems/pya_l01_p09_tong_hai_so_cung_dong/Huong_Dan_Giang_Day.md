@@ -1,64 +1,33 @@
-# Hướng Dẫn Giảng Dạy: Tổng Hai Số Cùng Dòng
+# Hướng Dẫn Giảng Dạy: Tổng hai số trên cùng 1 dòng
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tổng Hai Số Cùng Dòng** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là cộng hai số `A = 45` và `B = 55` nằm chung trên một dòng, kết quả `45 + 55 = 100`. Thầy cô giải thích cả dòng `"45 55"` được cắt thành hai mảnh tại dấu cách rồi mới đổi sang số.
+- Quy trình gồm hai bước với hai biến `a` và `b` trong lời giải: dùng `map(int, input().split())` để cắt dòng `45 55` thành `45` và `55` rồi cất vào `a` và `b`, sau đó `print(a + b)` in ra `100`.
+- Xử lý biên: ràng buộc cho `A, B` từ `-10^9` tới `10^9`. Thầy cô cho các con thử cặp biên `-1000000000 -1000000000` cho ra `-2000000000`, và cặp `1000000000 1000000000` cho ra `2000000000`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 45 55)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a, b = map(int, input().split())` với bàn phím gõ `45 55` | `a = 45`, `b = 55` | (chưa in gì) |
+| 2 | `print(a + b)` tức `print(45 + 55)` | `a = 45`, `b = 55` | `100` |
+| 3 | Kết thúc chương trình | — | Kết quả cuối cùng: `100`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: đọc bằng hai lệnh `int(input())` riêng thì sau dòng `45 55` dòng đầu đã nuốt cả hai số và dòng thứ hai không còn gì để đọc, chương trình cứ chờ thêm. Cách sửa: đọc một dòng rồi cắt bằng `map(int, input().split())`.
+- Bẫy 2: quên đổi sang số, viết `a, b = input().split()` rồi `print(a + b)` thì với mẫu `45 55` máy nối chữ thành `4555` thay vì `100`. Cách sửa: bọc `map(int, ...)` để đổi cả hai mảnh thành số.
+- Bẫy 3: trừ thay vì cộng, viết `print(a - b)` thì với mẫu `45 55` màn hình hiện `-10` thay vì `100`. Cách sửa: bài hỏi tổng nên viết dấu `+`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 a, b = map(int, input().split())
 print(a + b)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

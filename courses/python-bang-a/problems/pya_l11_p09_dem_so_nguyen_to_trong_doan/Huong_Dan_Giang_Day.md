@@ -1,80 +1,55 @@
-# Hướng Dẫn Giảng Dạy: Đếm Số Nguyên Tố Trong Đoạn
+# Hướng Dẫn Giảng Dạy: Đếm số nguyên tố trong đoạn
 Chuyên đề: **Ước Số, Bội Số & Số Nguyên Tố Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đếm Số Nguyên Tố Trong Đoạn** (`PYA-L11-P09`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: xét từng `num` từ `10` tới `20`, số nào là số nguyên tố thì `dem = dem + 1`.
+- Số nhỏ hơn `2` bị bỏ qua bằng `continue`; mỗi số còn lại được thử chia từ `2` tới căn bậc hai của nó.
+- Trong đoạn `10` tới `20` chỉ có `11, 13, 17, 19` vượt qua vòng kiểm tra nên `dem = 4`.
+- Thầy cô cho các em khoanh trước `11, 13, 17, 19` trên giấy rồi đối chiếu với chương trình.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10 20)
+| `num` | Kiểm tra | Kết luận | `dem` |
+| --- | --- | --- | --- |
+| 10 | `10 % 2 == 0` | hợp số | 0 |
+| 11 | không chia hết cho 2, 3 | nguyên tố | 1 |
+| 12 | `12 % 2 == 0` | hợp số | 1 |
+| 13 | không chia hết cho 2, 3 | nguyên tố | 2 |
+| 14 | `14 % 2 == 0` | hợp số | 2 |
+| 15 | `15 % 3 == 0` | hợp số | 2 |
+| 16 | `16 % 2 == 0` | hợp số | 2 |
+| 17 | không chia hết cho 2, 3, 4 | nguyên tố | 3 |
+| 18 | `18 % 2 == 0` | hợp số | 3 |
+| 19 | không chia hết cho 2, 3, 4 | nguyên tố | 4 |
+| 20 | `20 % 2 == 0` | hợp số | 4 |
+
+Kết quả in ra: `4`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên bỏ qua số nhỏ hơn `2` khi đoạn bắt đầu từ `1`. Đoạn sai thiếu `if num < 2: continue` có thể đếm nhầm `1` thành số nguyên tố. Sửa lại: giữ nguyên dòng `continue` như bài giải.
+- Bẫy 2: đặt lại `dem = 0` bên trong vòng lặp. Với mẫu `10 20` mỗi lần gặp nguyên tố `dem` lại tính từ đầu, cuối cùng in `1` thay vì `4`. Sửa lại: `dem = 0` nằm trước vòng `for num`.
+- Bẫy 3: duyệt `range(a, b)` thiếu `b`. Với mẫu `10 20` sẽ bỏ qua số `20` (không ảnh hưởng đáp án này) nhưng với đoạn `10 19` sẽ mất số `19` và ra `3`. Sửa lại: `range(a, b + 1)`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-10 20
-```
-* **Output:**
-```text
-4
-```
-* **Giải thích:** Có 4 số nguyên tố: 11, 13, 17, 19.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L11-P09: Đếm Số Nguyên Tố Trong Đoạn
-# Cài đặt code chuẩn Python 3
+a, b = map(int, input().split())
+dem = 0
+for num in range(a, b + 1):
+    if num < 2:
+        continue
+    la_snt = True
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            la_snt = False
+            break
+    if la_snt:
+        dem = dem + 1
+print(dem)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

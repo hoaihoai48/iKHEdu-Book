@@ -1,87 +1,42 @@
-# Hướng Dẫn Giảng Dạy: Bốn Mùa Trong Năm
+# Hướng Dẫn Giảng Dạy: Bốn mùa trong năm
 Chuyên đề: **Lựa Chọn Nhiều Hướng (if - elif - else)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Bốn Mùa Trong Năm** (`PYA-L05-P12`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là tra tháng `t` vào bốn nhóm: `1, 2, 3` là `XUAN`; `4, 5, 6` là `HA`; `7, 8, 9` là `THU`; `10, 11, 12` là `DONG`.
+- Cách làm của lời giải mẫu: đọc `t`, kiểm tra `if t in [1, 2, 3]` rồi tới các `elif` theo nhóm. Với mẫu `t = 4`: nhóm xuân sai, nhóm `4, 5, 6` đúng nên in `HA`.
+- Xử lý biên: ràng buộc `-100 <= M <= 100`. Thầy cô lưu ý lời giải mẫu không có nhánh cho tháng ngoài `1..12`, nên với `M = 0` hay `M = 13` chương trình không in gì; khi dạy cần đối chiếu với chương trình kiểm tra của lớp mình.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4)
+Sample 1 với input mẫu: `4`.
+| Bước | Việc làm | Giá trị của `t` | In ra |
+|---|---|---|---|
+| 1 | Đọc input | `t = 4` | — |
+| 2 | Kiểm tra `4` trong `[1, 2, 3]`? Sai | xuống nhánh `elif` | — |
+| 3 | Kiểm tra `4` trong `[4, 5, 6]`? Đúng | rẽ nhánh hai | — |
+| 4 | In kết quả | — | `HA` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — viết điều kiện dài dòng sai: bạn nhỏ viết `if t == 4 or 5 or 6`. Với `t = 1` cụm này vẫn đúng nên in `HA`, sai. Cách sửa: dùng `t in [4, 5, 6]` như lời giải mẫu.
+- Bẫy 2 — xếp tháng `6` vào mùa thu: bạn nhỏ viết nhóm thu là `[6, 7, 8]`. Với `t = 6` sẽ in `THU` thay vì `HA`. Cách sửa: giữ đúng bốn nhóm của lời giải mẫu.
+- Bẫy 3 — in `HE` thay vì `HA`: đề kể mùa Hạ (Hè) nên có bạn in `HE`. Với mẫu `4`, chương trình kiểm tra chờ `HA` nên sẽ báo kết quả sai. Cách sửa: in đúng `HA`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-10
-```
-* **Output:**
-```text
-20
-```
-* **Giải thích:** Chạy thử nghiệm mẫu cho bài toán Bốn Mùa Trong Năm.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 t = int(input().strip())
 if t in [1, 2, 3]:
- print("XUAN")
+    print("XUAN")
 elif t in [4, 5, 6]:
- print("HA")
+    print("HA")
 elif t in [7, 8, 9]:
- print("THU")
+    print("THU")
 elif t in [10, 11, 12]:
- print("DONG")
+    print("DONG")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

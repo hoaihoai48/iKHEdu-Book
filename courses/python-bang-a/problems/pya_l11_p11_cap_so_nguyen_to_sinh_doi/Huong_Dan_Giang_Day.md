@@ -1,82 +1,57 @@
-# Hướng Dẫn Giảng Dạy: Cặp Số Nguyên Tố Sinh Đôi
+# Hướng Dẫn Giảng Dạy: Cặp số nguyên tố sinh đôi
 Chuyên đề: **Ước Số, Bội Số & Số Nguyên Tố Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Cặp Số Nguyên Tố Sinh Đôi** (`PYA-L11-P11`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: cặp sinh đôi là hai số nguyên tố hơn kém nhau đúng `2` đơn vị, tức `(p, p + 2)` với `p + 2 <= 15`.
+- Chương trình cho `p` chạy từ `2` tới `13`, mỗi `p` kiểm tra cả `p` và `q = p + 2` có phải số nguyên tố không.
+- Với `N = 15`: `p = 3` cho cặp `3 5`, `p = 5` cho cặp `5 7`, `p = 11` cho cặp `11 13`; các `p` còn lại có ít nhất một số là hợp số.
+- Mỗi cặp in trên một dòng theo thứ tự tăng dần của `p`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 15)
+| `p` | `q = p + 2` | Kiểm tra | In? |
+| --- | --- | --- | --- |
+| 2 | 4 | `4 % 2 == 0`, hợp số | không |
+| 3 | 5 | cả hai nguyên tố | in `3 5` |
+| 4 | 6 | `4 % 2 == 0`, hợp số | không |
+| 5 | 7 | cả hai nguyên tố | in `5 7` |
+| 6–10 | 8–12 | `p` hoặc `q` chẵn, hợp số | không |
+| 11 | 13 | cả hai nguyên tố | in `11 13` |
+| 12 | 14 | hợp số | không |
+| 13 | 15 | `15 % 3 == 0`, hợp số | không |
+
+Kết quả in ra ba dòng `3 5`, `5 7`, `11 13`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên điều kiện `q <= n`. Với mẫu `15`, `p = 13` cho `q = 15` là hợp số nên không sao, nhưng với `N = 14` mà thiếu điều kiện, cặp `13 15` vẫn bị xét. Sửa lại: giữ `if la_snt_p and la_snt_q and q <= n`.
+- Bẫy 2: in hai số trên cùng một dòng cách nhau bởi dấu phẩy. Với mẫu `15` dòng đầu thành `3, 5`, chương trình kiểm tra không chấp nhận. Sửa lại: `print(p, q)` (mặc định cách nhau một khoảng trắng).
+- Bẫy 3: chỉ kiểm tra `p` mà quên kiểm tra `q`. Với mẫu `15`, `p = 7` là nguyên tố nhưng `q = 9` là hợp số, làm sai sẽ in thêm dòng `7 9`. Sửa lại: kiểm tra cả hai cờ như bài giải.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-15
-```
-* **Output:**
-```text
-3 5
-5 7
-11 13
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L11-P11: Cặp Số Nguyên Tố Sinh Đôi
-# Cài đặt code chuẩn Python 3
+n = int(input())
+for p in range(2, n - 1):
+    la_snt_p = True
+    if p < 2:
+        la_snt_p = False
+    else:
+        for i in range(2, int(p ** 0.5) + 1):
+            if p % i == 0:
+                la_snt_p = False
+                break
+    q = p + 2
+    la_snt_q = True
+    for i in range(2, int(q ** 0.5) + 1):
+        if q % i == 0:
+            la_snt_q = False
+            break
+    if la_snt_p and la_snt_q and q <= n:
+        print(p, q)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

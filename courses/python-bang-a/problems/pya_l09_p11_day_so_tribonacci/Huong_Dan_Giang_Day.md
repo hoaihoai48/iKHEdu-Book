@@ -1,80 +1,82 @@
-# Hướng Dẫn Giảng Dạy: Dãy Số Tribonacci
+# Hướng Dẫn Giảng Dạy: Dãy số Tribonacci
 Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Dãy Số Tribonacci** (`PYA-L09-P11`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này giống dãy Fibonacci nhưng mỗi số bằng tổng ba số liền trước: `T1 = 1, T2 = 1, T3 = 2`, từ số thứ 4 trở đi `Tn = T(n-1) + T(n-2) + T(n-3)`.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: `n = int(input().strip())` đọc vị trí cần tìm. Với mẫu, `n = 5`.
+  - Bước 2: đặt `a, b, c = 1, 1, 2` tượng trưng cho `T1, T2, T3`.
+  - Bước 3: vì `n = 5` lớn hơn 3 nên lặp `n - 3 = 2` lần, mỗi lần trượt `a, b, c = b, c, a + b + c`.
+  - Bước 4: in `c`.
+- Giá trị biên cụ thể: khi `n = 1` hoặc `n = 2` in `1`, khi `n = 3` in `2`; đề bài giới hạn `1 <= N <= 35` nên không lo số quá lớn.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5)
+
+| Lần lặp | `a` trước | `b` trước | `c` trước | Tổng `a + b + c` | Bộ ba sau lặp |
+|---|---|---|---|---|---|
+| Khởi đầu | 1 | 1 | 2 | — | (1, 1, 2) |
+| 1 | 1 | 1 | 2 | `1 + 1 + 2 = 4` | (1, 2, 4) |
+| 2 | 1 | 2 | 4 | `1 + 2 + 4 = 7` | (2, 4, 7) |
+
+- Sau 2 lần lặp thì `c = 7`, lệnh `print(c)` in ra `7`, trùng kết quả mẫu. Dãy viết ra là 1, 1, 2, 4, 7 nên số thứ 5 đúng là 7.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5
-```
-* **Output:**
-```text
-7
-```
-* **Giải thích:** Dãy là: 1, 1, 2, 4, 7... Số thứ 5 là $1+2+4=7$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1: lặp đúng `n` lần thay vì `n - 3` lần. Với mẫu `n = 5` sẽ lặp 5 lần và `c` vượt xa 7, là kết quả sai. Cách sửa: dùng `range(n - 3)`.
 ```python
-# Gợi ý mã nguồn cho PYA-L09-P11: Dãy Số Tribonacci
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+a, b, c = 1, 1, 2
+if n == 1 or n == 2:
+    print(1)
+elif n == 3:
+    print(2)
+else:
+    for _ in range(n):
+        a, b, c = b, c, a + b + c
+    print(c)
+```
+- Bẫy 2: quên xử lý riêng `n = 1, 2, 3` mà cho chạy vòng lặp ngay. Với `n = 1` thì `range(-2)` rỗng và in `c = 2`, là kết quả sai (đáp án đúng là 1). Cách sửa: rẽ nhánh như lời giải.
+```python
+n = int(input().strip())
+a, b, c = 1, 1, 2
+for _ in range(n - 3):
+    a, b, c = b, c, a + b + c
+print(c)
+```
+- Bẫy 3: công thức thiếu một số hạng, viết `a, b, c = b, c, b + c`. Với mẫu lần lặp 1 cho `c = 3` thay vì 4, kết quả cuối sai. Cách sửa: cộng đủ ba số `a + b + c`.
+```python
+n = int(input().strip())
+a, b, c = 1, 1, 2
+if n == 1 or n == 2:
+    print(1)
+elif n == 3:
+    print(2)
+else:
+    for _ in range(n - 3):
+        a, b, c = b, c, b + c
+    print(c)
 ```
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+n = int(input().strip())
+a, b, c = 1, 1, 2
+if n == 1 or n == 2:
+    print(1)
+elif n == 3:
+    print(2)
+else:
+    for _ in range(n - 3):
+        a, b, c = b, c, a + b + c
+    print(c)
+```

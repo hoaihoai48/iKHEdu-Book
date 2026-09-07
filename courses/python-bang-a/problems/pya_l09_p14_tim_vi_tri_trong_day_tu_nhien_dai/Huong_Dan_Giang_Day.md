@@ -1,80 +1,91 @@
-# Hướng Dẫn Giảng Dạy: Tìm Vị Trí Trong Dãy Tự Nhiên Dài
+# Hướng Dẫn Giảng Dạy: Tìm vị trí trong dãy tự nhiên dài
 Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tìm Vị Trí Trong Dãy Tự Nhiên Dài** (`PYA-L09-P14`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là dải số `123456789101112...` được chia thành từng khối: khối số có 1 chữ số (từ 1 tới 9) dài 9 chữ số, khối số có 2 chữ số dài 180 chữ số, và cứ thế tiếp tục.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: đọc `k = 7` (vị trí cần tìm), đặt `length = 1` (số chữ số của khối hiện tại), `count = 9` (có bao nhiêu số trong khối), `start = 1` (số đầu khối).
+  - Bước 2: lặp `while k > length * count` để trừ dần cả khối: khi `k` còn nằm trong khối hiện tại thì dừng.
+  - Bước 3: số chứa vị trí cần tìm là `num = start + (k - 1) // length`, vị trí chữ số trong số đó là `idx = (k - 1) % length`, rồi in `str(num)[idx]`.
+- Giá trị biên cụ thể: với mẫu `k = 7` thì `7 > 1*9` sai nên dừng ngay ở khối 1 chữ số; đề bài cho `K` tới 100000 nên `k` có thể rơi vào khối số có 5 chữ số.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 7)
+
+| Bước | Việc làm | `k` | `length` | `count` | `start` | Ghi chú |
+|---|---|---|---|---|---|---|
+| 1 | Đọc `k`, đặt khởi đầu | 7 | 1 | 9 | 1 | khối số 1 chữ số dài `1*9 = 9` chữ số |
+| 2 | Kiểm tra `k > 9` | 7 | 1 | 9 | 1 | `7 > 9` sai, dừng lặp |
+| 3 | Tính `num = 1 + (7-1)//1` | 7 | 1 | 9 | 1 | `num = 7` |
+| 4 | Tính `idx = (7-1)%1` | 7 | 1 | 9 | 1 | `idx = 0` |
+| 5 | In `str(7)[0]` | 7 | 1 | 9 | 1 | in ra `7` |
+
+- Chữ số thứ 7 trong dải `1234567...` đúng là `7`, trùng kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-7
-```
-* **Output:**
-```text
-7
-```
-* **Giải thích:** Ký tự thứ 7 là số 7.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1: quên trừ 1 khi tính `num`, viết `num = start + k // length`. Với mẫu `k = 7` sẽ ra `num = 8`, in ra `8`, là kết quả sai. Cách sửa: dùng `(k - 1) // length`.
 ```python
-# Gợi ý mã nguồn cho PYA-L09-P14: Tìm Vị Trí Trong Dãy Tự Nhiên Dài
-# Cài đặt code chuẩn Python 3
+k = int(input().strip())
+length = 1
+count = 9
+start = 1
+while k > length * count:
+    k -= length * count
+    length += 1
+    count *= 10
+    start *= 10
+num = start + k // length
+idx = (k - 1) % length
+print(str(num)[idx])
+```
+- Bẫy 2: nhầm điều kiện lặp thành `>=`, khối bị trừ lố. Với `k = 9` (đúng chữ số cuối khối 1 chữ số) vòng lặp trừ mất cả khối và nhảy sang khối 2 chữ số, cho kết quả sai. Cách sửa: lặp khi `k > length * count`.
+```python
+k = int(input().strip())
+length = 1
+count = 9
+start = 1
+while k >= length * count:
+    k -= length * count
+    length += 1
+    count *= 10
+    start *= 10
+num = start + (k - 1) // length
+idx = (k - 1) % length
+print(str(num)[idx])
+```
+- Bẫy 3: nối cả dải số thành chuỗi rồi lấy vị trí thứ `k`. Với `K = 100000` chuỗi dài hàng trăm nghìn ký tự, vừa tốn trí nhớ vừa chậm. Cách sửa: trừ dần từng khối như lời giải để tìm thẳng khối chứa `k`.
+```python
+k = int(input().strip())
+s = ""
+i = 1
+while len(s) < k:
+    s = s + str(i)
+    i += 1
+print(s[k - 1])
 ```
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+k = int(input().strip())
+length = 1
+count = 9
+start = 1
+while k > length * count:
+    k -= length * count
+    length += 1
+    count *= 10
+    start *= 10
+num = start + (k - 1) // length
+idx = (k - 1) % length
+print(str(num)[idx])
+```

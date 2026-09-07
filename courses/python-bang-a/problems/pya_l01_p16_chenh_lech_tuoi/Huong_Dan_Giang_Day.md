@@ -1,64 +1,33 @@
-# Hướng Dẫn Giảng Dạy: Chênh Lệch Tuổi Hai Anh Em
+# Hướng Dẫn Giảng Dạy: Chênh lệch tuổi của hai anh em
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Chênh Lệch Tuổi Hai Anh Em** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là tính anh hơn em bao nhiêu tuổi: tuổi anh `A = 12` trừ tuổi em `E = 7` được `5`, rồi đặt số `5` vào khung câu `Anh hon em 5 tuoi.`. Thầy cô cho các con đếm từ 7 lên 12 xem chênh mấy tuổi.
+- Quy trình gồm hai bước với hai biến `a` và `e` trong lời giải: dùng `map(int, input().split())` để cắt dòng `12 7` thành `12` và `7` rồi cất vào `a` và `e`, sau đó dùng chuỗi `f"Anh hon em {a - e} tuoi."` để tính `12 - 7 = 5` và ghép vào câu.
+- Xử lý biên: ràng buộc cho `1 <= E <= A <= 100` nên anh luôn lớn tuổi hơn hoặc bằng em. Thầy cô cho các con thử biên bằng nhau `100 100` cho ra `Anh hon em 0 tuoi.`, và biên `100 1` cho ra `Anh hon em 99 tuoi.`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 12 7)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a, e = map(int, input().split())` với bàn phím gõ `12 7` | `a = 12`, `e = 7` | (chưa in gì) |
+| 2 | `print(f"Anh hon em {a - e} tuoi.")` tức tính `12 - 7 = 5` rồi ghép vào câu | `a = 12`, `e = 7` | `Anh hon em 5 tuoi.` |
+| 3 | Kết thúc chương trình | — | Kết quả cuối cùng: `Anh hon em 5 tuoi.`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: chỉ in hiệu `print(a - e)` thì với mẫu `12 7` màn hình hiện `5` thay vì `Anh hon em 5 tuoi.` nên bị tính là kết quả sai. Cách sửa: in cả câu bằng `print(f"Anh hon em {a - e} tuoi.")`.
+- Bẫy 2: trừ ngược `e - a` thì với mẫu `12 7` câu hiện `Anh hon em -5 tuoi.` có số âm lạ. Cách sửa: nhớ anh trừ em, viết `a - e`.
+- Bẫy 3: quên dấu chấm cuối câu, in ra `Anh hon em 5 tuoi` thiếu dấu `.` nên bị tính là kết quả sai. Cách sửa: sao chép đúng mẫu có dấu chấm ở cuối.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 a, e = map(int, input().split())
 print(f"Anh hon em {a - e} tuoi.")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

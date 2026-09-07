@@ -1,83 +1,67 @@
-# Hướng Dẫn Giảng Dạy: Điểm Trung Bình Môn Học
+# Hướng Dẫn Giảng Dạy: Điểm trung bình môn học
 Chuyên đề: **Thống Kê Danh Sách & Sắp Xếp Nâng Cao**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Điểm Trung Bình Môn Học** (`PYA-L17-P03`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là cộng mọi điểm rồi chia cho số bài, sau đó in với đúng 2 chữ số sau dấu chấm.
+- Với số mẫu `N = 4`, các điểm `8 9 7 10`: tổng `34` chia `4` được `8.5`, viết đủ 2 chữ số thành `8.50`.
+- Quy trình trong lời giải với các biến `n`, `a`, `tb`:
+  - Đọc `n = 4`, dãy điểm `a = [8.0, 9.0, 7.0, 10.0]`.
+  - Tính `tb = 34.0 / 4 = 8.5`.
+  - In theo mẫu 2 chữ số được `8.50`.
+- Giá trị biên cụ thể: `N = 1` thì trung bình chính là điểm duy nhất đó (ví dụ `7` thì in `7.00`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 / 8 9 7 10)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n` | `n = 4` |
+| 2 | Đọc dãy `a` | `a = [8.0, 9.0, 7.0, 10.0]` |
+| 3 | Tính `tb = sum(a) / n` | `34.0 / 4 = 8.5` |
+| 4 | In với 2 chữ số | màn hình hiện `8.50` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `8.50`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4
-8 9 7 10
+- Bẫy 1 — in trực tiếp nên thiếu số 0 cuối:
+```python
+n = int(input().strip())
+a = list(map(float, input().split()))
+tb = sum(a) / n
+print(tb)
 ```
-* **Output:**
-```text
-8.50
+Với mẫu trên in ra `8.5`, không khớp đáp án mẫu `8.50`. Cách sửa: in bằng `print(f"{tb:.2f}")`.
+- Bẫy 2 — chia nguyên làm mất phần lẻ:
+```python
+n = int(input().strip())
+a = list(map(float, input().split()))
+tb = sum(a) // n
+print(f"{tb:.2f}")
 ```
-* **Giải thích:** $(8 + 9 + 7 + 10) / 4 = 8.5$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
+Với mẫu trên `34.0 // 4 = 8.0` nên in ra `8.00` sai. Cách sửa: chia thực bằng `/`.
+- Bẫy 3 — đọc điểm bằng số nguyên nên lỗi khi gặp điểm lẻ:
+```python
+n = int(input().strip())
+a = list(map(int, input().split()))
+tb = sum(a) / n
+print(f"{tb:.2f}")
+```
+Với mẫu toàn điểm nguyên vẫn ra `8.50`, nhưng điểm `7.5` trong đề là số thực nên `int("7.5")` gây lỗi chương trình. Cách sửa: đọc bằng `map(float, input().split())`.
 
 ---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+## 4. Lời giải tham khảo
 
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
 n = int(input().strip())
 a = list(map(float, input().split()))
 tb = sum(a) / n
 print(f"{tb:.2f}")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

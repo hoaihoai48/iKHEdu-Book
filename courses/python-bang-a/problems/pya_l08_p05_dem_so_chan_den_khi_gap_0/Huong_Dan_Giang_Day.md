@@ -1,84 +1,65 @@
-# Hướng Dẫn Giảng Dạy: Đếm Số Chẵn Đến Khi Gặp 0
+# Hướng Dẫn Giảng Dạy: Đếm số chẵn đến khi gặp 0
 Chuyên đề: **Vòng Lặp while & Người Lính Canh**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đếm Số Chẵn Đến Khi Gặp 0** (`PYA-L08-P05`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: vừa đọc tới số 0 thì dừng (như bài đếm số lượng), vừa chỉ đếm những số chia hết cho 2 (`x % 2 == 0`). Số 0 dừng vòng lặp không được đếm.
+- Quy trình trong lời giải: đặt `count = 0`; `while True` đọc `x`; nếu `x == 0` thì `break`; nếu `x % 2 == 0` thì tăng `count`; cuối cùng in `count`.
+- Xử lý biên: nếu nhập ngay số 0 thì kết quả là 0; dãy mẫu 4, 7, 8, 12 cho 3 số chẵn.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 / 7 / 8 / 12 / 0)
+| Lần đọc | Giá trị của `x` | Kiểm tra | `count` sau bước |
+|---|---|---|---|
+| đầu | — | — | 0 |
+| 1 | 4 | chẵn, đếm | 1 |
+| 2 | 7 | lẻ, bỏ qua | 1 |
+| 3 | 8 | chẵn, đếm | 2 |
+| 4 | 12 | chẵn, đếm | 3 |
+| 5 | 0 | dừng | 3 |
+
+In ra `3` (các số 4, 8, 12), khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4
-7
-8
-12
-0
-```
-* **Output:**
-```text
-3
-```
-* **Giải thích:** Có 3 số chẵn là 4, 8, 12.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — kiểm tra chẵn trước khi kiểm tra 0:
 ```python
-# Gợi ý mã nguồn cho PYA-L08-P05: Đếm Số Chẵn Đến Khi Gặp 0
-# Cài đặt code chuẩn Python 3
+count = 0
+while True:
+    x = int(input())
+    if x % 2 == 0:
+        count = count + 1
+    if x == 0:
+        break
+print(count)
 ```
+Với mẫu `4 / 7 / 8 / 12 / 0` sẽ đếm luôn số 0 (0 chia hết cho 2) nên in ra `4` thay vì `3`. Cách sửa: kiểm tra `if x == 0: break` trước.
+- Bẫy 2 — đếm số lẻ:
+```python
+count = 0
+while True:
+    x = int(input())
+    if x == 0:
+        break
+    if x % 2 == 1:
+        count = count + 1
+print(count)
+```
+Với mẫu sẽ in ra `1` (chỉ có số 7) thay vì `3`. Cách sửa: điều kiện đúng là `x % 2 == 0`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.
+## 4. Lời giải tham khảo
+```python
+count = 0
+while True:
+    x = int(input())
+    if x == 0:
+        break
+    if x % 2 == 0:
+        count = count + 1
+print(count)
+```

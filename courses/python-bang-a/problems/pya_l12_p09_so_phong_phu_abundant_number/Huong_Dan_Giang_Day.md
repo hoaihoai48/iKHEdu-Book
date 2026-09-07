@@ -1,80 +1,51 @@
-# Hướng Dẫn Giảng Dạy: Số Phong Phú (Abundant Number)
+# Hướng Dẫn Giảng Dạy: Số phong phú (abundant number)
 Chuyên đề: **Đếm Số Theo Quy Luật & Các Con Số Đặc Biệt**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Số Phong Phú (Abundant Number)** (`PYA-L12-P09`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: số phong phú là số mà tổng các ước nhỏ hơn nó lớn hơn chính nó; xét từng `num` từ `1` tới `20`.
+- `num = 12`: ước nhỏ hơn là `1, 2, 3, 4, 6`, tổng `16 > 12` nên ghi `12`.
+- `num = 18`: ước nhỏ hơn là `1, 2, 3, 6, 9`, tổng `21 > 18` nên ghi `18`.
+- `num = 20`: ước nhỏ hơn là `1, 2, 4, 5, 10`, tổng `22 > 20` nên ghi `20`; các số còn lại không thỏa mãn.
+- Danh sách cuối là `["12", "18", "20"]`, in ra `12 18 20`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 20)
+| `num` | Các ước nhỏ hơn | Tổng | So với `num` | Ghi? |
+| --- | --- | --- | --- | --- |
+| 12 | `1, 2, 3, 4, 6` | 16 | `16 > 12` | ghi |
+| 18 | `1, 2, 3, 6, 9` | 21 | `21 > 18` | ghi |
+| 20 | `1, 2, 4, 5, 10` | 22 | `22 > 20` | ghi |
+| các số khác tới 20 | — | `<= num` | không lớn hơn | không ghi |
+
+Kết quả in ra: `12 18 20`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: dùng điều kiện `tong == num` (số hoàn hảo) thay vì `tong > num`. Với mẫu `20` không số nào thỏa mãn nên chẳng in gì. Sửa lại: `if tong > num` như bài giải.
+- Bẫy 2: cộng cả chính `num` vào tổng. Khi đó mọi số đều có tổng lớn hơn chính nó và in ra cả dãy `1..20`. Sửa lại: chỉ cộng khi `i < num` và `j < num` như bài giải.
+- Bẫy 3: so sánh `tong >= num`. Với mẫu `20` thì trùng cờ vẫn ra `12 18 20`, nhưng với đoạn chứa số hoàn hảo như `6` sẽ ghi thừa số `6`. Sửa lại: điều kiện đúng là `tong > num`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-20
-```
-* **Output:**
-```text
-12 18 20
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L12-P09: Số Phong Phú (Abundant Number)
-# Cài đặt code chuẩn Python 3
+n = int(input())
+ket_qua = []
+for num in range(1, n + 1):
+    tong = 0
+    for i in range(1, int(num ** 0.5) + 1):
+        if num % i == 0:
+            j = num // i
+            if i < num:
+                tong = tong + i
+            if j != i and j < num:
+                tong = tong + j
+    if tong > num:
+        ket_qua.append(str(num))
+if ket_qua:
+    print(" ".join(ket_qua))
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

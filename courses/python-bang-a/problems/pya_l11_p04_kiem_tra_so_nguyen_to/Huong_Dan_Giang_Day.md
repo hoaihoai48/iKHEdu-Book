@@ -1,80 +1,55 @@
-# Hướng Dẫn Giảng Dạy: Kiểm Tra Số Nguyên Tố
+# Hướng Dẫn Giảng Dạy: Kiểm tra số nguyên tố
 Chuyên đề: **Ước Số, Bội Số & Số Nguyên Tố Cơ Bản**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Kiểm Tra Số Nguyên Tố** (`PYA-L11-P04`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: số nguyên tố là số lớn hơn `1` và không chia hết cho số nào từ `2` tới căn bậc hai của nó.
+- Với `n = 7`: `7 >= 2` nên đi tiếp; chỉ cần thử `i = 2` vì căn bậc hai của `7` khoảng `2,6`.
+- `7 % 2 = 1` nên cờ `la_snt` giữ nguyên `True` và in ra `YES`.
+- Thầy cô nhắc thêm hai mốc trong đề: `n = 1` in `NO` (nhỏ hơn `2`), `n = 9` in `NO` (vì `9 % 3 == 0`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 7)
+| Bước | Giá trị | Ghi chú |
+| --- | --- | --- |
+| Đọc | `n = 7` | |
+| So `n < 2` | `7 < 2` sai | đi tiếp |
+| `i = 2` | `7 % 2 = 1` | không chia hết, `la_snt` vẫn `True` |
+| Hết vòng | căn của 7 khoảng 2,6 | chỉ thử tới `2` |
+| Kết luận | `la_snt` đúng | in `YES` |
+
+Kết quả in ra: `YES`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-7
-```
-* **Output:**
-```text
-YES
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên loại số nhỏ hơn `2`. Đoạn sai:
 ```python
-# Gợi ý mã nguồn cho PYA-L11-P04: Kiểm Tra Số Nguyên Tố
-# Cài đặt code chuẩn Python 3
+la_snt = True
+for i in range(2, int(n ** 0.5) + 1):
+    ...
 ```
+với `n = 1` vòng lặp rỗng nên vẫn in `YES`, là kết quả sai. Sửa lại: giữ nhánh `if n < 2: print("NO")` như bài giải.
+- Bẫy 2: thử tới `n - 1` thay vì tới căn bậc hai. Với `n = 7` vẫn đúng nhưng với `n` tới `10^7` vòng lặp quá dài, chương trình chạy không xong. Sửa lại: `range(2, int(n ** 0.5) + 1)`.
+- Bẫy 3: in `True`/`False`. Với mẫu `7` sẽ in `True` thay vì `YES`. Sửa lại: in đúng chữ hoa `YES`/`NO`.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+```python
+n = int(input())
+if n < 2:
+    print("NO")
+else:
+    la_snt = True
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            la_snt = False
+            break
+    if la_snt:
+        print("YES")
+    else:
+        print("NO")
+```

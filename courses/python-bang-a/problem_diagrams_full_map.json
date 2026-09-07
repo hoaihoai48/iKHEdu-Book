@@ -1,0 +1,314 @@
+{
+  "pya_l01_p01_loi_chao_robot": [
+    "tl_robot_greeting.png",
+    "Hệ thống robot tự hành phát lời chào"
+  ],
+  "pya_l01_p02_cau_doi_tet": [
+    "tl_couplet_banner.png",
+    "Bảng điện tử hiển thị hai vế câu đối"
+  ],
+  "pya_l01_p05_doc_in_so_nguyen": [
+    "tl_ticket_number.png",
+    "Máy đếm vé và in mã số may mắn"
+  ],
+  "pya_l01_p03_in_so_sep": [
+    "tl_sep_hyphen.png",
+    "In các số nối nhau bằng dấu gạch ngang"
+  ],
+  "pya_l01_p25_nhan_doi_gia_tri": [
+    "tl_double_harvest.png",
+    "Mô hình nhân đôi sản lượng nông nghiệp"
+  ],
+  "pya_l01_p11_hoan_doi_hai_bien": [
+    "tl_swap_cards.png",
+    "Hai bạn An và Bình hoán đổi thẻ số"
+  ],
+  "pya_l01_p21_tong_hai_so_2_dong": [
+    "tl_two_bags_marbles.png",
+    "Tính tổng số viên bi của Minh và Nam"
+  ],
+  "pya_l01_p22_hieu_hai_so": [
+    "tl_fabric_roll.png",
+    "Độ dài cuộn vải sau khi cắt may"
+  ],
+  "pya_l01_p23_tich_hai_so": [
+    "tl_candy_grid.png",
+    "Đóng gói bánh kẹo A hộp mỗi hộp B chiếc"
+  ],
+  "pya_l01_p08_doan_tau_toa_xe_ghep_so": [
+    "tl_train_carriages.png",
+    "Đoàn tàu hỏa kéo hai toa xe mang số a và b"
+  ],
+  "pya_l01_p13_bon_phep_tinh": [
+    "tl_four_ops.png",
+    "Bốn phép tính số học cơ bản"
+  ],
+  "pya_l01_p10_co_may_thoi_gian_3_the_he": [
+    "tl_three_generations.png",
+    "Tuổi của ba thành viên thuộc ba thế hệ"
+  ],
+  "pya_l01_p06_cua_hang_banh_ran": [
+    "tl_donut_bakery.png",
+    "Hóa đơn thanh toán cửa hàng bánh rán"
+  ],
+  "pya_l01_p17_tam_danh_thiep_thong_minh": [
+    "tl_business_card.png",
+    "Tấm danh thiếp cá nhân thông minh"
+  ],
+  "pya_l01_p20_doi_thuoc_ke_milimet": [
+    "curated_ruler.png",
+    "Thước kẻ học sinh đo milimet và centimet"
+  ],
+  "pya_l01_p14_ghep_ngay_thang_nam": [
+    "curated_date_format.png",
+    "Định dạng ngày tháng năm d/m/y"
+  ],
+  "pya_l02_p04_chu_so_tan_cung": [
+    "tl_digit_split.png",
+    "Tách chữ số tận cùng của tấm vé số"
+  ],
+  "pya_l02_p10_chu_so_hang_chuc": [
+    "tl_digit_split.png",
+    "Tách chữ số hàng chục của biển số xe"
+  ],
+  "pya_l02_p29_tach_chu_so_tan_cung": [
+    "tl_digit_split.png",
+    "Tách chữ số tận cùng của mã số may mắn"
+  ],
+  "pya_l02_p34_dong_ho_24h": [
+    "tl_clock_24h.png",
+    "Đồng hồ điện tử định dạng 24 giờ"
+  ],
+  "pya_l02_p35_ngay_trong_tuan": [
+    "tl_week_days.png",
+    "Chu kỳ 7 ngày trong tuần (Chủ Nhật = 0)"
+  ],
+  "pya_l02_p27_vong_chay_dien_kinh": [
+    "tl_running_track.png",
+    "Vòng chạy điền kinh sân vận động"
+  ],
+  "pya_l02_p28_xep_ban_hoc": [
+    "tl_desks.png",
+    "Phòng thi xếp bàn đôi học sinh"
+  ],
+  "pya_l02_p05_bong_den_vien_bien_hieu": [
+    "tl_light_border.png",
+    "Bóng đèn mắc viền quanh biển hiệu"
+  ],
+  "pya_l02_p18_so_dao_nguoc_3_chu_so": [
+    "tl_number_mirror.png",
+    "Gương thần đảo ngược 3 chữ số"
+  ],
+  "pya_l02_p30_dao_nguoc_so_2_chu_so": [
+    "tl_number_mirror.png",
+    "Giải mã mật thư: Đảo ngược số 2 chữ số"
+  ],
+  "pya_l02_p26_trong_cay_dai_lo": [
+    "tl_tree_planting.png",
+    "Trồng cây xanh thẳng tắp dọc đại lộ"
+  ],
+  "pya_l02_p08_kim_dong_ho_12_gio": [
+    "tl_clock_hands_12h.png",
+    "Kim giờ và kim phút trên mặt đồng hồ tròn"
+  ],
+  "pya_l02_p31_xe_buyt_cho_hoc_sinh": [
+    "curated_bus.png",
+    "Xe buýt chở học sinh theo sức chứa K chỗ"
+  ],
+  "pya_l02_p19_chuyen_xe_hoc_sinh": [
+    "curated_bus.png",
+    "Tính số chuyến xe buýt chở học sinh"
+  ],
+  "pya_l02_p16_du_quay_vong_tron": [
+    "curated_ferris_wheel.png",
+    "Vòng đu quay công viên có N cabin"
+  ],
+  "pya_l02_p12_ban_co_caro_vo_tan": [
+    "curated_caro_board.png",
+    "Bàn cờ Ca-rô và hệ tọa độ ô vuông"
+  ],
+  "pya_l03_p01_hinh_vuong": [
+    "tl_square_geo.png",
+    "Hình vuông: Chu vi và diện tích"
+  ],
+  "pya_l03_p20_khung_tranh_hinh_vuong": [
+    "tl_square_geo.png",
+    "Khung tranh hình vuông: Chu vi và diện tích nẹp viền"
+  ],
+  "pya_l03_p02_hinh_chu_nhat": [
+    "tl_rect_geo.png",
+    "Hình chữ nhật: Chu vi và diện tích"
+  ],
+  "pya_l03_p19_manh_vuon_chu_nhat": [
+    "tl_rect_geo.png",
+    "Mảnh vườn hình chữ nhật: Kích thước và diện tích"
+  ],
+  "pya_l03_p04_canh_con_lai_cua_hinh_chu_nhat": [
+    "tl_rect_geo.png",
+    "Tính cạnh còn lại của hình chữ nhật khi biết diện tích"
+  ],
+  "pya_l03_p03_chu_vi_tam_giac": [
+    "tl_triangle_geo.png",
+    "Chu vi hình tam giác ba cạnh a, b, c"
+  ],
+  "pya_l03_p21_chu_vi_tam_giac_abc": [
+    "tl_triangle_geo.png",
+    "Chu vi tam giác ABC"
+  ],
+  "pya_l03_p23_ho_ca_sau_va_dao_nho": [
+    "tl_crocodile_island.png",
+    "Hồ cá sấu và hòn đảo nhỏ ở giữa"
+  ],
+  "pya_l03_p31_doi_do_la_sang_tien_viet": [
+    "tl_currency_exchange.png",
+    "Quầy đổi ngoại tệ: USD sang VNĐ"
+  ],
+  "pya_l03_p10_dien_tich_bon_hoa_chu_thap": [
+    "curated_flower_cross.png",
+    "Sơ đồ bồn hoa chữ thập trong công viên"
+  ],
+  "pya_l03_p16_loi_di_quanh_ho": [
+    "curated_lake_walkway.png",
+    "Mặt bằng hồ nước và đường đi dạo bao quanh"
+  ],
+  "pya_l03_p15_lat_gach_nen_nha": [
+    "curated_tiling_floor.png",
+    "Lát sàn phòng học bằng các viên gạch vuông"
+  ],
+  "pya_l03_p25_lat_gach_san_truong": [
+    "curated_tiling_floor.png",
+    "Lát gạch sân trường bằng các viên gạch vuông"
+  ],
+  "pya_l03_p27_rao_quanh_vuon_hoa_co_cua": [
+    "curated_fence_garden.png",
+    "Làm hàng rào bao quanh vườn hoa có chừa cửa"
+  ],
+  "pya_l03_p32_hang_rao_manh_dat": [
+    "curated_fence_garden.png",
+    "Hàng rào bao quanh mảnh đất chữ nhật"
+  ],
+  "pya_l03_p30_the_tich_hop_chu_nhat": [
+    "curated_box3d.png",
+    "Thể tích hình hộp chữ nhật có ba kích thước a, b, h"
+  ],
+  "pya_l03_p05_dien_tich_hinh_thang": [
+    "curated_trapezoid.png",
+    "Diện tích hình thang với hai đáy a, b và chiều cao h"
+  ],
+  "pya_l03_p11_dien_tich_tam_giac_vuong": [
+    "curated_right_triangle.png",
+    "Diện tích tam giác vuông hai cạnh góc vuông a, b"
+  ],
+  "pya_l03_p22_dien_tich_tam_giac_vuong": [
+    "curated_right_triangle.png",
+    "Diện tích tam giác vuông hai cạnh góc vuông a, b"
+  ],
+  "pya_l03_p17_son_tuong_phong": [
+    "curated_wall_painting.png",
+    "Diện tích quét sơn tường phòng học (trừ cửa ra vào và cửa sổ)"
+  ],
+  "pya_l03_p14_doi_do_c_sang_do_f": [
+    "curated_thermometer.png",
+    "Thang đo nhiệt độ Celsius và Fahrenheit"
+  ],
+  "pya_l03_p18_chay_bo_gap_nhau": [
+    "curated_motion_meet.png",
+    "Bài toán hai người chạy bộ ngược chiều gặp nhau"
+  ],
+  "pya_l03_p08_thuan_di_gap_anh": [
+    "curated_motion_meet.png",
+    "Bài toán hai chuyển động ngược chiều gặp nhau"
+  ],
+  "pya_l03_p28_doi_giay_sang_gio_phut_giay": [
+    "curated_time_cycle.png",
+    "Sơ đồ chuyển đổi đơn vị thời gian Giờ - Phút - Giây"
+  ],
+  "pya_l03_p24_doi_giay_sang_gio_phut_giay": [
+    "curated_time_cycle.png",
+    "Sơ đồ chuyển đổi giây sang giờ, phút, giây"
+  ],
+  "pya_l03_p09_phut_sang_gio_phut": [
+    "curated_time_cycle.png",
+    "Sơ đồ chuyển đổi phút sang giờ và phút"
+  ],
+  "pya_l03_p29_doi_sang_tong_giay": [
+    "curated_time_cycle.png",
+    "Đổi giờ, phút, giây sang tổng số giây"
+  ],
+  "pya_l04_p04_so_lon_nhat_trong_hai_so": [
+    "tl_scale_compare.png",
+    "Cân so sánh tìm số lớn nhất trong hai số"
+  ],
+  "pya_l04_p01_kiem_tra_so_chan_le": [
+    "tl_even_odd_filter.png",
+    "Kiểm tra tính chẵn lẻ của một số nguyên"
+  ],
+  "pya_l06_p01_so_chan_co_hai_chu_so": [
+    "tl_even_odd_filter.png",
+    "Kiểm tra số chẵn có hai chữ số"
+  ],
+  "pya_l06_p06_kiem_tra_nam_nhuan": [
+    "tl_leap_year_cal.png",
+    "Kiểm tra năm nhuận trên tờ lịch"
+  ],
+  "pya_l05_p07_tinh_cuoc_taxi_bac_thang": [
+    "tl_taxi_meter.png",
+    "Đồng hồ tính cước taxi bậc thang"
+  ],
+  "pya_l06_p13_tien_dien_bac_thang": [
+    "tl_electric_bill.png",
+    "Hóa đơn tiền điện sinh hoạt bậc thang"
+  ],
+  "pya_l05_p01_den_giao_thong_nga_tu": [
+    "curated_traffic_light.png",
+    "Đèn tín hiệu giao thông ngã tư (Đỏ, Vàng, Xanh)"
+  ],
+  "pya_l06_p04_diem_nam_trong_hinh_chu_nhat": [
+    "curated_point_in_rect.png",
+    "Kiểm tra điểm M(x, y) nằm trong hình chữ nhật"
+  ],
+  "pya_l06_p08_tam_giac_vuong_hay_khong": [
+    "curated_right_triangle.png",
+    "Định lý Pythagoras kiểm tra tam giác vuông"
+  ],
+  "pya_l07_p04_bang_cuu_chuong": [
+    "tl_mult_table.png",
+    "Bảng cửu chương nhân từ 1 đến 10"
+  ],
+  "pya_l07_p13_tam_giac_vuong_dau_sao": [
+    "curated_star_triangle.png",
+    "In tam giác vuông dấu sao bằng vòng lặp lồng nhau"
+  ],
+  "pya_l08_p09_chu_oc_sen_leo_cot_co": [
+    "curated_snail_pole.png",
+    "Hành trình chú ốc sên bò lên cột cờ ngày và đêm"
+  ],
+  "pya_l09_p09_tam_giac_sao_can": [
+    "curated_star_triangle.png",
+    "In tam giác sao cân bằng vòng lặp lồng nhau"
+  ],
+  "pya_l07_p01_tinh_tong_tu_1_den_n": [
+    "tl_sum_series.png",
+    "Vòng lặp cộng dồn tổng dãy số tự nhiên"
+  ],
+  "pya_l11_p13_phan_tich_ra_thua_so_nguyen_to": [
+    "tl_factor_tree.png",
+    "Cây phân tích số ra thừa số nguyên tố"
+  ],
+  "pya_l16_p15_heo_dat_tiet_kiem": [
+    "tl_piggy_bank.png",
+    "Nuôi heo đất: Tích lũy tiền tiết kiệm hàng ngày"
+  ],
+  "pya_l17_p14_xep_hang_mua_tra_sua_greedy": [
+    "tl_tea_queue.png",
+    "Xếp hàng mua trà sữa: Chiến lược tham lam"
+  ],
+  "pya_l15_p09_mat_ma_caesar_dich_chuyen_k": [
+    "curated_caesar.png",
+    "Mật mã Caesar dịch chuyển K ký tự"
+  ],
+  "pya_l15_p10_giai_ma_mat_thu_caesar": [
+    "curated_caesar.png",
+    "Giải mã mật thư Caesar dịch chuyển K ký tự"
+  ]
+}

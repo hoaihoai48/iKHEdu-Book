@@ -1,53 +1,65 @@
-# Hướng Dẫn Giảng Dạy — Heo Đất Tiết Kiệm (`PYA-L16-P01`)
+# Hướng Dẫn Giảng Dạy: Heo đất tiết kiệm
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Dễ trong 90 phút thi thử.
-- Rèn pattern ẩn: **vòng lặp + rẽ nhánh (tổng có điều kiện)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn vòng lặp có điều kiện và phép đếm ngày chẵn.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là cộng hai khoản: tiền bỏ đều mỗi ngày và tiền thưởng của các ngày chẵn.
+- Với số mẫu `N = 5`, `A = 10`, `B = 3`: 5 ngày mỗi ngày 10 đồng được `50` đồng; các ngày chẵn là ngày 2 và ngày 4, tức `5 // 2 = 2` ngày, thưởng thêm `2 * 3 = 6` đồng; tổng là `50 + 6 = 56`.
+- Quy trình trong lời giải với các biến `n`, `a`, `b`:
+  - Đọc `n = 5`, `a = 10`, `b = 3`.
+  - Tính tiền đều `n * a = 50`, tiền thưởng `(n // 2) * b = 6`.
+  - In `50 + 6 = 56`.
+- Giá trị biên cụ thể: `N = 1` thì không có ngày chẵn nào nên đáp án là `A`; `N = 10^6`, `A, B = 10^4` thì tổng tới khoảng `1.5 * 10^10`, Python tính trực tiếp không lo tràn số.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $N \le 10^6$.
-- Trường hợp biên: N = 1 (không có ngày chẵn nào); N lớn nhất.
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 10 3)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n, a, b` | `n = 5`, `a = 10`, `b = 3` |
+| 2 | Tính tiền đều `n * a` | `5 * 10 = 50` |
+| 3 | Đếm ngày chẵn `n // 2` | `5 // 2 = 2` (ngày 2 và 4) |
+| 4 | Tính tiền thưởng `2 * b` | `2 * 3 = 6` |
+| 5 | In tổng | màn hình hiện `56` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `56`.
 
-- Bất biến: Số ngày chẵn trong N ngày đầu đúng bằng N // 2.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- N=5, A=10, B=3: số ngày chẵn là 5 // 2 = 2, thưởng 6, tổng 56.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — đếm ngày chẵn bằng phép chia thực:
+```python
+n, a, b = map(int, input().split())
+print(int(n * a + (n / 2) * b))
+```
+Với mẫu `5 10 3` thì `(5 / 2) * 3 = 7.5`, tổng `57.5` rồi ép kiểu thành `57`, không khớp đáp án mẫu `56`. Cách sửa: đếm ngày chẵn bằng chia nguyên `(n // 2)`.
+- Bẫy 2 — thưởng cho cả ngày lẻ:
+```python
+n, a, b = map(int, input().split())
+print(n * a + n * b)
+```
+Với mẫu trên in ra `50 + 15 = 65` sai. Cách sửa: chỉ thưởng `(n // 2)` ngày chẵn.
+- Bẫy 3 — mô phỏng từng ngày bằng vòng lặp:
+```python
+n, a, b = map(int, input().split())
+tong = 0
+for ngay in range(1, n + 1):
+    tong = tong + a
+    if ngay % 2 == 0:
+        tong = tong + b
+print(tong)
+```
+Với mẫu `5 10 3` vẫn ra `56`, nhưng với `N` tới `10^6` vòng lặp chậm hơn hẳn phép tính trực tiếp. Cách sửa: dùng công thức `n * a + (n // 2) * b`.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- Dùng vòng lặp cộng từng ngày vẫn đúng nhưng công thức trực tiếp nhanh hơn; nhầm ngày chẵn với ngày lẻ.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 n, a, b = map(int, input().split())
 print(n * a + (n // 2) * b)
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.

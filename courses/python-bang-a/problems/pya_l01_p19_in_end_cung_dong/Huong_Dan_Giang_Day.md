@@ -1,64 +1,33 @@
-# Hướng Dẫn Giảng Dạy: In Khẩu Hiệu Cùng Dòng
+# Hướng Dẫn Giảng Dạy: In không xuống dòng với end
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **In Khẩu Hiệu Cùng Dòng** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là ghép khẩu hiệu `Lap trinh rat vui!` từ hai mảnh bằng hai lệnh `print()` nhưng vẫn nằm trên cùng một dòng. Thầy cô giải thích `end=" "` nghĩa là sau khi in xong thì dừng lại bằng một dấu cách thay vì xuống dòng.
+- Quy trình gồm hai bước: lệnh thứ nhất `print("Lap trinh", end=" ")` in `Lap trinh` kèm một dấu cách ở cuối và giữ con trỏ ở lại, lệnh thứ hai `print("rat vui!")` in tiếp `rat vui!` ngay sau dấu cách đó, tạo thành `Lap trinh rat vui!`.
+- Xử lý biên: bài này không có số liệu vào nên không có giá trị biên. Thầy cô nhắc các con giữ đúng một dấu cách giữa `trinh` và `rat`, vì thiếu dấu cách sẽ dính thành `Lap trinhrat vui!`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: (không có dữ liệu vào))
+| Bước | Lệnh chạy | Màn hình hiện ra |
+|------|-----------|------------------|
+| 1 | `print("Lap trinh", end=" ")` | `Lap trinh ` (con trỏ vẫn ở cùng dòng, chưa xuống dòng) |
+| 2 | `print("rat vui!")` | nối tiếp thành `Lap trinh rat vui!` rồi xuống dòng |
+| 3 | Kết thúc chương trình | Kết quả cuối cùng: `Lap trinh rat vui!`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên `end=" "`, viết hai lệnh `print("Lap trinh")` và `print("rat vui!")` thì màn hình hiện hai dòng rời nhau thay vì một dòng `Lap trinh rat vui!`. Cách sửa: thêm `end=" "` vào lệnh thứ nhất.
+- Bẫy 2: viết `end=""` không có dấu cách thì màn hình hiện `Lap trinhrat vui!` bị dính chữ. Cách sửa: viết đúng `end=" "` có một dấu cách ở giữa.
+- Bẫy 3: gộp dấu cách sai chỗ, ví dụ `print("Lap trinh ", end=" ")` kèm thêm cách sẽ tạo hai dấu cách liên tiếp thành `Lap trinh  rat vui!`. Cách sửa: chỉ để một dấu cách duy nhất, hoặc trong chữ hoặc trong `end`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 print("Lap trinh", end=" ")
 print("rat vui!")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

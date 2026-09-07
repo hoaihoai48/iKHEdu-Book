@@ -1,80 +1,37 @@
-# Hướng Dẫn Giảng Dạy: Vé Vào Công Viên
+# Hướng Dẫn Giảng Dạy: Vé vào công viên
 Chuyên đề: **Ngã Rẽ Quyết Định (if - else)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Vé Vào Công Viên** (`PYA-L04-P02`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là một mốc cắt duy nhất `130`: chiều cao `h` từ `130` trở lên là vé người lớn, dưới `130` là vé trẻ em.
+- Cách làm của lời giải mẫu: đọc `h`, kiểm tra `if h >= 130` thì in `VE NGUOI LON`, ngược lại in `VE TRE EM`. Với mẫu `h = 135`, vì `135 >= 130` nên in vé người lớn.
+- Xử lý biên: ràng buộc `1 <= h <= 200`. Hai mốc cần thử là `h = 130` (vừa chạm mốc, vẫn là `VE NGUOI LON`) và `h = 129` (thấp hơn một đơn vị, là `VE TRE EM`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 135)
+Sample 1 với input mẫu: `135`.
+| Bước | Việc làm | Giá trị của `h` | In ra |
+|---|---|---|---|
+| 1 | Đọc input | `h = 135` | — |
+| 2 | Kiểm tra `135 >= 130`? Đúng | rẽ nhánh `if` | — |
+| 3 | In theo nhánh đúng | — | `VE NGUOI LON` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — viết sai mốc so sánh: bạn nhỏ viết `if h > 130`. Với `h = 130` sẽ rơi sang vé trẻ em, sai. Cách sửa: dùng `>=` như lời giải mẫu.
+- Bẫy 2 — in sai chữ: bạn nhỏ in `VE NGUOI LON` thiếu chữ hoặc thêm dấu, ví dụ `VE NGUOI LON ` có khoảng trắng thừa hay `VÉ NGƯỜI LỚN` có dấu. Với mẫu `135`, chương trình kiểm tra sẽ báo kết quả sai. Cách sửa: chép đúng từng chữ in hoa không dấu `VE NGUOI LON`.
+- Bẫy 3 — đảo hai nhánh: bạn nhỏ cho nhánh `if` in `VE TRE EM`. Với mẫu `135` sẽ in vé trẻ em, sai. Cách sửa: nhánh `h >= 130` in `VE NGUOI LON`, nhánh còn lại in `VE TRE EM`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-135
-```
-* **Output:**
-```text
-VE NGUOI LON
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L04-P02: Vé Vào Công Viên
-# Cài đặt code chuẩn Python 3
+h = int(input())
+if h >= 130:
+    print("VE NGUOI LON")
+else:
+    print("VE TRE EM")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

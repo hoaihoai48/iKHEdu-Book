@@ -1,93 +1,44 @@
-# Hướng Dẫn Giảng Dạy: Cỗ Máy Thời Gian 3 Thế Hệ
+# Hướng Dẫn Giảng Dạy: Cỗ máy thời gian 3 thế hệ
 Chuyên đề: **Chào Python & Chiếc Hộp Biến Số**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Cỗ Máy Thời Gian 3 Thế Hệ** (`PYA-L01-P10`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là tính tuổi ba thế hệ dây chuyền: con `a = 10`, bố hơn con `b = 30` nên bố `10 + 30 = 40`, ông hơn bố `c = 25` nên ông `40 + 25 = 65`, tổng cả ba là `10 + 40 + 65 = 115`. Thầy cô vẽ cây gia đình ba tầng để các con dễ thấy.
+- Quy trình gồm bốn bước với các biến `a`, `b`, `c`, `tuoi_bo`, `tuoi_ong` trong lời giải: đọc `10` vào `a`, `30` vào `b`, `25` vào `c`, tính `tuoi_bo = a + b = 40`, tính `tuoi_ong = tuoi_bo + c = 65`, rồi in ba dòng `40`, `65`, `115`.
+- Xử lý biên: ràng buộc cho `a` từ 1 tới 20, `b` và `c` từ 20 tới 40. Thầy cô cho các con thử biên nhỏ `1, 20, 20` cho ra `21`, `41`, `63`, và biên lớn `20, 40, 40` cho ra `60`, `100`, `180`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10, 30 và 25)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a = int(input())` với dòng 1 gõ `10` | `a = 10` | (chưa in gì) |
+| 2 | `b = int(input())` với dòng 2 gõ `30` | `b = 30` | (chưa in gì) |
+| 3 | `c = int(input())` với dòng 3 gõ `25` | `c = 25` | (chưa in gì) |
+| 4 | `tuoi_bo = a + b` tức `10 + 30` | `tuoi_bo = 40` | (chưa in gì) |
+| 5 | `tuoi_ong = tuoi_bo + c` tức `40 + 25` | `tuoi_ong = 65` | (chưa in gì) |
+| 6 | `print(tuoi_bo)` | — | `40` |
+| 7 | `print(tuoi_ong)` | — | `65` |
+| 8 | `print(a + tuoi_bo + tuoi_ong)` tức `10 + 40 + 65` | — | `115` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: tính tuổi ông từ tuổi con, viết `tuoi_ong = a + c` thì với mẫu `10, 30, 25` tuổi ông ra `35` thay vì `65`. Cách sửa: ông hơn bố nên viết `tuoi_ong = tuoi_bo + c`.
+- Bẫy 2: tính tổng sai, viết `print(a + b + c)` thì với mẫu màn hình hiện `65` thay vì `115` vì đó chỉ là tổng các khoảng chênh. Cách sửa: tổng ba người là `a + tuoi_bo + tuoi_ong`.
+- Bẫy 3: in cả ba tuổi trên một dòng như `print(tuoi_bo, tuoi_ong, ...)` thì màn hình hiện `40 65 115` chung một dòng thay vì ba dòng riêng. Cách sửa: viết ba lệnh `print` riêng.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-10
-30
-25
-```
-* **Output:**
-```text
-40
-65
-115
-```
-* **Giải thích:** - Tuổi Nam: $10$.
-- Tuổi Bố: $10 + 30 = 40$.
-- Tuổi Ông: $40 + 25 = 65$.
-- Tổng cả 3 người: $10 + 40 + 65 = 115$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Nhap tuoi cua chau, bo hon chau x tuoi, ong hon bo y tuoi
-# Hoac 3 so a, b, c theo de
-chau = int(input().strip())
-x = int(input().strip())
-y = int(input().strip())
-bo = chau + x
-ong = bo + y
-print(chau + bo + ong)
+a = int(input())
+b = int(input())
+c = int(input())
+tuoi_bo = a + b
+tuoi_ong = tuoi_bo + c
+print(tuoi_bo)
+print(tuoi_ong)
+print(a + tuoi_bo + tuoi_ong)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

@@ -1,88 +1,42 @@
-# Hướng Dẫn Giảng Dạy: Số Ngày Trong Tháng
+# Hướng Dẫn Giảng Dạy: Số ngày trong tháng
 Chuyên đề: **Liên Minh Điều Kiện (and - or - not)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Số Ngày Trong Tháng** (`PYA-L06-P07`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là tra lịch: các tháng `1, 3, 5, 7, 8, 10, 12` có `31` ngày; các tháng `4, 6, 9, 11` có `30` ngày; tháng `2` có `29` ngày nếu năm nhuận, `28` ngày nếu năm thường.
+- Cách làm của lời giải mẫu: đọc `m` rồi đọc `y`, rẽ nhánh theo nhóm tháng kể trên; riêng tháng `2` kiểm tra `y % 400 == 0 or (y % 4 == 0 and y % 100 != 0)`. Với mẫu `m = 2, y = 2024`: `2024` nhuận nên in `29`.
+- Xử lý biên: thầy cô cho thử `m = 2, y = 2023` (năm thường, in `28`) và `m = 4, y = 2025` (tháng `30` ngày, in `30`).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 rồi 2024)
+Sample 1 với input mẫu: `2` rồi `2024`.
+| Bước | Việc làm | Giá trị các biến | In ra |
+|---|---|---|---|
+| 1 | Đọc dòng một | `m = 2` | — |
+| 2 | Đọc dòng hai | `y = 2024` | — |
+| 3 | `m` có trong nhóm `31` ngày? Không; nhóm `30` ngày? Không | xuống nhánh tháng `2` | — |
+| 4 | Kiểm tra `2024` nhuận? Chia hết cho `4`, không chia hết cho `100` nên đúng | chọn `29` | — |
+| 5 | In kết quả | — | `29` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — tháng `2` luôn `28` ngày: bạn nhỏ viết `print(28)` cho mọi năm. Với mẫu `2` và `2024` sẽ in `28` thay vì `29`. Cách sửa: kiểm tra năm nhuận như lời giải mẫu.
+- Bẫy 2 — nhớ sai nhóm tháng: bạn nhỏ cho tháng `8` vào nhóm `30` ngày. Với `m = 8` sẽ in `30` thay vì `31`. Cách sửa: giữ đúng hai danh sách `[1, 3, 5, 7, 8, 10, 12]` và `[4, 6, 9, 11]`.
+- Bẫy 3 — kiểm tra nhuận chỉ bằng `y % 4 == 0`: với `y = 1900` sẽ cho nhuận sai. Cách sửa: dùng đủ công thức `y % 400 == 0 or (y % 4 == 0 and y % 100 != 0)`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-2
-2024
-```
-* **Output:**
-```text
-29
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-line = input().split()
-m, y = int(line[0]), int(line[1])
+m = int(input())
+y = int(input())
 if m in [1, 3, 5, 7, 8, 10, 12]:
- print(31)
+    print(31)
 elif m in [4, 6, 9, 11]:
- print(30)
-elif m == 2:
- is_leap = (y % 400 == 0) or (y % 4 == 0 and y % 100 != 0)
- print(29 if is_leap else 28)
+    print(30)
+else:
+    print(29 if (y % 400 == 0 or (y % 4 == 0 and y % 100 != 0)) else 28)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

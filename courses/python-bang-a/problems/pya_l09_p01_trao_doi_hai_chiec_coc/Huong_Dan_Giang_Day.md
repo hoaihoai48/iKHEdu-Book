@@ -1,80 +1,54 @@
-# Hướng Dẫn Giảng Dạy: Tráo Đổi Hai Chiếc Cốc
+# Hướng Dẫn Giảng Dạy: Tráo đổi hai chiếc cốc
 Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tráo Đổi Hai Chiếc Cốc** (`PYA-L09-P01`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là đọc hai số rồi in ra theo thứ tự ngược lại: số thứ hai in trước, số thứ nhất in sau.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: `a, b = map(int, input().split())` đọc một dòng, tách thành hai số nguyên. Với mẫu `5 12` thì `a = 5`, `b = 12`.
+  - Bước 2: `print(b, a)` in `b` trước rồi tới `a`, giữa hai số có một dấu cách. Với mẫu này in ra `12 5`.
+- Giá trị biên cụ thể: đề bài không giới hạn miền giá trị, nhưng mẫu dùng `5` và `12` đều là số nguyên dương nhỏ; nếu hai số bằng nhau (ví dụ `7 7`) thì kết quả vẫn là `7 7`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 12)
+
+| Bước | Lệnh chạy | Giá trị của `a` | Giá trị của `b` | In ra màn hình |
+|---|---|---|---|---|
+| 1 | `a, b = map(int, input().split())` với dòng `5 12` | 5 | 12 | (chưa in gì) |
+| 2 | `print(b, a)` | 5 | 12 | `12 5` |
+
+- Kết quả cuối cùng trùng với kết quả mẫu: `12 5`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5 12
+- Bẫy 1: in nhầm thứ tự cũ `print(a, b)`. Với mẫu `5 12` sẽ in ra `5 12`, là kết quả sai vì đề bài yêu cầu tráo đổi. Cách sửa: đổi thành `print(b, a)`.
+```python
+a, b = map(int, input().split())
+print(a, b)
 ```
-* **Output:**
-```text
-12 5
+- Bẫy 2: quên tách dòng nhập bằng `split()`, viết `a = int(input())` rồi đọc tiếp dòng thứ hai không tồn tại. Với mẫu chỉ có một dòng `5 12`, cách viết sai này đọc `a = 5` rồi chờ thêm dữ liệu. Cách sửa: dùng `map(int, input().split())` để đọc cả hai số trên cùng một dòng.
+```python
+a = int(input())
+b = int(input())
+print(b, a)
 ```
-* **Giải thích:** Ban đầu $A=5, B=12$. Sau khi đổi $A=12, B=5$.
-
-| Bước | Dòng lệnh thực thi | Giá trị biến trong RAM | Xuất màn hình |
-| :---: | :--- | :--- | :--- |
-| **1** | `a, b = map(int, input().split())` | `a = 5`, `b = 12` | *(Chưa xuất)* |
-| **2** | Phép gán hoán đổi `a, b = b, a` | `a = 12`, `b = 5` | *(Chưa xuất)* |
-| **3** | `print(a, b)` | `a = 12`, `b = 5` | `12 5` |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
+- Bẫy 3: in mỗi số một dòng bằng hai lệnh `print(b)` rồi `print(a)`. Với mẫu sẽ in hai dòng `12` và `5`, là kết quả sai vì đề bài yêu cầu hai số trên cùng một dòng. Cách sửa: in một lần `print(b, a)`.
+```python
+a, b = map(int, input().split())
+print(b)
+print(a)
+```
 
 ---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+## 4. Lời giải tham khảo
 
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
 a, b = map(int, input().split())
 print(b, a)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

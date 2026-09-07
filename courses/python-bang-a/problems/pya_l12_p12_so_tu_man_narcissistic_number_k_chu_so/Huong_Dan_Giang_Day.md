@@ -1,80 +1,54 @@
-# Hướng Dẫn Giảng Dạy: Số Tự Mãn (Narcissistic Number K Chữ Số)
+# Hướng Dẫn Giảng Dạy: Số tự mãn (Narcissistic number K chữ số)
 Chuyên đề: **Đếm Số Theo Quy Luật & Các Con Số Đặc Biệt**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Số Tự Mãn (Narcissistic Number K Chữ Số)** (`PYA-L12-P12`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: đếm số chữ số `K` của `N = 1634` rồi kiểm tra tổng lũy thừa bậc `K` các chữ số có bằng `N` không.
+- Vòng lặp thứ nhất chia dần `1634` cho `10` (`1634 -> 163 -> 16 -> 1 -> 0`) nên đếm được `k = 4`.
+- Vòng lặp thứ hai tách từng chữ số từ phải sang trái (`4, 3, 6, 1`) và cộng `d ** 4`: `256 + 81 + 1296 + 1 = 1634`.
+- Vì `tong == n` (`1634 == 1634`) nên in `YES`.
+- Thầy cô cho các em tính tay `1 + 1296 + 81 + 256` rồi so với `1634`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1634)
+| Bước | `temp` | `d` | `tong` sau bước |
+| --- | --- | --- | --- |
+| Đếm chữ số | 1634 -> 163 -> 16 -> 1 -> 0 | — | `k = 4` |
+| Tách | 1634 | 4 | `0 + 256 = 256` |
+| Tách | 163 | 3 | `256 + 81 = 337` |
+| Tách | 16 | 6 | `337 + 1296 = 1633` |
+| Tách | 1 | 1 | `1633 + 1 = 1634` |
+| So sánh | `1634 == 1634` đúng | — | in `YES` |
+
+Kết quả in ra: `YES`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: cố định mũ `3` cho mọi số. Với mẫu `1634` được `1 + 216 + 27 + 64 = 308` nên in nhầm `NO`. Sửa lại: đếm `k` bằng vòng lặp rồi dùng `d ** k` như bài giải.
+- Bẫy 2: dùng chung biến `temp` mà quên gán lại `temp = n` trước vòng tách chữ số. Khi đó vòng thứ hai không chạy, `tong = 0` và in nhầm `NO`. Sửa lại: `temp = n` trước mỗi vòng như bài giải.
+- Bẫy 3: so sánh `tong == k` thay vì `tong == n`. Với mẫu `1634` thì `1634 == 4` sai nên in nhầm `NO`. Sửa lại: `if tong == n`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-1634
-```
-* **Output:**
-```text
-YES
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L12-P12: Số Tự Mãn (Narcissistic Number K Chữ Số)
-# Cài đặt code chuẩn Python 3
+n = int(input())
+temp = n
+k = 0
+while temp > 0:
+    k = k + 1
+    temp = temp // 10
+tong = 0
+temp = n
+while temp > 0:
+    d = temp % 10
+    tong = tong + d ** k
+    temp = temp // 10
+if tong == n:
+    print("YES")
+else:
+    print("NO")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

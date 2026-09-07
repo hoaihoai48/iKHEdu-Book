@@ -1,64 +1,35 @@
-# Hướng Dẫn Giảng Dạy: Đổi Khối Lượng
+# Hướng Dẫn Giảng Dạy: Đổi tạ và yến sang kilogram
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đổi Khối Lượng** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất đổi khối lượng: 1 tạ bằng 100 ki-lô-gam và 1 yến bằng 10 ki-lô-gam, nên tổng là `t * 100 + y * 10`.
+- Quy trình trong lời giải: đọc một dòng rồi tách thành `t, y`, sau đó in `t * 100 + y * 10`; với mẫu `5 3` thì `5 * 100 = 500`, `3 * 10 = 30`, tổng `500 + 30 = 530`.
+- Xử lý biên: `T` và `Y` từ 0 đến 1000, tổng nhỏ nhất là 0, lớn nhất là 110000.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3)
+Với số mẫu một dòng `5 3`, chương trình phải in ra `530`.
+
+| Bước | Hành động | Giá trị biến | Kết quả |
+|---|---|---|---|
+| 1 | Đọc `t, y` | `t = 5`, `y = 3` | 5 tạ 3 yến |
+| 2 | Tính `t * 100` | `5 * 100 = 500` | 500 ki-lô-gam |
+| 3 | Tính `500 + y * 10` | `500 + 30 = 530` | khớp kết quả mẫu `530` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1 — nhầm hệ số yến: viết `t * 100 + y * 100` thì với mẫu ra `800` thay vì `530`; cách sửa là yến nhân 10.
+- Bẫy 2 — đọc hai dòng riêng: dùng hai lần `input()` thì với mẫu một dòng `5 3` sẽ bị treo chờ; cách sửa là tách một dòng bằng `split()`.
+- Bẫy 3 — nhầm thành gam: viết `t * 1000 + y * 100` thì với mẫu ra số rất lớn thay vì `530`; cách sửa là nhân đúng 100 và 10.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 t, y = map(int, input().split())
 print(t * 100 + y * 10)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

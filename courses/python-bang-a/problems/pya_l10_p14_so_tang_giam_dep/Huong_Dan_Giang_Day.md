@@ -1,80 +1,103 @@
-# Hướng Dẫn Giảng Dạy: Số Tăng Giảm Đẹp
+# Hướng Dẫn Giảng Dạy: Số tăng giảm đẹp
 Chuyên đề: **Bí Mật Tách Chữ Số (// 10 và % 10)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Số Tăng Giảm Đẹp** (`PYA-L10-P14`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là xem các chữ số từ trái sang phải có tạo thành cầu thang đi lên (mỗi chữ số sau lớn hơn chữ số trước) hay cầu thang đi xuống (mỗi chữ số sau nhỏ hơn chữ số trước) hay không.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: `n = int(input())` đọc số. Với mẫu, `n = 1379`.
+  - Bước 2: gọt từng chữ số bằng `digits.append(n % 10)` rồi đảo lại `digits = digits[::-1]` để được thứ tự từ trái sang phải. Với mẫu, `digits = [1, 3, 7, 9]`.
+  - Bước 3: kiểm tra `tang` bằng cách xem mọi cặp kề có `digits[i] < digits[i + 1]` không; kiểm tra `giam` bằng cách xem mọi cặp kề có `digits[i] > digits[i + 1]` không.
+  - Bước 4: nếu `tang` thì in `TANG`, ngược lại nếu `giam` thì in `GIAM`, còn lại in `KHONG`.
+- Giá trị biên cụ thể: với mẫu `1379` có `1 < 3 < 7 < 9` nên in `TANG`; số như 1335 có hai chữ số 3 bằng nhau nên in `KHONG`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1379)
+
+| Bước | Việc làm | `digits` | Kết quả kiểm tra |
+|---|---|---|---|
+| 1 | Đọc `n = 1379`, gọt từng chữ số | `[9, 7, 3, 1]` rồi đảo thành `[1, 3, 7, 9]` | — |
+| 2 | Kiểm tra tăng: `1 < 3`, `3 < 7`, `7 < 9` | `[1, 3, 7, 9]` | `tang = True` |
+| 3 | Kiểm tra giảm: `1 > 3` sai ngay | `[1, 3, 7, 9]` | `giam = False` |
+| 4 | `tang` đúng nên in | `[1, 3, 7, 9]` | in ra `TANG` |
+
+- Kết quả `TANG` trùng kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-1379
-```
-* **Output:**
-```text
-TANG
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1: quên đảo danh sách `digits`, để nguyên thứ tự từ phải sang trái. Với mẫu `digits = [9, 7, 3, 1]` thì kiểm tra tăng sai mà kiểm tra giảm đúng nên in `GIAM`, là kết quả sai. Cách sửa: đảo lại `digits = digits[::-1]` trước khi kiểm tra.
 ```python
-# Gợi ý mã nguồn cho PYA-L10-P14: Số Tăng Giảm Đẹp
-# Cài đặt code chuẩn Python 3
+n = int(input())
+digits = []
+while n > 0:
+    digits.append(n % 10)
+    n //= 10
+tang = all(digits[i] < digits[i + 1] for i in range(len(digits) - 1))
+giam = all(digits[i] > digits[i + 1] for i in range(len(digits) - 1))
+if tang:
+    print("TANG")
+elif giam:
+    print("GIAM")
+else:
+    print("KHONG")
+```
+- Bẫy 2: dùng `<=` thay vì `<` khi kiểm tra tăng. Với số như 1335 có hai chữ số 3 bằng nhau mà `3 <= 3` vẫn đúng nên in `TANG`, là kết quả sai (đáp án đúng là `KHONG`). Cách sửa: tăng dần phải là `<` tuyệt đối, giảm dần phải là `>` tuyệt đối.
+```python
+n = int(input())
+digits = []
+while n > 0:
+    digits.append(n % 10)
+    n //= 10
+digits = digits[::-1]
+tang = all(digits[i] <= digits[i + 1] for i in range(len(digits) - 1))
+giam = all(digits[i] >= digits[i + 1] for i in range(len(digits) - 1))
+if tang:
+    print("TANG")
+elif giam:
+    print("GIAM")
+else:
+    print("KHONG")
+```
+- Bẫy 3: kiểm tra giảm trước tăng, rồi với số vừa tăng vừa giảm không thể xảy ra nên thứ tự không sai; lỗi thật sự hay gặp là in chữ thường `tang`. Với mẫu sẽ in `tang`, là kết quả sai vì đề bài yêu cầu in hoa. Cách sửa: in đúng `TANG`, `GIAM`, `KHONG`.
+```python
+n = int(input())
+digits = []
+while n > 0:
+    digits.append(n % 10)
+    n //= 10
+digits = digits[::-1]
+tang = all(digits[i] < digits[i + 1] for i in range(len(digits) - 1))
+giam = all(digits[i] > digits[i + 1] for i in range(len(digits) - 1))
+if tang:
+    print("tang")
+elif giam:
+    print("giam")
+else:
+    print("khong")
 ```
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+n = int(input())
+digits = []
+while n > 0:
+    digits.append(n % 10)
+    n //= 10
+digits = digits[::-1]
+tang = all(digits[i] < digits[i + 1] for i in range(len(digits) - 1))
+giam = all(digits[i] > digits[i + 1] for i in range(len(digits) - 1))
+if tang:
+    print("TANG")
+elif giam:
+    print("GIAM")
+else:
+    print("KHONG")
+```

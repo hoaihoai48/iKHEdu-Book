@@ -1,80 +1,87 @@
-# Hướng Dẫn Giảng Dạy: Dãy Số Bội Ba Bội Năm
+# Hướng Dẫn Giảng Dạy: Dãy số bội ba bội năm
 Chuyên đề: **Quy Luật Dãy Số & Tam Giác Số Kỳ Ảo**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Dãy Số Bội Ba Bội Năm** (`PYA-L09-P07`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là liệt kê các số chia hết cho 3 hoặc chia hết cho 5 theo thứ tự tăng dần: 3, 5, 6, 9, 10, 12, 15, ... và lấy `N` số đầu.
+- Quy trình từng bước với đúng tên biến trong lời giải:
+  - Bước 1: `n = int(input().strip())` đọc số lượng cần lấy. Với mẫu, `n = 6`.
+  - Bước 2: đặt `res = []` đựng kết quả và `num = 1` là số đang xét.
+  - Bước 3: lặp `while len(res) < n`, mỗi lần kiểm tra `if num % 3 == 0 or num % 5 == 0` thì thêm `str(num)` vào `res`, rồi tăng `num` thêm 1.
+  - Bước 4: in `" ".join(res)`.
+- Giá trị biên cụ thể: với mẫu `n = 6` thì `num` xét tới 12 là đủ 6 số; đề bài cho `N` tới 10000 nên vòng lặp xét tới số khoảng hơn hai vạn.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6)
+
+| `num` | `num % 3 == 0` | `num % 5 == 0` | Có thêm vào `res` không | `res` sau bước này |
+|---|---|---|---|---|
+| 1 | sai | sai | không | [] |
+| 2 | sai | sai | không | [] |
+| 3 | đúng | sai | có | [`3`] |
+| 4 | sai | sai | không | [`3`] |
+| 5 | sai | đúng | có | [`3`, `5`] |
+| 6 | đúng | sai | có | [`3`, `5`, `6`] |
+| 7 | sai | sai | không | [`3`, `5`, `6`] |
+| 8 | sai | sai | không | [`3`, `5`, `6`] |
+| 9 | đúng | sai | có | [`3`, `5`, `6`, `9`] |
+| 10 | sai | đúng | có | [`3`, `5`, `6`, `9`, `10`] |
+| 11 | sai | sai | không | [`3`, `5`, `6`, `9`, `10`] |
+| 12 | đúng | sai | có | [`3`, `5`, `6`, `9`, `10`, `12`] |
+
+- Đủ 6 số thì dừng, in ra `3 5 6 9 10 12`, trùng kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-6
-```
-* **Output:**
-```text
-3 5 6 9 10 12
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+- Bẫy 1: dùng `and` thay vì `or`, chỉ giữ số vừa chia hết cho 3 vừa chia hết cho 5. Với mẫu `n = 6` sẽ ra `15 30 45 60 75 90`, là kết quả sai. Cách sửa: dùng `or`.
 ```python
-# Gợi ý mã nguồn cho PYA-L09-P07: Dãy Số Bội Ba Bội Năm
-# Cài đặt code chuẩn Python 3
+n = int(input().strip())
+res = []
+num = 1
+while len(res) < n:
+    if num % 3 == 0 and num % 5 == 0:
+        res.append(str(num))
+    num += 1
+print(" ".join(res))
+```
+- Bẫy 2: quên tăng `num` trong vòng lặp, chương trình chạy mãi không dừng ở `num = 1`. Cách sửa: cuối mỗi lần lặp phải `num += 1`.
+```python
+n = int(input().strip())
+res = []
+num = 1
+while len(res) < n:
+    if num % 3 == 0 or num % 5 == 0:
+        res.append(str(num))
+print(" ".join(res))
+```
+- Bẫy 3: thêm `num` (số nguyên) vào `res` rồi `" ".join(res)` sẽ báo lỗi vì `join` cần chuỗi. Với mẫu sẽ dừng vì lỗi trước khi in. Cách sửa: thêm `str(num)`.
+```python
+n = int(input().strip())
+res = []
+num = 1
+while len(res) < n:
+    if num % 3 == 0 or num % 5 == 0:
+        res.append(num)
+    num += 1
+print(" ".join(res))
 ```
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+
+```python
+n = int(input().strip())
+res = []
+num = 1
+while len(res) < n:
+    if num % 3 == 0 or num % 5 == 0:
+        res.append(str(num))
+    num += 1
+print(" ".join(res))
+```

@@ -1,94 +1,43 @@
-# Hướng Dẫn Giảng Dạy: Vé Tham Quan Chùa Hương
+# Hướng Dẫn Giảng Dạy: Vé tham quan chùa hương
 Chuyên đề: **Chào Python & Chiếc Hộp Biến Số**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Vé Tham Quan Chùa Hương** (`PYA-L01-P09`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là cộng tiền vé thuyền và vé cáp treo cho cả đoàn: đoàn `n = 10` người gồm `m = 4` trẻ em nên có `6` người lớn. Vé thuyền người lớn `a = 20`, trẻ em `b = 10`; vé cáp treo người lớn `x = 50`, trẻ em `y = 30`. Tiền thuyền là `6 * 20 + 4 * 10 = 160`, tiền cáp treo là `6 * 50 + 4 * 30 = 420`, tổng là `580`.
+- Quy trình với các biến `a, b, x, y, n, m, so_tre_em, so_nguoi_lon, tong_tien` trong lời giải: đọc sáu số `20, 10, 50, 30, 10, 4` vào `a, b, x, y, n, m`, tính `so_tre_em = 4` và `so_nguoi_lon = 10 - 4 = 6`, rồi tính `tong_tien = 6 * (20 + 50) + 4 * (10 + 30) = 6 * 70 + 4 * 40 = 420 + 160 = 580` và in ra.
+- Xử lý biên: ràng buộc cho vé từ 0 tới 100, đoàn `0 <= m <= n < 100`. Thầy cô cho các con thử trường hợp đặc biệt đoàn toàn trẻ em như `n = 5, m = 5` thì số người lớn là `0`, và đoàn không ai `n = 0, m = 0` thì tổng tiền là `0`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 20, 10, 50, 30, 10 và 4)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | Đọc 6 dòng `20, 10, 50, 30, 10, 4` vào `a, b, x, y, n, m` | `a = 20`, `b = 10`, `x = 50`, `y = 30`, `n = 10`, `m = 4` | (chưa in gì) |
+| 2 | `so_tre_em = m` | `so_tre_em = 4` | (chưa in gì) |
+| 3 | `so_nguoi_lon = n - m` tức `10 - 4` | `so_nguoi_lon = 6` | (chưa in gì) |
+| 4 | `tong_tien = 6 * (20 + 50) + 4 * (10 + 30)` tức `420 + 160` | `tong_tien = 580` | (chưa in gì) |
+| 5 | `print(tong_tien)` | — | `580` |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: lấy nhầm `n` làm số người lớn, viết `tong_tien = n * (a + x) + m * (b + y)` thì với mẫu cho ra `10 * 70 + 4 * 40 = 860` thay vì `580` vì đếm trùng 4 trẻ em. Cách sửa: tính `so_nguoi_lon = n - m` rồi mới nhân.
+- Bẫy 2: chỉ tính một loại vé, ví dụ `tong_tien = so_nguoi_lon * a + so_tre_em * b` thì với mẫu chỉ ra `160` (tiền thuyền), thiếu `420` tiền cáp treo. Cách sửa: mỗi người phải cộng cả hai vé, viết `(a + x)` và `(b + y)`.
+- Bẫy 3: đọc sai thứ tự sáu số, ví dụ đọc `n` trước `a` thì mọi biến lệch hết và tổng ra số lạ thay vì `580`. Cách sửa: đọc đúng thứ tự đề cho là `a, b, x, y, n, m` mỗi số một dòng.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-20
-10
-50
-30
-10
-4
-```
-* **Output:**
-```text
-540
-```
-* **Giải thích:** - Số trẻ em: $4$, số người lớn: $10 - 4 = 6$ người.
-- Tiền thuyền: $6 \times 20 + 4 \times 10 = 120 + 40 = 160$.
-- Tiền cáp treo: $6 \times 50 + 4 \times 30 = 300 + 120 = 420$.
-- Tổng tiền: $160 + 420 = 580$ nghìn đồng.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# 6 dong: a, b (ve nguoi lon, tre em doan 1), x, y (ve doan 2), n, m (tong nguoi lon, tre em)
-# De bai: nhap lan luot cac gia tri
-inputs = [int(input().strip()) for _ in range(6)]
-a, b, x, y, n, m = inputs
+a = int(input())
+b = int(input())
+x = int(input())
+y = int(input())
+n = int(input())
+m = int(input())
 so_tre_em = m
 so_nguoi_lon = n - m
 tong_tien = so_nguoi_lon * (a + x) + so_tre_em * (b + y)
 print(tong_tien)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

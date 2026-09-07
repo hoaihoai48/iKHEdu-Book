@@ -1,46 +1,76 @@
-# Hướng Dẫn Giảng Dạy — Vé Số May Mắn (`PYA-L16-P02`)
+# Hướng Dẫn Giảng Dạy: Vé số may mắn
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Dễ trong 90 phút thi thử.
-- Rèn pattern ẩn: **tách chữ số + rẽ nhánh (tổng chữ số chia hết)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn tách chữ số và kiểm tra chia hết.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là cộng các chữ số của tấm vé rồi xem tổng có chia hết cho 7 không.
+- Với số mẫu `N = 1234`: tổng các chữ số là `1 + 2 + 3 + 4 = 10`, `10` chia 7 dư 3 nên không may mắn, đáp án `NO`. (Đề bài cho thêm ví dụ vé `16` có tổng `7` nên đáp án là `YES`.)
+- Quy trình trong lời giải với các biến `s`, `t`, `c`:
+  - Đọc chuỗi `s = "1234"`, đặt `t = 0`.
+  - Với mỗi ký tự `c`, nếu là chữ số thì cộng giá trị của nó vào `t`: `t` lần lượt thành `1`, `3`, `6`, `10`.
+  - Vì `10 % 7 = 3` khác 0 nên in `NO`.
+- Giá trị biên cụ thể: `N` dài tới 19 chữ số nên giữ nguyên dạng chuỗi, không đổi sang số nguyên rồi tách; tổng các chữ số bằng đúng 7 hoặc 14 thì in `YES`.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $N \le 10^{18}$.
-- Trường hợp biên: N < 7; N có tổng chữ số đúng bằng 7; N = 10^18.
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1234)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `s` | `s = "1234"`, `t = 0` |
+| 2 | Xét `1` | `t = 1` |
+| 3 | Xét `2` | `t = 3` |
+| 4 | Xét `3` | `t = 6` |
+| 5 | Xét `4` | `t = 10` |
+| 6 | Kiểm tra `t % 7` | `10 % 7 = 3` khác 0 |
+| 7 | In kết quả | màn hình hiện `NO` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `NO`.
 
-- Bất biến: Tổng chữ số không đổi dù duyệt từ trái hay phải.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- 1234: tổng 1+2+3+4 = 10, 10 % 7 = 3 nên in NO.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — viết ngược hai nhánh kết quả:
+```python
+s = input().strip()
+t = 0
+for c in s:
+    if "0" <= c <= "9":
+        t += ord(c) - ord("0")
+if t % 7 == 0:
+    print("NO")
+else:
+    print("YES")
+```
+Với mẫu `1234` in ra `YES` sai. Cách sửa: tổng chia hết cho 7 thì in `YES`, ngược lại in `NO`.
+- Bẫy 2 — cộng mã ký tự mà quên đổi ra giá trị số:
+```python
+s = input().strip()
+t = 0
+for c in s:
+    t += ord(c)
+if t % 7 == 0:
+    print("YES")
+else:
+    print("NO")
+```
+Với mẫu `1234`, `t` thành `49 + 50 + 51 + 52 = 202` thay vì `10`; với vé `16` thì `t = 103`, `103` chia 7 dư 5 nên in `NO` trong khi đáp án đúng phải là `YES`. Cách sửa: cộng `ord(c) - ord("0")`.
+- Bẫy 3 — kiểm tra số vé thay vì tổng chữ số:
+```python
+s = input().strip()
+if int(s) % 7 == 0:
+    print("YES")
+else:
+    print("NO")
+```
+Đề bài yêu cầu xét tổng các chữ số, không phải số vé; vé `16` có tổng `7` nên phải `YES` nhưng `16` chia 7 dư 2 nên cách này in `NO`. Cách sửa: cộng từng chữ số rồi mới xét chia hết cho 7.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- Quên số 0 vẫn là chữ số; nhầm chia hết cho 7 với số 7 trong số.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 s = input().strip()
@@ -53,8 +83,3 @@ if t % 7 == 0:
 else:
     print("NO")
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.

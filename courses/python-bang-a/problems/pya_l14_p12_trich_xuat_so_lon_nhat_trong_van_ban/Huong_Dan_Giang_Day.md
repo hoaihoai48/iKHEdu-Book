@@ -1,80 +1,61 @@
-# Hướng Dẫn Giảng Dạy: Trích Xuất Số Lớn Nhất Trong Văn Bản
+# Hướng Dẫn Giảng Dạy: Trích xuất số lớn nhất trong văn bản
 Chuyên đề: **Duyệt Chuỗi & Biến Đổi Ký Tự Thần Kỳ**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Trích Xuất Số Lớn Nhất Trong Văn Bản** (`PYA-L14-P12`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: giúp lớp trưởng gom từng cụm chữ số liên tiếp thành con số rồi giữ lại số to nhất.
+- Quy trình với biến thật (`s`, `lon_nhat`, `so_hien_tai`, `ch`):
+  - Đọc cả câu mẫu, khởi động `lon_nhat = -1`, `so_hien_tai = ''`.
+  - Duyệt từng `ch` (kèm một dấu cách giả ở cuối để chốt số): gom được `5` (lớn nhất thành 5), `38` (thành 38), `105` (thành 105).
+  - In `lon_nhat` được 105.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: Lop 5A co 38 hoc sinh va 105 quyen sach)
+| Bước | Lệnh chạy | Giá trị trong máy | Ghi chú |
+|---|---|---|---|
+| 1 | `s = input()` | câu báo cáo của lớp trưởng | chứa 5, 38, 105 |
+| 2 | gom tới hết `5A` | `lon_nhat = 5` | số đầu tiên |
+| 3 | gom tới hết `38` | `lon_nhat = 38` | 38 lớn hơn 5 |
+| 4 | gom tới hết `105` | `lon_nhat = 105` | 105 lớn nhất |
+| 5 | `print(lon_nhat)` | màn hình hiện `105` | khớp Output mẫu |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-Lop 5A co 38 hoc sinh va 105 quyen sach
-```
-* **Output:**
-```text
-105
-```
-* **Giải thích:** Các con số xuất hiện là: 5, 38, 105. Số lớn nhất là 105.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: so chuỗi thay vì so số nên `38` thắng `105`. Đoạn sai:
 ```python
-# Gợi ý mã nguồn cho PYA-L14-P12: Trích Xuất Số Lớn Nhất Trong Văn Bản
-# Cài đặt code chuẩn Python 3
+s = input()
+lon_nhat = ''
+so_hien_tai = ''
+for ch in s + ' ':
+    if ch.isdigit():
+        so_hien_tai = so_hien_tai + ch
+    else:
+        if so_hien_tai != '':
+            if so_hien_tai > lon_nhat:
+                lon_nhat = so_hien_tai
+            so_hien_tai = ''
+print(lon_nhat)
 ```
+Với mẫu trên so theo vần chữ nên `38` lớn hơn `105`, in ra `38`, đáp án đúng là `105`. Cách sửa: đổi sang số `int(so_hien_tai) > lon_nhat`.
+- Bẫy 2: quên dấu cách giả cuối `for ch in s:` nên số cuối mất tích. Đoạn sai khiến với câu kết thúc bằng số (như mẫu kết thúc bằng `sach` thì không sao, nhưng câu `co 105` sẽ chốt thiếu) dễ cho kết quả sai. Cách sửa: duyệt `for ch in s + ' ':` như lời giải.
 
 ---
 
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+## 4. Lời giải tham khảo
+```python
+s = input()
+lon_nhat = -1
+so_hien_tai = ''
+for ch in s + ' ':
+    if ch.isdigit():
+        so_hien_tai = so_hien_tai + ch
+    else:
+        if so_hien_tai != '':
+            if int(so_hien_tai) > lon_nhat:
+                lon_nhat = int(so_hien_tai)
+            so_hien_tai = ''
+print(lon_nhat)
+```

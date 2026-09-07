@@ -1,80 +1,56 @@
-# Hướng Dẫn Giảng Dạy: Cặp Số Thân Thiết
+# Hướng Dẫn Giảng Dạy: Cặp số thân thiết
 Chuyên đề: **Đếm Số Theo Quy Luật & Các Con Số Đặc Biệt**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Cặp Số Thân Thiết** (`PYA-L12-P08`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này: hai số thân thiết là hai số khác nhau mà tổng ước nhỏ hơn của số này bằng số kia, và ngược lại.
+- Tính `tong_a` cho `a = 220`: các ước nhỏ hơn `220` gồm `1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110`, tổng đúng bằng `284`.
+- Tính `tong_b` cho `b = 284`: các ước nhỏ hơn `284` gồm `1, 2, 4, 71, 142`, tổng đúng bằng `220`.
+- Vì `220 != 284`, `tong_a == 284` và `tong_b == 220` nên in `YES`.
+- Thầy cô cho các em cộng tay `1 + 2 + 4 + 71 + 142 = 220` để tin vào chiều ngược lại.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 220 284)
+| Biến | Tính | Giá trị |
+| --- | --- | --- |
+| `tong_a` | tổng ước nhỏ hơn `220` | `284` |
+| `tong_b` | tổng ước nhỏ hơn `284` (`1 + 2 + 4 + 71 + 142`) | `220` |
+| So sánh | `220 != 284`, `284 == 284`, `220 == 220` | cả ba đúng, in `YES` |
+
+Kết quả in ra: `YES`, khớp với kết quả mẫu.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên kiểm tra `a != b`. Với cặp `6 6` (số hoàn hảo), tổng ước mỗi bên đều bằng `6` nên làm sai sẽ in `YES`, trong khi đáp án đúng là `NO`. Sửa lại: giữ `a != b` như bài giải.
+- Bẫy 2: chỉ kiểm tra một chiều (`tong_a == b`) mà bỏ chiều còn lại. Với cặp `10 20` làm sai có thể kết luận vội, đáp án đúng phải kiểm tra cả hai chiều. Sửa lại: `tong_a == b and tong_b == a`.
+- Bẫy 3: cộng cả chính số vào tổng ước. Với mẫu `220 284`, `tong_a` thành `504` nên in nhầm `NO`. Sửa lại: chỉ cộng khi `i < a` và `j < a` (tương tự với `b`) như bài giải.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-220 284
-```
-* **Output:**
-```text
-YES
-```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
-# Gợi ý mã nguồn cho PYA-L12-P08: Cặp Số Thân Thiết
-# Cài đặt code chuẩn Python 3
+a, b = map(int, input().split())
+tong_a = 0
+for i in range(1, int(a ** 0.5) + 1):
+    if a % i == 0:
+        j = a // i
+        if i < a:
+            tong_a = tong_a + i
+        if j != i and j < a:
+            tong_a = tong_a + j
+tong_b = 0
+for i in range(1, int(b ** 0.5) + 1):
+    if b % i == 0:
+        j = b // i
+        if i < b:
+            tong_b = tong_b + i
+        if j != i and j < b:
+            tong_b = tong_b + j
+if a != b and tong_a == b and tong_b == a:
+    print("YES")
+else:
+    print("NO")
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

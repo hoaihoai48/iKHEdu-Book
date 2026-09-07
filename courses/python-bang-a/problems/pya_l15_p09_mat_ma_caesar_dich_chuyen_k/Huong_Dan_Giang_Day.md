@@ -1,74 +1,43 @@
-# Hướng Dẫn Giảng Dạy: Mật Mã Caesar Dịch Chuyển K
+# Hướng Dẫn Giảng Dạy: Mật mã Caesar dịch chuyển K
 Chuyên đề: **Tách Từ & Mật Mã Thay Thế**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Mật Mã Caesar Dịch Chuyển K** (`PYA-L15-P09`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất: giúp bạn Bin mã hóa thư bằng cách đẩy mỗi chữ cái sang phải `K` nấc, hết `Z` thì vòng lại `A`.
+- Quy trình với biến thật (`s`, `k`, `res`, `ch`):
+  - Đọc `s = "ABCXYZ"`, `k = 3`.
+  - Với từng `ch`, tính `chr((ord(ch) - ord('A') + k) % 26 + ord('A'))`: `A` thành `D`, `B` thành `E`, `C` thành `F`, `X` thành `A`, `Y` thành `B`, `Z` thành `C`.
+  - Nối lại được `DEFABC` rồi in ra.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: ABCXYZ và 3)
+| Bước | Lệnh chạy | Giá trị trong máy | Ghi chú |
+|---|---|---|---|
+| 1 | `s`, `k` | `s = "ABCXYZ"`, `k = 3` | thư gốc và bước nhảy |
+| 2 | `A, B, C` cộng 3 | `D, E, F` | chưa chạm vòng |
+| 3 | `X, Y, Z` cộng 3 | `A, B, C` | vòng lại từ đầu |
+| 4 | `print("".join(res))` | màn hình hiện `DEFABC` | khớp Output mẫu |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
-
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-ABCXYZ
-3
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: cộng trực tiếp `chr(ord(ch) + k)` nên `X, Y, Z` văng khỏi bảng chữ. Đoạn sai:
+```python
+s = input().strip()
+k = int(input().strip())
+res = []
+for ch in s:
+    res.append(chr(ord(ch) + k))
+print("".join(res))
 ```
-* **Output:**
-```text
-DEFABC
-```
-* **Giải thích:** 'A'->'D', 'B'->'E', 'X'->'A', 'Y'->'B', 'Z'->'C'.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
+Với mẫu `ABCXYZ` và `3`, ba chữ cuối thành ký tự lạ `[/]` thay vì `ABC`, đáp án đúng là `DEFABC`. Cách sửa: vòng lại bằng `% 26` như lời giải.
+- Bẫy 2: quên đọc `k` mà dùng số cố định. Đoạn sai khiến mọi bước nhảy khác 3 đều cho kết quả sai, ví dụ mẫu cần `DEFABC` nhưng với `k = 1` đúng ra phải là `BCDYZA`. Cách sửa: đọc `k = int(input().strip())`.
 
 ---
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 s = input().strip()
 k = int(input().strip())
@@ -80,9 +49,3 @@ for ch in s:
         res.append(ch)
 print("".join(res))
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

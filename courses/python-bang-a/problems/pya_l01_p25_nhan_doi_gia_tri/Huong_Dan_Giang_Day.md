@@ -1,64 +1,33 @@
-# Hướng Dẫn Giảng Dạy: Nhân Đôi Giá Trị
+# Hướng Dẫn Giảng Dạy: Nhân đôi giá trị
 Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Nhân Đôi Giá Trị** bằng Python 3.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là dự đoán sản lượng năm sau gấp đôi năm nay: lấy `N` nhân với 2. Thầy cô kể câu chuyện bác Tư thu hoạch 75 quả năm nay thì năm sau được 150 quả.
+- Quy trình gồm hai bước với biến `n` trong lời giải: đọc số `75` vào `n` bằng `int(input())`, rồi tính `n * 2` tức `75 * 2 = 150` và in ra.
+- Xử lý biên: ràng buộc cho `N` từ 0 tới `10^9`. Thầy cô cho các con thử giá trị biên `0` cho ra `0`, và giá trị biên `1000000000` cho ra `2000000000` để thấy chương trình vẫn đúng ở hai đầu.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
-* **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 75)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `n = int(input())` với bàn phím gõ `75` | `n = 75` | (chưa in gì) |
+| 2 | `print(n * 2)` tức `print(75 * 2)` | `n = 75` | `150` |
+| 3 | Kết thúc chương trình | — | Kết quả cuối cùng: `150`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str`)?
-2. Cần sử dụng toán tử nào để tính ra đáp án?
-3. Bẫy lỗi nào mà học sinh hay mắc phải ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên `int()`, viết `n = input()` rồi `print(n * 2)` thì với mẫu `75` máy hiểu `"75"` là chữ nên lặp chữ hai lần, hiện `7575` thay vì `150`. Cách sửa: viết `n = int(input())`.
+- Bẫy 2: in ra `n` mà quên nhân, viết `print(n)` thì với mẫu `75` màn hình hiện `75` thay vì `150`. Cách sửa: viết `print(n * 2)`.
+- Bẫy 3: cộng thay vì nhân, viết `print(n + 2)` thì với mẫu `75` màn hình hiện `77` thay vì `150`. Cách sửa: nhớ gấp đôi nghĩa là nhân với 2, viết `n * 2`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Áp dụng công thức trực tiếp $\mathcal{O}(1)$.
-* **Bất biến thuật toán:** Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước gán.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-| Bước | Hành Động | Trạng Thái Biến | Kết Quả Trung Gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức toán học | Cập nhật biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$, chạy tức thì dưới $0.05\text{s}$.
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$, bộ nhớ tối thiểu an toàn trong $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
-3. Thiếu dấu ngoặc trong biểu thức phân số.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 n = int(input())
 print(n * 2)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

@@ -1,46 +1,77 @@
-# Hướng Dẫn Giảng Dạy — Đếm Kẹo Chẵn Lẻ (`PYA-L16-P05`)
+# Hướng Dẫn Giảng Dạy: Đếm kẹo chẵn lẻ
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Dễ trong 90 phút thi thử.
-- Rèn pattern ẩn: **vòng lặp + rẽ nhánh (đếm theo tính chẵn lẻ)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn phép chia dư và bộ đếm đôi.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là đếm gói chẵn rồi suy ra gói lẻ bằng phép trừ, vì mỗi gói chỉ thuộc một mâm.
+- Với số mẫu `N = 6`, các gói `1 2 3 4 5 6`: các gói chẵn là `2`, `4`, `6` (3 gói); gói lẻ là `6 - 3 = 3` gói. Đáp án là `3 3`.
+- Quy trình trong lời giải với các biến `n`, `data`, `c`, `x`:
+  - Đọc `n = 6`, gom đủ 6 số vào `data`, đặt `c = 0`.
+  - Với mỗi `x`, nếu `x % 2 == 0` thì tăng `c`: `1` bỏ, `2` đếm 1, `3` bỏ, `4` đếm 2, `5` bỏ, `6` đếm 3.
+  - In `c` và `n - c` tức `3 3`.
+- Giá trị biên cụ thể: mỗi gói có thể có `0` viên kẹo mà `0` là số chẵn nên vẫn đếm vào mâm chẵn.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $N \le 10^5$.
-- Trường hợp biên: N = 1; số 0 được tính là số chẵn; tất cả cùng chẵn hoặc cùng lẻ.
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 / 1 2 3 4 5 6)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n` | `n = 6` |
+| 2 | Gom `data` | `data = [1, 2, 3, 4, 5, 6]`, `c = 0` |
+| 3 | Xét `1`, `2` | `2` chẵn nên `c = 1` |
+| 4 | Xét `3`, `4` | `4` chẵn nên `c = 2` |
+| 5 | Xét `5`, `6` | `6` chẵn nên `c = 3` |
+| 6 | In `c` và `n - c` | màn hình hiện `3 3` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `3 3`.
 
-- Bất biến: Tổng số chẵn và số lẻ luôn bằng N.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- 1 2 3 4 5 6: đếm chẵn được 3, lẻ = 6 - 3 = 3.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — đếm gói lẻ bằng vòng lặp riêng nhưng quên chia hai mâm:
+```python
+n = int(input())
+data = []
+while len(data) < n:
+    data += list(map(int, input().split()))
+print(len([x for x in data[:n] if x % 2 == 0]))
+```
+Với mẫu trên chỉ in ra `3`, thiếu số gói lẻ phía sau. Cách sửa: in cả hai số `print(str(c) + " " + str(n - c))`.
+- Bẫy 2 — in mỗi số một dòng:
+```python
+n = int(input())
+data = []
+while len(data) < n:
+    data += list(map(int, input().split()))
+c = 0
+for x in data[:n]:
+    if x % 2 == 0:
+        c += 1
+print(c)
+print(n - c)
+```
+Với mẫu trên in ra hai dòng `3` rồi `3`, không khớp đáp án mẫu `3 3` trên một dòng. Cách sửa: in chung một dòng cách nhau bởi dấu cách.
+- Bẫy 3 — coi gói `0` viên là gói lẻ:
+```python
+n = int(input())
+data = []
+while len(data) < n:
+    data += list(map(int, input().split()))
+c = 0
+for x in data[:n]:
+    if x % 2 == 0 and x > 0:
+        c += 1
+print(str(c) + " " + str(n - c))
+```
+Với mẫu trên vẫn ra `3 3`, nhưng dãy có gói `0` viên thì gói đó bị đẩy sang mâm lẻ sai. Cách sửa: điều kiện đúng chỉ là `x % 2 == 0`.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- Tưởng số 0 không chẵn không lẻ; in hai số trên hai dòng.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 n = int(input())
@@ -53,8 +84,3 @@ for x in data[:n]:
         c += 1
 print(str(c) + " " + str(n - c))
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.

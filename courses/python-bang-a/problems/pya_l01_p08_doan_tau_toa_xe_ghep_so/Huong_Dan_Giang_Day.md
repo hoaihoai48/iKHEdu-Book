@@ -1,85 +1,37 @@
-# Hướng Dẫn Giảng Dạy: Đoàn Tàu Toa Xe Ghép Số
+# Hướng Dẫn Giảng Dạy: Đoàn tàu toa xe ghép số
 Chuyên đề: **Chào Python & Chiếc Hộp Biến Số**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đoàn Tàu Toa Xe Ghép Số** (`PYA-L01-P08`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là phân biệt chữ với số: hai toa `a = 25` và `b = 30` khi ghép chữ cho ra `2530`, khi cộng số cho ra `55`. Thầy cô ví ghép chữ như nối hai toa tàu lại, còn cộng số như đổ kẹo hai toa vào chung một hộp.
+- Quy trình gồm ba bước với hai biến `s1` và `s2` trong lời giải: đọc nguyên văn hai dòng `"25"` vào `s1` và `"30"` vào `s2` bằng `input().strip()` (giữ dạng chữ), dòng 1 in `s1 + s2` tức `"25" + "30" = "2530"`, dòng 2 in `int(s1) + int(s2)` tức `25 + 30 = 55`.
+- Xử lý biên: ràng buộc cho `a, b` từ 1 tới 100. Thầy cô cho các con thử cặp biên `1` và `1` cho ra dòng 1 là `11` và dòng 2 là `2`, cặp `100` và `100` cho ra `100100` và `200`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Trường hợp đặc biệt):**
- * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
- * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
- * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 25 và 30)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `s1 = input().strip()` với dòng 1 gõ `25` | `s1 = "25"` | (chưa in gì) |
+| 2 | `s2 = input().strip()` với dòng 2 gõ `30` | `s2 = "30"` | (chưa in gì) |
+| 3 | `print(s1 + s2)` tức `print("25" + "30")` | `s1 = "25"`, `s2 = "30"` | `2530` |
+| 4 | `print(int(s1) + int(s2))` tức `print(25 + 30)` | `s1 = "25"`, `s2 = "30"` | `55` |
+| 5 | Kết thúc chương trình | — | Kết quả cuối cùng đúng hai dòng `2530` và `55`. |
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: đổi sang số ngay từ đầu bằng `s1 = int(input())` thì dòng ghép `s1 + s2` với mẫu `25` và `30` sẽ tính `25 + 30 = 55` ở cả hai dòng, mất dòng `2530`. Cách sửa: giữ nguyên chữ bằng `input().strip()`, chỉ đổi sang số ở dòng cộng.
+- Bẫy 2: quên đổi sang số ở dòng hai, viết `print(s1 + s2)` hai lần thì cả hai dòng đều hiện `2530`, mất dòng `55`. Cách sửa: dòng hai viết `print(int(s1) + int(s2))`.
+- Bẫy 3: in hai kết quả trên một dòng như `print(s1 + s2, int(s1) + int(s2))` thì màn hình hiện `2530 55` chung một dòng thay vì hai dòng riêng. Cách sửa: viết hai lệnh `print` riêng cho hai dòng.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
- > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-25
-30
-```
-* **Output:**
-```text
-2530
-55
-```
-* **Giải thích:** Dòng 1 ghép chữ: `"25" + "30" = "2530"`.
-Dòng 2 cộng số: $25 + 30 = 55$.
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
-
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```python
 s1 = input().strip()
 s2 = input().strip()
 print(s1 + s2)
 print(int(s1) + int(s2))
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.

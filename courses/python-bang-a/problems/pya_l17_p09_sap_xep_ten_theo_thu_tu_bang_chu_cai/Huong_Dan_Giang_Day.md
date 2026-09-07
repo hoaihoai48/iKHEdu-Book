@@ -1,83 +1,66 @@
-# Hướng Dẫn Giảng Dạy: Sắp Xếp Tên Theo Thứ Tự Bảng Chữ Cái
+# Hướng Dẫn Giảng Dạy: Sắp xếp tên theo thứ tự bảng chữ cái
 Chuyên đề: **Thống Kê Danh Sách & Sắp Xếp Nâng Cao**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Sắp Xếp Tên Theo Thứ Tự Bảng Chữ Cái** (`PYA-L17-P09`) bằng Python.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+## 1. Ý tưởng & Phân tích thuật toán
+
+- Bản chất của bài này là xếp các từ theo thứ tự từ điển từ A đến Z.
+- Với số mẫu `N = 4`, các từ `orange apple banana grape`: xếp lại thành `apple banana grape orange` (chữ `a` trước `b`, `b` trước `g`, `g` trước `o`).
+- Quy trình trong lời giải với các biến `n`, `words`:
+  - Đọc `n = 4`.
+  - Đọc các từ thành `words = ["orange", "apple", "banana", "grape"]`.
+  - Gọi `words.sort()` được `["apple", "banana", "grape", "orange"]` rồi in ra.
+- Giá trị biên cụ thể: `N = 1` thì in nguyên từ đó; các từ đều viết thường nên so sánh từ điển trực tiếp đúng luôn.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
-* **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 / orange apple banana grape)
+
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `n` | `n = 4` |
+| 2 | Đọc `words` | `["orange", "apple", "banana", "grape"]` |
+| 3 | Gọi `words.sort()` | `["apple", "banana", "grape", "orange"]` |
+| 4 | In kết quả | màn hình hiện `apple banana grape orange` |
+
+Kết quả cuối cùng khớp với đáp án mẫu: `apple banana grape orange`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Dữ liệu đầu vào của bài toán thuộc kiểu dữ liệu gì (`int`, `float`, `str` hay `list`)? Cần ép kiểu như thế nào?
-2. Có thể tính trực tiếp bằng công thức toán học $\mathcal{O}(1)$ được không, hay bắt buộc phải duyệt vòng lặp?
-3. Bẫy lỗi nào mà các bạn học sinh hay mắc phải nhất ở bài toán này?
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
----
-
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
-* **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4
-orange apple banana grape
+- Bẫy 1 — quên xếp mà in nguyên thứ tự nhập:
+```python
+n = int(input().strip())
+words = input().split()
+print(*words)
 ```
-* **Output:**
-```text
-apple banana grape orange
+Với mẫu trên in ra `orange apple banana grape` sai. Cách sửa: gọi `words.sort()` trước khi in.
+- Bẫy 2 — xếp ngược từ Z về A:
+```python
+n = int(input().strip())
+words = input().split()
+words.sort(reverse=True)
+print(*words)
 ```
-* **Giải thích:** 
-
-| Bước | Hành động | Trạng thái biến | Kết quả trung gian |
-| :---: | :--- | :--- | :--- |
-| **1** | Nhập dữ liệu đầu vào | Đọc từ bàn phím qua `input()` | Khởi tạo giá trị ban đầu |
-| **2** | Thực thi thuật toán | Áp dụng công thức / vòng lặp / rẽ nhánh | Cập nhật biến tích lũy / biến kết quả |
-| **3** | Xuất kết quả | Gọi hàm `print()` định dạng chuẩn | In chính xác kết quả đầu ra |
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$, đảm bảo chạy tức thì dưới $0.1\text{s}$ (vượt xa yêu cầu giới hạn $1.0\text{s}$ của kỳ thi).
-* **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ tối thiểu, đảm bảo an toàn tuyệt đối trong ngưỡng $256\text{MB}$.
+Với mẫu trên in ra `orange grape banana apple` sai. Cách sửa: xếp tăng dần mặc định, không dùng `reverse=True`.
+- Bẫy 3 — chỉ đọc một từ đầu tiên:
+```python
+n = int(input().strip())
+words = [input().strip()]
+words.sort()
+print(*words)
+```
+Với mẫu trên các từ nằm chung một dòng nên chỉ lấy được `orange`, in ra `orange` thiếu ba từ còn lại. Cách sửa: đọc cả dòng bằng `words = input().split()`.
 
 ---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
-2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+## 4. Lời giải tham khảo
 
----
-
-## 8. Mã Nguồn Tham Chiếu Python 3 Chuẩn Thi Đấu
 ```python
 n = int(input().strip())
 words = input().split()
 words.sort()
 print(*words)
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.

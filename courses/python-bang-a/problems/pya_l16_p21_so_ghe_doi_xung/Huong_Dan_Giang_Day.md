@@ -1,46 +1,71 @@
-# Hướng Dẫn Giảng Dạy — Số Ghế Đối Xứng (`PYA-L16-P07`)
+# Hướng Dẫn Giảng Dạy: Số ghế đối xứng
+Chuyên đề: **Chiếc Hộp Thần Kỳ list & Thao Tác Cơ Bản**
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
+---
 
-- Học sinh giải được bài ở mức Trung bình trong 90 phút thi thử.
-- Rèn pattern ẩn: **chuỗi (đảo ngược / kiểm tra đối xứng)**.
-- Mục tiêu trong ma trận Bai_Tap.md: Rèn đảo ngược số và so sánh chuỗi.
-- Chuẩn đầu ra: đọc đề contest không gợi ý, tự chọn công cụ, vét điểm từng subtask.
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+- Bản chất của bài này là kiểm tra chuỗi số đọc xuôi và đọc ngược có giống nhau không.
+- Với số mẫu `N = 121`, đọc xuôi là `121`, đọc ngược cũng là `121` nên là ghế vàng, đáp án `YES`.
+- Quy trình trong lời giải với biến `s`:
+  - Đọc cả dòng thành chuỗi `s`, mẫu đọc được `s = "121"`.
+  - Lấy chuỗi đảo ngược `s[::-1]`, với mẫu là `"121"`.
+  - So sánh `"121" == "121"` đúng nên in `YES`.
+- Giá trị biên cụ thể: `N` có 1 chữ số (ví dụ `7`) luôn đối xứng nên in `YES`; `N` dài tới 19 chữ số vẫn xử lý bằng chuỗi nên không lo tràn số.
 
-- Dữ kiện vào: xem mục Input trong De_Bai.md. Ràng buộc: $N \le 10^{18}$.
-- Trường hợp biên: Số có 1 chữ số luôn đối xứng; số tròn chục như 10 không đối xứng.
-- Đề giấu pattern: học sinh phải tự nhận ra công cụ từ câu chuyện, không được gợi ý trước.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 121)
 
-1. Đề cho những gì, hỏi cái gì? (Gạch chân dữ kiện.)
-2. Với ví dụ nhỏ, em làm tay thế nào trước khi nghĩ đến code?
-3. Trường hợp N = 0 / N = 1 thì đáp án là gì?
-4. Subtask 1 giới hạn nhỏ cho phép cách làm đơn giản nào?
+| Bước | Thao tác | Giá trị |
+|------|----------|---------|
+| 1 | Đọc `s = input().strip()` | `s = "121"` |
+| 2 | Lấy `s[::-1]` | `"121"` |
+| 3 | So sánh `s == s[::-1]` | `"121" == "121"` đúng |
+| 4 | In kết quả | màn hình hiện `YES` |
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
+Kết quả cuối cùng khớp với đáp án mẫu: `YES`.
 
-- Bất biến: Nửa đầu của chuỗi phải khớp với nửa sau đảo ngược.
-- Cách vét điểm: subtask 1 làm cách đơn giản (lặp trực tiếp) để lấy 50% điểm trước; subtask 2 mới cần cách nhanh.
-- Độ phức tạp mục tiêu xem mục 6.
+---
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
+## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- 121 đảo lại vẫn là 121 nên in YES.
-- Khuyến khích học sinh kẻ bảng tay 3 cột: bước | giá trị hiện tại | kết quả.
+- Bẫy 1 — đổi số đảo bằng phép tính số học rồi so sánh, dễ sai với số có chữ số 0 ở cuối:
+```python
+n = int(input())
+tam = n
+dao = 0
+while tam > 0:
+    dao = dao * 10 + tam % 10
+    tam = tam // 10
+if dao == n:
+    print("YES")
+else:
+    print("NO")
+```
+Với mẫu `121` vẫn ra `YES`, nhưng cách làm chuỗi `s == s[::-1]` ngắn gọn và ít nhầm hơn. Cách sửa: giữ nguyên số dưới dạng chuỗi rồi so sánh với chuỗi đảo.
+- Bẫy 2 — quên cắt khoảng trắng khi đọc:
+```python
+s = input()
+if s == s[::-1]:
+    print("YES")
+else:
+    print("NO")
+```
+Nếu dòng nhập mẫu `121` kèm dấu xuống dòng hoặc khoảng trắng thừa thì so sánh lệch và in `NO` sai. Cách sửa: đọc bằng `s = input().strip()`.
+- Bẫy 3 — viết hoa thường sai chữ đáp án:
+```python
+s = input().strip()
+if s == s[::-1]:
+    print("Yes")
+else:
+    print("No")
+```
+Với mẫu `121` in ra `Yes`, không khớp đáp án mẫu `YES`. Cách sửa: in đúng chữ in hoa `YES` và `NO`.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian ($\mathcal{O}(...)$)
+---
 
-- Thời gian $\mathcal{O}(N)$ (riêng bài tổng 1..N dùng công thức nên $\mathcal{O}(1)$), bộ nhớ $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$.
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-
-- Đảo số bằng phép tính rồi so sánh dễ sai khi số có chữ số 0 ở cuối; so sánh chuỗi an toàn hơn.
-- In thừa chữ giải thích gây Wrong Answer; sai định dạng số thập phân; quên test biên.
-
-## 8. Mã Nguồn Tham Chiếu
+## 4. Lời giải tham khảo
 
 ```python
 s = input().strip()
@@ -49,8 +74,3 @@ if s == s[::-1]:
 else:
     print("NO")
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-
-- Tăng giới hạn để buộc tối ưu hơn; đổi điều kiện (ngày lẻ, số nhỏ nhất, giảm dần).
-- Ghép với bài khác trong đề thi thử thành đề 4 bài / 90 phút.
