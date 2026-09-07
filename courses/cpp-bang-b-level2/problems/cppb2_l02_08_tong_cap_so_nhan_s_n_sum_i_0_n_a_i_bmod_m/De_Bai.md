@@ -9,25 +9,32 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $T$ cặp $(a, n)$. Hãy lập trình tính $S = 1 + a + a^2 + \dots + a^n$ theo modulo $10^9+7$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^4$) — số lượng truy vấn.
+- $T$ dòng tiếp theo, mỗi dòng chứa hai số nguyên không âm $a, n$ ($0 \le a \le 10^9$, $0 \le n \le 10^{18}$), cách nhau bởi một dấu cách.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là giá trị $S = 1 + a + a^2 + \dots + a^n$ theo modulo $10^9+7$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2
+2 3
+3 2
 ```
 ### Output
 ```text
 15
+13
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Cấp Số Nhân $S_N = \sum_{i=0}^N A^i \bmod M$.
+
+* Với $a = 2, n = 3$: $S = 1 + 2 + 4 + 8 = 15$.
+* Với $a = 3, n = 2$: $S = 1 + 3 + 9 = 13$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le T \le 10^4$, $0 \le a \le 10^9$, $0 \le n \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

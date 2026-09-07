@@ -1,31 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+const long long MOD = 1000000007;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, s;
-    if (!(cin >> n >> s)) return 0;
-
-    if (s < n || s > 6 * n) {
-        cout << "0.000000\n";
-        return 0;
-    }
-
-    vector<double> dp(s + 1, 0.0);
-    dp[0] = 1.0;
-
-    for (int i = 1; i <= n; ++i) {
-        vector<double> next_dp(s + 1, 0.0);
-        for (int j = 1; j <= s; ++j) {
-            for (int face = 1; face <= 6; ++face) {
-                if (j >= face) next_dp[j] += dp[j - face] / 6.0;
-            }
-        }
-        dp = next_dp;
-    }
-
-    cout << fixed << setprecision(6) << dp[s] << "\n";
+    int N, K;
+    if (!(cin >> N >> K)) return 0;
+    vector<vector<long long>> S(N + 1, vector<long long>(K + 1, 0));
+    S[0][0] = 1;
+    for (int n = 1; n <= N; n++)
+        for (int k = 1; k <= min(n, K); k++)
+            S[n][k] = (S[n - 1][k - 1] + (long long)k * S[n - 1][k]) % MOD;
+    cout << S[N][K] % MOD << "\n";
     return 0;
 }

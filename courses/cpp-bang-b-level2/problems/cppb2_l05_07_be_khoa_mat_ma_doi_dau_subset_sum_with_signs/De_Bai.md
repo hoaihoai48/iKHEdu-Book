@@ -9,25 +9,29 @@ Người thợ cần biết có bao nhiêu cách vặn để con số hiển th�
 Cho dãy gồm $N$ số nguyên và một giá trị mục tiêu $T$. Hãy lập trình đếm số cách gán mỗi phần tử vào một trong ba trạng thái (bỏ qua, cộng thêm, trừ đi) sao cho tổng thu được bằng $T$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ và số nguyên $T$ ($1 \le n \le 24$, $|T| \le 10^{14}$) — số phần tử và tổng mục tiêu.
+- Dòng thứ hai chứa $n$ số nguyên $a_i$ ($|a_i| \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số cách gán mỗi phần tử vào một trong ba trạng thái (bỏ qua, cộng thêm, trừ đi) sao cho tổng thu được đúng bằng $T$ (cách gán bỏ qua tất cả cũng được tính nếu tổng bằng $T$).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3 0
+1 2 3
 ```
 ### Output
 ```text
-15
+3
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Bẻ Khóa Mật Mã Đổi Dấu (Subset Sum with Signs).
+
+Với dãy $[1, 2, 3]$ và $T = 0$, xét dấu của số $3$: nếu bỏ qua $3$ thì $\pm 1 \pm 2 = 0$ chỉ xảy ra khi bỏ qua cả hai — $1$ cách (bỏ hết). Nếu lấy $+3$ thì cần $\pm 1 \pm 2 = -3$, chỉ có $-1 - 2$ thỏa — $1$ cách. Nếu lấy $-3$ thì cần $\pm 1 \pm 2 = 3$, chỉ có $+1 + 2$ thỏa — $1$ cách. Tổng cộng $3$ cách.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 24$, $|T| \le 10^{14}$, $|a_i| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

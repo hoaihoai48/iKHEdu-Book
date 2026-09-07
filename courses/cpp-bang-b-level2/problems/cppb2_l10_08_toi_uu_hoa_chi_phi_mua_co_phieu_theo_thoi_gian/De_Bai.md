@@ -1,33 +1,50 @@
 # Tối ưu hóa chi phí mua cổ phiếu theo thời gian
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: `multiset` duy trì trật tự giá trị.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thủ kho của cửa hàng linh kiện quản lý các lô hàng cùng một mã sản phẩm nhập về ở nhiều thời điểm khác nhau, mỗi lô được dán nhãn một mã số. Trong ngày, thủ kho thực hiện nhiều thao tác: nhập thêm một lô có mã $x$, xuất đi một lô có mã $x$ (nếu còn), hoặc kiểm kê xem hiện còn bao nhiêu lô mang mã $x$ trong kho. Vì số thao tác lên tới hàng chục nghìn lượt, thủ kho cần một chương trình ghi nhận và trả lời kiểm kê tức thì.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian với độ phức tạp tối ưu nhất.
+
+Cho $Q$ thao tác, mỗi thao tác gồm loại $type$ và mã $x$: loại $1$ là nhập một lô mã $x$, loại $2$ là xuất một lô mã $x$ (nếu kho còn), loại $3$ là hỏi hiện có bao nhiêu lô mã $x$. Hãy lập trình in ra đáp án của mỗi thao tác loại $3$ trên một dòng.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $Q$ ($1 \le Q \le 10^5$), là số thao tác.
+- $Q$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $type, x$ ($1 \le type \le 3$, $1 \le x \le 10^9$), mô tả một thao tác.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Mỗi dòng in ra đáp án của một thao tác loại $3$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+6
+1 5
+1 3
+1 5
+3 5
+2 5
+3 5
 ```
+
 ### Output
+
 ```text
-15
+2
+1
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Chi Phí Mua Cổ Phiếu Theo Thời Gian.
+
+- Nhập lô mã $5$, nhập lô mã $3$, nhập thêm lô mã $5$ thì kho có hai lô mã $5$.
+- Hỏi mã $5$ được đáp án $2$; xuất đi một lô mã $5$ thì kho còn một lô mã $5$.
+- Hỏi lại mã $5$ được đáp án $1$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le Q \le 10^5$, $1 \le type \le 3$, $1 \le x \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Dp Knapsack Trong So Lon W Le 1e9**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dp Knapsack Trong So Lon W Le 1e9 với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho n vật, mỗi vật có trọng lượng w[i] và giá trị v[i], cùng giới hạn trọng lượng W (W lên tới 1e9). Hãy lập trình chọn tập vật có tổng trọng lượng không vượt quá W sao cho tổng giá trị lớn nhất và in ra giá trị lớn nhất đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

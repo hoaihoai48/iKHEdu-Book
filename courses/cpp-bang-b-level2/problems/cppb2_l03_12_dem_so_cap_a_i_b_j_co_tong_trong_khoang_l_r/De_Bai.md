@@ -11,25 +11,34 @@ Ban tổ chức liệt kê thời lượng từng tiết mục rồi đếm xem 
 Cho hai dãy $A, B$ và khoảng $[L, R]$. Hãy lập trình đếm số cặp $(A_i, B_j)$ có tổng nằm trong khoảng $[L, R]$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $n, m$ và hai số nguyên $L, R$ ($1 \le n, m \le 2 \cdot 10^5$, $|L|, |R| \le 10^9$, $L \le R$) — kích thước hai mảng và khoảng tổng.
+- Dòng thứ hai chứa $n$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- Dòng thứ ba chứa $m$ số nguyên $b_j$ ($|b_j| \le 10^9$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số cặp $(i, j)$ sao cho $L \le a_i + b_j \le R$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3 4 5 9
+1 2 3
+4 5 6 7
 ```
 ### Output
 ```text
-15
+11
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Cặp $(A_i, B_j)$ Có Tổng Trong Khoảng $[L, R]$.
+
+* Với $a_1 = 1$: cần $b$ từ $4$ tới $8$, cả $4$ số $4, 5, 6, 7$ đều thỏa → $4$ cặp.
+* Với $a_2 = 2$: cần $b$ từ $3$ tới $7$, cả $4$ số đều thỏa → $4$ cặp.
+* Với $a_3 = 3$: cần $b$ từ $2$ tới $6$, các số $4, 5, 6$ thỏa → $3$ cặp.
+Tổng cộng $4 + 4 + 3 = 11$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n, m \le 2 \cdot 10^5$, $L \le R$, mọi giá trị có trị tuyệt đối không quá $10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -11,25 +11,31 @@ Tổ trọng tài ghi lại điểm đầu và điểm cuối của từng ngư�
 Cho danh sách các đoạn thẳng trên trục số. Hãy lập trình đếm số cặp đoạn thẳng có phần giao nhau.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ ($1 \le n \le 2 \cdot 10^5$) — số đoạn thẳng.
+- $n$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $l, r$ ($|l|, |r| \le 10^9$, $l \le r$) là hai đầu mút của một đoạn (hai đoạn chung nhau dù chỉ một đầu mút cũng tính là chồng lấn).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số cặp đoạn thẳng chồng lấn nhau.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3
+1 3
+2 4
+5 6
 ```
 ### Output
 ```text
-15
+1
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Cặp Đoạn Thẳng Chồng Lấn Nhau.
+
+Đoạn $[1, 3]$ và $[2, 4]$ giao nhau trên $[2, 3]$ → $1$ cặp. Đoạn $[5, 6]$ nằm tách biệt, không giao đoạn nào. Vậy đáp án là $1$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -11,25 +11,27 @@ Cả hai cùng đếm thử với bảng nhỏ trước khi nghĩ cách trả l�
 Cho kích thước bảng nhân $N \times N$ và số $K$. Hãy lập trình tìm phần tử nhỏ thứ $K$ khi xếp tất cả các số trong bảng theo thứ tự tăng dần.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Gồm một dòng duy nhất chứa hai số nguyên $n, k$ ($1 \le n \le 10^9$, $1 \le k \le n^2$) — kích thước bảng nhân và thứ tự cần tìm.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số nhỏ thứ $k$ trong bảng nhân $n \times n$ (ô $(i, j)$ có giá trị $i \cdot j$, xếp hạng tính cả các giá trị trùng nhau).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3 5
 ```
 ### Output
 ```text
-15
+3
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Phần Tử Nhỏ Thứ K Trong Bảng Nhân $N \times N$.
+
+Bảng $3 \times 3$: hàng $1$ là $1, 2, 3$; hàng $2$ là $2, 4, 6$; hàng $3$ là $3, 6, 9$. Xếp $9$ số tăng dần: $1, 2, 2, 3, 3, 4, 6, 6, 9$. Số đứng thứ $5$ là $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 10^9$, $1 \le k \le n^2$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

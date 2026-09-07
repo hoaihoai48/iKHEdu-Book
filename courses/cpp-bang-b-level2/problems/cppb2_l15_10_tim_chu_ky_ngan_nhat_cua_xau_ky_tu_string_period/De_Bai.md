@@ -1,33 +1,41 @@
-# Tìm chu kỳ ngắn nhất của xâu ký tự (string period)
+# Chu kỳ ngắn nhất của xâu ký tự
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (String Period)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: String Hashing kiểm tra chu kỳ lặp.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhà máy dệt lập trình cho khung cửi tự động với họa tiết được lặp đi lặp lại từ một mẫu cơ sở ngắn nhất để tiết kiệm bộ nhớ điều khiển của máy thêu công nghiệp. Mỗi mẫu thêu là một xâu ký tự và kỹ thuật viên cần xác định độ dài của khối lặp cơ sở, với điều kiện độ dài xâu chia hết cho độ dài khối và toàn bộ xâu được tạo thành bằng cách lặp khối đó. Mảng tiền tố KMP giúp tìm chu kỳ ngắn nhất trong thời gian tuyến tính.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (string Period) với độ phức tạp tối ưu nhất.
+
+Cho xâu $S$. Hãy lập trình tìm độ dài chu kỳ ngắn nhất $p$ sao cho $|S|$ chia hết cho $p$ và $S$ được tạo thành bằng cách lặp lại khối $p$ ký tự đầu, rồi in ra $p$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: xâu $S$ ($1 \le |S| \le 10^6$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là độ dài chu kỳ ngắn nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+abcabcabc
 ```
+
 ### Output
+
 ```text
-15
-```
+3```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Chu Kỳ Ngắn Nhất Của Xâu Ký Tự (String Period).
+
+- Xâu $abcabcabc$ dài chín ký tự: thử khối $abc$ dài ba thì lặp ba lần được đúng xâu ban đầu.
+- Khối độ dài một ($a$) hay độ dài hai ($ab$) khi lặp đều cho ra xâu khác.
+- Chu kỳ ngắn nhất là $3$ nên in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |S| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

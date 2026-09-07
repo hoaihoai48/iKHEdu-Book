@@ -9,25 +9,29 @@ Chủ cửa hàng ghi lại doanh thu từng ngày liên tiếp. Cuối tháng, 
 Cho mảng $A$ gồm $N$ số nguyên và hai ngưỡng $L, R$. Hãy lập trình đếm số đoạn con liên tiếp có tổng các phần tử nằm trong đoạn $[L, R]$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ và hai số nguyên $L, R$ ($1 \le n \le 2 \cdot 10^5$, $|L|, |R| \le 10^{14}$, $L \le R$) — độ dài mảng và khoảng tổng.
+- Dòng thứ hai chứa $n$ số nguyên $a_i$ ($|a_i| \le 10^9$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số đoạn con liên tiếp có tổng các phần tử nằm trong đoạn $[L, R]$.
 
 ## Sample 1
 ### Input
 ```text
-5
+5 3 8
 1 2 3 4 5
 ```
 ### Output
 ```text
-15
+7
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đoạn Con Có Tổng Nằm Trong $[L, R]$.
+
+Liệt kê: $[1, 2]$ tổng $3$ ✓; $[1, 2, 3]$ tổng $6$ ✓; $[2, 3]$ tổng $5$ ✓; $[3]$ tổng $3$ ✓; $[3, 4]$ tổng $7$ ✓; $[4]$ tổng $4$ ✓; $[5]$ tổng $5$ ✓. Các đoạn còn lại: $[1]$ ($1$ ✗), $[2]$ ($2$ ✗), $[2, 3, 4]$ ($9$ ✗), $[4, 5]$ ($9$ ✗), $[3, 4, 5]$ ($12$ ✗), cả dãy ($15$ ✗). Tổng cộng $7$ đoạn thỏa mãn.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 2 \cdot 10^5$, $L \le R$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

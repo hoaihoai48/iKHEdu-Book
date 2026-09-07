@@ -1,33 +1,41 @@
-# Tổng các số trong đoạn thỏa mãn tính chất chữ số
+# Đếm số có tổng chữ số nguyên tố
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP trả về cặp `{số_lượng, tổng_giá_trị}`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đài thiên văn tỉnh phát động cuộc thi tìm ngôi sao may mắn trong đó mã số đăng ký được coi là đẹp khi tổng các chữ số của nó là một số nguyên tố để gắn với chủ đề các con số bí ẩn của vũ trụ bao la. Mỗi đợt thi xét một đoạn mã liên tiếp và cần đếm có bao nhiêu mã đẹp để chuẩn bị giấy chứng nhận cho thí sinh dự thi. Chương trình quy hoạch động ghi nhớ tổng chữ số rồi kiểm tra tính nguyên tố giúp đếm nhanh cả đoạn dài.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) có tổng các chữ số là số nguyên tố, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 13
 ```
+
 ### Output
+
 ```text
-15
+6
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Các Số Trong Đoạn Thỏa Mãn Tính Chất Chữ Số.
+
+- Các số từ $1$ đến $13$ có tổng chữ số là nguyên tố gồm $2, 3, 5, 7$ (tổng một chữ số) và $11, 12$ (tổng $2$ và $3$).
+- Đếm được sáu số nên chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

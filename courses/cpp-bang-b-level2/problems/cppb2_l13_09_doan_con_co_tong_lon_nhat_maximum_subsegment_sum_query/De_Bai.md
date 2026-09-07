@@ -1,33 +1,45 @@
-# Đoạn con có tổng lớn nhất (maximum subsegment sum query)
+# Tổng đoạn con lớn nhất trên đoạn truy vấn (static)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Segment Tree lưu 4 trường (sum, pref, suff, ans).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Sở kế hoạch đầu tư rà soát N dự án xếp theo tiến độ với mức đóng góp lợi nhuận có thể âm hoặc dương vào ngân sách tỉnh. Mỗi kỳ họp, hội đồng chọn một đoạn các dự án liên tiếp để đánh giá và cần biết tổng lớn nhất của một chuỗi con liên tiếp nằm trong đoạn đó nhằm quyết định có tiếp tục rót vốn hay không. Cây đoạn hợp nhất bốn thông tin mỗi nút giúp trả lời từng truy vấn trong thời gian logarit.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query) với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$ cố định và $Q$ truy vấn. Hãy lập trình trả lời, với mỗi truy vấn $(l,r)$, tổng lớn nhất của một đoạn con liên tiếp nằm trong $[l,r]$, rồi in ra đáp án.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $Q$ dòng tiếp theo, mỗi dòng gồm $l, r$ ($1 \le l \le r \le N$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Gồm $Q$ dòng, mỗi dòng là tổng đoạn con lớn nhất trong đoạn tương ứng.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+9 1
+-2 1 -3 4 -1 2 1 -5 4
+1 9
 ```
+
 ### Output
+
 ```text
-15
-```
+6```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query).
+
+- Dãy gồm $-2\ 1\ -3\ 4\ -1\ 2\ 1\ -5\ 4$: xét đoạn $4, -1, 2, 1$ cho tổng $6$.
+- Mọi cách mở rộng đoạn này sang trái đều cộng thêm số âm, sang phải gặp $-5$ kéo tổng xuống nên $6$ là lớn nhất.
+- Truy vấn duy nhất in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|a_i| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -9,25 +9,27 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho cơ số $a$ và số mũ $b$ rất lớn được cho dưới dạng chuỗi thập phân. Hãy lập trình tính $a^b \bmod (10^9+7)$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Gồm một dòng duy nhất chứa cơ số $a$ ($0 \le a \le 10^9$) và số mũ $b$ rất lớn được cho dưới dạng chuỗi thập phân (độ dài không quá $10^5$ ký tự, không có số $0$ vô nghĩa ở đầu trừ chính số $0$), cách nhau bởi một dấu cách.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là giá trị $a^b \bmod (10^9+7)$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2 1000000007
 ```
 ### Output
 ```text
-15
+2
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Với Số Mũ Cực Lớn.
+
+Số mũ $1000000007$ quá lớn nên ta duyệt từng chữ số của nó từ trái sang phải, mỗi bước nhân phần dư đang có với $10$ rồi cộng chữ số mới và chỉ giữ phần dư khi chia cho $10^9+6$. Sau khi duyệt cả $10$ chữ số, phần dư thu được là $1$. Vì vậy đáp án là $2^1 = 2$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le a \le 10^9$; chuỗi $b$ có độ dài không quá $10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

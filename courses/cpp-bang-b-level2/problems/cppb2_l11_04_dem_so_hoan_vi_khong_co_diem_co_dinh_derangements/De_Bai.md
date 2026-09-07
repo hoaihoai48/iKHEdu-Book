@@ -1,33 +1,42 @@
-# Đếm số hoán vị không có điểm cố định (derangements)
+# Đếm hoán vị không có điểm cố định (Derangements)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Hoán Vị Không Có Điểm Cố Định (Derangements)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Công thức $D_n = (n-1)(D_{n-1} + D_{n-2})$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bưu điện thành phố chạy chương trình đổi quà tri ân với đúng N hộp quà được đánh số và N phiếu trúng thưởng ghi số tương ứng. Máy phát quà bị lỗi nên hộp số i tuyệt đối không được rơi vào tay người cầm phiếu số i, nếu không hệ thống sẽ báo động và dừng dây chuyền. Người quản lý cần đếm có bao nhiêu cách phát quà hợp lệ, lấy phần dư cho 1 000 000 007 để đối chiếu với nhật ký kho hàng mỗi buổi tối.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Hoán Vị Không Có Điểm Cố Định (derangements) với độ phức tạp tối ưu nhất.
+
+Cho số nguyên $N$. Hãy lập trình tính số hoán vị không có điểm cố định của $N$ phần tử (số derangement $D(N)$), rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: số nguyên $N$ ($1 \le N \le 10^6$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là $D(N) \bmod 1\,000\,000\,007$ ($D(1) = 0$, $D(2) = 1$).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
 ```
+
 ### Output
+
 ```text
-15
+9
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Hoán Vị Không Có Điểm Cố Định (Derangements).
+
+- Với $N = 4$: liệt kê các hoán vị mà không vị trí nào giữ nguyên giá trị cũ.
+- Đếm được $9$ hoán vị thỏa mãn, ví dụ $2\ 1\ 4\ 3$ và $2\ 3\ 4\ 1$ nằm trong danh sách.
+- Chương trình in ra $9$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

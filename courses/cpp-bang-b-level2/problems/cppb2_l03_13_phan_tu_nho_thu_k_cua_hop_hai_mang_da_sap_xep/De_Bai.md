@@ -11,25 +11,31 @@ Thầy không muốn bắt cả hai lớp xếp lại từ đầu mà chỉ so s
 Cho hai mảng đã sắp xếp và số $K$. Hãy lập trình tìm phần tử nhỏ thứ $K$ của dãy hợp nhất hai mảng.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa ba số nguyên $n, m, k$ ($1 \le n, m \le 2 \cdot 10^5$, $1 \le k \le n + m$) — kích thước hai mảng và thứ tự cần tìm (đánh số từ $1$).
+- Dòng thứ hai chứa $n$ số nguyên tăng dần $a_i$.
+- Dòng thứ ba chứa $m$ số nguyên tăng dần $b_j$.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số nhỏ thứ $k$ trong hợp của hai mảng (tính cả các giá trị trùng nhau).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3 3 4
+1 3 5
+2 4 6
 ```
 ### Output
 ```text
-15
+4
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Phần Tử Nhỏ Thứ K Của Hợp Hai Mảng Đã Sắp Xếp.
+
+Hợp hai mảng $[1, 3, 5]$ và $[2, 4, 6]$ rồi xếp tăng dần được $1, 2, 3, 4, 5, 6$. Số đứng thứ $4$ là $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n, m \le 2 \cdot 10^5$, $1 \le k \le n + m$, hai mảng đã tăng dần.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

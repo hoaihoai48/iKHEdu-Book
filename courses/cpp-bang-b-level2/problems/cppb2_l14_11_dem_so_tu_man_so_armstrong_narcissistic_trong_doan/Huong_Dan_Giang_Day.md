@@ -70,41 +70,23 @@ Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-string S_str;
-long long dp[20][1 << 10][2][2];
-
-long long solve_dp(int idx, int mask, bool tight, bool lead) {
-    if (idx == (int)S_str.size()) return !lead;
-    if (dp[idx][mask][tight][lead] != -1) return dp[idx][mask][tight][lead];
-
-    int limit = tight ? (S_str[idx] - '0') : 9;
-    long long ans = 0;
-
-    for (int d = 0; d <= limit; ++d) {
-        if (!lead && ((mask >> d) & 1)) continue;
-        bool next_lead = lead && (d == 0);
-        int next_mask = next_lead ? 0 : (mask | (1 << d));
-        ans += solve_dp(idx + 1, next_mask, tight && (d == limit), next_lead);
-    }
-    return dp[idx][mask][tight][lead] = ans;
-}
-
-long long count_distinct(long long n) {
-    if (n < 0) return 0;
-    S_str = to_string(n);
-    memset(dp, -1, sizeof(dp));
-    return solve_dp(0, 0, true, true);
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    long long L, R;
+    unsigned long long L, R;
     if (!(cin >> L >> R)) return 0;
-
-    cout << count_distinct(R) - count_distinct(L - 1) << "\n";
+    // All Armstrong (narcissistic) numbers <= 1e18, plus 0
+    unsigned long long A[] = {0,1,2,3,4,5,6,7,8,9,153,370,371,407,1634,8208,9474,
+        54748,92727,93084,548834,1741725,4210818,9800817,9926315,24678050,
+        24678051,88593477,146511208,472335975,534494836,912985153,4679307774ULL,
+        32164049650ULL,32164049651ULL,40028394225ULL,42678290603ULL,
+        44708635679ULL,49388550606ULL,82693916578ULL,94204591914ULL,
+        28116440335967ULL,4338281769391370ULL,4338281769391371ULL,
+        21897142587612075ULL,35641594208964132ULL,35875699062250035ULL};
+    long long ans = 0;
+    for (unsigned long long v : A) if (v >= L && v <= R) ans++;
+    // exclude 0 when L == 0? 0 = 0^1 is Armstrong; sample 1..500 -> 13 unaffected
+    cout << ans << "\n";
     return 0;
 }
 ```

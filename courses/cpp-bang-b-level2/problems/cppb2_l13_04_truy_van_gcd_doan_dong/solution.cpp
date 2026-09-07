@@ -1,45 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-struct FenwickTree {
-    int n;
-    vector<int> tree;
-    FenwickTree(int n) : n(n), tree(n + 1, 0) {}
-
-    void update(int i, int delta) {
-        for (; i <= n; i += i & -i) tree[i] += delta;
-    }
-
-    int query(int i) {
-        int sum = 0;
-        for (; i > 0; i -= i & -i) sum += tree[i];
-        return sum;
-    }
-};
-
+int mygcd(int x, int y) { while (y) { int t = x % y; x = y; y = t; } return x; }
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    vector<long long> vals = a;
-    sort(vals.begin(), vals.end());
-    vals.erase(unique(vals.begin(), vals.end()), vals.end());
-
-    FenwickTree bit(vals.size());
-    long long inv = 0;
-
-    for (int i = n - 1; i >= 0; --i) {
-        int rank = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin() + 1;
-        inv += bit.query(rank - 1);
-        bit.update(rank, 1);
+    int N, Q;
+    if (!(cin >> N >> Q)) return 0;
+    vector<int> a(N + 1);
+    for (int i = 1; i <= N; i++) cin >> a[i];
+    vector<int> lg(N + 1);
+    lg[1] = 0;
+    for (int i = 2; i <= N; i++) lg[i] = lg[i / 2] + 1;
+    int K = lg[N] + 1;
+    vector<vector<int>> st(K, vector<int>(N + 1));
+    for (int i = 1; i <= N; i++) st[0][i] = a[i];
+    for (int k = 1; k < K; k++)
+        for (int i = 1; i + (1 << k) - 1 <= N; i++)
+            st[k][i] = mygcd(st[k - 1][i], st[k - 1][i + (1 << (k - 1))]);
+    while (Q--) {
+        int l, r; cin >> l >> r;
+        int k = lg[r - l + 1];
+        cout << mygcd(st[k][l], st[k][r - (1 << k) + 1]) << "\n";
     }
-
-    cout << inv << "\n";
     return 0;
 }

@@ -1,33 +1,45 @@
-# Mê cung trọng số 0 và 1 (0-1 BFS)
+# Mê cung trọng số 0-1 (thuật toán 0-1 BFS)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Mê Cung Trọng Số 0 và 1 (0-1 BFS)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: 0-1 BFS với `std::deque`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhóm cứu hộ cần đưa thiết bị y tế qua khu nhà xưởng có N phòng nối với nhau bằng M hành lang hai chiều, mỗi hành lang hoặc thông thoáng đi qua không tốn phí hoặc bị chặn một phần phải tốn một đơn vị chi phí dọn dẹp. Đội trưởng xuất phát từ phòng S muốn chọn hành trình tốn ít chi phí nhất tới mọi phòng còn lại để phân bổ ngân sách cứu trợ. Vì chi phí mỗi hành lang chỉ là 0 hoặc 1 nên đội dùng thuật toán 0-1 BFS với hàng đợi hai đầu.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Mê Cung Trọng Số 0 Và 1 (0-1 Bfs) với độ phức tạp tối ưu nhất.
+
+Cho đồ thị vô hướng gồm $N$ đỉnh, $M$ cạnh trọng số $0$ hoặc $1$ và đỉnh xuất phát $S$. Hãy lập trình tính chi phí nhỏ nhất từ $S$ đến mọi đỉnh bằng thuật toán 0-1 BFS, rồi in ra trên một dòng ($-1$ cho đỉnh không tới được).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: ba số nguyên $N, M, S$ ($1 \le S \le N \le 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v, w$ với $w \in \{0, 1\}$.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất gồm $N$ số là chi phí nhỏ nhất từ $S$ đến từng đỉnh ($-1$ nếu không tới được).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 3 1
+1 2 0
+2 3 1
+1 4 1
 ```
+
 ### Output
+
 ```text
-15
-```
+0 0 1 1```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Mê Cung Trọng Số 0 và 1 (0-1 BFS).
+
+- Từ phòng $1$: sang $2$ tốn $0$ nên chi phí vẫn $0$; sang $4$ tốn $1$.
+- Từ $2$ sang $3$ tốn thêm $1$ thành $1$, không còn đường nào rẻ hơn.
+- Dãy chi phí là $0\ 0\ 1\ 1$ nên chương trình in ra đúng dãy này.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

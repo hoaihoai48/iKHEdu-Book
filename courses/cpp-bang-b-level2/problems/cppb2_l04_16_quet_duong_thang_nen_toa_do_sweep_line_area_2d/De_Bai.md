@@ -11,25 +11,30 @@ Anh cán bộ kẻ các đường thẳng đứng qua mọi cạnh khu đất r�
 Cho danh sách các hình chữ nhật trên mặt phẳng. Hãy lập trình tính tổng diện tích hợp bị phủ bởi ít nhất một hình chữ nhật.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ ($1 \le n \le 2000$) — số hình chữ nhật.
+- $n$ dòng tiếp theo, mỗi dòng chứa bốn số nguyên $x_1, y_1, x_2, y_2$ ($|x_i|, |y_i| \le 10^9$, $x_1 < x_2$, $y_1 < y_2$) là góc dưới-trái và góc trên-phải của một hình.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là tổng diện tích của phần mặt phẳng bị phủ bởi ít nhất một hình chữ nhật.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2
+0 0 2 2
+1 1 3 3
 ```
 ### Output
 ```text
-15
+7
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Quét Đường Thẳng Nén Tọa Độ (Sweep-line Area 2D).
+
+Quét từ trái sang phải theo các mốc $x = 0, 1, 2, 3$. Dải $[0, 1]$: chỉ hình thứ nhất phủ, độ cao phủ là $2$ → diện tích $1 \cdot 2 = 2$. Dải $[1, 2]$: cả hai hình cùng phủ, hợp theo trục $y$ là $[0, 3]$ cao $3$ → diện tích $3$. Dải $[2, 3]$: chỉ hình thứ hai phủ, cao $2$ → diện tích $2$. Tổng $2 + 3 + 2 = 7$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 2000$, tọa độ có trị tuyệt đối không quá $10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

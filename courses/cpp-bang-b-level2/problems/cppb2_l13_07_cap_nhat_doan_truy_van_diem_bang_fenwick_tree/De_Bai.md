@@ -1,33 +1,47 @@
-# Cập nhật đoạn truy vấn điểm bằng Fenwick Tree
+# Cập nhật đoạn, truy vấn điểm (Fenwick)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Fenwick trên mảng hiệu (Difference BIT).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban quản lý chợ đầu mối áp dụng chính sách trợ giá theo đợt cho N sạp hàng nằm liên tiếp nhau để bình ổn giá nông sản trong mùa mưa bão. Mỗi đợt hỗ trợ cộng thêm một khoản tiền vào tất cả các sạp trong một đoạn liên tiếp, và cuối ngày chủ từng sạp muốn biết tổng số tiền mình được nhận sau nhiều đợt dồn lại. Cây Fenwick hiệu đoạn giúp cộng cả đoạn trong logarit và đọc giá trị từng điểm cũng trong logarit.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree với độ phức tạp tối ưu nhất.
+
+Cho $N$ và $Q$ thao tác. Hãy lập trình xử lý: loại $1$ cộng $val$ vào mọi phần tử trên đoạn $[l,r]$; loại $2$ in ra giá trị hiện tại của $a[idx]$. Ban đầu mọi phần tử bằng $0$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- $Q$ dòng tiếp theo: loại $1$ gồm $1\ l\ r\ val$; loại $2$ gồm $2\ idx$ ($|val| \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi thao tác loại $2$, in ra một dòng là giá trị tại vị trí yêu cầu.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 4
+1 1 3 10
+1 2 5 5
+2 2
+2 4
 ```
+
 ### Output
+
 ```text
 15
-```
+5```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Cập Nhật Đoạn Truy Vấn Điểm Bằng Fenwick Tree.
+
+- Cộng $10$ vào đoạn $[1,3]$ rồi cộng $5$ vào đoạn $[2,5]$.
+- Vị trí $2$ nhận cả hai đợt nên bằng $10 + 5 = 15$; vị trí $4$ chỉ nhận đợt sau nên bằng $5$.
+- Hai truy vấn loại $2$ in ra $15$ rồi $5$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|val| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

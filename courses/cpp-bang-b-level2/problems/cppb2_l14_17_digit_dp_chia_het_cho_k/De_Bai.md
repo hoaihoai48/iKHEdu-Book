@@ -1,31 +1,42 @@
-# Digit DP chia het cho k
+# Đếm số chia hết cho K trong đoạn
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Digit Dp Chia Het Cho K**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Kho bạc nhà nước in séc du lịch theo dải số liên tiếp và quy định séc mệnh giá đặc biệt phải có số sê ri chia hết cho đúng K để máy kiểm đếm tự động phân loại vào khay riêng. Mỗi đợt phát hành xét một đoạn số và cần đếm có bao nhiêu sê ri đạt chuẩn nhằm chuẩn bị đủ khay đựng và tem niêm phong. Chương trình quy hoạch động ghi nhớ số dư theo mô-đun K giúp đếm nhanh đoạn dài tới hàng nghìn tỉ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Digit Dp Chia Het Cho K với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho ba số nguyên $L, R, K$. Hãy lập trình đếm các số $x$ ($L \le x \le R$, $x > 0$) chia hết cho $K$, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: ba số nguyên $L, R, K$ ($0 \le L \le R \le 10^{18}$, $1 \le K \le 100$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 20 3
 ```
+
 ### Output
+
 ```text
-15
+6
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Digit Dp Chia Het Cho K.
+
+- Các số từ $1$ đến $20$ chia hết cho $3$ là $3, 6, 9, 12, 15, 18$.
+- Đếm được sáu số, số $0$ không nằm trong đoạn nên không ảnh hưởng.
+- Chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $0 \le L \le R \le 10^{18}$; $1 \le K \le 100$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

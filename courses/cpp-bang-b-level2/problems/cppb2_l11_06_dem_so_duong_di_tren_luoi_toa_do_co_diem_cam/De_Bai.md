@@ -1,33 +1,43 @@
-# Đếm số đường đi trên lưới tọa độ có điểm cấm
+# Đếm đường đi trên lưới có điểm cấm
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP kết hợp PIE và tổ hợp.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban quản lý khu du lịch sinh thái cần vạch tuyến tuần tra cho đội kiểm lâm trên bản đồ lưới ô vuông kích thước R hàng và C cột. Một số ô bị ngập không thể đi qua, chốt xuất phát ở góc trên trái và trạm cuối ở góc dưới phải. Mỗi bước tuần tra chỉ được đi sang phải hoặc đi xuống dưới để tiết kiệm nhiên liệu xe điện. Đội trưởng cần biết có bao nhiêu lộ trình khác nhau, lấy phần dư cho 1 000 000 007 để lập lịch phân ca trực.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm với độ phức tạp tối ưu nhất.
+
+Cho lưới $R \times C$ và $K$ ô cấm. Hãy lập trình đếm số đường đi từ ô $(1,1)$ đến ô $(R,C)$, mỗi bước chỉ đi sang phải hoặc xuống dưới, không đi qua ô cấm, rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: ba số nguyên $R, C, K$ ($1 \le R, C \le 1000$, $0 \le K < R \times C$).
+- $K$ dòng tiếp theo, mỗi dòng gồm $x, y$ là tọa độ một ô cấm (ô xuất phát và ô đích không bao giờ bị cấm).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số lộ trình hợp lệ theo modulo $1\,000\,000\,007$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 3 1
+2 2
 ```
+
 ### Output
+
 ```text
-15
-```
+2```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đường Đi Trên Lưới Tọa Độ Có Điểm Cấm.
+
+- Lưới $3 \times 3$ cấm đúng ô giữa $(2,2)$.
+- Không có ô cấm sẽ có $6$ đường, nhưng mọi đường đi qua $(2,2)$ đều bị loại: từ đầu đến $(2,2)$ có $2$ cách, từ $(2,2)$ đến đích có $2$ cách, tức loại $2 \times 2 = 4$ đường.
+- Còn lại $6 - 4 = 2$ lộ trình nên chương trình in ra $2$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le R, C \le 1000$; $0 \le K < R \times C$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

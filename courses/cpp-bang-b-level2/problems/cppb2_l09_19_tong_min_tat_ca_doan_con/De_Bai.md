@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Tong Min Tat Ca Doan Con**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tong Min Tat Ca Doan Con với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho mảng a gồm n số. Hãy lập trình tính tổng giá trị nhỏ nhất của tất cả các đoạn con liên tiếp (lấy modulo 1000000007) và in ra kết quả.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

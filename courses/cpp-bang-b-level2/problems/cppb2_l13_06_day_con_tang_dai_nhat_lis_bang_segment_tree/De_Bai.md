@@ -1,33 +1,44 @@
-# Dãy con tăng dài nhất LIS bằng Segment Tree
+# Dãy con tăng dài nhất bằng Segment Tree
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Dài Nhất LIS Bằng Segment Tree** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: DP kết hợp Segment Tree Range Max.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trung tâm tuyển chọn vận động viên năng khiếu lưu hồ sơ chiều cao của N thí sinh theo thứ tự đăng ký để tìm đội hình biểu diễn có chiều cao tăng dần ấn tượng nhất. Huấn luyện viên muốn chọn ra nhiều thí sinh nhất sao cho chiều cao của họ tăng nghiêm ngặt theo đúng thứ tự đã đăng ký, và cần biết con số tối đa này để may đồng phục trình diễn. Cây đoạn trên dãy đã nén tọa độ giúp tính độ dài dãy con tăng dài nhất trong thời gian N log N.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dãy Con Tăng Dài Nhất Lis Bằng Segment Tree với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$. Hãy lập trình tính độ dài dãy con tăng nghiêm ngặt dài nhất (không cần liên tiếp), rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên $N$ ($1 \le N \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là độ dài LIS.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+6
+3 1 2 1 5 4
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Tăng Dài Nhất LIS Bằng Segment Tree.
+
+- Dãy $3\ 1\ 2\ 1\ 5\ 4$: thử nối các số tăng dần theo thứ tự xuất hiện.
+- Dãy con $1, 2, 5$ (vị trí $2, 3, 5$) tăng nghiêm ngặt và không thể thêm số nào khác vào mà vẫn tăng.
+- Độ dài lớn nhất là $3$ nên chương trình in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 2 \cdot 10^5$; $|a_i| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

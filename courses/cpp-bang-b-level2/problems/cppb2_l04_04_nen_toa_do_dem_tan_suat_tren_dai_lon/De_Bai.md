@@ -8,28 +8,34 @@ Anh nhân viên liệt kê tất cả biển số xuất hiện rồi đánh s�
 
 ## Nhiệm vụ
 
-Cho dãy tọa độ (có thể rất lớn) và các truy vấn đếm. Hãy lập trình nén tọa độ rồi trả lời tần suất xuất hiện của từng giá trị được hỏi.
+Cho dãy gồm $n$ tọa độ nguyên (giá trị có thể rất lớn). Hãy lập trình đếm số lần xuất hiện của từng giá trị phân biệt, rồi in ra theo thứ tự tăng dần của giá trị.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ ($1 \le n \le 2 \cdot 10^5$).
+- Dòng thứ hai chứa $n$ số nguyên $a_i$ ($|a_i| \le 10^{18}$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra mỗi giá trị phân biệt trên một dòng theo thứ tự tăng dần, theo định dạng `giá trị: tần suất`.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+6
+5 2 5 3 2 5
 ```
 ### Output
 ```text
-15
+2: 2
+3: 1
+5: 3
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Nén Tọa Độ & Đếm Tần Suất Trên Dải Lớn.
+
+Dãy có ba giá trị phân biệt. Đếm tay: số $2$ xuất hiện $2$ lần, số $3$ xuất hiện $1$ lần, số $5$ xuất hiện $3$ lần. Sắp xếp tăng dần các giá trị rồi in kèm tần suất, được đúng ba dòng kết quả.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 2 \cdot 10^5$, $|a_i| \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

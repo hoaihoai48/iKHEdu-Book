@@ -77,27 +77,17 @@ int main() {
 
     int n;
     if (!(cin >> n)) return 0;
-
-    vector<vector<long long>> w(n, vector<long long>(n));
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) cin >> w[i][j];
+    int sz = 1 << n;
+    vector<long long> f(sz);
+    for (int i = 0; i < sz; ++i) cin >> f[i];
+    for (int b = 0; b < n; ++b)
+        for (int mask = 0; mask < sz; ++mask)
+            if (mask & (1 << b)) f[mask] += f[mask ^ (1 << b)];
+    for (int i = 0; i < sz; ++i) {
+        if (i) cout << ' ';
+        cout << f[i];
     }
-
-    vector<long long> dp(1 << n, 0);
-
-    for (int mask = 0; mask < (1 << n); ++mask) {
-        int i = 0;
-        while (i < n && ((mask >> i) & 1)) i++;
-        if (i >= n) continue;
-
-        for (int j = i + 1; j < n; ++j) {
-            if (!((mask >> j) & 1)) {
-                dp[mask | (1 << i) | (1 << j)] = max(dp[mask | (1 << i) | (1 << j)], dp[mask] + w[i][j]);
-            }
-        }
-    }
-
-    cout << dp[(1 << n) - 1] << "\n";
+    cout << "\n";
     return 0;
 }
 ```

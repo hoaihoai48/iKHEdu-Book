@@ -1,31 +1,41 @@
-# Digit DP so doi xung palindrome
+# Đếm số đối xứng palindrome
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Digit Dp So Doi Xung Palindrome**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Công viên trò chơi in vé số đối xứng đọc xuôi ngược đều giống nhau để du khách giữ làm kỷ niệm sau mỗi lần trải nghiệm tàu lượn siêu tốc. Mỗi đợt phát hành xét một đoạn vé liên tiếp và cần đếm có bao nhiêu vé đối xứng để đặt giấy in nhũ vàng cao cấp. Chương trình quy hoạch động so khớp hai đầu dãy chữ số giúp đếm nhanh cả đoạn dài mà không cần lật từng tấm vé.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Digit Dp So Doi Xung Palindrome với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) đọc xuôi ngược giống nhau, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là số lượng số đối xứng trong đoạn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 20
 ```
+
 ### Output
+
 ```text
-15
-```
+10```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Digit Dp So Doi Xung Palindrome.
+
+- Các số một chữ số từ $1$ đến $9$ đều đối xứng, tổng chín số.
+- Trong các số hai chữ số tới $20$ chỉ có $11$ đọc ngược vẫn là $11$.
+- Tổng $9 + 1 = 10$ nên chương trình in ra $10$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

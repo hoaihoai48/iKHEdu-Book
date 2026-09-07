@@ -8,28 +8,33 @@ Bác ghi lại năng suất từng ô rồi tính mức năng suất tối thi�
 
 ## Nhiệm vụ
 
-Cho ma trận trọng số và số khu vực cần chia. Hãy lập trình tìm ngưỡng trọng số tối thiểu thỏa mãn yêu cầu phân đoạn ma trận.
+Cho ma trận trọng số không âm kích thước $n \times m$ và số phần $k$. Người ta cắt ngang ma trận thành các dải hàng liên tiếp (mỗi dải gồm một số hàng kề nhau). Hãy lập trình tìm tổng lớn nhất của một dải là nhỏ nhất có thể khi số vết cắt không vượt quá $k$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa ba số nguyên $n, m, k$ ($1 \le n, m \le 500$, $1 \le k \le n$) — kích thước ma trận và số phần cho phép.
+- $n$ dòng tiếp theo, mỗi dòng chứa $m$ số nguyên không âm $a_{ij}$ ($0 \le a_{ij} \le 10^6$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là tổng lớn nhất của một dải trong phương án cắt tốt nhất (tổng của dải tính trên toàn bộ các cột).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2 2 2
+1 2
+3 4
 ```
 ### Output
 ```text
-15
+4
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Phân Đoạn Trọng Số Ma Trận 2D.
+
+Phần tử lớn nhất trong bảng là $4$ nên đáp án không thể nhỏ hơn $4$. Với ngưỡng $4$: dải hàng $1$ có tổng theo từng tiền tố cột là $1$ rồi $3$, đều không vượt $4$ nên giữ nguyên; gộp thêm hàng $2$ thì tổng cột $1$ thành $1 + 3 = 4$ vẫn đạt, nhưng tổng cả hai cột thành $10 > 4$ nên phải cắt ngang sau hàng $1$ — chỉ dùng $1$ vết cắt, nằm trong giới hạn $2$ phần. Vậy $4$ là đáp án.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n, m \le 500$, $1 \le k \le n$, $0 \le a_{ij} \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

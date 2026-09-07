@@ -1,33 +1,41 @@
-# Bổ đề burnside đếm cấu hình bất biến phép quay
+# Bổ đề Burnside đếm vòng cổ theo phép quay
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Lý thuyết nhóm & Bổ đề Burnside đếm vòng cổ.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Làng nghề làm vòng tay chuẩn bị ra mắt bộ sưu tập mới gồm những chiếc vòng tròn đính N hạt, mỗi hạt được nhuộm một trong K màu có sẵn trong kho. Hai chiếc vòng được xem là giống nhau nếu chiếc này xoay được thành chiếc kia quanh tâm vòng tròn. Chủ xưởng cần đếm có bao nhiêu mẫu vòng thực sự khác nhau để đăng ký bản quyền từng mẫu, lấy dư cho 1 000 000 007 vì số mẫu tăng rất nhanh.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $N, K$. Hãy lập trình đếm số cách tô màu vòng cổ $N$ hạt bằng $K$ màu, hai cách tô xem là một nếu xoay được thành nhau (bổ đề Burnside cho nhóm quay), rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $N, K$ ($1 \le N, K \le 10^6$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số mẫu vòng phân biệt theo modulo $1\,000\,000\,007$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 2
 ```
+
 ### Output
+
 ```text
-15
-```
+4```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Bổ Đề Burnside Đếm Cấu Hình Bất Biến Phép Quay.
+
+- Vòng $3$ hạt với $2$ màu trắng đen, xét theo phép quay.
+- Liệt kê tay: ba hạt cùng trắng; ba hạt cùng đen; hai trắng một đen; hai đen một trắng (mọi vị trí hạt lẻ đều xoay được về nhau).
+- Có $4$ mẫu phân biệt nên chương trình in ra $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, K \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

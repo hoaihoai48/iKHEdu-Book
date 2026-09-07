@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Dp Matrix Chain Multiplication**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dp Matrix Chain Multiplication với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho n ma trận với dãy kích thước p[0..n]. Hãy lập trình tìm cách đặt dấu ngoặc nhân chuỗi ma trận sao cho tổng số phép nhân vô hướng nhỏ nhất và in ra chi phí nhỏ nhất đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

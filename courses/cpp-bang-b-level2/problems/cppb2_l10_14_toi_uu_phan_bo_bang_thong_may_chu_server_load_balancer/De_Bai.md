@@ -1,33 +1,44 @@
 # Tối ưu phân bổ băng thông máy chủ (server load balancer)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Phân Bổ Băng Thông Máy Chủ (Server Load Balancer)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: 2 `set` quản lý máy chủ bận và máy chủ rảnh.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đội thi tin học của trường được phát $N$ mảnh giấy, mỗi mảnh ghi một số nguyên không âm, để tham gia trò chơi ghép số trên sân khấu. Các bạn được phép sắp xếp các mảnh giấy theo bất kỳ thứ tự nào rồi ghép chúng lại thành một con số duy nhất, và đội nào tạo ra con số lớn nhất sẽ giành giải nhất cùng phần thưởng là một chuyến dã ngoại. Trước giờ thi đấu, cả đội muốn tính trước xem với bộ mảnh giấy hiện có thì con số lớn nhất ghép được là gì.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Phân Bổ Băng Thông Máy Chủ (server Load Balancer) với độ phức tạp tối ưu nhất.
+
+Cho $N$ chuỗi chỉ gồm chữ số. Hãy lập trình sắp xếp chúng theo một thứ tự rồi ghép lại sao cho con số tạo thành là lớn nhất có thể, rồi in ra con số đó (nếu mọi mảnh đều là `0` thì in ra `0`).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số mảnh giấy.
+- Dòng thứ hai chứa $N$ chuỗi $s_i$ ($1 \le |s_i| \le 100$, chỉ gồm chữ số), là các mảnh giấy.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra con số lớn nhất có thể ghép được.
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+3 30 34 5 9
 ```
+
 ### Output
+
 ```text
-15
+9534330
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Phân Bổ Băng Thông Máy Chủ (Server Load Balancer).
+
+- So sánh từng cặp mảnh giấy khi đặt cạnh nhau: đặt `9` trước `5` vì `95` lớn hơn `59`; đặt `5` trước `34` vì `534` lớn hơn `345`; đặt `34` trước `3` vì `343` lớn hơn `334`; đặt `3` trước `30` vì `330` lớn hơn `303`.
+- Thứ tự tốt nhất là `9`, `5`, `34`, `3`, `30`, ghép lại được `9534330`.
+- Mọi thứ tự khác đều cho con số không vượt quá `9534330`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le |s_i| \le 100$, chỉ gồm chữ số.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

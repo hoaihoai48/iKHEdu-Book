@@ -1,33 +1,42 @@
-# Số chia hết cho tất cả các chữ số khác không của nó
+# Số thứ K không chứa chữ số 4
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP trạng thái $lcm$ và số dư theo $2520$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Khu đô thị thông minh đánh số nhà tránh dùng chữ số 4 trong mọi biển số để chiều lòng cư dân có quan niệm kiêng kỵ lâu đời. Ban quản lý cần tìm biển số thứ K trong dãy các số nguyên dương hoàn toàn không chứa chữ số 4 để gắn cho căn hộ mới bàn giao trong tuần này. Chương trình đếm số không chứa chữ số 4 kết hợp chặt nhị phân giúp tìm ra đáp án nhanh mà không cần liệt kê từng biển số.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó với độ phức tạp tối ưu nhất.
+
+Cho số nguyên $K$. Hãy lập trình tìm số thứ $K$ (đánh số từ $1$, bắt đầu từ số $0$) trong dãy các số nguyên không âm mà biểu diễn thập phân không chứa chữ số $4$, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: số nguyên $K$ ($1 \le K \le 10^{18}$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số cần tìm.
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
 ```
+
 ### Output
+
 ```text
-15
+5
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Số Chia Hết Cho Tất Cả Các Chữ Số Khác Không Của Nó.
+
+- Liệt kê các số không chứa chữ số $4$ từ nhỏ đến lớn: $0, 1, 2, 3, 5, \dots$ (bỏ qua $4$).
+- Số thứ năm trong dãy này là $5$.
+- Chương trình in ra $5$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le K \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

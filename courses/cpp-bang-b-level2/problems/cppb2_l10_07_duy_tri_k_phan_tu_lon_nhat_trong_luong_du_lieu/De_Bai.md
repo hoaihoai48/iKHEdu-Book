@@ -1,33 +1,49 @@
 # Duy trì k phần tử lớn nhất trong luồng dữ liệu
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Min-Heap kích thước cố định $K$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức cuộc thi chạy marathon nhận kết quả của từng vận động viên về đích theo thời gian thực, mỗi người có một điểm thành tích khác nhau. Sau mỗi vận động viên vừa về đích, ban tổ chức muốn biết ngay điểm chuẩn tạm thời của tốp $K$ người dẫn đầu, tức điểm thấp nhất trong $K$ người có điểm cao nhất tính đến lúc đó, để cập nhật lên bảng điện tử cho khán giả theo dõi. Nếu số người về đích chưa đủ $K$ thì bảng điện tử hiển thị $-1$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu với độ phức tạp tối ưu nhất.
+
+Cho số nguyên $K$ và $N$ số nguyên đến lần lượt theo thời gian. Sau mỗi số vừa đến, xét $K$ số lớn nhất trong các số đã thấy (nếu chưa đủ $K$ số thì đáp án là $-1$), lấy số nhỏ nhất trong $K$ số đó. Hãy lập trình in ra đáp án sau mỗi lần thêm một số.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $N, K$ ($1 \le K \le N \le 10^5$), là số vận động viên và quy mô tốp đầu.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($1 \le a_i \le 10^9$), là điểm từng người theo thứ tự về đích.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra $N$ dòng, dòng thứ $i$ là điểm chuẩn của tốp $K$ sau $i$ người đầu tiên ($-1$ nếu chưa đủ người).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 3
+1 5 3 7 2
 ```
+
 ### Output
+
 ```text
-15
+-1
+-1
+1
+3
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Duy Trì K Phần Tử Lớn Nhất Trong Luồng Dữ Liệu.
+
+- Sau người đầu ($1$): chưa đủ $3$ người nên đáp án $-1$; sau hai người ($1, 5$) vẫn $-1$.
+- Sau ba người ($1, 5, 3$): tốp $3$ gồm $1, 5, 3$, điểm chuẩn là $\min(1, 5, 3) = 1$.
+- Sau bốn người ($1, 5, 3, 7$): tốp $3$ gồm $7, 5, 3$, điểm chuẩn là $3$.
+- Sau năm người ($1, 5, 3, 7, 2$): tốp $3$ vẫn gồm $7, 5, 3$, điểm chuẩn là $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le K \le N \le 10^5$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

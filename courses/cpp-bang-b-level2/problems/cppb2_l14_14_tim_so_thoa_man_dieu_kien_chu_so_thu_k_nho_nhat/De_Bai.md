@@ -1,33 +1,42 @@
-# Tìm số thỏa mãn điều kiện chữ số thứ k nhỏ nhất
+# Đếm số không chứa chuỗi 49
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chặt nhị phân kết quả kết hợp hàm đếm Digit DP.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãng hàng không mới khai trương tránh dùng chuỗi 49 trong mã số ghế vì cách đọc dễ gây nhầm lẫn của nhiều hành khách trên các đường bay quốc tế tấp nập. Mỗi đợt mở bán xét một đoạn mã ghế liên tiếp và cần đếm có bao nhiêu mã hoàn toàn không chứa chuỗi 49 kề nhau để in thẻ lên máy bay kịp tiến độ. Chương trình quy hoạch động ghi nhớ chữ số trước đó giúp đếm nhanh cả đoạn dài hàng tỉ mã ghế.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) mà biểu diễn thập phân không chứa chuỗi con $49$ (chữ số $4$ đứng ngay trước chữ số $9$), rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+40 55
 ```
+
 ### Output
+
 ```text
 15
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Số Thỏa Mãn Điều Kiện Chữ Số Thứ K Nhỏ Nhất.
+
+- Trong đoạn từ $40$ đến $55$ có $16$ số, chỉ duy nhất số $49$ chứa chuỗi $49$ kề nhau.
+- Còn lại $16 - 1 = 15$ số đạt chuẩn.
+- Chương trình in ra $15$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

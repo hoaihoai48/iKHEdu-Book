@@ -71,35 +71,27 @@ Chuyên đề: **Phép Toán Bit & Mặt Nạ Bit Nâng Cao (Bitmask DP)**
 #include <bits/stdc++.h>
 using namespace std;
 
-const int INF = 1e9;
-int n;
-int dist_mat[20][20];
-int dp[1 << 18][18];
-
-int tsp(int mask, int u) {
-    if (mask == (1 << n) - 1) return dist_mat[u][0];
-    if (dp[mask][u] != -1) return dp[mask][u];
-
-    int ans = INF;
-    for (int v = 0; v < n; ++v) {
-        if (!((mask >> v) & 1)) {
-            ans = min(ans, dist_mat[u][v] + tsp(mask | (1 << v), v));
-        }
-    }
-    return dp[mask][u] = ans;
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int n;
     if (!(cin >> n)) return 0;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) cin >> dist_mat[i][j];
+    vector<vector<long long>> cost(n, vector<long long>(n));
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n; ++j) cin >> cost[i][j];
+    const long long INF = (long long)4e18;
+    vector<long long> dp(1 << n, INF);
+    dp[0] = 0;
+    for (int mask = 0; mask < (1 << n); ++mask) {
+        int p = __builtin_popcount((unsigned)mask);
+        if (p >= n) continue;
+        for (int j = 0; j < n; ++j) {
+            if (mask & (1 << j)) continue;
+            dp[mask | (1 << j)] = min(dp[mask | (1 << j)], dp[mask] + cost[p][j]);
+        }
     }
-
-    memset(dp, -1, sizeof(dp));
-    cout << tsp(1, 0) << "\n";
+    cout << dp[(1 << n) - 1] << "\n";
     return 0;
 }
 ```

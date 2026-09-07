@@ -1,31 +1,42 @@
-# Xac suat co dieu kien dong xu
+# Xác suất có điều kiện khi tung đồng xu
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Xac Suat Co Dieu Kien Dong Xu**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Trạm khí tượng thủy văn dùng mô hình tung đồng xu công bằng để mô phỏng chuỗi N ngày nắng mưa trong bản tin dự báo mùa vụ cho bà con nông dân. Sau khi vệ tinh báo đã có ít nhất M ngày nắng trong chuỗi, bà con muốn biết xác suất để chuỗi đó có đúng K ngày nắng là bao nhiêu để quyết định lịch xuống giống. Đài khí tượng cần chương trình in xác suất với sáu chữ số thập phân cho từng bản tin phát sóng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Xac Suat Co Dieu Kien Dong Xu với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho ba số nguyên $N, K, M$. Hãy lập trình tính xác suất để có đúng $K$ mặt ngửa khi tung $N$ đồng xu công bằng, với điều kiện đã biết có ít nhất $M$ mặt ngửa, rồi in ra với đúng sáu chữ số thập phân.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: ba số nguyên $N, K, M$ ($1 \le M \le N \le 100$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là xác suất cần tính với đúng sáu chữ số sau dấu chấm thập phân ($0.000000$ khi $K < M$).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 3 2
 ```
+
 ### Output
+
 ```text
-15
+0.363636
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Xac Suat Co Dieu Kien Dong Xu.
+
+- Tung $4$ đồng xu, biết có ít nhất $2$ mặt ngửa, hỏi xác suất có đúng $3$ mặt ngửa.
+- Số kết quả thuận lợi cho đúng $3$ mặt ngửa là $C(4,3) = 4$; số kết quả thuộc điều kiện là $C(4,2)+C(4,3)+C(4,4) = 6+4+1 = 11$.
+- Tỉ số $4/11 = 0.363636$ nên chương trình in ra $0.363636$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le M \le N \le 100$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

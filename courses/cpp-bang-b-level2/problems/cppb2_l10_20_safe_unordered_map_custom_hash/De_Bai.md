@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Safe Unordered Map Custom Hash**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Safe Unordered Map Custom Hash với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm n số nguyên (có thể trùng nhau). Hãy lập trình đếm số giá trị phân biệt trong dãy bằng bảng băm an toàn và in ra số lượng đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

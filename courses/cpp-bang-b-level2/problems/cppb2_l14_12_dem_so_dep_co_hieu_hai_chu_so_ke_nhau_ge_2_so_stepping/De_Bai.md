@@ -1,33 +1,41 @@
-# Đếm số đẹp có hiệu hai chữ số kề nhau $\ge 2$ (số stepping)
+# Số stepping hiệu hai chữ số kề ít nhất 2
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (Số Stepping)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP kiểm tra $\vert D_i - D_{i-1} \vert \ge 2$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Viện thiết kế chống hàng giả in mã an ninh lên tem sản phẩm với yêu cầu hai chữ số kề nhau bất kỳ phải chênh lệch ít nhất 2 đơn vị để máy quét phân biệt rõ ràng khi tem bị mờ một phần. Mỗi đợt sản xuất xét một đoạn mã liên tiếp và cần đếm có bao nhiêu mã đạt chuẩn in ấn để đặt mực in chuyên dụng. Chương trình quy hoạch động ghi nhớ chữ số trước đó giúp đếm nhanh cả đoạn dài tới hàng nghìn tỉ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (số Stepping) với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) mà hiệu tuyệt đối của mọi cặp chữ số kề nhau đều ít nhất $2$, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn (số có một chữ số luôn thỏa mãn).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 30
 ```
+
 ### Output
+
 ```text
-15
-```
+24```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đẹp Có Hiệu Hai Chữ Số Kề Nhau $\ge 2$ (Số Stepping).
+
+- Các số một chữ số từ $1$ đến $9$ đều thỏa mãn vì không có cặp kề nào.
+- Các số hai chữ số tới $30$ bị loại đúng sáu số là $10, 12, 21, 23$ (hiệu $1$) và $11, 22$ (hiệu $0$).
+- Còn lại $21 - 6 = 15$ số hai chữ số, tổng $9 + 15 = 24$ nên in ra $24$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

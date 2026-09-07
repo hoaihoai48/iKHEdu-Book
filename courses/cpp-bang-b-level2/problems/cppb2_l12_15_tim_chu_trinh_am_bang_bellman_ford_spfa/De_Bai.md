@@ -1,33 +1,45 @@
-# Tìm chu trình âm bằng bellman-ford / spfa
+# Tìm chu trình âm bằng Bellman-Ford
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Chu Trình Âm Bằng Bellman-Ford / SPFA** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Kiểm tra nới lỏng lần thứ $V$ phát hiện chu trình âm.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ngân hàng trung ương giám sát mạng lưới N loại tiền tệ với M cặp quy đổi một chiều có tỉ giá được ghi dưới dạng chi phí logarit, trong đó chu trình tổng âm tương ứng với cơ hội kinh doanh chênh lệch tỉ giá. Đội phân tích rủi ro cần một chương trình phát hiện xem thị trường có tồn tại chu trình âm hay không để kịp thời cảnh báo các quỹ đầu tư. Thuật toán Bellman-Ford được chọn vì xử lý tốt cạnh trọng số âm trên quy mô lớn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Chu Trình Âm Bằng Bellman-ford / Spfa với độ phức tạp tối ưu nhất.
+
+Cho đồ thị có hướng gồm $N$ đỉnh và $M$ cạnh có trọng số (có thể âm). Hãy lập trình kiểm tra tồn tại chu trình âm bằng thuật toán Bellman-Ford, rồi in ra $YES$ nếu có và $NO$ nếu không.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v, w$ là cạnh có hướng trọng số $w$ ($|w| \le 10^9$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất: $YES$ nếu tồn tại chu trình âm, ngược lại $NO$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 3
+1 2 1
+2 3 -1
+3 1 -1
 ```
+
 ### Output
+
 ```text
-15
-```
+YES```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Chu Trình Âm Bằng Bellman-Ford / SPFA.
+
+- Chu trình $1 \to 2 \to 3 \to 1$ có tổng trọng số $1 + (-1) + (-1) = -1$ là số âm.
+- Thuật toán Bellman-Ford sau $N$ vòng nới lỏng vẫn còn cạnh cải thiện được nên kết luận có chu trình âm.
+- Chương trình in ra $YES$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

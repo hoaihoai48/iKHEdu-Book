@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Ordered Set Pbds Truy Van Thu Hang**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Ordered Set Pbds Truy Van Thu Hang với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho q truy vấn trên đa tập có thứ tự: loại 1 chèn x, loại 2 xóa một lần x, loại 3 đếm số phần tử nhỏ hơn x, loại 4 tìm phần tử thứ k (0-indexed). Hãy lập trình xử lý các truy vấn và in ra đáp án cho loại 3 và 4 (in -1 nếu k không hợp lệ).
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

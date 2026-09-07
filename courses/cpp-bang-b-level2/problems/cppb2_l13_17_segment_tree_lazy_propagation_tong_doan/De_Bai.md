@@ -1,31 +1,49 @@
-# Segment Tree lazy propagation tong doan
+# Cộng đoạn, tổng đoạn (lazy)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Segment Tree Lazy Propagation Tong Doan**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Sở nông nghiệp theo dõi năng suất của N thửa ruộng xếp liên tiếp nhau để tính toán lượng phân bón hỗ trợ sau mỗi đợt kiểm tra đồng ruộng. Mỗi đợt hỗ trợ cộng thêm cùng một lượng vào mọi thửa trong một đoạn, và cán bộ thống kê cần biết tổng năng suất của đoạn bất kỳ để lập báo cáo sản lượng quý. Cây đoạn lười cộng đoạn giúp cả hai thao tác đều chạy trong thời gian logarit trên đồng ruộng rộng lớn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Segment Tree Lazy Propagation Tong Doan với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho mảng $a_1, \dots, a_N$ và $Q$ thao tác. Hãy lập trình xử lý: loại $1$ cộng $val$ vào mọi phần tử trên $[l,r]$; loại $2$ in ra tổng trên $[l,r]$.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $Q$ dòng tiếp theo: loại $1$ gồm $1\ l\ r\ val$; loại $2$ gồm $2\ l\ r$ ($|val| \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- Với mỗi thao tác loại $2$, in ra một dòng là tổng trên đoạn yêu cầu.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
+5 3
 1 2 3 4 5
+1 2 4 10
+2 1 5
+2 2 3
 ```
+
 ### Output
+
 ```text
-15
+45
+25
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Segment Tree Lazy Propagation Tong Doan.
+
+- Cộng $10$ vào đoạn $[2,4]$ được mảng $1\ 12\ 13\ 14\ 5$.
+- Tổng toàn mảng là $1+12+13+14+5 = 45$; tổng đoạn $[2,3]$ là $12+13 = 25$.
+- Hai thao tác loại $2$ in ra $45$ rồi $25$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|a_i|, |val| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

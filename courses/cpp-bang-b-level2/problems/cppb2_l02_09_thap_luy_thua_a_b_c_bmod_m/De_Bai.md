@@ -9,25 +9,32 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $T$ bộ $(a, b, c)$. Hãy lập trình tính tháp lũy thừa $a^{b^c} \bmod (10^9+7)$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^4$) — số lượng truy vấn.
+- $T$ dòng tiếp theo, mỗi dòng chứa ba số nguyên không âm $a, b, c$ ($0 \le a, b, c \le 10^9$), cách nhau bởi dấu cách.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là giá trị tháp lũy thừa $a^{b^c} \bmod (10^9+7)$ (tính $b^c$ trước rồi lấy kết quả làm số mũ của $a$).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2
+2 3 2
+3 2 2
 ```
 ### Output
 ```text
-15
+512
+81
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tháp Lũy Thừa $A^{B^C} \bmod M$.
+
+* Với $(2, 3, 2)$: tính $3^2 = 9$ trước, sau đó $2^9 = 512$.
+* Với $(3, 2, 2)$: tính $2^2 = 4$ trước, sau đó $3^4 = 81$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le T \le 10^4$, $0 \le a, b, c \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

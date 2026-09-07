@@ -1,33 +1,49 @@
-# Truy vấn giá trị nhỏ nhất đoạn (RMQ Segment Tree)
+# Truy vấn giá trị nhỏ nhất đoạn (Segment Tree)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn Giá Trị Nhỏ Nhất Đoạn (RMQ Segment Tree)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt Segment Tree Point Update.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm quan trắc môi trường đặt N cảm biến dọc con sông để đo nồng độ chất gây ô nhiễm theo thời gian thực phục vụ cảnh báo lũ và sự cố tràn dầu. Mỗi giờ kỹ thuật viên hiệu chuẩn lại một cảm biến làm giá trị của nó thay đổi, đồng thời trung tâm cần biết mức thấp nhất trên từng đoạn sông để đánh giá vùng nước sạch. Hệ thống dùng cây đoạn để vừa cập nhật điểm vừa truy vấn giá trị nhỏ nhất trong thời gian logarit.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Truy Vấn Giá Trị Nhỏ Nhất Đoạn (rmq Segment Tree) với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$ và $Q$ thao tác. Hãy lập trình xử lý hai loại thao tác: loại $1$ gán $a[idx] = val$; loại $2$ in ra giá trị nhỏ nhất trên đoạn $[l, r]$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $Q$ dòng tiếp theo: thao tác loại $1$ gồm $1\ idx\ val$; thao tác loại $2$ gồm $2\ l\ r$ ($1 \le idx, l \le r \le N$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi thao tác loại $2$, in ra một dòng là giá trị nhỏ nhất trên đoạn yêu cầu.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 3
+5 3 1 4 2
+2 1 5
+1 3 6
+2 1 5
 ```
+
 ### Output
+
 ```text
-15
+1
+2
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Truy Vấn Giá Trị Nhỏ Nhất Đoạn (RMQ Segment Tree).
+
+- Mảng ban đầu $5\ 3\ 1\ 4\ 2$: giá trị nhỏ nhất toàn mảng là $1$ ở vị trí $3$.
+- Gán $a[3] = 6$ được mảng $5\ 3\ 6\ 4\ 2$: giá trị nhỏ nhất toàn mảng còn $2$.
+- Hai truy vấn loại $2$ in ra $1$ rồi $2$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|a_i|, |val| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

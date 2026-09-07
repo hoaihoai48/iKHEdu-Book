@@ -1,33 +1,41 @@
-# Đếm số hoán vị có đúng k điểm cố định
+# Đếm hoán vị có đúng K điểm cố định
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Hoán Vị Có Đúng K Điểm Cố Định** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Công thức $\binom{N}{K} \times D_{N-K} \bmod M$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Thư viện tỉnh tổ chức trò chơi bốc thăm trúng thưởng với N phong bì được đánh số và N phần quà tương ứng đặt ngẫu nhiên vào các phong bì. Ban tổ chức muốn tạo kịch tính nên yêu cầu có đúng K phong bì chứa đúng phần quà mang số của chính nó, các phong bì còn lại đều chứa quà khác số. Để in vé mời, ban tổ chức cần biết có bao nhiêu cách xếp quà thỏa mãn, lấy dư cho 1 000 000 007.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Hoán Vị Có Đúng K Điểm Cố Định với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $N, K$. Hãy lập trình tính số hoán vị của $N$ phần tử có đúng $K$ điểm cố định, tức $C(N,K) \times D(N-K)$ với $D$ là số derangement, rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $N, K$ ($0 \le K \le N \le 10^6$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là đáp án theo modulo $1\,000\,000\,007$ (quy ước $D(0) = 1$, $D(1) = 0$).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 2
 ```
+
 ### Output
+
 ```text
-15
-```
+6```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Hoán Vị Có Đúng K Điểm Cố Định.
+
+- Chọn $2$ vị trí cố định trong $4$ vị trí: có $C(4,2) = 6$ cách.
+- Hai vị trí còn lại phải xáo trộn hoàn toàn không giữ nguyên: $D(2) = 1$ cách duy nhất là đổi chỗ cho nhau.
+- Tổng $6 \times 1 = 6$ nên chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le K \le N \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -70,40 +70,34 @@ Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-string S_str;
-long long dp[20][11][2][2];
-
-long long solve_dp(int idx, int prev, bool tight, bool lead) {
-    if (idx == (int)S_str.size()) return 1;
-    if (dp[idx][prev + 1][tight][lead] != -1) return dp[idx][prev + 1][tight][lead];
-
-    int limit = tight ? (S_str[idx] - '0') : 9;
-    long long ans = 0;
-
-    for (int d = 0; d <= limit; ++d) {
-        if (!lead && d < prev) continue; // Tăng dần
-        bool next_lead = lead && (d == 0);
-        ans += solve_dp(idx + 1, next_lead ? -1 : d, tight && (d == limit), next_lead);
+string S;
+long long memo[20][2][1 << 10];
+char vis[20][2][1 << 10];
+long long dfs(int p, bool tight, bool started, int mask) {
+    if (p == (int)S.size()) return (started && mask == (1 << 10) - 1) ? 1 : 0;
+    if (!tight && vis[p][started][mask]) return memo[p][started][mask];
+    long long r = 0;
+    int lim = tight ? S[p] - '0' : 9;
+    for (int d = 0; d <= lim; d++) {
+        bool ns = started || d != 0;
+        int nm = ns ? (mask | (1 << d)) : 0;
+        r += dfs(p + 1, tight && d == lim, ns, nm);
     }
-    return dp[idx][prev + 1][tight][lead] = ans;
+    if (!tight) { vis[p][started][mask] = 1; memo[p][started][mask] = r; }
+    return r;
 }
-
-long long count_increasing(long long n) {
-    if (n < 0) return 0;
-    S_str = to_string(n);
-    memset(dp, -1, sizeof(dp));
-    return solve_dp(0, -1, true, true);
+long long countLE(long long X) {
+    if (X < 0) return 0;
+    S = to_string(X);
+    memset(vis, 0, sizeof vis);
+    return dfs(0, true, false, 0);
 }
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
     long long L, R;
     if (!(cin >> L >> R)) return 0;
-
-    cout << count_increasing(R) - count_increasing(L - 1) << "\n";
+    cout << countLE(R) - countLE(L - 1) << "\n";
     return 0;
 }
 ```

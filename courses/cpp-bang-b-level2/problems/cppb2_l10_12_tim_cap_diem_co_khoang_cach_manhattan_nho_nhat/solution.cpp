@@ -1,41 +1,47 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Giả lập Inversion count qua merge sort
-long long merge_count(vector<int> &a, int l, int mid, int r) {
-    vector<int> left(a.begin() + l, a.begin() + mid + 1);
-    vector<int> right(a.begin() + mid + 1, a.begin() + r + 1);
-    int i = 0, j = 0, k = l;
-    long long inv = 0;
-
-    while (i < (int)left.size() && j < (int)right.size()) {
-        if (left[i] <= right[j]) a[k++] = left[i++];
-        else {
-            a[k++] = right[j++];
-            inv += (left.size() - i);
-        }
-    }
-    while (i < (int)left.size()) a[k++] = left[i++];
-    while (j < (int)right.size()) a[k++] = right[j++];
-    return inv;
-}
-
-long long merge_sort(vector<int> &a, int l, int r) {
-    if (l >= r) return 0;
-    int mid = l + (r - l) / 2;
-    return merge_sort(a, l, mid) + merge_sort(a, mid + 1, r) + merge_count(a, l, mid, r);
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int n;
     if (!(cin >> n)) return 0;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    cout << merge_sort(a, 0, n - 1) << "\n";
+    vector<long long> xs(n), ys(n);
+    for (int i = 0; i < n; ++i) cin >> xs[i] >> ys[i];
+    vector<pair<long long, long long>> p(n);
+    for (int i = 0; i < n; ++i) p[i] = {xs[i] + ys[i], xs[i] - ys[i]};
+    sort(p.begin(), p.end());
+    for (int i = 1; i < n; ++i) {
+        if (p[i] == p[i - 1]) {
+            cout << 0 << "\n";
+            return 0;
+        }
+    }
+    long long d = llabs(p[1].first - p[0].first) + llabs(p[1].second - p[0].second);
+    if (d == 0) d = 1;
+    set<pair<long long, long long>> box;
+    deque<int> win;
+    const long long NEG = (long long)-4e18;
+    for (int i = 0; i < n; ++i) {
+        while (!win.empty() && p[win.front()].first < p[i].first - d) {
+            box.erase({p[win.front()].second, p[win.front()].first});
+            win.pop_front();
+        }
+        auto itlow = box.lower_bound({p[i].second - d, NEG});
+        for (auto it = itlow; it != box.end() && it->first <= p[i].second + d; ++it) {
+            long long du = llabs(p[i].first - it->second);
+            long long dv = llabs(p[i].second - it->first);
+            long long man = max(du, dv);
+            if (man < d) d = man;
+            if (d == 1) {
+                cout << 1 << "\n";
+                return 0;
+            }
+        }
+        box.insert({p[i].second, p[i].first});
+        win.push_back(i);
+    }
+    cout << d << "\n";
     return 0;
 }

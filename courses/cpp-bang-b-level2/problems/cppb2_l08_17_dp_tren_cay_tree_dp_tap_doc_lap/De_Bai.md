@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Dp Tren Cay Tree Dp Tap Doc Lap**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dp Tren Cay Tree Dp Tap Doc Lap với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho cây gồm n đỉnh, mỗi đỉnh có trọng số val[i]. Hãy lập trình chọn một tập độc lập (không có hai đỉnh kề nhau cùng được chọn) có tổng trọng số lớn nhất và in ra tổng đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

@@ -1,31 +1,46 @@
-# Dinh ly Lucas to hop modulo p
+# Định lý Lucas tính tổ hợp modulo p (nhiều truy vấn)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dinh Ly Lucas To Hop Modulo P**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Đội tuyển tin học của tỉnh đang luyện tập chuyên đề số học cho kỳ thi quốc gia với nội dung tính hệ số tổ hợp khổng lồ theo mô-đun nguyên tố nhỏ. Huấn luyện viên yêu cầu mỗi học viên xử lý trôi chảy hàng nghìn truy vấn dạng C(n, k) mod p bằng cách tách n, k theo cơ số p đúng như định lý Lucas đã dạy trên lớp. Bài nộp của học viên phải in đáp án từng truy vấn theo đúng thứ tự đề bài phát ra.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dinh Ly Lucas To Hop Modulo P với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho $T$ truy vấn, mỗi truy vấn gồm $N, K, p$ ($p$ nguyên tố). Hãy lập trình tính, với mỗi truy vấn, $C(N,K) \bmod p$ bằng định lý Lucas, rồi in ra đáp án (bằng $0$ khi $K > N$ hoặc $K < 0$).
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: số nguyên $T$ ($1 \le T \le 10^4$).
+- $T$ dòng tiếp theo, mỗi dòng gồm $N, K, p$ ($0 \le K \le N \le 10^{18}$, $p$ nguyên tố, $2 \le p \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- Gồm $T$ dòng, mỗi dòng là $C(N,K) \bmod p$ của truy vấn tương ứng.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+2
+5 2 3
+10 1 7
 ```
+
 ### Output
+
 ```text
-15
+1
+3
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dinh Ly Lucas To Hop Modulo P.
+
+- Truy vấn một: $C(5,2) = 10$, chia $3$ dư $1$.
+- Truy vấn hai: $C(10,1) = 10$, chia $7$ dư $3$.
+- Chương trình in ra $1$ rồi $3$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le T \le 10^4$; $0 \le K \le N \le 10^{18}$; $p$ nguyên tố.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,31 +1,46 @@
-# Tarjan tim khop va cau
+# Tarjan tìm khớp và cầu
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Tarjan Tim Khop Va Cau**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Trung tâm dữ liệu quốc gia vận hành mạng N máy chủ nối với nhau bằng M tuyến cáp hai chiều phục vụ các dịch vụ công trực tuyến. Trước đợt diễn tập an ninh mạng, đội ngũ kỹ thuật cần liệt kê các máy chủ trọng yếu mà nếu ngừng hoạt động sẽ chia cắt hệ thống cùng các tuyến cáp đơn lẻ mà nếu đứt sẽ cô lập một phần mạng lưới. Thuật toán Tarjan duyệt theo chiều sâu được dùng để đánh dấu khớp và cầu trong một lần duyệt duy nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tarjan Tim Khop Va Cau với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho đồ thị vô hướng gồm $N$ đỉnh và $M$ cạnh. Hãy lập trình đếm số khớp và số cầu bằng thuật toán Tarjan, rồi in ra hai số trên một dòng theo thứ tự: số khớp, số cầu.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: hai số nguyên $N, M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v$ là một cạnh hai chiều.
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất gồm hai số: số khớp và số cầu.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 3
+1 2
+2 3
+3 4
 ```
+
 ### Output
+
 ```text
-15
+2 3
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Tarjan Tim Khop Va Cau.
+
+- Mạng là đường thẳng $1-2-3-4$: cắt bất kỳ cạnh nào cũng chia cắt mạng nên có $3$ cầu.
+- Ngừng máy $2$ hoặc $3$ sẽ làm mạng rời rạc, còn ngừng $1$ hay $4$ thì phần còn lại vẫn liên thông nên có $2$ khớp.
+- Chương trình in ra $2\ 3$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

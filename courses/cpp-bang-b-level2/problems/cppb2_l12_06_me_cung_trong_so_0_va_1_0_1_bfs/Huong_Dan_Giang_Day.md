@@ -70,42 +70,30 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithm
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-const long long INF = 1e18;
-
+const int INF = 2000000000;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-
-    vector<vector<long long>> dist(n + 1, vector<long long>(n + 1, INF));
-    for (int i = 1; i <= n; ++i) dist[i][i] = 0;
-
-    for (int i = 0; i < m; ++i) {
-        int u, v; long long w;
-        cin >> u >> v >> w;
-        dist[u][v] = min(dist[u][v], w);
-        dist[v][u] = min(dist[v][u], w);
+    int N, M, S;
+    if (!(cin >> N >> M >> S)) return 0;
+    vector<vector<pair<int,int>>> adj(N + 1);
+    for (int i = 0; i < M; i++) {
+        int u, v, w; cin >> u >> v >> w;
+        adj[u].push_back({v, w}); adj[v].push_back({u, w});
     }
-
-    for (int k = 1; k <= n; ++k) {
-        for (int i = 1; i <= n; ++i) {
-            for (int j = 1; j <= n; ++j) {
-                if (dist[i][k] < INF && dist[k][j] < INF) {
-                    dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
-                }
+    vector<int> d(N + 1, INF);
+    d[S] = 0;
+    deque<int> dq; dq.push_front(S);
+    while (!dq.empty()) {
+        int u = dq.front(); dq.pop_front();
+        for (auto [v, w] : adj[u])
+            if (d[v] > d[u] + w) {
+                d[v] = d[u] + w;
+                if (w == 0) dq.push_front(v); else dq.push_back(v);
             }
-        }
     }
-
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= n; ++j) {
-            cout << (dist[i][j] >= INF ? -1 : dist[i][j]) << (j == n ? "" : " ");
-        }
-        cout << "\n";
-    }
+    for (int i = 1; i <= N; i++) { if (i > 1) cout << ' '; cout << (d[i] == INF ? -1 : d[i]); }
+    cout << "\n";
     return 0;
 }
 ```

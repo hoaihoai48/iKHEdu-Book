@@ -1,33 +1,45 @@
 # Giá trị nhỏ nhất trên cửa sổ trượt k
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Cài đặt Monotonic Deque $\mathcal{O}(N)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm quan trắc khí tượng đặt dọc bờ sông ghi lại nhiệt độ mỗi giờ trong suốt $N$ giờ liên tiếp của đợt rét đậm. Để cảnh báo sương muối cho bà con nông dân, trạm cần biết trong mỗi khoảng $K$ giờ liên tiếp thì nhiệt độ thấp nhất là bao nhiêu, vì chỉ cần một giờ giá rét là cả cánh đồng rau màu có thể mất trắng. Cửa sổ thời gian trượt dần từng giờ một, và cán bộ trạm muốn có bảng giá trị thấp nhất của mọi cửa sổ để phát bản tin kịp thời.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là nhiệt độ từng giờ và độ dài cửa sổ $K$. Với mỗi cửa sổ gồm $K$ giờ liên tiếp (trượt từ đầu đến cuối dãy), hãy lập trình tìm nhiệt độ thấp nhất trong cửa sổ đó, rồi in ra $N - K + 1$ giá trị theo thứ tự.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $N, K$ ($1 \le K \le N \le 10^6$), là số giờ quan trắc và độ dài cửa sổ.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($-10^9 \le a_i \le 10^9$), là nhiệt độ từng giờ.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra $N - K + 1$ số nguyên trên một dòng là giá trị nhỏ nhất của từng cửa sổ.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+8 3
+1 3 -1 -3 5 3 6 7
 ```
+
 ### Output
+
 ```text
-15
+-1 -3 -3 -3 3 3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Giá Trị Nhỏ Nhất Trên Cửa Sổ Trượt K.
+
+- Cửa sổ $[1, 3, -1]$ có giá trị nhỏ nhất $-1$; trượt sang $[3, -1, -3]$ được $-3$.
+- Cửa sổ $[-1, -3, 5]$ được $-3$; cửa sổ $[-3, 5, 3]$ được $-3$.
+- Cửa sổ $[5, 3, 6]$ được $3$; cửa sổ cuối $[3, 6, 7]$ được $3$.
+- Sáu cửa sổ cho sáu giá trị $-1, -3, -3, -3, 3, 3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le K \le N \le 10^6$, $-10^9 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

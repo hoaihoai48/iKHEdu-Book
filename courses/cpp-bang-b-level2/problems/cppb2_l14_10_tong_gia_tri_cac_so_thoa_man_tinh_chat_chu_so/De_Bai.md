@@ -1,33 +1,42 @@
-# Tổng giá trị các số thỏa mãn tính chất chữ số
+# Tổng chữ số trên đoạn (digit sum range)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP trả về cặp `{số_lượng, tổng_giá_trị}`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trung tâm dữ liệu căn cước kiểm tra tính toàn vẹn của lô hồ sơ mới bằng cách cộng toàn bộ các chữ số trong mã số của mọi hồ sơ thuộc đoạn liên tiếp rồi so với mã băm đã niêm phong từ trước. Nếu hai giá trị khớp nhau thì lô hồ sơ được duyệt tự động mà không cần mở từng bìa hồ sơ ra đối chiếu. Chương trình quy hoạch động chữ số cho ra tổng này gần như tức thì kể cả với đoạn dài hàng nghìn tỉ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình tính tổng các chữ số của tất cả các số $x$ ($L \le x \le R$), rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là tổng cần tính (dùng số nguyên 64-bit).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 13
 ```
+
 ### Output
+
 ```text
-15
+55
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Giá Trị Các Số Thỏa Mãn Tính Chất Chữ Số.
+
+- Tổng chữ số từ $1$ đến $9$ là $1+2+\dots+9 = 45$.
+- Bốn số tiếp theo đóng góp $1 + 2 + 3 + 4 = 10$ (tổng chữ số của $10, 11, 12, 13$).
+- Tổng chung $45 + 10 = 55$ nên chương trình in ra $55$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,30 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long hanoi4(int n) {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    vector<long long> dp(n + 1, 1e18);
-    dp[0] = 0; dp[1] = 1;
-    for (int i = 2; i <= n; ++i) {
-        for (int k = 1; k < i; ++k) {
-            dp[i] = min(dp[i], 2 * dp[k] + (1LL << (i - k)) - 1);
-        }
-    }
-    return dp[n];
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+    int n;
+    long long W;
+    if (!(cin >> n >> W)) return 0;
+    vector<long long> w(n), v(n);
+    for (int i = 0; i < n; ++i) cin >> w[i] >> v[i];
 
-    if (k == 3) {
-        cout << (1LL << n) - 1 << "\n";
-    } else {
-        cout << hanoi4(n) << "\n";
+    int n1 = n / 2;
+    vector<pair<long long, long long>> A;
+    A.reserve(1u << min(n1, 22));
+    for (long long mask = 0; mask < (1LL << n1); ++mask) {
+        long long sw = 0, sv = 0;
+        for (int i = 0; i < n1; ++i) if (mask & (1LL << i)) {
+            sw += w[i]; sv += v[i];
+        }
+        if (sw <= W) A.push_back({sw, sv});
     }
+    sort(A.begin(), A.end());
+    vector<long long> bw, bv;
+    long long best = -1;
+    for (auto &p : A) {
+        if (p.second > best) {
+            best = p.second;
+            bw.push_back(p.first);
+            bv.push_back(best);
+        }
+    }
+    long long ans = 0;
+    int n2 = n - n1;
+    for (long long mask = 0; mask < (1LL << n2); ++mask) {
+        long long sw = 0, sv = 0;
+        for (int i = 0; i < n2; ++i) if (mask & (1LL << i)) {
+            sw += w[n1 + i]; sv += v[n1 + i];
+        }
+        if (sw > W) continue;
+        long long rem = W - sw;
+        int idx = (int)(upper_bound(bw.begin(), bw.end(), rem) - bw.begin()) - 1;
+        long long cur = sv + (idx >= 0 ? bv[idx] : 0);
+        ans = max(ans, cur);
+    }
+    cout << ans << "\n";
     return 0;
 }

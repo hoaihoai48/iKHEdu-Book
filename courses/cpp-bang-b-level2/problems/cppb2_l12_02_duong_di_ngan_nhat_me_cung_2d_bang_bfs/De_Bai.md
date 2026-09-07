@@ -1,33 +1,47 @@
-# Đường đi ngắn nhất mê cung 2d bằng BFS
+# Đường đi ngắn nhất trên đồ thị vô trọng số (BFS)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đường Đi Ngắn Nhất Mê Cung 2D Bằng BFS** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: BFS trên lưới ma trận 2D.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Khu di tích cố đô mở tour tham quan bằng xe điện với N điểm dừng được nối với nhau bằng M đoạn đường hai chiều có độ dài bằng nhau. Du khách lên xe tại điểm S và muốn xuống tại điểm T với số đoạn đường đi qua là ít nhất để kịp giờ xem biểu diễn nghệ thuật buổi tối. Điều hành tour cần một chương trình tính số đoạn đường tối thiểu cho mọi sơ đồ tuyến, in ra trừ một khi hai điểm không thể đến được nhau.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đường Đi Ngắn Nhất Mê Cung 2d Bằng Bfs với độ phức tạp tối ưu nhất.
+
+Cho đồ thị vô hướng gồm $N$ đỉnh, $M$ cạnh, cùng hai đỉnh $S, T$. Hãy lập trình tính độ dài (số cạnh) của đường đi ngắn nhất từ $S$ đến $T$ bằng thuật toán BFS, rồi in ra kết quả ($-1$ nếu không có đường đi).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: bốn số nguyên $N, M, S, T$ ($1 \le S, T \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v$ là một cạnh hai chiều.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số cạnh của đường đi ngắn nhất từ $S$ đến $T$ ($-1$ nếu không tới được).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 4 1 5
+1 2
+2 3
+3 4
+4 5
 ```
+
 ### Output
+
 ```text
-15
+4
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đường Đi Ngắn Nhất Mê Cung 2D Bằng BFS.
+
+- Tuyến xe là một đường thẳng $1-2-3-4-5$, xuất phát $S = 1$, đích $T = 5$.
+- BFS lan từ $1$: thăm $2$ ở khoảng cách $1$, $3$ ở khoảng cách $2$, $4$ ở khoảng cách $3$, $5$ ở khoảng cách $4$.
+- Đích đến ở khoảng cách $4$ nên chương trình in ra $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

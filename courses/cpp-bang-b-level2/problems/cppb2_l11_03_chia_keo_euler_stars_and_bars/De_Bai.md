@@ -1,33 +1,42 @@
-# Chia kẹo Euler (stars and bars)
+# Chia kẹo theo nguyên lý Euler (stars and bars)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Kẹo Euler (Stars and Bars)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Ứng dụng công thức chia kẹo Euler.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhân dịp Trung thu, phường đoàn chuẩn bị N viên kẹo giống hệt nhau để phát cho K em nhỏ trong khu phố cổ. Có em đến muộn nên ban tổ chức cho phép một em nhận không viên nào mà chương trình văn nghệ vẫn bắt đầu đúng giờ. Các anh chị phụ trách muốn biết có bao nhiêu cách chia khác nhau, chỉ tính phần dư khi chia cho 1 000 000 007 để ghi nhanh vào sổ theo dõi quà tặng của phường.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chia Kẹo Euler (stars And Bars) với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $N$ (số kẹo) và $K$ (số em nhỏ). Hãy lập trình tính số cách chia $N$ viên kẹo giống nhau cho $K$ em (mỗi em có thể nhận không viên nào), rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $N, K$ ($1 \le K \le N \le 10^6$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số cách chia theo modulo $1\,000\,000\,007$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 2
 ```
+
 ### Output
+
 ```text
-15
+6
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Kẹo Euler (Stars and Bars).
+
+- Cần chia $5$ viên kẹo giống nhau cho $2$ em, em nào cũng có thể nhận không viên nào.
+- Liệt kê theo số kẹo của em thứ nhất: $0, 1, 2, 3, 4, 5$ (em thứ hai nhận phần còn lại $5, 4, 3, 2, 1, 0$).
+- Có tất cả $6$ cách nên chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le K \le N \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

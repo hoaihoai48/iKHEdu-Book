@@ -11,25 +11,29 @@ Anh lật lại nhật ký luyện tập, mở rộng rồi thu hẹp từng c�
 Cho dãy số và ngưỡng $S$. Hãy lập trình tìm độ dài đoạn con liên tiếp ngắn nhất có tổng không nhỏ hơn $S$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $n, S$ ($1 \le n \le 10^5$, $1 \le S \le 10^{14}$) — độ dài dãy và ngưỡng tổng.
+- Dòng thứ hai chứa $n$ số nguyên dương $a_i$ ($1 \le a_i \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là độ dài của đoạn con liên tiếp ngắn nhất có tổng ít nhất $S$; in `-1` nếu không tồn tại đoạn con nào đạt ngưỡng.
 
 ## Sample 1
 ### Input
 ```text
-5
+5 11
 1 2 3 4 5
 ```
 ### Output
 ```text
-15
+3
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Ngắn Nhất Có Tổng $\ge S$.
+
+Thử độ dài $2$: các tổng lớn nhất là $4 + 5 = 9 < 11$ nên không đoạn nào đạt. Thử độ dài $3$: đoạn $[3, 4, 5]$ có tổng $12 \ge 11$ — đạt yêu cầu. Vì độ dài $1$ và $2$ đều thất bại nên $3$ là ngắn nhất.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 10^5$, $1 \le S \le 10^{14}$, mọi $a_i$ đều dương.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

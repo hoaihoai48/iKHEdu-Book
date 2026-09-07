@@ -1,33 +1,41 @@
-# Kỳ vọng toán học trò chơi gieo xúc xắc (probability DP)
+# Kỳ vọng số lần gieo xúc xắc để tổng đạt N
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (Probability DP)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP tính kỳ vọng bước đi $E[i]$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Câu lạc bộ boardgame của trường thiết kế trò chơi mới trong đó người chơi gieo một con xúc xắc sáu mặt công bằng rồi cộng dồn số chấm vào điểm của mình. Ván chơi kết thúc ngay khi tổng điểm đạt ít nhất N, và nhóm thiết kế cần biết trung bình phải gieo bao nhiêu lượt để in thời lượng dự kiến lên vỏ hộp. Vì đáp án là số thực nên nhóm quy định in đúng sáu chữ số sau dấu chấm thập phân.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (probability Dp) với độ phức tạp tối ưu nhất.
+
+Cho số nguyên $N$. Hãy lập trình tính kỳ vọng số lần gieo một xúc xắc công bằng sáu mặt để tổng tích lũy đạt ít nhất $N$, rồi in ra với đúng sáu chữ số thập phân.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: số nguyên $N$ ($1 \le N \le 1000$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là kỳ vọng cần tính với đúng sáu chữ số sau dấu chấm thập phân.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1
 ```
+
 ### Output
+
 ```text
-15
-```
+1.000000```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Kỳ Vọng Toán Học Trò Chơi Gieo Xúc Xắc (Probability DP).
+
+- Với $N = 1$: chỉ cần gieo đúng một lần vì mặt nào của xúc xắc cũng cho ít nhất $1$ điểm.
+- Tổng sau lần gieo đầu tiên chắc chắn đạt yêu cầu nên số lần gieo luôn bằng $1$.
+- Kỳ vọng bằng $1$ nên chương trình in ra $1.000000$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 1000$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

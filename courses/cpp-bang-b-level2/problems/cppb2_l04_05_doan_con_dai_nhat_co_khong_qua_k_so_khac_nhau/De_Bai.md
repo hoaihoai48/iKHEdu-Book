@@ -11,25 +11,29 @@ Cô đi dọc hàng, nới rộng rồi thu hẹp đoạn quan sát sao cho số
 Cho dãy số và số $K$. Hãy lập trình tìm độ dài đoạn con liên tiếp dài nhất chứa không quá $K$ giá trị khác nhau.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $n, k$ ($1 \le n \le 2 \cdot 10^5$, $1 \le k \le n$) — độ dài dãy và giới hạn số giá trị phân biệt.
+- Dòng thứ hai chứa $n$ số nguyên $a_i$ ($|a_i| \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là độ dài của đoạn con liên tiếp dài nhất chứa không quá $k$ giá trị phân biệt.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+7 2
+1 2 1 3 4 2 3
 ```
 ### Output
 ```text
-15
+3
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Dài Nhất Có Không Quá K Số Khác Nhau.
+
+Đoạn $[1, 2, 1]$ ở đầu dãy chỉ chứa $2$ giá trị phân biệt nên dài $3$ thỏa mãn. Mọi đoạn dài $4$ đều chứa ít nhất $3$ giá trị phân biệt: $[1, 2, 1, 3]$, $[2, 1, 3, 4]$, $[1, 3, 4, 2]$, $[3, 4, 2, 3]$ — kiểm tra tay từng đoạn đều thấy $3$ giá trị khác nhau trở lên. Vậy đáp án là $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 2 \cdot 10^5$, $1 \le k \le n$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

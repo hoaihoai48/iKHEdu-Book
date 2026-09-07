@@ -1,33 +1,45 @@
 # Hứng nước mưa đa chiều (trapping rain water)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hứng Nước Mưa Đa Chiều (Trapping Rain Water)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Monotonic Stack tính thể tích nước đọng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Sau cơn mưa lớn đầu mùa, con đường làng lồi lõm thành nhiều mô đất cao thấp khác nhau, mỗi đoạn cao một số mét nhất định. Nước mưa đọng lại trong các chỗ trũng giữa những mô đất cao mà không thoát đi được, tạo thành nhiều vũng nước lớn nhỏ. Đội thanh niên tình nguyện muốn ước tính tổng lượng nước đọng lại trên cả con đường để điều máy bơm đi hút, vì nước tù đọng lâu ngày sẽ sinh muỗi gây bệnh cho cả xóm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hứng Nước Mưa Đa Chiều (trapping Rain Water) với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là chiều cao mặt đất của từng đoạn đường theo thứ tự. Sau cơn mưa, mỗi đoạn giữ lại lượng nước bằng độ cao mực nước chung quanh trừ đi chiều cao của nó (nếu dương). Hãy lập trình tính tổng lượng nước đọng lại trên toàn bộ con đường, rồi in ra tổng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số đoạn đường.
+- Dòng thứ hai chứa $N$ số nguyên $h_i$ ($0 \le h_i \le 10^6$), là chiều cao từng đoạn.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là tổng lượng nước đọng lại.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+6
+4 2 0 3 2 5
 ```
+
 ### Output
+
 ```text
-15
+9
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Hứng Nước Mưa Đa Chiều (Trapping Rain Water).
+
+- Hai mô cao $4$ và $5$ ở hai đầu giữ nước lại ở bốn đoạn giữa.
+- Đoạn cao $2$ giữ được $4 - 2 = 2$; đoạn cao $0$ giữ được $4 - 0 = 4$.
+- Đoạn cao $3$ giữ được $4 - 3 = 1$; đoạn cao $2$ giữ được $4 - 2 = 2$.
+- Tổng lượng nước là $2 + 4 + 1 + 2 = 9$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $0 \le h_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

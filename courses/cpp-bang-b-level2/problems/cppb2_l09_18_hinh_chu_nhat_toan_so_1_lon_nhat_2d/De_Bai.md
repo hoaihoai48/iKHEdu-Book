@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Hinh Chu Nhat Toan So 1 Lon Nhat 2d**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hinh Chu Nhat Toan So 1 Lon Nhat 2d với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ma trận nhị phân n x m. Hãy lập trình tìm hình chữ nhật con chỉ gồm số 1 có diện tích lớn nhất và in ra diện tích đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

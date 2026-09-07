@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Dp Tren Cay Duong Kinh Cay Co Trong So**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dp Tren Cay Duong Kinh Cay Co Trong So với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho cây có trọng số cạnh gồm n đỉnh. Hãy lập trình tìm đường đi đơn dài nhất trên cây (đường kính cây) và in ra độ dài của nó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

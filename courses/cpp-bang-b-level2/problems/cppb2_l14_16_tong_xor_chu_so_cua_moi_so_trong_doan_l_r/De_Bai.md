@@ -1,33 +1,44 @@
-# Tổng xor chữ số của mọi số trong đoạn $[l, r]$
+# Tổng XOR trên mọi cặp mảng
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng XOR Chữ Số Của Mọi Số Trong Đoạn $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Digit DP đa chiều tính tổng tích lũy XOR.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trung tâm an ninh mạng đánh giá độ phân tán của N khóa phiên trong hệ thống mã hóa đầu cuối bằng cách cộng giá trị XOR của mọi cặp khóa phân biệt để ước lượng mức độ khó đoán của toàn bộ phiên giao dịch. Vì số cặp lên tới hàng chục tỉ nên kỹ sư không thể duyệt từng cặp mà đếm số bit 1 theo từng vị trí bit rồi nhân tổ hợp, lấy phần dư cho 1 000 000 007 để ghi vào báo cáo kiểm định.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tổng Xor Chữ Số Của Mọi Số Trong Đoạn $[l, R]$ với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$. Hãy lập trình tính tổng $a_i \oplus a_j$ trên mọi cặp $i < j$, rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên $N$ ($1 \le N \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên không âm $a_i$ ($0 \le a_i < 2^{60}$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là tổng XOR trên mọi cặp theo modulo $1\,000\,000\,007$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3
+1 2 3
 ```
+
 ### Output
+
 ```text
-15
+6
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng XOR Chữ Số Của Mọi Số Trong Đoạn $[L, R]$.
+
+- Ba cặp phân biệt cho $1 \oplus 2 = 3$, $1 \oplus 3 = 2$ và $2 \oplus 3 = 1$.
+- Tổng ba giá trị là $3 + 2 + 1 = 6$.
+- Chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 2 \cdot 10^5$; $0 \le a_i < 2^{60}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

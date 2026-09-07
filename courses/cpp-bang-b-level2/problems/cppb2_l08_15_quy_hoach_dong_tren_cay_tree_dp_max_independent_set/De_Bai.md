@@ -1,33 +1,49 @@
 # Quy hoạch động trên cây (Tree dp: max independent set)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Quy Hoạch Động Trên Cây (Tree DP: Max Independent Set)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: DP $dp[u][0/1]$ chọn hoặc không chọn đỉnh $u$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Công ty tổ chức sự kiện muốn mời một nhóm khách mời từ danh sách bạn bè của giám đốc, mà mối quan hệ bạn bè giữa họ tạo thành một cấu trúc cây không có vòng tròn. Mỗi người có một mức độ ảnh hưởng khác nhau đã được phòng truyền thông chấm điểm, nhưng hai người là bạn trực tiếp của nhau không thể cùng mời. Công ty muốn chọn ra nhóm khách đôi một không phải bạn trực tiếp sao cho tổng điểm ảnh hưởng là lớn nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Quy Hoạch Động Trên Cây (tree Dp: Max Independent Set) với độ phức tạp tối ưu nhất.
+
+Cho một cây gồm $N$ đỉnh (đánh số từ $1$ đến $N$), mỗi đỉnh có giá trị $val_i$, và $N - 1$ cạnh. Hãy lập trình chọn một tập đỉnh đôi một không kề nhau có tổng giá trị lớn nhất, rồi in ra tổng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số người.
+- Dòng thứ hai chứa $N$ số nguyên $val_i$ ($1 \le val_i \le 10^6$), là điểm ảnh hưởng của từng người.
+- $N - 1$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $u, v$ ($1 \le u, v \le N$), là một cặp bạn trực tiếp.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một số nguyên duy nhất là tổng giá trị lớn nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+10 20 30 40 50
+1 2
+1 3
+3 4
+3 5
 ```
+
 ### Output
+
 ```text
-15
+110
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Quy Hoạch Động Trên Cây (Tree DP: Max Independent Set).
+
+- Người $1$ bạn với $2$ và $3$; người $3$ bạn với $4$ và $5$.
+- Chọn nhóm $\{2, 4, 5\}$: không ai là bạn trực tiếp của ai trong nhóm, tổng điểm $20 + 40 + 50 = 110$.
+- Mọi nhóm hợp lệ khác đều có tổng không vượt quá $110$, ví dụ nhóm $\{1, 4, 5\}$ chỉ được $10 + 40 + 50 = 100$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le val_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

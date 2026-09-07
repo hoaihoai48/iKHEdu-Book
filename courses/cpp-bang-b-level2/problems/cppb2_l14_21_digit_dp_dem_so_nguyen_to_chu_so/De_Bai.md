@@ -1,31 +1,41 @@
-# Digit DP dem so nguyen to chu so
+# Đếm số có tổng chữ số nguyên tố
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Digit Dp Dem So Nguyen To Chu So**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Đài thiên văn phát động cuộc thi tìm ngôi sao may mắn trong đó mã số đăng ký được coi là đẹp khi tổng các chữ số của nó là một số nguyên tố để gắn với chủ đề vũ trụ và các con số bí ẩn. Mỗi đợt thi xét một đoạn mã liên tiếp và cần đếm có bao nhiêu mã đẹp để chuẩn bị giấy chứng nhận cho thí sinh. Chương trình quy hoạch động ghi nhớ tổng chữ số rồi kiểm tra tính nguyên tố giúp đếm nhanh đoạn dài.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Digit Dp Dem So Nguyen To Chu So với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) có tổng các chữ số là số nguyên tố, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 20
 ```
+
 ### Output
+
 ```text
-15
+9
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Digit Dp Dem So Nguyen To Chu So.
+
+- Các số từ $1$ đến $20$ có tổng chữ số là nguyên tố gồm $2, 3, 5, 7$ (tổng một chữ số) và $11, 12, 14, 16, 20$ (tổng hai chữ số bằng $2, 3, 5, 7, 2$).
+- Đếm được $4 + 5 = 9$ số nên chương trình in ra $9$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

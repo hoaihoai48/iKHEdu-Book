@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Stack Danh Gia Bieu Thuc So Hoc**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Stack Danh Gia Bieu Thuc So Hoc với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho một biểu thức số học gồm số nguyên, các phép +, -, *, / và dấu ngoặc. Hãy lập trình tính giá trị của biểu thức theo đúng thứ tự ưu tiên và in ra kết quả.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

@@ -11,25 +11,27 @@ Hoa mở rộng khung chọn từng chút một, khi đã đủ chữ cái thì 
 Cho xâu ký tự. Hãy lập trình tìm độ dài đoạn con liên tiếp ngắn nhất chứa đầy đủ mọi chữ cái trong bảng chữ cái.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Gồm một dòng duy nhất chứa xâu $s$ (chỉ gồm chữ cái thường, $1 \le |s| \le 10^6$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là độ dài của xâu con liên tiếp ngắn nhất chứa đủ cả $26$ chữ cái `a`–`z`; in `-1` nếu không tồn tại xâu con như vậy.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+abcdefghijklmnopqrstuvwxyzabc
 ```
 ### Output
 ```text
-15
+26
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Ngắn Nhất Chứa Đầy Đủ Bảng Chữ Cái.
+
+Xâu dài $29$ ký tự, $26$ ký tự đầu đã chứa đủ `a` tới `z` nên đoạn $[0, 25]$ dài $26$ thỏa mãn. Mọi đoạn ngắn hơn $26$ ký tự không thể chứa đủ $26$ chữ cái phân biệt. Vậy đáp án là $26$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |s| \le 10^6$, chỉ gồm `a`–`z`.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

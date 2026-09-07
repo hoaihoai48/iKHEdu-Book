@@ -1,33 +1,41 @@
 # Số có các chữ số tăng ngặt
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Các Chữ Số Tăng Ngặt** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Digit DP lưu chữ số liền trước `last_digit`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ngân hàng phát hành thẻ tín dụng dòng cao cấp với yêu cầu số thẻ phải có các chữ số tăng nghiêm ngặt từ trái sang phải để tạo dấu ấn sang trọng dễ nhận biết khi thanh toán. Mỗi đợt phát hành xét một đoạn số liên tiếp và cần đếm có bao nhiêu số thẻ đạt chuẩn thiết kế để đặt phôi thẻ từ nhà cung ứng. Chương trình quy hoạch động chữ số ghi nhớ chữ số trước đó giúp đếm nhanh cả đoạn dài tới hàng nghìn tỉ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Số Có Các Chữ Số Tăng Ngặt với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) có các chữ số tăng nghiêm ngặt từ trái sang phải, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn (số $0$ không được tính).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 30
 ```
+
 ### Output
+
 ```text
-15
+24
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Số Có Các Chữ Số Tăng Ngặt.
+
+- Các số một chữ số từ $1$ đến $9$ đều thỏa mãn vì chỉ có một chữ số.
+- Các số hai chữ số tới $30$ thỏa mãn là $12$ đến $19$ (tám số) và $23$ đến $29$ (bảy số), tổng $9 + 8 + 7 = 24$ nên chương trình in ra $24$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

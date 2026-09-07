@@ -9,25 +9,33 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $T$ truy vấn, mỗi truy vấn gồm một số nguyên không âm $n$. Hãy lập trình đếm số dãy ngoặc đúng gồm $n$ cặp ngoặc (số Catalan thứ $n$) theo modulo $10^9+7$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^5$) — số lượng truy vấn.
+- $T$ dòng tiếp theo, mỗi dòng chứa một số nguyên không âm $n$ ($0 \le n \le 10^6$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là số dãy ngoặc đúng gồm $n$ cặp ngoặc (số Catalan thứ $n$) theo modulo $10^9+7$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3
+1 2 3
 ```
 ### Output
 ```text
-15
+1
+2
+5
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Dãy Ngoặc Đúng (Số Catalan Modulo).
+
+* $n = 1$: chỉ có `()` → $1$.
+* $n = 2$: có `(())` và `()()` → $2$.
+* $n = 3$: có `((()))`, `(()())`, `(())()`, `()(()`, `()()()` — liệt kê tay được $5$ dãy, không còn dãy nào khác.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le T \le 10^5$, $0 \le n \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

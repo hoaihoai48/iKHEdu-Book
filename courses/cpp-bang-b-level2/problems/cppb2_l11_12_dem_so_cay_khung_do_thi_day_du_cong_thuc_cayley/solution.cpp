@@ -1,39 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+const long long MOD = 1000000007;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    long long n, m;
-    if (!(cin >> n >> m)) return 0;
-
-    vector<long long> primes;
-    long long temp = m;
-    for (long long p = 2; p * p <= temp; ++p) {
-        if (temp % p == 0) {
-            primes.push_back(p);
-            while (temp % p == 0) temp /= p;
-        }
-    }
-    if (temp > 1) primes.push_back(temp);
-
-    int k = primes.size();
-    long long coprime_cnt = 0;
-
-    for (int mask = 0; mask < (1 << k); ++mask) {
-        long long prod = 1;
-        int bits = 0;
-        for (int i = 0; i < k; ++i) {
-            if ((mask >> i) & 1) {
-                bits++;
-                prod *= primes[i];
-            }
-        }
-        if (bits % 2 == 1) coprime_cnt -= n / prod;
-        else coprime_cnt += n / prod;
-    }
-
-    cout << coprime_cnt << "\n";
+    long long N;
+    if (!(cin >> N)) return 0;
+    if (N <= 2) { cout << 1 << "\n"; return 0; }
+    long long a = N % MOD, e = N - 2, r = 1;
+    while (e) { if (e & 1) r = r * a % MOD; a = a * a % MOD; e >>= 1; }
+    cout << r << "\n";
     return 0;
 }

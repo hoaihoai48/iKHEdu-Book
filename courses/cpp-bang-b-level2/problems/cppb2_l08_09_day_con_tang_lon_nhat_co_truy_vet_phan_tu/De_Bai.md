@@ -1,33 +1,46 @@
 # Dãy con tăng lớn nhất có truy vết phần tử
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: LIS $\mathcal{O}(N \log N)$ kèm mảng truy vết $parent[i]$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Câu lạc bộ cờ vua ghi lại hệ số elo của một kỳ thủ trẻ qua $N$ giải đấu liên tiếp để đánh giá sự tiến bộ. Ban huấn luyện muốn chỉ ra một chuỗi các giải mà elo tăng dần nghiêm ngặt (không cần là các giải liên tiếp nhau) và dài nhất có thể, để đưa vào hồ sơ đề nghị phong kiện tướng. Không chỉ cần biết chuỗi dài bao nhiêu giải, hồ sơ còn phải liệt kê cụ thể hệ số elo của từng giải trong chuỗi đó để hội đồng thẩm định kiểm tra.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là hệ số elo qua các giải theo đúng thứ tự thời gian. Hãy lập trình tìm một dãy con tăng nghiêm ngặt dài nhất, rồi in ra độ dài của nó ở dòng đầu và các phần tử của dãy đó ở dòng thứ hai.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 1000$), là số giải đấu.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($1 \le a_i \le 10^9$), là hệ số elo theo thứ tự thời gian.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Dòng đầu tiên in ra độ dài của dãy con tăng dài nhất.
+- Dòng thứ hai in ra các phần tử của một dãy con tăng dài nhất (được chấp nhận bất kỳ dãy nào đạt độ dài tối đa).
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+3 1 2 5 4
 ```
+
 ### Output
+
 ```text
-15
+3
+1 2 5
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Tăng Lớn Nhất Có Truy Vết Phần Tử.
+
+- Dãy elo theo thời gian là $3, 1, 2, 5, 4$.
+- Ba giải có elo $1, 2, 5$ xuất hiện theo đúng thứ tự và tăng dần nên tạo thành dãy con tăng dài $3$.
+- Không tồn tại bốn giải nào có elo tăng dần, nên độ dài tối đa là $3$ và dãy $1, 2, 5$ là một đáp án hợp lệ.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 1000$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

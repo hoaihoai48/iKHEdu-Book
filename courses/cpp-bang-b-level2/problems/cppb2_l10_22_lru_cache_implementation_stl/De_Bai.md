@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Lru Cache Implementation Stl**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Lru Cache Implementation Stl với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dung lượng cache cap và q thao tác gồm SET k v và GET k theo nguyên tắc LRU (loại bỏ phần tử dùng lâu nhất khi đầy). Hãy lập trình mô phỏng cache và in ra kết quả của mỗi lệnh GET (hoặc -1 nếu không tồn tại).
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

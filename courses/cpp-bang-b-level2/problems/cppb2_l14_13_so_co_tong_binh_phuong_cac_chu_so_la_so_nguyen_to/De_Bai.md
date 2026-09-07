@@ -1,33 +1,42 @@
-# Số có tổng bình phương các chữ số là số nguyên tố
+# Đếm số có đúng K bit 1
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Sàng nguyên tố kết hợp Digit DP.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhà sản xuất chip nhớ kiểm tra dải địa chỉ ô nhớ liên tiếp với yêu cầu mỗi địa chỉ đạt chuẩn phải có đúng K bit 1 trong biểu diễn nhị phân để mạch giải mã hoạt động ổn định ở tần số cao. Mỗi lô chip xét một đoạn địa chỉ và cần đếm có bao nhiêu địa chỉ đạt chuẩn trước khi đóng gói xuất xưởng. Chương trình tổ hợp theo từng bit giúp đếm nhanh đoạn dài mà không cần quét từng ô nhớ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố với độ phức tạp tối ưu nhất.
+
+Cho ba số nguyên $L, R, K$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) có đúng $K$ bit $1$ trong biểu diễn nhị phân, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: ba số nguyên $L, R, K$ ($0 \le L \le R \le 10^{18}$, $0 \le K \le 60$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
+```text
+1 10 2
+```
+
+### Output
+
 ```text
 5
-1 2 3 4 5
 ```
-### Output
-```text
-15
-```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Số Có Tổng Bình Phương Các Chữ Số Là Số Nguyên Tố.
+
+- Các số từ $1$ đến $10$ viết nhị phân: $3 = 11$, $5 = 101$, $6 = 110$, $9 = 1001$, $10 = 1010$ có đúng hai bit $1$.
+- Các số còn lại có một hoặc ba bit $1$ nên bị loại.
+- Đếm được $5$ số nên chương trình in ra $5$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$; $0 \le K \le 60$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

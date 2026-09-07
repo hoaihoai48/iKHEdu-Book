@@ -1,33 +1,47 @@
 # Cái túi 0/1 chuẩn (0/1 knapsack)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cái Túi 0/1 Chuẩn (0/1 Knapsack)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: DP Cái túi tối ưu bộ nhớ 1D.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bạn Lan chuẩn bị ba lô cho chuyến leo núi hai ngày cùng câu lạc bộ, nhưng chiếc ba lô của bạn chỉ chịu được một khối lượng giới hạn. Trước mặt bạn là nhiều món đồ dùng, mỗi món có khối lượng và mức độ hữu ích khác nhau, và mỗi món chỉ có đúng một cái nên hoặc mang theo hoặc để ở nhà. Bạn muốn chọn những món bỏ vào ba lô sao cho tổng khối lượng không vượt quá sức chịu mà tổng mức hữu ích là cao nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cái Túi 0/1 Chuẩn (0/1 Knapsack) với độ phức tạp tối ưu nhất.
+
+Cho sức chứa $W$ của ba lô và $N$ món đồ, mỗi món có khối lượng $w_i$ và giá trị $v_i$ (mỗi món lấy tối đa một lần). Hãy lập trình chọn các món sao cho tổng khối lượng không vượt quá $W$ và tổng giá trị lớn nhất, rồi in ra tổng giá trị đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ và số nguyên $W$ ($1 \le N \le 100$, $1 \le W \le 10^4$), là số món đồ và sức chứa của ba lô.
+- $N$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $w_i, v_i$ ($1 \le w_i \le W$, $1 \le v_i \le 10^6$), là khối lượng và giá trị của một món.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là tổng giá trị lớn nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 7
+1 1
+3 4
+4 5
+5 7
 ```
+
 ### Output
+
 ```text
-15
+9
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Cái Túi 0/1 Chuẩn (0/1 Knapsack).
+
+- Ba lô chịu được $7$ đơn vị khối lượng với bốn món $(1, 1)$, $(3, 4)$, $(4, 5)$, $(5, 7)$.
+- Chọn món $(3, 4)$ và món $(4, 5)$: tổng khối lượng $3 + 4 = 7$ vừa khít, tổng giá trị $4 + 5 = 9$.
+- Mọi cách chọn khác đều cho tổng giá trị nhỏ hơn: lấy món $(5, 7)$ thì chỉ còn chỗ cho món $(1, 1)$ được $8$; các cách còn lại đều dưới $9$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 100$, $1 \le W \le 10^4$, $1 \le w_i \le W$, $1 \le v_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

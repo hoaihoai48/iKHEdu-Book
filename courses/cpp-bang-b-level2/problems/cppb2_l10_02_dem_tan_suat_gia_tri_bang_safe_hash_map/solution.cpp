@@ -1,26 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Triển khai cây tìm kiếm nhị phân cân bằng thủ công hoặc multiset giả lập PBDS
+struct custom_hash {
+    static uint64_t splitmix64(uint64_t x) {
+        x += 0x9e3779b97f4a7c15ULL;
+        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9ULL;
+        x = (x ^ (x >> 27)) * 0x94d049bb133111ebULL;
+        return x ^ (x >> 31);
+    }
+    size_t operator()(uint64_t x) const {
+        static const uint64_t FIXED = (uint64_t)chrono::steady_clock::now().time_since_epoch().count();
+        return splitmix64(x + FIXED);
+    }
+};
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
-
-    vector<long long> dynamic_arr;
-
-    while (q--) {
-        int type; long long x;
-        cin >> type >> x;
-        if (type == 1) {
-            auto it = lower_bound(dynamic_arr.begin(), dynamic_arr.end(), x);
-            dynamic_arr.insert(it, x);
-        } else {
-            auto it = lower_bound(dynamic_arr.begin(), dynamic_arr.end(), x);
-            cout << (it - dynamic_arr.begin()) << "\n";
-        }
+    int n;
+    if (!(cin >> n)) return 0;
+    unordered_map<long long, int, custom_hash> cnt;
+    vector<long long> order;
+    for (int i = 0; i < n; ++i) {
+        long long x; cin >> x;
+        if (!cnt.count(x)) order.push_back(x);
+        cnt[x]++;
     }
+    for (long long v : order) cout << v << ' ' << cnt[v] << "\n";
     return 0;
 }

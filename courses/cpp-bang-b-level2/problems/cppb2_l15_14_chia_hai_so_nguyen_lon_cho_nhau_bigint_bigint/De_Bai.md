@@ -1,33 +1,45 @@
-# Chia hai số nguyên lớn cho nhau (BigInt / BigInt)
+# Chia hai số nguyên lớn
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Chia Hai Số Nguyên Lớn Cho Nhau (BigInt / BigInt)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Thuật toán chia dài Knuth (Algorithm D).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Công ty logistics quốc tế cần chia đều lô hàng có tổng giá trị khổng lồ cho các đối tác theo tỉ lệ góp vốn, trong đó cả tổng giá trị và số phần chia đều là những số nguyên vượt xa kiểu dữ liệu thông thường. Mỗi hợp đồng yêu cầu biết thương nguyên và số dư của phép chia để lập biên bản phân chia tài sản có chữ ký các bên. Chương trình chia số lớn theo từng chữ số thập phân cho ra thương và dư chính xác tuyệt đối.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Chia Hai Số Nguyên Lớn Cho Nhau (bigint / Bigint) với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên dương $A, B$ rất lớn. Hãy lập trình tính thương nguyên $Q$ và số dư $R$ của phép chia $A$ cho $B$, rồi in ra trên hai dòng.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên lớn $A$.
+- Dòng 2: số nguyên lớn $B$ ($B > 0$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Dòng 1: thương nguyên $Q$.
+- Dòng 2: số dư $R$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+12345
+123
 ```
+
 ### Output
+
 ```text
-15
-```
+100
+45```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Chia Hai Số Nguyên Lớn Cho Nhau (BigInt / BigInt).
+
+- Lấy $12345 \div 123$: $123 \times 100 = 12300$ vừa khít không vượt quá.
+- Số dư còn lại là $12345 - 12300 = 45$.
+- In ra $100$ rồi $45$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- Mỗi số có tối đa $1000$ chữ số.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -8,28 +8,33 @@ Tổ kỹ thuật đo đạc khoảng cách giữa các cột rồi bàn nhau ph
 
 ## Nhiệm vụ
 
-Cho vị trí các điểm cần nối dây cáp. Hãy lập trình tìm độ dài đoạn dây đáp ứng yêu cầu bài toán với độ chính xác $10^{-6}$.
+Cho $n$ điểm $(x_i, y_i)$ trên mặt phẳng. Một trạm nối dây được đặt tại điểm $(p, 0)$ nằm trên trục hoành. Hãy lập trình tìm vị trí đặt trạm sao cho tổng độ dài dây cáp từ trạm tới mọi điểm là nhỏ nhất.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ ($1 \le n \le 10^5$).
+- $n$ dòng tiếp theo, mỗi dòng chứa hai số thực $x_i, y_i$ ($|x_i|, |y_i| \le 10^6$) là tọa độ một điểm.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là tổng độ dài dây cáp nhỏ nhất, làm tròn tới $6$ chữ số thập phân.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2
+0 0
+4 0
 ```
 ### Output
 ```text
-15
+4.000000
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Khoảng Cách Dây Cáp Nhỏ Nhất.
+
+Đặt trạm tại $p = 2$: khoảng cách tới $(0, 0)$ là $2$, tới $(4, 0)$ cũng là $2$, tổng bằng $4$. Mọi vị trí $p$ nằm giữa $0$ và $4$ đều cho tổng đúng bằng $4$, còn đặt ngoài đoạn này tổng sẽ lớn hơn (ví dụ $p = 0$ cho tổng $0 + 4 = 4$, $p = -1$ cho tổng $1 + 5 = 6$). Vậy tổng nhỏ nhất là $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n \le 10^5$, $|x_i|, |y_i| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

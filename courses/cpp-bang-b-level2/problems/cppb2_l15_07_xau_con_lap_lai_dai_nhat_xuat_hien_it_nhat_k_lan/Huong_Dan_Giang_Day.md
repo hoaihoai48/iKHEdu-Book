@@ -70,58 +70,68 @@ Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-struct TrieNode {
-    int next[26];
-    bool is_end;
-    TrieNode() {
-        memset(next, -1, sizeof(next));
-        is_end = false;
-    }
-};
-
-vector<TrieNode> trie;
-
-void insert_str(const string &s) {
-    int u = 0;
-    for (char c : s) {
-        int idx = c - 'a';
-        if (trie[u].next[idx] == -1) {
-            trie[u].next[idx] = trie.size();
-            trie.push_back(TrieNode());
+vector<int> buildSA(const string &s) {
+    int n = (int)s.size();
+    vector<int> sa(n), rnk(n), tmp(n);
+    for (int i = 0; i < n; i++) { sa[i] = i; rnk[i] = (unsigned char)s[i]; }
+    for (int k = 1; k < n; k <<= 1) {
+        auto key2 = [&](int i) { return i + k < n ? rnk[i + k] + 1 : 0; };
+        int m = max(256, n) + 2;
+        vector<int> cnt(m, 0);
+        for (int i = 0; i < n; i++) cnt[key2(i)]++;
+        for (int i = 1; i < m; i++) cnt[i] += cnt[i - 1];
+        vector<int> sa2(n);
+        for (int i = n - 1; i >= 0; i--) sa2[--cnt[key2(sa[i])]] = sa[i];
+        fill(cnt.begin(), cnt.end(), 0);
+        for (int i = 0; i < n; i++) cnt[rnk[i] + 1]++;
+        for (int i = 1; i < m; i++) cnt[i] += cnt[i - 1];
+        for (int i = n - 1; i >= 0; i--) sa[--cnt[rnk[sa2[i]] + 1]] = sa2[i];
+        tmp[sa[0]] = 0;
+        int r = 0;
+        for (int i = 1; i < n; i++) {
+            int a = sa[i - 1], b = sa[i];
+            if (rnk[a] != rnk[b] || key2(a) != key2(b)) r++;
+            tmp[b] = r;
         }
-        u = trie[u].next[idx];
+        rnk = tmp;
+        if (r == n - 1) break;
     }
-    trie[u].is_end = true;
+    return sa;
 }
-
-bool search_str(const string &s) {
-    int u = 0;
-    for (char c : s) {
-        int idx = c - 'a';
-        if (trie[u].next[idx] == -1) return false;
-        u = trie[u].next[idx];
+vector<int> buildLCP(const string &s, const vector<int> &sa) {
+    int n = (int)s.size();
+    vector<int> rankv(n), lcp(max(0, n - 1));
+    for (int i = 0; i < n; i++) rankv[sa[i]] = i;
+    int h = 0;
+    for (int i = 0; i < n; i++) {
+        if (rankv[i] == 0) continue;
+        int j = sa[rankv[i] - 1];
+        while (i + h < n && j + h < n && s[i + h] == s[j + h]) h++;
+        lcp[rankv[i] - 1] = h;
+        if (h) h--;
     }
-    return trie[u].is_end;
+    return lcp;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-
-    trie.push_back(TrieNode());
-    for (int i = 0; i < n; ++i) {
-        string w; cin >> w;
-        insert_str(w);
+    string s;
+    if (!(cin >> s)) return 0;
+    int n, K;
+    cin >> K; n = (int)s.size();
+    if (K <= 1) { cout << n << "\n"; return 0; }
+    vector<int> sa = buildSA(s);
+    vector<int> lcp = buildLCP(s, sa);
+    int w = K - 1, ans = 0;
+    deque<int> dq;
+    for (int i = 0; i < n - 1; i++) {
+        while (!dq.empty() && lcp[dq.back()] >= lcp[i]) dq.pop_back();
+        dq.push_back(i);
+        if (dq.front() <= i - w) dq.pop_front();
+        if (i >= w - 1) ans = max(ans, lcp[dq.front()]);
     }
-
-    while (q--) {
-        string qry; cin >> qry;
-        cout << (search_str(qry) ? "YES" : "NO") << "\n";
-    }
+    cout << ans << "\n";
     return 0;
 }
 ```

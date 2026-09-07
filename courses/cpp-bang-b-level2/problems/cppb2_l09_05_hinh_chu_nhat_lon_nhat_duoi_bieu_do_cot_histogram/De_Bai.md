@@ -1,33 +1,45 @@
 # Hình chữ nhật lớn nhất dưới biểu đồ cột (histogram)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (Histogram)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Monotonic Stack tìm biên trái & biên phải.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Khu hội chợ xuân dựng một dãy các gian hàng san sát nhau với chiều cao mái che khác nhau. Ban tổ chức muốn căng một tấm bạt quảng cáo hình chữ nhật lớn nhất có thể nằm gọn dưới các mái che này, với cạnh đáy đặt trên mặt đất và không được vượt quá chiều cao của bất kỳ gian hàng nào mà nó che phủ. Tấm bạt càng to thì logo nhà tài trợ càng nổi bật, nên ban tổ chức cần tính chính xác diện tích lớn nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (histogram) với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là chiều cao của từng gian hàng theo thứ tự. Một hình chữ nhật hợp lệ gồm một đoạn gian hàng liên tiếp với chiều cao bằng chiều cao của gian thấp nhất trong đoạn. Hãy lập trình tính diện tích lớn nhất, rồi in ra diện tích đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số gian hàng.
+- Dòng thứ hai chứa $N$ số nguyên $h_i$ ($1 \le h_i \le 10^6$), là chiều cao từng gian.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là diện tích lớn nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+6
+2 1 5 6 2 3
 ```
+
 ### Output
+
 ```text
-15
+10
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Hình Chữ Nhật Lớn Nhất Dưới Biểu Đồ Cột (Histogram).
+
+- Xét các hình chữ nhật ứng với từng gian làm chiều cao giới hạn.
+- Lấy chiều cao $5$ phủ hai gian $5, 6$ được diện tích $5 \times 2 = 10$.
+- Lấy chiều cao $2$ của gian thứ năm phủ bốn gian $5, 6, 2, 3$ được $2 \times 4 = 8$; lấy chiều cao $1$ phủ cả sáu gian được $1 \times 6 = 6$.
+- Mọi hình chữ nhật hợp lệ khác đều có diện tích không vượt quá $10$, nên đáp án là $10$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le h_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

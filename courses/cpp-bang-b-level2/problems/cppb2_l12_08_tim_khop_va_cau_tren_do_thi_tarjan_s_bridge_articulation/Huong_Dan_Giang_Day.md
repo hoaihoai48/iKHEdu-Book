@@ -70,54 +70,55 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithm
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int timer = 0, scc_count = 0;
-void dfs_scc(int u, const vector<vector<int>> &adj, vector<int> &tin, vector<int> &low, stack<int> &st, vector<bool> &in_st) {
-    tin[u] = low[u] = ++timer;
-    st.push(u);
-    in_st[u] = true;
-
-    for (int v : adj[u]) {
-        if (!tin[v]) {
-            dfs_scc(v, adj, tin, low, st, in_st);
-            low[u] = min(low[u], low[v]);
-        } else if (in_st[v]) {
-            low[u] = min(low[u], tin[v]);
-        }
-    }
-
-    if (low[u] == tin[u]) {
-        scc_count++;
-        while (true) {
-            int node = st.top(); st.pop();
-            in_st[node] = false;
-            if (node == u) break;
-        }
-    }
-}
-
+struct Frame { int v, pe; size_t idx; };
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
+    int N, M;
+    if (!(cin >> N >> M)) return 0;
+    vector<vector<pair<int,int>>> adj(N + 1);
+    for (int i = 0; i < M; i++) {
         int u, v; cin >> u >> v;
-        adj[u].push_back(v);
+        if (u < 1 || u > N || v < 1 || v > N) continue;
+        adj[u].push_back({v, i}); adj[v].push_back({u, i});
     }
-
-    vector<int> tin(n + 1, 0), low(n + 1, 0);
-    vector<bool> in_st(n + 1, false);
-    stack<int> st;
-
-    for (int i = 1; i <= n; ++i) {
-        if (!tin[i]) dfs_scc(i, adj, tin, low, st, in_st);
+    vector<int> disc(N + 1, -1), low(N + 1, 0), parent(N + 1, -1);
+    vector<char> isArt(N + 1, 0), isBridge(max(0, M), 0);
+    int timer = 0;
+    for (int s = 1; s <= N; s++) {
+        if (disc[s] != -1) continue;
+        disc[s] = low[s] = timer++;
+        int rootCh = 0;
+        vector<Frame> st; st.push_back({s, -1, 0});
+        while (!st.empty()) {
+            Frame &f = st.back();
+            int v = f.v;
+            if (f.idx < adj[v].size()) {
+                auto [to, id] = adj[v][f.idx++];
+                if (id == f.pe) continue;
+                if (disc[to] == -1) {
+                    parent[to] = v;
+                    if (v == s) rootCh++;
+                    disc[to] = low[to] = timer++;
+                    st.push_back({to, id, 0});
+                } else {
+                    low[v] = min(low[v], disc[to]);
+                }
+            } else {
+                int p = parent[v];
+                if (p != -1) {
+                    low[p] = min(low[p], low[v]);
+                    if (low[v] > disc[p]) isBridge[f.pe] = 1;
+                    if (parent[p] != -1 && low[v] >= disc[p]) isArt[p] = 1;
+                } else if (rootCh > 1) isArt[v] = 1;
+                st.pop_back();
+            }
+        }
     }
-
-    cout << scc_count << "\n";
+    int ca = 0, cb = 0;
+    for (int i = 1; i <= N; i++) ca += isArt[i];
+    for (int i = 0; i < M; i++) cb += isBridge[i];
+    cout << ca << ' ' << cb << "\n";
     return 0;
 }
 ```

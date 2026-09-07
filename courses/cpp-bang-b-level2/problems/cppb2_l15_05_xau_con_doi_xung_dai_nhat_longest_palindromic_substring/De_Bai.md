@@ -1,33 +1,41 @@
-# Xâu con đối xứng dài nhất (longest palindromic substring)
+# Xâu con đối xứng dài nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Substring)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Băm xuôi + Băm ngược + Chặt nhị phân độ dài.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Công ty thiết kế quà tặng khắc tên lên vòng tay sao cho đoạn ký tự đối xứng dài nhất trong tên khách hàng được mạ vàng nổi bật để tạo điểm nhấn cá nhân hóa. Mỗi đơn hàng gửi một cái tên và xưởng cần xác định ngay đoạn đối xứng dài nhất, ưu tiên đoạn xuất hiện sớm nhất khi có nhiều đoạn cùng độ dài, để lập trình cho máy khắc laser. Thuật toán Manacher tìm đáp án trong thời gian tuyến tính kể cả với tên rất dài.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Xâu Con Đối Xứng Dài Nhất (longest Palindromic Substring) với độ phức tạp tối ưu nhất.
+
+Cho xâu $S$. Hãy lập trình tìm xâu con liên tiếp đối xứng dài nhất của $S$ (nếu nhiều đáp án thì lấy vị trí bắt đầu nhỏ nhất), rồi in ra xâu đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: xâu $S$ gồm chữ cái thường ($1 \le |S| \le 10^6$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là xâu con đối xứng dài nhất (sớm nhất).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+babad
 ```
+
 ### Output
+
 ```text
-15
-```
+bab```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Substring).
+
+- Xâu $babad$: kiểm tra các xâu con dài ba ký tự thấy $bab$ (vị trí $1$ đến $3$) đối xứng.
+- Không có xâu con nào dài bốn hoặc năm ký tự đối xứng (cả $baba$ lẫn $abad$ đều không đọc ngược giống xuôi).
+- Đáp án sớm nhất độ dài ba là $bab$ nên in ra $bab$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |S| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

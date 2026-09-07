@@ -1,33 +1,47 @@
-# Truy vấn so khớp hai xâu con bằng hashing
+# So khớp hai xâu con bằng hashing
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Truy Vấn So Khớp Hai Xâu Con Bằng Hashing** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Cài đặt Rolling Hash $\mathcal{O}(1)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hệ thống phát hiện đạo văn của nhà xuất bản cần so sánh hàng nghìn cặp đoạn văn bản trong cuốn tiểu thuyết dài hàng trăm nghìn ký tự để tìm các đoạn trích lặp lại trái phép. Mỗi truy vấn đưa ra hai đoạn con và yêu cầu trả lời chúng có giống hệt nhau hay không trong thời gian hằng số sau khi tiền xử lý hàm băm lăn. Ban biên tập dùng kết quả này để khoanh vùng các chương cần kiểm tra thủ công trước khi ký duyệt phát hành.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Truy Vấn So Khớp Hai Xâu Con Bằng Hashing với độ phức tạp tối ưu nhất.
+
+Cho xâu $S$ và $Q$ truy vấn. Hãy lập trình trả lời, với mỗi truy vấn $(l_1,r_1,l_2,r_2)$ (chỉ số từ $1$), hai xâu con $S[l_1 \dots r_1]$ và $S[l_2 \dots r_2]$ có bằng nhau hay không; in ra $YES$ hoặc $NO$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: xâu $S$ gồm chữ cái thường ($1 \le |S| \le 2 \cdot 10^5$).
+- Dòng 2: số nguyên $Q$ ($1 \le Q \le 2 \cdot 10^5$).
+- $Q$ dòng tiếp theo, mỗi dòng gồm $l_1, r_1, l_2, r_2$.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Gồm $Q$ dòng, mỗi dòng là $YES$ hoặc $NO$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+ababa
+2
+1 3 3 5
+1 2 2 3
 ```
+
 ### Output
+
 ```text
-15
-```
+YES
+NO```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Truy Vấn So Khớp Hai Xâu Con Bằng Hashing.
+
+- Truy vấn một so $S[1 \dots 3] =$ aba với $S[3 \dots 5] =$ aba: hai đoạn giống hệt nhau.
+- Truy vấn hai so $S[1 \dots 2] =$ ab với $S[2 \dots 3] =$ ba: khác nhau ở ký tự đầu.
+- Chương trình in ra $YES$ rồi $NO$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |S|, Q \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

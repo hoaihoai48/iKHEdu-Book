@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Divide And Conquer Dp Optimization**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Divide And Conquer Dp Optimization với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm n số và số nguyên k. Hãy lập trình chia dãy thành đúng k nhóm liên tiếp sao cho tổng chi phí các nhóm nhỏ nhất (chi phí nhóm bằng tổng đoạn nhân độ dài đoạn) và in ra chi phí đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

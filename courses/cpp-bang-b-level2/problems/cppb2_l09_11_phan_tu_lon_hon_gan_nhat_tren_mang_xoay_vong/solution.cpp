@@ -5,26 +5,22 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
-
-    stack<int> st;
-    st.push(-1);
-    int max_len = 0;
-
-    for (int i = 0; i < (int)s.size(); ++i) {
-        if (s[i] == '(') {
-            st.push(i);
-        } else {
-            st.pop();
-            if (st.empty()) {
-                st.push(i);
-            } else {
-                max_len = max(max_len, i - st.top());
-            }
-        }
+    int n;
+    if (!(cin >> n)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<long long> ans(n, -1);
+    vector<int> st;
+    for (int i = 2 * n - 1; i >= 0; --i) {
+        int idx = i % n;
+        while (!st.empty() && a[st.back()] <= a[idx]) st.pop_back();
+        if (i < n && !st.empty()) ans[idx] = a[st.back()];
+        st.push_back(idx);
     }
-
-    cout << max_len << "\n";
+    for (int i = 0; i < n; ++i) {
+        if (i) cout << ' ';
+        cout << ans[i];
+    }
+    cout << "\n";
     return 0;
 }

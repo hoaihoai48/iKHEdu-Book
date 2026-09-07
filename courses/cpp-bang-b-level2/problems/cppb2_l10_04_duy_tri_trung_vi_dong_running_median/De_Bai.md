@@ -1,33 +1,48 @@
 # Duy trì trung vị động (running median)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Duy Trì Trung Vị Động (Running Median)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: 2 Heap cân bằng kích thước.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm cân của hợp tác xã ghi lại khối lượng từng bao lúa mà bà con chở đến nhập kho trong ngày, các bao đến nối tiếp nhau không ngừng từ sáng đến tối. Sau mỗi bao lúa vừa cân, kế toán muốn biết ngay trung vị của tất cả các bao đã cân từ đầu ngày: trung vị là giá trị đứng giữa khi xếp mọi bao theo thứ tự (với số lượng bao chẵn thì lấy giá trị nhỏ hơn trong hai giá trị giữa).
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Duy Trì Trung Vị Động (running Median) với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên đến lần lượt theo thời gian. Sau mỗi số vừa đến, xét toàn bộ các số đã thấy và tìm trung vị của chúng (sắp xếp tăng dần; số lượng lẻ lấy phần tử giữa, số lượng chẵn lấy phần tử nhỏ hơn trong hai phần tử giữa). Hãy lập trình in ra trung vị sau mỗi lần thêm một số.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số bao lúa.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($1 \le a_i \le 10^9$), là khối lượng từng bao theo thứ tự.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra $N$ dòng, dòng thứ $i$ là trung vị của $i$ số đầu tiên.
 
 ## Sample 1
+
 ### Input
+
+```text
+4
+5 15 1 3
+```
+
+### Output
+
 ```text
 5
-1 2 3 4 5
+5
+5
+3
 ```
-### Output
-```text
-15
-```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Duy Trì Trung Vị Động (Running Median).
+
+- Sau bao đầu $5$: chỉ có một số nên trung vị là $5$.
+- Sau hai bao $5, 15$: xếp lại $5, 15$, số lượng chẵn nên lấy giá trị nhỏ hơn trong hai giữa là $5$.
+- Sau ba bao $5, 15, 1$: xếp lại $1, 5, 15$, phần tử giữa là $5$.
+- Sau bốn bao $5, 15, 1, 3$: xếp lại $1, 3, 5, 15$, hai giá trị giữa là $3$ và $5$ nên lấy $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

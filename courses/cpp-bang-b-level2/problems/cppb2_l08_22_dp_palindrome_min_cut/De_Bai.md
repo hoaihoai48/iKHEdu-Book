@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Dp Palindrome Min Cut**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dp Palindrome Min Cut với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho xâu s. Hãy lập trình cắt xâu thành ít nhát sao cho mỗi mảnh đều là xâu đối xứng (palindrome) và in ra số lần cắt ít nhất.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

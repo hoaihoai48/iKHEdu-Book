@@ -70,26 +70,37 @@ Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)*
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-const long long MOD = 1000000007;
-
+long long modpow(long long a, long long e, long long m) {
+    long long r = 1 % m;
+    a %= m;
+    while (e) { if (e & 1) r = r * a % m; a = a * a % m; e >>= 1; }
+    return r;
+}
+long long smallC(long long n, long long k, int p) {
+    if (k < 0 || k > n) return 0;
+    if (k > n - k) k = n - k;
+    long long num = 1, den = 1;
+    for (long long i = 1; i <= k; i++) { num = num * (n - k + i) % p; den = den * i % p; }
+    return num * modpow(den, p - 2, p) % p;
+}
+long long lucas(long long n, long long k, int p) {
+    if (k < 0 || k > n) return 0;
+    long long r = 1;
+    while (n > 0 || k > 0) {
+        long long ni = n % p, ki = k % p;
+        if (ki > ni) return 0;
+        r = r * smallC(ni, ki, p) % p;
+        n /= p; k /= p;
+    }
+    return r;
+}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-
-    vector<vector<long long>> S(n + 1, vector<long long>(k + 1, 0));
-    S[0][0] = 1;
-
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= min(i, k); ++j) {
-            S[i][j] = (S[i - 1][j - 1] + j * S[i - 1][j]) % MOD;
-        }
-    }
-
-    cout << S[n][k] << "\n";
+    long long N, K;
+    int p;
+    if (!(cin >> N >> K >> p)) return 0;
+    cout << lucas(N, K, p) % p << "\n";
     return 0;
 }
 ```

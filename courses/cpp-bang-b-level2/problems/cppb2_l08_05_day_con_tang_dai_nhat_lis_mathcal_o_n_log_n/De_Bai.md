@@ -1,33 +1,44 @@
 # Dãy con tăng dài nhất LIS $\mathcal{o}(n \log n)$
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Tăng Dài Nhất LIS $\mathcal{O}(N \log N)$** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: `lower_bound` trên mảng `tail`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Huấn luyện viên đội tuyển bơi lội ghi lại thành tích của $N$ vận động viên trẻ qua các buổi kiểm tra thể lực theo đúng thứ tự thời gian. Ông muốn tìm ra một nhóm vận động viên mà phong độ tăng dần đều đặn qua từng buổi (không cần liên tiếp nhau) để đưa vào danh sách bồi dưỡng chuyên sâu cho giải toàn quốc. Nhóm càng đông thì chương trình đào tạo càng hiệu quả, nên ông cần biết nhóm tăng dần dài nhất có thể chọn được gồm bao nhiêu người.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dãy Con Tăng Dài Nhất Lis $\mathcal{o}(n \log N)$ với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên theo đúng thứ tự thời gian. Hãy lập trình tìm dãy con (không cần liên tiếp, nhưng giữ nguyên thứ tự) tăng nghiêm ngặt dài nhất, rồi in ra độ dài của dãy đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số vận động viên.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($1 \le a_i \le 10^9$), là thành tích theo thứ tự thời gian.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là độ dài của dãy con tăng dài nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+3 1 2 5 4
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Tăng Dài Nhất LIS $\mathcal{O}(N \log N)$.
+
+- Dãy thành tích theo thời gian là $3, 1, 2, 5, 4$.
+- Chọn ba người có thành tích $1, 2, 5$ theo đúng thứ tự xuất hiện được dãy tăng dần.
+- Mọi dãy con tăng khác đều chỉ dài tối đa $3$, ví dụ $1, 2, 4$ cũng dài $3$ nhưng không thể tìm được bốn người nào có thành tích tăng dần.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

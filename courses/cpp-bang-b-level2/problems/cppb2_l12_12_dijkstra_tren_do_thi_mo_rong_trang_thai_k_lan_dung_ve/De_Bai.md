@@ -1,33 +1,45 @@
-# Dijkstra trên đồ thị mở rộng trạng thái (k lần dùng vé)
+# Dijkstra trạng thái với K lần miễn phí
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Dijkstra đa tầng $dist[u][k]$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hãng hàng không liên minh phát hành thẻ ưu đãi cho phép hành khách bay qua tối đa K chặng bất kỳ mà không phải trả thêm phí trên mạng N sân bay với M đường bay một chiều có giá vé khác nhau. Một du khách muốn bay từ sân bay 1 đến sân bay N với tổng chi phí thấp nhất tận dụng tối đa K lượt miễn phí của thẻ. Hệ thống đặt vé cần tính chi phí tối ưu bằng mô hình đồ thị mở rộng trạng thái kết hợp Dijkstra.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (k Lần Dùng Vé) với độ phức tạp tối ưu nhất.
+
+Cho đồ thị có hướng gồm $N$ đỉnh, $M$ cạnh có trọng số không âm và số nguyên $K$. Hãy lập trình tính chi phí nhỏ nhất từ đỉnh $1$ đến đỉnh $N$ khi được miễn phí tối đa $K$ cạnh trên hành trình, rồi in ra kết quả ($-1$ nếu không tới được).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: ba số nguyên $N, M, K$ ($1 \le N \le 10^4$, $0 \le K \le 10$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v, w$ là đường bay một chiều giá $w$ ($0 \le w \le 10^9$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là chi phí tối ưu ($-1$ nếu không tới được).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 3 1
+1 2 5
+2 3 5
+1 3 12
 ```
+
 ### Output
+
 ```text
-15
-```
+0```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Dijkstra Trên Đồ Thị Mở Rộng Trạng Thái (K Lần Dùng Vé).
+
+- Hành trình $1 \to 2 \to 3$ tốn $10$, hành trình bay thẳng $1 \to 3$ tốn $12$.
+- Dùng lượt miễn phí cho chặng bay thẳng $12$ thì chi phí còn $0$, tốt hơn miễn phí một chặng $5$ ở hành trình hai chặng (còn $5$).
+- Đáp án tối ưu là $0$ nên chương trình in ra $0$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^4$, $0 \le K \le 10$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,33 +1,49 @@
-# Tìm vị trí đầu tiên có giá trị $\ge x$ trong đoạn $[l, r]$
+# Vị trí đầu tiên có giá trị lớn hơn hoặc bằng X
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[L, R]$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Binary Search trên Segment Tree nhánh trái/phải.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Hệ thống kho lạnh bảo quản N thùng vắc xin với nhiệt độ được ghi nhận theo từng vị trí kệ để đảm bảo dây chuyền lạnh không bị gián đoạn. Khi cảnh báo ngưỡng an toàn X được ban hành, nhân viên cần tìm thùng đầu tiên trong một đoạn kệ có nhiệt độ vượt ngưỡng để kiểm tra khẩn cấp trước khi cả lô bị ảnh hưởng. Cây đoạn lưu giá trị lớn nhất mỗi nút giúp nhảy tìm vị trí thỏa mãn trong thời gian logarit.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[l, R]$ với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$ cố định và $Q$ truy vấn. Hãy lập trình trả lời, với mỗi truy vấn $(l,r,x)$, vị trí nhỏ nhất $p$ trong $[l,r]$ sao cho $a_p \ge x$ (in ra $-1$ nếu không tồn tại).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $Q$ dòng tiếp theo, mỗi dòng gồm $l, r, x$.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Gồm $Q$ dòng, mỗi dòng là vị trí cần tìm hoặc $-1$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 3
+1 5 2 4 3
+1 5 4
+2 3 6
+3 5 3
 ```
+
 ### Output
+
 ```text
-15
-```
+2
+-1
+4```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Vị Trí Đầu Tiên Có Giá Trị $\ge X$ Trong Đoạn $[L, R]$.
+
+- Truy vấn $(1,5,4)$: duyệt từ trái thấy $a[2] = 5 \ge 4$ nên đáp án là $2$.
+- Truy vấn $(2,3,6)$: hai giá trị $5$ và $2$ đều nhỏ hơn $6$ nên đáp án là $-1$.
+- Truy vấn $(3,5,3)$: $a[3] = 2$ chưa đạt nhưng $a[4] = 4 \ge 3$ nên đáp án là $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|a_i|, |x| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

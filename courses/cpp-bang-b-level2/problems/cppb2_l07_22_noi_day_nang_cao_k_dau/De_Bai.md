@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Noi Day Nang Cao K Dau**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Noi Day Nang Cao K Dau với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho n đoạn dây có độ dài cho trước và số nguyên k. Hãy lập trình mỗi lần nối đúng k đoạn thành một đoạn mới với chi phí bằng tổng độ dài, sao cho tổng chi phí nối về một đoạn duy nhất nhỏ nhất, và in ra chi phí đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

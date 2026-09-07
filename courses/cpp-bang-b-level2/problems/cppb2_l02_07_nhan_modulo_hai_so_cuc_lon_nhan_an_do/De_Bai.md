@@ -9,25 +9,32 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $T$ bộ $(a, b, m)$. Hãy lập trình tính $(a \cdot b) \bmod m$ mà không để xảy ra tràn số.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^5$) — số lượng truy vấn.
+- $T$ dòng tiếp theo, mỗi dòng chứa ba số nguyên không âm $a, b, m$ ($0 \le a, b \le 10^{18}$, $1 \le m \le 10^{18}$), cách nhau bởi dấu cách.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là giá trị $(a \cdot b) \bmod m$. Phép nhân phải được thực hiện mà không để xảy ra tràn số $64$ bit.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2
+1000000000000000000 1000000000000000000 1000000007
+5 7 13
 ```
 ### Output
 ```text
-15
+2401
+9
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Nhân Modulo Hai Số Cực Lớn (Nhân Ấn Độ).
+
+* Truy vấn thứ nhất: $10^{18}$ chia cho $1000000007$ dư $49$ (vì $10^9$ dư $-7$ nên $(10^9)^2$ dư $49$). Do đó tích dư $49 \cdot 49 = 2401$, mà $2401 < 1000000007$ nên đáp án là $2401$.
+* Truy vấn thứ hai: $5 \cdot 7 = 35 = 2 \cdot 13 + 9$, chia $13$ dư $9$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le T \le 10^5$, $0 \le a, b \le 10^{18}$, $1 \le m \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,33 +1,42 @@
-# Tam giác pascal modulo hợp số
+# Chỉnh hợp P(n, k) theo modulo
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tam Giác Pascal Modulo Hợp Số** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: DP Tam giác Pascal $C_n^k = C_{n-1}^{k-1} + C_{n-1}^k$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Câu lạc bộ Robotics của trường vừa nhập về một lô linh kiện gồm đúng N mô-đun cảm biến khác nhau để lắp ráp robot dự thi hội thao thành phố. Mỗi đội thi phải đăng ký một ban điều hành gồm K vị trí có phân biệt vai trò rõ ràng như đội trưởng, thủ quỹ và kỹ thuật viên. Ban giám khảo cần biết có tất cả bao nhiêu cách xếp K bạn khác nhau vào K vai trò này, lấy phần dư khi chia cho 1 000 000 007 để in lên bảng tin.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tam Giác Pascal Modulo Hợp Số với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $N$ và $K$. Hãy lập trình tính số chỉnh hợp chập $K$ của $N$ phần tử, tức $P(N,K) = N \times (N-1) \times \dots \times (N-K+1)$, rồi in ra phần dư của kết quả khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $N, K$ ($0 \le K, N \le 10^6$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là $P(N,K) \bmod 1\,000\,000\,007$. Quy ước $P(N,K) = 0$ khi $K > N$ hoặc $K < 0$, và $P(N,0) = 1$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 2
 ```
+
 ### Output
+
 ```text
-15
+20
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tam Giác Pascal Modulo Hợp Số.
+
+- Với $N = 5, K = 2$: các số nhân vào tích là $5$ rồi $4$.
+- Tích $5 \times 4 = 20$, phần dư khi chia cho $1\,000\,000\,007$ vẫn là $20$.
+- Chương trình in ra $20$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le N \le 10^6$, $0 \le K \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

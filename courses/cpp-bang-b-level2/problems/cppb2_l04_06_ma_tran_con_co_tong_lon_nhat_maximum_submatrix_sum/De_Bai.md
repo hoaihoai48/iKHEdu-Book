@@ -11,25 +11,30 @@ Bác ghi lại lợi nhuận từng ô rồi so sánh các vùng có thể khoan
 Cho ma trận số nguyên. Hãy lập trình tìm tổng lớn nhất của một hình chữ nhật con bất kỳ trong ma trận.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $n, m$ ($1 \le n, m \le 300$) — kích thước ma trận.
+- $n$ dòng tiếp theo, mỗi dòng chứa $m$ số nguyên $a_{ij}$ ($|a_{ij}| \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là tổng lớn nhất trong tất cả các ma trận con (hình chữ nhật con gồm các ô kề nhau) của ma trận đã cho.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2 3
+1 -2 3
+-4 5 -6
 ```
 ### Output
 ```text
-15
+5
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Ma Trận Con Có Tổng Lớn Nhất (Maximum Submatrix Sum).
+
+Liệt kê các ứng viên: ô đơn lớn nhất là $5$; hàng $1$ ($1, -2, 3$) có đoạn tốt nhất $3$; hàng $2$ có đoạn tốt nhất $5$; gộp cả hai hàng theo cột được $[-3, 3, -3]$, đoạn tốt nhất là $3$; ma trận con cột $2$ cả hai hàng cho $-2 + 5 = 3$. Không ma trận con nào vượt $5$ nên đáp án là $5$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n, m \le 300$, $|a_{ij}| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

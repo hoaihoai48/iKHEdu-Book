@@ -1,71 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-// Min-cut có giá trị bằng Max-flow (Dinic)
-struct Edge {
-    int to;
-    long long cap, flow;
-    int rev;
-};
-
-const int MAXN = 505;
-vector<Edge> adj[MAXN];
-int level[MAXN], ptr[MAXN];
-
-void add_edge(int from, int to, long long cap) {
-    adj[from].push_back({to, cap, 0, (int)adj[to].size()});
-    adj[to].push_back({from, 0, 0, (int)adj[from].size() - 1});
-}
-
-bool bfs_dinic(int s, int t) {
-    memset(level, -1, sizeof(level));
-    level[s] = 0;
-    queue<int> q; q.push(s);
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        for (const auto &e : adj[u]) {
-            if (e.cap - e.flow > 0 && level[e.to] == -1) {
-                level[e.to] = level[u] + 1;
-                q.push(e.to);
-            }
-        }
-    }
-    return level[t] != -1;
-}
-
-long long dfs_dinic(int u, int t, long long pushed) {
-    if (pushed == 0 || u == t) return pushed;
-    for (int &cid = ptr[u]; cid < (int)adj[u].size(); ++cid) {
-        auto &e = adj[u][cid];
-        int tr = e.to;
-        if (level[u] + 1 != level[tr] || e.cap - e.flow == 0) continue;
-        long long tr_pushed = dfs_dinic(tr, t, min(pushed, e.cap - e.flow));
-        if (tr_pushed == 0) continue;
-        e.flow += tr_pushed;
-        adj[tr][e.rev].flow -= tr_pushed;
-        return tr_pushed;
-    }
-    return 0;
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m, s, t;
-    if (!(cin >> n >> m >> s >> t)) return 0;
-
-    for (int i = 0; i < m; ++i) {
-        int u, v; long long c; cin >> u >> v >> c;
-        add_edge(u, v, c);
+    int N, M;
+    if (!(cin >> N >> M)) return 0;
+    vector<vector<pair<int,int>>> adj(N + 1);
+    for (int i = 0; i < M; i++) {
+        int u, v; cin >> u >> v;
+        adj[u].push_back({v, i}); adj[v].push_back({u, i});
     }
-
-    long long min_cut = 0;
-    while (bfs_dinic(s, t)) {
-        memset(ptr, 0, sizeof(ptr));
-        while (long long pushed = dfs_dinic(s, t, 1e18)) min_cut += pushed;
+    if (M == 0) { cout << 1 << "\n"; return 0; }
+    for (int v = 1; v <= N; v++) if (adj[v].size() % 2 == 1) { cout << "IMPOSSIBLE\n"; return 0; }
+    vector<char> seen(N + 1, 0);
+    vector<int> st; st.push_back(1); seen[1] = 1;
+    while (!st.empty()) {
+        int v = st.back(); st.pop_back();
+        for (auto [to, id] : adj[v]) if (!seen[to]) { seen[to] = 1; st.push_back(to); }
     }
-
-    cout << min_cut << "\n";
+    for (int v = 1; v <= N; v++) if (!adj[v].empty() && !seen[v]) { cout << "IMPOSSIBLE\n"; return 0; }
+    vector<char> used(max(1, M), 0);
+    vector<size_t> ptr(N + 1, 0);
+    vector<int> stack2; stack2.push_back(1);
+    vector<int> circ;
+    while (!stack2.empty()) {
+        int v = stack2.back();
+        while (ptr[v] < adj[v].size() && used[adj[v][ptr[v]].second]) ptr[v]++;
+        if (ptr[v] == adj[v].size()) { circ.push_back(v); stack2.pop_back(); }
+        else { auto [to, id] = adj[v][ptr[v]++]; used[id] = 1; stack2.push_back(to); }
+    }
+    if ((int)circ.size() != M + 1) { cout << "IMPOSSIBLE\n"; return 0; }
+    for (int i = (int)circ.size() - 1; i >= 0; i--) {
+        if (i != (int)circ.size() - 1) cout << ' ';
+        cout << circ[i];
+    }
+    cout << "\n";
     return 0;
 }

@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Knuth Optimization Dp**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Knuth Optimization Dp với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy a gồm n số. Hãy lập trình tính chi phí nhỏ nhất khi hợp nhất toàn bộ dãy thành một nhóm, trong đó chi phí mỗi lần hợp nhất một đoạn bằng tổng các phần tử của đoạn đó, và in ra chi phí nhỏ nhất.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

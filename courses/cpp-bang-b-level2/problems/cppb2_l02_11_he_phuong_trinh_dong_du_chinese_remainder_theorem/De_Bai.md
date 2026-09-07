@@ -9,25 +9,30 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho hệ $k$ phương trình đồng dư $x \equiv r_i \pmod{m_i}$. Hãy lập trình tìm nghiệm $x$ nhỏ nhất không âm thỏa mãn cả hệ.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $k$ ($2 \le k \le 10$) — số phương trình.
+- $k$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $r_i, m_i$ ($0 \le r_i < m_i \le 10^6$), các $m_i$ đôi một nguyên tố cùng nhau.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số nguyên $x$ nhỏ nhất không âm thỏa mãn đồng thời mọi phương trình $x \equiv r_i \pmod{m_i}$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2
+2 3
+3 5
 ```
 ### Output
 ```text
-15
+8
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Hệ Phương Trình Đồng Dư (Chinese Remainder Theorem).
+
+Các số chia $3$ dư $2$ là $2, 5, 8, 11, \dots$ Kiểm tra từng số với điều kiện thứ hai: $2$ chia $5$ dư $2$, $5$ chia $5$ dư $0$, $8$ chia $5$ dư $3$ — đúng cả hai điều kiện và là số nhỏ nhất thỏa mãn, nên đáp án là $8$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $2 \le k \le 10$, $0 \le r_i < m_i \le 10^6$, các $m_i$ đôi một nguyên tố cùng nhau.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

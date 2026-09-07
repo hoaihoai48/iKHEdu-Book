@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Dp Bitmask Duong Di Ngan Nhat K Dinh**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dp Bitmask Duong Di Ngan Nhat K Dinh với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho ma trận khoảng cách giữa k đỉnh đặc biệt. Hãy lập trình tìm đường đi xuất phát từ đỉnh 0, thăm tất cả k đỉnh đúng một lần với tổng độ dài ngắn nhất và in ra độ dài đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

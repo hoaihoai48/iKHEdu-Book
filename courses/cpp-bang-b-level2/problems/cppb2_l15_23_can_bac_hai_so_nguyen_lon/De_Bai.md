@@ -1,31 +1,42 @@
-# Can bac hai so nguyen lon
+# Căn bậc hai nguyên của số lớn
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Can Bac Hai So Nguyen Lon**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Phòng thí nghiệm vật liệu cần cắt tấm pin năng lượng mặt trời hình vuông có diện tích cho trước chính xác tới từng milimét, trong đó diện tích là số nguyên khổng lồ tới hàng trăm chữ số do ghép nhiều tấm nhỏ lại với nhau. Mỗi yêu cầu gửi một diện tích và hệ thống điều khiển máy cắt cần biết cạnh hình vuông lớn nhất có diện tích không vượt quá số đã cho. Thuật toán tìm căn theo từng chữ số cho ra đáp án chính xác mà không dùng tới số thực.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Can Bac Hai So Nguyen Lon với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho số nguyên không âm $A$ rất lớn (tới $1000$ chữ số). Hãy lập trình tính phần nguyên của $\sqrt{A}$, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: số nguyên $A$ (không có số 0 vô nghĩa ở đầu, trừ chính số $0$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là $\lfloor\sqrt{A}\rfloor$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+15241578750190521
 ```
+
 ### Output
+
 ```text
-15
+123456789
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Can Bac Hai So Nguyen Lon.
+
+- Kiểm tra $123456789^2 = 15241578750190521$ khớp đúng với số đã cho.
+- Số tiếp theo $123456790^2$ đã vượt quá nên phần nguyên của căn đúng bằng $123456789$.
+- Chương trình in ra $123456789$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $A$ có tối đa $1000$ chữ số.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

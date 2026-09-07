@@ -1,33 +1,45 @@
 # Nhân ma trận dây chuyền chi phí nhỏ nhất (matrix chain)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (Matrix Chain)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Interval DP $\mathcal{O}(N^3)$ tìm vị trí chia cắt tối ưu.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Phòng thí nghiệm trí tuệ nhân tạo cần nhân một dây chuyền $N$ ma trận liên tiếp nhau để huấn luyện mô hình mới, và thứ tự đặt dấu ngoặc khi nhân ảnh hưởng rất lớn đến tổng số phép tính phải thực hiện. Máy chủ của phòng thì cũ kỹ nên mỗi phép nhân thừa đều tốn thêm hàng giờ chạy. Nhóm kỹ sư cần tìm cách đặt dấu ngoặc sao cho tổng số phép nhân vô hướng là ít nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (matrix Chain) với độ phức tạp tối ưu nhất.
+
+Cho $N$ ma trận $A_1, A_2, \dots, A_N$, trong đó ma trận $A_i$ có kích thước $p_{i-1} \times p_i$. Hãy lập trình tìm cách đặt dấu ngoặc để nhân toàn bộ dây chuyền với tổng số phép nhân ít nhất, rồi in ra tổng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 200$), là số ma trận.
+- Dòng thứ hai chứa $N + 1$ số nguyên $p_0, p_1, \dots, p_N$ ($1 \le p_i \le 100$), mô tả kích thước các ma trận.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một số nguyên duy nhất là tổng số phép nhân ít nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3
+1 2 3 4
 ```
+
 ### Output
+
 ```text
-15
+18
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Nhân Ma Trận Dây Chuyền Chi Phí Nhỏ Nhất (Matrix Chain).
+
+- Ba ma trận có kích thước $1 \times 2$, $2 \times 3$ và $3 \times 4$.
+- Cách $(A_1 \times A_2) \times A_3$: nhân hai ma trận đầu tốn $1 \times 2 \times 3 = 6$, ma trận kết quả $1 \times 3$ nhân tiếp tốn $1 \times 3 \times 4 = 12$, tổng $18$.
+- Cách $A_1 \times (A_2 \times A_3)$: nhân hai ma trận sau tốn $2 \times 3 \times 4 = 24$, nhân tiếp tốn $1 \times 2 \times 4 = 8$, tổng $32$.
+- Cách rẻ nhất tốn $18$ phép nhân.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 200$, $1 \le p_i \le 100$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

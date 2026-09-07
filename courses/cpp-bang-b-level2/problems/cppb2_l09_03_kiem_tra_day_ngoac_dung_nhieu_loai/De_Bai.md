@@ -1,33 +1,43 @@
 # Kiểm tra dãy ngoặc đúng nhiều loại
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Ứng dụng Stack cơ bản.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bạn Mai đang học lập trình và viết ra một biểu thức gồm nhiều loại dấu ngoặc tròn, vuông, nhọn để thử trình biên dịch tự viết. Trước khi cho chương trình chạy, bạn muốn kiểm tra xem dãy ngoặc trong biểu thức có cân bằng hay không: mỗi ngoặc mở phải có đúng một ngoặc đóng cùng loại khép lại, và các cặp ngoặc phải lồng nhau đúng thứ tự chứ không được cắt ngang nhau. Một dãy đạt cả hai điều kiện được gọi là dãy ngoặc đúng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại với độ phức tạp tối ưu nhất.
+
+Cho một chuỗi chỉ gồm các ký tự `(`, `)`, `[`, `]`, `{`, `}`. Hãy lập trình kiểm tra xem chuỗi có phải là dãy ngoặc đúng hay không, rồi in ra `YES` nếu đúng và `NO` nếu sai. Chuỗi rỗng được coi là đúng.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa chuỗi $s$ ($0 \le |s| \le 10^5$) chỉ gồm sáu loại ký tự ngoặc kể trên.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra `YES` nếu là dãy ngoặc đúng, ngược lại in ra `NO`.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+{[()]}
 ```
+
 ### Output
+
 ```text
-15
+YES
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Kiểm Tra Dãy Ngoặc Đúng Nhiều Loại.
+
+- Đọc từng ký tự từ trái sang: gặp `{`, `[`, `(` là ngoặc mở nên tạm giữ lại theo thứ tự.
+- Gặp `)` khớp với `(` giữ gần nhất nên loại cặp này ra.
+- Gặp `]` khớp với `[` giữ gần nhất nên loại tiếp, rồi `}` khớp với `{` loại nốt.
+- Mọi ngoặc đều có cặp khớp đúng thứ tự lồng nhau nên chuỗi là dãy ngoặc đúng, đáp án `YES`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le |s| \le 10^5$, $s$ chỉ gồm `(`, `)`, `[`, `]`, `{`, `}`.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

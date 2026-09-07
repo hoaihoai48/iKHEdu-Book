@@ -1,33 +1,44 @@
 # Tối ưu hóa quy hoạch động bằng convex hull trick (CHT)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (CHT)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: CHT tối ưu $dp[i] = \min(dp[j] + m_j x_i + c_j)$ từ $\mathcal{O}(N^2) \to \mathcal{O}(N \log N)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Chú ếch muốn sang bờ bên kia của con suối bằng cách nhảy qua $N$ cột đá xếp thành hàng theo đúng thứ tự, mỗi cột có một độ cao khác nhau. Từ một cột, chú có thể nhảy tới bất kỳ cột nào phía trước, và năng lượng tốn cho một cú nhảy bằng bình phương chênh lệch độ cao giữa cột đáp và cột xuất phát. Chú muốn chọn hành trình từ cột đầu tiên tới cột cuối cùng sao cho tổng năng lượng tiêu hao là ít nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (cht) với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là độ cao $h_i$ của từng cột đá theo thứ tự. Mỗi cú nhảy từ cột $j$ tới cột $i$ ($j < i$) tốn $(h_i - h_j)^2$ năng lượng. Hãy lập trình tính tổng năng lượng ít nhất để đi từ cột đầu tiên tới cột cuối cùng, rồi in ra tổng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 5000$), là số cột đá.
+- Dòng thứ hai chứa $N$ số nguyên $h_i$ ($0 \le h_i \le 10^6$), là độ cao từng cột.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một số nguyên duy nhất là tổng năng lượng ít nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+0 1 2 3
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tối Ưu Hóa Quy Hoạch Động Bằng Convex Hull Trick (CHT).
+
+- Bốn cột có độ cao $0, 1, 2, 3$ theo thứ tự.
+- Nhảy từng bước một: $(1 - 0)^2 + (2 - 1)^2 + (3 - 2)^2 = 1 + 1 + 1 = 3$.
+- Mọi hành trình nhảy xa hơn đều tốn nhiều hơn, ví dụ nhảy $0 \to 2 \to 3$ tốn $(2 - 0)^2 + (3 - 2)^2 = 4 + 1 = 5$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 5000$, $0 \le h_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,44 +1,61 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+const long long NEG_INF = (long long)-4e18;
+int N, Q;
+vector<long long> a, sum, mx, se;
+vector<int> cnt;
+void pull(int p) {
+    sum[p] = sum[p * 2] + sum[p * 2 + 1];
+    if (mx[p * 2] > mx[p * 2 + 1]) { mx[p] = mx[p * 2]; cnt[p] = cnt[p * 2]; se[p] = max(se[p * 2], mx[p * 2 + 1]); }
+    else if (mx[p * 2] < mx[p * 2 + 1]) { mx[p] = mx[p * 2 + 1]; cnt[p] = cnt[p * 2 + 1]; se[p] = max(mx[p * 2], se[p * 2 + 1]); }
+    else { mx[p] = mx[p * 2]; cnt[p] = cnt[p * 2] + cnt[p * 2 + 1]; se[p] = max(se[p * 2], se[p * 2 + 1]); }
+}
+void applyChmin(int p, long long x) {
+    if (mx[p] <= x) return;
+    sum[p] -= (mx[p] - x) * cnt[p];
+    mx[p] = x;
+}
+void push(int p) {
+    applyChmin(p * 2, mx[p]);
+    applyChmin(p * 2 + 1, mx[p]);
+}
+void build(int p, int l, int r) {
+    if (l == r) { sum[p] = mx[p] = a[l]; se[p] = NEG_INF; cnt[p] = 1; return; }
+    int m = (l + r) / 2;
+    build(p * 2, l, m); build(p * 2 + 1, m + 1, r);
+    pull(p);
+}
+void rangeChmin(int p, int l, int r, int u, int v, long long x) {
+    if (r < u || l > v || mx[p] <= x) return;
+    if (u <= l && r <= v && se[p] < x) { applyChmin(p, x); return; }
+    push(p);
+    int m = (l + r) / 2;
+    rangeChmin(p * 2, l, m, u, v, x);
+    rangeChmin(p * 2 + 1, m + 1, r, u, v, x);
+    pull(p);
+}
+long long rangeSum(int p, int l, int r, int u, int v) {
+    if (u <= l && r <= v) return sum[p];
+    push(p);
+    int m = (l + r) / 2;
+    long long s = 0;
+    if (u <= m) s += rangeSum(p * 2, l, m, u, v);
+    if (v > m) s += rangeSum(p * 2 + 1, m + 1, r, u, v);
+    return s;
+}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    int block_sz = sqrt(n) + 1;
-    vector<long long> block_sum((n + block_sz - 1) / block_sz, 0);
-
-    for (int i = 0; i < n; ++i) {
-        block_sum[i / block_sz] += a[i];
-    }
-
-    while (q--) {
-        int type; cin >> type;
-        if (type == 1) {
-            int idx; long long val; cin >> idx >> val;
-            idx--;
-            block_sum[idx / block_sz] += (val - a[idx]);
-            a[idx] = val;
-        } else {
-            int l, r; cin >> l >> r;
-            l--; r--;
-            long long sum = 0;
-            int bl = l / block_sz, br = r / block_sz;
-            if (bl == br) {
-                for (int i = l; i <= r; ++i) sum += a[i];
-            } else {
-                for (int i = l; i < (bl + 1) * block_sz; ++i) sum += a[i];
-                for (int b = bl + 1; b < br; ++b) sum += block_sum[b];
-                for (int i = br * block_sz; i <= r; ++i) sum += a[i];
-            }
-            cout << sum << "\n";
-        }
+    if (!(cin >> N >> Q)) return 0;
+    a.assign(N + 1, 0);
+    for (int i = 1; i <= N; i++) cin >> a[i];
+    sum.assign(4 * N + 4, 0); mx.assign(4 * N + 4, 0);
+    se.assign(4 * N + 4, NEG_INF); cnt.assign(4 * N + 4, 0);
+    build(1, 1, N);
+    while (Q--) {
+        int t; cin >> t;
+        if (t == 1) { int l, r; long long x; cin >> l >> r >> x; rangeChmin(1, 1, N, l, r, x); }
+        else { int l, r; cin >> l >> r; cout << rangeSum(1, 1, N, l, r) << "\n"; }
     }
     return 0;
 }

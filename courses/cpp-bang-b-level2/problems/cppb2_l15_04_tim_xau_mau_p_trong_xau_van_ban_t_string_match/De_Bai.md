@@ -1,33 +1,43 @@
-# Tìm xâu mẫu p trong xâu văn bản t (string match)
+# Tìm mẫu P trong văn bản T (KMP)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Xâu Mẫu P Trong Xâu Văn Bản T (String Match)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: So khớp mã băm trượt.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bộ phận kiểm duyệt nội dung của mạng xã hội cần quét các bài đăng dài để tìm mọi vị trí xuất hiện của cụm từ vi phạm đã được ban pháp chế liệt kê trong danh sách đen. Mỗi bài đăng có thể dài tới hàng triệu ký tự nên việc tìm kiếm ngây thơ sẽ quá chậm, đội kỹ thuật triển khai thuật toán KMP duyệt văn bản đúng một lần. Kết quả là danh sách vị trí bắt đầu của mọi lần xuất hiện để chuyển cho kiểm duyệt viên xử lý.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Xâu Mẫu P Trong Xâu Văn Bản T (string Match) với độ phức tạp tối ưu nhất.
+
+Cho xâu văn bản $T$ và xâu mẫu $P$ (chữ cái thường). Hãy lập trình tìm mọi vị trí bắt đầu (đánh số từ $1$) mà $P$ xuất hiện trong $T$ bằng thuật toán KMP, rồi in ra các vị trí (in ra $-1$ nếu không xuất hiện).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: xâu $T$ ($1 \le |T| \le 10^6$).
+- Dòng 2: xâu $P$ ($1 \le |P| \le |T|$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất: các vị trí xuất hiện cách nhau bởi dấu cách, hoặc $-1$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+ababa
+aba
 ```
+
 ### Output
+
 ```text
-15
-```
+1 3```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Xâu Mẫu P Trong Xâu Văn Bản T (String Match).
+
+- Văn bản $ababa$ dài năm ký tự, mẫu $aba$ dài ba ký tự.
+- Đặt mẫu tại vị trí $1$ được $aba$ khớp; trượt tới vị trí $2$ được $bab$ không khớp; tại vị trí $3$ được $aba$ khớp.
+- Các vị trí thỏa mãn là $1$ và $3$ nên in ra $1\ 3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |P| \le |T| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

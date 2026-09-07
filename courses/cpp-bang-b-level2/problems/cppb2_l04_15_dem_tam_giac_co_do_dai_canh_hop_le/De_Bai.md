@@ -11,25 +11,29 @@ Cả nhóm sắp xếp các que từ ngắn đến dài rồi thử từng cặp
 Cho độ dài các que. Hãy lập trình đếm số bộ ba có thể ghép thành một tam giác không suy biến.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $n$ ($3 \le n \le 5000$) — số đoạn thẳng.
+- Dòng thứ hai chứa $n$ số nguyên dương $a_i$ ($1 \le a_i \le 10^9$) là độ dài các đoạn.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số bộ ba chỉ số $(i, j, k)$ với $i < j < k$ sao cho ba đoạn thẳng tạo thành một tam giác không suy biến (tổng hai cạnh ngắn hơn luôn lớn hơn cạnh dài nhất).
 
 ## Sample 1
 ### Input
 ```text
 5
-1 2 3 4 5
+3 4 5 6 7
 ```
 ### Output
 ```text
-15
+9
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Tam Giác Có Độ Dài Cạnh Hợp Lệ.
+
+Sắp xếp: $3, 4, 5, 6, 7$. Cố định cạnh dài nhất là $7$: các cặp cạnh ngắn thỏa $tổng > 7$ là $(3, 6), (4, 6), (5, 6), (3, 5), (4, 5)$ — $5$ bộ. Cố định $6$: các cặp $(3, 5), (4, 5), (3, 4)$ — $3$ bộ. Cố định $5$: cặp $(3, 4)$ ($3 + 4 = 7 > 5$) — $1$ bộ. Tổng $5 + 3 + 1 = 9$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $3 \le n \le 5000$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

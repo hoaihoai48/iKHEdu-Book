@@ -1,31 +1,44 @@
-# Hoan vi co chu ky cycles
+# Bậc của hoán vị (LCM độ dài chu trình)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Hoan Vi Co Chu Ky Cycles**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Xưởng in bao bì dùng băng chuyền gồm N khay mực được hoán đổi vị trí theo một quy tắc cố định sau mỗi ca sản xuất để mực không bị lắng cặn. Kỹ sư vận hành cần biết sau bao nhiêu ca thì mọi khay mực trở về đúng vị trí ban đầu để lên lịch bảo dưỡng toàn dây chuyền. Con số này chính là bội chung nhỏ nhất của độ dài các chu trình rời rạc trong hoán vị mô tả quy tắc đổi chỗ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Hoan Vi Co Chu Ky Cycles với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho hoán vị $p_1, \dots, p_N$ của $1, \dots, N$. Hãy lập trình tính bậc của hoán vị, tức bội chung nhỏ nhất của độ dài các chu trình rời rạc, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: số nguyên $N$ ($1 \le N \le 10^5$).
+- Dòng 2: $N$ số nguyên $p_1, \dots, p_N$ là một hoán vị của $1, \dots, N$.
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là bậc của hoán vị.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+2 1 4 3
 ```
+
 ### Output
+
 ```text
-15
+2
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Hoan Vi Co Chu Ky Cycles.
+
+- Hoán vị $2\ 1\ 4\ 3$ tách thành hai chu trình $(1\ 2)$ và $(3\ 4)$, mỗi chu trình dài $2$.
+- Bội chung nhỏ nhất của $2$ và $2$ là $2$, nghĩa là sau $2$ ca mọi khay về chỗ cũ.
+- Chương trình in ra $2$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N \le 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

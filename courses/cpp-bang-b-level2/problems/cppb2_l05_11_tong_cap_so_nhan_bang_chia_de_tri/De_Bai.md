@@ -6,28 +6,31 @@ Chị nhân viên ngân hàng cần tính tổng tiền gốc lẫn lãi sau nhi
 Chị cần tính nhanh tổng của dãy cấp số nhân này để in sao kê cho khách.
 
 ## Nhiệm vụ
-Cho số $A$, số lượng số hạng $N$ và số chia $MOD$. Hãy lập trình tính tổng $S = A^0 + A^1 + \dots + A^{N-1}$ theo modulo $MOD$.
+
+Cho số nguyên $a$ và số mũ $n$. Hãy lập trình tính tổng $S(n) = 1 + a + a^2 + \dots + a^n$ (gồm $n + 1$ số hạng) theo modulo $10^9+7$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Gồm một dòng duy nhất chứa hai số nguyên không âm $a, n$ ($0 \le a \le 10^9$, $0 \le n \le 10^{18}$), cách nhau bởi một dấu cách.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là giá trị $S(n) = 1 + a + \dots + a^n$ theo modulo $10^9+7$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2 4
 ```
 ### Output
 ```text
-15
+31
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Cấp Số Nhân Bằng Chia Để Trị.
+
+Khai triển trực tiếp: $S = 1 + 2 + 4 + 8 + 16 = 31$. Vì $31 < 10^9+7$ nên đáp án giữ nguyên là $31$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le a \le 10^9$, $0 \le n \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

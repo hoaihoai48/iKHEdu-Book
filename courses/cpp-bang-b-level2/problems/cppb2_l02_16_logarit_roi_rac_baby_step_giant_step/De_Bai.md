@@ -9,25 +9,27 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho ba số $a, b, m$. Hãy lập trình tìm số mũ $x$ nhỏ nhất không âm thỏa $a^x \equiv b \pmod m$; in `-1` nếu không tồn tại.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Gồm một dòng duy nhất chứa ba số nguyên $a, b, m$ ($0 \le a, b < m$, $m$ là số nguyên tố, $2 \le m \le 10^9$), cách nhau bởi dấu cách.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số mũ $x$ nhỏ nhất không âm thỏa $a^x \equiv b \pmod m$; in `-1` nếu không tồn tại.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3 4 7
 ```
 ### Output
 ```text
-15
+4
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Logarit Rời Rạc (Baby-step Giant-step).
+
+Thử tay từng số mũ: $3^0 = 1$, $3^1 = 3$, $3^2 = 9 = 7 + 2$ dư $2$, $3^3 = 6$, $3^4 = 81 = 11 \cdot 7 + 4$ dư $4$. Các số mũ $0, 1, 2, 3$ đều cho kết quả khác $4$ nên đáp án là $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le a, b < m$, $m$ nguyên tố không quá $10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

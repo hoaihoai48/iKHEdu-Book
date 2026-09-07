@@ -1,33 +1,41 @@
-# Thuật toán Manacher tìm mọi palindrome tuyến tính $\mathcal{o}(n)$
+# Độ dài đối xứng dài nhất (Manacher)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Thuật toán Manacher tìm mảng bán kính đối xứng.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm quan trắc tín hiệu vũ trụ thu được chuỗi ký tự mã hóa từ vệ tinh và nghi ngờ thông điệp quan trọng nằm trong đoạn đối xứng dài nhất của chuỗi thu được. Mỗi ca trực ghi nhận một chuỗi dài tới hàng triệu ký tự nên thuật toán kiểm tra từng tâm một sẽ quá chậm, đội kỹ thuật triển khai Manacher để tìm độ dài lớn nhất trong thời gian tuyến tính. Kết quả giúp ăng ten định hướng lại để thu trọn vẹn thông điệp trong lần quét tiếp theo.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{o}(n)$ với độ phức tạp tối ưu nhất.
+
+Cho xâu $S$. Hãy lập trình tính độ dài của xâu con liên tiếp đối xứng dài nhất của $S$ bằng thuật toán Manacher, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: xâu $S$ ($1 \le |S| \le 10^6$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là độ dài cần tìm.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+babad
 ```
+
 ### Output
+
 ```text
-15
-```
+3```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Thuật Toán Manacher Tìm Mọi Palindrome Tuyến Tính $\mathcal{O}(N)$.
+
+- Xâu $babad$: đoạn $bab$ (vị trí $1$ đến $3$) đối xứng và dài ba ký tự.
+- Mọi đoạn dài bốn hoặc năm ký tự đều không đối xứng.
+- Độ dài lớn nhất là $3$ nên in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |S| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

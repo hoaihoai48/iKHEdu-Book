@@ -1,31 +1,48 @@
-# Dynamic Segment Tree toa do 1e9
+# Cây đoạn động trên miền tọa độ lớn
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dynamic Segment Tree Toa Do 1e9**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Cục thuế quản lý dải mã số giao dịch lên tới một tỉ đơn vị nhưng mỗi ngày chỉ phát sinh vài nghìn giao dịch thực tế cần ghi nhận. Mỗi giao dịch cộng thêm một khoản vào đúng một mã số, và thanh tra viên cần tra cứu tổng giá trị trên bất kỳ đoạn mã nào để đối chiếu hóa đơn điện tử. Cây đoạn động chỉ tạo nút khi chạm tới giúp bộ nhớ gọn nhẹ mà mỗi thao tác vẫn chạy trong thời gian logarit theo miền tọa độ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dynamic Segment Tree Toa Do 1e9 với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho $Q$ thao tác trên mảng ảo kích thước $10^9$ (ban đầu toàn $0$). Hãy lập trình xử lý: loại $1$ cộng $val$ vào vị trí $idx$; loại $2$ in ra tổng trên đoạn $[l,r]$.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: số nguyên $Q$ ($1 \le Q \le 2 \cdot 10^5$).
+- $Q$ dòng tiếp theo: loại $1$ gồm $1\ idx\ val$; loại $2$ gồm $2\ l\ r$ ($1 \le idx, l \le r \le 10^9$, $|val| \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- Với mỗi thao tác loại $2$, in ra một dòng là tổng trên đoạn yêu cầu.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+1 1000000000 7
+1 5 3
+2 1 10
+2 1 1000000000
 ```
+
 ### Output
+
 ```text
-15
+3
+10
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dynamic Segment Tree Toa Do 1e9.
+
+- Cộng $7$ vào vị trí một tỉ và cộng $3$ vào vị trí $5$.
+- Đoạn $[1,10]$ chỉ chứa vị trí $5$ nên tổng là $3$; đoạn $[1,10^9]$ chứa cả hai nên tổng là $3 + 7 = 10$.
+- Hai thao tác loại $2$ in ra $3$ rồi $10$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le Q \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

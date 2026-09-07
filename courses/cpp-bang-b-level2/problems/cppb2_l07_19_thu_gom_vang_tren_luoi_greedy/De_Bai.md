@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Thu Gom Vang Tren Luoi Greedy**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Thu Gom Vang Tren Luoi Greedy với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho lưới n x m, mỗi ô chứa một lượng vàng a[i][j]. Hãy lập trình tìm đường đi từ (1,1) tới (n,m) chỉ đi xuống hoặc sang phải để thu được nhiều vàng nhất và in ra lượng vàng đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

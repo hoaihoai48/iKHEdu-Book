@@ -1,59 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int block_sz;
-
-struct Query {
-    int l, r, id;
-    bool operator<(const Query &other) const {
-        if (l / block_sz != other.l / block_sz) return l / block_sz < other.l / block_sz;
-        return (l / block_sz) % 2 ? r < other.r : r > other.r;
-    }
-};
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
-
-    block_sz = sqrt(n) + 1;
-    vector<int> a(n + 1);
-    for (int i = 1; i <= n; ++i) cin >> a[i];
-
-    vector<Query> queries(q);
-    for (int i = 0; i < q; ++i) {
-        cin >> queries[i].l >> queries[i].r;
-        queries[i].id = i;
+    int Q;
+    if (!(cin >> Q)) return 0;
+    struct Op { int t; long long x, y; };
+    vector<Op> ops(Q);
+    vector<long long> coords;
+    for (int i = 0; i < Q; i++) {
+        int t; cin >> t; ops[i].t = t;
+        if (t == 1) { long long id, v; cin >> id >> v; ops[i].x = id; ops[i].y = v; coords.push_back(id); }
+        else { long long l, r; cin >> l >> r; ops[i].x = l; ops[i].y = r; }
     }
-
-    sort(queries.begin(), queries.end());
-
-    vector<int> freq(1000005, 0);
-    vector<int> ans(q);
-    int cur_l = 1, cur_r = 0, distinct = 0;
-
-    for (const auto &qry : queries) {
-        while (cur_l > qry.l) {
-            cur_l--;
-            if (freq[a[cur_l]]++ == 0) distinct++;
+    sort(coords.begin(), coords.end());
+    coords.erase(unique(coords.begin(), coords.end()), coords.end());
+    int M = (int)coords.size();
+    vector<long long> bit(M + 2, 0);
+    auto add = [&](int i, long long v) { for (; i <= M; i += i & -i) bit[i] += v; };
+    auto sum = [&](int i) { long long s = 0; for (; i > 0; i -= i & -i) s += bit[i]; return s; };
+    for (auto &op : ops) {
+        if (op.t == 1) {
+            int i = (int)(lower_bound(coords.begin(), coords.end(), op.x) - coords.begin()) + 1;
+            add(i, op.y);
+        } else {
+            int R = (int)(upper_bound(coords.begin(), coords.end(), op.y) - coords.begin());
+            int L = (int)(lower_bound(coords.begin(), coords.end(), op.x) - coords.begin());
+            cout << sum(R) - sum(L) << "\n";
         }
-        while (cur_r < qry.r) {
-            cur_r++;
-            if (freq[a[cur_r]]++ == 0) distinct++;
-        }
-        while (cur_l < qry.l) {
-            if (--freq[a[cur_l]] == 0) distinct--;
-            cur_l++;
-        }
-        while (cur_r > qry.r) {
-            if (--freq[a[cur_r]] == 0) distinct--;
-            cur_r--;
-        }
-        ans[qry.id] = distinct;
     }
-
-    for (int i = 0; i < q; ++i) cout << ans[i] << "\n";
     return 0;
 }

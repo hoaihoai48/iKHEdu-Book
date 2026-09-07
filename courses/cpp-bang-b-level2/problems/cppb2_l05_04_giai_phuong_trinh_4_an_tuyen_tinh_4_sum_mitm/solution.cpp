@@ -1,53 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void gen_sums(int idx, int end_idx, long long cur, const vector<long long> &a, vector<long long> &res) {
-    if (idx == end_idx) {
-        res.push_back(cur);
-        return;
-    }
-    gen_sums(idx + 1, end_idx, cur, a, res);
-    gen_sums(idx + 1, end_idx, cur + a[idx], a, res);
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int n;
-    long long S;
-    if (!(cin >> n >> S)) return 0;
+    if (!(cin >> n)) return 0;
+    vector<long long> A(n), B(n), C(n), D(n);
+    for (int i = 0; i < n; ++i) cin >> A[i];
+    for (int i = 0; i < n; ++i) cin >> B[i];
+    for (int i = 0; i < n; ++i) cin >> C[i];
+    for (int i = 0; i < n; ++i) cin >> D[i];
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    vector<long long> ab, cd;
+    ab.reserve((size_t)n * n);
+    cd.reserve((size_t)n * n);
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n; ++j) ab.push_back(A[i] + B[j]);
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n; ++j) cd.push_back(C[i] + D[j]);
+    sort(cd.begin(), cd.end());
 
-    int mid = n / 2;
-    vector<long long> sum1, sum2;
-    gen_sums(0, mid, 0, a, sum1);
-    gen_sums(mid, n, 0, a, sum2);
-
-    sort(sum2.begin(), sum2.end());
-
-    long long best_diff = 2e18;
-    long long best_sum = 0;
-
-    for (long long s1 : sum1) {
-        auto it = lower_bound(sum2.begin(), sum2.end(), S - s1);
-        if (it != sum2.end()) {
-            if (abs(s1 + *it - S) < best_diff) {
-                best_diff = abs(s1 + *it - S);
-                best_sum = s1 + *it;
-            }
-        }
-        if (it != sum2.begin()) {
-            --it;
-            if (abs(s1 + *it - S) < best_diff) {
-                best_diff = abs(s1 + *it - S);
-                best_sum = s1 + *it;
-            }
-        }
+    long long ans = 0;
+    for (long long x : ab) {
+        auto r = equal_range(cd.begin(), cd.end(), -x);
+        ans += (long long)(r.second - r.first);
     }
-
-    cout << best_sum << "\n";
+    cout << ans << "\n";
     return 0;
 }

@@ -9,25 +9,31 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho ma trận vuông $A$ kích thước $k \times k$ và số mũ $n$. Hãy lập trình tính $A^n$ theo modulo $10^9+7$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $k, n$ ($1 \le k \le 30$, $0 \le n \le 10^{18}$) — kích thước ma trận và số mũ.
+- $k$ dòng tiếp theo, mỗi dòng chứa $k$ số nguyên không âm (mỗi số không quá $10^9$) mô tả một hàng của ma trận $A$.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra ma trận $A^n$ theo modulo $10^9+7$ gồm $k$ dòng, mỗi dòng $k$ số cách nhau bởi một dấu cách (với $n = 0$ thì kết quả là ma trận đơn vị).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2 3
+1 1
+1 0
 ```
 ### Output
 ```text
-15
+3 2
+2 1
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Ma Trận Kích Thước $K \times K$.
+
+Tính tay từng bước: $A^2 = A \cdot A$, hàng $1$ nhân cột $1$ được $1 \cdot 1 + 1 \cdot 1 = 2$, toàn bộ $A^2$ là `2 1 / 1 1`. Nhân tiếp với $A$: hàng $1$ nhân cột $1$ được $2 \cdot 1 + 1 \cdot 1 = 3$, hàng $1$ nhân cột $2$ được $2 \cdot 1 + 1 \cdot 0 = 2$, tương tự hàng $2$ được $2, 1$. Vậy $A^3$ là `3 2 / 2 1`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le k \le 30$, $0 \le n \le 10^{18}$, mỗi phần tử của $A$ không quá $10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,24 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-const long long MOD = 1000000007;
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<long long> dp(n + 1, 0);
-    dp[0] = 1;
-
-    for (int i = 1; i <= n; ++i) {
-        for (int j = i; j <= n; ++j) {
-            dp[j] = (dp[j] + dp[j - i]) % MOD;
-        }
+    int N;
+    if (!(cin >> N)) return 0;
+    vector<double> E(N + 7, 0.0);
+    for (int x = N - 1; x >= 0; x--) {
+        double s = 0;
+        for (int d = 1; d <= 6; d++) s += E[x + d];
+        E[x] = 1.0 + s / 6.0;
     }
-
-    cout << dp[n] << "\n";
+    cout.setf(ios::fixed); cout << setprecision(6) << E[0] + 1e-12 << "\n";
     return 0;
 }

@@ -1,33 +1,42 @@
-# Tổng các chữ số bằng k trong đoạn [l, r]
+# Đếm số có tổng chữ số bằng K
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Các Chữ Số Bằng K Trong Đoạn [L, R]** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Digit DP lưu trạng thái `current_sum`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Phòng quản lý thuê bao viễn thông triển khai gói cước phong thủy trong đó số điện thoại được coi là may mắn khi tổng các chữ số của nó đúng bằng con số K mà khách hàng yêu cầu. Mỗi ngày tổng đài nhận một đoạn số thuê bao liên tiếp và cần đếm có bao nhiêu số may mắn trong đoạn đó để báo giá lô sim cho đại lý. Vì đoạn số có thể dài tới hàng nghìn tỉ nên chương trình dùng quy hoạch động chữ số thay vì duyệt từng số.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tổng Các Chữ Số Bằng K Trong Đoạn [l, R] với độ phức tạp tối ưu nhất.
+
+Cho ba số nguyên $L, R, K$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) có tổng các chữ số đúng bằng $K$, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: ba số nguyên $L, R, K$ ($0 \le L \le R \le 10^{18}$, $0 \le K \le 162$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 20 2
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Các Chữ Số Bằng K Trong Đoạn [L, R].
+
+- Các số từ $1$ đến $20$ có tổng chữ số bằng $2$ là $2$ (tổng $2$), $11$ (tổng $1+1=2$) và $20$ (tổng $2+0=2$).
+- Không còn số nào khác thỏa mãn trong đoạn.
+- Chương trình in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$; $0 \le K \le 162$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

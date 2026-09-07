@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Xep Chong Hop Trong So Va Suc Chiu**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Xep Chong Hop Trong So Va Suc Chiu với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho n chiếc hộp, mỗi hộp có trọng lượng w, sức chịu s và giá trị v. Hãy lập trình xếp chồng một tập hộp sao cho mỗi hộp chịu được tổng trọng lượng các hộp phía trên và in ra tổng giá trị lớn nhất đạt được.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

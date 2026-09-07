@@ -1,22 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXV = 100000;
-bitset<MAXV + 1> bs;
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-
-    bs[0] = 1;
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    unordered_map<long long, int> cnt;
+    bool first = true;
     for (int i = 0; i < n; ++i) {
-        int w; cin >> w;
-        bs |= (bs << w);
+        cnt[a[i]]++;
+        if (i >= k) {
+            if (--cnt[a[i - k]] == 0) cnt.erase(a[i - k]);
+        }
+        if (i >= k - 1) {
+            if (!first) cout << ' ';
+            first = false;
+            cout << cnt.size();
+        }
     }
-
-    cout << bs.count() << "\n";
+    cout << "\n";
     return 0;
 }

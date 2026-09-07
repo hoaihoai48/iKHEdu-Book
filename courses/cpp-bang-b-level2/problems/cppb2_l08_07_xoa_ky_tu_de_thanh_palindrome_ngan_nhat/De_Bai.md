@@ -1,33 +1,42 @@
 # Xóa ký tự để thành palindrome ngắn nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xóa Ký Tự Để Thành Palindrome Ngắn Nhất** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP khoảng $[l, r]$ (Interval DP).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Em học sinh đang tập làm thơ lục bát và viết ra một dòng chữ nháp, nhưng cô giáo yêu cầu dòng thơ khi đọc xuôi hay đọc ngược phải giống hệt nhau mới đạt điểm tối đa về vần điệu. Em được phép xóa bớt một số chữ cái trong dòng nháp (giữ nguyên thứ tự các chữ còn lại) để tạo thành một chuỗi đối xứng. Vì mỗi chữ bị xóa đều làm mất một ý thơ, em muốn xóa càng ít chữ càng tốt mà vẫn được chuỗi đối xứng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Xóa Ký Tự Để Thành Palindrome Ngắn Nhất với độ phức tạp tối ưu nhất.
+
+Cho một chuỗi $s$. Được xóa một số ký tự (có thể không xóa) sao cho chuỗi còn lại đối xứng (đọc xuôi ngược như nhau). Hãy lập trình tính số ký tự ít nhất cần xóa, rồi in ra số đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa chuỗi $s$ ($1 \le |s| \le 1000$) gồm các chữ cái thường.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là số ký tự ít nhất cần xóa.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+abca
 ```
+
 ### Output
+
 ```text
-15
+1
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Xóa Ký Tự Để Thành Palindrome Ngắn Nhất.
+
+- Chuỗi ban đầu `abca` đọc ngược thành `acba` nên chưa đối xứng.
+- Xóa đúng một chữ `c` ở giữa còn lại `aba`, đọc xuôi ngược đều như nhau.
+- Không thể giữ nguyên cả bốn chữ vì `abca` không đối xứng, nên số chữ ít nhất cần xóa là $1$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |s| \le 1000$, chỉ gồm chữ cái thường.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,33 +1,41 @@
-# Số có tích các chữ số bằng k
+# Số có tích các chữ số bằng K
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Có Tích Các Chữ Số Bằng K** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP kiểm tra $K$ chỉ có ước nguyên tố 2, 3, 5, 7.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Xưởng sản xuất khóa số cơ khí kiểm định các mã khóa mới với yêu cầu tích các chữ số của mã phải đúng bằng hằng số K thì ổ khóa mới xoay trơn tru theo thiết kế rãnh bi. Mỗi lô kiểm định xét một đoạn mã liên tiếp và cần đếm có bao nhiêu mã đạt chuẩn để dán tem xuất xưởng. Chương trình quy hoạch động ghi nhớ tích hiện tại giúp đếm nhanh cả đoạn dài mà không cần thử từng chiếc khóa.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Số Có Tích Các Chữ Số Bằng K với độ phức tạp tối ưu nhất.
+
+Cho ba số nguyên $L, R, K$. Hãy lập trình đếm các số $x$ ($L \le x \le R$, $x > 0$) có tích các chữ số đúng bằng $K$, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: ba số nguyên $L, R, K$ ($1 \le L \le R \le 10^{18}$, $0 \le K \le 10^9$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 30 6
 ```
+
 ### Output
+
 ```text
-15
-```
+3```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Số Có Tích Các Chữ Số Bằng K.
+
+- Số $6$ có tích chữ số là $6$; số $16$ có tích $1 \times 6 = 6$; số $23$ có tích $2 \times 3 = 6$.
+- Mọi số còn lại tới $30$ đều có tích khác $6$ (ví dụ $26$ cho tích $12$).
+- Đếm được $3$ số nên chương trình in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le L \le R \le 10^{18}$; $0 \le K \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

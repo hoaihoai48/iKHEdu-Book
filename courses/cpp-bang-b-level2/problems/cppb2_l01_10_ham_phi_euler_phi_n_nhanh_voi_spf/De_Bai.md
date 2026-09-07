@@ -9,25 +9,33 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $Q$ truy vấn, mỗi truy vấn gồm một số nguyên dương $n$. Hãy lập trình tính $\phi(n)$ — số lượng số nguyên $k$ ($1 \le k \le n$) nguyên tố cùng nhau với $n$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $Q$ ($1 \le Q \le 10^5$) — số lượng truy vấn.
+- $Q$ dòng tiếp theo, mỗi dòng chứa một số nguyên dương $n$ ($1 \le n \le 10^6$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là giá trị $\phi(n)$ — số lượng số nguyên $k$ ($1 \le k \le n$) nguyên tố cùng nhau với $n$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3
+6 9 10
 ```
 ### Output
 ```text
-15
+2
+6
+4
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Hàm Phi Euler $\phi(N)$ Nhanh Với SPF.
+
+* Với $n = 6$: các số từ $1$ đến $6$ nguyên tố cùng nhau với $6$ là $1, 5$ → đáp án $2$.
+* Với $n = 9$: các số nguyên tố cùng nhau với $9$ là $1, 2, 4, 5, 7, 8$ → đáp án $6$.
+* Với $n = 10$: các số nguyên tố cùng nhau với $10$ là $1, 3, 7, 9$ → đáp án $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le Q \le 10^5$, $1 \le n \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

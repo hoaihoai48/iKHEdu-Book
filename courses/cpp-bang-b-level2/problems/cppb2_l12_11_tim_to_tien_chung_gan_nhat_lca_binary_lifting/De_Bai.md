@@ -1,33 +1,50 @@
-# Tìm tổ tiên chung gần nhất (LCA binary lifting)
+# Tổ tiên chung gần nhất (LCA binary lifting)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tìm Tổ Tiên Chung Gần Nhất (LCA Binary Lifting)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Bảng nhảy nhị phân $up[u][k]$ trong $\mathcal{O}(\log N)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Công ty gia phả số hoá cây dòng họ gồm N thành viên với quan hệ cha con rõ ràng tạo thành một cây có gốc là cụ tổ. Mỗi ngày hệ thống nhận nhiều yêu cầu tìm cụ chung gần nhất của hai thành viên để xác định vai vế trong họ tộc phục vụ việc xếp cỗ ngày giỗ tổ. Vì số lượng truy vấn rất lớn nên hệ thống tiền xử lý nhảy nhị phân để trả lời mỗi yêu cầu gần như tức thì.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tìm Tổ Tiên Chung Gần Nhất (lca Binary Lifting) với độ phức tạp tối ưu nhất.
+
+Cho cây gồm $N$ đỉnh (gốc $1$) và $Q$ truy vấn. Hãy lập trình trả lời, với mỗi truy vấn $(u,v)$, đỉnh tổ tiên chung gần nhất của $u$ và $v$ bằng thuật toán binary lifting.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 10^5$).
+- $N-1$ dòng tiếp theo, mỗi dòng gồm $u, v$ là một cạnh của cây.
+- $Q$ dòng tiếp theo, mỗi dòng gồm $u, v$ là một truy vấn.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Gồm $Q$ dòng, mỗi dòng là đáp án của truy vấn tương ứng.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 2
+1 2
+1 3
+2 4
+2 5
+4 5
+3 4
 ```
+
 ### Output
+
 ```text
-15
-```
+2
+1```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tìm Tổ Tiên Chung Gần Nhất (LCA Binary Lifting).
+
+- Cây có gốc $1$: $2$ và $3$ là con của $1$; $4$ và $5$ là con của $2$.
+- Truy vấn $(4,5)$ gặp nhau gần nhất ở $2$; truy vấn $(3,4)$ phải lên tận gốc $1$ mới gặp nhau.
+- Chương trình in ra $2$ rồi $1$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, Q \le 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

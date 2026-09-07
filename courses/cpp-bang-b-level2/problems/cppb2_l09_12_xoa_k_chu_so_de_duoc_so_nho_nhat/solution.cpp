@@ -5,28 +5,25 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<long long> h(n);
-    for (int i = 0; i < n; ++i) cin >> h[i];
-
-    stack<pair<long long, int>> st;
-    long long count = 0;
-
-    for (int i = 0; i < n; ++i) {
-        int cnt = 1;
-        while (!st.empty() && st.top().first <= h[i]) {
-            count += st.top().second;
-            if (st.top().first == h[i]) {
-                cnt += st.top().second;
-            }
-            st.pop();
+    string s;
+    long long k;
+    if (!(cin >> s >> k)) return 0;
+    string res;
+    for (char c : s) {
+        while (!res.empty() && res.back() > c && k > 0) {
+            res.pop_back();
+            --k;
         }
-        if (!st.empty()) count++;
-        st.push({h[i], cnt});
+        res.push_back(c);
     }
-
-    cout << count << "\n";
+    while (k > 0 && !res.empty()) {
+        res.pop_back();
+        --k;
+    }
+    size_t p = 0;
+    while (p < res.size() && res[p] == '0') ++p;
+    res = res.substr(p);
+    if (res.empty()) res = "0";
+    cout << res << "\n";
     return 0;
 }

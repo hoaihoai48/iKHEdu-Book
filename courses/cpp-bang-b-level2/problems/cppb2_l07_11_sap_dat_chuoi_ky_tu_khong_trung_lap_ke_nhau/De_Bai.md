@@ -1,33 +1,43 @@
 # Sắp đặt chuỗi ký tự không trùng lặp kề nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Max-Heap xếp ký tự có tần suất cao nhất.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Cô giáo mầm non chuẩn bị một bộ thẻ chữ cái để xếp thành hàng trang trí lớp học nhân ngày hội đọc sách. Trong túi có nhiều chữ cái khác nhau với số lượng mỗi loại đã đếm sẵn, và cô muốn xếp toàn bộ thẻ thành một hàng dài sao cho không có hai thẻ giống nhau nào đứng cạnh nhau, vì như vậy hàng chữ trông sẽ đều và đẹp mắt hơn. Trước khi bắt tay vào xếp, cô cần biết liệu với số thẻ hiện có thì cách xếp như vậy có tồn tại hay không.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau với độ phức tạp tối ưu nhất.
+
+Cho một chuỗi $s$ gồm các chữ cái thường. Hãy lập trình sắp xếp lại các ký tự của $s$ thành một chuỗi mới sao cho không có hai ký tự giống nhau nào đứng kề nhau. In ra chuỗi tìm được, hoặc in ra $-1$ nếu không thể.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa chuỗi $s$ ($1 \le |s| \le 10^5$) gồm các chữ cái thường `a` đến `z`.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một chuỗi là hoán vị của $s$ mà không có hai ký tự kề nhau trùng nhau, hoặc $-1$ nếu không tồn tại.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+aab
 ```
+
 ### Output
+
 ```text
-15
+aba
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Sắp Đặt Chuỗi Ký Tự Không Trùng Lặp Kề Nhau.
+
+- Chuỗi ban đầu có hai chữ `a` và một chữ `b`.
+- Đặt chữ `a` đầu tiên, còn lại một `a` và một `b`.
+- Đặt chữ `b` tiếp theo vì vừa dùng `a` xong, còn lại một `a`.
+- Đặt chữ `a` cuối cùng, được chuỗi `aba` mà không có hai ký tự kề nhau nào trùng nhau.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |s| \le 10^5$, $s$ chỉ gồm chữ cái thường.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

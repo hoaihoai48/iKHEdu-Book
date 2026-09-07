@@ -1,31 +1,42 @@
-# Digit DP tich cac chu so
+# Đếm số có tích chữ số bằng P
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Digit Dp Tich Cac Chu So**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Nhà máy khóa số điện tử kiểm định từng mã khóa với yêu cầu tích các chữ số khác không của mã phải đúng bằng hằng số P thì mạch điện mới đóng trơn tru khi người dùng xoay núm vặn. Mỗi lô kiểm định xét mọi mã từ 1 đến N và cần đếm có bao nhiêu mã đạt chuẩn để dán tem xuất xưởng. Chương trình quy hoạch động ghi nhớ tích hiện tại và cắt tỉa nhánh vượt quá P giúp đếm nhanh cả lô hàng triệu mã.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Digit Dp Tich Cac Chu So với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho hai số nguyên $N, P$. Hãy lập trình đếm các số $x$ ($1 \le x \le N$) có tích các chữ số đúng bằng $P$, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: hai số nguyên $N, P$ ($1 \le N \le 10^{18}$, $1 \le P \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+30 6
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Digit Dp Tich Cac Chu So.
+
+- Số $6$ có tích chữ số là $6$; số $16$ có tích $1 \times 6 = 6$; số $23$ có tích $2 \times 3 = 6$.
+- Mọi số còn lại tới $30$ đều có tích khác $6$.
+- Đếm được $3$ số nên chương trình in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N \le 10^{18}$; $1 \le P \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

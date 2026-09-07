@@ -1,31 +1,48 @@
-# Dinh to nho nhat Kruskal DSU
+# Cây khung nhỏ nhất Kruskal
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Dinh To Nho Nhat Kruskal Dsu**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Huyện miền núi triển khai dự án thắp sáng với N thôn bản cần nối điện bằng các tuyến dây có chi phí khác nhau do phải vượt đèo và sông suối. Yêu cầu toàn mạng liên thông với tổng chi phí thấp nhất để trình hội đồng phê duyệt vốn đầu tư công, và nếu địa hình chia cắt không thể nối hết thì hồ sơ phải ghi rõ không khả thi. Tổ thiết kế dùng thuật toán Kruskal sắp xếp tuyến dây theo chi phí tăng dần kết hợp kiểm tra chu trình bằng DSU.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dinh To Nho Nhat Kruskal Dsu với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho đồ thị vô hướng có trọng số gồm $N$ đỉnh và $M$ cạnh. Hãy lập trình tính tổng trọng số cây khung nhỏ nhất bằng thuật toán Kruskal, rồi in ra kết quả (in ra $IMPOSSIBLE$ nếu đồ thị không liên thông).
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: hai số nguyên $N, M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v, w$ ($1 \le w \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là tổng trọng số MST, hoặc $IMPOSSIBLE$ nếu không liên thông được.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 5
+1 2 1
+2 3 2
+3 4 3
+4 1 4
+1 3 5
 ```
+
 ### Output
+
 ```text
-15
+6
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Dinh To Nho Nhat Kruskal Dsu.
+
+- Xét các tuyến dây theo chi phí tăng dần: chọn $1-2$ giá $1$, rồi $2-3$ giá $2$.
+- Tuyến $3-4$ giá $3$ nối thôn cuối cùng vào mạng mà không tạo chu trình, tổng thành $6$.
+- Các tuyến còn lại đều tạo chu trình nên bị bỏ, chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

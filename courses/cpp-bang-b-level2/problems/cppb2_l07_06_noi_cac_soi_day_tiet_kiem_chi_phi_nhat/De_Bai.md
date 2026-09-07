@@ -1,33 +1,45 @@
 # Nối các sợi dây tiết kiệm chi phí nhất
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Hàng đợi ưu tiên `priority_queue` (Cây Huffman).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Xưởng cơ khí của hợp tác xã có nhiều đoạn dây cáp ngắn còn thừa sau các công trình, mỗi đoạn dài một số mét nhất định. Chú thợ cả muốn nối tất cả các đoạn rời này thành một sợi cáp dài duy nhất để dùng cho công trình mới. Mỗi lần nối hai sợi dây tốn chi phí đúng bằng tổng độ dài của hai sợi đem nối, và sợi dây tạo thành có thể đem nối tiếp với các sợi khác. Chú muốn chọn thứ tự nối sao cho tổng chi phí là thấp nhất.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là độ dài của từng đoạn dây ban đầu. Mỗi lần được nối hai sợi thành một với chi phí bằng tổng độ dài của chúng. Hãy lập trình tính tổng chi phí nhỏ nhất để nối tất cả thành một sợi duy nhất, rồi in ra tổng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số đoạn dây.
+- Dòng thứ hai chứa $N$ số nguyên $x_i$ ($1 \le x_i \le 10^6$), là độ dài từng đoạn.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là tổng chi phí nối nhỏ nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+1 2 3 4
 ```
+
 ### Output
+
 ```text
-15
+19
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Nối Các Sợi Dây Tiết Kiệm Chi Phí Nhất.
+
+- Nối hai sợi ngắn nhất $1$ và $2$ tốn $1 + 2 = 3$, còn lại các sợi $3, 3, 4$.
+- Nối hai sợi $3$ và $3$ tốn $3 + 3 = 6$, còn lại các sợi $4, 6$.
+- Nối hai sợi cuối $4$ và $6$ tốn $4 + 6 = 10$, chỉ còn một sợi duy nhất.
+- Tổng chi phí là $3 + 6 + 10 = 19$, và mọi thứ tự nối khác đều tốn từ $19$ trở lên.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le x_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

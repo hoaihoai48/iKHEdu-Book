@@ -70,58 +70,28 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithm
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-struct Edge {
-    int u, v;
-    long long w;
-};
-
-struct DSU {
-    vector<int> parent;
-    DSU(int n) : parent(n + 1) {
-        for (int i = 0; i <= n; ++i) parent[i] = i;
-    }
-    int find(int i) {
-        if (parent[i] == i) return i;
-        return parent[i] = find(parent[i]);
-    }
-    bool unite(int i, int j) {
-        int root_i = find(i), root_j = find(j);
-        if (root_i != root_j) {
-            parent[root_i] = root_j;
-            return true;
-        }
-        return false;
-    }
-};
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-
-    vector<Edge> edges(m);
-    for (int i = 0; i < m; ++i) cin >> edges[i].u >> edges[i].v >> edges[i].w;
-
-    sort(edges.begin(), edges.end(), [](const Edge &a, const Edge &b) {
-        return a.w < b.w;
-    });
-
-    DSU dsu(n);
-    long long mst_weight = 0;
-    int edge_count = 0;
-
-    for (const auto &e : edges) {
-        if (dsu.unite(e.u, e.v)) {
-            mst_weight += e.w;
-            edge_count++;
-            if (edge_count == n - 1) break;
-        }
+    int N, M;
+    if (!(cin >> N >> M)) return 0;
+    vector<vector<int>> adj(N + 1);
+    vector<int> indeg(N + 1, 0);
+    for (int i = 0; i < M; i++) {
+        int u, v; cin >> u >> v;
+        adj[u].push_back(v); indeg[v]++;
     }
-
-    cout << (edge_count == n - 1 ? mst_weight : -1) << "\n";
+    priority_queue<int, vector<int>, greater<int>> pq;
+    for (int i = 1; i <= N; i++) if (indeg[i] == 0) pq.push(i);
+    vector<int> ans;
+    while (!pq.empty()) {
+        int u = pq.top(); pq.pop();
+        ans.push_back(u);
+        for (int v : adj[u]) if (--indeg[v] == 0) pq.push(v);
+    }
+    if ((int)ans.size() != N) { cout << -1 << "\n"; return 0; }
+    for (int i = 0; i < N; i++) { if (i) cout << ' '; cout << ans[i]; }
+    cout << "\n";
     return 0;
 }
 ```

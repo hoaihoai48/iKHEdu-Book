@@ -1,33 +1,45 @@
 # Tổng thời gian chờ nhỏ nhất (sjf)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tổng Thời Gian Chờ Nhỏ Nhất (SJF)** là bài toán trọng tâm thuộc cấp độ **P0** nhằm rèn luyện: Sắp xếp thời gian phục vụ tăng dần.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Phòng khám đa khoa của phường mỗi sáng tiếp nhận một hàng dài bệnh nhân đến khám, mỗi người cần một khoảng thời gian khám khác nhau đã được y tá ước tính từ trước. Chỉ có một bác sĩ trực nên mọi người phải xếp hàng chờ đến lượt mình. Ban quản lý phòng khám muốn sắp xếp thứ tự khám sao cho tổng thời gian chờ của tất cả bệnh nhân là nhỏ nhất, để không ai phải ngồi đợi quá lâu mà bác sĩ vẫn khám hết được mọi người trong buổi sáng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tổng Thời Gian Chờ Nhỏ Nhất (sjf) với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là thời gian khám của từng bệnh nhân. Hãy lập trình sắp xếp thứ tự khám sao cho tổng thời gian chờ của tất cả mọi người là nhỏ nhất (thời gian chờ của một người bằng tổng thời gian khám của những người khám trước họ), rồi in ra tổng nhỏ nhất đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số bệnh nhân.
+- Dòng thứ hai chứa $N$ số nguyên $t_i$ ($1 \le t_i \le 10^6$), là thời gian khám của từng người.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là tổng thời gian chờ nhỏ nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+3 1 2 5
 ```
+
 ### Output
+
 ```text
-15
+10
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tổng Thời Gian Chờ Nhỏ Nhất (SJF).
+
+- Sắp xếp bốn người theo thời gian khám tăng dần: $1, 2, 3, 5$.
+- Người đầu tiên không phải chờ ai nên thời gian chờ là $0$.
+- Người thứ hai chờ $1$; người thứ ba chờ $1 + 2 = 3$; người thứ tư chờ $1 + 2 + 3 = 6$.
+- Tổng thời gian chờ là $0 + 1 + 3 + 6 = 10$, và không có thứ tự nào cho tổng nhỏ hơn.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le t_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

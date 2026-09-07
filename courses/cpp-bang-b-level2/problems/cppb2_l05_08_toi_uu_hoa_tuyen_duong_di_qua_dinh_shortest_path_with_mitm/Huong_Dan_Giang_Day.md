@@ -71,58 +71,42 @@ Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Point {
-    long long x, y;
-};
-
-double dist(Point a, Point b) {
-    return hypot(a.x - b.x, a.y - b.y);
-}
-
-double closest_pair(vector<Point> &pts, int l, int r) {
-    if (r - l <= 3) {
-        double d = 1e18;
-        for (int i = l; i <= r; ++i) {
-            for (int j = i + 1; j <= r; ++j) {
-                d = min(d, dist(pts[i], pts[j]));
-            }
-        }
-        return d;
-    }
-
-    int mid = l + (r - l) / 2;
-    long long mid_x = pts[mid].x;
-
-    double d = min(closest_pair(pts, l, mid), closest_pair(pts, mid + 1, r));
-
-    vector<Point> strip;
-    for (int i = l; i <= r; ++i) {
-        if (abs(pts[i].x - mid_x) < d) strip.push_back(pts[i]);
-    }
-
-    sort(strip.begin(), strip.end(), [](Point a, Point b) { return a.y < b.y; });
-
-    for (size_t i = 0; i < strip.size(); ++i) {
-        for (size_t j = i + 1; j < strip.size() && (strip[j].y - strip[i].y) < d; ++j) {
-            d = min(d, dist(strip[i], strip[j]));
-        }
-    }
-    return d;
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<Point> pts(n);
-    for (int i = 0; i < n; ++i) cin >> pts[i].x >> pts[i].y;
-
-    sort(pts.begin(), pts.end(), [](Point a, Point b) { return a.x < b.x; });
-
-    cout << fixed << setprecision(6) << closest_pair(pts, 0, n - 1) << "\n";
+    int n, m, s, t;
+    if (!(cin >> n >> m >> s >> t)) return 0;
+    --s; --t;
+    vector<vector<pair<int, long long>>> adj(n);
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        long long w;
+        cin >> u >> v >> w;
+        --u; --v;
+        if (u < 0 || u >= n || v < 0 || v >= n) continue;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
+    }
+    const long long INF = (long long)4e18;
+    vector<long long> dist(n, INF);
+    dist[s] = 0;
+    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;
+    pq.push({0, s});
+    while (!pq.empty()) {
+        auto [d, u] = pq.top();
+        pq.pop();
+        if (d != dist[u]) continue;
+        if (u == t) break;
+        for (auto [v, w] : adj[u]) {
+            if (dist[v] > d + w) {
+                dist[v] = d + w;
+                pq.push({dist[v], v});
+            }
+        }
+    }
+    if (dist[t] == INF) cout << -1 << "\n";
+    else cout << dist[t] << "\n";
     return 0;
 }
 ```

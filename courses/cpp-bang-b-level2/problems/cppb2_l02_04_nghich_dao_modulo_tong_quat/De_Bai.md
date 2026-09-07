@@ -9,25 +9,35 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $T$ cặp $(a, m)$. Hãy lập trình tìm số nguyên $x$ nhỏ nhất không âm thỏa $a\cdot x \equiv 1 \pmod m$; in `-1` nếu không tồn tại.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^5$) — số lượng truy vấn.
+- $T$ dòng tiếp theo, mỗi dòng chứa hai số nguyên dương $a, m$ ($1 \le a, m \le 10^9$), cách nhau bởi một dấu cách.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là số nguyên $x$ nhỏ nhất không âm thỏa $a \cdot x \equiv 1 \pmod m$; in `-1` nếu không tồn tại số $x$ như vậy.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+3
+3 11
+10 17
+6 9
 ```
 ### Output
 ```text
-15
+4
+12
+-1
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Nghịch Đảo Modulo Tổng Quát.
+
+* $a = 3, m = 11$: thử $x = 4$ thì $3 \cdot 4 = 12 = 11 + 1$, chia $11$ dư $1$ → đáp án $4$ (các giá trị $0, 1, 2, 3$ đều không thỏa).
+* $a = 10, m = 17$: $10 \cdot 12 = 120 = 7 \cdot 17 + 1$, chia $17$ dư $1$ → đáp án $12$.
+* $a = 6, m = 9$: ước chung lớn nhất của $6$ và $9$ là $3 \ne 1$ nên không tồn tại nghịch đảo → in `-1`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le T \le 10^5$, $1 \le a, m \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,47 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-struct Edge {
-    int to;
-    long long w;
-};
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m, s;
-    if (!(cin >> n >> m >> s)) return 0;
-
-    vector<vector<Edge>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
-        int u, v; long long w;
-        cin >> u >> v >> w;
-        adj[u].push_back({v, w});
-        adj[v].push_back({u, w});
+    int N, M;
+    if (!(cin >> N >> M)) return 0;
+    vector<vector<int>> adj(N + 1);
+    for (int i = 0; i < M; i++) {
+        int u, v; cin >> u >> v;
+        if (u < 1 || u > N || v < 1 || v > N) continue;
+        adj[u].push_back(v); adj[v].push_back(u);
     }
-
-    vector<long long> dist(n + 1, 1e18);
-    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;
-
-    dist[s] = 0;
-    pq.push({0, s});
-
-    while (!pq.empty()) {
-        auto [d, u] = pq.top(); pq.pop();
-        if (d > dist[u]) continue;
-
-        for (const auto &e : adj[u]) {
-            if (dist[u] + e.w < dist[e.to]) {
-                dist[e.to] = dist[u] + e.w;
-                pq.push({dist[e.to], e.to});
+    vector<int> col(N + 1, -1);
+    queue<int> q;
+    for (int s = 1; s <= N; s++) {
+        if (col[s] != -1) continue;
+        col[s] = 0; q.push(s);
+        while (!q.empty()) {
+            int u = q.front(); q.pop();
+            for (int v : adj[u]) {
+                if (col[v] == -1) { col[v] = col[u] ^ 1; q.push(v); }
+                else if (col[v] == col[u]) { cout << "NO\n"; return 0; }
             }
         }
     }
-
-    for (int i = 1; i <= n; ++i) {
-        cout << (dist[i] >= 1e18 ? -1 : dist[i]) << (i == n ? "" : " ");
-    }
-    cout << "\n";
+    cout << "YES\n";
     return 0;
 }

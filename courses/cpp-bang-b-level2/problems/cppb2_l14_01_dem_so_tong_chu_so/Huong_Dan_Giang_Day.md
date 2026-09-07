@@ -70,28 +70,46 @@ Chuyên đề: **Quy Hoạch Động Chữ Số (Digit DP)**
 #include <bits/stdc++.h>
 using namespace std;
 
-long long count_digit(long long n, int d) {
-    long long count = 0;
-    for (long long m = 1; m <= n; m *= 10) {
-        long long a = n / m, b = n % m;
-        int cur = a % 10;
-        if (d > 0) {
-            count += (a / 10) * m + (cur > d ? m : (cur == d ? b + 1 : 0));
-        } else {
-            if (a / 10 > 0) count += (a / 10 - 1) * m + (cur > 0 ? m : b + 1);
-        }
+long long Kglob;
+vector<int> dig;
+long long memo[20][185];
+bool vis[20][185];
+
+long long dfs(int pos, int sum, bool tight) {
+    if (sum > Kglob) return 0;
+    if (pos == (int)dig.size()) return (sum == Kglob) ? 1 : 0;
+    if (!tight && vis[pos][sum]) return memo[pos][sum];
+    int lim = tight ? dig[pos] : 9;
+    long long res = 0;
+    for (int d = 0; d <= lim; ++d) {
+        res += dfs(pos + 1, sum + d, tight && (d == lim));
     }
-    return count;
+    if (!tight) {
+        vis[pos][sum] = true;
+        memo[pos][sum] = res;
+    }
+    return res;
+}
+
+long long countLE(long long x) {
+    if (x <= 0) return 0;
+    dig.clear();
+    string s = to_string(x);
+    for (char c : s) dig.push_back(c - '0');
+    memset(vis, 0, sizeof(vis));
+    return dfs(0, 0, true);
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    long long L, R; int d;
-    if (!(cin >> L >> R >> d)) return 0;
+    long long L, R;
+    long long K;
+    if (!(cin >> L >> R >> K)) return 0;
+    Kglob = K;
 
-    cout << count_digit(R, d) - count_digit(L - 1, d) << "\n";
+    cout << countLE(R) - countLE(L - 1) << "\n";
     return 0;
 }
 ```

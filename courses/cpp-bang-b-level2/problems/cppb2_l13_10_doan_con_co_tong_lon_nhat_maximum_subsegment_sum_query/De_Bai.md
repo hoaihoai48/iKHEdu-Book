@@ -1,33 +1,48 @@
-# Đoạn con có tổng lớn nhất (maximum subsegment sum query)
+# Tổng đoạn con lớn nhất có cập nhật điểm
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Segment Tree lưu 4 trường (sum, pref, suff, ans).
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trung tâm điều hành lưới điện ghi lại N mức chênh lệch công suất theo từng giờ, số dương nghĩa là dư điện và số âm nghĩa là thiếu điện cần mua ngoài. Mỗi khi số liệu một giờ được hiệu chỉnh, kỹ sư trực muốn biết ngay chuỗi giờ liên tiếp có tổng chênh lệch lớn nhất trên toàn lưới để quyết định thời điểm xả蓄 tích năng. Cây đoạn có cập nhật điểm giúp duy trì đáp án tốt nhất sau mỗi lần hiệu chỉnh trong thời gian logarit.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đoạn Con Có Tổng Lớn Nhất (maximum Subsegment Sum Query) với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$ và $Q$ thao tác. Hãy lập trình xử lý: loại $1$ gán $a[idx] = val$; loại $2$ in ra tổng lớn nhất của một đoạn con liên tiếp trên toàn mảng.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $Q$ dòng tiếp theo: loại $1$ gồm $1\ idx\ val$; loại $2$ gồm một số $2$.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Với mỗi thao tác loại $2$, in ra một dòng là tổng đoạn con lớn nhất hiện tại.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 3
+1 -2 3 4
+2
+1 2 5
+2
 ```
+
 ### Output
+
 ```text
-15
-```
+7
+13```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đoạn Con Có Tổng Lớn Nhất (Maximum Subsegment Sum Query).
+
+- Mảng $1\ -2\ 3\ 4$: đoạn tốt nhất là $3 + 4 = 7$ (lấy thêm $1, -2$ chỉ làm giảm tổng).
+- Gán $a[2] = 5$ được $1\ 5\ 3\ 4$: cả bốn số đều dương nên tổng tốt nhất là $1+5+3+4 = 13$.
+- Hai thao tác loại $2$ in ra $7$ rồi $13$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|a_i|, |val| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

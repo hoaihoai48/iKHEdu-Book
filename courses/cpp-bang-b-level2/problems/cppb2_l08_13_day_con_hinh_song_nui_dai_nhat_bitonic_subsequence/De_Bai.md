@@ -1,33 +1,44 @@
 # Dãy con hình sóng núi dài nhất (bitonic subsequence)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Dãy Con Hình Sóng Núi Dài Nhất (Bitonic Subsequence)** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Kết hợp LIS xuôi và LDS ngược trong $\mathcal{O}(N \log N)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đội địa hình ghi lại độ cao của $N$ trạm quan trắc dọc theo tuyến đường leo núi theo đúng thứ tự hành trình. Ban tổ chức giải chạy trail muốn chọn ra một nhóm trạm (giữ nguyên thứ tự) mà độ cao tăng dần lên tới một đỉnh rồi giảm dần xuống, tạo thành hình sóng núi đẹp mắt để đặt các điểm tiếp sức. Nhóm trạm càng đông thì đường chạy càng dài và càng hấp dẫn, nên ban tổ chức cần biết có thể chọn được nhiều nhất bao nhiêu trạm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Dãy Con Hình Sóng Núi Dài Nhất (bitonic Subsequence) với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là độ cao các trạm theo thứ tự. Hãy lập trình tìm dãy con (giữ nguyên thứ tự) dài nhất mà tăng nghiêm ngặt rồi giảm nghiêm ngặt (chỉ tăng hoặc chỉ giảm cũng được tính), rồi in ra độ dài của dãy đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 1000$), là số trạm quan trắc.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($1 \le a_i \le 10^9$), là độ cao từng trạm.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một số nguyên duy nhất là độ dài của dãy con hình sóng núi dài nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+1 4 2 5 3
 ```
+
 ### Output
+
 ```text
-15
+4
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Dãy Con Hình Sóng Núi Dài Nhất (Bitonic Subsequence).
+
+- Dãy độ cao theo thứ tự là $1, 4, 2, 5, 3$.
+- Chọn bốn trạm $1, 2, 5, 3$ theo đúng thứ tự: đoạn $1, 2, 5$ tăng dần lên đỉnh $5$ rồi giảm xuống $3$.
+- Không tồn tại năm trạm nào tạo thành hình sóng núi vì cả dãy $1, 4, 2, 5, 3$ lên xuống hai lần, nên đáp án là $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 1000$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

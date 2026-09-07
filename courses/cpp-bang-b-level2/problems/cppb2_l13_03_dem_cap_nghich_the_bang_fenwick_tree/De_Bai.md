@@ -1,33 +1,43 @@
 # Đếm cặp nghịch thế bằng Fenwick Tree
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Cặp Nghịch Thế Bằng Fenwick Tree** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Nén tọa độ + Fenwick Tree.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Giải chạy marathon điện tử ghi lại thành tích của N vận động viên theo thứ tự về đích để xếp hạng khen thưởng cuối mùa giải. Ban trọng tài muốn đếm có bao nhiêu cặp mà người về trước lại có thành tích kém hơn người về sau nhằm phát hiện bất thường trong khâu bấm giờ chip điện tử. Cây Fenwick kết hợp nén tọa độ được dùng để đếm số cặp nghịch thế trong thời gian N log N thay vì duyệt toàn bộ từng cặp.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Cặp Nghịch Thế Bằng Fenwick Tree với độ phức tạp tối ưu nhất.
+
+Cho mảng $a_1, \dots, a_N$. Hãy lập trình đếm số cặp nghịch thế, tức số cặp $(i,j)$ với $i < j$ mà $a_i > a_j$, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên $N$ ($1 \le N \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số cặp nghịch thế (dùng số nguyên 64-bit).
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+2 3 8 6 1
 ```
+
 ### Output
+
 ```text
-15
-```
+5```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Cặp Nghịch Thế Bằng Fenwick Tree.
+
+- Mảng $2\ 3\ 8\ 6\ 1$: xét từng phần tử bên trái lớn hơn phần tử bên phải.
+- Các cặp thỏa mãn là $(2,1), (3,1), (8,6), (8,1), (6,1)$, tổng $5$ cặp.
+- Chương trình in ra $5$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 2 \cdot 10^5$; $|a_i| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,33 +1,45 @@
-# Multi-source BFS lan tỏa dịch bệnh / cháy rừng
+# BFS đa nguồn lan tỏa cháy rừng
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Multi-Source BFS Lan Tỏa Dịch Bệnh / Cháy Rừng** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: BFS đồng thời từ nhiều đỉnh nguồn ban đầu.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Chi cục kiểm lâm theo dõi khu rừng hình chữ nhật R hàng C cột, trong đó một số ô đang bốc cháy được vệ tinh phát hiện vào buổi sáng. Mỗi giờ ngọn lửa lan sang bốn ô kề cạnh chưa cháy và không phải là hồ nước cản lửa. Ban chỉ huy cần biết sau bao nhiêu giờ toàn bộ khu rừng sẽ cháy hết để điều xe cứu hỏa, hoặc xác định có vùng rừngicho an toàn không bao giờ bị cháy tới.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Multi-source Bfs Lan Tỏa Dịch Bệnh / Cháy Rừng với độ phức tạp tối ưu nhất.
+
+Cho lưới $R \times C$ gồm các ô $.$ (rừng), $\#$ (hồ nước), $F$ (đang cháy). Hãy lập trình tính, bằng BFS đa nguồn, thời gian để lửa lan hết các ô rừng; in ra $-1$ nếu có ô rừng không bao giờ cháy tới.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $R, C$ ($1 \le R, C \le 1000$).
+- $R$ dòng tiếp theo, mỗi dòng là một chuỗi $C$ ký tự thuộc $\{., \#, F\}$.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số giờ lan hết lửa, hoặc $-1$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 3
+...
+.F.
+...
 ```
+
 ### Output
+
 ```text
-15
-```
+2```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Multi-Source BFS Lan Tỏa Dịch Bệnh / Cháy Rừng.
+
+- Lửa khởi phát tại ô giữa $(2,2)$, giờ đầu lan ra bốn ô kề cạnh.
+- Giờ thứ hai lan tiếp ra bốn ô góc, toàn bộ tám ô rừng còn lại đều đã cháy.
+- Tổng thời gian là $2$ giờ nên chương trình in ra $2$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le R, C \le 1000$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

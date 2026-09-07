@@ -1,33 +1,41 @@
-# Đếm số xâu con khác nhau của một xâu
+# Đếm số xâu con khác nhau
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Xâu Con Khác Nhau Của Một Xâu** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: String Hashing + `unordered_set`.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Viện ngôn ngữ học phân tích một văn bản cổ để thống kê vốn từ vựng của tác giả vô danh qua số lượng các đoạn trích phân biệt xuất hiện trong toàn bộ cuộn giấy. Mỗi đoạn trích là một xâu con liên tiếp và hai đoạn ở vị trí khác nhau nhưng cùng mặt chữ chỉ tính một lần. Chương trình dùng mảng hậu tố kết hợp mảng LCP để đếm số xâu con khác nhau trong thời gian N log N thay vì liệt kê toàn bộ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Xâu Con Khác Nhau Của Một Xâu với độ phức tạp tối ưu nhất.
+
+Cho xâu $S$. Hãy lập trình đếm số xâu con liên tiếp phân biệt của $S$, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: xâu $S$ gồm chữ cái thường ($1 \le |S| \le 2 \cdot 10^5$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số xâu con phân biệt (dùng số nguyên 64-bit).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+aba
 ```
+
 ### Output
+
 ```text
-15
-```
+5```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Xâu Con Khác Nhau Của Một Xâu.
+
+- Các xâu con của $aba$ gồm $a, b, a, ab, ba, aba$ (sáu lượt xuất hiện).
+- Hai lượt $a$ trùng nhau nên chỉ còn năm xâu phân biệt là $a, b, ab, ba, aba$.
+- Chương trình in ra $5$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le |S| \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

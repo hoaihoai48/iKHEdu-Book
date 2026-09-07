@@ -1,31 +1,41 @@
-# Digit DP khong chua chu so cam
+# Đếm số không chứa chữ số cấm
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Digit Dp Khong Chua Chu So Cam**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Tổng đài taxi loại bỏ chữ số dễ gây nhầm lẫn khi đọc qua điện thoại khỏi mọi số tài xế để giảm cuốc xe bị gán nhầm trong giờ cao điểm. Mỗi đợt tuyển xét một đoạn số hiệu liên tiếp và cần đếm có bao nhiêu số hoàn toàn không chứa chữ số cấm để cấp phát cho tài xế mới. Chương trình quy hoạch động bỏ qua nhánh chứa chữ số cấm giúp đếm nhanh cả đoạn dài.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Digit Dp Khong Chua Chu So Cam với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho ba số nguyên $L, R, D$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) mà biểu diễn thập phân không chứa chữ số $D$, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: ba số nguyên $L, R, D$ ($0 \le L \le R \le 10^{18}$, $0 \le D \le 9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là số lượng số thỏa mãn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 20 1
 ```
+
 ### Output
+
 ```text
-15
+9
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Digit Dp Khong Chua Chu So Cam.
+
+- Các số từ $1$ đến $20$ không chứa chữ số $1$ gồm $2$ đến $9$ (tám số) và $20$.
+- Đếm được chín số nên chương trình in ra $9$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $0 \le L \le R \le 10^{18}$; $0 \le D \le 9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

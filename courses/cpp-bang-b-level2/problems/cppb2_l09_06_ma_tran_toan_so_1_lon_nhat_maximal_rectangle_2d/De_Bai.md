@@ -1,33 +1,46 @@
 # Ma trận toàn số 1 lớn nhất (maximal rectangle 2d)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Ma Trận Toàn Số 1 Lớn Nhất (Maximal Rectangle 2D)** là bài toán trọng tâm thuộc cấp độ **P2** nhằm rèn luyện: Histogram DP 2D.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban quản lý chợ đầu mối muốn dành ra một khu đất hình chữ nhật lớn nhất mà toàn bộ các lô trong khu đều còn trống để làm bãi đỗ xe tạm trong dịp Tết. Mặt bằng khu chợ được chia thành lưới ô vuông, mỗi ô được đánh dấu $1$ nếu đang trống và $0$ nếu đã có sạp chiếm chỗ. Khu đất chọn ra phải là một hình chữ nhật gồm toàn ô trống, càng rộng càng tốt để chứa được nhiều xe tải chở hàng hóa về chợ trong những ngày cao điểm.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Ma Trận Toàn Số 1 Lớn Nhất (maximal Rectangle 2d) với độ phức tạp tối ưu nhất.
+
+Cho lưới $N \times M$ chỉ gồm các số $0$ và $1$. Hãy lập trình tìm hình chữ nhật con có diện tích lớn nhất mà mọi ô trong đó đều bằng $1$, rồi in ra diện tích đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $N, M$ ($1 \le N, M \le 500$), là số hàng và số cột của mặt bằng.
+- $N$ dòng tiếp theo, mỗi dòng chứa $M$ số nguyên $0$ hoặc $1$, trong đó $1$ là ô trống.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là diện tích lớn nhất (bằng $0$ nếu không có ô trống nào).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 3
+1 0 1
+1 1 1
+0 1 1
 ```
+
 ### Output
+
 ```text
-15
+4
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Ma Trận Toàn Số 1 Lớn Nhất (Maximal Rectangle 2D).
+
+- Bốn ô ở góc dưới bên phải gồm hai hàng cuối và hai cột cuối đều bằng $1$ nên tạo thành hình chữ nhật $2 \times 2$ diện tích $4$.
+- Hàng giữa có ba ô $1$ liên tiếp tạo thành hình $1 \times 3$ diện tích $3$.
+- Mọi hình chữ nhật toàn số $1$ khác đều có diện tích không vượt quá $4$, nên đáp án là $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N, M \le 500$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

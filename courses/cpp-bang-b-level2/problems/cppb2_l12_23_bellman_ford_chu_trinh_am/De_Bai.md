@@ -1,31 +1,46 @@
-# Bellman-Ford chu trinh am
+# Phát hiện chu trình âm (Bellman-Ford)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Bellman Ford Chu Trinh Am**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Sở giao dịch ngoại tệ theo dõi N loại tiền với M cặp quy đổi một chiều có tỉ giá được mã hoá thành chi phí có thể mang giá trị âm do ưu đãi phí chuyển đổi. Phòng phân tích cần phát hiện xem thị trường có tồn tại chu trình quy đổi mà tổng chi phí âm hay không để kịp thời cảnh báo rủi ro cho các quỹ đầu tư. Thuật toán Bellman-Ford nới lỏng toàn bộ cạnh đúng N vòng được chọn để cho kết luận chính xác.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Bellman Ford Chu Trinh Am với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho đồ thị có hướng gồm $N$ đỉnh và $M$ cạnh có trọng số (có thể âm). Hãy lập trình kiểm tra tồn tại chu trình âm bằng thuật toán Bellman-Ford, rồi in ra $YES$ nếu có và $NO$ nếu không.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: hai số nguyên $N, M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v, w$ là cạnh có hướng trọng số $w$ ($|w| \le 10^9$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất: $YES$ nếu tồn tại chu trình âm, ngược lại $NO$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 3
+1 2 1
+2 3 -1
+3 1 -1
 ```
+
 ### Output
+
 ```text
-15
+YES
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Bellman Ford Chu Trinh Am.
+
+- Chu trình $1 \to 2 \to 3 \to 1$ có tổng trọng số $1 + (-1) + (-1) = -1$ là số âm.
+- Thuật toán Bellman-Ford sau đủ vòng nới lỏng vẫn còn cạnh cải thiện được nên kết luận có chu trình âm.
+- Chương trình in ra $YES$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

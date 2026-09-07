@@ -1,33 +1,45 @@
-# Số phân hoạch tập hợp (số Stirling loại 2)
+# Số Stirling loại 2 với nhiều truy vấn
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Số Phân Hoạch Tập Hợp (Số Stirling Loại 2)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: DP tính $S(n, k) = S(n-1, k-1) + k \cdot S(n-1, k)$.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Sở giáo dục thí điểm mô hình lớp học mở với N học sinh được chia thành đúng K nhóm thảo luận không phân biệt tên nhóm, nhóm nào cũng phải có ít nhất một thành viên để buổi học diễn ra sôi nổi. Vì có tới hàng chục nghìn lượt hỏi đáp với các quy mô lớp khác nhau gửi về cổng thông tin, máy chủ cần trả lời nhanh từng lượt hỏi và chỉ đưa phần dư cho 1 000 000 007 để tiết kiệm băng thông đường truyền.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Số Phân Hoạch Tập Hợp (số Stirling Loại 2) với độ phức tạp tối ưu nhất.
+
+Cho $Q$ truy vấn, mỗi truy vấn gồm $N, K$. Hãy lập trình tính, với mỗi truy vấn, số Stirling loại hai $S(N,K)$ rồi in ra phần dư khi chia cho $1\,000\,000\,007$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên $Q$ ($1 \le Q \le 10^4$).
+- $Q$ dòng tiếp theo, mỗi dòng gồm $N, K$ ($1 \le K \le N \le 1000$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Gồm $Q$ dòng, mỗi dòng là đáp án của truy vấn tương ứng theo modulo $1\,000\,000\,007$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+2
+5 3
+4 2
 ```
+
 ### Output
+
 ```text
-15
-```
+25
+7```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Số Phân Hoạch Tập Hợp (Số Stirling Loại 2).
+
+- Truy vấn một $N = 5, K = 3$: phân hoạch $5$ bạn thành $3$ nhóm không tên được $25$ cách.
+- Truy vấn hai $N = 4, K = 2$: dạng cỡ nhóm $3+1$ có $4$ cách, dạng $2+2$ có $3$ cách, tổng $7$ cách.
+- Chương trình in ra $25$ rồi $7$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le Q \le 10^4$; $1 \le K \le N \le 1000$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

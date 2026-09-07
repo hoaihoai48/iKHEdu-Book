@@ -1,36 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-const long long MOD = 1000000007;
-
-long long gcd_val(long long a, long long b) {
-    while (b) { a %= b; swap(a, b); }
-    return a;
+long long modpow(long long a, long long e, long long m) {
+    long long r = 1 % m;
+    a %= m;
+    while (e) { if (e & 1) r = r * a % m; a = a * a % m; e >>= 1; }
+    return r;
 }
-
-long long power_mod(long long a, long long b) {
-    long long res = 1; a %= MOD;
-    while (b > 0) {
-        if (b & 1) res = (res * a) % MOD;
-        a = (a * a) % MOD;
-        b >>= 1;
+long long smallC(long long n, long long k, int p) {
+    if (k < 0 || k > n) return 0;
+    if (k > n - k) k = n - k;
+    long long num = 1, den = 1;
+    for (long long i = 1; i <= k; i++) { num = num * (n - k + i) % p; den = den * i % p; }
+    return num * modpow(den, p - 2, p) % p;
+}
+long long lucas(long long n, long long k, int p) {
+    if (k < 0 || k > n) return 0;
+    long long r = 1;
+    while (n > 0 || k > 0) {
+        long long ni = n % p, ki = k % p;
+        if (ki > ni) return 0;
+        r = r * smallC(ni, ki, p) % p;
+        n /= p; k /= p;
     }
-    return res;
+    return r;
 }
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-
-    long long total = 0;
-    for (int i = 0; i < n; ++i) {
-        total = (total + power_mod(k, gcd_val(i, n))) % MOD;
+    int T;
+    if (!(cin >> T)) return 0;
+    while (T--) {
+        long long N, K;
+        int p;
+        cin >> N >> K >> p;
+        cout << lucas(N, K, p) % p << "\n";
     }
-
-    long long ans = total * power_mod(n, MOD - 2) % MOD;
-    cout << ans << "\n";
     return 0;
 }

@@ -1,33 +1,47 @@
-# Cây khung nhỏ nhất (MST Kruskal với DSU)
+# Cây khung nhỏ nhất Kruskal với DSU
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cây Khung Nhỏ Nhất (MST Kruskal với DSU)** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Kruskal + Disjoint Set Union.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Công ty điện lực miền núi cần kéo cáp nối N bản làng vùng cao bằng các đoạn đường dây có chi phí thi công khác nhau do địa hình hiểm trở. Yêu cầu toàn mạng liên thông mà tổng chi phí thấp nhất để tiết kiệm ngân sách nhà nước, và nếu địa hình chia cắt không thể nối hết thì dự án phải báo không khả thi. Tổ thiết kế dùng thuật toán Kruskal kết hợp cấu trúc hợp nhất tập rời rạc để chọn các đoạn dây rẻ nhất mà không tạo chu trình.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cây Khung Nhỏ Nhất (mst Kruskal Với Dsu) với độ phức tạp tối ưu nhất.
+
+Cho đồ thị vô hướng có trọng số gồm $N$ đỉnh và $M$ cạnh. Hãy lập trình tính tổng trọng số cây khung nhỏ nhất bằng thuật toán Kruskal, rồi in ra kết quả (in ra $IMPOSSIBLE$ nếu đồ thị không liên thông).
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v, w$ ($1 \le w \le 10^9$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là tổng trọng số MST, hoặc $IMPOSSIBLE$ nếu không liên thông được.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4 5
+1 2 1
+2 3 2
+3 4 3
+4 1 4
+1 3 5
 ```
+
 ### Output
+
 ```text
-15
-```
+6```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Cây Khung Nhỏ Nhất (MST Kruskal với DSU).
+
+- Xét các cạnh theo chi phí tăng dần: chọn $1-2$ giá $1$, rồi $2-3$ giá $2$.
+- Cạnh $3-4$ giá $3$ nối bản cuối cùng vào mạng mà không tạo chu trình, tổng thành $6$.
+- Các cạnh còn lại đều tạo chu trình nên bị bỏ, chương trình in ra $6$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

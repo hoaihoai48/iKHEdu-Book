@@ -71,40 +71,34 @@ Chuyên đề: **Thư Viện STL C++ Nâng Cao (Advanced STL Containers)**
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Customer {
-    int id, priority;
-};
-
-struct Compare {
-    bool operator()(const Customer &a, const Customer &b) {
-        if (a.priority != b.priority) return a.priority < b.priority;
-        return a.id > b.id;
-    }
-};
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
+    int n;
+    if (!(cin >> n)) return 0;
 
-    priority_queue<Customer, vector<Customer>, Compare> pq;
+    priority_queue<long long> lo;
+    priority_queue<long long, vector<long long>, greater<long long>> hi;
 
-    while (q--) {
-        int type; cin >> type;
-        if (type == 1) {
-            int id, p; cin >> id >> p;
-            pq.push({id, p});
-        } else {
-            if (!pq.empty()) {
-                cout << pq.top().id << "\n";
-                pq.pop();
-            } else {
-                cout << "-1\n";
-            }
+    for (int i = 0; i < n; ++i) {
+        long long x;
+        cin >> x;
+        if (lo.empty() || x <= lo.top()) lo.push(x);
+        else hi.push(x);
+
+        if ((int)lo.size() > (int)hi.size() + 1) {
+            hi.push(lo.top());
+            lo.pop();
+        } else if ((int)lo.size() < (int)hi.size()) {
+            lo.push(hi.top());
+            hi.pop();
         }
+
+        if (i > 0) cout << ' ';
+        cout << lo.top();
     }
+    cout << "\n";
     return 0;
 }
 ```

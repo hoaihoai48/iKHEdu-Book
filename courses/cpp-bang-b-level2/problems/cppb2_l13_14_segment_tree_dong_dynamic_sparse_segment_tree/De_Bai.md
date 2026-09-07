@@ -1,33 +1,47 @@
-# Segment Tree động (dynamic / sparse Segment Tree)
+# Cây đoạn động trên tọa độ tới 1e9
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Segment Tree Động (Dynamic / Sparse Segment Tree)** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Tạo nút cây theo yêu cầu bằng con trỏ.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Sàn đấu giá trực tuyến quản lý dải mã số sản phẩm lên tới một tỉ đơn vị nhưng tại mỗi thời điểm chỉ có rất ít mã được giao dịch thực tế. Mỗi giao dịch cộng thêm một khoản vào đúng một mã số, và ban điều hành cần tra cứu tổng giá trị trên bất kỳ đoạn mã nào để chốt phiên đấu giá theo giờ. Cây đoạn động chỉ tạo nút khi cần giúp tiết kiệm bộ nhớ mà vẫn trả lời mỗi thao tác trong thời gian logarit theo miền tọa độ.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Segment Tree Động (dynamic / Sparse Segment Tree) với độ phức tạp tối ưu nhất.
+
+Cho $Q$ thao tác trên mảng ảo kích thước $10^9$ (ban đầu toàn $0$). Hãy lập trình xử lý: loại $1$ cộng $val$ vào vị trí $idx$; loại $2$ in ra tổng trên đoạn $[l,r]$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên $Q$ ($1 \le Q \le 2 \cdot 10^5$).
+- $Q$ dòng tiếp theo: loại $1$ gồm $1\ idx\ val$; loại $2$ gồm $2\ l\ r$ ($1 \le idx, l \le r \le 10^9$, $|val| \le 10^9$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Với mỗi thao tác loại $2$, in ra một dòng là tổng trên đoạn yêu cầu.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+1 1000000000 7
+1 5 3
+2 1 10
+2 1 1000000000
 ```
+
 ### Output
+
 ```text
-15
-```
+3
+10```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Segment Tree Động (Dynamic / Sparse Segment Tree).
+
+- Cộng $7$ vào vị trí một tỉ và cộng $3$ vào vị trí $5$.
+- Đoạn $[1,10]$ chỉ chứa vị trí $5$ nên tổng là $3$; đoạn $[1,10^9]$ chứa cả hai nên tổng là $3 + 7 = 10$.
+- Hai truy vấn loại $2$ in ra $3$ rồi $10$ trên hai dòng.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le Q \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

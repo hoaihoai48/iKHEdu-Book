@@ -1,33 +1,45 @@
 # Đếm số phần tử phân biệt trong mọi cửa sổ k
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: `unordered_map` kết hợp Sliding Window.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhà máy sản xuất linh kiện ghi lại mã lỗi của từng sản phẩm chạy trên dây chuyền theo đúng thứ tự thời gian, mỗi sản phẩm có thể mắc một trong nhiều loại lỗi khác nhau. Để giám sát chất lượng theo từng ca sản xuất, tổ trưởng muốn biết trong mỗi khung $K$ sản phẩm liên tiếp có bao nhiêu loại lỗi khác nhau xuất hiện, vì khung nào có quá nhiều loại lỗi thì toàn bộ khung đó phải đưa đi kiểm tra lại từ đầu trước khi đóng gói xuất xưởng.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là mã lỗi từng sản phẩm và độ dài cửa sổ $K$. Với mỗi cửa sổ gồm $K$ sản phẩm liên tiếp (trượt từ đầu đến cuối dãy), hãy lập trình đếm số giá trị phân biệt trong cửa sổ đó, rồi in ra $N - K + 1$ kết quả theo thứ tự.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $N, K$ ($1 \le K \le N \le 10^5$), là số sản phẩm và độ dài cửa sổ.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($1 \le a_i \le 10^6$), là mã lỗi từng sản phẩm.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra $N - K + 1$ số nguyên trên một dòng là số giá trị phân biệt của từng cửa sổ.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+7 4
+1 2 1 3 4 2 3
 ```
+
 ### Output
+
 ```text
-15
+3 4 4 3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Phần Tử Phân Biệt Trong Mọi Cửa Sổ K.
+
+- Cửa sổ $[1, 2, 1, 3]$ gồm ba loại lỗi khác nhau là $1, 2, 3$.
+- Cửa sổ $[2, 1, 3, 4]$ gồm bốn loại khác nhau là $1, 2, 3, 4$.
+- Cửa sổ $[1, 3, 4, 2]$ gồm bốn loại khác nhau là $1, 2, 3, 4$.
+- Cửa sổ $[3, 4, 2, 3]$ gồm ba loại khác nhau là $2, 3, 4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le K \le N \le 10^5$, $1 \le a_i \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

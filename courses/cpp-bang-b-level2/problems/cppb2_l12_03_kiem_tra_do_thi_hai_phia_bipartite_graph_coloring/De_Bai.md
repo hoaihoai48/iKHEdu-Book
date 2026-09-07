@@ -1,33 +1,44 @@
-# Kiểm tra đồ thị hai phía (bipartite graph coloring)
+# Kiểm tra đồ thị hai phía (tô màu)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph Coloring)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Tô màu 2 màu bằng BFS/DFS.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Ban tổ chức giải cờ vua đồng đội cần xếp N kỳ thủ vào hai đội sao cho mọi cặp kỳ thủ từng hoà nhau ở vòng loại đều nằm khác đội để trận chung kết thêm kịch tính. Danh sách M cặp từng gặp nhau được ghi lại đầy đủ, và ban tổ chức muốn biết liệu cách chia hai đội như mong muốn có tồn tại hay không. Chương trình cần trả lời YES khi xếp được và NO khi có mâu thuẫn không thể hoá giải.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Kiểm Tra Đồ Thị Hai Phía (bipartite Graph Coloring) với độ phức tạp tối ưu nhất.
+
+Cho đồ thị vô hướng gồm $N$ đỉnh và $M$ cạnh. Hãy lập trình kiểm tra đồ thị có phải là đồ thị hai phía bằng thuật toán tô màu hai màu, rồi in ra $YES$ nếu đúng và $NO$ nếu sai.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: hai số nguyên $N, M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$).
+- $M$ dòng tiếp theo, mỗi dòng gồm $u, v$ là một cạnh hai chiều.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất: $YES$ nếu đồ thị hai phía, ngược lại $NO$.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 2
+1 2
+2 3
 ```
+
 ### Output
+
 ```text
-15
-```
+YES```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph Coloring).
+
+- Đồ thị là đường $1-2-3$: tô đỉnh $1$ màu đỏ thì đỉnh $2$ phải màu xanh, đỉnh $3$ lại màu đỏ.
+- Không có cạnh nào nối hai đỉnh cùng màu nên phép tô màu thành công.
+- Chương trình in ra $YES$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

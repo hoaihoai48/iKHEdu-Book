@@ -70,72 +70,34 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithm
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-struct Edge {
-    int to;
-    long long cap, flow;
-    int rev;
-};
-
-const int MAXN = 505;
-vector<Edge> adj[MAXN];
-int level[MAXN], ptr[MAXN];
-
-void add_edge(int from, int to, long long cap) {
-    adj[from].push_back({to, cap, 0, (int)adj[to].size()});
-    adj[to].push_back({from, 0, 0, (int)adj[from].size() - 1});
-}
-
-bool bfs_dinic(int s, int t) {
-    memset(level, -1, sizeof(level));
-    level[s] = 0;
-    queue<int> q; q.push(s);
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        for (const auto &e : adj[u]) {
-            if (e.cap - e.flow > 0 && level[e.to] == -1) {
-                level[e.to] = level[u] + 1;
-                q.push(e.to);
-            }
-        }
-    }
-    return level[t] != -1;
-}
-
-long long dfs_dinic(int u, int t, long long pushed) {
-    if (pushed == 0 || u == t) return pushed;
-    for (int &cid = ptr[u]; cid < (int)adj[u].size(); ++cid) {
-        auto &e = adj[u][cid];
-        int tr = e.to;
-        if (level[u] + 1 != level[tr] || e.cap - e.flow == 0) continue;
-        long long tr_pushed = dfs_dinic(tr, t, min(pushed, e.cap - e.flow));
-        if (tr_pushed == 0) continue;
-        e.flow += tr_pushed;
-        adj[tr][e.rev].flow -= tr_pushed;
-        return tr_pushed;
-    }
-    return 0;
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m, s, t;
-    if (!(cin >> n >> m >> s >> t)) return 0;
-
-    for (int i = 0; i < m; ++i) {
-        int u, v; long long c; cin >> u >> v >> c;
-        add_edge(u, v, c);
+    int R, C;
+    if (!(cin >> R >> C)) return 0;
+    vector<string> g(R);
+    for (int i = 0; i < R; i++) cin >> g[i];
+    vector<vector<int>> d(R, vector<int>(C, -1));
+    queue<pair<int,int>> q;
+    for (int i = 0; i < R; i++) for (int j = 0; j < C; j++)
+        if (g[i][j] == 'F') { d[i][j] = 0; q.push({i, j}); }
+    const int dx[4] = {-1, 1, 0, 0}, dy[4] = {0, 0, -1, 1};
+    while (!q.empty()) {
+        auto [x, y] = q.front(); q.pop();
+        for (int t = 0; t < 4; t++) {
+            int nx = x + dx[t], ny = y + dy[t];
+            if (nx < 0 || nx >= R || ny < 0 || ny >= C) continue;
+            if (g[nx][ny] == '#'|| d[nx][ny] != -1) continue;
+            d[nx][ny] = d[x][y] + 1; q.push({nx, ny});
+        }
     }
-
-    long long flow = 0;
-    while (bfs_dinic(s, t)) {
-        memset(ptr, 0, sizeof(ptr));
-        while (long long pushed = dfs_dinic(s, t, 1e18)) flow += pushed;
+    int ans = 0;
+    for (int i = 0; i < R; i++) for (int j = 0; j < C; j++) {
+        if (g[i][j] == '#') continue;
+        if (d[i][j] == -1) { cout << -1 << "\n"; return 0; }
+        ans = max(ans, d[i][j]);
     }
-
-    cout << flow << "\n";
+    cout << ans << "\n";
     return 0;
 }
 ```

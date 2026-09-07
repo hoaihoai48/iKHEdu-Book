@@ -1,33 +1,44 @@
-# Xâu con chung dài nhất của k xâu ký tự
+# Xâu con chung dài nhất của K xâu
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Xâu Con Chung Dài Nhất Của K Xâu Ký Tự** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Chặt nhị phân độ dài + Băm đa chuỗi.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trung tâm an ninh mạng so sánh K mẫu mã độc thu thập từ các máy chủ bị tấn công để tìm đoạn mã chung dài nhất xuất hiện trong mọi mẫu, từ đó viết chữ ký nhận diện cho tường lửa toàn hệ thống. Mỗi mẫu có thể dài tới hàng trăm nghìn ký tự nên việc so sánh từng cặp đoạn trích là bất khả thi. Thuật toán hậu tố chung kết hợp quy hoạch động giúp khoanh vùng đoạn mã độc đặc trưng trong thời gian chấp nhận được.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Xâu Con Chung Dài Nhất Của K Xâu Ký Tự với độ phức tạp tối ưu nhất.
+
+Cho $K$ xâu ký tự. Hãy lập trình tìm độ dài của xâu con liên tiếp dài nhất xuất hiện trong tất cả $K$ xâu, rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng 1: số nguyên $K$ ($2 \le K \le 10$).
+- $K$ dòng tiếp theo, mỗi dòng là một xâu chữ cái thường (tổng độ dài tới $2 \cdot 10^5$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là độ dài cần tìm ($0$ nếu không có).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+2
+ababa
+baba
 ```
+
 ### Output
+
 ```text
-15
-```
+4```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Xâu Con Chung Dài Nhất Của K Xâu Ký Tự.
+
+- Hai xâu $ababa$ và $baba$: đoạn $baba$ xuất hiện ở cuối xâu thứ nhất và chiếm toàn bộ xâu thứ hai.
+- Không có đoạn chung nào dài năm ký tự vì xâu thứ hai chỉ dài bốn.
+- Độ dài lớn nhất là $4$ nên in ra $4$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $2 \le K \le 10$; tổng độ dài tới $2 \cdot 10^5$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

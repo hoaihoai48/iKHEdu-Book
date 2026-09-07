@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Cay Ma Huffman Coding**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cay Ma Huffman Coding với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho n tần suất ký tự. Hãy lập trình xây dựng cây mã Huffman và tính tổng chi phí mã hóa (tổng độ dài mã có trọng số), rồi in ra tổng chi phí nhỏ nhất đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

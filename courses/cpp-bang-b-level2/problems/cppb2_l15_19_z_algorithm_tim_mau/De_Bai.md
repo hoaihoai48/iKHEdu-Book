@@ -1,31 +1,41 @@
-# Z algorithm tim mau
+# Mảng Z (Z-algorithm)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Z Algorithm Tim Mau**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Phòng nghiên cứu ngôn ngữ cổ cần tiền xử lý văn bản bia đá bằng mảng Z để phục vụ hàng loạt truy vấn tìm kiếm mẫu tự động trong dự án số hóa di sản. Với mỗi vị trí trong văn bản, mảng Z ghi lại độ dài của tiền tố dài nhất khớp tại vị trí đó, giúp mọi tìm kiếm mẫu sau này chạy trong thời gian tuyến tính. Thuật toán duy trì khung khớp hiện tại nên toàn bộ quá trình chỉ duyệt văn bản đúng một lần.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Z Algorithm Tim Mau với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho xâu $S$. Hãy lập trình tính mảng $Z$ bằng Z-algorithm, trong đó $Z[1] = 0$ và $Z[i]$ là độ dài của tiền tố dài nhất của $S$ khớp tại vị trí $i$, rồi in ra $n$ số trên một dòng.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: xâu $S$ ($1 \le |S| \le 10^6$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất gồm $|S|$ số là mảng $Z$ (đánh số từ $1$).
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+aabaa
 ```
+
 ### Output
+
 ```text
-15
+0 1 0 2 1
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Z Algorithm Tim Mau.
+
+- Vị trí $2$ khớp tiền tố được một ký tự $a$ rồi dừng ở $b$ nên $Z[2] = 1$.
+- Vị trí $3$ bắt đầu bằng $b$ khác $a$ nên $Z[3] = 0$; vị trí $4$ khớp $aa$ nên $Z[4] = 2$; vị trí $5$ khớp $a$ nên $Z[5] = 1$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le |S| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

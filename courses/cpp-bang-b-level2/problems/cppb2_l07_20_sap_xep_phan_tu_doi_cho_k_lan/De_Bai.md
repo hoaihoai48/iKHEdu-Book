@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Sap Xep Phan Tu Doi Cho K Lan**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Sap Xep Phan Tu Doi Cho K Lan với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho mảng a gồm n số và số nguyên k. Hãy lập trình thực hiện tối đa k lần đổi chỗ hai phần tử kề nhau để thu được mảng có thứ tự từ điển lớn nhất và in ra mảng đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

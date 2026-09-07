@@ -69,41 +69,32 @@
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-// Digit DP đếm các số đối xứng (Palindromes) trong [L, R]
-long long dp[20][20][2];
-string S;
-
-long long solve(int l, int r, bool tight) {
-    if (l > r) return 1;
-    if (dp[l][r][tight] != -1) return dp[l][r][tight];
-
-    int limit = tight ? (S[l] - '0') : 9;
-    long long ans = 0;
-
-    for (int d = 0; d <= limit; ++d) {
-        bool next_tight = tight && (d == limit);
-        ans += solve(l + 1, r - 1, next_tight);
-    }
-
-    return dp[l][r][tight] = ans;
+long long ipow10(int e) { long long r = 1; while (e--) r *= 10; return r; }
+long long countLE(long long X) {
+    if (X < 0) return 0;
+    if (X == 0) return 1; // 0 is palindrome
+    string s = to_string(X);
+    int n = (int)s.size();
+    long long ans = 1; // number 0
+    for (int l = 1; l < n; l++) ans += 9 * ipow10((l - 1) / 2);
+    long long half = (n + 1) / 2;
+    long long pre = stoll(s.substr(0, half));
+    long long base = ipow10(half - 1);
+    ans += pre - base;
+    string t = s.substr(0, half);
+    string q = t;
+    if (n % 2 == 1) q.pop_back();
+    reverse(q.begin(), q.end());
+    t += q;
+    if (stoll(t) <= X) ans++;
+    return ans;
 }
-
-long long count_pal(long long N) {
-    if (N <= 0) return 0;
-    S = to_string(N);
-    memset(dp, -1, sizeof(dp));
-    return solve(0, S.size() - 1, true);
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
     long long L, R;
     if (!(cin >> L >> R)) return 0;
-
-    cout << count_pal(R) - count_pal(L - 1) << "\n";
+    cout << countLE(R) - countLE(L - 1) << "\n";
     return 0;
 }
 ```

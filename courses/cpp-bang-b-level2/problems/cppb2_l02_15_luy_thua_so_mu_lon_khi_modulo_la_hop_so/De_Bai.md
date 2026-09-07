@@ -9,25 +9,27 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho cơ số $a$, số mũ $b$ rất lớn (dạng chuỗi thập phân) và modulo $m$ là hợp số. Hãy lập trình tính $a^b \bmod m$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Gồm một dòng duy nhất chứa cơ số $a$ ($0 \le a \le 10^{18}$), số mũ $b$ rất lớn dưới dạng chuỗi thập phân (độ dài không quá $10^5$ ký tự) và modulo $m$ ($1 \le m \le 10^9$), cách nhau bởi dấu cách.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là giá trị $a^b \bmod m$.
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+2 10 1000
 ```
 ### Output
 ```text
-15
+24
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Số Mũ Lớn Khi Modulo Là Hợp Số.
+
+Số mũ $10$ vừa đủ nhỏ để tính trực tiếp: $2^{10} = 1024$. Lấy $1024 = 1 \cdot 1000 + 24$ nên phần dư khi chia cho $1000$ là $24$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le a \le 10^{18}$; chuỗi $b$ dài không quá $10^5$; $1 \le m \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

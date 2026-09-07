@@ -1,31 +1,50 @@
-# Segment Tree dem so phan tu khac nhau offline
+# Đếm số phần tử phân biệt offline
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Segment Tree Dem So Phan Tu Khac Nhau Offline**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Thư viện tỉnh số hoá N đầu sách xếp theo mã kệ để phục vụ bạn đọc tra cứu nhanh trong mùa thi cử. Mỗi yêu cầu mượn đưa ra một đoạn kệ và cần biết trong đoạn đó có bao nhiêu tựa sách khác nhau để thủ thư chuẩn bị đúng số phiếu mượn. Hệ thống xử lý offline sắp xếp truy vấn theo đầu phải kết hợp Fenwick đánh dấu lần xuất hiện cuối giúp trả lời mỗi truy vấn trong thời gian logarit.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Segment Tree Dem So Phan Tu Khac Nhau Offline với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho mảng $a_1, \dots, a_N$ cố định và $Q$ truy vấn. Hãy lập trình trả lời, với mỗi truy vấn $(l,r)$, số giá trị phân biệt trong đoạn $a_l, \dots, a_r$, rồi in ra đáp án.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng 1: hai số nguyên $N, Q$ ($1 \le N, Q \le 2 \cdot 10^5$).
+- Dòng 2: $N$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $Q$ dòng tiếp theo, mỗi dòng gồm $l, r$ ($1 \le l \le r \le N$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- Gồm $Q$ dòng, mỗi dòng là đáp án của truy vấn tương ứng.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+5 3
+1 2 1 3 2
+1 3
+2 5
+1 5
 ```
+
 ### Output
+
 ```text
-15
+2
+3
+3
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Segment Tree Dem So Phan Tu Khac Nhau Offline.
+
+- Đoạn $[1,3]$ gồm $1\ 2\ 1$ có hai giá trị phân biệt là $1$ và $2$.
+- Đoạn $[2,5]$ gồm $2\ 1\ 3\ 2$ có ba giá trị phân biệt là $1, 2, 3$.
+- Đoạn $[1,5]$ gồm cả mảng cũng có ba giá trị phân biệt $1, 2, 3$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le N, Q \le 2 \cdot 10^5$; $|a_i| \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

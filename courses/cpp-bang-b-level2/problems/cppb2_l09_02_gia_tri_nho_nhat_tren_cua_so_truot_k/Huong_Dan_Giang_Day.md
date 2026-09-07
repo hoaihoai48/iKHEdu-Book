@@ -75,27 +75,23 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-
-    vector<long long> h(n);
-    for (int i = 0; i < n; ++i) cin >> h[i];
-
-    stack<int> st;
-    long long max_area = 0;
-
-    for (int i = 0; i <= n; ++i) {
-        long long cur_h = (i == n ? 0 : h[i]);
-        while (!st.empty() && h[st.top()] >= cur_h) {
-            long long height = h[st.top()];
-            st.pop();
-            long long width = st.empty() ? i : (i - st.top() - 1);
-            max_area = max(max_area, height * width);
+    int n, k;
+    if (!(cin >> n >> k)) return 0;
+    vector<long long> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+    deque<int> dq;
+    bool first = true;
+    for (int i = 0; i < n; ++i) {
+        while (!dq.empty() && a[dq.back()] >= a[i]) dq.pop_back();
+        dq.push_back(i);
+        if (dq.front() <= i - k) dq.pop_front();
+        if (i >= k - 1) {
+            if (!first) cout << ' ';
+            first = false;
+            cout << a[dq.front()];
         }
-        st.push(i);
     }
-
-    cout << max_area << "\n";
+    cout << "\n";
     return 0;
 }
 ```

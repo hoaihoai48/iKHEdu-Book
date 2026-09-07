@@ -71,13 +71,44 @@ Chuyên đề: **Đệ Quy, Chia Để Trị & Meet in the Middle (MITM)**
 #include <bits/stdc++.h>
 using namespace std;
 
-void gen_xors(int idx, int end_idx, long long cur, const vector<long long> &a, vector<long long> &res) {
-    if (idx == end_idx) {
-        res.push_back(cur);
-        return;
+vector<vector<long long>> pts, tmp;
+
+long double dist2(const vector<long long> &a, const vector<long long> &b) {
+    long double dx = (long double)a[0] - (long double)b[0];
+    long double dy = (long double)a[1] - (long double)b[1];
+    return dx * dx + dy * dy;
+}
+
+long double rec(int l, int r) {
+    int n = r - l;
+    if (n <= 3) {
+        long double best = 4e37L;
+        for (int i = l; i < r; ++i)
+            for (int j = i + 1; j < r; ++j)
+                best = min(best, dist2(pts[i], pts[j]));
+        sort(pts.begin() + l, pts.begin() + r,
+             [](const vector<long long> &a, const vector<long long> &b) { return a[1] < b[1]; });
+        return best;
     }
-    gen_xors(idx + 1, end_idx, cur, a, res);
-    gen_xors(idx + 1, end_idx, cur ^ a[idx], a, res);
+    int m = l + n / 2;
+    long long midx = pts[m][0];
+    long double d = min(rec(l, m), rec(m, r));
+    merge(pts.begin() + l, pts.begin() + m, pts.begin() + m, pts.begin() + r, tmp.begin(),
+          [](const vector<long long> &a, const vector<long long> &b) { return a[1] < b[1]; });
+    copy(tmp.begin(), tmp.begin() + n, pts.begin() + l);
+    int tsz = 0;
+    for (int i = l; i < r; ++i) {
+        long double dx = (long double)pts[i][0] - (long double)midx;
+        if (dx * dx < d) tmp[tsz++] = pts[i];
+    }
+    for (int i = 0; i < tsz; ++i) {
+        for (int j = i + 1; j < tsz; ++j) {
+            long double dy = (long double)tmp[j][1] - (long double)tmp[i][1];
+            if (dy * dy >= d) break;
+            d = min(d, dist2(tmp[i], tmp[j]));
+        }
+    }
+    return d;
 }
 
 int main() {
@@ -85,27 +116,13 @@ int main() {
     cin.tie(nullptr);
 
     int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
-
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-
-    int mid = n / 2;
-    vector<long long> xor1, xor2;
-    gen_xors(0, mid, 0, a, xor1);
-    gen_xors(mid, n, 0, a, xor2);
-
-    unordered_map<long long, int> freq2;
-    for (long long x : xor2) freq2[x]++;
-
-    long long count = 0;
-    for (long long x1 : xor1) {
-        long long need = k ^ x1;
-        if (freq2.count(need)) count += freq2[need];
-    }
-
-    cout << count << "\n";
+    if (!(cin >> n)) return 0;
+    pts.assign(n, vector<long long>(2));
+    for (int i = 0; i < n; ++i) cin >> pts[i][0] >> pts[i][1];
+    sort(pts.begin(), pts.end());
+    tmp.assign(n, vector<long long>(2));
+    long double best = rec(0, n);
+    cout << fixed << setprecision(6) << (double)sqrtl(best) << "\n";
     return 0;
 }
 ```

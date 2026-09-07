@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Can Bang Hai Heap Running Median**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Can Bang Hai Heap Running Median với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm n số được nhập lần lượt. Hãy lập trình sau mỗi lần nhập, in ra trung vị hiện tại của toàn bộ các số đã nhập (làm tròn một chữ số thập phân).
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

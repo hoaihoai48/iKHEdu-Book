@@ -8,28 +8,37 @@ Thay vì trả lời từng câu hỏi một, anh kỹ sư xử lý tất cả c
 
 ## Nhiệm vụ
 
-Cho dữ liệu các đợt đo và nhiều câu hỏi ngưỡng tích lũy. Hãy lập trình trả lời với mỗi câu hỏi đợt đo sớm nhất mà tổng tích lũy vượt ngưỡng.
+Cho dãy $a_1, \dots, a_n$ ghi kết quả từng đợt đo và $q$ câu hỏi, mỗi câu hỏi gồm $(l, r, target)$. Hãy lập trình trả lời với mỗi câu hỏi: vị trí $j$ nhỏ nhất trong $[l, r]$ sao cho $a_l + \dots + a_j \ge target$; in `-1` nếu tổng cả đoạn vẫn chưa đạt ngưỡng.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa ba số nguyên $n, m, q$ ($1 \le n, q \le 2000$, $m$ là tham số dự phòng, chương trình bỏ qua) — số đợt đo và số câu hỏi.
+- Dòng thứ hai chứa $n$ số nguyên $a_i$ ($|a_i| \le 10^9$).
+- $q$ dòng tiếp theo, mỗi dòng chứa ba số nguyên $l, r, target$ ($1 \le l \le r \le n$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- Với mỗi câu hỏi, in ra một dòng là vị trí $j$ thỏa mãn; in `-1` nếu không tồn tại.
 
 ## Sample 1
 ### Input
 ```text
-5
+5 0 2
 1 2 3 4 5
+1 5 7
+2 4 10
 ```
 ### Output
 ```text
-15
+4
+-1
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Chặt Nhị Phân Song Song (Parallel Binary Search).
+
+* Câu hỏi $(1, 5, 7)$: cộng dồn từ vị trí $1$: $1$, rồi $1 + 2 = 3$, rồi $+3 = 6$, rồi $+4 = 10 \ge 7$ — dừng tại vị trí $4$.
+* Câu hỏi $(2, 4, 10)$: cộng dồn $2$, rồi $2 + 3 = 5$, rồi $+4 = 9 < 10$ — hết đoạn mà chưa đạt ngưỡng nên đáp án là `-1`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le n, q \le 2000$, $1 \le l \le r \le n$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

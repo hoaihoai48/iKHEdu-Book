@@ -9,25 +9,32 @@ Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài
 Cho $T$ truy vấn, mỗi truy vấn gồm một số nguyên không âm $n$. Hãy lập trình tính số Fibonacci thứ $n$ (với $F_0 = 0, F_1 = 1$) theo modulo $10^9+7$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên dương $T$ ($1 \le T \le 10^4$) — số lượng truy vấn.
+- $T$ dòng tiếp theo, mỗi dòng chứa một số nguyên không âm $n$ ($0 \le n \le 10^{18}$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- Với mỗi truy vấn, in ra một dòng là số Fibonacci thứ $n$ theo modulo $10^9+7$ (với $F_0 = 0, F_1 = 1$).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+4
+0 1 5 10
 ```
 ### Output
 ```text
-15
+0
+1
+5
+55
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Lũy Thừa Ma Trận 2x2 (Dãy Fibonacci Lớn).
+
+Dãy Fibonacci bắt đầu $0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, \dots$ Do đó $F_0 = 0$, $F_1 = 1$, đếm tiếp tới vị trí thứ $5$ được $5$ và tới vị trí thứ $10$ được $55$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le T \le 10^4$, $0 \le n \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

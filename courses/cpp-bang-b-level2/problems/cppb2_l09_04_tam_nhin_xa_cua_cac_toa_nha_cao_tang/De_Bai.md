@@ -1,33 +1,46 @@
 # Tầm nhìn xa của các tòa nhà cao tầng
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Monotonic Stack đếm số tòa nhà quan sát được.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Dọc con đường ven biển của thành phố có $N$ tòa nhà cao tầng đứng san sát nhau, mỗi tòa cao một số mét nhất định. Hiệp hội du lịch muốn chọn những tòa nhà có thể nhìn thấy biển để đặt biển quảng cáo homestay trên sân thượng, với điều kiện một tòa nhà nhìn được ra biển khi và chỉ khi nó cao hơn mọi tòa nhà đứng giữa nó và bờ biển (phía bên phải). Những tòa bị che khuất hoàn toàn sẽ không được chọn.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là chiều cao các tòa nhà từ trái sang phải (biển ở phía bên phải tòa cuối cùng). Hãy lập trình đếm số tòa nhà cao hơn mọi tòa đứng bên phải nó, rồi in ra số lượng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là số tòa nhà.
+- Dòng thứ hai chứa $N$ số nguyên $h_i$ ($1 \le h_i \le 10^9$), là chiều cao từng tòa.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một số nguyên duy nhất là số tòa nhà nhìn thấy biển.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+4
+4 2 3 1
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Tầm Nhìn Xa Của Các Tòa Nhà Cao Tầng.
+
+- Xét từ tòa gần biển nhất trở về: tòa cao $1$ không bị ai che nên nhìn thấy biển.
+- Tòa cao $3$ cao hơn mọi tòa bên phải nó (chỉ có tòa $1$) nên nhìn thấy biển.
+- Tòa cao $2$ thấp hơn tòa $3$ đứng bên phải nên bị che khuất.
+- Tòa cao $4$ cao hơn mọi tòa bên phải ($2, 3, 1$) nên nhìn thấy biển.
+- Có $3$ tòa nhìn thấy biển.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le h_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

@@ -1,43 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+const long long INF = (long long)4e18;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-
-    vector<vector<int>> adj(n + 1);
-    vector<int> indeg(n + 1, 0);
-
-    for (int i = 0; i < m; ++i) {
-        int u, v; cin >> u >> v;
-        adj[u].push_back(v);
-        indeg[v]++;
+    int N, M, S;
+    if (!(cin >> N >> M >> S)) return 0;
+    vector<vector<pair<int,long long>>> adj(N + 1);
+    for (int i = 0; i < M; i++) {
+        int u, v; long long w; cin >> u >> v >> w;
+        adj[u].push_back({v, w}); adj[v].push_back({u, w});
     }
-
-    queue<int> q;
-    for (int i = 1; i <= n; ++i) {
-        if (indeg[i] == 0) q.push(i);
+    vector<long long> d(N + 1, INF);
+    d[S] = 0;
+    priority_queue<pair<long long,int>, vector<pair<long long,int>>, greater<pair<long long,int>>> pq;
+    pq.push({0, S});
+    while (!pq.empty()) {
+        auto [du, u] = pq.top(); pq.pop();
+        if (du != d[u]) continue;
+        for (auto [v, w] : adj[u])
+            if (d[v] > du + w) { d[v] = du + w; pq.push({d[v], v}); }
     }
-
-    vector<int> topo;
-    while (!q.empty()) {
-        int u = q.front(); q.pop();
-        topo.push_back(u);
-        for (int v : adj[u]) {
-            if (--indeg[v] == 0) q.push(v);
-        }
-    }
-
-    if ((int)topo.size() < n) {
-        cout << "-1\n";
-    } else {
-        for (size_t i = 0; i < topo.size(); ++i) {
-            cout << topo[i] << (i + 1 == topo.size() ? "" : " ");
-        }
-        cout << "\n";
-    }
+    for (int i = 1; i <= N; i++) { if (i > 1) cout << ' '; cout << (d[i] == INF ? -1 : d[i]); }
+    cout << "\n";
     return 0;
 }

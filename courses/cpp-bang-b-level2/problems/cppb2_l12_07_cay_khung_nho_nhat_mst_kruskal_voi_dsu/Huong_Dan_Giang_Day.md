@@ -70,44 +70,38 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản & Nâng Cao (Graph Algorithm
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int timer = 0;
-void dfs_bridge(int u, int p, const vector<vector<int>> &adj, vector<int> &tin, vector<int> &low, int &bridges) {
-    tin[u] = low[u] = ++timer;
-    for (int v : adj[u]) {
-        if (v == p) continue;
-        if (tin[v]) {
-            low[u] = min(low[u], tin[v]);
-        } else {
-            dfs_bridge(v, u, adj, tin, low, bridges);
-            low[u] = min(low[u], low[v]);
-            if (low[v] > tin[u]) bridges++;
-        }
+struct DSU {
+    vector<int> p, r;
+    DSU(int n = 0) { init(n); }
+    void init(int n) { p.resize(n + 1); r.assign(n + 1, 0); for (int i = 1; i <= n; i++) p[i] = i; }
+    int find(int x) { return p[x] == x ? x : p[x] = find(p[x]); }
+    bool unite(int a, int b) {
+        a = find(a); b = find(b);
+        if (a == b) return false;
+        if (r[a] < r[b]) swap(a, b);
+        p[b] = a;
+        if (r[a] == r[b]) r[a]++;
+        return true;
     }
-}
-
+};
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
-        int u, v; cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
+    int N, M;
+    if (!(cin >> N >> M)) return 0;
+    vector<tuple<long long,int,int>> e;
+    for (int i = 0; i < M; i++) { int u, v; long long w; cin >> u >> v >> w; e.push_back({w, u, v}); }
+    sort(e.begin(), e.end());
+    DSU dsu(N);
+    long long sum = 0;
+    int used = 0;
+    for (auto &t : e) {
+        long long w; int u, v; tie(w, u, v) = t;
+        if (dsu.unite(u, v)) { sum += w; used++; }
     }
-
-    vector<int> tin(n + 1, 0), low(n + 1, 0);
-    int bridges = 0;
-
-    for (int i = 1; i <= n; ++i) {
-        if (!tin[i]) dfs_bridge(i, 0, adj, tin, low, bridges);
-    }
-
-    cout << bridges << "\n";
+    if (N == 1) { cout << 0 << "\n"; return 0; }
+    if (used != N - 1) cout << "IMPOSSIBLE\n";
+    else cout << sum << "\n";
     return 0;
 }
 ```

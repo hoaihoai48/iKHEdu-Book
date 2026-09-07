@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Tam Nhin Toa Nha Hai Chieu**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Tam Nhin Toa Nha Hai Chieu với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho dãy gồm n chiều cao tòa nhà h[i]. Hãy lập trình đếm với mỗi vị trí i số tòa nhà nhìn thấy được sang trái và sang phải, rồi in ra dãy tổng số tòa nhà nhìn thấy được cộng chính nó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

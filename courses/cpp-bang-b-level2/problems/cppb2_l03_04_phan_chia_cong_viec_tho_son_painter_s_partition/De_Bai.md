@@ -11,25 +11,29 @@ Mọi người cùng bàn cách chia sao cho công việc cân đối, không ai
 Cho thời gian sơn từng đoạn tường và số thợ. Hãy lập trình tìm thời gian hoàn thành nhỏ nhất có thể của người làm lâu nhất khi chia công việc liên tiếp cho các thợ.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $n, k$ ($1 \le k \le n \le 10^5$) — số đoạn tường và số thợ sơn.
+- Dòng thứ hai chứa $n$ số nguyên dương $a_i$ ($1 \le a_i \le 10^9$) là thời gian sơn từng đoạn (mỗi thợ sơn một số đoạn liên tiếp, mỗi đoạn đúng một thợ).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là tổng thời gian lớn nhất của một thợ trong phương án chia việc tốt nhất (tổng thời gian hoàn thành cả công trình khi các thợ làm song song).
 
 ## Sample 1
 ### Input
 ```text
-5
-1 2 3 4 5
+4 2
+10 20 30 40
 ```
 ### Output
 ```text
-15
+60
 ```
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Phân Chia Công Việc Thợ Sơn (Painter's Partition).
+
+Thử đáp án $60$: thợ thứ nhất sơn $10 + 20 + 30 = 60$ (thêm đoạn $40$ nữa sẽ vượt), thợ thứ hai sơn nốt đoạn $40$ — vừa đủ $2$ thợ. Thử $59$: thợ thứ nhất chỉ sơn được $10 + 20 = 30$ (thêm $30$ nữa thành $60 > 59$), thợ thứ hai sơn $30$ rồi không gánh nổi đoạn $40$ ($30 + 40 > 59$) nên cần tới thợ thứ ba — không đủ người. Vậy đáp án là $60$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le k \le n \le 10^5$, $1 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

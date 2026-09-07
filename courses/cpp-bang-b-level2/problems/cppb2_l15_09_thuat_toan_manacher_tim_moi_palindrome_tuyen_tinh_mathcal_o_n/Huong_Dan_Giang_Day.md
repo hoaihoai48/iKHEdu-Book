@@ -70,30 +70,31 @@ Chuyên đề: **Xử Lý Chuỗi, String Hashing & BigInt**
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-const long long BASE1 = 311, MOD1 = 1000000007;
-const long long BASE2 = 317, MOD2 = 1000000009;
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n;
-    if (!(cin >> n)) return 0;
-
-    set<pair<long long, long long>> hashes;
-
-    for (int i = 0; i < n; ++i) {
-        string s; cin >> s;
-        long long h1 = 0, h2 = 0;
-        for (char c : s) {
-            h1 = (h1 * BASE1 + c) % MOD1;
-            h2 = (h2 * BASE2 + c) % MOD2;
-        }
-        hashes.insert({h1, h2});
+    string s;
+    if (!(cin >> s)) return 0;
+    int n = (int)s.size();
+    vector<int> d1(n), d2(n);
+    int l = 0, r = -1;
+    for (int i = 0; i < n; i++) {
+        int k = (i > r) ? 1 : min(d1[l + r - i], r - i + 1);
+        while (i - k >= 0 && i + k < n && s[i - k] == s[i + k]) k++;
+        d1[i] = k;
+        if (i + k - 1 > r) { l = i - k + 1; r = i + k - 1; }
     }
-
-    cout << hashes.size() << "\n";
+    l = 0; r = -1;
+    for (int i = 0; i < n; i++) {
+        int k = (i > r) ? 0 : min(d2[l + r - i + 1], r - i + 1);
+        while (i - k - 1 >= 0 && i + k < n && s[i - k - 1] == s[i + k]) k++;
+        d2[i] = k;
+        if (i + k - 1 > r) { l = i - k; r = i + k - 1; }
+    }
+    long long ans = 0;
+    for (int v : d1) ans += v;
+    for (int v : d2) ans += v;
+    cout << ans << "\n";
     return 0;
 }
 ```

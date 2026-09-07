@@ -1,33 +1,44 @@
 # Cắt băng rôn quảng cáo tối ưu bằng 2 deque
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Duy trì $\max - \min \le C$ trên cửa sổ co giãn.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhà thực vật học ghi lại thứ tự thăm các nút của một cây tìm kiếm nhị phân theo cách duyệt tiền thứ tự (thăm nút rồi mới thăm cây con trái và cây con phải). Về phòng thí nghiệm, trợ lý của ông muốn kiểm tra lại xem dãy số ghi trong sổ có thực sự là một thứ tự duyệt đúng hay không trước khi nhập vào cơ sở dữ liệu mẫu vật.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên phân biệt là dãy số cần kiểm tra. Hãy lập trình xác định xem dãy này có thể là thứ tự duyệt tiền thứ tự (nút, trái, phải) của một cây tìm kiếm nhị phân nào đó hay không, rồi in ra `YES` nếu đúng và `NO` nếu sai.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ ($1 \le N \le 10^5$), là độ dài dãy số.
+- Dòng thứ hai chứa $N$ số nguyên phân biệt $a_i$ ($-10^9 \le a_i \le 10^9$), là dãy cần kiểm tra.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra `YES` nếu là thứ tự duyệt đúng, ngược lại in ra `NO`.
 
 ## Sample 1
+
 ### Input
+
 ```text
 5
-1 2 3 4 5
+5 2 1 3 6
 ```
+
 ### Output
+
 ```text
-15
+YES
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Cắt Băng Rôn Quảng Cáo Tối Ưu Bằng 2 Deque.
+
+- Coi $5$ là gốc của cây: các số nhỏ hơn $5$ thuộc cây con trái, các số lớn hơn thuộc cây con phải.
+- Dãy con trái $2, 1, 3$ có gốc $2$, với $1$ nằm trái $2$ và $3$ nằm phải $2$ nhưng vẫn nhỏ hơn $5$ nên hợp lệ.
+- Dãy con phải chỉ gồm $6$ lớn hơn $5$ nên hợp lệ, toàn bộ dãy là một thứ tự duyệt đúng, đáp án `YES`.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, các $a_i$ phân biệt, $-10^9 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

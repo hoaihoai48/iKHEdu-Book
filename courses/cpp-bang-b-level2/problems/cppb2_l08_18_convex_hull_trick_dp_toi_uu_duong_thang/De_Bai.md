@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Convex Hull Trick Dp Toi Uu Duong Thang**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Convex Hull Trick Dp Toi Uu Duong Thang với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho hai dãy a[i], b[i] gồm n số. Hãy lập trình tính dãy dp với dp[0] = 0 và dp[i] = min(dp[j] + b[j] * a[i]) với j < i, rồi in ra dp[n-1].
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

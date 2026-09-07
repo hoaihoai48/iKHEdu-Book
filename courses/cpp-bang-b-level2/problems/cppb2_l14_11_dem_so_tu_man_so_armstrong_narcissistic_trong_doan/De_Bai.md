@@ -1,33 +1,41 @@
-# Đếm số tự mãn (số armstrong / narcissistic) trong đoạn
+# Đếm số Armstrong trong đoạn
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Tự Mãn (Số Armstrong / Narcissistic) Trong Đoạn** là bài toán trọng tâm thuộc cấp độ **P4** nhằm rèn luyện: Digit DP tính tổng lũy thừa bậc $K$ chữ số.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Bảo tàng toán học chuẩn bị triển lãm các số Armstrong là những số bằng tổng các lũy thừa bậc n của chính các chữ số của nó, với n là số chữ số, để minh họa vẻ đẹp số học cho học sinh tham quan. Ban tổ chức xét một đoạn số liên tiếp và cần liệt kê đếm có bao nhiêu số Armstrong trong đoạn để in catalogue giới thiệu từng số kèm lời giải thích. Vì số Armstrong rất hiếm nên chương trình tiền tính toàn bộ danh sách tới giới hạn rồi trả lời mỗi đoạn bằng tìm kiếm nhị phân.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Tự Mãn (số Armstrong / Narcissistic) Trong Đoạn với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số Armstrong $x$ ($L \le x \le R$), tức $x$ bằng tổng lũy thừa bậc $n$ của các chữ số của nó ($n$ là số chữ số), rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một dòng duy nhất là số lượng số Armstrong trong đoạn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 500
 ```
+
 ### Output
+
 ```text
-15
-```
+13```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Tự Mãn (Số Armstrong / Narcissistic) Trong Đoạn.
+
+- Các số một chữ số $1$ đến $9$ đều là Armstrong (chín số).
+- Số $153 = 1^3+5^3+3^3$, $370 = 3^3+7^3+0^3$, $371$ và $407$ cũng thỏa mãn.
+- Tổng $9 + 4 = 13$ nên chương trình in ra $13$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

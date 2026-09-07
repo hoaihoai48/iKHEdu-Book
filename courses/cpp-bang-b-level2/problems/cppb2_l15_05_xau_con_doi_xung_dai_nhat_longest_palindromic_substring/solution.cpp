@@ -1,46 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-vector<int> compute_lps(const string &p) {
-    int m = p.size();
-    vector<int> lps(m, 0);
-    int len = 0, i = 1;
-    while (i < m) {
-        if (p[i] == p[len]) {
-            len++;
-            lps[i] = len;
-            i++;
-        } else {
-            if (len != 0) len = lps[len - 1];
-            else { lps[i] = 0; i++; }
-        }
-    }
-    return lps;
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    string t, p;
-    if (!(cin >> t >> p)) return 0;
-
-    int n = t.size(), m = p.size();
-    vector<int> lps = compute_lps(p);
-    int i = 0, j = 0;
-
-    while (i < n) {
-        if (t[i] == p[j]) {
-            i++; j++;
-        }
-        if (j == m) {
-            cout << i - j + 1 << " ";
-            j = lps[j - 1];
-        } else if (i < n && t[i] != p[j]) {
-            if (j != 0) j = lps[j - 1];
-            else i++;
-        }
+    string s;
+    if (!(cin >> s)) return 0;
+    int n = (int)s.size();
+    vector<int> d1(n), d2(n);
+    int l = 0, r = -1;
+    for (int i = 0; i < n; i++) {
+        int k = (i > r) ? 1 : min(d1[l + r - i], r - i + 1);
+        while (i - k >= 0 && i + k < n && s[i - k] == s[i + k]) k++;
+        d1[i] = k;
+        if (i + k - 1 > r) { l = i - k + 1; r = i + k - 1; }
     }
-    cout << "\n";
+    l = 0; r = -1;
+    for (int i = 0; i < n; i++) {
+        int k = (i > r) ? 0 : min(d2[l + r - i + 1], r - i + 1);
+        while (i - k - 1 >= 0 && i + k < n && s[i - k - 1] == s[i + k]) k++;
+        d2[i] = k;
+        if (i + k - 1 > r) { l = i - k; r = i + k - 1; }
+    }
+    int bestLen = 1, bestPos = 0;
+    for (int i = 0; i < n; i++) {
+        int len = d1[i] * 2 - 1, pos = i - d1[i] + 1;
+        if (len > bestLen || (len == bestLen && pos < bestPos)) { bestLen = len; bestPos = pos; }
+        len = d2[i] * 2; pos = i - d2[i];
+        if (len > bestLen || (len == bestLen && len > 0 && pos < bestPos)) { bestLen = len; bestPos = pos; }
+    }
+    cout << s.substr(bestPos, bestLen) << "\n";
     return 0;
 }

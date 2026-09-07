@@ -68,29 +68,21 @@ Chuyên đề: **Tổ Hợp, Hoán Vị & Xác Suất Cơ Bản (Combinatorics)*
 
 ## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
 ```cpp
-#include <bits/stdio.h>
 #include <bits/stdc++.h>
 using namespace std;
-
-const long long MOD = 1000000007;
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-
-    vector<vector<long long>> E(n + 1, vector<long long>(k + 1, 0));
-    E[1][0] = 1;
-
-    for (int i = 2; i <= n; ++i) {
-        for (int j = 0; j <= k; ++j) {
-            E[i][j] = ((j + 1) * E[i - 1][j] + (j > 0 ? (i - j) * E[i - 1][j - 1] : 0)) % MOD;
-        }
-    }
-
-    cout << E[n][k] << "\n";
+    long long N;
+    if (!(cin >> N)) return 0;
+    __int128 r = (__int128)N * (N - 1) * (N - 2) / 6;
+    long long hi = (long long)(r / 1000000000000000000LL);
+    if (hi == 0) { cout << (long long)r << "\n"; return 0; }
+    string s;
+    __int128 t = r;
+    while (t > 0) { s.push_back(char('0' + t % 10)); t /= 10; }
+    reverse(s.begin(), s.end());
+    cout << s << "\n";
     return 0;
 }
 ```

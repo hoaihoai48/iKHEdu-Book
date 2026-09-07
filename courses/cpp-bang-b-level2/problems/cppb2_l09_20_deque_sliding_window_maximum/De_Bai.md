@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Deque Sliding Window Maximum**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Deque Sliding Window Maximum với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho mảng a gồm n số và độ dài cửa sổ k. Hãy lập trình tìm giá trị lớn nhất trong mỗi cửa sổ trượt liên tiếp độ dài k và in ra dãy các giá trị lớn nhất đó.
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

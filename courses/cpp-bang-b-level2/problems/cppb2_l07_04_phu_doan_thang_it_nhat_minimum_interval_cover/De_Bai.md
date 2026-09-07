@@ -1,33 +1,47 @@
 # Phủ đoạn thẳng ít nhất (minimum interval cover)
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Phủ Đoạn Thẳng Ít Nhất (Minimum Interval Cover)** là bài toán trọng tâm thuộc cấp độ **P1** nhằm rèn luyện: Tham lam chọn đoạn vươn xa nhất.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Đội thi công được giao nhiệm vụ lắp đèn đường dọc theo con đường dài $L$ kilômét tính từ đầu làng. Công ty đã mua sẵn nhiều loại cột đèn, mỗi cột khi dựng tại một vị trí sẽ chiếu sáng một đoạn đường $[l_i, r_i]$ nhất định. Để tiết kiệm chi phí nhân công, đội trưởng muốn chọn ra ít cột đèn nhất sao cho mọi điểm trên con đường từ $0$ đến $L$ đều được chiếu sáng, bởi mỗi cột dựng thêm đều tốn một ngày công của cả đội.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Phủ Đoạn Thẳng Ít Nhất (minimum Interval Cover) với độ phức tạp tối ưu nhất.
+
+Cho độ dài $L$ của con đường và $N$ đoạn chiếu sáng $[l_i, r_i]$. Hãy lập trình chọn ra ít đoạn nhất sao cho hợp của chúng phủ kín toàn bộ đoạn $[0, L]$, rồi in ra số đoạn đó. Nếu không thể phủ kín thì in ra $-1$.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa số nguyên $N$ và số nguyên $L$ ($1 \le N \le 10^5$, $1 \le L \le 10^9$), là số cột đèn và độ dài con đường.
+- $N$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $l_i, r_i$ ($0 \le l_i < r_i \le 10^9$), là đoạn đường mà một cột chiếu sáng.
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra số đoạn ít nhất để phủ kín $[0, L]$, hoặc $-1$ nếu không thể.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+3 10
+0 4
+3 8
+7 10
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Phủ Đoạn Thẳng Ít Nhất (Minimum Interval Cover).
+
+- Bắt đầu từ điểm $0$: chỉ có đoạn $[0, 4]$ vươn tới được nên buộc phải chọn nó, vùng sáng tới điểm $4$.
+- Từ điểm $4$: đoạn $[3, 8]$ bắt đầu trước điểm $4$ và vươn xa nhất tới $8$ nên chọn nó, vùng sáng tới điểm $8$.
+- Từ điểm $8$: đoạn $[7, 10]$ bắt đầu trước điểm $8$ và vươn tới $10$ nên chọn nó, cả con đường được phủ kín.
+- Tổng cộng cần $3$ đoạn và không thể ít hơn vì mỗi bước đều chỉ có một lựa chọn vươn xa nhất.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le N \le 10^5$, $1 \le L \le 10^9$, $0 \le l_i < r_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

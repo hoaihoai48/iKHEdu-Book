@@ -1,31 +1,42 @@
-# Thuat toan Manacher palindrome
+# Độ dài đối xứng dài nhất (Manacher)
 
 ## Bối cảnh
-Cho dữ liệu bài toán liên quan đến **Thuat Toan Manacher Palindrome**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
+
+Đội bảo trì đường ống dẫn khí đốt mã hóa nhật ký áp suất thành chuỗi ký tự và cần phát hiện nhanh đoạn đối xứng dài nhất vì đó là dấu hiệu của chu kỳ vận hành ổn định của toàn tuyến ống. Mỗi ngày hàng triệu ký tự được ghi nhận nên thuật toán thử từng tâm một không thể đáp ứng, đội kỹ thuật triển khai Manacher để quét toàn bộ trong thời gian tuyến tính. Kết quả giúp điều độ viên quyết định có cần dừng tuyến để kiểm tra hay không.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Thuat Toan Manacher Palindrome với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+
+Cho xâu $S$. Hãy lập trình tính độ dài của xâu con liên tiếp đối xứng dài nhất của $S$ bằng thuật toán Manacher, rồi in ra kết quả.
 
 ## Input
-- Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).
-- Các dòng tiếp theo: Chứa các phần tử của mảng hoặc các truy vấn cần xử lý.
+
+- Dòng duy nhất: xâu $S$ ($1 \le |S| \le 10^6$).
 
 ## Output
-- In ra kết quả tối ưu của bài toán trên từng dòng tương ứng.
+
+- In ra một dòng duy nhất là độ dài cần tìm.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+babad
 ```
+
 ### Output
+
 ```text
-15
+3
 ```
+
 ### Giải thích
-* Thuật toán khởi tạo cấu trúc dữ liệu, duyệt và tính toán kết quả tối ưu của Thuat Toan Manacher Palindrome.
+
+- Xâu $babad$: đoạn $bab$ (vị trí $1$ đến $3$) đối xứng và dài ba ký tự.
+- Mọi đoạn dài bốn hoặc năm ký tự đều không đối xứng.
+- Độ dài lớn nhất là $3$ nên in ra $3$.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le N \le 10^5$.
+
+- $1 \le |S| \le 10^6$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

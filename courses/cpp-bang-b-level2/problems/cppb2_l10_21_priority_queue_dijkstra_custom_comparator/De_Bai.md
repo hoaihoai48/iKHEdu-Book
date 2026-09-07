@@ -4,7 +4,7 @@
 Cho dữ liệu bài toán liên quan đến **Priority Queue Dijkstra Custom Comparator**. Cần thiết kế thuật toán tối ưu để xử lý nhanh chóng trong giới hạn thời gian $1.0\text{s}$.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Priority Queue Dijkstra Custom Comparator với độ phức tạp tối ưu nhất, xử lý chính xác tất cả các ràng buộc dữ liệu.
+Cho đồ thị có hướng gồm n đỉnh và m cạnh có trọng số không âm. Hãy lập trình tìm đường đi ngắn nhất từ đỉnh 1 tới đỉnh n và in ra khoảng cách đó (in -1 nếu không tới được).
 
 ## Input
 - Dòng 1: Gồm các số nguyên biểu thị tham số kích thước bài toán ($1 \le N \le 10^5$).

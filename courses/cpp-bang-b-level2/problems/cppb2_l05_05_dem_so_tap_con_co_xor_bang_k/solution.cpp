@@ -6,32 +6,33 @@ int main() {
     cin.tie(nullptr);
 
     int n;
-    long long target;
-    if (!(cin >> n >> target)) return 0;
-
-    vector<long long> a(n), b(n), c(n), d(n);
+    long long K;
+    if (!(cin >> n >> K)) return 0;
+    vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
-    for (int i = 0; i < n; ++i) cin >> b[i];
-    for (int i = 0; i < n; ++i) cin >> c[i];
-    for (int i = 0; i < n; ++i) cin >> d[i];
 
-    unordered_map<long long, int> ab_sum;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            ab_sum[a[i] + b[j]]++;
-        }
+    int n1 = n / 2;
+    vector<long long> x1, x2;
+    x1.reserve(1u << min(n1, 22));
+    for (long long mask = 0; mask < (1LL << n1); ++mask) {
+        long long xr = 0;
+        for (int i = 0; i < n1; ++i) if (mask & (1LL << i)) xr ^= a[i];
+        x1.push_back(xr);
     }
-
-    long long count = 0;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            long long rem = target - (c[i] + d[j]);
-            if (ab_sum.count(rem)) {
-                count += ab_sum[rem];
-            }
-        }
+    int n2 = n - n1;
+    x2.reserve(1u << min(n2, 22));
+    for (long long mask = 0; mask < (1LL << n2); ++mask) {
+        long long xr = 0;
+        for (int i = 0; i < n2; ++i) if (mask & (1LL << i)) xr ^= a[n1 + i];
+        x2.push_back(xr);
     }
+    sort(x2.begin(), x2.end());
 
-    cout << count << "\n";
+    long long ans = 0;
+    for (long long v : x1) {
+        auto r = equal_range(x2.begin(), x2.end(), K ^ v);
+        ans += (long long)(r.second - r.first);
+    }
+    cout << ans << "\n";
     return 0;
 }

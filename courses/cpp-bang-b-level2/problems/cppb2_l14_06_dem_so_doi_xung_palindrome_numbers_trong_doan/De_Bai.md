@@ -1,33 +1,42 @@
-# Đếm số đối xứng (palindrome numbers) trong đoạn
+# Đếm số đối xứng trong đoạn
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Đếm Số Đối Xứng (Palindrome Numbers) Trong Đoạn** là bài toán trọng tâm thuộc cấp độ **P3** nhằm rèn luyện: Digit DP xây dựng nửa đầu và nửa sau.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Nhà sách thiếu nhi in mã số đối xứng lên bìa bộ truyện tranh sưu tầm để độc giả nhỏ tuổi dễ ghi nhớ và thích thú khi đọc ngược vẫn giống hệt. Mỗi đợt in xét một đoạn mã liên tiếp và cần đếm có bao nhiêu mã đối xứng để đặt giấy bìa cứng chống thấm nước. Chương trình sinh nửa đầu rồi phản chiếu giúp đếm nhanh cả đoạn dài mà không cần kiểm tra từng mã số.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Đếm Số Đối Xứng (palindrome Numbers) Trong Đoạn với độ phức tạp tối ưu nhất.
+
+Cho hai số nguyên $L, R$. Hãy lập trình đếm các số $x$ ($L \le x \le R$) đọc xuôi ngược giống nhau (palindrome), rồi in ra kết quả.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng duy nhất: hai số nguyên $L, R$ ($0 \le L \le R \le 10^{18}$).
 
 ## Output
-- In ra kết quả của bài toán thỏa mãn các điều kiện đề bài trên một hoặc nhiều dòng.
+
+- In ra một dòng duy nhất là số lượng số đối xứng trong đoạn.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+1 20
 ```
+
 ### Output
+
 ```text
-15
+10
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Đếm Số Đối Xứng (Palindrome Numbers) Trong Đoạn.
+
+- Các số một chữ số từ $1$ đến $9$ đều đối xứng, tổng chín số.
+- Trong các số hai chữ số tới $20$ chỉ có $11$ đọc ngược vẫn là $11$.
+- Tổng $9 + 1 = 10$ nên chương trình in ra $10$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $0 \le L \le R \le 10^{18}$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

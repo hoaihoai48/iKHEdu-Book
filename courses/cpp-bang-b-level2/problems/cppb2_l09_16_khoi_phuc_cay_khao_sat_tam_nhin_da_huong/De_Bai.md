@@ -1,33 +1,45 @@
 # Khôi phục cây khảo sát tầm nhìn đa hướng
 
 ## Bối cảnh
-Trong lập trình thi đấu và giải quyết bài toán tối ưu, **Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng** là bài toán trọng tâm thuộc cấp độ **P5** nhằm rèn luyện: Monotonic Stack 2 chiều xây dựng Cartesian Tree.
 
-Cho dữ liệu đầu vào thỏa mãn các ràng buộc toán học của bài toán. Hãy lập trình tìm kết quả chính xác theo yêu cầu.
+Trạm quan trắc môi trường ghi lại chỉ số bụi mịn mỗi giờ trong suốt $N$ giờ của đợt ô nhiễm không khí. Để đánh giá mức độ nghiêm trọng theo từng khung thời gian, trạm cần tính với mỗi khoảng $K$ giờ liên tiếp thì chỉ số cao nhất là bao nhiêu, rồi cộng dồn các giá trị cao nhất này thành một con số tổng hợp duy nhất. Con số tổng càng lớn thì đợt ô nhiễm càng kéo dài và đậm đặc, giúp thành phố quyết định có nên cho học sinh nghỉ học hay không.
 
 ## Nhiệm vụ
-Hãy lập trình giải quyết bài toán Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng với độ phức tạp tối ưu nhất.
+
+Cho $N$ số nguyên là chỉ số bụi mịn từng giờ và độ dài cửa sổ $K$. Với mỗi cửa sổ gồm $K$ giờ liên tiếp, lấy giá trị lớn nhất trong cửa sổ. Hãy lập trình tính tổng các giá trị lớn nhất này trên mọi cửa sổ, rồi in ra tổng đó.
 
 ## Input
-- Dòng đầu tiên chứa số lượng phần tử hoặc số lượng truy vấn $N$ hoặc $T$.
-- Các dòng tiếp theo chứa dữ liệu chi tiết của bài toán theo chuẩn thi đấu.
+
+- Dòng đầu tiên chứa hai số nguyên $N, K$ ($1 \le K \le N \le 10^6$), là số giờ quan trắc và độ dài cửa sổ.
+- Dòng thứ hai chứa $N$ số nguyên $a_i$ ($-10^9 \le a_i \le 10^9$), là chỉ số từng giờ.
 
 ## Output
-- In ra kết quả trên một dòng.
+
+- In ra một số nguyên duy nhất là tổng các giá trị lớn nhất.
 
 ## Sample 1
+
 ### Input
+
 ```text
-5
-1 2 3 4 5
+8 3
+1 3 -1 -3 5 3 6 7
 ```
+
 ### Output
+
 ```text
-15
+29
 ```
+
 ### Giải thích
-* Kết quả tính toán phù hợp với yêu cầu của bài toán Khôi Phục Cây Khảo Sát Tầm Nhìn Đa Hướng.
+
+- Cửa sổ $[1, 3, -1]$ có giá trị lớn nhất $3$; trượt sang $[3, -1, -3]$ được $3$.
+- Cửa sổ $[-1, -3, 5]$ được $5$; cửa sổ $[-3, 5, 3]$ được $5$.
+- Cửa sổ $[5, 3, 6]$ được $6$; cửa sổ cuối $[3, 6, 7]$ được $7$.
+- Tổng sáu giá trị là $3 + 3 + 5 + 5 + 6 + 7 = 29$.
 
 ## Ràng buộc
-- $100\%$ số test có dữ liệu đầu vào nằm trong phạm vi cho phép.
+
+- $1 \le K \le N \le 10^6$, $-10^9 \le a_i \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.
