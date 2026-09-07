@@ -3,76 +3,44 @@ Chuyên đề: **Thuật Toán Sắp Xếp & Khai Thác Trật Tự (Sorting)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Thuật Toán Sắp Xếp & Khai Thác Trật Tự (Sorting).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho danh sách $N$ số nguyên không âm. Ghép toàn bộ các số này lại thành một số nguyên lớn nhất có thể.
+- **Tại sao so sánh thông thường bị sai?**
+  - Nếu so sánh theo thứ tự từ điển thông thường (`"9" > "34"` đúng, nhưng `"3" > "30"` thì `"30"` lại dài hơn `"3"`). Nếu xếp `"30"` trước `"3"` ta được `"303"`, trong khi `"3"` trước `"30"` cho `"330"` lớn hơn!
+- **Tính chất bắc cầu của phép ghép (Greedy Comparator):**
+  - Để quyết định giữa hai chuỗi $u$ và $v$ chuỗi nào nên đứng trước, ta so sánh trực tiếp kết quả của hai cách ghép:
+    $$\text{Nếu } u + v > v + u \implies u \text{ phải đứng trước } v.$$
+  - Quan hệ này thỏa mãn tính chất phản đối xứng và bắc cầu (Strict Weak Ordering), cho phép hàm `sort` định hình đúng toàn bộ dãy ghép.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 số)
+Mẫu thử: Danh sách gồm 4 chuỗi `["3", "30", "34", "5", "9"]`.
+
+| Cặp so sánh $(u, v)$ | Ghép $u + v$ | Ghép $v + u$ | Quyết định |
+|---|---|---|---|
+| `"9"` và `"5"` | `"95"` | `"59"` | `"9"` đứng trước `"5"` |
+| `"34"` và `"3"` | `"343"` | `"334"` | `"34"` đứng trước `"3"` |
+| `"3"` và `"30"` | `"330"` | `"303"` | `"3"` đứng trước `"30"` |
+
+Sau khi sắp xếp: `["9", "5", "34", "3", "30"]`.
+Ghép lại được số lớn nhất: `9534330`.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Nếu mảng chưa có thứ tự, ta phải tốn bao nhiêu chi phí để kiểm tra mọi cặp phần tử?
-2. Khi sắp xếp mảng tăng dần, các phần tử có khoảng cách nhỏ nhất sẽ nằm ở đâu?
-3. Ta có thể gom nhóm hoặc loại bỏ các phần tử trùng lặp trong thời gian tuyến tính sau khi sắp xếp không?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Toàn số 0:** Nếu input gồm các số `[0, 0, 0]`, kết quả ghép sẽ là `"000"`. Đáp số hợp lệ của bài toán khi đó chỉ là một số `"0"`. Cần kiểm tra nếu phần tử đầu tiên sau khi sắp xếp là `"0"` thì in ngay `"0"` và kết thúc.
+- **Bẫy 2 — Dùng dấu `>=` trong comparator:** Viết `return u + v >= v + u;` sẽ gây lỗi vi phạm Strict Weak Ordering dẫn đến crash chương trình khi gặp hai số giống hệt nhau.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Tận dụng tính chất lân cận của mảng sau khi sắp xếp: các phần tử có giá trị gần nhau nhất luôn nằm kề nhau.
-- Sử dụng hàm `sort` kết hợp Comparator chuẩn Strict Weak Ordering để định hình lại cấu trúc dữ liệu trong $\mathcal{O}(N \log N)$.
-
-### 4.2. Bất biến toán học (Invariant):
-> Sau khi sắp xếp, $\forall i < j \implies A_i \le A_j$. Mọi cặp phần tử tối ưu khoảng cách luôn có dạng $(A_k, A_{k+1})$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4
-3 30 34 5
-```
-* **Output:**
-```text
-534330
-```
-* **Phân tích quá trình thực thi:**
-  Thuật toán tiến hành khởi tạo cấu trúc dữ liệu, duyệt tuyến tính qua từng phần tử và cập nhật kết quả tối ưu theo đúng nguyên lý thiết kế.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N \log N)$ cho bước sắp xếp và $\mathcal{O}(N)$ cho bước duyệt tuyến tính $\implies$ Tổng thời gian: $\mathcal{O}(N \log N)$, chạy mượt mà dưới $0.1\text{s}$ với $N = 10^5$.
-- **Không gian (Space Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$ phụ thuộc vào việc xử lý mảng tại chỗ (in-place).
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Sử dụng dấu `<=` trong hàm so sánh dẫn đến vi phạm tiên đề Strict Weak Ordering gây Runtime Error / Crash.
-2. Tràn số khi nhân hoặc cộng các phần tử vượt giới hạn $2 \cdot 10^9$ (cần dùng `long long`).
-3. Quên lưu lại chỉ số gốc khi đề bài yêu cầu truy vết vị trí ban đầu.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-bool cmp(const string &a, const string &b) {
-    return a + b > b + a;
+bool cmp(const string &u, const string &v) {
+    return u + v > v + u;
 }
 
 int main() {
@@ -82,27 +50,20 @@ int main() {
     int n;
     if (!(cin >> n)) return 0;
 
-    vector<string> s(n);
-    for (int i = 0; i < n; ++i) cin >> s[i];
+    vector<string> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(s.begin(), s.end(), cmp);
+    sort(a.begin(), a.end(), cmp);
 
-    if (s[0] == "0") {
-        cout << 0 << "\n";
+    if (a[0] == "0") {
+        cout << "0\n";
         return 0;
     }
 
     for (int i = 0; i < n; ++i) {
-        cout << s[i];
+        cout << a[i];
     }
     cout << "\n";
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

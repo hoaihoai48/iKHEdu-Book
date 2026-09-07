@@ -3,88 +3,63 @@ Chuyên đề: **Thuật Toán Sắp Xếp & Khai Thác Trật Tự (Sorting)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Thuật Toán Sắp Xếp & Khai Thác Trật Tự (Sorting).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho danh sách $N$ số nguyên dương. Sắp xếp lại dãy số theo quy tắc:
+  1. Số nào có **tổng các chữ số** nhỏ hơn sẽ đứng trước.
+  2. Nếu hai số có cùng tổng chữ số, số có **giá trị nhỏ hơn** sẽ đứng trước.
+- **Phương pháp tiếp cận — Hàm tính tổng chữ số & Custom Comparator:**
+  - Viết hàm phụ trợ `int sum_digits(long long n)`: Dùng vòng lặp `while (n > 0)` lấy `n % 10` cộng dồn vào tổng, sau đó `n /= 10`.
+  - Định nghĩa hàm so sánh `bool cmp(long long u, long long v)`:
+    ```cpp
+    int su = sum_digits(u), sv = sum_digits(v);
+    if (su != sv) return su < sv;
+    return u < v;
+    ```
+  - Gọi `sort(a.begin(), a.end(), cmp)`. Độ phức tạp thời gian: $\mathcal{O}(N \log N \cdot \log_{10}(\max A))$.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 phần tử)
+Mẫu thử: $N = 5$, mảng ban đầu `a = [15, 20, 9, 32, 11]`.
+
+| Phần tử $x$ | Tổng chữ số $S(x)$ | Thứ tự ưu tiên sau phân tích |
+|---|---|---|
+| `20` | $2 + 0 = 2$ | Ưu tiên 1 (tổng chữ số nhỏ nhất là 2) |
+| `11` | $1 + 1 = 2$ | Ưu tiên 2 (cùng tổng 2, nhưng $20 > 11$ nên `11` đứng trước `20`) |
+| `32` | $3 + 2 = 5$ | Ưu tiên 3 (tổng 5) |
+| `15` | $1 + 5 = 6$ | Ưu tiên 4 (tổng 6) |
+| `9` | $9$ | Ưu tiên 5 (tổng chữ số lớn nhất là 9) |
+
+Kết quả sau khi sắp xếp chuẩn xác: `11 20 32 15 9`.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Nếu mảng chưa có thứ tự, ta phải tốn bao nhiêu chi phí để kiểm tra mọi cặp phần tử?
-2. Khi sắp xếp mảng tăng dần, các phần tử có khoảng cách nhỏ nhất sẽ nằm ở đâu?
-3. Ta có thể gom nhóm hoặc loại bỏ các phần tử trùng lặp trong thời gian tuyến tính sau khi sắp xếp không?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tính lại tổng chữ số quá nhiều lần:** Trong hàm `cmp`, việc gọi `sum_digits` liên tục trong mỗi phép so sánh vẫn chấp nhận được khi $N \le 10^5$. Tuy nhiên, để tối ưu tốc độ tối đa, có thể tiền tính tổng chữ số và lưu dưới dạng `pair<int, long long>` (tổng chữ số, giá trị gốc).
+- **Bẫy 2 — Số $0$:** Nếu số có thể bằng $0$, hàm tính tổng chữ số phải xử lý đúng trường hợp này (tổng bằng 0).
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Tận dụng tính chất lân cận của mảng sau khi sắp xếp: các phần tử có giá trị gần nhau nhất luôn nằm kề nhau.
-- Sử dụng hàm `sort` kết hợp Comparator chuẩn Strict Weak Ordering để định hình lại cấu trúc dữ liệu trong $\mathcal{O}(N \log N)$.
-
-### 4.2. Bất biến toán học (Invariant):
-> Sau khi sắp xếp, $\forall i < j \implies A_i \le A_j$. Mọi cặp phần tử tối ưu khoảng cách luôn có dạng $(A_k, A_{k+1})$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5
-13 20 4 103 11
-```
-* **Output:**
-```text
-11 20 4 13 103
-```
-* **Phân tích quá trình thực thi:**
-  Thuật toán tiến hành khởi tạo cấu trúc dữ liệu, duyệt tuyến tính qua từng phần tử và cập nhật kết quả tối ưu theo đúng nguyên lý thiết kế.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N \log N)$ cho bước sắp xếp và $\mathcal{O}(N)$ cho bước duyệt tuyến tính $\implies$ Tổng thời gian: $\mathcal{O}(N \log N)$, chạy mượt mà dưới $0.1\text{s}$ với $N = 10^5$.
-- **Không gian (Space Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$ phụ thuộc vào việc xử lý mảng tại chỗ (in-place).
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Sử dụng dấu `<=` trong hàm so sánh dẫn đến vi phạm tiên đề Strict Weak Ordering gây Runtime Error / Crash.
-2. Tràn số khi nhân hoặc cộng các phần tử vượt giới hạn $2 \cdot 10^9$ (cần dùng `long long`).
-3. Quên lưu lại chỉ số gốc khi đề bài yêu cầu truy vết vị trí ban đầu.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-long long sum_digits(long long x) {
-    long long s = 0;
-    while (x > 0) {
-        s += x % 10;
-        x /= 10;
+int sum_digits(long long n) {
+    int s = 0;
+    n = abs(n);
+    while (n > 0) {
+        s += n % 10;
+        n /= 10;
     }
     return s;
 }
 
-bool cmp(long long a, long long b) {
-    long long sa = sum_digits(a);
-    long long sb = sum_digits(b);
-    if (sa != sb) return sa < sb;
-    return a < b;
+bool cmp(long long u, long long v) {
+    int su = sum_digits(u);
+    int sv = sum_digits(v);
+    if (su != sv) return su < sv;
+    return u < v;
 }
 
 int main() {
@@ -106,10 +81,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

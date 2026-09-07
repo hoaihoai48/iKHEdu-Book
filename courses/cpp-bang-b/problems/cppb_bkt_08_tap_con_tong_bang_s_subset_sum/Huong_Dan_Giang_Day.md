@@ -1,69 +1,38 @@
 # Hướng Dẫn Giảng Dạy: Tập Con Có Tổng Bằng S (Subset Sum)
-Chuyên đề: **Thuật Toán Quay Lui & Nhánh Cận (Backtracking & Branch and Bound)**
-
-**Phân loại chuyên đề:** `Core Foundation`
+Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật: Tập Con Có Tổng Bằng S (Subset Sum).
-* **Tư duy thuật toán:** Rèn luyện phản xạ xây dựng cây không gian trạng thái theo chuẩn mực `Choose` $\to$ `Explore` $\to$ `Unchoose` và phân biệt rõ ràng giữa Cắt tỉa ràng buộc (Feasibility Pruning) và Cắt tỉa tối ưu (Optimality Pruning).
-* **Chuẩn code thi đấu:** Cài đặt C++ chuẩn thi đấu (Fast I/O, Safe Input, 0 `std::`, hoàn tác an toàn).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho mảng số nguyên dương $A$ gồm $N$ phần tử và số nguyên dương $S$. Hãy sử dụng thuật toán Quay lui kết hợp cắt tỉa khả thi (dừng nhánh khi tổng tích lũy vượt quá $S$) để tìm và in ra tất cả các tập con có tổng bằng đúng $S$ theo thứ tự từ điển. Nếu không có phương án nào thỏa mãn, in ra `-1`.
+
+- **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
+  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
+  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** - Dòng 1: Hai số nguyên $N, S$ ($1 \le N \le 20, 1 \le S \le 1000$).
-- Dòng 2: $N$ số nguyên dương $A_1, \dots, A_N$ ($1 \le A_i \le 100$).
-* **Yêu cầu cốt lõi:** Cho mảng số nguyên dương $A$ gồm $N$ phần tử và số nguyên dương $S$. Hãy in ra tất cả các tập con của $A$ có tổng đúng bằng $S$ theo thứ tự từ điển bằng thuật toán Quay Lui có cắt tỉa khả thi (`current_sum > S`). Nếu không có tập nào, in `-1`.
-* **Phân tích trường hợp biên:** Đảm bảo hàm dừng đúng khi chạm đáy cây trạng thái và hoàn tác đầy đủ cho các nhánh tiếp theo.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 6 1 2 3 5)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `4 6 1 2 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Với kho vàng gồm các thỏi $[1, 2, 3, 5]$ và mục tiêu $S = 6$, có 2 phương án chọn: - Phương án 1: Chọn các thỏi $\{1, 2,... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `1 2 3 1 5` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Với kho vàng gồm các thỏi $[1, 2, 3, 5]$ và mục tiêu $S = 6$, có 2 phương án chọn:
+- Phương án 1: Chọn các thỏi $\{1, 2, 3\}$ vì $1 + 2 + 3 = 6$.
+- Phương án 2: Chọn các thỏi $\{1, 5\}$ vì $1 + 5 = 6$.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Tại mỗi bước của quá trình quay lui, ta có những lựa chọn nào và điều kiện hợp lệ là gì?
-2. Sau khi gọi đệ quy đi sâu, trạng thái nào bắt buộc phải được hoàn tác (Unchoose)?
-3. Ta có thể thiết lập hàm đánh giá (Bound) như thế nào để cắt tỉa sớm các nhánh không thể tối ưu?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **State Consistency Invariant:** Trạng thái hệ thống trước và sau mỗi lời gọi đệ quy nhánh con phải hoàn toàn bất biến (nhờ bước Unchoose).
-* **Pruning Safety:** Cận dưới/Cận trên phải luôn bảo đảm tính đúng đắn toán học để không bao giờ cắt bỏ nghiệm tối ưu toàn cục.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4 6
-1 2 3 5
-```
-* **Output:**
-```text
-1 2 3
-1 5
-```
-* **Phân tích thực thi:** Có 2 tập con có tổng bằng 6: {1, 2, 3} và {1, 5}.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian thực thi (Time Complexity):** $\mathcal{O}(2^N)$ (Pruned)
-* **Bộ nhớ ngăn xếp (Call Stack Space):** $\Theta(N)$ (Độ sâu tối đa: $N$)
-* **Bộ nhớ phụ trợ (Auxiliary Memory):** $\Theta(N)$
-* **Ghi chú phân tích:** Mảng sắp xếp tăng dần kết hợp dừng nhánh (break) khi current_sum + a[i] > S.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **Quên bước hoàn tác (Unchoose):** Làm rò rỉ trạng thái giữa các nhánh gây thiếu nghiệm.
-2. **Hàm Bound sai:** Cắt tỉa nhầm nghiệm tối ưu trong các bài toán Branch & Bound.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -104,8 +73,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Nhận diện hiện tượng trùng lặp trạng thái trên đồ thị có hướng không chu trình (DAG) để chuẩn bị bước chuyển mình mang tính quyết định sang **Module 05: Quy Hoạch Động (Dynamic Programming)**.

@@ -1,0 +1,754 @@
+{
+  "cppb_sx_01_xep_hang_diem_danh": [
+    "cpp_student_lineup.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_02_khoang_cach_nho_nhat": [
+    "cpp_min_distance.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_03_tri_tuyet_doi": [
+    "cpp_student_lineup.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_04_dem_gia_tri_phan_biet": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_05_hai_tram_kiem_soat": [
+    "cpp_student_lineup.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_06_khoang_trong_lon_nhat": [
+    "cpp_min_distance.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_07_sap_xep_tong_chu_so": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_08_gom_cum_chenh_lech_k": [
+    "cpp_student_lineup.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_09_phan_tu_xuat_hien_nhieu_nhat": [
+    "cpp_min_distance.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_10_sap_xep_luu_vi_tri": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_11_ghep_so_lon_nhat": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_12_bang_diem_hoc_sinh": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_13_bang_xep_hang_the_thao": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_sx_14_khac_phuc_strict_weak_ordering": [
+    "cpp_ticket_fair.png",
+    "Mô hình sắp xếp thứ tự và tối ưu hóa vị trí"
+  ],
+  "cppb_hct_01_mo_phong_hai_con_tro": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_02_tong_hai_so": [
+    "cpp_two_sum.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_03_dem_cap_tong_be_hon_s": [
+    "cpp_two_sum.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_04_dem_cap_tong_lon_hon_s": [
+    "cpp_two_sum.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_05_thuyen_cuu_ho": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_06_van_chuyen_hang_hoa": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_07_tong_gan_s_nhat": [
+    "cpp_two_sum.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_08_hieu_hai_so_bang_k": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_09_bo_ba_tong_bang_s": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_10_dem_so_tam_giac": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_11_dem_cap_trung_lap": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_12_ghep_tre_em_banh_quy": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_13_bo_bon_tong_bang_s": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_hct_14_hai_con_tro_cuc_han": [
+    "cpp_two_pointers.png",
+    "Kỹ thuật hai con trỏ đối đầu quét mảng hiệu quả O(N)"
+  ],
+  "cppb_cst_01_cua_so_k": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_02_trung_binh_k_lon_nhat": [
+    "cpp_stock_avg.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_03_doan_con_ngan_nhat_tong_s": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_04_doan_con_dai_nhat_tong_s": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_05_lat_bit_k_so_khong": [
+    "cpp_stock_avg.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_06_camera_giao_thong": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_07_min_max_cua_so_k": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_08_dem_doan_con_tong_be_hon_s": [
+    "cpp_stock_avg.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_09_dem_doan_con_tong_bang_s": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_10_doan_con_k_ky_tu_khac_nhau": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_11_doan_con_ngan_nhat_chua_du_ky_tu": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_12_phu_song_wifi": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_13_doan_con_chenh_lech_k": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_cst_14_cua_so_truot_cuc_han": [
+    "cpp_sliding_window.png",
+    "Mô hình khung cửa sổ trượt duy trì trạng thái liên tục"
+  ],
+  "cppb_pt_01_truy_van_tong_doan_con": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_02_dem_so_chan_trong_doan": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_03_vi_tri_can_bang": [
+    "cpp_balance_seesaw.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_04_doan_con_tong_bang_khong": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_05_cap_nhat_cong_doan": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_06_trong_cay_phu_doan": [
+    "cpp_balance_seesaw.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_07_truy_van_hinh_chu_nhat_2d": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_08_hinh_vuong_k_tong_lon_nhat": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_09_mang_hieu_2d": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_10_tong_chia_het_cho_k": [
+    "cpp_balance_seesaw.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_11_mang_tien_to_xor": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_12_can_bang_khong_va_mot": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_13_ma_tran_da_vung": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_14_phan_phoi_tai_nguyen": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_15_ma_tran_con_tong_lon_nhat": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_pt_16_can_bang_tien_to_da_chieu": [
+    "cpp_prefix_toll.png",
+    "Cấu trúc mảng cộng dồn tiền tố truy vấn đoạn con tức thì O(1)"
+  ],
+  "cppb_bs_01_tim_kiem_tren_mang_sap_xep": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_02_vi_tri_dau_va_cuoi": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_03_dem_so_trong_khoang": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_04_can_bac_hai_so_lon": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_05_phan_tu_nho_nhat_lon_hon_x": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_06_chia_keo_hoc_sinh": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_07_cat_go_xay_dung": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_08_dat_tram_phat_song": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_09_chia_mang_tong_max_nho_nhat": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_10_van_chuyen_hang_hoa": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_11_nghiem_thuc_phuong_trinh": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_12_phan_tu_thu_k_hai_mang": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_13_trung_binh_lon_nhat_do_dai_k": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_14_tuyen_duong_van_tai": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_15_tim_kiem_mang_xoay_vong": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_16_tim_kiem_ma_tran_2d": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_17_tim_dinh_day_nui": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bs_18_trung_vi_hai_mang_sap_xep": [
+    "cpp_library_search.png",
+    "Thuật toán tìm kiếm nhị phân chia đôi không gian O(log N)"
+  ],
+  "cppb_bit_01_bat_tat_kiem_tra_bit": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_02_dem_so_bit_mot": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_03_kiem_tra_luy_thua_cua_hai": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_04_tim_phan_tu_don_le": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_05_tim_hai_so_don_le": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_06_dao_bit_gia_tri_bu_mot": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_07_duyet_tap_con_bitmask": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_08_tong_tap_con_bang_s": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_09_chia_tap_hop_chenh_lech_min": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_10_dem_cap_tich_and_bang_khong": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_11_cap_xor_lon_nhat": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_12_duyet_tat_ca_submask": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_13_day_con_tong_xor_bang_k": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_14_toi_uu_gan_viec_n_nguoi": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_15_cap_tong_luy_thua_hai": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_bit_16_tap_doc_lap_bit_lon_nhat": [
+    "cpp_bit_switches.png",
+    "Biểu diễn trạng thái nhị phân qua các bit công tắc bật tắt"
+  ],
+  "cppb_nt_01_uoc_chung_boi_chung": [
+    "cpp_gcd_gears.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_02_kiem_tra_so_nguyen_to": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_03_phan_tich_thua_so_nguyen_to": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_04_dem_uoc_va_tong_uoc": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_05_kiem_tra_so_chinh_phuong": [
+    "cpp_gcd_gears.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_06_sang_nguyen_to_eratosthenes": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_07_dem_so_nguyen_to_doan_l_r": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_08_sang_uoc_nguyen_to_nho_nhat_spf": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_09_sang_phan_doan_segmented_sieve": [
+    "cpp_gcd_gears.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_10_cap_so_nguyen_to_sinh_doi": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_11_so_hoan_hao": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_12_so_co_dung_ba_uoc": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_13_so_gan_nguyen_to_almost_prime": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_14_phan_tich_giai_thua_legendre": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_15_dem_so_khong_tan_cung_giai_thua": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_nt_16_cap_nguyen_to_cung_nhau_phi_euler": [
+    "cpp_sieve_primes.png",
+    "Phân tích cấu trúc số học, ước chung và sàng số nguyên tố"
+  ],
+  "cppb_mod_01_phep_tinh_dong_du_co_ban": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_02_luy_thua_nhi_phan": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_03_luy_thua_chuoi_so_lon": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_04_nhan_an_do_chong_tran_so": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_05_tong_cap_so_nhan_dong_du": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_06_nghich_dao_fermat": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_07_nghich_dao_euclid_mo_rong": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_08_phep_chia_dong_du": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_09_to_hop_c_n_k_modulo": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_10_chinh_hop_a_n_k_modulo": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_11_fibonacci_dong_du_lon": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_12_so_catalan_dong_du": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_13_luy_thua_tang_tower_of_powers": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_14_nghich_dao_tuyen_tinh": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_15_phuong_trinh_dong_du_tuyen_tinh": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_mod_16_can_bac_hai_modulo": [
+    "cpp_modulo_clock.png",
+    "Chu kỳ số học đồng dư khép kín và lũy thừa nhị phân"
+  ],
+  "cppb_big_01_so_sanh_hai_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_02_cong_hai_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_03_tru_hai_so_lon_khong_am": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_04_tru_hai_so_lon_tong_quat": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_05_nhan_so_lon_voi_so_nho": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_06_nhan_hai_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_07_chia_so_lon_cho_so_nho": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_08_chia_lay_du_so_lon_cho_so_nho": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_09_giai_thua_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_10_luy_thua_so_lon_chinh_xac": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_11_fibonacci_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_12_tong_chu_so_giai_thua": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_13_chia_hai_so_nguyen_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_14_can_bac_hai_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_15_uoc_chung_lon_nhat_so_lon": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_big_16_to_hop_so_lon_chinh_xac": [
+    "cpp_bigint_add.png",
+    "Đặt tính và xử lý từng chữ số cho số nguyên lớn vượt 64-bit"
+  ],
+  "cppb_rec_01_in_day_so_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_02_tong_day_so_va_giai_thua": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_03_dem_va_tinh_tong_chu_so": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_04_dao_nguoc_mang_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_05_kiem_tra_palindrome_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_06_tim_min_max_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_07_uoc_chung_lon_nhat_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_08_luy_thua_nhi_phan_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_09_thap_ha_noi_co_ban": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_10_fibonacci_cay_nhi_phan": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_11_chuyen_doi_he_nhi_phan_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_12_xay_dung_cong_thuc_truy_hoi_dan_dau": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_13_thap_ha_noi_co_rang_buoc": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_14_sinh_xau_nhi_phan_khong_2_so_1_lien_ke": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_15_phan_tich_so_thanh_tong_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_rec_16_dem_cau_hinh_cay_catalan_de_quy": [
+    "cpp_hanoi_tower.png",
+    "Mô hình phân rã bài toán lớn thành các bài toán con qua đệ quy"
+  ],
+  "cppb_dac_01_tim_kiem_nhi_phan_chia_de_tri": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_02_range_minimum_query_chia_de_tri": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_03_tim_phan_tu_lon_thu_hai_tournament": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_04_gop_hai_mang_da_sap_xep_merge_step": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_05_sap_xep_tron_merge_sort": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_06_dem_so_cap_nghich_the_inversion": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_07_doan_con_tong_lon_nhat_maximum_subarray": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_08_tim_phan_tu_da_so_majority_element": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_09_luy_thua_ma_tran_chia_de_tri": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_10_tim_dinh_mang_unimodal_peak_index": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_11_tinh_tong_cap_so_nhan_chia_de_tri": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_12_dem_so_cap_a_i_lon_hon_2_a_j": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_13_quickselect_tim_phan_tu_kth": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_14_dem_so_doan_con_tong_trong_khoang_l_r": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_15_cap_diem_gan_nhat_closest_pair": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_dac_16_median_hai_mang_da_sap_xep": [
+    "cpp_tournament_tree.png",
+    "Mô hình phân chia nhánh đấu loại và gộp kết quả tối ưu"
+  ],
+  "cppb_bkt_01_sinh_xau_nhi_phan": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_02_sinh_tap_con": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_03_sinh_hoan_vi": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_04_sinh_to_hop_chap_k": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_05_sinh_day_ngoac_dung": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_06_bai_toan_n_queens": [
+    "cpp_n_queens.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_07_me_cung_rat_in_a_maze": [
+    "cpp_n_queens.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_08_tap_con_tong_bang_s_subset_sum": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_09_chia_tap_hai_phan_bang_nhau": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_10_doi_tien_xu_it_nhat_branch_and_bound": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_11_ma_di_tuan_knights_tour": [
+    "cpp_n_queens.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_12_tro_choi_sudoku_9x9": [
+    "cpp_n_queens.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_13_cai_tui_01_nhanh_can_knapsack": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_14_nguoi_du_lich_tsp_nhanh_can": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_15_to_mau_do_thi_graph_coloring": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ],
+  "cppb_bkt_16_phan_cong_cong_viec_toi_uu_job_assignment": [
+    "cpp_knapsack.png",
+    "Duyệt không gian trạng thái kết hợp nhánh cận cắt tỉa nhanh"
+  ]
+}

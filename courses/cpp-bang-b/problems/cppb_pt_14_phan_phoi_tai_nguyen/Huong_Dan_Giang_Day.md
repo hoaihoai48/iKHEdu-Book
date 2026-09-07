@@ -1,73 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Phân Phối Tài Nguyên Không Gian Tuyến Tính
-Chuyên đề: **Mảng Tiền Tố & Mảng Hiệu (Prefix Sum & Difference Array)**
+Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Mảng Tiền Tố & Mảng Hiệu (Prefix Sum & Difference Array).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho dãy số N phần tử ban đầu toàn số 0. Thực hiện Q thao tác cộng vào đoạn [L, R] một dãy cấp số cộng với số hạng đầu V và công sai D. Hãy in ra mảng kết quả cuối cùng.
+
+- **Phương pháp tiếp cận — Mảng tiền tố & Mảng hiệu:**
+  - Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
+  - Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 1 2 4 1 2)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `5 1 2 4 1 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Thao tác trên đoạn [2, 4] với V = 1, D = 2: vị trí 2 nhận 1; vị trí 3 nhận 1 + 2 = 3; vị trí 4 nhận 1 + 2*2 = 5. Kết quả... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `0 1 3 5 0` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Thao tác trên đoạn [2, 4] với V = 1, D = 2: vị trí 2 nhận 1; vị trí 3 nhận 1 + 2 = 3; vị trí 4 nhận 1 + 2*2 = 5. Kết quả in ra: 0 1 3 5 0.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Bài toán có bao nhiêu truy vấn $Q$? Nếu $Q, N \le 10^5$, thuật toán $\mathcal{O}(Q \times N)$ có bị TLE không?
-2. Làm sao để tính tổng đoạn con trong $\mathcal{O}(1)$ sau một lần tiền xử lý duy nhất?
-3. Với bài toán cộng đoạn, ta tác động vào những điểm biên nào để sau khi tính tiền tố mảng sẽ được cộng đều?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Xây dựng mảng tiền tố $P_i = P_{i-1} + A_i$ (1-based index) để trả lời truy vấn tổng đoạn $[L \dots R]$ qua công thức $P_R - P_{L-1}$ trong $\mathcal{O}(1)$.
-- Sử dụng mảng hiệu $D[L] += V, D[R+1] -= V$ để thực hiện thao tác cộng dồn đoạn trong $\mathcal{O}(1)$, sau đó chạy tiền tố khôi phục mảng kết quả trong $\mathcal{O}(N)$.
-
-### 4.2. Bất biến toán học (Invariant):
-> $P[R] - P[L-1] = \sum_{k=1}^R A_k - \sum_{k=1}^{L-1} A_k = \sum_{k=L}^R A_k$. Đoạn thừa trước $L$ bị triệt tiêu hoàn toàn.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-5 2
-1 3 2 1
-2 4 1 2
-```
-* **Output:**
-```text
-2 4 7 5 0
-```
-* **Phân tích quá trình thực thi:**
-  Thuật toán tiến hành khởi tạo cấu trúc dữ liệu, duyệt tuyến tính qua từng phần tử và cập nhật kết quả tối ưu theo đúng nguyên lý thiết kế.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N)$ tiền xử lý + $\mathcal{O}(1)$ mỗi truy vấn $\implies$ Tổng thời gian $\mathcal{O}(N + Q)$, xử lý $10^5$ truy vấn trong dưới $0.05\text{s}$.
-- **Không gian (Space Complexity):** $\mathcal{O}(N)$ (hoặc $\mathcal{O}(N \times M)$ cho bảng 2D) để lưu mảng tiền tố.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Tràn số khi cộng dồn mảng tiền tố $P$ với $A_i \le 10^9$ (bắt buộc dùng `vector<long long>` hoặc `long long P[]`).
-2. Lỗi truy cập ngoài mảng khi cập nhật $D[R+1]$ với $R = N$ (cần khai báo mảng kích thước $N + 2$).
-3. Nhầm lẫn chỉ số 0-based và 1-based dẫn đến truy vấn $P[L-1]$ bị truy cập ô rác hoặc âm.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -107,10 +70,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

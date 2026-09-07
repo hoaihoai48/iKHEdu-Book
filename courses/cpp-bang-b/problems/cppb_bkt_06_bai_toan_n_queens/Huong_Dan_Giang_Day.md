@@ -1,66 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Bài Toán N-Queens (Đếm Số Cách)
-Chuyên đề: **Thuật Toán Quay Lui & Nhánh Cận (Backtracking & Branch and Bound)**
-
-**Phân loại chuyên đề:** `Core Foundation`
+Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật: Bài Toán N-Queens (Đếm Số Cách).
-* **Tư duy thuật toán:** Rèn luyện phản xạ xây dựng cây không gian trạng thái theo chuẩn mực `Choose` $\to$ `Explore` $\to$ `Unchoose` và phân biệt rõ ràng giữa Cắt tỉa ràng buộc (Feasibility Pruning) và Cắt tỉa tối ưu (Optimality Pruning).
-* **Chuẩn code thi đấu:** Cài đặt C++ chuẩn thi đấu (Fast I/O, Safe Input, 0 `std::`, hoàn tác an toàn).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho số nguyên dương $N$. Hãy áp dụng thuật toán Quay lui kết hợp các mảng đánh dấu cột, đường chéo chính và đường chéo phụ để đếm tổng số cách đặt $N$ quân hậu hợp lệ lên bàn cờ $N \times N$.
+
+- **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
+  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
+  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** - Một dòng duy nhất chứa số nguyên dương $N$ ($1 \le N \le 12$).
-* **Yêu cầu cốt lõi:** Cho số nguyên dương $N$. Hãy đếm số cách đặt $N$ quân hậu lên bàn cờ $N \times N$ sao cho không có 2 quân hậu nào khống chế lẫn nhau (không cùng hàng, không cùng cột, không cùng đường chéo).
-* **Phân tích trường hợp biên:** Đảm bảo hàm dừng đúng khi chạm đáy cây trạng thái và hoàn tác đầy đủ cho các nhánh tiếp theo.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `4` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Trên bàn cờ kích thước $4 \times 4$, có đúng 2 cấu hình hợp lệ không quân hậu nào khống chế nhau: hàng 1 đặt ở cột 2, hà... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `2` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Trên bàn cờ kích thước $4 \times 4$, có đúng 2 cấu hình hợp lệ không quân hậu nào khống chế nhau: hàng 1 đặt ở cột 2, hàng 2 cột 4, hàng 3 cột 1, hàng 4 cột 3 (tức `[2, 4, 1, 3]`) và cấu hình đối xứng qua gương `[3, 1, 4, 2]`.
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Tại mỗi bước của quá trình quay lui, ta có những lựa chọn nào và điều kiện hợp lệ là gì?
-2. Sau khi gọi đệ quy đi sâu, trạng thái nào bắt buộc phải được hoàn tác (Unchoose)?
-3. Ta có thể thiết lập hàm đánh giá (Bound) như thế nào để cắt tỉa sớm các nhánh không thể tối ưu?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **State Consistency Invariant:** Trạng thái hệ thống trước và sau mỗi lời gọi đệ quy nhánh con phải hoàn toàn bất biến (nhờ bước Unchoose).
-* **Pruning Safety:** Cận dưới/Cận trên phải luôn bảo đảm tính đúng đắn toán học để không bao giờ cắt bỏ nghiệm tối ưu toàn cục.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4
-```
-* **Output:**
-```text
-2
-```
-* **Phân tích thực thi:** Với bàn cờ 4x4, có đúng 2 cách xếp 4 quân hậu.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian thực thi (Time Complexity):** $\mathcal{O}(N!)$ (Upper bound)
-* **Bộ nhớ ngăn xếp (Call Stack Space):** $\Theta(N)$ (Độ sâu tối đa: $N$)
-* **Bộ nhớ phụ trợ (Auxiliary Memory):** $\Theta(N)$
-* **Ghi chú phân tích:** Đánh dấu cột và 2 đường chéo (row - col + n, row + col).
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **Quên bước hoàn tác (Unchoose):** Làm rò rỉ trạng thái giữa các nhánh gây thiếu nghiệm.
-2. **Hàm Bound sai:** Cắt tỉa nhầm nghiệm tối ưu trong các bài toán Branch & Bound.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -95,8 +65,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Nhận diện hiện tượng trùng lặp trạng thái trên đồ thị có hướng không chu trình (DAG) để chuẩn bị bước chuyển mình mang tính quyết định sang **Module 05: Quy Hoạch Động (Dynamic Programming)**.

@@ -1,0 +1,2416 @@
+{
+  "kind": "teacher-solutions",
+  "header_book": "Giáo trình C++ — Sách giáo viên",
+  "output": "cpp-giaovien-full.docx",
+  "template": "c++-level-1-quyen-1.docx",
+  "lessons": [
+    {
+      "lesson": 1,
+      "chapter": 1,
+      "title": "Bài 01: Thuật toán sắp xếp",
+      "problems": [
+        {
+          "code": "cppb_sx_01_xep_hang_diem_danh",
+          "title": "Xếp Hàng Điểm Danh",
+          "de_bai": "problems/cppb_sx_01_xep_hang_diem_danh/De_Bai.md",
+          "solution": "problems/cppb_sx_01_xep_hang_diem_danh/solution.cpp",
+          "guide": "problems/cppb_sx_01_xep_hang_diem_danh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_02_khoang_cach_nho_nhat",
+          "title": "Khoảng Cách Nhỏ Nhất",
+          "de_bai": "problems/cppb_sx_02_khoang_cach_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_sx_02_khoang_cach_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_sx_02_khoang_cach_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_03_tri_tuyet_doi",
+          "title": "Sắp Xếp Theo Trị Tuyệt Đối",
+          "de_bai": "problems/cppb_sx_03_tri_tuyet_doi/De_Bai.md",
+          "solution": "problems/cppb_sx_03_tri_tuyet_doi/solution.cpp",
+          "guide": "problems/cppb_sx_03_tri_tuyet_doi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_04_dem_gia_tri_phan_biet",
+          "title": "Đếm Giá Trị Phân Biệt",
+          "de_bai": "problems/cppb_sx_04_dem_gia_tri_phan_biet/De_Bai.md",
+          "solution": "problems/cppb_sx_04_dem_gia_tri_phan_biet/solution.cpp",
+          "guide": "problems/cppb_sx_04_dem_gia_tri_phan_biet/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_05_hai_tram_kiem_soat",
+          "title": "Hai Trạm Kiểm Soát Gần Nhau Nhất",
+          "de_bai": "problems/cppb_sx_05_hai_tram_kiem_soat/De_Bai.md",
+          "solution": "problems/cppb_sx_05_hai_tram_kiem_soat/solution.cpp",
+          "guide": "problems/cppb_sx_05_hai_tram_kiem_soat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_06_khoang_trong_lon_nhat",
+          "title": "Khoảng Trống Lớn Nhất Trên Trục Tọa Độ",
+          "de_bai": "problems/cppb_sx_06_khoang_trong_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_sx_06_khoang_trong_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_sx_06_khoang_trong_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_07_sap_xep_tong_chu_so",
+          "title": "Sắp Xếp Theo Tổng Chữ Số",
+          "de_bai": "problems/cppb_sx_07_sap_xep_tong_chu_so/De_Bai.md",
+          "solution": "problems/cppb_sx_07_sap_xep_tong_chu_so/solution.cpp",
+          "guide": "problems/cppb_sx_07_sap_xep_tong_chu_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_08_gom_cum_chenh_lech_k",
+          "title": "Gom Cụm Chênh Lệch Không Quá K",
+          "de_bai": "problems/cppb_sx_08_gom_cum_chenh_lech_k/De_Bai.md",
+          "solution": "problems/cppb_sx_08_gom_cum_chenh_lech_k/solution.cpp",
+          "guide": "problems/cppb_sx_08_gom_cum_chenh_lech_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_09_phan_tu_xuat_hien_nhieu_nhat",
+          "title": "Tìm Phần Tử Xuất Hiện Nhiều Nhất",
+          "de_bai": "problems/cppb_sx_09_phan_tu_xuat_hien_nhieu_nhat/De_Bai.md",
+          "solution": "problems/cppb_sx_09_phan_tu_xuat_hien_nhieu_nhat/solution.cpp",
+          "guide": "problems/cppb_sx_09_phan_tu_xuat_hien_nhieu_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_10_sap_xep_luu_vi_tri",
+          "title": "Sắp Xếp Lưu Vị Trí Ban Đầu",
+          "de_bai": "problems/cppb_sx_10_sap_xep_luu_vi_tri/De_Bai.md",
+          "solution": "problems/cppb_sx_10_sap_xep_luu_vi_tri/solution.cpp",
+          "guide": "problems/cppb_sx_10_sap_xep_luu_vi_tri/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_11_ghep_so_lon_nhat",
+          "title": "Ghép Chuỗi Tạo Số Lớn Nhất",
+          "de_bai": "problems/cppb_sx_11_ghep_so_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_sx_11_ghep_so_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_sx_11_ghep_so_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_12_bang_diem_hoc_sinh",
+          "title": "Bảng Điểm Học Sinh Đa Trường",
+          "de_bai": "problems/cppb_sx_12_bang_diem_hoc_sinh/De_Bai.md",
+          "solution": "problems/cppb_sx_12_bang_diem_hoc_sinh/solution.cpp",
+          "guide": "problems/cppb_sx_12_bang_diem_hoc_sinh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_13_bang_xep_hang_the_thao",
+          "title": "Bảng Xếp Hạng Giải Đấu Thể Thao",
+          "de_bai": "problems/cppb_sx_13_bang_xep_hang_the_thao/De_Bai.md",
+          "solution": "problems/cppb_sx_13_bang_xep_hang_the_thao/solution.cpp",
+          "guide": "problems/cppb_sx_13_bang_xep_hang_the_thao/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_sx_14_khac_phuc_strict_weak_ordering",
+          "title": "Sắp Xếp Đoạn Thẳng Không Giao Lỗi",
+          "de_bai": "problems/cppb_sx_14_khac_phuc_strict_weak_ordering/De_Bai.md",
+          "solution": "problems/cppb_sx_14_khac_phuc_strict_weak_ordering/solution.cpp",
+          "guide": "problems/cppb_sx_14_khac_phuc_strict_weak_ordering/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "chapter": 1,
+      "title": "Bài 02: Kỹ thuật hai con trỏ",
+      "problems": [
+        {
+          "code": "cppb_hct_01_mo_phong_hai_con_tro",
+          "title": "Mô Phỏng Hai Con Trỏ Đối Đầu",
+          "de_bai": "problems/cppb_hct_01_mo_phong_hai_con_tro/De_Bai.md",
+          "solution": "problems/cppb_hct_01_mo_phong_hai_con_tro/solution.cpp",
+          "guide": "problems/cppb_hct_01_mo_phong_hai_con_tro/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_02_tong_hai_so",
+          "title": "Cặp Số Có Tổng Bằng S (Two Sum)",
+          "de_bai": "problems/cppb_hct_02_tong_hai_so/De_Bai.md",
+          "solution": "problems/cppb_hct_02_tong_hai_so/solution.cpp",
+          "guide": "problems/cppb_hct_02_tong_hai_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_03_dem_cap_tong_be_hon_s",
+          "title": "Đếm Cặp Có Tổng Không Quá S",
+          "de_bai": "problems/cppb_hct_03_dem_cap_tong_be_hon_s/De_Bai.md",
+          "solution": "problems/cppb_hct_03_dem_cap_tong_be_hon_s/solution.cpp",
+          "guide": "problems/cppb_hct_03_dem_cap_tong_be_hon_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_04_dem_cap_tong_lon_hon_s",
+          "title": "Đếm Cặp Có Tổng Lớn Hơn Hoặc Bằng S",
+          "de_bai": "problems/cppb_hct_04_dem_cap_tong_lon_hon_s/De_Bai.md",
+          "solution": "problems/cppb_hct_04_dem_cap_tong_lon_hon_s/solution.cpp",
+          "guide": "problems/cppb_hct_04_dem_cap_tong_lon_hon_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_05_thuyen_cuu_ho",
+          "title": "Ghép Thuyền Cứu Hộ Tối Ưu",
+          "de_bai": "problems/cppb_hct_05_thuyen_cuu_ho/De_Bai.md",
+          "solution": "problems/cppb_hct_05_thuyen_cuu_ho/solution.cpp",
+          "guide": "problems/cppb_hct_05_thuyen_cuu_ho/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_06_van_chuyen_hang_hoa",
+          "title": "Vận Chuyển Thùng Hàng Cực Đại",
+          "de_bai": "problems/cppb_hct_06_van_chuyen_hang_hoa/De_Bai.md",
+          "solution": "problems/cppb_hct_06_van_chuyen_hang_hoa/solution.cpp",
+          "guide": "problems/cppb_hct_06_van_chuyen_hang_hoa/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_07_tong_gan_s_nhat",
+          "title": "Tìm Cặp Có Tổng Gần S Nhất",
+          "de_bai": "problems/cppb_hct_07_tong_gan_s_nhat/De_Bai.md",
+          "solution": "problems/cppb_hct_07_tong_gan_s_nhat/solution.cpp",
+          "guide": "problems/cppb_hct_07_tong_gan_s_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_08_hieu_hai_so_bang_k",
+          "title": "Tìm Cặp Có Hiệu Đúng Bằng K",
+          "de_bai": "problems/cppb_hct_08_hieu_hai_so_bang_k/De_Bai.md",
+          "solution": "problems/cppb_hct_08_hieu_hai_so_bang_k/solution.cpp",
+          "guide": "problems/cppb_hct_08_hieu_hai_so_bang_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_09_bo_ba_tong_bang_s",
+          "title": "Bộ Ba Số Có Tổng Bằng S (3-Sum)",
+          "de_bai": "problems/cppb_hct_09_bo_ba_tong_bang_s/De_Bai.md",
+          "solution": "problems/cppb_hct_09_bo_ba_tong_bang_s/solution.cpp",
+          "guide": "problems/cppb_hct_09_bo_ba_tong_bang_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_10_dem_so_tam_giac",
+          "title": "Đếm Số Tam Giác Có Thể Tạo Thành",
+          "de_bai": "problems/cppb_hct_10_dem_so_tam_giac/De_Bai.md",
+          "solution": "problems/cppb_hct_10_dem_so_tam_giac/solution.cpp",
+          "guide": "problems/cppb_hct_10_dem_so_tam_giac/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_11_dem_cap_trung_lap",
+          "title": "Đếm Cặp Tổng S Trên Mảng Trùng Lặp",
+          "de_bai": "problems/cppb_hct_11_dem_cap_trung_lap/De_Bai.md",
+          "solution": "problems/cppb_hct_11_dem_cap_trung_lap/solution.cpp",
+          "guide": "problems/cppb_hct_11_dem_cap_trung_lap/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_12_ghep_tre_em_banh_quy",
+          "title": "Ghép Cặp Trẻ Em Và Bánh Quy",
+          "de_bai": "problems/cppb_hct_12_ghep_tre_em_banh_quy/De_Bai.md",
+          "solution": "problems/cppb_hct_12_ghep_tre_em_banh_quy/solution.cpp",
+          "guide": "problems/cppb_hct_12_ghep_tre_em_banh_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_13_bo_bon_tong_bang_s",
+          "title": "Bộ Bốn Số Có Tổng Bằng S (4-Sum)",
+          "de_bai": "problems/cppb_hct_13_bo_bon_tong_bang_s/De_Bai.md",
+          "solution": "problems/cppb_hct_13_bo_bon_tong_bang_s/solution.cpp",
+          "guide": "problems/cppb_hct_13_bo_bon_tong_bang_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_hct_14_hai_con_tro_cuc_han",
+          "title": "Cặp Số Tối Ưu Với Chênh Lệch Cực Hạn",
+          "de_bai": "problems/cppb_hct_14_hai_con_tro_cuc_han/De_Bai.md",
+          "solution": "problems/cppb_hct_14_hai_con_tro_cuc_han/solution.cpp",
+          "guide": "problems/cppb_hct_14_hai_con_tro_cuc_han/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "chapter": 1,
+      "title": "Bài 03: Kỹ thuật cửa sổ trượt",
+      "problems": [
+        {
+          "code": "cppb_cst_01_cua_so_k",
+          "title": "Tổng Cửa Sổ Cố Định K",
+          "de_bai": "problems/cppb_cst_01_cua_so_k/De_Bai.md",
+          "solution": "problems/cppb_cst_01_cua_so_k/solution.cpp",
+          "guide": "problems/cppb_cst_01_cua_so_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_02_trung_binh_k_lon_nhat",
+          "title": "Giá Trị Trung Bình Lớn Nhất Của Đoạn K",
+          "de_bai": "problems/cppb_cst_02_trung_binh_k_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_cst_02_trung_binh_k_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_cst_02_trung_binh_k_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_03_doan_con_ngan_nhat_tong_s",
+          "title": "Đoạn Con Ngắn Nhất Có Tổng Đạt S",
+          "de_bai": "problems/cppb_cst_03_doan_con_ngan_nhat_tong_s/De_Bai.md",
+          "solution": "problems/cppb_cst_03_doan_con_ngan_nhat_tong_s/solution.cpp",
+          "guide": "problems/cppb_cst_03_doan_con_ngan_nhat_tong_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_04_doan_con_dai_nhat_tong_s",
+          "title": "Đoạn Con Dài Nhất Có Tổng Không Quá S",
+          "de_bai": "problems/cppb_cst_04_doan_con_dai_nhat_tong_s/De_Bai.md",
+          "solution": "problems/cppb_cst_04_doan_con_dai_nhat_tong_s/solution.cpp",
+          "guide": "problems/cppb_cst_04_doan_con_dai_nhat_tong_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_05_lat_bit_k_so_khong",
+          "title": "Đoạn Con Chứa Tối Đa K Số 0 (Lật Bit)",
+          "de_bai": "problems/cppb_cst_05_lat_bit_k_so_khong/De_Bai.md",
+          "solution": "problems/cppb_cst_05_lat_bit_k_so_khong/solution.cpp",
+          "guide": "problems/cppb_cst_05_lat_bit_k_so_khong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_06_camera_giao_thong",
+          "title": "Giám Sát Camera Giao Thông Thông Minh",
+          "de_bai": "problems/cppb_cst_06_camera_giao_thong/De_Bai.md",
+          "solution": "problems/cppb_cst_06_camera_giao_thong/solution.cpp",
+          "guide": "problems/cppb_cst_06_camera_giao_thong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_07_min_max_cua_so_k",
+          "title": "Tìm Min Trong Mọi Cửa Sổ Độ Dài K",
+          "de_bai": "problems/cppb_cst_07_min_max_cua_so_k/De_Bai.md",
+          "solution": "problems/cppb_cst_07_min_max_cua_so_k/solution.cpp",
+          "guide": "problems/cppb_cst_07_min_max_cua_so_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_08_dem_doan_con_tong_be_hon_s",
+          "title": "Đếm Số Lượng Đoạn Con Có Tổng Không Quá S",
+          "de_bai": "problems/cppb_cst_08_dem_doan_con_tong_be_hon_s/De_Bai.md",
+          "solution": "problems/cppb_cst_08_dem_doan_con_tong_be_hon_s/solution.cpp",
+          "guide": "problems/cppb_cst_08_dem_doan_con_tong_be_hon_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_09_dem_doan_con_tong_bang_s",
+          "title": "Đếm Số Lượng Đoạn Con Có Tổng Đúng Bằng S",
+          "de_bai": "problems/cppb_cst_09_dem_doan_con_tong_bang_s/De_Bai.md",
+          "solution": "problems/cppb_cst_09_dem_doan_con_tong_bang_s/solution.cpp",
+          "guide": "problems/cppb_cst_09_dem_doan_con_tong_bang_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_10_doan_con_k_ky_tu_khac_nhau",
+          "title": "Đoạn Con Dài Nhất Chứa Tối Đa K Ký Tự Khác Nhau",
+          "de_bai": "problems/cppb_cst_10_doan_con_k_ky_tu_khac_nhau/De_Bai.md",
+          "solution": "problems/cppb_cst_10_doan_con_k_ky_tu_khac_nhau/solution.cpp",
+          "guide": "problems/cppb_cst_10_doan_con_k_ky_tu_khac_nhau/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_11_doan_con_ngan_nhat_chua_du_ky_tu",
+          "title": "Đoạn Con Ngắn Nhất Chứa Đủ Mọi Ký Tự Của Tập Hợp",
+          "de_bai": "problems/cppb_cst_11_doan_con_ngan_nhat_chua_du_ky_tu/De_Bai.md",
+          "solution": "problems/cppb_cst_11_doan_con_ngan_nhat_chua_du_ky_tu/solution.cpp",
+          "guide": "problems/cppb_cst_11_doan_con_ngan_nhat_chua_du_ky_tu/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_12_phu_song_wifi",
+          "title": "Phủ Sóng Trạm Phát Sóng Wifi Đô Thị",
+          "de_bai": "problems/cppb_cst_12_phu_song_wifi/De_Bai.md",
+          "solution": "problems/cppb_cst_12_phu_song_wifi/solution.cpp",
+          "guide": "problems/cppb_cst_12_phu_song_wifi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_13_doan_con_chenh_lech_k",
+          "title": "Đoạn Con Có Độ Chênh Lệch Max - Min Không Quá K",
+          "de_bai": "problems/cppb_cst_13_doan_con_chenh_lech_k/De_Bai.md",
+          "solution": "problems/cppb_cst_13_doan_con_chenh_lech_k/solution.cpp",
+          "guide": "problems/cppb_cst_13_doan_con_chenh_lech_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_cst_14_cua_so_truot_cuc_han",
+          "title": "Tối Ưu Cửa Sổ Trượt Tuyến Tính Khi N = 2.10⁵",
+          "de_bai": "problems/cppb_cst_14_cua_so_truot_cuc_han/De_Bai.md",
+          "solution": "problems/cppb_cst_14_cua_so_truot_cuc_han/solution.cpp",
+          "guide": "problems/cppb_cst_14_cua_so_truot_cuc_han/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "chapter": 2,
+      "title": "Bài 04: Mảng tiền tố & mảng hiệu",
+      "problems": [
+        {
+          "code": "cppb_pt_01_truy_van_tong_doan_con",
+          "title": "Truy Vấn Tổng Đoạn Con 1D",
+          "de_bai": "problems/cppb_pt_01_truy_van_tong_doan_con/De_Bai.md",
+          "solution": "problems/cppb_pt_01_truy_van_tong_doan_con/solution.cpp",
+          "guide": "problems/cppb_pt_01_truy_van_tong_doan_con/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_02_dem_so_chan_trong_doan",
+          "title": "Đếm Số Lượng Số Chẵn Trong Đoạn",
+          "de_bai": "problems/cppb_pt_02_dem_so_chan_trong_doan/De_Bai.md",
+          "solution": "problems/cppb_pt_02_dem_so_chan_trong_doan/solution.cpp",
+          "guide": "problems/cppb_pt_02_dem_so_chan_trong_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_03_vi_tri_can_bang",
+          "title": "Tìm Vị Trí Cân Bằng Của Mảng",
+          "de_bai": "problems/cppb_pt_03_vi_tri_can_bang/De_Bai.md",
+          "solution": "problems/cppb_pt_03_vi_tri_can_bang/solution.cpp",
+          "guide": "problems/cppb_pt_03_vi_tri_can_bang/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_04_doan_con_tong_bang_khong",
+          "title": "Đoạn Con Có Tổng Bằng 0",
+          "de_bai": "problems/cppb_pt_04_doan_con_tong_bang_khong/De_Bai.md",
+          "solution": "problems/cppb_pt_04_doan_con_tong_bang_khong/solution.cpp",
+          "guide": "problems/cppb_pt_04_doan_con_tong_bang_khong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_05_cap_nhat_cong_doan",
+          "title": "Cập Nhật Cộng Đoạn Tuyến Tính (Mảng Hiệu)",
+          "de_bai": "problems/cppb_pt_05_cap_nhat_cong_doan/De_Bai.md",
+          "solution": "problems/cppb_pt_05_cap_nhat_cong_doan/solution.cpp",
+          "guide": "problems/cppb_pt_05_cap_nhat_cong_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_06_trong_cay_phu_doan",
+          "title": "Trồng Cây Phủ Đoạn Tối Ưu",
+          "de_bai": "problems/cppb_pt_06_trong_cay_phu_doan/De_Bai.md",
+          "solution": "problems/cppb_pt_06_trong_cay_phu_doan/solution.cpp",
+          "guide": "problems/cppb_pt_06_trong_cay_phu_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_07_truy_van_hinh_chu_nhat_2d",
+          "title": "Truy Vấn Tổng Hình Chữ Nhật 2D",
+          "de_bai": "problems/cppb_pt_07_truy_van_hinh_chu_nhat_2d/De_Bai.md",
+          "solution": "problems/cppb_pt_07_truy_van_hinh_chu_nhat_2d/solution.cpp",
+          "guide": "problems/cppb_pt_07_truy_van_hinh_chu_nhat_2d/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_08_hinh_vuong_k_tong_lon_nhat",
+          "title": "Tìm Hình Vuông K x K Có Tổng Lớn Nhất",
+          "de_bai": "problems/cppb_pt_08_hinh_vuong_k_tong_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_pt_08_hinh_vuong_k_tong_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_pt_08_hinh_vuong_k_tong_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_09_mang_hieu_2d",
+          "title": "Cập Nhật Cộng Hình Chữ Nhật (Mảng Hiệu 2D)",
+          "de_bai": "problems/cppb_pt_09_mang_hieu_2d/De_Bai.md",
+          "solution": "problems/cppb_pt_09_mang_hieu_2d/solution.cpp",
+          "guide": "problems/cppb_pt_09_mang_hieu_2d/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_10_tong_chia_het_cho_k",
+          "title": "Đoạn Con Có Tổng Chia Hết Cho K",
+          "de_bai": "problems/cppb_pt_10_tong_chia_het_cho_k/De_Bai.md",
+          "solution": "problems/cppb_pt_10_tong_chia_het_cho_k/solution.cpp",
+          "guide": "problems/cppb_pt_10_tong_chia_het_cho_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_11_mang_tien_to_xor",
+          "title": "Mảng Tiền Tố XOR Đoạn Con",
+          "de_bai": "problems/cppb_pt_11_mang_tien_to_xor/De_Bai.md",
+          "solution": "problems/cppb_pt_11_mang_tien_to_xor/solution.cpp",
+          "guide": "problems/cppb_pt_11_mang_tien_to_xor/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_12_can_bang_khong_va_mot",
+          "title": "Đoạn Con Cân Bằng Số Lượng 0 và 1",
+          "de_bai": "problems/cppb_pt_12_can_bang_khong_va_mot/De_Bai.md",
+          "solution": "problems/cppb_pt_12_can_bang_khong_va_mot/solution.cpp",
+          "guide": "problems/cppb_pt_12_can_bang_khong_va_mot/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_13_ma_tran_da_vung",
+          "title": "Truy Vấn Ma Trận Đa Vùng Cực Đại",
+          "de_bai": "problems/cppb_pt_13_ma_tran_da_vung/De_Bai.md",
+          "solution": "problems/cppb_pt_13_ma_tran_da_vung/solution.cpp",
+          "guide": "problems/cppb_pt_13_ma_tran_da_vung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_14_phan_phoi_tai_nguyen",
+          "title": "Phân Phối Tài Nguyên Không Gian Tuyến Tính",
+          "de_bai": "problems/cppb_pt_14_phan_phoi_tai_nguyen/De_Bai.md",
+          "solution": "problems/cppb_pt_14_phan_phoi_tai_nguyen/solution.cpp",
+          "guide": "problems/cppb_pt_14_phan_phoi_tai_nguyen/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_15_ma_tran_con_tong_lon_nhat",
+          "title": "Tìm Ma Trận Con Có Tổng Lớn Nhất (Max Submatrix Sum)",
+          "de_bai": "problems/cppb_pt_15_ma_tran_con_tong_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_pt_15_ma_tran_con_tong_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_pt_15_ma_tran_con_tong_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_pt_16_can_bang_tien_to_da_chieu",
+          "title": "Cân Bằng Tiền Tố Đa Chiều",
+          "de_bai": "problems/cppb_pt_16_can_bang_tien_to_da_chieu/De_Bai.md",
+          "solution": "problems/cppb_pt_16_can_bang_tien_to_da_chieu/solution.cpp",
+          "guide": "problems/cppb_pt_16_can_bang_tien_to_da_chieu/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "chapter": 2,
+      "title": "Bài 05: Thuật toán tìm kiếm nhị phân",
+      "problems": [
+        {
+          "code": "cppb_bs_01_tim_kiem_tren_mang_sap_xep",
+          "title": "Tìm Kiếm Phần Tử Trên Mảng Đã Sắp Xếp",
+          "de_bai": "problems/cppb_bs_01_tim_kiem_tren_mang_sap_xep/De_Bai.md",
+          "solution": "problems/cppb_bs_01_tim_kiem_tren_mang_sap_xep/solution.cpp",
+          "guide": "problems/cppb_bs_01_tim_kiem_tren_mang_sap_xep/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_02_vi_tri_dau_va_cuoi",
+          "title": "Tìm Vị Trí Xuất Hiện Đầu Tiên & Cuối Cùng",
+          "de_bai": "problems/cppb_bs_02_vi_tri_dau_va_cuoi/De_Bai.md",
+          "solution": "problems/cppb_bs_02_vi_tri_dau_va_cuoi/solution.cpp",
+          "guide": "problems/cppb_bs_02_vi_tri_dau_va_cuoi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_03_dem_so_trong_khoang",
+          "title": "Đếm Số Phần Tử Trong Đoạn [L, R]",
+          "de_bai": "problems/cppb_bs_03_dem_so_trong_khoang/De_Bai.md",
+          "solution": "problems/cppb_bs_03_dem_so_trong_khoang/solution.cpp",
+          "guide": "problems/cppb_bs_03_dem_so_trong_khoang/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_04_can_bac_hai_so_lon",
+          "title": "Tìm Căn Bậc Hai Số Nguyên Lớn",
+          "de_bai": "problems/cppb_bs_04_can_bac_hai_so_lon/De_Bai.md",
+          "solution": "problems/cppb_bs_04_can_bac_hai_so_lon/solution.cpp",
+          "guide": "problems/cppb_bs_04_can_bac_hai_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_05_phan_tu_nho_nhat_lon_hon_x",
+          "title": "Tìm Phần Tử Nhỏ Nhất Lớn Hơn X",
+          "de_bai": "problems/cppb_bs_05_phan_tu_nho_nhat_lon_hon_x/De_Bai.md",
+          "solution": "problems/cppb_bs_05_phan_tu_nho_nhat_lon_hon_x/solution.cpp",
+          "guide": "problems/cppb_bs_05_phan_tu_nho_nhat_lon_hon_x/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_06_chia_keo_hoc_sinh",
+          "title": "Chia Kẹo Cho Học Sinh Đạt Chuẩn",
+          "de_bai": "problems/cppb_bs_06_chia_keo_hoc_sinh/De_Bai.md",
+          "solution": "problems/cppb_bs_06_chia_keo_hoc_sinh/solution.cpp",
+          "guide": "problems/cppb_bs_06_chia_keo_hoc_sinh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_07_cat_go_xay_dung",
+          "title": "Cắt Gỗ Xây Dựng (Woodcutting / EKO)",
+          "de_bai": "problems/cppb_bs_07_cat_go_xay_dung/De_Bai.md",
+          "solution": "problems/cppb_bs_07_cat_go_xay_dung/solution.cpp",
+          "guide": "problems/cppb_bs_07_cat_go_xay_dung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_08_dat_tram_phat_song",
+          "title": "Đặt Trạm Phát Sóng Cách Nhau Xa Nhất (Aggressive Cows)",
+          "de_bai": "problems/cppb_bs_08_dat_tram_phat_song/De_Bai.md",
+          "solution": "problems/cppb_bs_08_dat_tram_phat_song/solution.cpp",
+          "guide": "problems/cppb_bs_08_dat_tram_phat_song/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_09_chia_mang_tong_max_nho_nhat",
+          "title": "Chia Mảng Thành K Đoạn Có Tổng Max Nhỏ Nhất",
+          "de_bai": "problems/cppb_bs_09_chia_mang_tong_max_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_bs_09_chia_mang_tong_max_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_bs_09_chia_mang_tong_max_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_10_van_chuyen_hang_hoa",
+          "title": "Vận Chuyển Hàng Hóa Qua Phà Trong D Ngày",
+          "de_bai": "problems/cppb_bs_10_van_chuyen_hang_hoa/De_Bai.md",
+          "solution": "problems/cppb_bs_10_van_chuyen_hang_hoa/solution.cpp",
+          "guide": "problems/cppb_bs_10_van_chuyen_hang_hoa/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_11_nghiem_thuc_phuong_trinh",
+          "title": "Tìm Nghiệm Thực Của Phương Trình Đơn Điệu",
+          "de_bai": "problems/cppb_bs_11_nghiem_thuc_phuong_trinh/De_Bai.md",
+          "solution": "problems/cppb_bs_11_nghiem_thuc_phuong_trinh/solution.cpp",
+          "guide": "problems/cppb_bs_11_nghiem_thuc_phuong_trinh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_12_phan_tu_thu_k_hai_mang",
+          "title": "Phần Tử Thứ K Của Hai Mảng Đã Sắp Xếp",
+          "de_bai": "problems/cppb_bs_12_phan_tu_thu_k_hai_mang/De_Bai.md",
+          "solution": "problems/cppb_bs_12_phan_tu_thu_k_hai_mang/solution.cpp",
+          "guide": "problems/cppb_bs_12_phan_tu_thu_k_hai_mang/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_13_trung_binh_lon_nhat_do_dai_k",
+          "title": "Tìm Đoạn Con Có Trung Bình Lớn Nhất Độ Dài >= K",
+          "de_bai": "problems/cppb_bs_13_trung_binh_lon_nhat_do_dai_k/De_Bai.md",
+          "solution": "problems/cppb_bs_13_trung_binh_lon_nhat_do_dai_k/solution.cpp",
+          "guide": "problems/cppb_bs_13_trung_binh_lon_nhat_do_dai_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_14_tuyen_duong_van_tai",
+          "title": "Tối Ưu Hóa Tuyến Đường Vận Tải Đa Điểm",
+          "de_bai": "problems/cppb_bs_14_tuyen_duong_van_tai/De_Bai.md",
+          "solution": "problems/cppb_bs_14_tuyen_duong_van_tai/solution.cpp",
+          "guide": "problems/cppb_bs_14_tuyen_duong_van_tai/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_15_tim_kiem_mang_xoay_vong",
+          "title": "Tìm Kiếm Trên Mảng Sắp Xếp Bị Xoay Vòng (Rotated Array)",
+          "de_bai": "problems/cppb_bs_15_tim_kiem_mang_xoay_vong/De_Bai.md",
+          "solution": "problems/cppb_bs_15_tim_kiem_mang_xoay_vong/solution.cpp",
+          "guide": "problems/cppb_bs_15_tim_kiem_mang_xoay_vong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_16_tim_kiem_ma_tran_2d",
+          "title": "Tìm Kiếm Trên Ma Trận 2D Đã Sắp Xếp (Matrix Search)",
+          "de_bai": "problems/cppb_bs_16_tim_kiem_ma_tran_2d/De_Bai.md",
+          "solution": "problems/cppb_bs_16_tim_kiem_ma_tran_2d/solution.cpp",
+          "guide": "problems/cppb_bs_16_tim_kiem_ma_tran_2d/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_17_tim_dinh_day_nui",
+          "title": "Tìm Đỉnh Của Dãy Núi (Peak in Mountain Array)",
+          "de_bai": "problems/cppb_bs_17_tim_dinh_day_nui/De_Bai.md",
+          "solution": "problems/cppb_bs_17_tim_dinh_day_nui/solution.cpp",
+          "guide": "problems/cppb_bs_17_tim_dinh_day_nui/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bs_18_trung_vi_hai_mang_sap_xep",
+          "title": "Trung Vị Của Hai Mảng Đã Sắp Xếp (Median of Two Sorted)",
+          "de_bai": "problems/cppb_bs_18_trung_vi_hai_mang_sap_xep/De_Bai.md",
+          "solution": "problems/cppb_bs_18_trung_vi_hai_mang_sap_xep/solution.cpp",
+          "guide": "problems/cppb_bs_18_trung_vi_hai_mang_sap_xep/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "chapter": 2,
+      "title": "Bài 06: Phép toán BIT & biểu diễn trạng thái",
+      "problems": [
+        {
+          "code": "cppb_bit_01_bat_tat_kiem_tra_bit",
+          "title": "Bật, Tắt Và Kiểm Tra Bit Thứ K",
+          "de_bai": "problems/cppb_bit_01_bat_tat_kiem_tra_bit/De_Bai.md",
+          "solution": "problems/cppb_bit_01_bat_tat_kiem_tra_bit/solution.cpp",
+          "guide": "problems/cppb_bit_01_bat_tat_kiem_tra_bit/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_02_dem_so_bit_mot",
+          "title": "Đếm Số Lượng Bit 1 (Popcount)",
+          "de_bai": "problems/cppb_bit_02_dem_so_bit_mot/De_Bai.md",
+          "solution": "problems/cppb_bit_02_dem_so_bit_mot/solution.cpp",
+          "guide": "problems/cppb_bit_02_dem_so_bit_mot/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_03_kiem_tra_luy_thua_cua_hai",
+          "title": "Kiểm Tra Số Có Phải Lũy Thừa Của 2",
+          "de_bai": "problems/cppb_bit_03_kiem_tra_luy_thua_cua_hai/De_Bai.md",
+          "solution": "problems/cppb_bit_03_kiem_tra_luy_thua_cua_hai/solution.cpp",
+          "guide": "problems/cppb_bit_03_kiem_tra_luy_thua_cua_hai/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_04_tim_phan_tu_don_le",
+          "title": "Tìm Phần Tử Xuất Hiện 1 Lần Duy Nhất",
+          "de_bai": "problems/cppb_bit_04_tim_phan_tu_don_le/De_Bai.md",
+          "solution": "problems/cppb_bit_04_tim_phan_tu_don_le/solution.cpp",
+          "guide": "problems/cppb_bit_04_tim_phan_tu_don_le/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_05_tim_hai_so_don_le",
+          "title": "Tìm Hai Số Xuất Hiện 1 Lần Duy Nhất",
+          "de_bai": "problems/cppb_bit_05_tim_hai_so_don_le/De_Bai.md",
+          "solution": "problems/cppb_bit_05_tim_hai_so_don_le/solution.cpp",
+          "guide": "problems/cppb_bit_05_tim_hai_so_don_le/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_06_dao_bit_gia_tri_bu_mot",
+          "title": "Đảo Bit Và Giá Trị Bù 1",
+          "de_bai": "problems/cppb_bit_06_dao_bit_gia_tri_bu_mot/De_Bai.md",
+          "solution": "problems/cppb_bit_06_dao_bit_gia_tri_bu_mot/solution.cpp",
+          "guide": "problems/cppb_bit_06_dao_bit_gia_tri_bu_mot/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_07_duyet_tap_con_bitmask",
+          "title": "Duyệt Toàn Bộ 2^N Tập Con Bằng Mặt Nạ Bit",
+          "de_bai": "problems/cppb_bit_07_duyet_tap_con_bitmask/De_Bai.md",
+          "solution": "problems/cppb_bit_07_duyet_tap_con_bitmask/solution.cpp",
+          "guide": "problems/cppb_bit_07_duyet_tap_con_bitmask/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_08_tong_tap_con_bang_s",
+          "title": "Bài Toán Tổng Tập Con Bằng S (Subset Sum)",
+          "de_bai": "problems/cppb_bit_08_tong_tap_con_bang_s/De_Bai.md",
+          "solution": "problems/cppb_bit_08_tong_tap_con_bang_s/solution.cpp",
+          "guide": "problems/cppb_bit_08_tong_tap_con_bang_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_09_chia_tap_hop_chenh_lech_min",
+          "title": "Chia Tập Hợp Thành 2 Phần Có Tổng Chênh Lệch Nhỏ Nhất",
+          "de_bai": "problems/cppb_bit_09_chia_tap_hop_chenh_lech_min/De_Bai.md",
+          "solution": "problems/cppb_bit_09_chia_tap_hop_chenh_lech_min/solution.cpp",
+          "guide": "problems/cppb_bit_09_chia_tap_hop_chenh_lech_min/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_10_dem_cap_tich_and_bang_khong",
+          "title": "Đếm Cặp Có Tích Bit AND Bằng 0",
+          "de_bai": "problems/cppb_bit_10_dem_cap_tich_and_bang_khong/De_Bai.md",
+          "solution": "problems/cppb_bit_10_dem_cap_tich_and_bang_khong/solution.cpp",
+          "guide": "problems/cppb_bit_10_dem_cap_tich_and_bang_khong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_11_cap_xor_lon_nhat",
+          "title": "Tìm Cặp Có XOR Lớn Nhất Trong Mảng",
+          "de_bai": "problems/cppb_bit_11_cap_xor_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_bit_11_cap_xor_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_bit_11_cap_xor_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_12_duyet_tat_ca_submask",
+          "title": "Duyệt Tất Cả Các Tập Con Của Một Mặt Nạ Bit",
+          "de_bai": "problems/cppb_bit_12_duyet_tat_ca_submask/De_Bai.md",
+          "solution": "problems/cppb_bit_12_duyet_tat_ca_submask/solution.cpp",
+          "guide": "problems/cppb_bit_12_duyet_tat_ca_submask/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_13_day_con_tong_xor_bang_k",
+          "title": "Tìm Dãy Con Có Tổng XOR Bằng K",
+          "de_bai": "problems/cppb_bit_13_day_con_tong_xor_bang_k/De_Bai.md",
+          "solution": "problems/cppb_bit_13_day_con_tong_xor_bang_k/solution.cpp",
+          "guide": "problems/cppb_bit_13_day_con_tong_xor_bang_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_14_toi_uu_gan_viec_n_nguoi",
+          "title": "Tối Ưu Hóa Gán Việc Cho N Người (N <= 20)",
+          "de_bai": "problems/cppb_bit_14_toi_uu_gan_viec_n_nguoi/De_Bai.md",
+          "solution": "problems/cppb_bit_14_toi_uu_gan_viec_n_nguoi/solution.cpp",
+          "guide": "problems/cppb_bit_14_toi_uu_gan_viec_n_nguoi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_15_cap_tong_luy_thua_hai",
+          "title": "Đếm Số Cặp Có Tổng Bằng Lũy Thừa Của 2",
+          "de_bai": "problems/cppb_bit_15_cap_tong_luy_thua_hai/De_Bai.md",
+          "solution": "problems/cppb_bit_15_cap_tong_luy_thua_hai/solution.cpp",
+          "guide": "problems/cppb_bit_15_cap_tong_luy_thua_hai/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bit_16_tap_doc_lap_bit_lon_nhat",
+          "title": "Tập Hợp Độc Lập Về Bit Lớn Nhất",
+          "de_bai": "problems/cppb_bit_16_tap_doc_lap_bit_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_bit_16_tap_doc_lap_bit_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_bit_16_tap_doc_lap_bit_lon_nhat/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "chapter": 3,
+      "title": "Bài 07: Lý thuyết số & số nguyên tố",
+      "problems": [
+        {
+          "code": "cppb_nt_01_uoc_chung_boi_chung",
+          "title": "Ước Chung Lớn Nhất & Bội Chung Nhỏ Nhất",
+          "de_bai": "problems/cppb_nt_01_uoc_chung_boi_chung/De_Bai.md",
+          "solution": "problems/cppb_nt_01_uoc_chung_boi_chung/solution.cpp",
+          "guide": "problems/cppb_nt_01_uoc_chung_boi_chung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_02_kiem_tra_so_nguyen_to",
+          "title": "Kiểm Tra Số Nguyên Tố Cơ Bản",
+          "de_bai": "problems/cppb_nt_02_kiem_tra_so_nguyen_to/De_Bai.md",
+          "solution": "problems/cppb_nt_02_kiem_tra_so_nguyen_to/solution.cpp",
+          "guide": "problems/cppb_nt_02_kiem_tra_so_nguyen_to/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_03_phan_tich_thua_so_nguyen_to",
+          "title": "Phân Tích Thừa Số Nguyên Tố",
+          "de_bai": "problems/cppb_nt_03_phan_tich_thua_so_nguyen_to/De_Bai.md",
+          "solution": "problems/cppb_nt_03_phan_tich_thua_so_nguyen_to/solution.cpp",
+          "guide": "problems/cppb_nt_03_phan_tich_thua_so_nguyen_to/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_04_dem_uoc_va_tong_uoc",
+          "title": "Đếm Số Lượng & Tính Tổng Các Ước Số",
+          "de_bai": "problems/cppb_nt_04_dem_uoc_va_tong_uoc/De_Bai.md",
+          "solution": "problems/cppb_nt_04_dem_uoc_va_tong_uoc/solution.cpp",
+          "guide": "problems/cppb_nt_04_dem_uoc_va_tong_uoc/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_05_kiem_tra_so_chinh_phuong",
+          "title": "Kiểm Tra Số Chính Phương",
+          "de_bai": "problems/cppb_nt_05_kiem_tra_so_chinh_phuong/De_Bai.md",
+          "solution": "problems/cppb_nt_05_kiem_tra_so_chinh_phuong/solution.cpp",
+          "guide": "problems/cppb_nt_05_kiem_tra_so_chinh_phuong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_06_sang_nguyen_to_eratosthenes",
+          "title": "Sàng Nguyên Tố Eratosthenes",
+          "de_bai": "problems/cppb_nt_06_sang_nguyen_to_eratosthenes/De_Bai.md",
+          "solution": "problems/cppb_nt_06_sang_nguyen_to_eratosthenes/solution.cpp",
+          "guide": "problems/cppb_nt_06_sang_nguyen_to_eratosthenes/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_07_dem_so_nguyen_to_doan_l_r",
+          "title": "Đếm Số Nguyên Tố Trong Đoạn [L, R]",
+          "de_bai": "problems/cppb_nt_07_dem_so_nguyen_to_doan_l_r/De_Bai.md",
+          "solution": "problems/cppb_nt_07_dem_so_nguyen_to_doan_l_r/solution.cpp",
+          "guide": "problems/cppb_nt_07_dem_so_nguyen_to_doan_l_r/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_08_sang_uoc_nguyen_to_nho_nhat_spf",
+          "title": "Sàng Ước Nguyên Tố Nhỏ Nhất (SPF)",
+          "de_bai": "problems/cppb_nt_08_sang_uoc_nguyen_to_nho_nhat_spf/De_Bai.md",
+          "solution": "problems/cppb_nt_08_sang_uoc_nguyen_to_nho_nhat_spf/solution.cpp",
+          "guide": "problems/cppb_nt_08_sang_uoc_nguyen_to_nho_nhat_spf/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_09_sang_phan_doan_segmented_sieve",
+          "title": "Sàng Phân Đoạn (Segmented Sieve)",
+          "de_bai": "problems/cppb_nt_09_sang_phan_doan_segmented_sieve/De_Bai.md",
+          "solution": "problems/cppb_nt_09_sang_phan_doan_segmented_sieve/solution.cpp",
+          "guide": "problems/cppb_nt_09_sang_phan_doan_segmented_sieve/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_10_cap_so_nguyen_to_sinh_doi",
+          "title": "Cặp Số Nguyên Tố Sinh Đôi (Twin Primes)",
+          "de_bai": "problems/cppb_nt_10_cap_so_nguyen_to_sinh_doi/De_Bai.md",
+          "solution": "problems/cppb_nt_10_cap_so_nguyen_to_sinh_doi/solution.cpp",
+          "guide": "problems/cppb_nt_10_cap_so_nguyen_to_sinh_doi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_11_so_hoan_hao",
+          "title": "Kiểm Tra Số Hoàn Hảo",
+          "de_bai": "problems/cppb_nt_11_so_hoan_hao/De_Bai.md",
+          "solution": "problems/cppb_nt_11_so_hoan_hao/solution.cpp",
+          "guide": "problems/cppb_nt_11_so_hoan_hao/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_12_so_co_dung_ba_uoc",
+          "title": "Số Có Đúng 3 Ước Số",
+          "de_bai": "problems/cppb_nt_12_so_co_dung_ba_uoc/De_Bai.md",
+          "solution": "problems/cppb_nt_12_so_co_dung_ba_uoc/solution.cpp",
+          "guide": "problems/cppb_nt_12_so_co_dung_ba_uoc/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_13_so_gan_nguyen_to_almost_prime",
+          "title": "Số Gần Nguyên Tố (Almost Prime)",
+          "de_bai": "problems/cppb_nt_13_so_gan_nguyen_to_almost_prime/De_Bai.md",
+          "solution": "problems/cppb_nt_13_so_gan_nguyen_to_almost_prime/solution.cpp",
+          "guide": "problems/cppb_nt_13_so_gan_nguyen_to_almost_prime/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_14_phan_tich_giai_thua_legendre",
+          "title": "Phân Tích Giai Thừa Ra Thừa Số (Định Lý Legendre)",
+          "de_bai": "problems/cppb_nt_14_phan_tich_giai_thua_legendre/De_Bai.md",
+          "solution": "problems/cppb_nt_14_phan_tich_giai_thua_legendre/solution.cpp",
+          "guide": "problems/cppb_nt_14_phan_tich_giai_thua_legendre/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_15_dem_so_khong_tan_cung_giai_thua",
+          "title": "Đếm Số Lượng Số Không Tận Cùng Của N!",
+          "de_bai": "problems/cppb_nt_15_dem_so_khong_tan_cung_giai_thua/De_Bai.md",
+          "solution": "problems/cppb_nt_15_dem_so_khong_tan_cung_giai_thua/solution.cpp",
+          "guide": "problems/cppb_nt_15_dem_so_khong_tan_cung_giai_thua/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_nt_16_cap_nguyen_to_cung_nhau_phi_euler",
+          "title": "Số Học Cực Hạn: Cặp Nguyên Tố Cùng Nhau & Phi Hàm Euler",
+          "de_bai": "problems/cppb_nt_16_cap_nguyen_to_cung_nhau_phi_euler/De_Bai.md",
+          "solution": "problems/cppb_nt_16_cap_nguyen_to_cung_nhau_phi_euler/solution.cpp",
+          "guide": "problems/cppb_nt_16_cap_nguyen_to_cung_nhau_phi_euler/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "chapter": 3,
+      "title": "Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch đảo modulo",
+      "problems": [
+        {
+          "code": "cppb_mod_01_phep_tinh_dong_du_co_ban",
+          "title": "Phép Tính Đồng Dư Cơ Bản (+, -, *)",
+          "de_bai": "problems/cppb_mod_01_phep_tinh_dong_du_co_ban/De_Bai.md",
+          "solution": "problems/cppb_mod_01_phep_tinh_dong_du_co_ban/solution.cpp",
+          "guide": "problems/cppb_mod_01_phep_tinh_dong_du_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_02_luy_thua_nhi_phan",
+          "title": "Lũy Thừa Nhị Phân Cơ Bản",
+          "de_bai": "problems/cppb_mod_02_luy_thua_nhi_phan/De_Bai.md",
+          "solution": "problems/cppb_mod_02_luy_thua_nhi_phan/solution.cpp",
+          "guide": "problems/cppb_mod_02_luy_thua_nhi_phan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_03_luy_thua_chuoi_so_lon",
+          "title": "Lũy Thừa Chuỗi Số Lớn",
+          "de_bai": "problems/cppb_mod_03_luy_thua_chuoi_so_lon/De_Bai.md",
+          "solution": "problems/cppb_mod_03_luy_thua_chuoi_so_lon/solution.cpp",
+          "guide": "problems/cppb_mod_03_luy_thua_chuoi_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_04_nhan_an_do_chong_tran_so",
+          "title": "Nhân Ấn Độ Chống Tràn Số 64-bit",
+          "de_bai": "problems/cppb_mod_04_nhan_an_do_chong_tran_so/De_Bai.md",
+          "solution": "problems/cppb_mod_04_nhan_an_do_chong_tran_so/solution.cpp",
+          "guide": "problems/cppb_mod_04_nhan_an_do_chong_tran_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_05_tong_cap_so_nhan_dong_du",
+          "title": "Tính Tổng Cấp Số Nhân Đồng Dư",
+          "de_bai": "problems/cppb_mod_05_tong_cap_so_nhan_dong_du/De_Bai.md",
+          "solution": "problems/cppb_mod_05_tong_cap_so_nhan_dong_du/solution.cpp",
+          "guide": "problems/cppb_mod_05_tong_cap_so_nhan_dong_du/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_06_nghich_dao_fermat",
+          "title": "Nghịch Đảo Modulo Bằng Fermat Nhỏ",
+          "de_bai": "problems/cppb_mod_06_nghich_dao_fermat/De_Bai.md",
+          "solution": "problems/cppb_mod_06_nghich_dao_fermat/solution.cpp",
+          "guide": "problems/cppb_mod_06_nghich_dao_fermat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_07_nghich_dao_euclid_mo_rong",
+          "title": "Nghịch Đảo Modulo Bằng Euclid Mở Rộng",
+          "de_bai": "problems/cppb_mod_07_nghich_dao_euclid_mo_rong/De_Bai.md",
+          "solution": "problems/cppb_mod_07_nghich_dao_euclid_mo_rong/solution.cpp",
+          "guide": "problems/cppb_mod_07_nghich_dao_euclid_mo_rong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_08_phep_chia_dong_du",
+          "title": "Phép Chia Đồng Dư A / B mod M",
+          "de_bai": "problems/cppb_mod_08_phep_chia_dong_du/De_Bai.md",
+          "solution": "problems/cppb_mod_08_phep_chia_dong_du/solution.cpp",
+          "guide": "problems/cppb_mod_08_phep_chia_dong_du/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_09_to_hop_c_n_k_modulo",
+          "title": "Tính Số Tổ Hợp C(N, K) mod M",
+          "de_bai": "problems/cppb_mod_09_to_hop_c_n_k_modulo/De_Bai.md",
+          "solution": "problems/cppb_mod_09_to_hop_c_n_k_modulo/solution.cpp",
+          "guide": "problems/cppb_mod_09_to_hop_c_n_k_modulo/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_10_chinh_hop_a_n_k_modulo",
+          "title": "Tính Số Chỉnh Hợp A(N, K) mod M",
+          "de_bai": "problems/cppb_mod_10_chinh_hop_a_n_k_modulo/De_Bai.md",
+          "solution": "problems/cppb_mod_10_chinh_hop_a_n_k_modulo/solution.cpp",
+          "guide": "problems/cppb_mod_10_chinh_hop_a_n_k_modulo/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_11_fibonacci_dong_du_lon",
+          "title": "Dãy Fibonacci Đồng Dư Lớn",
+          "de_bai": "problems/cppb_mod_11_fibonacci_dong_du_lon/De_Bai.md",
+          "solution": "problems/cppb_mod_11_fibonacci_dong_du_lon/solution.cpp",
+          "guide": "problems/cppb_mod_11_fibonacci_dong_du_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_12_so_catalan_dong_du",
+          "title": "Số Catalan Đồng Dư",
+          "de_bai": "problems/cppb_mod_12_so_catalan_dong_du/De_Bai.md",
+          "solution": "problems/cppb_mod_12_so_catalan_dong_du/solution.cpp",
+          "guide": "problems/cppb_mod_12_so_catalan_dong_du/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_13_luy_thua_tang_tower_of_powers",
+          "title": "Lũy Thừa Tầng (Tower of Powers)",
+          "de_bai": "problems/cppb_mod_13_luy_thua_tang_tower_of_powers/De_Bai.md",
+          "solution": "problems/cppb_mod_13_luy_thua_tang_tower_of_powers/solution.cpp",
+          "guide": "problems/cppb_mod_13_luy_thua_tang_tower_of_powers/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_14_nghich_dao_tuyen_tinh",
+          "title": "Nghịch Đảo Tuyến Tính 1..N Trong O(N)",
+          "de_bai": "problems/cppb_mod_14_nghich_dao_tuyen_tinh/De_Bai.md",
+          "solution": "problems/cppb_mod_14_nghich_dao_tuyen_tinh/solution.cpp",
+          "guide": "problems/cppb_mod_14_nghich_dao_tuyen_tinh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_15_phuong_trinh_dong_du_tuyen_tinh",
+          "title": "Giải Phương Trình Đồng Dư Tuyến Tính Ax = B mod M",
+          "de_bai": "problems/cppb_mod_15_phuong_trinh_dong_du_tuyen_tinh/De_Bai.md",
+          "solution": "problems/cppb_mod_15_phuong_trinh_dong_du_tuyen_tinh/solution.cpp",
+          "guide": "problems/cppb_mod_15_phuong_trinh_dong_du_tuyen_tinh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_mod_16_can_bac_hai_modulo",
+          "title": "Đồng Dư Cực Hạn: Căn Bậc Hai Modulo",
+          "de_bai": "problems/cppb_mod_16_can_bac_hai_modulo/De_Bai.md",
+          "solution": "problems/cppb_mod_16_can_bac_hai_modulo/solution.cpp",
+          "guide": "problems/cppb_mod_16_can_bac_hai_modulo/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 9,
+      "chapter": 3,
+      "title": "Bài 09: Xử lý số nguyên lớn (BigInt)",
+      "problems": [
+        {
+          "code": "cppb_big_01_so_sanh_hai_so_lon",
+          "title": "So Sánh Hai Số Nguyên Lớn",
+          "de_bai": "problems/cppb_big_01_so_sanh_hai_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_01_so_sanh_hai_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_01_so_sanh_hai_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_02_cong_hai_so_lon",
+          "title": "Cộng Hai Số Nguyên Lớn",
+          "de_bai": "problems/cppb_big_02_cong_hai_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_02_cong_hai_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_02_cong_hai_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_03_tru_hai_so_lon_khong_am",
+          "title": "Trừ Hai Số Nguyên Lớn (A >= B)",
+          "de_bai": "problems/cppb_big_03_tru_hai_so_lon_khong_am/De_Bai.md",
+          "solution": "problems/cppb_big_03_tru_hai_so_lon_khong_am/solution.cpp",
+          "guide": "problems/cppb_big_03_tru_hai_so_lon_khong_am/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_04_tru_hai_so_lon_tong_quat",
+          "title": "Trừ Hai Số Lớn Tổng Quát (Có Thể Âm)",
+          "de_bai": "problems/cppb_big_04_tru_hai_so_lon_tong_quat/De_Bai.md",
+          "solution": "problems/cppb_big_04_tru_hai_so_lon_tong_quat/solution.cpp",
+          "guide": "problems/cppb_big_04_tru_hai_so_lon_tong_quat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_05_nhan_so_lon_voi_so_nho",
+          "title": "Nhân Số Lớn Với Số Nhỏ",
+          "de_bai": "problems/cppb_big_05_nhan_so_lon_voi_so_nho/De_Bai.md",
+          "solution": "problems/cppb_big_05_nhan_so_lon_voi_so_nho/solution.cpp",
+          "guide": "problems/cppb_big_05_nhan_so_lon_voi_so_nho/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_06_nhan_hai_so_lon",
+          "title": "Nhân Hai Số Nguyên Lớn",
+          "de_bai": "problems/cppb_big_06_nhan_hai_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_06_nhan_hai_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_06_nhan_hai_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_07_chia_so_lon_cho_so_nho",
+          "title": "Chia Số Lớn Cho Số Nhỏ (Lấy Thương)",
+          "de_bai": "problems/cppb_big_07_chia_so_lon_cho_so_nho/De_Bai.md",
+          "solution": "problems/cppb_big_07_chia_so_lon_cho_so_nho/solution.cpp",
+          "guide": "problems/cppb_big_07_chia_so_lon_cho_so_nho/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_08_chia_lay_du_so_lon_cho_so_nho",
+          "title": "Chia Lấy Dư Số Lớn Cho Số Nhỏ",
+          "de_bai": "problems/cppb_big_08_chia_lay_du_so_lon_cho_so_nho/De_Bai.md",
+          "solution": "problems/cppb_big_08_chia_lay_du_so_lon_cho_so_nho/solution.cpp",
+          "guide": "problems/cppb_big_08_chia_lay_du_so_lon_cho_so_nho/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_09_giai_thua_so_lon",
+          "title": "Tính Giai Thừa Số Lớn (N!)",
+          "de_bai": "problems/cppb_big_09_giai_thua_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_09_giai_thua_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_09_giai_thua_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_10_luy_thua_so_lon_chinh_xac",
+          "title": "Lũy Thừa Số Lớn Chính Xác (A^B)",
+          "de_bai": "problems/cppb_big_10_luy_thua_so_lon_chinh_xac/De_Bai.md",
+          "solution": "problems/cppb_big_10_luy_thua_so_lon_chinh_xac/solution.cpp",
+          "guide": "problems/cppb_big_10_luy_thua_so_lon_chinh_xac/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_11_fibonacci_so_lon",
+          "title": "Số Fibonacci Lớn Thứ N",
+          "de_bai": "problems/cppb_big_11_fibonacci_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_11_fibonacci_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_11_fibonacci_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_12_tong_chu_so_giai_thua",
+          "title": "Tổng Các Chữ Số Của N!",
+          "de_bai": "problems/cppb_big_12_tong_chu_so_giai_thua/De_Bai.md",
+          "solution": "problems/cppb_big_12_tong_chu_so_giai_thua/solution.cpp",
+          "guide": "problems/cppb_big_12_tong_chu_so_giai_thua/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_13_chia_hai_so_nguyen_lon",
+          "title": "Chia Hai Số Nguyên Lớn (A / B)",
+          "de_bai": "problems/cppb_big_13_chia_hai_so_nguyen_lon/De_Bai.md",
+          "solution": "problems/cppb_big_13_chia_hai_so_nguyen_lon/solution.cpp",
+          "guide": "problems/cppb_big_13_chia_hai_so_nguyen_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_14_can_bac_hai_so_lon",
+          "title": "Căn Bậc Hai Số Nguyên Lớn",
+          "de_bai": "problems/cppb_big_14_can_bac_hai_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_14_can_bac_hai_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_14_can_bac_hai_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_15_uoc_chung_lon_nhat_so_lon",
+          "title": "Ước Chung Lớn Nhất Số Lớn",
+          "de_bai": "problems/cppb_big_15_uoc_chung_lon_nhat_so_lon/De_Bai.md",
+          "solution": "problems/cppb_big_15_uoc_chung_lon_nhat_so_lon/solution.cpp",
+          "guide": "problems/cppb_big_15_uoc_chung_lon_nhat_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_big_16_to_hop_so_lon_chinh_xac",
+          "title": "Số Lớn Cực Hạn: Tổ Hợp C(N, K) Chính Xác",
+          "de_bai": "problems/cppb_big_16_to_hop_so_lon_chinh_xac/De_Bai.md",
+          "solution": "problems/cppb_big_16_to_hop_so_lon_chinh_xac/solution.cpp",
+          "guide": "problems/cppb_big_16_to_hop_so_lon_chinh_xac/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 10,
+      "chapter": 4,
+      "title": "Bài 10: Thuật toán đệ quy & cây gọi hàm",
+      "problems": [
+        {
+          "code": "cppb_rec_01_in_day_so_de_quy",
+          "title": "In Dãy Số Đệ Quy 1..N và N..1",
+          "de_bai": "problems/cppb_rec_01_in_day_so_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_01_in_day_so_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_01_in_day_so_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_02_tong_day_so_va_giai_thua",
+          "title": "Tính Tổng Dãy Số & Giai Thừa Bằng Đệ Quy",
+          "de_bai": "problems/cppb_rec_02_tong_day_so_va_giai_thua/De_Bai.md",
+          "solution": "problems/cppb_rec_02_tong_day_so_va_giai_thua/solution.cpp",
+          "guide": "problems/cppb_rec_02_tong_day_so_va_giai_thua/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_03_dem_va_tinh_tong_chu_so",
+          "title": "Đếm & Tính Tổng Chữ Số Của N Bằng Đệ Quy",
+          "de_bai": "problems/cppb_rec_03_dem_va_tinh_tong_chu_so/De_Bai.md",
+          "solution": "problems/cppb_rec_03_dem_va_tinh_tong_chu_so/solution.cpp",
+          "guide": "problems/cppb_rec_03_dem_va_tinh_tong_chu_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_04_dao_nguoc_mang_de_quy",
+          "title": "Đảo Ngược Mảng Bằng Đệ Quy Hai Con Trỏ",
+          "de_bai": "problems/cppb_rec_04_dao_nguoc_mang_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_04_dao_nguoc_mang_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_04_dao_nguoc_mang_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_05_kiem_tra_palindrome_de_quy",
+          "title": "Kiểm Tra Chuỗi Palindrome Bằng Đệ Quy",
+          "de_bai": "problems/cppb_rec_05_kiem_tra_palindrome_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_05_kiem_tra_palindrome_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_05_kiem_tra_palindrome_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_06_tim_min_max_de_quy",
+          "title": "So Sánh Đệ Quy Tuyến Tính & Chia Đôi Khi Tìm Min/Max",
+          "de_bai": "problems/cppb_rec_06_tim_min_max_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_06_tim_min_max_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_06_tim_min_max_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_07_uoc_chung_lon_nhat_de_quy",
+          "title": "Thuật Toán Euclid Tính GCD & LCM Bằng Đệ Quy",
+          "de_bai": "problems/cppb_rec_07_uoc_chung_lon_nhat_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_07_uoc_chung_lon_nhat_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_07_uoc_chung_lon_nhat_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_08_luy_thua_nhi_phan_de_quy",
+          "title": "Lũy Thừa Nhị Phân Đệ Quy A^B mod M",
+          "de_bai": "problems/cppb_rec_08_luy_thua_nhi_phan_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_08_luy_thua_nhi_phan_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_08_luy_thua_nhi_phan_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_09_thap_ha_noi_co_ban",
+          "title": "Bài Toán Tháp Hà Nội (Tower of Hanoi)",
+          "de_bai": "problems/cppb_rec_09_thap_ha_noi_co_ban/De_Bai.md",
+          "solution": "problems/cppb_rec_09_thap_ha_noi_co_ban/solution.cpp",
+          "guide": "problems/cppb_rec_09_thap_ha_noi_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_10_fibonacci_cay_nhi_phan",
+          "title": "Dãy Fibonacci Đệ Quy & Khảo Sát Cây Gọi Hàm",
+          "de_bai": "problems/cppb_rec_10_fibonacci_cay_nhi_phan/De_Bai.md",
+          "solution": "problems/cppb_rec_10_fibonacci_cay_nhi_phan/solution.cpp",
+          "guide": "problems/cppb_rec_10_fibonacci_cay_nhi_phan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_11_chuyen_doi_he_nhi_phan_de_quy",
+          "title": "Chuyển Đổi Hệ Cơ Số 10 Sang Nhị Phân Bằng Đệ Quy",
+          "de_bai": "problems/cppb_rec_11_chuyen_doi_he_nhi_phan_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_11_chuyen_doi_he_nhi_phan_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_11_chuyen_doi_he_nhi_phan_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_12_xay_dung_cong_thuc_truy_hoi_dan_dau",
+          "title": "Xây Dựng Hệ Thức Truy Hồi Cho Dãy Số Đan Dấu",
+          "de_bai": "problems/cppb_rec_12_xay_dung_cong_thuc_truy_hoi_dan_dau/De_Bai.md",
+          "solution": "problems/cppb_rec_12_xay_dung_cong_thuc_truy_hoi_dan_dau/solution.cpp",
+          "guide": "problems/cppb_rec_12_xay_dung_cong_thuc_truy_hoi_dan_dau/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_13_thap_ha_noi_co_rang_buoc",
+          "title": "Tháp Hà Nội Có Ràng Buộc Nước Đi",
+          "de_bai": "problems/cppb_rec_13_thap_ha_noi_co_rang_buoc/De_Bai.md",
+          "solution": "problems/cppb_rec_13_thap_ha_noi_co_rang_buoc/solution.cpp",
+          "guide": "problems/cppb_rec_13_thap_ha_noi_co_rang_buoc/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_14_sinh_xau_nhi_phan_khong_2_so_1_lien_ke",
+          "title": "Sinh Xâu Nhị Phân Không Chứa Hai Số 1 Liền Kề",
+          "de_bai": "problems/cppb_rec_14_sinh_xau_nhi_phan_khong_2_so_1_lien_ke/De_Bai.md",
+          "solution": "problems/cppb_rec_14_sinh_xau_nhi_phan_khong_2_so_1_lien_ke/solution.cpp",
+          "guide": "problems/cppb_rec_14_sinh_xau_nhi_phan_khong_2_so_1_lien_ke/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_15_phan_tich_so_thanh_tong_de_quy",
+          "title": "Đếm Số Cách Phân Tích Số N Thành Tổng Bằng Đệ Quy",
+          "de_bai": "problems/cppb_rec_15_phan_tich_so_thanh_tong_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_15_phan_tich_so_thanh_tong_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_15_phan_tich_so_thanh_tong_de_quy/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rec_16_dem_cau_hinh_cay_catalan_de_quy",
+          "title": "Đếm Cấu Hình Trạng Thái Phân Nhánh Không Trùng Lặp",
+          "de_bai": "problems/cppb_rec_16_dem_cau_hinh_cay_catalan_de_quy/De_Bai.md",
+          "solution": "problems/cppb_rec_16_dem_cau_hinh_cay_catalan_de_quy/solution.cpp",
+          "guide": "problems/cppb_rec_16_dem_cau_hinh_cay_catalan_de_quy/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 11,
+      "chapter": 4,
+      "title": "Bài 11: Kỹ thuật chia để trị",
+      "problems": [
+        {
+          "code": "cppb_dac_01_tim_kiem_nhi_phan_chia_de_tri",
+          "title": "Tìm Kiếm Nhị Phân Bằng Đệ Quy (Cầu Nối Sang D&C)",
+          "de_bai": "problems/cppb_dac_01_tim_kiem_nhi_phan_chia_de_tri/De_Bai.md",
+          "solution": "problems/cppb_dac_01_tim_kiem_nhi_phan_chia_de_tri/solution.cpp",
+          "guide": "problems/cppb_dac_01_tim_kiem_nhi_phan_chia_de_tri/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_02_range_minimum_query_chia_de_tri",
+          "title": "Tìm Min Trên Đoạn Bằng Chia Để Trị (RMQ D&C Cơ Bản)",
+          "de_bai": "problems/cppb_dac_02_range_minimum_query_chia_de_tri/De_Bai.md",
+          "solution": "problems/cppb_dac_02_range_minimum_query_chia_de_tri/solution.cpp",
+          "guide": "problems/cppb_dac_02_range_minimum_query_chia_de_tri/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_03_tim_phan_tu_lon_thu_hai_tournament",
+          "title": "Tìm Phần Tử Lớn Thứ Hai (Tournament Tree)",
+          "de_bai": "problems/cppb_dac_03_tim_phan_tu_lon_thu_hai_tournament/De_Bai.md",
+          "solution": "problems/cppb_dac_03_tim_phan_tu_lon_thu_hai_tournament/solution.cpp",
+          "guide": "problems/cppb_dac_03_tim_phan_tu_lon_thu_hai_tournament/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_04_gop_hai_mang_da_sap_xep_merge_step",
+          "title": "Gộp Hai Mảng Đã Sắp Xếp (Merge Step)",
+          "de_bai": "problems/cppb_dac_04_gop_hai_mang_da_sap_xep_merge_step/De_Bai.md",
+          "solution": "problems/cppb_dac_04_gop_hai_mang_da_sap_xep_merge_step/solution.cpp",
+          "guide": "problems/cppb_dac_04_gop_hai_mang_da_sap_xep_merge_step/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_05_sap_xep_tron_merge_sort",
+          "title": "Thuật Toán Sắp Xếp Trộn (Merge Sort)",
+          "de_bai": "problems/cppb_dac_05_sap_xep_tron_merge_sort/De_Bai.md",
+          "solution": "problems/cppb_dac_05_sap_xep_tron_merge_sort/solution.cpp",
+          "guide": "problems/cppb_dac_05_sap_xep_tron_merge_sort/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_06_dem_so_cap_nghich_the_inversion",
+          "title": "Đếm Số Cặp Nghịch Thế (Inversion Count)",
+          "de_bai": "problems/cppb_dac_06_dem_so_cap_nghich_the_inversion/De_Bai.md",
+          "solution": "problems/cppb_dac_06_dem_so_cap_nghich_the_inversion/solution.cpp",
+          "guide": "problems/cppb_dac_06_dem_so_cap_nghich_the_inversion/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_07_doan_con_tong_lon_nhat_maximum_subarray",
+          "title": "Đoạn Con Tổng Lớn Nhất (Maximum Subarray D&C)",
+          "de_bai": "problems/cppb_dac_07_doan_con_tong_lon_nhat_maximum_subarray/De_Bai.md",
+          "solution": "problems/cppb_dac_07_doan_con_tong_lon_nhat_maximum_subarray/solution.cpp",
+          "guide": "problems/cppb_dac_07_doan_con_tong_lon_nhat_maximum_subarray/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_08_tim_phan_tu_da_so_majority_element",
+          "title": "Tìm Phần Tử Đa Số (Majority Element) D&C",
+          "de_bai": "problems/cppb_dac_08_tim_phan_tu_da_so_majority_element/De_Bai.md",
+          "solution": "problems/cppb_dac_08_tim_phan_tu_da_so_majority_element/solution.cpp",
+          "guide": "problems/cppb_dac_08_tim_phan_tu_da_so_majority_element/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_09_luy_thua_ma_tran_chia_de_tri",
+          "title": "Lũy Thừa Ma Trận Chia Để Trị 2x2",
+          "de_bai": "problems/cppb_dac_09_luy_thua_ma_tran_chia_de_tri/De_Bai.md",
+          "solution": "problems/cppb_dac_09_luy_thua_ma_tran_chia_de_tri/solution.cpp",
+          "guide": "problems/cppb_dac_09_luy_thua_ma_tran_chia_de_tri/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_10_tim_dinh_mang_unimodal_peak_index",
+          "title": "Tìm Điểm Cực Đại Mảng Unimodal (Peak Index)",
+          "de_bai": "problems/cppb_dac_10_tim_dinh_mang_unimodal_peak_index/De_Bai.md",
+          "solution": "problems/cppb_dac_10_tim_dinh_mang_unimodal_peak_index/solution.cpp",
+          "guide": "problems/cppb_dac_10_tim_dinh_mang_unimodal_peak_index/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_11_tinh_tong_cap_so_nhan_chia_de_tri",
+          "title": "Tính Tổng Cấp Số Nhân D&C",
+          "de_bai": "problems/cppb_dac_11_tinh_tong_cap_so_nhan_chia_de_tri/De_Bai.md",
+          "solution": "problems/cppb_dac_11_tinh_tong_cap_so_nhan_chia_de_tri/solution.cpp",
+          "guide": "problems/cppb_dac_11_tinh_tong_cap_so_nhan_chia_de_tri/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_12_dem_so_cap_a_i_lon_hon_2_a_j",
+          "title": "Đếm Số Cặp A_i > 2 * A_j (Significant Inversions)",
+          "de_bai": "problems/cppb_dac_12_dem_so_cap_a_i_lon_hon_2_a_j/De_Bai.md",
+          "solution": "problems/cppb_dac_12_dem_so_cap_a_i_lon_hon_2_a_j/solution.cpp",
+          "guide": "problems/cppb_dac_12_dem_so_cap_a_i_lon_hon_2_a_j/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_13_quickselect_tim_phan_tu_kth",
+          "title": "Thuật Toán QuickSelect Tìm K-th Element",
+          "de_bai": "problems/cppb_dac_13_quickselect_tim_phan_tu_kth/De_Bai.md",
+          "solution": "problems/cppb_dac_13_quickselect_tim_phan_tu_kth/solution.cpp",
+          "guide": "problems/cppb_dac_13_quickselect_tim_phan_tu_kth/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_14_dem_so_doan_con_tong_trong_khoang_l_r",
+          "title": "Đếm Số Đoạn Con Tổng Trong Đoạn [L, R]",
+          "de_bai": "problems/cppb_dac_14_dem_so_doan_con_tong_trong_khoang_l_r/De_Bai.md",
+          "solution": "problems/cppb_dac_14_dem_so_doan_con_tong_trong_khoang_l_r/solution.cpp",
+          "guide": "problems/cppb_dac_14_dem_so_doan_con_tong_trong_khoang_l_r/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_15_cap_diem_gan_nhat_closest_pair",
+          "title": "Cặp Điểm Gần Nhất (Closest Pair of Points)",
+          "de_bai": "problems/cppb_dac_15_cap_diem_gan_nhat_closest_pair/De_Bai.md",
+          "solution": "problems/cppb_dac_15_cap_diem_gan_nhat_closest_pair/solution.cpp",
+          "guide": "problems/cppb_dac_15_cap_diem_gan_nhat_closest_pair/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dac_16_median_hai_mang_da_sap_xep",
+          "title": "Median Của Hai Mảng Đã Sắp Xếp",
+          "de_bai": "problems/cppb_dac_16_median_hai_mang_da_sap_xep/De_Bai.md",
+          "solution": "problems/cppb_dac_16_median_hai_mang_da_sap_xep/solution.cpp",
+          "guide": "problems/cppb_dac_16_median_hai_mang_da_sap_xep/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 12,
+      "chapter": 4,
+      "title": "Bài 12: Thuật toán quay lui & nhánh cận",
+      "problems": [
+        {
+          "code": "cppb_bkt_01_sinh_xau_nhi_phan",
+          "title": "Sinh Tất Cả Xâu Nhị Phân Độ Dài N",
+          "de_bai": "problems/cppb_bkt_01_sinh_xau_nhi_phan/De_Bai.md",
+          "solution": "problems/cppb_bkt_01_sinh_xau_nhi_phan/solution.cpp",
+          "guide": "problems/cppb_bkt_01_sinh_xau_nhi_phan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_02_sinh_tap_con",
+          "title": "Sinh Tất Cả Tập Con Của Tập N Phần Tử",
+          "de_bai": "problems/cppb_bkt_02_sinh_tap_con/De_Bai.md",
+          "solution": "problems/cppb_bkt_02_sinh_tap_con/solution.cpp",
+          "guide": "problems/cppb_bkt_02_sinh_tap_con/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_03_sinh_hoan_vi",
+          "title": "Sinh Tất Cả Hoán Vị 1..N",
+          "de_bai": "problems/cppb_bkt_03_sinh_hoan_vi/De_Bai.md",
+          "solution": "problems/cppb_bkt_03_sinh_hoan_vi/solution.cpp",
+          "guide": "problems/cppb_bkt_03_sinh_hoan_vi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_04_sinh_to_hop_chap_k",
+          "title": "Sinh Tất Cả Tổ Hợp Chập K Của N",
+          "de_bai": "problems/cppb_bkt_04_sinh_to_hop_chap_k/De_Bai.md",
+          "solution": "problems/cppb_bkt_04_sinh_to_hop_chap_k/solution.cpp",
+          "guide": "problems/cppb_bkt_04_sinh_to_hop_chap_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_05_sinh_day_ngoac_dung",
+          "title": "Sinh Dãy Ngoặc Hợp Lệ Độ Dài 2N",
+          "de_bai": "problems/cppb_bkt_05_sinh_day_ngoac_dung/De_Bai.md",
+          "solution": "problems/cppb_bkt_05_sinh_day_ngoac_dung/solution.cpp",
+          "guide": "problems/cppb_bkt_05_sinh_day_ngoac_dung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_06_bai_toan_n_queens",
+          "title": "Bài Toán N-Queens (Đếm Số Cách)",
+          "de_bai": "problems/cppb_bkt_06_bai_toan_n_queens/De_Bai.md",
+          "solution": "problems/cppb_bkt_06_bai_toan_n_queens/solution.cpp",
+          "guide": "problems/cppb_bkt_06_bai_toan_n_queens/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_07_me_cung_rat_in_a_maze",
+          "title": "Mê Cung (Rat in a Maze): Tìm Mọi Đường Đi",
+          "de_bai": "problems/cppb_bkt_07_me_cung_rat_in_a_maze/De_Bai.md",
+          "solution": "problems/cppb_bkt_07_me_cung_rat_in_a_maze/solution.cpp",
+          "guide": "problems/cppb_bkt_07_me_cung_rat_in_a_maze/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_08_tap_con_tong_bang_s_subset_sum",
+          "title": "Tập Con Có Tổng Bằng S (Subset Sum)",
+          "de_bai": "problems/cppb_bkt_08_tap_con_tong_bang_s_subset_sum/De_Bai.md",
+          "solution": "problems/cppb_bkt_08_tap_con_tong_bang_s_subset_sum/solution.cpp",
+          "guide": "problems/cppb_bkt_08_tap_con_tong_bang_s_subset_sum/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_09_chia_tap_hai_phan_bang_nhau",
+          "title": "Chia Tập Thành 2 Phần Có Tổng Bằng Nhau",
+          "de_bai": "problems/cppb_bkt_09_chia_tap_hai_phan_bang_nhau/De_Bai.md",
+          "solution": "problems/cppb_bkt_09_chia_tap_hai_phan_bang_nhau/solution.cpp",
+          "guide": "problems/cppb_bkt_09_chia_tap_hai_phan_bang_nhau/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_10_doi_tien_xu_it_nhat_branch_and_bound",
+          "title": "Đổi Tiền Xu Ít Nhất (B&B Coin Change)",
+          "de_bai": "problems/cppb_bkt_10_doi_tien_xu_it_nhat_branch_and_bound/De_Bai.md",
+          "solution": "problems/cppb_bkt_10_doi_tien_xu_it_nhat_branch_and_bound/solution.cpp",
+          "guide": "problems/cppb_bkt_10_doi_tien_xu_it_nhat_branch_and_bound/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_11_ma_di_tuan_knights_tour",
+          "title": "Mã Đi Tuần (Knight's Tour)",
+          "de_bai": "problems/cppb_bkt_11_ma_di_tuan_knights_tour/De_Bai.md",
+          "solution": "problems/cppb_bkt_11_ma_di_tuan_knights_tour/solution.cpp",
+          "guide": "problems/cppb_bkt_11_ma_di_tuan_knights_tour/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_12_tro_choi_sudoku_9x9",
+          "title": "Trò Chơi Sudoku 9x9",
+          "de_bai": "problems/cppb_bkt_12_tro_choi_sudoku_9x9/De_Bai.md",
+          "solution": "problems/cppb_bkt_12_tro_choi_sudoku_9x9/solution.cpp",
+          "guide": "problems/cppb_bkt_12_tro_choi_sudoku_9x9/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_13_cai_tui_01_nhanh_can_knapsack",
+          "title": "Bài Toán Cái Túi 0/1 Nhánh Cận (B&B Knapsack)",
+          "de_bai": "problems/cppb_bkt_13_cai_tui_01_nhanh_can_knapsack/De_Bai.md",
+          "solution": "problems/cppb_bkt_13_cai_tui_01_nhanh_can_knapsack/solution.cpp",
+          "guide": "problems/cppb_bkt_13_cai_tui_01_nhanh_can_knapsack/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_14_nguoi_du_lich_tsp_nhanh_can",
+          "title": "Người Du Lịch (TSP) Nhánh Cận",
+          "de_bai": "problems/cppb_bkt_14_nguoi_du_lich_tsp_nhanh_can/De_Bai.md",
+          "solution": "problems/cppb_bkt_14_nguoi_du_lich_tsp_nhanh_can/solution.cpp",
+          "guide": "problems/cppb_bkt_14_nguoi_du_lich_tsp_nhanh_can/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_15_to_mau_do_thi_graph_coloring",
+          "title": "Tô Màu Đồ Thị (Graph K-Coloring)",
+          "de_bai": "problems/cppb_bkt_15_to_mau_do_thi_graph_coloring/De_Bai.md",
+          "solution": "problems/cppb_bkt_15_to_mau_do_thi_graph_coloring/solution.cpp",
+          "guide": "problems/cppb_bkt_15_to_mau_do_thi_graph_coloring/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_bkt_16_phan_cong_cong_viec_toi_uu_job_assignment",
+          "title": "Phân Công Công Việc Tối Ưu (Job Assignment B&B)",
+          "de_bai": "problems/cppb_bkt_16_phan_cong_cong_viec_toi_uu_job_assignment/De_Bai.md",
+          "solution": "problems/cppb_bkt_16_phan_cong_cong_viec_toi_uu_job_assignment/solution.cpp",
+          "guide": "problems/cppb_bkt_16_phan_cong_cong_viec_toi_uu_job_assignment/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 13,
+      "chapter": 5,
+      "title": "Bài 13: Quy hoạch động 1D & dãy con tăng dài nhất",
+      "problems": [
+        {
+          "code": "cppb_dp1_01_bac_thang_co_ban",
+          "title": "Bậc Thang Cơ Bản",
+          "de_bai": "problems/cppb_dp1_01_bac_thang_co_ban/De_Bai.md",
+          "solution": "problems/cppb_dp1_01_bac_thang_co_ban/solution.cpp",
+          "guide": "problems/cppb_dp1_01_bac_thang_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_02_chu_ech_nhay_cost",
+          "title": "Chú Ếch Nhảy Chi Phí Nhỏ Nhất",
+          "de_bai": "problems/cppb_dp1_02_chu_ech_nhay_cost/De_Bai.md",
+          "solution": "problems/cppb_dp1_02_chu_ech_nhay_cost/solution.cpp",
+          "guide": "problems/cppb_dp1_02_chu_ech_nhay_cost/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_03_chu_ech_nhay_k_buoc",
+          "title": "Chú Ếch Nhảy K Bước",
+          "de_bai": "problems/cppb_dp1_03_chu_ech_nhay_k_buoc/De_Bai.md",
+          "solution": "problems/cppb_dp1_03_chu_ech_nhay_k_buoc/solution.cpp",
+          "guide": "problems/cppb_dp1_03_chu_ech_nhay_k_buoc/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_04_doi_tien_xu_it_nhat",
+          "title": "Đổi Tiền Số Xu Ít Nhất",
+          "de_bai": "problems/cppb_dp1_04_doi_tien_xu_it_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp1_04_doi_tien_xu_it_nhat/solution.cpp",
+          "guide": "problems/cppb_dp1_04_doi_tien_xu_it_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_05_dem_so_cach_doi_tien",
+          "title": "Đếm Số Cách Đổi Tiền",
+          "de_bai": "problems/cppb_dp1_05_dem_so_cach_doi_tien/De_Bai.md",
+          "solution": "problems/cppb_dp1_05_dem_so_cach_doi_tien/solution.cpp",
+          "guide": "problems/cppb_dp1_05_dem_so_cach_doi_tien/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_06_tong_doan_con_khong_lien_ke",
+          "title": "Tổng Đoạn Con Không Liền Kề Lớn Nhất",
+          "de_bai": "problems/cppb_dp1_06_tong_doan_con_khong_lien_ke/De_Bai.md",
+          "solution": "problems/cppb_dp1_06_tong_doan_con_khong_lien_ke/solution.cpp",
+          "guide": "problems/cppb_dp1_06_tong_doan_con_khong_lien_ke/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_07_lat_gach_2xn",
+          "title": "Lát Gạch Bảng 2xN",
+          "de_bai": "problems/cppb_dp1_07_lat_gach_2xn/De_Bai.md",
+          "solution": "problems/cppb_dp1_07_lat_gach_2xn/solution.cpp",
+          "guide": "problems/cppb_dp1_07_lat_gach_2xn/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_08_lat_gach_3xn",
+          "title": "Lát Gạch Bảng 3xN",
+          "de_bai": "problems/cppb_dp1_08_lat_gach_3xn/De_Bai.md",
+          "solution": "problems/cppb_dp1_08_lat_gach_3xn/solution.cpp",
+          "guide": "problems/cppb_dp1_08_lat_gach_3xn/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_09_day_con_tang_dai_nhat_lis_n2",
+          "title": "Dãy Con Tăng Dài Nhất LIS O(N^2)",
+          "de_bai": "problems/cppb_dp1_09_day_con_tang_dai_nhat_lis_n2/De_Bai.md",
+          "solution": "problems/cppb_dp1_09_day_con_tang_dai_nhat_lis_n2/solution.cpp",
+          "guide": "problems/cppb_dp1_09_day_con_tang_dai_nhat_lis_n2/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_10_day_con_tang_dai_nhat_lis_nlogn",
+          "title": "Dãy Con Tăng Dài Nhất LIS O(N log N)",
+          "de_bai": "problems/cppb_dp1_10_day_con_tang_dai_nhat_lis_nlogn/De_Bai.md",
+          "solution": "problems/cppb_dp1_10_day_con_tang_dai_nhat_lis_nlogn/solution.cpp",
+          "guide": "problems/cppb_dp1_10_day_con_tang_dai_nhat_lis_nlogn/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_11_truy_vet_day_con_tang_dai_nhat",
+          "title": "Truy Vết Dãy Con Tăng Dài Nhất",
+          "de_bai": "problems/cppb_dp1_11_truy_vet_day_con_tang_dai_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp1_11_truy_vet_day_con_tang_dai_nhat/solution.cpp",
+          "guide": "problems/cppb_dp1_11_truy_vet_day_con_tang_dai_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_12_day_con_giam_dai_nhat",
+          "title": "Dãy Con Giảm Dài Nhất (LDS)",
+          "de_bai": "problems/cppb_dp1_12_day_con_giam_dai_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp1_12_day_con_giam_dai_nhat/solution.cpp",
+          "guide": "problems/cppb_dp1_12_day_con_giam_dai_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_13_day_con_hinh_song_nui_bitonic",
+          "title": "Dãy Con Hình Sóng Núi (Longest Bitonic Subsequence)",
+          "de_bai": "problems/cppb_dp1_13_day_con_hinh_song_nui_bitonic/De_Bai.md",
+          "solution": "problems/cppb_dp1_13_day_con_hinh_song_nui_bitonic/solution.cpp",
+          "guide": "problems/cppb_dp1_13_day_con_hinh_song_nui_bitonic/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_14_tong_day_con_tang_lon_nhat",
+          "title": "Tổng Dãy Con Tăng Lớn Nhất (MSIS)",
+          "de_bai": "problems/cppb_dp1_14_tong_day_con_tang_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp1_14_tong_day_con_tang_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_dp1_14_tong_day_con_tang_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp1_15_quy_hoach_dong_1d_cuc_han",
+          "title": "Tối Ưu Hóa Chuỗi Dự Án Năng Lượng",
+          "de_bai": "problems/cppb_dp1_15_quy_hoach_dong_1d_cuc_han/De_Bai.md",
+          "solution": "problems/cppb_dp1_15_quy_hoach_dong_1d_cuc_han/solution.cpp",
+          "guide": "problems/cppb_dp1_15_quy_hoach_dong_1d_cuc_han/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 14,
+      "chapter": 5,
+      "title": "Bài 14: Quy hoạch động 2D & bài toán cái túi (Knapsack)",
+      "problems": [
+        {
+          "code": "cppb_dp2_01_duong_di_tren_luoi_so_cach",
+          "title": "Đếm Số Cách Đi Trên Lưới",
+          "de_bai": "problems/cppb_dp2_01_duong_di_tren_luoi_so_cach/De_Bai.md",
+          "solution": "problems/cppb_dp2_01_duong_di_tren_luoi_so_cach/solution.cpp",
+          "guide": "problems/cppb_dp2_01_duong_di_tren_luoi_so_cach/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_02_duong_di_tren_luoi_co_vat_can",
+          "title": "Đường Đi Trên Lưới Có Vật Cản",
+          "de_bai": "problems/cppb_dp2_02_duong_di_tren_luoi_co_vat_can/De_Bai.md",
+          "solution": "problems/cppb_dp2_02_duong_di_tren_luoi_co_vat_can/solution.cpp",
+          "guide": "problems/cppb_dp2_02_duong_di_tren_luoi_co_vat_can/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_03_duong_di_chi_phi_nho_nhat_grid",
+          "title": "Đường Đi Chi Phí Nhỏ Nhất Trên Lưới",
+          "de_bai": "problems/cppb_dp2_03_duong_di_chi_phi_nho_nhat_grid/De_Bai.md",
+          "solution": "problems/cppb_dp2_03_duong_di_chi_phi_nho_nhat_grid/solution.cpp",
+          "guide": "problems/cppb_dp2_03_duong_di_chi_phi_nho_nhat_grid/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_04_duong_di_tong_lon_nhat_grid",
+          "title": "Nhặt Vàng Trên Lưới",
+          "de_bai": "problems/cppb_dp2_04_duong_di_tong_lon_nhat_grid/De_Bai.md",
+          "solution": "problems/cppb_dp2_04_duong_di_tong_lon_nhat_grid/solution.cpp",
+          "guide": "problems/cppb_dp2_04_duong_di_tong_lon_nhat_grid/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_05_cai_tui_01_knapsack_co_ban",
+          "title": "Cái Túi 0/1 Cơ Bản (0/1 Knapsack)",
+          "de_bai": "problems/cppb_dp2_05_cai_tui_01_knapsack_co_ban/De_Bai.md",
+          "solution": "problems/cppb_dp2_05_cai_tui_01_knapsack_co_ban/solution.cpp",
+          "guide": "problems/cppb_dp2_05_cai_tui_01_knapsack_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_06_cai_tui_khong_gioi_han_unbounded",
+          "title": "Cái Túi Không Giới Hạn (Unbounded Knapsack)",
+          "de_bai": "problems/cppb_dp2_06_cai_tui_khong_gioi_han_unbounded/De_Bai.md",
+          "solution": "problems/cppb_dp2_06_cai_tui_khong_gioi_han_unbounded/solution.cpp",
+          "guide": "problems/cppb_dp2_06_cai_tui_khong_gioi_han_unbounded/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_07_cai_tui_truy_vet_mon_do",
+          "title": "Truy Vết Món Đồ Cái Túi 0/1",
+          "de_bai": "problems/cppb_dp2_07_cai_tui_truy_vet_mon_do/De_Bai.md",
+          "solution": "problems/cppb_dp2_07_cai_tui_truy_vet_mon_do/solution.cpp",
+          "guide": "problems/cppb_dp2_07_cai_tui_truy_vet_mon_do/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_08_chia_tap_hai_phan_bang_nhau",
+          "title": "Chia Tập Thành Hai Phần Bằng Nhau (Partition Equal Subset Sum)",
+          "de_bai": "problems/cppb_dp2_08_chia_tap_hai_phan_bang_nhau/De_Bai.md",
+          "solution": "problems/cppb_dp2_08_chia_tap_hai_phan_bang_nhau/solution.cpp",
+          "guide": "problems/cppb_dp2_08_chia_tap_hai_phan_bang_nhau/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_09_chia_tap_chenh_lech_nho_nhat",
+          "title": "Chia Tập Chênh Lệch Nhỏ Nhất (Minimum Subset Sum Difference)",
+          "de_bai": "problems/cppb_dp2_09_chia_tap_chenh_lech_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp2_09_chia_tap_chenh_lech_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_dp2_09_chia_tap_chenh_lech_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_10_tam_giac_so_tong_lon_nhat",
+          "title": "Tam Giác Số Tổng Lớn Nhất (Triangle DP)",
+          "de_bai": "problems/cppb_dp2_10_tam_giac_so_tong_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp2_10_tam_giac_so_tong_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_dp2_10_tam_giac_so_tong_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_11_dem_so_tap_con_tong_bang_s",
+          "title": "Đếm Số Tập Con Có Tổng Bằng S",
+          "de_bai": "problems/cppb_dp2_11_dem_so_tap_con_tong_bang_s/De_Bai.md",
+          "solution": "problems/cppb_dp2_11_dem_so_tap_con_tong_bang_s/solution.cpp",
+          "guide": "problems/cppb_dp2_11_dem_so_tap_con_tong_bang_s/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_12_cai_tui_gia_tri_lon_doi_truc_dp",
+          "title": "Cái Túi Khối Lượng Cực Đại W <= 10^9 (Đổi Trục DP)",
+          "de_bai": "problems/cppb_dp2_12_cai_tui_gia_tri_lon_doi_truc_dp/De_Bai.md",
+          "solution": "problems/cppb_dp2_12_cai_tui_gia_tri_lon_doi_truc_dp/solution.cpp",
+          "guide": "problems/cppb_dp2_12_cai_tui_gia_tri_lon_doi_truc_dp/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_13_hinh_vuong_toan_mot_lon_nhat",
+          "title": "Hình Vuông Toàn 1 Lớn Nhất (Maximal Square)",
+          "de_bai": "problems/cppb_dp2_13_hinh_vuong_toan_mot_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_dp2_13_hinh_vuong_toan_mot_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_dp2_13_hinh_vuong_toan_mot_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_14_dong_tien_xu_gioi_han_so_luong",
+          "title": "Đổi Tiền Giới Hạn Số Lượng (Bounded Knapsack)",
+          "de_bai": "problems/cppb_dp2_14_dong_tien_xu_gioi_han_so_luong/De_Bai.md",
+          "solution": "problems/cppb_dp2_14_dong_tien_xu_gioi_han_so_luong/solution.cpp",
+          "guide": "problems/cppb_dp2_14_dong_tien_xu_gioi_han_so_luong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dp2_15_quy_hoach_dong_2d_cuc_han",
+          "title": "Tối Ưu Hóa Túi Đồ Hỗn Hợp (Hybrid Knapsack)",
+          "de_bai": "problems/cppb_dp2_15_quy_hoach_dong_2d_cuc_han/De_Bai.md",
+          "solution": "problems/cppb_dp2_15_quy_hoach_dong_2d_cuc_han/solution.cpp",
+          "guide": "problems/cppb_dp2_15_quy_hoach_dong_2d_cuc_han/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 15,
+      "chapter": 5,
+      "title": "Bài 15: Quy hoạch động chuỗi: LCS & Edit Distance",
+      "problems": [
+        {
+          "code": "cppb_dps_01_xau_con_chung_dai_nhat_lcs_co_ban",
+          "title": "Xâu Con Chung Dài Nhất Cơ Bản (LCS)",
+          "de_bai": "problems/cppb_dps_01_xau_con_chung_dai_nhat_lcs_co_ban/De_Bai.md",
+          "solution": "problems/cppb_dps_01_xau_con_chung_dai_nhat_lcs_co_ban/solution.cpp",
+          "guide": "problems/cppb_dps_01_xau_con_chung_dai_nhat_lcs_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_02_truy_vet_xau_con_chung_dai_nhat",
+          "title": "Truy Vết Xâu Con Chung Dài Nhất",
+          "de_bai": "problems/cppb_dps_02_truy_vet_xau_con_chung_dai_nhat/De_Bai.md",
+          "solution": "problems/cppb_dps_02_truy_vet_xau_con_chung_dai_nhat/solution.cpp",
+          "guide": "problems/cppb_dps_02_truy_vet_xau_con_chung_dai_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_03_khoang_cach_chinh_sua_edit_distance",
+          "title": "Khoảng Cách Chỉnh Sửa (Edit Distance / Levenshtein)",
+          "de_bai": "problems/cppb_dps_03_khoang_cach_chinh_sua_edit_distance/De_Bai.md",
+          "solution": "problems/cppb_dps_03_khoang_cach_chinh_sua_edit_distance/solution.cpp",
+          "guide": "problems/cppb_dps_03_khoang_cach_chinh_sua_edit_distance/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_04_bien_doi_xau_it_phep_toan_nhat",
+          "title": "Chỉ Dùng Phép Xóa Biến Đổi Hai Xâu",
+          "de_bai": "problems/cppb_dps_04_bien_doi_xau_it_phep_toan_nhat/De_Bai.md",
+          "solution": "problems/cppb_dps_04_bien_doi_xau_it_phep_toan_nhat/solution.cpp",
+          "guide": "problems/cppb_dps_04_bien_doi_xau_it_phep_toan_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_05_xau_con_doi_xung_dai_nhat_lps",
+          "title": "Xâu Con Đối Xứng Dài Nhất (Longest Palindromic Subsequence)",
+          "de_bai": "problems/cppb_dps_05_xau_con_doi_xung_dai_nhat_lps/De_Bai.md",
+          "solution": "problems/cppb_dps_05_xau_con_doi_xung_dai_nhat_lps/solution.cpp",
+          "guide": "problems/cppb_dps_05_xau_con_doi_xung_dai_nhat_lps/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_06_doan_con_doi_xung_dai_nhat_substring",
+          "title": "Đoạn Con Đối Xứng Liên Tiếp Dài Nhất",
+          "de_bai": "problems/cppb_dps_06_doan_con_doi_xung_dai_nhat_substring/De_Bai.md",
+          "solution": "problems/cppb_dps_06_doan_con_doi_xung_dai_nhat_substring/solution.cpp",
+          "guide": "problems/cppb_dps_06_doan_con_doi_xung_dai_nhat_substring/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_07_dem_so_xau_con_doi_xung",
+          "title": "Đếm Số Đoạn Con Đối Xứng Liên Tiếp",
+          "de_bai": "problems/cppb_dps_07_dem_so_xau_con_doi_xung/De_Bai.md",
+          "solution": "problems/cppb_dps_07_dem_so_xau_con_doi_xung/solution.cpp",
+          "guide": "problems/cppb_dps_07_dem_so_xau_con_doi_xung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_08_chen_it_nhat_thanh_palindrome",
+          "title": "Chèn Ít Ký Tự Nhất Tạo Chuỗi Đối Xứng",
+          "de_bai": "problems/cppb_dps_08_chen_it_nhat_thanh_palindrome/De_Bai.md",
+          "solution": "problems/cppb_dps_08_chen_it_nhat_thanh_palindrome/solution.cpp",
+          "guide": "problems/cppb_dps_08_chen_it_nhat_thanh_palindrome/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_09_xau_me_chung_ngan_nhat_scs",
+          "title": "Xâu Mẹ Chung Ngắn Nhất (Shortest Common Supersequence)",
+          "de_bai": "problems/cppb_dps_09_xau_me_chung_ngan_nhat_scs/De_Bai.md",
+          "solution": "problems/cppb_dps_09_xau_me_chung_ngan_nhat_scs/solution.cpp",
+          "guide": "problems/cppb_dps_09_xau_me_chung_ngan_nhat_scs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_10_dem_so_lan_xuat_hien_xau_con",
+          "title": "Đếm Số Lần Xuất Hiện Xâu Con Rời Rạc (Distinct Subsequences)",
+          "de_bai": "problems/cppb_dps_10_dem_so_lan_xuat_hien_xau_con/De_Bai.md",
+          "solution": "problems/cppb_dps_10_dem_so_lan_xuat_hien_xau_con/solution.cpp",
+          "guide": "problems/cppb_dps_10_dem_so_lan_xuat_hien_xau_con/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_11_khop_chuoi_wildcard_matching",
+          "title": "Khớp Chuỗi Ký Tự Đại Diện (Wildcard Matching)",
+          "de_bai": "problems/cppb_dps_11_khop_chuoi_wildcard_matching/De_Bai.md",
+          "solution": "problems/cppb_dps_11_khop_chuoi_wildcard_matching/solution.cpp",
+          "guide": "problems/cppb_dps_11_khop_chuoi_wildcard_matching/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_12_xau_con_chung_ba_chuoi",
+          "title": "Xâu Con Chung Của Ba Chuỗi (LCS 3 Strings)",
+          "de_bai": "problems/cppb_dps_12_xau_con_chung_ba_chuoi/De_Bai.md",
+          "solution": "problems/cppb_dps_12_xau_con_chung_ba_chuoi/solution.cpp",
+          "guide": "problems/cppb_dps_12_xau_con_chung_ba_chuoi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_13_xoa_it_ky_tu_nhat_tao_chuoi_doi_xung",
+          "title": "Xóa Ít Ký Tự Nhất Để Chuỗi Đối Xứng",
+          "de_bai": "problems/cppb_dps_13_xoa_it_ky_tu_nhat_tao_chuoi_doi_xung/De_Bai.md",
+          "solution": "problems/cppb_dps_13_xoa_it_ky_tu_nhat_tao_chuoi_doi_xung/solution.cpp",
+          "guide": "problems/cppb_dps_13_xoa_it_ky_tu_nhat_tao_chuoi_doi_xung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_14_khoi_phuc_chuoi_tu_dien_nho_nhat_lcs",
+          "title": "Độ Dài LCS Giữa Hai Chuỗi Gen",
+          "de_bai": "problems/cppb_dps_14_khoi_phuc_chuoi_tu_dien_nho_nhat_lcs/De_Bai.md",
+          "solution": "problems/cppb_dps_14_khoi_phuc_chuoi_tu_dien_nho_nhat_lcs/solution.cpp",
+          "guide": "problems/cppb_dps_14_khoi_phuc_chuoi_tu_dien_nho_nhat_lcs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_dps_15_quy_hoach_dong_chuoi_cuc_han",
+          "title": "Tách Từ Trong Chuỗi (Word Break)",
+          "de_bai": "problems/cppb_dps_15_quy_hoach_dong_chuoi_cuc_han/De_Bai.md",
+          "solution": "problems/cppb_dps_15_quy_hoach_dong_chuoi_cuc_han/solution.cpp",
+          "guide": "problems/cppb_dps_15_quy_hoach_dong_chuoi_cuc_han/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 16,
+      "chapter": 6,
+      "title": "Bài 16: Cấu trúc dữ liệu STL: Set, map & heap",
+      "problems": [
+        {
+          "code": "cppb_stl_01_dem_so_phan_tu_phan_biet",
+          "title": "Đếm Số Phần Tử Phân Biệt",
+          "de_bai": "problems/cppb_stl_01_dem_so_phan_tu_phan_biet/De_Bai.md",
+          "solution": "problems/cppb_stl_01_dem_so_phan_tu_phan_biet/solution.cpp",
+          "guide": "problems/cppb_stl_01_dem_so_phan_tu_phan_biet/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_02_bang_tra_cuu_tan_suat_tu_khoa",
+          "title": "Bảng Tra Cứu Tần Suất Từ Khóa",
+          "de_bai": "problems/cppb_stl_02_bang_tra_cuu_tan_suat_tu_khoa/De_Bai.md",
+          "solution": "problems/cppb_stl_02_bang_tra_cuu_tan_suat_tu_khoa/solution.cpp",
+          "guide": "problems/cppb_stl_02_bang_tra_cuu_tan_suat_tu_khoa/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_03_nen_toa_do_mang_so_lon",
+          "title": "Nén Tọa Độ Mảng Số Lớn",
+          "de_bai": "problems/cppb_stl_03_nen_toa_do_mang_so_lon/De_Bai.md",
+          "solution": "problems/cppb_stl_03_nen_toa_do_mang_so_lon/solution.cpp",
+          "guide": "problems/cppb_stl_03_nen_toa_do_mang_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_04_tim_phan_tu_nho_nhat_lon_hon_x",
+          "title": "Tìm Phần Tử Nhỏ Nhất Lớn Hơn Hoặc Bằng X",
+          "de_bai": "problems/cppb_stl_04_tim_phan_tu_nho_nhat_lon_hon_x/De_Bai.md",
+          "solution": "problems/cppb_stl_04_tim_phan_tu_nho_nhat_lon_hon_x/solution.cpp",
+          "guide": "problems/cppb_stl_04_tim_phan_tu_nho_nhat_lon_hon_x/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_05_hang_doi_uu_tien_k_phan_tu_lon_nhat",
+          "title": "Hàng Đợi Ưu Tiên K Phần Tử Lớn Nhất",
+          "de_bai": "problems/cppb_stl_05_hang_doi_uu_tien_k_phan_tu_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_stl_05_hang_doi_uu_tien_k_phan_tu_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_stl_05_hang_doi_uu_tien_k_phan_tu_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_06_quan_ly_tap_hop_da_trung_lap",
+          "title": "Quản Lý Tập Hợp Đa Trùng Lặp (Multiset)",
+          "de_bai": "problems/cppb_stl_06_quan_ly_tap_hop_da_trung_lap/De_Bai.md",
+          "solution": "problems/cppb_stl_06_quan_ly_tap_hop_da_trung_lap/solution.cpp",
+          "guide": "problems/cppb_stl_06_quan_ly_tap_hop_da_trung_lap/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_07_hop_nhat_cac_doan_so",
+          "title": "Hợp Nhất Các Đoạn Số (Merge Intervals)",
+          "de_bai": "problems/cppb_stl_07_hop_nhat_cac_doan_so/De_Bai.md",
+          "solution": "problems/cppb_stl_07_hop_nhat_cac_doan_so/solution.cpp",
+          "guide": "problems/cppb_stl_07_hop_nhat_cac_doan_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_08_tim_trung_vi_dong_trong_luong_du_lieu",
+          "title": "Tìm Trung Vị Động Trong Luồng Dữ Liệu",
+          "de_bai": "problems/cppb_stl_08_tim_trung_vi_dong_trong_luong_du_lieu/De_Bai.md",
+          "solution": "problems/cppb_stl_08_tim_trung_vi_dong_trong_luong_du_lieu/solution.cpp",
+          "guide": "problems/cppb_stl_08_tim_trung_vi_dong_trong_luong_du_lieu/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_09_dem_so_phan_tu_phan_biet_trong_cua_so_k",
+          "title": "Đếm Số Phần Tử Phân Biệt Trong Cửa Sổ K",
+          "de_bai": "problems/cppb_stl_09_dem_so_phan_tu_phan_biet_trong_cua_so_k/De_Bai.md",
+          "solution": "problems/cppb_stl_09_dem_so_phan_tu_phan_biet_trong_cua_so_k/solution.cpp",
+          "guide": "problems/cppb_stl_09_dem_so_phan_tu_phan_biet_trong_cua_so_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_10_noi_day_chi_phi_nho_nhat",
+          "title": "Nối Dây Chi Phí Nhỏ Nhất (Huffman Greedy)",
+          "de_bai": "problems/cppb_stl_10_noi_day_chi_phi_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_stl_10_noi_day_chi_phi_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_stl_10_noi_day_chi_phi_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_11_lap_lich_cong_viec_toi_uu_may_chu",
+          "title": "Lập Lịch Công Việc Số Máy Chủ Ít Nhất",
+          "de_bai": "problems/cppb_stl_11_lap_lich_cong_viec_toi_uu_may_chu/De_Bai.md",
+          "solution": "problems/cppb_stl_11_lap_lich_cong_viec_toi_uu_may_chu/solution.cpp",
+          "guide": "problems/cppb_stl_11_lap_lich_cong_viec_toi_uu_may_chu/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_12_dem_cap_so_co_hieu_bang_k_so_lon",
+          "title": "Đếm Cặp Số Có Hiệu Bằng K",
+          "de_bai": "problems/cppb_stl_12_dem_cap_so_co_hieu_bang_k_so_lon/De_Bai.md",
+          "solution": "problems/cppb_stl_12_dem_cap_so_co_hieu_bang_k_so_lon/solution.cpp",
+          "guide": "problems/cppb_stl_12_dem_cap_so_co_hieu_bang_k_so_lon/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_13_truy_van_phan_tu_xuat_hien_nhieu_nhat",
+          "title": "Phần Tử Xuất Hiện Nhiều Nhất (Mode)",
+          "de_bai": "problems/cppb_stl_13_truy_van_phan_tu_xuat_hien_nhieu_nhat/De_Bai.md",
+          "solution": "problems/cppb_stl_13_truy_van_phan_tu_xuat_hien_nhieu_nhat/solution.cpp",
+          "guide": "problems/cppb_stl_13_truy_van_phan_tu_xuat_hien_nhieu_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_14_tim_cap_diem_gan_nhat",
+          "title": "Cặp Điểm Gần Nhất (Closest Pair Of Points)",
+          "de_bai": "problems/cppb_stl_14_tim_cap_diem_gan_nhat/De_Bai.md",
+          "solution": "problems/cppb_stl_14_tim_cap_diem_gan_nhat/solution.cpp",
+          "guide": "problems/cppb_stl_14_tim_cap_diem_gan_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stl_15_he_thong_xep_hang_thi_dau_dynamic",
+          "title": "Hệ Thống Xếp Hạng Thi Đấu Dynamic",
+          "de_bai": "problems/cppb_stl_15_he_thong_xep_hang_thi_dau_dynamic/De_Bai.md",
+          "solution": "problems/cppb_stl_15_he_thong_xep_hang_thi_dau_dynamic/solution.cpp",
+          "guide": "problems/cppb_stl_15_he_thong_xep_hang_thi_dau_dynamic/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 17,
+      "chapter": 6,
+      "title": "Bài 17: Cấu trúc dữ liệu ngăn xếp (stack) & Monotonic Stack",
+      "problems": [
+        {
+          "code": "cppb_stk_01_kiem_tra_day_ngoac_dung_co_ban",
+          "title": "Kiểm Tra Dãy Ngoặc Đúng Đơn Loại",
+          "de_bai": "problems/cppb_stk_01_kiem_tra_day_ngoac_dung_co_ban/De_Bai.md",
+          "solution": "problems/cppb_stk_01_kiem_tra_day_ngoac_dung_co_ban/solution.cpp",
+          "guide": "problems/cppb_stk_01_kiem_tra_day_ngoac_dung_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_02_day_ngoac_hon_hop_nhieu_loai",
+          "title": "Dãy Ngoặc Hỗn Hợp Nhiều Loại",
+          "de_bai": "problems/cppb_stk_02_day_ngoac_hon_hop_nhieu_loai/De_Bai.md",
+          "solution": "problems/cppb_stk_02_day_ngoac_hon_hop_nhieu_loai/solution.cpp",
+          "guide": "problems/cppb_stk_02_day_ngoac_hon_hop_nhieu_loai/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_03_danh_gia_bieu_thuc_hau_to_rpn",
+          "title": "Đánh Giá Biểu Thức Hậu Tố (Reverse Polish Notation)",
+          "de_bai": "problems/cppb_stk_03_danh_gia_bieu_thuc_hau_to_rpn/De_Bai.md",
+          "solution": "problems/cppb_stk_03_danh_gia_bieu_thuc_hau_to_rpn/solution.cpp",
+          "guide": "problems/cppb_stk_03_danh_gia_bieu_thuc_hau_to_rpn/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_04_xoa_cac_ky_tu_trung_lap_lien_ke",
+          "title": "Xóa Ký Tự Trùng Lặp Liền Kề",
+          "de_bai": "problems/cppb_stk_04_xoa_cac_ky_tu_trung_lap_lien_ke/De_Bai.md",
+          "solution": "problems/cppb_stk_04_xoa_cac_ky_tu_trung_lap_lien_ke/solution.cpp",
+          "guide": "problems/cppb_stk_04_xoa_cac_ky_tu_trung_lap_lien_ke/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_05_phan_tu_lon_hon_tiep_theo_nge",
+          "title": "Phần Tử Lớn Hơn Tiếp Theo (Next Greater Element)",
+          "de_bai": "problems/cppb_stk_05_phan_tu_lon_hon_tiep_theo_nge/De_Bai.md",
+          "solution": "problems/cppb_stk_05_phan_tu_lon_hon_tiep_theo_nge/solution.cpp",
+          "guide": "problems/cppb_stk_05_phan_tu_lon_hon_tiep_theo_nge/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_06_phan_tu_nho_hon_gan_nhat_ben_trai",
+          "title": "Phần Tử Nhỏ Hơn Gần Nhất Bên Trái (Previous Smaller Element)",
+          "de_bai": "problems/cppb_stk_06_phan_tu_nho_hon_gan_nhat_ben_trai/De_Bai.md",
+          "solution": "problems/cppb_stk_06_phan_tu_nho_hon_gan_nhat_ben_trai/solution.cpp",
+          "guide": "problems/cppb_stk_06_phan_tu_nho_hon_gan_nhat_ben_trai/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_07_do_dai_day_ngoac_dung_dai_nhat",
+          "title": "Độ Dài Đoạn Ngoặc Đúng Liên Tiếp Dài Nhất",
+          "de_bai": "problems/cppb_stk_07_do_dai_day_ngoac_dung_dai_nhat/De_Bai.md",
+          "solution": "problems/cppb_stk_07_do_dai_day_ngoac_dung_dai_nhat/solution.cpp",
+          "guide": "problems/cppb_stk_07_do_dai_day_ngoac_dung_dai_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_08_xoa_k_chu_so_de_duoc_so_nho_nhat",
+          "title": "Xóa K Chữ Số Để Được Số Nhỏ Nhất",
+          "de_bai": "problems/cppb_stk_08_xoa_k_chu_so_de_duoc_so_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_stk_08_xoa_k_chu_so_de_duoc_so_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_stk_08_xoa_k_chu_so_de_duoc_so_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_09_hinh_chu_nhat_lon_nhat_tren_histogram",
+          "title": "Hình Chữ Nhật Lớn Nhất Trên Histogram",
+          "de_bai": "problems/cppb_stk_09_hinh_chu_nhat_lon_nhat_tren_histogram/De_Bai.md",
+          "solution": "problems/cppb_stk_09_hinh_chu_nhat_lon_nhat_tren_histogram/solution.cpp",
+          "guide": "problems/cppb_stk_09_hinh_chu_nhat_lon_nhat_tren_histogram/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_10_hung_nuoc_mua_trapping_rain_water",
+          "title": "Hứng Nước Mưa (Trapping Rain Water)",
+          "de_bai": "problems/cppb_stk_10_hung_nuoc_mua_trapping_rain_water/De_Bai.md",
+          "solution": "problems/cppb_stk_10_hung_nuoc_mua_trapping_rain_water/solution.cpp",
+          "guide": "problems/cppb_stk_10_hung_nuoc_mua_trapping_rain_water/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_11_hinh_chu_nhat_toan_mot_lon_nhat_ma_tran",
+          "title": "Hình Chữ Nhật Toàn 1 Lớn Nhất Trong Ma Trận",
+          "de_bai": "problems/cppb_stk_11_hinh_chu_nhat_toan_mot_lon_nhat_ma_tran/De_Bai.md",
+          "solution": "problems/cppb_stk_11_hinh_chu_nhat_toan_mot_lon_nhat_ma_tran/solution.cpp",
+          "guide": "problems/cppb_stk_11_hinh_chu_nhat_toan_mot_lon_nhat_ma_tran/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_12_tong_gia_tri_nho_nhat_moi_doan_con",
+          "title": "Tổng Giá Trị Nhỏ Nhất Của Mọi Đoạn Con",
+          "de_bai": "problems/cppb_stk_12_tong_gia_tri_nho_nhat_moi_doan_con/De_Bai.md",
+          "solution": "problems/cppb_stk_12_tong_gia_tri_nho_nhat_moi_doan_con/solution.cpp",
+          "guide": "problems/cppb_stk_12_tong_gia_tri_nho_nhat_moi_doan_con/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_13_nge_tren_mang_xoay_vong",
+          "title": "Next Greater Element Trên Mảng Vòng Tròn",
+          "de_bai": "problems/cppb_stk_13_nge_tren_mang_xoay_vong/De_Bai.md",
+          "solution": "problems/cppb_stk_13_nge_tren_mang_xoay_vong/solution.cpp",
+          "guide": "problems/cppb_stk_13_nge_tren_mang_xoay_vong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_14_toa_thap_tam_nhin",
+          "title": "Tầm Nhìn Tòa Tháp (Stock Span)",
+          "de_bai": "problems/cppb_stk_14_toa_thap_tam_nhin/De_Bai.md",
+          "solution": "problems/cppb_stk_14_toa_thap_tam_nhin/solution.cpp",
+          "guide": "problems/cppb_stk_14_toa_thap_tam_nhin/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_stk_15_danh_gia_bieu_thuc_dai_so_day_du",
+          "title": "Đánh Giá Biểu Thức Trung Tố (Infix Expression)",
+          "de_bai": "problems/cppb_stk_15_danh_gia_bieu_thuc_dai_so_day_du/De_Bai.md",
+          "solution": "problems/cppb_stk_15_danh_gia_bieu_thuc_dai_so_day_du/solution.cpp",
+          "guide": "problems/cppb_stk_15_danh_gia_bieu_thuc_dai_so_day_du/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 18,
+      "chapter": 6,
+      "title": "Bài 18: Cấu trúc dữ liệu hàng đợi (queue, deque) & Monotonic Deque",
+      "problems": [
+        {
+          "code": "cppb_que_01_cai_dat_hang_doi_co_ban",
+          "title": "Cài Đặt Hàng Đợi Cơ Bản",
+          "de_bai": "problems/cppb_que_01_cai_dat_hang_doi_co_ban/De_Bai.md",
+          "solution": "problems/cppb_que_01_cai_dat_hang_doi_co_ban/solution.cpp",
+          "guide": "problems/cppb_que_01_cai_dat_hang_doi_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_02_sinh_chuoi_so_nhi_phan_bang_queue",
+          "title": "Sinh Chuỗi Số Nhị Phân Bằng Queue",
+          "de_bai": "problems/cppb_que_02_sinh_chuoi_so_nhi_phan_bang_queue/De_Bai.md",
+          "solution": "problems/cppb_que_02_sinh_chuoi_so_nhi_phan_bang_queue/solution.cpp",
+          "guide": "problems/cppb_que_02_sinh_chuoi_so_nhi_phan_bang_queue/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_03_bfs_tim_duong_di_ngan_nhat_do_thi",
+          "title": "BFS Tìm Bước Đi Ngắn Nhất Đồ Thị",
+          "de_bai": "problems/cppb_que_03_bfs_tim_duong_di_ngan_nhat_do_thi/De_Bai.md",
+          "solution": "problems/cppb_que_03_bfs_tim_duong_di_ngan_nhat_do_thi/solution.cpp",
+          "guide": "problems/cppb_que_03_bfs_tim_duong_di_ngan_nhat_do_thi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_04_truy_vet_lo_trinh_ngan_nhat_bfs",
+          "title": "Truy Vết Lộ Trình Ngắn Nhất Bằng BFS",
+          "de_bai": "problems/cppb_que_04_truy_vet_lo_trinh_ngan_nhat_bfs/De_Bai.md",
+          "solution": "problems/cppb_que_04_truy_vet_lo_trinh_ngan_nhat_bfs/solution.cpp",
+          "guide": "problems/cppb_que_04_truy_vet_lo_trinh_ngan_nhat_bfs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_05_min_moi_cua_so_truot_do_dai_k",
+          "title": "Min Mọi Cửa Sổ Trượt Bằng Monotonic Deque O(N)",
+          "de_bai": "problems/cppb_que_05_min_moi_cua_so_truot_do_dai_k/De_Bai.md",
+          "solution": "problems/cppb_que_05_min_moi_cua_so_truot_do_dai_k/solution.cpp",
+          "guide": "problems/cppb_que_05_min_moi_cua_so_truot_do_dai_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_06_max_moi_cua_so_truot_do_dai_k",
+          "title": "Max Mọi Cửa Sổ Trượt Bằng Monotonic Deque O(N)",
+          "de_bai": "problems/cppb_que_06_max_moi_cua_so_truot_do_dai_k/De_Bai.md",
+          "solution": "problems/cppb_que_06_max_moi_cua_so_truot_do_dai_k/solution.cpp",
+          "guide": "problems/cppb_que_06_max_moi_cua_so_truot_do_dai_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_07_kiem_tra_do_thi_hai_phia_2_coloring",
+          "title": "Kiểm Tra Đồ Thị Hai Phía (Bipartite Graph)",
+          "de_bai": "problems/cppb_que_07_kiem_tra_do_thi_hai_phia_2_coloring/De_Bai.md",
+          "solution": "problems/cppb_que_07_kiem_tra_do_thi_hai_phia_2_coloring/solution.cpp",
+          "guide": "problems/cppb_que_07_kiem_tra_do_thi_hai_phia_2_coloring/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_08_bien_doi_so_buoc_nho_nhat_a_sang_b",
+          "title": "Biến Đổi Số Bước Nhỏ Nhất Từ A Sang B",
+          "de_bai": "problems/cppb_que_08_bien_doi_so_buoc_nho_nhat_a_sang_b/De_Bai.md",
+          "solution": "problems/cppb_que_08_bien_doi_so_buoc_nho_nhat_a_sang_b/solution.cpp",
+          "guide": "problems/cppb_que_08_bien_doi_so_buoc_nho_nhat_a_sang_b/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_09_0_1_bfs_tim_duong_ngan_nhat_trong_so_0_1",
+          "title": "0-1 BFS Tìm Đường Đi Ngắn Nhất Trọng Số 0/1",
+          "de_bai": "problems/cppb_que_09_0_1_bfs_tim_duong_ngan_nhat_trong_so_0_1/De_Bai.md",
+          "solution": "problems/cppb_que_09_0_1_bfs_tim_duong_ngan_nhat_trong_so_0_1/solution.cpp",
+          "guide": "problems/cppb_que_09_0_1_bfs_tim_duong_ngan_nhat_trong_so_0_1/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_10_doan_con_tong_lon_nhat_do_dai_toi_da_k",
+          "title": "Đoạn Con Tổng Lớn Nhất Độ Dài Tối Đa K",
+          "de_bai": "problems/cppb_que_10_doan_con_tong_lon_nhat_do_dai_toi_da_k/De_Bai.md",
+          "solution": "problems/cppb_que_10_doan_con_tong_lon_nhat_do_dai_toi_da_k/solution.cpp",
+          "guide": "problems/cppb_que_10_doan_con_tong_lon_nhat_do_dai_toi_da_k/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_11_tro_choi_vong_tron_josephus_bang_queue",
+          "title": "Trò Chơi Vòng Tròn Josephus",
+          "de_bai": "problems/cppb_que_11_tro_choi_vong_tron_josephus_bang_queue/De_Bai.md",
+          "solution": "problems/cppb_que_11_tro_choi_vong_tron_josephus_bang_queue/solution.cpp",
+          "guide": "problems/cppb_que_11_tro_choi_vong_tron_josephus_bang_queue/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_12_khoang_cach_den_tram_cuu_hoa_gan_nhat",
+          "title": "Khoảng Cách Đến Trạm Cứu Hỏa Gần Nhất (Multi-Source BFS)",
+          "de_bai": "problems/cppb_que_12_khoang_cach_den_tram_cuu_hoa_gan_nhat/De_Bai.md",
+          "solution": "problems/cppb_que_12_khoang_cach_den_tram_cuu_hoa_gan_nhat/solution.cpp",
+          "guide": "problems/cppb_que_12_khoang_cach_den_tram_cuu_hoa_gan_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_13_cua_so_truot_chenh_lech_max_min_le_c",
+          "title": "Đoạn Con Dài Nhất Có Độ Chênh Lệch Max-Min <= C",
+          "de_bai": "problems/cppb_que_13_cua_so_truot_chenh_lech_max_min_le_c/De_Bai.md",
+          "solution": "problems/cppb_que_13_cua_so_truot_chenh_lech_max_min_le_c/solution.cpp",
+          "guide": "problems/cppb_que_13_cua_so_truot_chenh_lech_max_min_le_c/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_14_cat_bang_ron_quang_cao_toi_uu",
+          "title": "Chọn Đoạn Tối Đa Không Quá K Phần Tử Liền Kề",
+          "de_bai": "problems/cppb_que_14_cat_bang_ron_quang_cao_toi_uu/De_Bai.md",
+          "solution": "problems/cppb_que_14_cat_bang_ron_quang_cao_toi_uu/solution.cpp",
+          "guide": "problems/cppb_que_14_cat_bang_ron_quang_cao_toi_uu/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_que_15_dua_xe_me_cung_doi_huong",
+          "title": "Đua Xe Mê Cung Đổi Hướng Ít Nhất (0-1 BFS State)",
+          "de_bai": "problems/cppb_que_15_dua_xe_me_cung_doi_huong/De_Bai.md",
+          "solution": "problems/cppb_que_15_dua_xe_me_cung_doi_huong/solution.cpp",
+          "guide": "problems/cppb_que_15_dua_xe_me_cung_doi_huong/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 19,
+      "chapter": 7,
+      "title": "Bài 19: Lý thuyết đồ thị cơ bản: Duyệt BFS & DFS",
+      "problems": [
+        {
+          "code": "cppb_gra_01_chuyen_doi_danh_sach_canh_sang_danh_sach_ke",
+          "title": "Chuyển Danh Sách Cạnh Sang Danh Sách Kề",
+          "de_bai": "problems/cppb_gra_01_chuyen_doi_danh_sach_canh_sang_danh_sach_ke/De_Bai.md",
+          "solution": "problems/cppb_gra_01_chuyen_doi_danh_sach_canh_sang_danh_sach_ke/solution.cpp",
+          "guide": "problems/cppb_gra_01_chuyen_doi_danh_sach_canh_sang_danh_sach_ke/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_02_duyet_do_thi_theo_chieu_sau_dfs",
+          "title": "Duyệt Đồ Thị Theo Chiều Sâu (DFS Traversal)",
+          "de_bai": "problems/cppb_gra_02_duyet_do_thi_theo_chieu_sau_dfs/De_Bai.md",
+          "solution": "problems/cppb_gra_02_duyet_do_thi_theo_chieu_sau_dfs/solution.cpp",
+          "guide": "problems/cppb_gra_02_duyet_do_thi_theo_chieu_sau_dfs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_03_duyet_do_thi_theo_chieu_rong_bfs",
+          "title": "Duyệt Đồ Thị Theo Chiều Rộng (BFS Traversal)",
+          "de_bai": "problems/cppb_gra_03_duyet_do_thi_theo_chieu_rong_bfs/De_Bai.md",
+          "solution": "problems/cppb_gra_03_duyet_do_thi_theo_chieu_rong_bfs/solution.cpp",
+          "guide": "problems/cppb_gra_03_duyet_do_thi_theo_chieu_rong_bfs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_04_dem_so_thanh_phan_lien_thong",
+          "title": "Đếm Số Thành Phần Liên Thông",
+          "de_bai": "problems/cppb_gra_04_dem_so_thanh_phan_lien_thong/De_Bai.md",
+          "solution": "problems/cppb_gra_04_dem_so_thanh_phan_lien_thong/solution.cpp",
+          "guide": "problems/cppb_gra_04_dem_so_thanh_phan_lien_thong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_05_tim_kich_thuoc_thanh_phan_lien_thong_lon_nhat",
+          "title": "Kích Thước Thành Phần Liên Thông Lớn Nhất",
+          "de_bai": "problems/cppb_gra_05_tim_kich_thuoc_thanh_phan_lien_thong_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_gra_05_tim_kich_thuoc_thanh_phan_lien_thong_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_gra_05_tim_kich_thuoc_thanh_phan_lien_thong_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_06_kiem_tra_duong_di_giua_hai_dinh",
+          "title": "Kiểm Tra Đường Đi Giữa Hai Đỉnh",
+          "de_bai": "problems/cppb_gra_06_kiem_tra_duong_di_giua_hai_dinh/De_Bai.md",
+          "solution": "problems/cppb_gra_06_kiem_tra_duong_di_giua_hai_dinh/solution.cpp",
+          "guide": "problems/cppb_gra_06_kiem_tra_duong_di_giua_hai_dinh/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_07_phat_hien_chu_trinh_tren_do_thi_vo_huong",
+          "title": "Phát Hiện Chu Trình Trên Đồ Thị Vô Hướng",
+          "de_bai": "problems/cppb_gra_07_phat_hien_chu_trinh_tren_do_thi_vo_huong/De_Bai.md",
+          "solution": "problems/cppb_gra_07_phat_hien_chu_trinh_tren_do_thi_vo_huong/solution.cpp",
+          "guide": "problems/cppb_gra_07_phat_hien_chu_trinh_tren_do_thi_vo_huong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_08_tim_duong_di_ngan_nhat_bang_bfs",
+          "title": "Đường Đi Ngắn Nhất Trên Đồ Thị Không Trọng Số",
+          "de_bai": "problems/cppb_gra_08_tim_duong_di_ngan_nhat_bang_bfs/De_Bai.md",
+          "solution": "problems/cppb_gra_08_tim_duong_di_ngan_nhat_bang_bfs/solution.cpp",
+          "guide": "problems/cppb_gra_08_tim_duong_di_ngan_nhat_bang_bfs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_09_kiem_tra_do_thi_cay",
+          "title": "Kiểm Tra Đồ Thị Cây (Tree Verification)",
+          "de_bai": "problems/cppb_gra_09_kiem_tra_do_thi_cay/De_Bai.md",
+          "solution": "problems/cppb_gra_09_kiem_tra_do_thi_cay/solution.cpp",
+          "guide": "problems/cppb_gra_09_kiem_tra_do_thi_cay/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_10_sap_xep_to_po_tren_dag",
+          "title": "Sắp Xếp Tô-pô (Topological Sort)",
+          "de_bai": "problems/cppb_gra_10_sap_xep_to_po_tren_dag/De_Bai.md",
+          "solution": "problems/cppb_gra_10_sap_xep_to_po_tren_dag/solution.cpp",
+          "guide": "problems/cppb_gra_10_sap_xep_to_po_tren_dag/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_11_tim_chu_trinh_do_dai_nho_nhat",
+          "title": "Chu Trình Ngắn Nhất Trên Đồ Thị (Girth)",
+          "de_bai": "problems/cppb_gra_11_tim_chu_trinh_do_dai_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_gra_11_tim_chu_trinh_do_dai_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_gra_11_tim_chu_trinh_do_dai_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_12_dem_cap_dinh_khong_the_di_toi_nhau",
+          "title": "Đếm Cặp Đỉnh Không Thể Đi Tới Nhau",
+          "de_bai": "problems/cppb_gra_12_dem_cap_dinh_khong_the_di_toi_nhau/De_Bai.md",
+          "solution": "problems/cppb_gra_12_dem_cap_dinh_khong_the_di_toi_nhau/solution.cpp",
+          "guide": "problems/cppb_gra_12_dem_cap_dinh_khong_the_di_toi_nhau/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_13_multi_source_bfs_lan_toa_virus",
+          "title": "Lan Tỏa Virus Trong Mạng Lưới (Multi-Source BFS)",
+          "de_bai": "problems/cppb_gra_13_multi_source_bfs_lan_toa_virus/De_Bai.md",
+          "solution": "problems/cppb_gra_13_multi_source_bfs_lan_toa_virus/solution.cpp",
+          "guide": "problems/cppb_gra_13_multi_source_bfs_lan_toa_virus/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_14_tim_canh_cau_tren_do_thi",
+          "title": "Đếm Số Cạnh Cầu Trên Đồ Thị (Bridges)",
+          "de_bai": "problems/cppb_gra_14_tim_canh_cau_tren_do_thi/De_Bai.md",
+          "solution": "problems/cppb_gra_14_tim_canh_cau_tren_do_thi/solution.cpp",
+          "guide": "problems/cppb_gra_14_tim_canh_cau_tren_do_thi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_gra_15_mang_luoi_giao_thong_toi_uu",
+          "title": "Xây Dựng Thêm Đường Nối Toàn Mạng (Building Roads)",
+          "de_bai": "problems/cppb_gra_15_mang_luoi_giao_thong_toi_uu/De_Bai.md",
+          "solution": "problems/cppb_gra_15_mang_luoi_giao_thong_toi_uu/solution.cpp",
+          "guide": "problems/cppb_gra_15_mang_luoi_giao_thong_toi_uu/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 20,
+      "chapter": 7,
+      "title": "Bài 20: Đồ thị lưới 2D, kỹ thuật Flood Fill & tính chất cây",
+      "problems": [
+        {
+          "code": "cppb_grd_01_duyet_4_huong_tren_ma_tran_co_ban",
+          "title": "Đếm Số Ô Kề Cạnh Hợp Lệ (4 Hướng)",
+          "de_bai": "problems/cppb_grd_01_duyet_4_huong_tren_ma_tran_co_ban/De_Bai.md",
+          "solution": "problems/cppb_grd_01_duyet_4_huong_tren_ma_tran_co_ban/solution.cpp",
+          "guide": "problems/cppb_grd_01_duyet_4_huong_tren_ma_tran_co_ban/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_02_dem_so_luong_hon_dao",
+          "title": "Đếm Số Lượng Hòn Đảo (Count Islands)",
+          "de_bai": "problems/cppb_grd_02_dem_so_luong_hon_dao/De_Bai.md",
+          "solution": "problems/cppb_grd_02_dem_so_luong_hon_dao/solution.cpp",
+          "guide": "problems/cppb_grd_02_dem_so_luong_hon_dao/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_03_dien_tich_hon_dao_lon_nhat",
+          "title": "Diện Tích Hòn Đảo Lớn Nhất (Max Area of Island)",
+          "de_bai": "problems/cppb_grd_03_dien_tich_hon_dao_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_grd_03_dien_tich_hon_dao_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_grd_03_dien_tich_hon_dao_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_04_tim_duong_thoat_khoi_me_cung_bfs",
+          "title": "Tìm Đường Thoát Khỏi Mê Cung BFS",
+          "de_bai": "problems/cppb_grd_04_tim_duong_thoat_khoi_me_cung_bfs/De_Bai.md",
+          "solution": "problems/cppb_grd_04_tim_duong_thoat_khoi_me_cung_bfs/solution.cpp",
+          "guide": "problems/cppb_grd_04_tim_duong_thoat_khoi_me_cung_bfs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_05_truy_vet_duong_di_me_cung",
+          "title": "Truy Vết Đường Đi Mê Cung (L, R, U, D)",
+          "de_bai": "problems/cppb_grd_05_truy_vet_duong_di_me_cung/De_Bai.md",
+          "solution": "problems/cppb_grd_05_truy_vet_duong_di_me_cung/solution.cpp",
+          "guide": "problems/cppb_grd_05_truy_vet_duong_di_me_cung/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_06_dem_vung_kin_khong_thong_ra_bien",
+          "title": "Đếm Số Ô Vùng Kín Không Thông Ra Biên",
+          "de_bai": "problems/cppb_grd_06_dem_vung_kin_khong_thong_ra_bien/De_Bai.md",
+          "solution": "problems/cppb_grd_06_dem_vung_kin_khong_thong_ra_bien/solution.cpp",
+          "guide": "problems/cppb_grd_06_dem_vung_kin_khong_thong_ra_bien/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_07_chu_vi_hon_dao",
+          "title": "Chu Vi Hòn Đảo (Island Perimeter)",
+          "de_bai": "problems/cppb_grd_07_chu_vi_hon_dao/De_Bai.md",
+          "solution": "problems/cppb_grd_07_chu_vi_hon_dao/solution.cpp",
+          "guide": "problems/cppb_grd_07_chu_vi_hon_dao/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_08_nuoc_tran_me_cung_multi_source_bfs",
+          "title": "Nước Tràn Mê Cung (Multi-Source BFS)",
+          "de_bai": "problems/cppb_grd_08_nuoc_tran_me_cung_multi_source_bfs/De_Bai.md",
+          "solution": "problems/cppb_grd_08_nuoc_tran_me_cung_multi_source_bfs/solution.cpp",
+          "guide": "problems/cppb_grd_08_nuoc_tran_me_cung_multi_source_bfs/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_09_buoc_nhay_quan_ma_ngan_nhat",
+          "title": "Bước Nhảy Quân Mã Ngắn Nhất (Knight Moves)",
+          "de_bai": "problems/cppb_grd_09_buoc_nhay_quan_ma_ngan_nhat/De_Bai.md",
+          "solution": "problems/cppb_grd_09_buoc_nhay_quan_ma_ngan_nhat/solution.cpp",
+          "guide": "problems/cppb_grd_09_buoc_nhay_quan_ma_ngan_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_10_duong_kinh_cua_cay",
+          "title": "Đường Kính Của Cây (Tree Diameter)",
+          "de_bai": "problems/cppb_grd_10_duong_kinh_cua_cay/De_Bai.md",
+          "solution": "problems/cppb_grd_10_duong_kinh_cua_cay/solution.cpp",
+          "guide": "problems/cppb_grd_10_duong_kinh_cua_cay/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_11_kich_thuoc_cay_con_va_trong_tam_cay",
+          "title": "Trọng Tâm Của Cây (Tree Centroid)",
+          "de_bai": "problems/cppb_grd_11_kich_thuoc_cay_con_va_trong_tam_cay/De_Bai.md",
+          "solution": "problems/cppb_grd_11_kich_thuoc_cay_con_va_trong_tam_cay/solution.cpp",
+          "guide": "problems/cppb_grd_11_kich_thuoc_cay_con_va_trong_tam_cay/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_12_me_cung_co_cua_dich_chuyen_tuc_thoi",
+          "title": "Cổng Dịch Chuyển Tức Thời (Teleport Maze)",
+          "de_bai": "problems/cppb_grd_12_me_cung_co_cua_dich_chuyen_tuc_thoi/De_Bai.md",
+          "solution": "problems/cppb_grd_12_me_cung_co_cua_dich_chuyen_tuc_thoi/solution.cpp",
+          "guide": "problems/cppb_grd_12_me_cung_co_cua_dich_chuyen_tuc_thoi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_13_lam_day_ho_chua_nuoc_rotting_oranges",
+          "title": "Lây Lan Quả Cam Hỏng (Rotting Oranges)",
+          "de_bai": "problems/cppb_grd_13_lam_day_ho_chua_nuoc_rotting_oranges/De_Bai.md",
+          "solution": "problems/cppb_grd_13_lam_day_ho_chua_nuoc_rotting_oranges/solution.cpp",
+          "guide": "problems/cppb_grd_13_lam_day_ho_chua_nuoc_rotting_oranges/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_14_hon_dao_nhan_tao_lon_nhat",
+          "title": "Hòn Đảo Nhân Tạo Lớn Nhất (Making A Large Island)",
+          "de_bai": "problems/cppb_grd_14_hon_dao_nhan_tao_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_grd_14_hon_dao_nhan_tao_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_grd_14_hon_dao_nhan_tao_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_grd_15_thoat_khoi_me_cung_quai_vat",
+          "title": "Thoát Khỏi Mê Cung Quái Vật (Monsters Maze)",
+          "de_bai": "problems/cppb_grd_15_thoat_khoi_me_cung_quai_vat/De_Bai.md",
+          "solution": "problems/cppb_grd_15_thoat_khoi_me_cung_quai_vat/solution.cpp",
+          "guide": "problems/cppb_grd_15_thoat_khoi_me_cung_quai_vat/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 21,
+      "chapter": 7,
+      "title": "Bài 21: Cấu trúc cây phân đoạn (Segment Tree) & Fenwick Tree (BIT)",
+      "problems": [
+        {
+          "code": "cppb_rng_01_cai_dat_fenwick_tree_tinh_tong_doan",
+          "title": "Cài Đặt Fenwick Tree Tính Tổng Đoạn (Range Sum)",
+          "de_bai": "problems/cppb_rng_01_cai_dat_fenwick_tree_tinh_tong_doan/De_Bai.md",
+          "solution": "problems/cppb_rng_01_cai_dat_fenwick_tree_tinh_tong_doan/solution.cpp",
+          "guide": "problems/cppb_rng_01_cai_dat_fenwick_tree_tinh_tong_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_02_cai_dat_segment_tree_tim_min_doan",
+          "title": "Cài Đặt Segment Tree Tìm Min Đoạn (RMQ)",
+          "de_bai": "problems/cppb_rng_02_cai_dat_segment_tree_tim_min_doan/De_Bai.md",
+          "solution": "problems/cppb_rng_02_cai_dat_segment_tree_tim_min_doan/solution.cpp",
+          "guide": "problems/cppb_rng_02_cai_dat_segment_tree_tim_min_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_03_cap_nhat_doan_va_truy_van_diem_bit",
+          "title": "Cập Nhật Đoạn & Truy Vấn Điểm (Range Update Point Query)",
+          "de_bai": "problems/cppb_rng_03_cap_nhat_doan_va_truy_van_diem_bit/De_Bai.md",
+          "solution": "problems/cppb_rng_03_cap_nhat_doan_va_truy_van_diem_bit/solution.cpp",
+          "guide": "problems/cppb_rng_03_cap_nhat_doan_va_truy_van_diem_bit/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_04_tim_gia_tri_lon_nhat_va_dem_so_lan_xuat_hien",
+          "title": "Tìm Max Đoạn & Đếm Số Lần Xuất Hiện",
+          "de_bai": "problems/cppb_rng_04_tim_gia_tri_lon_nhat_va_dem_so_lan_xuat_hien/De_Bai.md",
+          "solution": "problems/cppb_rng_04_tim_gia_tri_lon_nhat_va_dem_so_lan_xuat_hien/solution.cpp",
+          "guide": "problems/cppb_rng_04_tim_gia_tri_lon_nhat_va_dem_so_lan_xuat_hien/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_05_dem_so_cap_nghich_the_inversion_count",
+          "title": "Đếm Số Cặp Nghịch Thế (Inversion Count)",
+          "de_bai": "problems/cppb_rng_05_dem_so_cap_nghich_the_inversion_count/De_Bai.md",
+          "solution": "problems/cppb_rng_05_dem_so_cap_nghich_the_inversion_count/solution.cpp",
+          "guide": "problems/cppb_rng_05_dem_so_cap_nghich_the_inversion_count/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_06_truy_van_uoc_chung_lon_nhat_doan",
+          "title": "Truy Vấn Ước Chung Lớn Nhất Đoạn (Range GCD)",
+          "de_bai": "problems/cppb_rng_06_truy_van_uoc_chung_lon_nhat_doan/De_Bai.md",
+          "solution": "problems/cppb_rng_06_truy_van_uoc_chung_lon_nhat_doan/solution.cpp",
+          "guide": "problems/cppb_rng_06_truy_van_uoc_chung_lon_nhat_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_07_tim_phan_tu_thu_k_nho_nhat",
+          "title": "Tìm Phần Tử Thứ K Nhỏ Nhất (K-th Element on BIT)",
+          "de_bai": "problems/cppb_rng_07_tim_phan_tu_thu_k_nho_nhat/De_Bai.md",
+          "solution": "problems/cppb_rng_07_tim_phan_tu_thu_k_nho_nhat/solution.cpp",
+          "guide": "problems/cppb_rng_07_tim_phan_tu_thu_k_nho_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_08_tim_vi_tri_dau_tien_co_gia_tri_ge_x",
+          "title": "Tìm Vị Trí Đầu Tiên Có Giá Trị Lớn Hơn Hoặc Bằng X",
+          "de_bai": "problems/cppb_rng_08_tim_vi_tri_dau_tien_co_gia_tri_ge_x/De_Bai.md",
+          "solution": "problems/cppb_rng_08_tim_vi_tri_dau_tien_co_gia_tri_ge_x/solution.cpp",
+          "guide": "problems/cppb_rng_08_tim_vi_tri_dau_tien_co_gia_tri_ge_x/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_09_lis_o_nlogn_bang_bit",
+          "title": "Dãy Con Tăng Dài Nhất LIS Bằng Fenwick Tree",
+          "de_bai": "problems/cppb_rng_09_lis_o_nlogn_bang_bit/De_Bai.md",
+          "solution": "problems/cppb_rng_09_lis_o_nlogn_bang_bit/solution.cpp",
+          "guide": "problems/cppb_rng_09_lis_o_nlogn_bang_bit/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_10_doan_con_co_tong_lon_nhat_max_sub_sum",
+          "title": "Đoạn Con Có Tổng Lớn Nhất Trên Đoạn (Maximum Subarray Query)",
+          "de_bai": "problems/cppb_rng_10_doan_con_co_tong_lon_nhat_max_sub_sum/De_Bai.md",
+          "solution": "problems/cppb_rng_10_doan_con_co_tong_lon_nhat_max_sub_sum/solution.cpp",
+          "guide": "problems/cppb_rng_10_doan_con_co_tong_lon_nhat_max_sub_sum/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_11_dem_so_diem_nam_trong_hinh_chu_nhat",
+          "title": "Đếm Số Điểm Trong Hình Chữ Nhật (2D Range Query)",
+          "de_bai": "problems/cppb_rng_11_dem_so_diem_nam_trong_hinh_chu_nhat/De_Bai.md",
+          "solution": "problems/cppb_rng_11_dem_so_diem_nam_trong_hinh_chu_nhat/solution.cpp",
+          "guide": "problems/cppb_rng_11_dem_so_diem_nam_trong_hinh_chu_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_12_doi_dau_doan_va_tim_tong_lon_nhat",
+          "title": "Cập Nhật Phân Đoạn Nâng Cao",
+          "de_bai": "problems/cppb_rng_12_doi_dau_doan_va_tim_tong_lon_nhat/De_Bai.md",
+          "solution": "problems/cppb_rng_12_doi_dau_doan_va_tim_tong_lon_nhat/solution.cpp",
+          "guide": "problems/cppb_rng_12_doi_dau_doan_va_tim_tong_lon_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_13_cay_fenwick_2d_doc_lap",
+          "title": "Cây Fenwick 2D Tính Tổng Hình Chữ Nhật (2D BIT)",
+          "de_bai": "problems/cppb_rng_13_cay_fenwick_2d_doc_lap/De_Bai.md",
+          "solution": "problems/cppb_rng_13_cay_fenwick_2d_doc_lap/solution.cpp",
+          "guide": "problems/cppb_rng_13_cay_fenwick_2d_doc_lap/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_14_gioi_thieu_lazy_propagation_cong_doan",
+          "title": "Lazy Propagation — Cập Nhật & Truy Vấn Đoạn (Range Add Range Sum)",
+          "de_bai": "problems/cppb_rng_14_gioi_thieu_lazy_propagation_cong_doan/De_Bai.md",
+          "solution": "problems/cppb_rng_14_gioi_thieu_lazy_propagation_cong_doan/solution.cpp",
+          "guide": "problems/cppb_rng_14_gioi_thieu_lazy_propagation_cong_doan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_rng_15_he_thong_quan_ly_du_lieu_olympic",
+          "title": "Hệ Thống Quản Lý Dữ Liệu Olympic (Range Master)",
+          "de_bai": "problems/cppb_rng_15_he_thong_quan_ly_du_lieu_olympic/De_Bai.md",
+          "solution": "problems/cppb_rng_15_he_thong_quan_ly_du_lieu_olympic/solution.cpp",
+          "guide": "problems/cppb_rng_15_he_thong_quan_ly_du_lieu_olympic/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    }
+  ]
+}

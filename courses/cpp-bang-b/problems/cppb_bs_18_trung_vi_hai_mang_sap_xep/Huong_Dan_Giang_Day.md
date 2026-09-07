@@ -1,74 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Trung Vị Của Hai Mảng Đã Sắp Xếp (Median of Two Sorted)
-Chuyên đề: **Thuật Toán Tìm Kiếm Nhị Phân (Binary Search)**
+Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Thuật Toán Tìm Kiếm Nhị Phân (Binary Search).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho hai mảng đã sắp xếp A (kích thước N) và B (kích thước M). Hãy tìm giá trị trung vị của mảng hợp nhất với độ chính xác 1 chữ số thập phân.
+
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
+  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 2 1 3 2 4)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `2 2 1 3 2 4` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Mảng hợp nhất: [1, 2, 3, 4] có 4 phần tử. Hai phần tử ở giữa là 2 và 3. Giá trị trung vị là (2 + 3) / 2 = 2.5. Kết quả i... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `2.5` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Mảng hợp nhất: [1, 2, 3, 4] có 4 phần tử. Hai phần tử ở giữa là 2 và 3. Giá trị trung vị là (2 + 3) / 2 = 2.5. Kết quả in ra: 2.5.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Hàm mục tiêu có tính chất đơn điệu (tăng/giảm một chiều) khi biến đổi giá trị nghiệm giả định không?
-2. Khi `check(mid) == true`, đáp án tối ưu hơn có thể nằm ở nửa trái hay nửa phải?
-3. Giá trị nhỏ nhất và lớn nhất khả dĩ của nghiệm ($low, high$) là bao nhiêu?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Nhận diện tính chất đơn điệu của không gian tìm kiếm hoặc hàm kiểm tra `check(mid)`.
-- Thiết lập không gian tìm kiếm $[low, high]$.
-- Tại mỗi bước lặp, tính $mid = low + (high - low) / 2$, gọi `check(mid)` và thu hẹp $50\%$ không gian tìm kiếm.
-
-### 4.2. Bất biến toán học (Invariant):
-> Nghiệm tối ưu luôn được bảo toàn nằm trọn vẹn trong khoảng $[low, high]$ sau mỗi bước thu hẹp.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-2 2
-1 3
-2 4
-```
-* **Output:**
-```text
-2.5
-```
-* **Phân tích quá trình thực thi:**
-  Thuật toán tiến hành khởi tạo cấu trúc dữ liệu, duyệt tuyến tính qua từng phần tử và cập nhật kết quả tối ưu theo đúng nguyên lý thiết kế.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(\log(\text{Range}) \times \text{Cost}(\text{check}))$. Với Range $= 10^{18}$, chỉ mất tối đa $\approx 60$ lần lặp chia đôi không gian.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ phụ thuộc vào cấu trúc dữ liệu của hàm `check`.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Tràn số khi tính `mid = (low + high) / 2` với $low, high \ge 2 \cdot 10^9$ (phải dùng `low + (high - low) / 2`).
-2. Vòng lặp vô tận khi không gian còn 2 phần tử do làm tròn số hoặc cập nhật sai biên ($low = mid$ thay vì $low = mid + 1$).
-3. Đặt biên $high$ quá nhỏ dẫn đến bỏ sót nghiệm tối ưu, hoặc $low = 0$ gây chia cho 0 trong hàm `check`.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -124,10 +86,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

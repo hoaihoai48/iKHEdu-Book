@@ -1,74 +1,32 @@
 # Hướng Dẫn Giảng Dạy: Phủ Sóng Trạm Phát Sóng Wifi Đô Thị
-Chuyên đề: **Kỹ Thuật Cửa Sổ Trượt (Sliding Window)**
+Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Kỹ Thuật Cửa Sổ Trượt (Sliding Window).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho danh sách tọa độ của N căn nhà đã sắp xếp tăng dần và số nguyên R. Hãy tìm số lượng căn nhà nhiều nhất nằm gọn trong một đoạn có độ dài không vượt quá 2R.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 1 3 5 8 10)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 1 3 5 8 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Với bán kính R = 3, đường kính phủ sóng tối đa là 2R = 6. Xét đoạn từ nhà tọa độ 1 đến nhà tọa độ 5: độ dài khoảng cách ... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `3` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Với bán kính R = 3, đường kính phủ sóng tối đa là 2R = 6. Xét đoạn từ nhà tọa độ 1 đến nhà tọa độ 5: độ dài khoảng cách là 5 - 1 = 4 <= 6, phủ sóng được 3 căn nhà tại các tọa độ {1, 3, 5}. Tương tự, đoạn {3, 5, 8} có 8 - 3 = 5 <= 6 cũng phủ được 3 nhà. Số lượng nhà tối đa phủ được là 3.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Độ dài cửa sổ là cố định hay biến thiên?
-2. Khi cửa sổ trượt từ $[i-K \dots i-1]$ sang $[i-K+1 \dots i]$, giá trị tổng thay đổi như thế nào?
-3. Tất cả các phần tử trong mảng có đều không âm ($A_i \ge 0$) để đảm bảo tính đơn điệu không?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Duy trì một đoạn con liên tiếp $[L \dots R]$ trên mảng.
-- Khi mở rộng $R$, nạp phần tử $A_R$ vào trạng thái cửa sổ trong $\mathcal{O}(1)$.
-- Khi điều kiện vi phạm hoặc cần tối ưu kích thước, tăng con trỏ $L$ để nhả phần tử $A_L$ trong $\mathcal{O}(1)$.
-
-### 4.2. Bất biến toán học (Invariant):
-> Mỗi phần tử đi vào cửa sổ đúng 1 lần (qua $R$) và ra khỏi cửa sổ tối đa 1 lần (qua $L$). Tổng số thao tác di chuyển con trỏ không bao giờ vượt quá $2N$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-6 2
-1 2 3 7 8 11
-```
-* **Output:**
-```text
-3
-```
-* **Phân tích quá trình thực thi:**
-  - Bộ 1 đặt tại $3$: phủ $[1, 5]$ (nhà 1, 2, 3).
-- Bộ 2 đặt tại $9$: phủ $[7, 11]$ (nhà 7, 8, 11 - hoặc đặt tại 8 phủ 7, 8 và đặt bộ khác...).
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N)$ tuyến tính tuyệt đối, mỗi phần tử được xét đúng 2 lần.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ bộ nhớ phụ trợ ngoài mảng lưu trữ.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Áp dụng Sliding Window cho mảng có số âm khi bài toán yêu cầu tính tổng đoạn con (tính đơn điệu bị phá vỡ).
-2. Quên khởi tạo giá trị ban đầu cho cửa sổ cố định $K$ đầu tiên.
-3. Xử lý sai biên khi cửa sổ trượt qua vị trí cuối cùng của mảng.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -99,10 +57,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

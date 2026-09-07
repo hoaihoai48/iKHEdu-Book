@@ -1,73 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Nghịch Đảo Modulo Bằng Euclid Mở Rộng
-Chuyên đề: **Đồng Dư Thức & Lũy Thừa Nhị Phân (Modular Arithmetic)**
-
-**Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
+Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch đảo modulo**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán: Nghịch Đảo Modulo Bằng Euclid Mở Rộng.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích tính chất đồng dư, áp dụng lũy thừa nhị phân $\mathcal{O}(\log N)$, nghịch đảo modulo và tránh tràn số.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không tiền tố thừa, quản lý số dư âm chặt chẽ).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho hai số nguyên dương A và M với gcd(A, M) = 1. Hãy tìm nghịch đảo modulo của A theo modulo M.
+
+- **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
+  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** - Một dòng duy nhất chứa 2 số nguyên $A, M$ ($1 \le A, M \le 10^9, \gcd(A, M) = 1$).
-* **Yêu cầu cốt lõi:** Cho hai số nguyên dương $A, M$ với $\gcd(A, M) = 1$. Hãy tìm nghịch đảo modulo $A^{-1} \pmod M$ bằng thuật toán Euclid mở rộng.
-* **Trường hợp biên (Edge Cases):**
-  * Giá trị $A, B = 0$ hoặc $B = 1$.
-  * Số dư âm trong phép trừ.
-  * Phép nhân tràn số 32-bit (bắt buộc dùng `long long` hoặc ép kiểu).
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 11)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `3 11` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | 3 * 4 = 12 = 1 * 11 + 1 = 1 mod 11. Vì vậy nghịch đảo modulo của 3 theo mod 11 là 4.... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `4` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* 3 * 4 = 12 = 1 * 11 + 1 = 1 mod 11. Vì vậy nghịch đảo modulo của 3 theo mod 11 là 4.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Bài toán có thể chia để trị số mũ $B$ thành $\lfloor B / 2 \rfloor$ không?
-2. Có xuất hiện phép chia trên vành Modulo không? Nếu có, modulo $M$ có phải số nguyên tố không?
-3. Trong phép trừ, ta cần làm gì để số dư không bao giờ bị âm trong C++?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Triển khai Lũy thừa nhị phân lặp hoặc tiền xử lý mảng giai thừa / nghịch đảo.
-- Áp dụng các định lý số học (Fermat nhỏ, Euclid mở rộng).
-
-### 4.2. Bất biến toán học (Invariant):
-> Mọi phép toán biến đổi đều bảo toàn tính chất đồng dư trên vành $\mathbb{Z}_M$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-3 7
-```
-* **Output:**
-```text
-5
-```
-* **Phân tích quá trình thực thi:**
-  3 * 5 = 15 = 1 mod 7.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** Thuật toán chạy trong $\mathcal{O}(\log B)$ hoặc $\mathcal{O}(1)$ mỗi truy vấn sau tiền xử lý.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ hoặc $\mathcal{O}(N)$ bộ nhớ phụ trợ.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Tràn số khi nhân hai số $\approx 10^9$ (bắt buộc dùng `(1LL * a * b) % M`).
-2. Quên cộng $M$ trong phép trừ: `(a - b + M) % M`.
-3. Chia trực tiếp `(A / B) % M` gây sai bản chất toán học.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -96,14 +59,7 @@ int main() {
     extGCD(a, m, x, y);
     x = (x % m + m) % m;
 
-    cout << x << "
-";
+    cout << x << "\n";
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Áp dụng vào các bài toán quy hoạch động đếm đường đi, đếm dãy ngoặc đúng (Catalan).
-* **Mở rộng 2:** Tích hợp Lũy thừa nhị phân vào phép nhân ma trận trên đồ thị.

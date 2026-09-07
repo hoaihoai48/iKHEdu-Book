@@ -1,72 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Tìm Phần Tử Xuất Hiện 1 Lần Duy Nhất
-Chuyên đề: **Phép Toán Bit & Biểu Diễn Trạng Thái (Bitmask)**
+Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Phép Toán Bit & Biểu Diễn Trạng Thái (Bitmask).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho mảng gồm 2N + 1 số nguyên, trong đó mọi phần tử đều xuất hiện đúng 2 lần trừ 1 phần tử xuất hiện đúng 1 lần. Hãy tìm phần tử duy nhất đó.
+
+- **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
+  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 4 1 2 1 2)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `2 4 1 2 1 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Các số 1 và 2 đều xuất hiện 2 lần. Số 4 chỉ xuất hiện 1 lần duy nhất. Phép XOR toàn bộ mảng triệt tiêu các cặp giống nha... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `4` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Các số 1 và 2 đều xuất hiện 2 lần. Số 4 chỉ xuất hiện 1 lần duy nhất. Phép XOR toàn bộ mảng triệt tiêu các cặp giống nhau và giữ lại đúng số 4. Kết quả in ra: 4.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Số lượng phần tử $N$ có đủ nhỏ ($N \le 22$) để duyệt toàn bộ $2^N$ trạng thái không?
-2. Làm sao để kiểm tra, bật, tắt hoặc đảo trạng thái của phần tử thứ $k$ trong $\mathcal{O}(1)$?
-3. Làm thế nào để duyệt toàn bộ các tập con thực sự (submasks) của một mask trong $\mathcal{O}(3^N)$?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Biểu diễn trạng thái tập hợp $N$ phần tử bằng số nguyên $N$ bit ($0 \dots 2^N - 1$).
-- Sử dụng các phép toán bitwise `&, |, ^, ~, <<, >>` và các hàm nội tại CPU `__builtin_popcountll`, `__builtin_clzll` để thực thi trong $\mathcal{O}(1)$ chu kỳ máy.
-
-### 4.2. Bất biến toán học (Invariant):
-> Bit thứ $k$ bằng 1 đại diện cho phần tử thứ $k$ được chọn vào tập hợp con, bit thứ $k$ bằng 0 đại diện cho phần tử bị loại bỏ.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-2
-4 1 2 1 2
-```
-* **Output:**
-```text
-4
-```
-* **Phân tích quá trình thực thi:**
-  Thuật toán tiến hành khởi tạo cấu trúc dữ liệu, duyệt tuyến tính qua từng phần tử và cập nhật kết quả tối ưu theo đúng nguyên lý thiết kế.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N \times 2^N)$ cho bài toán duyệt tập con, hoặc $\mathcal{O}(1)$ cho mỗi thao tác bitwise.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ bộ nhớ phụ trợ.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Quên ép kiểu `1LL << k` khi dịch bit với $k \ge 31$ dẫn đến tràn số 32-bit (Undefined Behavior).
-2. Độ ưu tiên của các toán tử bitwise (`&, |, ^`) thấp hơn toán tử so sánh (`==, !=, <, >`), bắt buộc phải đóng ngoặc: `((mask >> k) & 1) == 1`.
-3. Vét cạn $2^N$ với $N > 25$ dẫn đến TLE (số phép tính vượt quá $10^8$).
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -90,10 +54,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

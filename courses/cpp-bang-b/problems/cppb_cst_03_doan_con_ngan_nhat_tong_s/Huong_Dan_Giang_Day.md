@@ -3,71 +3,40 @@ Chuyên đề: **Kỹ Thuật Cửa Sổ Trượt (Sliding Window)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Kỹ Thuật Cửa Sổ Trượt (Sliding Window).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho dãy số nguyên dương $A$ và số nguyên dương $S$. Tìm độ dài nhỏ nhất của một đoạn con liên tiếp có tổng các phần tử $\ge S$. Nếu không tồn tại đoạn nào, in `0`.
+- **Kỹ thuật Cửa sổ trượt biến thiên (Variable-size Sliding Window):**
+  - Vì tất cả các phần tử $A_i$ đều là số nguyên dương ($A_i > 0$), mảng có tính chất đơn điệu: khi mở rộng cửa sổ sang phải thì tổng luôn tăng, khi thu hẹp cửa sổ bên trái thì tổng luôn giảm.
+  - Sử dụng 2 con trỏ $L = 0, R = 0$ và biến tích lũy `cur_sum = 0`:
+    1. Mở rộng biên phải $R$: Cộng `cur_sum += a[R]`.
+    2. Trong khi `cur_sum >= S`: Ta đã tìm thấy một đoạn hợp lệ có độ dài $R - L + 1$. Cập nhật `min_len = min(min_len, R - L + 1)`. Sau đó thử thu hẹp biên trái bằng cách trừ `cur_sum -= a[L]` và tăng `L++` để tìm đoạn ngắn hơn.
+  - Mỗi phần tử đi vào cửa sổ qua $R$ đúng 1 lần và ra khỏi cửa sổ qua $L$ tối đa 1 lần $\implies$ Tổng số thao tác con trỏ không quá $2N$. Độ phức tạp thời gian: $\mathcal{O}(N)$.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: S = 7)
+Mẫu thử: $N = 6, S = 7$, mảng `a = [2, 3, 1, 2, 4, 3]`.
+
+| Bước | Con trỏ $R$ | Thêm $a[R]$ | `cur_sum` | `cur_sum >= 7`? | Thu hẹp con trỏ $L$ & Cập nhật `min_len` |
+|---|---|---|---|---|---|
+| 1 | $R=0$ | $+2$ | 2 | Chưa | $L=0$ |
+| 2 | $R=1$ | $+3$ | 5 | Chưa | $L=0$ |
+| 3 | $R=2$ | $+1$ | 6 | Chưa | $L=0$ |
+| 4 | $R=3$ | $+2$ | 8 | $8 \ge 7$ | Đoạn $[2, 3, 1, 2]$ dài 4. `min_len = 4`. Trừ $a[0]=2 \implies cur = 6, L=1$. |
+| 5 | $R=4$ | $+4$ | 10 | $10 \ge 7$ | Đoạn $[3, 1, 2, 4]$ dài 4. Trừ $a[1]=3 \implies cur=7, L=2$.<br>Lại có $7 \ge 7 \implies$ đoạn $[1, 2, 4]$ dài 3. `min_len = 3`. Trừ $a[2]=1 \implies cur=6, L=3$. |
+| 6 | $R=5$ | $+3$ | 9 | $9 \ge 7$ | Đoạn $[2, 4, 3]$ dài 3. Trừ $a[3]=2 \implies cur=7, L=4$.<br>Lại có $7 \ge 7 \implies$ đoạn $[4, 3]$ dài 2! `min_len = 2`. Trừ $a[4]=4 \implies cur=3, L=5$. |
+
+Kết quả: Đoạn ngắn nhất có độ dài `2` (chính là đoạn $[4, 3]$).
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Độ dài cửa sổ là cố định hay biến thiên?
-2. Khi cửa sổ trượt từ $[i-K \dots i-1]$ sang $[i-K+1 \dots i]$, giá trị tổng thay đổi như thế nào?
-3. Tất cả các phần tử trong mảng có đều không âm ($A_i \ge 0$) để đảm bảo tính đơn điệu không?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Mảng có số âm hoặc số 0:** Thuật toán 2 con trỏ chỉ áp dụng được khi các phần tử đều dương ($A_i > 0$). Nếu có số âm, tính đơn điệu bị phá vỡ, phải dùng Mảng tiền tố + Binary Search / Deque.
+- **Bẫy 2 — Không có đoạn nào thỏa mãn:** Khởi tạo `min_len = N + 1`. Nếu kết thúc vòng lặp mà `min_len > N` thì in `0`.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Duy trì một đoạn con liên tiếp $[L \dots R]$ trên mảng.
-- Khi mở rộng $R$, nạp phần tử $A_R$ vào trạng thái cửa sổ trong $\mathcal{O}(1)$.
-- Khi điều kiện vi phạm hoặc cần tối ưu kích thước, tăng con trỏ $L$ để nhả phần tử $A_L$ trong $\mathcal{O}(1)$.
-
-### 4.2. Bất biến toán học (Invariant):
-> Mỗi phần tử đi vào cửa sổ đúng 1 lần (qua $R$) và ra khỏi cửa sổ tối đa 1 lần (qua $L$). Tổng số thao tác di chuyển con trỏ không bao giờ vượt quá $2N$.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-6 7
-2 3 1 2 4 3
-```
-* **Output:**
-```text
-2
-```
-* **Phân tích quá trình thực thi:**
-  Đoạn $[4, 3]$ có tổng là $7 \ge 7$ với độ dài là 2.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N)$ tuyến tính tuyệt đối, mỗi phần tử được xét đúng 2 lần.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ bộ nhớ phụ trợ ngoài mảng lưu trữ.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Áp dụng Sliding Window cho mảng có số âm khi bài toán yêu cầu tính tổng đoạn con (tính đơn điệu bị phá vỡ).
-2. Quên khởi tạo giá trị ban đầu cho cửa sổ cố định $K$ đầu tiên.
-3. Xử lý sai biên khi cửa sổ trượt qua vị trí cuối cùng của mảng.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -92,19 +61,16 @@ int main() {
         while (cur_sum >= s) {
             min_len = min(min_len, r - l + 1);
             cur_sum -= a[l];
-            ++l;
+            l++;
         }
     }
 
-    if (min_len > n) cout << -1 << "\n";
-    else cout << min_len << "\n";
+    if (min_len > n) {
+        cout << 0 << "\n";
+    } else {
+        cout << min_len << "\n";
+    }
+
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

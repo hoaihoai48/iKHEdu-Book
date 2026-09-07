@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+long long gcd(long long a, long long b) { return b == 0 ? a : gcd(b, a % b); }
+
 struct SegmentTree {
     int n;
     vector<long long> tree;
@@ -14,7 +16,7 @@ struct SegmentTree {
         int mid = (l + r) / 2;
         build(a, 2 * id, l, mid);
         build(a, 2 * id + 1, mid + 1, r);
-        tree[id] = std::gcd(tree[2 * id], tree[2 * id + 1]);
+        tree[id] = gcd(tree[2 * id], tree[2 * id + 1]);
     }
 
     void update(int id, int l, int r, int pos, long long val) {
@@ -25,14 +27,14 @@ struct SegmentTree {
         int mid = (l + r) / 2;
         if (pos <= mid) update(2 * id, l, mid, pos, val);
         else update(2 * id + 1, mid + 1, r, pos, val);
-        tree[id] = std::gcd(tree[2 * id], tree[2 * id + 1]);
+        tree[id] = gcd(tree[2 * id], tree[2 * id + 1]);
     }
 
     long long query(int id, int l, int r, int u, int v) {
         if (v < l || r < u) return 0;
         if (u <= l && r <= v) return tree[id];
         int mid = (l + r) / 2;
-        return std::gcd(query(2 * id, l, mid, u, v), query(2 * id + 1, mid + 1, r, u, v));
+        return gcd(query(2 * id, l, mid, u, v), query(2 * id + 1, mid + 1, r, u, v));
     }
 };
 

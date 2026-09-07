@@ -3,71 +3,40 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ phương pháp giải quyết bài toán bằng kỹ thuật thuộc chuyên đề Kỹ Thuật Hai Con Trỏ (Two Pointers).
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân tích bài toán, nhận diện dạng dữ liệu, xây dựng cấu trúc mảng tối ưu và loại bỏ hoàn toàn các vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không dùng thư viện rườm rà, quản lý bộ nhớ tối ưu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho $N$ thanh gỗ có độ dài $A_1, A_2, \dots, A_N$. Đếm số bộ ba thanh gỗ có thể ghép thành một tam giác không suy biến.
+- **Bất đẳng thức tam giác trên mảng đã sắp xếp:**
+  - Ba cạnh $(a, b, c)$ tạo thành tam giác khi: $a + b > c, a + c > b, b + c > a$.
+  - Nếu ta sắp xếp tăng dần $A_i \le A_j \le A_k$, ta luôn có $A_k + A_i > A_j$ và $A_k + A_j > A_i$.
+  - Điều kiện duy nhất cần kiểm tra là:
+    $$A_i + A_j > A_k$$
+- **Thuật toán Hai con trỏ $\mathcal{O}(N^2)$:**
+  - Cố định cạnh lớn nhất $k$ chạy ngược từ $N - 1$ về $2$.
+  - Với mỗi $k$, đặt $L = 0$ và $R = k - 1$:
+    - Nếu $A_L + A_R > A_k$: Vì mảng tăng dần nên mọi phần tử từ $L$ đến $R - 1$ khi ghép với $A_R$ đều thỏa mãn $> A_k$.
+    - Do đó có đúng **$R - L$ tam giác hợp lệ**. Cộng `ans += (R - L)` và giảm `R--`.
+    - Nếu $A_L + A_R \le A_k$: Tổng quá nhỏ, tăng `L++`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** Đọc hiểu ràng buộc tham số và kiểu dữ liệu phù hợp (chú ý tràn số `long long` khi giá trị vượt $2 \cdot 10^9$).
-* **Yêu cầu cốt lõi:** Biến đổi bài toán từ mô hình phát biểu thực tế về mô hình thuật toán tối ưu.
-* **Trường hợp biên (Edge Cases):**
-  * Kích thước mảng cực tiểu ($N = 1$ hoặc $N = K$).
-  * Giá trị phần tử âm, cực lớn hoặc tất cả các phần tử đều bằng nhau.
-  * Truy vấn nằm ở sát biên của mảng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1)
+Mẫu thử: $N = 5$, các cạnh đã xếp `[2, 3, 4, 5, 6]`.
+
+| Cố định $k$ | Cạnh lớn nhất $A_k$ | Hai con trỏ $(L, R)$ | $A_L + A_R > A_k$? | Số tam giác cộng dồn |
+|---|---|---|---|---|
+| $k=4$ | $A_4 = 6$ | $L=0, R=3 (2, 5)$ | $2 + 5 = 7 > 6$ | Cặp (3, 4, 5) với 5 $\implies$ cộng $3 - 0 = 3$. $R=2$. |
+| — | $A_4 = 6$ | $L=0, R=2 (2, 4)$ | $2 + 4 = 6 \le 6$ | $L=1$. |
+| — | $A_4 = 6$ | $L=1, R=2 (3, 4)$ | $3 + 4 = 7 > 6$ | Cộng $2 - 1 = 1$. $R=1 \implies$ dừng $k=4$. (Được 4 tam giác) |
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Mảng đã có thứ tự tăng dần chưa? Nếu chưa, cần tiền xử lý gì?
-2. Khi tổng $A[L] + A[R]$ lớn hơn $S$, ta nên dịch con trỏ nào để giảm tổng?
-3. Có bao nhiêu cặp thỏa mãn nếu $A[L] + A[R] \le S$?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy tam giác suy biến:** Điều kiện là $a + b > c$ (lớn hơn nghiêm ngặt), nếu $a + b == c$ ba điểm thẳng hàng, không tạo thành tam giác.
+- **Biến đếm `ans`:** Phải dùng `long long ans = 0` vì số tam giác tối đa là $\binom{N}{3} \approx 1.6 \cdot 10^{11}$ khi $N = 10^4$.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Sắp xếp mảng để tạo tính đơn điệu.
-- Đặt 2 con trỏ $L$ ở đầu và $R$ ở cuối mảng (đối đầu), hoặc cùng chạy từ đầu mảng.
-- Tại mỗi bước, dựa vào mối quan hệ giữa tổng/hiệu hiện tại và mục tiêu để quyết định tăng $L$ hay giảm $R$ một cách đơn điệu.
-
-### 4.2. Bất biến toán học (Invariant):
-> Nếu $A[L] + A[R] > S$, vì mảng tăng dần nên $\forall k \ge L, A[k] + A[R] > S \implies$ phần tử $A[R]$ không thể ghép với bất kỳ số nào từ $L \dots R-1$, việc giảm $R$ là an toàn tuyệt đối và không bỏ sót nghiệm.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-4
-4 6 3 7
-```
-* **Output:**
-```text
-3
-```
-* **Phân tích quá trình thực thi:**
-  Các bộ 3 tạo tam giác: $(3, 4, 6), (3, 6, 7), (4, 6, 7)$.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(N \log N)$ (nếu cần sắp xếp) + $\mathcal{O}(N)$ duyệt 2 con trỏ $\implies \mathcal{O}(N \log N)$ tổng thể.
-- **Không gian (Space Complexity):** $\mathcal{O}(1)$ bộ nhớ phụ trợ.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Quên sắp xếp mảng trước khi chạy Hai con trỏ đối đầu khiến điều kiện di chuyển $L/R$ bị sai logic.
-2. Lỗi tràn số $A[L] + A[R] \ge 2 \cdot 10^9$ khi tính tổng hai số lớn.
-3. Vòng lặp dừng không đúng (ví dụ $L \le R$ thay vì $L < R$ khi chọn 2 phần tử phân biệt).
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -77,7 +46,7 @@ int main() {
     cin.tie(nullptr);
 
     int n;
-    if (!(cin >> n)) return 0;
+    if (!(cin >> n) || n < 3) { cout << 0 << "\n"; return 0; }
 
     vector<long long> a(n);
     for (int i = 0; i < n; ++i) cin >> a[i];
@@ -85,15 +54,14 @@ int main() {
     sort(a.begin(), a.end());
 
     long long count = 0;
-
     for (int k = n - 1; k >= 2; --k) {
         int l = 0, r = k - 1;
         while (l < r) {
             if (a[l] + a[r] > a[k]) {
                 count += (r - l);
-                --r;
+                r--;
             } else {
-                ++l;
+                l++;
             }
         }
     }
@@ -102,10 +70,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Thử thách học sinh giải bài toán khi dữ liệu cập nhật động liên tục (Online Queries).
-* **Mở rộng 2:** Áp dụng thuật toán trên không gian nhiều chiều (Ma trận 2D hoặc đồ thị).
-* **Tự giải thích:** Yêu cầu học sinh giải thích tại sao không thể dùng thuật toán ngây thơ và chứng minh độ phức tạp tối ưu trước lớp.

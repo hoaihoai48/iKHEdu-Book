@@ -1,75 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Chia Lấy Dư Số Lớn Cho Số Nhỏ
-Chuyên đề: **Xử Lý Số Nguyên Lớn (Big Integer Arithmetic)**
-
-**Phân loại chuyên đề:** `Core Foundation` (Kiến thức nền tảng bắt buộc)
+Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán: Chia Lấy Dư Số Lớn Cho Số Nhỏ.
-* **Tư duy thuật toán:** Rèn luyện phản xạ mô phỏng đặt tính số học trên chuỗi ký tự (`string`) hoặc mảng (`vector<int>`), quản lý biến nhớ `carry` và `borrow`.
-* **Chuẩn code thi đấu:** Cài đặt code C++ chuẩn thi đấu (Fast I/O, Safe Input, không tiền tố thừa, xóa sạch số 0 vô nghĩa ở đầu).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho số nguyên lớn A và số nguyên nhỏ b (1 <= b <= 10^18). Hãy tính A mod b.
+
+- **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
+  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** - Dòng 1: Chuỗi ký tự số $A$ ($1 \le |A| \le 10^5$).
-- Dòng 2: Số nguyên dương $b$ ($1 \le b \le 10^{18}$).
-* **Yêu cầu cốt lõi:** Cho số nguyên lớn $A$ và số nguyên nhỏ $b$ ($1 \le b \le 10^{18}$). Hãy tính $A \pmod b$.
-* **Trường hợp biên (Edge Cases):**
-  * Giá trị bằng $0$ (cần in `"0"`, tránh chuỗi rỗng `""`).
-  * Phép trừ dẫn đến số âm hoặc các số 0 ở đầu (`leading zeros`).
-  * Biến nhớ `carry` ở chữ số cuối cùng.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 123456789123456789 10)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `123456789123456789 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | Chữ số tận cùng của A là 9 nên khi chia cho 10 phần dư là 9.... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `9` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* Chữ số tận cùng của A là 9 nên khi chia cho 10 phần dư là 9.
 
 ---
 
-## 3. Câu Hỏi Dẫn Dắt Tư Duy (Socratic Method)
-1. Ta nên duyệt chuỗi từ trái sang phải hay đảo ngược chuỗi để hàng đơn vị ở `index = 0`?
-2. Trong phép nhân hai số lớn $A$ và $B$, kích thước tối đa của mảng kết quả là bao nhiêu?
-3. Khi nào cần xóa các số 0 vô nghĩa ở đầu kết quả?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-### 4.1. Chiến lược thực thi:
-- Đảo ngược chuỗi để thao tác `push_back()` đạt $\mathcal{O}(1)$.
-- Mô phỏng đúng quy tắc đặt tính toán học tiểu học.
-
-### 4.2. Bất biến toán học (Invariant):
-> Chữ số hàng $k$ của kết quả luôn được xác định bởi tổng các tích chữ số có tổng chỉ số bằng $k$ cộng dồn với biến nhớ.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run)
-### Dữ liệu Sample:
-* **Input:**
-```text
-123456789
-100
-```
-* **Output:**
-```text
-89
-```
-* **Phân tích quá trình thực thi:**
-  123456789 % 100 = 89.
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-- **Thời gian (Time Complexity):** $\mathcal{O}(L)$ cho phép cộng/trừ/chia nhỏ, $\mathcal{O}(L_A \times L_B)$ cho phép nhân lớn.
-- **Không gian (Space Complexity):** $\mathcal{O}(L)$ bộ nhớ lưu trữ chuỗi kết quả.
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. Quên xử lý `carry` còn lại sau vòng lặp.
-2. In ra các số 0 vô nghĩa (ví dụ `007` thay vì `7`).
-3. Phép nhân số lớn với 0 trả về chuỗi rỗng thay vì `"0"`.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -87,14 +48,7 @@ int main() {
         cur = (cur * 10 + (c - '0')) % b;
     }
 
-    cout << cur << "
-";
+    cout << cur << "\n";
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* **Mở rộng 1:** Áp dụng kỹ thuật nén Base $10^9$ để tăng tốc độ gấp hàng chục lần.
-* **Mở rộng 2:** Tích hợp số lớn vào các thuật toán quy hoạch động đếm số cách (DP đếm).

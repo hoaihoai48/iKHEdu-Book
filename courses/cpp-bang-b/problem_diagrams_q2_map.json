@@ -1,0 +1,542 @@
+{
+  "cppb_dp1_01_bac_thang_co_ban": [
+    "dp_1d_state_dag_vi.png",
+    "Mô hình chuyển trạng thái Quy hoạch động 1 chiều dạng đồ thị có hướng không chu trình (DAG)"
+  ],
+  "cppb_dp1_02_chu_ech_nhay_cost": [
+    "coin_change_dag_vi.png",
+    "Đồ thị chuyển trạng thái bài toán đổi tiền xu tối ưu"
+  ],
+  "cppb_dp1_03_chu_ech_nhay_k_buoc": [
+    "lis_quadratic_model_vi.png",
+    "Mô hình tìm dãy con tăng dài nhất LIS qua các vị trí trước đó"
+  ],
+  "cppb_dp1_04_doi_tien_xu_it_nhat": [
+    "dp_1d_state_dag_vi.png",
+    "Mô hình chuyển trạng thái Quy hoạch động 1 chiều dạng đồ thị có hướng không chu trình (DAG)"
+  ],
+  "cppb_dp1_05_dem_so_cach_doi_tien": [
+    "coin_change_dag_vi.png",
+    "Đồ thị chuyển trạng thái bài toán đổi tiền xu tối ưu"
+  ],
+  "cppb_dp1_06_tong_doan_con_khong_lien_ke": [
+    "lis_quadratic_model_vi.png",
+    "Mô hình tìm dãy con tăng dài nhất LIS qua các vị trí trước đó"
+  ],
+  "cppb_dp1_07_lat_gach_2xn": [
+    "dp_1d_state_dag_vi.png",
+    "Mô hình chuyển trạng thái Quy hoạch động 1 chiều dạng đồ thị có hướng không chu trình (DAG)"
+  ],
+  "cppb_dp1_08_lat_gach_3xn": [
+    "coin_change_dag_vi.png",
+    "Đồ thị chuyển trạng thái bài toán đổi tiền xu tối ưu"
+  ],
+  "cppb_dp1_09_day_con_tang_dai_nhat_lis_n2": [
+    "lis_quadratic_model_vi.png",
+    "Mô hình tìm dãy con tăng dài nhất LIS qua các vị trí trước đó"
+  ],
+  "cppb_dp1_10_day_con_tang_dai_nhat_lis_nlogn": [
+    "dp_1d_state_dag_vi.png",
+    "Mô hình chuyển trạng thái Quy hoạch động 1 chiều dạng đồ thị có hướng không chu trình (DAG)"
+  ],
+  "cppb_dp1_11_truy_vet_day_con_tang_dai_nhat": [
+    "coin_change_dag_vi.png",
+    "Đồ thị chuyển trạng thái bài toán đổi tiền xu tối ưu"
+  ],
+  "cppb_dp1_12_day_con_giam_dai_nhat": [
+    "lis_quadratic_model_vi.png",
+    "Mô hình tìm dãy con tăng dài nhất LIS qua các vị trí trước đó"
+  ],
+  "cppb_dp1_13_day_con_hinh_song_nui_bitonic": [
+    "dp_1d_state_dag_vi.png",
+    "Mô hình chuyển trạng thái Quy hoạch động 1 chiều dạng đồ thị có hướng không chu trình (DAG)"
+  ],
+  "cppb_dp1_14_tong_day_con_tang_lon_nhat": [
+    "coin_change_dag_vi.png",
+    "Đồ thị chuyển trạng thái bài toán đổi tiền xu tối ưu"
+  ],
+  "cppb_dp1_15_quy_hoach_dong_1d_cuc_han": [
+    "lis_quadratic_model_vi.png",
+    "Mô hình tìm dãy con tăng dài nhất LIS qua các vị trí trước đó"
+  ],
+  "cppb_dp2_01_duong_di_tren_luoi_so_cach": [
+    "grid_dp_matrix_vi.png",
+    "Mô hình bảng phương án quy hoạch động 2 chiều trên lưới toạ độ"
+  ],
+  "cppb_dp2_02_duong_di_tren_luoi_co_vat_can": [
+    "knapsack_01_compression_vi.png",
+    "Bảng phương án và kỹ thuật nén mảng 1 chiều trong bài toán Cái Túi (0/1 Knapsack)"
+  ],
+  "cppb_dp2_03_duong_di_chi_phi_nho_nhat_grid": [
+    "unbounded_vs_01_knapsack_vi.png",
+    "So sánh hướng duyệt mảng: Cái túi 0/1 (duyệt lùi) và Cái túi không giới hạn (duyệt xuôi)"
+  ],
+  "cppb_dp2_04_duong_di_tong_lon_nhat_grid": [
+    "grid_dp_matrix_vi.png",
+    "Mô hình bảng phương án quy hoạch động 2 chiều trên lưới toạ độ"
+  ],
+  "cppb_dp2_05_cai_tui_01_knapsack_co_ban": [
+    "knapsack_01_compression_vi.png",
+    "Bảng phương án và kỹ thuật nén mảng 1 chiều trong bài toán Cái Túi (0/1 Knapsack)"
+  ],
+  "cppb_dp2_06_cai_tui_khong_gioi_han_unbounded": [
+    "unbounded_vs_01_knapsack_vi.png",
+    "So sánh hướng duyệt mảng: Cái túi 0/1 (duyệt lùi) và Cái túi không giới hạn (duyệt xuôi)"
+  ],
+  "cppb_dp2_07_cai_tui_truy_vet_mon_do": [
+    "grid_dp_matrix_vi.png",
+    "Mô hình bảng phương án quy hoạch động 2 chiều trên lưới toạ độ"
+  ],
+  "cppb_dp2_08_chia_tap_hai_phan_bang_nhau": [
+    "knapsack_01_compression_vi.png",
+    "Bảng phương án và kỹ thuật nén mảng 1 chiều trong bài toán Cái Túi (0/1 Knapsack)"
+  ],
+  "cppb_dp2_09_chia_tap_chenh_lech_nho_nhat": [
+    "unbounded_vs_01_knapsack_vi.png",
+    "So sánh hướng duyệt mảng: Cái túi 0/1 (duyệt lùi) và Cái túi không giới hạn (duyệt xuôi)"
+  ],
+  "cppb_dp2_10_tam_giac_so_tong_lon_nhat": [
+    "grid_dp_matrix_vi.png",
+    "Mô hình bảng phương án quy hoạch động 2 chiều trên lưới toạ độ"
+  ],
+  "cppb_dp2_11_dem_so_tap_con_tong_bang_s": [
+    "knapsack_01_compression_vi.png",
+    "Bảng phương án và kỹ thuật nén mảng 1 chiều trong bài toán Cái Túi (0/1 Knapsack)"
+  ],
+  "cppb_dp2_12_cai_tui_gia_tri_lon_doi_truc_dp": [
+    "unbounded_vs_01_knapsack_vi.png",
+    "So sánh hướng duyệt mảng: Cái túi 0/1 (duyệt lùi) và Cái túi không giới hạn (duyệt xuôi)"
+  ],
+  "cppb_dp2_13_hinh_vuong_toan_mot_lon_nhat": [
+    "grid_dp_matrix_vi.png",
+    "Mô hình bảng phương án quy hoạch động 2 chiều trên lưới toạ độ"
+  ],
+  "cppb_dp2_14_dong_tien_xu_gioi_han_so_luong": [
+    "knapsack_01_compression_vi.png",
+    "Bảng phương án và kỹ thuật nén mảng 1 chiều trong bài toán Cái Túi (0/1 Knapsack)"
+  ],
+  "cppb_dp2_15_quy_hoach_dong_2d_cuc_han": [
+    "unbounded_vs_01_knapsack_vi.png",
+    "So sánh hướng duyệt mảng: Cái túi 0/1 (duyệt lùi) và Cái túi không giới hạn (duyệt xuôi)"
+  ],
+  "cppb_dps_01_xau_con_chung_dai_nhat_lcs_co_ban": [
+    "lcs_table_traceback_vi.png",
+    "Bảng phương án và hướng truy vết đường đi xâu con chung dài nhất (LCS)"
+  ],
+  "cppb_dps_02_truy_vet_xau_con_chung_dai_nhat": [
+    "edit_distance_transitions_vi.png",
+    "Ma trận chuyển trạng thái tính khoảng cách chỉnh sửa xâu (Edit Distance)"
+  ],
+  "cppb_dps_03_khoang_cach_chinh_sua_edit_distance": [
+    "palindrome_substring_vs_subsequence_vi.png",
+    "Phân biệt cấu trúc quy hoạch động xâu con đối xứng (Substring vs Subsequence)"
+  ],
+  "cppb_dps_04_bien_doi_xau_it_phep_toan_nhat": [
+    "lcs_table_traceback_vi.png",
+    "Bảng phương án và hướng truy vết đường đi xâu con chung dài nhất (LCS)"
+  ],
+  "cppb_dps_05_xau_con_doi_xung_dai_nhat_lps": [
+    "edit_distance_transitions_vi.png",
+    "Ma trận chuyển trạng thái tính khoảng cách chỉnh sửa xâu (Edit Distance)"
+  ],
+  "cppb_dps_06_doan_con_doi_xung_dai_nhat_substring": [
+    "palindrome_substring_vs_subsequence_vi.png",
+    "Phân biệt cấu trúc quy hoạch động xâu con đối xứng (Substring vs Subsequence)"
+  ],
+  "cppb_dps_07_dem_so_xau_con_doi_xung": [
+    "lcs_table_traceback_vi.png",
+    "Bảng phương án và hướng truy vết đường đi xâu con chung dài nhất (LCS)"
+  ],
+  "cppb_dps_08_chen_it_nhat_thanh_palindrome": [
+    "edit_distance_transitions_vi.png",
+    "Ma trận chuyển trạng thái tính khoảng cách chỉnh sửa xâu (Edit Distance)"
+  ],
+  "cppb_dps_09_xau_me_chung_ngan_nhat_scs": [
+    "palindrome_substring_vs_subsequence_vi.png",
+    "Phân biệt cấu trúc quy hoạch động xâu con đối xứng (Substring vs Subsequence)"
+  ],
+  "cppb_dps_10_dem_so_lan_xuat_hien_xau_con": [
+    "lcs_table_traceback_vi.png",
+    "Bảng phương án và hướng truy vết đường đi xâu con chung dài nhất (LCS)"
+  ],
+  "cppb_dps_11_khop_chuoi_wildcard_matching": [
+    "edit_distance_transitions_vi.png",
+    "Ma trận chuyển trạng thái tính khoảng cách chỉnh sửa xâu (Edit Distance)"
+  ],
+  "cppb_dps_12_xau_con_chung_ba_chuoi": [
+    "palindrome_substring_vs_subsequence_vi.png",
+    "Phân biệt cấu trúc quy hoạch động xâu con đối xứng (Substring vs Subsequence)"
+  ],
+  "cppb_dps_13_xoa_it_ky_tu_nhat_tao_chuoi_doi_xung": [
+    "lcs_table_traceback_vi.png",
+    "Bảng phương án và hướng truy vết đường đi xâu con chung dài nhất (LCS)"
+  ],
+  "cppb_dps_14_khoi_phuc_chuoi_tu_dien_nho_nhat_lcs": [
+    "edit_distance_transitions_vi.png",
+    "Ma trận chuyển trạng thái tính khoảng cách chỉnh sửa xâu (Edit Distance)"
+  ],
+  "cppb_dps_15_quy_hoach_dong_chuoi_cuc_han": [
+    "palindrome_substring_vs_subsequence_vi.png",
+    "Phân biệt cấu trúc quy hoạch động xâu con đối xứng (Substring vs Subsequence)"
+  ],
+  "cppb_stl_01_dem_so_phan_tu_phan_biet": [
+    "stl_set_map_rb_tree_vi.png",
+    "Cấu trúc cây đỏ đen (Red-Black Tree) cân bằng tự động của std::set và std::map"
+  ],
+  "cppb_stl_02_bang_tra_cuu_tan_suat_tu_khoa": [
+    "coordinate_compression_model_vi.png",
+    "Mô hình kỹ thuật nén toạ độ bảo toàn thứ tự độ lớn mảng số lớn"
+  ],
+  "cppb_stl_03_nen_toa_do_mang_so_lon": [
+    "priority_queue_heap_vi.png",
+    "Cấu trúc cây vun đống nhị phân (Binary Heap) của hàng đợi ưu tiên Priority Queue"
+  ],
+  "cppb_stl_04_tim_phan_tu_nho_nhat_lon_hon_x": [
+    "stl_set_map_rb_tree_vi.png",
+    "Cấu trúc cây đỏ đen (Red-Black Tree) cân bằng tự động của std::set và std::map"
+  ],
+  "cppb_stl_05_hang_doi_uu_tien_k_phan_tu_lon_nhat": [
+    "coordinate_compression_model_vi.png",
+    "Mô hình kỹ thuật nén toạ độ bảo toàn thứ tự độ lớn mảng số lớn"
+  ],
+  "cppb_stl_06_quan_ly_tap_hop_da_trung_lap": [
+    "priority_queue_heap_vi.png",
+    "Cấu trúc cây vun đống nhị phân (Binary Heap) của hàng đợi ưu tiên Priority Queue"
+  ],
+  "cppb_stl_07_hop_nhat_cac_doan_so": [
+    "stl_set_map_rb_tree_vi.png",
+    "Cấu trúc cây đỏ đen (Red-Black Tree) cân bằng tự động của std::set và std::map"
+  ],
+  "cppb_stl_08_tim_trung_vi_dong_trong_luong_du_lieu": [
+    "coordinate_compression_model_vi.png",
+    "Mô hình kỹ thuật nén toạ độ bảo toàn thứ tự độ lớn mảng số lớn"
+  ],
+  "cppb_stl_09_dem_so_phan_tu_phan_biet_trong_cua_so_k": [
+    "priority_queue_heap_vi.png",
+    "Cấu trúc cây vun đống nhị phân (Binary Heap) của hàng đợi ưu tiên Priority Queue"
+  ],
+  "cppb_stl_10_noi_day_chi_phi_nho_nhat": [
+    "stl_set_map_rb_tree_vi.png",
+    "Cấu trúc cây đỏ đen (Red-Black Tree) cân bằng tự động của std::set và std::map"
+  ],
+  "cppb_stl_11_lap_lich_cong_viec_toi_uu_may_chu": [
+    "coordinate_compression_model_vi.png",
+    "Mô hình kỹ thuật nén toạ độ bảo toàn thứ tự độ lớn mảng số lớn"
+  ],
+  "cppb_stl_12_dem_cap_so_co_hieu_bang_k_so_lon": [
+    "priority_queue_heap_vi.png",
+    "Cấu trúc cây vun đống nhị phân (Binary Heap) của hàng đợi ưu tiên Priority Queue"
+  ],
+  "cppb_stl_13_truy_van_phan_tu_xuat_hien_nhieu_nhat": [
+    "stl_set_map_rb_tree_vi.png",
+    "Cấu trúc cây đỏ đen (Red-Black Tree) cân bằng tự động của std::set và std::map"
+  ],
+  "cppb_stl_14_tim_cap_diem_gan_nhat": [
+    "coordinate_compression_model_vi.png",
+    "Mô hình kỹ thuật nén toạ độ bảo toàn thứ tự độ lớn mảng số lớn"
+  ],
+  "cppb_stl_15_he_thong_xep_hang_thi_dau_dynamic": [
+    "priority_queue_heap_vi.png",
+    "Cấu trúc cây vun đống nhị phân (Binary Heap) của hàng đợi ưu tiên Priority Queue"
+  ],
+  "cppb_stk_01_kiem_tra_day_ngoac_dung_co_ban": [
+    "stack_lifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào sau Ra trước (LIFO) của ngăn xếp (Stack)"
+  ],
+  "cppb_stk_02_day_ngoac_hon_hop_nhieu_loai": [
+    "monotonic_stack_nge_vi.png",
+    "Kỹ thuật ngăn xếp đơn điệu tìm phần tử lớn hơn tiếp theo (Next Greater Element)"
+  ],
+  "cppb_stk_03_danh_gia_bieu_thuc_hau_to_rpn": [
+    "histogram_max_rectangle_vi.png",
+    "Ứng dụng ngăn xếp đơn điệu giải bài toán hình chữ nhật lớn nhất trong biểu đồ cột"
+  ],
+  "cppb_stk_04_xoa_cac_ky_tu_trung_lap_lien_ke": [
+    "stack_lifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào sau Ra trước (LIFO) của ngăn xếp (Stack)"
+  ],
+  "cppb_stk_05_phan_tu_lon_hon_tiep_theo_nge": [
+    "monotonic_stack_nge_vi.png",
+    "Kỹ thuật ngăn xếp đơn điệu tìm phần tử lớn hơn tiếp theo (Next Greater Element)"
+  ],
+  "cppb_stk_06_phan_tu_nho_hon_gan_nhat_ben_trai": [
+    "histogram_max_rectangle_vi.png",
+    "Ứng dụng ngăn xếp đơn điệu giải bài toán hình chữ nhật lớn nhất trong biểu đồ cột"
+  ],
+  "cppb_stk_07_do_dai_day_ngoac_dung_dai_nhat": [
+    "stack_lifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào sau Ra trước (LIFO) của ngăn xếp (Stack)"
+  ],
+  "cppb_stk_08_xoa_k_chu_so_de_duoc_so_nho_nhat": [
+    "monotonic_stack_nge_vi.png",
+    "Kỹ thuật ngăn xếp đơn điệu tìm phần tử lớn hơn tiếp theo (Next Greater Element)"
+  ],
+  "cppb_stk_09_hinh_chu_nhat_lon_nhat_tren_histogram": [
+    "histogram_max_rectangle_vi.png",
+    "Ứng dụng ngăn xếp đơn điệu giải bài toán hình chữ nhật lớn nhất trong biểu đồ cột"
+  ],
+  "cppb_stk_10_hung_nuoc_mua_trapping_rain_water": [
+    "stack_lifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào sau Ra trước (LIFO) của ngăn xếp (Stack)"
+  ],
+  "cppb_stk_11_hinh_chu_nhat_toan_mot_lon_nhat_ma_tran": [
+    "monotonic_stack_nge_vi.png",
+    "Kỹ thuật ngăn xếp đơn điệu tìm phần tử lớn hơn tiếp theo (Next Greater Element)"
+  ],
+  "cppb_stk_12_tong_gia_tri_nho_nhat_moi_doan_con": [
+    "histogram_max_rectangle_vi.png",
+    "Ứng dụng ngăn xếp đơn điệu giải bài toán hình chữ nhật lớn nhất trong biểu đồ cột"
+  ],
+  "cppb_stk_13_nge_tren_mang_xoay_vong": [
+    "stack_lifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào sau Ra trước (LIFO) của ngăn xếp (Stack)"
+  ],
+  "cppb_stk_14_toa_thap_tam_nhin": [
+    "monotonic_stack_nge_vi.png",
+    "Kỹ thuật ngăn xếp đơn điệu tìm phần tử lớn hơn tiếp theo (Next Greater Element)"
+  ],
+  "cppb_stk_15_danh_gia_bieu_thuc_dai_so_day_du": [
+    "histogram_max_rectangle_vi.png",
+    "Ứng dụng ngăn xếp đơn điệu giải bài toán hình chữ nhật lớn nhất trong biểu đồ cột"
+  ],
+  "cppb_que_01_cai_dat_hang_doi_co_ban": [
+    "queue_fifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào trước Ra trước (FIFO) của hàng đợi tiêu chuẩn (Queue)"
+  ],
+  "cppb_que_02_sinh_chuoi_so_nhi_phan_bang_queue": [
+    "deque_sliding_window_minmax_vi.png",
+    "Hàng đợi hai đầu hai chiều (Deque) duy trì giá trị min/max trên cửa sổ trượt"
+  ],
+  "cppb_que_03_bfs_tim_duong_di_ngan_nhat_do_thi": [
+    "bfs_shortest_path_unweighted_vi.png",
+    "Cơ chế hàng đợi Queue mở rộng tìm đường đi ngắn nhất đồ thị trọng số đơn vị"
+  ],
+  "cppb_que_04_truy_vet_lo_trinh_ngan_nhat_bfs": [
+    "queue_fifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào trước Ra trước (FIFO) của hàng đợi tiêu chuẩn (Queue)"
+  ],
+  "cppb_que_05_min_moi_cua_so_truot_do_dai_k": [
+    "deque_sliding_window_minmax_vi.png",
+    "Hàng đợi hai đầu hai chiều (Deque) duy trì giá trị min/max trên cửa sổ trượt"
+  ],
+  "cppb_que_06_max_moi_cua_so_truot_do_dai_k": [
+    "bfs_shortest_path_unweighted_vi.png",
+    "Cơ chế hàng đợi Queue mở rộng tìm đường đi ngắn nhất đồ thị trọng số đơn vị"
+  ],
+  "cppb_que_07_kiem_tra_do_thi_hai_phia_2_coloring": [
+    "queue_fifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào trước Ra trước (FIFO) của hàng đợi tiêu chuẩn (Queue)"
+  ],
+  "cppb_que_08_bien_doi_so_buoc_nho_nhat_a_sang_b": [
+    "deque_sliding_window_minmax_vi.png",
+    "Hàng đợi hai đầu hai chiều (Deque) duy trì giá trị min/max trên cửa sổ trượt"
+  ],
+  "cppb_que_09_0_1_bfs_tim_duong_ngan_nhat_trong_so_0_1": [
+    "bfs_shortest_path_unweighted_vi.png",
+    "Cơ chế hàng đợi Queue mở rộng tìm đường đi ngắn nhất đồ thị trọng số đơn vị"
+  ],
+  "cppb_que_10_doan_con_tong_lon_nhat_do_dai_toi_da_k": [
+    "queue_fifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào trước Ra trước (FIFO) của hàng đợi tiêu chuẩn (Queue)"
+  ],
+  "cppb_que_11_tro_choi_vong_tron_josephus_bang_queue": [
+    "deque_sliding_window_minmax_vi.png",
+    "Hàng đợi hai đầu hai chiều (Deque) duy trì giá trị min/max trên cửa sổ trượt"
+  ],
+  "cppb_que_12_khoang_cach_den_tram_cuu_hoa_gan_nhat": [
+    "bfs_shortest_path_unweighted_vi.png",
+    "Cơ chế hàng đợi Queue mở rộng tìm đường đi ngắn nhất đồ thị trọng số đơn vị"
+  ],
+  "cppb_que_13_cua_so_truot_chenh_lech_max_min_le_c": [
+    "queue_fifo_operation_vi.png",
+    "Nguyên lý hoạt động Vào trước Ra trước (FIFO) của hàng đợi tiêu chuẩn (Queue)"
+  ],
+  "cppb_que_14_cat_bang_ron_quang_cao_toi_uu": [
+    "deque_sliding_window_minmax_vi.png",
+    "Hàng đợi hai đầu hai chiều (Deque) duy trì giá trị min/max trên cửa sổ trượt"
+  ],
+  "cppb_que_15_dua_xe_me_cung_doi_huong": [
+    "bfs_shortest_path_unweighted_vi.png",
+    "Cơ chế hàng đợi Queue mở rộng tìm đường đi ngắn nhất đồ thị trọng số đơn vị"
+  ],
+  "cppb_gra_01_chuyen_doi_danh_sach_canh_sang_danh_sach_ke": [
+    "graph_representations_vi.png",
+    "Ba phương pháp biểu diễn đồ thị trong lập trình: Ma trận kề, Danh sách cạnh, Danh sách kề"
+  ],
+  "cppb_gra_02_duyet_do_thi_theo_chieu_sau_dfs": [
+    "bfs_vs_dfs_traversal_vi.png",
+    "So sánh chiến lược duyệt đồ thị: Duyệt theo chiều sâu (DFS) và Duyệt theo chiều rộng (BFS)"
+  ],
+  "cppb_gra_03_duyet_do_thi_theo_chieu_rong_bfs": [
+    "connected_components_vi.png",
+    "Thuật toán loang tìm các thành phần liên thông trong đồ thị vô hướng"
+  ],
+  "cppb_gra_04_dem_so_thanh_phan_lien_thong": [
+    "graph_representations_vi.png",
+    "Ba phương pháp biểu diễn đồ thị trong lập trình: Ma trận kề, Danh sách cạnh, Danh sách kề"
+  ],
+  "cppb_gra_05_tim_kich_thuoc_thanh_phan_lien_thong_lon_nhat": [
+    "bfs_vs_dfs_traversal_vi.png",
+    "So sánh chiến lược duyệt đồ thị: Duyệt theo chiều sâu (DFS) và Duyệt theo chiều rộng (BFS)"
+  ],
+  "cppb_gra_06_kiem_tra_duong_di_giua_hai_dinh": [
+    "connected_components_vi.png",
+    "Thuật toán loang tìm các thành phần liên thông trong đồ thị vô hướng"
+  ],
+  "cppb_gra_07_phat_hien_chu_trinh_tren_do_thi_vo_huong": [
+    "graph_representations_vi.png",
+    "Ba phương pháp biểu diễn đồ thị trong lập trình: Ma trận kề, Danh sách cạnh, Danh sách kề"
+  ],
+  "cppb_gra_08_tim_duong_di_ngan_nhat_bang_bfs": [
+    "bfs_vs_dfs_traversal_vi.png",
+    "So sánh chiến lược duyệt đồ thị: Duyệt theo chiều sâu (DFS) và Duyệt theo chiều rộng (BFS)"
+  ],
+  "cppb_gra_09_kiem_tra_do_thi_cay": [
+    "connected_components_vi.png",
+    "Thuật toán loang tìm các thành phần liên thông trong đồ thị vô hướng"
+  ],
+  "cppb_gra_10_sap_xep_to_po_tren_dag": [
+    "graph_representations_vi.png",
+    "Ba phương pháp biểu diễn đồ thị trong lập trình: Ma trận kề, Danh sách cạnh, Danh sách kề"
+  ],
+  "cppb_gra_11_tim_chu_trinh_do_dai_nho_nhat": [
+    "bfs_vs_dfs_traversal_vi.png",
+    "So sánh chiến lược duyệt đồ thị: Duyệt theo chiều sâu (DFS) và Duyệt theo chiều rộng (BFS)"
+  ],
+  "cppb_gra_12_dem_cap_dinh_khong_the_di_toi_nhau": [
+    "connected_components_vi.png",
+    "Thuật toán loang tìm các thành phần liên thông trong đồ thị vô hướng"
+  ],
+  "cppb_gra_13_multi_source_bfs_lan_toa_virus": [
+    "graph_representations_vi.png",
+    "Ba phương pháp biểu diễn đồ thị trong lập trình: Ma trận kề, Danh sách cạnh, Danh sách kề"
+  ],
+  "cppb_gra_14_tim_canh_cau_tren_do_thi": [
+    "bfs_vs_dfs_traversal_vi.png",
+    "So sánh chiến lược duyệt đồ thị: Duyệt theo chiều sâu (DFS) và Duyệt theo chiều rộng (BFS)"
+  ],
+  "cppb_gra_15_mang_luoi_giao_thong_toi_uu": [
+    "connected_components_vi.png",
+    "Thuật toán loang tìm các thành phần liên thông trong đồ thị vô hướng"
+  ],
+  "cppb_grd_01_duyet_4_huong_tren_ma_tran_co_ban": [
+    "grid_2d_graph_modeling_vi.png",
+    "Mô hình hoá ma trận lưới 2 chiều thành đồ thị với các hướng di chuyển liền kề"
+  ],
+  "cppb_grd_02_dem_so_luong_hon_dao": [
+    "flood_fill_maze_vi.png",
+    "Kỹ thuật loang sơn (Flood Fill) giải bài toán tìm đường và đếm miền trong mê cung lưới"
+  ],
+  "cppb_grd_03_dien_tich_hon_dao_lon_nhat": [
+    "tree_properties_and_cycles_vi.png",
+    "Các tính chất nền tảng của đồ thị Cây: $N$ đỉnh $N-1$ cạnh liên thông không chu trình"
+  ],
+  "cppb_grd_04_tim_duong_thoat_khoi_me_cung_bfs": [
+    "grid_2d_graph_modeling_vi.png",
+    "Mô hình hoá ma trận lưới 2 chiều thành đồ thị với các hướng di chuyển liền kề"
+  ],
+  "cppb_grd_05_truy_vet_duong_di_me_cung": [
+    "flood_fill_maze_vi.png",
+    "Kỹ thuật loang sơn (Flood Fill) giải bài toán tìm đường và đếm miền trong mê cung lưới"
+  ],
+  "cppb_grd_06_dem_vung_kin_khong_thong_ra_bien": [
+    "tree_properties_and_cycles_vi.png",
+    "Các tính chất nền tảng của đồ thị Cây: $N$ đỉnh $N-1$ cạnh liên thông không chu trình"
+  ],
+  "cppb_grd_07_chu_vi_hon_dao": [
+    "grid_2d_graph_modeling_vi.png",
+    "Mô hình hoá ma trận lưới 2 chiều thành đồ thị với các hướng di chuyển liền kề"
+  ],
+  "cppb_grd_08_nuoc_tran_me_cung_multi_source_bfs": [
+    "flood_fill_maze_vi.png",
+    "Kỹ thuật loang sơn (Flood Fill) giải bài toán tìm đường và đếm miền trong mê cung lưới"
+  ],
+  "cppb_grd_09_buoc_nhay_quan_ma_ngan_nhat": [
+    "tree_properties_and_cycles_vi.png",
+    "Các tính chất nền tảng của đồ thị Cây: $N$ đỉnh $N-1$ cạnh liên thông không chu trình"
+  ],
+  "cppb_grd_10_duong_kinh_cua_cay": [
+    "grid_2d_graph_modeling_vi.png",
+    "Mô hình hoá ma trận lưới 2 chiều thành đồ thị với các hướng di chuyển liền kề"
+  ],
+  "cppb_grd_11_kich_thuoc_cay_con_va_trong_tam_cay": [
+    "flood_fill_maze_vi.png",
+    "Kỹ thuật loang sơn (Flood Fill) giải bài toán tìm đường và đếm miền trong mê cung lưới"
+  ],
+  "cppb_grd_12_me_cung_co_cua_dich_chuyen_tuc_thoi": [
+    "tree_properties_and_cycles_vi.png",
+    "Các tính chất nền tảng của đồ thị Cây: $N$ đỉnh $N-1$ cạnh liên thông không chu trình"
+  ],
+  "cppb_grd_13_lam_day_ho_chua_nuoc_rotting_oranges": [
+    "grid_2d_graph_modeling_vi.png",
+    "Mô hình hoá ma trận lưới 2 chiều thành đồ thị với các hướng di chuyển liền kề"
+  ],
+  "cppb_grd_14_hon_dao_nhan_tao_lon_nhat": [
+    "flood_fill_maze_vi.png",
+    "Kỹ thuật loang sơn (Flood Fill) giải bài toán tìm đường và đếm miền trong mê cung lưới"
+  ],
+  "cppb_grd_15_thoat_khoi_me_cung_quai_vat": [
+    "tree_properties_and_cycles_vi.png",
+    "Các tính chất nền tảng của đồ thị Cây: $N$ đỉnh $N-1$ cạnh liên thông không chu trình"
+  ],
+  "cppb_rng_01_cai_dat_fenwick_tree_tinh_tong_doan": [
+    "segment_tree_binary_tree_vi.png",
+    "Kiến trúc cây phân đoạn (Segment Tree) quản lý các đoạn con liên tiếp"
+  ],
+  "cppb_rng_02_cai_dat_segment_tree_tim_min_doan": [
+    "point_update_range_query_vi.png",
+    "Đường đi cập nhật điểm và truy vấn tổng/min đoạn trên Segment Tree trong O(log N)"
+  ],
+  "cppb_rng_03_cap_nhat_doan_va_truy_van_diem_bit": [
+    "fenwick_tree_lowbit_vi.png",
+    "Cấu trúc cây chỉ số nhị phân Fenwick Tree (Binary Indexed Tree) qua phép toán lowbit"
+  ],
+  "cppb_rng_04_tim_gia_tri_lon_nhat_va_dem_so_lan_xuat_hien": [
+    "segment_tree_binary_tree_vi.png",
+    "Kiến trúc cây phân đoạn (Segment Tree) quản lý các đoạn con liên tiếp"
+  ],
+  "cppb_rng_05_dem_so_cap_nghich_the_inversion_count": [
+    "point_update_range_query_vi.png",
+    "Đường đi cập nhật điểm và truy vấn tổng/min đoạn trên Segment Tree trong O(log N)"
+  ],
+  "cppb_rng_06_truy_van_uoc_chung_lon_nhat_doan": [
+    "fenwick_tree_lowbit_vi.png",
+    "Cấu trúc cây chỉ số nhị phân Fenwick Tree (Binary Indexed Tree) qua phép toán lowbit"
+  ],
+  "cppb_rng_07_tim_phan_tu_thu_k_nho_nhat": [
+    "segment_tree_binary_tree_vi.png",
+    "Kiến trúc cây phân đoạn (Segment Tree) quản lý các đoạn con liên tiếp"
+  ],
+  "cppb_rng_08_tim_vi_tri_dau_tien_co_gia_tri_ge_x": [
+    "point_update_range_query_vi.png",
+    "Đường đi cập nhật điểm và truy vấn tổng/min đoạn trên Segment Tree trong O(log N)"
+  ],
+  "cppb_rng_09_lis_o_nlogn_bang_bit": [
+    "fenwick_tree_lowbit_vi.png",
+    "Cấu trúc cây chỉ số nhị phân Fenwick Tree (Binary Indexed Tree) qua phép toán lowbit"
+  ],
+  "cppb_rng_10_doan_con_co_tong_lon_nhat_max_sub_sum": [
+    "segment_tree_binary_tree_vi.png",
+    "Kiến trúc cây phân đoạn (Segment Tree) quản lý các đoạn con liên tiếp"
+  ],
+  "cppb_rng_11_dem_so_diem_nam_trong_hinh_chu_nhat": [
+    "point_update_range_query_vi.png",
+    "Đường đi cập nhật điểm và truy vấn tổng/min đoạn trên Segment Tree trong O(log N)"
+  ],
+  "cppb_rng_12_doi_dau_doan_va_tim_tong_lon_nhat": [
+    "fenwick_tree_lowbit_vi.png",
+    "Cấu trúc cây chỉ số nhị phân Fenwick Tree (Binary Indexed Tree) qua phép toán lowbit"
+  ],
+  "cppb_rng_13_cay_fenwick_2d_doc_lap": [
+    "segment_tree_binary_tree_vi.png",
+    "Kiến trúc cây phân đoạn (Segment Tree) quản lý các đoạn con liên tiếp"
+  ],
+  "cppb_rng_14_gioi_thieu_lazy_propagation_cong_doan": [
+    "point_update_range_query_vi.png",
+    "Đường đi cập nhật điểm và truy vấn tổng/min đoạn trên Segment Tree trong O(log N)"
+  ],
+  "cppb_rng_15_he_thong_quan_ly_du_lieu_olympic": [
+    "fenwick_tree_lowbit_vi.png",
+    "Cấu trúc cây chỉ số nhị phân Fenwick Tree (Binary Indexed Tree) qua phép toán lowbit"
+  ]
+}

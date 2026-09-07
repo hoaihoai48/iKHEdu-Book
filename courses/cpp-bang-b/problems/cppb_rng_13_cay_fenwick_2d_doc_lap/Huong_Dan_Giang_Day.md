@@ -1,42 +1,45 @@
-# HƯỚNG DẪN GIẢNG DẠY: CÂY FENWICK 2D TÍNH TỔNG HÌNH CHỮ NHẬT (2D BIT)
+# Hướng Dẫn Giảng Dạy: Cây Fenwick 2D Tính Tổng Hình Chữ Nhật (2D BIT)
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* Hiểu rõ bản chất bài toán và cách nhận diện trạng thái quy hoạch động / cấu trúc dữ liệu.
-* Rèn luyện kỹ năng xây dựng công thức truy hồi và xác định trường hợp cơ sở (Base Case).
-* Nắm vững kỹ thuật tối ưu hóa không gian bộ nhớ và thời gian thực thi.
+Chuyên đề: **Cấu Trúc Dữ Liệu Cây Phân Đoạn (Segment Tree & Fenwick Tree / BIT)**
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Bản chất:** Phân rã bài toán lớn thành các bài toán con tối ưu lồng nhau (Optimal Substructure & Overlapping Subproblems).
-* **Trường hợp biên:**
-  * $N = 1$ hoặc giá trị biên nhỏ nhất.
-  * Mảng không có phần tử thỏa mãn hoặc các phần tử bằng nhau.
-  * Giá trị tích lũy vượt quá $2^31-1$ cần dùng `long long`.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Nếu giải bài toán bằng đệ quy ngây thơ, ta có bị tính lặp lại các trạng thái trùng nhau không?
-2. Trạng thái $dp[i]$ cần lưu trữ thông tin gì nhỏ nhất để đủ quyết định các bước tiếp theo?
-3. Thứ tự tính toán các trạng thái nên đi từ đâu đến đâu để đảm bảo trạng thái trước đã sẵn sàng?
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Trạng thái:** Định nghĩa rõ ràng ý nghĩa của bảng phương án $dp$.
-* **Công thức chuyển trạng thái:** Thiết lập mối liên hệ giữa bài toán con và bài toán lớn hơn.
-* **Bất biến:** Tại mọi bước $i$, $dp[i]$ luôn chứa kết quả tối ưu của tiền tố kích thước $i$.
+- **Bản chất bài toán:** Cho ma trận độ sáng ban đầu và $Q$ thao tác thuộc hai dạng: cập nhật điểm ảnh hoặc truy vấn tổng vùng hình chữ nhật. Hãy in ra kết quả của các thao tác truy vấn.
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-Mô phỏng chi tiết các bước cập nhật trạng thái trên dữ liệu mẫu:
-* Dữ liệu vào: `3 3 3 1 1 1 5 1 2 2 10 2 1 1 2 2`
-* Kết quả tính toán: `15`
+- **Phương pháp tiếp cận & Chiến lược tối ưu:**
+- **Fenwick Tree (Binary Indexed Tree):**
+  * Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
+  * Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
+- **Segment Tree (Cây phân đoạn):**
+  * Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
+  * Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
+- **Độ phức tạp:** Xây dựng cây $\mathcal{O}(N)$, mỗi thao tác truy vấn / cập nhật chỉ tốn $\mathcal{O}(\log N)$.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(N \log N)$ đảm bảo chạy dưới $1.0\text{s}$ với $N = 10^5$.
-* **Không gian (Space Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$ tối ưu bộ nhớ dưới $256\text{MB}$.
+---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-* Quên khởi tạo giá trị cơ sở hoặc khởi tạo sai giá trị cực trị (`INF` / `-INF`).
-* Tràn số nguyên 32-bit khi cộng dồn kết quả hoặc nhân giá trị.
-* Chỉ số mảng 0-based và 1-based bị lệch $1$ đơn vị.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
+Mẫu thử (Sample 1): Đầu vào: `3 3 3 1 1 1 5 1 2 2 10 2 1 1 2 2` $\implies$ Đầu ra kỳ vọng: `15`.
 
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+| Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `3 3 3 1 1 1 5 1 2 2 10 2 1 1 2 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với ma trận $3 × 3$ toàn số 1: Tổng độ sáng của hình chữ nhật con kích thước $2 × 2$ từ $(1, 1)$ đến $(2, 2)$ gồm 4 ô số 1, tổng bằng 4. | Cập nhật các biến / mảng trạng thái |
+| 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `15` |
+
+*Giải thích chi tiết:* Với ma trận $3 × 3$ toàn số 1: Tổng độ sáng của hình chữ nhật con kích thước $2 × 2$ từ $(1, 1)$ đến $(2, 2)$ gồm 4 ô số 1, tổng bằng 4.
+
+---
+
+## 3. Lưu ý & Bẫy lỗi thường gặp
+* Khai báo mảng Segment Tree quá nhỏ: Cần tối thiểu $4N$ phần tử (`vector<long long> tree(4 * N)`), khai báo $2N$ sẽ bị tràn chỉ số mảng khi cây bị lệch.
+* Fenwick Tree bắt buộc phải dùng chỉ số bắt đầu từ $1$ (1-based index). Nếu gọi `lowbit(0)` thì `0 & (-0) = 0`, vòng lặp `while (i <= N)` sẽ bị lặp vô tận.
+* Khi cây quản lý phép cộng dồn, giá trị các nút trên cây có thể vượt quá $2 \times 10^9$, bắt buộc phải khai báo kiểu `long long` cho toàn bộ các nút của cây.
+
+---
+
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -91,6 +94,3 @@ int main() {
     return 0;
 }
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Mở rộng bài toán khi có thêm ràng buộc hoặc kết hợp cấu trúc dữ liệu Segment Tree / Fenwick Tree để tăng tốc truy vấn.

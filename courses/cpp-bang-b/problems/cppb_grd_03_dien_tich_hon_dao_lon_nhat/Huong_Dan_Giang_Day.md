@@ -1,42 +1,42 @@
-# HƯỚNG DẪN GIẢNG DẠY: DIỆN TÍCH HÒN ĐẢO LỚN NHẤT (MAX AREA OF ISLAND)
+# Hướng Dẫn Giảng Dạy: Diện Tích Hòn Đảo Lớn Nhất (Max Area of Island)
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* Hiểu rõ bản chất bài toán và cách nhận diện trạng thái quy hoạch động / cấu trúc dữ liệu.
-* Rèn luyện kỹ năng xây dựng công thức truy hồi và xác định trường hợp cơ sở (Base Case).
-* Nắm vững kỹ thuật tối ưu hóa không gian bộ nhớ và thời gian thực thi.
+Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & Flood Fill)**
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Bản chất:** Phân rã bài toán lớn thành các bài toán con tối ưu lồng nhau (Optimal Substructure & Overlapping Subproblems).
-* **Trường hợp biên:**
-  * $N = 1$ hoặc giá trị biên nhỏ nhất.
-  * Mảng không có phần tử thỏa mãn hoặc các phần tử bằng nhau.
-  * Giá trị tích lũy vượt quá $2^31-1$ cần dùng `long long`.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Nếu giải bài toán bằng đệ quy ngây thơ, ta có bị tính lặp lại các trạng thái trùng nhau không?
-2. Trạng thái $dp[i]$ cần lưu trữ thông tin gì nhỏ nhất để đủ quyết định các bước tiếp theo?
-3. Thứ tự tính toán các trạng thái nên đi từ đâu đến đâu để đảm bảo trạng thái trước đã sẵn sàng?
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Trạng thái:** Định nghĩa rõ ràng ý nghĩa của bảng phương án $dp$.
-* **Công thức chuyển trạng thái:** Thiết lập mối liên hệ giữa bài toán con và bài toán lớn hơn.
-* **Bất biến:** Tại mọi bước $i$, $dp[i]$ luôn chứa kết quả tối ưu của tiền tố kích thước $i$.
+- **Bản chất bài toán:** Cho bản đồ ma trận $N  × M$. Hãy lập trình tìm diện tích (số lượng ô đất) của hòn đảo lớn nhất. Nếu bản đồ không có đảo nào, in ra `0`.
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-Mô phỏng chi tiết các bước cập nhật trạng thái trên dữ liệu mẫu:
-* Dữ liệu vào: `4 5 11000 11000 00100 00011`
-* Kết quả tính toán: `4`
+- **Phương pháp tiếp cận & Chiến lược tối ưu:**
+- **Mô hình hoá ma trận:** Coi mỗi ô $(r, c)$ trên lưới là một đỉnh của đồ thị, các cạnh nối đến 4 ô kề cạnh (hoặc 8 ô kề góc).
+- **Kỹ thuật mảng hướng di chuyển:** Sử dụng 2 mảng phụ trợ `int dx[] = {-1, 1, 0, 0}` và `int dy[] = {0, 0, -1, 1}` để duyệt các ô lân cận tinh gọn, tránh trùng lặp mã nguồn.
+- **Kỹ thuật Flood Fill:** Đánh dấu ô đã thăm ngay khi đẩy vào hàng đợi `queue` (hoặc biến đổi trực tiếp giá trị ô ma trận) để tránh việc một ô bị đẩy vào queue nhiều lần gây quá tải bộ nhớ.
+- **Độ phức tạp:** Thời gian $\mathcal{O}(N \times M)$, bộ nhớ $\mathcal{O}(N \times M)$.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(N \log N)$ đảm bảo chạy dưới $1.0\text{s}$ với $N = 10^5$.
-* **Không gian (Space Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$ tối ưu bộ nhớ dưới $256\text{MB}$.
+---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-* Quên khởi tạo giá trị cơ sở hoặc khởi tạo sai giá trị cực trị (`INF` / `-INF`).
-* Tràn số nguyên 32-bit khi cộng dồn kết quả hoặc nhân giá trị.
-* Chỉ số mảng 0-based và 1-based bị lệch $1$ đơn vị.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
+Mẫu thử (Sample 1): Đầu vào: `4 5 11000 11000 00100 00011` $\implies$ Đầu ra kỳ vọng: `4`.
 
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+| Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `4 5 11000 11000 00100 00011` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với bản đồ có cụm đảo lớn nhất gồm 5 ô đất liền kề cạnh kết nối liên tục với nhau, diện tích lớn nhất đo được là 5. | Cập nhật các biến / mảng trạng thái |
+| 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `4` |
+
+*Giải thích chi tiết:* Với bản đồ có cụm đảo lớn nhất gồm 5 ô đất liền kề cạnh kết nối liên tục với nhau, diện tích lớn nhất đo được là 5.
+
+---
+
+## 3. Lưu ý & Bẫy lỗi thường gặp
+* Quên kiểm tra toạ độ nằm ngoài biên giới ma trận ($r < 1$ hoặc $r > N$ hoặc $c < 1$ hoặc $c > M$) trước khi truy cập ô `grid[r][c]`, dẫn đến lỗi `Segmentation Fault`.
+* Chỉ đánh dấu `visited = true` khi lấy phần tử ra khỏi queue (`pop()`) thay vì khi đẩy vào (`push()`): Đây là lỗi kinh điển khiến cùng một ô bị đẩy vào hàng đợi hàng nghìn lần, dẫn đến `Memory Limit Exceeded` (MLE) hoặc `Time Limit Exceeded` (TLE).
+* Không đọc đúng các dòng ký tự liền nhau của ma trận: Khi các ký tự viết liền không có dấu cách, phải đọc từng chuỗi `string` rồi truy cập ký tự `s[c]`.
+
+---
+
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -89,6 +89,3 @@ int main() {
     return 0;
 }
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Mở rộng bài toán khi có thêm ràng buộc hoặc kết hợp cấu trúc dữ liệu Segment Tree / Fenwick Tree để tăng tốc truy vấn.

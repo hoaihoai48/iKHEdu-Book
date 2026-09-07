@@ -1,42 +1,44 @@
-# HƯỚNG DẪN GIẢNG DẠY: DÃY NGOẶC HỖN HỢP NHIỀU LOẠI
+# Hướng Dẫn Giảng Dạy: Dãy Ngoặc Hỗn Hợp Nhiều Loại
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* Hiểu rõ bản chất bài toán và cách nhận diện trạng thái quy hoạch động / cấu trúc dữ liệu.
-* Rèn luyện kỹ năng xây dựng công thức truy hồi và xác định trường hợp cơ sở (Base Case).
-* Nắm vững kỹ thuật tối ưu hóa không gian bộ nhớ và thời gian thực thi.
+Chuyên đề: **Cấu Trúc Dữ Liệu Ngăn Xếp (Stack) & Monotonic Stack**
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Bản chất:** Phân rã bài toán lớn thành các bài toán con tối ưu lồng nhau (Optimal Substructure & Overlapping Subproblems).
-* **Trường hợp biên:**
-  * $N = 1$ hoặc giá trị biên nhỏ nhất.
-  * Mảng không có phần tử thỏa mãn hoặc các phần tử bằng nhau.
-  * Giá trị tích lũy vượt quá $2^31-1$ cần dùng `long long`.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Nếu giải bài toán bằng đệ quy ngây thơ, ta có bị tính lặp lại các trạng thái trùng nhau không?
-2. Trạng thái $dp[i]$ cần lưu trữ thông tin gì nhỏ nhất để đủ quyết định các bước tiếp theo?
-3. Thứ tự tính toán các trạng thái nên đi từ đâu đến đâu để đảm bảo trạng thái trước đã sẵn sàng?
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Trạng thái:** Định nghĩa rõ ràng ý nghĩa của bảng phương án $dp$.
-* **Công thức chuyển trạng thái:** Thiết lập mối liên hệ giữa bài toán con và bài toán lớn hơn.
-* **Bất biến:** Tại mọi bước $i$, $dp[i]$ luôn chứa kết quả tối ưu của tiền tố kích thước $i$.
+- **Bản chất bài toán:** Cho chuỗi $S$ chỉ gồm các ký tự `(`, `)`, `[`, `]`, `{`, `}`. Hãy lập trình kiểm tra tính hợp lệ của chuỗi. Nếu hợp lệ in ra `YES`, ngược lại in ra `NO`.
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-Mô phỏng chi tiết các bước cập nhật trạng thái trên dữ liệu mẫu:
-* Dữ liệu vào: `{[()]}`
-* Kết quả tính toán: `YES`
+- **Phương pháp tiếp cận & Chiến lược tối ưu:**
+- **Nguyên lý hoạt động:** Vào sau Ra trước (LIFO). Thích hợp giải quyết các bài toán cặp ngoặc lồng nhau, khử đệ quy và tính toán biểu thức hậu tố.
+- **Kỹ thuật Ngăn xếp đơn điệu (Monotonic Stack):**
+  * Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
+  * Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
+  * Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(N \log N)$ đảm bảo chạy dưới $1.0\text{s}$ với $N = 10^5$.
-* **Không gian (Space Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$ tối ưu bộ nhớ dưới $256\text{MB}$.
+---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-* Quên khởi tạo giá trị cơ sở hoặc khởi tạo sai giá trị cực trị (`INF` / `-INF`).
-* Tràn số nguyên 32-bit khi cộng dồn kết quả hoặc nhân giá trị.
-* Chỉ số mảng 0-based và 1-based bị lệch $1$ đơn vị.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
+Mẫu thử (Sample 1): Đầu vào: `{[()]}` $\implies$ Đầu ra kỳ vọng: `YES`.
 
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+| Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `{[()]}` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với chuỗi $S = \text{"{[()]}"}$: Cặp ngoặc tròn nằm hoàn toàn bên trong ngoặc vuông, và ngoặc vuông nằm bên trong ngoặc nhọn. Quy tắc l... | Cập nhật các biến / mảng trạng thái |
+| 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `YES` |
+
+*Giải thích chi tiết:* Với chuỗi $S = \text{"{[()]}"}$:
+Cặp ngoặc tròn nằm hoàn toàn bên trong ngoặc vuông, và ngoặc vuông nằm bên trong ngoặc nhọn. Quy tắc lồng nhau được bảo đảm trọn vẹn, kết quả in ra là YES.
+
+---
+
+## 3. Lưu ý & Bẫy lỗi thường gặp
+* Lỗi `Runtime Error (SIGSEGV)` khi gọi `stk.top()` hoặc `stk.pop()` trên ngăn xếp rỗng. Bắt buộc kiểm tra `!stk.empty()` trước mọi thao tác truy cập đỉnh.
+* Quên xử lý các phần tử còn sót lại trong stack sau khi duyệt hết mảng dữ liệu (đặc biệt trong bài toán tìm hình chữ nhật lớn nhất trong biểu đồ cột).
+* Khi kiểm tra dãy ngoặc đúng, nếu gặp ngoặc đóng mà stack rỗng thì dãy ngoặc không hợp lệ ngay lập tức.
+
+---
+
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -72,6 +74,3 @@ int main() {
     return 0;
 }
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Mở rộng bài toán khi có thêm ràng buộc hoặc kết hợp cấu trúc dữ liệu Segment Tree / Fenwick Tree để tăng tốc truy vấn.

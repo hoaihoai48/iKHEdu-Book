@@ -1,70 +1,36 @@
 # Hướng Dẫn Giảng Dạy: Lũy Thừa Ma Trận Chia Để Trị 2x2
-Chuyên đề: **Kỹ Thuật Chia Để Trị (Divide and Conquer)**
-
-**Phân loại chuyên đề:** `Core Foundation`
+Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 
 ---
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật: Lũy Thừa Ma Trận Chia Để Trị 2x2.
-* **Tư duy thuật toán:** Rèn luyện phản xạ phân rã bài toán thành 3 pha chuẩn mực: `Divide` $\to$ `Solve` $\to$ `Combine`.
-* **Chuẩn code thi đấu:** Cài đặt C++ chuẩn thi đấu (Fast I/O, Safe Input, 0 `std::`, tối ưu bộ nhớ đệm).
+## 1. Ý tưởng & Phân tích thuật toán
+- **Bản chất bài toán:** Cho ma trận vuông 2x2 gồm các hệ số a, b, c, d và số nguyên N. Hãy tính A^N mod (10^9 + 7).
+
+- **Phương pháp tiếp cận — Chia để trị (Divide and Conquer):**
+  - Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
+  - Giải quyết bài toán con và gộp kết quả tối ưu.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học
-* **Dữ liệu đầu vào:** - Dòng 1: 4 số nguyên $a, b, c, d$ ($0 \le a, b, c, d \le 10^9$).
-- Dòng 2: Hai số nguyên $N, M$ ($0 \le N \le 10^{18}, 1 \le M \le 10^9 + 7$).
-* **Yêu cầu cốt lõi:** Cho ma trận vuông $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ cấp $2 \times 2$ và số nguyên không âm $N$. Hãy tính ma trận $A^N \pmod M$ bằng thuật toán Lũy thừa nhị phân Chia Để Trị trong $\mathcal{O}(\log N)$.
-* **Phân tích trường hợp biên:** Xử lý chính xác Base Case khi kích thước mảng thu nhỏ về $\le 1$ phần tử.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1 1 1 0 2)
+| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Nạp dữ liệu vào mảng/biến | Input: `1 1 1 0 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Thực thi thuật toán tối ưu | A^2 = [[1, 1], [1, 0]] * [[1, 1], [1, 0]] = [[2, 1], [1, 1]].... | Tính toán từng bước trạng thái |
+| 3 | Xuất kết quả | Output: `2 1 1 1` | Khớp chính xác với đầu ra mẫu |
+
+*Giải thích chi tiết từ mẫu:* A^2 = [[1, 1], [1, 0]] * [[1, 1], [1, 0]] = [[2, 1], [1, 1]].
 
 ---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Làm thế nào để chia bài toán hiện tại thành các bài toán con độc lập có kích thước $N/2$?
-2. Bước gộp (Combine) kết quả từ 2 nửa đòi hỏi những thao tác gì và độ phức tạp là bao nhiêu?
-3. Tại sao kỹ thuật Chia Để Trị lại giúp giảm độ phức tạp so với duyệt vét cạn tuần tự?
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- **Bẫy 1 — Tràn số nguyên:** Khi tính toán tổng, tích hoặc lũy thừa lớn hơn $2 \cdot 10^9$, bắt buộc phải sử dụng kiểu dữ liệu `long long` (64-bit) để tránh tràn số âm.
+- **Bẫy 2 — Chỉ số mảng & Giới hạn biên:** Chú ý giữa đánh chỉ số 0-based (`0 .. N-1`) và 1-based (`1 .. N`). Kiểm tra kỹ trường hợp $N = 1$ hoặc giá trị biên tối đa của đề bài.
+- **Bẫy 3 — Tối ưu thời gian I/O:** Luôn sử dụng `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()` để đọc ghi nhanh, tránh bị TLE khi số lượng testcase lớn.
 
 ---
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Divide & Combine Invariant:** Đảm bảo tính đúng đắn được bảo toàn qua từng tầng gộp mảng.
-* **Bộ nhớ đệm tái sử dụng:** Tránh cấp phát động liên tục trong hàm đệ quy để chống tràn bộ nhớ và TLE.
-
----
-
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-### Dữ liệu Sample:
-* **Input:**
-```text
-1 1
-1 0
-4 1000
-```
-* **Output:**
-```text
-5 3
-3 2
-```
-* **Phân tích thực thi:** Ma trận Fibonacci [[1,1],[1,0]]^4 = [[5,3],[3,2]].
-
----
-
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian thực thi (Time Complexity):** $\Theta(\log N)$
-* **Bộ nhớ ngăn xếp (Call Stack Space):** $\Theta(\log N)$ (Độ sâu tối đa: $\log_2 N$)
-* **Bộ nhớ phụ trợ (Auxiliary Memory):** $\mathcal{O}(1)$
-* **Ghi chú phân tích:** Nhân ma trận 2x2 tốn O(1), độ sâu chia đôi số mũ log2(N).
-
----
-
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **Tràn số 32-bit khi đếm nghịch thế hoặc tính tổng:** Luôn sử dụng kiểu dữ liệu `long long`.
-2. **Bẫy bỏ sót trường hợp vắt ngang (Crossing):** Phải xét đầy đủ mọi khả năng giữa 2 nửa mảng.
-
----
-
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -109,8 +75,3 @@ int main() {
     return 0;
 }
 ```
-
----
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Vận dụng tư duy phân rã không gian tìm kiếm sang các bài toán hình học và chuẩn bị bước đệm cho Quay lui & Nhánh cận (Lesson 12).

@@ -1,0 +1,5 @@
+# Lời nói đầu (Sách giáo viên)
+
+Bộ tài liệu Giáo trình C++ — Sách giáo viên được biên soạn đồng bộ cùng chương trình đào tạo lập trình thuật toán C++ cơ bản iKHEDU, dành riêng cho quý thầy cô giáo và các huấn luyện viên chuyên trách đội tuyển tin học. Tài liệu cung cấp trọn bộ lời giải tham khảo chuẩn thi đấu, mã nguồn C++ tối ưu và hệ thống phương pháp luận giảng dạy thực chiến chuyên sâu cho toàn bộ 323 bài toán thực hành thuộc 7 Chương (21 Bài học) từ cơ bản đến nâng cao.
+
+Mỗi bài toán trong sách giáo viên được cấu trúc thống nhất và tinh gọn qua 4 mục trọng tâm: (1) Ý tưởng & Phân tích thuật toán gắn liền với bản chất toán học; (2) Bảng chạy tay trực quan (Dry Run Table) trên các giá trị số thực tế của mẫu thử (Sample); (3) Lưu ý & các bẫy lỗi kinh điển học sinh thường gặp trong môi trường thi đấu; và (4) Mã nguồn C++ chuẩn thi đấu (Fast I/O, Safe Input, cú pháp tinh gọn tuyệt đối). Tài liệu là cẩm nang đắc lực hỗ trợ thầy cô tổ chức các giờ dạy chất lượng, phân tích sai sót của học sinh và tối ưu hóa thời gian đứng lớp.

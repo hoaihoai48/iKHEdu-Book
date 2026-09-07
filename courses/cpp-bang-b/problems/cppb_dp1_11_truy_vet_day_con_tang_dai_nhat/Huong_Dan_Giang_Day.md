@@ -1,43 +1,43 @@
-# HƯỚNG DẪN GIẢNG DẠY: TRUY VẾT DÃY CON TĂNG DÀI NHẤT
+# Hướng Dẫn Giảng Dạy: Truy Vết Dãy Con Tăng Dài Nhất
 
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-* Hiểu rõ bản chất bài toán và cách nhận diện trạng thái quy hoạch động / cấu trúc dữ liệu.
-* Rèn luyện kỹ năng xây dựng công thức truy hồi và xác định trường hợp cơ sở (Base Case).
-* Nắm vững kỹ thuật tối ưu hóa không gian bộ nhớ và thời gian thực thi.
+Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
-* **Bản chất:** Phân rã bài toán lớn thành các bài toán con tối ưu lồng nhau (Optimal Substructure & Overlapping Subproblems).
-* **Trường hợp biên:**
-  * $N = 1$ hoặc giá trị biên nhỏ nhất.
-  * Mảng không có phần tử thỏa mãn hoặc các phần tử bằng nhau.
-  * Giá trị tích lũy vượt quá $2^31-1$ cần dùng `long long`.
+---
 
-## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
-1. Nếu giải bài toán bằng đệ quy ngây thơ, ta có bị tính lặp lại các trạng thái trùng nhau không?
-2. Trạng thái $dp[i]$ cần lưu trữ thông tin gì nhỏ nhất để đủ quyết định các bước tiếp theo?
-3. Thứ tự tính toán các trạng thái nên đi từ đâu đến đâu để đảm bảo trạng thái trước đã sẵn sàng?
+## 1. Ý tưởng & Phân tích thuật toán
 
-## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
-* **Trạng thái:** Định nghĩa rõ ràng ý nghĩa của bảng phương án $dp$.
-* **Công thức chuyển trạng thái:** Thiết lập mối liên hệ giữa bài toán con và bài toán lớn hơn.
-* **Bất biến:** Tại mọi bước $i$, $dp[i]$ luôn chứa kết quả tối ưu của tiền tố kích thước $i$.
+- **Bản chất bài toán:** Cho dãy số nguyên $A$ gồm $N$ phần tử. Hãy lập trình tìm và in ra toàn bộ các phần tử thuộc về một dãy con tăng nghiêm ngặt dài nhất. Nếu có nhiều dãy con cùng đạt độ dài lớn nhất, bạn chỉ cần in ra một dãy con bất kỳ thỏa mãn.
 
-## 5. Mô Phỏng Từng Bước Trên Sample (Dry Run Table)
-Mô phỏng chi tiết các bước cập nhật trạng thái trên dữ liệu mẫu:
-* Dữ liệu vào: `5 2 1 4 3 5`
-* Kết quả tính toán: `3
-2 4 5`
+- **Phương pháp tiếp cận & Chiến lược tối ưu:**
+- **Mô hình trạng thái:** Định nghĩa $dp[i]$ là kết quả tối ưu cho bài toán con kết thúc tại bước/vị trí thứ $i$.
+- **Công thức chuyển trạng thái:** Dựa trên các lựa chọn bước đi trước đó (như $dp[i] = dp[i-1] + dp[i-2]$ hoặc $\min/\max$ qua các trạng thái $j < i$).
+- **Cơ sở quy hoạch động:** Khởi tạo các trường hợp biên nhỏ nhất $dp[0], dp[1]$ rõ ràng trước khi lặp.
+- **Độ phức tạp:** Thời gian tối ưu $\mathcal{O}(N)$ hoặc $\mathcal{O}(N \log N)$ (cho LIS cải tiến qua tìm kiếm nhị phân `lower_bound`), bộ nhớ $\mathcal{O}(N)$ hoặc nén về $\mathcal{O}(1)$.
 
-## 6. Phân Tích Độ Phức Tạp Thời Gian & Không Gian
-* **Thời gian (Time Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(N \log N)$ đảm bảo chạy dưới $1.0\text{s}$ với $N = 10^5$.
-* **Không gian (Space Complexity):** $\mathcal{O}(N)$ hoặc $\mathcal{O}(1)$ tối ưu bộ nhớ dưới $256\text{MB}$.
+---
 
-## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-* Quên khởi tạo giá trị cơ sở hoặc khởi tạo sai giá trị cực trị (`INF` / `-INF`).
-* Tràn số nguyên 32-bit khi cộng dồn kết quả hoặc nhân giá trị.
-* Chỉ số mảng 0-based và 1-based bị lệch $1$ đơn vị.
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
+Mẫu thử (Sample 1): Đầu vào: `5 2 1 4 3 5` $\implies$ Đầu ra kỳ vọng: `3 2 4 5`.
 
-## 8. Mã Nguồn Tham Chiếu C++ Chuẩn Thi Đấu
+| Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
+|---|---|---|---|
+| 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `5 2 1 4 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với dãy số gốc là $[2, 1, 4, 3, 5]$: Dãy con tăng dài nhất có độ dài bằng 3. Một dãy con hợp lệ thỏa mãn điều kiện tăng nghiêm ngặt là ... | Cập nhật các biến / mảng trạng thái |
+| 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3 2 4 5` |
+
+*Giải thích chi tiết:* Với dãy số gốc là $[2, 1, 4, 3, 5]$:
+Dãy con tăng dài nhất có độ dài bằng 3. Một dãy con hợp lệ thỏa mãn điều kiện tăng nghiêm ngặt là $[2, 4, 5]$ (hoặc $[1, 4, 5]$, $[1, 3, 5]$). Kết quả dòng 1 in ra 3, dòng 2 in ra các số 2 4 5.
+
+---
+
+## 3. Lưu ý & Bẫy lỗi thường gặp
+* Quên chia lấy dư theo modulo $10^9 + 7$ tại mỗi phép cộng/nhân dẫn đến tràn số nguyên.
+* Khởi tạo sai giá trị mảng $dp$: Các bài tìm giá trị nhỏ nhất cần khởi tạo giá trị vô cùng lớn (`INF = 1e18`), tránh dùng `0x3f` khi cộng dồn gây tràn số.
+* Lỗi lệch chỉ số giữa 0-based và 1-based khi tham chiếu các phần tử liền kề.
+
+---
+
+## 4. Lời giải tham khảo
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -87,6 +87,3 @@ int main() {
     return 0;
 }
 ```
-
-## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Mở rộng bài toán khi có thêm ràng buộc hoặc kết hợp cấu trúc dữ liệu Segment Tree / Fenwick Tree để tăng tốc truy vấn.
