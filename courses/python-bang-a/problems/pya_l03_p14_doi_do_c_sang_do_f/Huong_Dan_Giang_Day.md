@@ -6,17 +6,17 @@ Chuyên đề: **Đổi đơn vị nhiệt độ — Biểu thức hỗn hợp**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đổi Độ C Sang Độ F** (`PYA-L03-P14`) bằng Python ở mức `Luyện tập`.
 * **Tư duy thuật toán:** Rèn luyện phản xạ cài đặt đúng thứ tự ưu tiên $C \times 9 // 5 + 32$ và xử lý số âm.
-* **Chuẩn code thi đấu:** Đọc 1 số nguyên (kể cả âm), dùng chia nguyên an toàn, in số nguyên.
+* **Chuẩn code chuẩn:** Đọc 1 số nguyên (kể cả âm), dùng chia nguyên an toàn, in số nguyên.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Một số nguyên $C$ ($-50 \le C \le 50$, chia hết cho $5$) nên $C \times 9$ luôn chia hết cho $5$.
 * **Bản chất toán học:** Hàm bậc nhất $F = \frac{9C}{5} + 32$; vì tử số chia hết cho 5 nên dùng `//` cho kết quả nguyên exact.
-* **Trường hợp biên (Edge Cases):**
-  * Nhiệt độ âm nhỏ nhất $C = -50$ cho $F = -58$.
-  * Điểm đặc biệt $C = -40$ cho $F = -40$ (hai thang trùng nhau).
-  * Học sinh dễ viết `C * (9 // 5)` bằng `C * 1` vì chia trước nhân sau.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * Nhiệt độ âm nhỏ nhất $C = -50$ cho $F = -58$.
+ * Điểm đặc biệt $C = -40$ cho $F = -40$ (hai thang trùng nhau).
+ * Học sinh dễ viết `C * (9 // 5)` bằng `C * 1` vì chia trước nhân sau.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Đổi đơn vị nhiệt độ — Biểu thức hỗn hợp**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Đọc $C$, tính $(C \times 9) // 5 + 32$ từ trái sang phải, in kết quả $\mathcal{O}(1)$.
 * **Bất biến thuật toán (Invariant):**
-  > Phép nhân $C \times 9$ luôn thực hiện trước phép chia cho $5$, giữ đúng quan hệ phân số $\frac{9C}{5}$.
+ > Phép nhân $C \times 9$ luôn thực hiện trước phép chia cho $5$, giữ đúng quan hệ phân số $\frac{9C}{5}$.
 
 ---
 

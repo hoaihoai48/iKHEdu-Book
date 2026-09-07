@@ -6,17 +6,17 @@ Chuyên đề: **Đổi đơn vị tiền tệ — Phép nhân tỉ lệ**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đổi Đô La Sang Tiền Việt** (`PYA-L03-P13`) bằng Python ở mức `Luyện tập`.
 * **Tư duy thuật toán:** Rèn luyện phản xạ đổi đơn vị bằng phép nhân với tỉ giá cố định $25000$.
-* **Chuẩn code thi đấu:** Đọc 1 số, nhân số lớn tới $2.5 \times 10^{10}$, in chính xác không dấu phẩy.
+* **Chuẩn code chuẩn:** Đọc 1 số, nhân số lớn tới $2.5 \times 10^{10}$, in chính xác không dấu phẩy.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Một số tự nhiên $D$ ($1 \le D \le 10^6$), kết quả $D \times 25000$ tối đa $2.5 \times 10^{10}$.
 * **Bản chất toán học:** Hàm tuyến tính một biến: mỗi đô la tương ứng $25000$ đồng.
-* **Trường hợp biên (Edge Cases):**
-  * Đổi ít nhất $D = 1$ được $25000$ đồng.
-  * Đổi nhiều nhất $D = 10^6$ được $25000000000$ đồng.
-  * Học sinh dễ viết thiếu số 0 ($2500$ thay vì $25000$).
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * Đổi ít nhất $D = 1$ được $25000$ đồng.
+ * Đổi nhiều nhất $D = 10^6$ được $25000000000$ đồng.
+ * Học sinh dễ viết thiếu số 0 ($2500$ thay vì $25000$).
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Đổi đơn vị tiền tệ — Phép nhân tỉ lệ**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Đọc $D$, tính $D \times 25000$, in kết quả $\mathcal{O}(1)$.
 * **Bất biến thuật toán (Invariant):**
-  > Tỉ lệ tiền Việt trên đô la luôn bảo toàn $25000 : 1$ trước và sau phép tính.
+ > Tỉ lệ tiền Việt trên đô la luôn bảo toàn $25000 : 1$ trước và sau phép tính.
 
 ---
 
@@ -62,7 +62,7 @@ Chuyên đề: **Đổi đơn vị tiền tệ — Phép nhân tỉ lệ**
 
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
 1. **Sai tỉ giá:** Nhân với $2500$ hoặc $250000$ vì đếm nhầm số 0.
-2. **In kèm đơn vị:** Viết `print("100000 dong")` gây `Wrong Answer (WA)`.
+2. **In kèm đơn vị:** Viết `print("100000 dong")` gây `kết quả sai`.
 3. **Quên ép kiểu:** Tính `"4" * 25000` tạo chuỗi khổng lồ thay vì số học.
 
 ---

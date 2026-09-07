@@ -6,17 +6,17 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững thứ tự ưu tiên PEMDAS: ngoặc → lũy thừa `**` → nhân chia → cộng trừ (`PYA-L02-P15`).
 * **Tư duy thuật toán:** Biết mô phỏng tay biểu thức $a + b \times c^2$ trước khi viết code.
-* **Chuẩn code thi đấu:** Đọc 3 số trên 3 dòng, viết đúng một biểu thức Python duy nhất.
+* **Chuẩn code chuẩn:** Đọc 3 số trên 3 dòng, viết đúng một biểu thức Python duy nhất.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** $a, b, c$ ($1 \le a, b, c \le 100$). Kết quả tối đa $100 + 100 \times 100^2 = 1000100$.
 * **Bản chất toán học:** Tính $c^2$ trước, rồi nhân với $b$, cuối cùng cộng $a$.
-* **Trường hợp biên (Edge Cases):**
-  * $c = 1$: $c^2 = 1$, biểu thức thành $a + b$.
-  * $a, b, c$ tối đa $100$: kiểm tra số có 7 chữ số vẫn in nguyên vẹn.
-  * Học sinh quên thứ tự sẽ tính $(a + b) \times c^2$ cho ra số lớn hơn nhiều.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * $c = 1$: $c^2 = 1$, biểu thức thành $a + b$.
+ * $a, b, c$ tối đa $100$: kiểm tra số có 7 chữ số vẫn in nguyên vẹn.
+ * Học sinh quên thứ tự sẽ tính $(a + b) \times c^2$ cho ra số lớn hơn nhiều.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Viết đúng một dòng `a + b * c ** 2`, để Python tự áp dụng PEMDAS, độ phức tạp $\mathcal{O}(1)$.
 * **Bất biến thuật toán (Invariant):**
-  > Thứ tự tính luôn là $c^2 \to b \times c^2 \to a + (b \times c^2)$, không bao giờ cộng trước nhân.
+ > Thứ tự tính luôn là $c^2 \to b \times c^2 \to a + (b \times c^2)$, không bao giờ cộng trước nhân.
 
 ---
 

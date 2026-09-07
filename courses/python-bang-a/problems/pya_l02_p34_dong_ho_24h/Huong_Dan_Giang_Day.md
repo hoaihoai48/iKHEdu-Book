@@ -6,14 +6,14 @@ Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Đồng Hồ 24 Giờ** bằng Python 3.
 * **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc tính toán tối ưu.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (trong sáng, an toàn, không thừa ký tự).
+* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (trong sáng, an toàn, không thừa ký tự).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp.
 * **Bản chất toán học:** Thiết lập biểu thức toán học tương ứng.
-* **Trường hợp biên (Edge Cases):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
+* **Trường hợp biên (Trường hợp đặc biệt):** Giá trị cực tiểu, cực đại trong giới hạn đề bài.
 
 ---
 
@@ -46,7 +46,7 @@ Chuyên đề: **Tính Toán Cơ Bản & Nền Tảng Python**
 ---
 
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. In thừa thông báo giải thích dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
+1. In thừa thông báo giải thích dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
 2. Quên ép kiểu chuỗi sang số nguyên hoặc số thực.
 3. Thiếu dấu ngoặc trong biểu thức phân số.
 
@@ -61,4 +61,4 @@ print((h + k) % 24)
 ---
 
 ## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
-* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các đề thi lập trình các năm trước.
+* Áp dụng bài toán này để giải quyết các bài toán thực tế tương tự trong các bài tập các năm trước.

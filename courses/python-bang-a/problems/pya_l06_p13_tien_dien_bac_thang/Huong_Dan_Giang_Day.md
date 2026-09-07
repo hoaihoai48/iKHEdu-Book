@@ -6,17 +6,17 @@ Chuyên đề: **Toán thực tế — Giá bậc thang có điều kiện**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tiền Điện Bậc Thang** (`PYA-L03-P16`) bằng Python ở mức `Vận dụng`.
 * **Tư duy thuật toán:** Rèn luyện phản xạ rẽ nhánh `if-else` theo ngưỡng $100$ số điện và cộng hai bậc giá.
-* **Chuẩn code thi đấu:** Đọc 1 số, chia hai trường hợp, tính đúng tiền tới $3.2 \times 10^9$ đồng, in 1 dòng.
+* **Chuẩn code chuẩn:** Đọc 1 số, chia hai trường hợp, tính đúng tiền tới $3.2 \times 10^9$ đồng, in 1 dòng.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Một số tự nhiên $N$ ($1 \le N \le 10^6$); bậc 1 giá $2000$, bậc 2 giá $3500$.
 * **Bản chất toán học:** Hàm từng khúc: $N \le 100 \Rightarrow 2000N$; $N > 100 \Rightarrow 200000 + 3500(N - 100)$.
-* **Trường hợp biên (Edge Cases):**
-  * Ngay ngưỡng: $N = 100$ cho $200000$; $N = 101$ cho $203500$.
-  * Cực đại: $N = 10^6$ cho $3350000000$ đồng.
-  * Học sinh dễ tính cả $N$ số theo giá bậc 2 hoặc quên trừ $100$.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * Ngay ngưỡng: $N = 100$ cho $200000$; $N = 101$ cho $203500$.
+ * Cực đại: $N = 10^6$ cho $3350000000$ đồng.
+ * Học sinh dễ tính cả $N$ số theo giá bậc 2 hoặc quên trừ $100$.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Toán thực tế — Giá bậc thang có điều kiện**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Rẽ nhánh theo $N \le 100$; nhánh rẻ nhân trực tiếp, nhánh đắt cộng $200000$ với phần vượt ngưỡng $\mathcal{O}(1)$.
 * **Bất biến thuật toán (Invariant):**
-  > Mọi số điện từ 1 đến 100 luôn tính giá $2000$, mọi số từ 101 trở đi luôn tính giá $3500$, không số nào bị tính hai lần hay bỏ sót.
+ > Mọi số điện từ 1 đến 100 luôn tính giá $2000$, mọi số từ 101 trở đi luôn tính giá $3500$, không số nào bị tính hai lần hay bỏ sót.
 
 ---
 
@@ -64,7 +64,7 @@ Chuyên đề: **Toán thực tế — Giá bậc thang có điều kiện**
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
 1. **Quên trừ ngưỡng:** Viết `200000 + n * 3500` khiến 100 số đầu bị tính hai lần.
 2. **Sai điều kiện biên:** Dùng `n < 100` thay vì `n <= 100` làm $N = 100$ rơi nhầm nhánh đắt.
-3. **In kèm đơn vị:** Viết `print(tien, "dong")` gây `Wrong Answer (WA)`.
+3. **In kèm đơn vị:** Viết `print(tien, "dong")` gây `kết quả sai`.
 
 ---
 
@@ -72,9 +72,9 @@ Chuyên đề: **Toán thực tế — Giá bậc thang có điều kiện**
 ```python
 n = int(input())
 if n <= 100:
-    print(n * 2000)
+ print(n * 2000)
 else:
-    print(100 * 2000 + (n - 100) * 3500)
+ print(100 * 2000 + (n - 100) * 3500)
 ```
 
 ---

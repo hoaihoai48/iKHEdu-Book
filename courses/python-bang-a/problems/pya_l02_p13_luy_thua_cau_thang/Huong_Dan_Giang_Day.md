@@ -6,17 +6,17 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững toán tử lũy thừa `**` trong Python qua bài toán tính $a^n$ (`PYA-L02-P13`).
 * **Tư duy thuật toán:** Hiểu lũy thừa là phép nhân lặp lại, phân biệt `**` với `^` và `*`.
-* **Chuẩn code thi đấu:** Đọc 2 số bằng `input()`, ép kiểu `int`, in đúng một số bằng `print()`.
+* **Chuẩn code chuẩn:** Đọc 2 số bằng `input()`, ép kiểu `int`, in đúng một số bằng `print()`.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Cơ số $a$ ($1 \le a \le 10$), số mũ $n$ ($0 \le n \le 10$). Kết quả tối đa $10^{10}$ vừa trong số nguyên Python.
 * **Bản chất toán học:** $a^n = a \times a \times \dots \times a$ ($n$ lần). Quy ước $a^0 = 1$.
-* **Trường hợp biên (Edge Cases):**
-  * $n = 0$: kết quả luôn là $1$ (kể cả $a$ bất kỳ).
-  * $a = 1$: kết quả luôn là $1$.
-  * $n = 1$: kết quả bằng chính $a$.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * $n = 0$: kết quả luôn là $1$ (kể cả $a$ bất kỳ).
+ * $a = 1$: kết quả luôn là $1$.
+ * $n = 1$: kết quả bằng chính $a$.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Tính trực tiếp bằng toán tử `**` với độ phức tạp $\mathcal{O}(1)$, không cần vòng lặp vì $n \le 10$.
 * **Bất biến thuật toán (Invariant):**
-  > Biểu thức `a ** n` luôn bằng tích của $n$ thừa số $a$, và quy ước tích rỗng ($n = 0$) bằng $1$.
+ > Biểu thức `a ** n` luôn bằng tích của $n$ thừa số $a$, và quy ước tích rỗng ($n = 0$) bằng $1$.
 
 ---
 
@@ -65,7 +65,7 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
 1. **Dùng `^` thay cho `**`:** `3 ^ 4 = 7` (phép XOR bit), không phải $81$.
 2. **Quên ép kiểu:** Dùng trực tiếp chuỗi từ `input()` để tính `**` gây lỗi `TypeError`.
-3. **In thừa giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in `ans` gây `Wrong Answer (WA)`.
+3. **In thừa giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in `ans` gây `kết quả sai`.
 
 ---
 

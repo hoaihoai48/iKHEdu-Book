@@ -6,17 +6,17 @@ Chuyên đề: **Quãng đường – Vận tốc – Thời gian + Làm tròn**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Tính Vận Tốc Làm Tròn** (`PYA-L03-P15`) bằng Python ở mức `Vận dụng`.
 * **Tư duy thuật toán:** Rèn luyện phản xạ dùng phép chia thực $V = D / T$ rồi định dạng `f-string` `:.2f`.
-* **Chuẩn code thi đấu:** Đọc 2 số nguyên, chia thực, in đúng 2 chữ số thập phân kể cả số 0 ở cuối.
+* **Chuẩn code chuẩn:** Đọc 2 số nguyên, chia thực, in đúng 2 chữ số thập phân kể cả số 0 ở cuối.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Hai số nguyên $D, T$ ($1 \le D, T \le 10^4$), kết quả là số thực cần làm tròn 2 chữ số.
 * **Bản chất toán học:** Vận tốc trung bình bằng quãng đường chia thời gian; phần thập phân vô hạn cần làm tròn.
-* **Trường hợp biên (Edge Cases):**
-  * Chia hết: $D = 100, T = 4$ phải in `25.00` chứ không phải `25.0` hay `25`.
-  * Số lớn: $D = T = 10000$ cho `1.00`.
-  * Học sinh dễ dùng `//` ra số nguyên hoặc `round()` thiếu số 0 đệm.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * Chia hết: $D = 100, T = 4$ phải in `25.00` chứ không phải `25.0` hay `25`.
+ * Số lớn: $D = T = 10000$ cho `1.00`.
+ * Học sinh dễ dùng `//` ra số nguyên hoặc `round()` thiếu số 0 đệm.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Quãng đường – Vận tốc – Thời gian + Làm tròn**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Đọc $D, T$; tính $D / T$ kiểu `float`; in bằng `f"{v:.2f}"` $\mathcal{O}(1)$.
 * **Bất biến thuật toán (Invariant):**
-  > Chuỗi in ra luôn có đúng 2 chữ số sau dấu chấm, là dạng làm tròn gần nhất của thương $D : T$.
+ > Chuỗi in ra luôn có đúng 2 chữ số sau dấu chấm, là dạng làm tròn gần nhất của thương $D : T$.
 
 ---
 

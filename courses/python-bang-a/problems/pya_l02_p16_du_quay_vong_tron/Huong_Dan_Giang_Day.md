@@ -6,17 +6,17 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Vận dụng tổng hợp `//` và `%` với chu kỳ $C$ thay đổi theo đầu vào (`PYA-L02-P16`).
 * **Tư duy thuật toán:** Nhận diện dạng chu kỳ vòng tròn tổng quát: số vòng trọn $+$ phần dư.
-* **Chuẩn code thi đấu:** Đọc 2 số lớn tới $10^9$, in 2 số trên một dòng, Python xử lý số lớn tức thì.
+* **Chuẩn code chuẩn:** Đọc 2 số lớn tới $10^9$, in 2 số trên một dòng, Python xử lý số lớn tức thì.
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** $N$ ($1 \le N \le 10^9$) là tổng thời gian, $C$ ($1 \le C \le 10^9$) là thời gian một vòng.
 * **Bản chất toán học:** $\text{vòng} = N // C$, $\text{dư} = N \% C$. Luôn có $N = \text{vòng} \times C + \text{dư}$.
-* **Trường hợp biên (Edge Cases):**
-  * $N < C$: chưa đủ một vòng, kết quả `0 N`.
-  * $N$ chia hết cho $C$: dư bằng 0, ví dụ $N = 120, C = 60 \to$ `2 0`.
-  * $N, C$ tới $10^9$: Python vẫn tính chính xác, không tràn số.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * $N < C$: chưa đủ một vòng, kết quả `0 N`.
+ * $N$ chia hết cho $C$: dư bằng 0, ví dụ $N = 120, C = 60 \to$ `2 0`.
+ * $N, C$ tới $10^9$: Python vẫn tính chính xác, không tràn số.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Tính trực tiếp `N // C` và `N % C`, độ phức tạp $\mathcal{O}(1)$, không mô phỏng từng vòng quay.
 * **Bất biến thuật toán (Invariant):**
-  > Luôn bảo toàn $N = (N // C) \times C + (N \% C)$ với $0 \le N \% C < C$.
+ > Luôn bảo toàn $N = (N // C) \times C + (N \% C)$ với $0 \le N \% C < C$.
 
 ---
 
@@ -65,7 +65,7 @@ Chuyên đề: **Cỗ Máy Tính Toán & Bí Thuật Chia Dư**
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
 1. **Cố định chu kỳ 100:** Copy công thức bài vòng chạy `N // 100` mà quên chu kỳ $C$ do người dùng nhập.
 2. **Dùng `/` thay cho `//`:** In ra `4.166...` dạng số thực, sai định dạng số vòng nguyên.
-3. **In thừa giải thích:** Viết `print("So vong:", ...)` thay vì chỉ in 2 số gây `Wrong Answer (WA)`.
+3. **In thừa giải thích:** Viết `print("So vong:", ...)` thay vì chỉ in 2 số gây `kết quả sai`.
 
 ---
 

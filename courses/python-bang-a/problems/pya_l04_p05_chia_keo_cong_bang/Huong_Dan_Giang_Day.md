@@ -6,17 +6,17 @@ Chuyên đề: **Ngã Rẽ Quyết Định (if - else)**
 ## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
 * **Kỹ năng cốt lõi:** Nắm vững và làm chủ kỹ thuật giải quyết bài toán **Chia Kẹo Công Bằng** (`PYA-L04-P05`) bằng Python.
 * **Tư duy thuật toán:** Rèn luyện phản xạ phân tích đề bài, nhận diện dạng dữ liệu, xây dựng cấu trúc điều khiển hoặc cấu trúc dữ liệu tối ưu, không lặp code thừa thãi.
-* **Chuẩn code thi đấu:** Cài đặt code Python 3 chuẩn thi đấu lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
+* **Chuẩn code chuẩn:** Cài đặt code Python 3 chuẩn lập trình Python (rõ ràng, chạy nhanh, xử lý vào/ra an toàn, không thừa ký tự ngoài luồng).
 
 ---
 
-## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Edge Cases)
+## 2. Phân Tích Đề Bài & Bản Chất Toán Học (Trường hợp đặc biệt)
 * **Phân tích tham số:** Đọc hiểu phạm vi các biến số đầu vào và kiểu dữ liệu phù hợp (chú ý số nguyên lớn, số thực làm tròn, chuỗi có khoảng trắng thừa).
 * **Bản chất toán học:** Nhận diện công thức giải tích hoặc quy luật biến đổi trạng thái của bài toán.
-* **Trường hợp biên (Edge Cases):**
-  * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
-  * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
-  * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
+* **Trường hợp biên (Trường hợp đặc biệt):**
+ * Dữ liệu cực tiểu ($N = 0$, $N = 1$ hoặc số phần tử tối thiểu).
+ * Các số âm, số 0 hoặc các số có giá trị bằng nhau.
+ * Chuỗi rỗng hoặc chuỗi chỉ chứa ký tự đặc biệt.
 
 ---
 
@@ -30,7 +30,7 @@ Chuyên đề: **Ngã Rẽ Quyết Định (if - else)**
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
 * **Chiến lược:** Mô phỏng chính xác luồng dữ liệu, sử dụng biến đếm tích lũy hoặc công thức tính trực tiếp để đạt độ phức tạp tối ưu.
 * **Bất biến thuật toán (Invariant):**
-  > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
+ > Trạng thái của các biến số luôn bảo toàn đúng quan hệ toán học sau mỗi bước lặp hoặc sau mỗi lệnh rẽ nhánh điều kiện.
 
 ---
 
@@ -62,9 +62,9 @@ YES
 ---
 
 ## 7. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
-1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị máy chấm bắt lỗi `Wrong Answer (WA)`.
+1. **In thừa thông báo giải thích:** Viết `print("Ket qua la:", ans)` thay vì chỉ in đúng `ans` dẫn đến bị chương trình kiểm tra bắt lỗi `kết quả sai`.
 2. **Quên ép kiểu:** Dùng trực tiếp giá trị chuỗi từ `input()` để tính toán số học dẫn đến lỗi `TypeError`.
-3. **Tràn thời gian (TLE):** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
+3. **Tràn thời gian :** Dùng vòng lặp lồng nhau không cần thiết khi số $N$ lớn.
 
 ---
 
@@ -78,4 +78,4 @@ YES
 
 ## 9. Bài Toán Mở Rộng & Chuyển Giao (Transfer & Extensions)
 * **Mở rộng 1:** Thử thách học sinh giải bài toán khi số lượng truy vấn $Q$ lớn (yêu cầu tối ưu hóa công thức).
-* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong đề thi lập trình các năm trước.
+* **Mở rộng 2:** Áp dụng thuật toán này để giải quyết các bài toán thực tế tương tự trong bài tập các năm trước.
