@@ -60,38 +60,37 @@
 
   <!-- DP table nodes for S = 0..6 -->
   <g transform="translate(100, 110)">
-    <!-- S=0 -->
     <g transform="translate(0, 0)">
       <rect width="90" height="55" rx="8" fill="url(#greenCard)" stroke="#10b981" stroke-width="2" />
       <text x="45" y="24" fill="#065F46" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 0</text>
       <text x="45" y="45" fill="#065F46" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">0 xu</text>
     </g>
-    <!-- S=1 -->
-    <g transform="translate(130, 0)">
+    <g transform="translate(110, 0)">
       <rect width="90" height="55" rx="8" fill="#EFF6FF" stroke="#3B82F6" />
       <text x="45" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 1</text>
       <text x="45" y="45" fill="#0F172A" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">1 xu</text>
     </g>
-    <!-- S=2 -->
-    <g transform="translate(260, 0)">
+    <g transform="translate(220, 0)">
       <rect width="90" height="55" rx="8" fill="#EFF6FF" stroke="#3B82F6" />
       <text x="45" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 2</text>
       <text x="45" y="45" fill="#0F172A" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">2 xu</text>
     </g>
-    <!-- S=3 -->
-    <g transform="translate(390, 0)">
+    <g transform="translate(330, 0)">
       <rect width="90" height="55" rx="8" fill="#EFF6FF" stroke="#3B82F6" />
       <text x="45" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 3</text>
       <text x="45" y="45" fill="#0F172A" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">1 xu</text>
     </g>
-    <!-- S=4 -->
-    <g transform="translate(520, 0)">
+    <g transform="translate(440, 0)">
       <rect width="90" height="55" rx="8" fill="#EFF6FF" stroke="#3B82F6" />
       <text x="45" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 4</text>
       <text x="45" y="45" fill="#0F172A" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">1 xu</text>
     </g>
-    <!-- S=6 -->
-    <g transform="translate(670, 0)" filter="url(#glowAmber)">
+    <g transform="translate(550, 0)">
+      <rect width="90" height="55" rx="8" fill="#EFF6FF" stroke="#3B82F6" />
+      <text x="45" y="24" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 5</text>
+      <text x="45" y="45" fill="#0F172A" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">2 xu</text>
+    </g>
+    <g transform="translate(660, 0)" filter="url(#glowAmber)">
       <rect width="110" height="55" rx="8" fill="url(#amberCard)" stroke="#f59e0b" stroke-width="2" />
       <text x="55" y="24" fill="#92400E" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">S = 6 (Target)</text>
       <text x="55" y="45" fill="#065F46" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">2 xu (3+3)</text>
@@ -99,12 +98,11 @@
   </g>
 
   <!-- Transitions to S=6 -->
-  <path d="M 525 165 Q 640 215 725 165" fill="none" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowPurple)" />
-  <text x="630" y="210" fill="#c084fc" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold">Dùng xu 3 (từ S=3)</text>
 
-  <path d="M 655 165 Q 690 200 735 165" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowCyan)" />
-  <text x="700" y="195" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11.5">Dùng xu 4 (từ S=2)</text>
-
+  <path d="M 475 165 Q 620 215 755 150" fill="none" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowPurple)" />
+  <text x="600" y="212" fill="#7e22ce" font-family="system-ui, sans-serif" font-size="11.5" font-weight="bold">Dùng xu 3 (từ S=3)</text>
+  <path d="M 365 165 Q 540 235 755 160" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowCyan)" />
+  <text x="520" y="232" fill="#0369A1" font-family="system-ui, sans-serif" font-size="11.5">Dùng xu 4 (từ S=2)</text>
   <!-- Card Formula -->
   <g transform="translate(100, 240)" filter="url(#cardShadow)">
     <rect width="800" height="75" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" />

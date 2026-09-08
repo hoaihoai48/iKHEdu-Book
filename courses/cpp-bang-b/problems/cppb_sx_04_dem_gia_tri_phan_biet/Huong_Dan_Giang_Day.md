@@ -18,6 +18,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 *Giải thích chi tiết từ mẫu:* Danh sách mã vé ghi nhận là: $2, 3, 2, 1, 3, 5$.
 Sau khi sắp xếp tăng dần: $1, 2, 2, 3, 3, 5$.
 Các nhóm giá trị trùng nhau được gom liền kề:
+
 - Giá trị $1$ (xuất hiện 1 lần)
 - Giá trị $2$ (xuất hiện 2 lần)
 - Giá trị $3$ (xuất hiện 2 lần)

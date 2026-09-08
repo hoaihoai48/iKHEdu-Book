@@ -27,6 +27,7 @@ Cho danh sách thể tích $N$ lọ dung dịch và thể tích mục tiêu $S$.
 ### Giải thích
 Với mảng dung dịch $[1, 2, 3, 3]$ và thể tích cần lấy $S = 6$:
 Có 3 cách chọn tập con có tổng bằng 6:
+
 1. Chọn các phần tử tại vị trí 1, 2, 3: $1 + 2 + 3 = 6$.
 2. Chọn các phần tử tại vị trí 1, 2, 4: $1 + 2 + 3 = 6$.
 3. Chọn các phần tử tại vị trí 3, 4: $3 + 3 = 6$.

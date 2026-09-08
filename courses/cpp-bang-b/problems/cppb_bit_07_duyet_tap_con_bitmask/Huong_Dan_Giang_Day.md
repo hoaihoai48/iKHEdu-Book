@@ -20,6 +20,7 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 | 3 | Xuất kết quả | Output: `0 3 5 8` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Mask 0 (00_2): tập rỗng -> tổng 0.
+
 - Mask 1 (01_2): tập {A[0]} = {3} -> tổng 3.
 - Mask 2 (10_2): tập {A[1]} = {5} -> tổng 5.
 - Mask 3 (11_2): tập {A[0], A[1]} = {3, 5} -> tổng 8.

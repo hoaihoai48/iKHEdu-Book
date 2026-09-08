@@ -5,6 +5,7 @@ Tại kỳ thi Olympic Khoa học Trẻ liên trường, hội đồng chấm th
 
 ## Nhiệm vụ
 Cho danh sách $N$ học sinh cùng điểm số của hai môn thi. Hãy sắp xếp danh sách học sinh theo các quy tắc ưu tiên sau:
+
 1. Tổng điểm hai môn ($Math + Info$) giảm dần.
 2. Nếu bằng tổng điểm, thí sinh có điểm môn Tin học ($Info$) cao hơn sẽ đứng trước.
 3. Nếu vẫn bằng nhau cả về điểm Tin học, thí sinh có mã số định danh $ID$ nhỏ hơn sẽ đứng trước.
@@ -32,11 +33,13 @@ Cho danh sách $N$ học sinh cùng điểm số của hai môn thi. Hãy sắp 
 ```
 ### Giải thích
 Thống kê điểm của 3 thí sinh:
+
 - Thí sinh $103$: Điểm Toán = $10$, Điểm Tin = $10 \implies$ Tổng điểm = $20$.
 - Thí sinh $101$: Điểm Toán = $8$, Điểm Tin = $9 \implies$ Tổng điểm = $17$.
 - Thí sinh $102$: Điểm Toán = $9$, Điểm Tin = $8 \implies$ Tổng điểm = $17$.
 
 Xếp hạng theo các tiêu chí:
+
 - Thí sinh $103$ có tổng điểm cao nhất ($20$) nên đứng vị trí số 1.
 - Giữa hai thí sinh $101$ và $102$ có cùng tổng điểm là $17$: xét tiêu chí phụ điểm Tin học, thí sinh $101$ có điểm Tin $9 > 8$ của thí sinh $102$, do đó thí sinh $101$ xếp trước thí sinh $102$.
 

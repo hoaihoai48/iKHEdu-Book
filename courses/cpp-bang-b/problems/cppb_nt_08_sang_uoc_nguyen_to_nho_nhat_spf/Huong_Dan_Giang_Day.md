@@ -20,6 +20,7 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 | 3 | Xuất kết quả | Output: `3 7 2` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - SPF(15) = 3 (vì 15 chia hết cho số nguyên tố nhỏ nhất là 3).
+
 - SPF(7) = 7 (vì 7 là số nguyên tố).
 - SPF(20) = 2 (vì 20 chia hết cho 2).
 

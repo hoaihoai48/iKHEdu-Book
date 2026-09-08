@@ -10,6 +10,7 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
   - Nếu ta sắp xếp tăng dần $A_i \le A_j \le A_k$, ta luôn có $A_k + A_i > A_j$ và $A_k + A_j > A_i$.
   - Điều kiện duy nhất cần kiểm tra là:
     $$A_i + A_j > A_k$$
+
 - **Thuật toán Hai con trỏ $\mathcal{O}(N^2)$:**
   - Cố định cạnh lớn nhất $k$ chạy ngược từ $N - 1$ về $2$.
   - Với mỗi $k$, đặt $L = 0$ và $R = k - 1$:

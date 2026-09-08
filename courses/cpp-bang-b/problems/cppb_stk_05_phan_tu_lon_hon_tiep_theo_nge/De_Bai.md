@@ -26,6 +26,7 @@ Cho dãy số nguyên $A$ gồm $N$ phần tử. Với mỗi phần tử trong m
 
 ### Giải thích
 Với mảng gồm 4 phần tử $[4, 5, 2, 25]$:
+
 - Phần tử 4: Bên phải phần tử đầu tiên lớn hơn 4 là 5.
 - Phần tử 5: Bên phải phần tử đầu tiên lớn hơn 5 là 25.
 - Phần tử 2: Bên phải phần tử đầu tiên lớn hơn 2 là 25.

@@ -31,6 +31,7 @@ orange 1
 
 ### Giải thích
 Với danh sách 4 từ khóa: ["apple", "banana", "apple", "cherry"]:
+
 - Từ khóa "apple" xuất hiện 2 lần.
 - Từ khóa "banana" xuất hiện 1 lần.
 - Từ khóa "cherry" xuất hiện 1 lần.

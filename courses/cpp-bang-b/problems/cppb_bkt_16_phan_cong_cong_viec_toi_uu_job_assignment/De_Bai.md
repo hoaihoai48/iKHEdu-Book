@@ -30,6 +30,7 @@ Cho số lượng $N$ và ma trận chi phí phân công $C_{N \times N}$. Hãy 
 ```
 ### Giải thích
 Phương án phân công tối ưu nhất là:
+
 - Kỹ sư 1 làm việc 2 (chi phí $C_{1, 2} = 2$).
 - Kỹ sư 2 làm việc 1 (chi phí $C_{2, 1} = 6$).
 - Kỹ sư 3 làm việc 3 (chi phí $C_{3, 3} = 1$).

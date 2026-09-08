@@ -24,6 +24,7 @@ Cho một chuỗi biểu thức số học trung tố hợp lệ. Hãy lập tr�
 
 ### Giải thích
 Với biểu thức số học "1 + (2 * 3) - 4 / 2":
+
 1. Tính trong ngoặc: $2 \times 3 = 6$.
 2. Biểu thức trở thành: $1 + 6 - 4 / 2$.
 3. Thực hiện phép chia: $4 / 2 = 2$.

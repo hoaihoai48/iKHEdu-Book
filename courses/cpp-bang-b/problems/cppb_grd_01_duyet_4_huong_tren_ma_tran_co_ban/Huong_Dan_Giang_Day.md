@@ -26,6 +26,7 @@ Mẫu thử (Sample 1): Đầu vào: `3 3 0 0` $\implies$ Đầu ra kỳ vọng:
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2` |
 
 *Giải thích chi tiết:* Với lưới kích thước $3  × 3$ và vị trí ô góc $(0, 0)$:
+
 - Hướng lên trên và sang trái đều vượt ra ngoài biên của lưới.
 - Chỉ có 2 hướng hợp lệ là xuống dưới $(1, 0)$ và sang phải $(0, 1)$.
 Số ô kề cạnh hợp lệ là 2.

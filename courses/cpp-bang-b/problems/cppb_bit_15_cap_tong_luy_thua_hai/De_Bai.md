@@ -25,6 +25,7 @@ Cho dãy gồm N số nguyên dương. Hãy đếm số lượng cặp chỉ s�
 ```
 ### Giải thích
 Các cặp chỉ số $(i, j)$ có tổng là lũy thừa của 2 gồm 3 cặp:
+
 - $(1, 3)$: tổng $1 + 3 = 4 = 2^2$.
 - $(1, 7)$: tổng $1 + 7 = 8 = 2^3$.
 - $(1, 15)$: tổng $1 + 15 = 16 = 2^4$.

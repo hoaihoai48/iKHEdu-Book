@@ -24,6 +24,7 @@ Cho số nguyên dương $N$ là chiều dài của mặt sàn. Hãy lập trìn
 
 ### Giải thích
 Với sàn nhà kích thước $2  × 4$ ($N = 4$), có tất cả 5 cách lát kín hợp lệ:
+
 1. Đặt 4 viên gạch dựng đứng liên tiếp.
 2. Đặt 2 viên nằm ngang ở đầu, theo sau là 2 viên dựng đứng.
 3. Đặt 1 viên dựng đứng, 2 viên nằm ngang ở giữa, 1 viên dựng đứng ở cuối.

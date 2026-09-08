@@ -28,6 +28,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 2 1 5 3 4 2` $\implies$ Đầu ra kỳ v
 
 *Giải thích chi tiết:* Với mảng $[1, 5, 3, 4, 2]$ và $K = 2$:
 Các cặp có hiệu bằng 2 là:
+
 - $A_2 - A_3 = 5 - 3 = 2$.
 - $A_3 - A_1 = 3 - 1 = 2$.
 - $A_4 - A_5 = 4 - 2 = 2$.

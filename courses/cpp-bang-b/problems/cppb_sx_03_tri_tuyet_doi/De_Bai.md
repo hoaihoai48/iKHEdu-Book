@@ -25,6 +25,7 @@ Cho một dãy gồm $N$ số nguyên $A_1, A_2, \dots, A_N$. Hãy sắp xếp c
 ```
 ### Giải thích
 Xét dãy số ban đầu: $5, -8, 2, -3, 8$.
+
 - Giá trị tuyệt đối của các phần tử lần lượt là: $|5| = 5$, $|-8| = 8$, $|2| = 2$, $|-3| = 3$, $|8| = 8$.
 - Sắp xếp theo thứ tự độ lớn tăng dần:
   - $|2| = 2 \implies 2$ đứng đầu.

@@ -12,6 +12,7 @@ Chuyên đề: **Quy Hoạch Động 2 Chiều & Bài Toán Cái Túi (DP 2D / K
 - **Mô hình trạng thái:** Định nghĩa $dp[i][j]$ biểu diễn kết quả tối ưu khi xét tiền tố $i$ đồ vật và sức chứa/trọng lượng còn lại là $j$, hoặc toạ độ ô $(i, j)$ trên lưới.
 - **Chuyển trạng thái bài toán Cái Túi (0/1 Knapsack):**
   $$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
+
 - **Kỹ thuật tối ưu bộ nhớ (Nén mảng 1D):** Với bài toán 0/1 Knapsack, duyệt lùi $w$ từ $W$ về $w_i$ để đảm bảo mỗi vật chỉ được chọn tối đa một lần; với Unbounded Knapsack, duyệt xuôi từ $w_i$ đến $W$.
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N \times W)$ hoặc $\mathcal{O}(N \times M)$, không gian tối ưu $\mathcal{O}(W)$.
 
@@ -28,6 +29,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 5 1 2 3 4` $\implies$ Đầu ra kỳ v�
 
 *Giải thích chi tiết:* Với mảng dung dịch $[1, 2, 3, 3]$ và thể tích cần lấy $S = 6$:
 Có 3 cách chọn tập con có tổng bằng 6:
+
 1. Chọn các phần tử tại vị trí 1, 2, 3: $1 + 2 + 3 = 6$.
 2. Chọn các phần tử tại vị trí 1, 2, 4: $1 + 2 + 3 = 6$.
 3. Chọn các phần tử tại vị trí 3, 4: $3 + 3 = 6$.

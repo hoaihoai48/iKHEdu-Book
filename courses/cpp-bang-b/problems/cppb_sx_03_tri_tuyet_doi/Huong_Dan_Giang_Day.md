@@ -16,6 +16,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 | 3 | Xuất kết quả | Output: `2 -3 5 -8 8` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Xét dãy số ban đầu: $5, -8, 2, -3, 8$.
+
 - Giá trị tuyệt đối của các phần tử lần lượt là: $|5| = 5$, $|-8| = 8$, $|2| = 2$, $|-3| = 3$, $|8| = 8$.
 - Sắp xếp theo thứ tự độ lớn tăng dần:
   - $|2| = 2 \implies 2$ đứng đầu.

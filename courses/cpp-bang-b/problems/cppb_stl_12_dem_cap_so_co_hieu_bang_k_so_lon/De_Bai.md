@@ -27,6 +27,7 @@ Cho mảng $A$ gồm $N$ số nguyên và số nguyên $K$. Hãy lập trình đ
 ### Giải thích
 Với mảng $[1, 5, 3, 4, 2]$ và $K = 2$:
 Các cặp có hiệu bằng 2 là:
+
 - $A_2 - A_3 = 5 - 3 = 2$.
 - $A_3 - A_1 = 3 - 1 = 2$.
 - $A_4 - A_5 = 4 - 2 = 2$.

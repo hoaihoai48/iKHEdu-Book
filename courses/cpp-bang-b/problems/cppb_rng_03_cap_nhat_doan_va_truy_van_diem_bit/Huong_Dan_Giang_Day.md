@@ -29,6 +29,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 1 2 3 4 5 1 2 4 5 2 3 2 1` $\implies$ 
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `8 1` |
 
 *Giải thích chi tiết:* Với mảng ban đầu toàn số 0: $[0, 0, 0, 0, 0]$:
+
 - Cộng thêm 5 vào đoạn từ vị trí 2 đến 4: mảng thành $[0, 5, 5, 5, 0]$.
 - Truy vấn giá trị tại vị trí 3: in ra 5.
 

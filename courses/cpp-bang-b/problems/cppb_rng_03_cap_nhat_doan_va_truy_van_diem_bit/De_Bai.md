@@ -31,6 +31,7 @@ Cho mảng $A$ và $Q$ thao tác thuộc hai dạng: `1 L R V` (cộng thêm $V$
 
 ### Giải thích
 Với mảng ban đầu toàn số 0: $[0, 0, 0, 0, 0]$:
+
 - Cộng thêm 5 vào đoạn từ vị trí 2 đến 4: mảng thành $[0, 5, 5, 5, 0]$.
 - Truy vấn giá trị tại vị trí 3: in ra 5.
 

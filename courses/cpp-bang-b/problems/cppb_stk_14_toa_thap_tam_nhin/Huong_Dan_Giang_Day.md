@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `7 100 80 60 70 60 75 85` $\implies$ Đầu
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `1 1 1 2 1 4 6` |
 
 *Giải thích chi tiết:* Với chiều cao các tháp $[100, 80, 60, 70, 60, 75, 85]$:
+
 - Tháp 1 (100): tầm nhìn 1 (chính nó).
 - Tháp 2 (80): tầm nhìn 1.
 - Tháp 3 (60): tầm nhìn 1.

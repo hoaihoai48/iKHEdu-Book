@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 4 3 2 6` $\implies$ Đầu ra kỳ vọn
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `29` |
 
 *Giải thích chi tiết:* Với 4 đoạn dây có độ dài $[4, 3, 2, 6]$:
+
 1. Nối hai dây ngắn nhất 2 và 3 thành dây độ dài 5, chi phí tốn $2 + 3 = 5$. Danh sách dây còn: [4, 5, 6].
 2. Nối tiếp hai dây ngắn nhất 4 và 5 thành dây độ dài 9, chi phí tốn $4 + 5 = 9$. Danh sách dây còn: [6, 9].
 3. Nối hai dây cuối 6 và 9 thành dây độ dài 15, chi phí tốn $6 + 9 = 15$.

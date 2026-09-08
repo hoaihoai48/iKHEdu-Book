@@ -26,6 +26,7 @@ Mẫu thử (Sample 1): Đầu vào: `7 1 101 2 3 100 4 5` $\implies$ Đầu ra 
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `106` |
 
 *Giải thích chi tiết:* Với dãy số gồm 7 phần tử $[1, 101, 2, 3, 100, 4, 5]$:
+
 - Dãy con tăng dài nhất là $[1, 2, 3, 4, 5]$ có tổng là $1 + 2 + 3 + 4 + 5 = 15$.
 - Nhưng dãy con tăng $[1, 2, 3, 100]$ lại mang lại tổng giá trị lớn hơn nhiều: $1 + 2 + 3 + 100 = 106$. Đây là tổng lớn nhất có thể đạt được.
 

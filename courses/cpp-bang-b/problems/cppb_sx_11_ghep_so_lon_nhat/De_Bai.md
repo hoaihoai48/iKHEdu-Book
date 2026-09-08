@@ -25,6 +25,7 @@ Cho danh sách $N$ chuỗi số nguyên không âm. Hãy tìm cách sắp xếp 
 ```
 ### Giải thích
 Xét 4 mảnh thẻ: `"3"`, `"30"`, `"34"`, `"5"`.
+
 - Khi so sánh giữa `"3"` và `"30"`, ghép `"3" + "30" = "330"`, còn `"30" + "3" = "303"`. Vì `"330" > "303"` nên `"3"` phải đứng trước `"30"`.
 - Tương tự, `"34" + "3" = "343"` lớn hơn `"3" + "34" = "334"`, nên `"34"` phải đứng trước `"3"`.
 - Mảnh `"5"` khi ghép với bất kỳ mảnh nào khác ở đầu luôn tạo ra tiền tố $5...$ lớn nhất.

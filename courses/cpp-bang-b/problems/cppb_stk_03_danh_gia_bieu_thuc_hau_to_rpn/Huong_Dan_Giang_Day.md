@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 2 1 + 3 *` $\implies$ Đầu ra kỳ v�
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `9` |
 
 *Giải thích chi tiết:* Với biểu thức hậu tố "2 1 + 3 *":
+
 1. Gặp toán tử '+': Thực hiện $2 + 1 = 3$.
 2. Biểu thức trở thành "3 3 *".
 3. Gặp toán tử '*': Thực hiện $3 \times 3 = 9$.

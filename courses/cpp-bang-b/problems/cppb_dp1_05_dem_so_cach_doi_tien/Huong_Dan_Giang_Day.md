@@ -26,6 +26,7 @@ Mẫu thử (Sample 1): Đầu vào: `3 9 2 3 5` $\implies$ Đầu ra kỳ vọn
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3` |
 
 *Giải thích chi tiết:* Với các mệnh giá xu $\{2, 3, 5\}$ và số tiền mục tiêu $S = 9$, có đúng 3 tổ hợp đồng xu khác nhau:
+
 1. Ba đồng xu: $2 + 2 + 5 = 9$.
 2. Ba đồng xu: $3 + 3 + 3 = 9$.
 3. Bốn đồng xu: $2 + 2 + 2 + 3 = 9$.

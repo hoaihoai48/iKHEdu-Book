@@ -30,6 +30,7 @@ e v$) biểu diễn một cạnh.
 
 ### Giải thích
 Với đồ thị 4 đỉnh và các cạnh (1, 2), (1, 3), (2, 4):
+
 - Đỉnh 1 kề với các đỉnh: 2, 3.
 - Đỉnh 2 kề với các đỉnh: 1, 4.
 - Đỉnh 3 kề với đỉnh: 1.

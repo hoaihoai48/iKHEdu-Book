@@ -31,6 +31,7 @@ Cho mảng $A$ và $Q$ thao tác thuộc hai dạng: `1 pos val` (gán $A[pos] =
 
 ### Giải thích
 Với mảng $[6, 12, 18, 24]$:
+
 - Truy vấn GCD đoạn từ 1 đến 3: $\gcd(6, 12, 18) = 6$.
 - Cập nhật vị trí 1 thành 4: mảng thành $[4, 12, 18, 24]$.
 - Truy vấn lại GCD đoạn từ 1 đến 3: $\gcd(4, 12, 18) = 2$.

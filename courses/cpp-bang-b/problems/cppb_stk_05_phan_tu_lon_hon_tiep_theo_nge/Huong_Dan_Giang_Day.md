@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 4 5 2 25` $\implies$ Đầu ra kỳ vọ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `5 25 25 -1` |
 
 *Giải thích chi tiết:* Với mảng gồm 4 phần tử $[4, 5, 2, 25]$:
+
 - Phần tử 4: Bên phải phần tử đầu tiên lớn hơn 4 là 5.
 - Phần tử 5: Bên phải phần tử đầu tiên lớn hơn 5 là 25.
 - Phần tử 2: Bên phải phần tử đầu tiên lớn hơn 2 là 25.

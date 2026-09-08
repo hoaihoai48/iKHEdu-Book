@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `YES NO YES` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Truy vấn 1: Số 5 xuất hiện tại vị trí 3 -> YES.
+
 - Truy vấn 2: Số 4 không có trong mảng -> NO.
 - Truy vấn 3: Số 9 xuất hiện tại vị trí 5 -> YES.
 

@@ -32,6 +32,7 @@ Cho mảng $A$ gồm $N$ số nguyên và $Q$ truy vấn, mỗi truy vấn gồm
 
 ### Giải thích
 Với mảng $[1, 4, 6, 8, 10]$ và các truy vấn $X$:
+
 - Truy vấn $X = 5$: Phần tử nhỏ nhất trong mảng $\ge 5$ là 6.
 - Truy vấn $X = 11$: Không có phần tử nào trong mảng $\ge 11$, in ra -1.
 

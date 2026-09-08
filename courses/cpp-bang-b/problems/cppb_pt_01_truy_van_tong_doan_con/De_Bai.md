@@ -31,6 +31,7 @@ Cho dãy số nguyên gồm N phần tử. Với mỗi truy vấn [L, R] (1 <= L
 ```
 ### Giải thích
 Mảng tiền tố Pref = [0, 1, 3, 6, 10, 15].
+
 - Truy vấn [1, 3]: Pref[3] - Pref[0] = 6 - 0 = 6.
 - Truy vấn [2, 4]: Pref[4] - Pref[1] = 10 - 1 = 9.
 - Truy vấn [1, 5]: Pref[5] - Pref[0] = 15 - 0 = 15.

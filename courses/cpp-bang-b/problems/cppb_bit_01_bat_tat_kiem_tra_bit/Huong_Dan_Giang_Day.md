@@ -20,6 +20,7 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 | 3 | Xuất kết quả | Output: `1 0 1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* N = 5 có biểu diễn nhị phân là 101_2:
+
 - Thao tác 3 0: Bit thứ 0 có giá trị 1 -> in 1.
 - Thao tác 3 1: Bit thứ 1 có giá trị 0 -> in 0.
 - Thao tác 1 1: Bật bit thứ 1 lên 1 -> N trở thành 111_2 = 7.

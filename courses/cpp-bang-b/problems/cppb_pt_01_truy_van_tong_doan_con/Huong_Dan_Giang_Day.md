@@ -20,6 +20,7 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 | 3 | Xuất kết quả | Output: `6 9 15` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Mảng tiền tố Pref = [0, 1, 3, 6, 10, 15].
+
 - Truy vấn [1, 3]: Pref[3] - Pref[0] = 6 - 0 = 6.
 - Truy vấn [2, 4]: Pref[4] - Pref[1] = 10 - 1 = 9.
 - Truy vấn [1, 5]: Pref[5] - Pref[0] = 15 - 0 = 15.

@@ -27,6 +27,7 @@ Cho danh sách chiều cao của $N$ khối bê tông. Hãy lập trình tính t
 ### Giải thích
 Với độ cao địa hình là $[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]$:
 Nước mưa sẽ bị giữ lại ở các vùng trũng giữa các cột cao:
+
 - Tại vị trí 2: nước đọng 1 đơn vị.
 - Tại vị trí 4: nước đọng 1 đơn vị.
 - Tại vị trí 5: nước đọng 2 đơn vị.

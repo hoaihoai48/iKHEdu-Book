@@ -26,6 +26,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 1 2 3 1` $\implies$ Đầu ra kỳ vọn
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `4` |
 
 *Giải thích chi tiết:* Với dãy giá trị của 4 căn nhà là $[1, 2, 3, 1]$:
+
 - Nếu chọn nhà 2 và nhà 4: Tổng giá trị là $2 + 1 = 3$.
 - Phương án tối ưu: Chọn nhà 1 (giá trị 1) và nhà 3 (giá trị 3). Hai nhà này không kề nhau và mang lại tổng giá trị lớn nhất là $1 + 3 = 4$.
 

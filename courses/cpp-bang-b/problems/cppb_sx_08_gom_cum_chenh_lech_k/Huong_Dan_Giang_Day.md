@@ -18,6 +18,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 *Giải thích chi tiết từ mẫu:* Sắp xếp điểm năng lực của 6 bạn học sinh theo thứ tự tăng dần:
 $1, 3, 4, 10, 12, 15$.
 Với $K = 3$, ta có thể gom tối ưu thành 3 nhóm như sau:
+
 - Nhóm 1: $\{1, 3, 4\}$ (Điểm cao nhất là $4$, thấp nhất là $1$, chênh lệch $4 - 1 = 3 \le 3$).
 - Nhóm 2: $\{10, 12\}$ (Điểm cao nhất là $12$, thấp nhất là $10$, chênh lệch $12 - 10 = 2 \le 3$).
 - Nhóm 3: $\{15\}$ (Chỉ gồm 1 bạn, chênh lệch bằng $0 \le 3$).

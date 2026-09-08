@@ -10,6 +10,7 @@ Chuyên đề: **Thuật Toán Sắp Xếp & Khai Thác Trật Tự (Sorting)**
 - **Tính chất bắc cầu của phép ghép (Greedy Comparator):**
   - Để quyết định giữa hai chuỗi $u$ và $v$ chuỗi nào nên đứng trước, ta so sánh trực tiếp kết quả của hai cách ghép:
     $$\text{Nếu } u + v > v + u \implies u \text{ phải đứng trước } v.$$
+
   - Quan hệ này thỏa mãn tính chất phản đối xứng và bắc cầu (Strict Weak Ordering), cho phép hàm `sort` định hình đúng toàn bộ dãy ghép.
 
 ---

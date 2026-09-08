@@ -29,6 +29,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 1 2 3 4 5 2 1 3 1 2 10 2 1 3` $\implie
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `6 16` |
 
 *Giải thích chi tiết:* Với mảng ban đầu gồm 5 phần tử $[1, 2, 3, 4, 5]$:
+
 - Truy vấn tính tổng đoạn từ 1 đến 3: $1 + 2 + 3 = 6$.
 - Cập nhật cộng thêm 10 vào phần tử tại vị trí 3: mảng trở thành $[1, 2, 13, 4, 5]$.
 - Truy vấn lại tổng đoạn từ 1 đến 3: $1 + 2 + 13 = 16$.

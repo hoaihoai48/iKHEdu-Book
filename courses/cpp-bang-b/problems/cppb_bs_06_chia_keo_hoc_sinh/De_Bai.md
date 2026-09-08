@@ -25,6 +25,7 @@ Cho N gói kẹo và số học sinh K. Mỗi học sinh chỉ nhận kẹo từ
 ```
 ### Giải thích
 Nếu mỗi em nhận X = 5 chiếc kẹo:
+
 - Thùng 1 (15 kẹo) chia được 15/5 = 3 em.
 - Thùng 2 (8 kẹo) chia được 8/5 = 1 em.
 - Thùng 3 (10 kẹo) chia được 10/5 = 2 em.

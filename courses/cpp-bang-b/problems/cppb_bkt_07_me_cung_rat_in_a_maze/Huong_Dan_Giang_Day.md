@@ -20,6 +20,7 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 | 3 | Xuất kết quả | Output: `DDRDRR DRDDRR` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Robot xuất phát tại $(0,0)$ và đích đến là $(3,3)$. Có 2 tuyến đường hợp lệ không qua ô 0:
+
 - Tuyến 1: Đi xuống $\to$ xuống $\to$ phải $\to$ xuống $\to$ phải $\to$ phải (`DDRDRR`).
 - Tuyến 2: Đi xuống $\to$ phải $\to$ xuống $\to$ xuống $\to$ phải $\to$ phải (`DRDDRR`).
 

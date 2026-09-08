@@ -27,6 +27,7 @@ Cho mảng gồm $N$ số nguyên. Hãy lập trình thay thế mỗi phần t�
 ### Giải thích
 Với mảng số ban đầu là $[100, 5, 100, 20, 5]$:
 Các giá trị phân biệt sau khi sắp xếp tăng dần là: $5 < 20 < 100$.
+
 - Giá trị 5 nhỏ nhất nhận thứ hạng 1.
 - Giá trị 20 nhận thứ hạng 2.
 - Giá trị 100 nhận thứ hạng 3.

@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 10 20 30 40 50 25 50 60` $\implies$ Đ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `30 50 -1` |
 
 *Giải thích chi tiết:* Với mảng $[1, 4, 6, 8, 10]$ và các truy vấn $X$:
+
 - Truy vấn $X = 5$: Phần tử nhỏ nhất trong mảng $\ge 5$ là 6.
 - Truy vấn $X = 11$: Không có phần tử nào trong mảng $\ge 11$, in ra -1.
 

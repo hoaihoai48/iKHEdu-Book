@@ -27,6 +27,7 @@ NO
 
 ### Giải thích
 Với đồ thị có các cạnh (1, 2), (2, 3) và đỉnh 4 cô lập:
+
 - Kiểm tra giữa 1 và 3: Tồn tại đường đi $1  × o 2  × o 3$, in ra YES.
 - Nếu kiểm tra giữa 1 và 4: Không có đường đi, in ra NO.
 

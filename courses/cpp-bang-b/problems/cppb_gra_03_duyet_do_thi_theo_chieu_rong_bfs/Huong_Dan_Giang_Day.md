@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 3 1 1 2 1 3 2 4` $\implies$ Đầu ra k�
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `1 2 3 4` |
 
 *Giải thích chi tiết:* Với đồ thị có các cạnh (1, 2), (1, 3), (2, 4) xuất phát từ đỉnh 1:
+
 - Tầng 1 (kề trực tiếp với 1): thăm đỉnh 2 và đỉnh 3 theo thứ tự tăng dần.
 - Tầng 2: từ đỉnh 2 thăm tiếp đỉnh 4.
 Thứ tự ghé thăm là: 1 2 3 4.

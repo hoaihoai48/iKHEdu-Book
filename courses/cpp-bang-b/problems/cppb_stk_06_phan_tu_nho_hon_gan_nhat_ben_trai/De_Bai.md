@@ -26,6 +26,7 @@ Cho mảng $A$ gồm $N$ số nguyên. Với mỗi phần tử $A_i$, hãy tìm 
 
 ### Giải thích
 Với mảng $[4, 5, 2, 10, 8]$:
+
 - Số 4: Bên trái không có số nào $\to$ -1.
 - Số 5: Số đầu tiên bên trái nhỏ hơn 5 là 4.
 - Số 2: Bên trái không có số nào nhỏ hơn 2 $\to$ -1.

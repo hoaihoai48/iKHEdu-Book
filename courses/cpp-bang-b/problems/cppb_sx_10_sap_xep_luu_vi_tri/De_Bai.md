@@ -29,6 +29,7 @@ Cho một dãy gồm $N$ số nguyên $A_1, A_2, \dots, A_N$. Hãy sắp xếp c
 ```
 ### Giải thích
 Dãy ban đầu cùng vị trí gốc (1-indexed) là:
+
 - Vị trí 1: $40$
 - Vị trí 2: $10$
 - Vị trí 3: $20$
@@ -36,6 +37,7 @@ Dãy ban đầu cùng vị trí gốc (1-indexed) là:
 - Vị trí 5: $30$
 
 Sau khi sắp xếp theo giá trị tăng dần:
+
 - Giá trị $10$: có ở vị trí 2 và vị trí 4. Vì $2 < 4$ nên in `10 2` trước, sau đó in `10 4`.
 - Giá trị $20$: ở vị trí 3 $\implies$ in `20 3`.
 - Giá trị $30$: ở vị trí 5 $\implies$ in `30 5`.

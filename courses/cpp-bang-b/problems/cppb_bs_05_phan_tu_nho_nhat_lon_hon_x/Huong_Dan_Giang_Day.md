@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `5 3 -1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Với X = 4: phần tử nhỏ nhất > 4 là 5.
+
 - Với X = 2: phần tử nhỏ nhất > 2 là 3.
 - Với X = 8: không có phần tử nào > 8 -> in -1.
 

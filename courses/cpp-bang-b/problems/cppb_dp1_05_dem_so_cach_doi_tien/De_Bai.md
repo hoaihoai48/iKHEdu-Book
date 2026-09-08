@@ -26,6 +26,7 @@ Cho $N$ mệnh giá đồng xu và số tiền mục tiêu $S$. Hãy lập trìn
 
 ### Giải thích
 Với các mệnh giá xu $\{2, 3, 5\}$ và số tiền mục tiêu $S = 9$, có đúng 3 tổ hợp đồng xu khác nhau:
+
 1. Ba đồng xu: $2 + 2 + 5 = 9$.
 2. Ba đồng xu: $3 + 3 + 3 = 9$.
 3. Bốn đồng xu: $2 + 2 + 2 + 3 = 9$.

@@ -26,6 +26,7 @@ Cho mảng $A$ gồm $N$ số nguyên và kích thước cửa sổ $K$. Hãy l�
 
 ### Giải thích
 Với mảng $[1, 3, -1, -3, 5, 3, 6, 7]$ và cửa sổ $K = 3$:
+
 - Cửa sổ 1 [1, 3, -1] -> min = -1.
 - Cửa sổ 2 [3, -1, -3] -> min = -3.
 - Cửa sổ 3 [-1, -3, 5] -> min = -3.

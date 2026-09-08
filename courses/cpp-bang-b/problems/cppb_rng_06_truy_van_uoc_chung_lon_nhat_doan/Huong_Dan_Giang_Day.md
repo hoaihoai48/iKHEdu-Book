@@ -29,6 +29,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 2 4 6 8 10 2 1 3 1 2 12 2 1 3` $\impli
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2 2` |
 
 *Giải thích chi tiết:* Với mảng $[6, 12, 18, 24]$:
+
 - Truy vấn GCD đoạn từ 1 đến 3: $\gcd(6, 12, 18) = 6$.
 - Cập nhật vị trí 1 thành 4: mảng thành $[4, 12, 18, 24]$.
 - Truy vấn lại GCD đoạn từ 1 đến 3: $\gcd(4, 12, 18) = 2$.

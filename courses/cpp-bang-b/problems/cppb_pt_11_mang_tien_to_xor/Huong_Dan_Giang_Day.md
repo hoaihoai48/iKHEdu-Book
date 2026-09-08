@@ -20,6 +20,7 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 | 3 | Xuất kết quả | Output: `0 5 1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Mảng tiền tố XOR PrefXOR = [0, 1, 1^2=3, 3^3=0, 0^4=4, 4^5=1].
+
 - Đoạn [1, 3]: PrefXOR[3] ^ PrefXOR[0] = 0 ^ 0 = 0.
 - Đoạn [2, 4]: PrefXOR[4] ^ PrefXOR[1] = 4 ^ 1 = 5.
 - Đoạn [1, 5]: PrefXOR[5] ^ PrefXOR[0] = 1 ^ 0 = 1.

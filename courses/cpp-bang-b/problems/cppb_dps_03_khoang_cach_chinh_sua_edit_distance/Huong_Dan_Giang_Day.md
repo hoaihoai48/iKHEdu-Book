@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `horse ros` $\implies$ Đầu ra kỳ vọn
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3` |
 
 *Giải thích chi tiết:* Để biến đổi chuỗi $S = \text{"kitten"}$ thành $T = \text{"sitting"}$:
+
 1. Thay thế ký tự 'k' thành 's' $\to \text{"sitten"}$.
 2. Thay thế ký tự 'e' thành 'i' $\to \text{"sittin"}$.
 3. Chèn thêm ký tự 'g' vào cuối $\to \text{"sitting"}$.

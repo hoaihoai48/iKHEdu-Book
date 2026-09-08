@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `3 2 1 2 1 3` $\implies$ Đầu ra kỳ v�
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2 2 3 1 1 1 1` |
 
 *Giải thích chi tiết:* Với đồ thị 4 đỉnh và các cạnh (1, 2), (1, 3), (2, 4):
+
 - Đỉnh 1 kề với các đỉnh: 2, 3.
 - Đỉnh 2 kề với các đỉnh: 1, 4.
 - Đỉnh 3 kề với đỉnh: 1.

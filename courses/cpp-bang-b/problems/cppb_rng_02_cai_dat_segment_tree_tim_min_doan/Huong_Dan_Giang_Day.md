@@ -29,6 +29,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 5 2 4 1 3 2 1 3 1 4 10 2 3 5` $\implie
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2 3` |
 
 *Giải thích chi tiết:* Với mảng $[5, 2, 8, 1, 9]$:
+
 - Truy vấn tìm min đoạn từ 1 đến 3: $\min(5, 2, 8) = 2$.
 - Cập nhật vị trí 2 thành 10: mảng thành $[5, 10, 8, 1, 9]$.
 - Truy vấn lại min đoạn từ 1 đến 3: $\min(5, 10, 8) = 5$.

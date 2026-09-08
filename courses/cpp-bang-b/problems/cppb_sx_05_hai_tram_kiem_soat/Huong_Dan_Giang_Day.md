@@ -19,6 +19,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 Sắp xếp các trạm theo thứ tự tăng dần của tọa độ dọc tuyến đường:
 $300, 800, 1200, 1500, 2800, 3150$.
 Khoảng cách giữa các trạm liên tiếp:
+
 - $800 - 300 = 500$
 - $1200 - 800 = 400$
 - $1500 - 1200 = 300$

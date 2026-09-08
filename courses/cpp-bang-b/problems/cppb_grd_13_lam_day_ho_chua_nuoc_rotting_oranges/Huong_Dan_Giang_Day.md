@@ -26,6 +26,7 @@ Mẫu thử (Sample 1): Đầu vào: `3 3 211 110 011` $\implies$ Đầu ra kỳ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `4` |
 
 *Giải thích chi tiết:* Với thùng cam kích thước $3  × 3$:
+
 - Phút 1: cam hỏng tại $(0, 0)$ lây sang các ô $(0, 1)$ và $(1, 0)$.
 - Phút 2: tiếp tục lây sang các ô kế tiếp.
 Sau đúng 4 phút, toàn bộ cam tươi đều đã bị lây hỏng. Kết quả là 4.

@@ -1,92 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" />
       <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
-    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F0F9FF" />
-      <stop offset="100%" stop-color="#E0F2FE" />
-    </linearGradient>
-    <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#EFF6FF" />
-      <stop offset="100%" stop-color="#DBEAFE" />
-    </linearGradient>
-    <linearGradient id="greenCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ECFDF5" />
-      <stop offset="100%" stop-color="#D1FAE5" />
-    </linearGradient>
-    <linearGradient id="purpleCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF5FF" />
-      <stop offset="100%" stop-color="#F3E8FF" />
-    </linearGradient>
-    <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFBEB" />
-      <stop offset="100%" stop-color="#FEF3C7" />
-    </linearGradient>
-    <linearGradient id="redCard" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FEF2F2" />
-      <stop offset="100%" stop-color="#FEE2E2" />
-    </linearGradient>
-
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#06b6d4" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#10b981" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowAmber" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.4" />
-    </filter>
-    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#a855f7" flood-opacity="0.4" />
-    </filter>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#64748B" flood-opacity="0.12" />
     </filter>
-
-    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8" /></marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#059669" /></marker>
-    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#fbbf24" /></marker>
-    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8 Z" fill="#c084fc" /></marker>
   </defs>
-
-  <rect width="1000" height="350" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16" />
-  
-
-  
+  <rect width="1000" height="500" fill="url(#bgGrad)" stroke="#CBD5E1" stroke-width="2" rx="16" />
   <text x="500" y="40" fill="#0F172A" font-family="system-ui, sans-serif" font-size="21" font-weight="bold" text-anchor="middle">BẢNG PHƯƠNG ÁN LCS &amp; ĐƯỜNG TRUY VẾT XÂU TỐI ƯU</text>
   <text x="500" y="65" fill="#475569" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Xâu A = "AGGTAB", Xâu B = "GXTXAYB" ➔ LCS = "GTAB" (Độ dài = 4)</text>
-
-  <!-- Mini Grid Visualization -->
-  <g transform="translate(180, 100)">
-    <!-- Headers -->
-    <rect x="0" y="0" width="640" height="35" rx="6" fill="#F8FAFC" />
-    <text x="40" y="23" fill="#94a3b8" font-family="monospace" font-size="14" text-anchor="middle">i \ j</text>
-    <text x="110" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">eps</text>
-    <text x="180" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">G</text>
-    <text x="250" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">X</text>
-    <text x="320" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">T</text>
-    <text x="390" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">X</text>
-    <text x="460" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">A</text>
-    <text x="530" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">Y</text>
-    <text x="600" y="23" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">B</text>
-
-    <!-- Highlighted Cell (A[i] == B[j]) Diagonal -->
-    <g transform="translate(560, 45)" filter="url(#glowGreen)">
-      <rect width="70" height="40" rx="6" fill="url(#greenCard)" stroke="#10b981" stroke-width="2" />
-      <text x="35" y="26" fill="#065F46" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">4</text>
-      <text x="35" y="-6" fill="#059669" font-family="system-ui" font-size="10" font-weight="bold" text-anchor="middle">B == B</text>
-    </g>
-  </g>
-
-  <!-- Traceback explanation card -->
-  <g transform="translate(100, 205)" filter="url(#cardShadow)">
-    <rect width="800" height="120" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" />
+  <rect x="252" y="92" width="496" height="30" rx="6" fill="#F8FAFC" /><text x="283" y="113" fill="#94a3b8" font-family="monospace" font-size="14" text-anchor="middle">i \ j</text><text x="345" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">G</text><text x="407" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">X</text><text x="469" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">T</text><text x="531" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">X</text><text x="593" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">A</text><text x="655" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">Y</text><text x="717" y="113" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">B</text><rect x="254" y="124" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="143" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">eps</text><rect x="316" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="345" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="378" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="407" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="440" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="469" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="502" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="531" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="564" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="593" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="626" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="655" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="688" y="124" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="717" y="143" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="254" y="154" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="173" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">A</text><rect x="316" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="345" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="378" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="407" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="440" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="469" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="502" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="531" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">0</text><rect x="564" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="593" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="626" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="655" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="688" y="154" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="717" y="173" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="254" y="184" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="203" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">G</text><rect x="316" y="184" width="58" height="26" rx="4" fill="#D1FAE5" stroke="#10b981" /><text x="345" y="203" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="378" y="184" width="58" height="26" rx="4" fill="#ECFDF5" stroke="#6EE7B7" /><text x="407" y="203" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="440" y="184" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="469" y="203" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="502" y="184" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="531" y="203" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="564" y="184" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="593" y="203" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="626" y="184" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="655" y="203" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="688" y="184" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="717" y="203" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="254" y="214" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="233" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">G</text><rect x="316" y="214" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="345" y="233" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="378" y="214" width="58" height="26" rx="4" fill="#ECFDF5" stroke="#6EE7B7" /><text x="407" y="233" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="440" y="214" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="469" y="233" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="502" y="214" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="531" y="233" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="564" y="214" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="593" y="233" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="626" y="214" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="655" y="233" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="688" y="214" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="717" y="233" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="254" y="244" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="263" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">T</text><rect x="316" y="244" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="345" y="263" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="378" y="244" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="407" y="263" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="440" y="244" width="58" height="26" rx="4" fill="#D1FAE5" stroke="#10b981" /><text x="469" y="263" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="502" y="244" width="58" height="26" rx="4" fill="#ECFDF5" stroke="#6EE7B7" /><text x="531" y="263" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="564" y="244" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="593" y="263" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="626" y="244" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="655" y="263" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="688" y="244" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="717" y="263" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="254" y="274" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="293" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">A</text><rect x="316" y="274" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="345" y="293" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="378" y="274" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="407" y="293" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="440" y="274" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="469" y="293" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="502" y="274" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="531" y="293" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="564" y="274" width="58" height="26" rx="4" fill="#D1FAE5" stroke="#10b981" /><text x="593" y="293" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">3</text><rect x="626" y="274" width="58" height="26" rx="4" fill="#ECFDF5" stroke="#6EE7B7" /><text x="655" y="293" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">3</text><rect x="688" y="274" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="717" y="293" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">3</text><rect x="254" y="304" width="58" height="26" rx="4" fill="#F1F5F9" /><text x="283" y="323" fill="#475569" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">B</text><rect x="316" y="304" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="345" y="323" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="378" y="304" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="407" y="323" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">1</text><rect x="440" y="304" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="469" y="323" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="502" y="304" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="531" y="323" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">2</text><rect x="564" y="304" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="593" y="323" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">3</text><rect x="626" y="304" width="58" height="26" rx="4" fill="#FFFFFF" stroke="#E2E8F0" /><text x="655" y="323" fill="#0F172A" font-family="monospace" font-size="14" text-anchor="middle">3</text><rect x="688" y="304" width="58" height="26" rx="4" fill="#D1FAE5" stroke="#10b981" /><text x="717" y="323" fill="#065F46" font-family="monospace" font-size="14" text-anchor="middle">4</text>
+  <g transform="translate(100, 350)" filter="url(#cardShadow)">
+    <rect width="800" height="125" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" />
     <text x="30" y="30" fill="#0369A1" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">QUY TẮC TRUY VẾT (TRACEBACK) TRÊN BẢNG LCS:</text>
     <text x="30" y="55" fill="#334155" font-family="system-ui, sans-serif" font-size="12.5">• Nếu A[i] == B[j]: Ký tự này thuộc LCS ➔ Ghi nhận ký tự và đi chéo lùi về (i-1, j-1).</text>
     <text x="30" y="80" fill="#334155" font-family="system-ui, sans-serif" font-size="12.5">• Nếu A[i] != B[j]: Đi theo hướng có giá trị lớn hơn: lên trên (i-1, j) hoặc sang trái (i, j-1).</text>
-    <text x="30" y="105" fill="#059669" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold">➔ Kết quả sau khi đảo ngược chuỗi thu được: "GTAB"</text>
+    <text x="30" y="105" fill="#059669" font-family="system-ui, sans-serif" font-size="12.5" font-weight="bold">➔ Ô xanh lá là đường truy vết "GTAB", ô đậm là ký tự khớp (B, A, T, G).</text>
   </g>
-
 </svg>

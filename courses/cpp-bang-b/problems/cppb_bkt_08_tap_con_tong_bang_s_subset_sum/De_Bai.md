@@ -28,6 +28,7 @@ Cho mảng số nguyên dương $A$ gồm $N$ phần tử và số nguyên dươ
 ```
 ### Giải thích
 Với kho vàng gồm các thỏi $[1, 2, 3, 5]$ và mục tiêu $S = 6$, có 2 phương án chọn:
+
 - Phương án 1: Chọn các thỏi $\{1, 2, 3\}$ vì $1 + 2 + 3 = 6$.
 - Phương án 2: Chọn các thỏi $\{1, 5\}$ vì $1 + 5 = 6$.
 

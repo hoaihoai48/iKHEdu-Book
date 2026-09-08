@@ -17,6 +17,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 *Giải thích chi tiết từ mẫu:* Danh sách các phiếu bầu là: $3, 5, 2, 3, 5, 3, 2$.
 Thống kê tần suất xuất hiện của từng giá trị:
+
 - Mã số $2$: xuất hiện 2 lần.
 - Mã số $3$: xuất hiện 3 lần.
 - Mã số $5$: xuất hiện 2 lần.

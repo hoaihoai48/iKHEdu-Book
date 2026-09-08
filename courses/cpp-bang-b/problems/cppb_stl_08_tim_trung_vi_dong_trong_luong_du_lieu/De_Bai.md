@@ -26,6 +26,7 @@ Cho một luồng dữ liệu gồm $N$ số nguyên đến lần lượt từng
 
 ### Giải thích
 Với luồng dữ liệu đến lần lượt: 5, 15, 1, 3:
+
 - Nhận 5: dãy [5] $\to$ trung vị là 5.
 - Nhận 15: dãy [5, 15] $\to$ trung vị là 5 (hoặc trung bình lấy nguyên).
 - Nhận 1: dãy [1, 5, 15] $\to$ trung vị là 5.

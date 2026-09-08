@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 3 1 1 1 2 2 3 3 4` $\implies$ Đầu ra 
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3` |
 
 *Giải thích chi tiết:* Với 5 máy tính nối thành đường thẳng 1 - 2 - 3 - 4 - 5 và máy 3 bị nhiễm ban đầu:
+
 - Giây 1: máy 3 lây sang máy 2 và 4.
 - Giây 2: máy 2 lây sang 1, máy 4 lây sang 5.
 Sau đúng 2 giây toàn bộ mạng lưới đều bị lây nhiễm, kết quả là 2.

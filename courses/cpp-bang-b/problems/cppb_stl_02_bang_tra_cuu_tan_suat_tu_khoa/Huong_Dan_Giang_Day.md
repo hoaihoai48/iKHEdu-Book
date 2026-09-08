@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 apple banana apple orange` $\implies$ Đ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `apple 2 banana 1 orange 1` |
 
 *Giải thích chi tiết:* Với danh sách 4 từ khóa: ["apple", "banana", "apple", "cherry"]:
+
 - Từ khóa "apple" xuất hiện 2 lần.
 - Từ khóa "banana" xuất hiện 1 lần.
 - Từ khóa "cherry" xuất hiện 1 lần.

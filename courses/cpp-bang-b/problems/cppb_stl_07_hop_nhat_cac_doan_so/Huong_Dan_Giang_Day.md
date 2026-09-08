@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 1 3 2 6 8 10 15 18` $\implies$ Đầu ra
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3 1 6 8 10 15 18` |
 
 *Giải thích chi tiết:* Với các khoảng thời gian $[1, 3], [2, 6], [8, 10], [15, 18]$:
+
 - Khoảng $[1, 3]$ và $[2, 6]$ giao nhau vì $2 \le 3$, hợp nhất thành khoảng $[1, 6]$.
 - Các khoảng $[8, 10]$ và $[15, 18]$ độc lập không giao nhau.
 Kết quả thu được 3 khoảng: $[1, 6], [8, 10], [15, 18]$.

@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `2 4 5 5 -1 -1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Số 2 xuất hiện từ vị trí 2 đến vị trí 4 -> in `2 4`.
+
 - Số 3 chỉ xuất hiện tại vị trí 5 -> in `5 5`.
 - Số 6 không có trong mảng -> in `-1 -1`.
 

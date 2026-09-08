@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `15` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Khi đặt độ cao cắt H = 15:
+
 - Cây 20m cắt được: 20 - 15 = 5m.
 - Cây 15m cắt được: 15 - 15 = 0m.
 - Cây 10m không bị cắt: 0m.

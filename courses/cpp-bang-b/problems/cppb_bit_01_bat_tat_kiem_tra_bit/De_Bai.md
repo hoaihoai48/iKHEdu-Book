@@ -30,6 +30,7 @@ Cho số nguyên không âm N và Q thao tác: loại 1 (bật bit thứ k), lo�
 ```
 ### Giải thích
 N = 5 có biểu diễn nhị phân là 101_2:
+
 - Thao tác 3 0: Bit thứ 0 có giá trị 1 -> in 1.
 - Thao tác 3 1: Bit thứ 1 có giá trị 0 -> in 0.
 - Thao tác 1 1: Bật bit thứ 1 lên 1 -> N trở thành 111_2 = 7.

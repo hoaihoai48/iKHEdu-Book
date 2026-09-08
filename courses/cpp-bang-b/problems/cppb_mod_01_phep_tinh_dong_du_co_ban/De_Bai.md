@@ -23,6 +23,7 @@ Cho 2 số nguyên A, B và số nguyên dương M = 10^9 + 7. Hãy tính (A + B
 ```
 ### Giải thích
 Với M = 10^9 + 7:
+
 - Tổng: (10 + 15) mod M = 25.
 - Hiệu: (10 - 15) mod M = -5 mod M = 10^9 + 7 - 5 = 1000000002.
 - Tích: (10 * 15) mod M = 150.

@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 1 2 2 3 4 5` $\implies$ Đầu ra kỳ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3` |
 
 *Giải thích chi tiết:* Với 5 đỉnh và các cạnh (1, 2), (2, 3), (4, 5):
+
 - Cụm 1 gồm {1, 2, 3} có 3 hòn đảo.
 - Cụm 2 gồm {4, 5} có 2 hòn đảo.
 Kích thước của thành phần liên thông lớn nhất là 3.

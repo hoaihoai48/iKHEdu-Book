@@ -30,6 +30,7 @@ Cho bản đồ thành phố và danh sách vị trí các trạm cứu hỏa. H
 
 ### Giải thích
 Với 4 khu dân cư nối liên tiếp 1 - 2 - 3 - 4 và trạm cứu hỏa đặt tại khu 2:
+
 - Khu 1: cách trạm cứu hỏa 1 bước.
 - Khu 2: có sẵn trạm cứu hỏa $\to$ khoảng cách 0.
 - Khu 3: cách trạm cứu hỏa 1 bước.

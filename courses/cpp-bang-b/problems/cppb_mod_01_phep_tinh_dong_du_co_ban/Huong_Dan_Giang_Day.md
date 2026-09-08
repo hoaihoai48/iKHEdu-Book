@@ -20,6 +20,7 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 | 3 | Xuất kết quả | Output: `25 1000000002 150` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Với M = 10^9 + 7:
+
 - Tổng: (10 + 15) mod M = 25.
 - Hiệu: (10 - 15) mod M = -5 mod M = 10^9 + 7 - 5 = 1000000002.
 - Tích: (10 * 15) mod M = 150.

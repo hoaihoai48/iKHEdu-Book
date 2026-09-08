@@ -20,6 +20,7 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 | 3 | Xuất kết quả | Output: `4 4 2` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Đoạn [1, 10]: có 4 số nguyên tố {2, 3, 5, 7}.
+
 - Đoạn [10, 20]: có 4 số nguyên tố {11, 13, 17, 19}.
 - Đoạn [20, 30]: có 2 số nguyên tố {23, 29}.
 

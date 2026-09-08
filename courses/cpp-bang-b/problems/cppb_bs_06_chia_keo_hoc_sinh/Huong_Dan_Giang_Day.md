@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `5` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Nếu mỗi em nhận X = 5 chiếc kẹo:
+
 - Thùng 1 (15 kẹo) chia được 15/5 = 3 em.
 - Thùng 2 (8 kẹo) chia được 8/5 = 1 em.
 - Thùng 3 (10 kẹo) chia được 10/5 = 2 em.

@@ -31,6 +31,7 @@ Cho danh sách $Q$ thao tác của hệ thống. Bạn hãy lập trình mô ph�
 
 ### Giải thích
 Diễn biến 4 thao tác của hệ thống thi đấu:
+
 1. Thao tác 1 (`1 Alice 100`): Alice được cộng 100 điểm. Điểm hiện tại của Alice là 100.
 2. Thao tác 2 (`1 Bob 150`): Bob được cộng 150 điểm. Điểm hiện tại của Bob là 150.
 3. Thao tác 3 (`2 Alice`): Truy vấn điểm của Alice. Hệ thống in ra điểm hiện tại là 100.

@@ -24,6 +24,7 @@ Cho kích thước ma trận $N, M$ và tọa độ $(r, c)$. Hãy lập trình 
 
 ### Giải thích
 Với lưới kích thước $3  × 3$ và vị trí ô góc $(0, 0)$:
+
 - Hướng lên trên và sang trái đều vượt ra ngoài biên của lưới.
 - Chỉ có 2 hướng hợp lệ là xuống dưới $(1, 0)$ và sang phải $(0, 1)$.
 Số ô kề cạnh hợp lệ là 2.

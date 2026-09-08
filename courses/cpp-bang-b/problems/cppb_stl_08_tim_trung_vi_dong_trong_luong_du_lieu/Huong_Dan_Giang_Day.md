@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 5 15 1 3` $\implies$ Đầu ra kỳ vọ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `5 5 5 3` |
 
 *Giải thích chi tiết:* Với luồng dữ liệu đến lần lượt: 5, 15, 1, 3:
+
 - Nhận 5: dãy [5] $\to$ trung vị là 5.
 - Nhận 15: dãy [5, 15] $\to$ trung vị là 5 (hoặc trung bình lấy nguyên).
 - Nhận 1: dãy [1, 5, 15] $\to$ trung vị là 5.

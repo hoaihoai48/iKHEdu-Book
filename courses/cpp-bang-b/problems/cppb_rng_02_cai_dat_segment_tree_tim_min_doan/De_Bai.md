@@ -31,6 +31,7 @@ Cho mảng $A$ gồm $N$ số nguyên và $Q$ truy vấn thuộc hai dạng: `1 
 
 ### Giải thích
 Với mảng $[5, 2, 8, 1, 9]$:
+
 - Truy vấn tìm min đoạn từ 1 đến 3: $\min(5, 2, 8) = 2$.
 - Cập nhật vị trí 2 thành 10: mảng thành $[5, 10, 8, 1, 9]$.
 - Truy vấn lại min đoạn từ 1 đến 3: $\min(5, 10, 8) = 5$.

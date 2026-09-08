@@ -27,6 +27,7 @@ Cho mảng N số nguyên ban đầu toàn số 0. Thực hiện Q thao tác c�
 ```
 ### Giải thích
 Sử dụng mảng hiệu D kích thước N + 2:
+
 - Cộng 2 vào [1, 3]: D[1] += 2, D[4] -= 2.
 - Cộng 3 vào [2, 5]: D[2] += 3, D[6] -= 3.
 - Cộng -1 vào [3, 4]: D[3] -= 1, D[5] += 1.

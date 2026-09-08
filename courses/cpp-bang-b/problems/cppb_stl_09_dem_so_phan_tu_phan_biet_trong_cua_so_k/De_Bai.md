@@ -26,6 +26,7 @@ Cho mảng $A$ gồm $N$ số nguyên và kích thước cửa sổ $K$. Hãy l�
 
 ### Giải thích
 Với mảng gồm 7 phần tử $[1, 2, 1, 3, 4, 2, 3]$ và kích thước cửa sổ $K = 4$:
+
 - Cửa sổ 1 [1, 2, 1, 3]: gồm các giá trị phân biệt {1, 2, 3} $\to$ 3 phần tử.
 - Cửa sổ 2 [2, 1, 3, 4]: gồm {1, 2, 3, 4} $\to$ 4 phần tử.
 - Cửa sổ 3 [1, 3, 4, 2]: gồm {1, 2, 3, 4} $\to$ 4 phần tử.

@@ -20,6 +20,7 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 | 3 | Xuất kết quả | Output: `1 2 3 1 5` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Với kho vàng gồm các thỏi $[1, 2, 3, 5]$ và mục tiêu $S = 6$, có 2 phương án chọn:
+
 - Phương án 1: Chọn các thỏi $\{1, 2, 3\}$ vì $1 + 2 + 3 = 6$.
 - Phương án 2: Chọn các thỏi $\{1, 5\}$ vì $1 + 5 = 6$.
 

@@ -26,6 +26,7 @@ Cho số lượng phiến đá $N$ và độ cao của từng phiến đá. Hãy
 
 ### Giải thích
 Với 4 phiến đá có độ cao lần lượt là $[10, 30, 40, 20]$:
+
 - Bước 1: Từ phiến đá 1 ($H_1 = 10$) nhảy sang phiến đá 2 ($H_2 = 30$), chi phí tiêu hao là $|10 - 30| = 20$.
 - Bước 2: Từ phiến đá 2 ($H_2 = 30$) nhảy vượt sang phiến đá 4 ($H_4 = 20$), chi phí tiêu hao là $|30 - 20| = 10$.
 Tổng chi phí tiêu hao cho toàn bộ hành trình là $20 + 10 = 30$, đây là phương án tốn ít năng lượng nhất.

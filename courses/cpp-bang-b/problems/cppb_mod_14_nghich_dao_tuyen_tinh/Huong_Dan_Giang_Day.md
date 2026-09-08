@@ -20,6 +20,7 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 | 3 | Xuất kết quả | Output: `1 500000004 333333336` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - inv(1) = 1.
+
 - inv(2) = 500000004 (vì 2 * 500000004 = 1 mod M).
 - inv(3) = 333333336 (vì 3 * 333333336 = 1000000008 = 1 mod M).
 

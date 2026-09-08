@@ -25,6 +25,7 @@ Cho chiều cao N cây gỗ và lượng gỗ tối thiểu cần lấy M. Hãy 
 ```
 ### Giải thích
 Khi đặt độ cao cắt H = 15:
+
 - Cây 20m cắt được: 20 - 15 = 5m.
 - Cây 15m cắt được: 15 - 15 = 0m.
 - Cây 10m không bị cắt: 0m.

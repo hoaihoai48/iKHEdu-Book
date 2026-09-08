@@ -5,6 +5,7 @@ Vòng bảng giải bóng đá thanh thiếu niên quy tụ $N$ đội tuyển t
 
 ## Nhiệm vụ
 Cho thông số thi đấu của $N$ đội bóng. Hãy xếp hạng các đội theo thứ tự ưu tiên sau:
+
 1. Điểm số tích lũy ($Points$) giảm dần.
 2. Nếu bằng điểm số, đội có Hiệu số bàn thắng bại ($GoalDiff$) lớn hơn sẽ đứng trước.
 3. Nếu vẫn bằng cả điểm số và hiệu số, đội ghi được Tổng số bàn thắng ($Goals$) nhiều hơn sẽ đứng trước.
@@ -31,6 +32,7 @@ Cho thông số thi đấu của $N$ đội bóng. Hãy xếp hạng các đội
 ```
 ### Giải thích
 Xét thông số của 3 đội bóng:
+
 - Đội 3: có $12$ điểm (cao nhất) $\implies$ xếp vị trí số 1.
 - Đội 1 và Đội 2: đều có $10$ điểm và cùng có hiệu số bàn thắng bại là $5$.
   - Xét chỉ số phụ số bàn thắng ghi được: Đội 2 ghi được $15$ bàn, trong khi Đội 1 chỉ ghi được $12$ bàn ($15 > 12$).

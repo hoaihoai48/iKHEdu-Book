@@ -26,6 +26,7 @@ ros
 
 ### Giải thích
 Để biến đổi chuỗi $S = \text{"kitten"}$ thành $T = \text{"sitting"}$:
+
 1. Thay thế ký tự 'k' thành 's' $\to \text{"sitten"}$.
 2. Thay thế ký tự 'e' thành 'i' $\to \text{"sittin"}$.
 3. Chèn thêm ký tự 'g' vào cuối $\to \text{"sitting"}$.

@@ -26,6 +26,7 @@ Cho số lượng phiến đá $N$, tầm nhảy tối đa $K$ và danh sách đ
 
 ### Giải thích
 Với $N = 5, K = 3$ và độ cao các phiến đá là $[10, 30, 40, 50, 20]$:
+
 - Từ đá 1 ($H_1 = 10$), chú ếch nhảy sang đá 2 ($H_2 = 30$) với khoảng cách 1 bước hợp lệ ($\le 3$), chi phí là $|10 - 30| = 20$.
 - Từ đá 2 ($H_2 = 30$), chú ếch nhảy thẳng tới đích là đá 5 ($H_5 = 20$) với khoảng cách $5 - 2 = 3$ bước (vẫn $\le K = 3$), chi phí là $|30 - 20| = 10$.
 Tổng chi phí tối thiểu đạt được là $20 + 10 = 30$.

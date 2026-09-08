@@ -20,6 +20,7 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 | 3 | Xuất kết quả | Output: `12 28` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Vùng từ (1, 1) đến (2, 2) gồm các ô {1, 2, 4, 5} có tổng: 1 + 2 + 4 + 5 = 12.
+
 - Vùng từ (2, 2) đến (3, 3) gồm các ô {5, 6, 8, 9} có tổng: 5 + 6 + 8 + 9 = 28.
 
 ---

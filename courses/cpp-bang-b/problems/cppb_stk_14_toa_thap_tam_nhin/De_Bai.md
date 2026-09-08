@@ -26,6 +26,7 @@ Cho danh sách chiều cao của $N$ tòa tháp. Hãy lập trình tính tầm n
 
 ### Giải thích
 Với chiều cao các tháp $[100, 80, 60, 70, 60, 75, 85]$:
+
 - Tháp 1 (100): tầm nhìn 1 (chính nó).
 - Tháp 2 (80): tầm nhìn 1.
 - Tháp 3 (60): tầm nhìn 1.

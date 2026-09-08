@@ -25,6 +25,7 @@ Cho trọng lượng N kiện hàng và số ngày D. Tìm tải trọng nhỏ n
 ```
 ### Giải thích
 Với tải trọng 15:
+
 - Ngày 1: chở [1, 2, 3, 4, 5] (tổng 15)
 - Ngày 2: chở [6, 7] (tổng 13)
 - Ngày 3: chở [8] (tổng 8)

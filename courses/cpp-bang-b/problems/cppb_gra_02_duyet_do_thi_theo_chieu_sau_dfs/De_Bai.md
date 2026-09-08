@@ -28,6 +28,7 @@ Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và đỉnh xuất phát $S$
 
 ### Giải thích
 Với đồ thị 4 đỉnh gồm các cạnh (1, 2), (1, 3), (2, 4) xuất phát từ đỉnh 1:
+
 - Từ đỉnh 1 thăm đỉnh 2 (nhỏ hơn 3).
 - Từ đỉnh 2 tiếp tục thăm đỉnh 4.
 - Đỉnh 4 không còn đường mới, quay lui về 2, rồi về 1, từ 1 thăm tiếp đỉnh 3.

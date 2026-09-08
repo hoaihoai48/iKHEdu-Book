@@ -31,6 +31,7 @@ Cho mảng $A$ và $Q$ truy vấn thuộc hai loại: `1 pos val` (cộng $val$ 
 
 ### Giải thích
 Với mảng ban đầu gồm 5 phần tử $[1, 2, 3, 4, 5]$:
+
 - Truy vấn tính tổng đoạn từ 1 đến 3: $1 + 2 + 3 = 6$.
 - Cập nhật cộng thêm 10 vào phần tử tại vị trí 3: mảng trở thành $[1, 2, 13, 4, 5]$.
 - Truy vấn lại tổng đoạn từ 1 đến 3: $1 + 2 + 13 = 16$.

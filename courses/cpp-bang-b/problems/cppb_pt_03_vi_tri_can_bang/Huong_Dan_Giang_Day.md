@@ -20,6 +20,7 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 | 3 | Xuất kết quả | Output: `4` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Tại vị trí i = 4 (giá trị 2):
+
 - Tổng bên trái (vị trí 1 đến 3): (-7) + 1 + 5 = -1.
 - Tổng bên phải (vị trí 5 đến 7): (-4) + 3 + 0 = -1.
 Hai tổng bằng nhau (-1 = -1) nên vị trí cân bằng là 4.

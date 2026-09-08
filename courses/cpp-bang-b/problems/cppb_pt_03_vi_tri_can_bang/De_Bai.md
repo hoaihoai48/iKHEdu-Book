@@ -25,6 +25,7 @@ Cho mảng N số nguyên. Hãy tìm chỉ số i nhỏ nhất (1-indexed) sao c
 ```
 ### Giải thích
 Tại vị trí i = 4 (giá trị 2):
+
 - Tổng bên trái (vị trí 1 đến 3): (-7) + 1 + 5 = -1.
 - Tổng bên phải (vị trí 5 đến 7): (-4) + 3 + 0 = -1.
 Hai tổng bằng nhau (-1 = -1) nên vị trí cân bằng là 4.

@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `4 -1 1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Mảng bị xoay vòng [4, 5, 6, 7, 0, 1, 2]:
+
 - Số 0 ở vị trí chỉ số 4.
 - Số 3 không tồn tại -> -1.
 - Số 5 ở vị trí chỉ số 1.

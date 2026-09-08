@@ -30,6 +30,7 @@ Cho đồ thị mạng và danh sách $K$ máy tính bị nhiễm ban đầu. H�
 
 ### Giải thích
 Với 5 máy tính nối thành đường thẳng 1 - 2 - 3 - 4 - 5 và máy 3 bị nhiễm ban đầu:
+
 - Giây 1: máy 3 lây sang máy 2 và 4.
 - Giây 2: máy 2 lây sang 1, máy 4 lây sang 5.
 Sau đúng 2 giây toàn bộ mạng lưới đều bị lây nhiễm, kết quả là 2.

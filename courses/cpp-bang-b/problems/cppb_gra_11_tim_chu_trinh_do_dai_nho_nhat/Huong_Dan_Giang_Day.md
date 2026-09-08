@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 6 1 2 2 3 3 1 3 4 4 5 5 3` $\implies$ Đ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3` |
 
 *Giải thích chi tiết:* Với đồ thị gồm 4 đỉnh có các cạnh (1, 2), (2, 3), (3, 4), (4, 1) và đường chéo (1, 3):
+
 - Chu trình tạo bởi 1-2-3-1 có độ dài 3.
 - Chu trình tạo bởi 1-3-4-1 có độ dài 3.
 - Chu trình ngoài 1-2-3-4-1 có độ dài 4.

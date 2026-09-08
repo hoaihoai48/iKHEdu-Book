@@ -20,6 +20,7 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 | 3 | Xuất kết quả | Output: `20 24` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - A(5, 2) = 5 * 4 = 20.
+
 - A(4, 3) = 4 * 3 * 2 = 24.
 
 ---

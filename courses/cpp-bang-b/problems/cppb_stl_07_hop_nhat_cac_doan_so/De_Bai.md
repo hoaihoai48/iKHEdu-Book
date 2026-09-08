@@ -33,6 +33,7 @@ Cho danh sách $N$ khoảng thời gian $[L_i, R_i]$. Hãy lập trình hợp nh
 
 ### Giải thích
 Với các khoảng thời gian $[1, 3], [2, 6], [8, 10], [15, 18]$:
+
 - Khoảng $[1, 3]$ và $[2, 6]$ giao nhau vì $2 \le 3$, hợp nhất thành khoảng $[1, 6]$.
 - Các khoảng $[8, 10]$ và $[15, 18]$ độc lập không giao nhau.
 Kết quả thu được 3 khoảng: $[1, 6], [8, 10], [15, 18]$.

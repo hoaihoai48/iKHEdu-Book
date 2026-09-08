@@ -5,6 +5,7 @@ Trong đồ họa máy tính và xử lý bản đồ số, một hệ thống c
 
 ## Nhiệm vụ
 Cho danh sách $N$ đoạn thẳng $[L_i, R_i]$ trên trục số. Hãy sắp xếp các đoạn thẳng theo các tiêu chí sau:
+
 1. Tọa độ đầu mút bắt đầu $L_i$ tăng dần.
 2. Nếu cùng tọa độ $L_i$, tọa độ mút kết thúc $R_i$ giảm dần.
 3. Nếu trùng cả $L_i$ và $R_i$, giữ nguyên thứ tự ban đầu xuất hiện trong dữ liệu vào.
@@ -32,6 +33,7 @@ Cho danh sách $N$ đoạn thẳng $[L_i, R_i]$ trên trục số. Hãy sắp x�
 ```
 ### Giải thích
 Danh sách 3 đoạn thẳng ban đầu là: $[2, 8]$, $[1, 5]$, $[2, 10]$.
+
 - Xét điểm đầu mút $L$: đoạn $[1, 5]$ có $L = 1$ nhỏ nhất nên đứng đầu tiên.
 - Hai đoạn còn lại là $[2, 8]$ và $[2, 10]$ đều có cùng $L = 2$:
   - Xét điểm kết thúc $R$ giảm dần: đoạn $[2, 10]$ có $R = 10 > 8$ nên đoạn $[2, 10]$ phải đứng trước đoạn $[2, 8]$.

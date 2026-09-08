@@ -20,6 +20,7 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 | 3 | Xuất kết quả | Output: `15` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Với tải trọng 15:
+
 - Ngày 1: chở [1, 2, 3, 4, 5] (tổng 15)
 - Ngày 2: chở [6, 7] (tổng 13)
 - Ngày 3: chở [8] (tổng 8)

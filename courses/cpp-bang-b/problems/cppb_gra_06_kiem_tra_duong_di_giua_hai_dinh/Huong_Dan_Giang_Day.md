@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 2 1 4 1 2 2 3` $\implies$ Đầu ra kỳ
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `NO` |
 
 *Giải thích chi tiết:* Với đồ thị có các cạnh (1, 2), (2, 3) và đỉnh 4 cô lập:
+
 - Kiểm tra giữa 1 và 3: Tồn tại đường đi $1  × o 2  × o 3$, in ra YES.
 - Nếu kiểm tra giữa 1 và 4: Không có đường đi, in ra NO.
 

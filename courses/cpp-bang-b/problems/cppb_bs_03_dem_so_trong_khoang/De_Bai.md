@@ -31,6 +31,7 @@ Cho mảng gồm N số nguyên. Với mỗi câu hỏi gồm khoảng [L, R] (L
 ```
 ### Giải thích
 Sắp xếp mảng: [1, 2, 3, 5, 8].
+
 - Đoạn [2, 5]: có 3 phần tử {2, 3, 5} -> in 3.
 - Đoạn [1, 1]: có 1 phần tử {1} -> in 1.
 - Đoạn [6, 7]: không có phần tử nào -> in 0.

@@ -26,6 +26,7 @@ Cho danh sách $N$ số nguyên đại diện cho các mã phiếu bầu. Hãy t
 ### Giải thích
 Danh sách các phiếu bầu là: $3, 5, 2, 3, 5, 3, 2$.
 Thống kê tần suất xuất hiện của từng giá trị:
+
 - Mã số $2$: xuất hiện 2 lần.
 - Mã số $3$: xuất hiện 3 lần.
 - Mã số $5$: xuất hiện 2 lần.

@@ -16,6 +16,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 | 3 | Xuất kết quả | Output: `10 2 10 4 20 3 30 5 40 1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Dãy ban đầu cùng vị trí gốc (1-indexed) là:
+
 - Vị trí 1: $40$
 - Vị trí 2: $10$
 - Vị trí 3: $20$
@@ -23,6 +24,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 - Vị trí 5: $30$
 
 Sau khi sắp xếp theo giá trị tăng dần:
+
 - Giá trị $10$: có ở vị trí 2 và vị trí 4. Vì $2 < 4$ nên in `10 2` trước, sau đó in `10 4`.
 - Giá trị $20$: ở vị trí 3 $\implies$ in `20 3`.
 - Giá trị $30$: ở vị trí 5 $\implies$ in `30 5`.

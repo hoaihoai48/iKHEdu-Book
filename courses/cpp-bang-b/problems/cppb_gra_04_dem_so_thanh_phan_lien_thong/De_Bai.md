@@ -28,6 +28,7 @@ Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình đếm s�
 
 ### Giải thích
 Với 5 đỉnh và các cạnh (1, 2), (3, 4):
+
 - Cụm 1 gồm các đỉnh {1, 2}.
 - Cụm 2 gồm các đỉnh {3, 4}.
 - Cụm 3 gồm đỉnh cô lập {5}.

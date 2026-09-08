@@ -30,6 +30,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 2 4 1 3 5` $\implies$ Đầu ra kỳ v�
 
 *Giải thích chi tiết:* Với mảng gồm 5 phần tử $[2, 4, 1, 3, 5]$:
 Các cặp nghịch thế gồm:
+
 - (2, 1) vì $2 > 1$.
 - (4, 1) vì $4 > 1$.
 - (4, 3) vì $4 > 3$.

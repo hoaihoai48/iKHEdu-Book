@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `3+2*2` $\implies$ Đầu ra kỳ vọng: `
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `7` |
 
 *Giải thích chi tiết:* Với biểu thức số học "1 + (2 * 3) - 4 / 2":
+
 1. Tính trong ngoặc: $2 \times 3 = 6$.
 2. Biểu thức trở thành: $1 + 6 - 4 / 2$.
 3. Thực hiện phép chia: $4 / 2 = 2$.

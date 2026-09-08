@@ -24,6 +24,7 @@ ca
 
 ### Giải thích
 Với chuỗi $S = \text{"abbaca"}$:
+
 1. Cặp "bb" ở giữa triệt tiêu $\to$ chuỗi còn lại là "aaca".
 2. Cặp "aa" mới tạo thành kề nhau lại tiếp tục triệt tiêu $\to$ chuỗi còn lại là "ca".
 Không còn cặp nào trùng nhau kề nhau, chuỗi kết quả in ra là ca.

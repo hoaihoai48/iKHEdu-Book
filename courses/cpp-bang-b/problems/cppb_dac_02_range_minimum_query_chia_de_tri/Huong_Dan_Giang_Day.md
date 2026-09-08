@@ -20,6 +20,7 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 | 3 | Xuất kết quả | Output: `1 2` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Đoạn [1, 3] gồm {3, 1, 4} có min = 1.
+
 - Đoạn [3, 5] gồm {4, 2, 5} có min = 2.
 
 ---

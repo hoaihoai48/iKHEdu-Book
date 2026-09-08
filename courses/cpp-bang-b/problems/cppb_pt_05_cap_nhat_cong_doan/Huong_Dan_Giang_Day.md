@@ -20,6 +20,7 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 | 3 | Xuất kết quả | Output: `2 5 4 2 3` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Sử dụng mảng hiệu D kích thước N + 2:
+
 - Cộng 2 vào [1, 3]: D[1] += 2, D[4] -= 2.
 - Cộng 3 vào [2, 5]: D[2] += 3, D[6] -= 3.
 - Cộng -1 vào [3, 4]: D[3] -= 1, D[5] += 1.

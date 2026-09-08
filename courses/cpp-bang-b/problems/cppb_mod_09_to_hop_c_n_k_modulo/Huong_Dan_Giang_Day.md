@@ -20,6 +20,7 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 | 3 | Xuất kết quả | Output: `10 120` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - C(5, 2) = 5! / (2! * 3!) = 10.
+
 - C(10, 3) = 10! / (3! * 7!) = 120.
 
 ---

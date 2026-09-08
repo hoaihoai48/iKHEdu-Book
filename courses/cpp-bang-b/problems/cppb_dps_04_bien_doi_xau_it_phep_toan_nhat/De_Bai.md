@@ -27,6 +27,7 @@ eat
 ### Giải thích
 Với hai chuỗi $S = \text{"sea"}$ và $T = \text{"eat"}$:
 Để hai chuỗi trở nên giống nhau, ta đưa cả hai về chuỗi chung là $\text{"ea"}$:
+
 - Trên chuỗi $S$: Xóa ký tự 's' (1 ký tự).
 - Trên chuỗi $T$: Xóa ký tự 't' (1 ký tự).
 Tổng số ký tự cần xóa là $1 + 1 = 2$.

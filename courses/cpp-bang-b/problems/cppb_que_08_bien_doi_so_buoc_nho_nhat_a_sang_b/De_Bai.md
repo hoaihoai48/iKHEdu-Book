@@ -24,6 +24,7 @@ Cho hai số nguyên dương $A$ và $B$. Hãy lập trình tìm số bước bi
 
 ### Giải thích
 Để biến đổi từ $A = 4$ sang $B = 6$:
+
 - Bước 1: Trừ 1 đơn vị: $4 - 1 = 3$.
 - Bước 2: Nhân đôi: $3 \times 2 = 6$.
 Chỉ cần đúng 2 bước biến đổi, kết quả in ra là 2.

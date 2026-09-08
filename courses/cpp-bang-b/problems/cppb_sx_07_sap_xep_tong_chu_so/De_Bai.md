@@ -5,6 +5,7 @@ Trong một trò chơi giải mật mã cổ xưa, người chơi nhận đượ
 
 ## Nhiệm vụ
 Cho danh sách $N$ số nguyên dương. Hãy sắp xếp dãy số theo quy tắc:
+
 1. Tổng các chữ số tăng dần.
 2. Nếu hai số có cùng tổng các chữ số, số có giá trị nguyên nhỏ hơn sẽ đứng trước.
 
@@ -27,6 +28,7 @@ Cho danh sách $N$ số nguyên dương. Hãy sắp xếp dãy số theo quy t�
 ```
 ### Giải thích
 Tính tổng chữ số của từng số trong dãy ban đầu:
+
 - Số $13$: tổng chữ số là $1 + 3 = 4$.
 - Số $20$: tổng chữ số là $2 + 0 = 2$.
 - Số $4$: tổng chữ số là $4$.
@@ -34,6 +36,7 @@ Tính tổng chữ số của từng số trong dãy ban đầu:
 - Số $11$: tổng chữ số là $1 + 1 = 2$.
 
 Sắp xếp theo tổng chữ số tăng dần:
+
 - Nhóm có tổng chữ số bằng $2$: gồm $\{20, 11\}$. Vì $11 < 20$ nên $11$ đứng trước $20$.
 - Nhóm có tổng chữ số bằng $4$: gồm $\{13, 4, 103\}$. Sắp xếp theo giá trị tăng dần: $4 < 13 < 103$.
 

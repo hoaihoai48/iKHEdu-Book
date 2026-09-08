@@ -28,6 +28,7 @@ Mẫu thử (Sample 1): Đầu vào: `8 3 1 3 -1 -3 5 3 6 7` $\implies$ Đầu r
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3 3 5 5 6 7` |
 
 *Giải thích chi tiết:* Với mảng $[1, 3, -1, -3, 5, 3, 6, 7]$ và $K = 3$:
+
 - Cửa sổ [1, 3, -1] -> max = 3.
 - Cửa sổ [3, -1, -3] -> max = 3.
 - Cửa sổ [-1, -3, 5] -> max = 5.

@@ -20,6 +20,7 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 | 3 | Xuất kết quả | Output: `6` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Phương án phân công tối ưu có tổng chi phí nhỏ nhất là $6$:
+
 - Kỹ sư 1 làm việc 2 (chi phí $C_{1, 2} = 2$).
 - Kỹ sư 2 làm việc 3 (chi phí $C_{2, 3} = 3$).
 - Kỹ sư 3 làm việc 1 (chi phí $C_{3, 1} = 1$).

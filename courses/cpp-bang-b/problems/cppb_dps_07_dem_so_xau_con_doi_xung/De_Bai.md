@@ -25,6 +25,7 @@ aaa
 ### Giải thích
 Với chuỗi $S = \text{"aaa"}$:
 Có tất cả 6 đoạn con liên tiếp đối xứng gồm:
+
 - 3 đoạn độ dài 1: "a" (vị trí 0), "a" (vị trí 1), "a" (vị trí 2).
 - 2 đoạn độ dài 2: "aa" (vị trí 0-1), "aa" (vị trí 1-2).
 - 1 đoạn độ dài 3: "aaa" (toàn bộ chuỗi).

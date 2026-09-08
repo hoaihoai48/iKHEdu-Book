@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `3 1 2 1` $\implies$ Đầu ra kỳ vọng:
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2 -1 2` |
 
 *Giải thích chi tiết:* Với mảng tròn gồm 3 phần tử $[1, 2, 1]$:
+
 - Phần tử 1 (đầu): Nhìn tiếp theo gặp số 2 lớn hơn 1 $\to$ in ra 2.
 - Phần tử 2 (giữa): Nhìn tiếp theo gặp 1, rồi vòng lại đầu gặp 1, không có số nào lớn hơn 2 $\to$ in ra -1.
 - Phần tử 1 (cuối): Vòng lại đầu mảng gặp 1, tiếp tục gặp 2 lớn hơn 1 $\to$ in ra 2.

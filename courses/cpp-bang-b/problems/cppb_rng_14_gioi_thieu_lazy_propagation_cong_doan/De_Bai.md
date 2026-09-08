@@ -31,6 +31,7 @@ Cho mảng $A$ và $Q$ thao tác: `1 L R V` (cộng $V$ vào tất cả các ph�
 
 ### Giải thích
 Với mảng ban đầu $[1, 2, 3, 4, 5]$:
+
 - Cộng thêm 2 vào đoạn từ vị trí 2 đến 4: mảng trở thành $[1, 4, 5, 6, 5]$.
 - Truy vấn tổng đoạn từ 1 đến 5: $1 + 4 + 5 + 6 + 5 = 21$.
 

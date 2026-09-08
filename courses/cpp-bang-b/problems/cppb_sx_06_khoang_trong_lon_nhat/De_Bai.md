@@ -28,6 +28,7 @@ Tọa độ các chướng ngại vật ban đầu là: $10, 3, 25, 8, 12$.
 Sau khi sắp xếp tăng dần theo chiều dọc hành lang:
 $3, 8, 10, 12, 25$.
 Khoảng cách giữa các chướng ngại vật liên tiếp lần lượt là:
+
 - $8 - 3 = 5$
 - $10 - 8 = 2$
 - $12 - 10 = 2$

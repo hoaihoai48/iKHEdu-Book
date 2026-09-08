@@ -20,6 +20,7 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 | 3 | Xuất kết quả | Output: `13` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* Phương án phân công tối ưu nhất là:
+
 - Kỹ sư 1 làm việc 2 (chi phí $C_{1, 2} = 2$).
 - Kỹ sư 2 làm việc 1 (chi phí $C_{2, 1} = 6$).
 - Kỹ sư 3 làm việc 3 (chi phí $C_{3, 3} = 1$).

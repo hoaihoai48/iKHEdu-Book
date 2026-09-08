@@ -28,6 +28,7 @@ Tọa độ các trạm cảm biến ban đầu là: $8, 3, 14, 6, 10$.
 Sau khi sắp xếp lại theo chiều tăng dần của vị trí trên trục đường:
 $3, 6, 8, 10, 14$.
 Khoảng cách giữa các cặp trạm liền kề nhau:
+
 - Giữa trạm $3$ và $6$: khoảng cách là $6 - 3 = 3$.
 - Giữa trạm $6$ và $8$: khoảng cách là $8 - 6 = 2$.
 - Giữa trạm $8$ và $10$: khoảng cách là $10 - 8 = 2$.

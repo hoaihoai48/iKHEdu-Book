@@ -31,6 +31,7 @@ Cho mảng N số nguyên phân biệt bị xoay vòng tại một trục không
 ```
 ### Giải thích
 Mảng bị xoay vòng [4, 5, 6, 7, 0, 1, 2]:
+
 - Số 0 ở vị trí chỉ số 4.
 - Số 3 không tồn tại -> -1.
 - Số 5 ở vị trí chỉ số 1.

@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `5 2 1 2 3 4` $\implies$ Đầu ra kỳ v�
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `8` |
 
 *Giải thích chi tiết:* Với 4 đỉnh và chỉ có 1 cạnh nối (1, 2):
+
 - Cụm 1 gồm {1, 2}.
 - Đỉnh 3 cô lập, đỉnh 4 cô lập.
 Các cặp không đi tới nhau gồm: (1, 3), (1, 4), (2, 3), (2, 4), (3, 4). Có tổng cộng 5 cặp.

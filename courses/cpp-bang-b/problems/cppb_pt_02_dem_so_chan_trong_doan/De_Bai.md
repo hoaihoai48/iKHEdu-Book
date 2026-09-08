@@ -31,6 +31,7 @@ Cho dãy gồm N số nguyên. Hãy trả lời Q truy vấn [L, R], mỗi truy 
 ```
 ### Giải thích
 Mảng nhị phân đánh dấu số chẵn: [1, 0, 1, 1, 0, 1]. Mảng tiền tố đếm số chẵn: [0, 1, 1, 2, 3, 3, 4].
+
 - Đoạn [1, 4]: gồm {2, 3, 4, 6} có 3 số chẵn.
 - Đoạn [2, 5]: gồm {3, 4, 6, 7} có 2 số chẵn.
 - Đoạn [1, 6]: có 4 số chẵn.

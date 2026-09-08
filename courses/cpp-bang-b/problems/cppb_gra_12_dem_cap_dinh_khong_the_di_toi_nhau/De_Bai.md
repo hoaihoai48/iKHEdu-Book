@@ -27,6 +27,7 @@ Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình đếm s�
 
 ### Giải thích
 Với 4 đỉnh và chỉ có 1 cạnh nối (1, 2):
+
 - Cụm 1 gồm {1, 2}.
 - Đỉnh 3 cô lập, đỉnh 4 cô lập.
 Các cặp không đi tới nhau gồm: (1, 3), (1, 4), (2, 3), (2, 4), (3, 4). Có tổng cộng 5 cặp.

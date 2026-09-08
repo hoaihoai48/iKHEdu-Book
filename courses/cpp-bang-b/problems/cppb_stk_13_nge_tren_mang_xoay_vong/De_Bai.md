@@ -26,6 +26,7 @@ Cho mảng tròn $A$ gồm $N$ phần tử. Với mỗi phần tử, hãy tìm p
 
 ### Giải thích
 Với mảng tròn gồm 3 phần tử $[1, 2, 1]$:
+
 - Phần tử 1 (đầu): Nhìn tiếp theo gặp số 2 lớn hơn 1 $\to$ in ra 2.
 - Phần tử 2 (giữa): Nhìn tiếp theo gặp 1, rồi vòng lại đầu gặp 1, không có số nào lớn hơn 2 $\to$ in ra -1.
 - Phần tử 1 (cuối): Vòng lại đầu mảng gặp 1, tiếp tục gặp 2 lớn hơn 1 $\to$ in ra 2.

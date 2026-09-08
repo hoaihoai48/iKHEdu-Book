@@ -26,6 +26,7 @@ Cho dãy số nguyên dương $A$ gồm $N$ phần tử. Hãy lập trình tìm 
 
 ### Giải thích
 Với dãy số gồm 7 phần tử $[1, 101, 2, 3, 100, 4, 5]$:
+
 - Dãy con tăng dài nhất là $[1, 2, 3, 4, 5]$ có tổng là $1 + 2 + 3 + 4 + 5 = 15$.
 - Nhưng dãy con tăng $[1, 2, 3, 100]$ lại mang lại tổng giá trị lớn hơn nhiều: $1 + 2 + 3 + 100 = 106$. Đây là tổng lớn nhất có thể đạt được.
 

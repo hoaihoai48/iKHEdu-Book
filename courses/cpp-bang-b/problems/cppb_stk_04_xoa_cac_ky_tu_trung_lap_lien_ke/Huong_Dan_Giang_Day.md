@@ -27,6 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `abbaca` $\implies$ Đầu ra kỳ vọng: 
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `ca` |
 
 *Giải thích chi tiết:* Với chuỗi $S = \text{"abbaca"}$:
+
 1. Cặp "bb" ở giữa triệt tiêu $\to$ chuỗi còn lại là "aaca".
 2. Cặp "aa" mới tạo thành kề nhau lại tiếp tục triệt tiêu $\to$ chuỗi còn lại là "ca".
 Không còn cặp nào trùng nhau kề nhau, chuỗi kết quả in ra là ca.

@@ -24,6 +24,7 @@ Cho số nguyên dương $N$ là số bậc của cầu thang. Hãy lập trình
 
 ### Giải thích
 Với cầu thang có $N = 3$ bậc, robot có tất cả 3 trình tự bước đi hợp lệ để lên đến đỉnh:
+
 1. Bước từng bậc một: $1 + 1 + 1 = 3$.
 2. Bước 1 bậc rồi bước 2 bậc: $1 + 2 = 3$.
 3. Bước 2 bậc rồi bước 1 bậc: $2 + 1 = 3$.

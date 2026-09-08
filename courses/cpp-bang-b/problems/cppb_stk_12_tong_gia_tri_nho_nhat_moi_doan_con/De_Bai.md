@@ -27,6 +27,7 @@ Cho mảng $A$ gồm $N$ số nguyên. Hãy lập trình tính tổng giá trị
 ### Giải thích
 Với mảng gồm 4 phần tử $[3, 1, 2, 4]$:
 Các đoạn con có giá trị nhỏ nhất tương ứng:
+
 - Độ dài 1: [3] -> 3, [1] -> 1, [2] -> 2, [4] -> 4 (tổng = 10).
 - Độ dài 2: [3,1] -> 1, [1,2] -> 1, [2,4] -> 2 (tổng = 4).
 - Độ dài 3: [3,1,2] -> 1, [1,2,4] -> 1 (tổng = 2).

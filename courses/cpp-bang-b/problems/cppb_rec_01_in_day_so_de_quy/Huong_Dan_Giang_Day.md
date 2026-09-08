@@ -20,6 +20,7 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 | 3 | Xuất kết quả | Output: `1 2 3 4 5 5 4 3 2 1` | Khớp chính xác với đầu ra mẫu |
 
 *Giải thích chi tiết từ mẫu:* - Dòng 1 in xuôi từ 1 đến 5: 1 2 3 4 5.
+
 - Dòng 2 in ngược từ 5 về 1: 5 4 3 2 1.
 
 ---
