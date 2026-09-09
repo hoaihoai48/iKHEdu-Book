@@ -42,7 +42,7 @@ Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
 * Chia động dựa trên việc so sánh các phần tử với một giá trị chốt (`pivot`), kích thước 2 nửa có thể không đều nhau.
 * *Ví dụ:* QuickSelect phân hoạch `[7 2 9 1 5 3 8]` với `pivot = 5` thành `[2 1 3]` (nhỏ hơn 5), `[5]`, và `[7 9 8]` (lớn hơn 5).
 
-![Mô hình Thuật toán Chia để trị (Divide & Conquer)](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_model_vi.svg)
+![Mô hình Thuật toán Chia để trị (Divide & Conquer)](assets/dnc_model_vi.svg)
 
 ## 4. Khung tư duy d&c (the d&c mental model)
 
@@ -53,7 +53,7 @@ Trước bất kỳ bài toán nào nghi ngờ sử dụng Chia Để Trị, hã
 3. **Tôi cần giải bao nhiêu bài toán con** (Chỉ 1 nhánh như Binary Search/QuickSelect hay cả 2 nhánh như Merge Sort)
 4. **Tôi combine kết quả của các bài toán con như thế nào** (Đây là bước quyết định độ phức tạp!)
 
-![Cây quyết định lựa chọn thuật toán Chia để trị](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_decision_tree_vi.svg)
+![Cây quyết định lựa chọn thuật toán Chia để trị](assets/dnc_decision_tree_vi.svg)
 
 ## 5. Mô phỏng từng bước thuật toán sắp xếp trộn (Merge Sort simulation)
 
@@ -61,7 +61,7 @@ Xét mảng ban đầu: `A = [38, 27, 43, 3, 9, 82, 10]`.
 
 ### Sơ đồ cây phân rã & gộp mảng (divide & merge tree):
 
-![Mô phỏng Cây phân rã và gộp Merge Sort](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/mergesort_tree_vi.svg)
+![Mô phỏng Cây phân rã và gộp Merge Sort](assets/mergesort_tree_vi.svg)
 
 ## 6. Combine step & loop invariant — Trái tim của Divide & Conquer
 

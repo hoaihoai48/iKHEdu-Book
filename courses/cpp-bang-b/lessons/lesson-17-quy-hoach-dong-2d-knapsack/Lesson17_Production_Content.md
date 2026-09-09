@@ -3,12 +3,13 @@
 ## 1. Bản chất không gian trạng thái 2D
 
 Trong Chuyên đề 13, trạng thái $dp[i]$ chỉ phụ thuộc vào một tham số đơn lẻ (vị trí trên dãy số hoặc giá trị tổng tiền). Tuy nhiên, trong thực tế thi đấu, bài toán thường yêu cầu thỏa mãn đồng thời **hai điều kiện độc lập**:
+
 1. **Quy hoạch động trên Lưới tọa độ (Grid DP):** Trạng thái được định vị bởi cặp tọa độ $(i, j)$ trên ma trận $N \times M$.
 2. **Quy hoạch động Bài toán Cái túi (Knapsack DP):** Trạng thái cần theo dõi đồng thời **Chỉ số món đồ đang xét $i$** và **Sức chứa còn lại của cái túi $w$**.
 
 > **Bản chất Không gian Trạng thái 2D:** Mỗi ô $dp[i][j]$ là một đỉnh trong Đồ thị trạng thái DAG 2 chiều. Thứ tự tính toán phải quét qua toàn bộ các hàng và cột theo chiều tăng dần (hoặc giảm dần có kiểm soát) để đảm bảo tính đúng đắn của mọi quan hệ phụ thuộc.
 
-![Ma trận Quy hoạch động trên Lưới 2D](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-quy-hoach-dong-2d-knapsack/assets/grid_dp_matrix_vi.svg)
+![Ma trận Quy hoạch động trên Lưới 2D](assets/grid_dp_matrix_vi.svg)
 
 ## 2. Quy hoạch động trên lưới tọa độ (grid DP)
 
@@ -18,6 +19,7 @@ Trong Chuyên đề 13, trạng thái $dp[i]$ chỉ phụ thuộc vào một tha
 * **Base Case:** `dp[1][1] = (grid[1][1] == 0 1 : 0)`.
 * **State Transition:** Nếu ô $(i, j)$ là vật cản $\implies dp[i][j] = 0$. Ngược lại:
 $$dp[i][j] = (dp[i-1][j] + dp[i][j-1]) \pmod{10^9+7}$$
+
 * **Evaluation Order:** Duyệt lồng 2 vòng lặp: Hàng $i = 1 \to N$, Cột $j = 1 \to M$.
 
 ### 2.2. Tìm đường đi có tổng giá trị lớn nhất / nhỏ nhất
@@ -37,6 +39,7 @@ $$dp[i][j] = A[i][j] + \max(dp[i-1][j], dp[i][j-1])$$
 
 ### 3.2. Tuyệt kỹ nén mảng 1D
 Nhận xét rằng dòng $dp[i][\dots]$ **chỉ phụ thuộc duy nhất vào dòng ngay trước nó** là $dp[i-1][\dots]$. Ta có thể nén bảng 2D thành một mảng 1D $dp[w]$ kích thước $W + 1$.
+
 * **Tử huyệt bắt buộc:** Vòng lặp sức chứa $w$ bắt buộc phải **duyệt ngược từ $W$ giảm dần về $wt_i$**:
 ```cpp
 for (int w = W; w >= wt[i]; --w) {
@@ -45,11 +48,12 @@ dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
 ```
 * **Tại sao phải duyệt ngược** Khi tính $dp[w]$, ô `dp[w - wt[i]]` vẫn giữ nguyên giá trị của tầng $i-1$ (chưa bị đồ thứ $i$ ghi đè), đảm bảo mỗi món đồ chỉ được dùng tối đa 1 lần duy nhất!
 
-![Kỹ thuật Nén mảng 1D trong 0/1 Knapsack](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-quy-hoach-dong-2d-knapsack/assets/knapsack_01_compression_vi.svg)
+![Kỹ thuật Nén mảng 1D trong 0/1 Knapsack](assets/knapsack_01_compression_vi.svg)
 
 ## 4. Bài toán cái túi không giới hạn (unbounded Knapsack)
 
 Khi mỗi món đồ được phép chọn **vô số lần** không giới hạn:
+
 * **Hệ thức 2D:** $dp[i][w] = \max(dp[i-1][w], val_i + dp[i][w - wt_i])$.
 * **Kỹ thuật mảng 1D:** Vòng lặp $w$ duyệt **XUÔI từ $wt_i$ tăng dần lên $W$**:
 ```cpp
@@ -59,7 +63,7 @@ dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
 ```
 * Duyệt xuôi cho phép trạng thái $dp[w]$ kế thừa ngay lập tức kết quả của chính món đồ $i$ vừa được thêm vào ở `dp[w - wt[i]]`.
 
-![So sánh 0/1 Knapsack vs Unbounded Knapsack](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-quy-hoach-dong-2d-knapsack/assets/unbounded_vs_01_knapsack_vi.svg)
+![So sánh 0/1 Knapsack vs Unbounded Knapsack](assets/unbounded_vs_01_knapsack_vi.svg)
 
 ## 5. Kỹ thuật đổi trục DP khi sức chứa $W$ quá lớn ($DP[v] = \text{Min Weight}$)
 
@@ -69,6 +73,7 @@ dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
 * Base case: `dp[0] = 0`, mọi `dp[v] = INF` ($v \ge 1$).
 * Chuyển trạng thái: Duyệt ngược $v$ từ $V_{\text{sum}}$ về $val_i$:
 $$dp[v] = \min(dp[v], wt_i + dp[v - val_i])$$
+
 * Đáp án: $\max \{v \mid dp[v] \le W\}$.
 * **Độ phức tạp:** $\mathcal{O}(N \cdot V_{\text{sum}})$ — Chạy mượt mà dưới $0.05$ giây!
 
@@ -120,6 +125,8 @@ cout << dp[W] << "\n";
 return 0;
 }
 ```
+
+> **Cảnh báo bộ nhớ (bắt buộc đọc):** `dp(W + 1)` cấp phát $W+1$ ô nhớ. Mẫu này **chỉ đúng khi $W$ nhỏ** (ví dụ $W \le 10^5$). Nếu $W \le 10^9$ như bối cảnh đổi trục ở mục 5 thì `vector` này cần hàng GB RAM $\implies$ crash MLE/OOM ngay lập tức — trường hợp đó phải dùng kỹ thuật đổi trục `dp[v]` theo tổng giá trị. Ngoài ra `W` phải ép về `int` trước khi dùng làm kích thước vector và chỉ số vòng lặp.
 
 ### Mẫu 2: Đường đi có tổng lớn nhất trên lưới 2D
 

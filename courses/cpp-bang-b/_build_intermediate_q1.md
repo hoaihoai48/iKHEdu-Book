@@ -1632,7 +1632,39 @@ C++ cung cấp hai hàm sắp xếp có sẵn:
 * `sort(first, last)`: Sử dụng thuật toán **IntroSort** (kết hợp giữa QuickSort, HeapSort và InsertionSort), đạt độ phức tạp thời gian $\mathcal{O}(N \log N)$ trong mọi trường hợp (trung bình và xấu nhất). Không bảo toàn thứ tự ban đầu của các phần tử bằng nhau.
 * `stable_sort(first, last)`: Sử dụng thuật toán **MergeSort**, độ phức tạp $\mathcal{O}(N \log N)$, đảm bảo bảo toàn nguyên vẹn thứ tự xuất hiện ban đầu của các phần tử có giá trị bằng nhau.
 
-### 4.2. Nguyên lý Strict Weak Ordering (toán tử so sánh nghiêm ngặt)
+### 4.2. Cấu trúc 3 tham số của `sort` (bắt buộc nắm vững)
+Chữ ký đầy đủ của hàm `sort`:
+
+```cpp
+sort(first, last, cmp);
+```
+
+| Tham số | Bản chất | Ý nghĩa cụ thể |
+|:---:|---|---|
+| `first` | Iterator trỏ đến **phần tử đầu tiên** của đoạn cần sắp | Với `vector<int> a` là `a.begin()`; với mảng tĩnh `a` là `a` |
+| `last` | Iterator trỏ đến **vị trí ngay sau phần tử cuối cùng** (past-the-end) | Với `vector<int> a` là `a.end()`; với mảng tĩnh `a` có `n` phần tử là `a + n` |
+| `cmp` | Hàm so sánh (tùy chọn) | Nếu bỏ qua, `sort` dùng toán tử `<` mặc định (tăng dần) |
+
+> **Quy tắc nửa mở (Half-open range):** Đoạn được sắp xếp là $[first, last)$ — bao gồm `first` nhưng **không bao gồm** `last`. Vì vậy `sort(a.begin(), a.end())` sắp đúng $N$ phần tử, còn `sort(a.begin(), a.begin() + k)` chỉ sắp $k$ phần tử đầu tiên.
+
+### 4.3. Sắp xếp tăng dần và giảm dần
+Mặc định `sort` xếp **tăng dần**. Muốn xếp **giảm dần** có 2 cách tương đương:
+
+```cpp
+vector<int> a = {3, 1, 4, 1, 5};
+
+// Cách 1: dùng functor greater<int>() có sẵn
+sort(a.begin(), a.end(), greater<int>());
+
+// Cách 2: đảo cặp iterator (không cần tham số thứ ba)
+sort(a.rbegin(), a.rend());
+```
+
+Cả hai cách đều cho kết quả: $\{5, 4, 3, 1, 1\}$.
+
+> **Lưu ý quan trọng:** `greater<int>()` là functor so sánh "lớn hơn" chuẩn của C++ (không cần tự viết, không tốn thêm chi phí). Muốn tự định nghĩa quy tắc riêng thì viết hàm `cmp` như mục 5.0 dưới đây.
+
+### 4.4. Nguyên lý Strict Weak Ordering (toán tử so sánh nghiêm ngặt)
 Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải thỏa mãn 3 tiên đề toán học:
 
 1. **Tính bất phản xạ (Irreflexivity):** `cmp(a, a)` luôn trả về `false`.
@@ -1646,6 +1678,30 @@ Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải th�
 > **Lưu ý quan trọng:** Luôn dùng toán tử so sánh nghiêm ngặt (`<` hoặc `>`). Khi hai phần tử bằng nhau (`a == b`), hàm so sánh bắt buộc phải trả về `false`!
 
 ## 5. Các kỹ thuật Custom Comparator nâng cao
+
+### 5.0. Comparator cơ bản: tự định nghĩa quy tắc "đứng trước" (nấc thang đầu tiên)
+Trước khi học đa tiêu chí, phải nắm vững comparator một tiêu chí. Quy ước của `sort`: `cmp(a, b)` trả về `true` **khi và chỉ khi** `a` phải đứng trước `b` trong kết quả:
+
+```cpp
+// Sắp xếp giảm dần: a đứng trước b khi a lớn hơn b
+bool cmpDesc(int a, int b) {
+return a > b;
+}
+
+vector<int> a = {3, 1, 4, 1, 5};
+sort(a.begin(), a.end(), cmpDesc);
+// Kết quả: {5, 4, 3, 1, 1}
+```
+
+Bảng chạy tay quy tắc `cmpDesc` trên cặp phần tử:
+
+| Cặp `(a, b)` | `a > b` | Kết luận của `sort` |
+|:---:|:---:|---|
+| `(3, 1)` | `true` | `3` đứng trước `1` |
+| `(1, 4)` | `false` | `4` đứng trước `1` |
+| `(1, 1)` | `false` | Giữ nguyên (hai phần tử bằng nhau, comparator phải trả `false`) |
+
+> **Mẹo nhớ:** Muốn tăng dần dùng `<`, muốn giảm dần dùng `>`. Dòng cuối bảng chính là tiên đề Bất phản xạ ở mục 4.4 — mọi comparator phức tạp ở mục 5.1–5.3 đều phải tuân thủ quy tắc này.
 
 ### 5.1. Sắp xếp đa tiêu chí với vector lồng nhau (multi-criteria sorting)
 Khi mỗi phần tử gồm nhiều thuộc tính số (ví dụ: điểm bắt đầu $L = a[0]$ và điểm kết thúc $R = a[1]$ của một đoạn thẳng), ta sử dụng **vector lồng nhau `vector<vector<int>>`** để tận dụng mảng sẵn có:
@@ -1725,6 +1781,7 @@ cin >> a[i];
 sort(a.begin(), a.end());
 
 // Bước 2: Khai thác trật tự tuyến tính O(N)
+if (n < 2) return 0; // Mảng dưới 2 phần tử không có cặp kề để so sánh
 long long min_diff = a[1] - a[0];
 for (int i = 1; i < n - 1; ++i) {
 min_diff = min(min_diff, a[i + 1] - a[i]);
@@ -1739,147 +1796,6 @@ return 0;
 
 * **ĐƯỢC PHÉP SẮP XẾP:** Khi bài toán khảo sát tính chất trên **toàn bộ tập hợp** mà không phụ thuộc vào vị trí ban đầu của phần tử (như tìm $\min/\max$, đếm giá trị phân biệt, tìm cặp thỏa mãn điều kiện đại số).
 * **KHÔNG ĐƯỢC PHÉP SẮP XẾP:** Khi bài toán có ràng buộc gắn liền với **dòng thời gian hoặc vị trí liền kề nguyên thủy** (như tìm đoạn con liên tiếp, chuỗi con tăng dài nhất bảo toàn thứ tự ban đầu).
-
-
-#### Câu 1 (Nhận diện — Recognize):
-
-Một bài toán ghi nhận biến động giá vàng trong $N$ ngày liên tiếp: `[28, 31, 30, 27, 29]`. Đề bài yêu cầu tìm **hai ngày liên tiếp nhau có mức chênh lệch giá nhỏ nhất**. Bạn có được phép dùng hàm `sort()` để sắp xếp lại mảng này trước khi xử lý không
-
-- **A.** Được phép, vì sắp xếp luôn giúp tìm hiệu số nhỏ nhất nhanh hơn.
-
-- **B.** **[Đáp án đúng]** Không được phép, vì yêu cầu "hai ngày liên tiếp" gắn chặt với trục thời gian gốc; sắp xếp lại sẽ làm đảo lộn thứ tự thời gian và dẫn đến kết quả sai hoàn toàn.
-
-- **C.** Được phép, nhưng phải sắp xếp theo thứ tự giảm dần.
-
-- **D.** Được phép, nếu ta lưu lại giá trị trung bình của mảng.
-
-> *Giải thích:* Yêu cầu đề bài là "hai thời điểm liên tiếp nhau", nghĩa là các vị trí kề nhau theo trật tự thời gian gốc. Sắp xếp lại sẽ làm đảo lộn thứ tự thời gian và dẫn đến kết quả sai hoàn toàn.
-
-#### Câu 2 (Dự đoán — Predict):
-
-Cho dãy tọa độ chưa sắp xếp `A = [21, 5, 13, 8, 30, 14]`. Sau khi sắp xếp tăng dần thành `[5, 8, 13, 14, 21, 30]`, để tìm khoảng cách nhỏ nhất giữa 2 điểm bất kỳ, ta chỉ cần kiểm tra những cặp số nào
-
-- **A.** `(5, 30), (8, 21), (13, 14)`
-
-- **B.** **[Đáp án đúng]** `(5, 8), (8, 13), (13, 14), (14, 21), (21, 30)`
-
-- **C.** Bắt buộc phải kiểm tra tất cả 15 cặp có thể tạo ra từ 6 số.
-
-- **D.** Chỉ cần kiểm tra cặp đầu tiên `(5, 8)` và cặp cuối cùng `(21, 30)`.
-
-> *Giải thích:* Nhờ tính chất lân cận của dãy số tăng dần, khoảng cách nhỏ nhất toàn cục luôn nằm ở một trong $N - 1 = 5$ cặp kề nhau.
-
-#### Câu 3 (Bản chất — Explain):
-
-Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trình viên viết `return a <= b;` thì điều gì sẽ xảy ra khi mảng có các phần tử bằng nhau và $N$ lớn
-
-- **A.** Chương trình vẫn chạy đúng và sắp xếp ổn định.
-
-- **B.** Mảng sẽ được sắp xếp theo thứ tự giảm dần.
-
-- **C.** **[Đáp án đúng]** Chương trình có thể bị dừng đột ngột (Runtime Error) do vi phạm nguyên lý Strict Weak Ordering khi $a = b$.
-
-- **D.** Hàm `sort` tự động chuyển sang `stable_sort` để xử lý.
-
-> *Giải thích:* Khi $a = b$, `cmp(a, b)` và `cmp(b, a)` đều trả về `true`, vi phạm tính bất đối xứng nghiêm ngặt khiến thuật toán `sort` truy cập vùng nhớ ngoài biên dẫn đến Crash.
-
-#### Câu 4 (Chuyển giao — Transfer):
-
-Khi $N = 10^5$, vì sao phương pháp sắp xếp rồi duyệt kề nhau $\mathcal{O}(N \log N)$ lại vượt trội hơn hẳn phương pháp duyệt mọi cặp $\mathcal{O}(N^2)$
-
-- **A.** Vì hàm `sort()` làm giảm bớt số lượng phần tử cần lưu trữ trong bộ nhớ.
-
-- **B.** **[Đáp án đúng]** Vì việc sắp xếp tạo ra cấu trúc trật tự, giúp loại bỏ hàng tỷ cặp không có khả năng tối ưu mà chỉ cần xét $N-1$ cặp kề nhau.
-
-- **C.** Vì `sort()` được biên dịch sang mã máy đa luồng của CPU.
-
-- **D.** Vì số phép tính của 2 cách là như nhau nhưng `sort()` tốn ít bộ nhớ RAM hơn.
-
-> *Giải thích:* Bản chất của việc sắp xếp là biến đổi bài toán để giảm thiểu không gian tìm kiếm, giúp ta không phải kiểm tra những trường hợp chắc chắn không tối ưu.
-
-#### Câu 5 (Cú pháp & Ứng dụng — Syntax):
-
-Cách nào sau đây là chuẩn mực và an toàn nhất trong C++ để sắp xếp một `vector<int> a` theo thứ tự giảm dần
-
-- **A.** `sort(a.begin(), a.end(), less<int>());`
-
-- **B.** **[Đáp án đúng]** `sort(a.begin(), a.end(), greater<int>());` hoặc `sort(a.rbegin(), a.rend());`
-
-- **C.** `sort(a.end(), a.begin());`
-
-- **D.** `sort(a.begin(), a.end()); reverse(a.begin() + 1, a.end());`
-
-> *Giải thích:* `greater<int>()` là functor so sánh lớn hơn chuẩn của C++, hoặc dùng cặp iterator đảo ngược `rbegin()` và `rend()` để sắp xếp mảng giảm dần.
-
-#### Câu 6 (Phân biệt cấu trúc — Compare):
-
-Sự khác biệt cốt lõi giữa `sort` và `stable_sort` trong thư viện chuẩn C++ là gì
-
-- **A.** `sort` có độ phức tạp $\mathcal{O}(N^2)$, còn `stable_sort` là $\mathcal{O}(N \log N)$.
-
-- **B.** **[Đáp án đúng]** `stable_sort` đảm bảo giữ nguyên thứ tự xuất hiện ban đầu của các phần tử có giá trị tương đương nhau, còn `sort` thì không đảm bảo điều này.
-
-- **C.** `sort` chỉ sắp xếp được số nguyên, còn `stable_sort` sắp xếp được chuỗi.
-
-- **D.** `stable_sort` không tốn thêm bất kỳ bộ nhớ phụ trợ nào ($\mathcal{O}(1)$).
-
-> *Giải thích:* Tính ổn định (Stability) nghĩa là nếu $A_i = A_j$ và $i < j$, sau khi sort thì $A_i$ vẫn đứng trước $A_j$. `stable_sort` đảm bảo tính chất này (dùng MergeSort).
-
-#### Câu 7 (Thuật toán lân cận — Technique):
-
-Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đếm số lượng giá trị phân biệt (Distinct values) hoạt động trong thời gian bao lâu
-
-- **A.** $\mathcal{O}(N^2)$ vì phải so sánh từng cặp.
-
-- **B.** $\mathcal{O}(N \log N)$ vì phải dùng thêm cây nhị phân tìm kiếm.
-
-- **C.** **[Đáp án đúng]** $\mathcal{O}(N)$ vì các giá trị bằng nhau đã gom thành các khối liên tiếp, chỉ cần duyệt 1 vòng và đếm khi `A[i] != A[i-1]`.
-
-- **D.** $\mathcal{O}(1)$ bằng công thức toán học.
-
-> *Giải thích:* Sau khi sort, toàn bộ các phần tử trùng lặp đều nằm liền kề. Duyệt qua mảng và tăng biến đếm mỗi khi gặp một giá trị khác với phần tử đứng trước nó chỉ tốn $\mathcal{O}(N)$.
-
-#### Câu 8 (Comparator hàm mục tiêu — Logic):
-
-Trong bài toán ghép $N$ chuỗi số $S_1, S_2, \dots, S_N$ để tạo ra số nguyên lớn nhất, tại sao hàm so sánh `bool cmp(string a, string b)` lại được định nghĩa là `return a + b > b + a;`
-
-- **A.** Vì chuỗi có độ dài dài hơn luôn tạo ra số lớn hơn.
-
-- **B.** **[Đáp án đúng]** Vì thứ tự ghép trực tiếp $a + b$ so với $b + a$ phản ánh chính xác đóng góp vị trí chữ số của $a$ và $b$ vào số ghép tổng thể, đồng thời thỏa mãn tính chất bắc cầu.
-
-- **C.** Vì đây là quy ước bắt buộc của chuẩn ANSI C++.
-
-- **D.** Vì phép cộng chuỗi tự động ép kiểu về số nguyên 64-bit.
-
-> *Giải thích:* Nếu ghép $a$ trước $b$ tạo ra chuỗi lớn hơn ghép $b$ trước $a$ ($a + b > b + a$), thì việc đặt $a$ đứng trước $b$ trong mảng sẽ tối ưu hóa toàn cục chuỗi kết quả.
-
-#### Câu 9 (Sắp xếp đa tiêu chí — Multi-criteria):
-
-Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Điểm bắt đầu $L$ tăng dần; nếu trùng $L$ thì điểm kết thúc $R$ giảm dần, comparator nào sau đây viết đúng chuẩn Strict Weak Ordering
-
-- **A.** `return (a[0] <= b[0]) && (a[1] >= b[1]);`
-
-- **B.** `if (a[0] < b[0]) return true; else return a[1] > b[1];`
-
-- **C.** **[Đáp án đúng]** `if (a[0] != b[0]) return a[0] < b[0]; return a[1] > b[1];`
-
-- **D.** `return a[0] < b[0] || a[1] > b[1];`
-
-> *Giải thích:* Phải kiểm tra sự khác biệt của tiêu chí chính trước (`a[0] != b[0]`). Chỉ khi tiêu chí chính bằng nhau mới so sánh tiêu chí phụ. Cả hai nhánh đều phải dùng toán tử nghiêm ngặt `<` hoặc `>`.
-
-#### Câu 10 (Xử lý kiểu dữ liệu & Tràn số — Robustness):
-
-Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ điểm trên trục tọa độ, với tọa độ $X_i \in [-10^{18}, 10^{18}]$. Sai lầm nguy hiểm nhất khi duyệt cặp kề nhau $(X_i, X_{i+1})$ là gì
-
-- **A.** Sử dụng `sort` thay vì tự viết QuickSort.
-
-- **B.** **[Đáp án đúng]** Lưu biến kết quả bằng kiểu `int` hoặc $long$ (32-bit), gây tràn số âm khi tính hiệu $X_{i+1} - X_i$.
-
-- **C.** Đọc dữ liệu bằng `cin` có Fast I/O.
-
-- **D.** Duyệt vòng lặp từ `i = 0` đến $N - 2$.
-
-> *Giải thích:* Với $X_i$ lên tới $10^{18}$, khoảng cách giữa 2 điểm có thể đạt tới $2 \times 10^{18}$, vượt xa giới hạn $2 \times 10^9$ của kiểu `int`. Bắt buộc phải dùng kiểu `long long` (64-bit) cho toàn bộ mảng và biến tính khoảng cách.
 
 ## Bài tập thực hành
 
@@ -2632,147 +2548,6 @@ return 0;
 2. **Bẫy tràn số nguyên 32-bit:** Khi các phần tử $A_i \approx 10^9$, tổng $A_L + A_R$ có thể đạt $2 \cdot 10^9$, suýt soát giới hạn kiểu `int` ($2^{31}-1$). Bắt buộc sử dụng `long long` cho biến tính tổng.
 3. **Bẫy mảng chưa sắp xếp:** Áp dụng Hai con trỏ trên mảng chưa có trật tự đơn điệu sẽ dẫn đến sai lệch logic hoàn toàn.
 
-
-#### Câu 1 (Nhận diện — Recognize):
-
-Kỹ thuật hai con trỏ đối đầu ($L = 0, R = N - 1$) có thể áp dụng trực tiếp trên dãy số nào sau đây
-
-- **A.** Dãy số ngẫu nhiên ban đầu chưa qua xử lý.
-
-- **B.** **[Đáp án đúng]** Dãy số đã được sắp xếp tăng dần hoặc giảm dần đơn điệu.
-
-- **C.** Dãy số có tổng các phần tử bằng 0.
-
-- **D.** Dãy số chỉ gồm toàn các số nguyên dương lẻ.
-
-> *Giải thích:* Tính chất đơn điệu là điều kiện tiên quyết để việc dịch chuyển con trỏ không bỏ sót nghiệm. Do đó mảng bắt buộc phải có thứ tự đơn điệu.
-
-#### Câu 2 (Dự đoán — Predict):
-
-Cho mảng đã sắp xếp `A = [3, 7, 11, 15, 20]` và mục tiêu `S = 22`. Tại bước khởi đầu với `L = 0` (`A[0]=3`) và `R = 4` (`A[4]=20`), tổng là $3 + 20 = 23 > 22$. Hành động đúng tiếp theo là gì
-
-- **A.** Tăng con trỏ trái $L = L + 1$.
-
-- **B.** **[Đáp án đúng]** Giảm con trỏ phải $R = R - 1$ (đưa $R$ về vị trí 3 có giá trị 15).
-
-- **C.** Dừng thuật toán và kết luận không có nghiệm.
-
-- **D.** Hoán đổi giá trị của $A[L]$ và $A[R]$.
-
-> *Giải thích:* Do tổng hiện tại lớn hơn mục tiêu $S$, phần tử lớn nhất `A[R]=20` cộng với phần tử nhỏ nhất `A[L]=3` đã vượt quá 22, nên 20 không thể ghép với bất kỳ số nào khác để tạo ra 22. Ta phải loại bỏ 20 bằng cách giảm $R$.
-
-#### Câu 3 (Bản chất — Explain):
-
-Trong bài toán đếm số cặp có $A_i + A_j \le S$ trên mảng tăng dần, khi $A[L] + A[R] \le S$, tại sao ta có thể khẳng định ngay có đúng $R - L$ cặp hợp lệ kết thúc tại $R$
-
-- **A.** Vì $R - L$ là độ dài của mảng ban đầu.
-
-- **B.** **[Đáp án đúng]** Vì mảng tăng dần nên với mọi $k$ thỏa mãn $L < k \le R$, ta luôn có $A_L + A_k \le A_L + A_R \le S$.
-
-- **C.** Vì hàm `sort` tự động nhóm các cặp này lại với nhau.
-
-- **D.** Vì số lượng cặp luôn bằng hiệu hai con trỏ trong mọi bài toán.
-
-> *Giải thích:* Do $A[L]$ đã thỏa mãn khi cộng với $A[R]$, tất cả các phần tử từ $L+1$ đến $R$ khi ghép với $A[L]$ đều có tổng $\le S$. Có đúng $R - L$ cặp như vậy xuất phát từ $L$.
-
-#### Câu 4 (Chuyển giao — Transfer):
-
-Độ phức tạp thời gian tổng thể của bài toán Two Sum gồm 2 bước: Sắp xếp mảng $N$ phần tử bằng `sort` rồi duyệt bằng Two Pointers là bao nhiêu
-
-- **A.** $\mathcal{O}(N^2)$
-
-- **B.** $\mathcal{O}(N)$
-
-- **C.** **[Đáp án đúng]** $\mathcal{O}(N \log N)$ (trong đó sắp xếp mất $\mathcal{O}(N \log N)$ và duyệt Two Pointers mất $\mathcal{O}(N)$).
-
-- **D.** $\mathcal{O}(\log N)$
-
-> *Giải thích:* Bước sắp xếp tốn $\mathcal{O}(N \log N)$, bước duyệt 2 con trỏ tốn $\mathcal{O}(N)$. Tổng thời gian bị chi phối bởi bước sắp xếp là $\mathcal{O}(N \log N)$, nhanh hơn vượt bậc so với vét cạn $\mathcal{O}(N^2)$.
-
-#### Câu 5 (Bẫy điều kiện dừng — Bug Traps):
-
-Tại sao trong vòng lặp Two Pointers tìm cặp phần tử phân biệt (`i < j`), ta bắt buộc phải dùng điều kiện `while (l < r)` thay vì $while (l \le r)$
-
-- **A.** Vì nếu dùng $\le$ thì chương trình sẽ bị lỗi tràn bộ nhớ (Out of Memory).
-
-- **B.** **[Đáp án đúng]** Vì khi `L = R`, phần tử $A[L]$ sẽ tự cộng với chính nó ($2 * A[L]$), vi phạm yêu cầu chọn 2 vị trí phân biệt của đề bài.
-
-- **C.** Vì trình biên dịch C++ không hỗ trợ toán tử $\le$ trong vòng lặp `while`.
-
-- **D.** Vì khi `L = R` con trỏ sẽ nhảy về vị trí 0.
-
-> *Giải thích:* Cặp nghiệm đòi hỏi 2 chỉ số khác nhau `i < j`. Khi `L = R`, hai con trỏ trỏ vào cùng 1 phần tử, không thể tạo thành một cặp 2 phần tử phân biệt.
-
-#### Câu 6 (Chiến lược tham lam — Greedy Pairing):
-
-Trong bài toán **Ghép thuyền cứu hộ** (mỗi thuyền chở tối đa 2 người có tổng cân nặng $\le C$), tại sao khi $W[L] + W[R] > C$, ta lại để người nặng nhất $W[R]$ đi thuyền riêng một mình
-
-- **A.** Vì người nặng nhất luôn có quyền ưu tiên đi một mình.
-
-- **B.** **[Đáp án đúng]** Vì người nặng nhất $W[R]$ ghép với người nhẹ nhất hiện tại $W[L]$ mà vẫn bị quá tải, thì $W[R]$ không thể ghép được với bất kỳ ai khác $implies$ Bắt buộc phải đi riêng.
-
-- **C.** Vì ta muốn dành người nhẹ nhất $W[L]$ cho một người khác nặng hơn.
-
-- **D.** Vì thuật toán muốn giảm số lượng thuyền xuống mức tối thiểu.
-
-> *Giải thích:* Nếu người nhẹ nhất trong tập hợp còn lại mà không thể đi chung với $W[R]$, thì bất kỳ ai khác (đều có cân nặng $\ge W[L]$) khi đi cùng $W[R]$ cũng sẽ làm quá tải thuyền.
-
-#### Câu 7 (Khử chiều đa biến — Dimensionality Reduction):
-
-Đối với bài toán **3-Sum** (tìm 3 số $A_i + A_j + A_k = S$ với `i < j < k`), kỹ thuật Two Pointers giúp tối ưu hóa thuật toán như thế nào
-
-- **A.** Giảm từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
-
-- **B.** **[Đáp án đúng]** Cố định chỉ số $i$ bằng 1 vòng for ($\mathcal{O}(N)$), sau đó dùng Two Pointers trên đoạn $[i+1 \dots N-1]$ ($\mathcal{O}(N)$) để tìm $A_j + A_k = S - A_i$, giảm tổng thời gian từ $\mathcal{O}(N^3)$ xuống $\mathcal{O}(N^2)$.
-
-- **C.** Chạy 3 con trỏ cùng lúc từ 3 đầu mảng trong $\mathcal{O}(N)$.
-
-- **D.** Tính tổng tiền tố của 3 mảng con trong $\mathcal{O}(1)$.
-
-> *Giải thích:* Bằng cách cố định 1 biến, bài toán 3 biến quy về bài toán Two Sum 2 biến trên đoạn còn lại, giúp giảm đúng 1 bậc lũy thừa của độ phức tạp thời gian.
-
-#### Câu 8 (Xử lý trùng lặp — Duplicates Handling):
-
-Khi mảng có nhiều phần tử bằng nhau (ví dụ: `[2, 2, 2, 2]` và `S = 4`), để đếm chính xác số lượng cặp có tổng bằng $S$ mà không bị chạy $\mathcal{O}(N^2)$, ta xử lý như thế nào
-
-- **A.** Xóa bỏ tất cả các phần tử trùng lặp trước khi chạy.
-
-- **B.** **[Đáp án đúng]** Đếm số lượng phần tử bằng nhau liên tiếp ở 2 đầu $L$ và $R$ (ví dụ có `cnt_L` số bằng $A[L]$ và `cnt_R` số bằng $A[R]$), sau đó cộng $cnt_L * cnt_R$ vào kết quả (hoặc $(cnt_L * (cnt_L - 1))/(2)$ nếu $A[L] = A[R]$).
-
-- **C.** Chỉ duyệt một lần và bỏ qua các số giống nhau.
-
-- **D.** Dùng vòng lặp lồng nhau duyệt lại đoạn trùng.
-
-> *Giải thích:* Nhân trực tiếp số lượng tần suất ở 2 đầu cho phép nhảy qua toàn bộ khối phần tử trùng lặp trong $\mathcal{O}(1)$, giữ nguyên độ phức tạp tuyến tính $\mathcal{O}(N)$.
-
-#### Câu 9 (Hai mảng độc lập — Multi-array Pointers):
-
-Cho 2 mảng đã sắp xếp tăng dần $A$ kích thước $N$ và $B$ kích thước $M$. Để tìm giá trị nhỏ nhất của $|A_i - B_j|$, thuật toán Hai con trỏ điều khiển con trỏ $i$ (trên $A$) và $j$ (trên $B$) như thế nào
-
-- **A.** Luôn tăng $i$ trước, sau đó tăng $j$.
-
-- **B.** **[Đáp án đúng]** So sánh $A[i]$ và $B[j]$: Nếu `A[i] < B[j]` thì tăng $++i$; nếu `A[i] > B[j]` thì tăng $++j$; nếu bằng nhau thì khoảng cách bằng 0 (dừng lại).
-
-- **C.** Đặt `i = 0` và $j = M - 1$ rồi thu hẹp vào giữa.
-
-- **D.** Tăng cả hai con trỏ $++i$ và $++j$ đồng thời tại mỗi bước.
-
-> *Giải thích:* Muốn thu hẹp khoảng cách giữa $A[i]$ và $B[j]$, ta phải tăng phần tử có giá trị nhỏ hơn để nó tiến gần hơn đến giá trị của phần tử lớn hơn.
-
-#### Câu 10 (Phòng thủ kiểu dữ liệu — Data Overflow):
-
-Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và $S = 2 \cdot 10^9$, phát biểu nào sau đây về kiểu dữ liệu là chính xác
-
-- **A.** Dùng kiểu `int` cho biến $sum = a[l] + a[r]$ là hoàn toàn an toàn vì $2 \cdot 10^9 < 2^31 - 1$.
-
-- **B.** **[Đáp án đúng]** Biến `current_sum` và biến đếm số lượng cặp bắt buộc phải khai báo `long long` để phòng ngừa tràn số 32-bit (số lượng cặp có thể lên tới $(N(N-1))/(2) ≈ 5 \cdot 10^9$).
-
-- **C.** Chỉ cần dùng kiểu `double` là giải quyết được mọi trường hợp.
-
-- **D.** Không cần quan tâm kiểu dữ liệu vì compiler tự động ép kiểu 64-bit.
-
-> Giải thích: Giá trị tổng $A[L] + A[R]$ có thể vượt ngưỡng $2^31-1$ khi các số lớn hơn $10^9$, và số lượng cặp đếm được với $N = 2 10^5$ có thể đạt tới $2 10^10$, bắt buộc phải dùng `long long` cho biến đếm.
-
 ## Bài tập thực hành
 
 ### Bài 39 [CPPB-HCT-01]: Mô Phỏng Hai Con Trỏ Đối Đầu
@@ -3372,147 +3147,6 @@ Khi xử lý bài toán chuỗi ký tự (như Đoạn con dài nhất chứa t�
 1. **Bẫy tràn số nguyên khi tính tổng cửa sổ:** Tổng đoạn con của mảng $N = 10^5$ phần tử với $A_i = 10^9$ có thể lên tới $10^{14}$. Khai báo biến `current_sum` kiểu `long long`.
 2. **Bẫy điều kiện khởi tạo kết quả cực trị:** Khi tìm $\min$, khởi tạo `ans = n + 1` (hoặc $\infty$); khi không tìm thấy nghiệm phải in ra `0` hoặc `-1` theo đúng quy cách đề bài.
 3. **Bẫy chỉ số âm khi trượt cửa sổ cố định:** Luôn đảm bảo chỉ thực hiện phép trừ `a[i - k]` khi chỉ số $i \ge K$.
-
-
-#### Câu 1 (Nhận diện — Recognize):
-
-Kỹ thuật Cửa sổ trượt biến thiên (mở $R$, co $L$) áp dụng an toàn nhất trên tập dữ liệu nào sau đây
-
-- **A.** Mảng số nguyên có cả số dương lớn và số âm nhỏ.
-
-- **B.** **[Đáp án đúng]** Mảng các số nguyên không âm ($A_i \ge 0$).
-
-- **C.** Mảng các chuỗi ký tự ngẫu nhiên đã được đảo ngược.
-
-- **D.** Mảng 2 chiều kích thước $N * N$.
-
-> *Giải thích:* Tính không âm đảm bảo rằng khi mở rộng $R$ thì tổng luôn tăng hoặc giữ nguyên, và khi co $L$ thì tổng luôn giảm hoặc giữ nguyên (tính chất đơn điệu).
-
-#### Câu 2 (Dự đoán — Predict):
-
-Cho mảng `A = [1, 4, 2, 10, 2, 3, 1, 0, 20]` và cửa sổ cố định kích thước `K = 4`. Tổng của cửa sổ đầu tiên `[1, 4, 2, 10]` là $17$. Khi trượt cửa sổ sang phải để xét đoạn `[4, 2, 10, 2]`, tổng mới được tính nhanh nhất bằng phép toán nào
-
-- **A.** Cộng lại từ đầu: $4 + 2 + 10 + 2 = 18$.
-
-- **B.** **[Đáp án đúng]** Lấy tổng cũ trừ phần tử rời đi và cộng phần tử mới: $17 - 1 + 2 = 18$.
-
-- **C.** Nhân đôi tổng cũ rồi chia cho 4.
-
-- **D.** Lấy $17$ cộng thêm $4$.
-
-> *Giải thích:* Quy tắc trượt cửa sổ cố định: $sum = sum - A[i-K] + A[i]$ chỉ mất $\mathcal{O}(1)$ thời gian.
-
-#### Câu 3 (Bản chất — Explain):
-
-Mặc dù có vòng lặp `while` lồng bên trong vòng lặp `for`, tại sao thuật toán Cửa sổ trượt trên mảng $N$ phần tử vẫn đạt độ phức tạp thời gian $\mathcal{O}(N)$
-
-- **A.** Vì vòng lặp `while` chỉ chạy đúng 1 lần duy nhất trong toàn bộ chương trình.
-
-- **B.** Vì trình biên dịch C++ tự động tối ưu hóa vòng lặp `while` thành câu lệnh `if`.
-
-- **C.** **[Đáp án đúng]** Vì con trỏ $L$ chỉ dịch chuyển sang phải và mỗi phần tử chỉ bị loại bỏ khỏi cửa sổ tối đa đúng 1 lần.
-
-- **D.** Vì số phép tính của vòng `while` luôn bị giới hạn bởi hằng số 10.
-
-> *Giải thích:* $R$ duyệt từ $0 to N-1$ ($N$ bước) và $L$ duyệt từ `0 to N` (tối đa $N$ bước). Tổng số bước di chuyển của cả 2 con trỏ không bao giờ vượt quá $2N$.
-
-#### Câu 4 (Chuyển giao — Transfer):
-
-Nếu đề bài yêu cầu tìm đoạn con ngắn nhất có tổng $\ge S$ nhưng trong mảng có xuất hiện các số âm, tại sao ta **không được dùng** kỹ thuật Cửa sổ trượt đơn thuần
-
-- **A.** Vì số âm làm tràn bộ nhớ của mảng.
-
-- **B.** **[Đáp án đúng]** Vì số âm phá vỡ tính chất đơn điệu của tổng, khiến việc co con trỏ $L$ có thể làm tăng tổng và bỏ sót nghiệm tối ưu.
-
-- **C.** Vì hàm `min()` trong C++ không so sánh được số âm.
-
-- **D.** Vì vòng lặp `for` sẽ bị lặp vô tận.
-
-> *Giải thích:* Khi có số âm, việc mở rộng $R$ chưa chắc làm tăng tổng và việc co $L$ chưa chắc làm giảm tổng, khiến 2 con trỏ không thể đưa ra quyết định di chuyển một chiều chắc chắn.
-
-#### Câu 5 (Chiến lược điều khiển — Control Flow):
-
-Trong bài toán tìm **đoạn con dài nhất có tổng $\le S$** ($A_i \ge 0$), vòng lặp `while` co con trỏ $L$ được kích hoạt khi nào
-
-- **A.** Khi tổng cửa sổ $current_sum \le S$.
-
-- **B.** **[Đáp án đúng]** Khi tổng cửa sổ `current_sum > S` (cửa sổ vi phạm điều kiện, cần co $L$ cho đến khi tổng $\le S$ trở lại).
-
-- **C.** Khi con trỏ $R$ chạm đến cuối mảng.
-
-- **D.** Sau mỗi lần tăng con trỏ $R$.
-
-> *Giải thích:* Với bài toán tìm `max` độ dài thỏa mãn $sum \le S$, ta chỉ co $L$ khi tổng đang bị vượt quá ngưỡng cho phép (`> S`) để đưa cửa sổ về trạng thái hợp lệ.
-
-#### Câu 6 (Đếm tổ hợp đoạn con — Combinatorial Counting):
-
-Trong bài toán **Đếm số lượng đoạn con liên tiếp có tổng $\le S$** ($A_i \ge 0$), sau khi co $L$ để đảm bảo tổng đoạn $[L \dots R] \le S$, số lượng đoạn con hợp lệ kết thúc tại $R$ được tính bằng công thức nào
-
-- **A.** $1$
-
-- **B.** $R - L$
-
-- **C.** **[Đáp án đúng]** $R - L + 1$ (gồm các đoạn $[R \dots R], [R-1 \dots R], \dots , [L \dots R]$).
-
-- **D.** $((R - L + 1) * (R - L + 2))/(2)$
-
-> *Giải thích:* Vì đoạn dài nhất $[L \dots R]$ có tổng $\le S$ và mảng không âm, nên mọi đoạn con kết thúc tại $R$ bắt đầu từ bất kỳ vị trí nào từ $L$ đến $R$ đều có tổng $\le S$. Có đúng $R - L + 1$ đoạn như vậy.
-
-#### Câu 7 (Cửa sổ chuỗi ký tự — Frequency Map):
-
-Để tìm đoạn con dài nhất chứa tối đa $K$ ký tự phân biệt trên chuỗi chỉ gồm chữ cái thường tiếng Anh, ta nên quản lý trạng thái cửa sổ như thế nào tối ưu nhất
-
-- **A.** Quét lại toàn bộ cửa sổ để đếm số ký tự khác nhau trong mỗi bước ($\mathcal{O}(K)$).
-
-- **B.** **[Đáp án đúng]** Sử dụng một mảng đếm tần suất `int count[26] = {0}` và một biến đếm `distinct_chars` ($\mathcal{O}(1)$ thời gian cho mỗi thao tác nạp/nhả).
-
-- **C.** Khởi tạo mảng mới tại mỗi bước lặp.
-
-- **D.** Sắp xếp lại chuỗi ký tự trước khi chạy.
-
-> *Giải thích:* Bảng đếm tần suất kích thước cố định $26$ cho phép cập nhật số lượng ký tự phân biệt trong $\mathcal{O}(1)$, đảm bảo toàn bộ thuật toán chạy trong $\mathcal{O}(N)$ thời gian và $\mathcal{O}(1)$ bộ nhớ phụ trợ.
-
-#### Câu 8 (Cửa sổ bao phủ tối thiểu — Minimum Window):
-
-Trong bài toán tìm **đoạn con ngắn nhất chứa đầy đủ tất cả các ký tự của một tập hợp $T$**, điều kiện để bắt đầu co con trỏ $L$ là gì
-
-- **A.** Khi độ dài cửa sổ đạt tới độ dài của $T$.
-
-- **B.** **[Đáp án đúng]** Khi cửa sổ hiện tại $[L \dots R]$ đã chứa đủ tần suất của mọi ký tự trong tập $T$.
-
-- **C.** Khi con trỏ $R$ duyệt đến cuối chuỗi.
-
-- **D.** Khi gặp một ký tự không thuộc tập $T$.
-
-> *Giải thích:* Khi cửa sổ đã bao phủ đủ các ký tự yêu cầu (đạt trạng thái hợp lệ), ta tiến hành co $L$ để tìm kiếm độ dài ngắn nhất có thể mà vẫn duy trì tính bao phủ đầy đủ.
-
-#### Câu 9 (Xử lý giới hạn dữ liệu lớn — Large Constraints):
-
-Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mảng $N = 10^5$ phần tử với $A_i \le 10^9$. Biến tính tổng cửa sổ `current_sum` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì
-
-- **A.** $10^9$, dùng kiểu `int`.
-
-- **B.** $2 \times 10^9$, dùng kiểu `int`.
-
-- **C.** **[Đáp án đúng]** $10^{14}$, bắt buộc dùng kiểu `long long` (64-bit).
-
-- **D.** $10^{18}$, bắt buộc dùng kiểu `__int128`.
-
-> Giải thích: Tổng của $10^5$ phần tử có giá trị $10^9$ là $10^5 10^9 = 10^14$, vượt xa giới hạn khoảng $2.14 10^9$ của kiểu `int` 32-bit.
-
-#### Câu 10 (Kỹ thuật hiệu đếm đoạn con — Interval Counting Trick):
-
-Để đếm số lượng đoạn con liên tiếp có tổng nằm trong khoảng `[A, B]` (tức $A \le sum \le B$) trên mảng số nguyên dương, kỹ thuật chuẩn mực là gì
-
-- **A.** Chạy 2 vòng lặp lồng nhau duyệt mọi đoạn con.
-
-- **B.** **[Đáp án đúng]** Gọi `F(X)` là số lượng đoạn con có tổng $\le X$. Kết quả cần tìm chính là $F(B) - F(A - 1)$, trong đó hàm `F(X)` được tính bằng Sliding Window trong $\mathcal{O}(N)$.
-
-- **C.** Sử dụng cây Segment Tree với độ phức tạp $O(N log^2 N)$.
-
-- **D.** Nhân đôi mảng và áp dụng Two Pointers đối đầu.
-
-> *Giải thích:* Quy bài toán đếm đoạn trong khoảng `[A, B]` về hiệu của hai bài toán đếm tiền tố $\le X$ giúp tận dụng trọn vẹn thuật toán Sliding Window tuyến tính $\mathcal{O}(N)$ mà không cần cấu trúc dữ liệu phức tạp.
 
 ## Bài tập thực hành
 
@@ -4141,7 +3775,7 @@ vector<long long> a(n + 1, 0);
 
 for (int i = 1; i <= n; ++i) {
 a[i] = a[i - 1] + d[i];
-cout << a[i] << (i == n "" : " ");
+cout << a[i] << (i == n ? "" : " ");
 }
 cout << "\n";
 
@@ -4166,175 +3800,6 @@ return 0;
 * Dùng Prefix Sum sẽ tốn $\mathcal{O}(N)$ để cập nhật lại mảng $P \implies$ Tổng thời gian $\mathcal{O}(Q \times N)$ (TLE).
 * Dùng Difference Array sẽ tốn $\mathcal{O}(N)$ để khôi phục mỗi khi có truy vấn $\implies$ Tổng thời gian $\mathcal{O}(Q \times N)$ (TLE).
 * **Giải pháp chuẩn thi đấu:** Khi có cập nhật và truy vấn xen kẽ liên tục, bắt buộc phải sử dụng các cấu trúc dữ liệu cây động như **Cây chỉ số nhị phân (Fenwick Tree)** hoặc **Cây phân đoạn (Segment Tree)** (thuộc Module 08).
-
-
-#### Câu 1 (Nhận diện — Recognize):
-
-Mảng tiền tố $P$ của mảng `A = [4, 1, 7, 3, 2]` (đánh số từ 1 đến 5) là dãy số nào sau đây
-
-- **A.** `P = [0, 4, 5, 12, 15, 17]`
-
-- **B.** **[Đáp án đúng]** `P = [0, 4, 5, 12, 15, 17]` với `P0 = 0, P1 = 4, P2 = 5, P3 = 12, P4 = 15, P5 = 17`.
-
-- **C.** `P = [4, 5, 12, 15, 17, 0]`.
-
-- **D.** `P = [17, 13, 12, 5, 2, 0]`.
-
-> *Giải thích:* $P0 = 0, P1 = 4, P2 = 4+1=5, P3 = 5+7=12, P4 = 12+3=15, P5 = 15+2=17$.
-
-#### Câu 2 (Dự đoán — Predict):
-
-Cho mảng tiền tố `P = [0, 3, 8, 14, 20, 25]`. Tổng của đoạn từ vị trí `L = 2` đến `R = 4` được tính bằng biểu thức nào
-
-- **A.** $P[4] - P[2] = 20 - 8 = 12$.
-
-- **B.** **[Đáp án đúng]** $P[4] - P[1] = 20 - 3 = 17$.
-
-- **C.** $P[4] + P[2] = 20 + 8 = 28$.
-
-- **D.** $P[5] - P[2] = 25 - 8 = 17$.
-
-> *Giải thích:* Công thức tính tổng đoạn $[L \dots R]$ là $P[R] - P[L-1]$. Với `L=2, R=4`, ta có $Sum = P[4] - P[2-1] = P[4] - P[1] = 20 - 3 = 17$.
-
-#### Câu 3 (Bản chất — Explain):
-
-Tại sao khi thao tác trên mảng hiệu $D$ để cộng giá trị $V$ vào đoạn $[L \dots R]$, ta lại phải thực hiện $D[R+1] mathrel-= V$
-
-- **A.** Để giảm bớt giá trị của phần tử đứng ngay sau $R$.
-
-- **B.** **[Đáp án đúng]** Để triệt tiêu lượng tăng $V$ khi lấy tổng tiền tố từ vị trí $R+1$ trở đi, đảm bảo các phần tử ngoài đoạn $[L \dots R]$ không bị tăng thêm giá trị.
-
-- **C.** Để tránh tràn số nguyên khi tính toán.
-
-- **D.** Vì trình biên dịch C++ yêu cầu các thao tác mảng phải đối xứng.
-
-> *Giải thích:* Khi lấy tổng tiền tố, thao tác $+V$ tại $L$ sẽ lan truyền tới tất cả các vị trí từ `L to N`. Do đó ta phải đặt $-V$ tại $R+1$ để chặn sự lan truyền này từ vị trí $R+1$ trở đi.
-
-#### Câu 4 (Chuyển giao — Transfer):
-
-Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^5$ phần tử, việc sử dụng Mảng hiệu giúp giảm độ phức tạp thời gian từ bao nhiêu xuống bao nhiêu
-
-- **A.** Từ $\mathcal{O}(N \log N)$ xuống $\mathcal{O}(N)$.
-
-- **B.** **[Đáp án đúng]** Từ $O(Q * N) ≈ 10^10$ phép tính xuống $O(Q + N) ≈ 2 \cdot 10^5$ phép tính.
-
-- **C.** Từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
-
-- **D.** Từ $\mathcal{O}(1)$ xuống `O(Q)`.
-
-> *Giải thích:* Mỗi thao tác cập nhật mất $\mathcal{O}(1)$ (tổng $Q$ thao tác mất `O(Q)`), bước khôi phục mảng mất $\mathcal{O}(N)$. Tổng thời gian là $\mathcal{O}(Q + N)$, chạy dưới `0.05` giây.
-
-#### Câu 5 (Prefix Sum 2D — Geometry):
-
-Trong công thức tính tổng hình chữ nhật $2D$: $Sum = P[x2][y2] - P[x1-1][y2] - P[x2][y1-1] + P[x1-1][y1-1]$, tại sao lại có dấu cộng $+ P[x1-1][y1-1]$ ở cuối
-
-- **A.** Vì đây là công thức tính đường chéo hình chữ nhật.
-
-- **B.** **[Đáp án đúng]** Vì vùng hình chữ nhật góc $(1, 1) to (x1-1, y1-1)$ đã bị trừ 2 lần ở hai số hạng phía trước, nên cần cộng bù lại 1 lần theo nguyên lý Bao hàm - Loại trừ.
-
-- **C.** Vì ô $(x1-1, y1-1)$ mang giá trị âm.
-
-- **D.** Vì góc trên bên trái luôn phải có trọng số gấp đôi.
-
-> *Giải thích:* Cả hai vùng bị trừ là $P[x1-1][y2]$ và $P[x2][y1-1]$ đều cùng chứa vùng giao nhau $(1, 1) to (x1-1, y1-1)$. Việc trừ cả hai vùng đã trừ vùng giao 2 lần, bắt buộc phải cộng bù lại 1 lần.
-
-#### Câu 6 (Mảng hiệu 2D — Technique):
-
-Để cộng giá trị $V$ vào tất cả các ô trong hình chữ nhật `(x1, y1) to (x2, y2)` trên ma trận bằng mảng hiệu $2D$, cần cập nhật bao nhiêu ô và dấu như thế nào
-
-- **A.** Cập nhật 2 ô: $+V$ tại `(x1, y1)` và $-V$ tại `(x2, y2)`.
-
-- **B.** **[Đáp án đúng]** Cập nhật 4 ô: $+V$ tại `(x1, y1)` và $(x2+1, y2+1)$; $-V$ tại $(x1, y2+1)$ và $(x2+1, y1)$.
-
-- **C.** Cập nhật tất cả các ô nằm trên biên của hình chữ nhật.
-
-- **D.** Cập nhật 4 ô với dấu $+V$ ở tất cả các góc.
-
-> *Giải thích:* Đây là công thức mảng hiệu 2 chiều chuẩn mực để khi lấy Prefix Sum 2D khôi phục ma trận, chỉ có các ô bên trong hình chữ nhật nhận giá trị $+V$.
-
-#### Câu 7 (Đoạn con tổng bằng 0 — Logic):
-
-Nếu tồn tại hai chỉ số `i < j` trong mảng tiền tố thỏa mãn $P[i] = P[j]$, ta có thể rút ra kết luận gì về mảng ban đầu
-
-- **A.** Tất cả các phần tử từ $i$ đến $j$ đều bằng 0.
-
-- **B.** **[Đáp án đúng]** Đoạn con liên tiếp từ vị trí $i+1$ đến $j$ có tổng đúng bằng 0 ($Sum(i+1, j) = P[j] - P[i] = 0$).
-
-- **C.** Mảng ban đầu đối xứng qua tâm.
-
-- **D.** Toàn bộ mảng có tổng bằng 0.
-
-> *Giải thích:* $Sum(i+1, j) = P[j] - P[i]$. Nếu `P[j] = P[i]` thì hiệu này bằng 0, nghĩa là tổng các phần tử trong đoạn $[i+1 \dots j]$ bằng 0.
-
-#### Câu 8 (Đồng dư tiền tố — Prefix Modulo):
-
-Để đếm số lượng đoạn con có tổng chia hết cho $K$, ta tính mảng tiền tố lấy dư `M[i] = P[i] bmod K`. Đoạn con $[L \dots R]$ có tổng chia hết cho $K$ khi và chỉ khi điều kiện nào thỏa mãn
-
-- **A.** $M[R] + M[L-1] = K$.
-
-- **B.** **[Đáp án đúng]** $M[R] = M[L-1]$ (hai vị trí có cùng số dư khi chia cho $K$).
-
-- **C.** $M[R] - M[L-1] = 1$.
-
-- **D.** $M[R] * M[L-1] = 0$.
-
-> *Giải thích:* $(P[R] - P[L-1]) ≡ 0 mod K iff P[R] ≡ P[L-1] mod K iff M[R] = M[L-1]$.
-
-#### Câu 9 (Bẫy chỉ số mảng hiệu — Bug Traps):
-
-Khi làm việc với mảng hiệu 1D cho dãy có $N$ phần tử, tại sao mảng $D$ bắt buộc phải được khai báo với kích thước tối thiểu là $N + 2$
-
-- **A.** Để lưu trữ giá trị trung bình ở cuối mảng.
-
-- **B.** **[Đáp án đúng]** Vì khi đoạn cập nhật kết thúc tại `R = N`, câu lệnh $D[R+1] mathrel-= V$ sẽ ghi vào vị trí $N + 1$; nếu mảng chỉ có kích thước $N+1$ sẽ gây lỗi tràn bộ nhớ (Out of Bounds).
-
-- **C.** Vì mảng hiệu luôn cần 2 ô nhớ trống ở đầu và cuối để chạy đa luồng.
-
-- **D.** Vì số lượng thao tác $Q$ có thể lớn hơn $N$.
-
-> *Giải thích:* $R$ có thể đạt giá trị cực đại là $N$, khi đó $R+1 = N+1$. Với 1-based indexing, mảng cần các chỉ số từ $0 \dots N+1$, tức kích thước tối thiểu phải là $N+2$.
-
-#### Câu 10 (Tràn số dữ liệu lớn — Data Types):
-
-Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận $N * M = 1000 * 1000$, mỗi phần tử $A[i][j] \le 10^9$. Bảng tiền tố `P[i][j]` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì
-
-- **A.** $10^9$, dùng kiểu `int`.
-
-- **B.** $2 \times 10^9$, dùng kiểu `int`.
-
-- **C.** **[Đáp án đúng]** $10^6 \cdot 10^9 = 10^15$, bắt buộc phải khai báo bảng $P$ bằng kiểu `long long`.
-
-- **D.** $10^{18}$, bắt buộc dùng kiểu `__int128`.
-
-> *Giải thích:* Tổng của toàn bộ $1000 1000 = 10^6$ ô, mỗi ô có giá trị $10^9$, là $10^15$. Giá trị này vượt xa giới hạn $2.14 10^9$ của kiểu `int` 32-bit, bắt buộc phải dùng `long long` 64-bit.
-
-#### Câu 11 (Nén chiều ma trận — 2D Submatrix Compression):
-
-Để tìm ma trận con hình chữ nhật có tổng lớn nhất trên ma trận $N \times M$, kỹ thuật tối ưu kết hợp Mảng tiền tố và Thuật toán Kadane giảm độ phức tạp từ $O(N^2 M^2)$ xuống bao nhiêu
-
-- **A.** $\mathcal{O}(N \times M)$
-
-- **B.** **[Đáp án đúng]** $O(N^2 * M)$ (Cố định 2 hàng `r1, r2`, dùng tiền tố cột nén thành mảng 1D rồi chạy Kadane).
-
-- **C.** $O(N^3 * M^3)$
-
-- **D.** $O((N + M) log(NM))$
-
-> *Giải thích:* Cố định 2 hàng `r1, r2` mất $\mathcal{O}(N^2)$, tổng các cột giữa 2 hàng này được tính trong $\mathcal{O}(1)$ bằng tiền tố cột, sau đó chạy Kadane 1D mất `O(M) implies` Tổng thời gian $O(N^2 M)$.
-
-#### Câu 12 (Cân bằng đa trạng thái — Multidimensional Balance):
-
-Để tìm đoạn con dài nhất chứa số lượng 3 loại ký tự 'A', 'B', 'C' bằng nhau, ta cần lưu trữ và so khớp giá trị nào tại mỗi vị trí tiền tố $i$
-
-- **A.** Tổng số lượng $cntA + cntB + cntC$.
-
-- **B.** **[Đáp án đúng]** Cặp hiệu hai chiều $(cntA[i] - cntB[i], cntB[i] - cntC[i])$.
-
-- **C.** Tích $cntA[i] * cntB[i] * cntC[i]$.
-
-- **D.** Chỉ số `i bmod 3`.
-
-> *Giải thích:* Ba đại lượng bằng nhau $X = Y = Z iff X - Y = 0$ và $Y - Z = 0$. Khi lấy hiệu giữa hai mốc $R$ và $L-1$, điều này tương đương với $(cntA - cntB)$ và $(cntB - cntC)$ tại $R$ và $L-1$ phải bằng nhau.
 
 ## Bài tập thực hành
 
@@ -4917,6 +4382,15 @@ Cho mảng đã sắp xếp gồm 10 phần tử: $A = [2, 5, 8, 12, 16, 23, 38,
 
 ### 2.2. Tìm kiếm phần tử biên: `lower_bound` và `upper_bound`
 
+### Bảng cú pháp đầy đủ (điều kiện tiên quyết: mảng đã sắp xếp tăng dần)
+
+| Hàm | Từng tham số | Trả về |
+|:---|:---|:---|
+| `lower_bound(first, last, val)` | `first`: iterator đầu đoạn; `last`: iterator cuối đoạn (past-the-end); `val`: giá trị cần tìm | Iterator trỏ đến phần tử **đầu tiên $\ge$ `val`**; nếu không có thì trả về `last` |
+| `upper_bound(first, last, val)` | Giống hệt `lower_bound` | Iterator trỏ đến phần tử **đầu tiên $>$ `val`**; nếu không có thì trả về `last` |
+
+> **Đổi iterator thành chỉ số:** trừ đi `begin()`, ví dụ `lower_bound(A.begin(), A.end(), 5) - A.begin()`. Đếm số lần xuất hiện: $\text{Count}(X) = \text{upper\_bound}(X) - \text{lower\_bound}(X)$.
+
 Trong lập trình thi đấu, dạng toán tìm vị trí biên quan trọng hơn nhiều so với tìm chính xác:
 
 1. **`lower_bound` (Tìm phần tử nhỏ nhất $\ge X$):**
@@ -5143,203 +4617,6 @@ return 0;
 * Cần tối ưu nghiệm trên miền cực lớn ($1 \dots 10^{18}$) mà không thể duyệt tuần tự.
 * **KHI NÀO THẤT BẠI:**
 * Không gian tìm kiếm **không đơn điệu** (hàm dao động, có nhiều cực trị cục bộ). Lúc này chặt nhị phân sẽ bỏ sót nghiệm tối ưu toàn cục. Bắt buộc phải dùng **Ternary Search (Tìm kiếm Tam phân)** nếu hàm lồi/lõm, hoặc Quy hoạch động / Duyệt đồ thị.
-
-
-#### Câu 1 (Bản chất — Complexity):
-
-Tại sao thuật toán tìm kiếm nhị phân trên không gian kích thước $N = 10^9$ chỉ cần tối đa khoảng 30 bước lặp
-
-- **A.** Vì mỗi bước chia không gian thành 10 phần.
-
-- **B.** **[Đáp án đúng]** Vì mỗi bước loại bỏ chính xác $50%$ không gian tìm kiếm, và $2^{30} \approx 1.07 \times 10^9 > 10^9$.
-
-- **C.** Vì mảng số nguyên trong C++ chỉ chứa tối đa 30 phần tử âm.
-
-- **D.** Do trình biên dịch C++ tối ưu hóa vòng lặp thành lệnh SIMD.
-
-> *Giải thích:* Sau $k$ bước lặp, không gian còn lại là $N / 2^k$. Với $N = 10^9$, $2^{30} > 10^9 \implies k \approx 30$ bước là không gian thu hẹp về 1 phần tử.
-
-#### Câu 2 (Điều kiện tiên quyết — Monotonicity):
-
-Yêu cầu bắt buộc để có thể áp dụng thuật toán Tìm kiếm nhị phân là gì
-
-- **A.** Mảng phải chứa toàn số dương.
-
-- **B.** Kích thước mảng phải là một lũy thừa của 2.
-
-- **C.** **[Đáp án đúng]** Không gian tìm kiếm hoặc hàm kiểm tra phải có tính chất đơn điệu.
-
-- **D.** Tất cả các phần tử trong mảng phải đôi một khác nhau.
-
-> *Giải thích:* Tính đơn điệu đảm bảo khi so sánh với phần tử trung điểm $mid$, ta chắc chắn biết nửa nào chứa nghiệm và nửa nào có thể loại bỏ an toàn.
-
-#### Câu 3 (Cú pháp chuẩn — Bug Trap):
-
-Biểu thức nào sau đây tính trung điểm $mid$ an toàn nhất để chống tràn số trong C++
-
-- **A.** `mid = (low + high) / 2;`
-
-- **B.** **[Đáp án đúng]** `mid = low + (high - low) / 2;`
-
-- **C.** `mid = (low + high) >> 1;`
-
-- **D.** `mid = low + high / 2;`
-
-> *Giải thích:* Nếu $low = 1.5 \cdot 10^9$ và $high = 1.8 \cdot 10^9$, tổng $low + high = 3.3 \cdot 10^9$ vượt giới hạn $2.14 \cdot 10^9$ của `int`. Dùng $low + (high - low) / 2$ phép trừ $(high - low)$ luôn không âm và nhỏ hơn $high$, không bao giờ tràn số.
-
-#### Câu 4 (Hàm STL — lower_bound):
-
-Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của $lower_bound(A.begin(), A.end(), 4) - A.begin()$ là gì
-
-- **A.** 0
-
-- **B.** **[Đáp án đúng]** 1 (chỉ số của số 4 đầu tiên).
-
-- **C.** 3 (chỉ số của số 4 cuối cùng).
-
-- **D.** 4 (chỉ số của số 7).
-
-> *Giải thích:* $lower_bound( \dots , X)$ trả về con trỏ tới phần tử đầu tiên có giá trị $\ge X$. Số 4 đầu tiên nằm tại chỉ số 1 (0-based).
-
-#### Câu 5 (Hàm STL — upper_bound):
-
-Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của $upper_bound(A.begin(), A.end(), 4) - A.begin()$ là gì
-
-- **A.** 1
-
-- **B.** 3
-
-- **C.** **[Đáp án đúng]** 4 (chỉ số của số 7, phần tử đầu tiên `> 4`).
-
-- **D.** 5
-
-> *Giải thích:* $upper_bound( \dots , X)$ trả về con trỏ tới phần tử đầu tiên có giá trị nghiêm ngặt `> X`. Phần tử đầu tiên `> 4` là số 7 tại chỉ số 4.
-
-#### Câu 6 (Đếm số lần xuất hiện — Counting):
-
-Để đếm số lần xuất hiện của giá trị $X$ trong một vector $A$ gồm $N$ phần tử đã sắp xếp tăng dần trong thời gian $\mathcal{O}(\log N)$, ta dùng biểu thức nào
-
-- **A.** $upper_bound(A.begin(), A.end(), X) - A.begin()$
-
-- **B.** `count(A.begin(), A.end(), X)`
-
-- **C.** **[Đáp án đúng]** $upper_bound(A.begin(), A.end(), X) - lower_bound(A.begin(), A.end(), X)$
-
-- **D.** $lower_bound(A.begin(), A.end(), X) - A.begin()$
-
-> *Giải thích:* Hiệu vị trí của phần tử đầu tiên `> X` và phần tử đầu tiên $\ge X$ chính là số lượng phần tử có giá trị đúng bằng $X$. Hàm $count$ duyệt tuần tự $\mathcal{O}(N)$ sẽ bị TLE.
-
-#### Câu 7 (Binary Search on Answer — Logic):
-
-Trong bài toán *"Tìm chiều cao cắt $H$ lớn nhất sao cho tổng lượng gỗ thu được $\ge M$"*, tính chất đơn điệu của hàm kiểm tra `check(H)` thể hiện như thế nào
-
-- **A.** Chiều cao $H$ càng tăng thì lượng gỗ thu được càng tăng.
-
-- **B.** **[Đáp án đúng]** Chiều cao $H$ càng tăng thì lượng gỗ thu được càng giảm (hàm giảm đơn điệu).
-
-- **C.** Lượng gỗ thu được luôn không đổi với mọi chiều cao $H$.
-
-- **D.** Hàm lượng gỗ biến thiên ngẫu nhiên theo $H$.
-
-> *Giải thích:* Khi nâng máy cắt lên cao ($H$ tăng), phần ngọn cây bị cắt sẽ ngắn đi, do đó tổng lượng gỗ thu được chắc chắn giảm dần. Đây là hàm đơn điệu giảm.
-
-#### Câu 8 (Binary Search on Answer — Search Space):
-
-Nếu bài toán yêu cầu tìm giá trị $X$ nhỏ nhất thỏa mãn $check(X) = true$, sau khi kiểm tra tại $mid$ thấy $check(mid) = true$, ta cần cập nhật bước tiếp theo như thế nào
-
-- **A.** `low = mid + 1;`
-
-- **B.** **[Đáp án đúng]** `ans = mid; high = mid - 1;` (Ghi nhận $mid$ là một đáp án hợp lệ và tiếp tục tìm giá trị nhỏ hơn ở nửa trái).
-
-- **C.** `ans = mid; return ans;`
-
-- **D.** `high = mid + 1;`
-
-> *Giải thích:* Vì đề bài yêu cầu tìm $X$ **nhỏ nhất**, một giá trị $mid$ thỏa mãn có thể chưa phải là nhỏ nhất $implies$ ghi nhận `ans = mid` rồi thu hẹp không gian tìm kiếm sang bên trái $high = mid - 1$.
-
-#### Câu 9 (Chặt nhị phân số thực — Real Numbers):
-
-Tại sao khi chặt nhị phân trên tập số thực, ta nên dùng vòng lặp `for (int iter = 0; iter < 100; ++iter)` thay vì $while (high - low > 1e-7)$
-
-- **A.** Để chương trình chạy nhanh hơn gấp 100 lần.
-
-- **B.** **[Đáp án đúng]** Để tránh nguy cơ lặp vô tận do sai số làm tròn số thực (Floating-point round-off error) khiến hiệu $high - low$ không bao giờ nhỏ hơn epsilon.
-
-- **C.** Vì số thực trong C++ chỉ biểu diễn được tối đa 100 chữ số thập phân.
-
-- **D.** Do tiêu chuẩn thi đấu Olympic cấm dùng vòng lặp `while`.
-
-> *Giải thích:* Với kiểu `double`, khi $high$ và $low$ rất gần nhau, phép trừ $high - low$ có thể bị kẹt do giới hạn bit mantissa. Lặp 100 lần đảm bảo chia đôi khoảng cách $2^100$ lần, đạt độ chính xác cực cao mà không bao giờ bị kẹt vòng lặp.
-
-#### Câu 10 (Ranh giới thất bại — Failure Boundary):
-
-Trường hợp nào sau đây **KHÔNG THỂ** giải bằng thuật toán Tìm kiếm nhị phân một cách trực tiếp
-
-- **A.** Tìm căn bậc hai của số nguyên lớn $N \le 10^{18}$.
-
-- **B.** Tìm phần tử nhỏ nhất lớn hơn $X$ trong mảng đã sắp xếp.
-
-- **C.** **[Đáp án đúng]** Tìm giá trị $X$ để hàm số đa thức bậc 4 có 3 điểm cực trị `f(X)` đạt giá trị lớn nhất trên đoạn $[-1000, 1000]$.
-
-- **D.** Chia mảng thành $K$ đoạn con liên tiếp sao cho tổng đoạn lớn nhất là nhỏ nhất.
-
-> *Giải thích:* Hàm đa thức bậc 4 có 3 điểm cực trị không có tính chất đơn điệu trên toàn đoạn $[-1000, 1000]$ (đổi chiều tăng/giảm nhiều lần), do đó Binary Search không thể loại bỏ an toàn một nửa không gian. Lưu ý: Thuật toán Tìm kiếm Tam phân (Ternary Search) cũng chỉ áp dụng được cho hàm **đơn đỉnh (unimodal)** có đúng 1 cực trị duy nhất, không áp dụng trực tiếp cho hàm đa cực trị như đa thức bậc 4 này.
-
-#### Câu 11 (Mảng xoay vòng — Rotated Array):
-
-Cho mảng gồm các phần tử đôi một phân biệt đã sắp xếp nhưng bị xoay vòng tại một vị trí $P$ (ví dụ: `[4, 5, 6, 7, 0, 1, 2]`). Khi xét phần tử trung điểm $A[mid]$, tính chất cốt lõi nào cho phép ta tiếp tục tìm kiếm nhị phân
-
-- **A.** Cả hai nửa trái và phải đều đã được sắp xếp tăng dần.
-
-- **B.** **[Đáp án đúng]** Ít nhất một trong hai nửa $[low \dots mid]$ hoặc $[mid \dots high]$ chắc chắn là một dãy tăng dần đơn điệu bình thường.
-
-- **C.** Phần tử nhỏ nhất luôn nằm ở chính giữa mảng.
-
-- **D.** Mảng luôn có số lượng phần tử là số lẻ.
-
-> *Giải thích:* Điểm gãy (Pivot) chỉ nằm ở 1 trong 2 nửa. Do đó, nửa còn lại luôn là một mảng tăng dần hoàn hảo, ta có thể kiểm tra xem $X$ có thuộc khoảng giá trị của nửa đó không để thu hẹp không gian. (Lưu ý: Nếu mảng chứa các **phần tử trùng lặp** thỏa $A[low] = A[mid] = A[high]$, ta không thể xác định nửa nào được sắp xếp, thuật toán buộc phải co $low++, high--$ và có thể suy biến về $\mathcal{O}(N)$).
-
-#### Câu 12 (Ma trận 2D đã sắp xếp — 2D Matrix Binary Search):
-
-Cho ma trận $N \times M$ gồm các số nguyên tăng dần từ trái sang phải trên từng hàng và phần tử đầu mỗi hàng luôn lớn hơn phần tử cuối hàng trước. Để tìm kiếm phần tử $X$ trong $\mathcal{O}(\log(N \times M))$, ta ánh xạ chỉ số 1D $mid$ sang tọa độ ô `(r, c)` bằng công thức nào
-
-- **A.** $r = mid bmod M, c = mid / M$
-
-- **B.** **[Đáp án đúng]** $r = mid / M, c = mid bmod M$ (với chỉ số 0-based).
-
-- **C.** $r = mid / N, c = mid bmod N$
-
-- **D.** $r = mid * M, c = mid + M$
-
-> *Giải thích:* Coi ma trận $N \times M$ như một mảng 1D độ dài $N \times M$. Chỉ số dòng là $r = floor(mid / M )$ và chỉ số cột là `c = mid bmod M`.
-
-#### Câu 13 (Đỉnh dãy núi — Mountain Array Peak):
-
-Trong một mảng dạng đỉnh núi (tăng dần rồi giảm dần: $A0 < A1 < \dots < A_p > A[p+1] > \dots > A[N-1]$), điều kiện nào tại vị trí $mid$ cho biết đỉnh núi nằm ở bên phải $mid$
-
-- **A.** $A[mid] > A[mid + 1]$
-
-- **B.** **[Đáp án đúng]** $A[mid] < A[mid + 1]$ (đang ở sườn dốc đi lên, đỉnh núi chắc chắn nằm bên phải $implies low = mid + 1$).
-
-- **C.** $A[mid] = A[mid + 1]$
-
-- **D.** $A[mid] < A[mid - 1]$
-
-> *Giải thích:* Nếu $A[mid] < A[mid+1]$, dãy đang có xu hướng tăng tại $mid$, do đó đỉnh núi chưa đạt được và nằm về phía bên phải.
-
-#### Câu 14 (Trung vị hai mảng đã sắp xếp — Advanced Partition):
-
-Thuật toán tìm phần tử trung vị của hai mảng đã sắp xếp $A$ (kích thước $N$) và $B$ (kích thước $M$) trong thời gian tối ưu `O(log(min(N, M)))` dựa trên việc chặt nhị phân đối tượng nào
-
-- **A.** Chặt nhị phân giá trị của phần tử trung vị từ $-10^9 \dots 10^9$.
-
-- **B.** **[Đáp án đúng]** Chặt nhị phân vị trí vách ngăn (cut partition) trên mảng có kích thước nhỏ hơn để chia tổng hai mảng thành 2 nửa bằng nhau.
-
-- **C.** Sắp xếp lại toàn bộ mảng gộp trong $O((N+M)log(N+M))$.
-
-- **D.** Duyệt tuần tự 2 con trỏ qua cả 2 mảng.
-
-> *Giải thích:* Bằng cách chặt nhị phân số lượng phần tử lấy từ mảng nhỏ hơn $i \in [0, N]$, số lượng phần tử lấy từ mảng lớn hơn được cố định $j = (N + M + 1)/2 - i$. Ta kiểm tra điều kiện vách ngăn hợp lệ trong `O(1) implies` Tổng thời gian `O(log(min(N, M)))`.
 
 ## Bài tập thực hành
 
@@ -5996,6 +5273,17 @@ mask = mask ^ (1LL << k);
 
 ![Trực quan hóa cấu trúc Bit & 4 Thao tác Bit trên N = 13](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-09-phep-toan-bit/assets/bit_operations_simulation_vi.png)
 
+Bảng chạy tay 4 thao tác trên $N = 13$ ($1101_2$, các bit $3$ và $0$ đang bật):
+
+| Thao tác | Biểu thức | Tính toán nhị phân | Kết quả thập phân |
+|:---|:---|:---|:---:|
+| Kiểm tra bit $2$ | `(13 >> 2) & 1` | `1101_2 \to 11_2$, bit cuối $= 1$ | Bit $2$ đang **bật** |
+| Bật bit $1$ | `13 \| (1 << 1)` | $1101_2 \lor 0010_2 = 1111_2$ | $15$ |
+| Tắt bit $0$ | `13 & ~(1 << 0)` | $1101_2 \land 1110_2 = 1100_2$ | $12$ |
+| Đảo bit $3$ | `13 ^ (1 << 3)` | $1101_2 \oplus 1000_2 = 0101_2$ | $5$ |
+
+> **Cảnh báo tràn số khi dịch bit:** `1 << k` là số nguyên 32-bit, **tràn số (Undefined Behavior) khi $k \ge 31$**. Trong thi đấu luôn viết `1LL << k` (64-bit) và chỉ duyệt toàn bộ tập con khi $n \le 20$ (vì $2^{20} \approx 10^6$ vừa đủ nhanh, còn $2^{25}$ đã quá chậm).
+
 ## 3. Các tuyệt kỹ BIT & hàm nội tại CPU (builtin functions)
 
 ### 3.1. Kiểm tra một số nguyên dương có phải là lũy thừa của 2
@@ -6100,7 +5388,7 @@ break;
 }
 }
 
-cout << (found "YES\n" : "NO\n");
+cout << (found ? "YES\n" : "NO\n");
 return 0;
 }
 ```
@@ -6123,175 +5411,6 @@ return 0;
 * Khi $N \ge 30$ ($2^{30} \approx 10^9$ phép tính $\implies$ TLE). Lúc này bắt buộc phải dùng:
 * **Chia đôi tập hợp (Meet-in-the-middle)** khi $N \le 40$ ($\mathcal{O}(2^{N/2}) = 2^{20} \approx 10^6$).
 * Quy hoạch động hoặc Thuật toán Tham lam nếu bài toán có cấu trúc con tối ưu.
-
-
-#### Câu 1 (Bản chất XOR — Identity):
-
-Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì
-
-- **A.** 0
-
-- **B.** $A$
-
-- **C.** **[Đáp án đúng]** $B$ (vì `A XOR A = 0` và `0 XOR B = B`).
-
-- **D.** $2A + B$
-
-> *Giải thích:* Tính chất giao hoán và tự triệt tiêu của phép XOR: `A XOR B XOR A = (A XOR A) XOR B = 0 XOR B = B`.
-
-#### Câu 2 (Bẫy độ ưu tiên toán tử — Precedence):
-
-Đoạn mã C++ `if ((mask >> 3) & 1)` có ý nghĩa là gì
-
-- **A.** Dịch biến $mask$ sang phải 4 vị trí.
-
-- **B.** **[Đáp án đúng]** Kiểm tra xem bit thứ 3 của $mask$ có đang được bật (bằng 1) hay không.
-
-- **C.** Bật bit thứ 3 của $mask$ lên 1.
-
-- **D.** Tắt bit thứ 3 của $mask$.
-
-> *Giải thích:* Dịch phải 3 vị trí đưa bit thứ 3 về vị trí số 0, sau đó `& 1` sẽ trích xuất đúng giá trị của bit này (0 hoặc 1).
-
-#### Câu 3 (Kỹ thuật bật bit — Manipulation):
-
-Để bật bit thứ $k$ của biến số nguyên $mask$ lên 1 mà không làm thay đổi các bit khác, ta dùng câu lệnh nào
-
-- **A.** `mask = mask & (1LL << k);`
-
-- **B.** **[Đáp án đúng]** `mask = mask | (1LL << k);`
-
-- **C.** `mask = mask ^ (1LL << k);`
-
-- **D.** `mask = mask + (1LL << k);`
-
-> *Giải thích:* Phép OR với số có bit thứ $k$ bằng 1 và các bit khác bằng 0 sẽ biến bit thứ $k$ thành 1 mà giữ nguyên các bit còn lại.
-
-#### Câu 4 (Kỹ thuật tắt bit — Manipulation):
-
-Để tắt bit thứ $k$ của biến số nguyên $mask$ về 0, ta dùng câu lệnh nào
-
-- **A.** `mask = mask | ~(1LL << k);`
-
-- **B.** `mask = mask - (1LL << k);`
-
-- **C.** **[Đáp án đúng]** `mask = mask & ~(1LL << k);`
-
-- **D.** `mask = mask ^ (1LL << k);`
-
-> *Giải thích:* `~(1LL << k)` tạo ra một mặt nạ chứa toàn bit 1 ngoại trừ bit $k$ bằng 0. Khi `&` với mask, bit thứ $k$ chắc chắn về 0.
-
-#### Câu 5 (Lũy thừa của 2 — Bit Trick):
-
-Biểu thức $n > 0\ \text{và}\ (n\ \&\ (n-1)) = 0$ trả về `true` khi và chỉ khi:
-
-- **A.** $n$ là một số nguyên chẵn.
-
-- **B.** **[Đáp án đúng]** $n$ là một lũy thừa của 2 ($n = 2^k$ với $k \ge 0$).
-
-- **C.** $n$ là một số nguyên tố.
-
-- **D.** $n$ chia hết cho 4.
-
-> *Giải thích:* Một lũy thừa của 2 có dạng $100 \dots 0_2$, khi trừ 1 sẽ thành $011 \dots 1_2$. Phép AND giữa hai số này bằng đúng 0.
-
-#### Câu 6 (Đếm bit 1 — Builtin):
-
-Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian $\mathcal{O}(1)$, hàm nào sau đây là chuẩn xác nhất
-
-- **A.** `__builtin_popcount(x)`
-
-- **B.** **[Đáp án đúng]** `__builtin_popcountll(x)`
-
-- **C.** `__builtin_ctzll(x)`
-
-- **D.** `__builtin_clzll(x)`
-
-> *Giải thích:* Với kiểu `long long` 64-bit, bắt buộc phải dùng phiên bản có hậu tố $ll$ là `__builtin_popcountll`. Phiên bản không có $ll$ chỉ đếm 32 bit thấp.
-
-#### Câu 7 (Không gian tập con — Complexity):
-
-Một tập hợp có `N = 20` phần tử. Số lượng tập con được sinh ra bởi mặt nạ bit là bao nhiêu và thời gian duyệt vét cạn có chạy kịp $1$ giây không
-
-- **A.** $20^2 = 400$ tập con, chạy kịp.
-
-- **B.** **[Đáp án đúng]** $2^{20} = 1{,}048{,}576$ tập con, chạy mất khoảng `0.01` giây, hoàn toàn kịp thời gian $1$ giây.
-
-- **C.** $20! \approx 2.4 \times 10^{18}$ tập con, bị quá thời gian.
-
-- **D.** $2^{20} \approx 10^9$ tập con, bị quá thời gian.
-
-> *Giải thích:* Mỗi phần tử có 2 lựa chọn (chọn hoặc không) $implies 2^20 ≈ 1.05 \cdot 10^6$ trạng thái. Vòng lặp $10^6$ chạy dưới `0.02` giây trong C++.
-
-#### Câu 8 (Tìm phần tử đơn lẻ — XOR Application):
-
-Cho mảng gồm $2N + 1$ số nguyên, trong đó có đúng một số xuất hiện 1 lần, tất cả các số còn lại đều xuất hiện đúng 2 lần. Thuật toán tìm số xuất hiện 1 lần tối ưu nhất là gì
-
-- **A.** Dùng 2 vòng lặp lồng nhau $\mathcal{O}(N^2)$.
-
-- **B.** Sắp xếp mảng mất $\mathcal{O}(N \log N)$.
-
-- **C.** **[Đáp án đúng]** Tính XOR tất cả các phần tử trong mảng trong $\mathcal{O}(N)$ thời gian và $\mathcal{O}(1)$ bộ nhớ.
-
-- **D.** Dùng bảng băm đếm tần suất.
-
-> *Giải thích:* Các cặp số giống nhau khi XOR với nhau sẽ triệt tiêu về 0 (`x XOR x = 0`). Kết quả XOR của toàn bộ mảng chính là số xuất hiện 1 lần duy nhất.
-
-#### Câu 9 (Bẫy dịch bit 64-bit — 64-bit Shift):
-
-Đoạn code `long long mask = 1 << 40;` sẽ gây ra lỗi gì trong C++
-
-- **A.** Lỗi biên dịch không thể dịch bit.
-
-- **B.** **[Đáp án đúng]** Tràn số nguyên 32-bit (vì số $1$ mặc định là `int`), dẫn đến kết quả sai hoặc hành vi không xác định (Undefined Behavior).
-
-- **C.** Lỗi tràn bộ nhớ RAM.
-
-- **D.** Tự động ép kiểu thành 64-bit mà không có lỗi gì.
-
-> *Giải thích:* Hằng số $1$ mang kiểu `int` 32-bit, không thể dịch 40 vị trí. Bắt buộc phải viết `1LL << 40`.
-
-#### Câu 10 (Duyệt Submask — Advanced Technique):
-
-Vòng lặp `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` dùng để làm gì
-
-- **A.** Duyệt tất cả các số từ $mask$ về 1.
-
-- **B.** **[Đáp án đúng]** Duyệt chính xác và đầy đủ tất cả các tập con thực sự (Submasks) của $mask$ mà không duyệt thừa bất kỳ trạng thái nào khác.
-
-- **C.** Xóa tất cả các bit 1 của $mask$.
-
-- **D.** Đếm số lượng bit 0 của $mask$.
-
-> *Giải thích:* Đây là kỹ thuật kinh điển trong quy hoạch động Bitmask để sinh tất cả các tập con của một mặt nạ bit trong $O(3^N)$ tổng thời gian cho toàn bộ các mask.
-
-#### Câu 11 (Cặp tổng lũy thừa của 2 — Power of 2 Pairs):
-
-Cho $A_i \le 10^9$. Để đếm số cặp $A_i + A_j = 2^k$, tại sao ta chỉ cần lặp tối đa $k$ từ $1$ đến $30$
-
-- **A.** Vì kiểu `long long` trong C++ chỉ biểu diễn được 30 bit.
-
-- **B.** **[Đáp án đúng]** Vì giá trị tổng lớn nhất của hai số là $10^9 + 10^9 = 2 \cdot 10^9 < 2^31$, do đó chỉ có tối đa 30 lũy thừa của 2 khả dĩ.
-
-- **C.** Vì số 30 là số nguyên tố.
-
-- **D.** Do thuật toán chỉ kiểm tra các số chẵn.
-
-> *Giải thích:* $A_i + A_j \le 2 \cdot 10^9 < 2^31 ≈ 2.147 \cdot 10^9$. Do đó $k$ chỉ có thể nhận các giá trị từ $1 \dots 30$.
-
-#### Câu 12 (Tập độc lập về bit — Bit Independence):
-
-Hai số nguyên dương $X$ và $Y$ được gọi là độc lập về bit khi biểu thức nào sau đây bằng 0
-
-- **A.** $X XOR Y = 0$.
-
-- **B.** **[Đáp án đúng]** $X \,\&\, Y = 0$ (hai số không có bất kỳ bit 1 nào nằm ở cùng vị trí).
-
-- **C.** $X | Y = 0$.
-
-- **D.** $X + Y = 0$.
-
-> *Giải thích:* Phép AND kiểm tra các bit trùng nhau. $X \,\&\, Y = 0$ khi và chỉ khi không có vị trí bit nào mà cả $X$ và $Y$ cùng bằng 1.
 
 ## Bài tập thực hành
 
@@ -6826,6 +5945,37 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 * **Tính chất đối xứng của ước số:** Nếu $d$ là ước của $N$ thì $\frac{N}{d}$ cũng là ước của $N$.
 * **Bất biến $\sqrt{N}$:** Nếu $N$ là hợp số, nó **bắt buộc phải có ít nhất một ước nguyên tố $p \le \sqrt{N}$**. Do đó, ta chỉ cần duyệt kiểm tra các số từ $2$ đến $\lfloor \sqrt{N} \rfloor$ trong $\mathcal{O}(\sqrt{N})$ thay vì $\mathcal{O}(N)$.
 
+### Hàm mẫu kiểm tra số nguyên tố $\mathcal{O}(\sqrt{N})$ (bắt buộc thuộc lòng)
+```cpp
+// Trả về true khi và chỉ khi N là số nguyên tố
+bool isPrime(long long N) {
+if (N < 2) return false;
+for (long long i = 2; i * i <= N; ++i) {
+if (N % i == 0) return false; // Tìm được ước thật sự => hợp số
+}
+return true;
+}
+```
+
+Bảng chạy tay `isPrime(29)` ($\lfloor \sqrt{29} \rfloor = 5$, chỉ xét $i = 2, 3, 4, 5$):
+
+| $i$ | $i \times i \le 29$? | $29 \pmod i$ | Kết luận |
+|:---:|:---:|:---:|---|
+| $2$ | $4 \le 29$ | $1$ | Chưa tìm được ước, xét tiếp |
+| $3$ | $9 \le 29$ | $2$ | Chưa tìm được ước, xét tiếp |
+| $4$ | $16 \le 29$ | $1$ | Chưa tìm được ước, xét tiếp |
+| $5$ | $25 \le 29$ | $4$ | Chưa tìm được ước, xét tiếp |
+| $6$ | $36 > 29$ | Dừng vòng lặp | **$29$ là số nguyên tố** |
+
+### Bảng cú pháp `std::gcd` / `std::lcm` (thư viện `<numeric>`)
+
+| Hàm | Tham số | Trả về | Ví dụ |
+|:---|:---|:---|---|
+| `std::gcd(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Ước chung lớn nhất của `a` và `b` | `std::gcd(252, 105)` $\implies$ `21` |
+| `std::lcm(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Bội chung nhỏ nhất của `a` và `b` | `std::lcm(4, 6)` $\implies$ `12` |
+
+> **Lưu ý quan trọng:** `std::lcm` tính theo công thức $a / \gcd(a,b) \times b$ (chia trước nhân sau để tránh tràn số). Khi tự viết hàm `getGcd` bằng Euclid thì kết quả phải khớp `std::gcd` trên cùng bộ test.
+
 ## 2. Mô phỏng từng bước
 
 ### Ví dụ 1: Mô phỏng thuật toán euclid tìm $\gcd(252, 105)$
@@ -6987,182 +6137,13 @@ cin >> n;
 
 auto factors = factorize(n);
 for (int i = 0; i < (int)factors.size(); ++i) {
-cout << factors[i].first << "^" << factors[i].second << (i + 1 == (int)factors.size() "" : " * ");
+cout << factors[i].first << "^" << factors[i].second << (i + 1 == (int)factors.size() ? "" : " * ");
 }
 cout << "\n";
 }
 return 0;
 }
 ```
-
-
-#### Câu 1 (Độ phức tạp):
-
-Thuật toán Euclid tìm `gcd(A, B)` có độ phức tạp thời gian trong trường hợp xấu nhất là bao nhiêu
-
-- **A.** $\mathcal{O}(\min(A, B))$
-
-- **B.** **[Đáp án đúng]** $\mathcal{O}(\log(\min(A, B)))$
-
-- **C.** $\mathcal{O}(\sqrt{\min(A, B)})$
-
-- **D.** $\mathcal{O}(1)$
-
-> *Giải thích:* Sau mỗi hai bước lặp của phép lấy dư Euclid, số nhỏ hơn sẽ giảm ít nhất một nửa, do đó số bước lặp tối đa không vượt quá `2 log2(min(A, B))`.
-
-#### Câu 2 (Bản chất toán học):
-
-Trường hợp xấu nhất khiến thuật toán Euclid phải thực hiện số bước lặp nhiều nhất xảy ra khi $A$ và $B$ là hai số nào sau đây
-
-- **A.** Hai lũy thừa của 2: $A = 2^x, B = 2^y$.
-
-- **B.** **[Đáp án đúng]** Hai số Fibonacci liên tiếp: $A = F[k+1], B = F_k$.
-
-- **C.** Hai số nguyên tố rất lớn: `A = p, B = q`.
-
-- **D.** Một số chẵn và một số lẻ.
-
-> *Giải thích:* Định lý Lamé chứng minh rằng hai số Fibonacci liên tiếp luôn tạo ra các thương số bằng $1$ ở mọi bước lặp, khiến phép chia lấy dư thu hẹp chậm nhất.
-
-#### Câu 3 (Cú pháp & Bẫy lỗi):
-
-Trong template C++ chuẩn thi đấu, công thức nào sau đây được sử dụng để tính Bội chung nhỏ nhất `lcm(A, B)` nhằm triệt tiêu nguy cơ tràn số ở bước nhân trung gian
-
-- **A.** $(a * b) / getGcd(a, b)$
-
-- **B.** **[Đáp án đúng]** $(a / getGcd(a, b)) * b$
-
-- **C.** $a * b * getGcd(a, b)$
-
-- **D.** $(a + b) / getGcd(a, b)$
-
-> *Giải thích:* Vì $A$ luôn chia hết cho `gcd(A, B)`, ta thực hiện phép chia trước $(a / gcd(a, b))$ để thu nhỏ giá trị trung gian trước khi nhân với $B$, giúp chống tràn số 64-bit hiệu quả.
-
-#### Câu 4 (Thuật toán kiểm tra số nguyên tố):
-
-Tại sao để kiểm tra số $N$ có phải là số nguyên tố hay không, ta chỉ cần kiểm tra các ước nguyên từ $2$ đến `floor(sqrt(N) )`
-
-- **A.** Vì các số lớn hơn `sqrt(N)` luôn là số lẻ.
-
-- **B.** **[Đáp án đúng]** Vì nếu $N = a * b$, không thể xảy ra trường hợp cả $a$ và $b$ đều đồng thời lớn hơn `sqrt(N)`.
-
-- **C.** Vì hàm `sqrt(N)` trong C++ chạy trong $\mathcal{O}(1)$.
-
-- **D.** Vì số lượng ước của $N$ không bao giờ vượt quá `sqrt(N)`.
-
-> *Giải thích:* Nếu `a > sqrt(N)` và `b > sqrt(N)` thì $a * b > N$ (vô lý). Do đó, nếu $N$ là hợp số, ước nhỏ hơn bắt buộc phải nằm trong khoảng `[2, sqrt(N)]`.
-
-#### Câu 5 (Ứng dụng Sàng nguyên tố):
-
-Độ phức tạp thời gian chuẩn của thuật toán Sàng Eratosthenes để tìm tất cả các số nguyên tố `$\le N$` là:
-
-- **A.** $\mathcal{O}(N \sqrt{N})$
-
-- **B.** $\mathcal{O}(N \log N)$
-
-- **C.** **[Đáp án đúng]** $\mathcal{O}(N \log \log N)$
-
-- **D.** $\mathcal{O}(N)$
-
-> *Giải thích:* Tổng số thao tác gạch bỏ bằng $N sum(p $\le N$) (1)/(p)$. Theo định lý Mertens, chuỗi nghịch đảo các số nguyên tố có tổng tiệm cận `ln(ln N)`, do đó độ phức tạp là $\mathcal{O}(N \log \log N)$, gần như tuyến tính tuyệt đối.
-
-#### Câu 6 (Sàng SPF):
-
-Trong kỹ thuật Sàng Ước Nguyên Tố Nhỏ Nhất (SPF), mảng `spf[x]` lưu thông tin gì
-
-- **A.** Số lượng ước nguyên tố của $x$.
-
-- **B.** Tổng các chữ số của $x$.
-
-- **C.** **[Đáp án đúng]** Ước số nguyên tố nhỏ nhất của số nguyên $x$.
-
-- **D.** Số nguyên tố lớn nhất nhỏ hơn hoặc bằng $x$.
-
-> *Giải thích:* `spf[x]` lưu Smallest Prime Factor của $x$, giúp phân tích thừa số nguyên tố của $x$ trong `O(log x)` bước chia liên tiếp.
-
-#### Câu 7 (Đếm số lượng ước):
-
-Một số nguyên $N$ có dạng phân tích thừa số nguyên tố $N = p_1^3 \cdot p_2^4 \cdot p_3^1$ (với `p1, p2, p3` là các số nguyên tố phân biệt). Số $N$ có tất cả bao nhiêu ước số nguyên dương
-
-- **A.** $3 * 4 * 1 = 12$
-
-- **B.** $3 + 4 + 1 = 8$
-
-- **C.** **[Đáp án đúng]** $(3+1) * (4+1) * (1+1) = 4 * 5 * 2 = 40$ ước
-
-- **D.** $40 - 1 = 39$ ước
-
-> *Giải thích:* Theo công thức nhân tính, số lượng ước số của $N = \prod p_i^{a_i}$ là $\prod (a_i + 1)$.
-
-#### Câu 8 (Đặc điểm số chính phương):
-
-Một số nguyên dương $N$ là số chính phương ($N = k^2$) khi và chỉ khi điều kiện nào sau đây được thỏa mãn
-
-- **A.** $N$ có số lượng thừa số nguyên tố phân biệt là một số chẵn.
-
-- **B.** Tổng các chữ số của $N$ chia hết cho 9.
-
-- **C.** **[Đáp án đúng]** Số lượng ước số nguyên dương của $N$ là một số lẻ (tương đương số mũ của mọi thừa số nguyên tố đều là số chẵn).
-
-- **D.** $N$ có chữ số tận cùng thuộc tập `2, 3, 7, 8`.
-
-> *Giải thích:* Các ước số luôn đi thành từng cặp đối xứng $(d, N/d)$. Chỉ khi $N = k^2$ thì cặp ước tại $k = N/k$ mới trùng nhau, tạo ra số lượng ước số lẻ. Về mặt thừa số nguyên tố, $N = \prod p_i^{2a_i}$ nên số lượng ước $(2a_1 + 1)(2a_2 + 1) \dots$ luôn là tích các số lẻ (kết quả là số lẻ).
-
-#### Câu 9 (Công thức Legendre):
-
-Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng để tính đại lượng nào
-
-- **A.** Số lượng số nguyên tố nhỏ hơn $N!$.
-
-- **B.** **[Đáp án đúng]** Số mũ của thừa số nguyên tố $p$ trong phân tích thừa số nguyên tố của $N!$.
-
-- **C.** Ước chung lớn nhất của $N!$ và $p$.
-
-- **D.** Số chữ số của $N!$.
-
-> *Giải thích:* Công thức Legendre đếm số lượng bội của $p, p^2, p^3, \dots$ đóng góp vào tích $N! = 1 \times 2 \times \cdots \times N$.
-
-#### Câu 10 (Chữ số 0 tận cùng):
-
-Số lượng chữ số $0$ liên tiếp tận cùng của $100!$ là bao nhiêu
-
-- **A.** $10$
-
-- **B.** $20$
-
-- **C.** **[Đáp án đúng]** $\lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = 24$
-
-- **D.** $25$
-
-> *Giải thích:* Mỗi chữ số 0 tận cùng được tạo bởi tích $2 * 5$. Trong $N!$, số lượng thừa số 2 luôn nhiều hơn số lượng thừa số 5, do đó số chữ số 0 bằng số mũ của 5 trong $100!$.
-
-#### Câu 11 (Sàng phân đoạn - Segmented Sieve):
-
-Kỹ thuật Sàng phân đoạn (Segmented Sieve) được sử dụng tối ưu nhất trong tình huống nào
-
-- **A.** Khi cần tìm số nguyên tố trong khoảng $[1, 10^7]$.
-
-- **B.** **[Đáp án đúng]** Khi cần tìm số nguyên tố trong đoạn $[L, R]$ với $R \le 10^{12}$ nhưng độ dài đoạn $R - L \le 10^6$.
-
-- **C.** Khi $L$ và $R$ đều là số chẵn.
-
-- **D.** Khi bộ nhớ RAM máy tính có dung lượng trên 16GB.
-
-> *Giải thích:* Ta không thể tạo mảng kích thước $10^{12}$, nhưng có thể sàng trên mảng kích thước $R - L + 1 \le 10^6$ bằng cách chỉ dùng các số nguyên tố $\le \sqrt{R} \le 10^6$.
-
-#### Câu 12 (Số nguyên tố cùng nhau):
-
-Hai số nguyên dương $A$ và $B$ được gọi là nguyên tố cùng nhau (Coprime) khi và chỉ khi:
-
-- **A.** Cả $A$ và $B$ đều là số nguyên tố.
-
-- **B.** $A + B$ là số nguyên tố.
-
-- **C.** **[Đáp án đúng]** `gcd(A, B) = 1`.
-
-- **D.** $\text{lcm}(A, B) = A \times B + 1$.
-
-> *Giải thích:* Hai số nguyên tố cùng nhau là hai số không có ước chung nào khác ngoài $1$, tức `gcd(A, B) = 1`.
 
 ## Bài tập thực hành
 
@@ -7870,173 +6851,6 @@ return 0;
 }
 ```
 
-
-#### Câu 1 (Độ phức tạp):
-
-Thuật toán Lũy thừa nhị phân (Binary Exponentiation) tính $A^B \bmod M$ có độ phức tạp thời gian là:
-
-- **A.** $\mathcal{O}(B)$
-
-- **B.** $\mathcal{O}(\sqrt{B})$
-
-- **C.** **[Đáp án đúng]** $\mathcal{O}(\log_2 B)$
-
-- **D.** $\mathcal{O}(1)$
-
-> *Giải thích:* Sau mỗi vòng lặp, số mũ $B$ giảm đi một nửa ($B \gets \lfloor B / 2 \rfloor$). Do đó số lần lặp tối đa là $\lfloor \log_2 B \rfloor + 1$.
-
-#### Câu 2 (Xử lý số âm):
-
-Trong C++, biểu thức $(-8) \bmod 5$ trả về kết quả là $-3$. Cách viết chuẩn mực nào để luôn nhận được số dư không âm trong khoảng $[0, M - 1]$
-
-- **A.** $abs((-8) % 5)$
-
-- **B.** **[Đáp án đúng]** $((-8) % 5 + 5) % 5$
-
-- **C.** $(-8) % 5 + 5$
-
-- **D.** $5 - ((-8) % 5)$
-
-> *Giải thích:* Cộng thêm $M$ rồi lấy dư lại lần nữa đảm bảo nếu số dư ban đầu là âm (thuộc $(-M, 0)$), nó sẽ được đưa về miền dương $[0, M - 1]$, còn nếu ban đầu đã dương thì không đổi.
-
-#### Câu 3 (Định lý Fermat nhỏ):
-
-Định lý Fermat nhỏ phát biểu rằng: Nếu $M$ là số nguyên tố và $\gcd(A, M) = 1$, thì $A^{M-1} \equiv 1 \pmod M$. Từ đó suy ra nghịch đảo modulo $A^{-1} \pmod M$ bằng biểu thức nào
-
-- **A.** $A^M \bmod M$
-
-- **B.** $A^{M+1} \bmod M$
-
-- **C.** **[Đáp án đúng]** $A^{M-2} \bmod M$
-
-- **D.** $A^{M-1} - 1 \bmod M$
-
-> *Giải thích:* Nhân cả 2 vế của $A^{M-1} \equiv 1 \pmod M$ với $A^{-1}$, ta được $A^{-1} \equiv A^{M-2} \pmod M$.
-
-#### Câu 4 (Phép chia Modulo):
-
-Khi cần tính giá trị biểu thức $\frac{A}{B} \pmod M$ với $M = 10^9 + 7$ (số nguyên tố) và $B \not\equiv 0 \pmod M$, ta thực hiện phép toán nào sau đây
-
-- **A.** $(A / B) % M$
-
-- **B.** $(A \bmod M) / (B \bmod M)$
-
-- **C.** **[Đáp án đúng]** $(A \bmod M) \times \text{powerMod}(B, M-2, M) \bmod M$
-
-- **D.** $(A \bmod M) \times \text{powerMod}(B, M-1, M) \bmod M$
-
-> *Giải thích:* Phép chia trên vành modulo bắt buộc phải nhân với nghịch đảo của mẫu số: $A \cdot B^{-1} \pmod M$.
-
-#### Câu 5 (Điều kiện tồn tại Nghịch đảo):
-
-Nghịch đảo modulo của số nguyên $A$ theo modulo $M$ (tức số $X$ sao cho $A \cdot X \equiv 1 \pmod M$) **chắc chắn tồn tại** khi và chỉ khi:
-
-- **A.** $A$ và $M$ đều là số lẻ.
-
-- **B.** `A < M`.
-
-- **C.** **[Đáp án đúng]** `gcd(A, M) = 1` ($A$ và $M$ nguyên tố cùng nhau).
-
-- **D.** $M$ phải là số chẵn.
-
-> *Giải thích:* Theo định lý Bézout, phương trình $Ax + My = 1$ chỉ có nghiệm nguyên khi và chỉ khi `gcd(A, M) = 1`.
-
-#### Câu 6 (Tổ hợp Modulo $\mathcal{O}(1)$):
-
-Để trả lời $10^5$ truy vấn tính số tổ hợp $\binom{N}{K} \pmod{10^9 + 7}$ với $N, K \le 10^6$ trong tổng thời gian dưới `0.1s`, phương pháp tối ưu nhất là gì
-
-- **A.** Tính trực tiếp $C(N, K)$ bằng tam giác Pascal tại mỗi truy vấn.
-
-- **B.** Tính $N!$, $K!$, $(N-K)!$ từ đầu tại mỗi truy vấn.
-
-- **C.** **[Đáp án đúng]** Tiền xử lý mảng Giai thừa `fact[]` và Nghịch đảo giai thừa `invFact[]` trong $\mathcal{O}(N)$, sau đó trả lời mỗi truy vấn trong $\mathcal{O}(1)$.
-
-- **D.** Dùng đệ quy quay lui có nhớ.
-
-> Giải thích: Tiền xử lý $\mathcal{O}(N)$ cho phép tính $C(N, K) = \text{fact}[N] \cdot \text{invFact}[K] \cdot \text{invFact}[N-K] \pmod M$ trong đúng $\mathcal{O}(1)$ phép nhân.
-
-#### Câu 7 (Tối ưu tính Nghịch đảo giai thừa):
-
-Thay vì gọi hàm lũy thừa $N$ lần để tính `invFact[i]`, ta có thể tính toàn bộ mảng $invFact$ từ $1 \dots N$ chỉ với **1 lần gọi hàm lũy thừa duy nhất** bằng công thức quy nạp lùi nào
-
-- **A.** $invFact[i - 1] = invFact[i] / i$
-
-- **B.** **[Đáp án đúng]** $invFact[i - 1] = (invFact[i] * i) % MOD$
-
-- **C.** $invFact[i - 1] = (invFact[i] * (MOD - i)) % MOD$
-
-- **D.** $invFact[i] = invFact[i - 1] * (i + 1)$
-
-> *Giải thích:* Vì $\frac{1}{(i-1)!} = \frac{1}{i!} \cdot i$, do đó $invFact[i - 1] = (invFact[i] * i) % MOD$. Ta chỉ cần tính $invFact[N] = power(fact[N], MOD - 2)$ rồi đi lùi về $0$.
-
-#### Câu 8 (Rút gọn số mũ lớn):
-
-Theo định lý Fermat nhỏ, với $M = 10^9 + 7$ (số nguyên tố) và `gcd(A, M) = 1`, nếu số mũ $B$ là một số khổng lồ gồm hàng chục nghìn chữ số, ta có thể rút gọn số mũ $B$ trước khi tính lũy thừa bằng cách nào
-
-- **A.** $B \gets B \bmod M$
-
-- **B.** **[Đáp án đúng]** $B \gets B \bmod (M - 1)$
-
-- **C.** $B \gets B \bmod (M + 1)$
-
-- **D.** $B \gets B \bmod \sqrt{M}$
-
-> *Giải thích:* Vì $M$ là số nguyên tố và `gcd(A, M) = 1`, theo Fermat nhỏ $A^{M-1} \equiv 1 \pmod M$. Do đó $A^B = A^{q(M-1)+r} = (A^{M-1})^q \cdot A^r \equiv 1^q \cdot A^r \equiv A^r \pmod M$ với $r = B \bmod (M - 1)$.
-
-#### Câu 9 (Nhân an toàn chống tràn số 64-bit):
-
-Khi nào phép nhân trực tiếp $(a * b) % m$ có nguy cơ gây tràn số và bắt buộc phải áp dụng kỹ thuật nhân modulo an toàn (như Nhân Ấn Độ $\mathcal{O}(\log B)$ hoặc kiểu dữ liệu `__int128`)
-
-- **A.** Khi $A, B \le 10^9$ và $M = 10^9 + 7$.
-
-- **B.** **[Đáp án đúng]** Khi $A, B \le 10^{18}$ và $M \le 10^{18}$ (tích $A \times B$ có thể lên tới $10^{36}$, vượt quá giới hạn 64-bit của `unsigned long long`).
-
-- **C.** Khi $M$ là số chẵn.
-
-- **D.** Khi $B$ là số âm.
-
-> *Giải thích:* Khi $A, B \approx 10^{18}$, tích $A \times B \approx 10^{36}$ vượt xa ngưỡng $2^{64}-1 \approx 1.8 \times 10^{19}$. Ta cần phân rã phép nhân thành các phép cộng có lấy dư (Nhân Ấn Độ) hoặc dùng kiểu số nguyên 128-bit.
-
-#### Câu 10 (Phương trình Diophantine & Euclid mở rộng):
-
-Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phương trình $Ax + My = \gcd(A, M)$. Nếu `gcd(A, M) = 1`, giá trị $x \bmod M$ đại diện cho đại lượng nào
-
-- **A.** Ước chung lớn nhất của $A$ và $M$.
-
-- **B.** Phần dư của $A$ chia cho $M$.
-
-- **C.** **[Đáp án đúng]** Nghịch đảo modulo của $A$ theo modulo $M$ ($A^{-1} \pmod M$).
-
-- **D.** Bội chung nhỏ nhất của $A$ và $M$.
-
-> *Giải thích:* Phương trình $Ax + My = 1 \iff Ax \equiv 1 \pmod M$, nghĩa là $x$ chính là nghịch đảo modulo của $A$.
-
-
-### Ghi chú:
-**Phân tầng lộ trình học tập:**
-
-> * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-MOD-01` $\to$ `09`):** Nắm vững các phép toán đồng dư, lũy thừa nhị phân, nghịch đảo Fermat/Euclid và tổ hợp $C(N, K)$.
-> * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-MOD-10` $\to$ `16`):** Dành cho học sinh giỏi nâng cao tiếp cận các mô hình toán học chuyên sâu.
-
-| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Phân Loại | Dạng Thuật Toán & Kỹ Năng Cốt Lõi |
-|:---:|:---:|---|:---:|:---:|---|
-| 01 | `CPPB-MOD-01` | **Phép Tính Đồng Dư Cơ Bản (+, -, \*)** | `P0` | **Core** | Quy tắc cộng trừ nhân đồng dư và xử lý số dư âm |
-| 02 | `CPPB-MOD-02` | **Lũy Thừa Nhị Phân Cơ Bản ($A^B \pmod M$)** | `P0` | **Core** | Thuật toán Lũy thừa nhị phân lặp $\mathcal{O}(\log B)$ |
-| 03 | `CPPB-MOD-03` | **Lũy Thừa Chuỗi Số Lớn ($A^B \pmod M$)** | `P1` | **Core** | Định lý Fermat nhỏ và rút gọn số mũ $B \pmod{M - 1}$ |
-| 04 | `CPPB-MOD-04` | **Nhân Ấn Độ Chống Tràn Số ($A \times B \pmod M$)** | `P1` | **Core** | Nhân nhân đôi nhị phân $\mathcal{O}(\log B)$ hoặc `__int128` |
-| 05 | `CPPB-MOD-05` | **Tính Tổng Cấp Số Nhân Đồng Dư** | `P2` | **Core** | Chia để trị tính $S = 1 + A + \cdots + A^N \pmod M$ |
-| 06 | `CPPB-MOD-06` | **Nghịch Đảo Modulo Bằng Fermat Nhỏ** | `P2` | **Core** | Tính $A^{-1} \equiv A^{M-2} \pmod M$ với $M$ nguyên tố |
-| 07 | `CPPB-MOD-07` | **Nghịch Đảo Modulo Bằng Euclid Mở Rộng** | `P2` | **Core** | Giải phương trình $Ax + My = 1$ khi $\gcd(A, M) = 1$ |
-| 08 | `CPPB-MOD-08` | **Phép Chia Đồng Dư $\frac{A}{B} \pmod M$** | `P2` | **Core** | Thực hiện phép nhân với nghịch đảo modulo $A \times B^{-1}$ |
-| 09 | `CPPB-MOD-09` | **Tính Số Tổ Hợp $C(N, K) \pmod M$** | `P3` | **Core** | Tiền xử lý Giai thừa và Nghịch đảo trong $\mathcal{O}(N)$ |
-| 10 | `CPPB-MOD-10` | **Tính Số Chỉnh Hợp $A(N, K) \pmod M$** | `P3` | *Advanced* | Tính $A(N, K) = N! \times ((N-K)!)^{-1} \pmod M$ |
-| 11 | `CPPB-MOD-11` | **Dãy Fibonacci Đồng Dư Lớn** | `P3` | *Advanced* | Nhân ma trận nhị phân $\mathcal{O}(\log N)$ tính $F_N \pmod M$ |
-| 12 | `CPPB-MOD-12` | **Số Catalan Đồng Dư $C_N \pmod M$** | `P3` | *Advanced* | Công thức $C_N = \frac{1}{N+1} C(2N, N) \pmod M$ |
-| 13 | `CPPB-MOD-13` | **Lũy Thừa Tầng (Tower of Powers)** | `P4` | *Advanced* | Tính $A^{B^C} \pmod M$ bằng định lý Euler / Fermat nhỏ |
-| 14 | `CPPB-MOD-14` | **Nghịch Đảo Tuyến Tính $1 \dots N$ Trong $\mathcal{O}(N)$** | `P4` | *Advanced* | Công thức hồi quy tính nghịch đảo toàn bộ mảng |
-| 15 | `CPPB-MOD-15` | **Giải Phương Trình Đồng Dư Tuyến Tính $Ax \equiv B \pmod M$** | `P4` | *Advanced* | Thuật toán Euclid mở rộng tổng quát |
-| 16 | `CPPB-MOD-16` | **Đồng Dư Cực Hạn: Căn Bậc Hai Modulo (Tonelli-Shanks)** | `P5` | *Advanced* | Giải phương trình $x^2 \equiv A \pmod P$ |
-
 ## Bài tập thực hành
 
 ### Bài 133 [CPPB-MOD-01]: Phép Tính Đồng Dư Cơ Bản (+, -, *)
@@ -8587,9 +7401,9 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 * **Base 10 (`string` / `vector<int>`):** Mỗi phần tử lưu 1 chữ số thập phân ($0 \dots 9$).
 * **Base $10^9$ (`vector<int>` / `vector<long long>`):** Nhóm các cụm 9 chữ số từ phải sang trái.
 * *Cấu trúc dữ liệu:* Mỗi chunk lưu kiểu `int` ($0 \dots 999,999,999$); phép nhân giữa 2 chunks lưu kiểu `long long` (vì $(10^9 - 1) \times (10^9 - 1) \approx 10^{18} < 2^{63}-1$).
-* *Ví dụ:* Số $1234567890123456789$ được tách thành:
-$$\text{chunks} = [23456789, 123456789, 1]$$
-$$\text{Giá trị} = 23456789 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
+* *Ví dụ:* Số $1234567890123456789$ (19 chữ số) được tách từ phải sang trái thành từng cụm 9 chữ số (chunk bậc thấp đứng trước):
+$$\text{chunks} = [234567890, 123456789, 1]$$
+$$\text{Giá trị} = 234567890 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
 
 ### 3.2. Bảng tổng hợp các phép toán số nguyên lớn ($\mathcal{O}(L^2)$)
 
@@ -8749,173 +7563,6 @@ cout << "A * B = " << mulBig(a, b) << "\n";
 return 0;
 }
 ```
-
-
-#### Câu 1 (Lưu trữ dữ liệu Little-Endian):
-
-Tại sao khi cài đặt số nguyên lớn trong C++, ta thường đảo ngược chuỗi để chữ số hàng đơn vị nằm ở vị trí chỉ số $0$ (Little-Endian)
-
-- **A.** Để tiết kiệm bộ nhớ RAM.
-
-- **B.** **[Đáp án đúng]** Để thao tác thêm chữ số mới vào cuối mảng (`push_back`) đạt độ phức tạp amortized $\mathcal{O}(1)$ thay vì phải dịch chuyển toàn bộ mảng trong $\mathcal{O}(N)$.
-
-- **C.** Để chuyển đổi sang kiểu `int` nhanh hơn.
-
-- **D.** Bắt buộc theo chuẩn ngôn ngữ C++.
-
-> *Giải thích:* Trong `vector` hoặc `string`, thao tác `push_back()` vào cuối có chi phí trung bình amortized $\mathcal{O}(1)$, trong khi chèn vào đầu tốn $\mathcal{O}(N)$.
-
-#### Câu 2 (Độ phức tạp phép nhân):
-
-Phép nhân hai số nguyên lớn có độ dài lần lượt là $N$ chữ số và $M$ chữ số theo thuật toán đặt tính cơ bản có độ phức tạp thời gian là:
-
-- **A.** $\mathcal{O}(N + M)$
-
-- **B.** $\mathcal{O}(\max(N, M))$
-
-- **C.** **[Đáp án đúng]** $\mathcal{O}(N \times M)$
-
-- **D.** $\mathcal{O}((N + M) \log(N + M))$
-
-> *Giải thích:* Mỗi chữ số của số thứ nhất phải nhân với từng chữ số của số thứ hai qua hai vòng lặp lồng nhau, tạo ra $N \times M$ phép nhân chữ số.
-
-#### Câu 3 (Độ dài tối đa kết quả phép nhân):
-
-Tích của một số nguyên dương có $N$ chữ số và một số nguyên dương có $M$ chữ số có độ dài tối đa là bao nhiêu chữ số
-
-- **A.** $N \times M$
-
-- **B.** $\max(N, M) + 1$
-
-- **C.** **[Đáp án đúng]** $N + M$
-
-- **D.** $N + M - 1$
-
-> *Giải thích:* Giá trị lớn nhất là $(10^N - 1)(10^M - 1) < 10^{N+M}$, do đó số chữ số tối đa luôn là $N + M$.
-
-#### Câu 4 (Xử lý số 0 vô nghĩa):
-
-Sau khi thực hiện phép trừ số lớn $10005 - 10000$, chuỗi kết quả thu được là `"00005"`. Thao tác nào sau đây xử lý đúng để kết quả trở thành `"5"`
-
-- **A.** Gán chuỗi bằng `"5"`.
-
-- **B.** **[Đáp án đúng]** Xóa các ký tự `'0'` ở đầu cho đến khi gặp ký tự khác `'0'` hoặc chuỗi chỉ còn đúng 1 ký tự `'0'`.
-
-- **C.** Xóa toàn bộ ký tự `'0'` trong chuỗi.
-
-- **D.** Đảo ngược chuỗi 2 lần.
-
-> *Giải thích:* Ta phải giữ lại ít nhất 1 chữ số trong trường hợp kết quả phép trừ bằng $0$ (ví dụ $5 - 5 = 0$).
-
-#### Câu 5 (Phép chia số lớn cho số nhỏ):
-
-Khi thực hiện phép chia một số lớn $A$ (có $N$ chữ số) cho một số nguyên $b$ ($1 \le b \le 10^9$), ta duyệt các chữ số của $A$ theo thứ tự nào
-
-- **A.** Từ hàng đơn vị lên hàng cao nhất (từ phải sang trái).
-
-- **B.** **[Đáp án đúng]** Từ hàng cao nhất xuống hàng đơn vị (từ trái sang phải), duy trì số dư tích lũy $cur = cur * 10 + digit$.
-
-- **C.** Duyệt từ giữa chuỗi sang hai bên.
-
-- **D.** Thứ tự nào cũng cho kết quả như nhau.
-
-> *Giải thích:* Phép chia mô phỏng đúng quy tắc đặt tính chia của toán học: chia từ hàng cao nhất xuống hàng thấp nhất.
-
-#### Câu 6 (Trường hợp phép trừ số âm):
-
-Nếu cần tính hiệu $A - B$ của hai số nguyên dương lớn nhưng chưa biết số nào lớn hơn, giải thuật chuẩn xác là gì
-
-- **A.** Vẫn thực hiện phép trừ bình thường $A - B$.
-
-- **B.** **[Đáp án đúng]** So sánh $A$ và $B$. Nếu $A \ge B$ thì tính $A - B$. Nếu $A < B$ thì tính $B - A$ rồi thêm dấu trừ `"-"` vào đầu kết quả.
-
-- **C.** Báo lỗi không tính được.
-
-- **D.** Lấy trị tuyệt đối của từng chữ số rồi trừ nhau.
-
-> *Giải thích:* Phép trừ số lớn trên mảng chỉ đúng khi số bị trừ lớn hơn hoặc bằng số trừ. Khi $A < B$, ta quy về $-(B - A)$.
-
-#### Câu 7 (Tối ưu Base $10^9$):
-
-Thay vì lưu mỗi phần tử trong mảng là $1$ chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base $10^9$) mang lại lợi ích gì về mặt thuật toán
-
-- **A.** Giảm dung lượng bộ nhớ mảng đi khoảng 9 lần.
-
-- **B.** Giảm số lượng phép tính của phép cộng/trừ đi khoảng 9 lần.
-
-- **C.** Với phép nhân đặt tính, số cặp chunk cần xử lý giảm xấp xỉ $9^2 = 81$ lần.
-
-- **D.** **[Đáp án đúng]** Cả A, B, C đều đúng.
-
-> *Giải thích:* Base $10^9$ nén dữ liệu giúp giảm cả dung lượng bộ nhớ và số lượng phép toán chunk, giúp code BigInt chạy nhanh hơn rất nhiều trong các bài toán $N \le 10^5$.
-
-#### Câu 8 (Giai thừa số lớn $1000!$):
-
-Để tính chính xác $1000!$ mà không bị tràn số trong C++, ta áp dụng phương pháp nào
-
-- **A.** Dùng kiểu dữ liệu `double`.
-
-- **B.** Dùng kiểu dữ liệu `__int128`.
-
-- **C.** **[Đáp án đúng]** Khởi tạo `string ans = "1"`, sau đó thực hiện vòng lặp nhân lần lượt với các số từ $2$ đến $1000$ bằng hàm nhân số lớn với số nhỏ.
-
-- **D.** Dùng công thức xấp xỉ Stirling.
-
-> *Giải thích:* $1000!$ có 2568 chữ số, vượt xa kiểu `__int128` (khoảng 38 chữ số), bắt buộc phải dùng phép nhân số lớn.
-
-#### Câu 9 (Lũy thừa số lớn $A^B$):
-
-Khi cần tính $A^B$ với `A = 2` và `B = 10000` (kết quả chính xác không lấy dư), phương pháp tối ưu là:
-
-- **A.** Nhân 2 liên tiếp 10000 lần.
-
-- **B.** **[Đáp án đúng]** Kết hợp thuật toán Lũy thừa nhị phân $\mathcal{O}(\log B)$ với phép nhân 2 số nguyên lớn.
-
-- **C.** Dùng hàm `pow(2, 10000)` trong thư viện `<cmath>`.
-
-- **D.** Chuyển sang hệ nhị phân rồi in ra.
-
-> *Giải thích:* Lũy thừa nhị phân chỉ cần thực hiện $\approx 14$ phép nhân số lớn thay vì 10000 phép nhân.
-
-#### Câu 10 (So sánh hai số lớn dạng chuỗi):
-
-Điều kiện nào sau đây quyết định chắc chắn số nguyên dương lớn $A$ lớn hơn số nguyên dương lớn $B$ (giả sử cả $A$ và $B$ không có số 0 vô nghĩa ở đầu)
-
-- **A.** Ký tự đầu tiên của $A$ lớn hơn ký tự đầu tiên của $B$.
-
-- **B.** **[Đáp án đúng]** Độ dài chuỗi $|A| > |B|$, hoặc nếu $|A| == |B|$ thì $A > B$ theo thứ tự từ điển.
-
-- **C.** Tổng các chữ số của $A$ lớn hơn tổng các chữ số của $B$.
-
-- **D.** Chữ số tận cùng của $A$ lớn hơn chữ số tận cùng của $B$.
-
-> *Giải thích:* Số có nhiều chữ số hơn luôn lớn hơn. Khi cùng số chữ số, so sánh từ điển từ trái sang phải phản ánh đúng thứ tự so sánh từ hàng cao nhất xuống hàng thấp nhất.
-
-
-### Ghi chú:
-**Phân tầng lộ trình học tập:**
-
-> * **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-BIG-01` $\to$ `12`):** Mô hình biểu diễn, So sánh, 4 phép tính cơ bản (+, -, *, /), Giai thừa, Lũy thừa, Fibonacci và Tổng chữ số.
-> * **Nhóm Thử Thách Mở Rộng (Advanced / Challenge `CPPB-BIG-13` $\to$ `16`):** Chia hai số lớn, Căn bậc hai số lớn, Binary GCD và Tổ hợp chính xác kết hợp phân tích nguyên tố.
-
-| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Phân Loại | Dạng Thuật Toán & Kỹ Năng Cốt Lõi |
-|:---:|:---:|---|:---:|:---:|---|
-| 01 | `CPPB-BIG-01` | **So Sánh Hai Số Nguyên Lớn** | `P0` | **Core** | So sánh độ dài và so sánh từ điển chuỗi số |
-| 02 | `CPPB-BIG-02` | **Cộng Hai Số Nguyên Lớn ($A + B$)** | `P0` | **Core** | Mô phỏng phép cộng đặt tính và xử lý biến nhớ `carry` |
-| 03 | `CPPB-BIG-03` | **Trừ Hai Số Nguyên Lớn ($A - B$)** | `P1` | **Core** | Phép trừ có mượn $A \ge B$ và xóa số 0 vô nghĩa |
-| 04 | `CPPB-BIG-04` | **Trừ Hai Số Lớn Tổng Quát (Có Âm)** | `P1` | **Core** | So sánh và gắn dấu `"-"` khi $A < B$ |
-| 05 | `CPPB-BIG-05` | **Nhân Số Lớn Với Số Nhỏ ($A \times b$)** | `P1` | **Core** | Nhân từng chữ số với $b \le 10^9$ |
-| 06 | `CPPB-BIG-06` | **Nhân Hai Số Nguyên Lớn ($A \times B$)** | `P2` | **Core** | Thuật toán nhân chập và normalize $\mathcal{O}(L_A \times L_B)$ |
-| 07 | `CPPB-BIG-07` | **Chia Số Lớn Cho Số Nhỏ ($A / b$)** | `P2` | **Core** | Chia từ hàng cao xuống thấp và lấy thương nguyên |
-| 08 | `CPPB-BIG-08` | **Chia Lấy Dư Số Lớn Cho Số Nhỏ ($A \pmod b$)** | `P2` | **Core** | Duy trì số dư `cur = (cur * 10 + digit) % b` |
-| 09 | `CPPB-BIG-09` | **Tính Giai Thừa Số Lớn ($N!$)** | `P3` | **Core** | Tính chính xác $N!$ với $N \le 1000$ |
-| 10 | `CPPB-BIG-10` | **Lũy Thừa Số Lớn Chính Xác ($A^B$)** | `P3` | **Core** | Lũy thừa nhị phân kết hợp nhân số lớn |
-| 11 | `CPPB-BIG-11` | **Số Fibonacci Lớn Thứ $N$** | `P3` | **Core** | Tính chính xác $F_N$ với $N \le 1000$ bằng cộng số lớn |
-| 12 | `CPPB-BIG-12` | **Tổng Các Chữ Số Của $N!$ hoặc $2^N$** | `P3` | **Core** | Tính số lớn và tính tổng chữ số |
-| 13 | `CPPB-BIG-13` | **Chia Hai Số Nguyên Lớn ($A / B$)** | `P4` | *Advanced* | Tìm thương nguyên bằng tìm kiếm nhị phân hoặc Long Division |
-| 14 | `CPPB-BIG-14` | **Căn Bậc Hai Số Nguyên Lớn ($\lfloor \sqrt{A} \rfloor$)** | `P4` | *Advanced* | Tìm kiếm nhị phân trên không gian chuỗi kết hợp nhân BigInt |
-| 15 | `CPPB-BIG-15` | **Ước Chung Lớn Nhất Số Lớn ($\gcd(A, B)$)** | `P4` | *Challenge* | Thuật toán Stein's Binary GCD kết hợp phép chia 2 và trừ BigInt |
-| 16 | `CPPB-BIG-16` | **Số Lớn Cực Hạn: Tổ Hợp $C(N, K)$ Chính Xác** | `P5` | *Challenge* | Tối ưu hóa: Phân tích thừa số nguyên tố kết hợp nhân lũy thừa số lớn (hoặc DP Pascal BigInt) |
 
 ## Bài tập thực hành
 
@@ -9602,190 +8249,6 @@ cout << "2^10 mod 1000 = " << powerRec(2, 10, 1000) << "\n";
 return 0;
 }
 ```
-
-
-#### Câu 1 (Bản chất Base Case):
-
-Thành phần nào trong một hàm đệ quy có vai trò quyết định giúp hàm không bị rơi vào vòng lặp vô tận và tránh lỗi tràn bộ nhớ ngăn xếp (Stack Overflow)
-
-- **A.** Khối lệnh gọi lại chính hàm đó (Recursive Step).
-
-- **B.** **[Đáp án đúng]** Điều kiện dừng cơ sở (Base Case).
-
-- **C.** Kiểu dữ liệu trả về của hàm.
-
-- **D.** Danh sách các tham số truyền vào hàm.
-
-> *Giải thích:* Base Case là điều kiện chặn dưới, khi thỏa mãn điều kiện này hàm sẽ dừng gọi tiếp và bắt đầu quá trình trả lời lui về (Unwinding Phase).
-
-#### Câu 2 (Winding vs Unwinding Trace Prediction):
-
-Xét hàm đệ quy sau:
-```cpp
-void trace(int n) {
-if (n == 0) return;
-cout << n << " ";
-trace(n - 1);
-cout << n << " ";
-}
-```
-Khi gọi `trace(3)`, kết quả in ra màn hình chính xác là gì
-
-- **A.** `3 2 1`
-
-- **B.** `1 2 3 3 2 1`
-
-- **C.** **[Đáp án đúng]** `3 2 1 1 2 3`
-
-- **D.** `3 3 2 2 1 1`
-
-> *Giải thích:* Lệnh `cout` đầu tiên in trong pha Winding (`3 2 1`), lệnh `cout` thứ hai in trong pha Unwinding (`1 2 3`), tạo chuỗi đối xứng `3 2 1 1 2 3`.
-
-#### Câu 3 (Cấu trúc bộ nhớ Stack Frame):
-
-Mỗi lần một hàm đệ quy được gọi, thông tin nào sau đây được lưu vào một Stack Frame (Activation Record)
-
-- **A.** Toàn bộ mã nguồn C++ của chương trình.
-
-- **B.** **[Đáp án đúng]** Các tham số của hàm, biến cục bộ và địa chỉ trả về (Return Address).
-
-- **C.** Bảng mã ASCII của các ký tự.
-
-- **D.** Dữ liệu của file đề bài.
-
-> *Giải thích:* Mỗi Stack Frame lưu trữ ngữ cảnh thực thi riêng biệt của lần gọi hàm đó (biến cục bộ, tham số và địa chỉ lệnh cần thực thi tiếp khi hàm con kết thúc).
-
-#### Câu 4 (Độ phức tạp chính xác của Fibonacci đệ quy):
-
-Hàm đệ quy tính số Fibonacci thuần túy:
-```cpp
-int fib(int n) {
-if (n <= 1) return n;
-return fib(n - 1) + fib(n - 2);
-}
-```
-có độ phức tạp thời gian tiệm cận chính xác (Tight Bound) là bao nhiêu
-
-- **A.** $\mathcal{O}(N)$
-
-- **B.** $\mathcal{O}(N^2)$
-
-- **C.** $\mathcal{O}(\log N)$
-
-- **D.** **[Đáp án đúng]** $\Theta(\varphi^N)$ với $\varphi = (1 + \sqrt{5})/2 \approx 1.618$ (thường được chặn trên bởi $\mathcal{O}(2^N)$).
-
-> *Giải thích:* Số lượng lời gọi hàm thỏa mãn hệ thức truy hồi Fibonacci, có nghiệm chính xác tỷ lệ với lũy thừa tỉ lệ vàng $\varphi^N \approx 1.618^N$.
-
-#### Câu 5 (Bẫy tràn Stack Overflow):
-
-Yếu tố nào sau đây quyết định trực tiếp việc một hàm đệ quy có gây ra lỗi tràn bộ nhớ ngăn xếp (Stack Overflow) hay không
-
-- **A.** Hàm đệ quy có quá nhiều tham số kiểu `int`.
-
-- **B.** **[Đáp án đúng]** Tích của độ sâu đệ quy tối đa và dung lượng bộ nhớ tiêu thụ trên mỗi Stack Frame vượt quá giới hạn stack của hệ thống.
-
-- **C.** Hàm đệ quy có kiểu trả về là $void$.
-
-- **D.** Hàm đệ quy chạy trên hệ điều hành 64-bit.
-
-> *Giải thích:* Stack có kích thước hữu hạn. An toàn stack đòi hỏi phải kiểm soát đồng thời cả chiều sâu đệ quy và kích thước biến cục bộ trong mỗi frame.
-
-#### Câu 6 (Bẫy gọi đệ quy lặp lại):
-
-Trong thuật toán lũy thừa nhị phân $A^B$, nếu viết:
-`return power(a, b / 2) * power(a, b / 2);`
-thay vì lưu vào biến tạm `long long half = power(a, b / 2);`, độ phức tạp thời gian sẽ bị suy biến thành:
-
-- **A.** Vẫn giữ nguyên $\mathcal{O}(\log B)$.
-
-- **B.** **[Đáp án đúng]** Bị suy biến thành `Theta(B)` (tương đương với vòng lặp nhân tuần tự).
-
-- **C.** $\mathcal{O}(1)$.
-
-- **D.** $\mathcal{O}(B^2)$.
-
-> *Giải thích:* Việc gọi lại 2 lần cùng một hàm con biến cây gọi hàm thành cây nhị phân đầy đủ có số lượng nút bằng $2^{\log_2 B} = B$, làm mất hoàn toàn ưu thế của chia để trị.
-
-#### Câu 7 (Đặc điểm Tail Recursion trong C++):
-
-Nhận định nào sau đây là chính xác nhất về Đệ quy đuôi (Tail Recursion) trong ngôn ngữ C++ chuẩn thi đấu
-
-- **A.** C++ luôn tự động tối ưu đệ quy đuôi thành vòng lặp với bộ nhớ $\mathcal{O}(1)$ trong mọi trường hợp.
-
-- **B.** **[Đáp án đúng]** C++ không đảm bảo luôn tối ưu đệ quy đuôi; mức độ tối ưu phụ thuộc vào trình biên dịch, cờ tối ưu và kiến trúc CPU, do đó vẫn có nguy cơ tràn stack.
-
-- **C.** Đệ quy đuôi chạy chậm hơn đệ quy thông thường.
-
-- **D.** Đệ quy đuôi chỉ áp dụng được cho hàm trả về $void$.
-
-> *Giải thích:* Chuẩn ngôn ngữ C++ không bắt buộc Tail Call Optimization (TCO), lập trình viên thi đấu không được phép giả định stack sẽ được giải phóng an toàn.
-
-#### Câu 8 (Số bước di chuyển Tháp Hà Nội):
-
-Với bài toán Tháp Hà Nội chuẩn gồm $N$ đĩa, số bước di chuyển tối thiểu chính xác là:
-
-- **A.** $2N$
-
-- **B.** $N^2$
-
-- **C.** **[Đáp án đúng]** $2^N - 1$ (đạt độ phức tạp thời gian $\Theta(2^N)$).
-
-- **D.** $N!$
-
-> *Giải thích:* Hệ thức truy hồi số bước chuyển đĩa là $T(N) = 2T(N - 1) + 1$ với $T(1) = 1$, giải hệ thức thu được nghiệm tổng quát $T(N) = 2^N - 1$.
-
-#### Câu 9 (Bản chất đệ quy chia đôi tìm Min/Max):
-
-Khi tìm Min/Max của mảng $N$ phần tử bằng hàm đệ quy chia đôi $\text{getMin}(l, r) = \min(\text{getMin}(l, mid), \text{getMin}(mid + 1, r))$, độ phức tạp thời gian tiệm cận là:
-
-- **A.** $\mathcal{O}(\log N)$ vì mảng luôn được chia đôi ở mỗi bước.
-
-- **B.** **[Đáp án đúng]** $\Theta(N)$ vì thuật toán bắt buộc phải thăm và so sánh toàn bộ $N$ phần tử của cả hai nửa mảng.
-
-- **C.** $\mathcal{O}(N \log N)$.
-
-- **D.** $\mathcal{O}(1)$.
-
-> *Giải thích:* Hệ thức thời gian là $T(N) = 2T(N/2) + \mathcal{O}(1)$. Theo định lý thợ (Master Theorem), độ phức tạp là $\Theta(N)$. "Chia đôi" không đồng nghĩa với $\mathcal{O}(\log N)$ nếu phải duyệt cả hai nhánh.
-
-#### Câu 10 (Hiện tượng Overlapping Subproblems):
-
-Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị tính toán lặp đi lặp lại nhiều lần trên cây đệ quy là tiền đề trực tiếp để phát triển phương pháp tối ưu nào sau đây
-
-- **A.** Tìm kiếm nhị phân.
-
-- **B.** Kỹ thuật hai con trỏ (Two Pointers).
-
-- **C.** **[Đáp án đúng]** Quy hoạch động & Bảng nhớ (Dynamic Programming & Memoization).
-
-- **D.** Sắp xếp trộn (Merge Sort).
-
-> *Giải thích:* Khi một bài toán có tính chất bài toán con trùng lặp (Overlapping Subproblems), ta có thể lưu kết quả tính được lần đầu vào bảng nhớ để tái sử dụng ngay trong $\mathcal{O}(1)$ ở các lần gặp tiếp theo, chính là bản chất của Quy hoạch động.
-
-
-### Phân tầng lộ trình học tập lesson 10:
-
-* **Nhóm Cốt Lõi (Core Foundations - Bắt buộc `CPPB-REC-01` $\to$ `12`):** Nắm vững Winding/Unwinding phase, Base case, Đệ quy tuyến tính vs Đệ quy nhị phân, Tháp Hà Nội, Khảo sát cây Fibonacci.
-* **Nhóm Thử Thách Mở Rộng (Advanced & Optional Extension `CPPB-REC-13` $\to$ `16`):** Tháp Hà Nội ràng buộc nước đi ($\Theta(3^N)$), Sinh xâu không 2 số 1 liền kề, Đếm phân tích số thành tổng (Integer Partitioning không xét thứ tự), Đếm cấu hình cây nhị phân (Catalan Tree Recurrence).
-
-| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Phân Loại | Time Complexity | Stack Space | Max Depth |
-|:---:|:---:|---|:---:|:---:|:---:|:---:|:---:|
-| 01 | `CPPB-REC-01` | **In Dãy Số $1 \dots N$ và $N \dots 1$** | `P0` | **Core** | $\Theta(N)$ | $\Theta(N)$ | $N$ |
-| 02 | `CPPB-REC-02` | **Tính Tổng Dãy Số & Giai Thừa $N!$** | `P0` | **Core** | $\Theta(N)$ | $\Theta(N)$ | $N$ |
-| 03 | `CPPB-REC-03` | **Đếm & Tính Tổng Chữ Số Của $N$** | `P1` | **Core** | $\Theta(\log_{10} N)$ | $\Theta(\log_{10} N)$ | $\le 19$ |
-| 04 | `CPPB-REC-04` | **Đảo Ngược Mảng Bằng Đệ Quy** | `P1` | **Core** | $\Theta(N)$ | $\Theta(N)$ | $N/2$ |
-| 05 | `CPPB-REC-05` | **Kiểm Tra Chuỗi Palindrome** | `P1` | **Core** | $\Theta(\vert S \vert)$ | $\Theta(\vert S \vert)$ | $\vert S \vert / 2$ |
-| 06 | `CPPB-REC-06` | **So Sánh Đệ Quy Tuyến Tính & Chia Đôi (Min/Max)**| `P2` | **Core** | $\Theta(N)$ | $\Theta(\log N)$ | $\log_2 N$ |
-| 07 | `CPPB-REC-07` | **Thuật Toán Euclid Tính $\gcd(A, B)$** | `P2` | **Core** | $\Theta(\log(\min))$ | $\Theta(\log(\min))$ | $\le 90$ |
-| 08 | `CPPB-REC-08` | **Lũy Thừa Đệ Quy $A^B \pmod M$** | `P2` | **Core** | $\Theta(\log B)$ | $\Theta(\log B)$ | $\log_2 B$ |
-| 09 | `CPPB-REC-09` | **Tháp Hà Nội (Tower of Hanoi)** | `P3` | **Core** | $\Theta(2^N)$ | $\Theta(N)$ | $N$ |
-| 10 | `CPPB-REC-10` | **Dãy Fibonacci Đệ Quy & Cây Phân Nhánh** | `P3` | **Core** | $\Theta(\varphi^N)$ | $\Theta(N)$ | $N$ |
-| 11 | `CPPB-REC-11` | **Chuyển Đổi Hệ Cơ Số $10 \to 2$** | `P3` | **Core** | $\Theta(\log_2 N)$ | $\Theta(\log_2 N)$ | $\le 60$ |
-| 12 | `CPPB-REC-12` | **Xây Dựng Hệ Thức Truy Hồi Dãy Số** | `P3` | **Core** | $\Theta(N)$ | $\Theta(N)$ | $N$ |
-| 13 | `CPPB-REC-13` | **Tháp Hà Nội Có Ràng Buộc Nước Đi** | `P4` | *Advanced* | $\Theta(3^N)$ | $\Theta(N)$ | $N$ |
-| 14 | `CPPB-REC-14` | **Sinh Xâu Nhị Phân Không 2 Số 1 Liền Kề**| `P4` | *Advanced* | $\Theta(F_{N+2})$ | $\Theta(N)$ | $N$ |
-| 15 | `CPPB-REC-15` | **Đếm Phân Hoạch Nguyên Của N Không Thứ Tự**| `P4` | *Extension* | $\Theta(\text{Exp})$ | $\Theta(N)$ | $N$ |
-| 16 | `CPPB-REC-16` | **Đếm Cây Nhị Phân Có Thứ Tự (Catalan Rec)**| `P5` | *Extension* | $\Theta(\text{Catalan})$| $\Theta(N)$ | $N$ |
 
 ## Bài tập thực hành
 
@@ -10483,185 +8946,6 @@ return 0;
 }
 ```
 
-
-#### Câu 1 (Bản chất 3 giai đoạn Chia để trị):
-
-Ba bước cơ bản trong một giải thuật Chia để trị diễn ra theo thứ tự nào sau đây
-
-- **A.** $Solve$ $\to$ $Divide$ $\to$ $Combine$.
-
-- **B.** **[Đáp án đúng]** $Divide$ (Chia bài toán) $\to$ $Solve$ (Trị / Giải đệ quy các bài toán con) $\to$ $Combine$ (Gộp kết quả).
-
-- **C.** $Combine$ $\to$ $Divide$ $\to$ $Solve$.
-
-- **D.** $Divide$ $\to$ $Combine$ $\to$ $Solve$.
-
-> *Giải thích:* Giải thuật D&C trước hết chia bài toán lớn thành các phần độc lập, giải đệ quy từng phần, sau đó gộp kết quả lại ở pha Unwinding.
-
-#### Câu 2 (Suy luận hệ thức truy hồi từ cấu trúc code):
-
-Quan sát đoạn mã đệ quy sau:
-```cpp
-void process(int n) {
-if (n <= 1) return;
-process(n / 2);
-process(n / 2);
-for (int i = 0; i < n; i++) {
-// Thao tác xử lý tốn O(1)
-}
-}
-```
-Hệ thức truy hồi (Recurrence) mô tả chính xác thời gian thực thi `T(n)` của hàm trên là:
-
-- **A.** $T(n) = T(n / 2) + \mathcal{O}(n)$
-
-- **B.** **[Đáp án đúng]** $T(n) = 2T(n / 2) + \mathcal{O}(n)$
-
-- **C.** $T(n) = T(n - 1) + \mathcal{O}(n)$
-
-- **D.** $T(n) = 2T(n - 1) + \mathcal{O}(1)$
-
-> *Giải thích:* Hàm tạo ra 2 lời gọi đệ quy kích thước $n / 2$ và một vòng lặp `for` chạy $n$ lần tốn chi phí ngoài đệ quy $f(n) = \mathcal{O}(n)$. Theo Master Theorem, $T(n) = \Theta(n \log n)$.
-
-#### Câu 3 (So sánh bản chất: Cùng chia đôi nhưng khác biệt độ phức tạp):
-
-Hai thuật toán A ($T(N) = T(N/2) + \mathcal{O}(1)$) và B ($T(N) = 2T(N/2) + \mathcal{O}(N)$) đều chia đôi mảng ở mỗi bước. Lý do cốt lõi khiến thuật toán A đạt $\mathcal{O}(\log N)$ trong khi B tốn $\mathcal{O}(N \log N)$ là gì
-
-- **A.** Thuật toán A không dùng ngôn ngữ C++.
-
-- **B.** **[Đáp án đúng]** Thuật toán A chỉ đi vào 1 nhánh duy nhất với chi phí mỗi tầng $\mathcal{O}(1)$, trong khi thuật toán B bắt buộc phải giải cả 2 nhánh và tốn chi phí gộp $\mathcal{O}(N)$ trên mỗi tầng trong tổng số $\log_2 N$ tầng.
-
-- **C.** Thuật toán B tiêu tốn nhiều bộ nhớ RAM hơn.
-
-- **D.** Thuật toán A chỉ chạy trên số nguyên dương.
-
-> *Giải thích:* Số lượng nhánh đệ quy được khám phá và chi phí gộp ngoài đệ quy quyết định toàn bộ sự khác biệt giữa $\mathcal{O}(\log N)$ và $\mathcal{O}(N \log N)$.
-
-#### Câu 4 (Kiểu dữ liệu cho đếm cặp nghịch thế):
-
-Với mảng có $N = 10^5$ phần tử, biến lưu trữ tổng số cặp nghịch thế bắt buộc phải có kiểu dữ liệu nào để chống tràn số
-
-- **A.** `int`
-
-- **B.** `float`
-
-- **C.** **[Đáp án đúng]** `long long` (vì số cặp nghịch thế tối đa lên tới $N(N-1)/2 \approx 5 \times 10^9$, vượt quá giới hạn 32-bit).
-
-- **D.** `bool`
-
-> *Giải thích:* Mảng giảm dần hoàn toàn có số cặp nghịch thế bằng $N(N-1)/2$, vượt ngưỡng $2 \times 10^9$ của `int` 32-bit.
-
-#### Câu 5 (Cơ chế đếm cặp nghịch thế khi Merge):
-
-Trong thuật toán đếm số cặp nghịch thế bằng Merge Sort, khi con trỏ $i$ trỏ vào nửa trái $\text{Left}[l..mid]$ và con trỏ $j$ trỏ vào nửa phải $\text{Right}[mid+1..r]$, nếu $\text{Left}[i] > \text{Right}[j]$, số lượng cặp nghịch thế được cộng thêm vào kết quả trong $\mathcal{O}(1)$ là bao nhiêu
-
-- **A.** Đúng $1$ cặp.
-
-- **B.** **[Đáp án đúng]** $mid - i + 1$ cặp.
-
-- **C.** $j - mid$ cặp.
-
-- **D.** $r - l + 1$ cặp.
-
-> *Giải thích:* Vì mảng con $Left$ đã được sắp xếp tăng dần, nên nếu $\text{Left}[i] > \text{Right}[j]$ thì tất cả các phần tử từ chỉ số $i$ đến $mid$ trong mảng $Left$ đều lớn hơn `Right[j]`.
-
-#### Câu 6 (Bẫy Maximum Subarray D&C):
-
-Khi tìm đoạn con có tổng lớn nhất bằng Chia để trị trên đoạn `[l, r]`, ngoài đoạn con lớn nhất nằm trọn ở nửa trái và trọn ở nửa phải, ta bắt buộc phải xem xét thêm trường hợp nào
-
-- **A.** Đoạn con rỗng.
-
-- **B.** **[Đáp án đúng]** Đoạn con lớn nhất bắt đầu từ nửa trái kéo dài qua tâm $mid$ sang nửa phải (Crossing Subarray).
-
-- **C.** Toàn bộ mảng ban đầu.
-
-- **D.** Phần tử nhỏ nhất trong mảng.
-
-> *Giải thích:* Đoạn con tối ưu có thể vắt ngang qua ranh giới phân chia giữa hai nửa mảng.
-
-#### Câu 7 (Tối ưu bộ nhớ trong Merge Sort):
-
-Để tối ưu thời gian thực thi và tránh overhead cấp phát bộ nhớ động trong hàm `mergeSort()`, kỹ thuật cài đặt chuẩn thi đấu là gì
-
-- **A.** Khai báo `vector<long long>` mới trong mỗi lần gọi hàm `merge()`.
-
-- **B.** **[Đáp án đúng]** Khai báo một mảng đệm tạm duy nhất `vector<long long> temp(N)` và truyền tham chiếu vào hàm đệ quy để tái sử dụng cho mọi bước gộp.
-
-- **C.** Dùng vòng lặp `while(true)`.
-
-- **D.** Ép kiểu toàn bộ mảng sang chuỗi ký tự.
-
-> *Giải thích:* Tái sử dụng một vùng nhớ đệm duy nhất giúp tránh việc cấp phát/giải phóng nhiều buffer trong quá trình đệ quy, giảm overhead và giữ auxiliary memory ở mức $\Theta(N)$.
-
-#### Câu 8 (Tournament Tree tìm phần tử lớn thứ hai với $N = 2^k$):
-
-Trên mảng có kích thước $N = 2^k$ ($N$ là lũy thừa của $2$), bằng kỹ thuật Tournament Tree (cây thi đấu), số phép so sánh tối thiểu để tìm ra phần tử lớn thứ hai là:
-
-- **A.** $2N$
-
-- **B.** **[Đáp án đúng]** $N + \log_2 N - 2$ phép so sánh.
-
-- **C.** $N^2$
-
-- **D.** $N \log N$
-
-> *Giải thích:* Tìm nhà vô địch tốn $N - 1$ phép so sánh. Phần tử lớn thứ hai bắt buộc phải là một trong những phần tử từng thua trực tiếp nhà vô địch trong cây thi đấu (đúng $\log_2 N$ phần tử). Tìm max trong nhóm này tốn thêm $\log_2 N - 1$ phép $\implies$ Tổng cộng đúng $(N - 1) + (\log_2 N - 1) = N + \log_2 N - 2$ phép.
-
-#### Câu 9 (Đặc tính Stable Sort của Merge Sort):
-
-Merge Sort được gọi là thuật toán sắp xếp ổn định (Stable Sort) vì lý do nào sau đây
-
-- **A.** Thuật toán chạy không bao giờ bị lỗi bộ nhớ.
-
-- **B.** **[Đáp án đúng]** Trong bước gộp `merge()`, khi hai phần tử có giá trị bằng nhau ($a[i] == a[j]$), thuật toán luôn ưu tiên chọn phần tử ở nửa trái ($i$) trước nhờ điều kiện $a[i] \le a[j]$, giữ nguyên thứ tự xuất hiện ban đầu.
-
-- **C.** Thuật toán có độ phức tạp như nhau trong mọi trường hợp.
-
-- **D.** Thuật toán không sử dụng phép nhân.
-
-> *Giải thích:* Bất biến chọn phần tử bên trái khi bằng nhau bảo toàn tính thứ tự tương đối của các phần tử có khóa bằng nhau.
-
-#### Câu 10 (Lũy thừa ma trận chia để trị):
-
-Tính lũy thừa ma trận vuông $A^N$ cấp $2 \times 2$ modulo $M$ bằng Chia để trị có độ phức tạp thời gian tiệm cận là:
-
-- **A.** $\Theta(N)$
-
-- **B.** $\Theta(N^2)$
-
-- **C.** **[Đáp án đúng]** `Theta(log N)` (mỗi phép nhân ma trận $2 \times 2$ tốn $\mathcal{O}(1)$ với 8 phép nhân số học).
-
-- **D.** $\Theta(1)$
-
-> *Giải thích:* Thuật toán chia đôi số mũ $N \to N/2$ sau mỗi bước tương tự như lũy thừa nhị phân số học, độ sâu đệ quy là $\log_2 N$.
-
-
-### Phân tầng lộ trình học tập lesson 11:
-
-* **Nhóm Cốt Lõi (Core Foundations - `CPPB-DAC-01` $\to$ `12`):** Binary Search D&C, RMQ D&C, Tournament Tree, Cài đặt Merge Step, Merge Sort trọn vẹn, Đếm số cặp nghịch thế, Maximum Subarray D&C, Majority Element Voting, Lũy thừa ma trận $2 \times 2$, Đỉnh mảng Unimodal, Tổng cấp số nhân D&C, Đếm cặp $A_i > 2A_j$.
-
-* **Nhóm Nâng Cao & Thử Thách (Advanced & Challenge `CPPB-DAC-13` $\to$ `16`):** QuickSelect D&C ($\mathcal{O}(N)$ expected), Đếm đoạn con tổng nằm trong $[L, R]$, Cặp điểm gần nhất trong mặt phẳng (Closest Pair $\mathcal{O}(N \log N)$), Median của 2 mảng đã sắp xếp ($\mathcal{O}(\log(\min(N, M)))$).
-
-| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Phân Loại | Time Complexity | Call Stack | Aux Memory | Max Depth |
-|:---:|:---:|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| 01 | `CPPB-DAC-01` | **Tìm Kiếm Nhị Phân Bằng Đệ Quy (Cầu Nối D&C)** | `P0` | **Core** | $\Theta(\log N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 02 | `CPPB-DAC-02` | **Tìm Min Trên Đoạn Bằng Chia Để Trị (RMQ D&C)**| `P0` | **Core** | $\Theta(N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 03 | `CPPB-DAC-03` | **Tìm Phần Tử Lớn Thứ Hai (Tournament Tree)**| `P1` | **Core** | $\Theta(N)$ | $\Theta(\log N)$ | $\Theta(\log N)$ | $\log_2 N$ |
-| 04 | `CPPB-DAC-04` | **Gộp Hai Mảng Đã Sắp Xếp (Merge Step)** | `P1` | **Core** | $\Theta(N + M)$ | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ | $1$ |
-| 05 | `CPPB-DAC-05` | **Thuật Toán Sắp Xếp Trộn (Merge Sort)** | `P2` | **Core** | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\Theta(N)$ | $\log_2 N$ |
-| 06 | `CPPB-DAC-06` | **Đếm Số Cặp Nghịch Thế (Inversion Count)** | `P2` | **Core** | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\Theta(N)$ | $\log_2 N$ |
-| 07 | `CPPB-DAC-07` | **Đoạn Con Tổng Lớn Nhất (Maximum Subarray)** | `P2` | **Core** | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 08 | `CPPB-DAC-08` | **Tìm Phần Tử Đa Số (Majority Element) D&C** | `P2` | **Core** | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 09 | `CPPB-DAC-09` | **Lũy Thừa Ma Trận Chia Để Trị $2 \times 2$** | `P3` | **Core** | $\Theta(\log N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 10 | `CPPB-DAC-10` | **Tìm Điểm Cực Đại Mảng Unimodal (Peak Index)**| `P3` | **Core** | $\Theta(\log N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 11 | `CPPB-DAC-11` | **Tính Tổng Cấp Số Nhân D&C** | `P3` | **Core** | $\Theta(\log N)$ | $\Theta(\log N)$ | $\mathcal{O}(1)$ | $\log_2 N$ |
-| 12 | `CPPB-DAC-12` | **Đếm Số Cặp $A_i > 2A_j$ (Significant Inversions)**| `P3` | **Core** | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\Theta(N)$ | $\log_2 N$ |
-
-| 13 | `CPPB-DAC-13` | **Thuật Toán QuickSelect Tìm K-th Element** | `P4` | *Advanced* | $\Theta(N) \text{ exp} / \Theta(N^2) \text{ worst}$ | $\Theta(\log N) \text{ exp} / \Theta(N) \text{ worst}$ | $\mathcal{O}(1)$ | $\log_2 N \text{ exp} / N \text{ worst}$ |
-| 14 | `CPPB-DAC-14` | **Đếm Số Đoạn Con Tổng Trong Đoạn $[L, R]$**| `P4` | *Advanced* | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\Theta(N)$ | $\log_2 N$ |
-| 15 | `CPPB-DAC-15` | **Cặp Điểm Gần Nhất (Closest Pair of Points)**| `P4` | *Challenge* | $\Theta(N \log N)$ | $\Theta(\log N)$ | $\Theta(N)$ | $\log_2 N$ |
-| 16 | `CPPB-DAC-16` | **Median Của Hai Mảng Đã Sắp Xếp** | `P5` | *Challenge* | $\Theta(\log(\min))$ | $\Theta(\log(\min))$ | $\mathcal{O}(1)$ | $\log_2(\min)$ |
-
 ## Bài tập thực hành
 
 ### Bài 181 [CPPB-DAC-01]: Tìm Kiếm Nhị Phân Bằng Đệ Quy (Cầu Nối Sang D&C)
@@ -11225,7 +9509,23 @@ unchoose(state, candidate);// 3. Hoàn tác về State_before (Restoration)
 }
 ```
 
-## 4. Khung tư duy mental model: Hai sơ đồ cốt lõi của lesson 12
+#### Ví dụ tối giản + dry-run tay: sinh mọi chuỗi nhị phân độ dài $N = 3$
+
+Mỗi vị trí chọn `0` hoặc `1` (Choose), đi sâu (Explore), rồi hoàn tác (Unchoose) để thử nhánh còn lại:
+
+| Bước | Hành động (Choose–Explore–Unchoose) | `cur` hiện tại | Ghi nhận |
+|:---:|---|---|:---:|
+| 1 | Chọn vị trí $0 = 0$, đi sâu | `[0]` | — |
+| 2 | Chọn vị trí $1 = 0$, đi sâu | `[0, 0]` | — |
+| 3 | Chọn vị trí $2 = 0$ $\implies$ đủ độ dài | `[0, 0, 0]` | In `000` |
+| 4 | Hoàn tác vị trí $2$, chọn $1$ $\implies$ đủ độ dài | `[0, 0, 1]` | In `001` |
+| 5 | Hoàn tác vị trí $1$–$2$, chọn vị trí $1 = 1$, đi sâu | `[0, 1]` | — |
+| 6 | Chọn vị trí $2 = 0$ / hoàn tác / chọn $1$ | `[0, 1, 0]` → `[0, 1, 1]` | In `010`, `011` |
+| 7 | Hoàn tác toàn bộ nhánh $0$, chọn vị trí $0 = 1$, lặp tương tự | `[1, 0, 0]` … `[1, 1, 1]` | In `100`, `101`, `110`, `111` |
+
+> **Đọc bảng:** Mỗi lần quay lui (Unchoose) là xóa lựa chọn ở vị trí hiện tại để thử giá trị còn lại. Tổng $2^3 = 8$ chuỗi — đây chính là khung Choose–Explore–Unchoose áp dụng cho hoán vị, N-Queens và mọi bài quay lui khác.
+
+## 4. Khung tư duy mental model: Hai sơ đồ cốt lõi của bài học này
 
 ![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quay-lui-nhanh-can/assets/state_space_tree_vi.png)
 
@@ -11315,7 +9615,7 @@ vector<bool> visited;
 void genPermutations(int step) {
 if (step > n) {
 
-for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n "" : " ");
+for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n ? "" : " ");
 cout << "\n";
 return;
 }
@@ -11365,202 +9665,6 @@ cout << "So cach dat " << n_queens << " quan hau: " << queen_ways << "\n";
 return 0;
 }
 ```
-
-
-#### Câu 1 (Bản chất 3 bước Quay lui):
-
-Thứ tự thực hiện chuẩn mực trong thân vòng lặp của một hàm quay lui (Backtracking) là:
-
-- **A.** $Explore$ $\to$ $Choose$ $\to$ $Unchoose$.
-
-- **B.** **[Đáp án đúng]** $Choose$ (Thử và đánh dấu trạng thái) $\to$ $Explore$ (Gọi đệ quy đi sâu) $\to$ $Unchoose$ (Hoàn tác trạng thái sau khi đệ quy return).
-
-- **C.** $Unchoose$ $\to$ $Choose$ $\to$ $Explore$.
-
-- **D.** $Choose$ $\to$ $Unchoose$ $\to$ $Explore$.
-
-> *Giải thích:* Quy trình chuẩn là chọn thử một ứng viên hợp lệ, đệ quy khám phá cây con, sau đó bắt buộc phải hoàn tác khi hàm đệ quy return để thử ứng viên tiếp theo.
-
-#### Câu 2 (Phân biệt Feasibility vs Optimality Pruning):
-
-Sự khác biệt cốt lõi giữa Cắt tỉa tính khả thi (Feasibility Pruning) và Cắt tỉa tính tối ưu (Optimality Pruning - Branch & Bound) là gì
-
-- **A.** Feasibility Pruning chỉ dùng cho bài toán tìm đường đi.
-
-- **B.** **[Đáp án đúng]** Feasibility Pruning cắt nhánh vì vi phạm ràng buộc không thể tạo nghiệm hợp lệ; Optimality Pruning cắt nhánh vì hàm cận chứng minh nhánh này không thể tạo ra nghiệm tốt hơn $best$ hiện có.
-
-- **C.** Optimality Pruning chạy chậm hơn.
-
-- **D.** Hai khái niệm hoàn toàn giống hệt nhau.
-
-> *Giải thích:* Feasibility loại bỏ nghiệm sai; Optimality loại bỏ nghiệm đúng nhưng kém tối ưu so với $best$ hiện tại.
-
-#### Câu 3 (Hậu quả của việc quên Unchoose):
-
-Điều gì sẽ xảy ra nếu lập trình viên quên câu lệnh hoàn tác `visited[i] = false` sau lời gọi đệ quy trong bài toán sinh hoán vị
-
-- **A.** Chương trình vẫn chạy đúng nhưng tốn nhiều bộ nhớ hơn.
-
-- **B.** **[Đáp án đúng]** Trạng thái bị rò rỉ, các nhánh duyệt tiếp theo coi phần tử $i$ đã được dùng và bỏ qua, dẫn đến thiếu sót nghiêm trọng các nghiệm hợp lệ.
-
-- **C.** Chương trình bị tràn số `int`.
-
-- **D.** Mảng tự động sắp xếp lại.
-
-> *Giải thích:* Quên hoàn tác vi phạm State Restoration Invariant, làm đóng băng trạng thái của các nhánh sau.
-
-#### Câu 4 (Đánh dấu các họ đường chéo N-Queens):
-
-Trong bài toán xếp $N$ quân hậu trên bàn cờ $N \times N$ (1-based indexing), để tránh chỉ số mảng bị âm khi đánh dấu một họ đường chéo (hướng `\`) đi qua ô $(row, col)$, công thức chỉ số chuẩn xác là:
-
-- **A.** $row - col$
-
-- **B.** **[Đáp án đúng]** $row - col + N$ (với $N$ là kích thước bàn cờ, chỉ số thuộc $[1, 2N-1]$).
-
-- **C.** $row \times col$
-
-- **D.** $(row + col) \bmod N$
-
-> *Giải thích:* Vì $row - col$ có thể nhận giá trị âm từ $-(N-1)$ đến $N-1$, cộng thêm $N$ đảm bảo chỉ số luôn nằm trong khoảng an toàn $[1, 2N-1]$.
-
-#### Câu 5 (Bản chất quy tắc Warnsdorff trong Mã đi tuần):
-
-Trong bài toán Mã đi tuần (Knight's Tour), quy tắc Heuristic Warnsdorff (ưu tiên nhảy vào ô có ít nước đi tiếp theo nhất) có vai trò chuẩn xác là gì
-
-- **A.** Đảm bảo chắc chắn tìm thấy nghiệm trong $\mathcal{O}(1)$ bước mà không cần quay lui.
-
-- **B.** **[Đáp án đúng]** Trong framework bài học này, Warnsdorff được xem là Heuristic Ordering: nó thay đổi thứ tự ưu tiên thử nước đi để tìm nghiệm sớm hơn, không tự động loại bỏ các nhánh còn lại.
-
-- **C.** Dùng để cắt bỏ hoàn toàn các nhánh khác.
-
-- **D.** Là một thuật toán Quy hoạch động.
-
-> *Giải thích:* Heuristic chỉ đóng vai trò sắp xếp thứ tự thử nước đi (ordering), không thay thế cho toàn bộ cây tìm kiếm.
-
-#### Câu 6 (Tình huống thực tế đánh giá hàm Bound trong bài toán Cực tiểu):
-
-Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt nhất tìm được tính tới thời điểm hiện tại là `best = 100`. Tại một trạng thái nhánh $X$, hàm Cận Dưới tính ra $LB(X) = 105$. Quyết định chuẩn xác của thuật toán là gì
-
-- **A.** **[Đáp án đúng]** Cắt tỉa (Prune) ngay lập tức nhánh $X$, vì chi phí thực tế $OPT(X) \ge LB(X) = 105 > 100 = best$, nhánh này chắc chắn không thể cải thiện nghiệm.
-
-- **B.** Đi sâu tiếp vào nhánh $X$ vì có thể chi phí thực tế sẽ giảm xuống dưới 100.
-
-- **C.** Đặt lại giá trị `best = 105`.
-
-- **D.** Dừng toàn bộ chương trình.
-
-> *Giải thích:* Vì $LB(X) \le OPT(X)$, nếu $LB(X) \ge best$ thì chi phí thực tế chắc chắn không thể tốt hơn $best$.
-
-#### Câu 7 (Độ phức tạp không gian: Exponential Tree vs. Linear Stack Depth):
-
-Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \dots, N\}$ tiêu tốn bộ nhớ ngăn xếp (Call Stack Space) tối đa là bao nhiêu
-
-- **A.** $\Theta(N!)$
-
-- **B.** $\Theta(N^2)$
-
-- **C.** **[Đáp án đúng]** $\Theta(N)$ (Search Space đo tổng số trạng thái lá $N!$, nhưng Call Stack chỉ đo độ sâu của một đường đi đang khám phá là $N$).
-
-- **D.** $\Theta(1)$
-
-> *Giải thích:* Cây tìm kiếm khổng lồ không đồng nghĩa với Call Stack khổng lồ; độ sâu ngăn xếp chỉ tỷ lệ thuận với chiều dài nghiệm đang xây dựng.
-
-#### Câu 8 (Cắt tỉa kết hợp sắp xếp trong Subset Sum):
-
-Khi tìm các tập con của mảng các số nguyên dương ($A_i > 0$) có tổng bằng $S$, nếu mảng đã được sắp xếp tăng dần, điều kiện cắt tỉa tính khả thi hiệu quả nhất tại vòng lặp duyệt phần tử $A_i$ là gì
-
-- **A.** Dừng lại khi mảng còn hơn 10 phần tử.
-
-- **B.** **[Đáp án đúng]** Dùng lệnh $break$ dừng duyệt toàn bộ các phần tử còn lại ngay khi $\text{current\_sum} + A[i] > S$ (dựa trên tính đơn điệu Monotonicity: các phần tử sau $A_{i+1} \ge A_i$ chắc chắn cũng vượt $S$).
-
-- **C.** Dừng lại khi gặp số chẵn.
-
-- **D.** Dừng lại khi $\text{current\_sum} == 0$.
-
-> *Giải thích:* Sắp xếp mảng trước kết hợp giả thiết $A_i > 0$ giúp chuyển điều kiện từ $continue$ ở từng nhánh thành $break$ triệt tiêu toàn bộ cây con phía sau.
-
-#### Câu 9 (Độ phức tạp tổng thể khi in toàn bộ xâu nhị phân):
-
-Chương trình sinh và in toàn bộ các xâu nhị phân độ dài $N$ ra màn hình có tổng thời gian thực thi (Time Complexity) là:
-
-- **A.** $\Theta(2^N)$
-
-- **B.** **[Đáp án đúng]** $\Theta(N \cdot 2^N)$ (có đúng $2^N$ xâu nghiệm, và mỗi xâu tốn $\mathcal{O}(N)$ thời gian để xuất ra màn hình).
-
-- **C.** $\Theta(N!)$
-
-- **D.** $\Theta(N)$
-
-> *Giải thích:* Cần phân biệt rõ giữa số lượng nghiệm lá ($\Theta(2^N)$) và tổng thời gian thực thi khi phải xuất toàn bộ nội dung từng nghiệm ($\Theta(N \cdot 2^N)$).
-
-#### Câu 10 (Cầu nối từ Backtracking sang Dynamic Programming):
-
-Khi một bài toán quay lui có hiện tượng nhiều nhánh trạng thái khác nhau gặp lại cùng một trạng thái con (Overlapping States trong đồ thị State DAG), dấu hiệu này gợi ý điều gì
-
-- **A.** Thuật toán quay lui đã bị lỗi bộ nhớ.
-
-- **B.** **[Đáp án đúng]** Trùng lặp trạng thái là dấu hiệu quan trọng để xem xét Memoization / Dynamic Programming, lưu kết quả mỗi trạng thái $1$ lần duy nhất thay vì tính lại trên cây.
-
-- **C.** Bỏ qua hoàn toàn bài toán.
-
-- **D.** Tăng kích thước mảng lên gấp đôi.
-
-> *Giải thích:* Chuyển từ duyệt cây tìm kiếm (Tree Search) sang đồ thị trạng thái (State DAG) có lưu vết chính là bản chất của Quy Hoạch Động.
-
-#### Câu 11 (Bản chất State Identity trong bài toán Subset Sum):
-
-Trong bài toán Subset Sum, giả sử hai lời gọi đệ quy khác nhau đều đang đứng tại chỉ số `index = 5`, nhưng một nhánh có `current_sum = 12` và nhánh kia có `current_sum = 18`. Hai lời gọi này có được xem là cùng một State Identity trong DP không
-
-- **A.** Có, vì chúng có cùng chỉ số `index = 5`.
-
-- **B.** **[Đáp án đúng]** Không, vì `current_sum` quyết định trực tiếp đến các lựa chọn và khả năng đạt tổng mục tiêu còn lại, nên $(\text{index}, \text{current\_sum})$ mới là State Identity hoàn chỉnh.
-
-- **C.** Có, vì chỉ số mảng quan trọng hơn tổng.
-
-- **D.** Tùy thuộc vào việc mảng có số âm hay không.
-
-> *Giải thích:* State Identity phải bao hàm đủ thông tin để xác định không gian nghiệm phía sau; khác `current_sum` dẫn đến các bài toán con phía sau hoàn toàn khác nhau.
-
-#### Câu 12 (Nguyên tắc an toàn của hàm Bound trong Branch & Bound):
-
-Nếu một lập trình viên thiết kế một hàm Cận Dưới $LB(\text{state})$ cho bài toán tìm chi phí nhỏ nhất, nhưng trong một số trường hợp hiếm gặp $LB(\text{state}) > OPT(\text{state})$ (ước lượng quá cao so với thực tế), hậu quả là gì
-
-- **A.** Thuật toán chạy nhanh hơn và luôn cho kết quả đúng.
-
-- **B.** **[Đáp án đúng]** Thuật toán có thể vô tình cắt tỉa nhánh chứa nghiệm tối ưu thực sự và đưa ra kết quả sai (Invalid Bound).
-
-- **C.** Bộ nhớ bị tràn.
-
-- **D.** Không có ảnh hưởng gì vì hiếm khi xảy ra.
-
-> *Giải thích:* Bất biến sống còn của Branch & Bound là $LB \le OPT$; chỉ cần vi phạm một lần, nghiệm tối ưu có thể bị xóa sổ khỏi không gian tìm kiếm.
-
-
-### Lộ trình phân tầng học tập chuẩn mực:
-
-* **LEVEL 1: Pattern Sinh Cấu Hình Cơ Bản (`CPPB-BKT-01` $\to$ `04`):** Xâu nhị phân, Tập con, Hoán vị, Tổ hợp chập $K$.
-* **LEVEL 2: Constraint Backtracking / Feasibility Pruning (`CPPB-BKT-05` $\to$ `09`):** Dãy ngoặc đúng, $N$-Queens, Mê cung, Subset Sum, Chia tập bằng nhau.
-* **LEVEL 3: Optimization Search & Branch and Bound (`CPPB-BKT-10`, `13`, `14`, `16`):** Đổi tiền xu ít nhất (B&B), Cái túi $0/1$ B&B, TSP B&B, Phân công công việc B&B.
-* **LEVEL 4: Advanced CSP & Heuristic Search (`CPPB-BKT-11`, `12`, `15`):** Mã đi tuần Warnsdorff, Sudoku $9 \times 9$, Tô màu đồ thị ($K$-Coloring).
-
-| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Độ Phức Tạp | Mục Tiêu Rèn Luyện |
-|:---:|:---:|---|:---:|:---:|---|
-| 01 | `CPPB-BKT-01` | **Sinh Xâu Nhị Phân Độ Dài $N$** | `P0` | $\Theta(N \cdot 2^N)$ | Cây trạng thái nhị phân đầy đủ |
-| 02 | `CPPB-BKT-02` | **Sinh Tập Con Của Tập $N$ Phần Tử** | `P0` | $\Theta(N \cdot 2^N)$ | Trực quan hóa mô hình Include/Exclude |
-| 03 | `CPPB-BKT-03` | **Sinh Hoán Vị $1 \dots N$** | `P1` | $\Theta(N \cdot N!)$ | Mảng đánh dấu `visited` |
-| 04 | `CPPB-BKT-04` | **Sinh Tổ Hợp Chập $K$ Của $N$** | `P1` | $\Theta(K \cdot C_N^K)$ | Cận trên/cận dưới giá trị phần tử |
-| 05 | `CPPB-BKT-05` | **Sinh Dãy Ngoặc Hợp Lệ Độ Dài $2N$** | `P1` | $\Theta(N \cdot \text{Catalan}(N))$ | Cắt tỉa điều kiện số ngoặc đóng $\le$ mở |
-| 06 | `CPPB-BKT-06` | **Bài Toán $N$-Queens (Đếm Số Cách)** | `P2` | $\mathcal{O}(N!)$ | Mặt nạ đánh dấu cột & 2 đường chéo |
-| 07 | `CPPB-BKT-07` | **Mê Cung (Rat in a Maze)** | `P2` | $\mathcal{O}(4^{N^2})$ | Đánh dấu ô đang đi tránh chu trình |
-| 08 | `CPPB-BKT-08` | **Tập Con Có Tổng Bằng $S$ (Subset Sum)** | `P2` | $\mathcal{O}(2^N)$ | Cắt tỉa tổng vượt ngưỡng $S$ |
-| 09 | `CPPB-BKT-09` | **Chia Tập Thành 2 Phần Bằng Nhau** | `P3` | $\mathcal{O}(2^N)$ | Chuyển về bài toán Subset Sum $S/2$ |
-| 10 | `CPPB-BKT-10` | **Đổi Tiền Xu Ít Nhất (B&B Coin Change)** | `P3` | Exponential | Cắt tỉa cận dưới $\text{count} + \lceil rem / c_{\max} \rceil$ |
-| 11 | `CPPB-BKT-11` | **Mã Đi Tuần (Knight's Tour)** | `P3` | $\mathcal{O}(8^{N^2})$ | Heuristic Warnsdorff ưu tiên bậc nhỏ |
-| 12 | `CPPB-BKT-12` | **Trò Chơi Sudoku $9 \times 9$** | `P3` | $\mathcal{O}(9^E)$ | MRV Heuristic (ô ít lựa chọn nhất) |
-| 13 | `CPPB-BKT-13` | **Bài Toán Cái Túi $0/1$ Nhánh Cận** | `P4` | Exponential | Cận trên Fractional Knapsack (Greedy UB) |
-| 14 | `CPPB-BKT-14` | **Người Du Lịch (TSP) Nhánh Cận** | `P4` | $\mathcal{O}(N!)$ | Cận dưới tổng cạnh nhỏ nhất còn lại |
-| 15 | `CPPB-BKT-15` | **Tô Màu Đồ Thị (Graph $K$-Coloring)** | `P4` | $\mathcal{O}(K^V)$ | Kiểm tra xung đột đỉnh kề |
-| 16 | `CPPB-BKT-16` | **Phân Công Công Việc Tối Ưu** | `P5` | $\mathcal{O}(N!)$ | Cận dưới tổng chi phí tối thiểu theo hàng |
 
 ## Bài tập thực hành
 

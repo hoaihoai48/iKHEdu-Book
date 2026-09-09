@@ -3,6 +3,7 @@
 ## 1. Không gian trạng thái hai tiền tố (2-prefix state)
 
 Trong xử lý chuỗi ký tự thi đấu, các bài toán so khớp, tìm chuỗi tương đồng hay biến đổi xâu thường thao tác trên hai chuỗi $A$ (độ dài $N$) và $B$ (độ dài $M$).
+
 * **Nguyên lý Thiết kế Trạng thái:** Ta định nghĩa trạng thái dựa trên **Cặp tiền tố** của hai chuỗi:
 
 > **$dp[i][j]$ đại diện cho kết quả tối ưu khi xét tiền tố $A[1 \dots i]$ (gồm $i$ ký tự đầu của $A$) và tiền tố $B[1 \dots j]$ (gồm $j$ ký tự đầu của $B$).**
@@ -18,14 +19,28 @@ Trong xử lý chuỗi ký tự thi đấu, các bài toán so khớp, tìm chu�
 * **State Transition:** So sánh ký tự đuôi $A[i]$ và $B[j]$:
 1. Nếu $A[i] == B[j]$: Ký tự này chắc chắn thuộc LCS chung:
 $$dp[i][j] = 1 + dp[i-1][j-1]$$
+
 2. Nếu `A[i] != B[j]`: Bỏ qua $A[i]$ hoặc bỏ qua $B[j]$ để lấy phương án tốt hơn:
 $$dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$$
+
 * **Độ phức tạp:** Thời gian $\mathcal{O}(N \cdot M)$, Bộ nhớ $\mathcal{O}(N \cdot M)$.
 
-![Bảng phương án LCS và Đường truy vết](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/lcs_table_traceback_vi.svg)
+![Bảng phương án LCS và Đường truy vết](assets/lcs_table_traceback_vi.svg)
+
+#### Ví dụ tối giản + dry-run tay: $A = \text{"ABC"}$, $B = \text{"AC"}$ (bảng $3 \times 2$)
+
+| $i \backslash j$ | $0$ (`eps`) | $1$ (`A`) | $2$ (`C`) |
+|:---:|:---:|:---:|:---:|
+| $0$ (`eps`) | $0$ | $0$ | $0$ |
+| $1$ (`A`) | $0$ | $1$ ($A[1] = B[1] \implies 1 + dp[0][0]$) | $1$ ($\max(dp[0][2], dp[1][1])$) |
+| $2$ (`B`) | $0$ | $1$ ($\max(dp[1][1], dp[2][0])$) | $1$ ($\max(dp[1][2], dp[2][1])$) |
+| $3$ (`C`) | $0$ | $1$ ($\max(dp[2][1], dp[3][0])$) | $2$ ($A[3] = B[2] \implies 1 + dp[2][1]$) |
+
+> **Đọc bảng:** Đáp án $dp[3][2] = 2$ (xâu `"AC"`). Truy vết từ ô $(3,2)$: $A[3] = B[2] = \text{'C'}$ $\implies$ ghi nhận `'C'`, lùi chéo về $(2,1)$; $A[2] = \text{'B'} \ne B[1] = \text{'A'}$, đi về ô lớn hơn $(1,1)$; $A[1] = B[1] = \text{'A'}$ $\implies$ ghi nhận `'A'`. Đảo ngược $\implies$ `"AC"`.
 
 ### 2.2. Kỹ thuật khôi phục xâu LCS tối ưu (traceback)
 Từ ô kết quả $(N, M)$ trên bảng phương án 2D:
+
 1. Nếu $A[i] == B[j] \implies$ Thêm $A[i]$ vào xâu kết quả, lùi chéo về $(i-1, j-1)$.
 2. Nếu $A[i] \ne B[j] \implies$ Đi về ô có giá trị lớn hơn: lên trên $(i-1, j)$ nếu $dp[i-1][j] \ge dp[i][j-1]$, ngược lại sang trái $(i, j-1)$.
 3. Dừng lại khi $i = 0$ hoặc $j = 0$. Đảo ngược xâu kết quả thu được.
@@ -34,6 +49,7 @@ Từ ô kết quả $(N, M)$ trên bảng phương án 2D:
 
 ### 3.1. Bản chất 3 phép biến đổi
 Cần tìm số phép biến đổi **ít nhất** để biến xâu $A$ thành xâu $B$. Các phép thao tác hợp lệ gồm:
+
 1. **Chèn (Insert):** Thêm 1 ký tự vào xâu $A$.
 2. **Xóa (Delete):** Xóa 1 ký tự khỏi xâu $A$.
 3. **Thay thế (Replace):** Đổi 1 ký tự của $A$ thành ký tự khác.
@@ -48,13 +64,13 @@ Cần tìm số phép biến đổi **ít nhất** để biến xâu $A$ thành 
 * Nếu `A[i] != B[j]`:
 $$dp[i][j] = 1 + \min(\underbrace{dp[i-1][j-1]}_{\text{Thay thế}}, \underbrace{dp[i-1][j]}_{\text{Xóa}}, \underbrace{dp[i][j-1]}_{\text{Chèn}})$$
 
-![Khoảng cách biến đổi xâu Edit Distance](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/edit_distance_transitions_vi.svg)
+![Khoảng cách biến đổi xâu Edit Distance](assets/edit_distance_transitions_vi.svg)
 
 ## 4. Phân biệt rạch ròi: Xâu con đối xứng (substring) vs dãy con đối xứng (subsequence)
 
 Đây là tử huyệt thuật ngữ cực kỳ quan trọng trong lập trình thi đấu:
 
-![Phân biệt Xâu con liên tiếp vs Dãy con đối xứng](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/palindrome_substring_vs_subsequence_vi.svg)
+![Phân biệt Xâu con liên tiếp vs Dãy con đối xứng](assets/palindrome_substring_vs_subsequence_vi.svg)
 
 ### 4.1. Xâu con liên tiếp đối xứng dài nhất (longest palindromic substring)
 * **Đặc tính:** Các ký tự phải **liên tiếp liền kề nhau**.
@@ -344,7 +360,7 @@ Ký tự đại diện $*$ trong so khớp mẫu (khớp với chuỗi ký tự 
 
 - **D.** `dp[i][j] = false`
 
-> *Giải thích:* $dp[i-1][j]$ đại diện cho việc $$tiếp tục khớp thêm ký tự $A[i]$, còn $dp[i][j-1]$ đại diện cho việc$$ đại diện cho chuỗi rỗng không lấy ký tự nào.
+> *Giải thích:* $dp[i-1][j]$ đại diện cho việc tiếp tục khớp thêm ký tự $A[i]$, còn $dp[i][j-1]$ đại diện cho việc bỏ qua ký tự $B[j]$ (xem như không lấy ký tự nào từ tiền tố này).
 
 #### Câu 13 (Nén bộ nhớ LCS còn 2 dòng):
 

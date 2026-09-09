@@ -56,6 +56,17 @@ mask = mask ^ (1LL << k);
 
 ![Trực quan hóa cấu trúc Bit & 4 Thao tác Bit trên N = 13](assets/bit_operations_simulation_vi.svg)
 
+Bảng chạy tay 4 thao tác trên $N = 13$ ($1101_2$, các bit $3$ và $0$ đang bật):
+
+| Thao tác | Biểu thức | Tính toán nhị phân | Kết quả thập phân |
+|:---|:---|:---|:---:|
+| Kiểm tra bit $2$ | `(13 >> 2) & 1` | $1101_2 \to 11_2$, bit cuối $= 1$ | Bit $2$ đang **bật** |
+| Bật bit $1$ | `13 \| (1 << 1)` | $1101_2 \lor 0010_2 = 1111_2$ | $15$ |
+| Tắt bit $0$ | `13 & ~(1 << 0)` | $1101_2 \land 1110_2 = 1100_2$ | $12$ |
+| Đảo bit $3$ | `13 ^ (1 << 3)` | $1101_2 \oplus 1000_2 = 0101_2$ | $5$ |
+
+> **Cảnh báo tràn số khi dịch bit:** `1 << k` là số nguyên 32-bit, **tràn số (Undefined Behavior) khi $k \ge 31$**. Trong thi đấu luôn viết `1LL << k` (64-bit) và chỉ duyệt toàn bộ tập con khi $n \le 20$ (vì $2^{20} \approx 10^6$ vừa đủ nhanh, còn $2^{25}$ đã quá chậm).
+
 ## 3. Các tuyệt kỹ BIT & hàm nội tại CPU (builtin functions)
 
 ### 3.1. Kiểm tra một số nguyên dương có phải là lũy thừa của 2
@@ -77,6 +88,17 @@ long long lowbit = x & (-x);
 * `__builtin_popcount(unsigned int x)` / `__builtin_popcountll(unsigned long long x)`: Đếm số lượng bit 1 trong $\mathcal{O}(1)$ chu kỳ CPU.
 * `__builtin_clz(x)` / `__builtin_clzll(x)`: Đếm số lượng bit 0 liên tiếp ở đầu (Count Leading Zeros).
 * `__builtin_ctz(x)` / `__builtin_ctzll(x)`: Đếm số lượng bit 0 liên tiếp ở cuối (Count Trailing Zeros).
+
+### Bảng ví dụ chạy thực tế (tính tay đối chiếu với máy)
+
+| Lệnh gọi | Nhị phân của $x$ | Kết quả | Giải thích |
+|:---|:---|:---:|:---|
+| `__builtin_popcount(13)` | $1101_2$ | $3$ | Có đúng 3 bit $1$ |
+| `__builtin_popcountll(1000000000000LL)` | — | $13$ | Đếm trên 64-bit (bản không có $ll$ chỉ đếm 32 bit thấp nên sai) |
+| `__builtin_ctz(16)` | $10000_2$ | $4$ | Có 4 số $0$ liên tiếp ở cuối |
+| `__builtin_clz(1)` | $0\dots01_2$ (32-bit) | $31$ | Có 31 số $0$ ở đầu trước bit $1$ duy nhất |
+
+> **Bẫy thi đấu (Undefined Behavior):** Với $x = 0$, cả `__builtin_clz(0)` và `__builtin_ctz(0)` đều là **hành vi không xác định** trên CPU x86 — máy có thể trả về số rác hoặc crash. Quy tắc sắt: luôn kiểm tra `x > 0` trước khi gọi, và dùng đúng hậu tố $ll$ cho số 64-bit (`long long`).
 
 ## 4. Kỹ thuật mặt nạ BIT (bitmask & subset enumeration)
 
@@ -160,7 +182,7 @@ break;
 }
 }
 
-cout << (found "YES\n" : "NO\n");
+cout << (found ? "YES\n" : "NO\n");
 return 0;
 }
 ```

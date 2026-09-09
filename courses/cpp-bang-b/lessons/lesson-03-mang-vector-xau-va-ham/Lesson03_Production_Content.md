@@ -12,6 +12,20 @@ Trong C++ hiện đại và chuẩn lập trình thi đấu, **`vector` là cấ
 2. **An toàn bộ nhớ:** Tự động giải phóng khi ra khỏi phạm vi hàm, không bị tràn bộ nhớ Stack.
 3. **Tương thích toàn diện:** Tương thích trực tiếp với các thuật toán chuẩn như `sort`, `reverse`, `min_element`.
 
+### Bảng chữ ký hàm STL Algorithm dùng với `vector` (học thuộc trước khi làm bài tập)
+
+Học sinh chưa cần hiểu con trỏ/iterator là gì — chỉ cần nhớ quy tắc: mọi hàm dưới đây đều nhận cặp **`first` (vị trí đầu) và `last` (vị trí sau phần tử cuối)**, với `vector<int> a` thì `first` là `a.begin()` và `last` là `a.end()`.
+
+| Hàm | Tham số (`first`, `last`) | Trả về / Kết quả |
+|:---|:---|:---|
+| `reverse(a.begin(), a.end())` | Toàn bộ vector cần đảo ngược | Đảo ngược cả vector tại chỗ, ví dụ $[1, 2, 3] \to [3, 2, 1]$ |
+| `*max_element(a.begin(), a.end())` | Toàn bộ vector cần tìm | **Giá trị** lớn nhất (dấu `*` phía trước để lấy giá trị, không phải vị trí) |
+| `max_element(a.begin(), a.end()) - a.begin()` | Toàn bộ vector cần tìm | **Chỉ số (0-based)** của phần tử lớn nhất đầu tiên |
+| `*min_element(a.begin(), a.end())` | Toàn bộ vector cần tìm | **Giá trị** nhỏ nhất |
+| `min_element(a.begin(), a.end()) - a.begin()` | Toàn bộ vector cần tìm | **Chỉ số (0-based)** của phần tử nhỏ nhất đầu tiên |
+
+> **Bẫy dùng sai:** Quên dấu `*` thì nhận được iterator (vị trí) thay vì giá trị — chương trình vẫn biên dịch nhưng in ra địa chỉ rác. Muốn giá trị thì thêm `*`, muốn chỉ số thì trừ `a.begin()`.
+
 ### 1.1. Khởi tạo và truy xuất phần tử `vector`
 ```cpp
 int n;

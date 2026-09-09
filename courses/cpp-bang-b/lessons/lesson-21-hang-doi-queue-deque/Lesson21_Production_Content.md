@@ -4,15 +4,27 @@
 
 ### 1.1. Hàng đợi chuẩn (queue — FIFO)
 Hàng đợi hoạt động theo nguyên lý **FIFO (First In, First Out — Vào trước, Ra trước)**:
+
 * Phần tử được thêm vào ở đuôi (`push`), và được lấy ra ở đầu (`pop`).
 * Đây là cấu trúc dữ liệu nền tảng của thuật toán Tìm kiếm theo chiều rộng (BFS).
 
-![Cơ chế FIFO của Queue và Lan tỏa BFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-hang-doi-queue-deque/assets/queue_fifo_operation_vi.svg)
+![Cơ chế FIFO của Queue và Lan tỏa BFS](assets/queue_fifo_operation_vi.svg)
 
 ### 1.2. Hàng đợi hai đầu (double-ended queue — Deque)
-`std::deque` cho phép thực hiện thêm và xóa phần tử ở **CẢ HAI ĐẦU** với độ phức tạp tối ưu $\mathcal{O}(1)$:
-* `push_front()`, `pop_front()`: Thao tác ở đầu hàng đợi.
-* `push_back()`, `pop_back()`: Thao tác ở đuôi hàng đợi.
+`deque` cho phép thực hiện thêm và xóa phần tử ở **CẢ HAI ĐẦU** với độ phức tạp tối ưu $\mathcal{O}(1)$:
+
+### Bảng hàm thành viên hai đầu (so với `vector` ở Quyển 1 chỉ thao tác được ở đuôi)
+
+| Hàm | Tham số | Trả về / Tác dụng |
+|:---|:---|:---|
+| `push_front(x)` | Giá trị cần thêm vào đầu | Chèn `x` vào đầu trong $\mathcal{O}(1)$ (`vector` không làm được) |
+| `pop_front()` | (không có) | Loại bỏ phần tử ở đầu trong $\mathcal{O}(1)$ |
+| `push_back(x)` | Giá trị cần thêm vào đuôi | Chèn `x` vào đuôi trong $\mathcal{O}(1)$ (giống `vector`) |
+| `pop_back()` | (không có) | Loại bỏ phần tử ở đuôi trong $\mathcal{O}(1)$ |
+| `front()` | (không có) | Tham chiếu đến phần tử ở đầu (đọc/ghi trực tiếp) |
+| `back()` | (không có) | Tham chiếu đến phần tử ở đuôi (đọc/ghi trực tiếp |
+
+> **Bẫy dùng sai:** `pop_front()`/`pop_back()` không trả về gì (khác một số ngôn ngữ khác). Muốn lấy giá trị thì đọc `front()`/`back()` trước rồi mới `pop`.
 
 ## 2. Kỹ thuật deque cửa sổ trượt min/max $\mathcal{O}(N)$ (Sliding Window Monotonic Deque)
 
@@ -21,17 +33,18 @@ Hàng đợi hoạt động theo nguyên lý **FIFO (First In, First Out — Và
 * **Cách dùng Multiset / Priority Queue:** Mất $\mathcal{O}(N \log K)$.
 * **Cách dùng Monotonic Deque:** Đạt thời gian tối ưu tuyệt đối **$\mathcal{O}(N)$ tuyến tính**!
 
-![Monotonic Deque Cửa Sổ Trượt](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-hang-doi-queue-deque/assets/deque_sliding_window_minmax_vi.svg)
+![Monotonic Deque Cửa Sổ Trượt](assets/deque_sliding_window_minmax_vi.svg)
 
 ### 2.2. Bất biến 3 bước duy trì min cửa sổ
 Tại mỗi vị trí $i$ khi phần tử $A[i]$ bước vào:
+
 1. **Loại bỏ phần tử hết hạn (Out of Window):** Nếu phần tử ở đầu `dq.front() < i - K + 1` $\implies$ `dq.pop_front()`.
 2. **Duy trì tính đơn điệu tăng:** Trong khi `!dq.empty()` và $A[\text{dq.back()}] \ge A[i] \implies$ `dq.pop_back()` (vì $A[i]$ vừa nhỏ hơn vừa tồn tại lâu hơn các phần tử ở đuôi).
 3. **Thêm phần tử mới và lấy đáp án:** `dq.push_back(i)`. Khi $i \ge K-1$, giá trị nhỏ nhất của cửa sổ hiện tại chính là $A[\text{dq.front()}]$.
 
 ## 3. Ứng dụng nền tảng: Tìm đường đi ngắn nhất bằng queue (BFS nhập môn)
 
-![Đường đi ngắn nhất bằng BFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-hang-doi-queue-deque/assets/bfs_shortest_path_unweighted_vi.svg)
+![Đường đi ngắn nhất bằng BFS](assets/bfs_shortest_path_unweighted_vi.svg)
 
 * Trên đồ thị không có trọng số (hoặc đồ thị lưới di chuyển 4 hướng có chi phí mỗi bước bằng 1), thuật toán BFS sử dụng Queue luôn đảm bảo:
 
@@ -97,7 +110,7 @@ result.push_back(a[dq.front()]);
 }
 
 for (int i = 0; i < (int)result.size(); ++i) {
-cout << result[i] << (i + 1 == (int)result.size() "" : " ");
+cout << result[i] << (i + 1 == (int)result.size() ? "" : " ");
 }
 cout << "\n";
 

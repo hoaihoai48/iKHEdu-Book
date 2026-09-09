@@ -3,11 +3,36 @@
 ## 1. Bản chất các cấu trúc dữ liệu nâng cao trong thư viện chuẩn STL
 
 Trong lập trình thi đấu hiện đại, việc tự cài đặt lại cây nhị phân cân bằng hay bảng băm từ đầu cho mọi bài toán là không khả thi. C++ Standard Template Library (STL) cung cấp các cấu trúc dữ liệu tối ưu hóa cực mạnh:
+
 * **`std::set` / `std::map`:** Cây đỏ-đen (Red-Black Tree) tự cân bằng, luôn duy trì các phần tử theo thứ tự tăng dần. Các thao tác tìm kiếm, chèn, xóa đều có độ phức tạp đảm bảo $\mathcal{O}(\log N)$.
 * **`std::unordered_map` / `std::unordered_set`:** Bảng băm trực tiếp (Hash Table), đạt thời gian trung bình $\mathcal{O}(1)$ cho các truy vấn.
 * **`std::priority_queue`:** Cấu trúc Heap nhị phân hoàn chỉnh, cho phép truy xuất phần tử lớn nhất (hoặc nhỏ nhất) trong $\mathcal{O}(1)$ và thêm/bớt trong $\mathcal{O}(\log N)$.
 
-![So sánh Set Map vs Unordered Map](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-cau-truc-du-lieu-stl-set-map/assets/stl_set_map_rb_tree_vi.svg)
+![So sánh Set Map vs Unordered Map](assets/stl_set_map_rb_tree_vi.svg)
+
+### Bảng cú pháp đầy đủ (học thuộc trước khi dùng)
+
+| Hàm | Tham số | Trả về |
+|:---|:---|:---|
+| `st.insert(x)` / `mp[k] = v` | Giá trị / cặp khóa-giá trị cần chèn | `set`: pair (iterator, `bool` chèn thành công hay không); `map`: tham chiếu đến value |
+| `st.find(x)` / `mp.find(k)` | Giá trị / khóa cần tìm | Iterator trỏ đến phần tử; nếu không thấy thì `st.end()` / `mp.end()` |
+| `st.count(x)` | Giá trị cần đếm | `0` hoặc `1` với `set` (vì phần tử phân biệt) |
+| `st.lower_bound(x)` | Giá trị mốc | Iterator đầu tiên $\ge$ `x` (hàm **thành viên**, chạy $\mathcal{O}(\log N)$ trên cây) |
+| `st.upper_bound(x)` | Giá trị mốc | Iterator đầu tiên $>$ `x` |
+| `st.erase(x)` / `st.erase(it)` | Giá trị hoặc iterator | Số phần tử đã xóa (`set`) / iterator sau vị trí xóa |
+
+> **Bẫy dùng sai hàm toàn cục:** `std::lower_bound(st.begin(), st.end(), x)` (hàm `<algorithm>`) trên `set` phải duyệt từng bước iterator nên mất $\mathcal{O}(N)$. Trên cây phải luôn dùng hàm thành viên `st.lower_bound(x)` để được $\mathcal{O}(\log N)$.
+
+### Ví dụ tối giản + dry-run: nén `[100, 20, 100]` thành `[1, 0, 1]`
+
+| Bước | Thao tác | `vals` sau bước | Kết quả |
+|:---:|---|---|---|
+| 1. Sao chép | `vals = a` | $[100, 20, 100]$ | — |
+| 2. Sắp xếp | `sort` | $[20, 100, 100]$ | — |
+| 3. Lọc trùng | `unique` + `erase` | $[20, 100]$ ($K = 2$) | — |
+| 4. Ánh xạ | `lower_bound(vals, 100) - begin()` | — | $1$ |
+| 4. Ánh xạ | `lower_bound(vals, 20) - begin()` | — | $0$ |
+| 4. Ánh xạ | `lower_bound(vals, 100) - begin()` | — | $1$ |
 
 ## 2. Kỹ thuật nén tọa độ (Coordinate Compression)
 
@@ -16,7 +41,7 @@ Trong lập trình thi đấu hiện đại, việc tự cài đặt lại cây 
 * **Nguyên lý Nén Tọa Độ:** Ánh xạ tập giá trị rời rạc ban đầu về tập số nguyên liên tiếp $\{0, 1, 2, \dots, K-1\}$ ($K \le N$) sao cho **giữ nguyên thứ tự tương quan lớn bé** giữa các phần tử:
 $$A[i] < A[j] \iff \text{rank}(A[i]) < \text{rank}(A[j])$$
 
-![Mô hình Nén Tọa Độ](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-cau-truc-du-lieu-stl-set-map/assets/coordinate_compression_model_vi.svg)
+![Mô hình Nén Tọa Độ](assets/coordinate_compression_model_vi.svg)
 
 ### 2.2. Quy trình 4 bước chuẩn mực trong C++
 1. **Sao chép mảng:** `vector<long long> vals = a;`
@@ -30,11 +55,43 @@ int compressed_val = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
 
 ## 3. Hàng đợi ưu tiên (Priority Queue / heap)
 
-![Hàng đợi ưu tiên Max-Heap vs Min-Heap](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-cau-truc-du-lieu-stl-set-map/assets/priority_queue_heap_vi.svg)
+![Hàng đợi ưu tiên Max-Heap vs Min-Heap](assets/priority_queue_heap_vi.svg)
 
 * **Max-Heap (Mặc định):** `priority_queue<long long> max_pq;` $\implies$ `top()` trả về giá trị lớn nhất.
 
 * **Min-Heap (Đảo thứ tự):** `priority_queue<long long, vector<long long>, greater<long long>> min_pq;` $\implies$ `top()` trả về giá trị nhỏ nhất.
+
+### Giải phẫu 3 tham số template (vì sao Min-Heap viết dài hơn?)
+
+| Tham số | Ý nghĩa | Giá trị mặc định |
+|:---|:---|:---|
+| `T` | Kiểu dữ liệu phần tử (ví dụ `long long`) | (bắt buộc) |
+| `Container` | Vùng chứa bên dưới heap (phải hỗ trợ `push_back`/`pop_back`) | `vector<T>` |
+| `Compare` | Functor so sánh quyết định phần tử nào lên đỉnh | `less<T>` (phần tử lớn nhất lên đỉnh $\implies$ Max-Heap) |
+
+Max-Heap chỉ cần `priority_queue<int>` vì cả `Container` và `Compare` đều lấy mặc định. Muốn Min-Heap thì giữ nguyên `Container` nhưng đổi `Compare` thành `greater<T>` (phần tử nhỏ nhất lên đỉnh).
+
+### Bảng hàm thành viên (áp dụng cho cả Max-Heap và Min-Heap)
+
+| Hàm | Tham số | Trả về / Tác dụng |
+|:---|:---|:---|
+| `push(x)` | Giá trị cần thêm | Chèn `x` vào heap trong $\mathcal{O}(\log N)$ |
+| `pop()` | (không có) | Loại bỏ phần tử ở đỉnh trong $\mathcal{O}(\log N)$ (không trả về gì — muốn lấy thì gọi `top()` trước) |
+| `top()` | (không có) | Phần tử ở đỉnh trong $\mathcal{O}(1)$ (lớn nhất với Max-Heap, nhỏ nhất với Min-Heap) |
+| `empty()` | (không có) | `true` nếu heap rỗng |
+| `size()` | (không có) | Số phần tử hiện tại |
+
+### Cơ chế `unique` + `erase` (vì sao phải gọi cả hai?)
+
+Học sinh thường tưởng `unique` tự xóa phần tử — **không phải**. `unique(vals.begin(), vals.end())` chỉ dồn các phần tử phân biệt về đầu vector và trả về iterator trỏ đến **vị trí bắt đầu của vùng thừa** ở cuối; `erase` mới thực sự cắt bỏ vùng thừa đó:
+
+```cpp
+sort(vals.begin(), vals.end()); // [20, 100, 100]
+auto it = unique(vals.begin(), vals.end()); // dồn thành [20, 100, 100], it trỏ vào ô thứ 2 (giá trị 100 thừa)
+vals.erase(it, vals.end()); // cắt bỏ từ it đến hết -> [20, 100]
+```
+
+> **Điều kiện tiên quyết:** `unique` chỉ gom các phần tử **liên tiếp** trùng nhau, nên bắt buộc phải `sort` trước. Quên `sort` thì các bản sao cách xa nhau không bị gom.
 
 * **Ứng dụng kinh điển:** Tìm $K$ phần tử lớn nhất/nhỏ nhất trong luồng dữ liệu online, thuật toán Dijkstra, thuật toán Prim, duy trì Trung vị động (Median) bằng 2 Heap.
 
@@ -89,7 +146,7 @@ compressed[i] = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
 }
 
 for (int i = 0; i < n; ++i) {
-cout << compressed[i] << (i + 1 == n "" : " ");
+cout << compressed[i] << (i + 1 == n ? "" : " ");
 }
 cout << "\n";
 
@@ -138,7 +195,7 @@ right_min.pop();
 }
 
 // In trung vị hiện tại
-cout << left_max.top() << (i + 1 == n "" : " ");
+cout << left_max.top() << (i + 1 == n ? "" : " ");
 }
 cout << "\n";
 

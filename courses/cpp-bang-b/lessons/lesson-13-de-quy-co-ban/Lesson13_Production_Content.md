@@ -12,7 +12,7 @@ Mỗi hàm đệ quy chuẩn mực bắt buộc phải có đủ 2 thành phần
 1. **Điểm Dừng:** Trường hợp bài toán đơn giản nhất đã biết trước đáp án mà không cần gọi tiếp đệ quy. Điểm dừng có nhiệm vụ **ngắt chuỗi lời gọi vô tận**.
 2. **Bước Đệ Quy:** Thu nhỏ quy mô bài toán bằng cách gọi lại chính hàm đó với tham số tiến dần về phía Base Case.
 
-![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_structure_vi.svg)
+![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](assets/recursion_structure_vi.svg)
 
 ## 2. Mô phỏng từng bước hoạt động của Call Stack
 
@@ -90,7 +90,7 @@ Trong lý thuyết ngôn ngữ, *Đệ quy đuôi (Tail Recursion)* là hàm đ�
 
 ### 3.2. Hệ thống phân loại thuật ngữ đệ quy (recursion taxonomy)
 
-![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_taxonomy_vi.svg)
+![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](assets/recursion_taxonomy_vi.svg)
 
 1. **Đệ quy Tuyến tính (Linear Recursion - 1 nhánh gọi / Frame):**
 * Trong mỗi Stack Frame chỉ thực hiện **đúng 1 lời gọi đệ quy con**. Cây gọi hàm là một đường thẳng đơn tuyến.
@@ -110,7 +110,7 @@ Lũy thừa nhị phân `powerRec(A, B/2)` (khi lưu biến tạm `half`): Độ
 
 Xét cây gọi hàm khi tính $F(5)$ bằng đệ quy phân nhánh:
 
-![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/fibonacci_recursion_tree_vi.svg)
+![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](assets/fibonacci_recursion_tree_vi.svg)
 
 * **Phân tích độ phức tạp tiệm cận chính xác:**
 Số lời gọi hàm thỏa mãn hệ thức truy hồi $T(N) = T(N-1) + T(N-2) + 1$. Bằng phương trình đặc trưng $r^2 - r - 1 = 0$, ta chứng minh được số phép tính thực tế tăng theo **cấp số nhân chính xác**:

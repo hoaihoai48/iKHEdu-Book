@@ -3,10 +3,11 @@
 ## 1. Bản chất cấu trúc dữ liệu ngăn xếp (stack)
 
 Ngăn xếp (Stack) là cấu trúc dữ liệu hoạt động theo nguyên lý **LIFO (Last In, First Out — Vào sau, Ra trước)**:
+
 * Phần tử được thêm vào cuối cùng sẽ là phần tử đầu tiên được lấy ra.
 * Các thao tác cơ bản trong C++ `std::stack`: `push(x)` (thêm vào đỉnh), `pop()` (xóa đỉnh), `top()` (truy cập đỉnh), `empty()`, `size()`. Toàn bộ thao tác đều đạt thời gian tối ưu tuyệt đối $\mathcal{O}(1)$.
 
-![Cơ chế LIFO của Stack và Khớp Dấu Ngoặc](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-ngan-xep-stack-monotonic/assets/stack_lifo_operation_vi.svg)
+![Cơ chế LIFO của Stack và Khớp Dấu Ngoặc](assets/stack_lifo_operation_vi.svg)
 
 ## 2. Kỹ thuật ngăn xếp đơn điệu (Monotonic Stack)
 
@@ -15,7 +16,16 @@ Ngăn xếp (Stack) là cấu trúc dữ liệu hoạt động theo nguyên lý 
 * **Cách ngây thơ:** Duyệt 2 vòng lặp lồng nhau $\implies \mathcal{O}(N^2)$ (bị TLE khi $N = 10^5$).
 * **Nguyên lý Monotonic Stack:** Duy trì một ngăn xếp chứa các chỉ số mà giá trị tương ứng trong mảng luôn tuân theo tính chất **đơn điệu** (tăng dần hoặc giảm dần). Khi gặp phần tử mới vi phạm tính đơn điệu, ta liên tục `pop()` các phần tử ở đỉnh ngăn xếp và ghi nhận đáp án cho chúng.
 
-![Mô hình Monotonic Stack NGE](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-ngan-xep-stack-monotonic/assets/monotonic_stack_nge_vi.svg)
+![Mô hình Monotonic Stack NGE](assets/monotonic_stack_nge_vi.svg)
+
+#### Ví dụ tối giản + dry-run tay: $A = [4, 2, 5]$, tìm phần tử lớn hơn tiếp theo (NGE)
+
+| Bước | Phần tử đang xét | Stack trước (đáy $\to$ đỉnh) | Hành động | Stack sau | Đáp án ghi nhận |
+|:---:|:---:|:---:|:---|:---:|:---|
+| 1 | $4$ (chỉ số $0$) | $[\,]$ | Stack rỗng $\implies$ `push(0)` | $[0]$ | — |
+| 2 | $2$ (chỉ số $1$) | $[0]$ ($A[0]=4 \ge 2$, giữ đơn điệu giảm) | `push(1)` | $[0, 1]$ | — |
+| 3 | $5$ (chỉ số $2$) | $[0, 1]$ | $5 > 2$ $\implies$ `pop(1)`, ghi `NGE[1] = 5`; $5 > 4$ $\implies$ `pop(0)`, ghi `NGE[0] = 5$; `push(2)` | $[2]$ | $NGE = [5, 5, ?]$ |
+| 4 | Kết thúc mảng | $[2]$ | Chỉ số $2$ không còn phần tử nào bên phải | $[\,]$ | $NGE = [5, 5, -1]$ |
 
 ### 2.2. Phân tích độ phức tạp khấu hao (amortized analysis $\mathcal{O}(N)$)
 Mỗi phần tử của mảng được `push()` vào ngăn xếp đúng $1$ lần và bị `pop()` ra khỏi ngăn xếp tối đa $1$ lần trong toàn bộ quá trình chạy.
@@ -23,7 +33,7 @@ $$\text{Tổng số thao tác trên Stack} \le 2N \implies \text{Thời gian tru
 
 ## 3. Bài toán kinh điển: Hình chữ nhật lớn nhất trên biểu đồ cột (largest rectangle in histogram)
 
-![Hình chữ nhật lớn nhất trên Histogram](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-ngan-xep-stack-monotonic/assets/histogram_max_rectangle_vi.svg)
+![Hình chữ nhật lớn nhất trên Histogram](assets/histogram_max_rectangle_vi.svg)
 
 * **Bản chất:** Với mỗi cột $i$ có chiều cao $H[i]$, ta cần tìm:
 1. $L[i]$: Vị trí cột đầu tiên bên trái có chiều cao $< H[i]$.
@@ -80,7 +90,7 @@ st.push(i);
 }
 
 for (int i = 0; i < n; ++i) {
-cout << nge[i] << (i + 1 == n "" : " ");
+cout << nge[i] << (i + 1 == n ? "" : " ");
 }
 cout << "\n";
 
@@ -120,7 +130,7 @@ for (int i = 0; i <= n; ++i) {
 while (!st.empty() && h[i] < h[st.top()]) {
 long long height = h[st.top()];
 st.pop();
-long long width = st.empty() i : (i - st.top() - 1);
+long long width = st.empty() ? i : (i - st.top() - 1);
 max_area = max(max_area, height * width);
 }
 st.push(i);

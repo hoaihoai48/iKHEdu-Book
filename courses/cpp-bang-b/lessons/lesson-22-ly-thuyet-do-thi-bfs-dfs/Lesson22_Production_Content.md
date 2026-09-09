@@ -4,7 +4,7 @@
 
 Đồ thị $G = (V, E)$ là cấu trúc toán học biểu diễn tập hợp các đỉnh (Vertices — $V$) và các cạnh nối giữa chúng (Edges — $E$). Đồ thị có thể là vô hướng (Undirected) hoặc có hướng (Directed), có trọng số hoặc không có trọng số.
 
-![Biểu diễn Đồ thị: Ma trận kề vs Danh sách kề](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/graph_representations_vi.svg)
+![Biểu diễn Đồ thị: Ma trận kề vs Danh sách kề](assets/graph_representations_vi.svg)
 
 ### 1.1. Ma trận kề (adjacency matrix)
 * Mảng 2 chiều `int adj[N][N]`: `adj[u][v] = 1` nếu có cạnh nối giữa $u$ và $v$.
@@ -19,7 +19,7 @@
 
 ## 2. Hai chiến lược duyệt đồ thị kinh điển: BFS vs DFS
 
-![So sánh BFS vs DFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/bfs_vs_dfs_traversal_vi.svg)
+![So sánh BFS vs DFS](assets/bfs_vs_dfs_traversal_vi.svg)
 
 ### 2.1. Tìm kiếm theo chiều rộng (breadth-first search — BFS)
 * Sử dụng **Hàng đợi (Queue)**, lan tỏa theo từng tầng bán kính $d = 0, 1, 2, \dots$ tính từ đỉnh nguồn $S$.
@@ -29,9 +29,21 @@
 * Sử dụng **Đệ quy (hoặc Stack)**, đi sâu hết mức có thể trên một nhánh cho đến khi gặp ngõ cụt thì quay lui (Backtracking).
 * **Đặc tính vàng:** Cực kỳ hiệu quả để đếm thành phần liên thông, phát hiện chu trình, kiểm tra tính liên thông, định hướng cây DFS.
 
+### 2.3. Ví dụ tối giản + dry-run tay (đồ thị 5 đỉnh, cạnh: $1-2, 1-3, 2-4, 3-5$)
+
+| Bước | BFS (Queue) | Thứ tự thăm BFS | DFS (từ đỉnh $1$, kề nhỏ trước) | Thứ tự thăm DFS |
+|:---:|---|---|---|---|
+| 1 | Khởi tạo `queue = [1]`, `visited = {1}` | $[1]$ | Gọi `DFS(1)`, `visited = {1}` | $[1]$ |
+| 2 | `pop(1)`, đẩy kề chưa thăm $2, 3$ | $[1]$ | Từ $1$ đi sâu sang $2$, `visited += {2}` | $[1, 2]$ |
+| 3 | `pop(2)`, đẩy kề chưa thăm $4$ | $[1, 2]$ | Từ $2$ đi sâu sang $4$, `visited += {4}` | $[1, 2, 4]$ |
+| 4 | `pop(3)`, đẩy kề chưa thăm $5$ | $[1, 2, 3]$ | $4$ hết kề mới $\implies$ quay lui về $2$, về $1$, sang $3$ | $[1, 2, 4]$ |
+| 5 | `pop(4)`, `pop(5)` (không còn kề mới) | $[1, 2, 3, 4, 5]$ | Từ $3$ sang $5$ | $[1, 2, 4, 3, 5]$ |
+
+> **Đọc bảng:** BFS thăm theo từng tầng ($1$ | $2,3$ | $4,5$); DFS đi sâu hết nhánh $1 \to 2 \to 4$ rồi mới quay lui sang nhánh $3 \to 5$. Cùng một đồ thị nhưng thứ tự thăm khác nhau — đây chính là trực giác để chọn thuật toán.
+
 ## 3. Ứng dụng: Đếm số thành phần liên thông & kiểm tra chu trình
 
-![Đếm số thành phần liên thông](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/connected_components_vi.svg)
+![Đếm số thành phần liên thông](assets/connected_components_vi.svg)
 
 * **Thuật toán đếm thành phần liên thông:** Duyệt qua mọi đỉnh $i \in [1, N]$. Nếu đỉnh $i$ chưa được thăm (`!visited[i]`), tăng biến đếm số thành phần liên thông `components++` và gọi `DFS(i)` để loang thăm toàn bộ các đỉnh thuộc cùng thành phần.
 * **Phát hiện chu trình trên đồ thị vô hướng bằng DFS:** Khi duyệt từ $u$ sang đỉnh kề $v$, nếu $v$ đã được thăm (`visited[v] == true`) và `v != parent[u]`, ta khẳng định đồ thị **CÓ CHU TRÌNH**!
@@ -103,7 +115,7 @@ component_sizes.push_back(sz);
 
 cout << component_count << "\n";
 for (int i = 0; i < (int)component_sizes.size(); ++i) {
-cout << component_sizes[i] << (i + 1 == (int)component_sizes.size() "" : " ");
+cout << component_sizes[i] << (i + 1 == (int)component_sizes.size() ? "" : " ");
 }
 cout << "\n";
 

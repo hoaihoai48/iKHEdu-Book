@@ -4,7 +4,7 @@
 
 Để có cái nhìn toàn cảnh về các phương pháp giải thuật lớn trong Lập trình thi đấu:
 
-![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/search_paradigms_bridge_vi.svg)
+![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](assets/search_paradigms_bridge_vi.svg)
 
 * **Divide & Conquer:** $\text{Bài toán lớn} \longrightarrow \text{Các bài toán con riêng biệt}$.
 * **Backtracking / State-Space Search:** $\text{Trạng thái hiện tại} \longrightarrow \text{Các nhánh quyết định thử nghiệm (Choices)}$.
@@ -60,9 +60,25 @@ unchoose(state, candidate);// 3. Hoàn tác về State_before (Restoration)
 }
 ```
 
-## 4. Khung tư duy mental model: Hai sơ đồ cốt lõi của lesson 12
+#### Ví dụ tối giản + dry-run tay: sinh mọi chuỗi nhị phân độ dài $N = 3$
 
-![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_space_tree_vi.svg)
+Mỗi vị trí chọn `0` hoặc `1` (Choose), đi sâu (Explore), rồi hoàn tác (Unchoose) để thử nhánh còn lại:
+
+| Bước | Hành động (Choose–Explore–Unchoose) | `cur` hiện tại | Ghi nhận |
+|:---:|---|---|:---:|
+| 1 | Chọn vị trí $0 = 0$, đi sâu | `[0]` | — |
+| 2 | Chọn vị trí $1 = 0$, đi sâu | `[0, 0]` | — |
+| 3 | Chọn vị trí $2 = 0$ $\implies$ đủ độ dài | `[0, 0, 0]` | In `000` |
+| 4 | Hoàn tác vị trí $2$, chọn $1$ $\implies$ đủ độ dài | `[0, 0, 1]` | In `001` |
+| 5 | Hoàn tác vị trí $1$–$2$, chọn vị trí $1 = 1$, đi sâu | `[0, 1]` | — |
+| 6 | Chọn vị trí $2 = 0$ / hoàn tác / chọn $1$ | `[0, 1, 0]` → `[0, 1, 1]` | In `010`, `011` |
+| 7 | Hoàn tác toàn bộ nhánh $0$, chọn vị trí $0 = 1$, lặp tương tự | `[1, 0, 0]` … `[1, 1, 1]` | In `100`, `101`, `110`, `111` |
+
+> **Đọc bảng:** Mỗi lần quay lui (Unchoose) là xóa lựa chọn ở vị trí hiện tại để thử giá trị còn lại. Tổng $2^3 = 8$ chuỗi — đây chính là khung Choose–Explore–Unchoose áp dụng cho hoán vị, N-Queens và mọi bài quay lui khác.
+
+## 4. Khung tư duy mental model: Hai sơ đồ cốt lõi của bài học này
+
+![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](assets/state_space_tree_vi.svg)
 
 ### Quy trình 1: Luồng ra quyết định quay lui thuần túy (backtracking)
 
@@ -112,7 +128,7 @@ unchoose(state, candidate);// 3. Hoàn tác về State_before (Restoration)
 
 ## 8. Cầu nối sâu sang DP: Từ cây tìm kiếm (search tree) đến đồ thị trạng thái (state DAG)
 
-![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_dag_overlapping_vi.svg)
+![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](assets/state_dag_overlapping_vi.svg)
 
 * **Duyệt cây thuần túy (Tree Search):** Phải tính toán lại trạng thái `E` nhiều lần ở các nhánh con khác nhau.
 * **Quan điểm Đồ thị (State DAG View):** `E` chỉ là một đỉnh duy nhất trong không gian trạng thái.
@@ -150,7 +166,7 @@ vector<bool> visited;
 void genPermutations(int step) {
 if (step > n) {
 
-for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n "" : " ");
+for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n ? "" : " ");
 cout << "\n";
 return;
 }

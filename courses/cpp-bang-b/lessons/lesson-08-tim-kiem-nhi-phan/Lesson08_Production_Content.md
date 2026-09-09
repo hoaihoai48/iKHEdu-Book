@@ -56,6 +56,15 @@ Cho mảng đã sắp xếp gồm 10 phần tử: $A = [2, 5, 8, 12, 16, 23, 38,
 
 ### 2.2. Tìm kiếm phần tử biên: `lower_bound` và `upper_bound`
 
+### Bảng cú pháp đầy đủ (điều kiện tiên quyết: mảng đã sắp xếp tăng dần)
+
+| Hàm | Từng tham số | Trả về |
+|:---|:---|:---|
+| `lower_bound(first, last, val)` | `first`: iterator đầu đoạn; `last`: iterator cuối đoạn (past-the-end); `val`: giá trị cần tìm | Iterator trỏ đến phần tử **đầu tiên $\ge$ `val`**; nếu không có thì trả về `last` |
+| `upper_bound(first, last, val)` | Giống hệt `lower_bound` | Iterator trỏ đến phần tử **đầu tiên $>$ `val`**; nếu không có thì trả về `last` |
+
+> **Đổi iterator thành chỉ số:** trừ đi `begin()`, ví dụ `lower_bound(A.begin(), A.end(), 5) - A.begin()`. Đếm số lần xuất hiện: $\text{Count}(X) = \text{upper\_bound}(X) - \text{lower\_bound}(X)$.
+
 Trong lập trình thi đấu, dạng toán tìm vị trí biên quan trọng hơn nhiều so với tìm chính xác:
 
 1. **`lower_bound` (Tìm phần tử nhỏ nhất $\ge X$):**

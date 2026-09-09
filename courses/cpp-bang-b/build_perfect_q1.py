@@ -2,14 +2,13 @@
 """
 build_perfect_q1.py
 Xây dựng c++-level-1-quyen-1.docx chuẩn xác 100% theo mẫu c++-level-1-quyen-2.docx:
-- 5 Chương (15 Bài học, 212 bài toán):
+- 4 Chương (12 Bài học, 164 bài toán):
   + CHƯƠNG 01: NỀN TẢNG LẬP TRÌNH C++ (Bài 01, Bài 02, Bài 03 - 24 bài)
   + CHƯƠNG 02: THUẬT TOÁN SẮP XẾP & KỸ THUẬT MẢNG (Bài 04, Bài 05, Bài 06 - 42 bài)
   + CHƯƠNG 03: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN (Bài 07, Bài 08, Bài 09 - 50 bài)
   + CHƯƠNG 04: SỐ HỌC & ĐẠI SỐ MODULAR (Bài 10, Bài 11, Bài 12 - 48 bài)
-  + CHƯƠNG 05: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI (Bài 13, Bài 14, Bài 15 - 48 bài)
 - BLOCKER 1: Nhúng đầy đủ 18 ảnh minh họa lý thuyết (PNG 1600px).
-- BLOCKER 2: Đánh số bài tập liên tục từ Bài 01 đến Bài 212 toàn quyển.
+- BLOCKER 2: Đánh số bài tập liên tục từ Bài 01 đến Bài 164 toàn quyển.
 - MAJOR 3: Tiêu đề Bài 01-03 và 24 đề mới dùng sentence case đồng bộ Q2.
 - MAJOR 4: H1 LỜI NÓI ĐẦU viết hoa toàn bộ như Q2.
 - MAJOR 5: Heading 4 count = 0.
@@ -150,33 +149,6 @@ CHAPTERS_DEF = [
                 "problem_codes": [f"CPPB-BIG-{i:02d}" for i in range(1, 17)]
             }
         ]
-    },
-    {
-        "num": 5,
-        "title": "CHƯƠNG 05: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI",
-        "lessons": [
-            {
-                "num": 13,
-                "title": "Bài 13: Thuật toán đệ quy & cây gọi hàm",
-                "folder": LESSONS_DIR / "lesson-13-de-quy-co-ban",
-                "content_file": LESSONS_DIR / "lesson-13-de-quy-co-ban" / "Lesson13_Production_Content.md",
-                "problem_codes": [f"CPPB-REC-{i:02d}" for i in range(1, 17)]
-            },
-            {
-                "num": 14,
-                "title": "Bài 14: Kỹ thuật chia để trị",
-                "folder": LESSONS_DIR / "lesson-14-chia-de-tri",
-                "content_file": LESSONS_DIR / "lesson-14-chia-de-tri" / "Lesson14_Production_Content.md",
-                "problem_codes": [f"CPPB-DAC-{i:02d}" for i in range(1, 17)]
-            },
-            {
-                "num": 15,
-                "title": "Bài 15: Thuật toán quay lui & nhánh cận",
-                "folder": LESSONS_DIR / "lesson-15-quay-lui-nhanh-can",
-                "content_file": LESSONS_DIR / "lesson-15-quay-lui-nhanh-can" / "Lesson15_Production_Content.md",
-                "problem_codes": [f"CPPB-BKT-{i:02d}" for i in range(1, 17)]
-            }
-        ]
     }
 ]
 
@@ -307,7 +279,7 @@ Chào mừng các em học sinh và quý thầy cô đến với bộ giáo trì
 
 Bộ tài liệu này được biên soạn công phu nhằm cung cấp lộ trình học tập lập trình thi đấu bài bản, chuẩn mực và hiện đại nhất dành cho học sinh THCS, THPT và sinh viên đam mê thuật toán.
 
-Phần nội dung này gồm **5 Chương trọng tâm (Chương 01 đến Chương 05)** với **15 Bài học** và **212 bài toán thực hành**, trang bị toàn diện nền tảng lập trình C++, mảng, con trỏ, cửa sổ trượt, tìm kiếm nhị phân, bit, số học, đệ quy và quay lui.
+Phần nội dung này gồm **4 Chương trọng tâm (Chương 01 đến Chương 04)** với **12 Bài học** và **164 bài toán thực hành**, trang bị toàn diện nền tảng lập trình C++, mảng, con trỏ, cửa sổ trượt, tìm kiếm nhị phân, bit và số học.
 
 Mỗi bài học được thiết kế theo cấu trúc sư phạm chặt chẽ:
 
@@ -327,7 +299,7 @@ Chúc các em học tập hiệu quả và chinh phục những giải thưởng
 
     global_p_counter = 1
 
-    # 2. 5 Chapters & 15 Lessons
+    # 2. 4 Chapters & 12 Lessons
     for chap in CHAPTERS_DEF:
         chap_title = chap["title"]
         md.append(f"# {chap_title}\n\n")
@@ -348,8 +320,9 @@ Chúc các em học tập hiệu quả và chinh phục những giải thưởng
                 if c_lines and c_lines[0].startswith("# Bài"):
                     c_text = "\n".join(c_lines[1:])
                 # Remove Quiz section and Exercise matrix section
-                c_text = re.sub(r"## Câu hỏi trắc nghiệm.*?(?=\n##|\Z)", "", c_text, flags=re.DOTALL)
-                c_text = re.sub(r"## Ma trận bài tập.*?(?=\n##|\Z)", "", c_text, flags=re.DOTALL)
+                # NOTE: lookahead must exclude #### (use (?!#)), otherwise only the header line is removed
+                c_text = re.sub(r"## Câu hỏi trắc nghiệm.*?(?=\n##(?!#)|\Z)", "", c_text, flags=re.DOTALL)
+                c_text = re.sub(r"## Ma trận bài tập.*?(?=\n##(?!#)|\Z)", "", c_text, flags=re.DOTALL)
                 # Resolve absolute image paths
                 c_text = resolve_image_paths_in_content(c_text, l_folder)
                 md.append(c_text.strip() + "\n\n")
@@ -824,10 +797,6 @@ def post_process_q1_docx(docx_path):
         "150", # Bài 10
         "167", # Bài 11
         "187", # Bài 12
-        "207", # Chương 05
-        "207", # Bài 13
-        "228", # Bài 14
-        "252", # Bài 15
         "276"  # Phụ lục
     ]
 

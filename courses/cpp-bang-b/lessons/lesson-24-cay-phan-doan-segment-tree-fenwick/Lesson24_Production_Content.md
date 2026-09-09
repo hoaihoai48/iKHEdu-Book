@@ -3,6 +3,7 @@
 ## 1. Bản chất bài toán truy vấn đoạn động (dynamic range queries)
 
 Cho mảng $A$ gồm $N$ phần tử. Cần thực hiện liên tiếp $Q$ thao tác thuộc 2 loại:
+
 1. **Cập nhật điểm (Point Update):** Thay đổi giá trị $A[i] \gets v$ (hoặc $A[i] \gets A[i] + v$).
 2. **Truy vấn đoạn (Range Query):** Tính tổng $\sum_{k=L}^R A[k]$ hoặc tìm $\min_{k=L}^R A[k]$ / $\max_{k=L}^R A[k]$.
 
@@ -12,14 +13,15 @@ Cho mảng $A$ gồm $N$ phần tử. Cần thực hiện liên tiếp $Q$ thao 
 | **Cây Fenwick (BIT)** | $\mathcal{O}(N)$ | $\mathcal{O}(\log N)$ *(Cực nhanh)* | $\mathcal{O}(\log N)$ | $\mathcal{O}(N)$ |
 | **Cây Phân Đoạn (Segment Tree)** | $\mathcal{O}(N)$ | $\mathcal{O}(\log N)$ *(Cực nhanh)* | $\mathcal{O}(\log N)$ | $\mathcal{O}(4N)$ |
 
-![So sánh các cấu trúc Range Query](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-cay-phan-doan-segment-tree-fenwick/assets/point_update_range_query_vi.svg)
+![So sánh các cấu trúc Range Query](assets/point_update_range_query_vi.svg)
 
 ## 2. Cây fenwick (Binary Indexed Tree — BIT)
 
-![Cây Fenwick và Phép toán Lowbit](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-cay-phan-doan-segment-tree-fenwick/assets/fenwick_tree_lowbit_vi.svg)
+![Cây Fenwick và Phép toán Lowbit](assets/fenwick_tree_lowbit_vi.svg)
 
 ### 2.1. Phép toán ma thuật: `lowbit(x) = x & (-x)`
 Phép toán `x & (-x)` trích xuất bit $1$ thấp nhất (trọng số nhỏ nhất) của số nguyên $x$.
+
 * Mỗi vị trí $x$ trong mảng `bit[x]` quản lý tổng của một đoạn con có độ dài đúng bằng `lowbit(x)` kết thúc tại $x$:
 $$\text{Đoạn quản lý của } x = (x - \text{lowbit}(x), x]$$
 
@@ -43,7 +45,7 @@ return query(R) - query(L - 1);
 
 ## 3. Cây phân đoạn (Segment Tree)
 
-![Cây Phân Đoạn Segment Tree](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-cay-phan-doan-segment-tree-fenwick/assets/segment_tree_binary_tree_vi.svg)
+![Cây Phân Đoạn Segment Tree](assets/segment_tree_binary_tree_vi.svg)
 
 ### 3.1. Cấu trúc cây nhị phân hoàn hảo
 * Cây phân đoạn biểu diễn mảng quản lý theo cây nhị phân: Nút gốc $id = 1$ quản lý toàn đoạn $[1, N]$.
@@ -53,9 +55,50 @@ return query(R) - query(L - 1);
 
 ### 3.2. Ưu thế vượt trội của Segment Tree
 Khác với Fenwick Tree chủ yếu hỗ trợ phép toán có tính nghịch đảo (như phép cộng tổng), Segment Tree hỗ trợ **MỌI PHÉP TOÁN KẾT HỢP (Associative Operations)**:
+
 * Tìm giá trị nhỏ nhất / lớn nhất trên đoạn (Range Minimum / Maximum Query — RMQ).
 * Tìm ước chung lớn nhất trên đoạn ($\text{GCD}(A[L \dots R])$).
 * Đếm số lượng phần tử đạt cực đại trên đoạn.
+
+### 3.3. Cập nhật đoạn bằng mảng lười Lazy Propagation (nền tảng cho Bài 134–135)
+Point Update chỉ chạm $\mathcal{O}(\log N)$ nút trên một đường đi. Nhưng **cập nhật cả đoạn** $[L, R]$ (cộng thêm $v$ vào mọi phần tử) mà duyệt từng lá sẽ tốn $\mathcal{O}(N)$. Kỹ thuật Lazy dùng thêm mảng `lazy[id]` để **ghi nợ** giá trị chờ đẩy xuống con:
+
+* **Bất biến lười:** `tree[id]` luôn đã bao gồm mọi cập nhật áp lên đoạn của nó (kể cả phần đang "nợ" trong `lazy[id]` chưa đẩy xuống con).
+* **Hàm đẩy nợ `pushDown(id, L, R)`:** trước khi đi sâu xuống con, cộng `lazy[id]` vào `tree` của hai con (nhân với độ dài đoạn con) rồi dồn tiếp vào `lazy` của chúng, cuối cùng xóa nợ `lazy[id] = 0`.
+* **Cập nhật đoạn:** tại nút bao trọn trong $[L, R]$ thì cập nhật `tree[id]` và ghi nợ `lazy[id]`, **dừng ngay không đi sâu** — nhờ đó mỗi cập nhật chỉ chạm $\mathcal{O}(\log N)$ nút.
+
+```cpp
+const int MAXN = 100000;
+vector<long long> tree(4 * MAXN + 5, 0), lazy(4 * MAXN + 5, 0);
+
+// Đẩy giá trị đang nợ xuống hai nút con
+void pushDown(int id, int L, int R) {
+if (lazy[id] == 0 || L == R) return;
+int mid = (L + R) / 2;
+tree[id * 2] += lazy[id] * (mid - L + 1);
+lazy[id * 2] += lazy[id];
+tree[id * 2 + 1] += lazy[id] * (R - mid);
+lazy[id * 2 + 1] += lazy[id];
+lazy[id] = 0; // Đã trả hết nợ
+}
+
+// Cộng v vào mọi phần tử trên đoạn [l, r]
+void rangeAdd(int id, int L, int R, int l, int r, long long v) {
+if (r < L || R < l) return; // Nằm ngoài đoạn cần cập nhật
+if (l <= L && R <= r) { // Bao trọn: cập nhật + ghi nợ rồi dừng
+tree[id] += v * (R - L + 1);
+lazy[id] += v;
+return;
+}
+pushDown(id, L, R); // Đẩy nợ cũ trước khi đi sâu
+int mid = (L + R) / 2;
+rangeAdd(id * 2, L, mid, l, r, v);
+rangeAdd(id * 2 + 1, mid + 1, R, l, r, v);
+tree[id] = tree[id * 2] + tree[id * 2 + 1]; // Cập nhật lại từ con
+}
+```
+
+> **Bẫy quên đẩy nợ:** Mọi hàm đi sâu (cập nhật lẫn truy vấn) **bắt buộc** gọi `pushDown` đầu tiên, nếu không con sẽ tính trên dữ liệu cũ thiếu phần nợ của cha.
 
 ## 4. Các bẫy lỗi lập trình kinh điển
 

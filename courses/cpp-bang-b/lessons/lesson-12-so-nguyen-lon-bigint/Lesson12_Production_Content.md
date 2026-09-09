@@ -8,7 +8,7 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 
 ### Big integer hay modular arithmetic: Chọn vũ khí nào
 
-![Phân định lựa chọn giải thuật: Modulo vs Big Integer](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-09-so-nguyen-lon-bigint/assets/bigint_vs_modulo_vi.svg)
+![Phân định lựa chọn giải thuật: Modulo vs Big Integer](assets/bigint_vs_modulo_vi.svg)
 
 | Đề bài yêu cầu | Quy mô kết quả | Vũ khí tối ưu | Kỹ thuật cốt lõi |
 |---|:---:|:---:|---|
@@ -55,9 +55,9 @@ Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (n
 * **Base 10 (`string` / `vector<int>`):** Mỗi phần tử lưu 1 chữ số thập phân ($0 \dots 9$).
 * **Base $10^9$ (`vector<int>` / `vector<long long>`):** Nhóm các cụm 9 chữ số từ phải sang trái.
 * *Cấu trúc dữ liệu:* Mỗi chunk lưu kiểu `int` ($0 \dots 999,999,999$); phép nhân giữa 2 chunks lưu kiểu `long long` (vì $(10^9 - 1) \times (10^9 - 1) \approx 10^{18} < 2^{63}-1$).
-* *Ví dụ:* Số $1234567890123456789$ được tách thành:
-$$\text{chunks} = [23456789, 123456789, 1]$$
-$$\text{Giá trị} = 23456789 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
+* *Ví dụ:* Số $1234567890123456789$ (19 chữ số) được tách từ phải sang trái thành từng cụm 9 chữ số (chunk bậc thấp đứng trước):
+$$\text{chunks} = [234567890, 123456789, 1]$$
+$$\text{Giá trị} = 234567890 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
 
 ### 3.2. Bảng tổng hợp các phép toán số nguyên lớn ($\mathcal{O}(L^2)$)
 
@@ -122,6 +122,15 @@ while (s.size() > 1 && s.back() == '0') {
 
 s.pop_back();
 }
+}
+
+// So sánh 2 số nguyên lớn không âm (chuỗi không có số 0 thừa ở đầu)
+// Trả về: 1 nếu a > b, -1 nếu a < b, 0 nếu a == b
+int compareBig(string a, string b) {
+if (a.size() != b.size()) return a.size() > b.size() ? 1 : -1;
+if (a > b) return 1;
+if (a < b) return -1;
+return 0;
 }
 
 // Phép cộng 2 số nguyên lớn không âm (A + B)

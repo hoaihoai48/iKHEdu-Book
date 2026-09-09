@@ -3,30 +3,33 @@
 ## 1. Bản chất mô hình hóa lưới 2D thành đồ thị
 
 Trong lập trình thi đấu, ma trận bảng vuông $N \times M$ có thể được xem là một đồ thị đặc biệt:
+
 * Mỗi ô $(r, c)$ là một **Đỉnh** của đồ thị ($1 \le r \le N, 1 \le c \le M$). Tổng số đỉnh $|V| = N \times M$.
 * Mỗi bước di chuyển sang các ô kề cạnh (4 hướng: Trên, Dưới, Trái, Phải) tương đương với một **Cạnh** vô hướng có trọng số bằng 1. Tổng số cạnh $|E| \le 4NM$.
 * **Ưu điểm vượt trội:** Không cần dựng danh sách kề `vector<int> adj[]`, ta duyệt trực tiếp trên ma trận bằng **Mảng Hướng Dịch Chuyển (`dr`, `dc`)**.
 
-![Mô hình hóa Đồ thị Lưới 2D và Mảng Hướng](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-do-thi-luoi-2d-flood-fill/assets/grid_2d_graph_modeling_vi.svg)
+![Mô hình hóa Đồ thị Lưới 2D và Mảng Hướng](assets/grid_2d_graph_modeling_vi.svg)
 
 ## 2. Thuật toán loang (Flood Fill)
 
-![Thuật toán Loang Flood Fill](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-do-thi-luoi-2d-flood-fill/assets/flood_fill_maze_vi.svg)
+![Thuật toán Loang Flood Fill](assets/flood_fill_maze_vi.svg)
 
 * **Bản chất:** Từ một ô xuất phát $(r_0, c_0)$, thuật toán lan tỏa (bằng DFS hoặc BFS) sang tất cả các ô lân cận có cùng tính chất (cùng màu, ô đất liền không phải nước biển, ô đường đi không có vật cản).
 * **Điều kiện biên hợp lệ (Boundary Invariant):**
 ```cpp
+// Quy ước THỐNG NHẤT toàn bài: chỉ số 0-based (0..n-1, 0..m-1), khớp 100% với code mẫu
 bool isValid(int r, int c) {
-return (r >= 1 && r <= n && c >= 1 && c <= m && grid[r][c] != '#' && !visited[r][c]);
+return (r >= 0 && r < n && c >= 0 && c < m && grid[r][c] != '#' && !visited[r][c]);
 }
 ```
 * **Ứng dụng kinh điển:** Đếm số lượng hòn đảo (Number of Islands), tính diện tích vùng lớn nhất, tô màu sơn vùng kín, tìm đường thoát khỏi mê cung.
 
 ## 3. Lý thuyết cây trên đồ thị (Tree Properties & invariants)
 
-![Đặc tính Bất biến của Cây](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-do-thi-luoi-2d-flood-fill/assets/tree_properties_and_cycles_vi.svg)
+![Đặc tính Bất biến của Cây](assets/tree_properties_and_cycles_vi.svg)
 
 Cây (Tree) là một dạng đồ thị vô hướng đặc biệt có cấu trúc phân cấp chặt chẽ:
+
 1. Đồ thị liên thông gồm $N$ đỉnh và có **đúng $N - 1$ cạnh**.
 2. Giữa 2 đỉnh bất kỳ trong cây có **duy nhất một đường đi đơn**.
 3. Không chứa bất kỳ chu trình nào.

@@ -64,7 +64,39 @@ C++ cung cấp hai hàm sắp xếp có sẵn:
 * `sort(first, last)`: Sử dụng thuật toán **IntroSort** (kết hợp giữa QuickSort, HeapSort và InsertionSort), đạt độ phức tạp thời gian $\mathcal{O}(N \log N)$ trong mọi trường hợp (trung bình và xấu nhất). Không bảo toàn thứ tự ban đầu của các phần tử bằng nhau.
 * `stable_sort(first, last)`: Sử dụng thuật toán **MergeSort**, độ phức tạp $\mathcal{O}(N \log N)$, đảm bảo bảo toàn nguyên vẹn thứ tự xuất hiện ban đầu của các phần tử có giá trị bằng nhau.
 
-### 4.2. Nguyên lý Strict Weak Ordering (toán tử so sánh nghiêm ngặt)
+### 4.2. Cấu trúc 3 tham số của `sort` (bắt buộc nắm vững)
+Chữ ký đầy đủ của hàm `sort`:
+
+```cpp
+sort(first, last, cmp);
+```
+
+| Tham số | Bản chất | Ý nghĩa cụ thể |
+|:---:|---|---|
+| `first` | Iterator trỏ đến **phần tử đầu tiên** của đoạn cần sắp | Với `vector<int> a` là `a.begin()`; với mảng tĩnh `a` là `a` |
+| `last` | Iterator trỏ đến **vị trí ngay sau phần tử cuối cùng** (past-the-end) | Với `vector<int> a` là `a.end()`; với mảng tĩnh `a` có `n` phần tử là `a + n` |
+| `cmp` | Hàm so sánh (tùy chọn) | Nếu bỏ qua, `sort` dùng toán tử `<` mặc định (tăng dần) |
+
+> **Quy tắc nửa mở (Half-open range):** Đoạn được sắp xếp là $[first, last)$ — bao gồm `first` nhưng **không bao gồm** `last`. Vì vậy `sort(a.begin(), a.end())` sắp đúng $N$ phần tử, còn `sort(a.begin(), a.begin() + k)` chỉ sắp $k$ phần tử đầu tiên.
+
+### 4.3. Sắp xếp tăng dần và giảm dần
+Mặc định `sort` xếp **tăng dần**. Muốn xếp **giảm dần** có 2 cách tương đương:
+
+```cpp
+vector<int> a = {3, 1, 4, 1, 5};
+
+// Cách 1: dùng functor greater<int>() có sẵn
+sort(a.begin(), a.end(), greater<int>());
+
+// Cách 2: đảo cặp iterator (không cần tham số thứ ba)
+sort(a.rbegin(), a.rend());
+```
+
+Cả hai cách đều cho kết quả: $\{5, 4, 3, 1, 1\}$.
+
+> **Lưu ý quan trọng:** `greater<int>()` là functor so sánh "lớn hơn" chuẩn của C++ (không cần tự viết, không tốn thêm chi phí). Muốn tự định nghĩa quy tắc riêng thì viết hàm `cmp` như mục 5.0 dưới đây.
+
+### 4.4. Nguyên lý Strict Weak Ordering (toán tử so sánh nghiêm ngặt)
 Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải thỏa mãn 3 tiên đề toán học:
 
 1. **Tính bất phản xạ (Irreflexivity):** `cmp(a, a)` luôn trả về `false`.
@@ -78,6 +110,30 @@ Một hàm so sánh `cmp(a, b)` truyền vào `sort` **bắt buộc** phải th�
 > **Lưu ý quan trọng:** Luôn dùng toán tử so sánh nghiêm ngặt (`<` hoặc `>`). Khi hai phần tử bằng nhau (`a == b`), hàm so sánh bắt buộc phải trả về `false`!
 
 ## 5. Các kỹ thuật Custom Comparator nâng cao
+
+### 5.0. Comparator cơ bản: tự định nghĩa quy tắc "đứng trước" (nấc thang đầu tiên)
+Trước khi học đa tiêu chí, phải nắm vững comparator một tiêu chí. Quy ước của `sort`: `cmp(a, b)` trả về `true` **khi và chỉ khi** `a` phải đứng trước `b` trong kết quả:
+
+```cpp
+// Sắp xếp giảm dần: a đứng trước b khi a lớn hơn b
+bool cmpDesc(int a, int b) {
+return a > b;
+}
+
+vector<int> a = {3, 1, 4, 1, 5};
+sort(a.begin(), a.end(), cmpDesc);
+// Kết quả: {5, 4, 3, 1, 1}
+```
+
+Bảng chạy tay quy tắc `cmpDesc` trên cặp phần tử:
+
+| Cặp `(a, b)` | `a > b` | Kết luận của `sort` |
+|:---:|:---:|---|
+| `(3, 1)` | `true` | `3` đứng trước `1` |
+| `(1, 4)` | `false` | `4` đứng trước `1` |
+| `(1, 1)` | `false` | Giữ nguyên (hai phần tử bằng nhau, comparator phải trả `false`) |
+
+> **Mẹo nhớ:** Muốn tăng dần dùng `<`, muốn giảm dần dùng `>`. Dòng cuối bảng chính là tiên đề Bất phản xạ ở mục 4.4 — mọi comparator phức tạp ở mục 5.1–5.3 đều phải tuân thủ quy tắc này.
 
 ### 5.1. Sắp xếp đa tiêu chí với vector lồng nhau (multi-criteria sorting)
 Khi mỗi phần tử gồm nhiều thuộc tính số (ví dụ: điểm bắt đầu $L = a[0]$ và điểm kết thúc $R = a[1]$ của một đoạn thẳng), ta sử dụng **vector lồng nhau `vector<vector<int>>`** để tận dụng mảng sẵn có:
@@ -157,6 +213,7 @@ cin >> a[i];
 sort(a.begin(), a.end());
 
 // Bước 2: Khai thác trật tự tuyến tính O(N)
+if (n < 2) return 0; // Mảng dưới 2 phần tử không có cặp kề để so sánh
 long long min_diff = a[1] - a[0];
 for (int i = 1; i < n - 1; ++i) {
 min_diff = min(min_diff, a[i + 1] - a[i]);
@@ -306,7 +363,7 @@ Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ đi�
 
 - **A.** Sử dụng `sort` thay vì tự viết QuickSort.
 
-- **B.** **[Đáp án đúng]** Lưu biến kết quả bằng kiểu `int` hoặc $long$ (32-bit), gây tràn số âm khi tính hiệu $X_{i+1} - X_i$.
+- **B.** **[Đáp án đúng]** Lưu biến kết quả bằng kiểu `int` (32-bit), gây tràn số âm khi tính hiệu $X_{i+1} - X_i$ (lưu ý: `long` trên Linux 64-bit rộng 64-bit, nhưng code thi đấu phải dùng `long long` để đảm bảo đúng trên mọi trình chấm).
 
 - **C.** Đọc dữ liệu bằng `cin` có Fast I/O.
 

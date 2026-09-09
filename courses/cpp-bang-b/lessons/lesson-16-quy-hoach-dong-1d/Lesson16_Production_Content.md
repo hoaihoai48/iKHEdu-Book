@@ -3,6 +3,7 @@
 ## 1. Bản chất vấn đề & cầu nối từ đệ quy sang quy hoạch động
 
 Trong Chuyên đề 10 và 12, ta đã chứng kiến hiện tượng **Bùng nổ Không gian Trạng thái** khi duyệt đệ quy phân nhánh:
+
 * Khi tính số Fibonacci $F(N) = F(N-1) + F(N-2)$, trạng thái $F(3)$ bị tính lại $2$ lần, $F(2)$ bị tính lại $3$ lần. Độ phức tạp thời gian tăng vọt lên cấp số nhân $\Theta(\varphi^N) \approx \Theta(1.618^N)$.
 * **Nguyên nhân gốc rễ:** Hàm đệ quy thuần túy không có cơ chế "ghi nhớ" (Memory). Mỗi lần bước vào một nhánh mới, nó xem bài toán con đó như một thực thể hoàn toàn xa lạ và tính toán lại từ đầu.
 
@@ -10,7 +11,7 @@ Trong Chuyên đề 10 và 12, ta đã chứng kiến hiện tượng **Bùng n�
 
 > **DP loại bỏ việc tính toán lại các bài toán con trùng lặp bằng cách lưu trữ kết quả vào Bảng phương án (DP Table) và tái sử dụng ngay lập tức trong $\mathcal{O}(1)$.**
 
-![Mô hình Đồ thị trạng thái DAG Quy hoạch động 1D](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/dp_1d_state_dag_vi.svg)
+![Mô hình Đồ thị trạng thái DAG Quy hoạch động 1D](assets/dp_1d_state_dag_vi.svg)
 
 ## 2. Khung phương pháp luận: 7 bước DP state invariant
 
@@ -32,6 +33,7 @@ Trong Chuyên đề 10 và 12, ta đã chứng kiến hiện tượng **Bùng n�
 * **Base Cases:** `dp[0] = 1` (có đúng một cách để hoàn thành hành trình từ bậc 0 đến bậc 0 — không thực hiện bước nhảy nào), `dp[1] = 1`.
 * **State Transition:** Để đến bậc $i$, bước nhảy cuối cùng bắt buộc phải xuất phát từ bậc $i-1$ (nhảy 1 bước) hoặc bậc $i-2$ (nhảy 2 bước):
 $$dp[i] = dp[i-1] + dp[i-2] \pmod{10^9+7}$$
+
 * **Evaluation Order:** Duyệt xuôi từ $i = 2 \to N$.
 
 ### 3.2. Mô hình đổi tiền ít xu nhất (coin change 1D)
@@ -40,6 +42,7 @@ $$dp[i] = dp[i-1] + dp[i-2] \pmod{10^9+7}$$
 * **Base Cases:** `dp[0] = 0` (Tổng tiền bằng 0 cần đúng 0 đồng xu). Khởi tạo mọi `dp[i] = \infty` với $i \ge 1$.
 * **State Transition:** Thử chọn đồng xu cuối cùng là mệnh giá $c \in C$:
 $$dp[i] = 1 + \min_{\{c \in C \mid i \ge c\}} dp[i - c]$$
+
 * **Evaluation Order:** Duyệt xuôi $i = 1 \to S$. Nếu $dp[S] = \infty \implies$ Không thể đổi được.
 
 > **Lưu ý quan trọng:** Quy tắc thứ tự vòng lặp phân biệt Hoán vị / Tổ hợp dưới đây áp dụng cho **bài toán đếm số cách**. Với bài toán tối ưu số đồng xu ít nhất $dp[i] = 1 + \min(dp[i-c])$, do phép toán $\min$ có tính chất giao hoán và kết hợp nên ta luôn duyệt $i$ từ $1 \to S$ mà không làm thay đổi giá trị tối ưu.
@@ -48,7 +51,7 @@ $$dp[i] = 1 + \min_{\{c \in C \mid i \ge c\}} dp[i - c]$$
 * **Bài toán Hoán vị (Permutation):** Thứ tự các đồng xu có phân biệt (ví dụ $1+2 \neq 2+1$ (khác $2+1$)). Vòng lặp ngoài duyệt Tiền $i = 1 \to S$, vòng lặp trong thử từng đồng xu $c \in C$.
 * **Bài toán Tổ hợp (Combination):** Thứ tự các đồng xu không phân biệt (ví dụ $1+2$ và $2+1$ là một cách). Vòng lặp ngoài duyệt từng đồng xu $c \in C$, vòng lặp trong duyệt Tiền $i = c \to S$.
 
-![Bài toán Đổi tiền Coin Change và DAG trạng thái](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/coin_change_dag_vi.svg)
+![Bài toán Đổi tiền Coin Change và DAG trạng thái](assets/coin_change_dag_vi.svg)
 
 ### 3.3. Dãy con tăng dài nhất (longest increasing subsequence — LIS $\mathcal{O}(N^2)$)
 * **Bối cảnh:** Cho dãy số $A = [a_1, a_2, \dots, a_N]$. Tìm độ dài dãy con tăng nghiêm ngặt dài nhất.
@@ -56,19 +59,22 @@ $$dp[i] = 1 + \min_{\{c \in C \mid i \ge c\}} dp[i - c]$$
 * **Base Cases:** `dp[i] = 1` với mọi $1 \le i \le N$ (bản thân mỗi phần tử đơn lẻ là dãy con độ dài 1).
 * **State Transition:** Duyệt qua mọi phần tử $A[j]$ đứng trước $A[i]$ ($1 \le j < i$):
 $$dp[i] = 1 + \max_{\{1 \le j < i \mid A[j] < A[i]\}} dp[j]$$
+
 * **Answer Extraction:** Kết quả toàn cục là $\max_{i=1}^N dp[i]$.
 * **Độ phức tạp:** $\mathcal{O}(N^2)$ thời gian, $\mathcal{O}(N)$ bộ nhớ. Thường phù hợp với $N$ cỡ vài nghìn, tùy thuộc vào time limit và hệ số hằng số.
 
-![Mô hình Dãy con tăng dài nhất LIS O(N^2) và Truy vết](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/lis_quadratic_model_vi.svg)
+![Mô hình Dãy con tăng dài nhất LIS O(N^2) và Truy vết](assets/lis_quadratic_model_vi.svg)
 
 ### 3.4. Kỹ thuật khôi phục vết nghiệm 1D (traceback / reconstruction)
 Để in ra chính xác cấu hình dãy phần tử tạo nên nghiệm tối ưu:
+
 1. Duy trì mảng `trace[i] = j` ghi nhận chỉ số phần tử đứng ngay trước $A[i]$ trong cấu hình tối ưu.
 2. Tìm vị trí $best\_idx$ có $dp[best\_idx]$ đạt cực trị.
 3. Lần ngược mảng `trace` từ $best\_idx$ về điểm xuất phát, lưu các phần tử vào một vector rồi đảo ngược (`reverse`).
 
 ### 3.5. Mở rộng nâng cao: LIS $\mathcal{O}(N \log N)$ bằng Binary Search
 Khi $N \le 10^5$, thuật toán $\mathcal{O}(N^2)$ sẽ bị Quá thời gian (TLE).
+
 * **Ý tưởng:** Duy trì mảng phụ `tails` trong C++ (chỉ số 0-based), trong đó phần tử $tails[len - 1]$ lưu **giá trị phần tử kết thúc nhỏ nhất** của một dãy con tăng có độ dài đúng bằng `len`.
 * Mảng $tails$ luôn có tính chất **đơn điệu tăng dần** $\implies$ Dùng Tìm kiếm nhị phân (`lower_bound`) để tìm và cập nhật vị trí thích hợp cho mỗi $A[i]$ trong $\mathcal{O}(\log N)$.
 * **Tổng thời gian:** $\mathcal{O}(N \log N)$. Đây là kỹ thuật mở rộng tối ưu hóa nâng cao (Challenge Extension).
@@ -82,6 +88,7 @@ Mục tiêu lớn nhất của Module 05 không phải là học thuộc các c�
 * **State Invariant:** $dp[i]$ là tổng giá trị lớn nhất khi chỉ xét tiền tố từ $1 \dots i$.
 * **Transition:** Tại vị trí $i$, có 2 lựa chọn loại trừ lẫn nhau:
 $$dp[i] = \max(\underbrace{dp[i-1]}_{\text{Không chọn } i}, \underbrace{dp[i-2] + A[i]}_{\text{Chọn } i \implies \text{bỏ qua } i-1})$$
+
 * **Chuyển đổi bài toán (Delete and Earn):** Khi chọn giá trị $v$, ta nhận toàn bộ tổng điểm $points[v] = v \times count(v)$ nhưng bị cấm chọn $v-1$ và $v+1$. Bằng cách gom nhóm dữ liệu theo trục giá trị $v$, bài toán được quy đổi hoàn toàn về mô hình House Robber trên mảng $points$.
 
 ### 4.2. Pattern b: Mở rộng trạng thái hữu hạn (state dimension expansion)
@@ -106,6 +113,7 @@ $$dp[i] = A[i] + \max_{\{j < i \mid A[j] < A[i]\}} dp[j]$$
 * **State Invariant:** $dp[i]$ là chi phí/giá trị tối ưu khi phân hoạch tiền tố $A[1 \dots i]$.
 * **Transition:** Thử mọi điểm cắt cuối cùng $j \in [0, i-1]$:
 $$dp[i] = \min_{0 \le j < i, \text{valid}(j+1, i)} (dp[j] + \text{cost}(j+1, i))$$
+
 * **Áp dụng cho bài Mastery `CPPB-DP1-15`:** Tìm cách phân chia dãy số thành các khối đoạn con thỏa mãn điều kiện ràng buộc với chi phí nhỏ nhất.
 
 ## 5. Các bẫy lỗi lập trình kinh điển
@@ -180,7 +188,7 @@ curr = trace[curr];
 reverse(lis_elements.begin(), lis_elements.end());
 
 for (int i = 0; i < (int)lis_elements.size(); ++i) {
-cout << lis_elements[i] << (i + 1 == (int)lis_elements.size() "" : " ");
+cout << lis_elements[i] << (i + 1 == (int)lis_elements.size() ? "" : " ");
 }
 cout << "\n";
 

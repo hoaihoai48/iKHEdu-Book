@@ -17,6 +17,37 @@ Một số nguyên $N > 1$ là số nguyên tố nếu nó chỉ có đúng 2 ư
 * **Tính chất đối xứng của ước số:** Nếu $d$ là ước của $N$ thì $\frac{N}{d}$ cũng là ước của $N$.
 * **Bất biến $\sqrt{N}$:** Nếu $N$ là hợp số, nó **bắt buộc phải có ít nhất một ước nguyên tố $p \le \sqrt{N}$**. Do đó, ta chỉ cần duyệt kiểm tra các số từ $2$ đến $\lfloor \sqrt{N} \rfloor$ trong $\mathcal{O}(\sqrt{N})$ thay vì $\mathcal{O}(N)$.
 
+### Hàm mẫu kiểm tra số nguyên tố $\mathcal{O}(\sqrt{N})$ (bắt buộc thuộc lòng)
+```cpp
+// Trả về true khi và chỉ khi N là số nguyên tố
+bool isPrime(long long N) {
+if (N < 2) return false;
+for (long long i = 2; i * i <= N; ++i) {
+if (N % i == 0) return false; // Tìm được ước thật sự => hợp số
+}
+return true;
+}
+```
+
+Bảng chạy tay `isPrime(29)` ($\lfloor \sqrt{29} \rfloor = 5$, chỉ xét $i = 2, 3, 4, 5$):
+
+| $i$ | $i \times i \le 29$? | $29 \pmod i$ | Kết luận |
+|:---:|:---:|:---:|---|
+| $2$ | $4 \le 29$ | $1$ | Chưa tìm được ước, xét tiếp |
+| $3$ | $9 \le 29$ | $2$ | Chưa tìm được ước, xét tiếp |
+| $4$ | $16 \le 29$ | $1$ | Chưa tìm được ước, xét tiếp |
+| $5$ | $25 \le 29$ | $4$ | Chưa tìm được ước, xét tiếp |
+| $6$ | $36 > 29$ | Dừng vòng lặp | **$29$ là số nguyên tố** |
+
+### Bảng cú pháp `std::gcd` / `std::lcm` (thư viện `<numeric>`)
+
+| Hàm | Tham số | Trả về | Ví dụ |
+|:---|:---|:---|---|
+| `std::gcd(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Ước chung lớn nhất của `a` và `b` | `std::gcd(252, 105)` $\implies$ `21` |
+| `std::lcm(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Bội chung nhỏ nhất của `a` và `b` | `std::lcm(4, 6)` $\implies$ `12` |
+
+> **Lưu ý quan trọng:** `std::lcm` tính theo công thức $a / \gcd(a,b) \times b$ (chia trước nhân sau để tránh tràn số). Khi tự viết hàm `getGcd` bằng Euclid thì kết quả phải khớp `std::gcd` trên cùng bộ test.
+
 ## 2. Mô phỏng từng bước
 
 ### Ví dụ 1: Mô phỏng thuật toán euclid tìm $\gcd(252, 105)$
@@ -178,7 +209,7 @@ cin >> n;
 
 auto factors = factorize(n);
 for (int i = 0; i < (int)factors.size(); ++i) {
-cout << factors[i].first << "^" << factors[i].second << (i + 1 == (int)factors.size() "" : " * ");
+cout << factors[i].first << "^" << factors[i].second << (i + 1 == (int)factors.size() ? "" : " * ");
 }
 cout << "\n";
 }

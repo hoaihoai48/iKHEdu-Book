@@ -188,7 +188,7 @@ vector<long long> a(n + 1, 0);
 
 for (int i = 1; i <= n; ++i) {
 a[i] = a[i - 1] + d[i];
-cout << a[i] << (i == n "" : " ");
+cout << a[i] << (i == n ? "" : " ");
 }
 cout << "\n";
 
