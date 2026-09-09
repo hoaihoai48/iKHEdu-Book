@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho số nguyên N và M = 10^9 + 7. Hãy tính và in ra nghịch đảo modulo của tất cả các số từ 1 đến N theo modulo M trong thời gian O(N).
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | - inv(1) = 1. - inv(2) = 500000004 (vì 2 * 500000004 = 1 mod M). - inv(3) = 333333336 (vì 3 * 333333336 = 1000000008 = 1... | Tính toán từng bước trạng thái |
@@ -41,22 +40,22 @@ using namespace std;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> inv(n + 1);
-    inv[1] = 1;
-    long long sum_inv = 1;
+vector<long long> inv(n + 1);
+inv[1] = 1;
+long long sum_inv = 1;
 
-    for (int i = 2; i <= n; ++i) {
-        inv[i] = (MOD - (MOD / i) * inv[MOD % i] % MOD) % MOD;
-        sum_inv = (sum_inv + inv[i]) % MOD;
-    }
+for (int i = 2; i <= n; ++i) {
+inv[i] = (MOD - (MOD / i) * inv[MOD % i] % MOD) % MOD;
+sum_inv = (sum_inv + inv[i]) % MOD;
+}
 
-    cout << sum_inv << "\n";
-    return 0;
+cout << sum_inv << "\n";
+return 0;
 }
 ```

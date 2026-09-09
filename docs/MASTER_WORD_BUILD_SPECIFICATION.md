@@ -90,17 +90,17 @@
 ## 4. Bảng Màu & Hệ Thống Typography Chuẩn In Ấn
 
 ### 4.1. Bảng màu in ấn tiết kiệm mực & tương phản cao
-* **Chữ nội dung**: Đen xám đậm **`#1E293B`** (Times New Roman / Inter).
+* **Chữ nội dung**: Đen tuyền **`#000000`** (Times New Roman / Inter) — bắt buộc 100% để in ấn laser/offset rõ nét, không bị nhạt/xám nét khi in màu.
 * **Tiêu đề mục "Bài tập thực hành"**:
   * Bắt buộc đổi sang **Màu đỏ chuẩn `#FF0000` (Bold, 14pt, Heading 2)** ở toàn bộ các bài học trong giáo trình.
 * **Tiêu đề các cấp (Headings)**:
-  * `Heading 1` (Chương): `18pt Bold`, căn giữa `Center`, màu `#1E293B`.
-  * `Heading 1` (Bài học): `15.5pt Bold`, căn trái `Left`, màu `#1E293B`.
-  * `Heading 2` (Mục lý thuyết lớn): `14pt Bold`, căn trái `Left`, màu `#1E293B`.
+  * `Heading 1` (Chương): `18pt Bold`, căn giữa `Center`, màu đen tuyền `#000000`.
+  * `Heading 1` (Bài học): `15.5pt Bold`, căn trái `Left`, màu đen tuyền `#000000`.
+  * `Heading 2` (Mục lý thuyết lớn): `14pt Bold`, căn trái `Left`, màu đen tuyền `#000000`.
   * `Heading 2` (Mục Bài tập thực hành): `14pt Bold`, căn trái `Left`, màu đỏ `#FF0000`.
-  * `Heading 3` (Tên bài toán / Dạng bài): `13pt Bold`, căn trái `Left`, màu `#1E293B`.
-  * `Heading 4`: `12.5pt Bold`, căn trái `Left`, màu `#1E293B`.
-  * *Lưu ý tuyệt đối:* **Cấm áp dụng căn Justify cho Headings** để tránh bị dãn khoảng cách chữ bất thường.
+  * `Heading 3` (Tên bài toán / Dạng bài): `13pt Bold`, căn trái `Left`, màu đen tuyền `#000000`.
+  * `Heading 4`: Đã loại bỏ hoàn toàn (`Heading 4 = 0`).
+  * *Lưu ý tuyệt đối:* **Cấm áp dụng căn Justify cho Headings** để tránh bị dãn khoảng cách chữ bất thường. Cấm dùng màu xanh đen `#1E293B`, `#0F2A44`, `#1A4A6B`.
 
 ### 4.2. Thân bài & Khung chuyên biệt (Quy Chuẩn Chống Bể Khung & Tràn Chữ)
 * **Văn bản nội dung (Body Text, First Paragraph, Compact, Normal)**:

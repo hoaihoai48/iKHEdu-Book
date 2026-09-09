@@ -6,14 +6,13 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng N số nguyên. Hãy tìm tổng lớn nhất của một đoạn con liên tiếp khác rỗng bằng thuật toán Chia để trị.
 
-- **Phương pháp tiếp cận — Chia để trị (Divide and Conquer):**
-  - Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
-  - Giải quyết bài toán con và gộp kết quả tối ưu.
+- **Phương pháp tiếp cận — Chia để trị:**
+- Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
+- Giải quyết bài toán con và gộp kết quả tối ưu.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 8 -2 -3 4 -1 -2 1 5 -3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `8 -2 -3 4 -1 -2 1 5 -3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Đoạn con [4, -1, -2, 1, 5] từ vị trí 3 đến vị trí 7 có tổng là 4 - 1 - 2 + 1 + 5 = 7. Đây là đoạn con có tổng lớn nhất.... | Tính toán từng bước trạng thái |
@@ -36,37 +35,37 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 using namespace std;
 
 long long maxCrossingSum(const vector<long long> &a, int l, int mid, int r) {
-    long long left_sum = -1e18, sum = 0;
-    for (int i = mid; i >= l; --i) {
-        sum += a[i];
-        left_sum = max(left_sum, sum);
-    }
-    long long right_sum = -1e18;
-    sum = 0;
-    for (int i = mid + 1; i <= r; ++i) {
-        sum += a[i];
-        right_sum = max(right_sum, sum);
-    }
-    return left_sum + right_sum;
+long long left_sum = -1e18, sum = 0;
+for (int i = mid; i >= l; --i) {
+sum += a[i];
+left_sum = max(left_sum, sum);
+}
+long long right_sum = -1e18;
+sum = 0;
+for (int i = mid + 1; i <= r; ++i) {
+sum += a[i];
+right_sum = max(right_sum, sum);
+}
+return left_sum + right_sum;
 }
 
 long long maxSubarrayDac(const vector<long long> &a, int l, int r) {
-    if (l == r) return a[l];
-    int mid = l + (r - l) / 2;
-    long long left_max = maxSubarrayDac(a, l, mid);
-    long long right_max = maxSubarrayDac(a, mid + 1, r);
-    long long cross_max = maxCrossingSum(a, l, mid, r);
-    return max({left_max, right_max, cross_max});
+if (l == r) return a[l];
+int mid = l + (r - l) / 2;
+long long left_max = maxSubarrayDac(a, l, mid);
+long long right_max = maxSubarrayDac(a, mid + 1, r);
+long long cross_max = maxCrossingSum(a, l, mid, r);
+return max({left_max, right_max, cross_max});
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    if (!(cin >> n)) return 0;
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    cout << maxSubarrayDac(a, 0, n - 1) << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+if (!(cin >> n)) return 0;
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+cout << maxSubarrayDac(a, 0, n - 1) << "\n";
+return 0;
 }
 ```

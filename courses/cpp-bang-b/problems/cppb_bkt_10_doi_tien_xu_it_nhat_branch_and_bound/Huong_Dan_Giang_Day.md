@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho $N$ mệnh giá tiền xu $C_1, C_2, \dots, C_N$ và số tiền cần đổi $S$. Hãy áp dụng thuật toán Nhánh Cận (Branch and Bound) với hàm cận dưới tối ưu để tìm số lượng đồng xu ít nhất cần dùng để đổi đúng số tiền $S$. Nếu không có phương án đổi tiền nào hợp lệ, in ra `-1`.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 11 1 2 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 11 1 2 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với số tiền $S = 11$ và các mệnh giá $\{1, 2, 5\}$, phương án tối ưu nhất là chọn hai đồng mệnh giá 5 và một đồng mệnh g... | Tính toán từng bước trạng thái |
@@ -41,33 +40,33 @@ vector<long long> c;
 long long best_coins = 1e9;
 
 void branchAndBound(int idx, long long remain, long long count) {
-    // Optimality Pruning
-    if (count + (remain + c[0] - 1) / c[0] >= best_coins) return;
+// Optimality Pruning
+if (count + (remain + c[0] - 1) / c[0] >= best_coins) return;
 
-    if (remain == 0) {
-        best_coins = min(best_coins, count);
-        return;
-    }
-    if (idx >= n) return;
+if (remain == 0) {
+best_coins = min(best_coins, count);
+return;
+}
+if (idx >= n) return;
 
-    long long max_use = remain / c[idx];
-    for (long long k = max_use; k >= 0; --k) {
-        if (count + k + (remain - k * c[idx] + c[0] - 1) / c[0] < best_coins) {
-            branchAndBound(idx + 1, remain - k * c[idx], count + k);
-        }
-    }
+long long max_use = remain / c[idx];
+for (long long k = max_use; k >= 0; --k) {
+if (count + k + (remain - k * c[idx] + c[0] - 1) / c[0] < best_coins) {
+branchAndBound(idx + 1, remain - k * c[idx], count + k);
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n >> S)) return 0;
-    c.resize(n);
-    for (int i = 0; i < n; ++i) cin >> c[i];
-    sort(c.rbegin(), c.rend());
-    branchAndBound(0, S, 0);
-    if (best_coins > 1e8) cout << -1 << "\n";
-    else cout << best_coins << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n >> S)) return 0;
+c.resize(n);
+for (int i = 0; i < n; ++i) cin >> c[i];
+sort(c.rbegin(), c.rend());
+branchAndBound(0, S, 0);
+if (best_coins > 1e8) cout << -1 << "\n";
+else cout << best_coins << "\n";
+return 0;
 }
 ```

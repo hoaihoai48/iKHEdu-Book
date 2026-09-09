@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho N vị trí khả dụng và số trạm cần đặt C. Hãy tìm khoảng cách nhỏ nhất lớn nhất giữa hai trạm bất kỳ.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 1 2 8 4 9)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 1 2 8 4 9` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp tọa độ các vị trí: [1, 2, 4, 8, 9]. Để đặt 3 trạm với khoảng cách tối thiểu giữa hai trạm kề nhau là 3: ta đặt t... | Tính toán từng bước trạng thái |
@@ -36,42 +35,42 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 using namespace std;
 
 bool check(long long d, const vector<long long>& x, int c) {
-    int count = 1;
-    long long last_pos = x[0];
-    for (size_t i = 1; i < x.size(); ++i) {
-        if (x[i] - last_pos >= d) {
-            count++;
-            last_pos = x[i];
-        }
-    }
-    return count >= c;
+int count = 1;
+long long last_pos = x[0];
+for (size_t i = 1; i < x.size(); ++i) {
+if (x[i] - last_pos >= d) {
+count++;
+last_pos = x[i];
+}
+}
+return count >= c;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, c;
-    if (!(cin >> n >> c)) return 0;
+int n, c;
+if (!(cin >> n >> c)) return 0;
 
-    vector<long long> x(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> x[i];
-    }
-    sort(x.begin(), x.end());
+vector<long long> x(n);
+for (int i = 0; i < n; ++i) {
+cin >> x[i];
+}
+sort(x.begin(), x.end());
 
-    long long low = 1, high = x[n - 1] - x[0], ans = 1;
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (check(mid, x, c)) {
-            ans = mid;
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
+long long low = 1, high = x[n - 1] - x[0], ans = 1;
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (check(mid, x, c)) {
+ans = mid;
+low = mid + 1;
+} else {
+high = mid - 1;
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để thực hiện phép chia $\frac{A}{B}$ lấy dư cho $M$ khi phép chia thông thường không có tính chất phân phối với phép chia dư?**
+> **Làm thế nào để thực hiện phép chia $\frac{A}{B}$ lấy dư cho $M$ khi phép chia thông thường không có tính chất phân phối với phép chia dư**
 
 ---
 
@@ -35,24 +35,24 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 10.1: Dự Báo Chỉ Số Tăng Trưởng Kinh Tế Số**  
-> **Bối cảnh:** Viện Chiến lược Thông tin và Truyền thông xây dựng mô hình dự báo tăng trưởng giá trị kinh tế số theo đa thức bậc $N$:  
-> $$P(X) = A_N X^N + A_{N-1} X^{N-1} + \dots + A_1 X + A_0$$  
-> Do giá trị tính toán có thể vượt qua hàng nghìn chữ số, kết quả cuối cùng cần được lấy dư cho hằng số Modulo chuẩn thi đấu $M = 10^9 + 7$.  
-> **Nhiệm vụ:** Em hãy tính giá trị của đa thức $P(X) \pmod{10^9+7}$ theo sơ đồ Horner tối ưu trong $\mathcal{O}(N)$.  
+> **Bài toán mẫu 10.1: Dự Báo Chỉ Số Tăng Trưởng Kinh Tế Số** 
+> **Bối cảnh:** Viện Chiến lược Thông tin và Truyền thông xây dựng mô hình dự báo tăng trưởng giá trị kinh tế số theo đa thức bậc $N$: 
+> $$P(X) = A_N X^N + A_{N-1} X^{N-1} + \dots + A_1 X + A_0$$ 
+> Do giá trị tính toán có thể vượt qua hàng nghìn chữ số, kết quả cuối cùng cần được lấy dư cho hằng số Modulo chuẩn thi đấu $M = 10^9 + 7$. 
+> **Nhiệm vụ:** Em hãy tính giá trị của đa thức $P(X) \pmod{10^9+7}$ theo sơ đồ Horner tối ưu trong $\mathcal{O}(N)$. 
 > 
-> **Input:**  
-> - Dòng 1: Hai số nguyên $N$ và $X$ ($1 \le N \le 10^5, 0 \le X \le 10^9$).  
-> - Dòng 2: $N + 1$ số nguyên $A_N, A_{N-1}, \dots, A_0$ ($0 \le A_i \le 10^9$).  
+> **Input:** 
+> - Dòng 1: Hai số nguyên $N$ và $X$ ($1 \le N \le 10^5, 0 \le X \le 10^9$). 
+> - Dòng 2: $N + 1$ số nguyên $A_N, A_{N-1}, \dots, A_0$ ($0 \le A_i \le 10^9$). 
 > 
-> **Output:**  
-> - Ghi một số nguyên duy nhất là $P(X) \pmod{10^9+7}$.  
+> **Output:** 
+> - Ghi một số nguyên duy nhất là $P(X) \pmod{10^9+7}$. 
 > 
-> **Sample:**  
-> - **Input:**  
->   `2 3`  
->   `1 2 1`  
-> - **Output:** `16`  
+> **Sample:** 
+> - **Input:** 
+> `2 3` 
+> `1 2 1` 
+> - **Output:** `16` 
 > - **Giải thích:** $P(3) = 1 \times 3^2 + 2 \times 3 + 1 = 9 + 6 + 1 = 16 \pmod{10^9+7}$.
 
 #### Cài đặt C++
@@ -63,23 +63,23 @@ using namespace std;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long x;
-    if (!(cin >> n >> x)) return 0;
+int n;
+long long x;
+if (!(cin >> n >> x)) return 0;
 
-    vector<long long> a(n + 1);
-    for (int i = n; i >= 0; i--) cin >> a[i];
+vector<long long> a(n + 1);
+for (int i = n; i >= 0; i--) cin >> a[i];
 
-    long long ans = 0;
-    for (int i = n; i >= 0; i--) {
-        ans = (ans * (x % MOD) + a[i]) % MOD;
-    }
+long long ans = 0;
+for (int i = n; i >= 0; i--) {
+ans = (ans * (x % MOD) + a[i]) % MOD;
+}
 
-    cout << (ans % MOD + MOD) % MOD << "\n";
-    return 0;
+cout << (ans % MOD + MOD) % MOD << "\n";
+return 0;
 }
 ```
 
@@ -117,8 +117,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 10.2: Khóa Bảo Mật Cổng Dịch Vụ Công Quốc Gia**  
-> **Bối cảnh:** Cổng Dịch vụ công Quốc gia sinh khóa mã hóa xác thực phiên làm việc bằng hàm lũy thừa $A^B \pmod{10^9+7}$ với số mũ $B$ lên tới $10^{18}$.  
+> **Bài toán mẫu 10.2: Khóa Bảo Mật Cổng Dịch Vụ Công Quốc Gia** 
+> **Bối cảnh:** Cổng Dịch vụ công Quốc gia sinh khóa mã hóa xác thực phiên làm việc bằng hàm lũy thừa $A^B \pmod{10^9+7}$ với số mũ $B$ lên tới $10^{18}$. 
 > **Input:** `2 10` $\implies$ **Output:** `1024`.
 
 #### Cài đặt C++
@@ -129,25 +129,25 @@ using namespace std;
 const long long MOD = 1000000007;
 
 long long powerMod(long long a, long long b, long long m) {
-    long long res = 1;
-    a %= m;
-    while (b > 0) {
-        if (b & 1) res = (1LL * res * a) % m;
-        a = (1LL * a * a) % m;
-        b >>= 1;
-    }
-    return res;
+long long res = 1;
+a %= m;
+while (b > 0) {
+if (b & 1) res = (1LL * res * a) % m;
+a = (1LL * a * a) % m;
+b >>= 1;
+}
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << powerMod(a, b, MOD) << "\n";
-    return 0;
+cout << powerMod(a, b, MOD) << "\n";
+return 0;
 }
 ```
 
@@ -172,14 +172,14 @@ int main() {
 
 #### 1. Khái niệm & Định lý Fermat nhỏ
 - Khi $P$ là số nguyên tố và $\gcd(B, P) = 1$:
-  $$B^{-1} \equiv B^{P-2} \pmod P \implies \frac{A}{B} \equiv A \times B^{P-2} \pmod P$$
+$$B^{-1} \equiv B^{P-2} \pmod P \implies \frac{A}{B} \equiv A \times B^{P-2} \pmod P$$
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 10.3: Tuyển Chọn Đội Tuyển Olympic Tin Học Quốc Tế**  
-> **Bối cảnh:** Chọn $K$ học sinh từ $N$ học sinh xuất sắc vào đội tuyển Quốc gia. Tính số cách chọn $C_N^K \pmod{10^9+7}$.  
+> **Bài toán mẫu 10.3: Tuyển Chọn Đội Tuyển Olympic Tin Học Quốc Tế** 
+> **Bối cảnh:** Chọn $K$ học sinh từ $N$ học sinh xuất sắc vào đội tuyển Quốc gia. Tính số cách chọn $C_N^K \pmod{10^9+7}$. 
 > **Input:** `5 2` $\implies$ **Output:** `10`.
 
 #### Cài đặt C++
@@ -190,37 +190,37 @@ using namespace std;
 const long long MOD = 1000000007;
 
 long long powerMod(long long a, long long b) {
-    long long res = 1;
-    a %= MOD;
-    while (b > 0) {
-        if (b & 1) res = (res * a) % MOD;
-        a = (a * a) % MOD;
-        b >>= 1;
-    }
-    return res;
+long long res = 1;
+a %= MOD;
+while (b > 0) {
+if (b & 1) res = (res * a) % MOD;
+a = (a * a) % MOD;
+b >>= 1;
+}
+return res;
 }
 
 long long modInverse(long long n) {
-    return powerMod(n, MOD - 2);
+return powerMod(n, MOD - 2);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> fact(n + 1);
-    fact[0] = 1;
-    for (int i = 1; i <= n; i++) fact[i] = (fact[i - 1] * i) % MOD;
+vector<long long> fact(n + 1);
+fact[0] = 1;
+for (int i = 1; i <= n; i++) fact[i] = (fact[i - 1] * i) % MOD;
 
-    long long num = fact[n];
-    long long den = (fact[k] * fact[n - k]) % MOD;
-    long long ans = (num * modInverse(den)) % MOD;
+long long num = fact[n];
+long long den = (fact[k] * fact[n - k]) % MOD;
+long long ans = (num * modInverse(den)) % MOD;
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```
 
@@ -251,8 +251,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 10.4: Tìm Chu Kỳ Số Dư Của Dãy Fibonacci**  
-> **Bối cảnh:** Tìm độ dài chu kỳ tuần hoàn số dư Pisano $\pi(M)$ của dãy Fibonacci khi lấy dư cho số nguyên dương $M \le 1000$.  
+> **Bài toán mẫu 10.4: Tìm Chu Kỳ Số Dư Của Dãy Fibonacci** 
+> **Bối cảnh:** Tìm độ dài chu kỳ tuần hoàn số dư Pisano $\pi(M)$ của dãy Fibonacci khi lấy dư cho số nguyên dương $M \le 1000$. 
 > **Input:** `3` $\implies$ **Output:** `8` (dãy số dư mod 3: 0, 1, 1, 2, 0, 2, 2, 1, rồi lặp lại 0, 1).
 
 #### Cài đặt C++
@@ -261,25 +261,25 @@ int main() {
 using namespace std;
 
 int getPisanoPeriod(int m) {
-    int prev = 0, curr = 1;
-    for (int i = 0; i < m * m; i++) {
-        int temp = (prev + curr) % m;
-        prev = curr;
-        curr = temp;
-        if (prev == 0 && curr == 1) return i + 1;
-    }
-    return 0;
+int prev = 0, curr = 1;
+for (int i = 0; i < m * m; i++) {
+int temp = (prev + curr) % m;
+prev = curr;
+curr = temp;
+if (prev == 0 && curr == 1) return i + 1;
+}
+return 0;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int m;
-    if (!(cin >> m)) return 0;
+int m;
+if (!(cin >> m)) return 0;
 
-    cout << getPisanoPeriod(m) << "\n";
-    return 0;
+cout << getPisanoPeriod(m) << "\n";
+return 0;
 }
 ```
 

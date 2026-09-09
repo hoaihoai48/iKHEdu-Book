@@ -8,8 +8,7 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 1 8 5 3 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 1 8 5 3 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp mảng tăng dần: [1, 2, 3, 5, 8] với K = 3. Sử dụng hai con trỏ cùng chiều: cặp số (2, 5) có hiệu 5 - 2 = 3 = K ho... | Tính toán từng bước trạng thái |
@@ -32,39 +31,39 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
+int n;
+long long k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    int l = 0, r = 1;
-    bool found = false;
+int l = 0, r = 1;
+bool found = false;
 
-    while (r < n) {
-        if (l == r) {
-            ++r;
-            continue;
-        }
-        long long diff = a[r] - a[l];
-        if (diff == k) {
-            found = true;
-            break;
-        } else if (diff < k) {
-            ++r;
-        } else {
-            ++l;
-        }
-    }
+while (r < n) {
+if (l == r) {
+++r;
+continue;
+}
+long long diff = a[r] - a[l];
+if (diff == k) {
+found = true;
+break;
+} else if (diff < k) {
+++r;
+} else {
+++l;
+}
+}
 
-    if (found) cout << "YES\n";
-    else cout << "NO\n";
-    return 0;
+if (found) cout << "YES\n";
+else cout << "NO\n";
+return 0;
 }
 ```

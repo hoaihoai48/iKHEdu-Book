@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho hai số nguyên dương A và B. Hãy tìm ước chung lớn nhất gcd(A, B) và bội chung nhỏ nhất lcm(A, B).
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 12 18)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `12 18` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | gcd(12, 18) = 6 và lcm(12, 18) = (12 * 18) / 6 = 36. Kết quả in ra: 6 36.... | Tính toán từng bước trạng thái |
@@ -36,25 +35,25 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 long long getGcd(long long a, long long b) {
-    while (b != 0) {
-        long long r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+while (b != 0) {
+long long r = a % b;
+a = b;
+b = r;
+}
+return a;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    long long g = getGcd(a, b);
-    long long l = (a / g) * b;
+long long g = getGcd(a, b);
+long long l = (a / g) * b;
 
-    cout << g << " " << l << "\n";
-    return 0;
+cout << g << " " << l << "\n";
+return 0;
 }
 ```

@@ -7,7 +7,7 @@ Trong một hội thảo giao lưu quốc tế, có $N$ đại biểu và $M$ m�
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình kiểm tra xem đồ thị có phải là đồ thị hai phía hay không. Nếu có in ra `YES`, ngược lại in ra `NO`.
 
 ## Input
-- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u$ và $v$.
 
 ## Output

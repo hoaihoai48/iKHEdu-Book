@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 4 3 2 6` $\implies$ Đầu ra kỳ vọng: `29`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 4 3 2 6` $\implies$ Đầu ra kỳ vọng: `29`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,30 +47,30 @@ Tổng chi phí nhỏ nhất là $5 + 9 + 15 = 29$.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 1) { cout << 0 << "\n"; return 0; }
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 1) { cout << 0 << "\n"; return 0; }
 
-    priority_queue<long long, vector<long long>, greater<long long>> min_heap;
-    for (int i = 0; i < n; ++i) {
-        long long x;
-        cin >> x;
-        min_heap.push(x);
-    }
+priority_queue<long long, vector<long long>, greater<long long>> min_heap;
+for (int i = 0; i < n; ++i) {
+long long x;
+cin >> x;
+min_heap.push(x);
+}
 
-    long long total_cost = 0;
-    while (min_heap.size() > 1) {
-        long long a = min_heap.top(); min_heap.pop();
-        long long b = min_heap.top(); min_heap.pop();
-        long long sum = a + b;
-        total_cost += sum;
-        min_heap.push(sum);
-    }
+long long total_cost = 0;
+while (min_heap.size() > 1) {
+long long a = min_heap.top(); min_heap.pop();
+long long b = min_heap.top(); min_heap.pop();
+long long sum = a + b;
+total_cost += sum;
+min_heap.push(sum);
+}
 
-    cout << total_cost << "\n";
-    return 0;
+cout << total_cost << "\n";
+return 0;
 }
 ```

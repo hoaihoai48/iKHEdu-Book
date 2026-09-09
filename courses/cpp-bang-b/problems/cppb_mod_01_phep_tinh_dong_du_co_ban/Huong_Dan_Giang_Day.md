@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho 2 số nguyên A, B và số nguyên dương M = 10^9 + 7. Hãy tính (A + B) mod M, (A - B) mod M và (A * B) mod M sao cho kết quả luôn thuộc [0, M - 1].
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10 15)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `10 15` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với M = 10^9 + 7: - Tổng: (10 + 15) mod M = 25. - Hiệu: (10 - 15) mod M = -5 mod M = 10^9 + 7 - 5 = 1000000002. - Tích: ... | Tính toán từng bước trạng thái |
@@ -42,20 +41,20 @@ using namespace std;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    a %= MOD;
-    b %= MOD;
+a %= MOD;
+b %= MOD;
 
-    long long add_res = (a + b) % MOD;
-    long long sub_res = (a - b + MOD) % MOD;
-    long long mul_res = (a * b) % MOD;
+long long add_res = (a + b) % MOD;
+long long sub_res = (a - b + MOD) % MOD;
+long long mul_res = (a * b) % MOD;
 
-    cout << add_res << " " << sub_res << " " << mul_res << "\n";
-    return 0;
+cout << add_res << " " << sub_res << " " << mul_res << "\n";
+return 0;
 }
 ```

@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `8 1 11 2 10 4 5 2 1` $\implies$ Đầu ra kỳ vọng: `6`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `8 1 11 2 10 4 5 2 1` $\implies$ Đầu ra kỳ vọng: `6`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -43,38 +42,38 @@ Dãy con hình sóng núi dài nhất có thể chọn là $[1, 2, 10, 5, 2, 1]$
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    // LIS từ trái sang phải
-    vector<int> inc(n, 1);
-    for (int i = 1; i < n; ++i) {
-        for (int j = 0; j < i; ++j) {
-            if (a[j] < a[i]) inc[i] = max(inc[i], inc[j] + 1);
-        }
-    }
+// LIS từ trái sang phải
+vector<int> inc(n, 1);
+for (int i = 1; i < n; ++i) {
+for (int j = 0; j < i; ++j) {
+if (a[j] < a[i]) inc[i] = max(inc[i], inc[j] + 1);
+}
+}
 
-    // LDS từ phải sang trái
-    vector<int> dec(n, 1);
-    for (int i = n - 2; i >= 0; --i) {
-        for (int j = n - 1; j > i; --j) {
-            if (a[j] < a[i]) dec[i] = max(dec[i], dec[j] + 1);
-        }
-    }
+// LDS từ phải sang trái
+vector<int> dec(n, 1);
+for (int i = n - 2; i >= 0; --i) {
+for (int j = n - 1; j > i; --j) {
+if (a[j] < a[i]) dec[i] = max(dec[i], dec[j] + 1);
+}
+}
 
-    int max_bitonic = 0;
-    for (int i = 0; i < n; ++i) {
-        max_bitonic = max(max_bitonic, inc[i] + dec[i] - 1);
-    }
+int max_bitonic = 0;
+for (int i = 0; i < n; ++i) {
+max_bitonic = max(max_bitonic, inc[i] + dec[i] - 1);
+}
 
-    cout << max_bitonic << "\n";
-    return 0;
+cout << max_bitonic << "\n";
+return 0;
 }
 ```

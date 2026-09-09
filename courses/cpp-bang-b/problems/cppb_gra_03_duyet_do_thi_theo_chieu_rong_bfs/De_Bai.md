@@ -7,7 +7,7 @@ Một thông điệp cảnh báo khẩn cấp cần được lan truyền qua m�
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và đỉnh xuất phát $S$. Hãy lập trình in ra thứ tự các đỉnh nhận được thông điệp theo chiến lược duyệt theo chiều rộng.
 
 ## Input
-- Dòng 1: Chứa 3 số nguyên $N, M, S$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5, 1 \le S \le N$).
+- Dòng 1: Chứa 3 số nguyên $N, M, S$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5, 1 \le S \le N$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u, v$.
 
 ## Output

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho tập hợp gồm N số nguyên. Hãy in ra tổng các phần tử của tất cả 2^N tập con theo thứ tự mặt nạ bit tăng dần từ 0 đến 2^N - 1.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 3 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `2 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | - Mask 0 (00_2): tập rỗng -> tổng 0. - Mask 1 (01_2): tập {A[0]} = {3} -> tổng 3. - Mask 2 (10_2): tập {A[1]} = {5} -> t... | Tính toán từng bước trạng thái |
@@ -40,30 +39,30 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
 
-    int total_masks = (1 << n);
-    for (int mask = 0; mask < total_masks; ++mask) {
-        bool first = true;
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                if (!first) cout << " ";
-                cout << a[i];
-                first = false;
-            }
-        }
-        cout << "\n";
-    }
+int total_masks = (1 << n);
+for (int mask = 0; mask < total_masks; ++mask) {
+bool first = true;
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
+if (!first) cout << " ";
+cout << a[i];
+first = false;
+}
+}
+cout << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```

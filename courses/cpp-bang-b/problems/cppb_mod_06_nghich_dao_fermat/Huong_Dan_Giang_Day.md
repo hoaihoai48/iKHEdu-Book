@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho số nguyên A và số nguyên tố M = 10^9 + 7. Hãy tìm số nguyên X trong khoảng [1, M - 1] sao cho (A * X) mod M = 1.
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 2 * 500000004 = 1000000008 = (10^9 + 7) + 1 = 1 mod (10^9 + 7). Do đó nghịch đảo modulo của 2 là 500000004.... | Tính toán từng bước trạng thái |
@@ -38,24 +37,24 @@ using namespace std;
 const long long MOD = 1000000007;
 
 long long powerMod(long long a, long long b) {
-    long long ans = 1;
-    a %= MOD;
-    while (b > 0) {
-        if (b & 1) ans = (ans * a) % MOD;
-        a = (a * a) % MOD;
-        b >>= 1;
-    }
-    return ans;
+long long ans = 1;
+a %= MOD;
+while (b > 0) {
+if (b & 1) ans = (ans * a) % MOD;
+a = (a * a) % MOD;
+b >>= 1;
+}
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a;
-    if (!(cin >> a)) return 0;
+long long a;
+if (!(cin >> a)) return 0;
 
-    cout << powerMod(a, MOD - 2) << "\n";
-    return 0;
+cout << powerMod(a, MOD - 2) << "\n";
+return 0;
 }
 ```

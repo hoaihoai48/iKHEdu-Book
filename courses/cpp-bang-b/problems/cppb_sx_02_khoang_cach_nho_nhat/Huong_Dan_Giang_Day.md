@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 8 3 14 6 10)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 8 3 14 6 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Tọa độ các trạm cảm biến ban đầu là: $8, 3, 14, 6, 10$. Sau khi sắp xếp lại theo chiều tăng dần của vị trí trên trục đườ... | Tính toán từng bước trạng thái |
@@ -42,23 +41,23 @@ Do đó, khoảng cách nhỏ nhất giữa hai trạm bất kỳ là $2$ (đạ
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    long long ans = a[1] - a[0];
-    for (int i = 1; i < n - 1; ++i) {
-        ans = min(ans, a[i + 1] - a[i]);
-    }
+long long ans = a[1] - a[0];
+for (int i = 1; i < n - 1; ++i) {
+ans = min(ans, a[i + 1] - a[i]);
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

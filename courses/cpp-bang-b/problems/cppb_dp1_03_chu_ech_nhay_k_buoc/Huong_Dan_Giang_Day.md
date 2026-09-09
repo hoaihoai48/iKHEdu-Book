@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 3 10 30 40 50 20` $\implies$ Đầu ra kỳ vọng: `30`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 3 10 30 40 50 20` $\implies$ Đầu ra kỳ vọng: `30`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,26 +47,26 @@ using namespace std;
 const long long INF = 1e18;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    if (n <= 0) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> h(n);
-    for (int i = 0; i < n; ++i) cin >> h[i];
+vector<long long> h(n);
+for (int i = 0; i < n; ++i) cin >> h[i];
 
-    vector<long long> dp(n, INF);
-    dp[0] = 0;
+vector<long long> dp(n, INF);
+dp[0] = 0;
 
-    for (int i = 0; i < n; ++i) {
-        for (int j = 1; j <= k && i + j < n; ++j) {
-            dp[i + j] = min(dp[i + j], dp[i] + abs(h[i] - h[i + j]));
-        }
-    }
+for (int i = 0; i < n; ++i) {
+for (int j = 1; j <= k && i + j < n; ++j) {
+dp[i + j] = min(dp[i + j], dp[i] + abs(h[i] - h[i + j]));
+}
+}
 
-    cout << dp[n - 1] << "\n";
-    return 0;
+cout << dp[n - 1] << "\n";
+return 0;
 }
 ```

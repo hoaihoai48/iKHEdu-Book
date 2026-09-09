@@ -1,7 +1,7 @@
 # Nước Tràn Mê Cung (Multi-Source BFS)
 
 ## Bối cảnh
-Một hầm mỏ dưới lòng đất kích thước $N  × M$ gồm các buồng trống `.` và các khối đá chắn `#`. Đột ngột có một sự cố vỡ đê ngầm khiến nước tràn vào từ $K$ buồng mỏ cùng lúc tại thời điểm $t = 0$. Cứ sau mỗi phút, nước từ các buồng đã ngập sẽ tràn sang tất cả các buồng trống kề sát nó theo 4 hướng. Hãy tính thời gian để toàn bộ các buồng trống trong hầm mỏ đều bị ngập nước.
+Một hầm mỏ dưới lòng đất kích thước $N × M$ gồm các buồng trống `.` và các khối đá chắn `#`. Đột ngột có một sự cố vỡ đê ngầm khiến nước tràn vào từ $K$ buồng mỏ cùng lúc tại thời điểm $t = 0$. Cứ sau mỗi phút, nước từ các buồng đã ngập sẽ tràn sang tất cả các buồng trống kề sát nó theo 4 hướng. Hãy tính thời gian để toàn bộ các buồng trống trong hầm mỏ đều bị ngập nước.
 
 ## Nhiệm vụ
 Cho bản đồ hầm mỏ và vị trí các nguồn nước ban đầu. Hãy lập trình tính thời gian (phút) để nước tràn kín toàn bộ các buồng trống liên thông.

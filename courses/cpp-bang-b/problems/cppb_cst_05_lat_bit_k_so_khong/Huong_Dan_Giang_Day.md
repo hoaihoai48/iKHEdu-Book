@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 11 2 1 1 1 0 0 0 1 1 1 1 )
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `11 2 1 1 1 0 0 0 1 1 1 1 0` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Xét đoạn từ vị trí 5 đến vị trí 10: [0, 0, 1, 1, 1, 1]. Đoạn này có độ dài 6 và chứa đúng hai số 0. Khi lật 2 số 0 này t... | Tính toán từng bước trạng thái |
@@ -32,31 +31,31 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    int l = 0;
-    int zero_cnt = 0;
-    int max_len = 0;
+int l = 0;
+int zero_cnt = 0;
+int max_len = 0;
 
-    for (int r = 0; r < n; ++r) {
-        if (a[r] == 0) ++zero_cnt;
+for (int r = 0; r < n; ++r) {
+if (a[r] == 0) ++zero_cnt;
 
-        while (zero_cnt > k) {
-            if (a[l] == 0) --zero_cnt;
-            ++l;
-        }
+while (zero_cnt > k) {
+if (a[l] == 0) --zero_cnt;
+++l;
+}
 
-        max_len = max(max_len, r - l + 1);
-    }
+max_len = max(max_len, r - l + 1);
+}
 
-    cout << max_len << "\n";
-    return 0;
+cout << max_len << "\n";
+return 0;
 }
 ```

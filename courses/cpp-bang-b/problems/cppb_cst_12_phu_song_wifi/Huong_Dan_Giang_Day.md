@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 1 3 5 8 10)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 1 3 5 8 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với bán kính R = 3, đường kính phủ sóng tối đa là 2R = 6. Xét đoạn từ nhà tọa độ 1 đến nhà tọa độ 5: độ dài khoảng cách ... | Tính toán từng bước trạng thái |
@@ -32,28 +31,28 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long r;
-    if (!(cin >> n >> r)) return 0;
+int n;
+long long r;
+if (!(cin >> n >> r)) return 0;
 
-    vector<long long> x(n);
-    for (int i = 0; i < n; ++i) cin >> x[i];
+vector<long long> x(n);
+for (int i = 0; i < n; ++i) cin >> x[i];
 
-    int i = 0;
-    int count = 0;
+int i = 0;
+int count = 0;
 
-    while (i < n) {
-        ++count;
-        long long loc = x[i];
-        while (i < n && x[i] - loc <= r) ++i;
-        long long tower = x[i - 1];
-        while (i < n && x[i] - tower <= r) ++i;
-    }
+while (i < n) {
+++count;
+long long loc = x[i];
+while (i < n && x[i] - loc <= r) ++i;
+long long tower = x[i - 1];
+while (i < n && x[i] - tower <= r) ++i;
+}
 
-    cout << count << "\n";
-    return 0;
+cout << count << "\n";
+return 0;
 }
 ```

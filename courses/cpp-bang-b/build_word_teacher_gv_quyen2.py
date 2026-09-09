@@ -39,13 +39,14 @@ OUT_DOCX = BASE_DIR / "cpp-giaovien-quyen-2.docx"
 ASSETS_PNG_DIR = BASE_DIR / "assets_png"
 
 CHAPTER_NAMES = {
-    1: "CHƯƠNG 01: THUẬT TOÁN SẮP XẾP & KỸ THUẬT MẢNG",
-    2: "CHƯƠNG 02: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN",
-    3: "CHƯƠNG 03: SỐ HỌC & ĐẠI SỐ MODULAR",
-    4: "CHƯƠNG 04: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI",
-    5: "CHƯƠNG 05: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)",
-    6: "CHƯƠNG 06: CẤU TRÚC DỮ LIỆU NÂNG CAO",
-    7: "CHƯƠNG 07: ĐỒ THỊ & CÂY TRUY VẤN ĐOẠN",
+    1: "CHƯƠNG 01: NỀN TẢNG LẬP TRÌNH C++",
+    2: "CHƯƠNG 02: THUẬT TOÁN SẮP XẾP & KỸ THUẬT MẢNG",
+    3: "CHƯƠNG 03: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN",
+    4: "CHƯƠNG 04: SỐ HỌC & ĐẠI SỐ MODULAR",
+    5: "CHƯƠNG 05: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI",
+    6: "CHƯƠNG 06: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)",
+    7: "CHƯƠNG 07: CẤU TRÚC DỮ LIỆU NÂNG CAO",
+    8: "CHƯƠNG 08: ĐỒ THỊ & CÂY TRUY VẤN ĐOẠN",
 }
 
 # Load problem illustrations map (combine q1 and q2 maps)
@@ -181,7 +182,7 @@ def build_tap2_markdown(manifest_data):
     )
 
     current_chapter = None
-    tap2_lessons = manifest_data["lessons"][7:14]
+    tap2_lessons = manifest_data["lessons"][8:16]
     prob_count = 0
 
     for lesson_info in tap2_lessons:
@@ -366,7 +367,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
                 para.paragraph_format.space_after = Pt(100 / 20)   # 5pt
                 for r in para.runs:
                     r.font.name = "Times New Roman"
-                    r.font.size = Pt(16)
+                    r.font.size = Pt(18)
                     r.font.bold = True
                     r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
             else:
@@ -386,7 +387,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
                 para.paragraph_format.space_after = Pt(6)
                 for r in para.runs:
                     r.font.name = "Times New Roman"
-                    r.font.size = Pt(15)
+                    r.font.size = Pt(15.5)
                     r.font.bold = True
                     r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
@@ -437,7 +438,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
             para.paragraph_format.space_after = Pt(3)
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(12)
+                r.font.size = Pt(12.5)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
@@ -460,7 +461,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
             for r in para.runs:
                 r.font.name = "Consolas"
                 r.font.size = Pt(9.0)
-                r.font.color.rgb = RGBColor(0x0F, 0x2A, 0x44)
+                r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
             sp = pPr.find(qn("w:spacing"))
             if sp is not None:
@@ -530,7 +531,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
 
     # 4. Gắn hình ảnh minh họa bối cảnh vào từng bài toán
     print(f"🖼️ Đang chèn hình ảnh minh họa trực quan bối cảnh cho Quyển 2...")
-    tap2_codes = set(p["code"] for l in manifest_data["lessons"][7:14] for p in l["problems"])
+    tap2_codes = set(p["code"] for l in manifest_data["lessons"][8:16] for p in l["problems"])
     for prob_code in tap2_codes:
         if prob_code not in DIAGRAMS_MAP:
             continue
@@ -713,7 +714,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
                                     <w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>
                                     <w:sz w:val="19"/>
                                     <w:szCs w:val="19"/>
-                                    <w:color w:val="0F2A44"/>
+                                    <w:color w:val="000000"/>
                                 </w:rPr>
                                 <w:t xml:space="preserve">{html.escape(line_str)}</w:t>
                             </w:r>
@@ -783,18 +784,38 @@ def post_process_teacher_docx(docx_path, manifest_data):
                                 r.font.size = Pt(12)
                                 r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
-    # 6. Build Interactive Hyperlinked TOC at End (Chương + Bài học)
+    # 6. Build Interactive Hyperlinked TOC at End with Exact Page Numbers
+    # Exact page mapping for Q2 Teacher Guide (264 pages total)
+    EXACT_PAGES_GV_Q2 = [
+        "2",   # CHƯƠNG 03: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN
+        "2",   # Bài 09: Phép toán BIT & biểu diễn trạng thái
+        "34",  # CHƯƠNG 04: SỐ HỌC & ĐẠI SỐ MODULAR
+        "34",  # Bài 10: Lý thuyết số & số nguyên tố
+        "65",  # Bài 11: Đồng dư thức, lũy thừa nhị phân & nghịch đảo modulo
+        "97",  # Bài 12: Xử lý số nguyên lớn (BigInt)
+        "130", # CHƯƠNG 05: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI
+        "130", # Bài 13: Thuật toán đệ quy & cây gọi hàm
+        "159", # Bài 14: Kỹ thuật chia để trị
+        "191", # Bài 15: Thuật toán quay lui & nhánh cận
+        "227", # CHƯƠNG 06: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)
+        "227"  # Bài 16: Quy hoạch động 1D & dãy con tăng dài nhất
+    ]
+
     if p_toc_heading:
-        print(f"  → Tạo Mục lục tương tác gồm {len(toc_headings)} liên kết...")
+        print(f"  → Tạo Mục lục tương tác có số trang chính xác gồm {len(toc_headings)} liên kết...")
         last_elem = p_toc_heading._p
 
-        for item in toc_headings:
+        for item_idx, item in enumerate(toc_headings):
             title = html.escape(item["text"])
             bm = item["bm_name"]
+            page_str = EXACT_PAGES_GV_Q2[item_idx] if item_idx < len(EXACT_PAGES_GV_Q2) else "1"
 
             if item.get("is_chapter"):
                 p_xml = f'''<w:p {nsdecls("w")}>
                     <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="right" w:leader="dot" w:pos="9899"/>
+                        </w:tabs>
                         <w:spacing w:before="180" w:after="40"/>
                     </w:pPr>
                     <w:hyperlink w:anchor="{bm}">
@@ -803,15 +824,28 @@ def post_process_teacher_docx(docx_path, manifest_data):
                                 <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
                                 <w:b/>
                                 <w:sz w:val="23"/>
-                                <w:color w:val="0F2A44"/>
+                                <w:color w:val="000000"/>
                             </w:rPr>
                             <w:t>{title}</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                <w:b/>
+                                <w:sz w:val="23"/>
+                                <w:color w:val="000000"/>
+                            </w:rPr>
+                            <w:tab/>
+                            <w:t>{page_str}</w:t>
                         </w:r>
                     </w:hyperlink>
                 </w:p>'''
             elif item.get("is_lesson"):
                 p_xml = f'''<w:p {nsdecls("w")}>
                     <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="right" w:leader="dot" w:pos="9899"/>
+                        </w:tabs>
                         <w:ind w:left="280"/>
                         <w:spacing w:before="20" w:after="20"/>
                     </w:pPr>
@@ -820,9 +854,18 @@ def post_process_teacher_docx(docx_path, manifest_data):
                             <w:rPr>
                                 <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
                                 <w:sz w:val="22"/>
-                                <w:color w:val="1A4A6B"/>
+                                <w:color w:val="000000"/>
                             </w:rPr>
                             <w:t>•  {title}</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                <w:sz w:val="22"/>
+                                <w:color w:val="000000"/>
+                            </w:rPr>
+                            <w:tab/>
+                            <w:t>{page_str}</w:t>
                         </w:r>
                     </w:hyperlink>
                 </w:p>'''

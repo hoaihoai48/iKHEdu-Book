@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho 3 số nguyên A, B, M. Hãy tìm nghiệm nguyên không âm nhỏ nhất X của phương trình Ax = B mod M. Nếu vô nghiệm, in ra -1.
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 4 6)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `2 4 6` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Thay X = 2: 2 * 2 = 4 = 4 mod 6. Nghiệm không âm nhỏ nhất là 2.... | Tính toán từng bước trạng thái |
@@ -36,39 +35,39 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 using namespace std;
 
 long long extGCD(long long a, long long b, long long &x, long long &y) {
-    if (b == 0) {
-        x = 1;
-        y = 0;
-        return a;
-    }
-    long long x1, y1;
-    long long d = extGCD(b, a % b, x1, y1);
-    x = y1;
-    y = x1 - y1 * (a / b);
-    return d;
+if (b == 0) {
+x = 1;
+y = 0;
+return a;
+}
+long long x1, y1;
+long long d = extGCD(b, a % b, x1, y1);
+x = y1;
+y = x1 - y1 * (a / b);
+return d;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b, m;
-    if (!(cin >> a >> b >> m)) return 0;
+long long a, b, m;
+if (!(cin >> a >> b >> m)) return 0;
 
-    long long x, y;
-    long long g = extGCD(a, m, x, y);
+long long x, y;
+long long g = extGCD(a, m, x, y);
 
-    if (b % g != 0) {
-        cout << -1 << "\n";
-        return 0;
-    }
+if (b % g != 0) {
+cout << -1 << "\n";
+return 0;
+}
 
-    x = (x % m + m) % m;
-    long long m_prime = m / g;
-    long long ans = (x * ((b / g) % m_prime)) % m_prime;
-    ans = (ans % m_prime + m_prime) % m_prime;
+x = (x % m + m) % m;
+long long m_prime = m / g;
+long long ans = (x * ((b / g) % m_prime)) % m_prime;
+ans = (ans % m_prime + m_prime) % m_prime;
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

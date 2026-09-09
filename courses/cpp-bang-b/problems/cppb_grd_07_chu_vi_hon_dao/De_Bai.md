@@ -1,7 +1,7 @@
 # Chu Vi Hòn Đảo (Island Perimeter)
 
 ## Bối cảnh
-Trên bản đồ dạng lưới $N  × M$, có đúng một hòn đảo duy nhất được tạo thành bởi các ô đất liền `'1'` kết nối liên thông (các ô còn lại là nước biển `'0'`). Mỗi ô đất liền là một hình vuông có cạnh dài đúng 1 đơn vị. Chu vi của hòn đảo là tổng độ dài các cạnh của các ô đất liền tiếp xúc trực tiếp với nước biển hoặc tiếp xúc với mép ngoài của bản đồ.
+Trên bản đồ dạng lưới $N × M$, có đúng một hòn đảo duy nhất được tạo thành bởi các ô đất liền `'1'` kết nối liên thông (các ô còn lại là nước biển `'0'`). Mỗi ô đất liền là một hình vuông có cạnh dài đúng 1 đơn vị. Chu vi của hòn đảo là tổng độ dài các cạnh của các ô đất liền tiếp xúc trực tiếp với nước biển hoặc tiếp xúc với mép ngoài của bản đồ.
 
 ## Nhiệm vụ
 Cho bản đồ chứa đúng một hòn đảo. Hãy lập trình tính chu vi của hòn đảo đó.

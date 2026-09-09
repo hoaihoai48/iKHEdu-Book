@@ -8,8 +8,7 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 20 2 7 5 1 8 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 20 2 7 5 1 8 4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp mảng tăng dần: [1, 2, 4, 5, 7, 8] và S = 20. Bộ bốn số gồm các phần tử 1, 4, 7, 8 có tổng là 1 + 4 + 7 + 8 = 20 ... | Tính toán từng bước trạng thái |
@@ -32,37 +31,37 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    for (int i = 0; i < n - 3; ++i) {
-        for (int j = i + 1; j < n - 2; ++j) {
-            long long target = s - a[i] - a[j];
-            int l = j + 1, r = n - 1;
-            while (l < r) {
-                long long sum = a[l] + a[r];
-                if (sum == target) {
-                    cout << a[i] << " " << a[j] << " " << a[l] << " " << a[r] << "\n";
-                    return 0;
-                } else if (sum < target) {
-                    ++l;
-                } else {
-                    --r;
-                }
-            }
-        }
-    }
+for (int i = 0; i < n - 3; ++i) {
+for (int j = i + 1; j < n - 2; ++j) {
+long long target = s - a[i] - a[j];
+int l = j + 1, r = n - 1;
+while (l < r) {
+long long sum = a[l] + a[r];
+if (sum == target) {
+cout << a[i] << " " << a[j] << " " << a[l] << " " << a[r] << "\n";
+return 0;
+} else if (sum < target) {
+++l;
+} else {
+--r;
+}
+}
+}
+}
 
-    cout << -1 << "\n";
-    return 0;
+cout << -1 << "\n";
+return 0;
 }
 ```

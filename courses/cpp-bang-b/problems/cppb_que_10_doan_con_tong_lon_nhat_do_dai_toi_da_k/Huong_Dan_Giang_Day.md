@@ -11,15 +11,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Hàng Đợi (Queue, Deque) & Monotonic
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý Hàng đợi chuẩn (Queue):** Vào trước Ra trước (FIFO), là cấu trúc nền tảng phục vụ duyệt đồ thị theo chiều rộng (BFS).
 - **Hàng đợi hai đầu (Deque) & Monotonic Deque:**
-  * Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
-  * Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
-  * Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
+* Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
+* Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
+* Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N)$, không gian phụ trợ $\mathcal{O}(K)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 3 -1 2 4 -3 5` $\implies$ Đầu ra kỳ vọng: `6`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 3 -1 2 4 -3 5` $\implies$ Đầu ra kỳ vọng: `6`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -45,34 +44,34 @@ Mẫu thử (Sample 1): Đầu vào: `5 3 -1 2 4 -3 5` $\implies$ Đầu ra kỳ
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    if (n <= 0 || k <= 0) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
+if (n <= 0 || k <= 0) return 0;
 
-    vector<long long> a(n + 1);
-    vector<long long> pref(n + 1, 0);
-    for (int i = 1; i <= n; ++i) {
-        cin >> a[i];
-        pref[i] = pref[i - 1] + a[i];
-    }
+vector<long long> a(n + 1);
+vector<long long> pref(n + 1, 0);
+for (int i = 1; i <= n; ++i) {
+cin >> a[i];
+pref[i] = pref[i - 1] + a[i];
+}
 
-    deque<int> dq;
-    dq.push_back(0);
-    long long max_sum = LLONG_MIN;
+deque<int> dq;
+dq.push_back(0);
+long long max_sum = LLONG_MIN;
 
-    for (int i = 1; i <= n; ++i) {
-        while (!dq.empty() && dq.front() < i - k) dq.pop_front();
-        if (!dq.empty()) {
-            max_sum = max(max_sum, pref[i] - pref[dq.front()]);
-        }
-        while (!dq.empty() && pref[dq.back()] >= pref[i]) dq.pop_back();
-        dq.push_back(i);
-    }
+for (int i = 1; i <= n; ++i) {
+while (!dq.empty() && dq.front() < i - k) dq.pop_front();
+if (!dq.empty()) {
+max_sum = max(max_sum, pref[i] - pref[dq.front()]);
+}
+while (!dq.empty() && pref[dq.back()] >= pref[i]) dq.pop_back();
+dq.push_back(i);
+}
 
-    cout << max_sum << "\n";
-    return 0;
+cout << max_sum << "\n";
+return 0;
 }
 ```

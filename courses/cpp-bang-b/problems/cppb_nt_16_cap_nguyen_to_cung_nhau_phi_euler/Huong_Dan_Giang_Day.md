@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy đếm số lượng cặp số nguyên (x, y) thỏa mãn 1 <= x, y <= N và gcd(x, y) = 1.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các cặp thỏa mãn với N = 3 gồm: (1, 1), (1, 2), (2, 1), (1, 3), (3, 1). Tổng cộng có 5 cặp.... | Tính toán từng bước trạng thái |
@@ -39,33 +38,33 @@ const int MAXN = 1000000;
 vector<int> phi(MAXN + 1);
 
 void sievePhi() {
-    for (int i = 0; i <= MAXN; ++i) phi[i] = i;
-    for (int i = 2; i <= MAXN; ++i) {
-        if (phi[i] == i) { // i là số nguyên tố
-            for (int j = i; j <= MAXN; j += i) {
-                phi[j] -= phi[j] / i;
-            }
-        }
-    }
+for (int i = 0; i <= MAXN; ++i) phi[i] = i;
+for (int i = 2; i <= MAXN; ++i) {
+if (phi[i] == i) { // i là số nguyên tố
+for (int j = i; j <= MAXN; j += i) {
+phi[j] -= phi[j] / i;
+}
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    sievePhi();
+sievePhi();
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    long long sum_phi = 0;
-    for (int i = 1; i <= n; ++i) {
-        sum_phi += phi[i];
-    }
+long long sum_phi = 0;
+for (int i = 1; i <= n; ++i) {
+sum_phi += phi[i];
+}
 
-    // Số cặp (x, y) với gcd(x, y) = 1 là 2 * sum(phi(i)) - 1 (do (1,1) tính 1 lần)
-    long long ans = 2 * sum_phi - 1;
-    cout << ans << "\n";
-    return 0;
+// Số cặp (x, y) với gcd(x, y) = 1 là 2 * sum(phi(i)) - 1 (do (1,1) tính 1 lần)
+long long ans = 2 * sum_phi - 1;
+cout << ans << "\n";
+return 0;
 }
 ```

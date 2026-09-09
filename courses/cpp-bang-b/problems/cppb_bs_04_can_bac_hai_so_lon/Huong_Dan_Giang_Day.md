@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho số nguyên dương N (1 <= N <= 10^18). Hãy tìm số nguyên dương X lớn nhất thỏa mãn X^2 <= N bằng tìm kiếm nhị phân trên tập kết quả.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 17)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `17` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 4^2 = 16 <= 17, trong khi 5^2 = 25 > 17. Số nguyên lớn nhất có bình phương <= 17 là 4.... | Tính toán từng bước trạng thái |
@@ -36,30 +35,30 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 using namespace std;
 
 void solve() {
-    long long n;
-    cin >> n;
-    long long low = 1, high = 1000000000LL, ans = 1;
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (mid <= n / mid) {
-            ans = mid;
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
-    cout << ans << "\n";
+long long n;
+cin >> n;
+long long low = 1, high = 1000000000LL, ans = 1;
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (mid <= n / mid) {
+ans = mid;
+low = mid + 1;
+} else {
+high = mid - 1;
+}
+}
+cout << ans << "\n";
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int t;
-    if (!(cin >> t)) return 0;
-    while (t--) {
-        solve();
-    }
-    return 0;
+int t;
+if (!(cin >> t)) return 0;
+while (t--) {
+solve();
+}
+return 0;
 }
 ```

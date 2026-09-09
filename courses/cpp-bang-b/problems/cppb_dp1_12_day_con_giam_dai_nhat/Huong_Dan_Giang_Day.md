@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 10 9 2 5 3 7 101 18` $\implies$ Đầu ra kỳ vọng: `4`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 10 9 2 5 3 7 101 18` $\implies$ Đầu ra kỳ vọng: `4`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -43,30 +42,30 @@ Một dãy con giảm nghiêm ngặt dài nhất có thể trích xuất là $[1
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-        a[i] = -a[i]; // Đảo dấu để tìm LIS tương đương LDS
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+a[i] = -a[i]; // Đảo dấu để tìm LIS tương đương LDS
+}
 
-    vector<long long> tails;
-    for (int i = 0; i < n; ++i) {
-        auto it = lower_bound(tails.begin(), tails.end(), a[i]);
-        if (it == tails.end()) {
-            tails.push_back(a[i]);
-        } else {
-            *it = a[i];
-        }
-    }
+vector<long long> tails;
+for (int i = 0; i < n; ++i) {
+auto it = lower_bound(tails.begin(), tails.end(), a[i]);
+if (it == tails.end()) {
+tails.push_back(a[i]);
+} else {
+*it = a[i];
+}
+}
 
-    cout << tails.size() << "\n";
-    return 0;
+cout << tails.size() << "\n";
+return 0;
 }
 ```

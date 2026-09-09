@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 7 3 5 2 3 5 3 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `7 3 5 2 3 5 3 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Danh sách các phiếu bầu là: $3, 5, 2, 3, 5, 3, 2$. Thống kê tần suất xuất hiện của từng giá trị: - Mã số $2$: xuất hiện ... | Tính toán từng bước trạng thái |
@@ -39,41 +38,41 @@ Mã số xuất hiện nhiều nhất là $3$ với số lần xuất hiện là
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    long long best_val = a[0];
-    int max_freq = 1;
+long long best_val = a[0];
+int max_freq = 1;
 
-    long long cur_val = a[0];
-    int cur_freq = 1;
+long long cur_val = a[0];
+int cur_freq = 1;
 
-    for (int i = 1; i < n; ++i) {
-        if (a[i] == cur_val) {
-            ++cur_freq;
-        } else {
-            if (cur_freq > max_freq) {
-                max_freq = cur_freq;
-                best_val = cur_val;
-            }
-            cur_val = a[i];
-            cur_freq = 1;
-        }
-    }
-    if (cur_freq > max_freq) {
-        max_freq = cur_freq;
-        best_val = cur_val;
-    }
+for (int i = 1; i < n; ++i) {
+if (a[i] == cur_val) {
+++cur_freq;
+} else {
+if (cur_freq > max_freq) {
+max_freq = cur_freq;
+best_val = cur_val;
+}
+cur_val = a[i];
+cur_freq = 1;
+}
+}
+if (cur_freq > max_freq) {
+max_freq = cur_freq;
+best_val = cur_val;
+}
 
-    cout << best_val << " " << max_freq << "\n";
-    return 0;
+cout << best_val << " " << max_freq << "\n";
+return 0;
 }
 ```

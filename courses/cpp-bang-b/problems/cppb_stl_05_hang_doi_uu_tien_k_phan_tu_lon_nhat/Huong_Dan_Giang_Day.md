@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `6 3 10 50 30 20 60 40` $\implies$ Đầu ra kỳ vọng: `60 50 40`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `6 3 10 50 30 20 60 40` $\implies$ Đầu ra kỳ vọng: `60 50 40`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -44,35 +43,35 @@ Hai phần tử lớn nhất trong dãy là 6 và 5. In ra theo thứ tự giả
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    if (n <= 0 || k <= 0 || k > n) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
+if (n <= 0 || k <= 0 || k > n) return 0;
 
-    priority_queue<long long, vector<long long>, greater<long long>> min_heap;
+priority_queue<long long, vector<long long>, greater<long long>> min_heap;
 
-    for (int i = 0; i < n; ++i) {
-        long long x;
-        cin >> x;
-        min_heap.push(x);
-        if ((int)min_heap.size() > k) {
-            min_heap.pop();
-        }
-    }
+for (int i = 0; i < n; ++i) {
+long long x;
+cin >> x;
+min_heap.push(x);
+if ((int)min_heap.size() > k) {
+min_heap.pop();
+}
+}
 
-    vector<long long> result;
-    while (!min_heap.empty()) {
-        result.push_back(min_heap.top());
-        min_heap.pop();
-    }
-    sort(result.rbegin(), result.rend());
+vector<long long> result;
+while (!min_heap.empty()) {
+result.push_back(min_heap.top());
+min_heap.pop();
+}
+sort(result.rbegin(), result.rend());
 
-    for (int i = 0; i < k; ++i) {
-        cout << result[i] << (i + 1 == k ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < k; ++i) {
+cout << result[i] << (i + 1 == k "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

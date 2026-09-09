@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho dãy gồm N số nguyên dương. Hãy đếm số lượng cặp chỉ số (i, j) với 1 <= i < j <= N sao cho A[i] + A[j] là một lũy thừa của 2.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 1 1 3 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 1 1 3 3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các cặp chỉ số $(i, j)$ có tổng là lũy thừa của 2 gồm 3 cặp: - $(1, 3)$: tổng $1 + 3 = 4 = 2^2$. - $(1, 7)$: tổng $1 + 7... | Tính toán từng bước trạng thái |
@@ -41,32 +40,32 @@ Vậy có đúng 3 cặp thỏa mãn.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
-    sort(a.begin(), a.end());
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
+sort(a.begin(), a.end());
 
-    long long total_pairs = 0;
+long long total_pairs = 0;
 
-    for (int i = 0; i < n; ++i) {
-        for (int k = 1; k <= 30; ++k) {
-            long long target = (1LL << k) - a[i];
-            if (target <= 0) continue;
+for (int i = 0; i < n; ++i) {
+for (int k = 1; k <= 30; ++k) {
+long long target = (1LL << k) - a[i];
+if (target <= 0) continue;
 
-            auto it1 = lower_bound(a.begin() + i + 1, a.end(), target);
-            auto it2 = upper_bound(a.begin() + i + 1, a.end(), target);
-            total_pairs += (it2 - it1);
-        }
-    }
+auto it1 = lower_bound(a.begin() + i + 1, a.end(), target);
+auto it2 = upper_bound(a.begin() + i + 1, a.end(), target);
+total_pairs += (it2 - it1);
+}
+}
 
-    cout << total_pairs << "\n";
-    return 0;
+cout << total_pairs << "\n";
+return 0;
 }
 ```

@@ -7,7 +7,7 @@ Một đoàn tàu hỏa vận chuyển hàng hóa di chuyển trên mạng lư�
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và hai đỉnh $S, D$. Hãy lập trình tìm số cạnh trên đường đi ngắn nhất từ $S$ tới $D$. Nếu không có đường đi, in ra `-1`.
 
 ## Input
-- Dòng 1: Chứa 4 số nguyên $N, M, S, D$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa 4 số nguyên $N, M, S, D$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u, v$.
 
 ## Output
@@ -29,7 +29,7 @@ Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và hai đỉnh $S, D$. Hãy
 
 ### Giải thích
 Với mạng đường ray có các chặng (1, 2), (2, 3), (1, 4), (4, 3) từ ga 1 tới ga 3:
-Có hai lộ trình cùng đạt 2 chặng là $1  × o 2  × o 3$ hoặc $1  × o 4  × o 3$. Thời gian ít nhất là 2 chặng.
+Có hai lộ trình cùng đạt 2 chặng là $1 × o 2 × o 3$ hoặc $1 × o 4 × o 3$. Thời gian ít nhất là 2 chặng.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N \le 10^5, 0 \le M \le 2 \cdot 10^5$.

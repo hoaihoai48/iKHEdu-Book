@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng N số nguyên và số nguyên K. Hãy tìm giá trị cận trên tải trọng nhỏ nhất cho mỗi đoàn tàu.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 2 1 2 3 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 2 1 2 3 4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Chia thành 2 đoàn: [1, 2, 3] có tổng 6 và [4] có tổng 4. Mức tải trọng lớn nhất giữa hai đoàn là 6. Đây là mức tải trọng... | Tính toán từng bước trạng thái |
@@ -36,49 +35,49 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 using namespace std;
 
 bool check(long long cap, const vector<long long>& a, int n, int m, int d) {
-    int trucks = 0;
-    int i = 0;
-    while (i < n) {
-        trucks++;
-        if (trucks > m) return false;
-        long long current_load = 0;
-        int count_cities = 0;
-        while (i < n && count_cities < d && current_load + a[i] <= cap) {
-            current_load += a[i];
-            count_cities++;
-            i++;
-        }
-    }
-    return trucks <= m;
+int trucks = 0;
+int i = 0;
+while (i < n) {
+trucks++;
+if (trucks > m) return false;
+long long current_load = 0;
+int count_cities = 0;
+while (i < n && count_cities < d && current_load + a[i] <= cap) {
+current_load += a[i];
+count_cities++;
+i++;
+}
+}
+return trucks <= m;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m, d;
-    if (!(cin >> n >> m >> d)) return 0;
+int n, m, d;
+if (!(cin >> n >> m >> d)) return 0;
 
-    vector<long long> a(n);
-    long long max_val = 0, sum_val = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-        max_val = max(max_val, a[i]);
-        sum_val += a[i];
-    }
+vector<long long> a(n);
+long long max_val = 0, sum_val = 0;
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+max_val = max(max_val, a[i]);
+sum_val += a[i];
+}
 
-    long long low = max_val, high = sum_val, ans = sum_val;
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (check(mid, a, n, m, d)) {
-            ans = mid;
-            high = mid - 1;
-        } else {
-            low = mid + 1;
-        }
-    }
+long long low = max_val, high = sum_val, ans = sum_val;
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (check(mid, a, n, m, d)) {
+ans = mid;
+high = mid - 1;
+} else {
+low = mid + 1;
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

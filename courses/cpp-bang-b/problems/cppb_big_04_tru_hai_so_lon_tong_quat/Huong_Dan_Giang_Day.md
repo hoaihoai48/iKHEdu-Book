@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho 2 số nguyên dương lớn A và B. Hãy tính hiệu A - B (in dấu '-' phía trước nếu kết quả mang giá trị âm).
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1 1000)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `1 1000` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 1 - 1000 = -999. Kết quả in ra: -999.... | Tính toán từng bước trạng thái |
@@ -36,48 +35,48 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 bool isLess(const string &a, const string &b) {
-    if (a.size() != b.size()) return a.size() < b.size();
-    return a < b;
+if (a.size() != b.size()) return a.size() < b.size();
+return a < b;
 }
 
 string subBig(string a, string b) {
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
 
-    string res = "";
-    int borrow = 0;
+string res = "";
+int borrow = 0;
 
-    for (int i = 0; i < (int)a.size(); ++i) {
-        int diff = (a[i] - '0') - borrow;
-        if (i < (int)b.size()) diff -= (b[i] - '0');
-        if (diff < 0) {
-            diff += 10;
-            borrow = 1;
-        } else {
-            borrow = 0;
-        }
-        res.push_back(diff + '0');
-    }
+for (int i = 0; i < (int)a.size(); ++i) {
+int diff = (a[i] - '0') - borrow;
+if (i < (int)b.size()) diff -= (b[i] - '0');
+if (diff < 0) {
+diff += 10;
+borrow = 1;
+} else {
+borrow = 0;
+}
+res.push_back(diff + '0');
+}
 
-    while (res.size() > 1 && res.back() == '0') res.pop_back();
-    reverse(res.begin(), res.end());
-    return res;
+while (res.size() > 1 && res.back() == '0') res.pop_back();
+reverse(res.begin(), res.end());
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    if (a == b) {
-        cout << "0\n";
-    } else if (isLess(a, b)) {
-        cout << "-" << subBig(b, a) << "\n";
-    } else {
-        cout << subBig(a, b) << "\n";
-    }
-    return 0;
+if (a == b) {
+cout << "0\n";
+} else if (isLess(a, b)) {
+cout << "-" << subBig(b, a) << "\n";
+} else {
+cout << subBig(a, b) << "\n";
+}
+return 0;
 }
 ```

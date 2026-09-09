@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho mảng số nguyên dương $A$ gồm $N$ phần tử và số nguyên dương $S$. Hãy sử dụng thuật toán Quay lui kết hợp cắt tỉa khả thi (dừng nhánh khi tổng tích lũy vượt quá $S$) để tìm và in ra tất cả các tập con có tổng bằng đúng $S$ theo thứ tự từ điển. Nếu không có phương án nào thỏa mãn, in ra `-1`.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 6 1 2 3 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 6 1 2 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với kho vàng gồm các thỏi $[1, 2, 3, 5]$ và mục tiêu $S = 6$, có 2 phương án chọn: - Phương án 1: Chọn các thỏi $\{1, 2,... | Tính toán từng bước trạng thái |
@@ -45,32 +44,32 @@ vector<long long> cur;
 bool found = false;
 
 void backtrack(int idx, long long current_sum) {
-    if (current_sum == S) {
-        found = true;
-        for (int i = 0; i < (int)cur.size(); ++i) cout << cur[i] << (i + 1 == (int)cur.size() ? "" : " ");
-        cout << "\n";
-        return;
-    }
-    if (idx >= n || current_sum > S) return;
+if (current_sum == S) {
+found = true;
+for (int i = 0; i < (int)cur.size(); ++i) cout << cur[i] << (i + 1 == (int)cur.size() "" : " ");
+cout << "\n";
+return;
+}
+if (idx >= n || current_sum > S) return;
 
-    for (int i = idx; i < n; ++i) {
-        if (current_sum + a[i] <= S) {
-            cur.push_back(a[i]);
-            backtrack(i + 1, current_sum + a[i]);
-            cur.pop_back();
-        }
-    }
+for (int i = idx; i < n; ++i) {
+if (current_sum + a[i] <= S) {
+cur.push_back(a[i]);
+backtrack(i + 1, current_sum + a[i]);
+cur.pop_back();
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n >> S)) return 0;
-    a.resize(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    sort(a.begin(), a.end());
-    backtrack(0, 0);
-    if (!found) cout << -1 << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n >> S)) return 0;
+a.resize(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+sort(a.begin(), a.end());
+backtrack(0, 0);
+if (!found) cout << -1 << "\n";
+return 0;
 }
 ```

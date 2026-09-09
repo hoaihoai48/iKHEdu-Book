@@ -11,8 +11,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 101 8 9 102 9 8 103 10 )
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 101 8 9 102 9 8 103 10 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Thống kê điểm của 3 thí sinh: - Thí sinh $103$: Điểm Toán = $10$, Điểm Tin = $10 \implies$ Tổng điểm = $20$. - Thí sinh ... | Tính toán từng bước trạng thái |
@@ -46,30 +45,30 @@ Kết quả in ra đúng thứ tự: `103 10 10`, tiếp theo là `101 8 9`, và
 using namespace std;
 
 bool cmp(const vector<long long> &a, const vector<long long> &b) {
-    long long total_a = a[1] + a[2];
-    long long total_b = b[1] + b[2];
-    if (total_a != total_b) return total_a > total_b;
-    if (a[2] != b[2]) return a[2] > b[2];
-    return a[0] < b[0];
+long long total_a = a[1] + a[2];
+long long total_b = b[1] + b[2];
+if (total_a != total_b) return total_a > total_b;
+if (a[2] != b[2]) return a[2] > b[2];
+return a[0] < b[0];
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<vector<long long>> a(n, vector<long long>(3));
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i][0] >> a[i][1] >> a[i][2];
-    }
+vector<vector<long long>> a(n, vector<long long>(3));
+for (int i = 0; i < n; ++i) {
+cin >> a[i][0] >> a[i][1] >> a[i][2];
+}
 
-    sort(a.begin(), a.end(), cmp);
+sort(a.begin(), a.end(), cmp);
 
-    for (int i = 0; i < n; ++i) {
-        cout << a[i][0] << " " << a[i][1] << " " << a[i][2] << "\n";
-    }
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << a[i][0] << " " << a[i][1] << " " << a[i][2] << "\n";
+}
+return 0;
 }
 ```

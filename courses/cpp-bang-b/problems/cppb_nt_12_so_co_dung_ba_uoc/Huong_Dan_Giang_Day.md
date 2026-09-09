@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy đếm số lượng số nguyên dương <= N có đúng 3 ước số nguyên dương.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 50)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `50` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các số có đúng 3 ước số <= 50 là bình phương các số nguyên tố: 2^2=4, 3^2=9, 5^2=25, 7^2=49. Tổng cộng có 4 số.... | Tính toán từng bước trạng thái |
@@ -36,27 +35,27 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    int lim = sqrt(n);
-    vector<bool> is_prime(lim + 1, true);
-    is_prime[0] = is_prime[1] = false;
-    for (int i = 2; 1LL * i * i <= lim; ++i) {
-        if (is_prime[i]) {
-            for (int j = i * i; j <= lim; j += i) is_prime[j] = false;
-        }
-    }
+int lim = sqrt(n);
+vector<bool> is_prime(lim + 1, true);
+is_prime[0] = is_prime[1] = false;
+for (int i = 2; 1LL * i * i <= lim; ++i) {
+if (is_prime[i]) {
+for (int j = i * i; j <= lim; j += i) is_prime[j] = false;
+}
+}
 
-    int count_3div = 0;
-    for (int i = 2; i <= lim; ++i) {
-        if (is_prime[i] && 1LL * i * i <= n) count_3div++;
-    }
+int count_3div = 0;
+for (int i = 2; i <= lim; ++i) {
+if (is_prime[i] && 1LL * i * i <= n) count_3div++;
+}
 
-    cout << count_3div << "\n";
-    return 0;
+cout << count_3div << "\n";
+return 0;
 }
 ```

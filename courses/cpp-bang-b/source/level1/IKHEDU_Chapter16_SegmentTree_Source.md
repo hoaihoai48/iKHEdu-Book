@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để vừa sửa đổi một đoạn dữ liệu, vừa tính tổng hoặc tìm giá trị lớn nhất của đoạn đó trong thời gian chỉ tốn vài chục phép tính?**
+> **Làm thế nào để vừa sửa đổi một đoạn dữ liệu, vừa tính tổng hoặc tìm giá trị lớn nhất của đoạn đó trong thời gian chỉ tốn vài chục phép tính**
 
 ---
 
@@ -33,10 +33,10 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 16.1: Quản Lý Biến Động Doanh Thu Siêu Thị WinMart**  
-> **Bối cảnh:** Chuỗi $N$ siêu thị có doanh thu ban đầu $A_1, A_2, \dots, A_N$. Thực hiện $Q$ thao tác:  
-> - `1 pos val`: Cập nhật doanh thu siêu thị `pos` thành `val`.  
-> - `2 l r`: Tính tổng doanh thu các siêu thị từ `l` đến `r`.  
+> **Bài toán mẫu 16.1: Quản Lý Biến Động Doanh Thu Siêu Thị WinMart** 
+> **Bối cảnh:** Chuỗi $N$ siêu thị có doanh thu ban đầu $A_1, A_2, \dots, A_N$. Thực hiện $Q$ thao tác: 
+> - `1 pos val`: Cập nhật doanh thu siêu thị `pos` thành `val`. 
+> - `2 l r`: Tính tổng doanh thu các siêu thị từ `l` đến `r`. 
 > **Input:** `5 3` \ `1 2 3 4 5` \ `2 1 3` \ `1 2 10` \ `2 1 3` $\implies$ **Output:** `6` \ `14`.
 
 #### Cài đặt C++
@@ -48,62 +48,62 @@ int n, q;
 vector<long long> a, treeNode;
 
 void build(int id, int l, int r) {
-    if (l == r) {
-        treeNode[id] = a[l];
-        return;
-    }
-    int mid = l + (r - l) / 2;
-    build(2 * id, l, mid);
-    build(2 * id + 1, mid + 1, r);
-    treeNode[id] = treeNode[2 * id] + treeNode[2 * id + 1];
+if (l == r) {
+treeNode[id] = a[l];
+return;
+}
+int mid = l + (r - l) / 2;
+build(2 * id, l, mid);
+build(2 * id + 1, mid + 1, r);
+treeNode[id] = treeNode[2 * id] + treeNode[2 * id + 1];
 }
 
 void update(int id, int l, int r, int pos, long long val) {
-    if (l == r) {
-        treeNode[id] = val;
-        return;
-    }
-    int mid = l + (r - l) / 2;
-    if (pos <= mid) update(2 * id, l, mid, pos, val);
-    else update(2 * id + 1, mid + 1, r, pos, val);
-    treeNode[id] = treeNode[2 * id] + treeNode[2 * id + 1];
+if (l == r) {
+treeNode[id] = val;
+return;
+}
+int mid = l + (r - l) / 2;
+if (pos <= mid) update(2 * id, l, mid, pos, val);
+else update(2 * id + 1, mid + 1, r, pos, val);
+treeNode[id] = treeNode[2 * id] + treeNode[2 * id + 1];
 }
 
 long long query(int id, int l, int r, int ql, int qr) {
-    if (ql > r || qr < l) return 0;
-    if (ql <= l && r <= qr) return treeNode[id];
-    int mid = l + (r - l) / 2;
-    return query(2 * id, l, mid, ql, qr) + query(2 * id + 1, mid + 1, r, ql, qr);
+if (ql > r || qr < l) return 0;
+if (ql <= l && r <= qr) return treeNode[id];
+int mid = l + (r - l) / 2;
+return query(2 * id, l, mid, ql, qr) + query(2 * id + 1, mid + 1, r, ql, qr);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
+if (!(cin >> n >> q)) return 0;
 
-    a.resize(n + 1);
-    for (int i = 1; i <= n; i++) cin >> a[i];
+a.resize(n + 1);
+for (int i = 1; i <= n; i++) cin >> a[i];
 
-    treeNode.assign(4 * n + 1, 0);
-    build(1, 1, n);
+treeNode.assign(4 * n + 1, 0);
+build(1, 1, n);
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int pos;
-            long long val;
-            cin >> pos >> val;
-            update(1, 1, n, pos, val);
-        } else {
-            int l, r;
-            cin >> l >> r;
-            cout << query(1, 1, n, l, r) << "\n";
-        }
-    }
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int pos;
+long long val;
+cin >> pos >> val;
+update(1, 1, n, pos, val);
+} else {
+int l, r;
+cin >> l >> r;
+cout << query(1, 1, n, l, r) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -130,8 +130,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 16.2: Tìm Giá Trị Lớn Nhất Trên Đoạn Sau Cập Nhật**  
-> **Bối cảnh:** Tìm giá trị $\max(A[L.R])$ với các truy vấn sửa đổi giá trị tại một vị trí.  
+> **Bài toán mẫu 16.2: Tìm Giá Trị Lớn Nhất Trên Đoạn Sau Cập Nhật** 
+> **Bối cảnh:** Tìm giá trị $\max(A[L.R])$ với các truy vấn sửa đổi giá trị tại một vị trí. 
 > **Input:** `4 2` \ `1 5 2 8` \ `2 1 3` \ `1 2 10` $\implies$ **Output:** `5` (trước update).
 
 #### Cài đặt C++
@@ -143,62 +143,62 @@ int n, q;
 vector<long long> a, treeMax;
 
 void build(int id, int l, int r) {
-    if (l == r) {
-        treeMax[id] = a[l];
-        return;
-    }
-    int mid = l + (r - l) / 2;
-    build(2 * id, l, mid);
-    build(2 * id + 1, mid + 1, r);
-    treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
+if (l == r) {
+treeMax[id] = a[l];
+return;
+}
+int mid = l + (r - l) / 2;
+build(2 * id, l, mid);
+build(2 * id + 1, mid + 1, r);
+treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
 }
 
 void update(int id, int l, int r, int pos, long long val) {
-    if (l == r) {
-        treeMax[id] = val;
-        return;
-    }
-    int mid = l + (r - l) / 2;
-    if (pos <= mid) update(2 * id, l, mid, pos, val);
-    else update(2 * id + 1, mid + 1, r, pos, val);
-    treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
+if (l == r) {
+treeMax[id] = val;
+return;
+}
+int mid = l + (r - l) / 2;
+if (pos <= mid) update(2 * id, l, mid, pos, val);
+else update(2 * id + 1, mid + 1, r, pos, val);
+treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
 }
 
 long long queryMax(int id, int l, int r, int ql, int qr) {
-    if (ql > r || qr < l) return -1e18;
-    if (ql <= l && r <= qr) return treeMax[id];
-    int mid = l + (r - l) / 2;
-    return max(queryMax(2 * id, l, mid, ql, qr), queryMax(2 * id + 1, mid + 1, r, ql, qr));
+if (ql > r || qr < l) return -1e18;
+if (ql <= l && r <= qr) return treeMax[id];
+int mid = l + (r - l) / 2;
+return max(queryMax(2 * id, l, mid, ql, qr), queryMax(2 * id + 1, mid + 1, r, ql, qr));
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
+if (!(cin >> n >> q)) return 0;
 
-    a.resize(n + 1);
-    for (int i = 1; i <= n; i++) cin >> a[i];
+a.resize(n + 1);
+for (int i = 1; i <= n; i++) cin >> a[i];
 
-    treeMax.assign(4 * n + 1, 0);
-    build(1, 1, n);
+treeMax.assign(4 * n + 1, 0);
+build(1, 1, n);
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int pos;
-            long long val;
-            cin >> pos >> val;
-            update(1, 1, n, pos, val);
-        } else {
-            int l, r;
-            cin >> l >> r;
-            cout << queryMax(1, 1, n, l, r) << "\n";
-        }
-    }
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int pos;
+long long val;
+cin >> pos >> val;
+update(1, 1, n, pos, val);
+} else {
+int l, r;
+cin >> l >> r;
+cout << queryMax(1, 1, n, l, r) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -225,8 +225,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 16.3: Nâng Cấp Tải Trọng Tuyến Đường Vành Đai 3**  
-> **Bối cảnh:** $N$ đoạn đường vành đai. Thao tác 1: Tăng tải trọng đoạn $[L, R]$ thêm $V$ tấn. Thao tác 2: Tìm tải trọng lớn nhất trong đoạn $[L, R]$.  
+> **Bài toán mẫu 16.3: Nâng Cấp Tải Trọng Tuyến Đường Vành Đai 3** 
+> **Bối cảnh:** $N$ đoạn đường vành đai. Thao tác 1: Tăng tải trọng đoạn $[L, R]$ thêm $V$ tấn. Thao tác 2: Tìm tải trọng lớn nhất trong đoạn $[L, R]$. 
 > **Input:** `4 3` \ `1 2 3 4` \ `1 1 3 5` \ `2 1 2` \ `2 3 4` $\implies$ **Output:** `7` \ `8`.
 
 #### Cài đặt C++
@@ -238,77 +238,77 @@ int n, q;
 vector<long long> a, treeMax, lazyVal;
 
 void build(int id, int l, int r) {
-    if (l == r) {
-        treeMax[id] = a[l];
-        return;
-    }
-    int mid = l + (r - l) / 2;
-    build(2 * id, l, mid);
-    build(2 * id + 1, mid + 1, r);
-    treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
+if (l == r) {
+treeMax[id] = a[l];
+return;
+}
+int mid = l + (r - l) / 2;
+build(2 * id, l, mid);
+build(2 * id + 1, mid + 1, r);
+treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
 }
 
 void pushDown(int id) {
-    if (lazyVal[id] != 0) {
-        treeMax[2 * id] += lazyVal[id];
-        lazyVal[2 * id] += lazyVal[id];
-        treeMax[2 * id + 1] += lazyVal[id];
-        lazyVal[2 * id + 1] += lazyVal[id];
-        lazyVal[id] = 0;
-    }
+if (lazyVal[id] != 0) {
+treeMax[2 * id] += lazyVal[id];
+lazyVal[2 * id] += lazyVal[id];
+treeMax[2 * id + 1] += lazyVal[id];
+lazyVal[2 * id + 1] += lazyVal[id];
+lazyVal[id] = 0;
+}
 }
 
 void updateRange(int id, int l, int r, int ql, int qr, long long val) {
-    if (ql > r || qr < l) return;
-    if (ql <= l && r <= qr) {
-        treeMax[id] += val;
-        lazyVal[id] += val;
-        return;
-    }
-    pushDown(id);
-    int mid = l + (r - l) / 2;
-    updateRange(2 * id, l, mid, ql, qr, val);
-    updateRange(2 * id + 1, mid + 1, r, ql, qr, val);
-    treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
+if (ql > r || qr < l) return;
+if (ql <= l && r <= qr) {
+treeMax[id] += val;
+lazyVal[id] += val;
+return;
+}
+pushDown(id);
+int mid = l + (r - l) / 2;
+updateRange(2 * id, l, mid, ql, qr, val);
+updateRange(2 * id + 1, mid + 1, r, ql, qr, val);
+treeMax[id] = max(treeMax[2 * id], treeMax[2 * id + 1]);
 }
 
 long long queryMax(int id, int l, int r, int ql, int qr) {
-    if (ql > r || qr < l) return -1e18;
-    if (ql <= l && r <= qr) return treeMax[id];
-    pushDown(id);
-    int mid = l + (r - l) / 2;
-    return max(queryMax(2 * id, l, mid, ql, qr), queryMax(2 * id + 1, mid + 1, r, ql, qr));
+if (ql > r || qr < l) return -1e18;
+if (ql <= l && r <= qr) return treeMax[id];
+pushDown(id);
+int mid = l + (r - l) / 2;
+return max(queryMax(2 * id, l, mid, ql, qr), queryMax(2 * id + 1, mid + 1, r, ql, qr));
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
+if (!(cin >> n >> q)) return 0;
 
-    a.resize(n + 1);
-    for (int i = 1; i <= n; i++) cin >> a[i];
+a.resize(n + 1);
+for (int i = 1; i <= n; i++) cin >> a[i];
 
-    treeMax.assign(4 * n + 1, 0);
-    lazyVal.assign(4 * n + 1, 0);
-    build(1, 1, n);
+treeMax.assign(4 * n + 1, 0);
+lazyVal.assign(4 * n + 1, 0);
+build(1, 1, n);
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int l, r;
-            long long val;
-            cin >> l >> r >> val;
-            updateRange(1, 1, n, l, r, val);
-        } else {
-            int l, r;
-            cin >> l >> r;
-            cout << queryMax(1, 1, n, l, r) << "\n";
-        }
-    }
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int l, r;
+long long val;
+cin >> l >> r >> val;
+updateRange(1, 1, n, l, r, val);
+} else {
+int l, r;
+cin >> l >> r;
+cout << queryMax(1, 1, n, l, r) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -335,8 +335,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 16.4: Đếm Số Lượng Học Sinh Có Điểm Thấp Nhất**  
-> **Bối cảnh:** Tìm giá trị nhỏ nhất và đếm số lượng học sinh đạt điểm số nhỏ nhất trong đoạn $[L, R]$.  
+> **Bài toán mẫu 16.4: Đếm Số Lượng Học Sinh Có Điểm Thấp Nhất** 
+> **Bối cảnh:** Tìm giá trị nhỏ nhất và đếm số lượng học sinh đạt điểm số nhỏ nhất trong đoạn $[L, R]$. 
 > **Input:** `5 1` \ `2 1 3 1 4` \ `1 5` $\implies$ **Output:** `1 2` (min là 1, xuất hiện 2 lần).
 
 #### Cài đặt C++
@@ -345,8 +345,8 @@ int main() {
 using namespace std;
 
 struct Node {
-    long long minVal;
-    int cnt;
+long long minVal;
+int cnt;
 };
 
 int n, q;
@@ -354,49 +354,49 @@ vector<long long> a;
 vector<Node> treeNode;
 
 Node combine(Node left, Node right) {
-    if (left.minVal < right.minVal) return left;
-    if (right.minVal < left.minVal) return right;
-    return {left.minVal, left.cnt + right.cnt};
+if (left.minVal < right.minVal) return left;
+if (right.minVal < left.minVal) return right;
+return {left.minVal, left.cnt + right.cnt};
 }
 
 void build(int id, int l, int r) {
-    if (l == r) {
-        treeNode[id] = {a[l], 1};
-        return;
-    }
-    int mid = l + (r - l) / 2;
-    build(2 * id, l, mid);
-    build(2 * id + 1, mid + 1, r);
-    treeNode[id] = combine(treeNode[2 * id], treeNode[2 * id + 1]);
+if (l == r) {
+treeNode[id] = {a[l], 1};
+return;
+}
+int mid = l + (r - l) / 2;
+build(2 * id, l, mid);
+build(2 * id + 1, mid + 1, r);
+treeNode[id] = combine(treeNode[2 * id], treeNode[2 * id + 1]);
 }
 
 Node query(int id, int l, int r, int ql, int qr) {
-    if (ql > r || qr < l) return { (long long)1e18, 0 };
-    if (ql <= l && r <= qr) return treeNode[id];
-    int mid = l + (r - l) / 2;
-    return combine(query(2 * id, l, mid, ql, qr), query(2 * id + 1, mid + 1, r, ql, qr));
+if (ql > r || qr < l) return { (long long)1e18, 0 };
+if (ql <= l && r <= qr) return treeNode[id];
+int mid = l + (r - l) / 2;
+return combine(query(2 * id, l, mid, ql, qr), query(2 * id + 1, mid + 1, r, ql, qr));
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
+if (!(cin >> n >> q)) return 0;
 
-    a.resize(n + 1);
-    for (int i = 1; i <= n; i++) cin >> a[i];
+a.resize(n + 1);
+for (int i = 1; i <= n; i++) cin >> a[i];
 
-    treeNode.resize(4 * n + 1);
-    build(1, 1, n);
+treeNode.resize(4 * n + 1);
+build(1, 1, n);
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        Node res = query(1, 1, n, l, r);
-        cout << res.minVal << " " << res.cnt << "\n";
-    }
+while (q--) {
+int l, r;
+cin >> l >> r;
+Node res = query(1, 1, n, l, r);
+cout << res.minVal << " " << res.cnt << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 

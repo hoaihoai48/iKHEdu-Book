@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 2 1 5 3 4 2` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 2 1 5 3 4 2` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -49,26 +48,26 @@ Có tổng cộng 3 cặp số thỏa mãn.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
-    if (n <= 0) return 0;
+int n;
+long long k;
+if (!(cin >> n >> k)) return 0;
+if (n <= 0) return 0;
 
-    map<long long, int> freq;
-    long long ans = 0;
+map<long long, int> freq;
+long long ans = 0;
 
-    for (int i = 0; i < n; ++i) {
-        long long x;
-        cin >> x;
-        if (freq.count(x - k)) ans += freq[x - k];
-        if (k != 0 && freq.count(x + k)) ans += freq[x + k];
-        freq[x]++;
-    }
+for (int i = 0; i < n; ++i) {
+long long x;
+cin >> x;
+if (freq.count(x - k)) ans += freq[x - k];
+if (k != 0 && freq.count(x + k)) ans += freq[x + k];
+freq[x]++;
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

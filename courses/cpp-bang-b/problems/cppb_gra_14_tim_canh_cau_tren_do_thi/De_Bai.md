@@ -7,7 +7,7 @@ Một hệ thống giao thông đường thủy gồm $N$ cảng biển và $M$ 
 Cho đồ thị vô hướng liên thông $N$ đỉnh $M$ cạnh. Hãy lập trình đếm số lượng cạnh cầu trong đồ thị.
 
 ## Input
-- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u$ và $v$.
 
 ## Output

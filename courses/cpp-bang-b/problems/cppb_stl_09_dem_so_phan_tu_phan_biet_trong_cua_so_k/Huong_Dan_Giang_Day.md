@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `7 4 1 2 1 3 4 2 3` $\implies$ Đầu ra kỳ vọng: `3 4 4 3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `7 4 1 2 1 3 4 2 3` $\implies$ Đầu ra kỳ vọng: `3 4 4 3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -49,32 +48,32 @@ Kết quả in ra: 3 4 4 3.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    if (n <= 0 || k <= 0 || k > n) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
+if (n <= 0 || k <= 0 || k > n) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    map<int, int> freq;
-    for (int i = 0; i < k; ++i) freq[a[i]]++;
+map<int, int> freq;
+for (int i = 0; i < k; ++i) freq[a[i]]++;
 
-    cout << freq.size();
+cout << freq.size();
 
-    for (int i = k; i < n; ++i) {
-        // Xóa phần tử cũ
-        freq[a[i - k]]--;
-        if (freq[a[i - k]] == 0) freq.erase(a[i - k]);
+for (int i = k; i < n; ++i) {
+// Xóa phần tử cũ
+freq[a[i - k]]--;
+if (freq[a[i - k]] == 0) freq.erase(a[i - k]);
 
-        // Thêm phần tử mới
-        freq[a[i]]++;
+// Thêm phần tử mới
+freq[a[i]]++;
 
-        cout << " " << freq.size();
-    }
-    cout << "\n";
-    return 0;
+cout << " " << freq.size();
+}
+cout << "\n";
+return 0;
 }
 ```

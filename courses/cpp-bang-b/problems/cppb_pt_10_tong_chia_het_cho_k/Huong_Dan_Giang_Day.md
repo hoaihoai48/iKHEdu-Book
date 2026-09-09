@@ -7,13 +7,12 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 - **Bản chất bài toán:** Cho mảng gồm N số nguyên và số nguyên dương K. Hãy đếm số lượng đoạn con liên tiếp có tổng chia hết cho K.
 
 - **Phương pháp tiếp cận — Mảng tiền tố & Mảng hiệu:**
-  - Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
-  - Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
+- Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
+- Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 1 2 3 4 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 1 2 3 4 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các đoạn con liên tiếp có tổng chia hết cho 3 là: [1, 2] (tổng 3), [3] (tổng 3), [4, 5] (tổng 9), và [1, 2, 3] (tổng 6).... | Tính toán từng bước trạng thái |
@@ -36,31 +35,31 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
+int n;
+long long k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> cnt(k, 0);
-    cnt[0] = 1; // P[0] = 0
+vector<long long> cnt(k, 0);
+cnt[0] = 1; // P[0] = 0
 
-    long long current_sum = 0;
-    for (int i = 1; i <= n; ++i) {
-        long long x;
-        cin >> x;
-        current_sum += x;
-        long long rem = (current_sum % k + k) % k;
-        cnt[rem]++;
-    }
+long long current_sum = 0;
+for (int i = 1; i <= n; ++i) {
+long long x;
+cin >> x;
+current_sum += x;
+long long rem = (current_sum % k + k) % k;
+cnt[rem]++;
+}
 
-    long long total_pairs = 0;
-    for (int r = 0; r < k; ++r) {
-        total_pairs += cnt[r] * (cnt[r] - 1) / 2;
-    }
+long long total_pairs = 0;
+for (int r = 0; r < k; ++r) {
+total_pairs += cnt[r] * (cnt[r] - 1) / 2;
+}
 
-    cout << total_pairs << "\n";
-    return 0;
+cout << total_pairs << "\n";
+return 0;
 }
 ```

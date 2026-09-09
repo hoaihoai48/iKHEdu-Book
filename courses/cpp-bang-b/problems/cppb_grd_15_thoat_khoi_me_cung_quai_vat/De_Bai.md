@@ -1,7 +1,7 @@
 # Thoát Khỏi Mê Cung Quái Vật (Monsters Maze)
 
 ## Bối cảnh
-Trong một trò chơi phiêu lưu sinh tồn trên lưới ô vuông $N  × M$, một người thám hiểm xuất phát tại ô `A` và cần chạy thoát ra một ô biên bất kỳ của mê cung. Trong mê cung cũng có sự xuất hiện của một số quái vật tại các ô `M`. Tại mỗi giây, người thám hiểm và tất cả quái vật đều có thể di chuyển 1 bước sang ô kề cạnh. Nếu một con quái vật có thể tới một ô cùng lúc hoặc trước người thám hiểm, người thám hiểm sẽ bị bắt.
+Trong một trò chơi phiêu lưu sinh tồn trên lưới ô vuông $N × M$, một người thám hiểm xuất phát tại ô `A` và cần chạy thoát ra một ô biên bất kỳ của mê cung. Trong mê cung cũng có sự xuất hiện của một số quái vật tại các ô `M`. Tại mỗi giây, người thám hiểm và tất cả quái vật đều có thể di chuyển 1 bước sang ô kề cạnh. Nếu một con quái vật có thể tới một ô cùng lúc hoặc trước người thám hiểm, người thám hiểm sẽ bị bắt.
 
 ## Nhiệm vụ
 Cho bản đồ mê cung. Hãy lập trình kiểm tra xem người thám hiểm có thể thoát thân thành công ra mép biên hay không. Nếu có in ra `YES` kèm số bước, ngược lại in ra `NO`.

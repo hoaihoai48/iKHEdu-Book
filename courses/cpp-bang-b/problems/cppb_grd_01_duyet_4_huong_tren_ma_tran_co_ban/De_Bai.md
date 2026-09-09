@@ -1,7 +1,7 @@
 # Đếm Số Ô Kề Cạnh Hợp Lệ (4 Hướng)
 
 ## Bối cảnh
-Trong một hệ thống điều khiển lưới cảm biến kích thước $N  × M$ ô vuông (chỉ số các ô từ $(0, 0)$ đến $(N - 1, M - 1)$), một thiết bị di động đang đứng tại ô tọa độ $(r, c)$. Thiết bị chỉ có thể gửi tín hiệu không dây tới các ô kề sát cạnh theo 4 hướng chính: lên trên $(r - 1, c)$, xuống dưới $(r + 1, c)$, sang trái $(r, c - 1)$, và sang phải $(r, c + 1)$. Kỹ sư phần mềm cần kiểm tra xem có bao nhiêu hướng di chuyển hợp lệ vẫn nằm trọn vẹn bên trong phạm vi ma trận.
+Trong một hệ thống điều khiển lưới cảm biến kích thước $N × M$ ô vuông (chỉ số các ô từ $(0, 0)$ đến $(N - 1, M - 1)$), một thiết bị di động đang đứng tại ô tọa độ $(r, c)$. Thiết bị chỉ có thể gửi tín hiệu không dây tới các ô kề sát cạnh theo 4 hướng chính: lên trên $(r - 1, c)$, xuống dưới $(r + 1, c)$, sang trái $(r, c - 1)$, và sang phải $(r, c + 1)$. Kỹ sư phần mềm cần kiểm tra xem có bao nhiêu hướng di chuyển hợp lệ vẫn nằm trọn vẹn bên trong phạm vi ma trận.
 
 ## Nhiệm vụ
 Cho kích thước ma trận $N, M$ và tọa độ $(r, c)$. Hãy lập trình đếm số ô kề cạnh hợp lệ nằm trong ma trận.
@@ -23,7 +23,7 @@ Cho kích thước ma trận $N, M$ và tọa độ $(r, c)$. Hãy lập trình 
 ```
 
 ### Giải thích
-Với lưới kích thước $3  × 3$ và vị trí ô góc $(0, 0)$:
+Với lưới kích thước $3 × 3$ và vị trí ô góc $(0, 0)$:
 
 - Hướng lên trên và sang trái đều vượt ra ngoài biên của lưới.
 - Chỉ có 2 hướng hợp lệ là xuống dưới $(1, 0)$ và sang phải $(0, 1)$.

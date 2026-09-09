@@ -7,13 +7,12 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 - **Bản chất bài toán:** Cho 3 số nguyên A, B, M. Hãy tính A^B mod M bằng hàm đệ quy.
 
 - **Phương pháp tiếp cận — Thuật toán đệ quy & Cây gọi hàm:**
-  - Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
-  - Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
+- Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
+- Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 5 100)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 5 100` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 3^5 = 243. 243 mod 100 = 43. Kết quả in ra: 43.... | Tính toán từng bước trạng thái |
@@ -36,19 +35,19 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 using namespace std;
 
 long long powerRec(long long a, long long b, long long m) {
-    if (b == 0) return 1 % m;
-    long long half = powerRec(a, b / 2, m);
-    long long res = (1LL * (half % m) * (half % m)) % m;
-    if (b % 2 == 1) res = (1LL * res * (a % m)) % m;
-    return res;
+if (b == 0) return 1 % m;
+long long half = powerRec(a, b / 2, m);
+long long res = (1LL * (half % m) * (half % m)) % m;
+if (b % 2 == 1) res = (1LL * res * (a % m)) % m;
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    long long a, b, m;
-    if (!(cin >> a >> b >> m)) return 0;
-    cout << powerRec(a, b, m) << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+long long a, b, m;
+if (!(cin >> a >> b >> m)) return 0;
+cout << powerRec(a, b, m) << "\n";
+return 0;
 }
 ```

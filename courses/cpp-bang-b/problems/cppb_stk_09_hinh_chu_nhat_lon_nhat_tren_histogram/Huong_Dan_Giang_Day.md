@@ -11,14 +11,13 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Ngăn Xếp (Stack) & Monotonic Stack**
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý hoạt động:** Vào sau Ra trước (LIFO). Thích hợp giải quyết các bài toán cặp ngoặc lồng nhau, khử đệ quy và tính toán biểu thức hậu tố.
 - **Kỹ thuật Ngăn xếp đơn điệu (Monotonic Stack):**
-  * Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
-  * Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
-  * Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
+* Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
+* Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
+* Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `6 2 1 5 6 2 3` $\implies$ Đầu ra kỳ vọng: `10`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `6 2 1 5 6 2 3` $\implies$ Đầu ra kỳ vọng: `10`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -44,31 +43,31 @@ Hình chữ nhật lớn nhất được tạo thành bởi hai cột có chiề
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> h(n);
-    for (int i = 0; i < n; ++i) cin >> h[i];
+vector<long long> h(n);
+for (int i = 0; i < n; ++i) cin >> h[i];
 
-    h.push_back(0); // Cột lính canh
-    stack<int> st;
-    long long max_area = 0;
+h.push_back(0); // Cột lính canh
+stack<int> st;
+long long max_area = 0;
 
-    for (int i = 0; i <= n; ++i) {
-        while (!st.empty() && h[i] < h[st.top()]) {
-            long long height = h[st.top()];
-            st.pop();
-            long long width = st.empty() ? i : (i - st.top() - 1);
-            max_area = max(max_area, height * width);
-        }
-        st.push(i);
-    }
+for (int i = 0; i <= n; ++i) {
+while (!st.empty() && h[i] < h[st.top()]) {
+long long height = h[st.top()];
+st.pop();
+long long width = st.empty() i : (i - st.top() - 1);
+max_area = max(max_area, height * width);
+}
+st.push(i);
+}
 
-    cout << max_area << "\n";
-    return 0;
+cout << max_area << "\n";
+return 0;
 }
 ```

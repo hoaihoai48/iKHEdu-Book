@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho hai số nguyên dương $N$ và $K$ ($1 \le K \le N \le 16$). Hãy sử dụng thuật toán Quay lui có điều kiện chặn dưới tăng dần để sinh và in ra tất cả các tổ hợp chập $K$ của tập $\{1, 2, \dots, N\}$ theo thứ tự từ điển tăng dần.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Số lượng tổ hợp chập 2 của 4 chuyên gia là $C(4, 2) = \frac{4!}{2!2!} = 6$ tiểu ban. Các tiểu ban được liệt kê lần lượt ... | Tính toán từng bước trạng thái |
@@ -39,23 +38,23 @@ int n, k;
 vector<int> cur;
 
 void backtrack(int step, int start_val) {
-    if (step > k) {
-        for (int i = 0; i < k; ++i) cout << cur[i] << (i + 1 == k ? "" : " ");
-        cout << "\n";
-        return;
-    }
-    for (int val = start_val; val <= n - (k - step); ++val) {
-        cur.push_back(val);
-        backtrack(step + 1, val + 1);
-        cur.pop_back();
-    }
+if (step > k) {
+for (int i = 0; i < k; ++i) cout << cur[i] << (i + 1 == k "" : " ");
+cout << "\n";
+return;
+}
+for (int val = start_val; val <= n - (k - step); ++val) {
+cur.push_back(val);
+backtrack(step + 1, val + 1);
+cur.pop_back();
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n >> k)) return 0;
-    backtrack(1, 1);
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n >> k)) return 0;
+backtrack(1, 1);
+return 0;
 }
 ```

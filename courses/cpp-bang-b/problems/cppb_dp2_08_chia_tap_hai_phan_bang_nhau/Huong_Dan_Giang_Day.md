@@ -11,15 +11,14 @@ Chuyên đề: **Quy Hoạch Động 2 Chiều & Bài Toán Cái Túi (DP 2D / K
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái:** Định nghĩa $dp[i][j]$ biểu diễn kết quả tối ưu khi xét tiền tố $i$ đồ vật và sức chứa/trọng lượng còn lại là $j$, hoặc toạ độ ô $(i, j)$ trên lưới.
 - **Chuyển trạng thái bài toán Cái Túi (0/1 Knapsack):**
-  $$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
+$$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
 
 - **Kỹ thuật tối ưu bộ nhớ (Nén mảng 1D):** Với bài toán 0/1 Knapsack, duyệt lùi $w$ từ $W$ về $w_i$ để đảm bảo mỗi vật chỉ được chọn tối đa một lần; với Unbounded Knapsack, duyệt xuôi từ $w_i$ đến $W$.
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N \times W)$ hoặc $\mathcal{O}(N \times M)$, không gian tối ưu $\mathcal{O}(W)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 1 5 11 5` $\implies$ Đầu ra kỳ vọng: `YES`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 1 5 11 5` $\implies$ Đầu ra kỳ vọng: `YES`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -45,37 +44,37 @@ Tổng của toàn bộ dãy số là $1 + 5 + 11 + 5 = 22$. Ta có thể chia t
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<int> a(n);
-    int total_sum = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-        total_sum += a[i];
-    }
+vector<int> a(n);
+int total_sum = 0;
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+total_sum += a[i];
+}
 
-    if (total_sum % 2 != 0) {
-        cout << "NO\n";
-        return 0;
-    }
+if (total_sum % 2 != 0) {
+cout << "NO\n";
+return 0;
+}
 
-    int target = total_sum / 2;
-    vector<bool> dp(target + 1, false);
-    dp[0] = true;
+int target = total_sum / 2;
+vector<bool> dp(target + 1, false);
+dp[0] = true;
 
-    for (int x : a) {
-        for (int j = target; j >= x; --j) {
-            if (dp[j - x]) dp[j] = true;
-        }
-    }
+for (int x : a) {
+for (int j = target; j >= x; --j) {
+if (dp[j - x]) dp[j] = true;
+}
+}
 
-    if (dp[target]) cout << "YES\n";
-    else cout << "NO\n";
-    return 0;
+if (dp[target]) cout << "YES\n";
+else cout << "NO\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 - **Bản chất bài toán:** Cho xâu ký tự S gồm các chữ cái in thường. Hãy viết hàm đệ quy isPalindrome(S, L, R) kiểm tra xâu S có phải là Palindrome không. In YES nếu đúng, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Thuật toán đệ quy & Cây gọi hàm:**
-  - Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
-  - Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
+- Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
+- Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: radar)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `radar` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Xâu 'radar' đọc xuôi hay đọc ngược đều là 'radar' nên là xâu Palindrome -> in YES.... | Tính toán từng bước trạng thái |
@@ -36,21 +35,21 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 using namespace std;
 
 bool isPalindromeRec(const string &s, int l, int r) {
-    if (l >= r) return true;
-    if (s[l] != s[r]) return false;
-    return isPalindromeRec(s, l + 1, r - 1);
+if (l >= r) return true;
+if (s[l] != s[r]) return false;
+return isPalindromeRec(s, l + 1, r - 1);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    string s;
-    if (!(cin >> s)) return 0;
-    if (isPalindromeRec(s, 0, (int)s.size() - 1)) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
-    }
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+string s;
+if (!(cin >> s)) return 0;
+if (isPalindromeRec(s, 0, (int)s.size() - 1)) {
+cout << "YES\n";
+} else {
+cout << "NO\n";
+}
+return 0;
 }
 ```

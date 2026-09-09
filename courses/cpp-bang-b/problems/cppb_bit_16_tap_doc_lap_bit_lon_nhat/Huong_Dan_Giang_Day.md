@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho tập hợp N số nguyên dương (N <= 22). Hãy tìm kích thước lớn nhất của một tập con mà hai phần tử bất kỳ trong tập con đều có tích bit AND bằng 0.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 1 2 4 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 1 2 4 3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Tập con {1, 2, 4} gồm 3 số có các bit 1 độc lập từng đôi một: (1&2=0, 1&4=0, 2&4=0). Số lượng phần tử lớn nhất là 3.... | Tính toán từng bước trạng thái |
@@ -36,42 +35,42 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
 
-    int max_size = 0;
-    int total_masks = (1 << n);
+int max_size = 0;
+int total_masks = (1 << n);
 
-    for (int mask = 0; mask < total_masks; ++mask) {
-        long long used_bits = 0;
-        bool valid = true;
-        int current_count = 0;
+for (int mask = 0; mask < total_masks; ++mask) {
+long long used_bits = 0;
+bool valid = true;
+int current_count = 0;
 
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                if (used_bits & a[i]) {
-                    valid = false;
-                    break;
-                }
-                used_bits |= a[i];
-                current_count++;
-            }
-        }
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
+if (used_bits & a[i]) {
+valid = false;
+break;
+}
+used_bits |= a[i];
+current_count++;
+}
+}
 
-        if (valid) {
-            max_size = max(max_size, current_count);
-        }
-    }
+if (valid) {
+max_size = max(max_size, current_count);
+}
+}
 
-    cout << max_size << "\n";
-    return 0;
+cout << max_size << "\n";
+return 0;
 }
 ```

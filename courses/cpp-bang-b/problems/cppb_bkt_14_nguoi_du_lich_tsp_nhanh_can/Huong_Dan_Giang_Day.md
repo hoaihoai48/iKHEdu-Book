@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho số lượng thành phố $N$ và ma trận chi phí vận tải $C$ kích thước $N \times N$, trong đó $C_{i, j}$ là chi phí bay từ thành phố $i$ đến thành phố $j$. Hãy áp dụng thuật toán Nhánh Cận (Branch and Bound) với hàm cận dưới dựa trên cạnh có chi phí nhỏ nhất toàn đồ thị để tìm chu trình di chuyển có tổng chi phí thấp nhất.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 0 10 15 20 10 0 35 25 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 0 10 15 20 10 0 35 25 15 35 0 30 ` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Lộ trình tối ưu xuất phát từ thành phố 1 là: $1 \to 2 \to 4 \to 3 \to 1$. Tổng chi phí của hành trình là: $C_{1, 2} + C_... | Tính toán từng bước trạng thái |
@@ -42,37 +41,37 @@ long long min_edge = 1e9;
 long long best_cost = 1e18;
 
 void branchAndBound(int u, int count, long long current_cost) {
-    // Optimality Pruning
-    if (current_cost + (n - count + 1) * min_edge >= best_cost) return;
+// Optimality Pruning
+if (current_cost + (n - count + 1) * min_edge >= best_cost) return;
 
-    if (count == n) {
-        best_cost = min(best_cost, current_cost + c[u][1]);
-        return;
-    }
+if (count == n) {
+best_cost = min(best_cost, current_cost + c[u][1]);
+return;
+}
 
-    for (int v = 2; v <= n; ++v) {
-        if (!visited[v]) {
-            visited[v] = true;
-            branchAndBound(v, count + 1, current_cost + c[u][v]);
-            visited[v] = false;
-        }
-    }
+for (int v = 2; v <= n; ++v) {
+if (!visited[v]) {
+visited[v] = true;
+branchAndBound(v, count + 1, current_cost + c[u][v]);
+visited[v] = false;
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n)) return 0;
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= n; ++j) {
-            cin >> c[i][j];
-            if (i != j) min_edge = min(min_edge, c[i][j]);
-        }
-    }
-    memset(visited, false, sizeof(visited));
-    visited[1] = true;
-    branchAndBound(1, 1, 0);
-    cout << best_cost << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n)) return 0;
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= n; ++j) {
+cin >> c[i][j];
+if (i != j) min_edge = min(min_edge, c[i][j]);
+}
+}
+memset(visited, false, sizeof(visited));
+visited[1] = true;
+branchAndBound(1, 1, 0);
+cout << best_cost << "\n";
+return 0;
 }
 ```

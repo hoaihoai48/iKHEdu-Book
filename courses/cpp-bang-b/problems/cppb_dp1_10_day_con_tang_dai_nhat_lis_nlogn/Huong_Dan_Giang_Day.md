@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `6 5 2 7 4 3 8` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `6 5 2 7 4 3 8` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -43,27 +42,27 @@ Dãy con tăng nghiêm ngặt dài nhất có thể chọn là $[2, 4, 8]$ (ho�
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    vector<long long> tails;
-    for (int i = 0; i < n; ++i) {
-        auto it = lower_bound(tails.begin(), tails.end(), a[i]);
-        if (it == tails.end()) {
-            tails.push_back(a[i]);
-        } else {
-            *it = a[i];
-        }
-    }
+vector<long long> tails;
+for (int i = 0; i < n; ++i) {
+auto it = lower_bound(tails.begin(), tails.end(), a[i]);
+if (it == tails.end()) {
+tails.push_back(a[i]);
+} else {
+*it = a[i];
+}
+}
 
-    cout << tails.size() << "\n";
-    return 0;
+cout << tails.size() << "\n";
+return 0;
 }
 ```

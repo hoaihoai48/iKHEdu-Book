@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho số nguyên không âm N và Q thao tác: loại 1 (bật bit thứ k), loại 2 (tắt bit thứ k), loại 3 (kiểm tra trạng thái bit thứ k). Với thao tác loại 3, in ra 1 nếu bit đang bật, ngược lại in 0.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 4 3 0 3 1 1 1 3 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 4 3 0 3 1 1 1 3 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | N = 5 có biểu diễn nhị phân là 101_2: - Thao tác 3 0: Bit thứ 0 có giá trị 1 -> in 1. - Thao tác 3 1: Bit thứ 1 có giá t... | Tính toán từng bước trạng thái |
@@ -41,25 +40,25 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    unsigned long long n;
-    int q;
-    if (!(cin >> n >> q)) return 0;
+unsigned long long n;
+int q;
+if (!(cin >> n >> q)) return 0;
 
-    while (q--) {
-        int type, k;
-        cin >> type >> k;
-        if (type == 1) {
-            n |= (1ULL << k);
-        } else if (type == 2) {
-            n &= ~(1ULL << k);
-        } else if (type == 3) {
-            cout << ((n >> k) & 1ULL) << "\n";
-        }
-    }
+while (q--) {
+int type, k;
+cin >> type >> k;
+if (type == 1) {
+n |= (1ULL << k);
+} else if (type == 2) {
+n &= ~(1ULL << k);
+} else if (type == 3) {
+cout << ((n >> k) & 1ULL) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```

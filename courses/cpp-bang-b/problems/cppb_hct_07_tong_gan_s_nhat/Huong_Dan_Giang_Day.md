@@ -8,8 +8,7 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 20 2 8 13 4 25)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 20 2 8 13 4 25` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp danh sách điện trở tăng dần: [2, 4, 8, 13, 25] và S = 20. Xét các cặp có tổng gần 20: cặp (8, 13) có tổng 8 + 13... | Tính toán từng bước trạng thái |
@@ -32,38 +31,38 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    int l = 0, r = n - 1;
-    long long best_diff = -1;
-    long long ans_l = a[0], ans_r = a[1];
+int l = 0, r = n - 1;
+long long best_diff = -1;
+long long ans_l = a[0], ans_r = a[1];
 
-    while (l < r) {
-        long long cur_sum = a[l] + a[r];
-        long long cur_diff = abs(cur_sum - s);
+while (l < r) {
+long long cur_sum = a[l] + a[r];
+long long cur_diff = abs(cur_sum - s);
 
-        if (best_diff == -1 || cur_diff < best_diff || (cur_diff == best_diff && cur_sum < ans_l + ans_r)) {
-            best_diff = cur_diff;
-            ans_l = a[l];
-            ans_r = a[r];
-        }
+if (best_diff == -1 || cur_diff < best_diff || (cur_diff == best_diff && cur_sum < ans_l + ans_r)) {
+best_diff = cur_diff;
+ans_l = a[l];
+ans_r = a[r];
+}
 
-        if (cur_sum == s) break;
-        else if (cur_sum < s) ++l;
-        else --r;
-    }
+if (cur_sum == s) break;
+else if (cur_sum < s) ++l;
+else --r;
+}
 
-    cout << ans_l << " " << ans_r << "\n";
-    return 0;
+cout << ans_l << " " << ans_r << "\n";
+return 0;
 }
 ```

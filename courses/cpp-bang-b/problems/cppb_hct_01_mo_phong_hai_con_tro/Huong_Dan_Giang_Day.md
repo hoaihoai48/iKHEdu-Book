@@ -15,8 +15,7 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 20 2 5 8 12 19)
-| Bước | Thao tác thực hiện | Dữ liệu biến đổi | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Thao tác thực hiện | Dữ liệu biến đổi | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu vào | Input: `5 20 2 5 8 12 19` | Nạp dữ liệu vào các biến/mảng |
 | 2 | Thực thi thuật toán theo từng bước | Phân tích biến: Xét mảng đã sắp xếp: [2, 5, 8, 12, 19] và S = 20. Khởi tạo hai con trỏ L trỏ vào 2 (chỉ số 1) và R trỏ vào 19 (chỉ số 5). Tổng 2 + 19 = 21 > 20 -> giảm R xuống trỏ vào 12. Tiếp tục tính tổng 2 + 12 = 14 < 20 -> tăng L trỏ vào 5. Tổng 5 + 12 = 17 < 20 -> tăng L trỏ vào 8. Khi L trỏ vào 8 và R trỏ vào 12, tổng 8 + 12 = 20 đúng bằng S. Do đó in ra YES. | Cập nhật trạng thái tối ưu |
@@ -39,33 +38,33 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    int l = 0, r = n - 1;
-    bool found = false;
+int l = 0, r = n - 1;
+bool found = false;
 
-    while (l < r) {
-        long long sum = a[l] + a[r];
-        if (sum == s) {
-            found = true;
-            break;
-        } else if (sum < s) {
-            ++l;
-        } else {
-            --r;
-        }
-    }
+while (l < r) {
+long long sum = a[l] + a[r];
+if (sum == s) {
+found = true;
+break;
+} else if (sum < s) {
+++l;
+} else {
+--r;
+}
+}
 
-    if (found) cout << "YES\n";
-    else cout << "NO\n";
-    return 0;
+if (found) cout << "YES\n";
+else cout << "NO\n";
+return 0;
 }
 ```

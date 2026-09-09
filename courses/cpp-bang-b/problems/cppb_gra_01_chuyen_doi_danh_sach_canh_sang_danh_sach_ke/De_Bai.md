@@ -7,7 +7,7 @@ Một đồ thị mạng lưới giao thông gồm $N$ nút giao và $M$ con đ�
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình chuyển đổi sang biểu diễn danh sách kề và in ra các đỉnh kề của từng đỉnh theo thứ tự tăng dần.
 
 ## Input
-- Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai số nguyên $u$ và $v$ ($1 \le u, v \le N, u 
 e v$) biểu diễn một cạnh.
 

@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng gồm N số nguyên. Với mỗi câu hỏi gồm khoảng [L, R] (L <= R), hãy đếm số lượng phần tử của mảng có giá trị nằm trong đoạn [L, R] (L <= A[i] <= R).
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 5 1 8 3 2 2 5 1 1 6 7)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 5 1 8 3 2 2 5 1 1 6 7` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp mảng: [1, 2, 3, 5, 8]. - Đoạn [2, 5]: có 3 phần tử {2, 3, 5} -> in 3. - Đoạn [1, 1]: có 1 phần tử {1} -> in 1. -... | Tính toán từng bước trạng thái |
@@ -40,26 +39,26 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
-    sort(a.begin(), a.end());
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
+sort(a.begin(), a.end());
 
-    while (q--) {
-        long long l, r;
-        cin >> l >> r;
-        auto it_l = lower_bound(a.begin(), a.end(), l);
-        auto it_r = upper_bound(a.begin(), a.end(), r);
-        cout << (it_r - it_l) << "\n";
-    }
+while (q--) {
+long long l, r;
+cin >> l >> r;
+auto it_l = lower_bound(a.begin(), a.end(), l);
+auto it_r = upper_bound(a.begin(), a.end(), r);
+cout << (it_r - it_l) << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```

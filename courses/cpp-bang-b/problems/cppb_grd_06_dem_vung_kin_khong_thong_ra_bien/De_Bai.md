@@ -1,10 +1,10 @@
 # Đếm Số Ô Vùng Kín Không Thông Ra Biên
 
 ## Bối cảnh
-Một vùng trũng ngập nước được số hóa thành lưới $N  × M$. Các ô đất liền có giá trị `1`, ô ngập nước có giá trị `0`. Một vùng đất được gọi là "vùng kín" nếu nó là một cụm các ô `1` liên thông kề cạnh mà hoàn toàn không có bất kỳ ô nào chạm vào 4 mép biên ngoài của bản đồ (nghĩa là vùng đất bị bao bọc hoàn toàn bởi các ô nước).
+Một vùng trũng ngập nước được số hóa thành lưới $N × M$. Các ô đất liền có giá trị `1`, ô ngập nước có giá trị `0`. Một vùng đất được gọi là "vùng kín" nếu nó là một cụm các ô `1` liên thông kề cạnh mà hoàn toàn không có bất kỳ ô nào chạm vào 4 mép biên ngoài của bản đồ (nghĩa là vùng đất bị bao bọc hoàn toàn bởi các ô nước).
 
 ## Nhiệm vụ
-Cho ma trận nhị phân $N  × M$. Hãy lập trình đếm tổng số lượng ô đất liền `1` thuộc về các vùng đất kín không thông ra biên.
+Cho ma trận nhị phân $N × M$. Hãy lập trình đếm tổng số lượng ô đất liền `1` thuộc về các vùng đất kín không thông ra biên.
 
 ## Input
 - Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$).

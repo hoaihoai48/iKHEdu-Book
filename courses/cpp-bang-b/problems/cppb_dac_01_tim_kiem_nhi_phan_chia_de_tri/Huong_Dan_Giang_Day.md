@@ -6,14 +6,13 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng N số nguyên đã sắp xếp tăng dần và số nguyên X. Hãy tìm vị trí (1-indexed) của X bằng đệ quy chia để trị. Nếu không tìm thấy, in ra -1.
 
-- **Phương pháp tiếp cận — Chia để trị (Divide and Conquer):**
-  - Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
-  - Giải quyết bài toán con và gộp kết quả tối ưu.
+- **Phương pháp tiếp cận — Chia để trị:**
+- Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
+- Giải quyết bài toán con và gộp kết quả tối ưu.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 7 1 3 5 7 9)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 7 1 3 5 7 9` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Số 7 nằm ở vị trí thứ 4 trong mảng đã sắp xếp. Kết quả in ra: 4.... | Tính toán từng bước trạng thái |
@@ -36,28 +35,28 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 using namespace std;
 
 int binarySearchDac(const vector<long long> &a, int l, int r, long long x) {
-    if (l > r) return -1;
-    int mid = l + (r - l) / 2;
-    if (a[mid] == x) {
-        int left_res = binarySearchDac(a, l, mid - 1, x);
-        if (left_res != -1) return left_res;
-        return mid;
-    }
-    if (a[mid] > x) return binarySearchDac(a, l, mid - 1, x);
-    return binarySearchDac(a, mid + 1, r, x);
+if (l > r) return -1;
+int mid = l + (r - l) / 2;
+if (a[mid] == x) {
+int left_res = binarySearchDac(a, l, mid - 1, x);
+if (left_res != -1) return left_res;
+return mid;
+}
+if (a[mid] > x) return binarySearchDac(a, l, mid - 1, x);
+return binarySearchDac(a, mid + 1, r, x);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    long long x;
-    if (!(cin >> n >> x)) return 0;
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    int ans = binarySearchDac(a, 0, n - 1, x);
-    if (ans != -1) ans += 1;
-    cout << ans << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+long long x;
+if (!(cin >> n >> x)) return 0;
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+int ans = binarySearchDac(a, 0, n - 1, x);
+if (ans != -1) ans += 1;
+cout << ans << "\n";
+return 0;
 }
 ```

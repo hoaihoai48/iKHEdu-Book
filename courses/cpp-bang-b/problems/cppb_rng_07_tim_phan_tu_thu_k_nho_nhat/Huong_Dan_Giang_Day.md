@@ -10,17 +10,16 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Cây Phân Đoạn (Segment Tree & Fenw
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Fenwick Tree (Binary Indexed Tree):**
-  * Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
-  * Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
+* Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
+* Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
 - **Segment Tree (Cây phân đoạn):**
-  * Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
-  * Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
+* Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
+* Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
 - **Độ phức tạp:** Xây dựng cây $\mathcal{O}(N)$, mỗi thao tác truy vấn / cập nhật chỉ tốn $\mathcal{O}(\log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 1 10 1 20 1 15 2 2 2 3` $\implies$ Đầu ra kỳ vọng: `15 20`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 1 10 1 20 1 15 2 2 2 3` $\implies$ Đầu ra kỳ vọng: `15 20`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,47 +47,47 @@ using namespace std;
 const int MAX_VAL = 200000;
 
 struct FenwickTree {
-    int bit[MAX_VAL + 5];
-    FenwickTree() { memset(bit, 0, sizeof(bit)); }
+int bit[MAX_VAL + 5];
+FenwickTree() { memset(bit, 0, sizeof(bit)); }
 
-    void update(int x, int val) {
-        for (; x <= MAX_VAL; x += x & -x) bit[x] += val;
-    }
+void update(int x, int val) {
+for (; x <= MAX_VAL; x += x & -x) bit[x] += val;
+}
 
-    int findKth(int k) {
-        int idx = 0;
-        for (int i = 1 << 18; i > 0; i >>= 1) {
-            if (idx + i <= MAX_VAL && bit[idx + i] < k) {
-                idx += i;
-                k -= bit[idx];
-            }
-        }
-        return idx + 1;
-    }
+int findKth(int k) {
+int idx = 0;
+for (int i = 1 << 18; i > 0; i >>= 1) {
+if (idx + i <= MAX_VAL && bit[idx + i] < k) {
+idx += i;
+k -= bit[idx];
+}
+}
+return idx + 1;
+}
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    FenwickTree ft;
+FenwickTree ft;
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int x;
-            cin >> x;
-            ft.update(x, 1);
-        } else {
-            int k;
-            cin >> k;
-            cout << ft.findKth(k) << "\n";
-        }
-    }
-    return 0;
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int x;
+cin >> x;
+ft.update(x, 1);
+} else {
+int k;
+cin >> k;
+cout << ft.findKth(k) << "\n";
+}
+}
+return 0;
 }
 ```

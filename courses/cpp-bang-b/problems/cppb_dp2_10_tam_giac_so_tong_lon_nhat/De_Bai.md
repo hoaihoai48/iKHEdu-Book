@@ -29,11 +29,11 @@ Cho cấu trúc kim tự tháp số $N$ tầng. Hãy lập trình tìm đường
 
 ### Giải thích
 Với tam giác số gồm 4 tầng:
-  3
-  7 4
-  2 4 6
-  8 5 9 3
-Đường đi mang lại tổng lớn nhất là $3  × o 7  × o 4  × o 9$, cho tổng lớn nhất là $3 + 7 + 4 + 9 = 23$.
+3
+7 4
+2 4 6
+8 5 9 3
+Đường đi mang lại tổng lớn nhất là $3 × o 7 × o 4 × o 9$, cho tổng lớn nhất là $3 + 7 + 4 + 9 = 23$.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N \le 1000, 0 \le A_{i, j} \le 10^4$.

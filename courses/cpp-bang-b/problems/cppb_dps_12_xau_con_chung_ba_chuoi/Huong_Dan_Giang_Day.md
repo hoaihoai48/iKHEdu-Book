@@ -11,14 +11,13 @@ Chuyên đề: **Quy Hoạch Động Trên Chuỗi (String DP: LCS & Edit Distan
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái xâu:** Gọi $dp[i][j]$ là đáp số tối ưu khi so khớp tiền tố độ dài $i$ của xâu $S$ và tiền tố độ dài $j$ của xâu $T$.
 - **Công thức chuyển trạng thái tiêu biểu:**
-  * *Xâu con chung dài nhất (LCS):* Nếu $S[i-1] == T[j-1]$ thì $dp[i][j] = dp[i-1][j-1] + 1$; ngược lại $dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$.
-  * *Khoảng cách chỉnh sửa (Edit Distance):* Lấy giá trị nhỏ nhất giữa 3 thao tác: Chèn ($dp[i][j-1] + 1$), Xoá ($dp[i-1][j] + 1$), Thay thế ($dp[i-1][j-1] + (S[i-1] \neq T[j-1])$).
+* *Xâu con chung dài nhất (LCS):* Nếu $S[i-1] == T[j-1]$ thì $dp[i][j] = dp[i-1][j-1] + 1$; ngược lại $dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$.
+* *Khoảng cách chỉnh sửa (Edit Distance):* Lấy giá trị nhỏ nhất giữa 3 thao tác: Chèn ($dp[i][j-1] + 1$), Xoá ($dp[i-1][j] + 1$), Thay thế ($dp[i-1][j-1] + (S[i-1] \neq T[j-1])$).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(|S| \times |T|)$, bộ nhớ $\mathcal{O}(|S| \times |T|)$ hoặc $\mathcal{O}(\min(|S|, |T|))$ khi nén 2 hàng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `geeks geek geekfor` $\implies$ Đầu ra kỳ vọng: `4`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `geeks geek geekfor` $\implies$ Đầu ra kỳ vọng: `4`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -45,28 +44,28 @@ Chuỗi con chung dài nhất xuất hiện trong cả 3 chuỗi là $\text{"gee
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s1, s2, s3;
-    if (!(cin >> s1 >> s2 >> s3)) return 0;
+string s1, s2, s3;
+if (!(cin >> s1 >> s2 >> s3)) return 0;
 
-    int n1 = s1.size(), n2 = s2.size(), n3 = s3.size();
-    vector<vector<vector<int>>> dp(n1 + 1, vector<vector<int>>(n2 + 1, vector<int>(n3 + 1, 0)));
+int n1 = s1.size(), n2 = s2.size(), n3 = s3.size();
+vector<vector<vector<int>>> dp(n1 + 1, vector<vector<int>>(n2 + 1, vector<int>(n3 + 1, 0)));
 
-    for (int i = 1; i <= n1; ++i) {
-        for (int j = 1; j <= n2; ++j) {
-            for (int k = 1; k <= n3; ++k) {
-                if (s1[i - 1] == s2[j - 1] && s2[j - 1] == s3[k - 1]) {
-                    dp[i][j][k] = dp[i - 1][j - 1][k - 1] + 1;
-                } else {
-                    dp[i][j][k] = max({dp[i - 1][j][k], dp[i][j - 1][k], dp[i][j][k - 1]});
-                }
-            }
-        }
-    }
+for (int i = 1; i <= n1; ++i) {
+for (int j = 1; j <= n2; ++j) {
+for (int k = 1; k <= n3; ++k) {
+if (s1[i - 1] == s2[j - 1] && s2[j - 1] == s3[k - 1]) {
+dp[i][j][k] = dp[i - 1][j - 1][k - 1] + 1;
+} else {
+dp[i][j][k] = max({dp[i - 1][j][k], dp[i][j - 1][k], dp[i][j][k - 1]});
+}
+}
+}
+}
 
-    cout << dp[n1][n2][n3] << "\n";
-    return 0;
+cout << dp[n1][n2][n3] << "\n";
+return 0;
 }
 ```

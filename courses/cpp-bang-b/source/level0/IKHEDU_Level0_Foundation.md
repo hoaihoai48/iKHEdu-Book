@@ -4,16 +4,16 @@ Mọi bài toán đều bắt đầu bằng chuỗi câu hỏi:
 
 ```text
 Đề bài → Dữ liệu → Biến → Công thức/Điều kiện
-       → Các bước xử lý → Code → Kiểm tra kết quả
+→ Các bước xử lý → Code → Kiểm tra kết quả
 ```
 
 ### Mô hình Input – Process – Output
 
 | Thành phần | Câu hỏi cần trả lời |
 |---|---|
-| **Input** | Chương trình nhận những dữ liệu nào? |
-| **Process** | Cần tính toán, kiểm tra hoặc lặp lại việc gì? |
-| **Output** | Cần in ra kết quả nào, theo định dạng nào? |
+| **Input** | Chương trình nhận những dữ liệu nào |
+| **Process** | Cần tính toán, kiểm tra hoặc lặp lại việc gì |
+| **Output** | Cần in ra kết quả nào, theo định dạng nào |
 
 Trước khi viết code, hãy viết bằng lời hoặc pseudocode:
 
@@ -54,14 +54,14 @@ double average = 1.0 * sum / n;
 
 | Từ khóa | Câu hỏi tự kiểm tra |
 |---|---|
-| **Biến** | Tôi cần lưu dữ liệu gì? |
-| **Tính** | Tôi cần công thức nào? |
-| **Điều kiện** | Tôi cần đưa ra quyết định nào? |
-| **Lặp** | Tôi cần làm việc gì nhiều lần? |
-| **Tích lũy** | Tôi cần cộng, đếm, tìm lớn nhất hay nhỏ nhất? |
-| **Mảng** | Tôi có nhiều dữ liệu cùng loại không? |
-| **Hàm** | Tôi có thể tách phần việc nào thành một nhiệm vụ riêng? |
-| **Debug** | Nếu kết quả sai, tôi sẽ kiểm tra từ đâu? |
+| **Biến** | Tôi cần lưu dữ liệu gì |
+| **Tính** | Tôi cần công thức nào |
+| **Điều kiện** | Tôi cần đưa ra quyết định nào |
+| **Lặp** | Tôi cần làm việc gì nhiều lần |
+| **Tích lũy** | Tôi cần cộng, đếm, tìm lớn nhất hay nhỏ nhất |
+| **Mảng** | Tôi có nhiều dữ liệu cùng loại không |
+| **Hàm** | Tôi có thể tách phần việc nào thành một nhiệm vụ riêng |
+| **Debug** | Nếu kết quả sai, tôi sẽ kiểm tra từ đâu |
 
 ---
 
@@ -72,15 +72,15 @@ double average = 1.0 * sum / n;
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    // 1. Khai báo biến
-    // 2. Đọc dữ liệu
-    // 3. Xử lý
-    // 4. In kết quả
+// 1. Khai báo biến
+// 2. Đọc dữ liệu
+// 3. Xử lý
+// 4. In kết quả
 
-    return 0;
+return 0;
 }
 ```
 
@@ -180,7 +180,7 @@ Trong phần lớn bài thi cơ bản, dữ liệu dạng số hoặc từ khôn
 // 1. Đọc nhiều bộ test đến khi hết file
 int n;
 while (cin >> n) {
-    // xử lý từng bộ test
+// xử lý từng bộ test
 }
 
 // 2. Đọc dòng có khoảng trắng sau khi đã cin >> n
@@ -227,7 +227,7 @@ Khi cả hai toán hạng là số nguyên, phép `/` cho phần nguyên. Toán 
 ### Toán tử so sánh
 
 ```cpp
->    <    >=    <=    ==    !=
+> < >= <= == !=
 ```
 
 | Toán tử | Ý nghĩa |
@@ -257,9 +257,9 @@ Khi cả hai toán hạng là số nguyên, phép `/` cho phần nguyên. Toán 
 
 ```cpp
 if (condition) {
-    // việc A
+// việc A
 } else {
-    // việc B
+// việc B
 }
 ```
 
@@ -267,20 +267,20 @@ Mô hình bằng lời:
 
 ```text
 NẾU điều kiện đúng
-    thực hiện A
+thực hiện A
 NGƯỢC LẠI
-    thực hiện B
+thực hiện B
 ```
 
 ### Nhiều trường hợp
 
 ```cpp
 if (score >= 8) {
-    cout << "Gioi";
+cout << "Gioi";
 } else if (score >= 6.5) {
-    cout << "Kha";
+cout << "Kha";
 } else {
-    cout << "Can co gang";
+cout << "Can co gang";
 }
 ```
 
@@ -303,15 +303,15 @@ Chỉ dùng khi quyết định thứ hai phụ thuộc vào quyết định th�
 
 Trước khi viết vòng lặp, trả lời ba câu hỏi:
 
-1. Việc gì được lặp lại?
-2. Biến nào thay đổi sau mỗi lần?
-3. Khi nào vòng lặp dừng?
+1. Việc gì được lặp lại
+2. Biến nào thay đổi sau mỗi lần
+3. Khi nào vòng lặp dừng
 
 ### `for`: biết trước số lần hoặc khoảng lặp
 
 ```cpp
 for (int i = 0; i < n; i++) {
-    // xử lý phần tử thứ i
+// xử lý phần tử thứ i
 }
 ```
 
@@ -321,8 +321,8 @@ Với mảng có `n` phần tử, chỉ số thường chạy từ `0` đến `n
 
 ```cpp
 while (condition) {
-    // xử lý
-    // phải có cách làm condition thay đổi
+// xử lý
+// phải có cách làm condition thay đổi
 }
 ```
 
@@ -332,7 +332,7 @@ Nếu điều kiện không bao giờ sai, chương trình có thể lặp vô h
 
 ```cpp
 do {
-    // xử lý
+// xử lý
 } while (condition);
 ```
 
@@ -342,9 +342,9 @@ Trong phần C++ cơ bản, `for` và `while` là hai dạng cần dùng thành 
 
 ```cpp
 for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++) {
-        // xử lý từng cặp (i, j)
-    }
+for (int j = 0; j < m; j++) {
+// xử lý từng cặp (i, j)
+}
 }
 ```
 
@@ -359,7 +359,7 @@ Nếu vòng ngoài chạy `N` lần và vòng trong chạy `M` lần, số thao 
 ```cpp
 long long sum = 0;
 for (int x : a) {
-    sum += x;
+sum += x;
 }
 ```
 
@@ -368,7 +368,7 @@ for (int x : a) {
 ```cpp
 int count = 0;
 for (int x : a) {
-    if (x % 2 == 0) count++;
+if (x % 2 == 0) count++;
 }
 ```
 
@@ -377,7 +377,7 @@ for (int x : a) {
 ```cpp
 int mx = a[0];
 for (int x : a) {
-    mx = max(mx, x);
+mx = max(mx, x);
 }
 ```
 
@@ -386,7 +386,7 @@ for (int x : a) {
 ```cpp
 int mn = a[0];
 for (int x : a) {
-    mn = min(mn, x);
+mn = min(mn, x);
 }
 ```
 
@@ -412,11 +412,11 @@ cin >> n;
 
 vector<int> a(n);
 for (int i = 0; i < n; i++) {
-    cin >> a[i];
+cin >> a[i];
 }
 
 for (int i = 0; i < n; i++) {
-    cout << a[i] << ' ';
+cout << a[i] << ' ';
 }
 ```
 
@@ -424,7 +424,7 @@ for (int i = 0; i < n; i++) {
 
 ```cpp
 for (int x : a) {
-    cout << x << ' ';
+cout << x << ' ';
 }
 ```
 
@@ -448,9 +448,9 @@ string s;
 cin >> s;
 
 for (int i = 0; i < (int)s.size(); i++) {
-    if (s[i] == 'A') {
-        // xử lý ký tự A
-    }
+if (s[i] == 'A') {
+// xử lý ký tự A
+}
 }
 ```
 
@@ -470,7 +470,7 @@ for (int i = 0; i < (int)s.size(); i++) {
 
 ```cpp
 int square(int x) {
-    return x * x;
+return x * x;
 }
 ```
 
@@ -482,8 +482,8 @@ int result = square(5); // result = 25
 
 ```cpp
 return_type function_name(parameters) {
-    // xử lý
-    return value;
+// xử lý
+return value;
 }
 ```
 
@@ -491,8 +491,8 @@ Nếu hàm không trả về kết quả, dùng `void`:
 
 ```cpp
 void printLine(int n) {
-    for (int i = 0; i < n; i++) cout << '-';
-    cout << '\n';
+for (int i = 0; i < n; i++) cout << '-';
+cout << '\n';
 }
 ```
 
@@ -506,13 +506,13 @@ Khi chương trình sai, không đoán bừa. Hãy kiểm tra theo thứ tự:
 
 | Câu hỏi | Việc cần làm |
 |---|---|
-| Input có đúng không? | Đọc lại định dạng và số lượng dữ liệu |
-| Kiểu dữ liệu có đủ lớn không? | Kiểm tra `int`, `long long`, phép nhân và tổng |
-| Công thức có đúng không? | Tính thủ công bằng một ví dụ nhỏ |
-| Điều kiện có đúng không? | Thử trường hợp bằng biên, nhỏ hơn và lớn hơn biên |
-| Vòng lặp có chạy đủ không? | Theo dõi giá trị bắt đầu, kết thúc và bước nhảy |
-| Chỉ số có hợp lệ không? | Kiểm tra `0 ≤ i < n` |
-| Kết quả trung gian có đúng không? | In biến tạm tại vị trí cần kiểm tra |
+| Input có đúng không | Đọc lại định dạng và số lượng dữ liệu |
+| Kiểu dữ liệu có đủ lớn không | Kiểm tra `int`, `long long`, phép nhân và tổng |
+| Công thức có đúng không | Tính thủ công bằng một ví dụ nhỏ |
+| Điều kiện có đúng không | Thử trường hợp bằng biên, nhỏ hơn và lớn hơn biên |
+| Vòng lặp có chạy đủ không | Theo dõi giá trị bắt đầu, kết thúc và bước nhảy |
+| Chỉ số có hợp lệ không | Kiểm tra `0 ≤ i < n` |
+| Kết quả trung gian có đúng không | In biến tạm tại vị trí cần kiểm tra |
 
 ### In giá trị trung gian
 
@@ -536,7 +536,7 @@ Mỗi bài nên thử:
 
 ---
 
-## 12. ĐỘ PHỨC TẠP — CHƯƠNG TRÌNH CÓ ĐỦ NHANH?
+## 12. ĐỘ PHỨC TẠP — CHƯƠNG TRÌNH CÓ ĐỦ NHANH
 
 | Độ phức tạp | Trực giác |
 |---|---|
@@ -564,28 +564,28 @@ Mỗi bài nên thử:
 
 ```text
 BIẾN
-  Tôi cần lưu dữ liệu gì?
+Tôi cần lưu dữ liệu gì
 
 TÍNH
-  Tôi cần công thức nào?
+Tôi cần công thức nào
 
 ĐIỀU KIỆN
-  Tôi cần quyết định điều gì?
+Tôi cần quyết định điều gì
 
 LẶP
-  Tôi cần làm việc gì nhiều lần?
+Tôi cần làm việc gì nhiều lần
 
 TÍCH LŨY
-  Tôi cần cộng, đếm, max hay min?
+Tôi cần cộng, đếm, max hay min
 
 MẢNG
-  Tôi có nhiều dữ liệu cùng loại không?
+Tôi có nhiều dữ liệu cùng loại không
 
 HÀM
-  Tôi có thể tách nhiệm vụ nào thành một khối công việc riêng?
+Tôi có thể tách nhiệm vụ nào thành một khối công việc riêng
 
 DEBUG
-  Input, biến, công thức, điều kiện, vòng lặp và kết quả trung gian có đúng không?
+Input, biến, công thức, điều kiện, vòng lặp và kết quả trung gian có đúng không
 ```
 
 > **Mục tiêu của C++ Cơ bản:** Không phải nhớ thật nhiều câu lệnh, mà là nhìn một bài toán đơn giản và biết biến nó thành các bước có thể lập trình được.

@@ -1,7 +1,7 @@
 # Lây Lan Quả Cam Hỏng (Rotting Oranges)
 
 ## Bối cảnh
-Trong một thùng hàng hoa quả kích thước $N  × M$, mỗi ô có thể chứa: ô trống (số `0`), một quả cam tươi nguyên vẹn (số `1`), hoặc một quả cam đã bị hỏng mốc (số `2`). Cứ sau mỗi phút, những quả cam bị hỏng sẽ làm hỏng tất cả các quả cam tươi kề sát nó theo 4 hướng. Hãy tính số phút tối thiểu để toàn bộ cam tươi trong thùng đều bị hỏng. Nếu có quả cam tươi nào mãi mãi không bị hỏng (bị cô lập), in ra `-1`.
+Trong một thùng hàng hoa quả kích thước $N × M$, mỗi ô có thể chứa: ô trống (số `0`), một quả cam tươi nguyên vẹn (số `1`), hoặc một quả cam đã bị hỏng mốc (số `2`). Cứ sau mỗi phút, những quả cam bị hỏng sẽ làm hỏng tất cả các quả cam tươi kề sát nó theo 4 hướng. Hãy tính số phút tối thiểu để toàn bộ cam tươi trong thùng đều bị hỏng. Nếu có quả cam tươi nào mãi mãi không bị hỏng (bị cô lập), in ra `-1`.
 
 ## Nhiệm vụ
 Cho ma trận trạng thái thùng cam. Hãy lập trình tìm số phút ít nhất để tất cả cam tươi đều hỏng.
@@ -27,7 +27,7 @@ Cho ma trận trạng thái thùng cam. Hãy lập trình tìm số phút ít nh
 ```
 
 ### Giải thích
-Với thùng cam kích thước $3  × 3$:
+Với thùng cam kích thước $3 × 3$:
 
 - Phút 1: cam hỏng tại $(0, 0)$ lây sang các ô $(0, 1)$ và $(1, 0)$.
 - Phút 2: tiếp tục lây sang các ô kế tiếp.

@@ -16,19 +16,18 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 11 1 5 6` $\implies$ Đầu ra kỳ vọng: `2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 11 1 5 6` $\implies$ Đầu ra kỳ vọng: `2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `3 11 1 5 6` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Để đổi được số tiền $S = 11$ từ các mệnh giá xu $\{1, 5, 6\}$: - Cách 1: Dùng 1 đồng 6 và 5 đồng 1 ($6 + 1  × 5 = 11$), tổng cộng tốn 6... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Để đổi được số tiền $S = 11$ từ các mệnh giá xu $\{1, 5, 6\}$: - Cách 1: Dùng 1 đồng 6 và 5 đồng 1 ($6 + 1 × 5 = 11$), tổng cộng tốn 6... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2` |
 
 *Giải thích chi tiết:* Để đổi được số tiền $S = 11$ từ các mệnh giá xu $\{1, 5, 6\}$:
 
-- Cách 1: Dùng 1 đồng 6 và 5 đồng 1 ($6 + 1  × 5 = 11$), tổng cộng tốn 6 đồng xu.
-- Cách 2: Dùng 2 đồng 5 và 1 đồng 1 ($5  × 2 + 1 = 11$), tổng cộng tốn 3 đồng xu.
+- Cách 1: Dùng 1 đồng 6 và 5 đồng 1 ($6 + 1 × 5 = 11$), tổng cộng tốn 6 đồng xu.
+- Cách 2: Dùng 2 đồng 5 và 1 đồng 1 ($5 × 2 + 1 = 11$), tổng cộng tốn 3 đồng xu.
 - Phương án tối ưu nhất: Dùng 1 đồng 5 và 1 đồng 6 ($5 + 6 = 11$), chỉ cần đúng 2 đồng xu. Kết quả là 2.
 
 ---
@@ -48,29 +47,29 @@ using namespace std;
 const int INF = 1e9;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, s;
-    if (!(cin >> n >> s)) return 0;
-    if (n <= 0 || s < 0) return 0;
+int n, s;
+if (!(cin >> n >> s)) return 0;
+if (n <= 0 || s < 0) return 0;
 
-    vector<int> c(n);
-    for (int i = 0; i < n; ++i) cin >> c[i];
+vector<int> c(n);
+for (int i = 0; i < n; ++i) cin >> c[i];
 
-    vector<int> dp(s + 1, INF);
-    dp[0] = 0;
+vector<int> dp(s + 1, INF);
+dp[0] = 0;
 
-    for (int i = 1; i <= s; ++i) {
-        for (int coin : c) {
-            if (i >= coin && dp[i - coin] != INF) {
-                dp[i] = min(dp[i], dp[i - coin] + 1);
-            }
-        }
-    }
+for (int i = 1; i <= s; ++i) {
+for (int coin : c) {
+if (i >= coin && dp[i - coin] != INF) {
+dp[i] = min(dp[i], dp[i - coin] + 1);
+}
+}
+}
 
-    if (dp[s] == INF) cout << -1 << "\n";
-    else cout << dp[s] << "\n";
-    return 0;
+if (dp[s] == INF) cout << -1 << "\n";
+else cout << dp[s] << "\n";
+return 0;
 }
 ```

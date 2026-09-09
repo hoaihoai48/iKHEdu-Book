@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" style="background:#ffffff; font-family:'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <filter id="sh2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <text x="500" y="45" text-anchor="middle" font-size="22" font-weight="bold" fill="#0F172A">HỆ THỐNG KIỂU DỮ LIỆU C++ &amp; GIỚI HẠN TRÀN SỐ</text>
+  <text x="500" y="75" text-anchor="middle" font-size="14" fill="#64748B">Quy tắc vàng: Tổng/Tích vượt 2 × 10^9 bắt buộc dùng long long</text>
+
+  <!-- Table Header -->
+  <g transform="translate(60, 105)">
+    <rect width="880" height="45" rx="8" fill="#1E293B"/>
+    <text x="100" y="28" fill="#FFFFFF" font-weight="bold" font-size="15" text-anchor="middle">Kiểu dữ liệu</text>
+    <text x="240" y="28" fill="#FFFFFF" font-weight="bold" font-size="15" text-anchor="middle">Kích thước</text>
+    <text x="470" y="28" fill="#FFFFFF" font-weight="bold" font-size="15" text-anchor="middle">Phạm vi giá trị xấp xỉ</text>
+    <text x="750" y="28" fill="#FFFFFF" font-weight="bold" font-size="15" text-anchor="middle">Tử huyệt lập trình</text>
+  </g>
+
+  <!-- Row 1: int -->
+  <g transform="translate(60, 160)" filter="url(#sh2)">
+    <rect width="880" height="55" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="100" y="33" fill="#0284C7" font-family="Consolas" font-weight="bold" font-size="16" text-anchor="middle">int</text>
+    <text x="240" y="33" fill="#334155" font-size="14" text-anchor="middle">32-bit (4 Bytes)</text>
+    <text x="470" y="33" fill="#0F172A" font-size="14" text-anchor="middle">-2 × 10^9 đến +2 × 10^9</text>
+    <text x="750" y="33" fill="#DC2626" font-weight="bold" font-size="13" text-anchor="middle">Tràn số nếu tích &gt; 2 × 10^9</text>
+  </g>
+
+  <!-- Row 2: long long -->
+  <g transform="translate(60, 225)" filter="url(#sh2)">
+    <rect width="880" height="55" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="100" y="33" fill="#2563EB" font-family="Consolas" font-weight="bold" font-size="16" text-anchor="middle">long long</text>
+    <text x="240" y="33" fill="#1E40AF" font-size="14" text-anchor="middle">64-bit (8 Bytes)</text>
+    <text x="470" y="33" fill="#1E40AF" font-weight="bold" font-size="14" text-anchor="middle">-9 × 10^18 đến +9 × 10^18</text>
+    <text x="750" y="33" fill="#059669" font-weight="bold" font-size="13" text-anchor="middle">Khởi tạo hậu tố: 1LL, 0LL</text>
+  </g>
+
+  <!-- Row 3: double -->
+  <g transform="translate(60, 290)" filter="url(#sh2)">
+    <rect width="880" height="55" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="100" y="33" fill="#0D9488" font-family="Consolas" font-weight="bold" font-size="16" text-anchor="middle">double</text>
+    <text x="240" y="33" fill="#334155" font-size="14" text-anchor="middle">64-bit (8 Bytes)</text>
+    <text x="470" y="33" fill="#0F172A" font-size="14" text-anchor="middle">15-17 chữ số có nghĩa</text>
+    <text x="750" y="33" fill="#D97706" font-weight="bold" font-size="13" text-anchor="middle">Sai số dấu phẩy động (EPS)</text>
+  </g>
+
+  <!-- Row 4: char / string -->
+  <g transform="translate(60, 355)" filter="url(#sh2)">
+    <rect width="880" height="55" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="100" y="33" fill="#7C3AED" font-family="Consolas" font-weight="bold" font-size="16" text-anchor="middle">char / string</text>
+    <text x="240" y="33" fill="#334155" font-size="14" text-anchor="middle">1 Byte / Động</text>
+    <text x="470" y="33" fill="#0F172A" font-size="14" text-anchor="middle">Bảng mã ASCII 0..255</text>
+    <text x="750" y="33" fill="#6D28D9" font-weight="bold" font-size="13" text-anchor="middle">Trừ mã ký tự: c - '0', c - 'a'</text>
+  </g>
+</svg>

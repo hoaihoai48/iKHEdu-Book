@@ -1,13 +1,13 @@
-# Tính Tổng Hai Số
+# Tính tổng hai số
 
 ## Bối cảnh
-Trong giờ Toán, thầy giáo giao cho mỗi bạn hai số nguyên và yêu cầu tính tổng của chúng. Bạn An muốn viết một chương trình C++ để giải nhanh bài tập này thay vì tính bằng tay.
+Trong giờ học lập trình C++ đầu tiên, thầy giáo giao cho mỗi bạn học sinh hai số nguyên và yêu cầu viết chương trình tính tổng của chúng. Bạn An muốn hoàn thành thật nhanh bài toán này để làm quen với việc đọc và in dữ liệu trong C++.
 
 ## Nhiệm vụ
 Cho hai số nguyên $a$ và $b$. Hãy lập trình tính và in ra tổng $a + b$.
 
 ## Input
-- Một dòng duy nhất chứa hai số nguyên $a$ và $b$ ($-10^9 \le a, b \le 10^9$), cách nhau bởi khoảng trắng.
+- Một dòng duy nhất chứa hai số nguyên $a$ và $b$ ($-10^9 \le a, b \le 10^9$), cách nhau bởi một khoảng trắng.
 
 ## Output
 - In ra một số nguyên duy nhất là tổng $a + b$.

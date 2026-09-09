@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `6 10 20 10 30 20 50` $\implies$ Đầu ra kỳ vọng: `4`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `6 10 20 10 30 20 50` $\implies$ Đầu ra kỳ vọng: `4`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -43,29 +42,29 @@ Một dãy con tăng nghiêm ngặt dài nhất có thể chọn là $[10, 20, 3
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    vector<int> dp(n, 1);
-    int ans = 1;
+vector<int> dp(n, 1);
+int ans = 1;
 
-    for (int i = 1; i < n; ++i) {
-        for (int j = 0; j < i; ++j) {
-            if (a[j] < a[i]) {
-                dp[i] = max(dp[i], dp[j] + 1);
-            }
-        }
-        ans = max(ans, dp[i]);
-    }
+for (int i = 1; i < n; ++i) {
+for (int j = 0; j < i; ++j) {
+if (a[j] < a[i]) {
+dp[i] = max(dp[i], dp[j] + 1);
+}
+}
+ans = max(ans, dp[i]);
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

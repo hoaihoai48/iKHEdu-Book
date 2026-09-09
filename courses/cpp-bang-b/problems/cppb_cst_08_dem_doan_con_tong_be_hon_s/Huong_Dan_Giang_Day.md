@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 3 1 2 1 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 3 1 2 1 4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các đoạn con liên tiếp có tổng <= 3 là: [1] (tổng 1), [2] (tổng 2), [1] (ở vị trí 3, tổng 1), và [1, 2] (tổng 3). Tổng c... | Tính toán từng bước trạng thái |
@@ -32,30 +31,30 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    int l = 0;
-    long long cur_sum = 0;
-    long long count = 0;
+int l = 0;
+long long cur_sum = 0;
+long long count = 0;
 
-    for (int r = 0; r < n; ++r) {
-        cur_sum += a[r];
-        while (cur_sum > s) {
-            cur_sum -= a[l];
-            ++l;
-        }
-        count += (r - l + 1);
-    }
+for (int r = 0; r < n; ++r) {
+cur_sum += a[r];
+while (cur_sum > s) {
+cur_sum -= a[l];
+++l;
+}
+count += (r - l + 1);
+}
 
-    cout << count << "\n";
-    return 0;
+cout << count << "\n";
+return 0;
 }
 ```

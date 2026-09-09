@@ -7,7 +7,7 @@ Một robot thám hiểm cần khám phá toàn bộ các gian phòng trong mộ
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và đỉnh xuất phát $S$. Hãy lập trình in ra thứ tự các đỉnh được robot ghé thăm trong quá trình duyệt theo chiều sâu (khi có nhiều lựa chọn, luôn ưu tiên đỉnh có số hiệu nhỏ hơn).
 
 ## Input
-- Dòng 1: Chứa 3 số nguyên $N, M, S$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5, 1 \le S \le N$).
+- Dòng 1: Chứa 3 số nguyên $N, M, S$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5, 1 \le S \le N$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u, v$.
 
 ## Output

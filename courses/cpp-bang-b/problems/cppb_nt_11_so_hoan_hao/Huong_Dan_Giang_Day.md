@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy kiểm tra xem N có phải là số hoàn hảo hay không. In YES nếu đúng, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 28)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `28` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các ước số thực sự của 28 là {1, 2, 4, 7, 14}. Tổng của chúng là 1 + 2 + 4 + 7 + 14 = 28. Vì vậy 28 là số hoàn hảo -> in... | Tính toán từng bước trạng thái |
@@ -36,38 +35,38 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 bool isPrime(long long p) {
-    if (p < 2) return false;
-    for (long long i = 2; i * i <= p; ++i) {
-        if (p % i == 0) return false;
-    }
-    return true;
+if (p < 2) return false;
+for (long long i = 2; i * i <= p; ++i) {
+if (p % i == 0) return false;
+}
+return true;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    unsigned long long n;
-    if (!(cin >> n)) return 0;
+unsigned long long n;
+if (!(cin >> n)) return 0;
 
-    // Theo Euclid-Euler, số hoàn hảo chẵn có dạng 2^(p-1) * (2^p - 1) với 2^p - 1 là số nguyên tố
-    vector<unsigned long long> perfect_nums;
-    int primes[] = {2, 3, 5, 7, 13, 17, 19, 31};
-    for (int p : primes) {
-        unsigned long long mersenne = (1ULL << p) - 1;
-        if (isPrime(mersenne)) {
-            unsigned long long perf = (1ULL << (p - 1)) * mersenne;
-            perfect_nums.push_back(perf);
-        }
-    }
+// Theo Euclid-Euler, số hoàn hảo chẵn có dạng 2^(p-1) * (2^p - 1) với 2^p - 1 là số nguyên tố
+vector<unsigned long long> perfect_nums;
+int primes[] = {2, 3, 5, 7, 13, 17, 19, 31};
+for (int p : primes) {
+unsigned long long mersenne = (1ULL << p) - 1;
+if (isPrime(mersenne)) {
+unsigned long long perf = (1ULL << (p - 1)) * mersenne;
+perfect_nums.push_back(perf);
+}
+}
 
-    for (auto v : perfect_nums) {
-        if (v == n) {
-            cout << "YES\n";
-            return 0;
-        }
-    }
-    cout << "NO\n";
-    return 0;
+for (auto v : perfect_nums) {
+if (v == n) {
+cout << "YES\n";
+return 0;
+}
+}
+cout << "NO\n";
+return 0;
 }
 ```

@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 10 1 2 3 4 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 10 1 2 3 4 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Đoạn con [1, 2, 3, 4] có tổng 1 + 2 + 3 + 4 = 10 <= 10 và có độ dài bằng 4. Nếu xét cả 5 phần tử thì tổng là 15 > 10. Do... | Tính toán từng bước trạng thái |
@@ -32,30 +31,30 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    int l = 0;
-    long long cur_sum = 0;
-    int max_len = 0;
+int l = 0;
+long long cur_sum = 0;
+int max_len = 0;
 
-    for (int r = 0; r < n; ++r) {
-        cur_sum += a[r];
-        while (cur_sum > s) {
-            cur_sum -= a[l];
-            ++l;
-        }
-        max_len = max(max_len, r - l + 1);
-    }
+for (int r = 0; r < n; ++r) {
+cur_sum += a[r];
+while (cur_sum > s) {
+cur_sum -= a[l];
+++l;
+}
+max_len = max(max_len, r - l + 1);
+}
 
-    cout << max_len << "\n";
-    return 0;
+cout << max_len << "\n";
+return 0;
 }
 ```

@@ -10,17 +10,16 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Cây Phân Đoạn (Segment Tree & Fenw
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Fenwick Tree (Binary Indexed Tree):**
-  * Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
-  * Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
+* Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
+* Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
 - **Segment Tree (Cây phân đoạn):**
-  * Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
-  * Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
+* Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
+* Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
 - **Độ phức tạp:** Xây dựng cây $\mathcal{O}(N)$, mỗi thao tác truy vấn / cập nhật chỉ tốn $\mathcal{O}(\log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 2 1 1 2 2 3 3 1 1 2 2 2 2 4 4` $\implies$ Đầu ra kỳ vọng: `2 2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 2 1 1 2 2 3 3 1 1 2 2 2 2 4 4` $\implies$ Đầu ra kỳ vọng: `2 2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -46,30 +45,30 @@ Hai điểm $(1, 2)$ và $(2, 3)$ nằm trọn vẹn bên trong vùng hình ch�
 using namespace std;
 
 struct Point {
-    int x, y;
+int x, y;
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<Point> pts(n);
-    for (int i = 0; i < n; ++i) cin >> pts[i].x >> pts[i].y;
+vector<Point> pts(n);
+for (int i = 0; i < n; ++i) cin >> pts[i].x >> pts[i].y;
 
-    while (q--) {
-        int x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
-        int count = 0;
-        for (int i = 0; i < n; ++i) {
-            if (pts[i].x >= x1 && pts[i].x <= x2 && pts[i].y >= y1 && pts[i].y <= y2) {
-                count++;
-            }
-        }
-        cout << count << "\n";
-    }
-    return 0;
+while (q--) {
+int x1, y1, x2, y2;
+cin >> x1 >> y1 >> x2 >> y2;
+int count = 0;
+for (int i = 0; i < n; ++i) {
+if (pts[i].x >= x1 && pts[i].x <= x2 && pts[i].y >= y1 && pts[i].y <= y2) {
+count++;
+}
+}
+cout << count << "\n";
+}
+return 0;
 }
 ```

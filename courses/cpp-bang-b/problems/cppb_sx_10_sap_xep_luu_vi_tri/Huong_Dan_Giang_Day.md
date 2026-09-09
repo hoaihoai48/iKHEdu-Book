@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 40 10 20 10 30)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 40 10 20 10 30` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Dãy ban đầu cùng vị trí gốc (1-indexed) là: - Vị trí 1: $40$ - Vị trí 2: $10$ - Vị trí 3: $20$ - Vị trí 4: $10$ - Vị trí... | Tính toán từng bước trạng thái |
@@ -45,23 +44,23 @@ Sau khi sắp xếp theo giá trị tăng dần:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<vector<long long>> a(n, vector<long long>(2));
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i][0];
-        a[i][1] = i + 1;
-    }
+vector<vector<long long>> a(n, vector<long long>(2));
+for (int i = 0; i < n; ++i) {
+cin >> a[i][0];
+a[i][1] = i + 1;
+}
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    for (int i = 0; i < n; ++i) {
-        cout << a[i][0] << " " << a[i][1] << "\n";
-    }
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << a[i][0] << " " << a[i][1] << "\n";
+}
+return 0;
 }
 ```

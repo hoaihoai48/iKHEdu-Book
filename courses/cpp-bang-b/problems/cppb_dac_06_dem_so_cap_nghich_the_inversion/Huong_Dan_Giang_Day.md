@@ -6,14 +6,13 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng N số nguyên. Hãy đếm số lượng cặp chỉ số (i, j) với 1 <= i < j <= N sao cho A[i] > A[j].
 
-- **Phương pháp tiếp cận — Chia để trị (Divide and Conquer):**
-  - Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
-  - Giải quyết bài toán con và gộp kết quả tối ưu.
+- **Phương pháp tiếp cận — Chia để trị:**
+- Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
+- Giải quyết bài toán con và gộp kết quả tối ưu.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 2 4 1 3 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 2 4 1 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các cặp nghịch thế gồm: (2, 1) tại vị trí (1, 3); (4, 1) tại vị trí (2, 3); và (4, 3) tại vị trí (2, 4). Tổng cộng có 3 ... | Tính toán từng bước trạng thái |
@@ -36,35 +35,35 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 using namespace std;
 
 long long countInversions(vector<long long> &a, vector<long long> &temp, int l, int r) {
-    if (l >= r) return 0;
-    int mid = l + (r - l) / 2;
-    long long inv = 0;
-    inv += countInversions(a, temp, l, mid);
-    inv += countInversions(a, temp, mid + 1, r);
+if (l >= r) return 0;
+int mid = l + (r - l) / 2;
+long long inv = 0;
+inv += countInversions(a, temp, l, mid);
+inv += countInversions(a, temp, mid + 1, r);
 
-    int i = l, j = mid + 1, k = l;
-    while (i <= mid && j <= r) {
-        if (a[i] <= a[j]) {
-            temp[k++] = a[i++];
-        } else {
-            temp[k++] = a[j++];
-            inv += (mid - i + 1);
-        }
-    }
-    while (i <= mid) temp[k++] = a[i++];
-    while (j <= r) temp[k++] = a[j++];
-    for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
-    return inv;
+int i = l, j = mid + 1, k = l;
+while (i <= mid && j <= r) {
+if (a[i] <= a[j]) {
+temp[k++] = a[i++];
+} else {
+temp[k++] = a[j++];
+inv += (mid - i + 1);
+}
+}
+while (i <= mid) temp[k++] = a[i++];
+while (j <= r) temp[k++] = a[j++];
+for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
+return inv;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    if (!(cin >> n)) return 0;
-    vector<long long> a(n), temp(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    cout << countInversions(a, temp, 0, n - 1) << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+if (!(cin >> n)) return 0;
+vector<long long> a(n), temp(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+cout << countInversions(a, temp, 0, n - 1) << "\n";
+return 0;
 }
 ```

@@ -7,7 +7,7 @@ Một mạng lưới giao thông gồm $N$ nút giao và $M$ tuyến đường m
 Cho đồ thị có hướng $N$ đỉnh $M$ cạnh với trọng số mỗi cạnh thuộc $\{0, 1\}$. Hãy lập trình tìm khoảng cách ngắn nhất từ $S$ tới $D$. Nếu không đến được, in ra `-1`.
 
 ## Input
-- Dòng 1: Chứa 4 số nguyên $N, M, S, D$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5, 1 \le S, D \le N$).
+- Dòng 1: Chứa 4 số nguyên $N, M, S, D$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5, 1 \le S, D \le N$).
 - $M$ dòng tiếp theo, mỗi dòng chứa 3 số nguyên $u, v, w$ biểu diễn đường một chiều từ $u$ tới $v$ với trọng số $w \in \{0, 1\}$.
 
 ## Output

@@ -1,7 +1,7 @@
 # Thuật Toán Euclid Tính GCD & LCM Bằng Đệ Quy
 
 ## Bối cảnh
-Thuật toán Euclid cổ đại phát biểu dưới dạng đệ quy một dòng gcd(A, B) = (B == 0) ? A : gcd(B, A % B) là một trong những thuật toán đẹp đẽ và hiệu quả nhất lịch sử toán học. Hãy dùng hàm đệ quy này để tính ước chung lớn nhất và bội chung nhỏ nhất.
+Thuật toán Euclid cổ đại phát biểu dưới dạng đệ quy một dòng gcd(A, B) = (B == 0) A : gcd(B, A % B) là một trong những thuật toán đẹp đẽ và hiệu quả nhất lịch sử toán học. Hãy dùng hàm đệ quy này để tính ước chung lớn nhất và bội chung nhỏ nhất.
 
 ## Nhiệm vụ
 Cho 2 số nguyên dương A, B. Hãy tính ước chung lớn nhất gcd(A, B) và bội chung nhỏ nhất lcm(A, B) bằng hàm đệ quy Euclid.

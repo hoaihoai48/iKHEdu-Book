@@ -6,7 +6,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- **Bản chất bài toán:** Cho số nguyên dương $N$ là chiều dài của mặt sàn. Hãy lập trình tính số cách lát gạch khác nhau để phủ kín mặt sàn $2  × N$, lấy dư cho $10^9 + 7$.
+- **Bản chất bài toán:** Cho số nguyên dương $N$ là chiều dài của mặt sàn. Hãy lập trình tính số cách lát gạch khác nhau để phủ kín mặt sàn $2 × N$, lấy dư cho $10^9 + 7$.
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái:** Định nghĩa $dp[i]$ là kết quả tối ưu cho bài toán con kết thúc tại bước/vị trí thứ $i$.
@@ -16,16 +16,15 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4` $\implies$ Đầu ra kỳ vọng: `5`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4` $\implies$ Đầu ra kỳ vọng: `5`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `4` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với sàn nhà kích thước $2  × 4$ ($N = 4$), có tất cả 5 cách lát kín hợp lệ: 1. Đặt 4 viên gạch dựng đứng liên tiếp. 2. Đặt 2 viên nằm n... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với sàn nhà kích thước $2 × 4$ ($N = 4$), có tất cả 5 cách lát kín hợp lệ: 1. Đặt 4 viên gạch dựng đứng liên tiếp. 2. Đặt 2 viên nằm n... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `5` |
 
-*Giải thích chi tiết:* Với sàn nhà kích thước $2  × 4$ ($N = 4$), có tất cả 5 cách lát kín hợp lệ:
+*Giải thích chi tiết:* Với sàn nhà kích thước $2 × 4$ ($N = 4$), có tất cả 5 cách lát kín hợp lệ:
 
 1. Đặt 4 viên gạch dựng đứng liên tiếp.
 2. Đặt 2 viên nằm ngang ở đầu, theo sau là 2 viên dựng đứng.
@@ -51,24 +50,24 @@ using namespace std;
 const int MOD = 1e9 + 7;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    if (n == 1) { cout << 1 << "\n"; return 0; }
-    if (n == 2) { cout << 2 << "\n"; return 0; }
+if (n == 1) { cout << 1 << "\n"; return 0; }
+if (n == 2) { cout << 2 << "\n"; return 0; }
 
-    int p2 = 1, p1 = 2, cur = 0;
-    for (int i = 3; i <= n; ++i) {
-        cur = (p1 + p2) % MOD;
-        p2 = p1;
-        p1 = cur;
-    }
+int p2 = 1, p1 = 2, cur = 0;
+for (int i = 3; i <= n; ++i) {
+cur = (p1 + p2) % MOD;
+p2 = p1;
+p1 = cur;
+}
 
-    cout << cur << "\n";
-    return 0;
+cout << cur << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 - **Bản chất bài toán:** Cho số nguyên dương N (1 <= N <= 20). Hãy sinh tất cả các xâu nhị phân độ dài N không chứa chuỗi '11' theo thứ tự từ điển.
 
 - **Phương pháp tiếp cận — Thuật toán đệ quy & Cây gọi hàm:**
-  - Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
-  - Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
+- Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
+- Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các xâu nhị phân độ dài 3 không có '11' gồm: 000, 001, 010, 100, 101. Tổng cộng có 5 xâu.... | Tính toán từng bước trạng thái |
@@ -38,32 +37,32 @@ using namespace std;
 vector<string> results;
 
 void genRec(int n, string &cur, char last_char) {
-    if ((int)cur.size() == n) {
-        results.push_back(cur);
-        return;
-    }
-    // Luôn có thể thêm '0'
-    cur.push_back('0');
-    genRec(n, cur, '0');
-    cur.pop_back();
+if ((int)cur.size() == n) {
+results.push_back(cur);
+return;
+}
+// Luôn có thể thêm '0'
+cur.push_back('0');
+genRec(n, cur, '0');
+cur.pop_back();
 
-    // Chỉ thêm '1' nếu ký tự trước không phải '1'
-    if (last_char != '1') {
-        cur.push_back('1');
-        genRec(n, cur, '1');
-        cur.pop_back();
-    }
+// Chỉ thêm '1' nếu ký tự trước không phải '1'
+if (last_char != '1') {
+cur.push_back('1');
+genRec(n, cur, '1');
+cur.pop_back();
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    if (!(cin >> n)) return 0;
-    string cur = "";
-    genRec(n, cur, '0');
-    cout << results.size() << "\n";
-    for (const string &s : results) cout << s << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+if (!(cin >> n)) return 0;
+string cur = "";
+genRec(n, cur, '0');
+cout << results.size() << "\n";
+for (const string &s : results) cout << s << "\n";
+return 0;
 }
 ```

@@ -11,8 +11,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 2 8 1 5 2 10)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 2 8 1 5 2 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Danh sách 3 đoạn thẳng ban đầu là: $[2, 8]$, $[1, 5]$, $[2, 10]$. - Xét điểm đầu mút $L$: đoạn $[1, 5]$ có $L = 1$ nhỏ n... | Tính toán từng bước trạng thái |
@@ -22,7 +21,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 - Xét điểm đầu mút $L$: đoạn $[1, 5]$ có $L = 1$ nhỏ nhất nên đứng đầu tiên.
 - Hai đoạn còn lại là $[2, 8]$ và $[2, 10]$ đều có cùng $L = 2$:
-  - Xét điểm kết thúc $R$ giảm dần: đoạn $[2, 10]$ có $R = 10 > 8$ nên đoạn $[2, 10]$ phải đứng trước đoạn $[2, 8]$.
+- Xét điểm kết thúc $R$ giảm dần: đoạn $[2, 10]$ có $R = 10 > 8$ nên đoạn $[2, 10]$ phải đứng trước đoạn $[2, 8]$.
 
 Thứ tự sau khi sắp xếp chuẩn là: `1 5`, tiếp đến `2 10`, và cuối cùng là `2 8`.
 
@@ -41,27 +40,27 @@ Thứ tự sau khi sắp xếp chuẩn là: `1 5`, tiếp đến `2 10`, và cu�
 using namespace std;
 
 bool cmp(const vector<long long> &a, const vector<long long> &b) {
-    if (a[0] != b[0]) return a[0] < b[0];
-    return a[1] > b[1];
+if (a[0] != b[0]) return a[0] < b[0];
+return a[1] > b[1];
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<vector<long long>> a(n, vector<long long>(2));
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i][0] >> a[i][1];
-    }
+vector<vector<long long>> a(n, vector<long long>(2));
+for (int i = 0; i < n; ++i) {
+cin >> a[i][0] >> a[i][1];
+}
 
-    stable_sort(a.begin(), a.end(), cmp);
+stable_sort(a.begin(), a.end(), cmp);
 
-    for (int i = 0; i < n; ++i) {
-        cout << a[i][0] << " " << a[i][1] << "\n";
-    }
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << a[i][0] << " " << a[i][1] << "\n";
+}
+return 0;
 }
 ```

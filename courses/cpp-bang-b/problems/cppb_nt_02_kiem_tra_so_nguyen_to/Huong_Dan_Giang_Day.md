@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho một số nguyên dương N. Hãy kiểm tra xem N có phải là số nguyên tố hay không. In YES nếu đúng, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 29)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `29` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Số 29 chỉ chia hết cho 1 và 29, do đó 29 là số nguyên tố -> in YES.... | Tính toán từng bước trạng thái |
@@ -36,23 +35,23 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 bool isPrime(long long n) {
-    if (n < 2) return false;
-    if (n == 2 || n == 3) return true;
-    if (n % 2 == 0 || n % 3 == 0) return false;
-    for (long long i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0) return false;
-    }
-    return true;
+if (n < 2) return false;
+if (n == 2 || n == 3) return true;
+if (n % 2 == 0 || n % 3 == 0) return false;
+for (long long i = 5; i * i <= n; i += 6) {
+if (n % i == 0 || n % (i + 2) == 0) return false;
+}
+return true;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    cout << (isPrime(n) ? "YES" : "NO") << "\n";
-    return 0;
+cout << (isPrime(n) "YES" : "NO") << "\n";
+return 0;
 }
 ```

@@ -6,14 +6,13 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng N số nguyên và số nguyên K (1 <= K <= N). Hãy tìm giá trị của phần tử nhỏ thứ K bằng thuật toán QuickSelect.
 
-- **Phương pháp tiếp cận — Chia để trị (Divide and Conquer):**
-  - Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
-  - Giải quyết bài toán con và gộp kết quả tối ưu.
+- **Phương pháp tiếp cận — Chia để trị:**
+- Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
+- Giải quyết bài toán con và gộp kết quả tối ưu.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 3 3 2 1 5 6 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 3 3 2 1 5 6 4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Mảng có thứ tự: [1, 2, 3, 4, 5, 6]. Phần tử nhỏ thứ K = 3 là số 3. Kết quả in ra: 3.... | Tính toán từng bước trạng thái |
@@ -36,38 +35,38 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 using namespace std;
 
 int partition(vector<long long> &a, int l, int r) {
-    int pivot_idx = l + rand() % (r - l + 1);
-    swap(a[pivot_idx], a[r]);
-    long long pivot = a[r];
-    int i = l;
-    for (int j = l; j < r; ++j) {
-        if (a[j] <= pivot) {
-            swap(a[i], a[j]);
-            i++;
-        }
-    }
-    swap(a[i], a[r]);
-    return i;
+int pivot_idx = l + rand() % (r - l + 1);
+swap(a[pivot_idx], a[r]);
+long long pivot = a[r];
+int i = l;
+for (int j = l; j < r; ++j) {
+if (a[j] <= pivot) {
+swap(a[i], a[j]);
+i++;
+}
+}
+swap(a[i], a[r]);
+return i;
 }
 
 long long quickSelect(vector<long long> &a, int l, int r, int k) {
-    if (l == r) return a[l];
-    int p = partition(a, l, r);
-    int rank = p - l + 1;
-    if (rank == k) return a[p];
-    if (k < rank) return quickSelect(a, l, p - 1, k);
-    return quickSelect(a, p + 1, r, k - rank);
+if (l == r) return a[l];
+int p = partition(a, l, r);
+int rank = p - l + 1;
+if (rank == k) return a[p];
+if (k < rank) return quickSelect(a, l, p - 1, k);
+return quickSelect(a, p + 1, r, k - rank);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    srand(42);
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    cout << quickSelect(a, 0, n - 1, k) << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+srand(42);
+int n, k;
+if (!(cin >> n >> k)) return 0;
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+cout << quickSelect(a, 0, n - 1, k) << "\n";
+return 0;
 }
 ```

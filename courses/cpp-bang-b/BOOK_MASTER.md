@@ -97,10 +97,10 @@ Khi mỗi phần tử gồm nhiều thuộc tính số (ví dụ: điểm bắt 
 // nếu trùng điểm kết thúc thì theo điểm bắt đầu a[0] giảm dần
 bool cmpInterval(const vector<int> &a, const vector<int> &b) {
 
-    if (a[1] != b[1]) {
-        return a[1] < b[1]; // Ưu tiên kết thúc sớm hơn đứng trước
-    }
-    return a[0] > b[0]; // Cùng điểm kết thúc: Bắt đầu muộn hơn đứng trước
+if (a[1] != b[1]) {
+return a[1] < b[1]; // Ưu tiên kết thúc sớm hơn đứng trước
+}
+return a[0] > b[0]; // Cùng điểm kết thúc: Bắt đầu muộn hơn đứng trước
 
 }
 ```
@@ -122,9 +122,9 @@ Khi bài toán yêu cầu in ra vị trí gốc của các phần tử sau khi s
 vector<vector<long long>> a(n, vector<long long>(2));
 
 for (int i = 0; i < n; ++i) {
-    cin >> a[i][0];   // Giá trị phần tử
+cin >> a[i][0]; // Giá trị phần tử
 
-    a[i][1] = i + 1;  // Chỉ số ban đầu (1-based)
+a[i][1] = i + 1; // Chỉ số ban đầu (1-based)
 }
 
 // sort mặc định so sánh cột 0 (giá trị), nếu bằng nhau so sánh tiếp cột 1 (chỉ số gốc)
@@ -136,8 +136,8 @@ Bài toán ghép $N$ chuỗi số để tạo thành số lớn nhất:
 
 ```cpp
 bool cmpConcat(const string &a, const string &b) {
-    // Sắp xếp sao cho chuỗi ghép a + b lớn hơn chuỗi ghép b + a
-    return a + b > b + a;
+// Sắp xếp sao cho chuỗi ghép a + b lớn hơn chuỗi ghép b + a
+return a + b > b + a;
 
 }
 ```
@@ -149,35 +149,35 @@ bool cmpConcat(const string &a, const string &b) {
 using namespace std;
 
 int main() {
-    // Tối ưu hóa tốc độ I/O
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+// Tối ưu hóa tốc độ I/O
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    // Bước 1: Sắp xếp mảng O(N log N)
-    sort(a.begin(), a.end());
+// Bước 1: Sắp xếp mảng O(N log N)
+sort(a.begin(), a.end());
 
-    // Bước 2: Khai thác trật tự tuyến tính O(N)
-    long long min_diff = a[1] - a[0];
-    for (int i = 1; i < n - 1; ++i) {
-        min_diff = min(min_diff, a[i + 1] - a[i]);
-    }
+// Bước 2: Khai thác trật tự tuyến tính O(N)
+long long min_diff = a[1] - a[0];
+for (int i = 1; i < n - 1; ++i) {
+min_diff = min(min_diff, a[i + 1] - a[i]);
+}
 
-    cout << min_diff << "\n";
-    return 0;
+cout << min_diff << "\n";
+return 0;
 }
 ```
 
-## 7. Ranh Giới Áp Dụng: Khi Nào Được & Không Được Sắp Xếp?
+## 7. Ranh Giới Áp Dụng: Khi Nào Được & Không Được Sắp Xếp
 
 * **ĐƯỢC PHÉP SẮP XẾP:** Khi bài toán khảo sát tính chất trên **toàn bộ tập hợp** mà không phụ thuộc vào vị trí ban đầu của phần tử (như tìm $\min/\max$, đếm giá trị phân biệt, tìm cặp thỏa mãn điều kiện đại số).
 * **KHÔNG ĐƯỢC PHÉP SẮP XẾP:** Khi bài toán có ràng buộc gắn liền với **dòng thời gian hoặc vị trí liền kề nguyên thủy** (như tìm đoạn con liên tiếp, chuỗi con tăng dài nhất bảo toàn thứ tự ban đầu).
@@ -186,7 +186,7 @@ int main() {
 
 #### Câu 1 (Nhận diện — Recognize):
 
-Một bài toán ghi nhận biến động giá vàng trong $N$ ngày liên tiếp: `[28, 31, 30, 27, 29]`. Đề bài yêu cầu tìm **hai ngày liên tiếp nhau có mức chênh lệch giá nhỏ nhất**. Bạn có được phép dùng hàm `sort()` để sắp xếp lại mảng này trước khi xử lý không?
+Một bài toán ghi nhận biến động giá vàng trong $N$ ngày liên tiếp: `[28, 31, 30, 27, 29]`. Đề bài yêu cầu tìm **hai ngày liên tiếp nhau có mức chênh lệch giá nhỏ nhất**. Bạn có được phép dùng hàm `sort()` để sắp xếp lại mảng này trước khi xử lý không
 
 - **A.** Được phép, vì sắp xếp luôn giúp tìm hiệu số nhỏ nhất nhanh hơn.
 
@@ -200,7 +200,7 @@ Một bài toán ghi nhận biến động giá vàng trong $N$ ngày liên ti�
 
 #### Câu 2 (Dự đoán — Predict):
 
-Cho dãy tọa độ chưa sắp xếp `A = [21, 5, 13, 8, 30, 14]`. Sau khi sắp xếp tăng dần thành `[5, 8, 13, 14, 21, 30]`, để tìm khoảng cách nhỏ nhất giữa 2 điểm bất kỳ, ta chỉ cần kiểm tra những cặp số nào?
+Cho dãy tọa độ chưa sắp xếp `A = [21, 5, 13, 8, 30, 14]`. Sau khi sắp xếp tăng dần thành `[5, 8, 13, 14, 21, 30]`, để tìm khoảng cách nhỏ nhất giữa 2 điểm bất kỳ, ta chỉ cần kiểm tra những cặp số nào
 
 - **A.** `(5, 30), (8, 21), (13, 14)`
 
@@ -214,7 +214,7 @@ Cho dãy tọa độ chưa sắp xếp `A = [21, 5, 13, 8, 30, 14]`. Sau khi s�
 
 #### Câu 3 (Bản chất — Explain):
 
-Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trình viên viết `return a <= b;` thì điều gì sẽ xảy ra khi mảng có các phần tử bằng nhau và $N$ lớn?
+Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trình viên viết `return a <= b;` thì điều gì sẽ xảy ra khi mảng có các phần tử bằng nhau và $N$ lớn
 
 - **A.** Chương trình vẫn chạy đúng và sắp xếp ổn định.
 
@@ -228,7 +228,7 @@ Trong hàm so sánh Custom Comparator `bool cmp(int a, int b)`, nếu lập trì
 
 #### Câu 4 (Chuyển giao — Transfer):
 
-Khi $N = 100{,}000$, vì sao phương pháp **Sắp xếp rồi duyệt kề nhau** $\mathcal{O}(N \log N + N)$ lại vượt trội hơn hẳn phương pháp **Duyệt mọi cặp** $\mathcal{O}(N^2)$?
+Khi $N = 100{,}000$, vì sao phương pháp **Sắp xếp rồi duyệt kề nhau** $\mathcal{O}(N \log N + N)$ lại vượt trội hơn hẳn phương pháp **Duyệt mọi cặp** $\mathcal{O}(N^2)$
 
 - **A.** Vì hàm `sort()` làm giảm bớt số lượng phần tử cần lưu trữ trong bộ nhớ.
 
@@ -242,7 +242,7 @@ Khi $N = 100{,}000$, vì sao phương pháp **Sắp xếp rồi duyệt kề nha
 
 #### Câu 5 (Cú pháp & Ứng dụng — Syntax):
 
-Cách nào sau đây là chuẩn mực và an toàn nhất trong C++ để sắp xếp một `vector<int> a` theo thứ tự **giảm dần**?
+Cách nào sau đây là chuẩn mực và an toàn nhất trong C++ để sắp xếp một `vector<int> a` theo thứ tự **giảm dần**
 
 - **A.** `sort(a.begin(), a.end(), less<int>());`
 
@@ -256,7 +256,7 @@ Cách nào sau đây là chuẩn mực và an toàn nhất trong C++ để sắp
 
 #### Câu 6 (Phân biệt cấu trúc — Compare):
 
-Sự khác biệt cốt lõi giữa `sort` và `stable_sort` trong thư viện chuẩn C++ là gì?
+Sự khác biệt cốt lõi giữa `sort` và `stable_sort` trong thư viện chuẩn C++ là gì
 
 - **A.** `sort` có độ phức tạp $\mathcal{O}(N^2)$, còn `stable_sort` là $\mathcal{O}(N \log N)$.
 
@@ -270,7 +270,7 @@ Sự khác biệt cốt lõi giữa `sort` và `stable_sort` trong thư viện c
 
 #### Câu 7 (Thuật toán lân cận — Technique):
 
-Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đếm số lượng giá trị phân biệt (Distinct values) hoạt động trong thời gian bao lâu?
+Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đếm số lượng giá trị phân biệt (Distinct values) hoạt động trong thời gian bao lâu
 
 - **A.** $\mathcal{O}(N^2)$ vì phải so sánh từng cặp.
 
@@ -284,7 +284,7 @@ Sau khi sắp xếp một mảng $N$ phần tử tăng dần, thuật toán đ�
 
 #### Câu 8 (Comparator hàm mục tiêu — Logic):
 
-Trong bài toán ghép $N$ chuỗi số $S_1, S_2, \dots, S_N$ để tạo ra số nguyên lớn nhất, tại sao hàm so sánh `bool cmp(string a, string b)` lại được định nghĩa là `return a + b > b + a;`?
+Trong bài toán ghép $N$ chuỗi số $S_1, S_2, \dots, S_N$ để tạo ra số nguyên lớn nhất, tại sao hàm so sánh `bool cmp(string a, string b)` lại được định nghĩa là `return a + b > b + a;`
 
 - **A.** Vì chuỗi có độ dài dài hơn luôn tạo ra số lớn hơn.
 
@@ -298,7 +298,7 @@ Trong bài toán ghép $N$ chuỗi số $S_1, S_2, \dots, S_N$ để tạo ra s�
 
 #### Câu 9 (Sắp xếp đa tiêu chí — Multi-criteria):
 
-Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Điểm bắt đầu $L$ tăng dần; nếu trùng $L$ thì điểm kết thúc $R$ giảm dần, comparator nào sau đây viết đúng chuẩn Strict Weak Ordering?
+Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Điểm bắt đầu $L$ tăng dần; nếu trùng $L$ thì điểm kết thúc $R$ giảm dần, comparator nào sau đây viết đúng chuẩn Strict Weak Ordering
 
 - **A.** `return (a[0] <= b[0]) && (a[1] >= b[1]);`
 
@@ -312,7 +312,7 @@ Khi sắp xếp danh sách các đoạn thẳng $[L_i, R_i]$ theo tiêu chí: Đ
 
 #### Câu 10 (Xử lý kiểu dữ liệu & Tràn số — Robustness):
 
-Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ điểm trên trục tọa độ, với tọa độ $X_i \in [-10^{18}, 10^{18}]$. Sai lầm nguy hiểm nhất khi duyệt cặp kề nhau $(X_i, X_{i+1})$ là gì?
+Cho bài toán tìm khoảng cách nhỏ nhất giữa 2 điểm trong $N$ điểm trên trục tọa độ, với tọa độ $X_i \in [-10^{18}, 10^{18}]$. Sai lầm nguy hiểm nhất khi duyệt cặp kề nhau $(X_i, X_{i+1})$ là gì
 
 - **A.** Sử dụng `sort` thay vì tự viết QuickSort.
 
@@ -459,47 +459,47 @@ Do đó, có đúng **$R - L$ cặp hợp lệ** xuất phát từ $L$: $(L, L+1
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    // Bước 1: Sắp xếp mảng tạo tính đơn điệu O(N log N)
-    sort(a.begin(), a.end());
+// Bước 1: Sắp xếp mảng tạo tính đơn điệu O(N log N)
+sort(a.begin(), a.end());
 
-    // Bước 2: Khởi tạo Hai con trỏ đối đầu O(N)
-    int l = 0, r = n - 1;
-    bool found = false;
+// Bước 2: Khởi tạo Hai con trỏ đối đầu O(N)
+int l = 0, r = n - 1;
+bool found = false;
 
-    while (l < r) {
-        long long current_sum = a[l] + a[r];
-        if (current_sum == s) {
-            cout << a[l] << " " << a[r] << "\n";
-            found = true;
-            break;
-        } else if (current_sum < s) {
-            ++l; // Tổng nhỏ hơn mục tiêu -> tăng giá trị cận dưới
+while (l < r) {
+long long current_sum = a[l] + a[r];
+if (current_sum == s) {
+cout << a[l] << " " << a[r] << "\n";
+found = true;
+break;
+} else if (current_sum < s) {
+++l; // Tổng nhỏ hơn mục tiêu -> tăng giá trị cận dưới
 
-        } else {
-            --r; // Tổng lớn hơn mục tiêu -> giảm giá trị cận trên
+} else {
+--r; // Tổng lớn hơn mục tiêu -> giảm giá trị cận trên
 
-        }
-    }
+}
+}
 
-    if (!found) {
-        cout << -1 << "\n";
-    }
+if (!found) {
+cout << -1 << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -513,7 +513,7 @@ int main() {
 
 #### Câu 1 (Nhận diện — Recognize):
 
-Kỹ thuật hai con trỏ đối đầu (`L = 0, R = N - 1`) có thể áp dụng trực tiếp trên dãy số nào sau đây?
+Kỹ thuật hai con trỏ đối đầu (`L = 0, R = N - 1`) có thể áp dụng trực tiếp trên dãy số nào sau đây
 
 - **A.** Dãy số ngẫu nhiên ban đầu chưa qua xử lý.
 
@@ -527,7 +527,7 @@ Kỹ thuật hai con trỏ đối đầu (`L = 0, R = N - 1`) có thể áp dụ
 
 #### Câu 2 (Dự đoán — Predict):
 
-Cho mảng đã sắp xếp `A = [3, 7, 11, 15, 20]` và mục tiêu `S = 22`. Tại bước khởi đầu với `L = 0` (`A[0]=3`) và `R = 4` (`A[4]=20`), tổng là `3 + 20 = 23 > 22`. Hành động đúng tiếp theo là gì?
+Cho mảng đã sắp xếp `A = [3, 7, 11, 15, 20]` và mục tiêu `S = 22`. Tại bước khởi đầu với `L = 0` (`A[0]=3`) và `R = 4` (`A[4]=20`), tổng là `3 + 20 = 23 > 22`. Hành động đúng tiếp theo là gì
 
 - **A.** Tăng con trỏ trái `L = L + 1`.
 
@@ -541,7 +541,7 @@ Cho mảng đã sắp xếp `A = [3, 7, 11, 15, 20]` và mục tiêu `S = 22`. T
 
 #### Câu 3 (Bản chất — Explain):
 
-Trong bài toán đếm số cặp có `A_i + A_j <= S` trên mảng tăng dần, khi `A[L] + A[R] <= S`, tại sao ta có thể khẳng định ngay có đúng `R - L` cặp hợp lệ kết thúc tại `R`?
+Trong bài toán đếm số cặp có `A_i + A_j <= S` trên mảng tăng dần, khi `A[L] + A[R] <= S`, tại sao ta có thể khẳng định ngay có đúng `R - L` cặp hợp lệ kết thúc tại `R`
 
 - **A.** Vì `R - L` là độ dài của mảng ban đầu.
 
@@ -555,7 +555,7 @@ Trong bài toán đếm số cặp có `A_i + A_j <= S` trên mảng tăng dần
 
 #### Câu 4 (Chuyển giao — Transfer):
 
-Độ phức tạp thời gian tổng thể của bài toán Two Sum gồm 2 bước: Sắp xếp mảng `N` phần tử bằng `sort` rồi duyệt bằng Two Pointers là bao nhiêu?
+Độ phức tạp thời gian tổng thể của bài toán Two Sum gồm 2 bước: Sắp xếp mảng `N` phần tử bằng `sort` rồi duyệt bằng Two Pointers là bao nhiêu
 
 - **A.** $\mathcal{O}(N^2)$
 
@@ -569,7 +569,7 @@ Trong bài toán đếm số cặp có `A_i + A_j <= S` trên mảng tăng dần
 
 #### Câu 5 (Bẫy điều kiện dừng — Bug Traps):
 
-Tại sao trong vòng lặp Two Pointers tìm cặp phần tử phân biệt (`i < j`), ta bắt buộc phải dùng điều kiện `while (l < r)` thay vì `while (l <= r)`?
+Tại sao trong vòng lặp Two Pointers tìm cặp phần tử phân biệt (`i < j`), ta bắt buộc phải dùng điều kiện `while (l < r)` thay vì `while (l <= r)`
 
 - **A.** Vì nếu dùng `<=` thì chương trình sẽ bị lỗi tràn bộ nhớ (Out of Memory).
 
@@ -583,7 +583,7 @@ Tại sao trong vòng lặp Two Pointers tìm cặp phần tử phân biệt (`i
 
 #### Câu 6 (Chiến lược tham lam — Greedy Pairing):
 
-Trong bài toán **Ghép thuyền cứu hộ** (mỗi thuyền chở tối đa 2 người có tổng cân nặng `<= C`), tại sao khi `W[L] + W[R] > C`, ta lại để người nặng nhất `W[R]` đi thuyền riêng một mình?
+Trong bài toán **Ghép thuyền cứu hộ** (mỗi thuyền chở tối đa 2 người có tổng cân nặng `<= C`), tại sao khi `W[L] + W[R] > C`, ta lại để người nặng nhất `W[R]` đi thuyền riêng một mình
 
 - **A.** Vì người nặng nhất luôn có quyền ưu tiên đi một mình.
 
@@ -597,7 +597,7 @@ Trong bài toán **Ghép thuyền cứu hộ** (mỗi thuyền chở tối đa 2
 
 #### Câu 7 (Khử chiều đa biến — Dimensionality Reduction):
 
-Đối với bài toán **3-Sum** (tìm 3 số `A_i + A_j + A_k = S` với `i < j < k`), kỹ thuật Two Pointers giúp tối ưu hóa thuật toán như thế nào?
+Đối với bài toán **3-Sum** (tìm 3 số `A_i + A_j + A_k = S` với `i < j < k`), kỹ thuật Two Pointers giúp tối ưu hóa thuật toán như thế nào
 
 - **A.** Giảm từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N \log N)$.
 
@@ -611,7 +611,7 @@ Trong bài toán **Ghép thuyền cứu hộ** (mỗi thuyền chở tối đa 2
 
 #### Câu 8 (Xử lý trùng lặp — Duplicates Handling):
 
-Khi mảng có nhiều phần tử bằng nhau (ví dụ: `[2, 2, 2, 2]` và `S = 4`), để đếm chính xác số lượng cặp có tổng bằng `S` mà không bị chạy $\mathcal{O}(N^2)$, ta xử lý như thế nào?
+Khi mảng có nhiều phần tử bằng nhau (ví dụ: `[2, 2, 2, 2]` và `S = 4`), để đếm chính xác số lượng cặp có tổng bằng `S` mà không bị chạy $\mathcal{O}(N^2)$, ta xử lý như thế nào
 
 - **A.** Xóa bỏ tất cả các phần tử trùng lặp trước khi chạy.
 
@@ -625,7 +625,7 @@ Khi mảng có nhiều phần tử bằng nhau (ví dụ: `[2, 2, 2, 2]` và `S 
 
 #### Câu 9 (Hai mảng độc lập — Multi-array Pointers):
 
-Cho 2 mảng đã sắp xếp tăng dần `A` kích thước `N` và `B` kích thước `M`. Để tìm giá trị nhỏ nhất của `|A_i - B_j|`, thuật toán Hai con trỏ điều khiển con trỏ `i` (trên `A`) và `j` (trên `B`) như thế nào?
+Cho 2 mảng đã sắp xếp tăng dần `A` kích thước `N` và `B` kích thước `M`. Để tìm giá trị nhỏ nhất của `|A_i - B_j|`, thuật toán Hai con trỏ điều khiển con trỏ `i` (trên `A`) và `j` (trên `B`) như thế nào
 
 - **A.** Luôn tăng `i` trước, sau đó tăng `j`.
 
@@ -639,7 +639,7 @@ Cho 2 mảng đã sắp xếp tăng dần `A` kích thước `N` và `B` kích t
 
 #### Câu 10 (Phòng thủ kiểu dữ liệu — Data Overflow):
 
-Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và `S = 2 * 10^9`, phát biểu nào sau đây về kiểu dữ liệu là chính xác?
+Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và `S = 2 * 10^9`, phát biểu nào sau đây về kiểu dữ liệu là chính xác
 
 - **A.** Dùng kiểu `int` cho biến `sum = a[l] + a[r]` là hoàn toàn an toàn vì `2 * 10^9 < 2^31 - 1`.
 
@@ -649,7 +649,7 @@ Trong bài toán Two Sum với các phần tử mảng $A_i \in [1, 10^9]$ và `
 
 - **D.** Không cần quan tâm kiểu dữ liệu vì compiler tự động ép kiểu 64-bit.
 
-> Giải thích: Giá trị tổng `A[L] + A[R]` có thể vượt ngưỡng `2^31-1` khi các số lớn hơn $10^9$, và số lượng cặp đếm được với `N = 2  10^5` có thể đạt tới `2  10^10`, bắt buộc phải dùng `long long` cho biến đếm.
+> Giải thích: Giá trị tổng `A[L] + A[R]` có thể vượt ngưỡng `2^31-1` khi các số lớn hơn $10^9$, và số lượng cặp đếm được với `N = 2 10^5` có thể đạt tới `2 10^10`, bắt buộc phải dùng `long long` cho biến đếm.
 
 ## Ma Trận Bài Tập Thực Hành (P0 → P5)
 
@@ -757,7 +757,7 @@ Cửa sổ trượt biến thiên **bắt buộc yêu cầu hàm mục tiêu ph�
 
 Đối với bài toán tổng đoạn con, điều này tương đương với điều kiện: **Tất cả các phần tử trong mảng phải là số không âm ($A_i \ge 0$)**.
 
-### 4.2. Giới hạn: Vì sao Sliding Window thất bại khi có số âm?
+### 4.2. Giới hạn: Vì sao Sliding Window thất bại khi có số âm
 Xét mảng $A = [2, -5, 10, -2, 8]$ với mục tiêu tìm đoạn con ngắn nhất có tổng $\ge 8$.
 * Khi $R$ nạp thêm số âm $-5$, tổng cửa sổ bị giảm.
 * Khi $L$ dịch qua số âm $-5$, tổng cửa sổ lại tăng lên.
@@ -773,44 +773,44 @@ Xét mảng $A = [2, -5, 10, -2, 8]$ với mục tiêu tìm đoạn con ngắn n
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    int l = 0;
-    long long current_sum = 0;
-    int min_len = n + 1; // Khởi tạo vô cực
+int l = 0;
+long long current_sum = 0;
+int min_len = n + 1; // Khởi tạo vô cực
 
-    // Duyệt con trỏ R tuyến tính O(N)
-    for (int r = 0; r < n; ++r) {
-        current_sum += a[r]; // Nạp a[r] vào cửa sổ
+// Duyệt con trỏ R tuyến tính O(N)
+for (int r = 0; r < n; ++r) {
+current_sum += a[r]; // Nạp a[r] vào cửa sổ
 
-        // Co hẹp con trỏ L khi cửa sổ đã thỏa mãn điều kiện
-        while (current_sum >= s) {
-            min_len = min(min_len, r - l + 1); // Cập nhật độ dài nhỏ nhất
-            current_sum -= a[l];               // Nhả a[l] ra khỏi cửa sổ
-            ++l;                               // Dịch chuyển biên trái
-        }
-    }
+// Co hẹp con trỏ L khi cửa sổ đã thỏa mãn điều kiện
+while (current_sum >= s) {
+min_len = min(min_len, r - l + 1); // Cập nhật độ dài nhỏ nhất
+current_sum -= a[l]; // Nhả a[l] ra khỏi cửa sổ
+++l; // Dịch chuyển biên trái
+}
+}
 
-    if (min_len > n) {
+if (min_len > n) {
 
-        cout << 0 << "\n"; // Không tồn tại đoạn thỏa mãn
-    } else {
-        cout << min_len << "\n";
-    }
+cout << 0 << "\n"; // Không tồn tại đoạn thỏa mãn
+} else {
+cout << min_len << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -831,7 +831,7 @@ Khi xử lý bài toán chuỗi ký tự (như Đoạn con dài nhất chứa t�
 
 #### Câu 1 (Nhận diện — Recognize):
 
-Kỹ thuật Cửa sổ trượt biến thiên (mở `R`, co `L`) áp dụng an toàn nhất trên tập dữ liệu nào sau đây?
+Kỹ thuật Cửa sổ trượt biến thiên (mở `R`, co `L`) áp dụng an toàn nhất trên tập dữ liệu nào sau đây
 
 - **A.** Mảng số nguyên có cả số dương lớn và số âm nhỏ.
 
@@ -845,7 +845,7 @@ Kỹ thuật Cửa sổ trượt biến thiên (mở `R`, co `L`) áp dụng an 
 
 #### Câu 2 (Dự đoán — Predict):
 
-Cho mảng `A = [1, 4, 2, 10, 2, 3, 1, 0, 20]` và cửa sổ cố định kích thước `K = 4`. Tổng của cửa sổ đầu tiên `[1, 4, 2, 10]` là `17`. Khi trượt cửa sổ sang phải để xét đoạn `[4, 2, 10, 2]`, tổng mới được tính nhanh nhất bằng phép toán nào?
+Cho mảng `A = [1, 4, 2, 10, 2, 3, 1, 0, 20]` và cửa sổ cố định kích thước `K = 4`. Tổng của cửa sổ đầu tiên `[1, 4, 2, 10]` là `17`. Khi trượt cửa sổ sang phải để xét đoạn `[4, 2, 10, 2]`, tổng mới được tính nhanh nhất bằng phép toán nào
 
 - **A.** Cộng lại từ đầu: `4 + 2 + 10 + 2 = 18`.
 
@@ -859,7 +859,7 @@ Cho mảng `A = [1, 4, 2, 10, 2, 3, 1, 0, 20]` và cửa sổ cố định kích
 
 #### Câu 3 (Bản chất — Explain):
 
-Mặc dù có vòng lặp `while` lồng bên trong vòng lặp `for`, tại sao thuật toán Cửa sổ trượt trên mảng `N` phần tử vẫn đạt độ phức tạp thời gian $\mathcal{O}(N)$?
+Mặc dù có vòng lặp `while` lồng bên trong vòng lặp `for`, tại sao thuật toán Cửa sổ trượt trên mảng `N` phần tử vẫn đạt độ phức tạp thời gian $\mathcal{O}(N)$
 
 - **A.** Vì vòng lặp `while` chỉ chạy đúng 1 lần duy nhất trong toàn bộ chương trình.
 
@@ -873,7 +873,7 @@ Mặc dù có vòng lặp `while` lồng bên trong vòng lặp `for`, tại sao
 
 #### Câu 4 (Chuyển giao — Transfer):
 
-Nếu đề bài yêu cầu tìm đoạn con ngắn nhất có tổng `>= S` nhưng trong mảng có xuất hiện các số âm, tại sao ta **không được dùng** kỹ thuật Cửa sổ trượt đơn thuần?
+Nếu đề bài yêu cầu tìm đoạn con ngắn nhất có tổng `>= S` nhưng trong mảng có xuất hiện các số âm, tại sao ta **không được dùng** kỹ thuật Cửa sổ trượt đơn thuần
 
 - **A.** Vì số âm làm tràn bộ nhớ của mảng.
 
@@ -887,7 +887,7 @@ Nếu đề bài yêu cầu tìm đoạn con ngắn nhất có tổng `>= S` nh�
 
 #### Câu 5 (Chiến lược điều khiển — Control Flow):
 
-Trong bài toán tìm **đoạn con dài nhất có tổng `<= S`** (`A_i >= 0`), vòng lặp `while` co con trỏ `L` được kích hoạt khi nào?
+Trong bài toán tìm **đoạn con dài nhất có tổng `<= S`** (`A_i >= 0`), vòng lặp `while` co con trỏ `L` được kích hoạt khi nào
 
 - **A.** Khi tổng cửa sổ `current_sum <= S`.
 
@@ -901,7 +901,7 @@ Trong bài toán tìm **đoạn con dài nhất có tổng `<= S`** (`A_i >= 0`)
 
 #### Câu 6 (Đếm tổ hợp đoạn con — Combinatorial Counting):
 
-Trong bài toán **Đếm số lượng đoạn con liên tiếp có tổng `<= S`** (`A_i >= 0`), sau khi co `L` để đảm bảo tổng đoạn `[L ... R] <= S`, số lượng đoạn con hợp lệ kết thúc tại `R` được tính bằng công thức nào?
+Trong bài toán **Đếm số lượng đoạn con liên tiếp có tổng `<= S`** (`A_i >= 0`), sau khi co `L` để đảm bảo tổng đoạn `[L ... R] <= S`, số lượng đoạn con hợp lệ kết thúc tại `R` được tính bằng công thức nào
 
 - **A.** `1`
 
@@ -915,7 +915,7 @@ Trong bài toán **Đếm số lượng đoạn con liên tiếp có tổng `<= 
 
 #### Câu 7 (Cửa sổ chuỗi ký tự — Frequency Map):
 
-Để tìm **đoạn con dài nhất chứa tối đa $K$ ký tự phân biệt** trên chuỗi chỉ gồm chữ cái thường tiếng Anh, ta nên quản lý trạng thái cửa sổ như thế nào tối ưu nhất?
+Để tìm **đoạn con dài nhất chứa tối đa $K$ ký tự phân biệt** trên chuỗi chỉ gồm chữ cái thường tiếng Anh, ta nên quản lý trạng thái cửa sổ như thế nào tối ưu nhất
 
 - **A.** Quét lại toàn bộ cửa sổ để đếm số ký tự khác nhau trong mỗi bước ($\mathcal{O}(K)$).
 
@@ -929,7 +929,7 @@ Trong bài toán **Đếm số lượng đoạn con liên tiếp có tổng `<= 
 
 #### Câu 8 (Cửa sổ bao phủ tối thiểu — Minimum Window):
 
-Trong bài toán tìm **đoạn con ngắn nhất chứa đầy đủ tất cả các ký tự của một tập hợp `T`**, điều kiện để bắt đầu co con trỏ `L` là gì?
+Trong bài toán tìm **đoạn con ngắn nhất chứa đầy đủ tất cả các ký tự của một tập hợp `T`**, điều kiện để bắt đầu co con trỏ `L` là gì
 
 - **A.** Khi độ dài cửa sổ đạt tới độ dài của `T`.
 
@@ -943,7 +943,7 @@ Trong bài toán tìm **đoạn con ngắn nhất chứa đầy đủ tất cả
 
 #### Câu 9 (Xử lý giới hạn dữ liệu lớn — Large Constraints):
 
-Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mảng $N = 10^5$ phần tử với $A_i \le 10^9$. Biến tính tổng cửa sổ `current_sum` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì?
+Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mảng $N = 10^5$ phần tử với $A_i \le 10^9$. Biến tính tổng cửa sổ `current_sum` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì
 
 - **A.** $10^9$, dùng kiểu `int`.
 
@@ -953,11 +953,11 @@ Một bài toán yêu cầu tìm đoạn con có tổng lớn nhất trong mản
 
 - **D.** $10^{18}$, bắt buộc dùng kiểu `__int128`.
 
-> Giải thích: Tổng của $10^5$ phần tử có giá trị $10^9$ là `10^5  10^9 = 10^14`, vượt xa giới hạn khoảng `2.14  10^9` của kiểu `int` 32-bit.
+> Giải thích: Tổng của $10^5$ phần tử có giá trị $10^9$ là `10^5 10^9 = 10^14`, vượt xa giới hạn khoảng `2.14 10^9` của kiểu `int` 32-bit.
 
 #### Câu 10 (Kỹ thuật hiệu đếm đoạn con — Interval Counting Trick):
 
-Để đếm số lượng đoạn con liên tiếp có tổng nằm trong khoảng `[A, B]` (tức `A <= sum <= B`) trên mảng số nguyên dương, kỹ thuật chuẩn mực là gì?
+Để đếm số lượng đoạn con liên tiếp có tổng nằm trong khoảng `[A, B]` (tức `A <= sum <= B`) trên mảng số nguyên dương, kỹ thuật chuẩn mực là gì
 
 - **A.** Chạy 2 vòng lặp lồng nhau duyệt mọi đoạn con.
 
@@ -1115,32 +1115,32 @@ Sau khi thực hiện xong $Q$ thao tác, khôi phục ma trận gốc bằng c�
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n + 1);
+vector<long long> a(n + 1);
 
-    vector<long long> p(n + 1, 0);
+vector<long long> p(n + 1, 0);
 
-    // Bước 1: Đọc dữ liệu và xây dựng mảng tiền tố O(N)
-    for (int i = 1; i <= n; ++i) {
-        cin >> a[i];
+// Bước 1: Đọc dữ liệu và xây dựng mảng tiền tố O(N)
+for (int i = 1; i <= n; ++i) {
+cin >> a[i];
 
-        p[i] = p[i - 1] + a[i];
-    }
+p[i] = p[i - 1] + a[i];
+}
 
-    // Bước 2: Trả lời từng truy vấn trong O(1)
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
+// Bước 2: Trả lời từng truy vấn trong O(1)
+while (q--) {
+int l, r;
+cin >> l >> r;
 
-        cout << p[r] - p[l - 1] << "\n";
-    }
+cout << p[r] - p[l - 1] << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -1151,35 +1151,35 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    // Khởi tạo mảng hiệu kích thước n + 2 để an toàn khi truy cập r + 1
-    vector<long long> d(n + 2, 0);
+// Khởi tạo mảng hiệu kích thước n + 2 để an toàn khi truy cập r + 1
+vector<long long> d(n + 2, 0);
 
-    // Bước 1: Tiếp nhận Q thao tác cập nhật O(1)
-    while (q--) {
-        int l, r;
-        long long v;
-        cin >> l >> r >> v;
+// Bước 1: Tiếp nhận Q thao tác cập nhật O(1)
+while (q--) {
+int l, r;
+long long v;
+cin >> l >> r >> v;
 
-        d[l] += v;
-        d[r + 1] -= v;
-    }
+d[l] += v;
+d[r + 1] -= v;
+}
 
-    // Bước 2: Khôi phục mảng kết quả bằng tiền tố O(N)
-    vector<long long> a(n + 1, 0);
+// Bước 2: Khôi phục mảng kết quả bằng tiền tố O(N)
+vector<long long> a(n + 1, 0);
 
-    for (int i = 1; i <= n; ++i) {
-        a[i] = a[i - 1] + d[i];
-        cout << a[i] << (i == n ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 1; i <= n; ++i) {
+a[i] = a[i - 1] + d[i];
+cout << a[i] << (i == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -1189,7 +1189,7 @@ int main() {
 2. **Bẫy tràn số nguyên 32-bit khi cộng dồn:** Mảng $N = 2 \cdot 10^5$ phần tử với $A_i = 10^9$ sẽ có tổng tiền tố lên tới $2 \cdot 10^{14}$, vượt ngưỡng $2 \cdot 10^9$ của `int`. Khai báo toàn bộ mảng $P$ và $D$ kiểu `long long`.
 3. **Bẫy tràn biên $R + 1$ trong mảng hiệu:** Khi đoạn cập nhật có $R = N$, thao tác $D[R+1] -= V$ sẽ ghi vào vị trí $N + 1$. Bắt buộc phải cấp phát mảng hiệu có kích thước tối thiểu là `N + 2`.
 
-## 7. Ranh Giới Áp Dụng: Khi Nào Nên & Không Nên Dùng?
+## 7. Ranh Giới Áp Dụng: Khi Nào Nên & Không Nên Dùng
 
 * **KHI NÀO ÁP DỤNG TỐI ƯU:**
 * **Mảng tĩnh (Static Queries):** Toàn bộ dữ liệu mảng cố định, chỉ nhận các truy vấn tính tổng đoạn liên tiếp $\implies$ **Prefix Sum đạt $\mathcal{O}(1)$ tuyệt đối**.
@@ -1205,7 +1205,7 @@ int main() {
 
 #### Câu 1 (Nhận diện — Recognize):
 
-Mảng tiền tố `P` của mảng `A = [4, 1, 7, 3, 2]` (đánh số từ 1 đến 5) là dãy số nào sau đây?
+Mảng tiền tố `P` của mảng `A = [4, 1, 7, 3, 2]` (đánh số từ 1 đến 5) là dãy số nào sau đây
 
 - **A.** `P = [0, 4, 5, 12, 15, 17]`
 
@@ -1219,7 +1219,7 @@ Mảng tiền tố `P` của mảng `A = [4, 1, 7, 3, 2]` (đánh số từ 1 đ
 
 #### Câu 2 (Dự đoán — Predict):
 
-Cho mảng tiền tố `P = [0, 3, 8, 14, 20, 25]`. Tổng của đoạn từ vị trí `L = 2` đến `R = 4` được tính bằng biểu thức nào?
+Cho mảng tiền tố `P = [0, 3, 8, 14, 20, 25]`. Tổng của đoạn từ vị trí `L = 2` đến `R = 4` được tính bằng biểu thức nào
 
 - **A.** `P[4] - P[2] = 20 - 8 = 12`.
 
@@ -1233,7 +1233,7 @@ Cho mảng tiền tố `P = [0, 3, 8, 14, 20, 25]`. Tổng của đoạn từ v�
 
 #### Câu 3 (Bản chất — Explain):
 
-Tại sao khi thao tác trên mảng hiệu `D` để cộng giá trị `V` vào đoạn `[L ... R]`, ta lại phải thực hiện `D[R+1] mathrel-= V`?
+Tại sao khi thao tác trên mảng hiệu `D` để cộng giá trị `V` vào đoạn `[L ... R]`, ta lại phải thực hiện `D[R+1] mathrel-= V`
 
 - **A.** Để giảm bớt giá trị của phần tử đứng ngay sau `R`.
 
@@ -1247,7 +1247,7 @@ Tại sao khi thao tác trên mảng hiệu `D` để cộng giá trị `V` vào
 
 #### Câu 4 (Chuyển giao — Transfer):
 
-Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^5$ phần tử, việc sử dụng Mảng hiệu giúp giảm độ phức tạp thời gian từ bao nhiêu xuống bao nhiêu?
+Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^5$ phần tử, việc sử dụng Mảng hiệu giúp giảm độ phức tạp thời gian từ bao nhiêu xuống bao nhiêu
 
 - **A.** Từ $\mathcal{O}(N \log N)$ xuống $\mathcal{O}(N)$.
 
@@ -1261,7 +1261,7 @@ Nếu có $Q = 10^5$ thao tác cập nhật cộng đoạn trên mảng $N = 10^
 
 #### Câu 5 (Prefix Sum 2D — Geometry):
 
-Trong công thức tính tổng hình chữ nhật `2D`: `Sum = P[x2][y2] - P[x1-1][y2] - P[x2][y1-1] + P[x1-1][y1-1]`, tại sao lại có dấu cộng `+ P[x1-1][y1-1]` ở cuối?
+Trong công thức tính tổng hình chữ nhật `2D`: `Sum = P[x2][y2] - P[x1-1][y2] - P[x2][y1-1] + P[x1-1][y1-1]`, tại sao lại có dấu cộng `+ P[x1-1][y1-1]` ở cuối
 
 - **A.** Vì đây là công thức tính đường chéo hình chữ nhật.
 
@@ -1275,7 +1275,7 @@ Trong công thức tính tổng hình chữ nhật `2D`: `Sum = P[x2][y2] - P[x1
 
 #### Câu 6 (Mảng hiệu 2D — Technique):
 
-Để cộng giá trị `V` vào tất cả các ô trong hình chữ nhật `(x1, y1) to (x2, y2)` trên ma trận bằng mảng hiệu `2D`, cần cập nhật bao nhiêu ô và dấu như thế nào?
+Để cộng giá trị `V` vào tất cả các ô trong hình chữ nhật `(x1, y1) to (x2, y2)` trên ma trận bằng mảng hiệu `2D`, cần cập nhật bao nhiêu ô và dấu như thế nào
 
 - **A.** Cập nhật 2 ô: `+V` tại `(x1, y1)` và `-V` tại `(x2, y2)`.
 
@@ -1289,7 +1289,7 @@ Trong công thức tính tổng hình chữ nhật `2D`: `Sum = P[x2][y2] - P[x1
 
 #### Câu 7 (Đoạn con tổng bằng 0 — Logic):
 
-Nếu tồn tại hai chỉ số `i < j` trong mảng tiền tố thỏa mãn `P[i] == P[j]`, ta có thể rút ra kết luận gì về mảng ban đầu?
+Nếu tồn tại hai chỉ số `i < j` trong mảng tiền tố thỏa mãn `P[i] == P[j]`, ta có thể rút ra kết luận gì về mảng ban đầu
 
 - **A.** Tất cả các phần tử từ `i` đến `j` đều bằng 0.
 
@@ -1303,7 +1303,7 @@ Nếu tồn tại hai chỉ số `i < j` trong mảng tiền tố thỏa mãn `P
 
 #### Câu 8 (Đồng dư tiền tố — Prefix Modulo):
 
-Để đếm số lượng đoạn con có tổng chia hết cho $K$, ta tính mảng tiền tố lấy dư `M[i] = P[i] bmod K`. Đoạn con `[L ... R]` có tổng chia hết cho $K$ khi và chỉ khi điều kiện nào thỏa mãn?
+Để đếm số lượng đoạn con có tổng chia hết cho $K$, ta tính mảng tiền tố lấy dư `M[i] = P[i] bmod K`. Đoạn con `[L ... R]` có tổng chia hết cho $K$ khi và chỉ khi điều kiện nào thỏa mãn
 
 - **A.** `M[R] + M[L-1] == K`.
 
@@ -1317,7 +1317,7 @@ Nếu tồn tại hai chỉ số `i < j` trong mảng tiền tố thỏa mãn `P
 
 #### Câu 9 (Bẫy chỉ số mảng hiệu — Bug Traps):
 
-Khi làm việc với mảng hiệu 1D cho dãy có `N` phần tử, tại sao mảng `D` bắt buộc phải được khai báo với kích thước tối thiểu là `N + 2`?
+Khi làm việc với mảng hiệu 1D cho dãy có `N` phần tử, tại sao mảng `D` bắt buộc phải được khai báo với kích thước tối thiểu là `N + 2`
 
 - **A.** Để lưu trữ giá trị trung bình ở cuối mảng.
 
@@ -1331,7 +1331,7 @@ Khi làm việc với mảng hiệu 1D cho dãy có `N` phần tử, tại sao m
 
 #### Câu 10 (Tràn số dữ liệu lớn — Data Types):
 
-Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận `N * M = 1000 * 1000`, mỗi phần tử `A[i][j] <= 10^9`. Bảng tiền tố `P[i][j]` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì?
+Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận `N * M = 1000 * 1000`, mỗi phần tử `A[i][j] <= 10^9`. Bảng tiền tố `P[i][j]` có thể đạt giá trị tối đa là bao nhiêu và cần kiểu dữ liệu gì
 
 - **A.** $10^9$, dùng kiểu `int`.
 
@@ -1341,11 +1341,11 @@ Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận `N * M
 
 - **D.** $10^{18}$, bắt buộc dùng kiểu `__int128`.
 
-> *Giải thích:* Tổng của toàn bộ `1000  1000 = 10^6` ô, mỗi ô có giá trị $10^9$, là `10^15`. Giá trị này vượt xa giới hạn `2.14  10^9` của kiểu `int` 32-bit, bắt buộc phải dùng `long long` 64-bit.
+> *Giải thích:* Tổng của toàn bộ `1000 1000 = 10^6` ô, mỗi ô có giá trị $10^9$, là `10^15`. Giá trị này vượt xa giới hạn `2.14 10^9` của kiểu `int` 32-bit, bắt buộc phải dùng `long long` 64-bit.
 
 #### Câu 11 (Nén chiều ma trận — 2D Submatrix Compression):
 
-Để tìm ma trận con hình chữ nhật có tổng lớn nhất trên ma trận $N \times M$, kỹ thuật tối ưu kết hợp Mảng tiền tố và Thuật toán Kadane giảm độ phức tạp từ `O(N^2 M^2)` xuống bao nhiêu?
+Để tìm ma trận con hình chữ nhật có tổng lớn nhất trên ma trận $N \times M$, kỹ thuật tối ưu kết hợp Mảng tiền tố và Thuật toán Kadane giảm độ phức tạp từ `O(N^2 M^2)` xuống bao nhiêu
 
 - **A.** $\mathcal{O}(N \times M)$
 
@@ -1359,7 +1359,7 @@ Cho bài toán gồm $Q = 10^5$ truy vấn tổng đoạn trên ma trận `N * M
 
 #### Câu 12 (Cân bằng đa trạng thái — Multidimensional Balance):
 
-Để tìm đoạn con dài nhất chứa số lượng 3 loại ký tự 'A', 'B', 'C' bằng nhau, ta cần lưu trữ và so khớp giá trị nào tại mỗi vị trí tiền tố `i`?
+Để tìm đoạn con dài nhất chứa số lượng 3 loại ký tự 'A', 'B', 'C' bằng nhau, ta cần lưu trữ và so khớp giá trị nào tại mỗi vị trí tiền tố `i`
 
 - **A.** Tổng số lượng `cntA + cntB + cntC`.
 
@@ -1527,48 +1527,48 @@ $$\text{Độ thu hẹp} = \frac{\text{high} - \text{low}}{2^{100}} \approx \fra
 # include <bits/stdc++.h>
 using namespace std;
 
-// Hàm kiểm tra: Lượng gỗ thu được khi cưa ở độ cao mid có >= M hay không?
+// Hàm kiểm tra: Lượng gỗ thu được khi cưa ở độ cao mid có >= M hay không
 bool check(long long mid, const vector<long long>& a, long long m) {
-    long long wood = 0;
-    for (long long x : a) {
-        if (x > mid) wood += (x - mid);
+long long wood = 0;
+for (long long x : a) {
+if (x > mid) wood += (x - mid);
 
-    }
-    return wood >= m;
+}
+return wood >= m;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long m;
-    if (!(cin >> n >> m)) return 0;
+int n;
+long long m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    long long max_val = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+long long max_val = 0;
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-        max_val = max(max_val, a[i]);
-    }
+max_val = max(max_val, a[i]);
+}
 
-    long long low = 0, high = max_val;
-    long long ans = 0;
+long long low = 0, high = max_val;
+long long ans = 0;
 
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (check(mid, a, m)) {
-            ans = mid;        // Ghi nhận nghiệm hợp lệ
-            low = mid + 1;    // Tìm giá trị lớn hơn ở bên phải
-        } else {
-            high = mid - 1;   // Không thỏa mãn, thu hẹp về bên trái
-        }
-    }
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (check(mid, a, m)) {
+ans = mid; // Ghi nhận nghiệm hợp lệ
+low = mid + 1; // Tìm giá trị lớn hơn ở bên phải
+} else {
+high = mid - 1; // Không thỏa mãn, thu hẹp về bên trái
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```
 
@@ -1578,55 +1578,55 @@ int main() {
 # include <bits/stdc++.h>
 using namespace std;
 
-// Hàm kiểm tra: Với tải trọng phà là mid, có chở hết hàng trong <= D ngày hay không?
+// Hàm kiểm tra: Với tải trọng phà là mid, có chở hết hàng trong <= D ngày hay không
 bool check(long long mid, const vector<long long>& w, int d) {
-    int days = 1;
-    long long current_load = 0;
-    for (long long x : w) {
-        if (current_load + x > mid) {
+int days = 1;
+long long current_load = 0;
+for (long long x : w) {
+if (current_load + x > mid) {
 
-            days++;
-            current_load = x;
-        } else {
-            current_load += x;
-        }
-    }
-    return days <= d;
+days++;
+current_load = x;
+} else {
+current_load += x;
+}
+}
+return days <= d;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, d;
-    if (!(cin >> n >> d)) return 0;
+int n, d;
+if (!(cin >> n >> d)) return 0;
 
-    vector<long long> w(n);
+vector<long long> w(n);
 
-    long long max_w = 0, sum_w = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> w[i];
+long long max_w = 0, sum_w = 0;
+for (int i = 0; i < n; ++i) {
+cin >> w[i];
 
-        max_w = max(max_w, w[i]);
-        sum_w += w[i];
-    }
+max_w = max(max_w, w[i]);
+sum_w += w[i];
+}
 
-    // Không gian tìm kiếm: Tải trọng tối thiểu phải chở được kiện nặng nhất
-    long long low = max_w, high = sum_w;
-    long long ans = sum_w;
+// Không gian tìm kiếm: Tải trọng tối thiểu phải chở được kiện nặng nhất
+long long low = max_w, high = sum_w;
+long long ans = sum_w;
 
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (check(mid, w, d)) {
-            ans = mid;        // Ghi nhận nghiệm hợp lệ
-            high = mid - 1;   // Tìm giá trị nhỏ hơn ở bên trái
-        } else {
-            low = mid + 1;    // Tải trọng chưa đủ, phải tăng lên
-        }
-    }
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (check(mid, w, d)) {
+ans = mid; // Ghi nhận nghiệm hợp lệ
+high = mid - 1; // Tìm giá trị nhỏ hơn ở bên trái
+} else {
+low = mid + 1; // Tải trọng chưa đủ, phải tăng lên
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```
 
@@ -1637,27 +1637,27 @@ int main() {
 using namespace std;
 
 bool check_real(double mid) {
-    return (mid * mid * mid + 2.0 * mid * mid + 10.0 * mid >= 100.0);
+return (mid * mid * mid + 2.0 * mid * mid + 10.0 * mid >= 100.0);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    double low = 0.0, high = 1e9;
+double low = 0.0, high = 1e9;
 
-    // Lặp cố định 100 lần để đạt sai số < 10^-15
-    for (int iter = 0; iter < 100; ++iter) {
-        double mid = low + (high - low) / 2.0;
-        if (check_real(mid)) {
-            high = mid;
-        } else {
-            low = mid;
-        }
-    }
+// Lặp cố định 100 lần để đạt sai số < 10^-15
+for (int iter = 0; iter < 100; ++iter) {
+double mid = low + (high - low) / 2.0;
+if (check_real(mid)) {
+high = mid;
+} else {
+low = mid;
+}
+}
 
-    cout << fixed << setprecision(7) << low << "\n";
-    return 0;
+cout << fixed << setprecision(7) << low << "\n";
+return 0;
 }
 ```
 
@@ -1668,7 +1668,7 @@ int main() {
 3. **Bẫy biên không gian tìm kiếm $[low, high]$:** Đặt $high$ quá nhỏ dẫn đến bỏ sót nghiệm đúng, hoặc đặt $low = 0$ dẫn đến lỗi chia cho 0 (`mid = 0`) trong hàm `check`.
 4. **Bẫy phần tử trùng lặp trong mảng xoay vòng:** Nếu mảng xoay vòng có các phần tử trùng lặp thỏa mãn $A[low] == A[mid] == A[high]$, ta không thể xác định nửa nào được sắp xếp đơn điệu $\implies$ Trường hợp xấu nhất phải co cả hai đầu `low++` và `high--`, làm độ phức tạp suy biến về $\mathcal{O}(N)$.
 
-## 7. Ranh Giới Áp Dụng: Khi Nào Nên & Không Nên Dùng?
+## 7. Ranh Giới Áp Dụng: Khi Nào Nên & Không Nên Dùng
 
 * **KHI NÀO ÁP DỤNG:**
 * Không gian tìm kiếm có tính chất **đơn điệu (Monotonic)**: Đồ thị hàm kiểm tra có dạng dải phân cách rõ ràng: $[\text{True}, \dots, \text{True}, \text{False}, \dots, \text{False}]$.
@@ -1680,7 +1680,7 @@ int main() {
 
 #### Câu 1 (Bản chất — Complexity):
 
-Tại sao thuật toán tìm kiếm nhị phân trên không gian kích thước $N = 10^9$ chỉ cần tối đa khoảng 30 bước lặp?
+Tại sao thuật toán tìm kiếm nhị phân trên không gian kích thước $N = 10^9$ chỉ cần tối đa khoảng 30 bước lặp
 
 - **A.** Vì mỗi bước chia không gian thành 10 phần.
 
@@ -1694,7 +1694,7 @@ Tại sao thuật toán tìm kiếm nhị phân trên không gian kích thước
 
 #### Câu 2 (Điều kiện tiên quyết — Monotonicity):
 
-Yêu cầu bắt buộc để có thể áp dụng thuật toán Tìm kiếm nhị phân là gì?
+Yêu cầu bắt buộc để có thể áp dụng thuật toán Tìm kiếm nhị phân là gì
 
 - **A.** Mảng phải chứa toàn số dương.
 
@@ -1708,7 +1708,7 @@ Yêu cầu bắt buộc để có thể áp dụng thuật toán Tìm kiếm nh�
 
 #### Câu 3 (Cú pháp chuẩn — Bug Trap):
 
-Biểu thức nào sau đây tính trung điểm `mid` an toàn nhất để chống tràn số trong C++?
+Biểu thức nào sau đây tính trung điểm `mid` an toàn nhất để chống tràn số trong C++
 
 - **A.** `mid = (low + high) / 2;`
 
@@ -1722,7 +1722,7 @@ Biểu thức nào sau đây tính trung điểm `mid` an toàn nhất để ch�
 
 #### Câu 4 (Hàm STL — lower_bound):
 
-Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của `lower_bound(A.begin(), A.end(), 4) - A.begin()` là gì?
+Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của `lower_bound(A.begin(), A.end(), 4) - A.begin()` là gì
 
 - **A.** 0
 
@@ -1736,7 +1736,7 @@ Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về củ
 
 #### Câu 5 (Hàm STL — upper_bound):
 
-Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của `upper_bound(A.begin(), A.end(), 4) - A.begin()` là gì?
+Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về của `upper_bound(A.begin(), A.end(), 4) - A.begin()` là gì
 
 - **A.** 1
 
@@ -1750,7 +1750,7 @@ Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về củ
 
 #### Câu 6 (Đếm số lần xuất hiện — Counting):
 
-Để đếm số lần xuất hiện của giá trị `X` trong một vector `A` gồm `N` phần tử đã sắp xếp tăng dần trong thời gian $\mathcal{O}(\log N)$, ta dùng biểu thức nào?
+Để đếm số lần xuất hiện của giá trị `X` trong một vector `A` gồm `N` phần tử đã sắp xếp tăng dần trong thời gian $\mathcal{O}(\log N)$, ta dùng biểu thức nào
 
 - **A.** `upper_bound(A.begin(), A.end(), X) - A.begin()`
 
@@ -1764,7 +1764,7 @@ Cho mảng đã sắp xếp `A = [2, 4, 4, 4, 7, 9]`. Giá trị trả về củ
 
 #### Câu 7 (Binary Search on Answer — Logic):
 
-Trong bài toán *"Tìm chiều cao cắt `H` lớn nhất sao cho tổng lượng gỗ thu được `>= M`"*, tính chất đơn điệu của hàm kiểm tra `check(H)` thể hiện như thế nào?
+Trong bài toán *"Tìm chiều cao cắt `H` lớn nhất sao cho tổng lượng gỗ thu được `>= M`"*, tính chất đơn điệu của hàm kiểm tra `check(H)` thể hiện như thế nào
 
 - **A.** Chiều cao `H` càng tăng thì lượng gỗ thu được càng tăng.
 
@@ -1778,7 +1778,7 @@ Trong bài toán *"Tìm chiều cao cắt `H` lớn nhất sao cho tổng lượ
 
 #### Câu 8 (Binary Search on Answer — Search Space):
 
-Nếu bài toán yêu cầu tìm giá trị `X` nhỏ nhất thỏa mãn `check(X) == true`, sau khi kiểm tra tại `mid` thấy `check(mid) == true`, ta cần cập nhật bước tiếp theo như thế nào?
+Nếu bài toán yêu cầu tìm giá trị `X` nhỏ nhất thỏa mãn `check(X) == true`, sau khi kiểm tra tại `mid` thấy `check(mid) == true`, ta cần cập nhật bước tiếp theo như thế nào
 
 - **A.** `low = mid + 1;`
 
@@ -1792,7 +1792,7 @@ Nếu bài toán yêu cầu tìm giá trị `X` nhỏ nhất thỏa mãn `check(
 
 #### Câu 9 (Chặt nhị phân số thực — Real Numbers):
 
-Tại sao khi chặt nhị phân trên tập số thực, ta nên dùng vòng lặp `for (int iter = 0; iter < 100; ++iter)` thay vì `while (high - low > 1e-7)`?
+Tại sao khi chặt nhị phân trên tập số thực, ta nên dùng vòng lặp `for (int iter = 0; iter < 100; ++iter)` thay vì `while (high - low > 1e-7)`
 
 - **A.** Để chương trình chạy nhanh hơn gấp 100 lần.
 
@@ -1806,7 +1806,7 @@ Tại sao khi chặt nhị phân trên tập số thực, ta nên dùng vòng l�
 
 #### Câu 10 (Ranh giới thất bại — Failure Boundary):
 
-Trường hợp nào sau đây **KHÔNG THỂ** giải bằng thuật toán Tìm kiếm nhị phân một cách trực tiếp?
+Trường hợp nào sau đây **KHÔNG THỂ** giải bằng thuật toán Tìm kiếm nhị phân một cách trực tiếp
 
 - **A.** Tìm căn bậc hai của số nguyên lớn $N \le 10^{18}$.
 
@@ -1820,7 +1820,7 @@ Trường hợp nào sau đây **KHÔNG THỂ** giải bằng thuật toán Tìm
 
 #### Câu 11 (Mảng xoay vòng — Rotated Array):
 
-Cho mảng gồm các phần tử đôi một phân biệt đã sắp xếp nhưng bị xoay vòng tại một vị trí `P` (ví dụ: `[4, 5, 6, 7, 0, 1, 2]`). Khi xét phần tử trung điểm `A[mid]`, tính chất cốt lõi nào cho phép ta tiếp tục tìm kiếm nhị phân?
+Cho mảng gồm các phần tử đôi một phân biệt đã sắp xếp nhưng bị xoay vòng tại một vị trí `P` (ví dụ: `[4, 5, 6, 7, 0, 1, 2]`). Khi xét phần tử trung điểm `A[mid]`, tính chất cốt lõi nào cho phép ta tiếp tục tìm kiếm nhị phân
 
 - **A.** Cả hai nửa trái và phải đều đã được sắp xếp tăng dần.
 
@@ -1834,7 +1834,7 @@ Cho mảng gồm các phần tử đôi một phân biệt đã sắp xếp như
 
 #### Câu 12 (Ma trận 2D đã sắp xếp — 2D Matrix Binary Search):
 
-Cho ma trận $N \times M$ gồm các số nguyên tăng dần từ trái sang phải trên từng hàng và phần tử đầu mỗi hàng luôn lớn hơn phần tử cuối hàng trước. Để tìm kiếm phần tử `X` trong $\mathcal{O}(\log(N \times M))$, ta ánh xạ chỉ số 1D `mid` sang tọa độ ô `(r, c)` bằng công thức nào?
+Cho ma trận $N \times M$ gồm các số nguyên tăng dần từ trái sang phải trên từng hàng và phần tử đầu mỗi hàng luôn lớn hơn phần tử cuối hàng trước. Để tìm kiếm phần tử `X` trong $\mathcal{O}(\log(N \times M))$, ta ánh xạ chỉ số 1D `mid` sang tọa độ ô `(r, c)` bằng công thức nào
 
 - **A.** `r = mid bmod M, c = mid / M`
 
@@ -1848,7 +1848,7 @@ Cho ma trận $N \times M$ gồm các số nguyên tăng dần từ trái sang p
 
 #### Câu 13 (Đỉnh dãy núi — Mountain Array Peak):
 
-Trong một mảng dạng đỉnh núi (tăng dần rồi giảm dần: `A0 < A1 < ... < A_p > A[p+1] > ... > A[N-1]`), điều kiện nào tại vị trí `mid` cho biết đỉnh núi nằm ở bên phải `mid`?
+Trong một mảng dạng đỉnh núi (tăng dần rồi giảm dần: `A0 < A1 < ... < A_p > A[p+1] > ... > A[N-1]`), điều kiện nào tại vị trí `mid` cho biết đỉnh núi nằm ở bên phải `mid`
 
 - **A.** `A[mid] > A[mid + 1]`
 
@@ -1862,7 +1862,7 @@ Trong một mảng dạng đỉnh núi (tăng dần rồi giảm dần: `A0 < A1
 
 #### Câu 14 (Trung vị hai mảng đã sắp xếp — Advanced Partition):
 
-Thuật toán tìm phần tử trung vị của hai mảng đã sắp xếp `A` (kích thước `N`) và `B` (kích thước `M`) trong thời gian tối ưu `O(log(min(N, M)))` dựa trên việc chặt nhị phân đối tượng nào?
+Thuật toán tìm phần tử trung vị của hai mảng đã sắp xếp `A` (kích thước `N`) và `B` (kích thước `M`) trong thời gian tối ưu `O(log(min(N, M)))` dựa trên việc chặt nhị phân đối tượng nào
 
 - **A.** Chặt nhị phân giá trị của phần tử trung vị từ `-10^9 ... 10^9`.
 
@@ -2001,12 +2001,12 @@ Mặt nạ bit (**Bitmask**) là kỹ thuật dùng một số nguyên $N$ bit �
 ```cpp
 int n = 4;
 for (int mask = 0; mask < (1 << n); ++mask) {
-    for (int i = 0; i < n; ++i) {
-        if ((mask >> i) & 1) {
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
 
-            // Phần tử i thuộc tập con hiện tại
-        }
-    }
+// Phần tử i thuộc tập con hiện tại
+}
+}
 }
 ```
 
@@ -2014,7 +2014,7 @@ for (int mask = 0; mask < (1 << n); ++mask) {
 ```cpp
 for (int sub = mask; sub > 0; sub = (sub - 1) & mask) {
 
-    // sub là một tập con hợp lệ của mask
+// sub là một tập con hợp lệ của mask
 }
 ```
 
@@ -2041,39 +2041,39 @@ Với $N = 3$, có $2^3 = 8$ mặt nạ bit từ $0$ đến $7$:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long target_s;
-    if (!(cin >> n >> target_s)) return 0;
+int n;
+long long target_s;
+if (!(cin >> n >> target_s)) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    bool found = false;
-    int total_masks = (1 << n);
+bool found = false;
+int total_masks = (1 << n);
 
-    for (int mask = 0; mask < total_masks; ++mask) {
-        long long current_sum = 0;
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
+for (int mask = 0; mask < total_masks; ++mask) {
+long long current_sum = 0;
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
 
-                current_sum += a[i];
-            }
-        }
-        if (current_sum == target_s) {
-            found = true;
-            break;
-        }
-    }
+current_sum += a[i];
+}
+}
+if (current_sum == target_s) {
+found = true;
+break;
+}
+}
 
-    cout << (found ? "YES\n" : "NO\n");
-    return 0;
+cout << (found "YES\n" : "NO\n");
+return 0;
 }
 ```
 
@@ -2086,7 +2086,7 @@ int main() {
 2. **Bẫy tràn số khi dịch bit quá 31:** Hằng số `1` mặc định là số nguyên 32-bit có dấu. Biểu thức `1 << 40` sẽ gây tràn số và lỗi hành vi không xác định (Undefined Behavior).
 * **Quy tắc bắt buộc:** Luôn viết `1LL << k` khi $k \ge 31$.
 
-## 7. Ranh Giới Áp Dụng: Khi Nào Nên & Không Nên Dùng?
+## 7. Ranh Giới Áp Dụng: Khi Nào Nên & Không Nên Dùng
 
 * **KHI NÀO ÁP DỤNG:**
 * Kích thước tập hợp nhỏ: $N \le 20$ ($2^{20} \approx 10^6$ phép tính) hoặc $N \le 24$ ($2^{24} \approx 1.6 \cdot 10^7$ phép tính).
@@ -2100,7 +2100,7 @@ int main() {
 
 #### Câu 1 (Bản chất XOR — Identity):
 
-Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì?
+Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì
 
 - **A.** 0
 
@@ -2114,7 +2114,7 @@ Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì?
 
 #### Câu 2 (Bẫy độ ưu tiên toán tử — Precedence):
 
-Đoạn mã C++ `if ((mask >> 3) & 1)` có ý nghĩa là gì?
+Đoạn mã C++ `if ((mask >> 3) & 1)` có ý nghĩa là gì
 
 - **A.** Dịch biến `mask` sang phải 4 vị trí.
 
@@ -2128,7 +2128,7 @@ Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì?
 
 #### Câu 3 (Kỹ thuật bật bit — Manipulation):
 
-Để bật bit thứ `k` của biến số nguyên `mask` lên 1 mà không làm thay đổi các bit khác, ta dùng câu lệnh nào?
+Để bật bit thứ `k` của biến số nguyên `mask` lên 1 mà không làm thay đổi các bit khác, ta dùng câu lệnh nào
 
 - **A.** `mask = mask & (1LL << k);`
 
@@ -2142,7 +2142,7 @@ Giá trị của biểu thức `A XOR B XOR A` trong C++ luôn bằng gì?
 
 #### Câu 4 (Kỹ thuật tắt bit — Manipulation):
 
-Để tắt bit thứ `k` của biến số nguyên `mask` về 0, ta dùng câu lệnh nào?
+Để tắt bit thứ `k` của biến số nguyên `mask` về 0, ta dùng câu lệnh nào
 
 - **A.** `mask = mask | ~(1LL << k);`
 
@@ -2170,7 +2170,7 @@ Biểu thức `n > 0 && (n & (n - 1)) == 0` trả về `true` khi và chỉ khi:
 
 #### Câu 6 (Đếm bit 1 — Builtin):
 
-Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian $\mathcal{O}(1)$, hàm nào sau đây là chuẩn xác nhất?
+Để đếm số lượng bit 1 của một số nguyên 64-bit `long long x` trong thời gian $\mathcal{O}(1)$, hàm nào sau đây là chuẩn xác nhất
 
 - **A.** `__builtin_popcount(x)`
 
@@ -2184,7 +2184,7 @@ Biểu thức `n > 0 && (n & (n - 1)) == 0` trả về `true` khi và chỉ khi:
 
 #### Câu 7 (Không gian tập con — Complexity):
 
-Một tập hợp có `N = 20` phần tử. Số lượng tập con được sinh ra bởi mặt nạ bit là bao nhiêu và thời gian duyệt vét cạn có chạy kịp `1` giây không?
+Một tập hợp có `N = 20` phần tử. Số lượng tập con được sinh ra bởi mặt nạ bit là bao nhiêu và thời gian duyệt vét cạn có chạy kịp `1` giây không
 
 - **A.** $20^2 = 400$ tập con, chạy kịp.
 
@@ -2198,7 +2198,7 @@ Một tập hợp có `N = 20` phần tử. Số lượng tập con được sin
 
 #### Câu 8 (Tìm phần tử đơn lẻ — XOR Application):
 
-Cho mảng gồm `2N + 1` số nguyên, trong đó có đúng một số xuất hiện 1 lần, tất cả các số còn lại đều xuất hiện đúng 2 lần. Thuật toán tìm số xuất hiện 1 lần tối ưu nhất là gì?
+Cho mảng gồm `2N + 1` số nguyên, trong đó có đúng một số xuất hiện 1 lần, tất cả các số còn lại đều xuất hiện đúng 2 lần. Thuật toán tìm số xuất hiện 1 lần tối ưu nhất là gì
 
 - **A.** Dùng 2 vòng lặp lồng nhau $\mathcal{O}(N^2)$.
 
@@ -2212,7 +2212,7 @@ Cho mảng gồm `2N + 1` số nguyên, trong đó có đúng một số xuất 
 
 #### Câu 9 (Bẫy dịch bit 64-bit — 64-bit Shift):
 
-Đoạn code `long long mask = 1 << 40;` sẽ gây ra lỗi gì trong C++?
+Đoạn code `long long mask = 1 << 40;` sẽ gây ra lỗi gì trong C++
 
 - **A.** Lỗi biên dịch không thể dịch bit.
 
@@ -2226,7 +2226,7 @@ Cho mảng gồm `2N + 1` số nguyên, trong đó có đúng một số xuất 
 
 #### Câu 10 (Duyệt Submask — Advanced Technique):
 
-Vòng lặp `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` dùng để làm gì?
+Vòng lặp `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` dùng để làm gì
 
 - **A.** Duyệt tất cả các số từ `mask` về 1.
 
@@ -2240,7 +2240,7 @@ Vòng lặp `for (int sub = mask; sub > 0; sub = (sub - 1) & mask)` dùng để 
 
 #### Câu 11 (Cặp tổng lũy thừa của 2 — Power of 2 Pairs):
 
-Cho $A_i \le 10^9$. Để đếm số cặp `A_i + A_j = 2^k`, tại sao ta chỉ cần lặp tối đa `k` từ `1` đến `30`?
+Cho $A_i \le 10^9$. Để đếm số cặp `A_i + A_j = 2^k`, tại sao ta chỉ cần lặp tối đa `k` từ `1` đến `30`
 
 - **A.** Vì kiểu `long long` trong C++ chỉ biểu diễn được 30 bit.
 
@@ -2254,7 +2254,7 @@ Cho $A_i \le 10^9$. Để đếm số cặp `A_i + A_j = 2^k`, tại sao ta ch�
 
 #### Câu 12 (Tập độc lập về bit — Bit Independence):
 
-Hai số nguyên dương `X` và `Y` được gọi là độc lập về bit khi biểu thức nào sau đây bằng 0?
+Hai số nguyên dương `X` và `Y` được gọi là độc lập về bit khi biểu thức nào sau đây bằng 0
 
 - **A.** `X XOR Y == 0`.
 
@@ -2389,29 +2389,29 @@ using namespace std;
 
 // GCD bằng thuật toán Euclid lặp O(log(min(A, B)))
 long long getGcd(long long a, long long b) {
-    while (b != 0) {
-        long long r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+while (b != 0) {
+long long r = a % b;
+a = b;
+b = r;
+}
+return a;
 }
 
 // LCM an toàn chống tràn số
 long long getLcm(long long a, long long b) {
-    if (a == 0 || b == 0) return 0;
-    return (a / getGcd(a, b)) * b;
+if (a == 0 || b == 0) return 0;
+return (a / getGcd(a, b)) * b;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << getGcd(a, b) << " " << getLcm(a, b) << "\n";
-    return 0;
+cout << getGcd(a, b) << " " << getLcm(a, b) << "\n";
+return 0;
 }
 ```
 
@@ -2425,56 +2425,56 @@ vector<int> spf(MAXN + 1);
 
 // Tiền xử lý Sàng SPF trong O(N log log N)
 void sieveSPF() {
-    for (int i = 1; i <= MAXN; ++i) spf[i] = i;
-    for (int i = 2; 1LL * i * i <= MAXN; ++i) {
-        if (spf[i] == i) { // i là số nguyên tố
-            for (int j = i * i; j <= MAXN; j += i) {
-                if (spf[j] == j) {
-                    spf[j] = i;
-                }
-            }
-        }
-    }
+for (int i = 1; i <= MAXN; ++i) spf[i] = i;
+for (int i = 2; 1LL * i * i <= MAXN; ++i) {
+if (spf[i] == i) { // i là số nguyên tố
+for (int j = i * i; j <= MAXN; j += i) {
+if (spf[j] == j) {
+spf[j] = i;
+}
+}
+}
+}
 }
 
 // Phân tích thừa số nguyên tố O(log N) cho mỗi truy vấn
 vector<pair<int, int>> factorize(int n) {
 
-    vector<pair<int, int>> factors;
+vector<pair<int, int>> factors;
 
-    while (n > 1) {
+while (n > 1) {
 
-        int p = spf[n];
-        int count = 0;
-        while (n % p == 0) {
-            count++;
-            n /= p;
-        }
-        factors.push_back({p, count});
-    }
-    return factors;
+int p = spf[n];
+int count = 0;
+while (n % p == 0) {
+count++;
+n /= p;
+}
+factors.push_back({p, count});
+}
+return factors;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    sieveSPF();
+sieveSPF();
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    while (q--) {
-        int n;
-        cin >> n;
+while (q--) {
+int n;
+cin >> n;
 
-        auto factors = factorize(n);
-        for (int i = 0; i < (int)factors.size(); ++i) {
-            cout << factors[i].first << "^" << factors[i].second << (i + 1 == (int)factors.size() ? "" : " * ");
-        }
-        cout << "\n";
-    }
-    return 0;
+auto factors = factorize(n);
+for (int i = 0; i < (int)factors.size(); ++i) {
+cout << factors[i].first << "^" << factors[i].second << (i + 1 == (int)factors.size() "" : " * ");
+}
+cout << "\n";
+}
+return 0;
 }
 ```
 
@@ -2482,7 +2482,7 @@ int main() {
 
 #### Câu 1 (Độ phức tạp):
 
-Thuật toán Euclid tìm `gcd(A, B)` có độ phức tạp thời gian trong trường hợp xấu nhất là bao nhiêu?
+Thuật toán Euclid tìm `gcd(A, B)` có độ phức tạp thời gian trong trường hợp xấu nhất là bao nhiêu
 
 - **A.** $\mathcal{O}(\min(A, B))$
 
@@ -2496,7 +2496,7 @@ Thuật toán Euclid tìm `gcd(A, B)` có độ phức tạp thời gian trong t
 
 #### Câu 2 (Bản chất toán học):
 
-Trường hợp xấu nhất khiến thuật toán Euclid phải thực hiện số bước lặp nhiều nhất xảy ra khi `A` và `B` là hai số nào sau đây?
+Trường hợp xấu nhất khiến thuật toán Euclid phải thực hiện số bước lặp nhiều nhất xảy ra khi `A` và `B` là hai số nào sau đây
 
 - **A.** Hai lũy thừa của 2: `A = 2^x, B = 2^y`.
 
@@ -2510,7 +2510,7 @@ Trường hợp xấu nhất khiến thuật toán Euclid phải thực hiện s
 
 #### Câu 3 (Cú pháp & Bẫy lỗi):
 
-Trong template C++ chuẩn thi đấu, công thức nào sau đây được sử dụng để tính Bội chung nhỏ nhất `lcm(A, B)` nhằm triệt tiêu nguy cơ tràn số ở bước nhân trung gian?
+Trong template C++ chuẩn thi đấu, công thức nào sau đây được sử dụng để tính Bội chung nhỏ nhất `lcm(A, B)` nhằm triệt tiêu nguy cơ tràn số ở bước nhân trung gian
 
 - **A.** `(a * b) / getGcd(a, b)`
 
@@ -2524,7 +2524,7 @@ Trong template C++ chuẩn thi đấu, công thức nào sau đây được sử
 
 #### Câu 4 (Thuật toán kiểm tra số nguyên tố):
 
-Tại sao để kiểm tra số `N` có phải là số nguyên tố hay không, ta chỉ cần kiểm tra các ước nguyên từ `2` đến `floor(sqrt(N) )`?
+Tại sao để kiểm tra số `N` có phải là số nguyên tố hay không, ta chỉ cần kiểm tra các ước nguyên từ `2` đến `floor(sqrt(N) )`
 
 - **A.** Vì các số lớn hơn `sqrt(N)` luôn là số lẻ.
 
@@ -2552,7 +2552,7 @@ Tại sao để kiểm tra số `N` có phải là số nguyên tố hay không,
 
 #### Câu 6 (Sàng SPF):
 
-Trong kỹ thuật Sàng Ước Nguyên Tố Nhỏ Nhất (SPF), mảng `spf[x]` lưu thông tin gì?
+Trong kỹ thuật Sàng Ước Nguyên Tố Nhỏ Nhất (SPF), mảng `spf[x]` lưu thông tin gì
 
 - **A.** Số lượng ước nguyên tố của `x`.
 
@@ -2566,7 +2566,7 @@ Trong kỹ thuật Sàng Ước Nguyên Tố Nhỏ Nhất (SPF), mảng `spf[x]`
 
 #### Câu 7 (Đếm số lượng ước):
 
-Một số nguyên `N` có dạng phân tích thừa số nguyên tố $N = p_1^3 \cdot p_2^4 \cdot p_3^1$ (với `p1, p2, p3` là các số nguyên tố phân biệt). Số `N` có tất cả bao nhiêu ước số nguyên dương?
+Một số nguyên `N` có dạng phân tích thừa số nguyên tố $N = p_1^3 \cdot p_2^4 \cdot p_3^1$ (với `p1, p2, p3` là các số nguyên tố phân biệt). Số `N` có tất cả bao nhiêu ước số nguyên dương
 
 - **A.** `3 * 4 * 1 = 12`
 
@@ -2580,7 +2580,7 @@ Một số nguyên `N` có dạng phân tích thừa số nguyên tố $N = p_1^
 
 #### Câu 8 (Đặc điểm số chính phương):
 
-Một số nguyên dương `N` là số chính phương ($N = k^2$) khi và chỉ khi điều kiện nào sau đây được thỏa mãn?
+Một số nguyên dương `N` là số chính phương ($N = k^2$) khi và chỉ khi điều kiện nào sau đây được thỏa mãn
 
 - **A.** `N` có số lượng thừa số nguyên tố phân biệt là một số chẵn.
 
@@ -2594,7 +2594,7 @@ Một số nguyên dương `N` là số chính phương ($N = k^2$) khi và ch�
 
 #### Câu 9 (Công thức Legendre):
 
-Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng để tính đại lượng nào?
+Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng để tính đại lượng nào
 
 - **A.** Số lượng số nguyên tố nhỏ hơn $N!$.
 
@@ -2608,7 +2608,7 @@ Công thức Legendre $E_p(N!) = \sum_{k=1}^\infty \lfloor N/p^k \rfloor$ dùng 
 
 #### Câu 10 (Chữ số 0 tận cùng):
 
-Số lượng chữ số `0` liên tiếp tận cùng của $100!$ là bao nhiêu?
+Số lượng chữ số `0` liên tiếp tận cùng của $100!$ là bao nhiêu
 
 - **A.** `10`
 
@@ -2622,7 +2622,7 @@ Số lượng chữ số `0` liên tiếp tận cùng của $100!$ là bao nhiê
 
 #### Câu 11 (Sàng phân đoạn - Segmented Sieve):
 
-Kỹ thuật Sàng phân đoạn (Segmented Sieve) được sử dụng tối ưu nhất trong tình huống nào?
+Kỹ thuật Sàng phân đoạn (Segmented Sieve) được sử dụng tối ưu nhất trong tình huống nào
 
 - **A.** Khi cần tìm số nguyên tố trong khoảng $[1, 10^7]$.
 
@@ -2795,32 +2795,32 @@ using namespace std;
 
 // Tính (a^b) % m trong O(log b)
 long long powerMod(long long a, long long b, long long m) {
-    if (m == 1) return 0;
-    long long ans = 1 % m;
-    a %= m;
-    while (b > 0) {
+if (m == 1) return 0;
+long long ans = 1 % m;
+a %= m;
+while (b > 0) {
 
-        if (b & 1) ans = (ans * a) % m;
-        a = (a * a) % m;
-        b >>= 1;
-    }
-    return ans;
+if (b & 1) ans = (ans * a) % m;
+a = (a * a) % m;
+b >>= 1;
+}
+return ans;
 }
 
 // Nghịch đảo Modulo bằng Định lý Fermat nhỏ (khi m là số nguyên tố)
 long long modInversePrime(long long a, long long m) {
-    return powerMod(a, m - 2, m);
+return powerMod(a, m - 2, m);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b, m;
-    if (!(cin >> a >> b >> m)) return 0;
+long long a, b, m;
+if (!(cin >> a >> b >> m)) return 0;
 
-    cout << powerMod(a, b, m) << "\n";
-    return 0;
+cout << powerMod(a, b, m) << "\n";
+return 0;
 }
 ```
 
@@ -2837,50 +2837,50 @@ vector<long long> fact(MAXN + 1);
 vector<long long> invFact(MAXN + 1);
 
 long long powerMod(long long a, long long b, long long m) {
-    long long ans = 1;
-    a %= m;
-    while (b > 0) {
+long long ans = 1;
+a %= m;
+while (b > 0) {
 
-        if (b & 1) ans = (ans * a) % m;
-        a = (a * a) % m;
-        b >>= 1;
-    }
-    return ans;
+if (b & 1) ans = (ans * a) % m;
+a = (a * a) % m;
+b >>= 1;
+}
+return ans;
 }
 
 void precomputeCombinatorics() {
-    fact[0] = 1;
-    for (int i = 1; i <= MAXN; ++i) {
-        fact[i] = (fact[i - 1] * i) % MOD;
-    }
-    invFact[MAXN] = powerMod(fact[MAXN], MOD - 2, MOD);
-    for (int i = MAXN; i >= 1; --i) {
-        invFact[i - 1] = (invFact[i] * i) % MOD;
-    }
+fact[0] = 1;
+for (int i = 1; i <= MAXN; ++i) {
+fact[i] = (fact[i - 1] * i) % MOD;
+}
+invFact[MAXN] = powerMod(fact[MAXN], MOD - 2, MOD);
+for (int i = MAXN; i >= 1; --i) {
+invFact[i - 1] = (invFact[i] * i) % MOD;
+}
 }
 
 long long nCr(int n, int r) {
-    if (r < 0 || r > n) return 0;
+if (r < 0 || r > n) return 0;
 
-    return fact[n] * invFact[r] % MOD * invFact[n - r] % MOD;
+return fact[n] * invFact[r] % MOD * invFact[n - r] % MOD;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    precomputeCombinatorics();
+precomputeCombinatorics();
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    while (q--) {
-        int n, r;
-        cin >> n >> r;
+while (q--) {
+int n, r;
+cin >> n >> r;
 
-        cout << nCr(n, r) << "\n";
-    }
-    return 0;
+cout << nCr(n, r) << "\n";
+}
+return 0;
 }
 ```
 
@@ -2902,7 +2902,7 @@ Thuật toán Lũy thừa nhị phân (Binary Exponentiation) tính $A^B \bmod M
 
 #### Câu 2 (Xử lý số âm):
 
-Trong C++, biểu thức $(-8) \bmod 5$ trả về kết quả là `-3`. Cách viết chuẩn mực nào để luôn nhận được số dư không âm trong khoảng $[0, M - 1]$?
+Trong C++, biểu thức $(-8) \bmod 5$ trả về kết quả là `-3`. Cách viết chuẩn mực nào để luôn nhận được số dư không âm trong khoảng $[0, M - 1]$
 
 - **A.** `abs((-8) % 5)`
 
@@ -2916,7 +2916,7 @@ Trong C++, biểu thức $(-8) \bmod 5$ trả về kết quả là `-3`. Cách v
 
 #### Câu 3 (Định lý Fermat nhỏ):
 
-Định lý Fermat nhỏ phát biểu rằng: Nếu $M$ là số nguyên tố và $\gcd(A, M) = 1$, thì $A^{M-1} \equiv 1 \pmod M$. Từ đó suy ra nghịch đảo modulo $A^{-1} \pmod M$ bằng biểu thức nào?
+Định lý Fermat nhỏ phát biểu rằng: Nếu $M$ là số nguyên tố và $\gcd(A, M) = 1$, thì $A^{M-1} \equiv 1 \pmod M$. Từ đó suy ra nghịch đảo modulo $A^{-1} \pmod M$ bằng biểu thức nào
 
 - **A.** $A^M \bmod M$
 
@@ -2930,7 +2930,7 @@ Trong C++, biểu thức $(-8) \bmod 5$ trả về kết quả là `-3`. Cách v
 
 #### Câu 4 (Phép chia Modulo):
 
-Khi cần tính giá trị biểu thức $\frac{A}{B} \pmod M$ với $M = 10^9 + 7$ (số nguyên tố) và $B \not\equiv 0 \pmod M$, ta thực hiện phép toán nào sau đây?
+Khi cần tính giá trị biểu thức $\frac{A}{B} \pmod M$ với $M = 10^9 + 7$ (số nguyên tố) và $B \not\equiv 0 \pmod M$, ta thực hiện phép toán nào sau đây
 
 - **A.** `(A / B) % M`
 
@@ -2958,7 +2958,7 @@ Nghịch đảo modulo của số nguyên $A$ theo modulo $M$ (tức số `X` sa
 
 #### Câu 6 (Tổ hợp Modulo $\mathcal{O}(1)$):
 
-Để trả lời $10^5$ truy vấn tính số tổ hợp $\binom{N}{K} \pmod{10^9 + 7}$ với $N, K \le 10^6$ trong tổng thời gian dưới `0.1s`, phương pháp tối ưu nhất là gì?
+Để trả lời $10^5$ truy vấn tính số tổ hợp $\binom{N}{K} \pmod{10^9 + 7}$ với $N, K \le 10^6$ trong tổng thời gian dưới `0.1s`, phương pháp tối ưu nhất là gì
 
 - **A.** Tính trực tiếp $C(N, K)$ bằng tam giác Pascal tại mỗi truy vấn.
 
@@ -2972,7 +2972,7 @@ Nghịch đảo modulo của số nguyên $A$ theo modulo $M$ (tức số `X` sa
 
 #### Câu 7 (Tối ưu tính Nghịch đảo giai thừa):
 
-Thay vì gọi hàm lũy thừa `N` lần để tính `invFact[i]`, ta có thể tính toàn bộ mảng `invFact` từ `1 ... N` chỉ với **1 lần gọi hàm lũy thừa duy nhất** bằng công thức quy nạp lùi nào?
+Thay vì gọi hàm lũy thừa `N` lần để tính `invFact[i]`, ta có thể tính toàn bộ mảng `invFact` từ `1 ... N` chỉ với **1 lần gọi hàm lũy thừa duy nhất** bằng công thức quy nạp lùi nào
 
 - **A.** `invFact[i - 1] = invFact[i] / i`
 
@@ -2986,7 +2986,7 @@ Thay vì gọi hàm lũy thừa `N` lần để tính `invFact[i]`, ta có thể
 
 #### Câu 8 (Rút gọn số mũ lớn):
 
-Theo định lý Fermat nhỏ, với $M = 10^9 + 7$ (số nguyên tố) và `gcd(A, M) = 1`, nếu số mũ $B$ là một số khổng lồ gồm hàng chục nghìn chữ số, ta có thể rút gọn số mũ $B$ trước khi tính lũy thừa bằng cách nào?
+Theo định lý Fermat nhỏ, với $M = 10^9 + 7$ (số nguyên tố) và `gcd(A, M) = 1`, nếu số mũ $B$ là một số khổng lồ gồm hàng chục nghìn chữ số, ta có thể rút gọn số mũ $B$ trước khi tính lũy thừa bằng cách nào
 
 - **A.** $B \gets B \bmod M$
 
@@ -3000,7 +3000,7 @@ Theo định lý Fermat nhỏ, với $M = 10^9 + 7$ (số nguyên tố) và `gcd
 
 #### Câu 9 (Nhân an toàn chống tràn số 64-bit):
 
-Khi nào phép nhân trực tiếp `(a * b) % m` có nguy cơ gây tràn số và bắt buộc phải áp dụng kỹ thuật nhân modulo an toàn (như Nhân Ấn Độ $\mathcal{O}(\log B)$ hoặc kiểu dữ liệu `__int128`)?
+Khi nào phép nhân trực tiếp `(a * b) % m` có nguy cơ gây tràn số và bắt buộc phải áp dụng kỹ thuật nhân modulo an toàn (như Nhân Ấn Độ $\mathcal{O}(\log B)$ hoặc kiểu dữ liệu `__int128`)
 
 - **A.** Khi `A, B <= 10^9` và $M = 10^9 + 7$.
 
@@ -3014,7 +3014,7 @@ Khi nào phép nhân trực tiếp `(a * b) % m` có nguy cơ gây tràn số v�
 
 #### Câu 10 (Phương trình Diophantine & Euclid mở rộng):
 
-Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phương trình $Ax + My = \gcd(A, M)$. Nếu `gcd(A, M) = 1`, giá trị $x \bmod M$ đại diện cho đại lượng nào?
+Thuật toán Euclid mở rộng tìm cặp nghiệm nguyên `(x, y)` cho phương trình $Ax + My = \gcd(A, M)$. Nếu `gcd(A, M) = 1`, giá trị $x \bmod M$ đại diện cho đại lượng nào
 
 - **A.** Ước chung lớn nhất của $A$ và $M$.
 
@@ -3065,9 +3065,9 @@ Trong ngôn ngữ lập trình C++, kiểu dữ liệu số nguyên có kích th
 
 Tuy nhiên, trong các bài toán thực tế và đề thi học sinh giỏi (như tính $100!$, tính số Fibonacci thứ $1000$, hoặc tính $2^{10000}$ **mà không lấy dư modulo**), kết quả có thể dài hàng nghìn đến hàng chục nghìn chữ số. Vì C++ không có sẵn kiểu dữ liệu BigInteger như Python hay Java, lập trình viên thi đấu C++ bắt buộc phải **tự mô phỏng các phép tính số học đặt tính rồi tính như toán tiểu học** trên mảng ký tự (`string`) hoặc mảng số nguyên (`vector<int>`).
 
-### Big Integer Hay Modular Arithmetic: Chọn Vũ Khí Nào?
+### Big Integer Hay Modular Arithmetic: Chọn Vũ Khí Nào
 
-![Phân định lựa chọn giải thuật: Modulo vs Big Integer](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-09-so-nguyen-lon-bigint/assets/bigint_vs_modulo_vi.svg)
+![Phân định lựa chọn giải thuật: Modulo vs Big Integer](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-so-nguyen-lon-bigint/assets/bigint_vs_modulo_vi.svg)
 
 | Đề bài yêu cầu | Quy mô kết quả | Vũ khí tối ưu | Kỹ thuật cốt lõi |
 |---|:---:|:---:|---|
@@ -3130,18 +3130,18 @@ $$\text{Giá trị} = 23456789 + 123456789 \times 10^9 + 1 \times (10^9)^2$$
 Khi chia số lớn $A$ cho số nguyên $b$ ($1 \le b \le 10^9$), ta duyệt từ chữ số hàng cao nhất xuống hàng đơn vị:
 ```cpp
 string divSmall(string a, long long b) {
-    string res = "";
-    long long cur = 0;
-    for (char c : a) {
-        cur = cur * 10 + (c - '0');
-        int digit = cur / b;
-        res.push_back(char('0' + digit));
-        cur %= b; // cur luôn là số dư hiện tại
-    }
-    // Xóa số 0 vô nghĩa ở đầu
-    int pos = 0;
-    while (pos + 1 < (int)res.size() && res[pos] == '0') pos++;
-    return res.substr(pos);
+string res = "";
+long long cur = 0;
+for (char c : a) {
+cur = cur * 10 + (c - '0');
+int digit = cur / b;
+res.push_back(char('0' + digit));
+cur %= b; // cur luôn là số dư hiện tại
+}
+// Xóa số 0 vô nghĩa ở đầu
+int pos = 0;
+while (pos + 1 < (int)res.size() && res[pos] == '0') pos++;
+return res.substr(pos);
 }
 ```
 
@@ -3173,103 +3173,103 @@ using namespace std;
 
 // Hàm xóa số 0 vô nghĩa ở đầu chuỗi đảo ngược
 void removeLeadingZeros(string &s) {
-    while (s.size() > 1 && s.back() == '0') {
+while (s.size() > 1 && s.back() == '0') {
 
-        s.pop_back();
-    }
+s.pop_back();
+}
 }
 
 // Phép cộng 2 số nguyên lớn không âm (A + B)
 string addBig(string a, string b) {
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
 
-    string res = "";
-    int carry = 0;
-    int n = max(a.size(), b.size());
+string res = "";
+int carry = 0;
+int n = max(a.size(), b.size());
 
-    for (int i = 0; i < n || carry; ++i) {
-        int sum = carry;
-        if (i < (int)a.size()) sum += a[i] - '0';
-        if (i < (int)b.size()) sum += b[i] - '0';
-        res.push_back((sum % 10) + '0');
-        carry = sum / 10;
-    }
+for (int i = 0; i < n || carry; ++i) {
+int sum = carry;
+if (i < (int)a.size()) sum += a[i] - '0';
+if (i < (int)b.size()) sum += b[i] - '0';
+res.push_back((sum % 10) + '0');
+carry = sum / 10;
+}
 
-    reverse(res.begin(), res.end());
-    return res;
+reverse(res.begin(), res.end());
+return res;
 }
 
 // Phép trừ 2 số nguyên lớn không âm (A - B với A >= B)
 string subBig(string a, string b) {
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
 
-    string res = "";
-    int borrow = 0;
+string res = "";
+int borrow = 0;
 
-    for (int i = 0; i < (int)a.size(); ++i) {
-        int diff = (a[i] - '0') - borrow;
-        if (i < (int)b.size()) diff -= (b[i] - '0');
-        if (diff < 0) {
-            diff += 10;
-            borrow = 1;
-        } else {
-            borrow = 0;
-        }
-        res.push_back(diff + '0');
-    }
+for (int i = 0; i < (int)a.size(); ++i) {
+int diff = (a[i] - '0') - borrow;
+if (i < (int)b.size()) diff -= (b[i] - '0');
+if (diff < 0) {
+diff += 10;
+borrow = 1;
+} else {
+borrow = 0;
+}
+res.push_back(diff + '0');
+}
 
-    removeLeadingZeros(res);
-    reverse(res.begin(), res.end());
-    return res;
+removeLeadingZeros(res);
+reverse(res.begin(), res.end());
+return res;
 }
 
 // Phép nhân 2 số nguyên lớn chuẩn mực và an toàn (A * B)
 string mulBig(string a, string b) {
-    if (a == "0" || b == "0") return "0";
+if (a == "0" || b == "0") return "0";
 
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
 
-    int n = a.size(), m = b.size();
-    vector<int> c(n + m, 0);
+int n = a.size(), m = b.size();
+vector<int> c(n + m, 0);
 
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            c[i + j] += (a[i] - '0') * (b[j] - '0');
-        }
-    }
+for (int i = 0; i < n; ++i) {
+for (int j = 0; j < m; ++j) {
+c[i + j] += (a[i] - '0') * (b[j] - '0');
+}
+}
 
-    // Normalize: Đẩy biến nhớ carry sang các ô kế tiếp
-    for (int i = 0; i + 1 < n + m; ++i) {
-        c[i + 1] += c[i] / 10;
-        c[i] %= 10;
-    }
+// Normalize: Đẩy biến nhớ carry sang các ô kế tiếp
+for (int i = 0; i + 1 < n + m; ++i) {
+c[i + 1] += c[i] / 10;
+c[i] %= 10;
+}
 
-    while (c.size() > 1 && c.back() == 0) {
+while (c.size() > 1 && c.back() == 0) {
 
-        c.pop_back();
-    }
+c.pop_back();
+}
 
-    string res = "";
-    for (int i = (int)c.size() - 1; i >= 0; --i) {
-        res.push_back(c[i] + '0');
-    }
+string res = "";
+for (int i = (int)c.size() - 1; i >= 0; --i) {
+res.push_back(c[i] + '0');
+}
 
-    return res;
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << "A + B = " << addBig(a, b) << "\n";
-    cout << "A * B = " << mulBig(a, b) << "\n";
-    return 0;
+cout << "A + B = " << addBig(a, b) << "\n";
+cout << "A * B = " << mulBig(a, b) << "\n";
+return 0;
 }
 ```
 
@@ -3277,7 +3277,7 @@ int main() {
 
 #### Câu 1 (Lưu trữ dữ liệu Little-Endian):
 
-Tại sao khi cài đặt số nguyên lớn trong C++, ta thường đảo ngược chuỗi để chữ số hàng đơn vị nằm ở vị trí chỉ số `0` (Little-Endian)?
+Tại sao khi cài đặt số nguyên lớn trong C++, ta thường đảo ngược chuỗi để chữ số hàng đơn vị nằm ở vị trí chỉ số `0` (Little-Endian)
 
 - **A.** Để tiết kiệm bộ nhớ RAM.
 
@@ -3305,7 +3305,7 @@ Phép nhân hai số nguyên lớn có độ dài lần lượt là `N` chữ s�
 
 #### Câu 3 (Độ dài tối đa kết quả phép nhân):
 
-Tích của một số nguyên dương có `N` chữ số và một số nguyên dương có `M` chữ số có độ dài tối đa là bao nhiêu chữ số?
+Tích của một số nguyên dương có `N` chữ số và một số nguyên dương có `M` chữ số có độ dài tối đa là bao nhiêu chữ số
 
 - **A.** $N \times M$
 
@@ -3319,7 +3319,7 @@ Tích của một số nguyên dương có `N` chữ số và một số nguyên
 
 #### Câu 4 (Xử lý số 0 vô nghĩa):
 
-Sau khi thực hiện phép trừ số lớn `10005 - 10000`, chuỗi kết quả thu được là `"00005"`. Thao tác nào sau đây xử lý đúng để kết quả trở thành `"5"`?
+Sau khi thực hiện phép trừ số lớn `10005 - 10000`, chuỗi kết quả thu được là `"00005"`. Thao tác nào sau đây xử lý đúng để kết quả trở thành `"5"`
 
 - **A.** Gán chuỗi bằng `"5"`.
 
@@ -3333,7 +3333,7 @@ Sau khi thực hiện phép trừ số lớn `10005 - 10000`, chuỗi kết qu�
 
 #### Câu 5 (Phép chia số lớn cho số nhỏ):
 
-Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một số nguyên `b` ($1 \le b \le 10^9$), ta duyệt các chữ số của `A` theo thứ tự nào?
+Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một số nguyên `b` ($1 \le b \le 10^9$), ta duyệt các chữ số của `A` theo thứ tự nào
 
 - **A.** Từ hàng đơn vị lên hàng cao nhất (từ phải sang trái).
 
@@ -3347,7 +3347,7 @@ Khi thực hiện phép chia một số lớn `A` (có `N` chữ số) cho một
 
 #### Câu 6 (Trường hợp phép trừ số âm):
 
-Nếu cần tính hiệu $A - B$ của hai số nguyên dương lớn nhưng chưa biết số nào lớn hơn, giải thuật chuẩn xác là gì?
+Nếu cần tính hiệu $A - B$ của hai số nguyên dương lớn nhưng chưa biết số nào lớn hơn, giải thuật chuẩn xác là gì
 
 - **A.** Vẫn thực hiện phép trừ bình thường $A - B$.
 
@@ -3361,7 +3361,7 @@ Nếu cần tính hiệu $A - B$ của hai số nguyên dương lớn nhưng ch�
 
 #### Câu 7 (Tối ưu Base $10^9$):
 
-Thay vì lưu mỗi phần tử trong mảng là `1` chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base $10^9$) mang lại lợi ích gì về mặt thuật toán?
+Thay vì lưu mỗi phần tử trong mảng là `1` chữ số thập phân (Base 10), việc gom 9 chữ số thập phân vào 1 số nguyên 32-bit (Base $10^9$) mang lại lợi ích gì về mặt thuật toán
 
 - **A.** Giảm dung lượng bộ nhớ mảng đi khoảng 9 lần.
 
@@ -3375,7 +3375,7 @@ Thay vì lưu mỗi phần tử trong mảng là `1` chữ số thập phân (Ba
 
 #### Câu 8 (Giai thừa số lớn $1000!$):
 
-Để tính chính xác $1000!$ mà không bị tràn số trong C++, ta áp dụng phương pháp nào?
+Để tính chính xác $1000!$ mà không bị tràn số trong C++, ta áp dụng phương pháp nào
 
 - **A.** Dùng kiểu dữ liệu `double`.
 
@@ -3403,7 +3403,7 @@ Khi cần tính $A^B$ với `A = 2` và `B = 10000` (kết quả chính xác kh�
 
 #### Câu 10 (So sánh hai số lớn dạng chuỗi):
 
-Điều kiện nào sau đây quyết định chắc chắn số nguyên dương lớn `A` lớn hơn số nguyên dương lớn `B` (giả sử cả `A` và `B` không có số 0 vô nghĩa ở đầu)?
+Điều kiện nào sau đây quyết định chắc chắn số nguyên dương lớn `A` lớn hơn số nguyên dương lớn `B` (giả sử cả `A` và `B` không có số 0 vô nghĩa ở đầu)
 
 - **A.** Ký tự đầu tiên của `A` lớn hơn ký tự đầu tiên của `B`.
 
@@ -3458,7 +3458,7 @@ Mỗi hàm đệ quy chuẩn mực bắt buộc phải có đủ 2 thành phần
 1. **Điểm Dừng (Base Case / Anchor):** Trường hợp bài toán đơn giản nhất đã biết trước đáp án mà không cần gọi tiếp đệ quy. Điểm dừng có nhiệm vụ **ngắt chuỗi lời gọi vô tận**.
 2. **Bước Đệ Quy (Recursive Case / Reduction Step):** Thu nhỏ quy mô bài toán bằng cách gọi lại chính hàm đó với tham số tiến dần về phía Base Case.
 
-![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_structure_vi.svg)
+![Cấu trúc điều hướng của hàm đệ quy: Base Case vs Recursive Case](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-de-quy-co-ban/assets/recursion_structure_vi.svg)
 
 ## 2. Mô Phỏng Từng Bước Hoạt Động Của Call Stack (Visual Step-by-Step Simulation)
 
@@ -3470,8 +3470,8 @@ Mỗi hàm đệ quy chuẩn mực bắt buộc phải có đủ 2 thành phần
 
 ```cpp
 long long fact(int n) {
-    if (n <= 1) return 1;          // Base Case
-    return n * fact(n - 1);        // Recursive Step
+if (n <= 1) return 1; // Base Case
+return n * fact(n - 1); // Recursive Step
 }
 ```
 
@@ -3500,17 +3500,17 @@ Quan sát sự khác biệt khi đặt lệnh `cout` **trước** vs **sau** l�
 ```cpp
 // Dạng A: In trong Winding Phase (Trước khi gọi đệ quy)
 void printBackward(int n) {
-    if (n == 0) return;
-    cout << n << " ";           // In ngay khi vào hàm
-    printBackward(n - 1);
+if (n == 0) return;
+cout << n << " "; // In ngay khi vào hàm
+printBackward(n - 1);
 }
 // Gọi printBackward(3) -> Output: 3 2 1
 
 // Dạng B: In trong Unwinding Phase (Sau khi gọi đệ quy)
 void printForward(int n) {
-    if (n == 0) return;
-    printForward(n - 1);
-    cout << n << " ";           // In khi hàm quay lui trở về
+if (n == 0) return;
+printForward(n - 1);
+cout << n << " "; // In khi hàm quay lui trở về
 }
 // Gọi printForward(3) -> Output: 1 2 3
 
@@ -3533,7 +3533,7 @@ Trong lý thuyết ngôn ngữ, *Đệ quy đuôi (Tail Recursion)* là hàm đ�
 
 ### 3.2. Hệ Thống Phân Loại Thuật Ngữ Đệ Quy (Recursion Taxonomy)
 
-![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/recursion_taxonomy_vi.svg)
+![Hệ thống phân loại thuật toán đệ quy: Tuyến tính vs Phân nhánh](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-de-quy-co-ban/assets/recursion_taxonomy_vi.svg)
 
 1. **Đệ quy Tuyến tính (Linear Recursion - 1 nhánh gọi / Frame):**
 * Trong mỗi Stack Frame chỉ thực hiện **đúng 1 lời gọi đệ quy con**. Cây gọi hàm là một đường thẳng đơn tuyến.
@@ -3553,7 +3553,7 @@ Lũy thừa nhị phân `powerRec(A, B/2)` (khi lưu biến tạm `half`): Độ
 
 Xét cây gọi hàm khi tính $F(5)$ bằng đệ quy phân nhánh:
 
-![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-10-de-quy-co-ban/assets/fibonacci_recursion_tree_vi.svg)
+![Cây đệ quy phân nhánh Fibonacci F(5) và hiện tượng bài toán con trùng lặp](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-de-quy-co-ban/assets/fibonacci_recursion_tree_vi.svg)
 
 * **Phân tích độ phức tạp tiệm cận chính xác:**
 Số lời gọi hàm thỏa mãn hệ thức truy hồi $T(N) = T(N-1) + T(N-2) + 1$. Bằng phương trình đặc trưng $r^2 - r - 1 = 0$, ta chứng minh được số phép tính thực tế tăng theo **cấp số nhân chính xác**:
@@ -3584,50 +3584,50 @@ using namespace std;
 
 // 1. In dãy số 1..N và N..1 chuẩn Winding / Unwinding
 void printForward(int n) {
-    if (n <= 0) return;
-    printForward(n - 1);
-    cout << n << " ";
+if (n <= 0) return;
+printForward(n - 1);
+cout << n << " ";
 }
 
 void printBackward(int n) {
-    if (n <= 0) return;
-    cout << n << " ";
-    printBackward(n - 1);
+if (n <= 0) return;
+cout << n << " ";
+printBackward(n - 1);
 }
 
 // 2. Lũy thừa nhị phân đệ quy O(log B) an toàn với M <= 10^9
 long long powerRec(long long a, long long b, long long m) {
-    if (b == 0) return 1 % m;
-    long long half = powerRec(a, b / 2, m);
-    long long res = (1LL * (half % m) * (half % m)) % m;
-    if (b % 2 == 1) res = (1LL * res * (a % m)) % m;
-    return res;
+if (b == 0) return 1 % m;
+long long half = powerRec(a, b / 2, m);
+long long res = (1LL * (half % m) * (half % m)) % m;
+if (b % 2 == 1) res = (1LL * res * (a % m)) % m;
+return res;
 }
 
 // 3. Tháp Hà Nội chuẩn Theta(2^N)
 void solveHanoi(int n, char from_rod, char to_rod, char aux_rod) {
-    if (n == 0) return;
-    solveHanoi(n - 1, from_rod, aux_rod, to_rod);
-    cout << from_rod << " -> " << to_rod << "\n";
+if (n == 0) return;
+solveHanoi(n - 1, from_rod, aux_rod, to_rod);
+cout << from_rod << " -> " << to_rod << "\n";
 
-    solveHanoi(n - 1, aux_rod, to_rod, from_rod);
+solveHanoi(n - 1, aux_rod, to_rod, from_rod);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n = 4;
-    cout << "Day so 1..N: ";
-    printForward(n);
-    cout << "\n";
+int n = 4;
+cout << "Day so 1..N: ";
+printForward(n);
+cout << "\n";
 
-    cout << "Day so N..1: ";
-    printBackward(n);
-    cout << "\n";
+cout << "Day so N..1: ";
+printBackward(n);
+cout << "\n";
 
-    cout << "2^10 mod 1000 = " << powerRec(2, 10, 1000) << "\n";
-    return 0;
+cout << "2^10 mod 1000 = " << powerRec(2, 10, 1000) << "\n";
+return 0;
 }
 ```
 
@@ -3635,7 +3635,7 @@ int main() {
 
 #### Câu 1 (Bản chất Base Case):
 
-Thành phần nào trong một hàm đệ quy có vai trò quyết định giúp hàm không bị rơi vào vòng lặp vô tận và tránh lỗi tràn bộ nhớ ngăn xếp (Stack Overflow)?
+Thành phần nào trong một hàm đệ quy có vai trò quyết định giúp hàm không bị rơi vào vòng lặp vô tận và tránh lỗi tràn bộ nhớ ngăn xếp (Stack Overflow)
 
 - **A.** Khối lệnh gọi lại chính hàm đó (Recursive Step).
 
@@ -3652,13 +3652,13 @@ Thành phần nào trong một hàm đệ quy có vai trò quyết định giúp
 Xét hàm đệ quy sau:
 ```cpp
 void trace(int n) {
-    if (n == 0) return;
-    cout << n << " ";
-    trace(n - 1);
-    cout << n << " ";
+if (n == 0) return;
+cout << n << " ";
+trace(n - 1);
+cout << n << " ";
 }
 ```
-Khi gọi `trace(3)`, kết quả in ra màn hình chính xác là gì?
+Khi gọi `trace(3)`, kết quả in ra màn hình chính xác là gì
 
 - **A.** `3 2 1`
 
@@ -3672,7 +3672,7 @@ Khi gọi `trace(3)`, kết quả in ra màn hình chính xác là gì?
 
 #### Câu 3 (Cấu trúc bộ nhớ Stack Frame):
 
-Mỗi lần một hàm đệ quy được gọi, thông tin nào sau đây được lưu vào một Stack Frame (Activation Record)?
+Mỗi lần một hàm đệ quy được gọi, thông tin nào sau đây được lưu vào một Stack Frame (Activation Record)
 
 - **A.** Toàn bộ mã nguồn C++ của chương trình.
 
@@ -3689,11 +3689,11 @@ Mỗi lần một hàm đệ quy được gọi, thông tin nào sau đây đư�
 Hàm đệ quy tính số Fibonacci thuần túy:
 ```cpp
 int fib(int n) {
-    if (n <= 1) return n;
-    return fib(n - 1) + fib(n - 2);
+if (n <= 1) return n;
+return fib(n - 1) + fib(n - 2);
 }
 ```
-có độ phức tạp thời gian tiệm cận chính xác (Tight Bound) là bao nhiêu?
+có độ phức tạp thời gian tiệm cận chính xác (Tight Bound) là bao nhiêu
 
 - **A.** $\mathcal{O}(N)$
 
@@ -3707,7 +3707,7 @@ có độ phức tạp thời gian tiệm cận chính xác (Tight Bound) là ba
 
 #### Câu 5 (Bẫy tràn Stack Overflow):
 
-Yếu tố nào sau đây quyết định trực tiếp việc một hàm đệ quy có gây ra lỗi tràn bộ nhớ ngăn xếp (Stack Overflow) hay không?
+Yếu tố nào sau đây quyết định trực tiếp việc một hàm đệ quy có gây ra lỗi tràn bộ nhớ ngăn xếp (Stack Overflow) hay không
 
 - **A.** Hàm đệ quy có quá nhiều tham số kiểu `int`.
 
@@ -3737,7 +3737,7 @@ thay vì lưu vào biến tạm `long long half = power(a, b / 2);`, độ phứ
 
 #### Câu 7 (Đặc điểm Tail Recursion trong C++):
 
-Nhận định nào sau đây là chính xác nhất về Đệ quy đuôi (Tail Recursion) trong ngôn ngữ C++ chuẩn thi đấu?
+Nhận định nào sau đây là chính xác nhất về Đệ quy đuôi (Tail Recursion) trong ngôn ngữ C++ chuẩn thi đấu
 
 - **A.** C++ luôn tự động tối ưu đệ quy đuôi thành vòng lặp với bộ nhớ $\mathcal{O}(1)$ trong mọi trường hợp.
 
@@ -3779,7 +3779,7 @@ Khi tìm Min/Max của mảng `N` phần tử bằng hàm đệ quy chia đôi $
 
 #### Câu 10 (Hiện tượng Overlapping Subproblems):
 
-Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị tính toán lặp đi lặp lại nhiều lần trên cây đệ quy là tiền đề trực tiếp để phát triển phương pháp tối ưu nào sau đây?
+Hiện tượng nhiều hàm đệ quy con có cùng tham số đầu vào bị tính toán lặp đi lặp lại nhiều lần trên cây đệ quy là tiền đề trực tiếp để phát triển phương pháp tối ưu nào sau đây
 
 - **A.** Tìm kiếm nhị phân (Binary Search).
 
@@ -3860,18 +3860,18 @@ Học sinh rất dễ nhầm lẫn giữa hai khái niệm này:
 * Chia động dựa trên việc so sánh các phần tử với một giá trị chốt (`pivot`), kích thước 2 nửa có thể không đều nhau.
 * *Ví dụ:* QuickSelect phân hoạch `[7 2 9 1 5 3 8]` với `pivot = 5` thành `[2 1 3]` (nhỏ hơn 5), `[5]`, và `[7 9 8]` (lớn hơn 5).
 
-![Mô hình Thuật toán Chia để trị (Divide & Conquer)](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_model_vi.svg)
+![Mô hình Thuật toán Chia để trị (Divide & Conquer)](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-chia-de-tri/assets/dnc_model_vi.svg)
 
 ## 4. Khung Tư Duy D&C (The D&C Mental Model)
 
 Trước bất kỳ bài toán nào nghi ngờ sử dụng Chia Để Trị, hãy luôn trả lời **4 câu hỏi định hướng**:
 
-1. **Tôi chia bài toán ở đâu?** (Tại điểm giữa `mid`, theo trục tọa độ $x$, hay qua `pivot`?)
-2. **Bài toán con có kích thước bao nhiêu?** ($N/2, N_1, N_2$?)
-3. **Tôi cần giải bao nhiêu bài toán con?** (Chỉ 1 nhánh như Binary Search/QuickSelect hay cả 2 nhánh như Merge Sort?)
-4. **Tôi combine kết quả của các bài toán con như thế nào?** (Đây là bước quyết định độ phức tạp!)
+1. **Tôi chia bài toán ở đâu** (Tại điểm giữa `mid`, theo trục tọa độ $x$, hay qua `pivot`)
+2. **Bài toán con có kích thước bao nhiêu** ($N/2, N_1, N_2$)
+3. **Tôi cần giải bao nhiêu bài toán con** (Chỉ 1 nhánh như Binary Search/QuickSelect hay cả 2 nhánh như Merge Sort)
+4. **Tôi combine kết quả của các bài toán con như thế nào** (Đây là bước quyết định độ phức tạp!)
 
-![Cây quyết định lựa chọn thuật toán Chia để trị](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/dnc_decision_tree_vi.svg)
+![Cây quyết định lựa chọn thuật toán Chia để trị](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-chia-de-tri/assets/dnc_decision_tree_vi.svg)
 
 ## 5. Mô Phỏng Từng Bước Thuật Toán Sắp Xếp Trộn (Merge Sort Simulation)
 
@@ -3879,7 +3879,7 @@ Xét mảng ban đầu: `A = [38, 27, 43, 3, 9, 82, 10]`.
 
 ### Sơ Đồ Cây Phân Rã & Gộp Mảng (Divide & Merge Tree):
 
-![Mô phỏng Cây phân rã và gộp Merge Sort](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-11-chia-de-tri/assets/mergesort_tree_vi.svg)
+![Mô phỏng Cây phân rã và gộp Merge Sort](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-chia-de-tri/assets/mergesort_tree_vi.svg)
 
 ## 6. Combine Step & Loop Invariant — Trái Tim Của Divide & Conquer
 
@@ -3964,61 +3964,61 @@ using ll = long long;
 // 1. Thuật toán Merge Sort chuẩn O(N log N) dùng buffer tái sử dụng
 void merge(vector<ll> &a, vector<ll> &temp, int l, int mid, int r) {
 
-    int i = l, j = mid + 1, k = l;
-    while (i <= mid && j <= r) {
-        // <= giữ tính stable: phần tử bên trái thắng khi bằng nhau
-        if (a[i] <= a[j]) temp[k++] = a[i++];
-        else temp[k++] = a[j++];
-    }
-    while (i <= mid) temp[k++] = a[i++];
-    while (j <= r) temp[k++] = a[j++];
-    for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
+int i = l, j = mid + 1, k = l;
+while (i <= mid && j <= r) {
+// <= giữ tính stable: phần tử bên trái thắng khi bằng nhau
+if (a[i] <= a[j]) temp[k++] = a[i++];
+else temp[k++] = a[j++];
+}
+while (i <= mid) temp[k++] = a[i++];
+while (j <= r) temp[k++] = a[j++];
+for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
 }
 
 void mergeSort(vector<ll> &a, vector<ll> &temp, int l, int r) {
 
-    if (l >= r) return;
-    int mid = l + (r - l) / 2;
-    mergeSort(a, temp, l, mid);
-    mergeSort(a, temp, mid + 1, r);
-    merge(a, temp, l, mid, r);
+if (l >= r) return;
+int mid = l + (r - l) / 2;
+mergeSort(a, temp, l, mid);
+mergeSort(a, temp, mid + 1, r);
+merge(a, temp, l, mid, r);
 }
 
 // 2. Thuật toán Đếm Số Cặp Nghịch Thế O(N log N)
 ll countInversions(vector<ll> &a, vector<ll> &temp, int l, int r) {
 
-    if (l >= r) return 0;
-    int mid = l + (r - l) / 2;
-    ll inv = 0;
-    inv += countInversions(a, temp, l, mid);
-    inv += countInversions(a, temp, mid + 1, r);
+if (l >= r) return 0;
+int mid = l + (r - l) / 2;
+ll inv = 0;
+inv += countInversions(a, temp, l, mid);
+inv += countInversions(a, temp, mid + 1, r);
 
-    int i = l, j = mid + 1, k = l;
-    while (i <= mid && j <= r) {
-        if (a[i] <= a[j]) {
-            temp[k++] = a[i++];
-        } else {
-            temp[k++] = a[j++];
-            inv += (mid - i + 1); // Đếm O(1) nhờ cấu trúc đã sắp xếp
-        }
-    }
-    while (i <= mid) temp[k++] = a[i++];
-    while (j <= r) temp[k++] = a[j++];
-    for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
-    return inv;
+int i = l, j = mid + 1, k = l;
+while (i <= mid && j <= r) {
+if (a[i] <= a[j]) {
+temp[k++] = a[i++];
+} else {
+temp[k++] = a[j++];
+inv += (mid - i + 1); // Đếm O(1) nhờ cấu trúc đã sắp xếp
+}
+}
+while (i <= mid) temp[k++] = a[i++];
+while (j <= r) temp[k++] = a[j++];
+for (int idx = l; idx <= r; ++idx) a[idx] = temp[idx];
+return inv;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    vector<ll> a = {38, 27, 43, 3, 9, 82, 10};
+vector<ll> a = {38, 27, 43, 3, 9, 82, 10};
 
-    int n = a.size();
-    vector<ll> temp(n);
+int n = a.size();
+vector<ll> temp(n);
 
-    cout << "So cap nghich the: " << countInversions(a, temp, 0, n - 1) << "\n";
-    return 0;
+cout << "So cap nghich the: " << countInversions(a, temp, 0, n - 1) << "\n";
+return 0;
 }
 ```
 
@@ -4026,7 +4026,7 @@ int main() {
 
 #### Câu 1 (Bản chất 3 giai đoạn Chia để trị):
 
-Ba bước cơ bản trong một giải thuật Chia để trị (Divide and Conquer) diễn ra theo thứ tự nào sau đây?
+Ba bước cơ bản trong một giải thuật Chia để trị (Divide and Conquer) diễn ra theo thứ tự nào sau đây
 
 - **A.** `Solve` $\to$ `Divide` $\to$ `Combine`.
 
@@ -4043,12 +4043,12 @@ Ba bước cơ bản trong một giải thuật Chia để trị (Divide and Con
 Quan sát đoạn mã đệ quy sau:
 ```cpp
 void process(int n) {
-    if (n <= 1) return;
-    process(n / 2);
-    process(n / 2);
-    for (int i = 0; i < n; i++) {
-        // Thao tác xử lý tốn O(1)
-    }
+if (n <= 1) return;
+process(n / 2);
+process(n / 2);
+for (int i = 0; i < n; i++) {
+// Thao tác xử lý tốn O(1)
+}
 }
 ```
 Hệ thức truy hồi (Recurrence) mô tả chính xác thời gian thực thi `T(n)` của hàm trên là:
@@ -4065,7 +4065,7 @@ Hệ thức truy hồi (Recurrence) mô tả chính xác thời gian thực thi 
 
 #### Câu 3 (So sánh bản chất: Cùng chia đôi nhưng khác biệt độ phức tạp):
 
-Hai thuật toán A ($T(N) = T(N/2) + \mathcal{O}(1)$) và B ($T(N) = 2T(N/2) + \mathcal{O}(N)$) đều chia đôi mảng ở mỗi bước. Lý do cốt lõi khiến thuật toán A đạt $\mathcal{O}(\log N)$ trong khi B tốn $\mathcal{O}(N \log N)$ là gì?
+Hai thuật toán A ($T(N) = T(N/2) + \mathcal{O}(1)$) và B ($T(N) = 2T(N/2) + \mathcal{O}(N)$) đều chia đôi mảng ở mỗi bước. Lý do cốt lõi khiến thuật toán A đạt $\mathcal{O}(\log N)$ trong khi B tốn $\mathcal{O}(N \log N)$ là gì
 
 - **A.** Thuật toán A không dùng ngôn ngữ C++.
 
@@ -4079,7 +4079,7 @@ Hai thuật toán A ($T(N) = T(N/2) + \mathcal{O}(1)$) và B ($T(N) = 2T(N/2) + 
 
 #### Câu 4 (Kiểu dữ liệu cho đếm cặp nghịch thế):
 
-Với mảng có $N = 10^5$ phần tử, biến lưu trữ tổng số cặp nghịch thế bắt buộc phải có kiểu dữ liệu nào để chống tràn số?
+Với mảng có $N = 10^5$ phần tử, biến lưu trữ tổng số cặp nghịch thế bắt buộc phải có kiểu dữ liệu nào để chống tràn số
 
 - **A.** `int`
 
@@ -4093,7 +4093,7 @@ Với mảng có $N = 10^5$ phần tử, biến lưu trữ tổng số cặp ngh
 
 #### Câu 5 (Cơ chế đếm cặp nghịch thế khi Merge):
 
-Trong thuật toán đếm số cặp nghịch thế bằng Merge Sort, khi con trỏ `i` trỏ vào nửa trái $\text{Left}[l..mid]$ và con trỏ `j` trỏ vào nửa phải $\text{Right}[mid+1..r]$, nếu $\text{Left}[i] > \text{Right}[j]$, số lượng cặp nghịch thế được cộng thêm vào kết quả trong $\mathcal{O}(1)$ là bao nhiêu?
+Trong thuật toán đếm số cặp nghịch thế bằng Merge Sort, khi con trỏ `i` trỏ vào nửa trái $\text{Left}[l..mid]$ và con trỏ `j` trỏ vào nửa phải $\text{Right}[mid+1..r]$, nếu $\text{Left}[i] > \text{Right}[j]$, số lượng cặp nghịch thế được cộng thêm vào kết quả trong $\mathcal{O}(1)$ là bao nhiêu
 
 - **A.** Đúng `1` cặp.
 
@@ -4107,7 +4107,7 @@ Trong thuật toán đếm số cặp nghịch thế bằng Merge Sort, khi con 
 
 #### Câu 6 (Bẫy Maximum Subarray D&C):
 
-Khi tìm đoạn con có tổng lớn nhất bằng Chia để trị trên đoạn `[l, r]`, ngoài đoạn con lớn nhất nằm trọn ở nửa trái và trọn ở nửa phải, ta bắt buộc phải xem xét thêm trường hợp nào?
+Khi tìm đoạn con có tổng lớn nhất bằng Chia để trị trên đoạn `[l, r]`, ngoài đoạn con lớn nhất nằm trọn ở nửa trái và trọn ở nửa phải, ta bắt buộc phải xem xét thêm trường hợp nào
 
 - **A.** Đoạn con rỗng.
 
@@ -4121,7 +4121,7 @@ Khi tìm đoạn con có tổng lớn nhất bằng Chia để trị trên đo�
 
 #### Câu 7 (Tối ưu bộ nhớ trong Merge Sort):
 
-Để tối ưu thời gian thực thi và tránh overhead cấp phát bộ nhớ động trong hàm `mergeSort()`, kỹ thuật cài đặt chuẩn thi đấu là gì?
+Để tối ưu thời gian thực thi và tránh overhead cấp phát bộ nhớ động trong hàm `mergeSort()`, kỹ thuật cài đặt chuẩn thi đấu là gì
 
 - **A.** Khai báo `vector<long long>` mới trong mỗi lần gọi hàm `merge()`.
 
@@ -4149,7 +4149,7 @@ Trên mảng có kích thước $N = 2^k$ ($N$ là lũy thừa của $2$), bằn
 
 #### Câu 9 (Đặc tính Stable Sort của Merge Sort):
 
-Merge Sort được gọi là thuật toán sắp xếp ổn định (Stable Sort) vì lý do nào sau đây?
+Merge Sort được gọi là thuật toán sắp xếp ổn định (Stable Sort) vì lý do nào sau đây
 
 - **A.** Thuật toán chạy không bao giờ bị lỗi bộ nhớ.
 
@@ -4211,7 +4211,7 @@ Tính lũy thừa ma trận vuông $A^N$ cấp $2 \times 2$ modulo $M$ bằng Ch
 
 Để có cái nhìn toàn cảnh về các phương pháp giải thuật lớn trong Lập trình thi đấu:
 
-![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/search_paradigms_bridge_vi.svg)
+![Cầu nối kiến trúc các phương pháp thuật toán lớn: Đệ quy -> D&C / Quay lui / Nhánh cận -> Quy hoạch động](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quay-lui-nhanh-can/assets/search_paradigms_bridge_vi.svg)
 
 * **Divide & Conquer:** $\text{Bài toán lớn} \longrightarrow \text{Các bài toán con riêng biệt}$.
 * **Backtracking / State-Space Search:** $\text{Trạng thái hiện tại} \longrightarrow \text{Các nhánh quyết định thử nghiệm (Choices)}$.
@@ -4250,25 +4250,25 @@ Tính lũy thừa ma trận vuông $A^N$ cấp $2 \times 2$ modulo $M$ bằng Ch
 ### 2. Khung Thực Thi Mã Nguồn (Runtime Pattern):
 ```cpp
 void search(State state) {
-    if (isGoal(state)) {
-        processSolution(state);
-        return;
-    }
-    for (const auto &candidate : getCandidates(state)) {
-        if (!isFeasible(state, candidate)) continue; // Feasibility Pruning
+if (isGoal(state)) {
+processSolution(state);
+return;
+}
+for (const auto &candidate : getCandidates(state)) {
+if (!isFeasible(state, candidate)) continue; // Feasibility Pruning
 
-        if (boundSaysImpossible(state, candidate)) continue; // Optimality Pruning (B&B)
+if (boundSaysImpossible(state, candidate)) continue; // Optimality Pruning (B&B)
 
-        choose(state, candidate);  // 1. Chuyển sang State_new
-        search(state);             // 2. Đi sâu vào nhánh con (Explore)
-        unchoose(state, candidate);// 3. Hoàn tác về State_before (Restoration)
-    }
+choose(state, candidate); // 1. Chuyển sang State_new
+search(state); // 2. Đi sâu vào nhánh con (Explore)
+unchoose(state, candidate);// 3. Hoàn tác về State_before (Restoration)
+}
 }
 ```
 
 ## 4. Khung Tư Duy Mental Model: Hai Sơ Đồ Cốt Lõi Của Lesson 12
 
-![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_space_tree_vi.svg)
+![Cây tìm kiếm không gian trạng thái: Quay lui và Nhánh cận](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quay-lui-nhanh-can/assets/state_space_tree_vi.svg)
 
 ### Quy Trình 1: Luồng Ra Quyết Định Quay Lui Thuần Túy (Backtracking)
 
@@ -4317,7 +4317,7 @@ void search(State state) {
 
 ## 8. Cầu Nối Sâu Sang DP: Từ Cây Tìm Kiếm (Search Tree) Đến Đồ Thị Trạng Thái (State DAG)
 
-![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-12-quay-lui-nhanh-can/assets/state_dag_overlapping_vi.svg)
+![Từ Cây tìm kiếm Search Tree đến Đồ thị trạng thái State DAG](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quay-lui-nhanh-can/assets/state_dag_overlapping_vi.svg)
 
 * **Duyệt cây thuần túy (Tree Search):** Phải tính toán lại trạng thái `E` nhiều lần ở các nhánh con khác nhau.
 * **Quan điểm Đồ thị (State DAG View):** `E` chỉ là một đỉnh duy nhất trong không gian trạng thái.
@@ -4353,21 +4353,21 @@ vector<int> cur;
 vector<bool> visited;
 
 void genPermutations(int step) {
-    if (step > n) {
+if (step > n) {
 
-        for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n ? "" : " ");
-        cout << "\n";
-        return;
-    }
-    for (int val = 1; val <= n; ++val) {
-        if (!visited[val]) {
-            visited[val] = true;       // 1. CHOOSE
-            cur.push_back(val);
-            genPermutations(step + 1); // 2. EXPLORE
-            cur.pop_back();            // 3. UNCHOOSE (Khôi phục)
-            visited[val] = false;
-        }
-    }
+for (int i = 0; i < n; ++i) cout << cur[i] << (i + 1 == n "" : " ");
+cout << "\n";
+return;
+}
+for (int val = 1; val <= n; ++val) {
+if (!visited[val]) {
+visited[val] = true; // 1. CHOOSE
+cur.push_back(val);
+genPermutations(step + 1); // 2. EXPLORE
+cur.pop_back(); // 3. UNCHOOSE (Khôi phục)
+visited[val] = false;
+}
+}
 }
 
 // 2. Bài Toán N-Queens (Đếm số cách đặt N quân hậu)
@@ -4376,33 +4376,33 @@ ll queen_ways = 0;
 vector<bool> col_used, diag1_used, diag2_used;
 
 void solveNQueens(int row) {
-    if (row > n_queens) {
+if (row > n_queens) {
 
-        queen_ways++;
-        return;
-    }
-    for (int col = 1; col <= n_queens; ++col) {
-        if (!col_used[col] && !diag1_used[row - col + n_queens] && !diag2_used[row + col]) {
-            col_used[col] = diag1_used[row - col + n_queens] = diag2_used[row + col] = true; // CHOOSE
-            solveNQueens(row + 1); // EXPLORE
-            col_used[col] = diag1_used[row - col + n_queens] = diag2_used[row + col] = false; // UNCHOOSE
-        }
-    }
+queen_ways++;
+return;
+}
+for (int col = 1; col <= n_queens; ++col) {
+if (!col_used[col] && !diag1_used[row - col + n_queens] && !diag2_used[row + col]) {
+col_used[col] = diag1_used[row - col + n_queens] = diag2_used[row + col] = true; // CHOOSE
+solveNQueens(row + 1); // EXPLORE
+col_used[col] = diag1_used[row - col + n_queens] = diag2_used[row + col] = false; // UNCHOOSE
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    visited.assign(n + 1, false);
-    genPermutations(1);
+visited.assign(n + 1, false);
+genPermutations(1);
 
-    col_used.assign(n_queens + 1, false);
-    diag1_used.assign(2 * n_queens + 1, false);
-    diag2_used.assign(2 * n_queens + 1, false);
-    solveNQueens(1);
-    cout << "So cach dat " << n_queens << " quan hau: " << queen_ways << "\n";
-    return 0;
+col_used.assign(n_queens + 1, false);
+diag1_used.assign(2 * n_queens + 1, false);
+diag2_used.assign(2 * n_queens + 1, false);
+solveNQueens(1);
+cout << "So cach dat " << n_queens << " quan hau: " << queen_ways << "\n";
+return 0;
 }
 ```
 
@@ -4424,7 +4424,7 @@ Thứ tự thực hiện chuẩn mực trong thân vòng lặp của một hàm 
 
 #### Câu 2 (Phân biệt Feasibility vs Optimality Pruning):
 
-Sự khác biệt cốt lõi giữa Cắt tỉa tính khả thi (Feasibility Pruning) và Cắt tỉa tính tối ưu (Optimality Pruning - Branch & Bound) là gì?
+Sự khác biệt cốt lõi giữa Cắt tỉa tính khả thi (Feasibility Pruning) và Cắt tỉa tính tối ưu (Optimality Pruning - Branch & Bound) là gì
 
 - **A.** Feasibility Pruning chỉ dùng cho bài toán tìm đường đi.
 
@@ -4438,7 +4438,7 @@ Sự khác biệt cốt lõi giữa Cắt tỉa tính khả thi (Feasibility Pru
 
 #### Câu 3 (Hậu quả của việc quên Unchoose):
 
-Điều gì sẽ xảy ra nếu lập trình viên quên câu lệnh hoàn tác `visited[i] = false` sau lời gọi đệ quy trong bài toán sinh hoán vị?
+Điều gì sẽ xảy ra nếu lập trình viên quên câu lệnh hoàn tác `visited[i] = false` sau lời gọi đệ quy trong bài toán sinh hoán vị
 
 - **A.** Chương trình vẫn chạy đúng nhưng tốn nhiều bộ nhớ hơn.
 
@@ -4466,7 +4466,7 @@ Trong bài toán xếp $N$ quân hậu trên bàn cờ $N \times N$ (1-based ind
 
 #### Câu 5 (Bản chất quy tắc Warnsdorff trong Mã đi tuần):
 
-Trong bài toán Mã đi tuần (Knight's Tour), quy tắc Heuristic Warnsdorff (ưu tiên nhảy vào ô có ít nước đi tiếp theo nhất) có vai trò chuẩn xác là gì?
+Trong bài toán Mã đi tuần (Knight's Tour), quy tắc Heuristic Warnsdorff (ưu tiên nhảy vào ô có ít nước đi tiếp theo nhất) có vai trò chuẩn xác là gì
 
 - **A.** Đảm bảo chắc chắn tìm thấy nghiệm trong $\mathcal{O}(1)$ bước mà không cần quay lui.
 
@@ -4480,7 +4480,7 @@ Trong bài toán Mã đi tuần (Knight's Tour), quy tắc Heuristic Warnsdorff 
 
 #### Câu 6 (Tình huống thực tế đánh giá hàm Bound trong bài toán Cực tiểu):
 
-Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt nhất tìm được tính tới thời điểm hiện tại là `best = 100`. Tại một trạng thái nhánh $X$, hàm Cận Dưới tính ra $LB(X) = 105$. Quyết định chuẩn xác của thuật toán là gì?
+Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt nhất tìm được tính tới thời điểm hiện tại là `best = 100`. Tại một trạng thái nhánh $X$, hàm Cận Dưới tính ra $LB(X) = 105$. Quyết định chuẩn xác của thuật toán là gì
 
 - **A.** **[Đáp án đúng]** Cắt tỉa (Prune) ngay lập tức nhánh $X$, vì chi phí thực tế $OPT(X) \ge LB(X) = 105 > 100 = best$, nhánh này chắc chắn không thể cải thiện nghiệm.
 
@@ -4494,7 +4494,7 @@ Trong bài toán tìm hành trình TSP ngắn nhất, giả sử nghiệm tốt 
 
 #### Câu 7 (Độ phức tạp không gian: Exponential Tree $\ne$ Exponential Stack):
 
-Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \dots, N\}$ tiêu tốn bộ nhớ ngăn xếp (Call Stack Space) tối đa là bao nhiêu?
+Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \dots, N\}$ tiêu tốn bộ nhớ ngăn xếp (Call Stack Space) tối đa là bao nhiêu
 
 - **A.** $\Theta(N!)$
 
@@ -4508,7 +4508,7 @@ Thuật toán quay lui sinh tất cả $N!$ hoán vị của tập hợp $\{1, \
 
 #### Câu 8 (Cắt tỉa kết hợp sắp xếp trong Subset Sum):
 
-Khi tìm các tập con của mảng các số nguyên dương ($A_i > 0$) có tổng bằng $S$, nếu mảng đã được sắp xếp tăng dần, điều kiện cắt tỉa tính khả thi hiệu quả nhất tại vòng lặp duyệt phần tử $A_i$ là gì?
+Khi tìm các tập con của mảng các số nguyên dương ($A_i > 0$) có tổng bằng $S$, nếu mảng đã được sắp xếp tăng dần, điều kiện cắt tỉa tính khả thi hiệu quả nhất tại vòng lặp duyệt phần tử $A_i$ là gì
 
 - **A.** Dừng lại khi mảng còn hơn 10 phần tử.
 
@@ -4536,7 +4536,7 @@ Chương trình sinh và in toàn bộ các xâu nhị phân độ dài $N$ ra m
 
 #### Câu 10 (Cầu nối từ Backtracking sang Dynamic Programming):
 
-Khi một bài toán quay lui có hiện tượng nhiều nhánh trạng thái khác nhau gặp lại cùng một trạng thái con (Overlapping States trong đồ thị State DAG), dấu hiệu này gợi ý điều gì?
+Khi một bài toán quay lui có hiện tượng nhiều nhánh trạng thái khác nhau gặp lại cùng một trạng thái con (Overlapping States trong đồ thị State DAG), dấu hiệu này gợi ý điều gì
 
 - **A.** Thuật toán quay lui đã bị lỗi bộ nhớ.
 
@@ -4550,7 +4550,7 @@ Khi một bài toán quay lui có hiện tượng nhiều nhánh trạng thái k
 
 #### Câu 11 (Bản chất State Identity trong bài toán Subset Sum):
 
-Trong bài toán Subset Sum, giả sử hai lời gọi đệ quy khác nhau đều đang đứng tại chỉ số `index = 5`, nhưng một nhánh có `current_sum = 12` và nhánh kia có `current_sum = 18`. Hai lời gọi này có được xem là cùng một State Identity trong DP không?
+Trong bài toán Subset Sum, giả sử hai lời gọi đệ quy khác nhau đều đang đứng tại chỉ số `index = 5`, nhưng một nhánh có `current_sum = 12` và nhánh kia có `current_sum = 18`. Hai lời gọi này có được xem là cùng một State Identity trong DP không
 
 - **A.** Có, vì chúng có cùng chỉ số `index = 5`.
 
@@ -4564,7 +4564,7 @@ Trong bài toán Subset Sum, giả sử hai lời gọi đệ quy khác nhau đ�
 
 #### Câu 12 (Nguyên tắc an toàn của hàm Bound trong Branch & Bound):
 
-Nếu một lập trình viên thiết kế một hàm Cận Dưới $LB(\text{state})$ cho bài toán tìm chi phí nhỏ nhất, nhưng trong một số trường hợp hiếm gặp $LB(\text{state}) > OPT(\text{state})$ (ước lượng quá cao so với thực tế), hậu quả là gì?
+Nếu một lập trình viên thiết kế một hàm Cận Dưới $LB(\text{state})$ cho bài toán tìm chi phí nhỏ nhất, nhưng trong một số trường hợp hiếm gặp $LB(\text{state}) > OPT(\text{state})$ (ước lượng quá cao so với thực tế), hậu quả là gì
 
 - **A.** Thuật toán chạy nhanh hơn và luôn cho kết quả đúng.
 
@@ -4619,17 +4619,17 @@ Trong Chuyên đề 10 và 12, ta đã chứng kiến hiện tượng **Bùng n�
 
 > **DP loại bỏ việc tính toán lại các bài toán con trùng lặp bằng cách lưu trữ kết quả vào Bảng phương án (DP Table) và tái sử dụng ngay lập tức trong $\mathcal{O}(1)$.**
 
-![Mô hình Đồ thị trạng thái DAG Quy hoạch động 1D](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/dp_1d_state_dag_vi.svg)
+![Mô hình Đồ thị trạng thái DAG Quy hoạch động 1D](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-quy-hoach-dong-1d/assets/dp_1d_state_dag_vi.svg)
 
 ## 2. Khung Phương Pháp Luận: 7 Bước DP State Invariant
 
 Để giải quyết chính xác bất kỳ bài toán Quy hoạch động nào, ta áp dụng khung 7 thành phần logic chuẩn mực:
 
-1. **State Definition & Invariant (Định nghĩa Trạng thái & Bất biến):** $dp[i]$ đại diện chính xác $100\%$ cho đại lượng nào? (Là giá trị tối ưu, số cách thực hiện, hay trạng thái logic?).
-2. **Base Cases (Trường hợp cơ sở):** Các trạng thái biên nhỏ nhất không thể phân rã thêm ($i = 0, 1$) có giá trị bằng bao nhiêu?
-3. **State Transition (Hệ thức chuyển trạng thái):** Trạng thái $dp[i]$ phụ thuộc vào các trạng thái con `dp[j]` ($j < i$) nào trước đó qua công thức toán học nào?
+1. **State Definition & Invariant (Định nghĩa Trạng thái & Bất biến):** $dp[i]$ đại diện chính xác $100\%$ cho đại lượng nào (Là giá trị tối ưu, số cách thực hiện, hay trạng thái logic).
+2. **Base Cases (Trường hợp cơ sở):** Các trạng thái biên nhỏ nhất không thể phân rã thêm ($i = 0, 1$) có giá trị bằng bao nhiêu
+3. **State Transition (Hệ thức chuyển trạng thái):** Trạng thái $dp[i]$ phụ thuộc vào các trạng thái con `dp[j]` ($j < i$) nào trước đó qua công thức toán học nào
 4. **Evaluation Order (Thứ tự tính toán):** Chiều duyệt vòng lặp ($i = 1 \to N$ xuôi hay ngược) theo thứ tự Topo DAG để đảm bảo mọi bài toán con phụ thuộc đều đã được tính xong trước khi dùng.
-5. **Answer Extraction (Trích xuất kết quả):** Đáp án của bài toán gốc nằm ở đâu? (Tại `dp[N]`, hay $\max_{i=1}^N dp[i]$?).
+5. **Answer Extraction (Trích xuất kết quả):** Đáp án của bài toán gốc nằm ở đâu (Tại `dp[N]`, hay $\max_{i=1}^N dp[i]$).
 6. **Space & Time Optimization (Tối ưu hóa):** Phân tích độ phức tạp thời gian $\mathcal{O}(\text{Time})$, bộ nhớ $\mathcal{O}(\text{Space})$ và khả năng nén mảng.
 7. **Reconstruction (Khôi phục nghiệm):** Dùng mảng truy vết `trace[i]` hoặc duyệt ngược trên bảng `dp` để tái tạo lại cấu hình nghiệm tối ưu (*Ghi `N/A` nếu bài toán chỉ yêu cầu giá trị*).
 
@@ -4657,7 +4657,7 @@ $$dp[i] = 1 + \min_{\{c \in C \mid i \ge c\}} dp[i - c]$$
 * **Bài toán Hoán vị (Permutation):** Thứ tự các đồng xu có phân biệt (ví dụ $1+2 \ne 2+1$). Vòng lặp ngoài duyệt Tiền $i = 1 \to S$, vòng lặp trong thử từng đồng xu $c \in C$.
 * **Bài toán Tổ hợp (Combination):** Thứ tự các đồng xu không phân biệt (ví dụ $1+2$ và $2+1$ là một cách). Vòng lặp ngoài duyệt từng đồng xu $c \in C$, vòng lặp trong duyệt Tiền $i = c \to S$.
 
-![Bài toán Đổi tiền Coin Change và DAG trạng thái](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/coin_change_dag_vi.svg)
+![Bài toán Đổi tiền Coin Change và DAG trạng thái](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-quy-hoach-dong-1d/assets/coin_change_dag_vi.svg)
 
 ### 3.3. Dãy Con Tăng Dài Nhất (Longest Increasing Subsequence — LIS $\mathcal{O}(N^2)$)
 * **Bối cảnh:** Cho dãy số $A = [a_1, a_2, \dots, a_N]$. Tìm độ dài dãy con tăng nghiêm ngặt dài nhất.
@@ -4668,7 +4668,7 @@ $$dp[i] = 1 + \max_{\{1 \le j < i \mid A[j] < A[i]\}} dp[j]$$
 * **Answer Extraction:** Kết quả toàn cục là $\max_{i=1}^N dp[i]$.
 * **Độ phức tạp:** $\mathcal{O}(N^2)$ thời gian, $\mathcal{O}(N)$ bộ nhớ. Thường phù hợp với $N$ cỡ vài nghìn, tùy thuộc vào time limit và hệ số hằng số.
 
-![Mô hình Dãy con tăng dài nhất LIS O(N^2) và Truy vết](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/lis_quadratic_model_vi.svg)
+![Mô hình Dãy con tăng dài nhất LIS O(N^2) và Truy vết](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-quy-hoach-dong-1d/assets/lis_quadratic_model_vi.svg)
 
 ### 3.4. Kỹ Thuật Khôi Phục Vết Nghiệm 1D (Traceback / Reconstruction)
 Để in ra chính xác cấu hình dãy phần tử tạo nên nghiệm tối ưu:
@@ -4738,62 +4738,62 @@ $$dp[i] = \min_{0 \le j < i, \text{valid}(j+1, i)} (dp[j] + \text{cost}(j+1, i))
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    vector<int> dp(n, 1);
+vector<int> dp(n, 1);
 
-    vector<int> trace(n, -1);
+vector<int> trace(n, -1);
 
-    int max_len = 1;
-    int best_end = 0;
+int max_len = 1;
+int best_end = 0;
 
-    // Quy hoạch động O(N^2)
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < i; ++j) {
-            if (a[j] < a[i] && dp[j] + 1 > dp[i]) {
+// Quy hoạch động O(N^2)
+for (int i = 0; i < n; ++i) {
+for (int j = 0; j < i; ++j) {
+if (a[j] < a[i] && dp[j] + 1 > dp[i]) {
 
-                dp[i] = dp[j] + 1;
-                trace[i] = j;
-            }
-        }
-        if (dp[i] > max_len) {
+dp[i] = dp[j] + 1;
+trace[i] = j;
+}
+}
+if (dp[i] > max_len) {
 
-            max_len = dp[i];
-            best_end = i;
-        }
-    }
+max_len = dp[i];
+best_end = i;
+}
+}
 
-    cout << max_len << "\n";
+cout << max_len << "\n";
 
-    // Khôi phục vết nghiệm
-    vector<long long> lis_elements;
+// Khôi phục vết nghiệm
+vector<long long> lis_elements;
 
-    int curr = best_end;
-    while (curr != -1) {
-        lis_elements.push_back(a[curr]);
-        curr = trace[curr];
-    }
-    reverse(lis_elements.begin(), lis_elements.end());
+int curr = best_end;
+while (curr != -1) {
+lis_elements.push_back(a[curr]);
+curr = trace[curr];
+}
+reverse(lis_elements.begin(), lis_elements.end());
 
-    for (int i = 0; i < (int)lis_elements.size(); ++i) {
-        cout << lis_elements[i] << (i + 1 == (int)lis_elements.size() ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 0; i < (int)lis_elements.size(); ++i) {
+cout << lis_elements[i] << (i + 1 == (int)lis_elements.size() "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -4806,39 +4806,39 @@ using namespace std;
 const long long INF = 1e18;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int k;
-    long long s;
-    if (!(cin >> k >> s)) return 0;
+int k;
+long long s;
+if (!(cin >> k >> s)) return 0;
 
-    vector<long long> c(k);
+vector<long long> c(k);
 
-    for (int i = 0; i < k; ++i) {
-        cin >> c[i];
+for (int i = 0; i < k; ++i) {
+cin >> c[i];
 
-    }
+}
 
-    vector<long long> dp(s + 1, INF);
+vector<long long> dp(s + 1, INF);
 
-    dp[0] = 0;
+dp[0] = 0;
 
-    for (int i = 1; i <= s; ++i) {
-        for (long long coin : c) {
-            if (i >= coin && dp[i - coin] != INF) {
-                dp[i] = min(dp[i], dp[i - coin] + 1);
-            }
-        }
-    }
+for (int i = 1; i <= s; ++i) {
+for (long long coin : c) {
+if (i >= coin && dp[i - coin] != INF) {
+dp[i] = min(dp[i], dp[i - coin] + 1);
+}
+}
+}
 
-    if (dp[s] == INF) {
-        cout << -1 << "\n";
-    } else {
-        cout << dp[s] << "\n";
-    }
+if (dp[s] == INF) {
+cout << -1 << "\n";
+} else {
+cout << dp[s] << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -4846,7 +4846,7 @@ int main() {
 
 #### Câu 1 (Bản chất Quy hoạch động):
 
-Điểm khác biệt cốt lõi nhất giữa Thuật toán Đệ quy thuần túy và Quy hoạch động là gì?
+Điểm khác biệt cốt lõi nhất giữa Thuật toán Đệ quy thuần túy và Quy hoạch động là gì
 
 - **A.** Đệ quy chạy nhanh hơn Quy hoạch động.
 
@@ -4860,7 +4860,7 @@ int main() {
 
 #### Câu 2 (Bất biến Trạng thái LIS):
 
-Trong thuật toán tìm Dãy con tăng dài nhất LIS $\mathcal{O}(N^2)$, $dp[i]$ đại diện chính xác cho điều gì?
+Trong thuật toán tìm Dãy con tăng dài nhất LIS $\mathcal{O}(N^2)$, $dp[i]$ đại diện chính xác cho điều gì
 
 - **A.** Độ dài LIS của đoạn con từ $A[1]$ đến $A[i]$.
 
@@ -4874,7 +4874,7 @@ Trong thuật toán tìm Dãy con tăng dài nhất LIS $\mathcal{O}(N^2)$, $dp[
 
 #### Câu 3 (Trường hợp cơ sở Bài toán Bậc thang):
 
-Trong bài toán ếch nhảy bậc thang $dp[i] = dp[i-1] + dp[i-2]$, tại sao giá trị cơ sở $dp[0] = 1$?
+Trong bài toán ếch nhảy bậc thang $dp[i] = dp[i-1] + dp[i-2]$, tại sao giá trị cơ sở $dp[0] = 1$
 
 - **A.** Vì ếch bắt buộc phải nhảy 1 bước đầu tiên.
 
@@ -4888,7 +4888,7 @@ Trong bài toán ếch nhảy bậc thang $dp[i] = dp[i-1] + dp[i-2]$, tại sao
 
 #### Câu 4 (Thứ tự tính toán Evaluation Order):
 
-Trong bài toán **Đổi tiền ít đồng xu nhất với hệ thức truy hồi $dp[i] = 1 + \min(dp[i-c])$**, tại sao vòng lặp tính $i$ phải duyệt xuôi từ $1 \to S$?
+Trong bài toán **Đổi tiền ít đồng xu nhất với hệ thức truy hồi $dp[i] = 1 + \min(dp[i-c])$**, tại sao vòng lặp tính $i$ phải duyệt xuôi từ $1 \to S$
 
 - **A.** Để in ra các đồng xu theo thứ tự tăng dần.
 
@@ -4902,7 +4902,7 @@ Trong bài toán **Đổi tiền ít đồng xu nhất với hệ thức truy h�
 
 #### Câu 5 (Bẫy số nguyên vô cùng):
 
-Khi khởi tạo mảng `dp` tìm giá trị nhỏ nhất, giá trị nào sau đây an toàn nhất để tránh tràn số khi cộng thêm 1?
+Khi khởi tạo mảng `dp` tìm giá trị nhỏ nhất, giá trị nào sau đây an toàn nhất để tránh tràn số khi cộng thêm 1
 
 - **A.** `INT_MAX` (khoảng $2 \cdot 10^9$) với kiểu `int`.
 
@@ -4916,7 +4916,7 @@ Khi khởi tạo mảng `dp` tìm giá trị nhỏ nhất, giá trị nào sau �
 
 #### Câu 6 (Khôi phục vết nghiệm Traceback):
 
-Để khôi phục lại các phần tử thuộc dãy con tăng dài nhất LIS, kỹ thuật nào sau đây là chuẩn mực nhất?
+Để khôi phục lại các phần tử thuộc dãy con tăng dài nhất LIS, kỹ thuật nào sau đây là chuẩn mực nhất
 
 - **A.** Chạy lại thuật toán LIS lần thứ hai.
 
@@ -4930,7 +4930,7 @@ Khi khởi tạo mảng `dp` tìm giá trị nhỏ nhất, giá trị nào sau �
 
 #### Câu 7 (Độ phức tạp Bài toán Đổi tiền):
 
-Cho $K$ loại đồng xu và số tiền cần đổi $S$. Độ phức tạp thời gian và không gian của thuật toán DP 1D là bao nhiêu?
+Cho $K$ loại đồng xu và số tiền cần đổi $S$. Độ phức tạp thời gian và không gian của thuật toán DP 1D là bao nhiêu
 
 - **A.** **[Đáp án đúng]** Thời gian $\mathcal{O}(K \cdot S)$, Không gian $\mathcal{O}(S)$.
 
@@ -4944,7 +4944,7 @@ Cho $K$ loại đồng xu và số tiền cần đổi $S$. Độ phức tạp t
 
 #### Câu 8 (Bài toán House Robber 1D):
 
-Một tên trộm không được trộm hai ngôi nhà liền kề. Gọi $A[i]$ là số tiền ở nhà $i$. Hệ thức chuyển trạng thái nào sau đây là chính xác cho $dp[i]$ (tiền nhiều nhất trộm được từ $1 \to i$)?
+Một tên trộm không được trộm hai ngôi nhà liền kề. Gọi $A[i]$ là số tiền ở nhà $i$. Hệ thức chuyển trạng thái nào sau đây là chính xác cho $dp[i]$ (tiền nhiều nhất trộm được từ $1 \to i$)
 
 - **A.** $dp[i] = dp[i-1] + A[i]$
 
@@ -4972,7 +4972,7 @@ Cho thanh gỗ độ dài $N$ và bảng giá $P[len]$ cho từng đoạn gỗ �
 
 #### Câu 10 (Ranh giới LIS O(N^2) vs O(N log N)):
 
-Khi $N = 10^5$, tại sao thuật toán LIS $\mathcal{O}(N^2)$ không thể vượt qua giới hạn thời gian 1.0 giây?
+Khi $N = 10^5$, tại sao thuật toán LIS $\mathcal{O}(N^2)$ không thể vượt qua giới hạn thời gian 1.0 giây
 
 - **A.** **[Đáp án đúng]** Vì với $N = 10^5$, thuật toán $\mathcal{O}(N^2)$ phải xét khoảng $N^2/2 \approx 5 \times 10^9$ cặp, thường vượt xa giới hạn thời gian thông thường của CPU trong 1.0 giây. Trong khi $\mathcal{O}(N \log N)$ chỉ cần khoảng $N \log_2 N \approx 1.7 \times 10^6$ bước ở quy mô này.
 
@@ -4986,7 +4986,7 @@ Khi $N = 10^5$, tại sao thuật toán LIS $\mathcal{O}(N^2)$ không thể vư�
 
 #### Câu 11 (State Transformation — LIS sang MSIS):
 
-Khi chuyển từ bài toán LIS (Độ dài lớn nhất) sang MSIS (Tổng giá trị lớn nhất), thành phần nào trong hệ thức quy hoạch động thay đổi?
+Khi chuyển từ bài toán LIS (Độ dài lớn nhất) sang MSIS (Tổng giá trị lớn nhất), thành phần nào trong hệ thức quy hoạch động thay đổi
 
 - **A.** Điều kiện $A[j] < A[i]$ bị bỏ đi.
 
@@ -5000,7 +5000,7 @@ Khi chuyển từ bài toán LIS (Độ dài lớn nhất) sang MSIS (Tổng gi�
 
 #### Câu 12 (State Dimension — Alternating Subsequence):
 
-Tại sao trong bài toán Dãy con đan dấu, ta cần mở rộng trạng thái thành $dp[i][2]$ thay vì chỉ dùng $dp[i]$?
+Tại sao trong bài toán Dãy con đan dấu, ta cần mở rộng trạng thái thành $dp[i][2]$ thay vì chỉ dùng $dp[i]$
 
 - **A.** Để lưu thêm vị trí của phần tử đứng trước.
 
@@ -5014,7 +5014,7 @@ Tại sao trong bài toán Dãy con đan dấu, ta cần mở rộng trạng th�
 
 #### Câu 13 (Segmentation DP — Phân hoạch đoạn):
 
-Trong bài toán Phân đoạn dãy số tối ưu $A[1 \dots N]$, hệ thức chuyển trạng thái tổng quát để tính $dp[i]$ (chi phí tối ưu cho tiền tố $1 \dots i$) là gì?
+Trong bài toán Phân đoạn dãy số tối ưu $A[1 \dots N]$, hệ thức chuyển trạng thái tổng quát để tính $dp[i]$ (chi phí tối ưu cho tiền tố $1 \dots i$) là gì
 
 - **A.** $dp[i] = dp[i-1] + \text{cost}(i, i)$
 
@@ -5028,7 +5028,7 @@ Trong bài toán Phân đoạn dãy số tối ưu $A[1 \dots N]$, hệ thức c
 
 #### Câu 14 (Coin Change — Phân biệt Thứ tự duyệt):
 
-Để đếm số cách đổi tiền **không phân biệt thứ tự** (Tổ hợp: $1+2$ và $2+1$ là một cách), thứ tự duyệt 2 vòng lặp phải như thế nào?
+Để đếm số cách đổi tiền **không phân biệt thứ tự** (Tổ hợp: $1+2$ và $2+1$ là một cách), thứ tự duyệt 2 vòng lặp phải như thế nào
 
 - **A.** Vòng ngoài duyệt Tiền $1 \to S$, vòng trong duyệt từng Đồng xu.
 
@@ -5042,7 +5042,7 @@ Trong bài toán Phân đoạn dãy số tối ưu $A[1 \dots N]$, hệ thức c
 
 #### Câu 15 (Ý nghĩa mảng tails trong LIS O(N log N)):
 
-Trong thuật toán LIS $\mathcal{O}(N \log N)$ (chỉ số 0-based), phần tử $tails[len - 1]$ lưu trữ giá trị gì?
+Trong thuật toán LIS $\mathcal{O}(N \log N)$ (chỉ số 0-based), phần tử $tails[len - 1]$ lưu trữ giá trị gì
 
 - **A.** Độ dài lớn nhất của dãy con tăng.
 
@@ -5087,14 +5087,14 @@ Trong Chuyên đề 13, trạng thái $dp[i]$ chỉ phụ thuộc vào một tha
 
 > **Bản chất Không gian Trạng thái 2D:** Mỗi ô $dp[i][j]$ là một đỉnh trong Đồ thị trạng thái DAG 2 chiều. Thứ tự tính toán phải quét qua toàn bộ các hàng và cột theo chiều tăng dần (hoặc giảm dần có kiểm soát) để đảm bảo tính đúng đắn của mọi quan hệ phụ thuộc.
 
-![Ma trận Quy hoạch động trên Lưới 2D](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-quy-hoach-dong-2d-knapsack/assets/grid_dp_matrix_vi.svg)
+![Ma trận Quy hoạch động trên Lưới 2D](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-quy-hoach-dong-2d-knapsack/assets/grid_dp_matrix_vi.svg)
 
 ## 2. Quy Hoạch Động Trên Lưới Tọa Độ (Grid DP)
 
 ### 2.1. Đếm Số Đường Đi Trên Lưới & Xử Lý Vật Cản
 * **Bối cảnh:** Bắt đầu từ ô $(1, 1)$, cần đi đến ô $(N, M)$. Tại mỗi ô $(i, j)$, chỉ được phép di chuyển **Sang phải** $(i, j+1)$ hoặc **Xuống dưới** $(i+1, j)$. Trên lưới có một số ô là vật cản không thể đi vào.
 * **State Definition:** $dp[i][j]$ là số đường đi hợp lệ từ $(1, 1)$ đến $(i, j)$.
-* **Base Case:** `dp[1][1] = (grid[1][1] == 0 ? 1 : 0)`.
+* **Base Case:** `dp[1][1] = (grid[1][1] == 0 1 : 0)`.
 * **State Transition:** Nếu ô $(i, j)$ là vật cản $\implies dp[i][j] = 0$. Ngược lại:
 $$dp[i][j] = (dp[i-1][j] + dp[i][j-1]) \pmod{10^9+7}$$
 * **Evaluation Order:** Duyệt lồng 2 vòng lặp: Hàng $i = 1 \to N$, Cột $j = 1 \to M$.
@@ -5117,28 +5117,28 @@ $$dp[i][j] = A[i][j] + \max(dp[i-1][j], dp[i][j-1])$$
 ### 3.2. Tuyệt Kỹ Nén Mảng 1D (Space Optimization & Backward Traversal)
 Nhận xét rằng dòng $dp[i][\dots]$ **chỉ phụ thuộc duy nhất vào dòng ngay trước nó** là $dp[i-1][\dots]$. Ta có thể nén bảng 2D thành một mảng 1D $dp[w]$ kích thước $W + 1$.
 * **Tử huyệt bắt buộc:** Vòng lặp sức chứa $w$ bắt buộc phải **duyệt ngược từ $W$ giảm dần về $wt_i$**:
-  ```cpp
-  for (int w = W; w >= wt[i]; --w) {
-      dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
-  }
-  ```
-* **Tại sao phải duyệt ngược?** Khi tính $dp[w]$, ô `dp[w - wt[i]]` vẫn giữ nguyên giá trị của tầng $i-1$ (chưa bị đồ thứ $i$ ghi đè), đảm bảo mỗi món đồ chỉ được dùng tối đa 1 lần duy nhất!
+```cpp
+for (int w = W; w >= wt[i]; --w) {
+dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
+}
+```
+* **Tại sao phải duyệt ngược** Khi tính $dp[w]$, ô `dp[w - wt[i]]` vẫn giữ nguyên giá trị của tầng $i-1$ (chưa bị đồ thứ $i$ ghi đè), đảm bảo mỗi món đồ chỉ được dùng tối đa 1 lần duy nhất!
 
-![Kỹ thuật Nén mảng 1D trong 0/1 Knapsack](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-quy-hoach-dong-2d-knapsack/assets/knapsack_01_compression_vi.svg)
+![Kỹ thuật Nén mảng 1D trong 0/1 Knapsack](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-quy-hoach-dong-2d-knapsack/assets/knapsack_01_compression_vi.svg)
 
 ## 4. Bài Toán Cái Túi Không Giới Hạn (Unbounded Knapsack)
 
 Khi mỗi món đồ được phép chọn **vô số lần** không giới hạn:
 * **Hệ thức 2D:** $dp[i][w] = \max(dp[i-1][w], val_i + dp[i][w - wt_i])$.
 * **Kỹ thuật mảng 1D:** Vòng lặp $w$ duyệt **XUÔI từ $wt_i$ tăng dần lên $W$**:
-  ```cpp
-  for (int w = wt[i]; w <= W; ++w) {
-      dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
-  }
-  ```
+```cpp
+for (int w = wt[i]; w <= W; ++w) {
+dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
+}
+```
 * Duyệt xuôi cho phép trạng thái $dp[w]$ kế thừa ngay lập tức kết quả của chính món đồ $i$ vừa được thêm vào ở `dp[w - wt[i]]`.
 
-![So sánh 0/1 Knapsack vs Unbounded Knapsack](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-14-quy-hoach-dong-2d-knapsack/assets/unbounded_vs_01_knapsack_vi.svg)
+![So sánh 0/1 Knapsack vs Unbounded Knapsack](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-quy-hoach-dong-2d-knapsack/assets/unbounded_vs_01_knapsack_vi.svg)
 
 ## 5. Kỹ Thuật Đổi Trục DP Khi Sức Chứa $W$ Quá Lớn ($DP[v] = \text{Min Weight}$)
 
@@ -5170,33 +5170,33 @@ $$dp[v] = \min(dp[v], wt_i + dp[v - val_i])$$
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long W;
-    if (!(cin >> n >> W)) return 0;
+int n;
+long long W;
+if (!(cin >> n >> W)) return 0;
 
-    if (n <= 0 || W < 0) return 0;
+if (n <= 0 || W < 0) return 0;
 
-    vector<long long> wt(n), val(n);
+vector<long long> wt(n), val(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> wt[i] >> val[i];
+for (int i = 0; i < n; ++i) {
+cin >> wt[i] >> val[i];
 
-    }
+}
 
-    vector<long long> dp(W + 1, 0);
+vector<long long> dp(W + 1, 0);
 
-    for (int i = 0; i < n; ++i) {
-        // Duyệt ngược w giảm dần từ W về wt[i]
-        for (long long w = W; w >= wt[i]; --w) {
-            dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
-        }
-    }
+for (int i = 0; i < n; ++i) {
+// Duyệt ngược w giảm dần từ W về wt[i]
+for (long long w = W; w >= wt[i]; --w) {
+dp[w] = max(dp[w], val[i] + dp[w - wt[i]]);
+}
+}
 
-    cout << dp[W] << "\n";
-    return 0;
+cout << dp[W] << "\n";
+return 0;
 }
 ```
 
@@ -5207,41 +5207,41 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    if (n <= 0 || m <= 0) return 0;
+if (n <= 0 || m <= 0) return 0;
 
-    vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
+vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
-            cin >> a[i][j];
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= m; ++j) {
+cin >> a[i][j];
 
-        }
-    }
+}
+}
 
-    vector<vector<long long>> dp(n + 1, vector<long long>(m + 1, 0));
+vector<vector<long long>> dp(n + 1, vector<long long>(m + 1, 0));
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
-            if (i == 1 && j == 1) {
-                dp[i][j] = a[1][1];
-            } else if (i == 1) {
-                dp[i][j] = dp[1][j - 1] + a[i][j];
-            } else if (j == 1) {
-                dp[i][j] = dp[i - 1][1] + a[i][j];
-            } else {
-                dp[i][j] = a[i][j] + max(dp[i - 1][j], dp[i][j - 1]);
-            }
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= m; ++j) {
+if (i == 1 && j == 1) {
+dp[i][j] = a[1][1];
+} else if (i == 1) {
+dp[i][j] = dp[1][j - 1] + a[i][j];
+} else if (j == 1) {
+dp[i][j] = dp[i - 1][1] + a[i][j];
+} else {
+dp[i][j] = a[i][j] + max(dp[i - 1][j], dp[i][j - 1]);
+}
+}
+}
 
-    cout << dp[n][m] << "\n";
-    return 0;
+cout << dp[n][m] << "\n";
+return 0;
 }
 ```
 
@@ -5249,7 +5249,7 @@ int main() {
 
 #### Câu 1 (Bản chất Không gian Trạng thái 2D):
 
-Trong bài toán Cái túi $0/1$ Knapsack, tại sao cần đến hai tham số trạng thái $dp[i][w]$?
+Trong bài toán Cái túi $0/1$ Knapsack, tại sao cần đến hai tham số trạng thái $dp[i][w]$
 
 - **A.** Vì mỗi món đồ có hai thuộc tính là tên gọi và mã số.
 
@@ -5263,7 +5263,7 @@ Trong bài toán Cái túi $0/1$ Knapsack, tại sao cần đến hai tham số 
 
 #### Câu 2 (Chiều duyệt vòng lặp Nén mảng 0/1 Knapsack):
 
-Khi nén bảng $DP[i][w]$ thành mảng 1D $DP[w]$ trong bài toán $0/1$ Knapsack, chiều duyệt của biến $w$ bắt buộc phải như thế nào?
+Khi nén bảng $DP[i][w]$ thành mảng 1D $DP[w]$ trong bài toán $0/1$ Knapsack, chiều duyệt của biến $w$ bắt buộc phải như thế nào
 
 - **A.** Duyệt xuôi từ $wt_i \to W$.
 
@@ -5277,7 +5277,7 @@ Khi nén bảng $DP[i][w]$ thành mảng 1D $DP[w]$ trong bài toán $0/1$ Knaps
 
 #### Câu 3 (Unbounded Knapsack vs 0/1 Knapsack):
 
-Điểm khác biệt duy nhất trong mã nguồn C++ giữa $0/1$ Knapsack mảng 1D và Unbounded Knapsack mảng 1D là gì?
+Điểm khác biệt duy nhất trong mã nguồn C++ giữa $0/1$ Knapsack mảng 1D và Unbounded Knapsack mảng 1D là gì
 
 - **A.** Thay hàm `max` bằng hàm `min`.
 
@@ -5291,7 +5291,7 @@ Khi nén bảng $DP[i][w]$ thành mảng 1D $DP[w]$ trong bài toán $0/1$ Knaps
 
 #### Câu 4 (Xử lý vật cản trên Lưới 2D):
 
-Khi đếm số đường đi trên lưới $N \times M$, nếu ô $(i, j)$ có chứa vật cản, giá trị $dp[i][j]$ phải được xử lý như thế nào?
+Khi đếm số đường đi trên lưới $N \times M$, nếu ô $(i, j)$ có chứa vật cản, giá trị $dp[i][j]$ phải được xử lý như thế nào
 
 - **A.** $dp[i][j] = -1$
 
@@ -5305,7 +5305,7 @@ Khi đếm số đường đi trên lưới $N \times M$, nếu ô $(i, j)$ có 
 
 #### Câu 5 (Kỹ thuật Đổi Trục DP theo Value):
 
-Khi $N = 100$ và $W = 10^9$ nhưng $\sum val_i \le 10^5$, tại sao ta đổi trạng thái thành $dp[v]$ = Khối lượng nhỏ nhất để đạt giá trị $v$?
+Khi $N = 100$ và $W = 10^9$ nhưng $\sum val_i \le 10^5$, tại sao ta đổi trạng thái thành $dp[v]$ = Khối lượng nhỏ nhất để đạt giá trị $v$
 
 - **A.** Vì thuật toán cũ bị sai đáp án.
 
@@ -5319,7 +5319,7 @@ Khi $N = 100$ và $W = 10^9$ nhưng $\sum val_i \le 10^5$, tại sao ta đổi t
 
 #### Câu 6 (Bài toán Subset Sum):
 
-Cho mảng $N$ số nguyên dương và số $S$. Bài toán kiểm tra tồn tại tập con có tổng bằng $S$ thực chất là trường hợp đặc biệt của bài toán nào?
+Cho mảng $N$ số nguyên dương và số $S$. Bài toán kiểm tra tồn tại tập con có tổng bằng $S$ thực chất là trường hợp đặc biệt của bài toán nào
 
 - **A.** Dãy con tăng dài nhất (LIS).
 
@@ -5333,7 +5333,7 @@ Cho mảng $N$ số nguyên dương và số $S$. Bài toán kiểm tra tồn t�
 
 #### Câu 7 (Khôi phục danh sách đồ trong Cái túi 0/1):
 
-Để in ra danh sách các món đồ được chọn trong bài toán Cái túi $0/1$, ta cần lưu trữ bảng phương án ở dạng nào?
+Để in ra danh sách các món đồ được chọn trong bài toán Cái túi $0/1$, ta cần lưu trữ bảng phương án ở dạng nào
 
 - **A.** Mảng 1D $dp[w]$.
 
@@ -5347,7 +5347,7 @@ Cho mảng $N$ số nguyên dương và số $S$. Bài toán kiểm tra tồn t�
 
 #### Câu 8 (Độ phức tạp Lưới Tam Giác Triangle DP):
 
-Cho tam giác số gồm $N$ hàng, hàng thứ $i$ có $i$ số. Độ phức tạp thời gian để tìm đường đi từ đỉnh xuống đáy có tổng lớn nhất là bao nhiêu?
+Cho tam giác số gồm $N$ hàng, hàng thứ $i$ có $i$ số. Độ phức tạp thời gian để tìm đường đi từ đỉnh xuống đáy có tổng lớn nhất là bao nhiêu
 
 - **A.** $\mathcal{O}(2^N)$
 
@@ -5361,7 +5361,7 @@ Cho tam giác số gồm $N$ hàng, hàng thứ $i$ có $i$ số. Độ phức t
 
 #### Câu 9 (Bẫy bộ nhớ 2D MLE):
 
-Khai báo mảng `long long dp[5000][5000]` trong C++ sẽ tiêu tốn xấp xỉ bao nhiêu bộ nhớ RAM?
+Khai báo mảng `long long dp[5000][5000]` trong C++ sẽ tiêu tốn xấp xỉ bao nhiêu bộ nhớ RAM
 
 - **A.** $25\text{ MB}$
 
@@ -5375,7 +5375,7 @@ Khai báo mảng `long long dp[5000][5000]` trong C++ sẽ tiêu tốn xấp x�
 
 #### Câu 10 (Bài toán Phân chia Tập con Bằng nhau):
 
-Để kiểm tra xem mảng $A$ có thể chia thành 2 tập con có tổng bằng nhau hay không, điều kiện cần đầu tiên là gì?
+Để kiểm tra xem mảng $A$ có thể chia thành 2 tập con có tổng bằng nhau hay không, điều kiện cần đầu tiên là gì
 
 - **A.** Số phần tử $N$ phải là số chẵn.
 
@@ -5389,7 +5389,7 @@ Khai báo mảng `long long dp[5000][5000]` trong C++ sẽ tiêu tốn xấp x�
 
 #### Câu 11 (Quy hoạch động từ Dưới lên trên Triangle DP):
 
-Tại sao khi giải bài toán Tam giác số, duyệt từ hàng đáy $N-1$ ngược lên đỉnh $0$ lại tiện lợi hơn duyệt từ đỉnh xuống?
+Tại sao khi giải bài toán Tam giác số, duyệt từ hàng đáy $N-1$ ngược lên đỉnh $0$ lại tiện lợi hơn duyệt từ đỉnh xuống
 
 - **A.** Vì chạy nhanh hơn gấp đôi.
 
@@ -5403,7 +5403,7 @@ Tại sao khi giải bài toán Tam giác số, duyệt từ hàng đáy $N-1$ n
 
 #### Câu 12 (Knapsack 2 chiều ràng buộc):
 
-Nếu cái túi vừa có giới hạn khối lượng $W$, vừa có giới hạn thể tích $V$, mảng phương án nén 1D cần mở rộng thành mảng mấy chiều?
+Nếu cái túi vừa có giới hạn khối lượng $W$, vừa có giới hạn thể tích $V$, mảng phương án nén 1D cần mở rộng thành mảng mấy chiều
 
 - **A.** Vẫn là mảng 1D.
 
@@ -5417,7 +5417,7 @@ Nếu cái túi vừa có giới hạn khối lượng $W$, vừa có giới h�
 
 #### Câu 13 (Tối ưu hóa bộ nhớ Lưới 2D bằng 2 dòng):
 
-Khi tính $dp[i][j] = A[i][j] + \max(dp[i-1][j], dp[i][j-1])$ trên lưới $N \times M$, nếu $N, M \le 10^4$ nhưng bộ nhớ giới hạn $16\text{MB}$, ta có thể tối ưu không gian như thế nào?
+Khi tính $dp[i][j] = A[i][j] + \max(dp[i-1][j], dp[i][j-1])$ trên lưới $N \times M$, nếu $N, M \le 10^4$ nhưng bộ nhớ giới hạn $16\text{MB}$, ta có thể tối ưu không gian như thế nào
 
 - **A.** Dùng thuật toán đệ quy.
 
@@ -5431,7 +5431,7 @@ Khi tính $dp[i][j] = A[i][j] + \max(dp[i-1][j], dp[i][j-1])$ trên lưới $N \
 
 #### Câu 14 (Knapsack Phân chia chênh lệch nhỏ nhất):
 
-Cho mảng $N$ phần tử tổng $S$. Để chia thành 2 nhóm có tổng $s_1, s_2$ sao cho $|s_1 - s_2|$ nhỏ nhất, ta tìm giá trị $s_1$ như thế nào?
+Cho mảng $N$ phần tử tổng $S$. Để chia thành 2 nhóm có tổng $s_1, s_2$ sao cho $|s_1 - s_2|$ nhỏ nhất, ta tìm giá trị $s_1$ như thế nào
 
 - **A.** $s_1 = S / 2$.
 
@@ -5445,7 +5445,7 @@ Cho mảng $N$ phần tử tổng $S$. Để chia thành 2 nhóm có tổng $s_1
 
 #### Câu 15 (Truy vết đường đi trên Lưới 2D):
 
-Khi lần ngược từ ô $(N, M)$ về ô $(1, 1)$ để in ra các bước đi `D` (Down) và `R` (Right), thứ tự các bước đi được ghi nhận như thế nào?
+Khi lần ngược từ ô $(N, M)$ về ô $(1, 1)$ để in ra các bước đi `D` (Down) và `R` (Right), thứ tự các bước đi được ghi nhận như thế nào
 
 - **A.** In trực tiếp không cần đảo ngược.
 
@@ -5504,7 +5504,7 @@ $$dp[i][j] = 1 + dp[i-1][j-1]$$
 $$dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$$
 * **Độ phức tạp:** Thời gian $\mathcal{O}(N \cdot M)$, Bộ nhớ $\mathcal{O}(N \cdot M)$.
 
-![Bảng phương án LCS và Đường truy vết](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/lcs_table_traceback_vi.svg)
+![Bảng phương án LCS và Đường truy vết](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-quy-hoach-dong-chuoi-lcs/assets/lcs_table_traceback_vi.svg)
 
 ### 2.2. Kỹ Thuật Khôi Phục Xâu LCS Tối Ưu (Traceback)
 Từ ô kết quả $(N, M)$ trên bảng phương án 2D:
@@ -5530,13 +5530,13 @@ Cần tìm số phép biến đổi **ít nhất** để biến xâu $A$ thành 
 * Nếu $A[i] \ne B[j]$:
 $$dp[i][j] = 1 + \min(\underbrace{dp[i-1][j-1]}_{\text{Thay thế}}, \underbrace{dp[i-1][j]}_{\text{Xóa}}, \underbrace{dp[i][j-1]}_{\text{Chèn}})$$
 
-![Khoảng cách biến đổi xâu Edit Distance](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/edit_distance_transitions_vi.svg)
+![Khoảng cách biến đổi xâu Edit Distance](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-quy-hoach-dong-chuoi-lcs/assets/edit_distance_transitions_vi.svg)
 
 ## 4. Phân Biệt Rạch Ròi: Xâu Con Đối Xứng (Substring) vs Dãy Con Đối Xứng (Subsequence)
 
 Đây là tử huyệt thuật ngữ cực kỳ quan trọng trong lập trình thi đấu:
 
-![Phân biệt Xâu con liên tiếp vs Dãy con đối xứng](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-15-quy-hoach-dong-chuoi-lcs/assets/palindrome_substring_vs_subsequence_vi.svg)
+![Phân biệt Xâu con liên tiếp vs Dãy con đối xứng](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-quy-hoach-dong-chuoi-lcs/assets/palindrome_substring_vs_subsequence_vi.svg)
 
 ### 4.1. Xâu Con Liên Tiếp Đối Xứng Dài Nhất (Longest Palindromic Substring)
 * **Đặc tính:** Các ký tự phải **liên tiếp liền kề nhau**.
@@ -5571,52 +5571,52 @@ $$dp[i][j] = 1 + \min(\underbrace{dp[i-1][j-1]}_{\text{Thay thế}}, \underbrace
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    int n = a.size();
-    int m = b.size();
-    if (n == 0 || m == 0) {
-        cout << 0 << "\n\n";
-        return 0;
-    }
+int n = a.size();
+int m = b.size();
+if (n == 0 || m == 0) {
+cout << 0 << "\n\n";
+return 0;
+}
 
-    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
-            if (a[i - 1] == b[j - 1]) {
-                dp[i][j] = 1 + dp[i - 1][j - 1];
-            } else {
-                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
-            }
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= m; ++j) {
+if (a[i - 1] == b[j - 1]) {
+dp[i][j] = 1 + dp[i - 1][j - 1];
+} else {
+dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+}
+}
+}
 
-    cout << dp[n][m] << "\n";
+cout << dp[n][m] << "\n";
 
-    // Khôi phục xâu LCS
-    string lcs_str = "";
-    int i = n, j = m;
-    while (i > 0 && j > 0) {
+// Khôi phục xâu LCS
+string lcs_str = "";
+int i = n, j = m;
+while (i > 0 && j > 0) {
 
-        if (a[i - 1] == b[j - 1]) {
-            lcs_str.push_back(a[i - 1]);
-            --i;
-            --j;
-        } else if (dp[i - 1][j] >= dp[i][j - 1]) {
-            --i;
-        } else {
-            --j;
-        }
-    }
-    reverse(lcs_str.begin(), lcs_str.end());
-    cout << lcs_str << "\n";
+if (a[i - 1] == b[j - 1]) {
+lcs_str.push_back(a[i - 1]);
+--i;
+--j;
+} else if (dp[i - 1][j] >= dp[i][j - 1]) {
+--i;
+} else {
+--j;
+}
+}
+reverse(lcs_str.begin(), lcs_str.end());
+cout << lcs_str << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -5627,34 +5627,34 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    int n = a.size();
-    int m = b.size();
+int n = a.size();
+int m = b.size();
 
-    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
 
-    for (int i = 0; i <= n; ++i) dp[i][0] = i;
-    for (int j = 0; j <= m; ++j) dp[0][j] = j;
+for (int i = 0; i <= n; ++i) dp[i][0] = i;
+for (int j = 0; j <= m; ++j) dp[0][j] = j;
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
-            if (a[i - 1] == b[j - 1]) {
-                dp[i][j] = dp[i - 1][j - 1];
-            } else {
-                dp[i][j] = 1 + min({dp[i - 1][j - 1], // Replace
-                                    dp[i - 1][j],     // Delete
-                                    dp[i][j - 1]});   // Insert
-            }
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= m; ++j) {
+if (a[i - 1] == b[j - 1]) {
+dp[i][j] = dp[i - 1][j - 1];
+} else {
+dp[i][j] = 1 + min({dp[i - 1][j - 1], // Replace
+dp[i - 1][j], // Delete
+dp[i][j - 1]}); // Insert
+}
+}
+}
 
-    cout << dp[n][m] << "\n";
-    return 0;
+cout << dp[n][m] << "\n";
+return 0;
 }
 ```
 
@@ -5662,7 +5662,7 @@ int main() {
 
 #### Câu 1 (Không gian trạng thái 2-Prefix):
 
-Trong bài toán LCS trên hai chuỗi $A$ và $B$, trạng thái $dp[i][j]$ đại diện chính xác cho điều gì?
+Trong bài toán LCS trên hai chuỗi $A$ và $B$, trạng thái $dp[i][j]$ đại diện chính xác cho điều gì
 
 - **A.** Độ dài xâu $A$ cộng với độ dài xâu $B$.
 
@@ -5676,7 +5676,7 @@ Trong bài toán LCS trên hai chuỗi $A$ và $B$, trạng thái $dp[i][j]$ đ�
 
 #### Câu 2 (Trường hợp ký tự trùng khớp trong LCS):
 
-Khi $A[i] == B[j]$, tại sao ta chuyển trạng thái $dp[i][j] = 1 + dp[i-1][j-1]$ mà không cần xét $\max(dp[i-1][j], dp[i][j-1])$?
+Khi $A[i] == B[j]$, tại sao ta chuyển trạng thái $dp[i][j] = 1 + dp[i-1][j-1]$ mà không cần xét $\max(dp[i-1][j], dp[i][j-1])$
 
 - **A.** Vì phép gán này chạy nhanh hơn.
 
@@ -5690,7 +5690,7 @@ Khi $A[i] == B[j]$, tại sao ta chuyển trạng thái $dp[i][j] = 1 + dp[i-1][
 
 #### Câu 3 (Cơ sở của Edit Distance):
 
-Tại sao trong bài toán Edit Distance, $dp[i][0] = i$ và $dp[0][j] = j$?
+Tại sao trong bài toán Edit Distance, $dp[i][0] = i$ và $dp[0][j] = j$
 
 - **A.** Vì các ô này không dùng đến nên khởi tạo đại diện.
 
@@ -5704,7 +5704,7 @@ Tại sao trong bài toán Edit Distance, $dp[i][0] = i$ và $dp[0][j] = j$?
 
 #### Câu 4 (Phân biệt Substring vs Subsequence):
 
-Cho xâu $S = \text{"ABBA"}$. Khẳng định nào sau đây là đúng về bản chất Substring và Subsequence?
+Cho xâu $S = \text{"ABBA"}$. Khẳng định nào sau đây là đúng về bản chất Substring và Subsequence
 
 - **A.** Mọi Subsequence đều là Substring.
 
@@ -5718,7 +5718,7 @@ Cho xâu $S = \text{"ABBA"}$. Khẳng định nào sau đây là đúng về b�
 
 #### Câu 5 (Độ phức tạp của LCS và Edit Distance):
 
-Cho hai xâu có độ dài lần lượt là $N$ và $M$. Thuật toán DP chuẩn mực chạy trong thời gian và bộ nhớ là bao nhiêu?
+Cho hai xâu có độ dài lần lượt là $N$ và $M$. Thuật toán DP chuẩn mực chạy trong thời gian và bộ nhớ là bao nhiêu
 
 - **A.** Thời gian $\mathcal{O}(N + M)$, Bộ nhớ $\mathcal{O}(1)$.
 
@@ -5732,7 +5732,7 @@ Cho hai xâu có độ dài lần lượt là $N$ và $M$. Thuật toán DP chu�
 
 #### Câu 6 (Mối liên hệ giữa LCS và Xâu con chung ngắn nhất SCS):
 
-Độ dài xâu ngắn nhất chứa cả hai xâu $A$ (độ dài $N$) và $B$ (độ dài $M$) dưới dạng dãy con (Shortest Common Supersequence) được tính bằng công thức nào?
+Độ dài xâu ngắn nhất chứa cả hai xâu $A$ (độ dài $N$) và $B$ (độ dài $M$) dưới dạng dãy con (Shortest Common Supersequence) được tính bằng công thức nào
 
 - **A.** $N + M$
 
@@ -5746,7 +5746,7 @@ Cho hai xâu có độ dài lần lượt là $N$ và $M$. Thuật toán DP chu�
 
 #### Câu 7 (Tìm Dãy con đối xứng dài nhất bằng LCS):
 
-Để tìm độ dài Dãy con không liên tiếp đối xứng dài nhất (Longest Palindromic Subsequence) của xâu $S$, ta có thể quy về bài toán nào?
+Để tìm độ dài Dãy con không liên tiếp đối xứng dài nhất (Longest Palindromic Subsequence) của xâu $S$, ta có thể quy về bài toán nào
 
 - **A.** Tìm LIS trên xâu $S$.
 
@@ -5760,7 +5760,7 @@ Cho hai xâu có độ dài lần lượt là $N$ và $M$. Thuật toán DP chu�
 
 #### Câu 8 (Thứ tự duyệt trong DP Đoạn con Palindrome Substring):
 
-Khi tính $dp[i][j] = (S[i] == S[j]) \land dp[i+1][j-1]$, thứ tự duyệt vòng lặp nào sau đây là đúng?
+Khi tính $dp[i][j] = (S[i] == S[j]) \land dp[i+1][j-1]$, thứ tự duyệt vòng lặp nào sau đây là đúng
 
 - **A.** Duyệt $i = 1 \to N$, $j = 1 \to N$.
 
@@ -5774,7 +5774,7 @@ Khi tính $dp[i][j] = (S[i] == S[j]) \land dp[i+1][j-1]$, thứ tự duyệt vò
 
 #### Câu 9 (Bẫy truy cập ký tự 0-based trong C++):
 
-Trong C++, nếu xâu `string s = "CODE"` và bảng DP khai báo 1-based từ $1 \to 4$, ký tự tương ứng với chỉ số $i = 3$ trong bảng DP được truy cập là gì?
+Trong C++, nếu xâu `string s = "CODE"` và bảng DP khai báo 1-based từ $1 \to 4$, ký tự tương ứng với chỉ số $i = 3$ trong bảng DP được truy cập là gì
 
 - **A.** `s[3]`
 
@@ -5802,7 +5802,7 @@ Cho xâu $S$ độ dài $N$. Số ký tự ít nhất cần chèn thêm vào $S$
 
 #### Câu 11 (Truy vết chuỗi thao tác Edit Distance):
 
-Khi truy vết từ ô $(i, j)$ trong bảng Edit Distance, nếu $dp[i][j] == dp[i-1][j] + 1$, thao tác đã được thực hiện là gì?
+Khi truy vết từ ô $(i, j)$ trong bảng Edit Distance, nếu $dp[i][j] == dp[i-1][j] + 1$, thao tác đã được thực hiện là gì
 
 - **A.** Chèn ký tự $B[j]$.
 
@@ -5830,7 +5830,7 @@ Ký tự đại diện `*` trong so khớp mẫu (khớp với chuỗi ký tự 
 
 #### Câu 13 (Nén bộ nhớ LCS còn 2 dòng):
 
-Nếu chỉ cần tìm độ dài của LCS giữa 2 chuỗi độ dài $N$ và $M$ (không yêu cầu truy vết xâu), ta có thể nén bộ nhớ về mức nào?
+Nếu chỉ cần tìm độ dài của LCS giữa 2 chuỗi độ dài $N$ và $M$ (không yêu cầu truy vết xâu), ta có thể nén bộ nhớ về mức nào
 
 - **A.** $\mathcal{O}(1)$
 
@@ -5887,7 +5887,7 @@ Cho xâu $S$ và xâu $T$. Gọi $dp[i][j]$ là số lần xâu $T[1 \dots j]$ x
 | `CPPB-DPS-11` | Xóa Ít Ký Tự Nhất Để Hai Xâu Bằng Nhau | **P3** | Cực tiểu hóa chi phí xóa ký tự mã ASCII. |
 | `CPPB-DPS-12` | Khôi Phục Chuỗi LCS Cụ Thể | **P4** | Lần ngược từ $(N, M)$ tái tạo chính xác xâu ký tự con chung. |
 | `CPPB-DPS-13` | Khôi Phục Lộ Trình Biến Đổi Edit Distance | **P4** | In ra từng bước thao tác Insert, Delete, Replace cụ thể. |
-| `CPPB-DPS-14` | So Khớp Ký Tự Đại Diện (Wildcard Matching) | **P4** | Xử lý ký tự `?` (1 ký tự) và `*` (chuỗi bất kỳ $\ge 0$). |
+| `CPPB-DPS-14` | So Khớp Ký Tự Đại Diện (Wildcard Matching) | **P4** | Xử lý ký tự `` (1 ký tự) và `*` (chuỗi bất kỳ $\ge 0$). |
 | `CPPB-DPS-15` | Quy Hoạch Động Chuỗi Olympic (Mastery) | **P5** | Bài toán tối ưu hóa xâu kết hợp điều kiện từ vựng chuẩn thi đấu. |
 
 
@@ -5902,16 +5902,16 @@ Trong lập trình thi đấu hiện đại, việc tự cài đặt lại cây 
 * **`std::unordered_map` / `std::unordered_set`:** Bảng băm trực tiếp (Hash Table), đạt thời gian trung bình $\mathcal{O}(1)$ cho các truy vấn.
 * **`std::priority_queue`:** Cấu trúc Heap nhị phân hoàn chỉnh, cho phép truy xuất phần tử lớn nhất (hoặc nhỏ nhất) trong $\mathcal{O}(1)$ và thêm/bớt trong $\mathcal{O}(\log N)$.
 
-![So sánh Set Map vs Unordered Map](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-cau-truc-du-lieu-stl-set-map/assets/stl_set_map_rb_tree_vi.svg)
+![So sánh Set Map vs Unordered Map](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-cau-truc-du-lieu-stl-set-map/assets/stl_set_map_rb_tree_vi.svg)
 
 ## 2. Kỹ Thuật Nén Tọa Độ (Coordinate Compression)
 
-### 2.1. Bản Chất Bài Toán & Khi Nào Cần Nén Tọa Độ?
+### 2.1. Bản Chất Bài Toán & Khi Nào Cần Nén Tọa Độ
 * **Vấn đề:** Các giá trị trong mảng $A$ có thể rất lớn ($A[i] \le 10^9$ hoặc $10^{18}$), ta không thể dùng giá trị này làm chỉ số mảng đếm tần suất hoặc dựng cây Segment Tree / Fenwick Tree. Tuy nhiên, số lượng phần tử $N$ lại rất nhỏ ($N \le 10^5$).
 * **Nguyên lý Nén Tọa Độ:** Ánh xạ tập giá trị rời rạc ban đầu về tập số nguyên liên tiếp $\{0, 1, 2, \dots, K-1\}$ ($K \le N$) sao cho **giữ nguyên thứ tự tương quan lớn bé** giữa các phần tử:
 $$A[i] < A[j] \iff \text{rank}(A[i]) < \text{rank}(A[j])$$
 
-![Mô hình Nén Tọa Độ](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-cau-truc-du-lieu-stl-set-map/assets/coordinate_compression_model_vi.svg)
+![Mô hình Nén Tọa Độ](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-cau-truc-du-lieu-stl-set-map/assets/coordinate_compression_model_vi.svg)
 
 ### 2.2. Quy Trình 4 Bước Chuẩn Mực Trong C++
 1. **Sao chép mảng:** `vector<long long> vals = a;`
@@ -5919,13 +5919,13 @@ $$A[i] < A[j] \iff \text{rank}(A[i]) < \text{rank}(A[j])$$
 2. **Sắp xếp tăng dần:** `sort(vals.begin(), vals.end());`
 3. **Lọc bỏ trùng lặp:** `vals.erase(unique(vals.begin(), vals.end()), vals.end());`
 4. **Ánh xạ bằng Tìm kiếm nhị phân:**
-   ```cpp
-   int compressed_val = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
-   ```
+```cpp
+int compressed_val = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
+```
 
 ## 3. Hàng Đợi Ưu Tiên (Priority Queue / Heap)
 
-![Hàng Đợi Ưu Tiên Max-Heap vs Min-Heap](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-16-cau-truc-du-lieu-stl-set-map/assets/priority_queue_heap_vi.svg)
+![Hàng Đợi Ưu Tiên Max-Heap vs Min-Heap](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-cau-truc-du-lieu-stl-set-map/assets/priority_queue_heap_vi.svg)
 
 * **Max-Heap (Mặc định):** `priority_queue<long long> max_pq;` $\implies$ `top()` trả về giá trị lớn nhất.
 
@@ -5955,40 +5955,40 @@ $$A[i] < A[j] \iff \text{rank}(A[i]) < \text{rank}(A[j])$$
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    // 1. Tạo mảng nén
-    vector<long long> vals = a;
+// 1. Tạo mảng nén
+vector<long long> vals = a;
 
-    sort(vals.begin(), vals.end());
-    vals.erase(unique(vals.begin(), vals.end()), vals.end());
+sort(vals.begin(), vals.end());
+vals.erase(unique(vals.begin(), vals.end()), vals.end());
 
-    // 2. Ánh xạ từng phần tử
-    vector<int> compressed(n);
+// 2. Ánh xạ từng phần tử
+vector<int> compressed(n);
 
-    for (int i = 0; i < n; ++i) {
-        compressed[i] = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
-    }
+for (int i = 0; i < n; ++i) {
+compressed[i] = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
+}
 
-    for (int i = 0; i < n; ++i) {
-        cout << compressed[i] << (i + 1 == n ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 0; i < n; ++i) {
+cout << compressed[i] << (i + 1 == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -5999,45 +5999,45 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    priority_queue<long long> left_max; // Nửa nhỏ hơn (Max-Heap)
+priority_queue<long long> left_max; // Nửa nhỏ hơn (Max-Heap)
 
-    priority_queue<long long, vector<long long>, greater<long long>> right_min; // Nửa lớn hơn (Min-Heap)
+priority_queue<long long, vector<long long>, greater<long long>> right_min; // Nửa lớn hơn (Min-Heap)
 
-    for (int i = 0; i < n; ++i) {
-        long long x;
-        cin >> x;
+for (int i = 0; i < n; ++i) {
+long long x;
+cin >> x;
 
-        if (left_max.empty() || x <= left_max.top()) {
-            left_max.push(x);
-        } else {
-            right_min.push(x);
-        }
+if (left_max.empty() || x <= left_max.top()) {
+left_max.push(x);
+} else {
+right_min.push(x);
+}
 
-        // Tự cân bằng kích thước: left_max luôn có size == right_min hoặc size == right_min + 1
-        if (left_max.size() > right_min.size() + 1) {
+// Tự cân bằng kích thước: left_max luôn có size == right_min hoặc size == right_min + 1
+if (left_max.size() > right_min.size() + 1) {
 
-            right_min.push(left_max.top());
-            left_max.pop();
-        } else if (right_min.size() > left_max.size()) {
+right_min.push(left_max.top());
+left_max.pop();
+} else if (right_min.size() > left_max.size()) {
 
-            left_max.push(right_min.top());
-            right_min.pop();
-        }
+left_max.push(right_min.top());
+right_min.pop();
+}
 
-        // In trung vị hiện tại
-        cout << left_max.top() << (i + 1 == n ? "" : " ");
-    }
-    cout << "\n";
+// In trung vị hiện tại
+cout << left_max.top() << (i + 1 == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -6045,7 +6045,7 @@ int main() {
 
 #### Câu 1 (Bản chất std::set):
 
-Cấu trúc dữ liệu `std::set` trong C++ được cài đặt dựa trên cấu trúc cây nào?
+Cấu trúc dữ liệu `std::set` trong C++ được cài đặt dựa trên cấu trúc cây nào
 
 - **A.** Cây nhị phân tìm kiếm thông thường (BST).
 
@@ -6059,7 +6059,7 @@ Cấu trúc dữ liệu `std::set` trong C++ được cài đặt dựa trên c�
 
 #### Câu 2 (Xóa 1 phần tử trong std::multiset):
 
-Để xóa đúng **MỘT** phần tử có giá trị $x$ trong `std::multiset<int> ms`, cú pháp nào sau đây là chính xác?
+Để xóa đúng **MỘT** phần tử có giá trị $x$ trong `std::multiset<int> ms`, cú pháp nào sau đây là chính xác
 
 - **A.** `ms.erase(x);`
 
@@ -6073,7 +6073,7 @@ Cấu trúc dữ liệu `std::set` trong C++ được cài đặt dựa trên c�
 
 #### Câu 3 (Độ phức tạp nén tọa độ):
 
-Cho mảng $N$ phần tử. Quy trình nén tọa độ gồm sao chép, sắp xếp `sort`, lọc `unique` và ánh xạ `lower_bound` có tổng độ phức tạp thời gian là bao nhiêu?
+Cho mảng $N$ phần tử. Quy trình nén tọa độ gồm sao chép, sắp xếp `sort`, lọc `unique` và ánh xạ `lower_bound` có tổng độ phức tạp thời gian là bao nhiêu
 
 - **A.** $\mathcal{O}(N^2)$
 
@@ -6087,7 +6087,7 @@ Cho mảng $N$ phần tử. Quy trình nén tọa độ gồm sao chép, sắp x
 
 #### Câu 4 (Mục đích cốt lõi của nén tọa độ):
 
-Tại sao ta cần nén tọa độ khi giá trị các phần tử lên tới $10^9$?
+Tại sao ta cần nén tọa độ khi giá trị các phần tử lên tới $10^9$
 
 - **A.** Để mảng có thứ tự tăng dần.
 
@@ -6101,7 +6101,7 @@ Tại sao ta cần nén tọa độ khi giá trị các phần tử lên tới $
 
 #### Câu 5 (Cấu trúc Min-Heap trong C++):
 
-Khai báo nào sau đây tạo ra một Hàng đợi ưu tiên Min-Heap trong C++?
+Khai báo nào sau đây tạo ra một Hàng đợi ưu tiên Min-Heap trong C++
 
 - **A.** `priority_queue<int> pq;`
 
@@ -6129,7 +6129,7 @@ Trong `std::priority_queue`, độ phức tạp thời gian của các hàm `top
 
 #### Câu 7 (Bẫy truy cập std::map):
 
-Khi thực hiện kiểm tra `if (mp[key] == 5)` mà `key` chưa từng xuất hiện trong `map`, điều gì sẽ xảy ra?
+Khi thực hiện kiểm tra `if (mp[key] == 5)` mà `key` chưa từng xuất hiện trong `map`, điều gì sẽ xảy ra
 
 - **A.** Chương trình báo lỗi biên dịch.
 
@@ -6143,7 +6143,7 @@ Khi thực hiện kiểm tra `if (mp[key] == 5)` mà `key` chưa từng xuất h
 
 #### Câu 8 (Khác biệt giữa set và unordered_set):
 
-Ưu điểm lớn nhất của `std::set` so với `std::unordered_set` là gì?
+Ưu điểm lớn nhất của `std::set` so với `std::unordered_set` là gì
 
 - **A.** Chạy nhanh hơn trong mọi trường hợp.
 
@@ -6157,7 +6157,7 @@ Khi thực hiện kiểm tra `if (mp[key] == 5)` mà `key` chưa từng xuất h
 
 #### Câu 9 (Tìm kiếm lower_bound trên std::set):
 
-Để tìm phần tử nhỏ nhất $\ge x$ trong `std::set<int> st`, cú pháp nào có hiệu năng tối ưu $\mathcal{O}(\log N)$?
+Để tìm phần tử nhỏ nhất $\ge x$ trong `std::set<int> st`, cú pháp nào có hiệu năng tối ưu $\mathcal{O}(\log N)$
 
 - **A.** `lower_bound(st.begin(), st.end(), x);`
 
@@ -6171,7 +6171,7 @@ Khi thực hiện kiểm tra `if (mp[key] == 5)` mà `key` chưa từng xuất h
 
 #### Câu 10 (Duy trì Trung vị động):
 
-Trong bài toán tìm trung vị động của luồng dữ liệu, ta sử dụng cặp cấu trúc dữ liệu nào tối ưu nhất?
+Trong bài toán tìm trung vị động của luồng dữ liệu, ta sử dụng cặp cấu trúc dữ liệu nào tối ưu nhất
 
 - **A.** Hai mảng `vector`.
 
@@ -6185,7 +6185,7 @@ Trong bài toán tìm trung vị động của luồng dữ liệu, ta sử dụ
 
 #### Câu 11 (Cấu trúc std::map lồng nhau):
 
-Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, kiểu dữ liệu nào sau đây là chuẩn mực?
+Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, kiểu dữ liệu nào sau đây là chuẩn mực
 
 - **A.** `vector<int> mp;`
 
@@ -6199,7 +6199,7 @@ Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, ki
 
 #### Câu 12 (Đếm số phần tử phân biệt trong cửa sổ):
 
-Để đếm số phần tử phân biệt trong cửa sổ trượt độ dài $K$ một cách hiệu quả, cấu trúc nào sau đây là tối ưu nhất?
+Để đếm số phần tử phân biệt trong cửa sổ trượt độ dài $K$ một cách hiệu quả, cấu trúc nào sau đây là tối ưu nhất
 
 - **A.** Mỗi bước tạo một `set` mới $\mathcal{O}(K \log K)$.
 
@@ -6213,7 +6213,7 @@ Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, ki
 
 #### Câu 13 (Hàm std::unique trong C++):
 
-Hàm `std::unique(v.begin(), v.end())` chỉ hoạt động chính xác khi nào?
+Hàm `std::unique(v.begin(), v.end())` chỉ hoạt động chính xác khi nào
 
 - **A.** Khi vector có kích thước chẵn.
 
@@ -6227,7 +6227,7 @@ Hàm `std::unique(v.begin(), v.end())` chỉ hoạt động chính xác khi nào
 
 #### Câu 14 (Hàng đợi ưu tiên lưu Struct / Comparator):
 
-Muốn `priority_queue` ưu tiên phần tử có giá trị nhỏ nhất, nếu dùng Struct thì toán tử `operator<` phải định nghĩa như thế nào?
+Muốn `priority_queue` ưu tiên phần tử có giá trị nhỏ nhất, nếu dùng Struct thì toán tử `operator<` phải định nghĩa như thế nào
 
 - **A.** `bool operator<(const Node& other) const { return val < other.val; }`
 
@@ -6284,16 +6284,16 @@ Ngăn xếp (Stack) là cấu trúc dữ liệu hoạt động theo nguyên lý 
 * Phần tử được thêm vào cuối cùng sẽ là phần tử đầu tiên được lấy ra.
 * Các thao tác cơ bản trong C++ `std::stack`: `push(x)` (thêm vào đỉnh), `pop()` (xóa đỉnh), `top()` (truy cập đỉnh), `empty()`, `size()`. Toàn bộ thao tác đều đạt thời gian tối ưu tuyệt đối $\mathcal{O}(1)$.
 
-![Cơ chế LIFO của Stack và Khớp Dấu Ngoặc](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-ngan-xep-stack-monotonic/assets/stack_lifo_operation_vi.svg)
+![Cơ chế LIFO của Stack và Khớp Dấu Ngoặc](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-ngan-xep-stack-monotonic/assets/stack_lifo_operation_vi.svg)
 
 ## 2. Kỹ Thuật Ngăn Xếp Đơn Điệu (Monotonic Stack)
 
-### 2.1. Bản Chất Bài Toán & Khi Nào Cần Monotonic Stack?
+### 2.1. Bản Chất Bài Toán & Khi Nào Cần Monotonic Stack
 * **Vấn đề:** Cho mảng $A$ gồm $N$ phần tử. Với mỗi vị trí $i$, cần tìm vị trí phần tử **đầu tiên bên phải (hoặc bên trái)** có giá trị lớn hơn (hoặc nhỏ hơn) $A[i]$.
 * **Cách ngây thơ:** Duyệt 2 vòng lặp lồng nhau $\implies \mathcal{O}(N^2)$ (bị TLE khi $N = 10^5$).
 * **Nguyên lý Monotonic Stack:** Duy trì một ngăn xếp chứa các chỉ số mà giá trị tương ứng trong mảng luôn tuân theo tính chất **đơn điệu** (tăng dần hoặc giảm dần). Khi gặp phần tử mới vi phạm tính đơn điệu, ta liên tục `pop()` các phần tử ở đỉnh ngăn xếp và ghi nhận đáp án cho chúng.
 
-![Mô hình Monotonic Stack NGE](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-ngan-xep-stack-monotonic/assets/monotonic_stack_nge_vi.svg)
+![Mô hình Monotonic Stack NGE](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-ngan-xep-stack-monotonic/assets/monotonic_stack_nge_vi.svg)
 
 ### 2.2. Phân Tích Độ Phức Tạp Khấu Hao (Amortized Analysis $\mathcal{O}(N)$)
 Mỗi phần tử của mảng được `push()` vào ngăn xếp đúng $1$ lần và bị `pop()` ra khỏi ngăn xếp tối đa $1$ lần trong toàn bộ quá trình chạy.
@@ -6301,7 +6301,7 @@ $$\text{Tổng số thao tác trên Stack} \le 2N \implies \text{Thời gian tru
 
 ## 3. Bài Toán Kinh Điển: Hình Chữ Nhật Lớn Nhất Trên Biểu Đồ Cột (Largest Rectangle in Histogram)
 
-![Hình chữ nhật lớn nhất trên Histogram](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-17-ngan-xep-stack-monotonic/assets/histogram_max_rectangle_vi.svg)
+![Hình chữ nhật lớn nhất trên Histogram](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-ngan-xep-stack-monotonic/assets/histogram_max_rectangle_vi.svg)
 
 * **Bản chất:** Với mỗi cột $i$ có chiều cao $H[i]$, ta cần tìm:
 1. $L[i]$: Vị trí cột đầu tiên bên trái có chiều cao $< H[i]$.
@@ -6329,40 +6329,40 @@ $$\text{Tổng số thao tác trên Stack} \le 2N \implies \text{Thời gian tru
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    vector<long long> nge(n, -1);
+vector<long long> nge(n, -1);
 
-    stack<int> st; // Lưu chỉ số
+stack<int> st; // Lưu chỉ số
 
-    for (int i = 0; i < n; ++i) {
-        while (!st.empty() && a[i] > a[st.top()]) {
+for (int i = 0; i < n; ++i) {
+while (!st.empty() && a[i] > a[st.top()]) {
 
-            nge[st.top()] = a[i];
-            st.pop();
-        }
-        st.push(i);
-    }
+nge[st.top()] = a[i];
+st.pop();
+}
+st.push(i);
+}
 
-    for (int i = 0; i < n; ++i) {
-        cout << nge[i] << (i + 1 == n ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 0; i < n; ++i) {
+cout << nge[i] << (i + 1 == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -6373,39 +6373,39 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> h(n);
+vector<long long> h(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> h[i];
+for (int i = 0; i < n; ++i) {
+cin >> h[i];
 
-    }
+}
 
-    // Thêm phần tử lính canh 0 ở cuối để đẩy toàn bộ stack ra
-    h.push_back(0);
-    stack<int> st;
+// Thêm phần tử lính canh 0 ở cuối để đẩy toàn bộ stack ra
+h.push_back(0);
+stack<int> st;
 
-    long long max_area = 0;
+long long max_area = 0;
 
-    for (int i = 0; i <= n; ++i) {
-        while (!st.empty() && h[i] < h[st.top()]) {
-            long long height = h[st.top()];
-            st.pop();
-            long long width = st.empty() ? i : (i - st.top() - 1);
-            max_area = max(max_area, height * width);
-        }
-        st.push(i);
-    }
+for (int i = 0; i <= n; ++i) {
+while (!st.empty() && h[i] < h[st.top()]) {
+long long height = h[st.top()];
+st.pop();
+long long width = st.empty() i : (i - st.top() - 1);
+max_area = max(max_area, height * width);
+}
+st.push(i);
+}
 
-    cout << max_area << "\n";
-    return 0;
+cout << max_area << "\n";
+return 0;
 }
 ```
 
@@ -6413,7 +6413,7 @@ int main() {
 
 #### Câu 1 (Bản chất LIFO của Stack):
 
-Nguyên lý hoạt động cơ bản của cấu trúc dữ liệu Ngăn xếp (Stack) là gì?
+Nguyên lý hoạt động cơ bản của cấu trúc dữ liệu Ngăn xếp (Stack) là gì
 
 - **A.** FIFO (Vào trước, Ra trước).
 
@@ -6427,7 +6427,7 @@ Nguyên lý hoạt động cơ bản của cấu trúc dữ liệu Ngăn xếp (
 
 #### Câu 2 (Độ phức tạp Monotonic Stack):
 
-Tại sao thuật toán tìm phần tử lớn hơn tiếp theo dùng Monotonic Stack chỉ mất tổng thời gian $\mathcal{O}(N)$ dù có vòng lặp `while` lồng bên trong vòng `for`?
+Tại sao thuật toán tìm phần tử lớn hơn tiếp theo dùng Monotonic Stack chỉ mất tổng thời gian $\mathcal{O}(N)$ dù có vòng lặp `while` lồng bên trong vòng `for`
 
 - **A.** Vì số vòng lặp `while` luôn nhỏ hơn 3.
 
@@ -6441,7 +6441,7 @@ Tại sao thuật toán tìm phần tử lớn hơn tiếp theo dùng Monotonic 
 
 #### Câu 3 (Điều kiện dãy ngoặc đúng):
 
-Một chuỗi ngoặc chỉ gồm `(` và `)` là hợp lệ khi và chỉ khi thỏa mãn điều kiện nào?
+Một chuỗi ngoặc chỉ gồm `(` và `)` là hợp lệ khi và chỉ khi thỏa mãn điều kiện nào
 
 - **A.** Số lượng ngoặc mở bằng số lượng ngoặc đóng.
 
@@ -6455,7 +6455,7 @@ Một chuỗi ngoặc chỉ gồm `(` và `)` là hợp lệ khi và chỉ khi t
 
 #### Câu 4 (Lưu trữ trong Monotonic Stack):
 
-Trong thuật toán tìm Next Greater Element hay Histogram, thông thường ta nên lưu giá trị gì vào trong `stack`?
+Trong thuật toán tìm Next Greater Element hay Histogram, thông thường ta nên lưu giá trị gì vào trong `stack`
 
 - **A.** Lưu giá trị của phần tử $A[i]$.
 
@@ -6469,7 +6469,7 @@ Trong thuật toán tìm Next Greater Element hay Histogram, thông thường ta
 
 #### Câu 5 (Hình chữ nhật lớn nhất trong ma trận 0-1):
 
-Bài toán tìm hình chữ nhật toàn số 1 có diện tích lớn nhất trong ma trận nhị phân $N \times M$ có thể quy về bài toán nào?
+Bài toán tìm hình chữ nhật toàn số 1 có diện tích lớn nhất trong ma trận nhị phân $N \times M$ có thể quy về bài toán nào
 
 - **A.** Quy hoạch động trên cây.
 
@@ -6479,11 +6479,11 @@ Bài toán tìm hình chữ nhật toàn số 1 có diện tích lớn nhất tr
 
 - **D.** Tìm kiếm nhị phân trên lưới.
 
-> *Giải thích:* Duyệt từng hàng $1 \to N$, duy trì chiều cao cột $h[j] = (matrix[i][j] == 1 ? h[j] + 1 : 0)$, sau đó chạy Monotonic Stack Histogram trong $\mathcal{O}(M) \implies$ Tổng thời gian $\mathcal{O}(N \times M)$.
+> *Giải thích:* Duyệt từng hàng $1 \to N$, duy trì chiều cao cột $h[j] = (matrix[i][j] == 1 h[j] + 1 : 0)$, sau đó chạy Monotonic Stack Histogram trong $\mathcal{O}(M) \implies$ Tổng thời gian $\mathcal{O}(N \times M)$.
 
 #### Câu 6 (Biểu thức Hậu tố RPN):
 
-Để tính giá trị của một biểu thức toán học dạng Hậu tố (Reverse Polish Notation — RPN, ví dụ `3 4 + 2 *`), ta sử dụng cấu trúc dữ liệu nào?
+Để tính giá trị của một biểu thức toán học dạng Hậu tố (Reverse Polish Notation — RPN, ví dụ `3 4 + 2 *`), ta sử dụng cấu trúc dữ liệu nào
 
 - **A.** Hàng đợi Queue.
 
@@ -6497,7 +6497,7 @@ Bài toán tìm hình chữ nhật toàn số 1 có diện tích lớn nhất tr
 
 #### Câu 7 (Bẫy runtime error với Stack):
 
-Đoạn mã C++ nào sau đây có nguy cơ gây lỗi sập chương trình (Crash / Runtime Error)?
+Đoạn mã C++ nào sau đây có nguy cơ gây lỗi sập chương trình (Crash / Runtime Error)
 
 - **A.** `if (!st.empty()) st.pop();`
 
@@ -6511,7 +6511,7 @@ Bài toán tìm hình chữ nhật toàn số 1 có diện tích lớn nhất tr
 
 #### Câu 8 (Phần tử nhỏ hơn gần nhất bên trái):
 
-Để tìm phần tử đầu tiên bên trái nhỏ hơn $A[i]$ (Previous Smaller Element), ta duy trì Monotonic Stack theo tính chất nào?
+Để tìm phần tử đầu tiên bên trái nhỏ hơn $A[i]$ (Previous Smaller Element), ta duy trì Monotonic Stack theo tính chất nào
 
 - **A.** Đơn điệu giảm dần.
 
@@ -6525,7 +6525,7 @@ Bài toán tìm hình chữ nhật toàn số 1 có diện tích lớn nhất tr
 
 #### Câu 9 (Mục đích của phần tử lính canh trong Histogram):
 
-Tại sao khi cài đặt bài toán Histogram, ta thường thêm một cột chiều cao $0$ vào cuối mảng (`h.push_back(0)`)?
+Tại sao khi cài đặt bài toán Histogram, ta thường thêm một cột chiều cao $0$ vào cuối mảng (`h.push_back(0)`)
 
 - **A.** Để tăng kích thước mảng cho đẹp.
 
@@ -6539,7 +6539,7 @@ Tại sao khi cài đặt bài toán Histogram, ta thường thêm một cột c
 
 #### Câu 10 (Dãy con có tổng nhỏ nhất / Min Subarray):
 
-Để tìm tổng giá trị nhỏ nhất của mọi đoạn con trong mảng, kỹ thuật nào sau đây kết hợp Monotonic Stack là tối ưu nhất?
+Để tìm tổng giá trị nhỏ nhất của mọi đoạn con trong mảng, kỹ thuật nào sau đây kết hợp Monotonic Stack là tối ưu nhất
 
 - **A.** Thử mọi cặp $(i, j)$ trong $\mathcal{O}(N^2)$.
 
@@ -6553,7 +6553,7 @@ Tại sao khi cài đặt bài toán Histogram, ta thường thêm một cột c
 
 #### Câu 11 (Xóa K chữ số để được số nhỏ nhất):
 
-Cho chuỗi số $S$ và số $K$. Để xóa $K$ chữ số sao cho số thu được là nhỏ nhất, cấu trúc dữ liệu nào được sử dụng?
+Cho chuỗi số $S$ và số $K$. Để xóa $K$ chữ số sao cho số thu được là nhỏ nhất, cấu trúc dữ liệu nào được sử dụng
 
 - **A.** Hàng đợi hai đầu Deque.
 
@@ -6581,7 +6581,7 @@ Khi kiểm tra chuỗi có cả ngoặc tròn `()`, ngoặc vuông `[]`, ngoặc
 
 #### Câu 13 (Thuật toán Shunting-Yard):
 
-Thuật toán Shunting-Yard của Edsger Dijkstra sử dụng Stack để làm gì?
+Thuật toán Shunting-Yard của Edsger Dijkstra sử dụng Stack để làm gì
 
 - **A.** Tìm đường đi ngắn nhất.
 
@@ -6595,7 +6595,7 @@ Thuật toán Shunting-Yard của Edsger Dijkstra sử dụng Stack để làm g
 
 #### Câu 14 (Hứng nước mưa — Trapping Rain Water):
 
-Bài toán tính lượng nước mưa đọng lại giữa các cột có thể giải bằng Monotonic Stack trong thời gian bao nhiêu?
+Bài toán tính lượng nước mưa đọng lại giữa các cột có thể giải bằng Monotonic Stack trong thời gian bao nhiêu
 
 - **A.** $\mathcal{O}(N^2)$
 
@@ -6609,7 +6609,7 @@ Bài toán tính lượng nước mưa đọng lại giữa các cột có thể
 
 #### Câu 15 (Stack dùng mảng tự tạo vs std::stack):
 
-Trong C++, việc tự tạo stack bằng một mảng `int st[N]` và biến con trỏ `top_idx = 0` so với dùng `std::stack` có ưu điểm gì?
+Trong C++, việc tự tạo stack bằng một mảng `int st[N]` và biến con trỏ `top_idx = 0` so với dùng `std::stack` có ưu điểm gì
 
 - **A.** Giúp code chạy chính xác hơn.
 
@@ -6653,7 +6653,7 @@ Hàng đợi hoạt động theo nguyên lý **FIFO (First In, First Out — Và
 * Phần tử được thêm vào ở đuôi (`push`), và được lấy ra ở đầu (`pop`).
 * Đây là cấu trúc dữ liệu nền tảng của thuật toán Tìm kiếm theo chiều rộng (BFS).
 
-![Cơ chế FIFO của Queue và Lan tỏa BFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-hang-doi-queue-deque/assets/queue_fifo_operation_vi.svg)
+![Cơ chế FIFO của Queue và Lan tỏa BFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-hang-doi-queue-deque/assets/queue_fifo_operation_vi.svg)
 
 ### 1.2. Hàng Đợi Hai Đầu (Double-Ended Queue — Deque)
 `std::deque` cho phép thực hiện thêm và xóa phần tử ở **CẢ HAI ĐẦU** với độ phức tạp tối ưu $\mathcal{O}(1)$:
@@ -6667,7 +6667,7 @@ Hàng đợi hoạt động theo nguyên lý **FIFO (First In, First Out — Và
 * **Cách dùng Multiset / Priority Queue:** Mất $\mathcal{O}(N \log K)$.
 * **Cách dùng Monotonic Deque:** Đạt thời gian tối ưu tuyệt đối **$\mathcal{O}(N)$ tuyến tính**!
 
-![Monotonic Deque Cửa Sổ Trượt](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-hang-doi-queue-deque/assets/deque_sliding_window_minmax_vi.svg)
+![Monotonic Deque Cửa Sổ Trượt](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-hang-doi-queue-deque/assets/deque_sliding_window_minmax_vi.svg)
 
 ### 2.2. Bất Biến 3 Bước Duy Trì Min Cửa Sổ
 Tại mỗi vị trí $i$ khi phần tử $A[i]$ bước vào:
@@ -6677,7 +6677,7 @@ Tại mỗi vị trí $i$ khi phần tử $A[i]$ bước vào:
 
 ## 3. Ứng Dụng Nền Tảng: Tìm Đường Đi Ngắn Nhất Bằng Queue (BFS Nhập Môn)
 
-![Đường đi ngắn nhất bằng BFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-18-hang-doi-queue-deque/assets/bfs_shortest_path_unweighted_vi.svg)
+![Đường đi ngắn nhất bằng BFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-hang-doi-queue-deque/assets/bfs_shortest_path_unweighted_vi.svg)
 
 * Trên đồ thị không có trọng số (hoặc đồ thị lưới di chuyển 4 hướng có chi phí mỗi bước bằng 1), thuật toán BFS sử dụng Queue luôn đảm bảo:
 
@@ -6703,51 +6703,51 @@ Tại mỗi vị trí $i$ khi phần tử $A[i]$ bước vào:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    if (n <= 0 || k <= 0 || k > n) return 0;
+if (n <= 0 || k <= 0 || k > n) return 0;
 
-    vector<long long> a(n);
+vector<long long> a(n);
 
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    deque<int> dq; // Lưu chỉ số, duy trì A[dq[i]] tăng dần
+deque<int> dq; // Lưu chỉ số, duy trì A[dq[i]] tăng dần
 
-    vector<long long> result;
+vector<long long> result;
 
-    for (int i = 0; i < n; ++i) {
-        // 1. Xóa phần tử quá hạn cửa sổ
-        while (!dq.empty() && dq.front() < i - k + 1) {
-            dq.pop_front();
-        }
+for (int i = 0; i < n; ++i) {
+// 1. Xóa phần tử quá hạn cửa sổ
+while (!dq.empty() && dq.front() < i - k + 1) {
+dq.pop_front();
+}
 
-        // 2. Duy trì tính đơn điệu tăng
-        while (!dq.empty() && a[dq.back()] >= a[i]) {
-            dq.pop_back();
-        }
+// 2. Duy trì tính đơn điệu tăng
+while (!dq.empty() && a[dq.back()] >= a[i]) {
+dq.pop_back();
+}
 
-        // 3. Thêm phần tử hiện tại
-        dq.push_back(i);
+// 3. Thêm phần tử hiện tại
+dq.push_back(i);
 
-        // 4. Ghi nhận kết quả khi cửa sổ đủ kích thước k
-        if (i >= k - 1) {
-            result.push_back(a[dq.front()]);
-        }
-    }
+// 4. Ghi nhận kết quả khi cửa sổ đủ kích thước k
+if (i >= k - 1) {
+result.push_back(a[dq.front()]);
+}
+}
 
-    for (int i = 0; i < (int)result.size(); ++i) {
-        cout << result[i] << (i + 1 == (int)result.size() ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 0; i < (int)result.size(); ++i) {
+cout << result[i] << (i + 1 == (int)result.size() "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -6758,46 +6758,46 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    vector<vector<int>> adj(n + 1);
+vector<vector<int>> adj(n + 1);
 
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
 
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    vector<int> dist(n + 1, -1);
+vector<int> dist(n + 1, -1);
 
-    queue<int> q;
+queue<int> q;
 
-    // Khởi tạo gốc 1
-    dist[1] = 0;
-    q.push(1);
+// Khởi tạo gốc 1
+dist[1] = 0;
+q.push(1);
 
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
+while (!q.empty()) {
+int u = q.front();
+q.pop();
 
-        for (int v : adj[u]) {
-            if (dist[v] == -1) { // Chưa thăm
-                dist[v] = dist[u] + 1;
-                q.push(v); // Đánh dấu ngay khi push
-            }
-        }
-    }
+for (int v : adj[u]) {
+if (dist[v] == -1) { // Chưa thăm
+dist[v] = dist[u] + 1;
+q.push(v); // Đánh dấu ngay khi push
+}
+}
+}
 
-    cout << dist[n] << "\n";
-    return 0;
+cout << dist[n] << "\n";
+return 0;
 }
 ```
 
@@ -6805,7 +6805,7 @@ int main() {
 
 #### Câu 1 (Bản chất FIFO của Queue):
 
-Điểm khác biệt cốt lõi giữa `std::queue` và `std::stack` là gì?
+Điểm khác biệt cốt lõi giữa `std::queue` và `std::stack` là gì
 
 - **A.** Queue cho phép truy cập ngẫu nhiên theo chỉ số.
 
@@ -6819,7 +6819,7 @@ int main() {
 
 #### Câu 2 (Độ phức tạp Monotonic Deque):
 
-Thuật toán tìm Min trên cửa sổ trượt độ dài $K$ bằng `std::deque` có độ phức tạp thời gian là bao nhiêu?
+Thuật toán tìm Min trên cửa sổ trượt độ dài $K$ bằng `std::deque` có độ phức tạp thời gian là bao nhiêu
 
 - **A.** $\mathcal{O}(N \log K)$
 
@@ -6833,7 +6833,7 @@ Thuật toán tìm Min trên cửa sổ trượt độ dài $K$ bằng `std::deq
 
 #### Câu 3 (Khi nào cần Deque thay vì Queue):
 
-Cấu trúc `std::deque` vượt trội hơn `std::queue` ở điểm nào?
+Cấu trúc `std::deque` vượt trội hơn `std::queue` ở điểm nào
 
 - **A.** Chiếm ít bộ nhớ hơn.
 
@@ -6847,7 +6847,7 @@ Cấu trúc `std::deque` vượt trội hơn `std::queue` ở điểm nào?
 
 #### Câu 4 (Bẫy đánh dấu visited trong BFS):
 
-Tại sao trong thuật toán BFS, ta bắt buộc phải đánh dấu `visited[v] = true` ngay khi gọi `q.push(v)` thay vì khi `q.pop()`?
+Tại sao trong thuật toán BFS, ta bắt buộc phải đánh dấu `visited[v] = true` ngay khi gọi `q.push(v)` thay vì khi `q.pop()`
 
 - **A.** Để in ra thứ tự duyệt đẹp hơn.
 
@@ -6861,7 +6861,7 @@ Tại sao trong thuật toán BFS, ta bắt buộc phải đánh dấu `visited[
 
 #### Câu 5 (Duy trì Max Cửa Sổ bằng Deque):
 
-Để tìm GIÁ TRỊ LỚN NHẤT (Max) trên cửa sổ trượt, ta duy trì Deque theo thứ tự nào?
+Để tìm GIÁ TRỊ LỚN NHẤT (Max) trên cửa sổ trượt, ta duy trì Deque theo thứ tự nào
 
 - **A.** Đơn điệu tăng dần.
 
@@ -6875,7 +6875,7 @@ Tại sao trong thuật toán BFS, ta bắt buộc phải đánh dấu `visited[
 
 #### Câu 6 (Thuật toán BFS 0-1):
 
-Trên đồ thị mà trọng số các cạnh chỉ có thể là $0$ hoặc $1$, ta có thể tìm đường đi ngắn nhất trong $\mathcal{O}(V + E)$ bằng cấu trúc nào?
+Trên đồ thị mà trọng số các cạnh chỉ có thể là $0$ hoặc $1$, ta có thể tìm đường đi ngắn nhất trong $\mathcal{O}(V + E)$ bằng cấu trúc nào
 
 - **A.** Dùng Dijkstra với `priority_queue` $\mathcal{O}(E \log V)$.
 
@@ -6889,7 +6889,7 @@ Trên đồ thị mà trọng số các cạnh chỉ có thể là $0$ hoặc $1
 
 #### Câu 7 (Bài toán Đổi tiền ít xu nhất bằng BFS):
 
-Bài toán đổi số tiền $S$ với ít đồng xu nhất có thể giải bằng BFS trên đồ thị trạng thái khi nào?
+Bài toán đổi số tiền $S$ với ít đồng xu nhất có thể giải bằng BFS trên đồ thị trạng thái khi nào
 
 - **A.** Khi số lượng đồng xu lớn hơn 100.
 
@@ -6903,7 +6903,7 @@ Bài toán đổi số tiền $S$ với ít đồng xu nhất có thể giải b
 
 #### Câu 8 (Đoạn con có tổng lớn nhất độ dài tối đa K):
 
-Để tìm đoạn con có tổng lớn nhất có độ dài không vượt quá $K$, ta kết hợp Mảng tiền tố $pref[i]$ với cấu trúc dữ liệu nào?
+Để tìm đoạn con có tổng lớn nhất có độ dài không vượt quá $K$, ta kết hợp Mảng tiền tố $pref[i]$ với cấu trúc dữ liệu nào
 
 - **A.** Monotonic Stack.
 
@@ -6917,7 +6917,7 @@ Bài toán đổi số tiền $S$ với ít đồng xu nhất có thể giải b
 
 #### Câu 9 (Trạng thái rỗng của Deque):
 
-Lệnh nào sau đây xóa sạch toàn bộ các phần tử trong `std::deque<int> dq`?
+Lệnh nào sau đây xóa sạch toàn bộ các phần tử trong `std::deque<int> dq`
 
 - **A.** `dq.erase();`
 
@@ -6931,7 +6931,7 @@ Lệnh nào sau đây xóa sạch toàn bộ các phần tử trong `std::deque<
 
 #### Câu 10 (Sinh các số nhị phân từ 1 đến N):
 
-Để sinh danh sách $N$ số nhị phân đầu tiên (`"1"`, `"10"`, `"11"`, `"100"`...) theo thứ tự tăng dần, ta sử dụng Queue như thế nào?
+Để sinh danh sách $N$ số nhị phân đầu tiên (`"1"`, `"10"`, `"11"`, `"100"`...) theo thứ tự tăng dần, ta sử dụng Queue như thế nào
 
 - **A.** Chuyển đổi từng số nguyên sang nhị phân.
 
@@ -6945,7 +6945,7 @@ Lệnh nào sau đây xóa sạch toàn bộ các phần tử trong `std::deque<
 
 #### Câu 11 (Truy vết đường đi trong BFS):
 
-Để in ra chính xác các đỉnh trên đường đi ngắn nhất từ $S$ đến $T$ trong BFS, ta duy trì mảng phụ nào?
+Để in ra chính xác các đỉnh trên đường đi ngắn nhất từ $S$ đến $T$ trong BFS, ta duy trì mảng phụ nào
 
 - **A.** Mảng `visited`.
 
@@ -6973,7 +6973,7 @@ Khi tự cài đặt Queue bằng mảng cố định `a[MAXN]`, công thức t�
 
 #### Câu 13 (Kiểm tra đồ thị hai phía Bipartite Graph):
 
-Thuật toán BFS kiểm tra đồ thị hai phía (2-coloring) bằng cách tô màu như thế nào?
+Thuật toán BFS kiểm tra đồ thị hai phía (2-coloring) bằng cách tô màu như thế nào
 
 - **A.** Tô mọi đỉnh cùng một màu.
 
@@ -6987,7 +6987,7 @@ Thuật toán BFS kiểm tra đồ thị hai phía (2-coloring) bằng cách tô
 
 #### Câu 14 (Hàng đợi hai đầu trong Sliding Window Median):
 
-Tại sao `std::deque` không thể dùng trực tiếp để tìm Trung vị (Median) trong cửa sổ trượt?
+Tại sao `std::deque` không thể dùng trực tiếp để tìm Trung vị (Median) trong cửa sổ trượt
 
 - **A.** Vì Deque chạy chậm.
 
@@ -7042,7 +7042,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 
 Đồ thị $G = (V, E)$ là cấu trúc toán học biểu diễn tập hợp các đỉnh (Vertices — $V$) và các cạnh nối giữa chúng (Edges — $E$). Đồ thị có thể là vô hướng (Undirected) hoặc có hướng (Directed), có trọng số hoặc không có trọng số.
 
-![Biểu diễn Đồ thị: Ma trận kề vs Danh sách kề](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/graph_representations_vi.svg)
+![Biểu diễn Đồ thị: Ma trận kề vs Danh sách kề](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-22-ly-thuyet-do-thi-bfs-dfs/assets/graph_representations_vi.svg)
 
 ### 1.1. Ma Trận Kề (Adjacency Matrix)
 * Mảng 2 chiều `int adj[N][N]`: `adj[u][v] = 1` nếu có cạnh nối giữa $u$ và $v$.
@@ -7057,7 +7057,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 
 ## 2. Hai Chiến Lược Duyệt Đồ Thị Kinh Điển: BFS vs DFS
 
-![So sánh BFS vs DFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/bfs_vs_dfs_traversal_vi.svg)
+![So sánh BFS vs DFS](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-22-ly-thuyet-do-thi-bfs-dfs/assets/bfs_vs_dfs_traversal_vi.svg)
 
 ### 2.1. Tìm Kiếm Theo Chiều Rộng (Breadth-First Search — BFS)
 * Sử dụng **Hàng đợi (Queue)**, lan tỏa theo từng tầng bán kính $d = 0, 1, 2, \dots$ tính từ đỉnh nguồn $S$.
@@ -7069,7 +7069,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 
 ## 3. Ứng Dụng: Đếm Số Thành Phần Liên Thông & Kiểm Tra Chu Trình
 
-![Đếm số thành phần liên thông](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-19-ly-thuyet-do-thi-bfs-dfs/assets/connected_components_vi.svg)
+![Đếm số thành phần liên thông](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-22-ly-thuyet-do-thi-bfs-dfs/assets/connected_components_vi.svg)
 
 * **Thuật toán đếm thành phần liên thông:** Duyệt qua mọi đỉnh $i \in [1, N]$. Nếu đỉnh $i$ chưa được thăm (`!visited[i]`), tăng biến đếm số thành phần liên thông `components++` và gọi `DFS(i)` để loang thăm toàn bộ các đỉnh thuộc cùng thành phần.
 * **Phát hiện chu trình trên đồ thị vô hướng bằng DFS:** Khi duyệt từ $u$ sang đỉnh kề $v$, nếu $v$ đã được thăm (`visited[v] == true`) và $v \ne parent[u]$, ta khẳng định đồ thị **CÓ CHU TRÌNH**!
@@ -7087,7 +7087,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 
 ### Mẫu 1: DFS Đếm số thành phần liên thông và tìm kích thước từng thành phần
 
-> ⚠️ **Lưu ý về Stack Overflow:** Hàm DFS đệ quy dưới đây có thể gây tràn ngăn xếp hệ thống (Segmentation Fault) khi đồ thị có dạng đường thẳng $N = 2 \times 10^5$ đỉnh (độ sâu đệ quy lên tới $N$ tầng). Trong thi đấu thực tế, nên dùng **DFS bằng `std::stack` tường minh** hoặc thiết lập `ulimit -s unlimited` (Linux) trước khi chạy. Mẫu đệ quy được giữ lại ở đây vì tính trực quan sư phạm.
+> **Lưu ý về Stack Overflow:** Hàm DFS đệ quy dưới đây có thể gây tràn ngăn xếp hệ thống (Segmentation Fault) khi đồ thị có dạng đường thẳng $N = 2 \times 10^5$ đỉnh (độ sâu đệ quy lên tới $N$ tầng). Trong thi đấu thực tế, nên dùng **DFS bằng `std::stack` tường minh** hoặc thiết lập `ulimit -s unlimited` (Linux) trước khi chạy. Mẫu đệ quy được giữ lại ở đây vì tính trực quan sư phạm.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7099,53 +7099,53 @@ vector<vector<int>> adj;
 vector<bool> visited;
 
 int dfs(int u) {
-    visited[u] = true;
-    int comp_size = 1;
-    for (int v : adj[u]) {
-        if (!visited[v]) {
-            comp_size += dfs(v);
-        }
-    }
-    return comp_size;
+visited[u] = true;
+int comp_size = 1;
+for (int v : adj[u]) {
+if (!visited[v]) {
+comp_size += dfs(v);
+}
+}
+return comp_size;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m)) return 0;
+if (!(cin >> n >> m)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    adj.assign(n + 1, vector<int>());
-    visited.assign(n + 1, false);
+adj.assign(n + 1, vector<int>());
+visited.assign(n + 1, false);
 
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
 
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    int component_count = 0;
-    vector<int> component_sizes;
+int component_count = 0;
+vector<int> component_sizes;
 
-    for (int i = 1; i <= n; ++i) {
-        if (!visited[i]) {
-            component_count++;
-            int sz = dfs(i);
-            component_sizes.push_back(sz);
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+if (!visited[i]) {
+component_count++;
+int sz = dfs(i);
+component_sizes.push_back(sz);
+}
+}
 
-    cout << component_count << "\n";
-    for (int i = 0; i < (int)component_sizes.size(); ++i) {
-        cout << component_sizes[i] << (i + 1 == (int)component_sizes.size() ? "" : " ");
-    }
-    cout << "\n";
+cout << component_count << "\n";
+for (int i = 0; i < (int)component_sizes.size(); ++i) {
+cout << component_sizes[i] << (i + 1 == (int)component_sizes.size() "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -7163,49 +7163,49 @@ vector<bool> visited;
 bool has_cycle = false;
 
 void dfs_cycle(int u, int p) {
-    visited[u] = true;
-    for (int v : adj[u]) {
-        if (!visited[v]) {
-            dfs_cycle(v, u);
-        } else if (v != p) {
-            has_cycle = true; // Gặp lại đỉnh đã thăm khác cha -> Chu trình!
+visited[u] = true;
+for (int v : adj[u]) {
+if (!visited[v]) {
+dfs_cycle(v, u);
+} else if (v != p) {
+has_cycle = true; // Gặp lại đỉnh đã thăm khác cha -> Chu trình!
 
-        }
-    }
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m)) return 0;
+if (!(cin >> n >> m)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    adj.assign(n + 1, vector<int>());
-    visited.assign(n + 1, false);
+adj.assign(n + 1, vector<int>());
+visited.assign(n + 1, false);
 
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
 
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    for (int i = 1; i <= n; ++i) {
-        if (!visited[i]) {
-            dfs_cycle(i, 0);
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+if (!visited[i]) {
+dfs_cycle(i, 0);
+}
+}
 
-    if (has_cycle) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
-    }
+if (has_cycle) {
+cout << "YES\n";
+} else {
+cout << "NO\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -7213,7 +7213,7 @@ int main() {
 
 #### Câu 1 (Bộ nhớ của Danh sách kề):
 
-Với đồ thị gồm $V$ đỉnh và $E$ cạnh, danh sách kề `vector<int> adj[V + 1]` chiếm dung lượng bộ nhớ là bao nhiêu?
+Với đồ thị gồm $V$ đỉnh và $E$ cạnh, danh sách kề `vector<int> adj[V + 1]` chiếm dung lượng bộ nhớ là bao nhiêu
 
 - **A.** $\mathcal{O}(V^2)$
 
@@ -7241,7 +7241,7 @@ Thuật toán BFS và DFS khi duyệt qua toàn bộ đồ thị biểu diễn b
 
 #### Câu 3 (Điều kiện phát hiện chu trình đồ thị vô hướng):
 
-Trong hàm `DFS(u, p)` với $p$ là đỉnh cha trực tiếp của $u$, dấu hiệu nào khẳng định có chu trình?
+Trong hàm `DFS(u, p)` với $p$ là đỉnh cha trực tiếp của $u$, dấu hiệu nào khẳng định có chu trình
 
 - **A.** Gặp một đỉnh kề $v$ chưa được thăm.
 
@@ -7255,7 +7255,7 @@ Trong hàm `DFS(u, p)` với $p$ là đỉnh cha trực tiếp của $u$, dấu 
 
 #### Câu 4 (Tìm đường đi ngắn nhất không trọng số):
 
-Để tìm đường đi qua ít cạnh nhất từ đỉnh $S$ đến đỉnh $T$, thuật toán nào luôn đảm bảo tìm ra kết quả tối ưu đầu tiên?
+Để tìm đường đi qua ít cạnh nhất từ đỉnh $S$ đến đỉnh $T$, thuật toán nào luôn đảm bảo tìm ra kết quả tối ưu đầu tiên
 
 - **A.** DFS.
 
@@ -7297,7 +7297,7 @@ Tổng bậc của toàn bộ các đỉnh trong đồ thị vô hướng $G = (
 
 #### Câu 7 (Thứ tự duyệt Topo trên DAG):
 
-Thuật toán Sắp xếp Tô-pô (Topological Sort) chỉ áp dụng được trên loại đồ thị nào?
+Thuật toán Sắp xếp Tô-pô (Topological Sort) chỉ áp dụng được trên loại đồ thị nào
 
 - **A.** Đồ thị vô hướng bất kỳ.
 
@@ -7311,7 +7311,7 @@ Thuật toán Sắp xếp Tô-pô (Topological Sort) chỉ áp dụng được t
 
 #### Câu 8 (Đồ thị đầy đủ $K_N$):
 
-Đồ thị đơn vô hướng đầy đủ gồm $N$ đỉnh có chính xác bao nhiêu cạnh?
+Đồ thị đơn vô hướng đầy đủ gồm $N$ đỉnh có chính xác bao nhiêu cạnh
 
 - **A.** $N(N - 1)$
 
@@ -7339,7 +7339,7 @@ Khi DFS trên một đồ thị hình đường thẳng (Line Graph) gồm $N = 
 
 #### Câu 10 (Cạnh cầu trong đồ thị Bridge):
 
-Một cạnh trong đồ thị vô hướng được gọi là Cạnh Cầu (Bridge) khi nào?
+Một cạnh trong đồ thị vô hướng được gọi là Cạnh Cầu (Bridge) khi nào
 
 - **A.** Khi nó thuộc một chu trình.
 
@@ -7353,7 +7353,7 @@ Một cạnh trong đồ thị vô hướng được gọi là Cạnh Cầu (Bri
 
 #### Câu 11 (Đỉnh khớp trong đồ thị Articulation Point):
 
-Một đỉnh $u$ được gọi là Đỉnh Khớp (Cut Vertex) khi nào?
+Một đỉnh $u$ được gọi là Đỉnh Khớp (Cut Vertex) khi nào
 
 - **A.** Khi $u$ có bậc lớn hơn 3.
 
@@ -7453,24 +7453,24 @@ Trong lập trình thi đấu, ma trận bảng vuông $N \times M$ có thể đ
 * Mỗi bước di chuyển sang các ô kề cạnh (4 hướng: Trên, Dưới, Trái, Phải) tương đương với một **Cạnh** vô hướng có trọng số bằng 1. Tổng số cạnh $|E| \le 4NM$.
 * **Ưu điểm vượt trội:** Không cần dựng danh sách kề `vector<int> adj[]`, ta duyệt trực tiếp trên ma trận bằng **Mảng Hướng Dịch Chuyển (`dr`, `dc`)**.
 
-![Mô hình hóa Đồ thị Lưới 2D và Mảng Hướng](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-do-thi-luoi-2d-flood-fill/assets/grid_2d_graph_modeling_vi.svg)
+![Mô hình hóa Đồ thị Lưới 2D và Mảng Hướng](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-23-do-thi-luoi-2d-flood-fill/assets/grid_2d_graph_modeling_vi.svg)
 
 ## 2. Thuật Toán Loang (Flood Fill)
 
-![Thuật toán Loang Flood Fill](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-do-thi-luoi-2d-flood-fill/assets/flood_fill_maze_vi.svg)
+![Thuật toán Loang Flood Fill](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-23-do-thi-luoi-2d-flood-fill/assets/flood_fill_maze_vi.svg)
 
 * **Bản chất:** Từ một ô xuất phát $(r_0, c_0)$, thuật toán lan tỏa (bằng DFS hoặc BFS) sang tất cả các ô lân cận có cùng tính chất (cùng màu, ô đất liền không phải nước biển, ô đường đi không có vật cản).
 * **Điều kiện biên hợp lệ (Boundary Invariant):**
-  ```cpp
-  bool isValid(int r, int c) {
-      return (r >= 1 && r <= n && c >= 1 && c <= m && grid[r][c] != '#' && !visited[r][c]);
-  }
-  ```
+```cpp
+bool isValid(int r, int c) {
+return (r >= 1 && r <= n && c >= 1 && c <= m && grid[r][c] != '#' && !visited[r][c]);
+}
+```
 * **Ứng dụng kinh điển:** Đếm số lượng hòn đảo (Number of Islands), tính diện tích vùng lớn nhất, tô màu sơn vùng kín, tìm đường thoát khỏi mê cung.
 
 ## 3. Lý Thuyết Cây Trên Đồ Thị (Tree Properties & Invariants)
 
-![Đặc tính Bất biến của Cây](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-20-do-thi-luoi-2d-flood-fill/assets/tree_properties_and_cycles_vi.svg)
+![Đặc tính Bất biến của Cây](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-23-do-thi-luoi-2d-flood-fill/assets/tree_properties_and_cycles_vi.svg)
 
 Cây (Tree) là một dạng đồ thị vô hướng đặc biệt có cấu trúc phân cấp chặt chẽ:
 1. Đồ thị liên thông gồm $N$ đỉnh và có **đúng $N - 1$ cạnh**.
@@ -7493,7 +7493,7 @@ Cây (Tree) là một dạng đồ thị vô hướng đặc biệt có cấu tr
 
 ### Mẫu 1: Đếm số lượng hòn đảo và diện tích lớn nhất (Flood Fill DFS)
 
-> ⚠️ **Lưu ý về Stack Overflow:** Hàm DFS đệ quy trên lưới 2D có thể gây tràn ngăn xếp hệ thống khi hòn đảo có kích thước lớn (ví dụ lưới $500 \times 500$ toàn ô đất tạo ra độ sâu đệ quy $250{,}000$ tầng). Trong thi đấu thực tế với lưới lớn ($N \times M \ge 10^5$), **nên dùng BFS bằng `std::queue` (xem Mẫu 2 bên dưới)** để tránh hoàn toàn rủi ro này. Mẫu DFS đệ quy được giữ lại vì tính trực quan sư phạm.
+> **Lưu ý về Stack Overflow:** Hàm DFS đệ quy trên lưới 2D có thể gây tràn ngăn xếp hệ thống khi hòn đảo có kích thước lớn (ví dụ lưới $500 \times 500$ toàn ô đất tạo ra độ sâu đệ quy $250{,}000$ tầng). Trong thi đấu thực tế với lưới lớn ($N \times M \ge 10^5$), **nên dùng BFS bằng `std::queue` (xem Mẫu 2 bên dưới)** để tránh hoàn toàn rủi ro này. Mẫu DFS đệ quy được giữ lại vì tính trực quan sư phạm.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -7508,52 +7508,52 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 bool isValid(int r, int c) {
-    return (r >= 0 && r < n && c >= 0 && c < m && grid[r][c] == '1' && !visited[r][c]);
+return (r >= 0 && r < n && c >= 0 && c < m && grid[r][c] == '1' && !visited[r][c]);
 }
 
 int dfs(int r, int c) {
-    visited[r][c] = true;
-    int area = 1;
+visited[r][c] = true;
+int area = 1;
 
-    for (int d = 0; d < 4; ++d) {
-        int nr = r + dr[d];
-        int nc = c + dc[d];
-        if (isValid(nr, nc)) {
-            area += dfs(nr, nc);
-        }
-    }
-    return area;
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (isValid(nr, nc)) {
+area += dfs(nr, nc);
+}
+}
+return area;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m)) return 0;
+if (!(cin >> n >> m)) return 0;
 
-    if (n <= 0 || m <= 0) return 0;
+if (n <= 0 || m <= 0) return 0;
 
-    grid.resize(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> grid[i];
+grid.resize(n);
+for (int i = 0; i < n; ++i) {
+cin >> grid[i];
 
-    }
+}
 
-    visited.assign(n, vector<bool>(m, false));
-    int island_count = 0;
-    int max_area = 0;
+visited.assign(n, vector<bool>(m, false));
+int island_count = 0;
+int max_area = 0;
 
-    for (int r = 0; r < n; ++r) {
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == '1' && !visited[r][c]) {
-                island_count++;
-                max_area = max(max_area, dfs(r, c));
-            }
-        }
-    }
+for (int r = 0; r < n; ++r) {
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == '1' && !visited[r][c]) {
+island_count++;
+max_area = max(max_area, dfs(r, c));
+}
+}
+}
 
-    cout << island_count << " " << max_area << "\n";
-    return 0;
+cout << island_count << " " << max_area << "\n";
+return 0;
 }
 ```
 
@@ -7572,50 +7572,50 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m)) return 0;
+if (!(cin >> n >> m)) return 0;
 
-    if (n <= 0 || m <= 0) return 0;
+if (n <= 0 || m <= 0) return 0;
 
-    grid.resize(n);
-    int sr = -1, sc = -1, er = -1, ec = -1;
+grid.resize(n);
+int sr = -1, sc = -1, er = -1, ec = -1;
 
-    for (int r = 0; r < n; ++r) {
-        cin >> grid[r];
+for (int r = 0; r < n; ++r) {
+cin >> grid[r];
 
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == 'S') { sr = r; sc = c; }
-            if (grid[r][c] == 'E') { er = r; ec = c; }
-        }
-    }
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == 'S') { sr = r; sc = c; }
+if (grid[r][c] == 'E') { er = r; ec = c; }
+}
+}
 
-    dist.assign(n, vector<int>(m, -1));
-    queue<pair<int, int>> q;
+dist.assign(n, vector<int>(m, -1));
+queue<pair<int, int>> q;
 
-    dist[sr][sc] = 0;
-    q.push({sr, sc});
+dist[sr][sc] = 0;
+q.push({sr, sc});
 
-    while (!q.empty()) {
-        auto [r, c] = q.front();
-        q.pop();
+while (!q.empty()) {
+auto [r, c] = q.front();
+q.pop();
 
-        if (r == er && c == ec) break;
+if (r == er && c == ec) break;
 
-        for (int d = 0; d < 4; ++d) {
-            int nr = r + dr[d];
-            int nc = c + dc[d];
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
 
-            if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] != '#' && dist[nr][nc] == -1) {
-                dist[nr][nc] = dist[r][c] + 1;
-                q.push({nr, nc});
-            }
-        }
-    }
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] != '#' && dist[nr][nc] == -1) {
+dist[nr][nc] = dist[r][c] + 1;
+q.push({nr, nc});
+}
+}
+}
 
-    cout << dist[er][ec] << "\n";
-    return 0;
+cout << dist[er][ec] << "\n";
+return 0;
 }
 ```
 
@@ -7637,7 +7637,7 @@ Lưới ma trận $N \times M$ với quy tắc di chuyển 4 hướng có số �
 
 #### Câu 2 (Mảng hướng 8 hướng bao gồm cả đường chéo):
 
-Để di chuyển 8 hướng (kể cả 4 hướng chéo) trên lưới 2D, mảng dịch chuyển $dr$ và $dc$ cần có bao nhiêu phần tử?
+Để di chuyển 8 hướng (kể cả 4 hướng chéo) trên lưới 2D, mảng dịch chuyển $dr$ và $dc$ cần có bao nhiêu phần tử
 
 - **A.** 4 phần tử.
 
@@ -7665,7 +7665,7 @@ Thuật toán Flood Fill duyệt qua toàn bộ ma trận $N \times M$ có độ
 
 #### Câu 4 (Đường đi của Quân Mã trên bàn cờ Knight Moves):
 
-Quân mã trong cờ vua có bao nhiêu bước nhảy hợp lệ và biểu diễn mảng hướng như thế nào?
+Quân mã trong cờ vua có bao nhiêu bước nhảy hợp lệ và biểu diễn mảng hướng như thế nào
 
 - **A.** 4 bước nhảy dạng chữ thập.
 
@@ -7679,7 +7679,7 @@ Quân mã trong cờ vua có bao nhiêu bước nhảy hợp lệ và biểu di�
 
 #### Câu 5 (Đặc tính bất biến của Cây N đỉnh):
 
-Một đồ thị vô hướng gồm $N$ đỉnh là một Cây khi thỏa mãn đồng thời hai điều kiện nào sau đây?
+Một đồ thị vô hướng gồm $N$ đỉnh là một Cây khi thỏa mãn đồng thời hai điều kiện nào sau đây
 
 - **A.** Có $N$ cạnh và liên thông.
 
@@ -7693,7 +7693,7 @@ Một đồ thị vô hướng gồm $N$ đỉnh là một Cây khi thỏa mãn 
 
 #### Câu 6 (Đường kính của Cây — Tree Diameter):
 
-Đường kính của cây (khoảng cách lớn nhất giữa hai đỉnh bất kỳ trên cây) có thể tìm bằng mấy lần BFS/DFS?
+Đường kính của cây (khoảng cách lớn nhất giữa hai đỉnh bất kỳ trên cây) có thể tìm bằng mấy lần BFS/DFS
 
 - **A.** 1 lần duy nhất.
 
@@ -7735,7 +7735,7 @@ Khi chọn đỉnh $R$ làm gốc (Root) của cây, chiều cao của cây đư
 
 #### Câu 9 (Số lượng lá tối thiểu của một cây $N \ge 2$):
 
-Mọi cây có $N \ge 2$ đỉnh luôn có ít nhất bao nhiêu đỉnh lá (đỉnh có bậc bằng 1)?
+Mọi cây có $N \ge 2$ đỉnh luôn có ít nhất bao nhiêu đỉnh lá (đỉnh có bậc bằng 1)
 
 - **A.** 0 lá.
 
@@ -7749,7 +7749,7 @@ Mọi cây có $N \ge 2$ đỉnh luôn có ít nhất bao nhiêu đỉnh lá (đ
 
 #### Câu 10 (Truy vết đường đi trong Mê cung 2D):
 
-Để in ra chuỗi ký tự các bước đi `'U'`, `'D'`, `'L'`, `'R'` từ $S$ đến $E$ trong mê cung, ta lưu thông tin gì trong BFS?
+Để in ra chuỗi ký tự các bước đi `'U'`, `'D'`, `'L'`, `'R'` từ $S$ đến $E$ trong mê cung, ta lưu thông tin gì trong BFS
 
 - **A.** Lưu mảng boolean `visited`.
 
@@ -7763,7 +7763,7 @@ Mọi cây có $N \ge 2$ đỉnh luôn có ít nhất bao nhiêu đỉnh lá (đ
 
 #### Câu 11 (Thuật toán Loang đa nguồn trên Lưới):
 
-Trong bài toán "Cháy rừng" (nhiều điểm cháy cùng lúc lan sang các cây xung quanh mỗi giây), ta giải bằng cấu trúc nào?
+Trong bài toán "Cháy rừng" (nhiều điểm cháy cùng lúc lan sang các cây xung quanh mỗi giây), ta giải bằng cấu trúc nào
 
 - **A.** Chạy DFS độc lập từ từng đám cháy.
 
@@ -7777,7 +7777,7 @@ Trong bài toán "Cháy rừng" (nhiều điểm cháy cùng lúc lan sang các 
 
 #### Câu 12 (Bậc của đỉnh trong Cây):
 
-Trên một Cây có gốc, một đỉnh $u$ có $K$ nút con trực tiếp. Bậc của đỉnh $u$ (vô hướng) bằng bao nhiêu?
+Trên một Cây có gốc, một đỉnh $u$ có $K$ nút con trực tiếp. Bậc của đỉnh $u$ (vô hướng) bằng bao nhiêu
 
 - **A.** Luôn bằng $K$.
 
@@ -7791,7 +7791,7 @@ Trên một Cây có gốc, một đỉnh $u$ có $K$ nút con trực tiếp. B�
 
 #### Câu 13 (Cây con Subtree Size):
 
-Để tính kích thước của mọi cây con $sz[u]$ (số lượng đỉnh thuộc cây con gốc $u$), ta sử dụng hàm đệ quy DFS theo thứ tự nào?
+Để tính kích thước của mọi cây con $sz[u]$ (số lượng đỉnh thuộc cây con gốc $u$), ta sử dụng hàm đệ quy DFS theo thứ tự nào
 
 - **A.** Tiền thứ tự (Pre-order, tính trước khi duyệt con).
 
@@ -7805,7 +7805,7 @@ Trên một Cây có gốc, một đỉnh $u$ có $K$ nút con trực tiếp. B�
 
 #### Câu 14 (Chu trình trong Đồ thị lưới):
 
-Một đồ thị lưới 2D kích thước $2 \times 2$ có chứa chu trình hay không?
+Một đồ thị lưới 2D kích thước $2 \times 2$ có chứa chu trình hay không
 
 - **A.** Không có chu trình vì lưới là cây.
 
@@ -7819,7 +7819,7 @@ Một đồ thị lưới 2D kích thước $2 \times 2$ có chứa chu trình h
 
 #### Câu 15 (Số thành phần liên thông của tập ô đất liền):
 
-Cho ma trận biển đảo, sau khi biến một ô nước `'0'` thành ô đất `'1'`, số thành phần liên thông đảo sẽ thay đổi tối đa như thế nào?
+Cho ma trận biển đảo, sau khi biến một ô nước `'0'` thành ô đất `'1'`, số thành phần liên thông đảo sẽ thay đổi tối đa như thế nào
 
 - **A.** Luôn tăng thêm 1.
 
@@ -7868,11 +7868,11 @@ Cho mảng $A$ gồm $N$ phần tử. Cần thực hiện liên tiếp $Q$ thao 
 | **Cây Fenwick (BIT)** | $\mathcal{O}(N)$ | $\mathcal{O}(\log N)$ *(Cực nhanh)* | $\mathcal{O}(\log N)$ | $\mathcal{O}(N)$ |
 | **Cây Phân Đoạn (Segment Tree)** | $\mathcal{O}(N)$ | $\mathcal{O}(\log N)$ *(Cực nhanh)* | $\mathcal{O}(\log N)$ | $\mathcal{O}(4N)$ |
 
-![So sánh các cấu trúc Range Query](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-cay-phan-doan-segment-tree-fenwick/assets/point_update_range_query_vi.svg)
+![So sánh các cấu trúc Range Query](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-24-cay-phan-doan-segment-tree-fenwick/assets/point_update_range_query_vi.svg)
 
 ## 2. Cây Fenwick (Binary Indexed Tree — BIT)
 
-![Cây Fenwick và Phép toán Lowbit](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-cay-phan-doan-segment-tree-fenwick/assets/fenwick_tree_lowbit_vi.svg)
+![Cây Fenwick và Phép toán Lowbit](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-24-cay-phan-doan-segment-tree-fenwick/assets/fenwick_tree_lowbit_vi.svg)
 
 ### 2.1. Phép Toán Ma Thuật: `lowbit(x) = x & (-x)`
 Phép toán `x & (-x)` trích xuất bit $1$ thấp nhất (trọng số nhỏ nhất) của số nguyên $x$.
@@ -7882,24 +7882,24 @@ $$\text{Đoạn quản lý của } x = (x - \text{lowbit}(x), x]$$
 ### 2.2. Hai Thao Tác Cốt Lõi Siêu Tinh Gọn (Chỉ 5 Dòng Code)
 ```cpp
 void update(int x, long long val) {
-    for (; x <= n; x += x & -x) bit[x] += val;
+for (; x <= n; x += x & -x) bit[x] += val;
 }
 
 long long query(int x) { // Tính tổng tiền tố A[1..x]
-    long long sum = 0;
-    for (; x > 0; x -= x & -x) sum += bit[x];
+long long sum = 0;
+for (; x > 0; x -= x & -x) sum += bit[x];
 
-    return sum;
+return sum;
 }
 
 long long range_query(int L, int R) {
-    return query(R) - query(L - 1);
+return query(R) - query(L - 1);
 }
 ```
 
 ## 3. Cây Phân Đoạn (Segment Tree)
 
-![Cây Phân Đoạn Segment Tree](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-21-cay-phan-doan-segment-tree-fenwick/assets/segment_tree_binary_tree_vi.svg)
+![Cây Phân Đoạn Segment Tree](/Users/vu/Developer/ikhEdu_lessons/courses/cpp-bang-b/lessons/lesson-24-cay-phan-doan-segment-tree-fenwick/assets/segment_tree_binary_tree_vi.svg)
 
 ### 3.1. Cấu Trúc Cây Nhị Phân Hoàn Hảo
 * Cây phân đoạn biểu diễn mảng quản lý theo cây nhị phân: Nút gốc $id = 1$ quản lý toàn đoạn $[1, N]$.
@@ -7916,7 +7916,7 @@ Khác với Fenwick Tree chủ yếu hỗ trợ phép toán có tính nghịch �
 ## 4. Các Bẫy Lỗi Lập Trình Kinh Điển (Bug Traps)
 
 1. **Bẫy quên khai báo mảng Segment Tree kích thước $4N$:**
-* Khai báo `tree[2  N]` hoặc `tree[N]` sẽ bị tràn mảng (Out of Bounds) khi $N = 10^5$. Bắt buộc phải khai báo kích thước tối thiểu $4N$ (`vector<long long> tree(4  n + 5)`).
+* Khai báo `tree[2 N]` hoặc `tree[N]` sẽ bị tràn mảng (Out of Bounds) khi $N = 10^5$. Bắt buộc phải khai báo kích thước tối thiểu $4N$ (`vector<long long> tree(4 n + 5)`).
 
 2. **Bẫy chỉ số 0-based của Fenwick Tree (Vòng lặp vô tận):**
 * Trong Fenwick Tree, `lowbit(0) = 0 & -0 = 0`. Nếu gọi `update(0, val)` hoặc `query(0)`, vòng lặp $x \gets x + (x \ \& \ -x)$ sẽ biến thành `x += 0` và chạy vô tận $\implies$ Time Limit Exceeded!
@@ -7933,70 +7933,70 @@ Khác với Fenwick Tree chủ yếu hỗ trợ phép toán có tính nghịch �
 using namespace std;
 
 struct FenwickTree {
-    int n;
-    vector<long long> bit;
+int n;
+vector<long long> bit;
 
-    FenwickTree(int n) : n(n), bit(n + 1, 0) {}
+FenwickTree(int n) : n(n), bit(n + 1, 0) {}
 
-    void update(int x, long long val) {
-        for (; x <= n; x += x & -x) {
-            bit[x] += val;
-        }
-    }
+void update(int x, long long val) {
+for (; x <= n; x += x & -x) {
+bit[x] += val;
+}
+}
 
-    long long query(int x) {
-        long long sum = 0;
-        for (; x > 0; x -= x & -x) {
+long long query(int x) {
+long long sum = 0;
+for (; x > 0; x -= x & -x) {
 
-            sum += bit[x];
-        }
-        return sum;
-    }
+sum += bit[x];
+}
+return sum;
+}
 
-    long long queryRange(int l, int r) {
-        if (l > r) return 0;
+long long queryRange(int l, int r) {
+if (l > r) return 0;
 
-        return query(r) - query(l - 1);
-    }
+return query(r) - query(l - 1);
+}
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    FenwickTree ft(n);
+FenwickTree ft(n);
 
-    for (int i = 1; i <= n; ++i) {
-        long long x;
-        cin >> x;
+for (int i = 1; i <= n; ++i) {
+long long x;
+cin >> x;
 
-        ft.update(i, x);
-    }
+ft.update(i, x);
+}
 
-    while (q--) {
-        int type;
-        cin >> type;
+while (q--) {
+int type;
+cin >> type;
 
-        if (type == 1) { // Update: A[pos] += val
-            int pos;
-            long long val;
-            cin >> pos >> val;
+if (type == 1) { // Update: A[pos] += val
+int pos;
+long long val;
+cin >> pos >> val;
 
-            ft.update(pos, val);
-        } else { // Query: Sum(L..R)
-            int l, r;
-            cin >> l >> r;
+ft.update(pos, val);
+} else { // Query: Sum(L..R)
+int l, r;
+cin >> l >> r;
 
-            cout << ft.queryRange(l, r) << "\n";
-        }
-    }
+cout << ft.queryRange(l, r) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -8009,84 +8009,84 @@ using namespace std;
 const long long INF = 1e18;
 
 struct SegmentTree {
-    int n;
-    vector<long long> tree;
+int n;
+vector<long long> tree;
 
-    SegmentTree(int n) : n(n), tree(4 * n + 5, INF) {}
+SegmentTree(int n) : n(n), tree(4 * n + 5, INF) {}
 
-    void build(const vector<long long>& a, int id, int l, int r) {
-        if (l == r) {
-            tree[id] = a[l];
-            return;
-        }
-        int mid = (l + r) / 2;
-        build(a, 2 * id, l, mid);
-        build(a, 2 * id + 1, mid + 1, r);
-        tree[id] = min(tree[2 * id], tree[2 * id + 1]);
-    }
+void build(const vector<long long>& a, int id, int l, int r) {
+if (l == r) {
+tree[id] = a[l];
+return;
+}
+int mid = (l + r) / 2;
+build(a, 2 * id, l, mid);
+build(a, 2 * id + 1, mid + 1, r);
+tree[id] = min(tree[2 * id], tree[2 * id + 1]);
+}
 
-    void update(int id, int l, int r, int pos, long long val) {
-        if (l == r) {
-            tree[id] = val;
-            return;
-        }
-        int mid = (l + r) / 2;
-        if (pos <= mid) {
-            update(2 * id, l, mid, pos, val);
-        } else {
-            update(2 * id + 1, mid + 1, r, pos, val);
-        }
-        tree[id] = min(tree[2 * id], tree[2 * id + 1]);
-    }
+void update(int id, int l, int r, int pos, long long val) {
+if (l == r) {
+tree[id] = val;
+return;
+}
+int mid = (l + r) / 2;
+if (pos <= mid) {
+update(2 * id, l, mid, pos, val);
+} else {
+update(2 * id + 1, mid + 1, r, pos, val);
+}
+tree[id] = min(tree[2 * id], tree[2 * id + 1]);
+}
 
-    long long query(int id, int l, int r, int u, int v) {
-        if (v < l || r < u) return INF; // Ngoài đoạn
-        if (u <= l && r <= v) return tree[id]; // Nằm trọn trong đoạn
+long long query(int id, int l, int r, int u, int v) {
+if (v < l || r < u) return INF; // Ngoài đoạn
+if (u <= l && r <= v) return tree[id]; // Nằm trọn trong đoạn
 
-        int mid = (l + r) / 2;
-        return min(query(2 * id, l, mid, u, v),
-                   query(2 * id + 1, mid + 1, r, u, v));
-    }
+int mid = (l + r) / 2;
+return min(query(2 * id, l, mid, u, v),
+query(2 * id + 1, mid + 1, r, u, v));
+}
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    if (n <= 0) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n + 1);
+vector<long long> a(n + 1);
 
-    for (int i = 1; i <= n; ++i) {
-        cin >> a[i];
+for (int i = 1; i <= n; ++i) {
+cin >> a[i];
 
-    }
+}
 
-    SegmentTree st(n);
-    st.build(a, 1, 1, n);
+SegmentTree st(n);
+st.build(a, 1, 1, n);
 
-    while (q--) {
-        int type;
-        cin >> type;
+while (q--) {
+int type;
+cin >> type;
 
-        if (type == 1) { // Gán A[pos] = val
-            int pos;
-            long long val;
-            cin >> pos >> val;
+if (type == 1) { // Gán A[pos] = val
+int pos;
+long long val;
+cin >> pos >> val;
 
-            st.update(1, 1, n, pos, val);
-        } else { // Tìm Min trong đoạn [L, R]
-            int l, r;
-            cin >> l >> r;
+st.update(1, 1, n, pos, val);
+} else { // Tìm Min trong đoạn [L, R]
+int l, r;
+cin >> l >> r;
 
-            cout << st.query(1, 1, n, l, r) << "\n";
-        }
-    }
+cout << st.query(1, 1, n, l, r) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -8094,7 +8094,7 @@ int main() {
 
 #### Câu 1 (Khi nào dùng Segment Tree thay vì Fenwick Tree):
 
-Ưu điểm quan trọng nhất của Segment Tree so với Fenwick Tree (BIT) cơ bản là gì?
+Ưu điểm quan trọng nhất của Segment Tree so với Fenwick Tree (BIT) cơ bản là gì
 
 - **A.** Segment Tree chạy nhanh hơn và tốn ít bộ nhớ hơn.
 
@@ -8108,7 +8108,7 @@ int main() {
 
 #### Câu 2 (Kích thước mảng Segment Tree):
 
-Với mảng $N$ phần tử, tại sao mảng cây Segment Tree dạng mảng 1D phẳng cần khai báo kích thước tối thiểu là $4N$?
+Với mảng $N$ phần tử, tại sao mảng cây Segment Tree dạng mảng 1D phẳng cần khai báo kích thước tối thiểu là $4N$
 
 - **A.** Vì mỗi nút có 4 nút con.
 
@@ -8122,7 +8122,7 @@ Với mảng $N$ phần tử, tại sao mảng cây Segment Tree dạng mảng 1
 
 #### Câu 3 (Phép toán bit lowbit trong Fenwick Tree):
 
-Giá trị của $\text{lowbit}(12)$ (tức $12 \ \& \ -12$) bằng bao nhiêu?
+Giá trị của $\text{lowbit}(12)$ (tức $12 \ \& \ -12$) bằng bao nhiêu
 
 - **A.** 1
 
@@ -8136,7 +8136,7 @@ Giá trị của $\text{lowbit}(12)$ (tức $12 \ \& \ -12$) bằng bao nhiêu?
 
 #### Câu 4 (Bẫy số 0 trong Fenwick Tree):
 
-Điều gì sẽ xảy ra nếu ta gọi hàm `update(0, val)` trên cây Fenwick Tree chuẩn?
+Điều gì sẽ xảy ra nếu ta gọi hàm `update(0, val)` trên cây Fenwick Tree chuẩn
 
 - **A.** Hàm cập nhật thành công ô số 0.
 
@@ -8164,7 +8164,7 @@ Hàm `build` dựng toàn bộ cây Segment Tree $N$ phần tử từ mảng ban
 
 #### Câu 6 (Đếm số cặp nghịch thế bằng Fenwick Tree):
 
-Để đếm số lượng cặp số nghịch thế ($i < j$ và $A[i] > A[j]$) trong mảng $N$ phần tử, ta kết hợp Fenwick Tree với kỹ thuật nào?
+Để đếm số lượng cặp số nghịch thế ($i < j$ và $A[i] > A[j]$) trong mảng $N$ phần tử, ta kết hợp Fenwick Tree với kỹ thuật nào
 
 - **A.** Thuật toán hai con trỏ.
 
@@ -8178,7 +8178,7 @@ Hàm `build` dựng toàn bộ cây Segment Tree $N$ phần tử từ mảng ban
 
 #### Câu 7 (Độ phức tạp mỗi truy vấn Segment Tree):
 
-Tại sao hàm `query(L, R)` trên Segment Tree chỉ mất tối đa $\mathcal{O}(\log N)$ dù phải rẽ nhánh đệ quy?
+Tại sao hàm `query(L, R)` trên Segment Tree chỉ mất tối đa $\mathcal{O}(\log N)$ dù phải rẽ nhánh đệ quy
 
 - **A.** Vì cây chỉ có 2 nút lá.
 
@@ -8192,7 +8192,7 @@ Tại sao hàm `query(L, R)` trên Segment Tree chỉ mất tối đa $\mathcal{
 
 #### Câu 8 (Cập nhật đoạn Range Update & Điểm Point Query bằng Fenwick):
 
-Để hỗ trợ thao tác "Cộng thêm $v$ vào toàn bộ đoạn $[L, R]$" và "Hỏi giá trị tại vị trí $i$", ta cài đặt Fenwick Tree trên mảng nào?
+Để hỗ trợ thao tác "Cộng thêm $v$ vào toàn bộ đoạn $[L, R]$" và "Hỏi giá trị tại vị trí $i$", ta cài đặt Fenwick Tree trên mảng nào
 
 - **A.** Trên mảng gốc $A$.
 
@@ -8206,7 +8206,7 @@ Tại sao hàm `query(L, R)` trên Segment Tree chỉ mất tối đa $\mathcal{
 
 #### Câu 9 (Tìm kiếm K-th phần tử trên Fenwick Tree):
 
-Để tìm phần tử thứ $K$ nhỏ nhất còn tồn tại trong tập hợp bằng Fenwick Tree, ta áp dụng kỹ thuật nào trong $\mathcal{O}(\log N)$?
+Để tìm phần tử thứ $K$ nhỏ nhất còn tồn tại trong tập hợp bằng Fenwick Tree, ta áp dụng kỹ thuật nào trong $\mathcal{O}(\log N)$
 
 - **A.** Tìm kiếm nhị phân thông thường $\mathcal{O}(\log^2 N)$.
 
@@ -8248,7 +8248,7 @@ Khi dùng Segment Tree để tính $\text{GCD}(A[L \dots R])$, công thức kế
 
 #### Câu 12 (Điều kiện dừng đệ quy trong Query Segment Tree):
 
-Trong hàm `query(id, l, r, u, v)`, khi đoạn hiện tại $[l, r]$ nằm hoàn toàn bên ngoài đoạn truy vấn $[u, v]$ ($r < u$ hoặc $v < l$), ta trả về giá trị gì cho bài toán Range Sum?
+Trong hàm `query(id, l, r, u, v)`, khi đoạn hiện tại $[l, r]$ nằm hoàn toàn bên ngoài đoạn truy vấn $[u, v]$ ($r < u$ hoặc $v < l$), ta trả về giá trị gì cho bài toán Range Sum
 
 - **A.** Trả về $1$.
 
@@ -8276,7 +8276,7 @@ Trong hàm `query(id, l, r, u, v)`, khi đoạn hiện tại $[l, r]$ nằm hoà
 
 #### Câu 14 (Đếm số lượng số 0 trong đoạn):
 
-Để đếm số lượng số 0 trong đoạn $[L, R]$ hỗ trợ cập nhật điểm, cấu hình Segment Tree lưu trữ gì?
+Để đếm số lượng số 0 trong đoạn $[L, R]$ hỗ trợ cập nhật điểm, cấu hình Segment Tree lưu trữ gì
 
 - **A.** Lưu tổng các số.
 
@@ -8290,7 +8290,7 @@ Trong hàm `query(id, l, r, u, v)`, khi đoạn hiện tại $[l, r]$ nằm hoà
 
 #### Câu 15 (Kỹ thuật Lazy Propagation — Giới thiệu mở rộng):
 
-Khi cần thực hiện **Cập nhật cả đoạn (Range Update)** và **Truy vấn cả đoạn (Range Query)** trên Segment Tree trong $\mathcal{O}(\log N)$, kỹ thuật nào được áp dụng?
+Khi cần thực hiện **Cập nhật cả đoạn (Range Update)** và **Truy vấn cả đoạn (Range Query)** trên Segment Tree trong $\mathcal{O}(\log N)$, kỹ thuật nào được áp dụng
 
 - **A.** Dùng đệ quy quay lui.
 

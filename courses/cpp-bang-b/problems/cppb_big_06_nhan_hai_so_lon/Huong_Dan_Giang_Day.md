@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho 2 số nguyên lớn A và B. Hãy tính tích A * B.
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 123 456)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `123 456` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 123 * 456 = 56088.... | Tính toán từng bước trạng thái |
@@ -36,41 +35,41 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 string mulBig(string a, string b) {
-    if (a == "0" || b == "0") return "0";
+if (a == "0" || b == "0") return "0";
 
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
 
-    int n = a.size(), m = b.size();
-    vector<int> c(n + m, 0);
+int n = a.size(), m = b.size();
+vector<int> c(n + m, 0);
 
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            c[i + j] += (a[i] - '0') * (b[j] - '0');
-        }
-    }
+for (int i = 0; i < n; ++i) {
+for (int j = 0; j < m; ++j) {
+c[i + j] += (a[i] - '0') * (b[j] - '0');
+}
+}
 
-    int carry = 0;
-    string res = "";
-    for (int i = 0; i < n + m || carry; ++i) {
-        if (i < (int)c.size()) carry += c[i];
-        res.push_back((carry % 10) + '0');
-        carry /= 10;
-    }
+int carry = 0;
+string res = "";
+for (int i = 0; i < n + m || carry; ++i) {
+if (i < (int)c.size()) carry += c[i];
+res.push_back((carry % 10) + '0');
+carry /= 10;
+}
 
-    while (res.size() > 1 && res.back() == '0') res.pop_back();
-    reverse(res.begin(), res.end());
-    return res;
+while (res.size() > 1 && res.back() == '0') res.pop_back();
+reverse(res.begin(), res.end());
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << mulBig(a, b) << "\n";
-    return 0;
+cout << mulBig(a, b) << "\n";
+return 0;
 }
 ```

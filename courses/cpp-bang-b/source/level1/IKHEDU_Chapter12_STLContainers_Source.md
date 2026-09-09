@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để đếm tần suất hoặc kiểm tra sự tồn tại khi giá trị của phần tử lên tới $10^9$ hoặc là xâu ký tự?**
+> **Làm thế nào để đếm tần suất hoặc kiểm tra sự tồn tại khi giá trị của phần tử lên tới $10^9$ hoặc là xâu ký tự**
 
 ---
 
@@ -34,11 +34,11 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 12.1: Quản Lý Danh Sách Phòng Họp Trực Tuyến Zoom**  
-> **Bối cảnh:** Hệ thống Zoom Meeting duy trì danh sách các phòng họp đang hoạt động có ID là các số nguyên lớn. Thực hiện $Q$ thao tác:  
-> - `1 x`: Mở phòng họp mới mang ID $x$.  
-> - `2 x`: Đóng phòng họp $x$.  
-> - `3 x`: Kiểm tra phòng $x$ có đang mở không (in `YES`/`NO`).  
+> **Bài toán mẫu 12.1: Quản Lý Danh Sách Phòng Họp Trực Tuyến Zoom** 
+> **Bối cảnh:** Hệ thống Zoom Meeting duy trì danh sách các phòng họp đang hoạt động có ID là các số nguyên lớn. Thực hiện $Q$ thao tác: 
+> - `1 x`: Mở phòng họp mới mang ID $x$. 
+> - `2 x`: Đóng phòng họp $x$. 
+> - `3 x`: Kiểm tra phòng $x$ có đang mở không (in `YES`/`NO`). 
 > **Input:** `5` \ `1 5` \ `1 10` \ `3 5` \ `2 5` \ `3 5` $\implies$ **Output:** `YES` \ `NO`.
 
 #### Cài đặt C++
@@ -47,23 +47,23 @@ Sau chương này, em có thể:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    set<long long> s;
-    while (q--) {
-        int type;
-        long long x;
-        cin >> type >> x;
-        if (type == 1) s.insert(x);
-        else if (type == 2) s.erase(x);
-        else cout << (s.count(x) ? "YES\n" : "NO\n");
-    }
+set<long long> s;
+while (q--) {
+int type;
+long long x;
+cin >> type >> x;
+if (type == 1) s.insert(x);
+else if (type == 2) s.erase(x);
+else cout << (s.count(x) "YES\n" : "NO\n");
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -90,8 +90,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 12.2: Thống Kê Tần Suất Từ Khóa Tìm Kiếm Tiki**  
-> **Bối cảnh:** Sàn thương mại điện tử Tiki thống kê số lần tìm kiếm của $N$ từ khóa và in danh sách theo thứ tự từ điển tăng dần.  
+> **Bài toán mẫu 12.2: Thống Kê Tần Suất Từ Khóa Tìm Kiếm Tiki** 
+> **Bối cảnh:** Sàn thương mại điện tử Tiki thống kê số lần tìm kiếm của $N$ từ khóa và in danh sách theo thứ tự từ điển tăng dần. 
 > **Input:** `4` \ `apple banana apple orange` $\implies$ **Output:** `apple 2`, `banana 1`, `orange 1`.
 
 #### Cài đặt C++
@@ -100,24 +100,24 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    map<string, int> freq;
-    for (int i = 0; i < n; i++) {
-        string s;
-        cin >> s;
-        freq[s]++;
-    }
+map<string, int> freq;
+for (int i = 0; i < n; i++) {
+string s;
+cin >> s;
+freq[s]++;
+}
 
-    for (auto entry : freq) {
-        cout << entry.first << " " << entry.second << "\n";
-    }
+for (auto entry : freq) {
+cout << entry.first << " " << entry.second << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -144,8 +144,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 12.3: Tra Cứu Nhanh Mã Vận Đơn Bưu Điện**  
-> **Bối cảnh:** Bưu điện lưu trữ $N$ mã vận đơn bằng `unordered_map` để tra cứu trạng thái bưu kiện trong $\mathcal{O}(1)$ thời gian thực.  
+> **Bài toán mẫu 12.3: Tra Cứu Nhanh Mã Vận Đơn Bưu Điện** 
+> **Bối cảnh:** Bưu điện lưu trữ $N$ mã vận đơn bằng `unordered_map` để tra cứu trạng thái bưu kiện trong $\mathcal{O}(1)$ thời gian thực. 
 > **Input:** `2 1` \ `VN123 GiaoHang` \ `VN456 DaNhan` \ `VN123` $\implies$ **Output:** `GiaoHang`.
 
 #### Cài đặt C++
@@ -154,27 +154,27 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    unordered_map<string, string> status;
-    for (int i = 0; i < n; i++) {
-        string code, stat;
-        cin >> code >> stat;
-        status[code] = stat;
-    }
+unordered_map<string, string> status;
+for (int i = 0; i < n; i++) {
+string code, stat;
+cin >> code >> stat;
+status[code] = stat;
+}
 
-    while (q--) {
-        string queryCode;
-        cin >> queryCode;
-        if (status.count(queryCode)) cout << status[queryCode] << "\n";
-        else cout << "KhongTimThay\n";
-    }
+while (q--) {
+string queryCode;
+cin >> queryCode;
+if (status.count(queryCode)) cout << status[queryCode] << "\n";
+else cout << "KhongTimThay\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -203,8 +203,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 12.4: Rời Rạc Hóa Tọa Độ Trạm Thu Phát Sóng 5G**  
-> **Bối cảnh:** $N$ trạm 5G đặt tại các mốc tọa độ cực lớn $|A_i| \le 10^9$. Hãy nén tọa độ về khoảng $[0, K - 1]$ mà vẫn bảo toàn thứ tự tương đối.  
+> **Bài toán mẫu 12.4: Rời Rạc Hóa Tọa Độ Trạm Thu Phát Sóng 5G** 
+> **Bối cảnh:** $N$ trạm 5G đặt tại các mốc tọa độ cực lớn $|A_i| \le 10^9$. Hãy nén tọa độ về khoảng $[0, K - 1]$ mà vẫn bảo toàn thứ tự tương đối. 
 > **Input:** `5` \ `1000000000 5 1000000000 20 5` $\implies$ **Output:** `2 0 2 1 0`.
 
 #### Cài đặt C++
@@ -213,28 +213,28 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n), vals;
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-        vals.push_back(a[i]);
-    }
+vector<int> a(n), vals;
+for (int i = 0; i < n; i++) {
+cin >> a[i];
+vals.push_back(a[i]);
+}
 
-    sort(vals.begin(), vals.end());
-    vals.erase(unique(vals.begin(), vals.end()), vals.end());
+sort(vals.begin(), vals.end());
+vals.erase(unique(vals.begin(), vals.end()), vals.end());
 
-    for (int i = 0; i < n; i++) {
-        int rank = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
-        cout << rank << (i + 1 == n ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 0; i < n; i++) {
+int rank = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin();
+cout << rank << (i + 1 == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 

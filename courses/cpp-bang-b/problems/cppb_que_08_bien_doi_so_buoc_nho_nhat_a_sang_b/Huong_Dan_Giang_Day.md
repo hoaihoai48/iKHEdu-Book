@@ -11,15 +11,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Hàng Đợi (Queue, Deque) & Monotonic
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý Hàng đợi chuẩn (Queue):** Vào trước Ra trước (FIFO), là cấu trúc nền tảng phục vụ duyệt đồ thị theo chiều rộng (BFS).
 - **Hàng đợi hai đầu (Deque) & Monotonic Deque:**
-  * Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
-  * Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
-  * Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
+* Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
+* Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
+* Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N)$, không gian phụ trợ $\mathcal{O}(K)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 6` $\implies$ Đầu ra kỳ vọng: `2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 6` $\implies$ Đầu ra kỳ vọng: `2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,45 +47,45 @@ Chỉ cần đúng 2 bước biến đổi, kết quả in ra là 2.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int a, b;
-    if (!(cin >> a >> b)) return 0;
+int a, b;
+if (!(cin >> a >> b)) return 0;
 
-    if (a >= b) {
-        cout << a - b << "\n";
-        return 0;
-    }
+if (a >= b) {
+cout << a - b << "\n";
+return 0;
+}
 
-    vector<int> dist(20005, -1);
-    queue<int> q;
+vector<int> dist(20005, -1);
+queue<int> q;
 
-    dist[a] = 0;
-    q.push(a);
+dist[a] = 0;
+q.push(a);
 
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
+while (!q.empty()) {
+int u = q.front();
+q.pop();
 
-        if (u == b) {
-            cout << dist[b] << "\n";
-            return 0;
-        }
+if (u == b) {
+cout << dist[b] << "\n";
+return 0;
+}
 
-        // Thao tác 1: u * 2
-        if (u * 2 <= 20000 && dist[u * 2] == -1) {
-            dist[u * 2] = dist[u] + 1;
-            q.push(u * 2);
-        }
+// Thao tác 1: u * 2
+if (u * 2 <= 20000 && dist[u * 2] == -1) {
+dist[u * 2] = dist[u] + 1;
+q.push(u * 2);
+}
 
-        // Thao tác 2: u - 1
-        if (u - 1 > 0 && dist[u - 1] == -1) {
-            dist[u - 1] = dist[u] + 1;
-            q.push(u - 1);
-        }
-    }
+// Thao tác 2: u - 1
+if (u - 1 > 0 && dist[u - 1] == -1) {
+dist[u - 1] = dist[u] + 1;
+q.push(u - 1);
+}
+}
 
-    return 0;
+return 0;
 }
 ```

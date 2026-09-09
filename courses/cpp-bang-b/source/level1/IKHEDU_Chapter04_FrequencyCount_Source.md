@@ -37,7 +37,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để đếm tần suất, tìm phần tử xuất hiện nhiều nhất và đếm hàng tỷ cặp phần tử chỉ qua MỘT lần duyệt mảng duy nhất mà không bị quá thời gian?**
+> **Làm thế nào để đếm tần suất, tìm phần tử xuất hiện nhiều nhất và đếm hàng tỷ cặp phần tử chỉ qua MỘT lần duyệt mảng duy nhất mà không bị quá thời gian**
 
 ---
 
@@ -59,10 +59,10 @@ Khi kiểm phiếu bầu cử lớp trưởng cho 3 ứng viên mang số báo d
 
 - **Cách làm ngây thơ ($\mathcal{O}(N^2)$):** Với mỗi phần tử $A[i]$, duyệt lại toàn bộ mảng từ đầu đến cuối để đếm. Với $N = 10^5$, hai vòng lặp lồng nhau mất $10^{10}$ phép tính $\implies$ Quá thời gian (TLE).
 - **Mảng tần suất ($\mathcal{O}(N)$):**
-  1. Khởi tạo một mảng đếm `cnt` kích thước đủ lớn, ban đầu tất cả bằng `0`.
-  2. Khi đọc phần tử giá trị `x`, ta tăng biến đếm tại chỉ số `x` lên 1:
-     $$\text{cnt}[x] = \text{cnt}[x] + 1 \quad (\text{hoặc } \text{cnt}[x]\text{++})$$
-  3. Sau khi đọc xong, `cnt[v]` lưu trữ chính xác số lần xuất hiện của giá trị `v`.
+1. Khởi tạo một mảng đếm `cnt` kích thước đủ lớn, ban đầu tất cả bằng `0`.
+2. Khi đọc phần tử giá trị `x`, ta tăng biến đếm tại chỉ số `x` lên 1:
+$$\text{cnt}[x] = \text{cnt}[x] + 1 \quad (\text{hoặc } \text{cnt}[x]\text{++})$$
+3. Sau khi đọc xong, `cnt[v]` lưu trữ chính xác số lần xuất hiện của giá trị `v`.
 
 #### Mô phỏng ghi nhận tần suất cho dãy $A = [3, 1, 3, 2, 1, 3]$
 
@@ -76,24 +76,24 @@ Khi kiểm phiếu bầu cử lớp trưởng cho 3 ứng viên mang số báo d
 | 5 | $1$ | `cnt[1]++` | `[0: 0, 1: 2, 2: 1, 3: 2]` |
 | 6 | $3$ | `cnt[3]++` | `[0: 0, 1: 2, 2: 1, 3: 3]` |
 
-👉 **Kết quả:** Số 1 xuất hiện 2 lần, số 2 xuất hiện 1 lần, số 3 xuất hiện 3 lần.
+**Kết quả:** Số 1 xuất hiện 2 lần, số 2 xuất hiện 1 lần, số 3 xuất hiện 3 lần.
 
 #### Pseudocode
 
 ```text
 cnt = mảng kích thước MAX_VAL + 1, khởi tạo bằng 0
 for x trong dãy A:
-    cnt[x] = cnt[x] + 1
+cnt[x] = cnt[x] + 1
 
 distinctCount = 0
 for v từ 0 đến MAX_VAL:
-    nếu cnt[v] > 0:
-        distinctCount tăng 1
+nếu cnt[v] > 0:
+distinctCount tăng 1
 
 in distinctCount
 for v từ 0 đến MAX_VAL:
-    nếu cnt[v] > 0:
-        in v và cnt[v]
+nếu cnt[v] > 0:
+in v và cnt[v]
 ```
 
 #### Code C++
@@ -105,34 +105,34 @@ using namespace std;
 const int MAX_VAL = 100000;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> cnt(MAX_VAL + 1, 0);
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        cnt[x]++;
-    }
+vector<int> cnt(MAX_VAL + 1, 0);
+for (int i = 0; i < n; i++) {
+int x;
+cin >> x;
+cnt[x]++;
+}
 
-    int distinctCount = 0;
-    for (int v = 0; v <= MAX_VAL; v++) {
-        if (cnt[v] > 0) {
-            distinctCount++;
-        }
-    }
+int distinctCount = 0;
+for (int v = 0; v <= MAX_VAL; v++) {
+if (cnt[v] > 0) {
+distinctCount++;
+}
+}
 
-    cout << distinctCount << '\n';
-    for (int v = 0; v <= MAX_VAL; v++) {
-        if (cnt[v] > 0) {
-            cout << v << " xuat hien " << cnt[v] << " lan\n";
-        }
-    }
+cout << distinctCount << '\n';
+for (int v = 0; v <= MAX_VAL; v++) {
+if (cnt[v] > 0) {
+cout << v << " xuat hien " << cnt[v] << " lan\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -145,8 +145,8 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Mảng tần suất trực tiếp áp dụng tốt nhất khi giá trị các phần tử nằm trong khoảng nào?
-2. Vì sao mảng tần suất giúp giảm độ phức tạp từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N)$?
+1. Mảng tần suất trực tiếp áp dụng tốt nhất khi giá trị các phần tử nằm trong khoảng nào
+2. Vì sao mảng tần suất giúp giảm độ phức tạp từ $\mathcal{O}(N^2)$ xuống $\mathcal{O}(N)$
 
 #### Luyện tập ngắn
 
@@ -171,10 +171,10 @@ Trong cuộc bỏ phiếu bầu lớp trưởng với $N = 7$ phiếu, ứng vi�
 
 #### Ý tưởng thống kê
 
-1. **Tìm phần tử xuất hiện nhiều nhất (Mode):**  
-   Duyệt `v` từ `0` đến `MAX_VAL`. Duy trì biến `maxFreq` và `bestVal`. Nếu `cnt[v] > maxFreq`, cập nhật `maxFreq = cnt[v]` và `bestVal = v`.
-2. **Tìm phần tử đa số tuyệt đối:**  
-   Kiểm tra xem có giá trị `v` nào thỏa mãn `cnt[v] > n / 2` không. Trong mảng $N$ phần tử, **tối đa chỉ có thể có duy nhất một phần tử đa số tuyệt đối**.
+1. **Tìm phần tử xuất hiện nhiều nhất (Mode):** 
+Duyệt `v` từ `0` đến `MAX_VAL`. Duy trì biến `maxFreq` và `bestVal`. Nếu `cnt[v] > maxFreq`, cập nhật `maxFreq = cnt[v]` và `bestVal = v`.
+2. **Tìm phần tử đa số tuyệt đối:** 
+Kiểm tra xem có giá trị `v` nào thỏa mãn `cnt[v] > n / 2` không. Trong mảng $N$ phần tử, **tối đa chỉ có thể có duy nhất một phần tử đa số tuyệt đối**.
 
 #### Mô phỏng tìm phần tử đa số cho $A = [3, 3, 4, 2, 3, 3, 5]$ ($N = 7$, ngưỡng $> 3$)
 
@@ -190,9 +190,9 @@ Trong cuộc bỏ phiếu bầu lớp trưởng với $N = 7$ phiếu, ứng vi�
 ```text
 majority = -1
 for v từ 0 đến MAX_VAL:
-    nếu cnt[v] > n / 2:
-        majority = v
-        dừng vòng lặp
+nếu cnt[v] > n / 2:
+majority = v
+dừng vòng lặp
 in majority
 ```
 
@@ -205,30 +205,30 @@ using namespace std;
 const int MAX_VAL = 100000;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> cnt(MAX_VAL + 1, 0);
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        cnt[x]++;
-    }
+vector<int> cnt(MAX_VAL + 1, 0);
+for (int i = 0; i < n; i++) {
+int x;
+cin >> x;
+cnt[x]++;
+}
 
-    int majority = -1;
-    for (int v = 0; v <= MAX_VAL; v++) {
-        if (cnt[v] > n / 2) {
-            majority = v;
-            break;
-        }
-    }
+int majority = -1;
+for (int v = 0; v <= MAX_VAL; v++) {
+if (cnt[v] > n / 2) {
+majority = v;
+break;
+}
+}
 
-    cout << majority << '\n';
+cout << majority << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -241,8 +241,8 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Một mảng có độ dài $N = 10$ có thể có 2 phần tử cùng xuất hiện 6 lần không? Vì sao?
-2. Vì sao phần tử đa số tuyệt đối nếu tồn tại thì luôn là duy nhất?
+1. Một mảng có độ dài $N = 10$ có thể có 2 phần tử cùng xuất hiện 6 lần không Vì sao
+2. Vì sao phần tử đa số tuyệt đối nếu tồn tại thì luôn là duy nhất
 
 #### Luyện tập ngắn
 
@@ -269,10 +269,10 @@ Hai từ tiếng Anh **"listen"** và **"silent"** tuy viết khác nhau nhưng 
 
 - Bảng chữ cái tiếng Anh in thường có 26 ký tự từ `'a'` đến `'z'`.
 - Công thức ánh xạ: Trừ đi ký tự gốc `'a'`:
-  $$\text{Index} = c - \text{'a'}$$
-  - `'a' - 'a' = 0`
-  - `'b' - 'a' = 1`
-  - `'z' - 'a' = 25`
+$$\text{Index} = c - \text{'a'}$$
+- `'a' - 'a' = 0`
+- `'b' - 'a' = 1`
+- `'z' - 'a' = 25`
 - Chỉ cần mảng `vector<int> cnt(26, 0)` để đếm tần suất mọi ký tự.
 
 > **Hai chuỗi $S$ và $T$ là Anagram của nhau khi và chỉ khi chúng có cùng độ dài và mảng tần suất 26 chữ cái của chúng hoàn toàn giống nhau.**
@@ -288,7 +288,7 @@ for c trong S: cntS[c - 'a']++
 for c trong T: cntT[c - 'a']++
 
 for i từ 0 đến 25:
-    nếu cntS[i] != cntT[i]: trả về false
+nếu cntS[i] != cntT[i]: trả về false
 trả về true
 ```
 
@@ -299,35 +299,35 @@ trả về true
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s, t;
-    if (!(cin >> s >> t)) return 0;
+string s, t;
+if (!(cin >> s >> t)) return 0;
 
-    if (s.length() != t.length()) {
-        cout << "NO\n";
-        return 0;
-    }
+if (s.length() != t.length()) {
+cout << "NO\n";
+return 0;
+}
 
-    vector<int> cntS(26, 0);
-    vector<int> cntT(26, 0);
+vector<int> cntS(26, 0);
+vector<int> cntT(26, 0);
 
-    for (char c : s) cntS[c - 'a']++;
-    for (char c : t) cntT[c - 'a']++;
+for (char c : s) cntS[c - 'a']++;
+for (char c : t) cntT[c - 'a']++;
 
-    bool isAnagram = true;
-    for (int i = 0; i < 26; i++) {
-        if (cntS[i] != cntT[i]) {
-            isAnagram = false;
-            break;
-        }
-    }
+bool isAnagram = true;
+for (int i = 0; i < 26; i++) {
+if (cntS[i] != cntT[i]) {
+isAnagram = false;
+break;
+}
+}
 
-    if (isAnagram) cout << "YES\n";
-    else cout << "NO\n";
+if (isAnagram) cout << "YES\n";
+else cout << "NO\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -340,8 +340,8 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Phép trừ `c - 'a'` cho kết quả là kiểu dữ liệu gì?
-2. Làm thế nào để kiểm tra một xâu có thể sắp xếp lại thành xâu đối xứng (Palindrome) không? (Gợi ý: Có tối đa 1 ký tự có số lần xuất hiện lẻ).
+1. Phép trừ `c - 'a'` cho kết quả là kiểu dữ liệu gì
+2. Làm thế nào để kiểm tra một xâu có thể sắp xếp lại thành xâu đối xứng (Palindrome) không (Gợi ý: Có tối đa 1 ký tự có số lần xuất hiện lẻ).
 
 #### Luyện tập ngắn
 
@@ -369,11 +369,11 @@ Một bãi xe cần ghép từng cặp 2 xe sao cho tổng trọng tải đúng 
 #### Kỹ thuật "Vừa duyệt vừa đếm"
 
 - Khi xét phần tử đứng sau tại vị trí $j$ có giá trị $x = A[j]$, phần tử đứng trước $A[i]$ ($i < j$) muốn ghép đôi để có tổng bằng $S$ phải có giá trị:
-  $$\text{comp} = S - x$$
+$$\text{comp} = S - x$$
 - Số phần tử đứng trước thỏa mãn chính là số lần `comp` đã xuất hiện trong mảng `cnt` tính đến trước bước $j$.
 - **Thứ tự thực hiện:**
-  1. `totalPairs += cnt[comp]` (cộng số cặp tạo được với các phần tử đứng trước).
-  2. `cnt[x]++` (ghi nhận phần tử hiện tại vào mảng đếm).
+1. `totalPairs += cnt[comp]` (cộng số cặp tạo được với các phần tử đứng trước).
+2. `cnt[x]++` (ghi nhận phần tử hiện tại vào mảng đếm).
 
 > **Bẫy tràn số:** Với $N = 10^5$, số lượng cặp có thể đạt tới $\frac{N(N-1)}{2} \approx 5 \times 10^9 > 2 \times 10^9 \implies$ Bắt buộc dùng kiểu `long long` cho biến đếm kết quả.
 
@@ -387,7 +387,7 @@ Một bãi xe cần ghép từng cặp 2 xe sao cho tổng trọng tải đúng 
 | 3 | $3$ | $3$ | $1$ | $1 + 1 = 2$ | `cnt[3] = 2` |
 | 4 | $5$ | $1$ | $1$ | $2 + 1 = 3$ | `cnt[5] = 2` |
 
-👉 **Tổng số cặp: 3 cặp** (chính xác 100%).
+**Tổng số cặp: 3 cặp** (chính xác 100%).
 
 #### Pseudocode
 
@@ -396,10 +396,10 @@ totalPairs = 0 (kiểu long long)
 cnt = mảng MAX_VAL + 1 số 0
 
 for x trong dãy A:
-    comp = S - x
-    nếu comp nằm trong khoảng [0, MAX_VAL]:
-        totalPairs = totalPairs + cnt[comp]
-    cnt[x] = cnt[x] + 1
+comp = S - x
+nếu comp nằm trong khoảng [0, MAX_VAL]:
+totalPairs = totalPairs + cnt[comp]
+cnt[x] = cnt[x] + 1
 
 in totalPairs
 ```
@@ -413,32 +413,32 @@ using namespace std;
 const int MAX_VAL = 200000;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, s;
-    if (!(cin >> n >> s)) return 0;
+int n, s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<int> cnt(MAX_VAL + 1, 0);
-    long long totalPairs = 0;
+vector<int> cnt(MAX_VAL + 1, 0);
+long long totalPairs = 0;
 
-    for (int j = 0; j < n; j++) {
-        int x;
-        cin >> x;
+for (int j = 0; j < n; j++) {
+int x;
+cin >> x;
 
-        int comp = s - x;
-        if (comp >= 0 && comp <= MAX_VAL) {
-            totalPairs += cnt[comp];
-        }
+int comp = s - x;
+if (comp >= 0 && comp <= MAX_VAL) {
+totalPairs += cnt[comp];
+}
 
-        if (x >= 0 && x <= MAX_VAL) {
-            cnt[x]++;
-        }
-    }
+if (x >= 0 && x <= MAX_VAL) {
+cnt[x]++;
+}
+}
 
-    cout << totalPairs << '\n';
+cout << totalPairs << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -446,13 +446,13 @@ int main() {
 
 | Thao tác | Đánh giá |
 |---|---|
-| Cộng `cnt[comp]` trước rồi mới `cnt[x]++` |  Đúng, tự động bảo đảm chỉ ghép với phần tử đứng trước ($i < j$). |
-| Khai báo `long long totalPairs` |  Đúng, chống tràn số khi số cặp vượt $2 \times 10^9$. |
+| Cộng `cnt[comp]` trước rồi mới `cnt[x]++` | Đúng, tự động bảo đảm chỉ ghép với phần tử đứng trước ($i < j$). |
+| Khai báo `long long totalPairs` | Đúng, chống tràn số khi số cặp vượt $2 \times 10^9$. |
 
 #### Tự kiểm tra
 
-1. Nếu đổi thứ tự thực hiện `cnt[x]++` trước rồi mới cộng `totalPairs += cnt[comp]`, điều gì sẽ xảy ra khi $x + x = S$?
-2. Muốn đếm số cặp bằng nhau ($A_i = A_j$), giá trị `comp` bằng bao nhiêu?
+1. Nếu đổi thứ tự thực hiện `cnt[x]++` trước rồi mới cộng `totalPairs += cnt[comp]`, điều gì sẽ xảy ra khi $x + x = S$
+2. Muốn đếm số cặp bằng nhau ($A_i = A_j$), giá trị `comp` bằng bao nhiêu
 
 #### Luyện tập ngắn
 
@@ -478,10 +478,10 @@ Nếu có **4 chiếc áo** và chỉ có **3 chiếc móc treo**, khi treo hế
 #### Nguyên lý Dirichlet và Đoạn con chia hết
 
 - **Nguyên lý cơ bản:** Nhốt $N + 1$ đồ vật vào $N$ chiếc hộp $\implies$ tồn tại ít nhất một hộp chứa từ 2 đồ vật trở lên.
-- **Ứng dụng tìm đoạn con chia hết cho $N$:**  
-  Xét $N$ tổng tiền tố $S_1, S_2, \dots, S_N$. Lấy số dư khi chia cho $N$: $R_i = S_i \pmod N$.
-  - Nếu có $S_k \pmod N == 0 \implies$ đoạn $[1, k]$ chia hết cho $N$.
-  - Nếu không, $N$ số dư chỉ nhận $N - 1$ giá trị từ $1$ đến $N - 1$. Theo Dirichlet, chắc chắn có hai vị trí $u < v$ sao cho $S_u \equiv S_v \pmod N \implies$ tổng đoạn từ $u + 1$ đến $v$ là $S_v - S_u$ chia hết cho $N$!
+- **Ứng dụng tìm đoạn con chia hết cho $N$:** 
+Xét $N$ tổng tiền tố $S_1, S_2, \dots, S_N$. Lấy số dư khi chia cho $N$: $R_i = S_i \pmod N$.
+- Nếu có $S_k \pmod N == 0 \implies$ đoạn $[1, k]$ chia hết cho $N$.
+- Nếu không, $N$ số dư chỉ nhận $N - 1$ giá trị từ $1$ đến $N - 1$. Theo Dirichlet, chắc chắn có hai vị trí $u < v$ sao cho $S_u \equiv S_v \pmod N \implies$ tổng đoạn từ $u + 1$ đến $v$ là $S_v - S_u$ chia hết cho $N$!
 
 #### Mô phỏng cho dãy $N = 5$: $A = [2, 3, 7, 1, 4]$
 
@@ -499,12 +499,12 @@ firstPos[0] = 0
 prefix = 0
 
 for i từ 1 đến n:
-    prefix = prefix + a[i]
-    rem = (prefix % n + n) % n
-    nếu firstPos[rem] != -1:
-        in (firstPos[rem] + 1) và i
-        dừng
-    firstPos[rem] = i
+prefix = prefix + a[i]
+rem = (prefix % n + n) % n
+nếu firstPos[rem] != -1:
+in (firstPos[rem] + 1) và i
+dừng
+firstPos[rem] = i
 ```
 
 #### Code C++
@@ -514,36 +514,36 @@ for i từ 1 đến n:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> firstPos(n, -1);
-    firstPos[0] = 0;
+vector<int> firstPos(n, -1);
+firstPos[0] = 0;
 
-    long long currentPrefix = 0;
-    int ansL = -1, ansR = -1;
+long long currentPrefix = 0;
+int ansL = -1, ansR = -1;
 
-    for (int i = 1; i <= n; i++) {
-        long long x;
-        cin >> x;
-        currentPrefix += x;
-        int rem = (currentPrefix % n + n) % n;
+for (int i = 1; i <= n; i++) {
+long long x;
+cin >> x;
+currentPrefix += x;
+int rem = (currentPrefix % n + n) % n;
 
-        if (firstPos[rem] != -1) {
-            ansL = firstPos[rem] + 1;
-            ansR = i;
-            break;
-        } else {
-            firstPos[rem] = i;
-        }
-    }
+if (firstPos[rem] != -1) {
+ansL = firstPos[rem] + 1;
+ansR = i;
+break;
+} else {
+firstPos[rem] = i;
+}
+}
 
-    cout << ansL << " " << ansR << '\n';
+cout << ansL << " " << ansR << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -556,8 +556,8 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Vì sao mảng $N$ phần tử luôn tìm được ít nhất một đoạn con có tổng chia hết cho $N$?
-2. Công thức `ansL = firstPos[rem] + 1` vì sao phải cộng thêm 1?
+1. Vì sao mảng $N$ phần tử luôn tìm được ít nhất một đoạn con có tổng chia hết cho $N$
+2. Công thức `ansL = firstPos[rem] + 1` vì sao phải cộng thêm 1
 
 #### Luyện tập ngắn
 
@@ -638,12 +638,12 @@ Cho $N$ chuỗi ký tự ngắn ($N \le 10^5, |S_i| \le 10$). Đếm số cặp 
 
 | Năng lực | Chưa chắc | Làm khi có gợi ý | Tự làm được |
 |---|:---:|:---:|:---:|
-| Xây dựng mảng tần suất $\mathcal{O}(N)$ |  |  |  |
-| Tìm Mode và Phần tử đa số tuyệt đối |  |  |  |
-| Ánh xạ chữ cái `'a'..'z'` kiểm tra Anagram |  |  |  |
-| Đếm cặp có tổng bằng $S$ trong $\mathcal{O}(N)$ |  |  |  |
-| Khai báo `long long` chống tràn số khi đếm cặp |  |  |  |
-| Tìm đoạn con chia hết cho $N$ bằng Dirichlet |  |  |  |
+| Xây dựng mảng tần suất $\mathcal{O}(N)$ | | | |
+| Tìm Mode và Phần tử đa số tuyệt đối | | | |
+| Ánh xạ chữ cái `'a'..'z'` kiểm tra Anagram | | | |
+| Đếm cặp có tổng bằng $S$ trong $\mathcal{O}(N)$ | | | |
+| Khai báo `long long` chống tràn số khi đếm cặp | | | |
+| Tìm đoạn con chia hết cho $N$ bằng Dirichlet | | | |
 
 #### Tiêu chí hoàn thành chương
 
@@ -689,45 +689,45 @@ const int MAX_VAL = 100000;
 
 // 1. Dem so cap co tong bang S trong O(N)
 long long countPairsWithSum(const vector<int> &a, int s) {
-    vector<int> cnt(MAX_VAL + 1, 0);
-    long long totalPairs = 0;
+vector<int> cnt(MAX_VAL + 1, 0);
+long long totalPairs = 0;
 
-    for (int x : a) {
-        int comp = s - x;
-        if (comp >= 0 && comp <= MAX_VAL) {
-            totalPairs += cnt[comp];
-        }
-        if (x >= 0 && x <= MAX_VAL) {
-            cnt[x]++;
-        }
-    }
-    return totalPairs;
+for (int x : a) {
+int comp = s - x;
+if (comp >= 0 && comp <= MAX_VAL) {
+totalPairs += cnt[comp];
+}
+if (x >= 0 && x <= MAX_VAL) {
+cnt[x]++;
+}
+}
+return totalPairs;
 }
 
 // 2. Kiem tra hai chuoi Anagram O(N)
 bool isAnagram(const string &s, const string &t) {
-    if (s.length() != t.length()) return false;
-    vector<int> cnt(26, 0);
-    for (char c : s) cnt[c - 'a']++;
-    for (char c : t) cnt[c - 'a']--;
-    for (int i = 0; i < 26; i++) {
-        if (cnt[i] != 0) return false;
-    }
-    return true;
+if (s.length() != t.length()) return false;
+vector<int> cnt(26, 0);
+for (char c : s) cnt[c - 'a']++;
+for (char c : t) cnt[c - 'a']--;
+for (int i = 0; i < 26; i++) {
+if (cnt[i] != 0) return false;
+}
+return true;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, s;
-    if (!(cin >> n >> s)) return 0;
+int n, s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    cout << "Pairs with sum " << s << ": " << countPairsWithSum(a, s) << "\n";
+cout << "Pairs with sum " << s << ": " << countPairsWithSum(a, s) << "\n";
 
-    return 0;
+return 0;
 }
 ```

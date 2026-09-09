@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để tính tổng các số trong một đoạn hoặc trong một hình chữ nhật con ngay lập tức trong $1$ bước tính?**
+> **Làm thế nào để tính tổng các số trong một đoạn hoặc trong một hình chữ nhật con ngay lập tức trong $1$ bước tính**
 
 ---
 
@@ -28,38 +28,38 @@ Sau chương này, em có thể:
 
 #### 1. Khái niệm & Công thức tính tổng đoạn trong $\mathcal{O}(1)$
 - **Mảng tiền tố $P$:** Định nghĩa $P[i]$ là tổng của tất cả các phần tử từ vị trí đầu tiên $1$ đến vị trí $i$:
-  $$P[0] = 0, \quad P[i] = P[i - 1] + A[i] \quad (1 \le i \le N)$$
+$$P[0] = 0, \quad P[i] = P[i - 1] + A[i] \quad (1 \le i \le N)$$
 - **Công thức tính tổng đoạn $[L, R]$:**
-  $$\text{Sum}(L, R) = A[L] + A[L+1] + \dots + A[R] = P[R] - P[L - 1]$$
+$$\text{Sum}(L, R) = A[L] + A[L+1] + \dots + A[R] = P[R] - P[L - 1]$$
 - **Ý nghĩa:** Tiền xử lý $\mathcal{O}(N)$, sau đó mỗi truy vấn chỉ tốn đúng $\mathcal{O}(1)$ thời gian.
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 6.1: Thống Kê Doanh Thu Chuỗi Cửa Hàng Bán Lẻ WinMart**  
-> **Bối cảnh:** Tập đoàn WinCommerce quản lý chuỗi $N$ siêu thị mini trải dọc tuyến phố. Siêu thị thứ $i$ có doanh thu trong ngày là $A_i$ triệu đồng ($1 \le i \le N$). Ban giám đốc gửi $Q$ yêu cầu báo cáo doanh thu của các khu vực từ siêu thị $L$ đến siêu thị $R$.  
-> **Nhiệm vụ:** Em hãy tính và in ra tổng doanh thu của khu vực $[L, R]$ trong $\mathcal{O}(1)$ thời gian cho mỗi truy vấn.  
+> **Bài toán mẫu 6.1: Thống Kê Doanh Thu Chuỗi Cửa Hàng Bán Lẻ WinMart** 
+> **Bối cảnh:** Tập đoàn WinCommerce quản lý chuỗi $N$ siêu thị mini trải dọc tuyến phố. Siêu thị thứ $i$ có doanh thu trong ngày là $A_i$ triệu đồng ($1 \le i \le N$). Ban giám đốc gửi $Q$ yêu cầu báo cáo doanh thu của các khu vực từ siêu thị $L$ đến siêu thị $R$. 
+> **Nhiệm vụ:** Em hãy tính và in ra tổng doanh thu của khu vực $[L, R]$ trong $\mathcal{O}(1)$ thời gian cho mỗi truy vấn. 
 > 
-> **Input:**  
-> - Dòng 1: Hai số nguyên $N$ và $Q$ ($1 \le N, Q \le 10^5$).  
-> - Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$).  
-> - $Q$ dòng tiếp theo: Mỗi dòng chứa hai số nguyên $L, R$ ($1 \le L \le R \le N$).  
+> **Input:** 
+> - Dòng 1: Hai số nguyên $N$ và $Q$ ($1 \le N, Q \le 10^5$). 
+> - Dòng 2: $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$). 
+> - $Q$ dòng tiếp theo: Mỗi dòng chứa hai số nguyên $L, R$ ($1 \le L \le R \le N$). 
 > 
-> **Output:**  
-> - Ghi $Q$ dòng, mỗi dòng là tổng doanh thu của đoạn tương ứng.  
+> **Output:** 
+> - Ghi $Q$ dòng, mỗi dòng là tổng doanh thu của đoạn tương ứng. 
 > 
-> **Sample:**  
-> - **Input:**  
->   `5 3`  
->   `2 4 1 7 3`  
->   `1 3`  
->   `2 4`  
->   `3 5`  
-> - **Output:**  
->   `7`  
->   `12`  
->   `11`  
+> **Sample:** 
+> - **Input:** 
+> `5 3` 
+> `2 4 1 7 3` 
+> `1 3` 
+> `2 4` 
+> `3 5` 
+> - **Output:** 
+> `7` 
+> `12` 
+> `11` 
 > - **Giải thích:** Tổng từ siêu thị 1 đến 3 là $2 + 4 + 1 = 7$. Tổng từ 2 đến 4 là $4 + 1 + 7 = 12$.
 
 #### Cài đặt C++
@@ -68,26 +68,26 @@ Sau chương này, em có thể:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<long long> pref(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        long long x;
-        cin >> x;
-        pref[i] = pref[i - 1] + x;
-    }
+vector<long long> pref(n + 1, 0);
+for (int i = 1; i <= n; i++) {
+long long x;
+cin >> x;
+pref[i] = pref[i - 1] + x;
+}
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << pref[r] - pref[l - 1] << "\n";
-    }
+while (q--) {
+int l, r;
+cin >> l >> r;
+cout << pref[r] - pref[l - 1] << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -123,9 +123,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 6.2: Giải Mã Tín Hiệu Bảo Mật VinaPhone**  
-> **Bối cảnh:** Trạm thu phát sóng viễn thông VinaPhone mã hóa luồng dữ liệu $N$ gói tin bằng toán tử XOR.  
-> **Nhiệm vụ:** Trả lời $Q$ truy vấn tính tổng XOR của các gói tin từ vị trí $L$ đến $R$.  
+> **Bài toán mẫu 6.2: Giải Mã Tín Hiệu Bảo Mật VinaPhone** 
+> **Bối cảnh:** Trạm thu phát sóng viễn thông VinaPhone mã hóa luồng dữ liệu $N$ gói tin bằng toán tử XOR. 
+> **Nhiệm vụ:** Trả lời $Q$ truy vấn tính tổng XOR của các gói tin từ vị trí $L$ đến $R$. 
 > **Input:** `4 2` \ `3 2 5 7` \ `1 3` \ `2 4` $\implies$ **Output:** `4` \ `0`.
 
 #### Cài đặt C++
@@ -134,26 +134,26 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<int> prefXor(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        int x;
-        cin >> x;
-        prefXor[i] = prefXor[i - 1] ^ x;
-    }
+vector<int> prefXor(n + 1, 0);
+for (int i = 1; i <= n; i++) {
+int x;
+cin >> x;
+prefXor[i] = prefXor[i - 1] ^ x;
+}
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << (prefXor[r] ^ prefXor[l - 1]) << "\n";
-    }
+while (q--) {
+int l, r;
+cin >> l >> r;
+cout << (prefXor[r] ^ prefXor[l - 1]) << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -181,9 +181,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 6.3: Phân Bổ Điện Năng Lưới Điện Quốc Gia EVN**  
-> **Bối cảnh:** Tập đoàn Điện lực Việt Nam (EVN) quản lý $N$ trạm biến áp, ban đầu mức tải bổ sung đều là $0$. Có $Q$ lịch điều phối điện áp, lần thứ $j$ tăng cường $V_j$ Megawatt cho các trạm từ $L_j$ đến $R_j$.  
-> **Nhiệm vụ:** In ra mức điện tải cuối cùng của $N$ trạm biến áp sau $Q$ lần điều phối.  
+> **Bài toán mẫu 6.3: Phân Bổ Điện Năng Lưới Điện Quốc Gia EVN** 
+> **Bối cảnh:** Tập đoàn Điện lực Việt Nam (EVN) quản lý $N$ trạm biến áp, ban đầu mức tải bổ sung đều là $0$. Có $Q$ lịch điều phối điện áp, lần thứ $j$ tăng cường $V_j$ Megawatt cho các trạm từ $L_j$ đến $R_j$. 
+> **Nhiệm vụ:** In ra mức điện tải cuối cùng của $N$ trạm biến áp sau $Q$ lần điều phối. 
 > **Input:** `5 3` \ `1 3 2` \ `2 5 3` \ `4 5 1` $\implies$ **Output:** `2 5 5 4 4`.
 
 #### Cài đặt C++
@@ -192,29 +192,29 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<long long> diff(n + 2, 0);
-    while (q--) {
-        int l, r;
-        long long v;
-        cin >> l >> r >> v;
-        diff[l] += v;
-        diff[r + 1] -= v;
-    }
+vector<long long> diff(n + 2, 0);
+while (q--) {
+int l, r;
+long long v;
+cin >> l >> r >> v;
+diff[l] += v;
+diff[r + 1] -= v;
+}
 
-    long long current = 0;
-    for (int i = 1; i <= n; i++) {
-        current += diff[i];
-        cout << current << (i == n ? "" : " ");
-    }
-    cout << "\n";
+long long current = 0;
+for (int i = 1; i <= n; i++) {
+current += diff[i];
+cout << current << (i == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -242,14 +242,14 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 6.4: Quy Hoạch Vùng Nông Nghiệp Công Nghệ Cao**  
-> **Bối cảnh:** Bản đồ nông nghiệp $N \times M$ ô, ô $(i, j)$ cho sản lượng $A[i][j]$ tấn lúa. Trả lời $Q$ truy vấn tính sản lượng của vùng quy hoạch hình chữ nhật từ $(x_1, y_1)$ đến $(x_2, y_2)$.  
-> **Input:**  
-> `3 3 1`  
-> `1 2 3`  
-> `4 5 6`  
-> `7 8 9`  
-> `2 2 3 3`  
+> **Bài toán mẫu 6.4: Quy Hoạch Vùng Nông Nghiệp Công Nghệ Cao** 
+> **Bối cảnh:** Bản đồ nông nghiệp $N \times M$ ô, ô $(i, j)$ cho sản lượng $A[i][j]$ tấn lúa. Trả lời $Q$ truy vấn tính sản lượng của vùng quy hoạch hình chữ nhật từ $(x_1, y_1)$ đến $(x_2, y_2)$. 
+> **Input:** 
+> `3 3 1` 
+> `1 2 3` 
+> `4 5 6` 
+> `7 8 9` 
+> `2 2 3 3` 
 > **Output:** `28` ($5 + 6 + 8 + 9 = 28$).
 
 #### Cài đặt C++
@@ -258,29 +258,29 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m, q;
-    if (!(cin >> n >> m >> q)) return 0;
+int n, m, q;
+if (!(cin >> n >> m >> q)) return 0;
 
-    vector<vector<long long>> pref(n + 1, vector<long long>(m + 1, 0));
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            long long val;
-            cin >> val;
-            pref[i][j] = pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1] + val;
-        }
-    }
+vector<vector<long long>> pref(n + 1, vector<long long>(m + 1, 0));
+for (int i = 1; i <= n; i++) {
+for (int j = 1; j <= m; j++) {
+long long val;
+cin >> val;
+pref[i][j] = pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1] + val;
+}
+}
 
-    while (q--) {
-        int x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
-        long long sum = pref[x2][y2] - pref[x1 - 1][y2] - pref[x2][y1 - 1] + pref[x1 - 1][y1 - 1];
-        cout << sum << "\n";
-    }
+while (q--) {
+int x1, y1, x2, y2;
+cin >> x1 >> y1 >> x2 >> y2;
+long long sum = pref[x2][y2] - pref[x1 - 1][y2] - pref[x2][y1 - 1] + pref[x1 - 1][y1 - 1];
+cout << sum << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 

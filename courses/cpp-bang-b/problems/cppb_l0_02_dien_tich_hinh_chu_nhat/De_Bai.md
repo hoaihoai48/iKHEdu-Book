@@ -1,33 +1,34 @@
-# Diện Tích Hình Chữ Nhật
+# Tính chu vi và diện tích hình chữ nhật
 
 ## Bối cảnh
-Bạn Bình muốn tính diện tích mảnh vườn hình chữ nhật của gia đình để biết cần mua bao nhiêu cây giống. Bạn ấy đã đo được chiều dài và chiều rộng của mảnh vườn và cần một chương trình tính nhanh diện tích.
+Bác An vừa mua một mảnh đất hình chữ nhật để trồng rau sạch. Bác cần tính chu vi mảnh đất để mua lưới rào xung quanh, đồng thời tính diện tích để mua phân bón hữu cơ phù hợp. Bạn hãy lập trình giúp bác An tính toán nhanh chóng.
 
 ## Nhiệm vụ
-Cho chiều dài $a$ và chiều rộng $b$ của hình chữ nhật. Hãy lập trình tính và in ra chu vi và diện tích của hình chữ nhật đó.
+Cho chiều dài $a$ và chiều rộng $b$ của hình chữ nhật. Hãy lập trình tính và in ra chu vi cùng diện tích của hình chữ nhật đó trên cùng một dòng.
 
 ## Input
-- Một dòng duy nhất chứa hai số nguyên dương $a$ và $b$ ($1 \le a, b \le 10^4$), cách nhau bởi khoảng trắng.
+- Một dòng duy nhất chứa hai số nguyên dương $a$ và $b$ ($1 \le a, b \le 10^9$), cách nhau bởi một khoảng trắng.
 
 ## Output
-- In ra hai số nguyên trên một dòng, cách nhau bởi khoảng trắng: chu vi $P$ và diện tích $S$ của hình chữ nhật.
+- In ra hai số nguyên cách nhau bởi một khoảng trắng lần lượt là chu vi và diện tích của hình chữ nhật.
 
 ## Sample 1
 ### Input
 ```text
-5 3
+4 7
 ```
 ### Output
 ```text
-16 15
+22 28
 ```
 
 ### Giải thích
-Chiều dài $a = 5$, chiều rộng $b = 3$.
-Chu vi: $P = 2 \times (a + b) = 2 \times (5 + 3) = 2 \times 8 = 16$.
-Diện tích: $S = a \times b = 5 \times 3 = 15$.
-Kết quả in ra: 16 15.
+Hình chữ nhật có chiều dài $a = 4$ và chiều rộng $b = 7$:
+
+- Chu vi: $(4 + 7) \times 2 = 22$.
+- Diện tích: $4 \times 7 = 28$.
+Kết quả in ra: `22 28`.
 
 ## Ràng buộc
-- $100\%$ số test có $1 \le a, b \le 10^4$.
+- $100\%$ số test có $1 \le a, b \le 10^9$.
 - Thời gian: $1.0\text{s}$, Bộ nhớ: $256\text{MB}$.

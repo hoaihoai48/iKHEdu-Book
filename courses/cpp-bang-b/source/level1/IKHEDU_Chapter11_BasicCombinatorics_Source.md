@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để đếm số lượng cách sắp xếp hoặc phân chia đồ vật có thể lên tới hàng tỷ trường hợp mà không cần phải sinh từng trường hợp?**
+> **Làm thế nào để đếm số lượng cách sắp xếp hoặc phân chia đồ vật có thể lên tới hàng tỷ trường hợp mà không cần phải sinh từng trường hợp**
 
 ---
 
@@ -35,9 +35,9 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 11.1: Phân Luồng Xe Vận Tải Theo Biển Số**  
-> **Bối cảnh:** Trạm kiểm soát giao thông có $N$ xe tải đi qua mang biển số từ $1$ đến $N$. Các xe có biển số chia hết cho $A$ hoặc chia hết cho $B$ được ưu tiên vào làn xanh.  
-> **Nhiệm vụ:** Đếm số lượng xe tải được ưu tiên vào làn xanh trong đoạn $[1, N]$.  
+> **Bài toán mẫu 11.1: Phân Luồng Xe Vận Tải Theo Biển Số** 
+> **Bối cảnh:** Trạm kiểm soát giao thông có $N$ xe tải đi qua mang biển số từ $1$ đến $N$. Các xe có biển số chia hết cho $A$ hoặc chia hết cho $B$ được ưu tiên vào làn xanh. 
+> **Nhiệm vụ:** Đếm số lượng xe tải được ưu tiên vào làn xanh trong đoạn $[1, N]$. 
 > **Input:** `20 3 5` $\implies$ **Output:** `9` (các xe có biển số: 3, 5, 6, 9, 10, 12, 15, 18, 20).
 
 #### Cài đặt C++
@@ -46,31 +46,31 @@ Sau chương này, em có thể:
 using namespace std;
 
 long long gcd(long long a, long long b) {
-    while (b != 0) {
-        long long r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+while (b != 0) {
+long long r = a % b;
+a = b;
+b = r;
+}
+return a;
 }
 
 long long lcm(long long a, long long b) {
-    return (a / gcd(a, b)) * b;
+return (a / gcd(a, b)) * b;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n, a, b;
-    if (!(cin >> n >> a >> b)) return 0;
+long long n, a, b;
+if (!(cin >> n >> a >> b)) return 0;
 
-    long long countA = n / a;
-    long long countB = n / b;
-    long long countAB = n / lcm(a, b);
+long long countA = n / a;
+long long countB = n / b;
+long long countAB = n / lcm(a, b);
 
-    cout << countA + countB - countAB << "\n";
-    return 0;
+cout << countA + countB - countAB << "\n";
+return 0;
 }
 ```
 
@@ -99,8 +99,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 11.2: Bầu Chọn Ban Chấp Hành Đoàn Trường**  
-> **Bối cảnh:** Từ danh sách $N$ ứng viên, cần chọn ra 1 Bí thư, 1 Phó bí thư và 1 Ủy viên thường vụ (3 vị trí có phân biệt vai trò $\implies$ Chỉnh hợp $A_N^3$).  
+> **Bài toán mẫu 11.2: Bầu Chọn Ban Chấp Hành Đoàn Trường** 
+> **Bối cảnh:** Từ danh sách $N$ ứng viên, cần chọn ra 1 Bí thư, 1 Phó bí thư và 1 Ủy viên thường vụ (3 vị trí có phân biệt vai trò $\implies$ Chỉnh hợp $A_N^3$). 
 > **Input:** `5` $\implies$ **Output:** `60` ($A_5^3 = 5 \times 4 \times 3 = 60$).
 
 #### Cài đặt C++
@@ -111,19 +111,19 @@ using namespace std;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    long long ans = 1;
-    for (int i = 0; i < k; i++) {
-        ans = (ans * (n - i)) % MOD;
-    }
+long long ans = 1;
+for (int i = 0; i < k; i++) {
+ans = (ans * (n - i)) % MOD;
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```
 
@@ -150,8 +150,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 11.3: Sinh Bảng Tổ Hợp Bằng Tam Giác Pascal**  
-> **Bối cảnh:** Lập bảng tổ hợp $C_N^K$ modulo $10^9+7$ cho $N \le 2000$ khi thực hiện $Q$ truy vấn thời gian thực.  
+> **Bài toán mẫu 11.3: Sinh Bảng Tổ Hợp Bằng Tam Giác Pascal** 
+> **Bối cảnh:** Lập bảng tổ hợp $C_N^K$ modulo $10^9+7$ cho $N \le 2000$ khi thực hiện $Q$ truy vấn thời gian thực. 
 > **Input:** `5 2` $\implies$ **Output:** `10`.
 
 #### Cài đặt C++
@@ -165,25 +165,25 @@ const int MOD = 1000000007;
 int c[MAX_N + 1][MAX_N + 1];
 
 void buildPascal() {
-    for (int i = 0; i <= MAX_N; i++) {
-        c[i][0] = 1;
-        for (int j = 1; j <= i; j++) {
-            c[i][j] = (c[i - 1][j - 1] + c[i - 1][j]) % MOD;
-        }
-    }
+for (int i = 0; i <= MAX_N; i++) {
+c[i][0] = 1;
+for (int j = 1; j <= i; j++) {
+c[i][j] = (c[i - 1][j - 1] + c[i - 1][j]) % MOD;
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    buildPascal();
+buildPascal();
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    cout << c[n][k] << "\n";
-    return 0;
+cout << c[n][k] << "\n";
+return 0;
 }
 ```
 
@@ -206,15 +206,15 @@ int main() {
 #### 1. Khái niệm & Công thức kinh điển
 - **Đường đi trên lưới:** Số đường đi từ $(0, 0)$ đến $(N, M)$ chỉ đi sang phải và lên trên: $C_{N+M}^N$.
 - **Bài toán chia kẹo Euler:**
-  - Chia $N$ cái kẹo cho $K$ đứa trẻ sao cho mỗi người có ít nhất $1$ cái: $C_{N-1}^{K-1}$.
-  - Chia $N$ cái kẹo cho $K$ đứa trẻ sao cho mỗi người có thể nhận $\ge 0$ cái: $C_{N+K-1}^{K-1}$.
+- Chia $N$ cái kẹo cho $K$ đứa trẻ sao cho mỗi người có ít nhất $1$ cái: $C_{N-1}^{K-1}$.
+- Chia $N$ cái kẹo cho $K$ đứa trẻ sao cho mỗi người có thể nhận $\ge 0$ cái: $C_{N+K-1}^{K-1}$.
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 11.4: Phân Phối Suất Học Bổng Cho Các Trường THPT**  
-> **Bối cảnh:** Quỹ học bổng iKHEDU phân bổ $N$ suất học bổng cho $K$ trường THPT chuyên, mỗi trường nhận ít nhất $1$ suất.  
+> **Bài toán mẫu 11.4: Phân Phối Suất Học Bổng Cho Các Trường THPT** 
+> **Bối cảnh:** Quỹ học bổng iKHEDU phân bổ $N$ suất học bổng cho $K$ trường THPT chuyên, mỗi trường nhận ít nhất $1$ suất. 
 > **Input:** `5 3` $\implies$ **Output:** `6` ($C_{5-1}^{3-1} = C_4^2 = 6$).
 
 #### Cài đặt C++
@@ -223,23 +223,23 @@ int main() {
 using namespace std;
 
 long long nCr(int n, int r) {
-    if (r < 0 || r > n) return 0;
-    long long ans = 1;
-    for (int i = 1; i <= r; i++) {
-        ans = ans * (n - i + 1) / i;
-    }
-    return ans;
+if (r < 0 || r > n) return 0;
+long long ans = 1;
+for (int i = 1; i <= r; i++) {
+ans = ans * (n - i + 1) / i;
+}
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    cout << nCr(n - 1, k - 1) << "\n";
-    return 0;
+cout << nCr(n - 1, k - 1) << "\n";
+return 0;
 }
 ```
 

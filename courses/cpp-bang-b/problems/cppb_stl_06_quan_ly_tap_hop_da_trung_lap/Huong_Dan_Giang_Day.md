@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 1 5 1 5 3 5 2 5 3 5` $\implies$ Đầu ra kỳ vọng: `2 1`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 1 5 1 5 3 5 2 5 3 5` $\implies$ Đầu ra kỳ vọng: `2 1`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -43,28 +42,28 @@ Mẫu thử (Sample 1): Đầu vào: `5 1 5 1 5 3 5 2 5 3 5` $\implies$ Đầu r
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    multiset<long long> ms;
+multiset<long long> ms;
 
-    while (q--) {
-        int type;
-        long long x;
-        cin >> type >> x;
+while (q--) {
+int type;
+long long x;
+cin >> type >> x;
 
-        if (type == 1) { // Thêm x
-            ms.insert(x);
-        } else if (type == 2) { // Xóa đúng 1 bản sao của x nếu có
-            auto it = ms.find(x);
-            if (it != ms.end()) ms.erase(it);
-        } else { // Đếm số lượng x
-            cout << ms.count(x) << "\n";
-        }
-    }
-    return 0;
+if (type == 1) { // Thêm x
+ms.insert(x);
+} else if (type == 2) { // Xóa đúng 1 bản sao của x nếu có
+auto it = ms.find(x);
+if (it != ms.end()) ms.erase(it);
+} else { // Đếm số lượng x
+cout << ms.count(x) << "\n";
+}
+}
+return 0;
 }
 ```

@@ -4,7 +4,7 @@
 Sau khi xác định được thời gian thoát hiểm ngắn nhất trong mê cung, bộ điều khiển cần xuất ra chuỗi lệnh điều hướng chi tiết bằng các ký tự viết tắt phương hướng: `'U'` (lên trên), `'D'` (xuống dưới), `'L'` (sang trái), `'R'` (sang phải) để nạp trực tiếp vào bộ nhớ vi điều khiển của robot.
 
 ## Nhiệm vụ
-Cho bản đồ mê cung $N  × M$ với điểm xuất phát `S` và đích `E`. Hãy lập trình tìm đường đi ngắn nhất và in ra chuỗi các bước di chuyển tương ứng.
+Cho bản đồ mê cung $N × M$ với điểm xuất phát `S` và đích `E`. Hãy lập trình tìm đường đi ngắn nhất và in ra chuỗi các bước di chuyển tương ứng.
 
 ## Input
 - Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$).

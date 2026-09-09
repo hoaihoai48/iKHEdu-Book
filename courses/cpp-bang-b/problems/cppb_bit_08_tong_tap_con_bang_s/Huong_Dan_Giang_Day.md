@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho dãy gồm N số nguyên dương và số nguyên dương S. Hãy kiểm tra xem có tồn tại một tập con có tổng đúng bằng S hay không. In YES nếu có, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 9 3 34 4 12)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 9 3 34 4 12` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các tập con có thể tạo được từ {3, 34, 4, 12} có tổng lần lượt là: 0, 3, 34, 37, 4, 7, 38, 41, 12, 15, 46, 49, 16, 19, 5... | Tính toán từng bước trạng thái |
@@ -36,33 +35,33 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
 
-    int total_masks = (1 << n);
-    for (int mask = 0; mask < total_masks; ++mask) {
-        long long current_sum = 0;
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                current_sum += a[i];
-            }
-        }
-        if (current_sum == s) {
-            cout << "YES\n";
-            return 0;
-        }
-    }
+int total_masks = (1 << n);
+for (int mask = 0; mask < total_masks; ++mask) {
+long long current_sum = 0;
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
+current_sum += a[i];
+}
+}
+if (current_sum == s) {
+cout << "YES\n";
+return 0;
+}
+}
 
-    cout << "NO\n";
-    return 0;
+cout << "NO\n";
+return 0;
 }
 ```

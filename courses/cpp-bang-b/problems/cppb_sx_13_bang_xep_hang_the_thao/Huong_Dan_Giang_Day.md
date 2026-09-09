@@ -12,8 +12,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 1 10 5 12 2 10 5 15 3 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 1 10 5 12 2 10 5 15 3 12 2 8` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Xét thông số của 3 đội bóng: - Đội 3: có $12$ điểm (cao nhất) $\implies$ xếp vị trí số 1. - Đội 1 và Đội 2: đều có $10$ ... | Tính toán từng bước trạng thái |
@@ -23,8 +22,8 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 - Đội 3: có $12$ điểm (cao nhất) $\implies$ xếp vị trí số 1.
 - Đội 1 và Đội 2: đều có $10$ điểm và cùng có hiệu số bàn thắng bại là $5$.
-  - Xét chỉ số phụ số bàn thắng ghi được: Đội 2 ghi được $15$ bàn, trong khi Đội 1 chỉ ghi được $12$ bàn ($15 > 12$).
-  - Do đó Đội 2 xếp thứ nhì, Đội 1 xếp thứ ba.
+- Xét chỉ số phụ số bàn thắng ghi được: Đội 2 ghi được $15$ bàn, trong khi Đội 1 chỉ ghi được $12$ bàn ($15 > 12$).
+- Do đó Đội 2 xếp thứ nhì, Đội 1 xếp thứ ba.
 
 Thứ tự mã đội trên bảng xếp hạng là: `3 2 1`.
 
@@ -43,30 +42,30 @@ Thứ tự mã đội trên bảng xếp hạng là: `3 2 1`.
 using namespace std;
 
 bool cmp(const vector<long long> &a, const vector<long long> &b) {
-    if (a[1] != b[1]) return a[1] > b[1];
-    if (a[2] != b[2]) return a[2] > b[2];
-    if (a[3] != b[3]) return a[3] > b[3];
-    return a[0] < b[0];
+if (a[1] != b[1]) return a[1] > b[1];
+if (a[2] != b[2]) return a[2] > b[2];
+if (a[3] != b[3]) return a[3] > b[3];
+return a[0] < b[0];
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<vector<long long>> a(n, vector<long long>(4));
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i][0] >> a[i][1] >> a[i][2] >> a[i][3];
-    }
+vector<vector<long long>> a(n, vector<long long>(4));
+for (int i = 0; i < n; ++i) {
+cin >> a[i][0] >> a[i][1] >> a[i][2] >> a[i][3];
+}
 
-    sort(a.begin(), a.end(), cmp);
+sort(a.begin(), a.end(), cmp);
 
-    for (int i = 0; i < n; ++i) {
-        cout << a[i][0] << (i == n - 1 ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << a[i][0] << (i == n - 1 "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy đếm số lượng số nguyên trong đoạn [1, N] có đúng 2 ước số nguyên tố phân biệt.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Trong đoạn [1, 10], các số có đúng 2 ước nguyên tố phân biệt là: 6 (ước 2, 3) và 10 (ước 2, 5). Tổng cộng có 2 số.... | Tính toán từng bước trạng thái |
@@ -36,27 +35,27 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> prime_count(n + 1, 0);
-    for (int i = 2; i <= n; ++i) {
-        if (prime_count[i] == 0) { // i là số nguyên tố
-            for (int j = i; j <= n; j += i) {
-                prime_count[j]++;
-            }
-        }
-    }
+vector<int> prime_count(n + 1, 0);
+for (int i = 2; i <= n; ++i) {
+if (prime_count[i] == 0) { // i là số nguyên tố
+for (int j = i; j <= n; j += i) {
+prime_count[j]++;
+}
+}
+}
 
-    int ans = 0;
-    for (int i = 1; i <= n; ++i) {
-        if (prime_count[i] == 2) ans++;
-    }
+int ans = 0;
+for (int i = 1; i <= n; ++i) {
+if (prime_count[i] == 2) ans++;
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

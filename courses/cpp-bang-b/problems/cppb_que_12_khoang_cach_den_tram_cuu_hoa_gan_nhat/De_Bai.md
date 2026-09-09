@@ -7,7 +7,7 @@ Một bản đồ đô thị gồm $N$ khu dân cư và $M$ tuyến đường ha
 Cho bản đồ thành phố và danh sách vị trí các trạm cứu hỏa. Hãy lập trình tính khoảng cách ngắn nhất từ từng khu dân cư đến trạm cứu hỏa gần nhất.
 
 ## Input
-- Dòng 1: Chứa 3 số nguyên $N, M, K$ ($1 \le K \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa 3 số nguyên $N, M, K$ ($1 \le K \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - Dòng 2: Chứa $K$ số nguyên là vị trí đặt các trạm cứu hỏa.
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh biểu diễn một tuyến đường.
 

@@ -7,7 +7,7 @@ Tại một hội nghị thượng đỉnh về chuyển đổi số, ban lễ t
 Cho danh sách gồm $N$ số nguyên đại diện cho mã định danh. Hãy lập trình đếm và in ra số lượng giá trị phân biệt xuất hiện trong dãy số.
 
 ## Input
-- Dòng 1: Chứa số nguyên dương $N$ ($1 \le N \le 2  × 10^5$).
+- Dòng 1: Chứa số nguyên dương $N$ ($1 \le N \le 2 × 10^5$).
 - Dòng 2: Chứa $N$ số nguyên $A_1, A_2, \dots, A_N$ ($-10^9 \le A_i \le 10^9$) cách nhau bởi khoảng trắng.
 
 ## Output

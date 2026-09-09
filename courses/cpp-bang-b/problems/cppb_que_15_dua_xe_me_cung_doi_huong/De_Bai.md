@@ -1,10 +1,10 @@
 # Đua Xe Mê Cung Đổi Hướng Ít Nhất (0-1 BFS State)
 
 ## Bối cảnh
-Trong một giải đua xe robot trong mê cung lưới ô vuông $N  × M$, robot cần di chuyển từ ô xuất phát $S$ tới ô đích $D$. Mỗi lần robot đi thẳng theo hướng đang di chuyển thì hoàn toàn miễn phí (chi phí 0), nhưng mỗi khi robot phải bẻ lái đổi sang một trong các hướng vuông góc thì bánh lái sẽ tiêu hao 1 đơn vị năng lượng.
+Trong một giải đua xe robot trong mê cung lưới ô vuông $N × M$, robot cần di chuyển từ ô xuất phát $S$ tới ô đích $D$. Mỗi lần robot đi thẳng theo hướng đang di chuyển thì hoàn toàn miễn phí (chi phí 0), nhưng mỗi khi robot phải bẻ lái đổi sang một trong các hướng vuông góc thì bánh lái sẽ tiêu hao 1 đơn vị năng lượng.
 
 ## Nhiệm vụ
-Cho bản đồ mê cung $N  × M$ và vị trí $S, D$. Hãy lập trình tìm số lần đổi hướng ít nhất để robot đi từ $S$ tới $D$. Nếu không có đường đi, in ra `-1`.
+Cho bản đồ mê cung $N × M$ và vị trí $S, D$. Hãy lập trình tìm số lần đổi hướng ít nhất để robot đi từ $S$ tới $D$. Nếu không có đường đi, in ra `-1`.
 
 ## Input
 - Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$).

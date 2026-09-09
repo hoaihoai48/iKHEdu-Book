@@ -1,7 +1,7 @@
 # Đếm Số Cách Đi Trên Lưới
 
 ## Bối cảnh
-Một robot tự hành giao hàng được đặt ở góc trên bên trái (ô $(1, 1)$) của một kho hàng hình chữ nhật có kích thước $N  × M$ ô vuông. Robot cần di chuyển đến điểm đích ở góc dưới bên phải (ô $(N, M)$) để dỡ kiện hàng. Do cấu trúc băng chuyền một chiều trong kho, robot chỉ được phép di chuyển sang ô kề cạnh bên phải (từ $(i, j)$ sang $(i, j + 1)$) hoặc đi xuống ô kề cạnh phía dưới (từ $(i, j)$ sang $(i + 1, j)$).
+Một robot tự hành giao hàng được đặt ở góc trên bên trái (ô $(1, 1)$) của một kho hàng hình chữ nhật có kích thước $N × M$ ô vuông. Robot cần di chuyển đến điểm đích ở góc dưới bên phải (ô $(N, M)$) để dỡ kiện hàng. Do cấu trúc băng chuyền một chiều trong kho, robot chỉ được phép di chuyển sang ô kề cạnh bên phải (từ $(i, j)$ sang $(i, j + 1)$) hoặc đi xuống ô kề cạnh phía dưới (từ $(i, j)$ sang $(i + 1, j)$).
 
 ## Nhiệm vụ
 Cho hai số nguyên dương $N$ và $M$ là kích thước của kho hàng. Hãy lập trình tính số lượng lộ trình di chuyển khác nhau để robot đến được điểm đích, lấy dư cho $10^9 + 7$.
@@ -23,7 +23,7 @@ Cho hai số nguyên dương $N$ và $M$ là kích thước của kho hàng. Hã
 ```
 
 ### Giải thích
-Với lưới kích thước $3  × 3$ ($N = 3, M = 3$), robot cần thực hiện đúng 2 bước sang phải và 2 bước xuống dưới. Có tất cả 6 đường đi khác nhau từ $(1, 1)$ đến $(3, 3)$. Kết quả là 6.
+Với lưới kích thước $3 × 3$ ($N = 3, M = 3$), robot cần thực hiện đúng 2 bước sang phải và 2 bước xuống dưới. Có tất cả 6 đường đi khác nhau từ $(1, 1)$ đến $(3, 3)$. Kết quả là 6.
 
 ## Ràng buộc
 - $100\%$ số test có $1 \le N, M \le 1000$.

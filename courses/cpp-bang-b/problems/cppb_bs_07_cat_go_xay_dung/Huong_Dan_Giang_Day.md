@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho chiều cao N cây gỗ và lượng gỗ tối thiểu cần lấy M. Hãy tìm độ cao cắt H lớn nhất của máy cưa.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 7 20 15 10 17)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 7 20 15 10 17` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Khi đặt độ cao cắt H = 15: - Cây 20m cắt được: 20 - 15 = 5m. - Cây 15m cắt được: 15 - 15 = 0m. - Cây 10m không bị cắt: 0... | Tính toán từng bước trạng thái |
@@ -42,42 +41,42 @@ Tổng gỗ thu được là 5 + 0 + 0 + 2 = 7 mét đúng bằng M. Đây là �
 using namespace std;
 
 bool check(long long h, const vector<long long>& a, long long m) {
-    long long wood = 0;
-    for (long long x : a) {
-        if (x > h) {
-            wood += (x - h);
-        }
-    }
-    return wood >= m;
+long long wood = 0;
+for (long long x : a) {
+if (x > h) {
+wood += (x - h);
+}
+}
+return wood >= m;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long m;
-    if (!(cin >> n >> m)) return 0;
+int n;
+long long m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n);
-    long long max_val = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-        max_val = max(max_val, a[i]);
-    }
+vector<long long> a(n);
+long long max_val = 0;
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+max_val = max(max_val, a[i]);
+}
 
-    long long low = 0, high = max_val, ans = 0;
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (check(mid, a, m)) {
-            ans = mid;
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
+long long low = 0, high = max_val, ans = 0;
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (check(mid, a, m)) {
+ans = mid;
+low = mid + 1;
+} else {
+high = mid - 1;
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

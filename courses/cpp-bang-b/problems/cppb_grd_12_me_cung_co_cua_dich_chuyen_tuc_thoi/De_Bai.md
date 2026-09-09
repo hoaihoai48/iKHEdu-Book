@@ -1,7 +1,7 @@
 # Cổng Dịch Chuyển Tức Thời (Teleport Maze)
 
 ## Bối cảnh
-Trong một trò chơi thực tế ảo trong mê cung lưới $N  × M$, ngoài các ô đường đi thông thường, mê cung còn bố trí một số cặp cổng dịch chuyển tức thời không gian. Khi bước vào một cổng dịch chuyển, người chơi sẽ ngay lập tức được dịch chuyển sang cổng tương ứng ở vị trí khác mà không tốn thời gian (0 giây). Hãy tìm thời gian ngắn nhất để đi từ điểm xuất phát `S` tới đích `E`.
+Trong một trò chơi thực tế ảo trong mê cung lưới $N × M$, ngoài các ô đường đi thông thường, mê cung còn bố trí một số cặp cổng dịch chuyển tức thời không gian. Khi bước vào một cổng dịch chuyển, người chơi sẽ ngay lập tức được dịch chuyển sang cổng tương ứng ở vị trí khác mà không tốn thời gian (0 giây). Hãy tìm thời gian ngắn nhất để đi từ điểm xuất phát `S` tới đích `E`.
 
 ## Nhiệm vụ
 Cho bản đồ mê cung và danh sách các cặp cổng dịch chuyển. Hãy lập trình tìm số bước ít nhất để đến đích.

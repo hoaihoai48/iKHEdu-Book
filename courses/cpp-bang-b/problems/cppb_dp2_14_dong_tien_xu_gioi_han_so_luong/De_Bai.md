@@ -28,7 +28,7 @@ Cho danh sách $N$ mệnh giá kèm số lượng tờ tiền tương ứng và 
 
 ### Giải thích
 Với số tiền cần rút $S = 10$ và các mệnh giá: 5 đồng (có 1 tờ), 2 đồng (có 3 tờ):
-Chọn 1 tờ 5 đồng và 2 tờ 2 đồng ($5 + 2  × 2 = 9 < 10$).
+Chọn 1 tờ 5 đồng và 2 tờ 2 đồng ($5 + 2 × 2 = 9 < 10$).
 Phương án đổi đúng là dùng 5 tờ 2 đồng (nhưng chỉ có 3 tờ nên không được).
 Nếu có thêm mệnh giá 1 đồng (2 tờ): Dùng 1 tờ 5, 2 tờ 2 và 1 tờ 1, tổng cộng 4 tờ tiền.
 

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy đếm số lượng chữ số 0 liên tiếp tận cùng trong biểu diễn thập phân của N!.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 25)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `25` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Số lượng thừa số 5 trong 25! là: floor(25/5) + floor(25/25) = 5 + 1 = 6. Vì vậy 25! có đúng 6 chữ số 0 tận cùng.... | Tính toán từng bước trạng thái |
@@ -36,19 +35,19 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    long long count_zeros = 0;
-    while (n > 0) {
-        count_zeros += (n / 5);
-        n /= 5;
-    }
+long long count_zeros = 0;
+while (n > 0) {
+count_zeros += (n / 5);
+n /= 5;
+}
 
-    cout << count_zeros << "\n";
-    return 0;
+cout << count_zeros << "\n";
+return 0;
 }
 ```

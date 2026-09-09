@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho 2 số nguyên N và K. Hãy tính giá trị chính xác tuyệt đối của C(N, K) = N! / (K! * (N - K)!).
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | C(5, 2) = 10.... | Tính toán từng bước trạng thái |
@@ -36,39 +35,39 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 string addBig(string a, string b) {
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
-    string res = "";
-    int carry = 0;
-    int n = max(a.size(), b.size());
-    for (int i = 0; i < n || carry; ++i) {
-        int sum = carry;
-        if (i < (int)a.size()) sum += a[i] - '0';
-        if (i < (int)b.size()) sum += b[i] - '0';
-        res.push_back((sum % 10) + '0');
-        carry = sum / 10;
-    }
-    reverse(res.begin(), res.end());
-    return res;
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
+string res = "";
+int carry = 0;
+int n = max(a.size(), b.size());
+for (int i = 0; i < n || carry; ++i) {
+int sum = carry;
+if (i < (int)a.size()) sum += a[i] - '0';
+if (i < (int)b.size()) sum += b[i] - '0';
+res.push_back((sum % 10) + '0');
+carry = sum / 10;
+}
+reverse(res.begin(), res.end());
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<vector<string>> c(n + 1, vector<string>(k + 1, "0"));
-    for (int i = 0; i <= n; ++i) {
-        c[i][0] = "1";
-        for (int j = 1; j <= min(i, k); ++j) {
-            if (j == i) c[i][j] = "1";
-            else c[i][j] = addBig(c[i - 1][j - 1], c[i - 1][j]);
-        }
-    }
+vector<vector<string>> c(n + 1, vector<string>(k + 1, "0"));
+for (int i = 0; i <= n; ++i) {
+c[i][0] = "1";
+for (int j = 1; j <= min(i, k); ++j) {
+if (j == i) c[i][j] = "1";
+else c[i][j] = addBig(c[i - 1][j - 1], c[i - 1][j]);
+}
+}
 
-    cout << c[n][k] << "\n";
-    return 0;
+cout << c[n][k] << "\n";
+return 0;
 }
 ```

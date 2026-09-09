@@ -105,7 +105,7 @@ Sau module thử nghiệm, cần kiểm chứng được rằng cấu trúc sác
 
 ## 6. File map
 
-| Loại | Path | Canonical? | Mô tả |
+| Loại | Path | Canonical | Mô tả |
 |---|---|---:|---|
 | Course index | `README.md` | yes | Trang chủ khóa học, learning path và assessment map |
 | Book master | [`BOOK_MASTER.md`](BOOK_MASTER.md) | yes | Bản thảo canonical tổng hợp để chuẩn bị bản in/digital |

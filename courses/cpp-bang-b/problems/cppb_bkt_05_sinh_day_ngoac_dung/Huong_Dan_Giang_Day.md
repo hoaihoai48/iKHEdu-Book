@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho số nguyên dương $N$. Hãy áp dụng thuật toán Quay lui có kỹ thuật cắt tỉa điều kiện hợp lệ (`open < N` và `close < open`) để sinh và in ra tất cả các dãy ngoặc đúng gồm $N$ cặp ngoặc tròn `()` theo thứ tự từ điển (`(` đứng trước `)`).
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với $N = 3$ cặp ngoặc (độ dài 6 ký tự), số lượng dãy ngoặc hợp lệ chính là số Catalan $C_3 = \frac{1}{4} \binom{6}{3} = ... | Tính toán từng bước trạng thái |
@@ -39,27 +38,27 @@ int n;
 string cur = "";
 
 void backtrack(int open_cnt, int close_cnt) {
-    if (open_cnt == n && close_cnt == n) {
-        cout << cur << "\n";
-        return;
-    }
-    if (open_cnt < n) {
-        cur.push_back('(');
-        backtrack(open_cnt + 1, close_cnt);
-        cur.pop_back();
-    }
-    if (close_cnt < open_cnt) {
-        cur.push_back(')');
-        backtrack(open_cnt, close_cnt + 1);
-        cur.pop_back();
-    }
+if (open_cnt == n && close_cnt == n) {
+cout << cur << "\n";
+return;
+}
+if (open_cnt < n) {
+cur.push_back('(');
+backtrack(open_cnt + 1, close_cnt);
+cur.pop_back();
+}
+if (close_cnt < open_cnt) {
+cur.push_back(')');
+backtrack(open_cnt, close_cnt + 1);
+cur.pop_back();
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n)) return 0;
-    backtrack(0, 0);
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n)) return 0;
+backtrack(0, 0);
+return 0;
 }
 ```

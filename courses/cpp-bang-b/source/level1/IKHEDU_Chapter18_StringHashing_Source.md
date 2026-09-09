@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để so sánh xem hai đoạn văn bản dài hàng triệu ký tự có giống hệt nhau không chỉ trong $1$ phép so sánh duy nhất?**
+> **Làm thế nào để so sánh xem hai đoạn văn bản dài hàng triệu ký tự có giống hệt nhau không chỉ trong $1$ phép so sánh duy nhất**
 
 ---
 
@@ -28,17 +28,17 @@ Sau chương này, em có thể:
 
 #### 1. Khái niệm & Công thức mã băm
 - **Công thức mã băm đa thức:**
-  $$H[i] = (H[i - 1] \times \text{BASE} + S[i]) \pmod M$$
-  (với $\text{BASE} = 311$, $M = 10^9+7$).
+$$H[i] = (H[i - 1] \times \text{BASE} + S[i]) \pmod M$$
+(với $\text{BASE} = 311$, $M = 10^9+7$).
 - **Mã băm của đoạn con $S[L.R]$:**
-  $$\text{getHash}(L, R) = (H[R] - H[L - 1] \times \text{BASE}^{R - L + 1} + M \times M) \pmod M$$
+$$\text{getHash}(L, R) = (H[R] - H[L - 1] \times \text{BASE}^{R - L + 1} + M \times M) \pmod M$$
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 18.1: So Khớp Mẫu Mã Độc Trong Tệp Thực Thi**  
-> **Bối cảnh:** Phần mềm diệt virus Bkav cần tìm tất cả các vị trí xuất hiện của chuỗi chữ ký mã độc $P$ trong tệp thực thi $T$.  
+> **Bài toán mẫu 18.1: So Khớp Mẫu Mã Độc Trong Tệp Thực Thi** 
+> **Bối cảnh:** Phần mềm diệt virus Bkav cần tìm tất cả các vị trí xuất hiện của chuỗi chữ ký mã độc $P$ trong tệp thực thi $T$. 
 > **Input:** `ikheducppikhedu` \ `ikhedu` $\implies$ **Output:** `1 10` (xuất hiện tại vị trí 1 và 10).
 
 #### Cài đặt C++
@@ -50,36 +50,36 @@ const long long BASE = 311;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string t, p;
-    if (!(cin >> t >> p)) return 0;
+string t, p;
+if (!(cin >> t >> p)) return 0;
 
-    int n = t.size(), m = p.size();
-    t = " " + t;
-    p = " " + p;
+int n = t.size(), m = p.size();
+t = " " + t;
+p = " " + p;
 
-    vector<long long> power(n + 1, 1), h(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        power[i] = (power[i - 1] * BASE) % MOD;
-        h[i] = (h[i - 1] * BASE + t[i]) % MOD;
-    }
+vector<long long> power(n + 1, 1), h(n + 1, 0);
+for (int i = 1; i <= n; i++) {
+power[i] = (power[i - 1] * BASE) % MOD;
+h[i] = (h[i - 1] * BASE + t[i]) % MOD;
+}
 
-    long long hashP = 0;
-    for (int i = 1; i <= m; i++) {
-        hashP = (hashP * BASE + p[i]) % MOD;
-    }
+long long hashP = 0;
+for (int i = 1; i <= m; i++) {
+hashP = (hashP * BASE + p[i]) % MOD;
+}
 
-    for (int i = 1; i <= n - m + 1; i++) {
-        long long currentHash = (h[i + m - 1] - h[i - 1] * power[m] % MOD + MOD) % MOD;
-        if (currentHash == hashP) {
-            cout << i << " ";
-        }
-    }
-    cout << "\n";
+for (int i = 1; i <= n - m + 1; i++) {
+long long currentHash = (h[i + m - 1] - h[i - 1] * power[m] % MOD + MOD) % MOD;
+if (currentHash == hashP) {
+cout << i << " ";
+}
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -106,8 +106,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 18.2: So Sánh Hai Đoạn Văn Bản Trong $\mathcal{O}(1)$**  
-> **Bối cảnh:** Nhập xâu $S$. Thực hiện $Q$ truy vấn kiểm tra xem đoạn con $S[a.b]$ có giống hệt đoạn con $S[c.d]$ hay không.  
+> **Bài toán mẫu 18.2: So Sánh Hai Đoạn Văn Bản Trong $\mathcal{O}(1)$** 
+> **Bối cảnh:** Nhập xâu $S$. Thực hiện $Q$ truy vấn kiểm tra xem đoạn con $S[a.b]$ có giống hệt đoạn con $S[c.d]$ hay không. 
 > **Input:** `abacaba` \ `2` \ `1 3 5 7` \ `1 2 4 5` $\implies$ **Output:** `YES` \ `NO`.
 
 #### Cài đặt C++
@@ -119,37 +119,37 @@ const long long BASE = 311;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    int q;
-    if (!(cin >> s >> q)) return 0;
+string s;
+int q;
+if (!(cin >> s >> q)) return 0;
 
-    int n = s.size();
-    s = " " + s;
+int n = s.size();
+s = " " + s;
 
-    vector<long long> power(n + 1, 1), h(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        power[i] = (power[i - 1] * BASE) % MOD;
-        h[i] = (h[i - 1] * BASE + s[i]) % MOD;
-    }
+vector<long long> power(n + 1, 1), h(n + 1, 0);
+for (int i = 1; i <= n; i++) {
+power[i] = (power[i - 1] * BASE) % MOD;
+h[i] = (h[i - 1] * BASE + s[i]) % MOD;
+}
 
-    auto getHash = [&](int l, int r) {
-        return (h[r] - h[l - 1] * power[r - l + 1] % MOD + MOD) % MOD;
-    };
+auto getHash = [&](int l, int r) {
+return (h[r] - h[l - 1] * power[r - l + 1] % MOD + MOD) % MOD;
+};
 
-    while (q--) {
-        int a, b, c, d;
-        cin >> a >> b >> c >> d;
-        if (b - a == d - c && getHash(a, b) == getHash(c, d)) {
-            cout << "YES\n";
-        } else {
-            cout << "NO\n";
-        }
-    }
+while (q--) {
+int a, b, c, d;
+cin >> a >> b >> c >> d;
+if (b - a == d - c && getHash(a, b) == getHash(c, d)) {
+cout << "YES\n";
+} else {
+cout << "NO\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -176,7 +176,7 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 18.3: Băm Đôi Chống Bộ Dữ Liệu Tấn Công Thử Nghiệm**  
+> **Bài toán mẫu 18.3: Băm Đôi Chống Bộ Dữ Liệu Tấn Công Thử Nghiệm** 
 > **Bối cảnh:** Cài đặt hàm lấy mã băm đôi cho xâu $S$ với 2 Modulo $10^9+7$ và $10^9+9$.
 
 #### Cài đặt C++
@@ -189,33 +189,33 @@ const long long MOD1 = 1000000007;
 const long long MOD2 = 1000000009;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
+string s;
+if (!(cin >> s)) return 0;
 
-    int n = s.size();
-    s = " " + s;
+int n = s.size();
+s = " " + s;
 
-    vector<long long> pow1(n + 1, 1), h1(n + 1, 0);
-    vector<long long> pow2(n + 1, 1), h2(n + 1, 0);
+vector<long long> pow1(n + 1, 1), h1(n + 1, 0);
+vector<long long> pow2(n + 1, 1), h2(n + 1, 0);
 
-    for (int i = 1; i <= n; i++) {
-        pow1[i] = (pow1[i - 1] * BASE) % MOD1;
-        h1[i] = (h1[i - 1] * BASE + s[i]) % MOD1;
-        pow2[i] = (pow2[i - 1] * BASE) % MOD2;
-        h2[i] = (h2[i - 1] * BASE + s[i]) % MOD2;
-    }
+for (int i = 1; i <= n; i++) {
+pow1[i] = (pow1[i - 1] * BASE) % MOD1;
+h1[i] = (h1[i - 1] * BASE + s[i]) % MOD1;
+pow2[i] = (pow2[i - 1] * BASE) % MOD2;
+h2[i] = (h2[i - 1] * BASE + s[i]) % MOD2;
+}
 
-    auto getDoubleHash = [&](int l, int r) {
-        long long hash1 = (h1[r] - h1[l - 1] * pow1[r - l + 1] % MOD1 + MOD1) % MOD1;
-        long long hash2 = (h2[r] - h2[l - 1] * pow2[r - l + 1] % MOD2 + MOD2) % MOD2;
-        return make_pair(hash1, hash2);
-    };
+auto getDoubleHash = [&](int l, int r) {
+long long hash1 = (h1[r] - h1[l - 1] * pow1[r - l + 1] % MOD1 + MOD1) % MOD1;
+long long hash2 = (h2[r] - h2[l - 1] * pow2[r - l + 1] % MOD2 + MOD2) % MOD2;
+return make_pair(hash1, hash2);
+};
 
-    cout << "Double hash full string: " << getDoubleHash(1, n).first << ", " << getDoubleHash(1, n).second << "\n";
-    return 0;
+cout << "Double hash full string: " << getDoubleHash(1, n).first << ", " << getDoubleHash(1, n).second << "\n";
+return 0;
 }
 ```
 
@@ -242,8 +242,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 18.4: Tìm Tiền Tố Chung Dài Nhất (LCP)**  
-> **Bối cảnh:** Tìm độ dài tiền tố chung dài nhất của 2 hậu tố bắt đầu tại vị trí $i$ và $j$ trong xâu $S$.  
+> **Bài toán mẫu 18.4: Tìm Tiền Tố Chung Dài Nhất (LCP)** 
+> **Bối cảnh:** Tìm độ dài tiền tố chung dài nhất của 2 hậu tố bắt đầu tại vị trí $i$ và $j$ trong xâu $S$. 
 > **Input:** `banana` \ `2 4` $\implies$ **Output:** `3` (`"anana"` và `"ana"` có LCP là `"ana"` dài 3).
 
 #### Cài đặt C++
@@ -255,39 +255,39 @@ const long long BASE = 311;
 const long long MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    int pos1, pos2;
-    if (!(cin >> s >> pos1 >> pos2)) return 0;
+string s;
+int pos1, pos2;
+if (!(cin >> s >> pos1 >> pos2)) return 0;
 
-    int n = s.size();
-    s = " " + s;
+int n = s.size();
+s = " " + s;
 
-    vector<long long> power(n + 1, 1), h(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        power[i] = (power[i - 1] * BASE) % MOD;
-        h[i] = (h[i - 1] * BASE + s[i]) % MOD;
-    }
+vector<long long> power(n + 1, 1), h(n + 1, 0);
+for (int i = 1; i <= n; i++) {
+power[i] = (power[i - 1] * BASE) % MOD;
+h[i] = (h[i - 1] * BASE + s[i]) % MOD;
+}
 
-    auto getHash = [&](int l, int r) {
-        return (h[r] - h[l - 1] * power[r - l + 1] % MOD + MOD) % MOD;
-    };
+auto getHash = [&](int l, int r) {
+return (h[r] - h[l - 1] * power[r - l + 1] % MOD + MOD) % MOD;
+};
 
-    int low = 1, high = min(n - pos1 + 1, n - pos2 + 1), ans = 0;
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-        if (getHash(pos1, pos1 + mid - 1) == getHash(pos2, pos2 + mid - 1)) {
-            ans = mid;
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
+int low = 1, high = min(n - pos1 + 1, n - pos2 + 1), ans = 0;
+while (low <= high) {
+int mid = low + (high - low) / 2;
+if (getHash(pos1, pos1 + mid - 1) == getHash(pos2, pos2 + mid - 1)) {
+ans = mid;
+low = mid + 1;
+} else {
+high = mid - 1;
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```
 

@@ -5,9 +5,12 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int a, b;
+    long long a, b;
     if (!(cin >> a >> b)) return 0;
 
-    cout << 2 * (a + b) << ' ' << a * b << '\n';
+    long long perimeter = 2 * (a + b);
+    long long area = a * b;
+
+    cout << perimeter << ' ' << area << '\n';
     return 0;
 }

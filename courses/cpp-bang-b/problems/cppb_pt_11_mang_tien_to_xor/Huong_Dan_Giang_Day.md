@@ -7,13 +7,12 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 - **Bản chất bài toán:** Cho dãy số nguyên gồm N phần tử. Có Q truy vấn, mỗi truy vấn yêu cầu tính tích XOR của các phần tử trong đoạn [L, R]: A[L] xor A[L+1] xor ... xor A[R].
 
 - **Phương pháp tiếp cận — Mảng tiền tố & Mảng hiệu:**
-  - Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
-  - Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
+- Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
+- Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 1 2 3 4 5 1 3 2 4 1 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 1 2 3 4 5 1 3 2 4 1 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Mảng tiền tố XOR PrefXOR = [0, 1, 1^2=3, 3^3=0, 0^4=4, 4^5=1]. - Đoạn [1, 3]: PrefXOR[3] ^ PrefXOR[0] = 0 ^ 0 = 0. - Đoạ... | Tính toán từng bước trạng thái |
@@ -40,25 +39,25 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<long long> p(n + 1, 0);
-    for (int i = 1; i <= n; ++i) {
-        long long x;
-        cin >> x;
-        p[i] = p[i - 1] ^ x;
-    }
+vector<long long> p(n + 1, 0);
+for (int i = 1; i <= n; ++i) {
+long long x;
+cin >> x;
+p[i] = p[i - 1] ^ x;
+}
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << (p[r] ^ p[l - 1]) << "\n";
-    }
+while (q--) {
+int l, r;
+cin >> l >> r;
+cout << (p[r] ^ p[l - 1]) << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```

@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 3 1 10 3 4 12 15)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 3 1 10 3 4 12 15` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp điểm năng lực của 6 bạn học sinh theo thứ tự tăng dần: $1, 3, 4, 10, 12, 15$. Với $K = 3$, ta có thể gom tối ưu ... | Tính toán từng bước trạng thái |
@@ -40,29 +39,29 @@ Không thể chia thành ít hơn 3 nhóm mà vẫn thỏa mãn điều kiện. 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
+int n;
+long long k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    int groups = 1;
-    long long min_val = a[0];
+int groups = 1;
+long long min_val = a[0];
 
-    for (int i = 1; i < n; ++i) {
-        if (a[i] - min_val > k) {
-            ++groups;
-            min_val = a[i];
-        }
-    }
+for (int i = 1; i < n; ++i) {
+if (a[i] - min_val > k) {
+++groups;
+min_val = a[i];
+}
+}
 
-    cout << groups << "\n";
-    return 0;
+cout << groups << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho ma trận chi phí C kích thước N x N (N <= 16). Hãy tìm tổng chi phí phân công nhỏ nhất để giao N việc cho N người bằng quy hoạch động trạng thái bitmask.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 9 2 7 6 4 3 5 8 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 9 2 7 6 4 3 5 8 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Phương án phân công tối ưu có tổng chi phí nhỏ nhất là $6$: - Kỹ sư 1 làm việc 2 (chi phí $C_{1, 2} = 2$). - Kỹ sư 2 làm... | Tính toán từng bước trạng thái |
@@ -41,38 +40,38 @@ Tổng chi phí tối thiểu: $2 + 3 + 1 = 6$.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<vector<long long>> cost(n, vector<long long>(n));
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            cin >> cost[i][j];
-        }
-    }
+vector<vector<long long>> cost(n, vector<long long>(n));
+for (int i = 0; i < n; ++i) {
+for (int j = 0; j < n; ++j) {
+cin >> cost[i][j];
+}
+}
 
-    int total_masks = (1 << n);
-    const long long INF = 1e18;
-    vector<long long> dp(total_masks, INF);
-    dp[0] = 0;
+int total_masks = (1 << n);
+const long long INF = 1e18;
+vector<long long> dp(total_masks, INF);
+dp[0] = 0;
 
-    for (int mask = 0; mask < total_masks; ++mask) {
-        if (dp[mask] == INF) continue;
-        int task_idx = __builtin_popcount(mask);
-        if (task_idx >= n) continue;
+for (int mask = 0; mask < total_masks; ++mask) {
+if (dp[mask] == INF) continue;
+int task_idx = __builtin_popcount(mask);
+if (task_idx >= n) continue;
 
-        for (int j = 0; j < n; ++j) {
-            if (!((mask >> j) & 1)) {
-                int next_mask = mask | (1 << j);
-                dp[next_mask] = min(dp[next_mask], dp[mask] + cost[task_idx][j]);
-            }
-        }
-    }
+for (int j = 0; j < n; ++j) {
+if (!((mask >> j) & 1)) {
+int next_mask = mask | (1 << j);
+dp[next_mask] = min(dp[next_mask], dp[mask] + cost[task_idx][j]);
+}
+}
+}
 
-    cout << dp[total_masks - 1] << "\n";
-    return 0;
+cout << dp[total_masks - 1] << "\n";
+return 0;
 }
 ```

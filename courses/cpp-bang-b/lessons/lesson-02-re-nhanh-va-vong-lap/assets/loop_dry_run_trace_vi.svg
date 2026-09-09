@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" style="background:#ffffff; font-family:'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <filter id="sh4" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <text x="500" y="45" text-anchor="middle" font-size="22" font-weight="bold" fill="#0F172A">4 MẪU TÍCH LŨY (ACCUMULATION PATTERNS) KINH ĐIỂN</text>
+  <text x="500" y="75" text-anchor="middle" font-size="14" fill="#64748B">Nền tảng xử lý mọi bài toán duyệt dãy số: Khởi tạo đúng → Cập nhật trong vòng lặp</text>
+
+  <!-- Pattern 1: Sum -->
+  <g transform="translate(60, 105)" filter="url(#sh4)">
+    <rect width="200" height="300" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="200" height="50" rx="12" fill="#3B82F6"/>
+    <text x="100" y="32" text-anchor="middle" fill="#FFFFFF" font-weight="bold" font-size="16">1. TÍNH TỔNG (SUM)</text>
+    <text x="15" y="80" font-size="13" font-weight="bold" fill="#1E293B">Khởi tạo:</text>
+    <text x="15" y="105" font-family="Consolas" font-size="13" fill="#2563EB">long long S = 0;</text>
+    <text x="15" y="145" font-size="13" font-weight="bold" fill="#1E293B">Cập nhật lặp:</text>
+    <text x="15" y="170" font-family="Consolas" font-size="13" fill="#059669">S += a[i];</text>
+    <text x="15" y="210" font-size="13" font-weight="bold" fill="#1E293B">Bẫy tử huyệt:</text>
+    <text x="15" y="235" font-size="12" fill="#DC2626">Tràn số int khi N lớn</text>
+    <text x="15" y="260" font-size="12" fill="#DC2626">Quên gán S = 0 ban đầu</text>
+  </g>
+
+  <!-- Pattern 2: Count -->
+  <g transform="translate(280, 105)" filter="url(#sh4)">
+    <rect width="200" height="300" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="200" height="50" rx="12" fill="#10B981"/>
+    <text x="100" y="32" text-anchor="middle" fill="#FFFFFF" font-weight="bold" font-size="16">2. ĐẾM (COUNT)</text>
+    <text x="15" y="80" font-size="13" font-weight="bold" fill="#1E293B">Khởi tạo:</text>
+    <text x="15" y="105" font-family="Consolas" font-size="13" fill="#059669">int cnt = 0;</text>
+    <text x="15" y="145" font-size="13" font-weight="bold" fill="#1E293B">Cập nhật lặp:</text>
+    <text x="15" y="170" font-family="Consolas" font-size="12" fill="#047857">if (thoa_man) cnt++;</text>
+    <text x="15" y="210" font-size="13" font-weight="bold" fill="#1E293B">Ứng dụng:</text>
+    <text x="15" y="235" font-size="12" fill="#475569">Đếm số chẵn / lẻ</text>
+    <text x="15" y="260" font-size="12" fill="#475569">Đếm ước số nguyên</text>
+  </g>
+
+  <!-- Pattern 3: Max -->
+  <g transform="translate(500, 105)" filter="url(#sh4)">
+    <rect width="200" height="300" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="200" height="50" rx="12" fill="#F59E0B"/>
+    <text x="100" y="32" text-anchor="middle" fill="#FFFFFF" font-weight="bold" font-size="16">3. TÌM MAX</text>
+    <text x="15" y="80" font-size="13" font-weight="bold" fill="#1E293B">Khởi tạo:</text>
+    <text x="15" y="105" font-family="Consolas" font-size="12" fill="#D97706">long long mx = -1e18;</text>
+    <text x="15" y="125" font-size="11" fill="#64748B">(hoặc mx = a[0])</text>
+    <text x="15" y="155" font-size="13" font-weight="bold" fill="#1E293B">Cập nhật lặp:</text>
+    <text x="15" y="180" font-family="Consolas" font-size="12" fill="#059669">mx = max(mx, a[i]);</text>
+    <text x="15" y="210" font-size="13" font-weight="bold" fill="#1E293B">Bẫy tử huyệt:</text>
+    <text x="15" y="235" font-size="12" fill="#DC2626">Gán mx = 0 khi mảng</text>
+    <text x="15" y="255" font-size="12" fill="#DC2626">chứa toàn số âm!</text>
+  </g>
+
+  <!-- Pattern 4: Min -->
+  <g transform="translate(720, 105)" filter="url(#sh4)">
+    <rect width="200" height="300" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="200" height="50" rx="12" fill="#8B5CF6"/>
+    <text x="100" y="32" text-anchor="middle" fill="#FFFFFF" font-weight="bold" font-size="16">4. TÌM MIN</text>
+    <text x="15" y="80" font-size="13" font-weight="bold" fill="#1E293B">Khởi tạo:</text>
+    <text x="15" y="105" font-family="Consolas" font-size="12" fill="#7C3AED">long long mn = 1e18;</text>
+    <text x="15" y="125" font-size="11" fill="#64748B">(hoặc mn = a[0])</text>
+    <text x="15" y="155" font-size="13" font-weight="bold" fill="#1E293B">Cập nhật lặp:</text>
+    <text x="15" y="180" font-family="Consolas" font-size="12" fill="#059669">mn = min(mn, a[i]);</text>
+    <text x="15" y="210" font-size="13" font-weight="bold" fill="#1E293B">Bẫy tử huyệt:</text>
+    <text x="15" y="235" font-size="12" fill="#DC2626">Khởi tạo INT_MAX bị</text>
+    <text x="15" y="255" font-size="12" fill="#DC2626">tràn khi cộng thêm</text>
+  </g>
+</svg>

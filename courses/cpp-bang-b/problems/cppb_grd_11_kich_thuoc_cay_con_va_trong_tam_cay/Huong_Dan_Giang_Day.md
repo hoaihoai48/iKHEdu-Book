@@ -16,8 +16,7 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 1 2 2 3 3 4 3 5` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 1 2 2 3 3 4 3 5` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,40 +47,40 @@ vector<int> sz;
 int centroid_node = -1;
 
 void dfs(int u, int p) {
-    sz[u] = 1;
-    bool is_centroid = true;
+sz[u] = 1;
+bool is_centroid = true;
 
-    for (int v : adj[u]) {
-        if (v != p) {
-            dfs(v, u);
-            sz[u] += sz[v];
-            if (sz[v] > n / 2) is_centroid = false;
-        }
-    }
+for (int v : adj[u]) {
+if (v != p) {
+dfs(v, u);
+sz[u] += sz[v];
+if (sz[v] > n / 2) is_centroid = false;
+}
+}
 
-    if (n - sz[u] > n / 2) is_centroid = false;
-    if (is_centroid && centroid_node == -1) centroid_node = u;
+if (n - sz[u] > n / 2) is_centroid = false;
+if (is_centroid && centroid_node == -1) centroid_node = u;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    adj.assign(n + 1, vector<int>());
-    sz.assign(n + 1, 0);
+adj.assign(n + 1, vector<int>());
+sz.assign(n + 1, 0);
 
-    for (int i = 0; i < n - 1; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+for (int i = 0; i < n - 1; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    dfs(1, 0);
-    cout << centroid_node << "\n";
-    return 0;
+dfs(1, 0);
+cout << centroid_node << "\n";
+return 0;
 }
 ```

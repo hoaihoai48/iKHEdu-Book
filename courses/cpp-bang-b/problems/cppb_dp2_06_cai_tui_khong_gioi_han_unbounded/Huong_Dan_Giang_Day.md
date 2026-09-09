@@ -11,15 +11,14 @@ Chuyên đề: **Quy Hoạch Động 2 Chiều & Bài Toán Cái Túi (DP 2D / K
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái:** Định nghĩa $dp[i][j]$ biểu diễn kết quả tối ưu khi xét tiền tố $i$ đồ vật và sức chứa/trọng lượng còn lại là $j$, hoặc toạ độ ô $(i, j)$ trên lưới.
 - **Chuyển trạng thái bài toán Cái Túi (0/1 Knapsack):**
-  $$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
+$$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
 
 - **Kỹ thuật tối ưu bộ nhớ (Nén mảng 1D):** Với bài toán 0/1 Knapsack, duyệt lùi $w$ từ $W$ về $w_i$ để đảm bảo mỗi vật chỉ được chọn tối đa một lần; với Unbounded Knapsack, duyệt xuôi từ $w_i$ đến $W$.
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N \times W)$ hoặc $\mathcal{O}(N \times M)$, không gian tối ưu $\mathcal{O}(W)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 8 2 10 3 15 4 40` $\implies$ Đầu ra kỳ vọng: `80`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 8 2 10 3 15 4 40` $\implies$ Đầu ra kỳ vọng: `80`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -45,24 +44,24 @@ Ta có thể chọn lặp lại nhiều lần loại phôi có hiệu suất gi�
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, w;
-    if (!(cin >> n >> w)) return 0;
-    if (n <= 0 || w <= 0) return 0;
+int n, w;
+if (!(cin >> n >> w)) return 0;
+if (n <= 0 || w <= 0) return 0;
 
-    vector<long long> dp(w + 1, 0);
+vector<long long> dp(w + 1, 0);
 
-    for (int i = 0; i < n; ++i) {
-        long long weight, val;
-        cin >> weight >> val;
-        for (int j = weight; j <= w; ++j) {
-            dp[j] = max(dp[j], dp[j - weight] + val);
-        }
-    }
+for (int i = 0; i < n; ++i) {
+long long weight, val;
+cin >> weight >> val;
+for (int j = weight; j <= w; ++j) {
+dp[j] = max(dp[j], dp[j - weight] + val);
+}
+}
 
-    cout << dp[w] << "\n";
-    return 0;
+cout << dp[w] << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho đồ thị vô hướng $G = (V, E)$ gồm $V$ đỉnh và $E$ cạnh, cùng số lượng màu khả dụng $K$. Hãy áp dụng thuật toán Quay lui để kiểm tra xem có thể gán cho mỗi đỉnh của đồ thị một trong $K$ màu sao cho không có bất kỳ hai đỉnh kề nhau nào có cùng màu hay không. Nếu có thể tô màu hợp lệ in ra `YES`, ngược lại in ra `NO`.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 5 3 1 2 2 3 3 4 4 1 1 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 5 3 1 2 2 3 3 4 4 1 1 3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với 4 đỉnh và 5 cạnh xung đột, đồ thị hoàn toàn có thể được tô hợp lệ bằng 3 màu: đỉnh 1 màu 1, đỉnh 2 màu 2, đỉnh 3 màu... | Tính toán từng bước trạng thái |
@@ -41,41 +40,41 @@ int color[15];
 bool possible = false;
 
 bool isSafe(int u, int c) {
-    for (int v : adj[u]) {
-        if (color[v] == c) return false;
-    }
-    return true;
+for (int v : adj[u]) {
+if (color[v] == c) return false;
+}
+return true;
 }
 
 void backtrack(int u) {
-    if (possible) return;
-    if (u > V) {
-        possible = true;
-        return;
-    }
-    for (int c = 1; c <= K; ++c) {
-        if (isSafe(u, c)) {
-            color[u] = c;
-            backtrack(u + 1);
-            color[u] = 0;
-            if (possible) return;
-        }
-    }
+if (possible) return;
+if (u > V) {
+possible = true;
+return;
+}
+for (int c = 1; c <= K; ++c) {
+if (isSafe(u, c)) {
+color[u] = c;
+backtrack(u + 1);
+color[u] = 0;
+if (possible) return;
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> V >> E >> K)) return 0;
-    for (int i = 0; i < E; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
-    memset(color, 0, sizeof(color));
-    backtrack(1);
-    cout << (possible ? "YES\n" : "NO\n");
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> V >> E >> K)) return 0;
+for (int i = 0; i < E; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
+memset(color, 0, sizeof(color));
+backtrack(1);
+cout << (possible "YES\n" : "NO\n");
+return 0;
 }
 ```

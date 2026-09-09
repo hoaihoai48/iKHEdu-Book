@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy phân tích N thành tích các thừa số nguyên tố theo dạng p1^e1 * p2^e2 * ... với p1 < p2 < ...
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 60)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `60` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 60 = 4 * 3 * 5 = 2^2 * 3^1 * 5^1. Kết quả in ra: `2^2 * 3^1 * 5^1`.... | Tính toán từng bước trạng thái |
@@ -36,32 +35,32 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    vector<pair<long long, int>> factors;
-    for (long long i = 2; i * i <= n; ++i) {
-        if (n % i == 0) {
-            int cnt = 0;
-            while (n % i == 0) {
-                cnt++;
-                n /= i;
-            }
-            factors.push_back({i, cnt});
-        }
-    }
-    if (n > 1) {
-        factors.push_back({n, 1});
-    }
+vector<pair<long long, int>> factors;
+for (long long i = 2; i * i <= n; ++i) {
+if (n % i == 0) {
+int cnt = 0;
+while (n % i == 0) {
+cnt++;
+n /= i;
+}
+factors.push_back({i, cnt});
+}
+}
+if (n > 1) {
+factors.push_back({n, 1});
+}
 
-    for (int i = 0; i < (int)factors.size(); ++i) {
-        cout << factors[i].first << "^" << factors[i].second;
-        if (i + 1 < (int)factors.size()) cout << " * ";
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < (int)factors.size(); ++i) {
+cout << factors[i].first << "^" << factors[i].second;
+if (i + 1 < (int)factors.size()) cout << " * ";
+}
+cout << "\n";
+return 0;
 }
 ```

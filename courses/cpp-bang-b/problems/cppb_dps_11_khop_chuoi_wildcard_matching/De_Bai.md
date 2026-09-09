@@ -1,7 +1,7 @@
 # Khớp Chuỗi Ký Tự Đại Diện (Wildcard Matching)
 
 ## Bối cảnh
-Một công cụ tìm kiếm tệp tin hỗ trợ tìm kiếm theo mẫu (pattern) chứa các ký tự đại diện thông dụng: Ký tự `?` có thể khớp với đúng một ký tự bất kỳ, và ký tự `*` có thể khớp với bất kỳ chuỗi ký tự nào (kể cả chuỗi rỗng). Quản trị viên cần kiểm tra xem tên tệp văn bản $S$ có khớp hoàn toàn với mẫu $P$ hay không.
+Một công cụ tìm kiếm tệp tin hỗ trợ tìm kiếm theo mẫu (pattern) chứa các ký tự đại diện thông dụng: Ký tự `` có thể khớp với đúng một ký tự bất kỳ, và ký tự `*` có thể khớp với bất kỳ chuỗi ký tự nào (kể cả chuỗi rỗng). Quản trị viên cần kiểm tra xem tên tệp văn bản $S$ có khớp hoàn toàn với mẫu $P$ hay không.
 
 ## Nhiệm vụ
 Cho chuỗi văn bản $S$ và chuỗi mẫu $P$. Hãy lập trình kiểm tra xem chuỗi $S$ có khớp toàn bộ với mẫu $P$ hay không. Nếu khớp in ra `YES`, ngược lại in ra `NO`.

@@ -10,17 +10,16 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Cây Phân Đoạn (Segment Tree & Fenw
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Fenwick Tree (Binary Indexed Tree):**
-  * Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
-  * Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
+* Tận dụng phép toán bit `lowbit(i) = i & (-i)` để lưu tổng các đoạn luỹ thừa của 2.
+* Cập nhật điểm trong $\mathcal{O}(\log N)$, truy vấn tổng tiền tố trong $\mathcal{O}(\log N)$ với dung lượng bộ nhớ đúng bằng $N$ phần tử.
 - **Segment Tree (Cây phân đoạn):**
-  * Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
-  * Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
+* Cấu trúc cây nhị phân đầy đủ quản lý các đoạn con liên tiếp, cần mảng kích thước $4N$.
+* Hỗ trợ đa dạng phép toán gộp (tổng, $\min, \max$, GCD) trong $\mathcal{O}(\log N)$ và kỹ thuật Lazy Propagation cho các truy vấn cập nhật đoạn.
 - **Độ phức tạp:** Xây dựng cây $\mathcal{O}(N)$, mỗi thao tác truy vấn / cập nhật chỉ tốn $\mathcal{O}(\log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 3 3 1 1 1 5 1 2 2 10 2 1 1 2 2` $\implies$ Đầu ra kỳ vọng: `15`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 3 3 1 1 1 5 1 2 2 10 2 1 1 2 2` $\implies$ Đầu ra kỳ vọng: `15`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,49 +47,49 @@ int n, m, q;
 vector<vector<long long>> bit;
 
 void update(int r, int c, long long val) {
-    for (int i = r; i <= n; i += i & -i) {
-        for (int j = c; j <= m; j += j & -j) {
-            bit[i][j] += val;
-        }
-    }
+for (int i = r; i <= n; i += i & -i) {
+for (int j = c; j <= m; j += j & -j) {
+bit[i][j] += val;
+}
+}
 }
 
 long long query(int r, int c) {
-    long long sum = 0;
-    for (int i = r; i > 0; i -= i & -i) {
-        for (int j = c; j > 0; j -= j & -j) {
-            sum += bit[i][j];
-        }
-    }
-    return sum;
+long long sum = 0;
+for (int i = r; i > 0; i -= i & -i) {
+for (int j = c; j > 0; j -= j & -j) {
+sum += bit[i][j];
+}
+}
+return sum;
 }
 
 long long queryRange(int r1, int c1, int r2, int c2) {
-    return query(r2, c2) - query(r1 - 1, c2) - query(r2, c1 - 1) + query(r1 - 1, c1 - 1);
+return query(r2, c2) - query(r1 - 1, c2) - query(r2, c1 - 1) + query(r1 - 1, c1 - 1);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m >> q)) return 0;
+if (!(cin >> n >> m >> q)) return 0;
 
-    bit.assign(n + 1, vector<long long>(m + 1, 0));
+bit.assign(n + 1, vector<long long>(m + 1, 0));
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int r, c;
-            long long val;
-            cin >> r >> c >> val;
-            update(r, c, val);
-        } else {
-            int r1, c1, r2, c2;
-            cin >> r1 >> c1 >> r2 >> c2;
-            cout << queryRange(r1, c1, r2, c2) << "\n";
-        }
-    }
-    return 0;
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int r, c;
+long long val;
+cin >> r >> c >> val;
+update(r, c, val);
+} else {
+int r1, c1, r2, c2;
+cin >> r1 >> c1 >> r2 >> c2;
+cout << queryRange(r1, c1, r2, c2) << "\n";
+}
+}
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho 2 số nguyên dương lớn A và B. Hãy so sánh A và B, in ra '>' nếu A > B, '<' nếu A < B, '=' nếu A = B.
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 123456789 98765432)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `123456789 98765432` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Số A có 9 chữ số trong khi số B chỉ có 8 chữ số. Do đó A > B. Kết quả in ra: `>`.... | Tính toán từng bước trạng thái |
@@ -36,19 +35,19 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    if (a.size() > b.size()) cout << ">\n";
-    else if (a.size() < b.size()) cout << "<\n";
-    else {
-        if (a > b) cout << ">\n";
-        else if (a < b) cout << "<\n";
-        else cout << "=\n";
-    }
-    return 0;
+if (a.size() > b.size()) cout << ">\n";
+else if (a.size() < b.size()) cout << "<\n";
+else {
+if (a > b) cout << ">\n";
+else if (a < b) cout << "<\n";
+else cout << "=\n";
+}
+return 0;
 }
 ```

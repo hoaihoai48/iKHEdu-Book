@@ -7,7 +7,7 @@ Sau khi tính toán được số bước nhảy tối thiểu để truyền g�
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và hai đỉnh $S, D$. Hãy lập trình tìm và in ra một đường đi ngắn nhất từ $S$ tới $D$. Nếu không có đường đi, in ra `-1`.
 
 ## Input
-- Dòng 1: Chứa 4 số nguyên $N, M, S, D$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa 4 số nguyên $N, M, S, D$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u, v$.
 
 ## Output
@@ -31,7 +31,7 @@ Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh và hai đỉnh $S, D$. Hãy
 ```
 
 ### Giải thích
-Với đồ thị có đường đi ngắn nhất từ 1 tới 4 là $1  × o 3  × o 4$:
+Với đồ thị có đường đi ngắn nhất từ 1 tới 4 là $1 × o 3 × o 4$:
 Dòng 1 in ra 3 (số đỉnh trên đường đi).
 Dòng 2 in ra 1 3 4.
 

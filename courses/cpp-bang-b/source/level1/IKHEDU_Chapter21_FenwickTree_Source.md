@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để vừa sửa đổi một phần tử vừa tính tổng đoạn tiền tố với đoạn mã C++ ngắn nhất và tốc độ chạy nhanh nhất có thể?**
+> **Làm thế nào để vừa sửa đổi một phần tử vừa tính tổng đoạn tiền tố với đoạn mã C++ ngắn nhất và tốc độ chạy nhanh nhất có thể**
 
 ---
 
@@ -34,10 +34,10 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 21.1: Quản Lý Tổng Tiền Tài Khoản Ngân Hàng Số MB Bank**  
-> **Bối cảnh:** Ứng dụng ngân hàng MB Bank quản lý biến động số dư của $N$ tài khoản giao dịch. Thực hiện $Q$ truy vấn:  
-> - `1 pos val`: Cộng thêm số tiền `val` vào tài khoản `pos`.  
-> - `2 l r`: Tính tổng số dư của các tài khoản từ `l` đến `r`.  
+> **Bài toán mẫu 21.1: Quản Lý Tổng Tiền Tài Khoản Ngân Hàng Số MB Bank** 
+> **Bối cảnh:** Ứng dụng ngân hàng MB Bank quản lý biến động số dư của $N$ tài khoản giao dịch. Thực hiện $Q$ truy vấn: 
+> - `1 pos val`: Cộng thêm số tiền `val` vào tài khoản `pos`. 
+> - `2 l r`: Tính tổng số dư của các tài khoản từ `l` đến `r`. 
 > **Input:** `5 3` \ `1 2 3 4 5` \ `2 1 3` \ `1 2 5` \ `2 1 3` $\implies$ **Output:** `6` \ `11`.
 
 #### Cài đặt C++
@@ -49,48 +49,48 @@ int n, q;
 vector<long long> bitTree;
 
 void update(int idx, long long val) {
-    for (; idx <= n; idx += idx & (-idx)) {
-        bitTree[idx] += val;
-    }
+for (; idx <= n; idx += idx & (-idx)) {
+bitTree[idx] += val;
+}
 }
 
 long long getPrefixSum(int idx) {
-    long long sum = 0;
-    for (; idx > 0; idx -= idx & (-idx)) {
-        sum += bitTree[idx];
-    }
-    return sum;
+long long sum = 0;
+for (; idx > 0; idx -= idx & (-idx)) {
+sum += bitTree[idx];
+}
+return sum;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
+if (!(cin >> n >> q)) return 0;
 
-    bitTree.assign(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        long long x;
-        cin >> x;
-        update(i, x);
-    }
+bitTree.assign(n + 1, 0);
+for (int i = 1; i <= n; i++) {
+long long x;
+cin >> x;
+update(i, x);
+}
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int pos;
-            long long val;
-            cin >> pos >> val;
-            update(pos, val);
-        } else {
-            int l, r;
-            cin >> l >> r;
-            cout << getPrefixSum(r) - getPrefixSum(l - 1) << "\n";
-        }
-    }
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int pos;
+long long val;
+cin >> pos >> val;
+update(pos, val);
+} else {
+int l, r;
+cin >> l >> r;
+cout << getPrefixSum(r) - getPrefixSum(l - 1) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -118,7 +118,7 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 21.2: Truy Vấn Tổng Đoạn Với Cây BIT**  
+> **Bài toán mẫu 21.2: Truy Vấn Tổng Đoạn Với Cây BIT** 
 > **Bối cảnh:** Cho mảng $N$ phần tử. Thực hiện $Q$ truy vấn cập nhật điểm và tính tổng đoạn $[L, R]$.
 
 #### Cài đặt C++
@@ -130,35 +130,35 @@ int n, q;
 vector<long long> bitTree;
 
 void add(int idx, long long val) {
-    for (; idx <= n; idx += idx & (-idx)) bitTree[idx] += val;
+for (; idx <= n; idx += idx & (-idx)) bitTree[idx] += val;
 }
 
 long long sum(int idx) {
-    long long ans = 0;
-    for (; idx > 0; idx -= idx & (-idx)) ans += bitTree[idx];
-    return ans;
+long long ans = 0;
+for (; idx > 0; idx -= idx & (-idx)) ans += bitTree[idx];
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
-    bitTree.assign(n + 1, 0);
+if (!(cin >> n >> q)) return 0;
+bitTree.assign(n + 1, 0);
 
-    for (int i = 1; i <= n; i++) {
-        long long x;
-        cin >> x;
-        add(i, x);
-    }
+for (int i = 1; i <= n; i++) {
+long long x;
+cin >> x;
+add(i, x);
+}
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << sum(r) - sum(l - 1) << "\n";
-    }
+while (q--) {
+int l, r;
+cin >> l >> r;
+cout << sum(r) - sum(l - 1) << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -186,8 +186,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 21.3: Đếm Cặp Nghịch Thế Bằng Fenwick Tree Siêu Tốc**  
-> **Bối cảnh:** Đếm số cặp nghịch thế $(i, j)$ có $i < j$ và $A_i > A_j$ trong dãy $N$ số nguyên lớn $|A_i| \le 10^9$.  
+> **Bài toán mẫu 21.3: Đếm Cặp Nghịch Thế Bằng Fenwick Tree Siêu Tốc** 
+> **Bối cảnh:** Đếm số cặp nghịch thế $(i, j)$ có $i < j$ và $A_i > A_j$ trong dãy $N$ số nguyên lớn $|A_i| \le 10^9$. 
 > **Input:** `5` \ `5 2 4 1 3` $\implies$ **Output:** `7`.
 
 #### Cài đặt C++
@@ -199,45 +199,45 @@ int n;
 vector<int> bitTree;
 
 void update(int idx, int val) {
-    for (; idx <= n; idx += idx & (-idx)) {
-        bitTree[idx] += val;
-    }
+for (; idx <= n; idx += idx & (-idx)) {
+bitTree[idx] += val;
+}
 }
 
 int getPrefixSum(int idx) {
-    int sum = 0;
-    for (; idx > 0; idx -= idx & (-idx)) {
-        sum += bitTree[idx];
-    }
-    return sum;
+int sum = 0;
+for (; idx > 0; idx -= idx & (-idx)) {
+sum += bitTree[idx];
+}
+return sum;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n)) return 0;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n), vals;
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-        vals.push_back(a[i]);
-    }
+vector<int> a(n), vals;
+for (int i = 0; i < n; i++) {
+cin >> a[i];
+vals.push_back(a[i]);
+}
 
-    sort(vals.begin(), vals.end());
-    vals.erase(unique(vals.begin(), vals.end()), vals.end());
+sort(vals.begin(), vals.end());
+vals.erase(unique(vals.begin(), vals.end()), vals.end());
 
-    bitTree.assign(n + 1, 0);
-    long long invCount = 0;
+bitTree.assign(n + 1, 0);
+long long invCount = 0;
 
-    for (int i = n - 1; i >= 0; i--) {
-        int rank = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin() + 1;
-        invCount += getPrefixSum(rank - 1);
-        update(rank, 1);
-    }
+for (int i = n - 1; i >= 0; i--) {
+int rank = lower_bound(vals.begin(), vals.end(), a[i]) - vals.begin() + 1;
+invCount += getPrefixSum(rank - 1);
+update(rank, 1);
+}
 
-    cout << invCount << "\n";
-    return 0;
+cout << invCount << "\n";
+return 0;
 }
 ```
 
@@ -269,8 +269,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 21.4: Cập Nhật Đoạn Truy Vấn Điểm Bằng BIT Hiệu**  
-> **Bối cảnh:** Thao tác 1: Cộng $V$ vào đoạn $[L, R]$. Thao tác 2: Tra cứu giá trị tại điểm $P$.  
+> **Bài toán mẫu 21.4: Cập Nhật Đoạn Truy Vấn Điểm Bằng BIT Hiệu** 
+> **Bối cảnh:** Thao tác 1: Cộng $V$ vào đoạn $[L, R]$. Thao tác 2: Tra cứu giá trị tại điểm $P$. 
 > **Input:** `3 2` \ `0 0 0` \ `1 1 2 5` \ `2 2` $\implies$ **Output:** `5`.
 
 #### Cài đặt C++
@@ -282,39 +282,39 @@ int n, q;
 vector<long long> bitDiff;
 
 void update(int idx, long long val) {
-    for (; idx <= n; idx += idx & (-idx)) bitDiff[idx] += val;
+for (; idx <= n; idx += idx & (-idx)) bitDiff[idx] += val;
 }
 
 long long queryPoint(int idx) {
-    long long sum = 0;
-    for (; idx > 0; idx -= idx & (-idx)) sum += bitDiff[idx];
-    return sum;
+long long sum = 0;
+for (; idx > 0; idx -= idx & (-idx)) sum += bitDiff[idx];
+return sum;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> q)) return 0;
-    bitDiff.assign(n + 1, 0);
+if (!(cin >> n >> q)) return 0;
+bitDiff.assign(n + 1, 0);
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int l, r;
-            long long val;
-            cin >> l >> r >> val;
-            update(l, val);
-            update(r + 1, -val);
-        } else {
-            int p;
-            cin >> p;
-            cout << queryPoint(p) << "\n";
-        }
-    }
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int l, r;
+long long val;
+cin >> l >> r >> val;
+update(l, val);
+update(r + 1, -val);
+} else {
+int p;
+cin >> p;
+cout << queryPoint(p) << "\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 

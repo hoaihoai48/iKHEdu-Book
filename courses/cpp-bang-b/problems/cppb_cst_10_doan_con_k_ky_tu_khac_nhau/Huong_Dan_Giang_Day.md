@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: eceba 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `eceba 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Chuỗi con liên tiếp dài nhất chứa tối đa 2 ký tự khác nhau là 'ece' (chỉ chứa 2 ký tự 'e' và 'c') với độ dài bằng 3. Kết... | Tính toán từng bước trạng thái |
@@ -32,35 +31,35 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    string s;
-    cin >> s;
+string s;
+cin >> s;
 
-    vector<int> freq(26, 0);
-    int distinct = 0;
-    int l = 0, max_len = 0;
+vector<int> freq(26, 0);
+int distinct = 0;
+int l = 0, max_len = 0;
 
-    for (int r = 0; r < n; ++r) {
-        int c = s[r] - 'a';
-        if (freq[c] == 0) ++distinct;
-        ++freq[c];
+for (int r = 0; r < n; ++r) {
+int c = s[r] - 'a';
+if (freq[c] == 0) ++distinct;
+++freq[c];
 
-        while (distinct > k) {
-            int lc = s[l] - 'a';
-            --freq[lc];
-            if (freq[lc] == 0) --distinct;
-            ++l;
-        }
+while (distinct > k) {
+int lc = s[l] - 'a';
+--freq[lc];
+if (freq[lc] == 0) --distinct;
+++l;
+}
 
-        max_len = max(max_len, r - l + 1);
-    }
+max_len = max(max_len, r - l + 1);
+}
 
-    cout << max_len << "\n";
-    return 0;
+cout << max_len << "\n";
+return 0;
 }
 ```

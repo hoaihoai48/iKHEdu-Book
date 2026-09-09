@@ -35,8 +35,8 @@ Xét thông số của 3 đội bóng:
 
 - Đội 3: có $12$ điểm (cao nhất) $\implies$ xếp vị trí số 1.
 - Đội 1 và Đội 2: đều có $10$ điểm và cùng có hiệu số bàn thắng bại là $5$.
-  - Xét chỉ số phụ số bàn thắng ghi được: Đội 2 ghi được $15$ bàn, trong khi Đội 1 chỉ ghi được $12$ bàn ($15 > 12$).
-  - Do đó Đội 2 xếp thứ nhì, Đội 1 xếp thứ ba.
+- Xét chỉ số phụ số bàn thắng ghi được: Đội 2 ghi được $15$ bàn, trong khi Đội 1 chỉ ghi được $12$ bàn ($15 > 12$).
+- Do đó Đội 2 xếp thứ nhì, Đội 1 xếp thứ ba.
 
 Thứ tự mã đội trên bảng xếp hạng là: `3 2 1`.
 

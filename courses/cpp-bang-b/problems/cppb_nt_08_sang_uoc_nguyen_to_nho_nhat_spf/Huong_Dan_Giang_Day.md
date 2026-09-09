@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho Q truy vấn, mỗi truy vấn chứa một số nguyên N (2 <= N <= 10^6). Hãy in ra ước số nguyên tố nhỏ nhất của N.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 15 7 20)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 15 7 20` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | - SPF(15) = 3 (vì 15 chia hết cho số nguyên tố nhỏ nhất là 3). - SPF(7) = 7 (vì 7 là số nguyên tố). - SPF(20) = 2 (vì 20... | Tính toán từng bước trạng thái |
@@ -42,31 +41,31 @@ const int MAXN = 1000000;
 vector<int> spf(MAXN + 1);
 
 void sieveSPF() {
-    for (int i = 1; i <= MAXN; ++i) spf[i] = i;
-    for (int i = 2; 1LL * i * i <= MAXN; ++i) {
-        if (spf[i] == i) {
-            for (int j = i * i; j <= MAXN; j += i) {
-                if (spf[j] == j) spf[j] = i;
-            }
-        }
-    }
+for (int i = 1; i <= MAXN; ++i) spf[i] = i;
+for (int i = 2; 1LL * i * i <= MAXN; ++i) {
+if (spf[i] == i) {
+for (int j = i * i; j <= MAXN; j += i) {
+if (spf[j] == j) spf[j] = i;
+}
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    sieveSPF();
+sieveSPF();
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    for (int i = 0; i < q; ++i) {
-        int n;
-        cin >> n;
-        cout << spf[n] << (i + 1 == q ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < q; ++i) {
+int n;
+cin >> n;
+cout << spf[n] << (i + 1 == q "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

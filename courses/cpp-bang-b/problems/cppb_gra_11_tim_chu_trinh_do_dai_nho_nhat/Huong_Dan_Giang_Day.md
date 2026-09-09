@@ -11,14 +11,13 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản (Graph: BFS, DFS & Thành Ph
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Biểu diễn đồ thị:** Sử dụng danh sách kề `vector<vector<int>> adj(N + 1)` để tối ưu bộ nhớ $\mathcal{O}(N + M)$ và duyệt cạnh nhanh chóng.
 - **Thuật toán duyệt đồ thị:**
-  * *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
-  * *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
+* *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
+* *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
 - **Mảng đánh dấu:** Sử dụng mảng `visited[]` để đảm bảo mỗi đỉnh và cạnh chỉ được xét một số lần hằng số, độ phức tạp đạt $\mathcal{O}(N + M)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `5 6 1 2 2 3 3 1 3 4 4 5 5 3` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `5 6 1 2 2 3 3 1 3 4 4 5 5 3` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -50,49 +49,49 @@ using namespace std;
 const int INF = 1e9;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    if (n <= 0) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
+if (n <= 0) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    int min_cycle = INF;
+int min_cycle = INF;
 
-    for (int s = 1; s <= n; ++s) {
-        vector<int> dist(n + 1, INF);
-        vector<int> parent(n + 1, -1);
-        queue<int> q;
+for (int s = 1; s <= n; ++s) {
+vector<int> dist(n + 1, INF);
+vector<int> parent(n + 1, -1);
+queue<int> q;
 
-        dist[s] = 0;
-        q.push(s);
+dist[s] = 0;
+q.push(s);
 
-        while (!q.empty()) {
-            int u = q.front();
-            q.pop();
+while (!q.empty()) {
+int u = q.front();
+q.pop();
 
-            for (int v : adj[u]) {
-                if (dist[v] == INF) {
-                    dist[v] = dist[u] + 1;
-                    parent[v] = u;
-                    q.push(v);
-                } else if (parent[u] != v) {
-                    min_cycle = min(min_cycle, dist[u] + dist[v] + 1);
-                }
-            }
-        }
-    }
+for (int v : adj[u]) {
+if (dist[v] == INF) {
+dist[v] = dist[u] + 1;
+parent[v] = u;
+q.push(v);
+} else if (parent[u] != v) {
+min_cycle = min(min_cycle, dist[u] + dist[v] + 1);
+}
+}
+}
+}
 
-    if (min_cycle == INF) cout << -1 << "\n";
-    else cout << min_cycle << "\n";
-    return 0;
+if (min_cycle == INF) cout << -1 << "\n";
+else cout << min_cycle << "\n";
+return 0;
 }
 ```

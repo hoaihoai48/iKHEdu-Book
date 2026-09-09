@@ -11,14 +11,13 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Ngăn Xếp (Stack) & Monotonic Stack**
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý hoạt động:** Vào sau Ra trước (LIFO). Thích hợp giải quyết các bài toán cặp ngoặc lồng nhau, khử đệ quy và tính toán biểu thức hậu tố.
 - **Kỹ thuật Ngăn xếp đơn điệu (Monotonic Stack):**
-  * Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
-  * Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
-  * Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
+* Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
+* Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
+* Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 1 2 1` $\implies$ Đầu ra kỳ vọng: `2 -1 2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 1 2 1` $\implies$ Đầu ra kỳ vọng: `2 -1 2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,32 +47,32 @@ Kết quả in ra: 2 -1 2.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    vector<long long> nge(n, -1);
-    stack<int> st;
+vector<long long> nge(n, -1);
+stack<int> st;
 
-    // Duyệt vòng tròn 2 vòng (2N)
-    for (int i = 0; i < 2 * n; ++i) {
-        while (!st.empty() && a[i % n] > a[st.top()]) {
-            nge[st.top()] = a[i % n];
-            st.pop();
-        }
-        if (i < n) st.push(i);
-    }
+// Duyệt vòng tròn 2 vòng (2N)
+for (int i = 0; i < 2 * n; ++i) {
+while (!st.empty() && a[i % n] > a[st.top()]) {
+nge[st.top()] = a[i % n];
+st.pop();
+}
+if (i < n) st.push(i);
+}
 
-    for (int i = 0; i < n; ++i) {
-        cout << nge[i] << (i + 1 == n ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << nge[i] << (i + 1 == n "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

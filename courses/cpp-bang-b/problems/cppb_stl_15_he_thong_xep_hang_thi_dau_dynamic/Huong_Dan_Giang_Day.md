@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 1 Alice 100 1 Bob 150 2 Alice 1 Alice 60` $\implies$ Đầu ra kỳ vọng: `100`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 1 Alice 100 1 Bob 150 2 Alice 1 Alice 60` $\implies$ Đầu ra kỳ vọng: `100`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,36 +47,36 @@ Mẫu thử (Sample 1): Đầu vào: `4 1 Alice 100 1 Bob 150 2 Alice 1 Alice 60
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    map<string, long long> scores;
-    multiset<long long> all_scores;
+map<string, long long> scores;
+multiset<long long> all_scores;
 
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) { // Cộng điểm cho thí sinh
-            string name;
-            long long delta;
-            cin >> name >> delta;
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) { // Cộng điểm cho thí sinh
+string name;
+long long delta;
+cin >> name >> delta;
 
-            if (scores.count(name)) {
-                auto it = all_scores.find(scores[name]);
-                if (it != all_scores.end()) all_scores.erase(it);
-            }
+if (scores.count(name)) {
+auto it = all_scores.find(scores[name]);
+if (it != all_scores.end()) all_scores.erase(it);
+}
 
-            scores[name] += delta;
-            all_scores.insert(scores[name]);
-        } else { // Truy vấn điểm của thí sinh
-            string name;
-            cin >> name;
-            cout << (scores.count(name) ? scores[name] : 0) << "\n";
-        }
-    }
-    return 0;
+scores[name] += delta;
+all_scores.insert(scores[name]);
+} else { // Truy vấn điểm của thí sinh
+string name;
+cin >> name;
+cout << (scores.count(name) scores[name] : 0) << "\n";
+}
+}
+return 0;
 }
 ```

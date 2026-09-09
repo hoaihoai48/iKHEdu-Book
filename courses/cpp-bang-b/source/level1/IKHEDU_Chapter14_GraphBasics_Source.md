@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để tìm đường đi ngắn nhất trong một mê cung hoặc kiểm tra xem hai máy tính có thể kết nối với nhau không?**
+> **Làm thế nào để tìm đường đi ngắn nhất trong một mê cung hoặc kiểm tra xem hai máy tính có thể kết nối với nhau không**
 
 ---
 
@@ -33,9 +33,9 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 14.1: Mạng Lưới Tuyến Xe Být Thủ Đô Hà Nội**  
-> **Bối cảnh:** Sở Giao thông Vận tải Hà Nội quản lý $N$ trạm trung chuyển và $M$ tuyến đường hai chiều kết nối trực tiếp giữa các trạm.  
-> **Nhiệm vụ:** Hãy in ra bậc kết nối và danh sách các trạm kề của từng trạm trung chuyển.  
+> **Bài toán mẫu 14.1: Mạng Lưới Tuyến Xe Být Thủ Đô Hà Nội** 
+> **Bối cảnh:** Sở Giao thông Vận tải Hà Nội quản lý $N$ trạm trung chuyển và $M$ tuyến đường hai chiều kết nối trực tiếp giữa các trạm. 
+> **Nhiệm vụ:** Hãy in ra bậc kết nối và danh sách các trạm kề của từng trạm trung chuyển. 
 > **Input:** `3 2` \ `1 2` \ `2 3` $\implies$ **Output:** `Dinh 1: bac 1, ke voi 2`..
 
 #### Cài đặt C++
@@ -44,27 +44,27 @@ Sau chương này, em có thể:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; i++) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    for (int u = 1; u <= n; u++) {
-        cout << "Dinh " << u << ": bac " << adj[u].size() << ", ke voi";
-        for (int v : adj[u]) cout << " " << v;
-        cout << "\n";
-    }
+for (int u = 1; u <= n; u++) {
+cout << "Dinh " << u << ": bac " << adj[u].size() << ", ke voi";
+for (int v : adj[u]) cout << " " << v;
+cout << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -91,8 +91,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 14.2: Quy Hoạch Mạng Cáp Quang Độc Lập FPT Telecom**  
-> **Bối cảnh:** FPT Telecom rà soát $N$ máy chủ và $M$ tuyến cáp kết nối để xác định số lượng mạng con độc lập (thành phần liên thông).  
+> **Bài toán mẫu 14.2: Quy Hoạch Mạng Cáp Quang Độc Lập FPT Telecom** 
+> **Bối cảnh:** FPT Telecom rà soát $N$ máy chủ và $M$ tuyến cáp kết nối để xác định số lượng mạng con độc lập (thành phần liên thông). 
 > **Input:** `4 2` \ `1 2` \ `3 4` $\implies$ **Output:** `2` (nhóm {1, 2} và nhóm {3, 4}).
 
 #### Cài đặt C++
@@ -101,38 +101,38 @@ int main() {
 using namespace std;
 
 void dfs(int u, const vector<vector<int>> &adj, vector<bool> &visited) {
-    visited[u] = true;
-    for (int v : adj[u]) {
-        if (!visited[v]) dfs(v, adj, visited);
-    }
+visited[u] = true;
+for (int v : adj[u]) {
+if (!visited[v]) dfs(v, adj, visited);
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; i++) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    vector<bool> visited(n + 1, false);
-    int connectedComponents = 0;
-    for (int i = 1; i <= n; i++) {
-        if (!visited[i]) {
-            connectedComponents++;
-            dfs(i, adj, visited);
-        }
-    }
+vector<bool> visited(n + 1, false);
+int connectedComponents = 0;
+for (int i = 1; i <= n; i++) {
+if (!visited[i]) {
+connectedComponents++;
+dfs(i, adj, visited);
+}
+}
 
-    cout << connectedComponents << "\n";
-    return 0;
+cout << connectedComponents << "\n";
+return 0;
 }
 ```
 
@@ -159,8 +159,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 14.3: Đường Bay Cấp Cứu Y Tế Khẩn Cấp**  
-> **Bối cảnh:** Trực thăng cấp cứu từ bệnh viện dã chiến đặt tại trạm $S$. Tìm số chặng bay ít nhất từ $S$ đến tất cả các trạm cứu hộ khác trên bản đồ.  
+> **Bài toán mẫu 14.3: Đường Bay Cấp Cứu Y Tế Khẩn Cấp** 
+> **Bối cảnh:** Trực thăng cấp cứu từ bệnh viện dã chiến đặt tại trạm $S$. Tìm số chặng bay ít nhất từ $S$ đến tất cả các trạm cứu hộ khác trên bản đồ. 
 > **Input:** `4 3 1` \ `1 2` \ `2 3` \ `1 4` $\implies$ **Output:** `0 1 2 1`.
 
 #### Cài đặt C++
@@ -169,44 +169,44 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m, startNode;
-    if (!(cin >> n >> m >> startNode)) return 0;
+int n, m, startNode;
+if (!(cin >> n >> m >> startNode)) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; i++) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    vector<int> dist(n + 1, -1);
-    queue<int> q;
+vector<int> dist(n + 1, -1);
+queue<int> q;
 
-    dist[startNode] = 0;
-    q.push(startNode);
+dist[startNode] = 0;
+q.push(startNode);
 
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
+while (!q.empty()) {
+int u = q.front();
+q.pop();
 
-        for (int v : adj[u]) {
-            if (dist[v] == -1) {
-                dist[v] = dist[u] + 1;
-                q.push(v);
-            }
-        }
-    }
+for (int v : adj[u]) {
+if (dist[v] == -1) {
+dist[v] = dist[u] + 1;
+q.push(v);
+}
+}
+}
 
-    for (int i = 1; i <= n; i++) {
-        cout << dist[i] << (i == n ? "" : " ");
-    }
-    cout << "\n";
+for (int i = 1; i <= n; i++) {
+cout << dist[i] << (i == n "" : " ");
+}
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -233,8 +233,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 14.4: Đếm Số Quần Đảo Trên Bản Đồ Hải Dương Học**  
-> **Bối cảnh:** Bản đồ vệ tinh $N \times M$ ô, `#` là đảo nổi, `.` là mặt biển. Hai ô đất kề cạnh nhau thuộc cùng một quần đảo. Đếm số lượng quần đảo độc lập.  
+> **Bài toán mẫu 14.4: Đếm Số Quần Đảo Trên Bản Đồ Hải Dương Học** 
+> **Bối cảnh:** Bản đồ vệ tinh $N \times M$ ô, `#` là đảo nổi, `.` là mặt biển. Hai ô đất kề cạnh nhau thuộc cùng một quần đảo. Đếm số lượng quần đảo độc lập. 
 > **Input:** `3 3` \ `##.` \ `.#` \ `.#` $\implies$ **Output:** `2`.
 
 #### Cài đặt C++
@@ -248,37 +248,37 @@ int dr[] = {-1, 1, 0, 0};
 int dc[] = {0, 0, -1, 1};
 
 void dfsGrid(int r, int c) {
-    grid[r][c] = '.';
-    for (int k = 0; k < 4; k++) {
-        int nr = r + dr[k];
-        int nc = c + dc[k];
-        if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '#') {
-            dfsGrid(nr, nc);
-        }
-    }
+grid[r][c] = '.';
+for (int k = 0; k < 4; k++) {
+int nr = r + dr[k];
+int nc = c + dc[k];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '#') {
+dfsGrid(nr, nc);
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m)) return 0;
+if (!(cin >> n >> m)) return 0;
 
-    grid.resize(n);
-    for (int i = 0; i < n; i++) cin >> grid[i];
+grid.resize(n);
+for (int i = 0; i < n; i++) cin >> grid[i];
 
-    int islands = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            if (grid[i][j] == '#') {
-                islands++;
-                dfsGrid(i, j);
-            }
-        }
-    }
+int islands = 0;
+for (int i = 0; i < n; i++) {
+for (int j = 0; j < m; j++) {
+if (grid[i][j] == '#') {
+islands++;
+dfsGrid(i, j);
+}
+}
+}
 
-    cout << islands << "\n";
-    return 0;
+cout << islands << "\n";
+return 0;
 }
 ```
 

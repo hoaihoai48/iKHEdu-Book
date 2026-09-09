@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" style="background:#ffffff; font-family:'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <linearGradient id="gradInput" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="gradProcess" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="gradOutput" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="45" text-anchor="middle" font-size="22" font-weight="bold" fill="#0F172A">MÔ HÌNH INPUT – PROCESS – OUTPUT TRONG LẬP TRÌNH C++</text>
+  <text x="500" y="75" text-anchor="middle" font-size="14" fill="#64748B">Quy trình xử lý dữ liệu chuẩn thi đấu: Nhập an toàn → Biến đổi thuật toán → Xuất định dạng</text>
+
+  <!-- Box 1: Input -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    <rect width="240" height="260" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="240" height="55" rx="16" fill="url(#gradInput)"/>
+    <text x="120" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">1. ĐẦU VÀO (INPUT)</text>
+    <text x="20" y="90" font-size="14" font-weight="bold" fill="#1E293B">• cin &gt;&gt; a &gt;&gt; b;</text>
+    <text x="35" y="115" font-size="12" fill="#64748B">Đọc từ bàn phím / file</text>
+    <text x="20" y="150" font-weight="bold" font-size="14" fill="#1E293B">• Safe Input Pattern:</text>
+    <text x="35" y="175" font-size="12" fill="#0284C7" font-family="Consolas">if (!(cin &gt;&gt; n)) return 0;</text>
+    <text x="20" y="210" font-size="14" font-weight="bold" fill="#1E293B">• Fast I/O Boilerplate:</text>
+    <text x="35" y="235" font-size="11" fill="#475569" font-family="Consolas">ios::sync_with_stdio(0);</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="320" y1="240" x2="370" y2="240" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Process -->
+  <g transform="translate(380, 110)" filter="url(#shadow)">
+    <rect width="240" height="260" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="240" height="55" rx="16" fill="url(#gradProcess)"/>
+    <text x="120" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">2. XỬ LÝ (PROCESS)</text>
+    <text x="20" y="90" font-size="14" font-weight="bold" fill="#1E293B">• Khai báo &amp; Tính toán:</text>
+    <text x="35" y="115" font-size="12" fill="#047857" font-family="Consolas">long long sum = a + b;</text>
+    <text x="20" y="150" font-size="14" font-weight="bold" fill="#1E293B">• Ép kiểu thực:</text>
+    <text x="35" y="175" font-size="12" fill="#047857" font-family="Consolas">double avg = 1.0 * sum / n;</text>
+    <text x="20" y="210" font-size="14" font-weight="bold" fill="#1E293B">• Toán tử / và %:</text>
+    <text x="35" y="235" font-size="12" fill="#64748B">Tách chữ số &amp; Chia nguyên</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <line x1="640" y1="240" x2="690" y2="240" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Output -->
+  <g transform="translate(700, 110)" filter="url(#shadow)">
+    <rect width="240" height="260" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect width="240" height="55" rx="16" fill="url(#gradOutput)"/>
+    <text x="120" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">3. ĐẦU RA (OUTPUT)</text>
+    <text x="20" y="90" font-size="14" font-weight="bold" fill="#1E293B">• cout &lt;&lt; res &lt;&lt; '
+';</text>
+    <text x="35" y="115" font-size="12" fill="#64748B">Ưu tiên '
+' hơn endl</text>
+    <text x="20" y="150" font-size="14" font-weight="bold" fill="#1E293B">• In số thực cố định:</text>
+    <text x="35" y="175" font-size="12" fill="#6D28D9" font-family="Consolas">cout &lt;&lt; fixed;</text>
+    <text x="35" y="195" font-size="12" fill="#6D28D9" font-family="Consolas">cout &lt;&lt; setprecision(2);</text>
+    <text x="20" y="235" font-size="13" font-weight="bold" fill="#1E293B">→ In đúng định dạng đề bài</text>
+  </g>
+</svg>

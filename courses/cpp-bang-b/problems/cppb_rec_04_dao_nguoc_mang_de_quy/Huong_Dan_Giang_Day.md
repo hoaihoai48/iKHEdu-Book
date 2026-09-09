@@ -7,13 +7,12 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 - **Bản chất bài toán:** Cho mảng số nguyên A gồm N phần tử. Hãy sử dụng hàm đệ quy 2 con trỏ reverseArray(A, L, R) để đảo ngược toàn bộ mảng tại chỗ.
 
 - **Phương pháp tiếp cận — Thuật toán đệ quy & Cây gọi hàm:**
-  - Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
-  - Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
+- Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
+- Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 1 2 3 4 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 1 2 3 4 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Mảng ban đầu [1, 2, 3, 4, 5] sau khi đảo ngược trở thành [5, 4, 3, 2, 1].... | Tính toán từng bước trạng thái |
@@ -36,21 +35,21 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 using namespace std;
 
 void reverseRec(vector<long long> &a, int l, int r) {
-    if (l >= r) return;
-    swap(a[l], a[r]);
-    reverseRec(a, l + 1, r - 1);
+if (l >= r) return;
+swap(a[l], a[r]);
+reverseRec(a, l + 1, r - 1);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    if (!(cin >> n)) return 0;
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    reverseRec(a, 0, n - 1);
-    for (int i = 0; i < n; ++i) cout << a[i] << (i + 1 == n ? "" : " ");
-    cout << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+if (!(cin >> n)) return 0;
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+reverseRec(a, 0, n - 1);
+for (int i = 0; i < n; ++i) cout << a[i] << (i + 1 == n "" : " ");
+cout << "\n";
+return 0;
 }
 ```

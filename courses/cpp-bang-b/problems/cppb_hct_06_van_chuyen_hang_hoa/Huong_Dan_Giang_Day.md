@@ -8,8 +8,7 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 10 3 5 8 2 7)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 10 3 5 8 2 7` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Sắp xếp khối lượng 5 kiện hàng tăng dần: [2, 3, 5, 7, 8] với tải trọng C = 10. Chiến thuật ghép con trỏ hai đầu: kiện nặ... | Tính toán từng bước trạng thái |
@@ -32,36 +31,36 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long c;
-    if (!(cin >> n >> c)) return 0;
+int n;
+long long c;
+if (!(cin >> n >> c)) return 0;
 
-    vector<long long> w(n);
-    for (int i = 0; i < n; ++i) cin >> w[i];
+vector<long long> w(n);
+for (int i = 0; i < n; ++i) cin >> w[i];
 
-    sort(w.begin(), w.end());
+sort(w.begin(), w.end());
 
-    int l = 0, r = n - 1;
-    int trips = 0;
+int l = 0, r = n - 1;
+int trips = 0;
 
-    while (l <= r) {
-        if (l == r) {
-            ++trips;
-            break;
-        }
-        if (w[l] + w[r] <= c) {
-            ++l;
-            --r;
-        } else {
-            --r;
-        }
-        ++trips;
-    }
+while (l <= r) {
+if (l == r) {
+++trips;
+break;
+}
+if (w[l] + w[r] <= c) {
+++l;
+--r;
+} else {
+--r;
+}
+++trips;
+}
 
-    cout << trips << "\n";
-    return 0;
+cout << trips << "\n";
+return 0;
 }
 ```

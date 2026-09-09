@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho 3 số nguyên A, B, C. Hãy tính giá trị của tháp lũy thừa A^(B^C) theo modulo 10^9 + 7.
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 2 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 2 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | B^C = 2^2 = 4. Do đó A^(B^C) = 3^4 = 81. Kết quả in ra: 81.... | Tính toán từng bước trạng thái |
@@ -38,28 +37,28 @@ using namespace std;
 const long long MOD = 1000000007;
 
 long long powerMod(long long a, long long b, long long m) {
-    if (m == 1) return 0;
-    long long ans = 1 % m;
-    a %= m;
-    while (b > 0) {
-        if (b & 1) ans = (ans * a) % m;
-        a = (a * a) % m;
-        b >>= 1;
-    }
-    return ans;
+if (m == 1) return 0;
+long long ans = 1 % m;
+a %= m;
+while (b > 0) {
+if (b & 1) ans = (ans * a) % m;
+a = (a * a) % m;
+b >>= 1;
+}
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b, c;
-    if (!(cin >> a >> b >> c)) return 0;
+long long a, b, c;
+if (!(cin >> a >> b >> c)) return 0;
 
-    long long exp = powerMod(b, c, MOD - 1);
-    long long ans = powerMod(a, exp, MOD);
+long long exp = powerMod(b, c, MOD - 1);
+long long ans = powerMod(a, exp, MOD);
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

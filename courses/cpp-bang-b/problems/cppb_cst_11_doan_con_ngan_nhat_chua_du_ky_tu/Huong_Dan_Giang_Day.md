@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: adobecodebanc abc)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `adobecodebanc abc` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Chuỗi T = 'abc' yêu cầu phải có đủ 3 ký tự 'a', 'b', 'c'. Đoạn con ngắn nhất trong S chứa đủ cả 3 ký tự này là 'banc' ở ... | Tính toán từng bước trạng thái |
@@ -32,42 +31,42 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    string s, t;
-    cin >> s >> t;
+string s, t;
+cin >> s >> t;
 
-    vector<int> need(26, 0);
-    for (char c : t) need[c - 'a'] = 1;
+vector<int> need(26, 0);
+for (char c : t) need[c - 'a'] = 1;
 
-    vector<int> have(26, 0);
-    int matched = 0;
-    int l = 0, min_len = n + 1;
+vector<int> have(26, 0);
+int matched = 0;
+int l = 0, min_len = n + 1;
 
-    for (int r = 0; r < n; ++r) {
-        int c = s[r] - 'a';
-        if (need[c]) {
-            if (have[c] == 0) ++matched;
-            ++have[c];
-        }
+for (int r = 0; r < n; ++r) {
+int c = s[r] - 'a';
+if (need[c]) {
+if (have[c] == 0) ++matched;
+++have[c];
+}
 
-        while (matched == m) {
-            min_len = min(min_len, r - l + 1);
-            int lc = s[l] - 'a';
-            if (need[lc]) {
-                --have[lc];
-                if (have[lc] == 0) --matched;
-            }
-            ++l;
-        }
-    }
+while (matched == m) {
+min_len = min(min_len, r - l + 1);
+int lc = s[l] - 'a';
+if (need[lc]) {
+--have[lc];
+if (have[lc] == 0) --matched;
+}
+++l;
+}
+}
 
-    if (min_len > n) cout << -1 << "\n";
-    else cout << min_len << "\n";
-    return 0;
+if (min_len > n) cout << -1 << "\n";
+else cout << min_len << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho N quả táo với khối lượng P1, P2, ..., Pn. Hãy chia táo vào 2 rổ sao cho độ chênh lệch tổng khối lượng giữa hai rổ là nhỏ nhất có thể.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 3 2 7 4 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 3 2 7 4 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Tổng khối lượng 5 quả táo là 3 + 2 + 7 + 4 + 1 = 17. Chia thành hai nhóm: nhóm 1 gồm {2, 7} có tổng 9; nhóm 2 gồm {3, 4,... | Tính toán từng bước trạng thái |
@@ -36,34 +35,34 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> p(n);
-    long long total_sum = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> p[i];
-        total_sum += p[i];
-    }
+vector<long long> p(n);
+long long total_sum = 0;
+for (int i = 0; i < n; ++i) {
+cin >> p[i];
+total_sum += p[i];
+}
 
-    long long min_diff = total_sum;
-    int total_masks = (1 << n);
+long long min_diff = total_sum;
+int total_masks = (1 << n);
 
-    for (int mask = 0; mask < total_masks; ++mask) {
-        long long s1 = 0;
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                s1 += p[i];
-            }
-        }
-        long long s2 = total_sum - s1;
-        min_diff = min(min_diff, abs(s1 - s2));
-    }
+for (int mask = 0; mask < total_masks; ++mask) {
+long long s1 = 0;
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
+s1 += p[i];
+}
+}
+long long s2 = total_sum - s1;
+min_diff = min(min_diff, abs(s1 - s2));
+}
 
-    cout << min_diff << "\n";
-    return 0;
+cout << min_diff << "\n";
+return 0;
 }
 ```

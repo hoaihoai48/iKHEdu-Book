@@ -7,7 +7,7 @@ Trong một cuộc tấn công không gian mạng giả định, có $N$ máy t�
 Cho đồ thị mạng và danh sách $K$ máy tính bị nhiễm ban đầu. Hãy lập trình tính thời gian để toàn bộ máy tính trong thành phần liên thông bị nhiễm.
 
 ## Input
-- Dòng 1: Chứa 3 số nguyên $N, M, K$ ($1 \le K \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa 3 số nguyên $N, M, K$ ($1 \le K \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - Dòng 2: Chứa $K$ số nguyên là chỉ số các máy tính nhiễm bệnh ban đầu.
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u, v$.
 

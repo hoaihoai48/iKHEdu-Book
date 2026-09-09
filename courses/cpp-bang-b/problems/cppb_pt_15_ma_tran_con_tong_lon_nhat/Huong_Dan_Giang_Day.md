@@ -7,13 +7,12 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 - **Bản chất bài toán:** Cho ma trận số nguyên A kích thước N x M. Hãy tìm một ma trận con chữ nhật có tổng các phần tử là lớn nhất.
 
 - **Phương pháp tiếp cận — Mảng tiền tố & Mảng hiệu:**
-  - Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
-  - Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
+- Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
+- Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 3 1 2 -1 -8 -9 -2 3 4 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 3 1 2 -1 -8 -9 -2 3 4 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Ma trận con ở hàng 3 gồm các phần tử [3, 4, 5] có tổng 3 + 4 + 5 = 12. Đây là ma trận con có tổng lớn nhất trong bảng.... | Tính toán từng bước trạng thái |
@@ -36,36 +35,36 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
-    vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
+vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
+vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
-            cin >> a[i][j];
-            p[i][j] = p[i - 1][j] + a[i][j]; // Tiền tố theo cột
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= m; ++j) {
+cin >> a[i][j];
+p[i][j] = p[i - 1][j] + a[i][j]; // Tiền tố theo cột
+}
+}
 
-    long long max_sum = -4e18;
+long long max_sum = -4e18;
 
-    for (int r1 = 1; r1 <= n; ++r1) {
-        for (int r2 = r1; r2 <= n; ++r2) {
-            long long current_kadane = 0;
-            for (int c = 1; c <= m; ++c) {
-                long long val = p[r2][c] - p[r1 - 1][c];
-                current_kadane = max(val, current_kadane + val);
-                max_sum = max(max_sum, current_kadane);
-            }
-        }
-    }
+for (int r1 = 1; r1 <= n; ++r1) {
+for (int r2 = r1; r2 <= n; ++r2) {
+long long current_kadane = 0;
+for (int c = 1; c <= m; ++c) {
+long long val = p[r2][c] - p[r1 - 1][c];
+current_kadane = max(val, current_kadane + val);
+max_sum = max(max_sum, current_kadane);
+}
+}
+}
 
-    cout << max_sum << "\n";
-    return 0;
+cout << max_sum << "\n";
+return 0;
 }
 ```

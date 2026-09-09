@@ -7,7 +7,7 @@ Một quần đảo gồm $N$ hòn đảo và $M$ cây cầu hai chiều nối g
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình đếm số lượng thành phần liên thông của đồ thị.
 
 ## Input
-- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u$ và $v$.
 
 ## Output

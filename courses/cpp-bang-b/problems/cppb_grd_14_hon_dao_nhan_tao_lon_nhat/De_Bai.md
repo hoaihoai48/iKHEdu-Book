@@ -1,10 +1,10 @@
 # Hòn Đảo Nhân Tạo Lớn Nhất (Making A Large Island)
 
 ## Bối cảnh
-Một dự án lấn biển quy hoạch trên vùng biển lưới $N  × M$ gồm các ô đất liền `'1'` và các ô nước biển `'0'`. Ban quản lý dự án được cấp ngân sách để cải tạo đúng một ô nước biển `'0'` duy nhất thành ô đất liền `'1'`. Hãy tìm diện tích hòn đảo lớn nhất có thể tạo thành sau khi đã biến đổi đúng một ô nước biển thích hợp.
+Một dự án lấn biển quy hoạch trên vùng biển lưới $N × M$ gồm các ô đất liền `'1'` và các ô nước biển `'0'`. Ban quản lý dự án được cấp ngân sách để cải tạo đúng một ô nước biển `'0'` duy nhất thành ô đất liền `'1'`. Hãy tìm diện tích hòn đảo lớn nhất có thể tạo thành sau khi đã biến đổi đúng một ô nước biển thích hợp.
 
 ## Nhiệm vụ
-Cho ma trận nhị phân $N  × M$. Hãy lập trình tìm diện tích lớn nhất của một hòn đảo sau khi chuyển đổi tối đa một ô `0` thành `1`.
+Cho ma trận nhị phân $N × M$. Hãy lập trình tìm diện tích lớn nhất của một hòn đảo sau khi chuyển đổi tối đa một ô `0` thành `1`.
 
 ## Input
 - Dòng 1: Chứa hai số nguyên dương $N$ và $M$ ($1 \le N, M \le 1000$).

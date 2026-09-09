@@ -8,8 +8,7 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 3 1 5 10 2 8 14)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 3 1 5 10 2 8 14` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Dãy A = [1, 5, 10] và dãy B = [2, 8, 14]. So sánh các cặp phần tử: chọn A[0] = 1 và B[0] = 2 cho độ chênh lệch |1 - 2| =... | Tính toán từng bước trạng thái |
@@ -32,30 +31,30 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<long long> a(n), b(m);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    for (int i = 0; i < m; ++i) cin >> b[i];
+vector<long long> a(n), b(m);
+for (int i = 0; i < n; ++i) cin >> a[i];
+for (int i = 0; i < m; ++i) cin >> b[i];
 
-    sort(a.begin(), a.end());
-    sort(b.begin(), b.end());
+sort(a.begin(), a.end());
+sort(b.begin(), b.end());
 
-    int i = 0, j = 0;
-    long long min_diff = abs(a[0] - b[0]);
+int i = 0, j = 0;
+long long min_diff = abs(a[0] - b[0]);
 
-    while (i < n && j < m) {
-        min_diff = min(min_diff, abs(a[i] - b[j]));
-        if (a[i] == b[j]) break;
-        else if (a[i] < b[j]) ++i;
-        else ++j;
-    }
+while (i < n && j < m) {
+min_diff = min(min_diff, abs(a[i] - b[j]));
+if (a[i] == b[j]) break;
+else if (a[i] < b[j]) ++i;
+else ++j;
+}
 
-    cout << min_diff << "\n";
-    return 0;
+cout << min_diff << "\n";
+return 0;
 }
 ```

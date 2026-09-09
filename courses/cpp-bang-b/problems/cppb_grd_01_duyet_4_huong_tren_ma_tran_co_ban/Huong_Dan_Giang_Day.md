@@ -16,16 +16,15 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 3 0 0` $\implies$ Đầu ra kỳ vọng: `2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 3 0 0` $\implies$ Đầu ra kỳ vọng: `2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `3 3 0 0` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với lưới kích thước $3  × 3$ và vị trí ô góc $(0, 0)$: - Hướng lên trên và sang trái đều vượt ra ngoài biên của lưới. - Chỉ có 2 hướng ... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với lưới kích thước $3 × 3$ và vị trí ô góc $(0, 0)$: - Hướng lên trên và sang trái đều vượt ra ngoài biên của lưới. - Chỉ có 2 hướng ... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2` |
 
-*Giải thích chi tiết:* Với lưới kích thước $3  × 3$ và vị trí ô góc $(0, 0)$:
+*Giải thích chi tiết:* Với lưới kích thước $3 × 3$ và vị trí ô góc $(0, 0)$:
 
 - Hướng lên trên và sang trái đều vượt ra ngoài biên của lưới.
 - Chỉ có 2 hướng hợp lệ là xuống dưới $(1, 0)$ và sang phải $(0, 1)$.
@@ -49,22 +48,22 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m, r, c;
-    if (!(cin >> n >> m >> r >> c)) return 0;
+int n, m, r, c;
+if (!(cin >> n >> m >> r >> c)) return 0;
 
-    int valid_neighbors = 0;
-    for (int d = 0; d < 4; ++d) {
-        int nr = r + dr[d];
-        int nc = c + dc[d];
-        if (nr >= 0 && nr < n && nc >= 0 && nc < m) {
-            valid_neighbors++;
-        }
-    }
+int valid_neighbors = 0;
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m) {
+valid_neighbors++;
+}
+}
 
-    cout << valid_neighbors << "\n";
-    return 0;
+cout << valid_neighbors << "\n";
+return 0;
 }
 ```

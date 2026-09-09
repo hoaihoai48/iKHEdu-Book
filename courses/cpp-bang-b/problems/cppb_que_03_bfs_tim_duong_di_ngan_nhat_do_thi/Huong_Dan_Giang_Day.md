@@ -11,15 +11,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Hàng Đợi (Queue, Deque) & Monotonic
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý Hàng đợi chuẩn (Queue):** Vào trước Ra trước (FIFO), là cấu trúc nền tảng phục vụ duyệt đồ thị theo chiều rộng (BFS).
 - **Hàng đợi hai đầu (Deque) & Monotonic Deque:**
-  * Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
-  * Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
-  * Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
+* Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
+* Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
+* Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N)$, không gian phụ trợ $\mathcal{O}(K)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 4 1 2 2 3 3 4 1 3` $\implies$ Đầu ra kỳ vọng: `2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 4 1 2 2 3 3 4 1 3` $\implies$ Đầu ra kỳ vọng: `2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -28,7 +27,7 @@ Mẫu thử (Sample 1): Đầu vào: `4 4 1 2 2 3 3 4 1 3` $\implies$ Đầu ra 
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2` |
 
 *Giải thích chi tiết:* Với mạng gồm 4 máy chủ kết nối theo chuỗi $1 - 2 - 3 - 4$ và một kênh tắt nối trực tiếp $1 - 3$:
-Để đi từ 1 tới 4, gói tin đi qua kênh tắt $1  × o 3$ tốn 1 bước, sau đó từ $3  × o 4$ tốn 1 bước nữa. Tổng số bước đi ít nhất là 2.
+Để đi từ 1 tới 4, gói tin đi qua kênh tắt $1 × o 3$ tốn 1 bước, sau đó từ $3 × o 4$ tốn 1 bước nữa. Tổng số bước đi ít nhất là 2.
 
 ---
 
@@ -45,40 +44,40 @@ Mẫu thử (Sample 1): Đầu vào: `4 4 1 2 2 3 3 4 1 3` $\implies$ Đầu ra 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    if (n <= 0) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
+if (n <= 0) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    vector<int> dist(n + 1, -1);
-    queue<int> q;
+vector<int> dist(n + 1, -1);
+queue<int> q;
 
-    dist[1] = 0;
-    q.push(1);
+dist[1] = 0;
+q.push(1);
 
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
+while (!q.empty()) {
+int u = q.front();
+q.pop();
 
-        for (int v : adj[u]) {
-            if (dist[v] == -1) {
-                dist[v] = dist[u] + 1;
-                q.push(v);
-            }
-        }
-    }
+for (int v : adj[u]) {
+if (dist[v] == -1) {
+dist[v] = dist[u] + 1;
+q.push(v);
+}
+}
+}
 
-    cout << dist[n] << "\n";
-    return 0;
+cout << dist[n] << "\n";
+return 0;
 }
 ```

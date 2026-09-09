@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 1550 1420 1680 1500 160)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 1550 1420 1680 1500 1600` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Chiều cao ban đầu của 5 bạn học sinh lần lượt là: $1550, 1420, 1680, 1500, 1600$ (đơn vị: mm). Sau khi sắp xếp theo thứ ... | Tính toán từng bước trạng thái |
@@ -34,21 +33,21 @@ $1420 \le 1500 \le 1550 \le 1600 \le 1680$.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    for (int i = 0; i < n; ++i) {
-        cout << a[i] << (i == n - 1 ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << a[i] << (i == n - 1 "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

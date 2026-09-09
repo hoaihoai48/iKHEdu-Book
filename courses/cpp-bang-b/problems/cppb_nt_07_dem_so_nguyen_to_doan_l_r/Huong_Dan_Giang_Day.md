@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho Q truy vấn, mỗi truy vấn gồm 2 số nguyên L, R (1 <= L <= R <= 10^6). Hãy đếm số lượng số nguyên tố nằm trong đoạn [L, R].
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 1 10 10 20 20 30)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 1 10 10 20 20 30` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | - Đoạn [1, 10]: có 4 số nguyên tố {2, 3, 5, 7}. - Đoạn [10, 20]: có 4 số nguyên tố {11, 13, 17, 19}. - Đoạn [20, 30]: có... | Tính toán từng bước trạng thái |
@@ -43,33 +42,33 @@ vector<bool> is_prime(MAXN + 1, true);
 vector<int> pref(MAXN + 1, 0);
 
 void sieve() {
-    is_prime[0] = is_prime[1] = false;
-    for (int i = 2; 1LL * i * i <= MAXN; ++i) {
-        if (is_prime[i]) {
-            for (int j = i * i; j <= MAXN; j += i) {
-                is_prime[j] = false;
-            }
-        }
-    }
-    for (int i = 1; i <= MAXN; ++i) {
-        pref[i] = pref[i - 1] + (is_prime[i] ? 1 : 0);
-    }
+is_prime[0] = is_prime[1] = false;
+for (int i = 2; 1LL * i * i <= MAXN; ++i) {
+if (is_prime[i]) {
+for (int j = i * i; j <= MAXN; j += i) {
+is_prime[j] = false;
+}
+}
+}
+for (int i = 1; i <= MAXN; ++i) {
+pref[i] = pref[i - 1] + (is_prime[i] 1 : 0);
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    sieve();
+sieve();
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << pref[r] - pref[l - 1] << "\n";
-    }
-    return 0;
+while (q--) {
+int l, r;
+cin >> l >> r;
+cout << pref[r] - pref[l - 1] << "\n";
+}
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 - **Bản chất bài toán:** Cho số nguyên dương N (1 <= N <= 40). Hãy đếm số cách phân tích N thành tổng của các số nguyên dương.
 
 - **Phương pháp tiếp cận — Thuật toán đệ quy & Cây gọi hàm:**
-  - Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
-  - Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
+- Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
+- Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 5 cách phân tích số 4 gồm: 4 = 1+1+1+1 = 1+1+2 = 1+3 = 2+2 = 4. Kết quả in ra: 5.... | Tính toán từng bước trạng thái |
@@ -36,18 +35,18 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 using namespace std;
 
 long long countPartitions(int remain, int max_val) {
-    if (remain == 0) return 1;
-    if (remain < 0 || max_val <= 0) return 0;
-    // Chọn dùng max_val hoặc không dùng max_val
-    return countPartitions(remain - max_val, max_val) + countPartitions(remain, max_val - 1);
+if (remain == 0) return 1;
+if (remain < 0 || max_val <= 0) return 0;
+// Chọn dùng max_val hoặc không dùng max_val
+return countPartitions(remain - max_val, max_val) + countPartitions(remain, max_val - 1);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    if (!(cin >> n)) return 0;
-    cout << countPartitions(n, n) << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+if (!(cin >> n)) return 0;
+cout << countPartitions(n, n) << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho 2 số nguyên dương lớn A và B. Hãy tính và in ra giá trị tổng A + B.
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 999 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `999 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 999 + 1 = 1000. Kết quả in ra: 1000.... | Tính toán từng bước trạng thái |
@@ -36,33 +35,33 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 string addBig(string a, string b) {
-    reverse(a.begin(), a.end());
-    reverse(b.begin(), b.end());
+reverse(a.begin(), a.end());
+reverse(b.begin(), b.end());
 
-    string res = "";
-    int carry = 0;
-    int n = max(a.size(), b.size());
+string res = "";
+int carry = 0;
+int n = max(a.size(), b.size());
 
-    for (int i = 0; i < n || carry; ++i) {
-        int sum = carry;
-        if (i < (int)a.size()) sum += a[i] - '0';
-        if (i < (int)b.size()) sum += b[i] - '0';
-        res.push_back((sum % 10) + '0');
-        carry = sum / 10;
-    }
+for (int i = 0; i < n || carry; ++i) {
+int sum = carry;
+if (i < (int)a.size()) sum += a[i] - '0';
+if (i < (int)b.size()) sum += b[i] - '0';
+res.push_back((sum % 10) + '0');
+carry = sum / 10;
+}
 
-    reverse(res.begin(), res.end());
-    return res;
+reverse(res.begin(), res.end());
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << addBig(a, b) << "\n";
-    return 0;
+cout << addBig(a, b) << "\n";
+return 0;
 }
 ```

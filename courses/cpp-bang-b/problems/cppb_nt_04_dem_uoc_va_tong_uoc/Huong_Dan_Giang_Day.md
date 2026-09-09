@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy tính số lượng ước số nguyên dương d(N) và tổng tất cả các ước số nguyên dương của N.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 12)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `12` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các ước số của 12 là {1, 2, 3, 4, 6, 12}, tổng cộng có 6 ước. Tổng các ước là 1 + 2 + 3 + 4 + 6 + 12 = 28. Kết quả in ra... | Tính toán từng bước trạng thái |
@@ -36,36 +35,36 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    long long count_div = 1;
-    long long sum_div = 1;
+long long count_div = 1;
+long long sum_div = 1;
 
-    for (long long i = 2; i * i <= n; ++i) {
-        if (n % i == 0) {
-            int a = 0;
-            long long p_pow = 1;
-            long long cur_sum = 1;
-            while (n % i == 0) {
-                a++;
-                n /= i;
-                p_pow *= i;
-                cur_sum += p_pow;
-            }
-            count_div *= (a + 1);
-            sum_div *= cur_sum;
-        }
-    }
-    if (n > 1) {
-        count_div *= 2;
-        sum_div *= (1 + n);
-    }
+for (long long i = 2; i * i <= n; ++i) {
+if (n % i == 0) {
+int a = 0;
+long long p_pow = 1;
+long long cur_sum = 1;
+while (n % i == 0) {
+a++;
+n /= i;
+p_pow *= i;
+cur_sum += p_pow;
+}
+count_div *= (a + 1);
+sum_div *= cur_sum;
+}
+}
+if (n > 1) {
+count_div *= 2;
+sum_div *= (1 + n);
+}
 
-    cout << count_div << " " << sum_div << "\n";
-    return 0;
+cout << count_div << " " << sum_div << "\n";
+return 0;
 }
 ```

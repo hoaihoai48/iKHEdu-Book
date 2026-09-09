@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho số nguyên dương $N$. Hãy áp dụng mô hình thuật toán Quay lui chuẩn mực (`Choose` $\to$ `Explore` $\to$ `Unchoose`) để sinh và in ra tất cả các xâu nhị phân độ dài $N$ theo thứ tự từ điển tăng dần.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Với độ dài $N = 3$, không gian trạng thái nhị phân gồm $2^3 = 8$ xâu. Bắt đầu từ cấu hình nhỏ nhất theo từ điển là `000`... | Tính toán từng bước trạng thái |
@@ -39,22 +38,22 @@ int n;
 string cur = "";
 
 void backtrack(int step) {
-    if (step > n) {
-        cout << cur << "\n";
-        return;
-    }
-    for (char c : {'0', '1'}) {
-        cur.push_back(c);
-        backtrack(step + 1);
-        cur.pop_back();
-    }
+if (step > n) {
+cout << cur << "\n";
+return;
+}
+for (char c : {'0', '1'}) {
+cur.push_back(c);
+backtrack(step + 1);
+cur.pop_back();
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n)) return 0;
-    backtrack(1);
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n)) return 0;
+backtrack(1);
+return 0;
 }
 ```

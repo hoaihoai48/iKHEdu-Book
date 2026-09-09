@@ -11,14 +11,13 @@ Chuyên đề: **Quy Hoạch Động Trên Chuỗi (String DP: LCS & Edit Distan
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái xâu:** Gọi $dp[i][j]$ là đáp số tối ưu khi so khớp tiền tố độ dài $i$ của xâu $S$ và tiền tố độ dài $j$ của xâu $T$.
 - **Công thức chuyển trạng thái tiêu biểu:**
-  * *Xâu con chung dài nhất (LCS):* Nếu $S[i-1] == T[j-1]$ thì $dp[i][j] = dp[i-1][j-1] + 1$; ngược lại $dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$.
-  * *Khoảng cách chỉnh sửa (Edit Distance):* Lấy giá trị nhỏ nhất giữa 3 thao tác: Chèn ($dp[i][j-1] + 1$), Xoá ($dp[i-1][j] + 1$), Thay thế ($dp[i-1][j-1] + (S[i-1] \neq T[j-1])$).
+* *Xâu con chung dài nhất (LCS):* Nếu $S[i-1] == T[j-1]$ thì $dp[i][j] = dp[i-1][j-1] + 1$; ngược lại $dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$.
+* *Khoảng cách chỉnh sửa (Edit Distance):* Lấy giá trị nhỏ nhất giữa 3 thao tác: Chèn ($dp[i][j-1] + 1$), Xoá ($dp[i-1][j] + 1$), Thay thế ($dp[i-1][j-1] + (S[i-1] \neq T[j-1])$).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(|S| \times |T|)$, bộ nhớ $\mathcal{O}(|S| \times |T|)$ hoặc $\mathcal{O}(\min(|S|, |T|))$ khi nén 2 hàng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `zzazz` $\implies$ Đầu ra kỳ vọng: `0`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `zzazz` $\implies$ Đầu ra kỳ vọng: `0`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -44,31 +43,31 @@ Mẫu thử (Sample 1): Đầu vào: `zzazz` $\implies$ Đầu ra kỳ vọng: `
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
+string s;
+if (!(cin >> s)) return 0;
 
-    int n = s.size();
-    string t = s;
-    reverse(t.begin(), t.end());
+int n = s.size();
+string t = s;
+reverse(t.begin(), t.end());
 
-    vector<int> prev_row(n + 1, 0), curr_row(n + 1, 0);
+vector<int> prev_row(n + 1, 0), curr_row(n + 1, 0);
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= n; ++j) {
-            if (s[i - 1] == t[j - 1]) {
-                curr_row[j] = prev_row[j - 1] + 1;
-            } else {
-                curr_row[j] = max(prev_row[j], curr_row[j - 1]);
-            }
-        }
-        prev_row = curr_row;
-    }
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= n; ++j) {
+if (s[i - 1] == t[j - 1]) {
+curr_row[j] = prev_row[j - 1] + 1;
+} else {
+curr_row[j] = max(prev_row[j], curr_row[j - 1]);
+}
+}
+prev_row = curr_row;
+}
 
-    int lps = prev_row[n];
-    cout << n - lps << "\n";
-    return 0;
+int lps = prev_row[n];
+cout << n - lps << "\n";
+return 0;
 }
 ```

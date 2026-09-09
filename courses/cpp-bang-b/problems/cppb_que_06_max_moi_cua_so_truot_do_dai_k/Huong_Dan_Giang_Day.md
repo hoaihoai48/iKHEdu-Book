@@ -11,15 +11,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Hàng Đợi (Queue, Deque) & Monotonic
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý Hàng đợi chuẩn (Queue):** Vào trước Ra trước (FIFO), là cấu trúc nền tảng phục vụ duyệt đồ thị theo chiều rộng (BFS).
 - **Hàng đợi hai đầu (Deque) & Monotonic Deque:**
-  * Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
-  * Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
-  * Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
+* Hỗ trợ thêm/xoá ở cả hai đầu trong $\mathcal{O}(1)$.
+* Khi trượt cửa sổ kích thước $K$, lưu chỉ số phần tử trong deque sao cho giá trị tương ứng luôn đơn điệu.
+* Loại bỏ phần tử trượt ra khỏi cửa sổ ở đầu trước (`pop_front()`) và loại bỏ phần tử kém tối ưu ở đầu sau (`pop_back()`).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N)$, không gian phụ trợ $\mathcal{O}(K)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `8 3 1 3 -1 -3 5 3 6 7` $\implies$ Đầu ra kỳ vọng: `3 3 5 5 6 7`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `8 3 1 3 -1 -3 5 3 6 7` $\implies$ Đầu ra kỳ vọng: `3 3 5 5 6 7`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -52,31 +51,31 @@ Kết quả in ra: 3 3 5 5 6 7.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
-    if (n <= 0 || k <= 0 || k > n) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
+if (n <= 0 || k <= 0 || k > n) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    deque<int> dq;
-    vector<long long> ans;
+deque<int> dq;
+vector<long long> ans;
 
-    for (int i = 0; i < n; ++i) {
-        while (!dq.empty() && dq.front() < i - k + 1) dq.pop_front();
-        while (!dq.empty() && a[dq.back()] <= a[i]) dq.pop_back();
-        dq.push_back(i);
+for (int i = 0; i < n; ++i) {
+while (!dq.empty() && dq.front() < i - k + 1) dq.pop_front();
+while (!dq.empty() && a[dq.back()] <= a[i]) dq.pop_back();
+dq.push_back(i);
 
-        if (i >= k - 1) ans.push_back(a[dq.front()]);
-    }
+if (i >= k - 1) ans.push_back(a[dq.front()]);
+}
 
-    for (int i = 0; i < (int)ans.size(); ++i) {
-        cout << ans[i] << (i + 1 == (int)ans.size() ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < (int)ans.size(); ++i) {
+cout << ans[i] << (i + 1 == (int)ans.size() "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

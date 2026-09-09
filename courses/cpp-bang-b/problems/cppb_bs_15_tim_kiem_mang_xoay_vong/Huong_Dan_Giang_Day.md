@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng N số nguyên phân biệt bị xoay vòng tại một trục không xác định. Có Q truy vấn tìm vị trí xuất hiện (0-indexed) của số nguyên X. Nếu không tìm thấy, in ra -1.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 7 3 4 5 6 7 0 1 2 0 3 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `7 3 4 5 6 7 0 1 2 0 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Mảng bị xoay vòng [4, 5, 6, 7, 0, 1, 2]: - Số 0 ở vị trí chỉ số 4. - Số 3 không tồn tại -> -1. - Số 5 ở vị trí chỉ số 1.... | Tính toán từng bước trạng thái |
@@ -40,48 +39,48 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 using namespace std;
 
 int search_rotated(const vector<long long>& a, long long target) {
-    int low = 0, high = (int)a.size() - 1;
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-        if (a[mid] == target) return mid + 1; // 1-based
+int low = 0, high = (int)a.size() - 1;
+while (low <= high) {
+int mid = low + (high - low) / 2;
+if (a[mid] == target) return mid + 1; // 1-based
 
-        if (a[low] <= a[mid]) {
-            // Nửa trái được sắp xếp
-            if (a[low] <= target && target < a[mid]) {
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
-        } else {
-            // Nửa phải được sắp xếp
-            if (a[mid] < target && target <= a[high]) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-    }
-    return -1;
+if (a[low] <= a[mid]) {
+// Nửa trái được sắp xếp
+if (a[low] <= target && target < a[mid]) {
+high = mid - 1;
+} else {
+low = mid + 1;
+}
+} else {
+// Nửa phải được sắp xếp
+if (a[mid] < target && target <= a[high]) {
+low = mid + 1;
+} else {
+high = mid - 1;
+}
+}
+}
+return -1;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
 
-    while (q--) {
-        long long x;
-        cin >> x;
-        cout << search_rotated(a, x) << "\n";
-    }
+while (q--) {
+long long x;
+cin >> x;
+cout << search_rotated(a, x) << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```

@@ -11,14 +11,13 @@ Chuyên đề: **Quy Hoạch Động Trên Chuỗi (String DP: LCS & Edit Distan
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái xâu:** Gọi $dp[i][j]$ là đáp số tối ưu khi so khớp tiền tố độ dài $i$ của xâu $S$ và tiền tố độ dài $j$ của xâu $T$.
 - **Công thức chuyển trạng thái tiêu biểu:**
-  * *Xâu con chung dài nhất (LCS):* Nếu $S[i-1] == T[j-1]$ thì $dp[i][j] = dp[i-1][j-1] + 1$; ngược lại $dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$.
-  * *Khoảng cách chỉnh sửa (Edit Distance):* Lấy giá trị nhỏ nhất giữa 3 thao tác: Chèn ($dp[i][j-1] + 1$), Xoá ($dp[i-1][j] + 1$), Thay thế ($dp[i-1][j-1] + (S[i-1] \neq T[j-1])$).
+* *Xâu con chung dài nhất (LCS):* Nếu $S[i-1] == T[j-1]$ thì $dp[i][j] = dp[i-1][j-1] + 1$; ngược lại $dp[i][j] = \max(dp[i-1][j], dp[i][j-1])$.
+* *Khoảng cách chỉnh sửa (Edit Distance):* Lấy giá trị nhỏ nhất giữa 3 thao tác: Chèn ($dp[i][j-1] + 1$), Xoá ($dp[i-1][j] + 1$), Thay thế ($dp[i-1][j-1] + (S[i-1] \neq T[j-1])$).
 - **Độ phức tạp:** Thời gian $\mathcal{O}(|S| \times |T|)$, bộ nhớ $\mathcal{O}(|S| \times |T|)$ hoặc $\mathcal{O}(\min(|S|, |T|))$ khi nén 2 hàng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `aaa` $\implies$ Đầu ra kỳ vọng: `6`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `aaa` $\implies$ Đầu ra kỳ vọng: `6`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -49,39 +48,39 @@ Tổng số đoạn đối xứng là 6.
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
+string s;
+if (!(cin >> s)) return 0;
 
-    int n = s.size();
-    vector<vector<bool>> dp(n, vector<bool>(n, false));
-    int count = 0;
+int n = s.size();
+vector<vector<bool>> dp(n, vector<bool>(n, false));
+int count = 0;
 
-    for (int i = 0; i < n; ++i) {
-        dp[i][i] = true;
-        count++;
-    }
+for (int i = 0; i < n; ++i) {
+dp[i][i] = true;
+count++;
+}
 
-    for (int i = 0; i < n - 1; ++i) {
-        if (s[i] == s[i + 1]) {
-            dp[i][i + 1] = true;
-            count++;
-        }
-    }
+for (int i = 0; i < n - 1; ++i) {
+if (s[i] == s[i + 1]) {
+dp[i][i + 1] = true;
+count++;
+}
+}
 
-    for (int len = 3; len <= n; ++len) {
-        for (int i = 0; i <= n - len; ++i) {
-            int j = i + len - 1;
-            if (s[i] == s[j] && dp[i + 1][j - 1]) {
-                dp[i][j] = true;
-                count++;
-            }
-        }
-    }
+for (int len = 3; len <= n; ++len) {
+for (int i = 0; i <= n - len; ++i) {
+int j = i + len - 1;
+if (s[i] == s[j] && dp[i + 1][j - 1]) {
+dp[i][j] = true;
+count++;
+}
+}
+}
 
-    cout << count << "\n";
-    return 0;
+cout << count << "\n";
+return 0;
 }
 ```

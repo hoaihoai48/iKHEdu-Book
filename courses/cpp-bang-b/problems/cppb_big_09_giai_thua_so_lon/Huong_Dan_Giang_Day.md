@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho số nguyên dương N (1 <= N <= 1000). Hãy in ra giá trị chính xác của N!.
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 5! = 1 * 2 * 3 * 4 * 5 = 120.... | Tính toán từng bước trạng thái |
@@ -36,32 +35,32 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 string mulSmall(string a, int b) {
-    reverse(a.begin(), a.end());
-    string res = "";
-    int carry = 0;
-    for (int i = 0; i < (int)a.size() || carry; ++i) {
-        int prod = carry;
-        if (i < (int)a.size()) prod += (a[i] - '0') * b;
-        res.push_back((prod % 10) + '0');
-        carry = prod / 10;
-    }
-    reverse(res.begin(), res.end());
-    return res;
+reverse(a.begin(), a.end());
+string res = "";
+int carry = 0;
+for (int i = 0; i < (int)a.size() || carry; ++i) {
+int prod = carry;
+if (i < (int)a.size()) prod += (a[i] - '0') * b;
+res.push_back((prod % 10) + '0');
+carry = prod / 10;
+}
+reverse(res.begin(), res.end());
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    string ans = "1";
-    for (int i = 2; i <= n; ++i) {
-        ans = mulSmall(ans, i);
-    }
+string ans = "1";
+for (int i = 2; i <= n; ++i) {
+ans = mulSmall(ans, i);
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

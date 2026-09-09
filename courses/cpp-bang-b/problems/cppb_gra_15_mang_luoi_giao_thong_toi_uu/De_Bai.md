@@ -7,7 +7,7 @@ Một vương quốc gồm $N$ thành phố nhưng hiện tại hệ thống đ�
 Cho bản đồ vương quốc hiện tại. Hãy lập trình tìm số lượng đường mới ít nhất cần xây dựng và chỉ rõ danh sách các con đường cần làm thêm.
 
 ## Input
-- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh biểu diễn một con đường hiện có.
 
 ## Output

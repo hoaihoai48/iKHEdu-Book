@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 10 30 40 20` $\implies$ Đầu ra kỳ vọng: `30`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 10 30 40 20` $\implies$ Đầu ra kỳ vọng: `30`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -46,28 +45,28 @@ Tổng chi phí tiêu hao cho toàn bộ hành trình là $20 + 10 = 30$, đây 
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<long long> h(n);
-    for (int i = 0; i < n; ++i) cin >> h[i];
+vector<long long> h(n);
+for (int i = 0; i < n; ++i) cin >> h[i];
 
-    if (n == 1) { cout << 0 << "\n"; return 0; }
+if (n == 1) { cout << 0 << "\n"; return 0; }
 
-    vector<long long> dp(n, 0);
-    dp[0] = 0;
-    dp[1] = abs(h[1] - h[0]);
+vector<long long> dp(n, 0);
+dp[0] = 0;
+dp[1] = abs(h[1] - h[0]);
 
-    for (int i = 2; i < n; ++i) {
-        dp[i] = min(dp[i - 1] + abs(h[i] - h[i - 1]),
-                    dp[i - 2] + abs(h[i] - h[i - 2]));
-    }
+for (int i = 2; i < n; ++i) {
+dp[i] = min(dp[i - 1] + abs(h[i] - h[i - 1]),
+dp[i - 2] + abs(h[i] - h[i - 2]));
+}
 
-    cout << dp[n - 1] << "\n";
-    return 0;
+cout << dp[n - 1] << "\n";
+return 0;
 }
 ```

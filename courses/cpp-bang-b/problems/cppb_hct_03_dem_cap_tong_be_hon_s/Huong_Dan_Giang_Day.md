@@ -15,8 +15,7 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 8 2 5 1 4 3)
-| Bước | Thao tác thực hiện | Dữ liệu biến đổi | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Thao tác thực hiện | Dữ liệu biến đổi | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu vào | Input: `5 8 2 5 1 4 3` | Nạp dữ liệu vào các biến/mảng |
 | 2 | Thực thi thuật toán theo từng bước | Phân tích biến: Sắp xếp mảng tăng dần: [1, 2, 3, 4, 5] và S = 8. Tổng số cặp phân biệt từ 5 phần tử là 5*4/2 = 10 cặp. Cặp duy nhất có tổng lớn hơn 8 là (4, 5) với tổng 4 + 5 = 9 > 8. Còn lại tất cả 9 cặp khác đều có tổng <= 8: (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5). Vì vậy kết quả là 9. | Cập nhật trạng thái tối ưu |
@@ -39,31 +38,31 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    int l = 0, r = n - 1;
-    long long count = 0;
+int l = 0, r = n - 1;
+long long count = 0;
 
-    while (l < r) {
-        if (a[l] + a[r] <= s) {
-            count += (r - l);
-            ++l;
-        } else {
-            --r;
-        }
-    }
+while (l < r) {
+if (a[l] + a[r] <= s) {
+count += (r - l);
+++l;
+} else {
+--r;
+}
+}
 
-    cout << count << "\n";
-    return 0;
+cout << count << "\n";
+return 0;
 }
 ```

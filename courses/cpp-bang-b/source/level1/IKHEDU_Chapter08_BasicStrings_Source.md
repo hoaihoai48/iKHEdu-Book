@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để xử lý, đối soát và trích xuất thông tin từ các chuỗi văn bản một cách chính xác và hiệu quả trong C++?**
+> **Làm thế nào để xử lý, đối soát và trích xuất thông tin từ các chuỗi văn bản một cách chính xác và hiệu quả trong C++**
 
 ---
 
@@ -35,9 +35,9 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 8.1: Thống Kê Loại Ký Tự Trong Mật Khẩu Hệ Thống**  
-> **Bối cảnh:** Hệ thống xác thực mật khẩu ngân hàng cần thống kê số lượng chữ in hoa, chữ in thường, và chữ số trong một chuỗi mật khẩu $S$.  
-> **Input:** `iKHEDU C++ 2026!`  
+> **Bài toán mẫu 8.1: Thống Kê Loại Ký Tự Trong Mật Khẩu Hệ Thống** 
+> **Bối cảnh:** Hệ thống xác thực mật khẩu ngân hàng cần thống kê số lượng chữ in hoa, chữ in thường, và chữ số trong một chuỗi mật khẩu $S$. 
+> **Input:** `iKHEDU C++ 2026!` 
 > **Output:** `6 6 4` (6 chữ hoa: K, H, E, D, U, C; 6 chữ thường: i; 4 chữ số: 2, 0, 2, 6).
 
 #### Cài đặt C++
@@ -46,21 +46,21 @@ Sau chương này, em có thể:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!getline(cin, s)) return 0;
+string s;
+if (!getline(cin, s)) return 0;
 
-    int upperCount = 0, lowerCount = 0, digitCount = 0;
-    for (char c : s) {
-        if (isupper(c)) upperCount++;
-        else if (islower(c)) lowerCount++;
-        else if (isdigit(c)) digitCount++;
-    }
+int upperCount = 0, lowerCount = 0, digitCount = 0;
+for (char c : s) {
+if (isupper(c)) upperCount++;
+else if (islower(c)) lowerCount++;
+else if (isdigit(c)) digitCount++;
+}
 
-    cout << upperCount << " " << lowerCount << " " << digitCount << "\n";
-    return 0;
+cout << upperCount << " " << lowerCount << " " << digitCount << "\n";
+return 0;
 }
 ```
 
@@ -87,9 +87,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 8.2: Kiểm Tra Biển Số Xe Đối Xứng Phong Thủy**  
-> **Bối cảnh:** Khách hàng muốn kiểm tra biển số xe có phải là chuỗi đối xứng may mắn (Palindrome) hay không.  
-> **Input:** `racecar` $\implies$ **Output:** `YES`.  
+> **Bài toán mẫu 8.2: Kiểm Tra Biển Số Xe Đối Xứng Phong Thủy** 
+> **Bối cảnh:** Khách hàng muốn kiểm tra biển số xe có phải là chuỗi đối xứng may mắn (Palindrome) hay không. 
+> **Input:** `racecar` $\implies$ **Output:** `YES`. 
 > **Input:** `ikhedu` $\implies$ **Output:** `NO`.
 
 #### Cài đặt C++
@@ -98,22 +98,22 @@ int main() {
 using namespace std;
 
 bool isPalindrome(const string &s) {
-    int l = 0, r = (int)s.size() - 1;
-    while (l < r) {
-        if (s[l++] != s[r--]) return false;
-    }
-    return true;
+int l = 0, r = (int)s.size() - 1;
+while (l < r) {
+if (s[l++] != s[r--]) return false;
+}
+return true;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
+string s;
+if (!(cin >> s)) return 0;
 
-    cout << (isPalindrome(s) ? "YES\n" : "NO\n");
-    return 0;
+cout << (isPalindrome(s) "YES\n" : "NO\n");
+return 0;
 }
 ```
 
@@ -140,8 +140,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 8.3: Đối Soát Khóa Mã Hóa Đảo Vị Trí**  
-> **Bối cảnh:** Hai xâu $S$ và $T$ được kiểm tra xem có phải là phiên bản hoán vị các ký tự của nhau hay không.  
+> **Bài toán mẫu 8.3: Đối Soát Khóa Mã Hóa Đảo Vị Trí** 
+> **Bối cảnh:** Hai xâu $S$ và $T$ được kiểm tra xem có phải là phiên bản hoán vị các ký tự của nhau hay không. 
 > **Input:** `listen silent` $\implies$ **Output:** `YES`.
 
 #### Cài đặt C++
@@ -150,25 +150,25 @@ int main() {
 using namespace std;
 
 bool isAnagram(const string &s, const string &t) {
-    if (s.size() != t.size()) return false;
-    vector<int> cnt(26, 0);
-    for (char c : s) cnt[c - 'a']++;
-    for (char c : t) cnt[c - 'a']--;
-    for (int i = 0; i < 26; i++) {
-        if (cnt[i] != 0) return false;
-    }
-    return true;
+if (s.size() != t.size()) return false;
+vector<int> cnt(26, 0);
+for (char c : s) cnt[c - 'a']++;
+for (char c : t) cnt[c - 'a']--;
+for (int i = 0; i < 26; i++) {
+if (cnt[i] != 0) return false;
+}
+return true;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s, t;
-    if (!(cin >> s >> t)) return 0;
+string s, t;
+if (!(cin >> s >> t)) return 0;
 
-    cout << (isAnagram(s, t) ? "YES\n" : "NO\n");
-    return 0;
+cout << (isAnagram(s, t) "YES\n" : "NO\n");
+return 0;
 }
 ```
 
@@ -196,9 +196,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 8.4: Chuẩn Hóa Danh Sách Họ Tên Thí Sinh**  
-> **Bối cảnh:** Chuẩn hóa họ tên học sinh nhập từ bàn phím có nhiều khoảng trắng thừa và viết hoa lộn xộn.  
-> **Input:** `  nGuYEn   vAn   aN  ` $\implies$ **Output:** `Nguyen Van An`.
+> **Bài toán mẫu 8.4: Chuẩn Hóa Danh Sách Họ Tên Thí Sinh** 
+> **Bối cảnh:** Chuẩn hóa họ tên học sinh nhập từ bàn phím có nhiều khoảng trắng thừa và viết hoa lộn xộn. 
+> **Input:** ` nGuYEn vAn aN ` $\implies$ **Output:** `Nguyen Van An`.
 
 #### Cài đặt C++
 ```cpp
@@ -206,31 +206,31 @@ int main() {
 using namespace std;
 
 string formatWord(string w) {
-    if (w.empty()) return "";
-    w[0] = toupper(w[0]);
-    for (size_t i = 1; i < w.size(); i++) {
-        w[i] = tolower(w[i]);
-    }
-    return w;
+if (w.empty()) return "";
+w[0] = toupper(w[0]);
+for (size_t i = 1; i < w.size(); i++) {
+w[i] = tolower(w[i]);
+}
+return w;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!getline(cin, s)) return 0;
+string s;
+if (!getline(cin, s)) return 0;
 
-    stringstream ss(s);
-    string word, result = "";
+stringstream ss(s);
+string word, result = "";
 
-    while (ss >> word) {
-        if (!result.empty()) result += " ";
-        result += formatWord(word);
-    }
+while (ss >> word) {
+if (!result.empty()) result += " ";
+result += formatWord(word);
+}
 
-    cout << result << "\n";
-    return 0;
+cout << result << "\n";
+return 0;
 }
 ```
 
@@ -240,7 +240,7 @@ int main() {
 
 ##### Bài 8.4.1 — Đếm Số Từ Trong Câu Văn
 - **Bối cảnh:** Đếm số lượng từ trong một câu văn có nhiều khoảng trắng thừa bằng `stringstream`.
-- **Input:** `  Lap   trinh   C++   ` $\implies$ **Output:** `3`
+- **Input:** ` Lap trinh C++ ` $\implies$ **Output:** `3`
 
 ##### Bài 8.4.2 — Tìm Từ Dài Nhất Trong Văn Bản
 - **Bối cảnh:** Tìm từ có độ dài lớn nhất trong chuỗi văn bản.
@@ -273,7 +273,7 @@ int main() {
 - **Bối cảnh:** Giải mã `a3b2c1` thành `aaabbc`.
 
 #### Tầng C — Chuyển giao & Nâng cao (Rating 1500 - 1800)
-##### Bài 8.5.9 — Khôi Phục Chuỗi Nhị Phân Đối Xứng Từ Dấu ?
+##### Bài 8.5.9 — Khôi Phục Chuỗi Nhị Phân Đối Xứng Từ Dấu 
 - **Bối cảnh:** Điền '0'/'1' tạo Palindrome từ điển nhỏ nhất.
 ##### Bài 8.5.10 — Tìm Chu Kỳ Xung Nhịp Nhỏ Nhất Của Tín Hiệu
 - **Bối cảnh:** Tìm chu kỳ nhỏ nhất của xâu $S$.

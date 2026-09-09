@@ -6,7 +6,7 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- **Bản chất bài toán:** Cho ma trận nhị phân $N  × M$. Hãy lập trình tìm diện tích lớn nhất của một hòn đảo sau khi chuyển đổi tối đa một ô `0` thành `1`.
+- **Bản chất bài toán:** Cho ma trận nhị phân $N × M$. Hãy lập trình tìm diện tích lớn nhất của một hòn đảo sau khi chuyển đổi tối đa một ô `0` thành `1`.
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình hoá ma trận:** Coi mỗi ô $(r, c)$ trên lưới là một đỉnh của đồ thị, các cạnh nối đến 4 ô kề cạnh (hoặc 8 ô kề góc).
@@ -16,8 +16,7 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `2 2 10 01` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `2 2 10 01` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -51,67 +50,67 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m)) return 0;
-    grid.resize(n);
-    for (int i = 0; i < n; ++i) cin >> grid[i];
+if (!(cin >> n >> m)) return 0;
+grid.resize(n);
+for (int i = 0; i < n; ++i) cin >> grid[i];
 
-    island_id.assign(n, vector<int>(m, 0));
-    island_size.push_back(0); // id 0 unused
-    int current_id = 1;
-    int max_area = 0;
+island_id.assign(n, vector<int>(m, 0));
+island_size.push_back(0); // id 0 unused
+int current_id = 1;
+int max_area = 0;
 
-    for (int r = 0; r < n; ++r) {
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == '1' && island_id[r][c] == 0) {
-                int sz = 0;
-                island_id[r][c] = current_id;
-                queue<pair<int, int>> q;
-                q.push({r, c});
+for (int r = 0; r < n; ++r) {
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == '1' && island_id[r][c] == 0) {
+int sz = 0;
+island_id[r][c] = current_id;
+queue<pair<int, int>> q;
+q.push({r, c});
 
-                while (!q.empty()) {
-                    auto [cr, cc] = q.front();
-                    q.pop();
-                    sz++;
+while (!q.empty()) {
+auto [cr, cc] = q.front();
+q.pop();
+sz++;
 
-                    for (int d = 0; d < 4; ++d) {
-                        int nr = cr + dr[d];
-                        int nc = cc + dc[d];
-                        if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '1' && island_id[nr][nc] == 0) {
-                            island_id[nr][nc] = current_id;
-                            q.push({nr, nc});
-                        }
-                    }
-                }
+for (int d = 0; d < 4; ++d) {
+int nr = cr + dr[d];
+int nc = cc + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '1' && island_id[nr][nc] == 0) {
+island_id[nr][nc] = current_id;
+q.push({nr, nc});
+}
+}
+}
 
-                island_size.push_back(sz);
-                max_area = max(max_area, sz);
-                current_id++;
-            }
-        }
-    }
+island_size.push_back(sz);
+max_area = max(max_area, sz);
+current_id++;
+}
+}
+}
 
-    for (int r = 0; r < n; ++r) {
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == '0') {
-                unordered_set<int> neighbor_ids;
-                for (int d = 0; d < 4; ++d) {
-                    int nr = r + dr[d];
-                    int nc = c + dc[d];
-                    if (nr >= 0 && nr < n && nc >= 0 && nc < m && island_id[nr][nc] > 0) {
-                        neighbor_ids.insert(island_id[nr][nc]);
-                    }
-                }
-                int combined_sz = 1;
-                for (int id : neighbor_ids) combined_sz += island_size[id];
-                max_area = max(max_area, combined_sz);
-            }
-        }
-    }
+for (int r = 0; r < n; ++r) {
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == '0') {
+unordered_set<int> neighbor_ids;
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && island_id[nr][nc] > 0) {
+neighbor_ids.insert(island_id[nr][nc]);
+}
+}
+int combined_sz = 1;
+for (int id : neighbor_ids) combined_sz += island_size[id];
+max_area = max(max_area, combined_sz);
+}
+}
+}
 
-    cout << max_area << "\n";
-    return 0;
+cout << max_area << "\n";
+return 0;
 }
 ```

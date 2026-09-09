@@ -8,8 +8,7 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 2 1 2 3 1 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 2 1 2 3 1 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Có 3 đứa trẻ với mức độ thèm ăn là [1, 2, 3] và 2 chiếc bánh quy kích thước [1, 1]. Chiếc bánh đầu tiên kích thước 1 phá... | Tính toán từng bước trạng thái |
@@ -32,33 +31,33 @@ Chuyên đề: **Bài 02: Kỹ thuật hai con trỏ**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<long long> g(n), s(m);
-    for (int i = 0; i < n; ++i) cin >> g[i];
-    for (int i = 0; i < m; ++i) cin >> s[i];
+vector<long long> g(n), s(m);
+for (int i = 0; i < n; ++i) cin >> g[i];
+for (int i = 0; i < m; ++i) cin >> s[i];
 
-    sort(g.begin(), g.end());
-    sort(s.begin(), s.end());
+sort(g.begin(), g.end());
+sort(s.begin(), s.end());
 
-    int i = 0, j = 0;
-    int satisfied = 0;
+int i = 0, j = 0;
+int satisfied = 0;
 
-    while (i < n && j < m) {
-        if (s[j] >= g[i]) {
-            ++satisfied;
-            ++i;
-            ++j;
-        } else {
-            ++j;
-        }
-    }
+while (i < n && j < m) {
+if (s[j] >= g[i]) {
+++satisfied;
+++i;
+++j;
+} else {
+++j;
+}
+}
 
-    cout << satisfied << "\n";
-    return 0;
+cout << satisfied << "\n";
+return 0;
 }
 ```

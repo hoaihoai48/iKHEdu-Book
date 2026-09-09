@@ -1,7 +1,7 @@
 # Nhặt Vàng Trên Lưới
 
 ## Bối cảnh
-Trong một trò chơi phiêu lưu, một nhà khảo cổ học thám hiểm một lăng mộ cổ hình chữ nhật gồm $N  × M$ gian phòng. Gian phòng tại tọa độ $(i, j)$ chứa một số thỏi vàng có giá trị là $A_{i,j}$. Nhà khảo cổ xuất phát từ căn phòng $(1, 1)$ và cần thoát ra ở căn phòng $(N, M)$. Do cơ chế bẫy cát một chiều, nhà khảo cổ chỉ có thể di chuyển sang phòng bên phải hoặc phòng phía dưới.
+Trong một trò chơi phiêu lưu, một nhà khảo cổ học thám hiểm một lăng mộ cổ hình chữ nhật gồm $N × M$ gian phòng. Gian phòng tại tọa độ $(i, j)$ chứa một số thỏi vàng có giá trị là $A_{i,j}$. Nhà khảo cổ xuất phát từ căn phòng $(1, 1)$ và cần thoát ra ở căn phòng $(N, M)$. Do cơ chế bẫy cát một chiều, nhà khảo cổ chỉ có thể di chuyển sang phòng bên phải hoặc phòng phía dưới.
 
 ## Nhiệm vụ
 Cho ma trận số vàng tại các gian phòng. Hãy lập trình tìm tổng số vàng lớn nhất mà nhà khảo cổ có thể thu thập được trên đường thoát ra.
@@ -27,7 +27,7 @@ Cho ma trận số vàng tại các gian phòng. Hãy lập trình tìm tổng s
 ```
 
 ### Giải thích
-Với lưới vàng kích thước $3  × 3$:
+Với lưới vàng kích thước $3 × 3$:
 Lộ trình thu thập tối ưu là đi qua các gian phòng có lượng vàng phong phú nhất, đạt tổng giá trị lớn nhất là 15.
 
 ## Ràng buộc

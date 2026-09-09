@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho số nguyên dương $N$. Hãy áp dụng thuật toán Quay lui kết hợp các mảng đánh dấu cột, đường chéo chính và đường chéo phụ để đếm tổng số cách đặt $N$ quân hậu hợp lệ lên bàn cờ $N \times N$.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Trên bàn cờ kích thước $4 \times 4$, có đúng 2 cấu hình hợp lệ không quân hậu nào khống chế nhau: hàng 1 đặt ở cột 2, hà... | Tính toán từng bước trạng thái |
@@ -40,28 +39,28 @@ long long ans = 0;
 vector<bool> col_used, diag1, diag2;
 
 void backtrack(int row) {
-    if (row > n) {
-        ans++;
-        return;
-    }
-    for (int col = 1; col <= n; ++col) {
-        if (!col_used[col] && !diag1[row - col + n] && !diag2[row + col]) {
-            col_used[col] = diag1[row - col + n] = diag2[row + col] = true;
-            backtrack(row + 1);
-            col_used[col] = diag1[row - col + n] = diag2[row + col] = false;
-        }
-    }
+if (row > n) {
+ans++;
+return;
+}
+for (int col = 1; col <= n; ++col) {
+if (!col_used[col] && !diag1[row - col + n] && !diag2[row + col]) {
+col_used[col] = diag1[row - col + n] = diag2[row + col] = true;
+backtrack(row + 1);
+col_used[col] = diag1[row - col + n] = diag2[row + col] = false;
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n)) return 0;
-    col_used.assign(n + 1, false);
-    diag1.assign(2 * n + 1, false);
-    diag2.assign(2 * n + 1, false);
-    backtrack(1);
-    cout << ans << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n)) return 0;
+col_used.assign(n + 1, false);
+diag1.assign(2 * n + 1, false);
+diag2.assign(2 * n + 1, false);
+backtrack(1);
+cout << ans << "\n";
+return 0;
 }
 ```

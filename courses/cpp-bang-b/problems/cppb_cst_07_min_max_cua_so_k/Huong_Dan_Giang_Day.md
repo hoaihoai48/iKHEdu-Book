@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 3 4 2 12 3 5 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 3 4 2 12 3 5 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các cửa sổ độ dài K = 3 gồm: [4, 2, 12] có min = 2; [2, 12, 3] có min = 2; [12, 3, 5] có min = 3; [3, 5, 1] có min = 1. ... | Tính toán từng bước trạng thái |
@@ -32,23 +31,23 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    for (int i = 0; i <= n - k; ++i) {
-        long long cur_min = a[i];
-        for (int j = i + 1; j < i + k; ++j) {
-            cur_min = min(cur_min, a[j]);
-        }
-        cout << cur_min << (i == n - k ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i <= n - k; ++i) {
+long long cur_min = a[i];
+for (int j = i + 1; j < i + k; ++j) {
+cur_min = min(cur_min, a[j]);
+}
+cout << cur_min << (i == n - k "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

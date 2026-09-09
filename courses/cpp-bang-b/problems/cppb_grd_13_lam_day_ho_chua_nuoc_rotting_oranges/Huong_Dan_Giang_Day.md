@@ -16,16 +16,15 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 3 211 110 011` $\implies$ Đầu ra kỳ vọng: `4`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 3 211 110 011` $\implies$ Đầu ra kỳ vọng: `4`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `3 3 211 110 011` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với thùng cam kích thước $3  × 3$: - Phút 1: cam hỏng tại $(0, 0)$ lây sang các ô $(0, 1)$ và $(1, 0)$. - Phút 2: tiếp tục lây sang các... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với thùng cam kích thước $3 × 3$: - Phút 1: cam hỏng tại $(0, 0)$ lây sang các ô $(0, 1)$ và $(1, 0)$. - Phút 2: tiếp tục lây sang các... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `4` |
 
-*Giải thích chi tiết:* Với thùng cam kích thước $3  × 3$:
+*Giải thích chi tiết:* Với thùng cam kích thước $3 × 3$:
 
 - Phút 1: cam hỏng tại $(0, 0)$ lây sang các ô $(0, 1)$ và $(1, 0)$.
 - Phút 2: tiếp tục lây sang các ô kế tiếp.
@@ -49,46 +48,46 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<string> grid(n);
-    queue<pair<int, int>> q;
-    int fresh_count = 0;
+vector<string> grid(n);
+queue<pair<int, int>> q;
+int fresh_count = 0;
 
-    for (int r = 0; r < n; ++r) {
-        cin >> grid[r];
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == '2') q.push({r, c});
-            else if (grid[r][c] == '1') fresh_count++;
-        }
-    }
+for (int r = 0; r < n; ++r) {
+cin >> grid[r];
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == '2') q.push({r, c});
+else if (grid[r][c] == '1') fresh_count++;
+}
+}
 
-    int minutes = 0;
-    while (!q.empty() && fresh_count > 0) {
-        int sz = q.size();
-        minutes++;
-        while (sz--) {
-            auto [r, c] = q.front();
-            q.pop();
+int minutes = 0;
+while (!q.empty() && fresh_count > 0) {
+int sz = q.size();
+minutes++;
+while (sz--) {
+auto [r, c] = q.front();
+q.pop();
 
-            for (int d = 0; d < 4; ++d) {
-                int nr = r + dr[d];
-                int nc = c + dc[d];
-                if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '1') {
-                    grid[nr][nc] = '2';
-                    fresh_count--;
-                    q.push({nr, nc});
-                }
-            }
-        }
-    }
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '1') {
+grid[nr][nc] = '2';
+fresh_count--;
+q.push({nr, nc});
+}
+}
+}
+}
 
-    if (fresh_count > 0) cout << -1 << "\n";
-    else cout << minutes << "\n";
-    return 0;
+if (fresh_count > 0) cout << -1 << "\n";
+else cout << minutes << "\n";
+return 0;
 }
 ```

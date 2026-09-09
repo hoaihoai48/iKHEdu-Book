@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để máy tính thực hiện các phép cộng, nhân trên những con số có hàng nghìn chữ số vượt xa giới hạn $10^{18}$ của kiểu `long long`?**
+> **Làm thế nào để máy tính thực hiện các phép cộng, nhân trên những con số có hàng nghìn chữ số vượt xa giới hạn $10^{18}$ của kiểu `long long`**
 
 ---
 
@@ -29,16 +29,16 @@ Sau chương này, em có thể:
 #### 1. Khái niệm & Biểu diễn mảng đảo ngược
 - Số $A = 12345$ được lưu dưới dạng xâu `string a = "12345"`. Để thuận tiện cho việc cộng/trừ từ hàng đơn vị sang hàng chục, ta duyệt từ cuối về đầu hoặc đảo ngược xâu: `a[0] = 5, a[1] = 4, a[2] = 3, a[3] = 2, a[4] = 1`.
 - **So sánh 2 số lớn:**
-  - Nếu độ dài khác nhau: Số nào có độ dài lớn hơn thì số đó lớn hơn.
-  - Nếu độ dài bằng nhau: So sánh theo thứ tự từ điển từ trái sang phải.
+- Nếu độ dài khác nhau: Số nào có độ dài lớn hơn thì số đó lớn hơn.
+- Nếu độ dài bằng nhau: So sánh theo thứ tự từ điển từ trái sang phải.
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 19.1: Xếp Hạng Giá Trị Gói Thầu Quốc Tế**  
-> **Bối cảnh:** $N$ hồ sơ dự thầu có giá trị là các số nguyên dương cực lớn (lên tới $1000$ chữ số).  
-> **Nhiệm vụ:** Tìm giá trị gói thầu lớn nhất trong danh sách.  
+> **Bài toán mẫu 19.1: Xếp Hạng Giá Trị Gói Thầu Quốc Tế** 
+> **Bối cảnh:** $N$ hồ sơ dự thầu có giá trị là các số nguyên dương cực lớn (lên tới $1000$ chữ số). 
+> **Nhiệm vụ:** Tìm giá trị gói thầu lớn nhất trong danh sách. 
 > **Input:** `3` \ `99999999999999999999` \ `100000000000000000000` \ `50000000000000000000` $\implies$ **Output:** `100000000000000000000`.
 
 #### Cài đặt C++
@@ -47,28 +47,28 @@ Sau chương này, em có thể:
 using namespace std;
 
 bool isGreater(const string &a, const string &b) {
-    if (a.size() != b.size()) return a.size() > b.size();
-    return a > b;
+if (a.size() != b.size()) return a.size() > b.size();
+return a > b;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    string maxVal = "";
-    for (int i = 0; i < n; i++) {
-        string s;
-        cin >> s;
-        if (maxVal == "" || isGreater(s, maxVal)) {
-            maxVal = s;
-        }
-    }
+string maxVal = "";
+for (int i = 0; i < n; i++) {
+string s;
+cin >> s;
+if (maxVal == "" || isGreater(s, maxVal)) {
+maxVal = s;
+}
+}
 
-    cout << maxVal << "\n";
-    return 0;
+cout << maxVal << "\n";
+return 0;
 }
 ```
 
@@ -95,8 +95,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 19.2: Tổng Doanh Số Chuỗi Bán Lẻ Toàn Cầu**  
-> **Bối cảnh:** Tính tổng giá trị của hai số nguyên dương lớn $A$ và $B$ có tới $10^5$ chữ số: $A + B$.  
+> **Bài toán mẫu 19.2: Tổng Doanh Số Chuỗi Bán Lẻ Toàn Cầu** 
+> **Bối cảnh:** Tính tổng giá trị của hai số nguyên dương lớn $A$ và $B$ có tới $10^5$ chữ số: $A + B$. 
 > **Input:** `99999999999999999999 1` $\implies$ **Output:** `100000000000000000000`.
 
 #### Cài đặt C++
@@ -105,31 +105,31 @@ int main() {
 using namespace std;
 
 string addBigInt(string a, string b) {
-    string res = "";
-    int i = (int)a.size() - 1, j = (int)b.size() - 1;
-    int carry = 0;
+string res = "";
+int i = (int)a.size() - 1, j = (int)b.size() - 1;
+int carry = 0;
 
-    while (i >= 0 || j >= 0 || carry) {
-        int sum = carry;
-        if (i >= 0) sum += (a[i--] - '0');
-        if (j >= 0) sum += (b[j--] - '0');
-        res.push_back((sum % 10) + '0');
-        carry = sum / 10;
-    }
+while (i >= 0 || j >= 0 || carry) {
+int sum = carry;
+if (i >= 0) sum += (a[i--] - '0');
+if (j >= 0) sum += (b[j--] - '0');
+res.push_back((sum % 10) + '0');
+carry = sum / 10;
+}
 
-    reverse(res.begin(), res.end());
-    return res;
+reverse(res.begin(), res.end());
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << addBigInt(a, b) << "\n";
-    return 0;
+cout << addBigInt(a, b) << "\n";
+return 0;
 }
 ```
 
@@ -157,8 +157,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 19.3: Nhân Số Lớn Với Số Lớn**  
-> **Bối cảnh:** Tính tích của 2 số nguyên dương $A$ và $B$ có tới $1000$ chữ số.  
+> **Bài toán mẫu 19.3: Nhân Số Lớn Với Số Lớn** 
+> **Bối cảnh:** Tính tích của 2 số nguyên dương $A$ và $B$ có tới $1000$ chữ số. 
 > **Input:** `123 45` $\implies$ **Output:** `5535`.
 
 #### Cài đặt C++
@@ -167,36 +167,36 @@ int main() {
 using namespace std;
 
 string multiplyBigInt(string a, string b) {
-    if (a == "0" || b == "0") return "0";
-    int n = a.size(), m = b.size();
-    vector<int> res(n + m, 0);
+if (a == "0" || b == "0") return "0";
+int n = a.size(), m = b.size();
+vector<int> res(n + m, 0);
 
-    for (int i = n - 1; i >= 0; i--) {
-        for (int j = m - 1; j >= 0; j--) {
-            int mul = (a[i] - '0') * (b[j] - '0');
-            int sum = mul + res[i + j + 1];
-            res[i + j + 1] = sum % 10;
-            res[i + j] += sum / 10;
-        }
-    }
+for (int i = n - 1; i >= 0; i--) {
+for (int j = m - 1; j >= 0; j--) {
+int mul = (a[i] - '0') * (b[j] - '0');
+int sum = mul + res[i + j + 1];
+res[i + j + 1] = sum % 10;
+res[i + j] += sum / 10;
+}
+}
 
-    string ans = "";
-    int i = 0;
-    while (i < (int)res.size() && res[i] == 0) i++;
-    while (i < (int)res.size()) ans.push_back(res[i++] + '0');
+string ans = "";
+int i = 0;
+while (i < (int)res.size() && res[i] == 0) i++;
+while (i < (int)res.size()) ans.push_back(res[i++] + '0');
 
-    return ans.empty() ? "0" : ans;
+return ans.empty() "0" : ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a, b;
-    if (!(cin >> a >> b)) return 0;
+string a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << multiplyBigInt(a, b) << "\n";
-    return 0;
+cout << multiplyBigInt(a, b) << "\n";
+return 0;
 }
 ```
 
@@ -223,8 +223,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 19.4: Kiểm Tra Tính Chia Hết Của Khóa Mã Hóa 10.000 Chữ Số**  
-> **Bối cảnh:** Cho số nguyên lớn $S$ có tới $10^4$ chữ số và một số nguyên $M \le 10^9$. Hãy tính phần dư $S \pmod M$.  
+> **Bài toán mẫu 19.4: Kiểm Tra Tính Chia Hết Của Khóa Mã Hóa 10.000 Chữ Số** 
+> **Bối cảnh:** Cho số nguyên lớn $S$ có tới $10^4$ chữ số và một số nguyên $M \le 10^9$. Hãy tính phần dư $S \pmod M$. 
 > **Input:** `123456789101112131415 13` $\implies$ **Output:** `4`.
 
 #### Cài đặt C++
@@ -233,20 +233,20 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    long long m;
-    if (!(cin >> s >> m)) return 0;
+string s;
+long long m;
+if (!(cin >> s >> m)) return 0;
 
-    long long rem = 0;
-    for (char c : s) {
-        rem = (rem * 10 + (c - '0')) % m;
-    }
+long long rem = 0;
+for (char c : s) {
+rem = (rem * 10 + (c - '0')) % m;
+}
 
-    cout << rem << "\n";
-    return 0;
+cout << rem << "\n";
+return 0;
 }
 ```
 

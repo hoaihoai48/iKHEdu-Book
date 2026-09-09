@@ -89,7 +89,7 @@ Mọi tài liệu giáo trình Word (`.docx`) xuất bản bắt buộc tuân th
 1. **Khổ giấy & Căn lề**: Bỏ trang bìa (vào thẳng Lời nói đầu tại trang 1). Margins: Top `36pt`, Bottom `36pt`, Left `64.35pt` (gáy sách), Right `36pt`. Tiêu đề Chương đầu tiên mang `pageBreakBefore = True`.
 2. **Watermark Logo trên 100% trang**: Cấu hình đủ 3 Header (`even`, `default`, `first`) chứa VML Watermark shape `alt="logo_in"` trỏ tới `media/image13.jpeg`. Đảm bảo trang nào cũng có logo mờ ở trung tâm.
 3. **Lời nói đầu**: Tiêu đề Center `14pt Bold`, thân bài `14pt` dãn dòng `1.5 line spacing`, Căn đều `Justify` 100%.
-4. **Typography & Màu sắc**: Body text `12.5pt`, dãn dòng `1.15`, Căn đều `Justify` 100%. Tiêu đề mục "Bài tập thực hành" bắt buộc màu đỏ `#FF0000` (Bold 14pt Heading 2). Headings màu `#1E293B`.
+4. **Typography & Màu sắc**: Body text `12.5pt`, dãn dòng `1.15`, Căn đều `Justify` 100%. Toàn bộ chữ Body, Bảng và Headings bắt buộc màu đen tuyền `#000000` (đảm bảo in màu laser/offset không bị mờ nét, cấm dùng màu xanh đen `#0F2A44`, `#1E293B`, `#1A4A6B`). Duy nhất tiêu đề mục "Bài tập thực hành" bắt buộc màu đỏ `#FF0000` (Bold 14pt Heading 2).
 5. **Khung Code C++ (`Source Code`)**: Font `Consolas 9.0pt`, line-height `1.05` (`line=252`), nền `#F8FAFC`, viền `#E2E8F0`. **Bắt buộc Căn trái (`Left`) 100%**, cấm numbering rác (`w:numPr`), tuyệt đối cấm gán Justify vào style `Normal` tránh làm dãn cách từng chữ cái.
 6. **Bảng dữ liệu & Thuật toán Thụt lề động (Dynamic Left Indent)**:
    * Xóa sạch 100% `<w:tblHeader/>` (tránh lặp tiêu đề khi ngắt trang), thêm `<w:cantSplit/>` cho mọi hàng.

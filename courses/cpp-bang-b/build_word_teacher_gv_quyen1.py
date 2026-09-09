@@ -39,13 +39,14 @@ OUT_DOCX = BASE_DIR / "cpp-giaovien-quyen-1.docx"
 ASSETS_PNG_DIR = BASE_DIR / "assets_png"
 
 CHAPTER_NAMES = {
-    1: "CHƯƠNG 01: THUẬT TOÁN SẮP XẾP & KỸ THUẬT MẢNG",
-    2: "CHƯƠNG 02: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN",
-    3: "CHƯƠNG 03: SỐ HỌC & ĐẠI SỐ MODULAR",
-    4: "CHƯƠNG 04: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI",
-    5: "CHƯƠNG 05: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)",
-    6: "CHƯƠNG 06: CẤU TRÚC DỮ LIỆU NÂNG CAO",
-    7: "CHƯƠNG 07: ĐỒ THỊ & CÂY TRUY VẤN ĐOẠN",
+    1: "CHƯƠNG 01: NỀN TẢNG LẬP TRÌNH C++",
+    2: "CHƯƠNG 02: THUẬT TOÁN SẮP XẾP & KỸ THUẬT MẢNG",
+    3: "CHƯƠNG 03: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN",
+    4: "CHƯƠNG 04: SỐ HỌC & ĐẠI SỐ MODULAR",
+    5: "CHƯƠNG 05: ĐỆ QUY, CHIA ĐỂ TRỊ & QUAY LUI",
+    6: "CHƯƠNG 06: QUY HOẠCH ĐỘNG (DYNAMIC PROGRAMMING)",
+    7: "CHƯƠNG 07: CẤU TRÚC DỮ LIỆU NÂNG CAO",
+    8: "CHƯƠNG 08: ĐỒ THỊ & CÂY TRUY VẤN ĐOẠN",
 }
 
 # Load problem illustrations map (combine q1 and q2 maps)
@@ -169,9 +170,8 @@ def build_tap1_markdown(manifest_data):
         "lập trình thuật toán C++ cơ bản iKHEDU, dành riêng cho quý thầy cô giáo và các huấn luyện viên chuyên trách đội tuyển tin học. "
         "Tài liệu này cung cấp trọn bộ lời giải chi tiết, mã nguồn C++ tối ưu và hệ thống **phương pháp luận giảng dạy thực chiến chuyên sâu** "
         "(ý tưởng và phân tích thuật toán, bảng mô phỏng chạy tay từng bước trên số liệu mẫu thực tế, lưu ý và các bẫy lỗi kinh điển thường gặp) "
-        "cho toàn bộ **108 bài toán thực hành** từ Bài 01 đến Bài 07 thuộc các chủ đề nền tảng: Thuật toán sắp xếp & kỹ thuật mảng, "
-        "Kỹ thuật hai con trỏ, Kỹ thuật cửa sổ trượt, Mảng tiền tố & mảng hiệu, Thuật toán tìm kiếm nhị phân, "
-        "Phép toán BIT & biểu diễn trạng thái, cùng Lý thuyết số & số nguyên tố.\n\n"
+        "cho các bài toán thực hành thuộc các chủ đề nền tảng: Nền tảng lập trình C++, Thuật toán sắp xếp & kỹ thuật mảng, "
+        "Kỹ thuật hai con trỏ, Kỹ thuật cửa sổ trượt, Mảng tiền tố & mảng hiệu, cùng Thuật toán tìm kiếm nhị phân.\n\n"
         "Mỗi bài toán trong sách giáo viên được cấu trúc thống nhất và tinh gọn qua 4 mục trọng tâm: "
         "(1) Ý tưởng & Phân tích thuật toán gắn liền với bản chất toán học; "
         "(2) Bảng chạy tay trực quan (Dry Run Table) trên các giá trị số thực tế của mẫu thử (Sample); "
@@ -181,7 +181,7 @@ def build_tap1_markdown(manifest_data):
     )
 
     current_chapter = None
-    tap1_lessons = manifest_data["lessons"][0:7]
+    tap1_lessons = manifest_data["lessons"][0:8]
     prob_count = 0
 
     for lesson_info in tap1_lessons:
@@ -366,7 +366,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
                 para.paragraph_format.space_after = Pt(100 / 20)   # 5pt
                 for r in para.runs:
                     r.font.name = "Times New Roman"
-                    r.font.size = Pt(16)
+                    r.font.size = Pt(18)
                     r.font.bold = True
                     r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
             else:
@@ -386,7 +386,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
                 para.paragraph_format.space_after = Pt(6)
                 for r in para.runs:
                     r.font.name = "Times New Roman"
-                    r.font.size = Pt(15)
+                    r.font.size = Pt(15.5)
                     r.font.bold = True
                     r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
@@ -437,7 +437,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
             para.paragraph_format.space_after = Pt(3)
             for r in para.runs:
                 r.font.name = "Times New Roman"
-                r.font.size = Pt(12)
+                r.font.size = Pt(12.5)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
@@ -460,7 +460,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
             for r in para.runs:
                 r.font.name = "Consolas"
                 r.font.size = Pt(9.0)
-                r.font.color.rgb = RGBColor(0x0F, 0x2A, 0x44)
+                r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
             sp = pPr.find(qn("w:spacing"))
             if sp is not None:
@@ -525,12 +525,12 @@ def post_process_teacher_docx(docx_path, manifest_data):
                 para.paragraph_format.space_after = Pt(3)
                 for r in para.runs:
                     r.font.name = "Times New Roman"
-                    r.font.size = Pt(12)
+                    r.font.size = Pt(12.5)
                     r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
     # 4. Gắn hình ảnh minh họa bối cảnh vào từng bài toán
     print(f"🖼️ Đang chèn hình ảnh minh họa trực quan bối cảnh cho Quyển 1...")
-    tap1_codes = set(p["code"] for l in manifest_data["lessons"][0:7] for p in l["problems"])
+    tap1_codes = set(p["code"] for l in manifest_data["lessons"][0:8] for p in l["problems"])
     for prob_code in tap1_codes:
         if prob_code not in DIAGRAMS_MAP:
             continue
@@ -713,7 +713,7 @@ def post_process_teacher_docx(docx_path, manifest_data):
                                     <w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>
                                     <w:sz w:val="19"/>
                                     <w:szCs w:val="19"/>
-                                    <w:color w:val="0F2A44"/>
+                                    <w:color w:val="000000"/>
                                 </w:rPr>
                                 <w:t xml:space="preserve">{html.escape(line_str)}</w:t>
                             </w:r>
@@ -783,18 +783,37 @@ def post_process_teacher_docx(docx_path, manifest_data):
                                 r.font.size = Pt(12)
                                 r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
-    # 6. Build Interactive Hyperlinked TOC at End (Chương + Bài học)
+    # 6. Build Interactive Hyperlinked TOC at End with Exact Page Numbers
+    # Exact page mapping for Q1 Teacher Guide (218 pages total)
+    EXACT_PAGES_GV_Q1 = [
+        "2",   # CHƯƠNG 01: NỀN TẢNG LẬP TRÌNH C++
+        "2",   # Bài 01: Biến, Kiểu Dữ Liệu, Toán Tử & Nhập Xuất An Toàn
+        "20",  # Bài 02: Cấu Trúc Rẽ Nhánh & Cấu Trúc Vòng Lặp
+        "40",  # Bài 03: Mảng 1 Chiều, Vector, Xâu Ký Tự & Tổ Chức Hàm
+        "62",  # CHƯƠNG 02: THUẬT TOÁN SẮP XẾP & KỸ THUẬT MẢNG
+        "62",  # Bài 04: Thuật toán sắp xếp
+        "95",  # Bài 05: Kỹ thuật hai con trỏ
+        "126", # Bài 06: Kỹ thuật cửa sổ trượt
+        "155", # CHƯƠNG 03: MẢNG TIỀN TỐ & TÌM KIẾM NHỊ PHÂN
+        "155", # Bài 07: Mảng tiền tố & mảng hiệu
+        "188"  # Bài 08: Thuật toán tìm kiếm nhị phân
+    ]
+
     if p_toc_heading:
-        print(f"  → Tạo Mục lục tương tác gồm {len(toc_headings)} liên kết...")
+        print(f"  → Tạo Mục lục tương tác có số trang chính xác gồm {len(toc_headings)} liên kết...")
         last_elem = p_toc_heading._p
 
-        for item in toc_headings:
+        for item_idx, item in enumerate(toc_headings):
             title = html.escape(item["text"])
             bm = item["bm_name"]
+            page_str = EXACT_PAGES_GV_Q1[item_idx] if item_idx < len(EXACT_PAGES_GV_Q1) else "1"
 
             if item.get("is_chapter"):
                 p_xml = f'''<w:p {nsdecls("w")}>
                     <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="right" w:leader="dot" w:pos="9899"/>
+                        </w:tabs>
                         <w:spacing w:before="180" w:after="40"/>
                     </w:pPr>
                     <w:hyperlink w:anchor="{bm}">
@@ -803,15 +822,28 @@ def post_process_teacher_docx(docx_path, manifest_data):
                                 <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
                                 <w:b/>
                                 <w:sz w:val="23"/>
-                                <w:color w:val="0F2A44"/>
+                                <w:color w:val="000000"/>
                             </w:rPr>
                             <w:t>{title}</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                <w:b/>
+                                <w:sz w:val="23"/>
+                                <w:color w:val="000000"/>
+                            </w:rPr>
+                            <w:tab/>
+                            <w:t>{page_str}</w:t>
                         </w:r>
                     </w:hyperlink>
                 </w:p>'''
             elif item.get("is_lesson"):
                 p_xml = f'''<w:p {nsdecls("w")}>
                     <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="right" w:leader="dot" w:pos="9899"/>
+                        </w:tabs>
                         <w:ind w:left="280"/>
                         <w:spacing w:before="20" w:after="20"/>
                     </w:pPr>
@@ -820,9 +852,18 @@ def post_process_teacher_docx(docx_path, manifest_data):
                             <w:rPr>
                                 <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
                                 <w:sz w:val="22"/>
-                                <w:color w:val="1A4A6B"/>
+                                <w:color w:val="000000"/>
                             </w:rPr>
                             <w:t>•  {title}</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                <w:sz w:val="22"/>
+                                <w:color w:val="000000"/>
+                            </w:rPr>
+                            <w:tab/>
+                            <w:t>{page_str}</w:t>
                         </w:r>
                     </w:hyperlink>
                 </w:p>'''

@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 1 3 2 6 8 10 15 18` $\implies$ Đầu ra kỳ vọng: `3 1 6 8 10 15 18`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 1 3 2 6 8 10 15 18` $\implies$ Đầu ra kỳ vọng: `3 1 6 8 10 15 18`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -47,40 +46,40 @@ Kết quả thu được 3 khoảng: $[1, 6], [8, 10], [15, 18]$.
 using namespace std;
 
 struct Interval {
-    long long l, r;
+long long l, r;
 };
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    vector<Interval> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i].l >> a[i].r;
+vector<Interval> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i].l >> a[i].r;
 
-    sort(a.begin(), a.end(), [](const Interval& x, const Interval& y) {
-        if (x.l != y.l) return x.l < y.l;
-        return x.r < y.r;
-    });
+sort(a.begin(), a.end(), [](const Interval& x, const Interval& y) {
+if (x.l != y.l) return x.l < y.l;
+return x.r < y.r;
+});
 
-    vector<Interval> merged;
-    merged.push_back(a[0]);
+vector<Interval> merged;
+merged.push_back(a[0]);
 
-    for (int i = 1; i < n; ++i) {
-        if (a[i].l <= merged.back().r) {
-            merged.back().r = max(merged.back().r, a[i].r);
-        } else {
-            merged.push_back(a[i]);
-        }
-    }
+for (int i = 1; i < n; ++i) {
+if (a[i].l <= merged.back().r) {
+merged.back().r = max(merged.back().r, a[i].r);
+} else {
+merged.push_back(a[i]);
+}
+}
 
-    cout << merged.size() << "\n";
-    for (const auto& iv : merged) {
-        cout << iv.l << " " << iv.r << "\n";
-    }
-    return 0;
+cout << merged.size() << "\n";
+for (const auto& iv : merged) {
+cout << iv.l << " " << iv.r << "\n";
+}
+return 0;
 }
 ```

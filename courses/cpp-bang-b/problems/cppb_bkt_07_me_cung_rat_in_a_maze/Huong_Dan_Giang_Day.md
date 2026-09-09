@@ -7,13 +7,12 @@ Chuyên đề: **Bài 12: Thuật toán quay lui & nhánh cận**
 - **Bản chất bài toán:** Cho bản đồ mê cung $N \times N$. Giả sử mỗi bước robot chỉ di chuyển sang các ô kề cạnh chưa từng ghé qua theo các hướng: Xuống dưới (`D`), Sang trái (`L`), Sang phải (`R`), Lên trên (`U`). Hãy áp dụng thuật toán Quay lui để tìm và in ra tất cả các chuỗi di chuyển hợp lệ theo thứ tự từ điển (`D < L < R < U`). Nếu ô xuất phát bị chặn hoặc không có đường đi nào, in ra `-1`.
 
 - **Phương pháp tiếp cận — Quay lui & Nhánh cận (Backtracking):**
-  - Xây dựng không gian trạng thái dạng cây tìm kiếm.
-  - Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
+- Xây dựng không gian trạng thái dạng cây tìm kiếm.
+- Thử từng khả năng, nếu vi phạm điều kiện ràng buộc thì tỉa nhánh sớm (nhánh cận) để giảm số trạng thái cần duyệt.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 1 0 0 0 1 1 0 1 0 1 0 0)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 1 0 0 0 1 1 0 1 0 1 0 0 1 1 1 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Robot xuất phát tại $(0,0)$ và đích đến là $(3,3)$. Có 2 tuyến đường hợp lệ không qua ô 0: - Tuyến 1: Đi xuống $\to$ xuố... | Tính toán từng bước trạng thái |
@@ -49,38 +48,38 @@ int dy[] = {0, -1, 1, 0};
 char step_char[] = {'D', 'L', 'R', 'U'};
 
 void backtrack(int x, int y) {
-    if (x == n - 1 && y == n - 1) {
-        paths.push_back(cur);
-        return;
-    }
-    for (int i = 0; i < 4; ++i) {
-        int nx = x + dx[i], ny = y + dy[i];
-        if (nx >= 0 && nx < n && ny >= 0 && ny < n && a[nx][ny] == 1 && !visited[nx][ny]) {
-            visited[nx][ny] = true;
-            cur.push_back(step_char[i]);
-            backtrack(nx, ny);
-            cur.pop_back();
-            visited[nx][ny] = false;
-        }
-    }
+if (x == n - 1 && y == n - 1) {
+paths.push_back(cur);
+return;
+}
+for (int i = 0; i < 4; ++i) {
+int nx = x + dx[i], ny = y + dy[i];
+if (nx >= 0 && nx < n && ny >= 0 && ny < n && a[nx][ny] == 1 && !visited[nx][ny]) {
+visited[nx][ny] = true;
+cur.push_back(step_char[i]);
+backtrack(nx, ny);
+cur.pop_back();
+visited[nx][ny] = false;
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    if (!(cin >> n)) return 0;
-    for (int i = 0; i < n; ++i)
-        for (int j = 0; j < n; ++j) cin >> a[i][j];
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+if (!(cin >> n)) return 0;
+for (int i = 0; i < n; ++i)
+for (int j = 0; j < n; ++j) cin >> a[i][j];
 
-    if (a[0][0] == 1) {
-        visited[0][0] = true;
-        backtrack(0, 0);
-    }
-    if (paths.empty()) {
-        cout << -1 << "\n";
-    } else {
-        for (const string &s : paths) cout << s << "\n";
-    }
-    return 0;
+if (a[0][0] == 1) {
+visited[0][0] = true;
+backtrack(0, 0);
+}
+if (paths.empty()) {
+cout << -1 << "\n";
+} else {
+for (const string &s : paths) cout << s << "\n";
+}
+return 0;
 }
 ```

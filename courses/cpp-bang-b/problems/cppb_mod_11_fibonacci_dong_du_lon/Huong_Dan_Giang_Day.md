@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho số nguyên dương N (1 <= N <= 10^18). Hãy tìm số Fibonacci thứ N (với F(1) = 1, F(2) = 1, F(3) = 2, ...) theo modulo 10^9 + 7.
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Dãy số Fibonacci: F(1)=1, F(2)=1, F(3)=2, F(4)=3, F(5)=5, F(6)=8. Kết quả in ra: 8.... | Tính toán từng bước trạng thái |
@@ -38,37 +37,37 @@ using namespace std;
 const long long MOD = 1000000007;
 
 void multiply(long long F[2][2], long long M[2][2]) {
-    long long x = (F[0][0] * M[0][0] + F[0][1] * M[1][0]) % MOD;
-    long long y = (F[0][0] * M[0][1] + F[0][1] * M[1][1]) % MOD;
-    long long z = (F[1][0] * M[0][0] + F[1][0] * M[1][0]) % MOD;
-    long long w = (F[1][0] * M[0][1] + F[1][1] * M[1][1]) % MOD;
-    F[0][0] = x; F[0][1] = y;
-    F[1][0] = z; F[1][1] = w;
+long long x = (F[0][0] * M[0][0] + F[0][1] * M[1][0]) % MOD;
+long long y = (F[0][0] * M[0][1] + F[0][1] * M[1][1]) % MOD;
+long long z = (F[1][0] * M[0][0] + F[1][0] * M[1][0]) % MOD;
+long long w = (F[1][0] * M[0][1] + F[1][1] * M[1][1]) % MOD;
+F[0][0] = x; F[0][1] = y;
+F[1][0] = z; F[1][1] = w;
 }
 
 void powerMat(long long F[2][2], long long n) {
-    if (n == 0 || n == 1) return;
-    long long M[2][2] = {{1, 1}, {1, 0}};
-    powerMat(F, n / 2);
-    multiply(F, F);
-    if (n % 2 != 0) multiply(F, M);
+if (n == 0 || n == 1) return;
+long long M[2][2] = {{1, 1}, {1, 0}};
+powerMat(F, n / 2);
+multiply(F, F);
+if (n % 2 != 0) multiply(F, M);
 }
 
 long long fib(long long n) {
-    if (n == 0) return 0;
-    long long F[2][2] = {{1, 1}, {1, 0}};
-    powerMat(F, n - 1);
-    return F[0][0];
+if (n == 0) return 0;
+long long F[2][2] = {{1, 1}, {1, 0}};
+powerMat(F, n - 1);
+return F[0][0];
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    cout << fib(n) << "\n";
-    return 0;
+cout << fib(n) << "\n";
+return 0;
 }
 ```

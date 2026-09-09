@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10 6 5 1 0 1 1 0 1 1 1 0 )
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `10 6 5 1 0 1 1 0 1 1 1 0 1` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Đoạn từ vị trí 1 đến 6 là [1, 0, 1, 1, 0, 1] chỉ có 4 camera hoạt động (thiếu 1 camera so với chuẩn B = 5). Ta sửa camer... | Tính toán từng bước trạng thái |
@@ -32,28 +31,28 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    int cur_broken = 0;
-    for (int i = 0; i < k; ++i) {
-        if (a[i] == 0) ++cur_broken;
-    }
+int cur_broken = 0;
+for (int i = 0; i < k; ++i) {
+if (a[i] == 0) ++cur_broken;
+}
 
-    int min_broken = cur_broken;
-    for (int i = k; i < n; ++i) {
-        if (a[i] == 0) ++cur_broken;
-        if (a[i - k] == 0) --cur_broken;
-        min_broken = min(min_broken, cur_broken);
-    }
+int min_broken = cur_broken;
+for (int i = k; i < n; ++i) {
+if (a[i] == 0) ++cur_broken;
+if (a[i - k] == 0) --cur_broken;
+min_broken = min(min_broken, cur_broken);
+}
 
-    cout << min_broken << "\n";
-    return 0;
+cout << min_broken << "\n";
+return 0;
 }
 ```

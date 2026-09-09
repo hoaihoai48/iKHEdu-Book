@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho số nguyên dương N. Hãy kiểm tra xem N có phải là số chính phương (N = k^2 với k nguyên dương) hay không. In YES nếu đúng, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 49)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `49` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 49 = 7^2 là bình phương của số nguyên 7, do đó 49 là số chính phương -> in YES.... | Tính toán từng bước trạng thái |
@@ -36,18 +35,18 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    unsigned long long n;
-    if (!(cin >> n)) return 0;
+unsigned long long n;
+if (!(cin >> n)) return 0;
 
-    unsigned long long r = sqrt((double)n);
-    while (r * r > n) r--;
-    while ((r + 1) * (r + 1) <= n) r++;
+unsigned long long r = sqrt((double)n);
+while (r * r > n) r--;
+while ((r + 1) * (r + 1) <= n) r++;
 
-    if (r * r == n) cout << "YES\n";
-    else cout << "NO\n";
-    return 0;
+if (r * r == n) cout << "YES\n";
+else cout << "NO\n";
+return 0;
 }
 ```

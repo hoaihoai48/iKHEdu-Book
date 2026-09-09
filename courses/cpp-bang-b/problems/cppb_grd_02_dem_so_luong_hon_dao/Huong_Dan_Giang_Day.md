@@ -6,7 +6,7 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- **Bản chất bài toán:** Cho bản đồ ma trận $N  × M$. Hãy lập trình đếm số lượng hòn đảo xuất hiện trên bản đồ.
+- **Bản chất bài toán:** Cho bản đồ ma trận $N × M$. Hãy lập trình đếm số lượng hòn đảo xuất hiện trên bản đồ.
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình hoá ma trận:** Coi mỗi ô $(r, c)$ trên lưới là một đỉnh của đồ thị, các cạnh nối đến 4 ô kề cạnh (hoặc 8 ô kề góc).
@@ -16,16 +16,15 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 5 11000 11000 00100 00011` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 5 11000 11000 00100 00011` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `4 5 11000 11000 00100 00011` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với bản đồ kích thước $3  × 3$ chứa các cụm đất liền biệt lập không có ô kề cạnh chung: Các ô đất liền kết nối thành đúng 3 cụm độc lập... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với bản đồ kích thước $3 × 3$ chứa các cụm đất liền biệt lập không có ô kề cạnh chung: Các ô đất liền kết nối thành đúng 3 cụm độc lập... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `3` |
 
-*Giải thích chi tiết:* Với bản đồ kích thước $3  × 3$ chứa các cụm đất liền biệt lập không có ô kề cạnh chung:
+*Giải thích chi tiết:* Với bản đồ kích thước $3 × 3$ chứa các cụm đất liền biệt lập không có ô kề cạnh chung:
 Các ô đất liền kết nối thành đúng 3 cụm độc lập, kết quả đếm được là 3 hòn đảo.
 
 ---
@@ -46,45 +45,45 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    if (n <= 0 || m <= 0) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
+if (n <= 0 || m <= 0) return 0;
 
-    vector<string> grid(n);
-    for (int i = 0; i < n; ++i) cin >> grid[i];
+vector<string> grid(n);
+for (int i = 0; i < n; ++i) cin >> grid[i];
 
-    vector<vector<bool>> visited(n, vector<bool>(m, false));
-    int islands = 0;
+vector<vector<bool>> visited(n, vector<bool>(m, false));
+int islands = 0;
 
-    for (int r = 0; r < n; ++r) {
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == '1' && !visited[r][c]) {
-                islands++;
-                visited[r][c] = true;
-                queue<pair<int, int>> q;
-                q.push({r, c});
+for (int r = 0; r < n; ++r) {
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == '1' && !visited[r][c]) {
+islands++;
+visited[r][c] = true;
+queue<pair<int, int>> q;
+q.push({r, c});
 
-                while (!q.empty()) {
-                    auto [cr, cc] = q.front();
-                    q.pop();
+while (!q.empty()) {
+auto [cr, cc] = q.front();
+q.pop();
 
-                    for (int d = 0; d < 4; ++d) {
-                        int nr = cr + dr[d];
-                        int nc = cc + dc[d];
-                        if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '1' && !visited[nr][nc]) {
-                            visited[nr][nc] = true;
-                            q.push({nr, nc});
-                        }
-                    }
-                }
-            }
-        }
-    }
+for (int d = 0; d < 4; ++d) {
+int nr = cr + dr[d];
+int nc = cc + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == '1' && !visited[nr][nc]) {
+visited[nr][nc] = true;
+q.push({nr, nc});
+}
+}
+}
+}
+}
+}
 
-    cout << islands << "\n";
-    return 0;
+cout << islands << "\n";
+return 0;
 }
 ```

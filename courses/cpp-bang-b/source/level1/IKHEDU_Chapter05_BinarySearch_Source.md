@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để tìm được phương án tốt nhất trong một không gian có hàng tỷ khả năng mà chỉ cần kiểm tra tối đa $60$ lần?**
+> **Làm thế nào để tìm được phương án tốt nhất trong một không gian có hàng tỷ khả năng mà chỉ cần kiểm tra tối đa $60$ lần**
 
 ---
 
@@ -29,31 +29,31 @@ Sau chương này, em có thể:
 #### 1. Khái niệm & Nguyên lý chia đôi $\mathcal{O}(\log N)$
 - **Điều kiện tiên quyết:** Dữ liệu bắt buộc phải được sắp xếp theo thứ tự tăng dần.
 - **Nguyên lý:** Chia đôi đoạn tìm kiếm $[left, right]$ tại $mid = left + (right - left) / 2$. So sánh $A[mid]$ với $X$:
-  - Nếu $A[mid] == X$: Tìm thấy.
-  - Nếu $A[mid] < X$: Loại bỏ nửa trái, tìm bên phải ($left = mid + 1$).
-  - Nếu $A[mid] > X$: Loại bỏ nửa phải, tìm bên trái ($right = mid - 1$).
+- Nếu $A[mid] == X$: Tìm thấy.
+- Nếu $A[mid] < X$: Loại bỏ nửa trái, tìm bên phải ($left = mid + 1$).
+- Nếu $A[mid] > X$: Loại bỏ nửa phải, tìm bên trái ($right = mid - 1$).
 - **Độ phức tạp:** Giảm một nửa mỗi bước $\implies \mathcal{O}(\log N)$. Với $N = 10^9$ chỉ mất tối đa $\approx 30$ phép so sánh.
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 5.1: Tra Cứu Điểm Thu Phí Tự Động VETC**  
-> **Bối cảnh:** Trạm thu phí tự động không dừng VETC lưu trữ danh sách $N$ mã định danh thẻ RFID của các xe đã đăng ký tài khoản giao thông. Danh sách đã được sắp xếp tăng dần.  
-> **Nhiệm vụ:** Khi một xe mang mã $X$ tiến vào làn thu phí, hệ thống cần kiểm tra xem mã $X$ có tồn tại trong cơ sở dữ liệu không và trả về vị trí chỉ số (0-based) để mở barrier trong thời gian dưới $0.001$ mili-giây.  
+> **Bài toán mẫu 5.1: Tra Cứu Điểm Thu Phí Tự Động VETC** 
+> **Bối cảnh:** Trạm thu phí tự động không dừng VETC lưu trữ danh sách $N$ mã định danh thẻ RFID của các xe đã đăng ký tài khoản giao thông. Danh sách đã được sắp xếp tăng dần. 
+> **Nhiệm vụ:** Khi một xe mang mã $X$ tiến vào làn thu phí, hệ thống cần kiểm tra xem mã $X$ có tồn tại trong cơ sở dữ liệu không và trả về vị trí chỉ số (0-based) để mở barrier trong thời gian dưới $0.001$ mili-giây. 
 > 
-> **Input:**  
-> - Dòng 1: Hai số nguyên $N$ và $X$ ($1 \le N \le 10^6, -10^9 \le X \le 10^9$).  
-> - Dòng 2: $N$ số nguyên đã sắp xếp tăng dần $A_0, A_1, \dots, A_{N-1}$ ($-10^9 \le A_i \le 10^9$).  
+> **Input:** 
+> - Dòng 1: Hai số nguyên $N$ và $X$ ($1 \le N \le 10^6, -10^9 \le X \le 10^9$). 
+> - Dòng 2: $N$ số nguyên đã sắp xếp tăng dần $A_0, A_1, \dots, A_{N-1}$ ($-10^9 \le A_i \le 10^9$). 
 > 
-> **Output:**  
-> - Ghi chỉ số (0-based) của phần tử $X$. Nếu không tìm thấy, in `-1`.  
+> **Output:** 
+> - Ghi chỉ số (0-based) của phần tử $X$. Nếu không tìm thấy, in `-1`. 
 > 
-> **Sample:**  
-> - **Input:**  
->   `6 7`  
->   `1 3 5 7 9 11`  
-> - **Output:** `3`  
+> **Sample:** 
+> - **Input:** 
+> `6 7` 
+> `1 3 5 7 9 11` 
+> - **Output:** `3` 
 > - **Giải thích:** Mã số $7$ nằm ở vị trí chỉ số 3 trong mảng.
 
 #### Cài đặt C++
@@ -62,33 +62,33 @@ Sau chương này, em có thể:
 using namespace std;
 
 int binarySearch(const vector<int> &a, int x) {
-    int left = 0, right = (int)a.size() - 1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (a[mid] == x) {
-            return mid;
-        } else if (a[mid] < x) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return -1;
+int left = 0, right = (int)a.size() - 1;
+while (left <= right) {
+int mid = left + (right - left) / 2;
+if (a[mid] == x) {
+return mid;
+} else if (a[mid] < x) {
+left = mid + 1;
+} else {
+right = mid - 1;
+}
+}
+return -1;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, x;
-    if (!(cin >> n >> x)) return 0;
+int n, x;
+if (!(cin >> n >> x)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    cout << binarySearch(a, x) << "\n";
+cout << binarySearch(a, x) << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -127,9 +127,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 5.2: Thống Kê Số Lượng Vé Xem Ca Nhạc Theo Mệnh Giá**  
-> **Bối cảnh:** Ban tổ chức liveshow bán $N$ vé xem ca nhạc với nhiều mệnh giá khác nhau, đã được sắp xếp tăng dần.  
-> **Nhiệm vụ:** Em hãy đếm xem có bao nhiêu vé có đúng mệnh giá $X$ bằng thuật toán Lower Bound và Upper Bound.  
+> **Bài toán mẫu 5.2: Thống Kê Số Lượng Vé Xem Ca Nhạc Theo Mệnh Giá** 
+> **Bối cảnh:** Ban tổ chức liveshow bán $N$ vé xem ca nhạc với nhiều mệnh giá khác nhau, đã được sắp xếp tăng dần. 
+> **Nhiệm vụ:** Em hãy đếm xem có bao nhiêu vé có đúng mệnh giá $X$ bằng thuật toán Lower Bound và Upper Bound. 
 > **Input:** `7 5` \ `1 2 5 5 5 8 9` $\implies$ **Output:** `3` (có 3 vé mệnh giá 5).
 
 #### Cài đặt C++
@@ -138,46 +138,46 @@ int main() {
 using namespace std;
 
 int findLowerBound(const vector<int> &a, int x) {
-    int left = 0, right = (int)a.size() - 1, ans = a.size();
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (a[mid] >= x) {
-            ans = mid;
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return ans;
+int left = 0, right = (int)a.size() - 1, ans = a.size();
+while (left <= right) {
+int mid = left + (right - left) / 2;
+if (a[mid] >= x) {
+ans = mid;
+right = mid - 1;
+} else {
+left = mid + 1;
+}
+}
+return ans;
 }
 
 int findUpperBound(const vector<int> &a, int x) {
-    int left = 0, right = (int)a.size() - 1, ans = a.size();
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (a[mid] > x) {
-            ans = mid;
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
-    }
-    return ans;
+int left = 0, right = (int)a.size() - 1, ans = a.size();
+while (left <= right) {
+int mid = left + (right - left) / 2;
+if (a[mid] > x) {
+ans = mid;
+right = mid - 1;
+} else {
+left = mid + 1;
+}
+}
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, x;
-    if (!(cin >> n >> x)) return 0;
+int n, x;
+if (!(cin >> n >> x)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    cout << findUpperBound(a, x) - findLowerBound(a, x) << "\n";
+cout << findUpperBound(a, x) - findLowerBound(a, x) << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -204,9 +204,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 5.3: Quy Hoạch Công Viên Xanh Hình Vuông Ecopark**  
-> **Bối cảnh:** Khu đô thị Ecopark dành quỹ đất $N$ mét vuông để xây dựng một quảng trường hình vuông có cạnh là số nguyên mét $K$.  
-> **Nhiệm vụ:** Tìm độ dài cạnh $K$ lớn nhất sao cho diện tích $K \times K \le N$ ($N \le 10^{18}$).  
+> **Bài toán mẫu 5.3: Quy Hoạch Công Viên Xanh Hình Vuông Ecopark** 
+> **Bối cảnh:** Khu đô thị Ecopark dành quỹ đất $N$ mét vuông để xây dựng một quảng trường hình vuông có cạnh là số nguyên mét $K$. 
+> **Nhiệm vụ:** Tìm độ dài cạnh $K$ lớn nhất sao cho diện tích $K \times K \le N$ ($N \le 10^{18}$). 
 > **Input:** `20` $\implies$ **Output:** `4` (vì $4^2 = 16 \le 20 < 5^2 = 25$).
 
 #### Cài đặt C++
@@ -215,30 +215,30 @@ int main() {
 using namespace std;
 
 long long integerSqrt(long long n) {
-    long long left = 0, right = 1000000000LL;
-    long long ans = 0;
-    while (left <= right) {
-        long long mid = left + (right - left) / 2;
-        if (mid * mid <= n) {
-            ans = mid;
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return ans;
+long long left = 0, right = 1000000000LL;
+long long ans = 0;
+while (left <= right) {
+long long mid = left + (right - left) / 2;
+if (mid * mid <= n) {
+ans = mid;
+left = mid + 1;
+} else {
+right = mid - 1;
+}
+}
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    cout << integerSqrt(n) << "\n";
+cout << integerSqrt(n) << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -266,22 +266,22 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 5.4: Khai Thác Gỗ Rừng Trồng Bền Vững (EKO)**  
-> **Bối cảnh:** Công ty Lâm nghiệp Quốc gia quản lý $N$ cây gỗ có chiều cao $H_1, H_2, \dots, H_N$. Để chế biến theo hợp đồng xuất khẩu, công ty cần thu hoạch ít nhất $M$ mét gỗ. Máy cưa tự động được đặt ở độ cao $H$, mọi phần thân cây cao hơn $H$ sẽ bị cắt đứt để lấy gỗ.  
-> **Nhiệm vụ:** Tìm độ cao đặt máy cưa $H$ lớn nhất có thể để vừa thu đủ ít nhất $M$ mét gỗ, vừa bảo tồn tối đa chiều cao phần thân cây còn lại.  
+> **Bài toán mẫu 5.4: Khai Thác Gỗ Rừng Trồng Bền Vững (EKO)** 
+> **Bối cảnh:** Công ty Lâm nghiệp Quốc gia quản lý $N$ cây gỗ có chiều cao $H_1, H_2, \dots, H_N$. Để chế biến theo hợp đồng xuất khẩu, công ty cần thu hoạch ít nhất $M$ mét gỗ. Máy cưa tự động được đặt ở độ cao $H$, mọi phần thân cây cao hơn $H$ sẽ bị cắt đứt để lấy gỗ. 
+> **Nhiệm vụ:** Tìm độ cao đặt máy cưa $H$ lớn nhất có thể để vừa thu đủ ít nhất $M$ mét gỗ, vừa bảo tồn tối đa chiều cao phần thân cây còn lại. 
 > 
-> **Input:**  
-> - Dòng 1: Hai số nguyên $N$ và $M$ ($1 \le N \le 10^6, 1 \le M \le 10^9$).  
-> - Dòng 2: $N$ số nguyên $H_1, H_2, \dots, H_N$ ($1 \le H_i \le 10^9$).  
+> **Input:** 
+> - Dòng 1: Hai số nguyên $N$ và $M$ ($1 \le N \le 10^6, 1 \le M \le 10^9$). 
+> - Dòng 2: $N$ số nguyên $H_1, H_2, \dots, H_N$ ($1 \le H_i \le 10^9$). 
 > 
-> **Output:**  
-> - Ghi một số nguyên duy nhất là độ cao $H$ lớn nhất tìm được.  
+> **Output:** 
+> - Ghi một số nguyên duy nhất là độ cao $H$ lớn nhất tìm được. 
 > 
-> **Sample:**  
-> - **Input:**  
->   `4 7`  
->   `20 15 10 17`  
-> - **Output:** `15`  
+> **Sample:** 
+> - **Input:** 
+> `4 7` 
+> `20 15 10 17` 
+> - **Output:** `15` 
 > - **Giải thích:** Cắt ở độ cao 15 thu được $(20-15) + (17-15) = 5 + 2 = 7$ mét gỗ $\ge 7$.
 
 #### Cài đặt C++
@@ -290,44 +290,44 @@ int main() {
 using namespace std;
 
 bool check(const vector<int> &trees, long long m, int h) {
-    long long wood = 0;
-    for (int height : trees) {
-        if (height > h) {
-            wood += height - h;
-        }
-    }
-    return wood >= m;
+long long wood = 0;
+for (int height : trees) {
+if (height > h) {
+wood += height - h;
+}
+}
+return wood >= m;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long m;
-    if (!(cin >> n >> m)) return 0;
+int n;
+long long m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<int> trees(n);
-    int maxH = 0;
-    for (int i = 0; i < n; i++) {
-        cin >> trees[i];
-        maxH = max(maxH, trees[i]);
-    }
+vector<int> trees(n);
+int maxH = 0;
+for (int i = 0; i < n; i++) {
+cin >> trees[i];
+maxH = max(maxH, trees[i]);
+}
 
-    int left = 0, right = maxH, ans = 0;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (check(trees, m, mid)) {
-            ans = mid;
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
+int left = 0, right = maxH, ans = 0;
+while (left <= right) {
+int mid = left + (right - left) / 2;
+if (check(trees, m, mid)) {
+ans = mid;
+left = mid + 1;
+} else {
+right = mid - 1;
+}
+}
 
-    cout << ans << "\n";
+cout << ans << "\n";
 
-    return 0;
+return 0;
 }
 ```
 

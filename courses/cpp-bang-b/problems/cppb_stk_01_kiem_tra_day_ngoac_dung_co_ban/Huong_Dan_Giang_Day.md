@@ -11,14 +11,13 @@ Chuyên đề: **Cấu Trúc Dữ Liệu Ngăn Xếp (Stack) & Monotonic Stack**
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Nguyên lý hoạt động:** Vào sau Ra trước (LIFO). Thích hợp giải quyết các bài toán cặp ngoặc lồng nhau, khử đệ quy và tính toán biểu thức hậu tố.
 - **Kỹ thuật Ngăn xếp đơn điệu (Monotonic Stack):**
-  * Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
-  * Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
-  * Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
+* Duy trì các phần tử trong stack luôn tăng dần hoặc giảm dần nghiêm ngặt.
+* Trước khi đưa phần tử mới $A_i$ vào, liên tục đẩy các phần tử vi phạm tính đơn điệu ra khỏi stack (`pop()`).
+* Mỗi phần tử chỉ được đưa vào và lấy ra khỏi stack đúng 1 lần, giúp tổng độ phức tạp đạt $\mathcal{O}(N)$ tối ưu tuyệt đối.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `(()())` $\implies$ Đầu ra kỳ vọng: `YES`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `(()())` $\implies$ Đầu ra kỳ vọng: `YES`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -44,27 +43,27 @@ Mỗi dấu mở ngoặc đều có đúng một dấu đóng ngoặc tương �
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
+string s;
+if (!(cin >> s)) return 0;
 
-    int open_cnt = 0;
-    for (char c : s) {
-        if (c == '(') {
-            open_cnt++;
-        } else {
-            if (open_cnt == 0) {
-                cout << "NO\n";
-                return 0;
-            }
-            open_cnt--;
-        }
-    }
+int open_cnt = 0;
+for (char c : s) {
+if (c == '(') {
+open_cnt++;
+} else {
+if (open_cnt == 0) {
+cout << "NO\n";
+return 0;
+}
+open_cnt--;
+}
+}
 
-    if (open_cnt == 0) cout << "YES\n";
-    else cout << "NO\n";
-    return 0;
+if (open_cnt == 0) cout << "YES\n";
+else cout << "NO\n";
+return 0;
 }
 ```

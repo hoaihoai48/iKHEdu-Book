@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 7 2 3 2 5 2)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 7 2 3 2 5 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các đoạn con liên tiếp có tổng đúng bằng 7 là: [2, 3, 2] (2 + 3 + 2 = 7) và [5, 2] (5 + 2 = 7). Tổng cộng có đúng 2 đoạn... | Tính toán từng bước trạng thái |
@@ -32,36 +31,36 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 long long count_at_most(const vector<long long> &x, long long limit) {
-    if (limit <= 0) return 0;
-    int n = x.size();
-    int l = 0;
-    long long cur_sum = 0;
-    long long count = 0;
+if (limit <= 0) return 0;
+int n = x.size();
+int l = 0;
+long long cur_sum = 0;
+long long count = 0;
 
-    for (int r = 0; r < n; ++r) {
-        cur_sum += x[r];
-        while (cur_sum > limit) {
-            cur_sum -= x[l];
-            ++l;
-        }
-        count += (r - l + 1);
-    }
-    return count;
+for (int r = 0; r < n; ++r) {
+cur_sum += x[r];
+while (cur_sum > limit) {
+cur_sum -= x[l];
+++l;
+}
+count += (r - l + 1);
+}
+return count;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long a, b;
-    if (!(cin >> n >> a >> b)) return 0;
+int n;
+long long a, b;
+if (!(cin >> n >> a >> b)) return 0;
 
-    vector<long long> x(n);
-    for (int i = 0; i < n; ++i) cin >> x[i];
+vector<long long> x(n);
+for (int i = 0; i < n; ++i) cin >> x[i];
 
-    long long ans = count_at_most(x, b) - count_at_most(x, a - 1);
-    cout << ans << "\n";
-    return 0;
+long long ans = count_at_most(x, b) - count_at_most(x, a - 1);
+cout << ans << "\n";
+return 0;
 }
 ```

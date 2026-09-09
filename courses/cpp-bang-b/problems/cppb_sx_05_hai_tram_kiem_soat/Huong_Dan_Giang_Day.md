@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 1500 300 2800 800 1200 )
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 1500 300 2800 800 1200 3150` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Tọa độ ban đầu của 6 trạm là: $1500, 300, 2800, 800, 1200, 3150$. Sắp xếp các trạm theo thứ tự tăng dần của tọa độ dọc t... | Tính toán từng bước trạng thái |
@@ -43,23 +42,23 @@ Khoảng cách ngắn nhất đạt được là $300$ mét (giữa hai trạm t
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> x(n);
-    for (int i = 0; i < n; ++i) cin >> x[i];
+vector<long long> x(n);
+for (int i = 0; i < n; ++i) cin >> x[i];
 
-    sort(x.begin(), x.end());
+sort(x.begin(), x.end());
 
-    long long min_dist = x[1] - x[0];
-    for (int i = 1; i < n - 1; ++i) {
-        min_dist = min(min_dist, x[i + 1] - x[i]);
-    }
+long long min_dist = x[1] - x[0];
+for (int i = 1; i < n - 1; ++i) {
+min_dist = min(min_dist, x[i + 1] - x[i]);
+}
 
-    cout << min_dist << "\n";
-    return 0;
+cout << min_dist << "\n";
+return 0;
 }
 ```

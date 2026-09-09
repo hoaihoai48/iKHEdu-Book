@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 5 5 -8 2 -3 8)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `5 5 -8 2 -3 8` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Xét dãy số ban đầu: $5, -8, 2, -3, 8$. - Giá trị tuyệt đối của các phần tử lần lượt là: $|5| = 5$, $|-8| = 8$, $|2| = 2$... | Tính toán từng bước trạng thái |
@@ -19,10 +18,10 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 - Giá trị tuyệt đối của các phần tử lần lượt là: $|5| = 5$, $|-8| = 8$, $|2| = 2$, $|-3| = 3$, $|8| = 8$.
 - Sắp xếp theo thứ tự độ lớn tăng dần:
-  - $|2| = 2 \implies 2$ đứng đầu.
-  - $|-3| = 3 \implies -3$ đứng tiếp theo.
-  - $|5| = 5 \implies 5$ đứng tiếp theo.
-  - Với hai phần tử có độ lớn bằng nhau là $-8$ và $8$ (cùng có trị tuyệt đối là $8$): theo quy tắc ưu tiên, số âm $-8$ phải đứng trước số dương $8$.
+- $|2| = 2 \implies 2$ đứng đầu.
+- $|-3| = 3 \implies -3$ đứng tiếp theo.
+- $|5| = 5 \implies 5$ đứng tiếp theo.
+- Với hai phần tử có độ lớn bằng nhau là $-8$ và $8$ (cùng có trị tuyệt đối là $8$): theo quy tắc ưu tiên, số âm $-8$ phải đứng trước số dương $8$.
 Kết quả thu được: `2 -3 5 -8 8`.
 
 ---
@@ -40,26 +39,26 @@ Kết quả thu được: `2 -3 5 -8 8`.
 using namespace std;
 
 bool cmp(long long u, long long v) {
-    if (abs(u) != abs(v)) return abs(u) < abs(v);
-    return u < v;
+if (abs(u) != abs(v)) return abs(u) < abs(v);
+return u < v;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end(), cmp);
+sort(a.begin(), a.end(), cmp);
 
-    for (int i = 0; i < n; ++i) {
-        cout << a[i] << (i == n - 1 ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+for (int i = 0; i < n; ++i) {
+cout << a[i] << (i == n - 1 "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

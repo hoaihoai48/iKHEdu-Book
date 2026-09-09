@@ -7,13 +7,12 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 - **Bản chất bài toán:** Cho hai số nguyên L, R (1 <= L <= R <= 10^12, R - L <= 10^6). Hãy đếm số lượng số nguyên tố trong đoạn [L, R].
 
 - **Phương pháp tiếp cận — Lý thuyết số & Số nguyên tố:**
-  - Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
-  - Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
+- Tận dụng sàng nguyên tố Eratosthenes cho các truy vấn tiền xử lý $\mathcal{O}(N \log \log N)$ hoặc kiểm tra căn bậc hai $\mathcal{O}(\sqrt{N})$.
+- Phân tích thừa số nguyên tố và tính chất ước số để tối ưu hóa bài toán.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10 20)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `10 20` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các số nguyên tố trong đoạn [10, 20] gồm {11, 13, 17, 19}, tổng cộng có 4 số.... | Tính toán từng bước trạng thái |
@@ -36,38 +35,38 @@ Chuyên đề: **Bài 07: Lý thuyết số & số nguyên tố**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long l, r;
-    if (!(cin >> l >> r)) return 0;
+long long l, r;
+if (!(cin >> l >> r)) return 0;
 
-    int lim = sqrt(r);
-    vector<bool> is_prime(lim + 1, true);
-    vector<int> primes;
-    for (int i = 2; i <= lim; ++i) {
-        if (is_prime[i]) {
-            primes.push_back(i);
-            for (int j = i * 2; j <= lim; j += i) is_prime[j] = false;
-        }
-    }
+int lim = sqrt(r);
+vector<bool> is_prime(lim + 1, true);
+vector<int> primes;
+for (int i = 2; i <= lim; ++i) {
+if (is_prime[i]) {
+primes.push_back(i);
+for (int j = i * 2; j <= lim; j += i) is_prime[j] = false;
+}
+}
 
-    vector<bool> is_prime_range(r - l + 1, true);
-    for (int p : primes) {
-        long long start = max(1LL * p * p, ((l + p - 1) / p) * p);
-        for (long long j = start; j <= r; j += p) {
-            is_prime_range[j - l] = false;
-        }
-    }
+vector<bool> is_prime_range(r - l + 1, true);
+for (int p : primes) {
+long long start = max(1LL * p * p, ((l + p - 1) / p) * p);
+for (long long j = start; j <= r; j += p) {
+is_prime_range[j - l] = false;
+}
+}
 
-    if (l == 1) is_prime_range[0] = false;
+if (l == 1) is_prime_range[0] = false;
 
-    int count_primes = 0;
-    for (int i = 0; i <= r - l; ++i) {
-        if (is_prime_range[i]) count_primes++;
-    }
+int count_primes = 0;
+for (int i = 0; i <= r - l; ++i) {
+if (is_prime_range[i]) count_primes++;
+}
 
-    cout << count_primes << "\n";
-    return 0;
+cout << count_primes << "\n";
+return 0;
 }
 ```

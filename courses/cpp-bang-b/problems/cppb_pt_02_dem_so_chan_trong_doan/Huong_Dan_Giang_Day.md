@@ -7,13 +7,12 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 - **Bản chất bài toán:** Cho dãy gồm N số nguyên. Hãy trả lời Q truy vấn [L, R], mỗi truy vấn yêu cầu đếm xem có bao nhiêu số chẵn trong đoạn từ vị trí L đến R.
 
 - **Phương pháp tiếp cận — Mảng tiền tố & Mảng hiệu:**
-  - Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
-  - Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
+- Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
+- Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 3 2 3 4 6 7 8 1 4 2 5 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 3 2 3 4 6 7 8 1 4 2 5 1 6` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Mảng nhị phân đánh dấu số chẵn: [1, 0, 1, 1, 0, 1]. Mảng tiền tố đếm số chẵn: [0, 1, 1, 2, 3, 3, 4]. - Đoạn [1, 4]: gồm ... | Tính toán từng bước trạng thái |
@@ -40,25 +39,25 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, q;
-    if (!(cin >> n >> q)) return 0;
+int n, q;
+if (!(cin >> n >> q)) return 0;
 
-    vector<int> p(n + 1, 0);
-    for (int i = 1; i <= n; ++i) {
-        long long x;
-        cin >> x;
-        p[i] = p[i - 1] + (abs(x) % 2 == 0 ? 1 : 0);
-    }
+vector<int> p(n + 1, 0);
+for (int i = 1; i <= n; ++i) {
+long long x;
+cin >> x;
+p[i] = p[i - 1] + (abs(x) % 2 == 0 1 : 0);
+}
 
-    while (q--) {
-        int l, r;
-        cin >> l >> r;
-        cout << p[r] - p[l - 1] << "\n";
-    }
+while (q--) {
+int l, r;
+cin >> l >> r;
+cout << p[r] - p[l - 1] << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```

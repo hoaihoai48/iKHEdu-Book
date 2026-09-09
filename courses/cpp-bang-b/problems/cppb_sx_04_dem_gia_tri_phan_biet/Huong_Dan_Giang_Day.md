@@ -8,8 +8,7 @@ Chuyên đề: **Bài 01: Thuật toán sắp xếp**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6 2 3 2 1 3 5)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `6 2 3 2 1 3 5` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Danh sách mã vé ghi nhận là: $2, 3, 2, 1, 3, 5$. Sau khi sắp xếp tăng dần: $1, 2, 2, 3, 3, 5$. Các nhóm giá trị trùng nh... | Tính toán từng bước trạng thái |
@@ -40,23 +39,23 @@ Tổng cộng có $4$ giá trị phân biệt khác nhau là $\{1, 2, 3, 5\}$. D
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    sort(a.begin(), a.end());
+sort(a.begin(), a.end());
 
-    int cnt = 1;
-    for (int i = 1; i < n; ++i) {
-        if (a[i] != a[i - 1]) ++cnt;
-    }
+int cnt = 1;
+for (int i = 1; i < n; ++i) {
+if (a[i] != a[i - 1]) ++cnt;
+}
 
-    cout << cnt << "\n";
-    return 0;
+cout << cnt << "\n";
+return 0;
 }
 ```

@@ -7,7 +7,7 @@ Vẫn tại quần đảo gồm $N$ hòn đảo và $M$ cây cầu, ban quy ho�
 Cho đồ thị vô hướng $N$ đỉnh $M$ cạnh. Hãy lập trình tìm số lượng đỉnh thuộc về thành phần liên thông có kích thước lớn nhất.
 
 ## Input
-- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2  × 10^5$).
+- Dòng 1: Chứa hai số nguyên $N$ và $M$ ($1 \le N \le 10^5, 0 \le M \le 2 × 10^5$).
 - $M$ dòng tiếp theo, mỗi dòng chứa hai đỉnh $u$ và $v$.
 
 ## Output

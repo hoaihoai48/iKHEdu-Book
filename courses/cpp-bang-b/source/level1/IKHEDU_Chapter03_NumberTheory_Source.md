@@ -38,7 +38,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để kiểm tra, đếm và phân tích tính chất chia hết của một số nguyên lớn mà không làm chương trình bị quá thời gian hay tràn bộ nhớ?**
+> **Làm thế nào để kiểm tra, đếm và phân tích tính chất chia hết của một số nguyên lớn mà không làm chương trình bị quá thời gian hay tràn bộ nhớ**
 
 ---
 
@@ -52,20 +52,20 @@ Sau Bài 3.1, em có thể giải thích định nghĩa ước - bội, nhận b
 
 Giả sử em có $N = 36$ chiếc kẹo và muốn chia đều vào các túi, mỗi túi có đúng $d$ chiếc.
 - Nếu mỗi túi có $d = 2$ chiếc $\implies$ cần $36 / 2 = 18$ túi. Cặp số $(2, 18)$ cùng xuất hiện từ một phép chia hết!
-- Liệu em có cần thử duyệt từ $1$ đến tận $36$ để tìm tất cả các cách chia không?
+- Liệu em có cần thử duyệt từ $1$ đến tận $36$ để tìm tất cả các cách chia không
 
 #### Ước, bội và quy luật đối xứng
 
 - Số nguyên dương $d$ là **ước** của $N$ nếu phép chia $N$ cho $d$ có phần dư bằng $0$ (`N % d == 0`). Khi đó $N$ là **bội** của $d$.
 - Nếu $d$ là một ước của $N$ thì thương số $N / d$ cũng chắc chắn là một ước của $N$:
-  $$d \times \frac{N}{d} = N$$
+$$d \times \frac{N}{d} = N$$
 - Trong mỗi cặp ước $(d, N/d)$, số nhỏ hơn không bao giờ vượt quá $\sqrt{N}$. Vì nếu cả hai số đều lớn hơn $\sqrt{N}$ thì tích của chúng sẽ lớn hơn $\sqrt{N} \times \sqrt{N} = N$ (vô lý).
 
 > **Chỉ cần duyệt $d$ từ $1$ đến $\lfloor\sqrt{N}\rfloor$ ($d \times d \le N$). Với mỗi ước $d$ tìm thấy, ta lấy thêm ước đối xứng $N/d$.**
 
 #### Mô phỏng từng lượt tìm ước của $N = 36$ ($\sqrt{36} = 6$)
 
-| Lượt duyệt $d$ | $36 \% d == 0$? | Cặp ước thu được $(d, 36/d)$ | Ghi chú |
+| Lượt duyệt $d$ | $36 \% d == 0$ | Cặp ước thu được $(d, 36/d)$ | Ghi chú |
 |:---:|:---:|:---:|---|
 | $1$ | Có | $(1, 36)$ | Lấy cả 1 và 36 |
 | $2$ | Có | $(2, 18)$ | Lấy cả 2 và 18 |
@@ -79,10 +79,10 @@ Giả sử em có $N = 36$ chiếc kẹo và muốn chia đều vào các túi, 
 ```text
 divisors = danh sách rỗng
 for d từ 1 đến khi d * d > n:
-    nếu n % d == 0:
-        thêm d vào divisors
-        nếu d != n / d:
-            thêm (n / d) vào divisors
+nếu n % d == 0:
+thêm d vào divisors
+nếu d != n / d:
+thêm (n / d) vào divisors
 sắp xếp divisors tăng dần
 in số lượng và danh sách ước
 ```
@@ -94,32 +94,32 @@ in số lượng và danh sách ước
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> divisors;
-    for (long long d = 1; d * d <= n; d++) {
-        if (n % d == 0) {
-            divisors.push_back(d);
-            if (d * d != n) {
-                divisors.push_back(n / d);
-            }
-        }
-    }
+vector<long long> divisors;
+for (long long d = 1; d * d <= n; d++) {
+if (n % d == 0) {
+divisors.push_back(d);
+if (d * d != n) {
+divisors.push_back(n / d);
+}
+}
+}
 
-    sort(divisors.begin(), divisors.end());
+sort(divisors.begin(), divisors.end());
 
-    cout << divisors.size() << '\n';
-    for (int i = 0; i < (int)divisors.size(); i++) {
-        if (i > 0) cout << ' ';
-        cout << divisors[i];
-    }
-    cout << '\n';
+cout << divisors.size() << '\n';
+for (int i = 0; i < (int)divisors.size(); i++) {
+if (i > 0) cout << ' ';
+cout << divisors[i];
+}
+cout << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -127,15 +127,15 @@ int main() {
 
 | Biến | Câu hỏi kiểm tra |
 |---|---|
-| `d` | Đã khai báo kiểu `long long` chưa? (Nếu khai báo `int d`, khi $N = 10^{12}$ thì `d * d` sẽ tràn số gây lặp vô hạn). |
-| `d * d != n` | Có bị trùng ước khi $N$ là số chính phương ($36 = 6 \times 6$) không? |
-| `d * d <= n` | Đã dùng phép nhân nguyên thay vì gọi hàm `sqrt(n)` chưa? |
+| `d` | Đã khai báo kiểu `long long` chưa (Nếu khai báo `int d`, khi $N = 10^{12}$ thì `d * d` sẽ tràn số gây lặp vô hạn). |
+| `d * d != n` | Có bị trùng ước khi $N$ là số chính phương ($36 = 6 \times 6$) không |
+| `d * d <= n` | Đã dùng phép nhân nguyên thay vì gọi hàm `sqrt(n)` chưa |
 
 #### Tự kiểm tra
 
-1. Vì sao trong mỗi cặp ước $(d, N/d)$ luôn có ít nhất một số $\le \sqrt{N}$?
-2. Số nguyên dương $N$ có số lượng ước là số lẻ khi và chỉ khi $N$ là số gì?
-3. Với $N = 10^{12}$, vòng lặp `for` chạy tối đa bao nhiêu lần?
+1. Vì sao trong mỗi cặp ước $(d, N/d)$ luôn có ít nhất một số $\le \sqrt{N}$
+2. Số nguyên dương $N$ có số lượng ước là số lẻ khi và chỉ khi $N$ là số gì
+3. Với $N = 10^{12}$, vòng lặp `for` chạy tối đa bao nhiêu lần
 
 #### Luyện tập ngắn
 
@@ -164,8 +164,8 @@ Em có một mảnh sân hình chữ nhật dài $105\text{ cm}$, rộng $45\tex
 
 - **Ước chung lớn nhất ($\gcd(a, b)$):** Là số nguyên dương lớn nhất chia hết cả $a$ và $b$. Nếu $\gcd(a, b) = 1$, ta gọi $a$ và $b$ là hai số **nguyên tố cùng nhau**.
 - **Định lý Euclid:** Ước chung lớn nhất của hai số không thay đổi khi thay số lớn bằng số dư của phép chia số lớn cho số nhỏ:
-  $$\gcd(a, b) = \gcd(b, a \% b)$$
-  Quá trình dừng lại khi số dư bằng $0$, khi đó số còn lại chính là $\gcd$.
+$$\gcd(a, b) = \gcd(b, a \% b)$$
+Quá trình dừng lại khi số dư bằng $0$, khi đó số còn lại chính là $\gcd$.
 
 #### Mô phỏng từng bước cho cặp $(a = 105, b = 45)$
 
@@ -181,11 +181,11 @@ Sau mỗi bước, số dư giảm đi ít nhất một nửa. Thuật toán ch�
 
 ```text
 hàm gcd(a, b):
-    trong khi b != 0:
-        r = a % b
-        a = b
-        b = r
-    trả về a
+trong khi b != 0:
+r = a % b
+a = b
+b = r
+trả về a
 ```
 
 #### Code C++
@@ -195,25 +195,25 @@ hàm gcd(a, b):
 using namespace std;
 
 long long gcd(long long a, long long b) {
-    while (b != 0) {
-        long long r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+while (b != 0) {
+long long r = a % b;
+a = b;
+b = r;
+}
+return a;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    long long g = gcd(a, b);
-    cout << a / g << " " << b / g << '\n';
+long long g = gcd(a, b);
+cout << a / g << " " << b / g << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -226,9 +226,9 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Điều kiện dừng của thuật toán Euclid là gì?
-2. Hai số nguyên dương được gọi là nguyên tố cùng nhau khi $\gcd(a, b)$ bằng bao nhiêu?
-3. Muốn tìm $\gcd$ của 3 số $a, b, c$, ta làm thế nào?
+1. Điều kiện dừng của thuật toán Euclid là gì
+2. Hai số nguyên dương được gọi là nguyên tố cùng nhau khi $\gcd(a, b)$ bằng bao nhiêu
+3. Muốn tìm $\gcd$ của 3 số $a, b, c$, ta làm thế nào
 
 #### Luyện tập ngắn
 
@@ -249,24 +249,24 @@ Sau Bài 3.3, em hiểu mối liên hệ giữa GCD và LCM, nắm vững quy t�
 
 #### Khởi động
 
-Hai chiếc xe cùng xuất phát từ bến lúc 6h sáng. Xe A cứ $12$ phút quay lại bến một lần, xe B cứ $18$ phút quay lại bến một lần. Sau bao lâu hai xe lại cùng lúc về bến?
+Hai chiếc xe cùng xuất phát từ bến lúc 6h sáng. Xe A cứ $12$ phút quay lại bến một lần, xe B cứ $18$ phút quay lại bến một lần. Sau bao lâu hai xe lại cùng lúc về bến
 - Khoảng thời gian đó chính là **Bội chung nhỏ nhất** $\text{lcm}(12, 18) = 36$ phút.
 
 #### Mối liên hệ và Bẫy tràn số
 
 - **Bội chung nhỏ nhất ($\text{lcm}(a, b)$):** Số nguyên dương nhỏ nhất chia hết cho cả $a$ và $b$.
 - **Công thức liên hệ:**
-  $$a \times b = \gcd(a, b) \times \text{lcm}(a, b) \implies \text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$$
+$$a \times b = \gcd(a, b) \times \text{lcm}(a, b) \implies \text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$$
 - **Bẫy tràn số:** Nếu tính `(a * b) / gcd(a, b)` khi $a, b = 10^9$, tích $a \times b = 10^{18}$ sẽ tràn số `int` ngay lập tức.
 - **Quy tắc an toàn:** Vì $a$ luôn chia hết cho $\gcd(a, b)$, ta chia trước rồi mới nhân:
-  $$\text{lcm}(a, b) = \left( \frac{a}{\gcd(a, b)} \right) \times b$$
+$$\text{lcm}(a, b) = \left( \frac{a}{\gcd(a, b)} \right) \times b$$
 
 #### Pseudocode
 
 ```text
 hàm lcm(a, b):
-    nếu a == 0 hoặc b == 0: trả về 0
-    trả về (a / gcd(a, b)) * b
+nếu a == 0 hoặc b == 0: trả về 0
+trả về (a / gcd(a, b)) * b
 ```
 
 #### Code C++
@@ -276,29 +276,29 @@ hàm lcm(a, b):
 using namespace std;
 
 long long gcd(long long a, long long b) {
-    while (b != 0) {
-        long long r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+while (b != 0) {
+long long r = a % b;
+a = b;
+b = r;
+}
+return a;
 }
 
 long long lcm(long long a, long long b) {
-    if (a == 0 || b == 0) return 0;
-    return (a / gcd(a, b)) * b;
+if (a == 0 || b == 0) return 0;
+return (a / gcd(a, b)) * b;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << lcm(a, b) << '\n';
+cout << lcm(a, b) << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -306,13 +306,13 @@ int main() {
 
 | Thao tác | Đánh giá |
 |---|---|
-| `(a * b) / gcd(a, b)` | ❌ Nguy hiểm, dễ tràn số trung gian. |
-| `(a / gcd(a, b)) * b` |  An toàn, luôn là phép chia hết. |
+| `(a * b) / gcd(a, b)` | [SAI] Nguy hiểm, dễ tràn số trung gian. |
+| `(a / gcd(a, b)) * b` | An toàn, luôn là phép chia hết. |
 
 #### Tự kiểm tra
 
-1. Tại sao phép chia `a / gcd(a, b)` không bao giờ có dư?
-2. Nếu $a$ và $b$ nguyên tố cùng nhau thì $\text{lcm}(a, b)$ bằng bao nhiêu?
+1. Tại sao phép chia `a / gcd(a, b)` không bao giờ có dư
+2. Nếu $a$ và $b$ nguyên tố cùng nhau thì $\text{lcm}(a, b)$ bằng bao nhiêu
 
 #### Luyện tập ngắn
 
@@ -344,28 +344,28 @@ Số nguyên tố giống như các "viên gạch nguyên tử" của thế gi�
 
 #### Mô phỏng kiểm tra $N = 29$ ($\sqrt{29} \approx 5.38$)
 
-| Bước | Số thử chia | $29 \% i == 0$? | Kết luận |
+| Bước | Số thử chia | $29 \% i == 0$ | Kết luận |
 |:---:|:---:|:---:|---|
 | 1 | $2$ | Không | 29 là số lẻ |
 | 2 | $3$ | Không | 29 không chia hết cho 3 |
 | 3 | $5$ ($i = 5$) | Không | $5 \times 5 = 25 \le 29$, không chia hết |
 | 4 | $7$ ($i + 2 = 7$) | Bỏ qua | $7 \times 7 = 49 > 29$, dừng vòng lặp |
 
-👉 **Kết luận:** 29 là số nguyên tố.
+**Kết luận:** 29 là số nguyên tố.
 
 #### Pseudocode
 
 ```text
 hàm isPrime(n):
-    nếu n < 2: trả về false
-    nếu n == 2 hoặc n == 3: trả về true
-    nếu n % 2 == 0 hoặc n % 3 == 0: trả về false
-    i = 5
-    trong khi i * i <= n:
-        nếu n % i == 0 hoặc n % (i + 2) == 0:
-            trả về false
-        i = i + 6
-    trả về true
+nếu n < 2: trả về false
+nếu n == 2 hoặc n == 3: trả về true
+nếu n % 2 == 0 hoặc n % 3 == 0: trả về false
+i = 5
+trong khi i * i <= n:
+nếu n % i == 0 hoặc n % (i + 2) == 0:
+trả về false
+i = i + 6
+trả về true
 ```
 
 #### Code C++
@@ -375,31 +375,31 @@ hàm isPrime(n):
 using namespace std;
 
 bool isPrime(long long n) {
-    if (n < 2) return false;
-    if (n == 2 || n == 3) return true;
-    if (n % 2 == 0 || n % 3 == 0) return false;
-    for (long long i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0) {
-            return false;
-        }
-    }
-    return true;
+if (n < 2) return false;
+if (n == 2 || n == 3) return true;
+if (n % 2 == 0 || n % 3 == 0) return false;
+for (long long i = 5; i * i <= n; i += 6) {
+if (n % i == 0 || n % (i + 2) == 0) {
+return false;
+}
+}
+return true;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    if (isPrime(n)) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
-    }
+if (isPrime(n)) {
+cout << "YES\n";
+} else {
+cout << "NO\n";
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -413,8 +413,8 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Số nguyên tố chẵn duy nhất là số nào?
-2. Vì sao một hợp số $N$ luôn có ước nguyên tố $\le \sqrt{N}$?
+1. Số nguyên tố chẵn duy nhất là số nào
+2. Vì sao một hợp số $N$ luôn có ước nguyên tố $\le \sqrt{N}$
 
 #### Luyện tập ngắn
 
@@ -452,20 +452,20 @@ Số $60$ có thể viết thành $2 \times 2 \times 3 \times 5 = 2^2 \times 3^1
 | 3 | $5$ | $p = 4$ | $4 \times 4 = 16 > 5 \implies$ dừng vòng lặp | - | $5$ |
 | 4 | $5 > 1$ | - | Thừa số nguyên tố cuối cùng là $5^1$ | $5^1$ | $1$ |
 
-👉 **Kết quả:** $60 = 2^2 \times 3^1 \times 5^1$.
+**Kết quả:** $60 = 2^2 \times 3^1 \times 5^1$.
 
 #### Pseudocode
 
 ```text
 for p từ 2 đến khi p * p > n:
-    nếu n % p == 0:
-        exp = 0
-        trong khi n % p == 0:
-            exp tăng 1
-            n = n / p
-        in p và exp
+nếu n % p == 0:
+exp = 0
+trong khi n % p == 0:
+exp tăng 1
+n = n / p
+in p và exp
 nếu n > 1:
-    in n và exp = 1
+in n và exp = 1
 ```
 
 #### Code C++
@@ -475,33 +475,33 @@ nếu n > 1:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long n;
-    if (!(cin >> n)) return 0;
+long long n;
+if (!(cin >> n)) return 0;
 
-    bool first = true;
-    for (long long p = 2; p * p <= n; p++) {
-        if (n % p == 0) {
-            int exp = 0;
-            while (n % p == 0) {
-                exp++;
-                n /= p;
-            }
-            if (!first) cout << " * ";
-            cout << p << "^" << exp;
-            first = false;
-        }
-    }
+bool first = true;
+for (long long p = 2; p * p <= n; p++) {
+if (n % p == 0) {
+int exp = 0;
+while (n % p == 0) {
+exp++;
+n /= p;
+}
+if (!first) cout << " * ";
+cout << p << "^" << exp;
+first = false;
+}
+}
 
-    if (n > 1) {
-        if (!first) cout << " * ";
-        cout << n << "^1";
-    }
-    cout << '\n';
+if (n > 1) {
+if (!first) cout << " * ";
+cout << n << "^1";
+}
+cout << '\n';
 
-    return 0;
+return 0;
 }
 ```
 
@@ -510,12 +510,12 @@ int main() {
 | Tình huống | Hiện tượng | Cách xử lý đúng |
 |---|---|---|
 | Số nguyên tố $N = 13$ | Vòng lặp dừng ngay ở $p = 2$ | Khối lệnh `if (n > 1)` sẽ in ra $13^1$. |
-| Hợp số $p = 4, 6$ | Có bị in nhầm làm thừa số không? | Không, vì các thừa số nguyên tố nhỏ hơn ($2, 3$) đã chia rút gọn hết $N$ từ trước. |
+| Hợp số $p = 4, 6$ | Có bị in nhầm làm thừa số không | Không, vì các thừa số nguyên tố nhỏ hơn ($2, 3$) đã chia rút gọn hết $N$ từ trước. |
 
 #### Tự kiểm tra
 
-1. Vì sao không cần kiểm tra $p$ có phải số nguyên tố trước khi chia?
-2. Nếu $N = 2^3 \times 3^2 \times 5^1$, số lượng ước của $N$ tính bằng công thức nào? (Đáp án: $(3+1)(2+1)(1+1) = 24$ ước).
+1. Vì sao không cần kiểm tra $p$ có phải số nguyên tố trước khi chia
+2. Nếu $N = 2^3 \times 3^2 \times 5^1$, số lượng ước của $N$ tính bằng công thức nào (Đáp án: $(3+1)(2+1)(1+1) = 24$ ước).
 
 #### Luyện tập ngắn
 
@@ -550,10 +550,10 @@ Nếu cần kiểm tra số nguyên tố cho $Q = 10^6$ truy vấn, mỗi truy v
 #### Mô phỏng sàng từ 2 đến 20
 
 ```text
-Ban đầu:     2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
-Gạch bội 2:  2  3  .  5  .  7  .  9  . 11  . 13  . 15  . 17  . 19  .
-Gạch bội 3:  2  3  .  5  .  7  .  .  . 11  . 13  .  .  . 17  . 19  .
-Còn lại:     2, 3, 5, 7, 11, 13, 17, 19
+Ban đầu: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+Gạch bội 2: 2 3 . 5 . 7 . 9 . 11 . 13 . 15 . 17 . 19 .
+Gạch bội 3: 2 3 . 5 . 7 . . . 11 . 13 . . . 17 . 19 .
+Còn lại: 2, 3, 5, 7, 11, 13, 17, 19
 ```
 
 #### Pseudocode
@@ -563,9 +563,9 @@ is_prime[0] = is_prime[1] = false
 mọi vị trí từ 2 đến N gán bằng true
 
 for p từ 2 đến khi p * p > N:
-    nếu is_prime[p] == true:
-        for i từ p * p đến N, mỗi bước tăng p:
-            is_prime[i] = false
+nếu is_prime[p] == true:
+for i từ p * p đến N, mỗi bước tăng p:
+is_prime[i] = false
 ```
 
 #### Code C++
@@ -578,36 +578,36 @@ const int MAX_N = 10000000;
 vector<bool> is_prime(MAX_N + 1, true);
 
 void sieve() {
-    is_prime[0] = is_prime[1] = false;
-    for (int p = 2; p * p <= MAX_N; p++) {
-        if (is_prime[p]) {
-            for (int i = p * p; i <= MAX_N; i += p) {
-                is_prime[i] = false;
-            }
-        }
-    }
+is_prime[0] = is_prime[1] = false;
+for (int p = 2; p * p <= MAX_N; p++) {
+if (is_prime[p]) {
+for (int i = p * p; i <= MAX_N; i += p) {
+is_prime[i] = false;
+}
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    sieve();
+sieve();
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    while (q--) {
-        int x;
-        cin >> x;
-        if (is_prime[x]) {
-            cout << "YES\n";
-        } else {
-            cout << "NO\n";
-        }
-    }
+while (q--) {
+int x;
+cin >> x;
+if (is_prime[x]) {
+cout << "YES\n";
+} else {
+cout << "NO\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -620,8 +620,8 @@ int main() {
 
 #### Tự kiểm tra
 
-1. Vì sao vòng lặp ngoài chỉ cần chạy đến $p \times p \le N$?
-2. Sàng Eratosthenes cho $N = 10^7$ mất bao lâu để hoàn thành? (Đáp án: $\approx 0.08$ giây).
+1. Vì sao vòng lặp ngoài chỉ cần chạy đến $p \times p \le N$
+2. Sàng Eratosthenes cho $N = 10^7$ mất bao lâu để hoàn thành (Đáp án: $\approx 0.08$ giây).
 
 #### Luyện tập ngắn
 
@@ -720,13 +720,13 @@ Cài đặt Sàng Eratosthenes cho $10^7$ số và trả lời $Q$ truy vấn ki
 
 | Năng lực | Chưa chắc | Làm khi có gợi ý | Tự làm được |
 |---|:---:|:---:|:---:|
-| Tìm ước trong $\mathcal{O}(\sqrt{N})$ |  |  |  |
-| Cài đặt thuật toán Euclid tìm GCD |  |  |  |
-| Tính LCM an toàn (chia trước nhân) |  |  |  |
-| Kiểm tra số nguyên tố tối ưu $6k \pm 1$ |  |  |  |
-| Phân tích thừa số nguyên tố bằng chia dần |  |  |  |
-| Cài đặt Sàng Eratosthenes $\mathcal{O}(N \log \log N)$ |  |  |  |
-| Xử lý số lớn $10^{18}$ với `long long` |  |  |  |
+| Tìm ước trong $\mathcal{O}(\sqrt{N})$ | | | |
+| Cài đặt thuật toán Euclid tìm GCD | | | |
+| Tính LCM an toàn (chia trước nhân) | | | |
+| Kiểm tra số nguyên tố tối ưu $6k \pm 1$ | | | |
+| Phân tích thừa số nguyên tố bằng chia dần | | | |
+| Cài đặt Sàng Eratosthenes $\mathcal{O}(N \log \log N)$ | | | |
+| Xử lý số lớn $10^{18}$ với `long long` | | | |
 
 #### Tiêu chí hoàn thành chương
 
@@ -771,31 +771,31 @@ using namespace std;
 
 // 1. Uoc chung lon nhat (Euclid)
 long long gcd(long long a, long long b) {
-    while (b != 0) {
-        long long r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+while (b != 0) {
+long long r = a % b;
+a = b;
+b = r;
+}
+return a;
 }
 
 // 2. Boi chung nho nhat an toan (Chia truoc khi nhan)
 long long lcm(long long a, long long b) {
-    if (a == 0 || b == 0) return 0;
-    return (a / gcd(a, b)) * b;
+if (a == 0 || b == 0) return 0;
+return (a / gcd(a, b)) * b;
 }
 
 // 3. Kiem tra so nguyen to toi uu O(sqrt(N)) buoc nhay 6k +- 1
 bool isPrime(long long n) {
-    if (n < 2) return false;
-    if (n == 2 || n == 3) return true;
-    if (n % 2 == 0 || n % 3 == 0) return false;
-    for (long long i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0) {
-            return false;
-        }
-    }
-    return true;
+if (n < 2) return false;
+if (n == 2 || n == 3) return true;
+if (n % 2 == 0 || n % 3 == 0) return false;
+for (long long i = 5; i * i <= n; i += 6) {
+if (n % i == 0 || n % (i + 2) == 0) {
+return false;
+}
+}
+return true;
 }
 
 // 4. Sang so nguyen to Eratosthenes O(N log log N)
@@ -803,30 +803,30 @@ const int MAX_VAL = 1000000;
 vector<bool> is_prime_sieve(MAX_VAL + 1, true);
 
 void sieve() {
-    is_prime_sieve[0] = is_prime_sieve[1] = false;
-    for (int p = 2; p * p <= MAX_VAL; p++) {
-        if (is_prime_sieve[p]) {
-            for (int i = p * p; i <= MAX_VAL; i += p) {
-                is_prime_sieve[i] = false;
-            }
-        }
-    }
+is_prime_sieve[0] = is_prime_sieve[1] = false;
+for (int p = 2; p * p <= MAX_VAL; p++) {
+if (is_prime_sieve[p]) {
+for (int i = p * p; i <= MAX_VAL; i += p) {
+is_prime_sieve[i] = false;
+}
+}
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    sieve();
+sieve();
 
-    long long a, b;
-    if (!(cin >> a >> b)) return 0;
+long long a, b;
+if (!(cin >> a >> b)) return 0;
 
-    cout << "GCD: " << gcd(a, b) << "\n";
-    cout << "LCM: " << lcm(a, b) << "\n";
-    cout << "a is Prime: " << (isPrime(a) ? "YES" : "NO") << "\n";
-    cout << "b is Prime: " << (isPrime(b) ? "YES" : "NO") << "\n";
+cout << "GCD: " << gcd(a, b) << "\n";
+cout << "LCM: " << lcm(a, b) << "\n";
+cout << "a is Prime: " << (isPrime(a) "YES" : "NO") << "\n";
+cout << "b is Prime: " << (isPrime(b) "YES" : "NO") << "\n";
 
-    return 0;
+return 0;
 }
 ```

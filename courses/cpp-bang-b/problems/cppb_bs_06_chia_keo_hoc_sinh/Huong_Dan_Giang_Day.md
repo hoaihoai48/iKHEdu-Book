@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho N gói kẹo và số học sinh K. Mỗi học sinh chỉ nhận kẹo từ cùng 1 gói. Hãy tìm số kẹo X lớn nhất phát đều cho K học sinh.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 6 15 8 10 7)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 6 15 8 10 7` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Nếu mỗi em nhận X = 5 chiếc kẹo: - Thùng 1 (15 kẹo) chia được 15/5 = 3 em. - Thùng 2 (8 kẹo) chia được 8/5 = 1 em. - Thù... | Tính toán từng bước trạng thái |
@@ -42,40 +41,40 @@ Tổng số em được nhận là 3 + 1 + 2 + 1 = 7 >= 6 em. Nếu tăng X = 6 
 using namespace std;
 
 bool check(long long mid, const vector<long long>& a, long long k) {
-    long long count = 0;
-    for (long long x : a) {
-        count += (x / mid);
-    }
-    return count >= k;
+long long count = 0;
+for (long long x : a) {
+count += (x / mid);
+}
+return count >= k;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
+int n;
+long long k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    long long max_val = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-        max_val = max(max_val, a[i]);
-    }
+vector<long long> a(n);
+long long max_val = 0;
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+max_val = max(max_val, a[i]);
+}
 
-    long long low = 1, high = max_val, ans = 0;
-    while (low <= high) {
-        long long mid = low + (high - low) / 2;
-        if (check(mid, a, k)) {
-            ans = mid;
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
+long long low = 1, high = max_val, ans = 0;
+while (low <= high) {
+long long mid = low + (high - low) / 2;
+if (check(mid, a, k)) {
+ans = mid;
+low = mid + 1;
+} else {
+high = mid - 1;
+}
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```

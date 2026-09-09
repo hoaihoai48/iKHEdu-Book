@@ -79,7 +79,7 @@ def convert_l13_l15_svg_to_light(svg_path, out_svg_path):
     with open(out_svg_path, "w", encoding="utf-8") as f:
         f.write(txt)
 
-convert_l13_l15_svg_to_light('courses/cpp-bang-b/lessons/lesson-13-quy-hoach-dong-1d/assets/dp_1d_state_dag_vi.svg', 'courses/cpp-bang-b/test_light.svg')
+convert_l13_l15_svg_to_light('courses/cpp-bang-b/lessons/lesson-16-quy-hoach-dong-1d/assets/dp_1d_state_dag_vi.svg', 'courses/cpp-bang-b/test_light.svg')
 cmd = ["npx", "-y", "@resvg/resvg-js-cli", "--fit-width", "2800", "--dpi", "300", "courses/cpp-bang-b/test_light.svg", "courses/cpp-bang-b/test_light.png"]
 subprocess.run(cmd, check=True)
 print("Rendered test_light.png successfully!")

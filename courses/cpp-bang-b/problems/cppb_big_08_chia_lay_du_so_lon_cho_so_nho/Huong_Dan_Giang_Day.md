@@ -7,13 +7,12 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 - **Bản chất bài toán:** Cho số nguyên lớn A và số nguyên nhỏ b (1 <= b <= 10^18). Hãy tính A mod b.
 
 - **Phương pháp tiếp cận — Xử lý số nguyên lớn (BigInt):**
-  - Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
-  - Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
+- Biểu diễn số lớn bằng chuỗi ký tự `string` hoặc mảng các chữ số `vector<int>` đảo ngược.
+- Mô phỏng các phép tính cộng, trừ, nhân, chia bằng thuật toán đặt tính từng cột như tiểu học.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 123456789123456789 10)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `123456789123456789 10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Chữ số tận cùng của A là 9 nên khi chia cho 10 phần dư là 9.... | Tính toán từng bước trạng thái |
@@ -36,19 +35,19 @@ Chuyên đề: **Bài 09: Xử lý số nguyên lớn (BigInt)**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string a;
-    long long b;
-    if (!(cin >> a >> b)) return 0;
+string a;
+long long b;
+if (!(cin >> a >> b)) return 0;
 
-    long long cur = 0;
-    for (char c : a) {
-        cur = (cur * 10 + (c - '0')) % b;
-    }
+long long cur = 0;
+for (char c : a) {
+cur = (cur * 10 + (c - '0')) % b;
+}
 
-    cout << cur << "\n";
-    return 0;
+cout << cur << "\n";
+return 0;
 }
 ```

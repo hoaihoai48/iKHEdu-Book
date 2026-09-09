@@ -16,17 +16,16 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `8 8 0 0 7 7` $\implies$ Đầu ra kỳ vọng: `6`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `8 8 0 0 7 7` $\implies$ Đầu ra kỳ vọng: `6`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `8 8 0 0 7 7` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Để đi từ ô $(1, 1)$ tới ô $(4, 5)$ trên bàn cờ vua: Quân mã thực hiện lần lượt các bước nhảy: $(1, 1)  × o (2, 3)  × o (4, 4)  × o (2, ... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Để đi từ ô $(1, 1)$ tới ô $(4, 5)$ trên bàn cờ vua: Quân mã thực hiện lần lượt các bước nhảy: $(1, 1) × o (2, 3) × o (4, 4) × o (2, ... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `6` |
 
 *Giải thích chi tiết:* Để đi từ ô $(1, 1)$ tới ô $(4, 5)$ trên bàn cờ vua:
-Quân mã thực hiện lần lượt các bước nhảy: $(1, 1)  × o (2, 3)  × o (4, 4)  × o (2, 5)  × o (4, 5)$ hoặc lộ trình tối ưu tương tự với đúng 3 bước nhảy. Kết quả là 3.
+Quân mã thực hiện lần lượt các bước nhảy: $(1, 1) × o (2, 3) × o (4, 4) × o (2, 5) × o (4, 5)$ hoặc lộ trình tối ưu tương tự với đúng 3 bước nhảy. Kết quả là 3.
 
 ---
 
@@ -46,38 +45,38 @@ const int dr[] = {-2, -2, -1, -1, 1, 1, 2, 2};
 const int dc[] = {-1, 1, -2, 2, -2, 2, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m, sr, sc, er, ec;
-    if (!(cin >> n >> m >> sr >> sc >> er >> ec)) return 0;
+int n, m, sr, sc, er, ec;
+if (!(cin >> n >> m >> sr >> sc >> er >> ec)) return 0;
 
-    vector<vector<int>> dist(n, vector<int>(m, -1));
-    queue<pair<int, int>> q;
+vector<vector<int>> dist(n, vector<int>(m, -1));
+queue<pair<int, int>> q;
 
-    dist[sr][sc] = 0;
-    q.push({sr, sc});
+dist[sr][sc] = 0;
+q.push({sr, sc});
 
-    while (!q.empty()) {
-        auto [r, c] = q.front();
-        q.pop();
+while (!q.empty()) {
+auto [r, c] = q.front();
+q.pop();
 
-        if (r == er && c == ec) {
-            cout << dist[r][c] << "\n";
-            return 0;
-        }
+if (r == er && c == ec) {
+cout << dist[r][c] << "\n";
+return 0;
+}
 
-        for (int d = 0; d < 8; ++d) {
-            int nr = r + dr[d];
-            int nc = c + dc[d];
-            if (nr >= 0 && nr < n && nc >= 0 && nc < m && dist[nr][nc] == -1) {
-                dist[nr][nc] = dist[r][c] + 1;
-                q.push({nr, nc});
-            }
-        }
-    }
+for (int d = 0; d < 8; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && dist[nr][nc] == -1) {
+dist[nr][nc] = dist[r][c] + 1;
+q.push({nr, nc});
+}
+}
+}
 
-    cout << dist[er][ec] << "\n";
-    return 0;
+cout << dist[er][ec] << "\n";
+return 0;
 }
 ```

@@ -10,15 +10,14 @@ Chuyên đề: **Cấu Trúc Dữ Liệu STL Nâng Cao (Set, Map, Priority Queue
 
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Lựa chọn cấu trúc dữ liệu tối ưu:**
-  * `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
-  * `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
-  * `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
+* `set` / `multiset`: Quản lý tập hợp tự động sắp xếp theo cây đỏ đen, hỗ trợ chèn, xoá, tìm kiếm trong $\mathcal{O}(\log N)$.
+* `map`: Ánh xạ khoá - giá trị với các truy vấn đếm tần suất, nén toạ độ trong $\mathcal{O}(\log N)$.
+* `priority_queue`: Hàng đợi ưu tiên (Binary Heap) cho phép lấy phần tử cực đại/cực tiểu trong $\mathcal{O}(1)$ và cập nhật trong $\mathcal{O}(\log N)$.
 - **Kỹ thuật nén toạ độ:** Sao chép mảng, sắp xếp tăng dần, loại bỏ phần tử trùng bằng `unique()` và tìm thứ hạng nén qua `lower_bound()` trong $\mathcal{O}(N \log N)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `6 1 3 2 1 4 1` $\implies$ Đầu ra kỳ vọng: `1 3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `6 1 3 2 1 4 1` $\implies$ Đầu ra kỳ vọng: `1 3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -44,28 +43,28 @@ Cả hai số 1 và 2 đều xuất hiện đúng 2 lần (nhiều nhất). Theo
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
-    if (n <= 0) return 0;
+int n;
+if (!(cin >> n)) return 0;
+if (n <= 0) return 0;
 
-    map<long long, int> freq;
-    long long best_val = -1;
-    int max_freq = 0;
+map<long long, int> freq;
+long long best_val = -1;
+int max_freq = 0;
 
-    for (int i = 0; i < n; ++i) {
-        long long x;
-        cin >> x;
-        freq[x]++;
-        if (freq[x] > max_freq || (freq[x] == max_freq && x < best_val)) {
-            max_freq = freq[x];
-            best_val = x;
-        }
-    }
+for (int i = 0; i < n; ++i) {
+long long x;
+cin >> x;
+freq[x]++;
+if (freq[x] > max_freq || (freq[x] == max_freq && x < best_val)) {
+max_freq = freq[x];
+best_val = x;
+}
+}
 
-    cout << best_val << " " << max_freq << "\n";
-    return 0;
+cout << best_val << " " << max_freq << "\n";
+return 0;
 }
 ```

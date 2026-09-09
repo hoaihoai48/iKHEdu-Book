@@ -7,13 +7,12 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 - **Bản chất bài toán:** Cho số nguyên không âm N. Hãy in ra biểu diễn nhị phân của N bằng hàm đệ quy.
 
 - **Phương pháp tiếp cận — Thuật toán đệ quy & Cây gọi hàm:**
-  - Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
-  - Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
+- Xác định trường hợp cơ sở (Base Case) để chặn đệ quy vô hạn.
+- Thiết lập công thức truy hồi và theo dõi luồng thực thi trên cây gọi hàm.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `10` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Số 10 trong hệ thập phân chuyển sang nhị phân là 1010_2.... | Tính toán từng bước trạng thái |
@@ -36,22 +35,22 @@ Chuyên đề: **Bài 10: Thuật toán đệ quy & cây gọi hàm**
 using namespace std;
 
 void printBinaryRec(long long n) {
-    if (n == 0) return;
-    printBinaryRec(n / 2);
-    cout << (n % 2);
+if (n == 0) return;
+printBinaryRec(n / 2);
+cout << (n % 2);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    long long n;
-    if (!(cin >> n)) return 0;
-    if (n == 0) {
-        cout << 0 << "\n";
-    } else {
-        printBinaryRec(n);
-        cout << "\n";
-    }
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+long long n;
+if (!(cin >> n)) return 0;
+if (n == 0) {
+cout << 0 << "\n";
+} else {
+printBinaryRec(n);
+cout << "\n";
+}
+return 0;
 }
 ```

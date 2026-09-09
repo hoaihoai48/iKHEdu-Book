@@ -16,8 +16,7 @@ Chuyên đề: **Quy Hoạch Động 1 Chiều & Dãy Con Tăng (DP 1D / LIS)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 9 2 3 5` $\implies$ Đầu ra kỳ vọng: `3`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 9 2 3 5` $\implies$ Đầu ra kỳ vọng: `3`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -49,26 +48,26 @@ using namespace std;
 const int MOD = 1e9 + 7;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, s;
-    if (!(cin >> n >> s)) return 0;
-    if (n <= 0 || s < 0) return 0;
+int n, s;
+if (!(cin >> n >> s)) return 0;
+if (n <= 0 || s < 0) return 0;
 
-    vector<int> c(n);
-    for (int i = 0; i < n; ++i) cin >> c[i];
+vector<int> c(n);
+for (int i = 0; i < n; ++i) cin >> c[i];
 
-    vector<int> dp(s + 1, 0);
-    dp[0] = 1;
+vector<int> dp(s + 1, 0);
+dp[0] = 1;
 
-    for (int coin : c) {
-        for (int i = coin; i <= s; ++i) {
-            dp[i] = (dp[i] + dp[i - coin]) % MOD;
-        }
-    }
+for (int coin : c) {
+for (int i = coin; i <= s; ++i) {
+dp[i] = (dp[i] + dp[i - coin]) % MOD;
+}
+}
 
-    cout << dp[s] << "\n";
-    return 0;
+cout << dp[s] << "\n";
+return 0;
 }
 ```

@@ -11,24 +11,23 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản (Graph: BFS, DFS & Thành Ph
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Biểu diễn đồ thị:** Sử dụng danh sách kề `vector<vector<int>> adj(N + 1)` để tối ưu bộ nhớ $\mathcal{O}(N + M)$ và duyệt cạnh nhanh chóng.
 - **Thuật toán duyệt đồ thị:**
-  * *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
-  * *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
+* *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
+* *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
 - **Mảng đánh dấu:** Sử dụng mảng `visited[]` để đảm bảo mỗi đỉnh và cạnh chỉ được xét một số lần hằng số, độ phức tạp đạt $\mathcal{O}(N + M)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 2 1 4 1 2 2 3` $\implies$ Đầu ra kỳ vọng: `NO`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 2 1 4 1 2 2 3` $\implies$ Đầu ra kỳ vọng: `NO`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `4 2 1 4 1 2 2 3` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với đồ thị có các cạnh (1, 2), (2, 3) và đỉnh 4 cô lập: - Kiểm tra giữa 1 và 3: Tồn tại đường đi $1  × o 2  × o 3$, in ra YES. - Nếu ki... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với đồ thị có các cạnh (1, 2), (2, 3) và đỉnh 4 cô lập: - Kiểm tra giữa 1 và 3: Tồn tại đường đi $1 × o 2 × o 3$, in ra YES. - Nếu ki... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `NO` |
 
 *Giải thích chi tiết:* Với đồ thị có các cạnh (1, 2), (2, 3) và đỉnh 4 cô lập:
 
-- Kiểm tra giữa 1 và 3: Tồn tại đường đi $1  × o 2  × o 3$, in ra YES.
+- Kiểm tra giữa 1 và 3: Tồn tại đường đi $1 × o 2 × o 3$, in ra YES.
 - Nếu kiểm tra giữa 1 và 4: Không có đường đi, in ra NO.
 
 ---
@@ -50,33 +49,33 @@ vector<vector<int>> adj;
 vector<bool> visited;
 
 void dfs(int u) {
-    visited[u] = true;
-    for (int v : adj[u]) {
-        if (!visited[v]) dfs(v);
-    }
+visited[u] = true;
+for (int v : adj[u]) {
+if (!visited[v]) dfs(v);
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    if (!(cin >> n >> m >> s >> t)) return 0;
-    if (n <= 0) return 0;
+if (!(cin >> n >> m >> s >> t)) return 0;
+if (n <= 0) return 0;
 
-    adj.assign(n + 1, vector<int>());
-    visited.assign(n + 1, false);
+adj.assign(n + 1, vector<int>());
+visited.assign(n + 1, false);
 
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    dfs(s);
+dfs(s);
 
-    if (visited[t]) cout << "YES\n";
-    else cout << "NO\n";
-    return 0;
+if (visited[t]) cout << "YES\n";
+else cout << "NO\n";
+return 0;
 }
 ```

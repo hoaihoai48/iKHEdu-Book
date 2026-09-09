@@ -16,8 +16,7 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 4 0100 1110 0100 1100` $\implies$ Đầu ra kỳ vọng: `16`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 4 0100 1110 0100 1100` $\implies$ Đầu ra kỳ vọng: `16`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -46,32 +45,32 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<string> grid(n);
-    for (int i = 0; i < n; ++i) cin >> grid[i];
+vector<string> grid(n);
+for (int i = 0; i < n; ++i) cin >> grid[i];
 
-    int perimeter = 0;
+int perimeter = 0;
 
-    for (int r = 0; r < n; ++r) {
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == '1') {
-                for (int d = 0; d < 4; ++d) {
-                    int nr = r + dr[d];
-                    int nc = c + dc[d];
-                    if (nr < 0 || nr >= n || nc < 0 || nc >= m || grid[nr][nc] == '0') {
-                        perimeter++;
-                    }
-                }
-            }
-        }
-    }
+for (int r = 0; r < n; ++r) {
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == '1') {
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (nr < 0 || nr >= n || nc < 0 || nc >= m || grid[nr][nc] == '0') {
+perimeter++;
+}
+}
+}
+}
+}
 
-    cout << perimeter << "\n";
-    return 0;
+cout << perimeter << "\n";
+return 0;
 }
 ```

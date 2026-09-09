@@ -1,7 +1,7 @@
 # Xây Dựng Hệ Thức Truy Hồi Cho Dãy Số Đan Dấu
 
 ## Bối cảnh
-Một biểu thức chuỗi số đan dấu xen kẽ S(N) = 1 - 2 + 3 - 4 + ... + (-1)^(N-1) * N có thể được biểu diễn dưới dạng hệ thức truy hồi đệ quy: S(N) = S(N - 1) + (N lẻ ? N : -N). Hãy tính giá trị biểu thức này bằng đệ quy.
+Một biểu thức chuỗi số đan dấu xen kẽ S(N) = 1 - 2 + 3 - 4 + ... + (-1)^(N-1) * N có thể được biểu diễn dưới dạng hệ thức truy hồi đệ quy: S(N) = S(N - 1) + (N lẻ N : -N). Hãy tính giá trị biểu thức này bằng đệ quy.
 
 ## Nhiệm vụ
 Cho số nguyên dương N. Hãy tính giá trị của biểu thức S(N) bằng đệ quy.

@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để giải quyết một bài toán phức tạp bằng cách chia nó thành các bài toán con giống hệt nhưng có kích thước nhỏ hơn?**
+> **Làm thế nào để giải quyết một bài toán phức tạp bằng cách chia nó thành các bài toán con giống hệt nhưng có kích thước nhỏ hơn**
 
 ---
 
@@ -28,16 +28,16 @@ Sau chương này, em có thể:
 
 #### 1. Khái niệm & Cấu trúc bắt buộc của Đệ quy
 - **2 thành phần bắt buộc:**
-  1. **Điều kiện dừng (Base Case):** Trường hợp đơn giản nhất trả về kết quả ngay lập tức để tránh tràn ngăn xếp `Stack Overflow`.
-  2. **Bước đệ quy (Recursive Step):** Gọi lại hàm với tham số giảm dần về phía Base Case.
+1. **Điều kiện dừng (Base Case):** Trường hợp đơn giản nhất trả về kết quả ngay lập tức để tránh tràn ngăn xếp `Stack Overflow`.
+2. **Bước đệ quy (Recursive Step):** Gọi lại hàm với tham số giảm dần về phía Base Case.
 
 ---
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 9.1: Sinh Trưởng Của Quần Thể Sinh Vật Fibonacci**  
-> **Bối cảnh:** Nhà sinh vật học theo dõi chu kỳ sinh sản của một loài sinh vật đặc hữu. Số cá thể trưởng thành tại thế hệ thứ $N$ tuân theo dãy Fibonacci: $F_0 = 0, F_1 = 1, F_N = F_{N-1} + F_{N-2}$. Đồng thời, số tổ hợp ghép cặp gen tại thế hệ $N$ tương ứng với giá trị giai thừa $N!$.  
-> **Nhiệm vụ:** Em hãy viết hàm đệ quy tính giá trị $N!$ và số Fibonacci thứ $N$.  
+> **Bài toán mẫu 9.1: Sinh Trưởng Của Quần Thể Sinh Vật Fibonacci** 
+> **Bối cảnh:** Nhà sinh vật học theo dõi chu kỳ sinh sản của một loài sinh vật đặc hữu. Số cá thể trưởng thành tại thế hệ thứ $N$ tuân theo dãy Fibonacci: $F_0 = 0, F_1 = 1, F_N = F_{N-1} + F_{N-2}$. Đồng thời, số tổ hợp ghép cặp gen tại thế hệ $N$ tương ứng với giá trị giai thừa $N!$. 
+> **Nhiệm vụ:** Em hãy viết hàm đệ quy tính giá trị $N!$ và số Fibonacci thứ $N$. 
 > **Input:** `5` $\implies$ **Output:** `120 5`.
 
 #### Cài đặt C++
@@ -46,25 +46,25 @@ Sau chương này, em có thể:
 using namespace std;
 
 long long factorial(int n) {
-    if (n <= 1) return 1;
-    return 1LL * n * factorial(n - 1);
+if (n <= 1) return 1;
+return 1LL * n * factorial(n - 1);
 }
 
 long long fibo(int n) {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    return fibo(n - 1) + fibo(n - 2);
+if (n == 0) return 0;
+if (n == 1) return 1;
+return fibo(n - 1) + fibo(n - 2);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    cout << factorial(n) << " " << fibo(n) << "\n";
-    return 0;
+cout << factorial(n) << " " << fibo(n) << "\n";
+return 0;
 }
 ```
 
@@ -91,8 +91,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 9.2: Xác Thực Chữ Ký Số Hệ Thống Bảo Hiểm Xã Hội (BHXH)**  
-> **Bối cảnh:** Hệ thống cổng dịch vụ công BHXH Việt Nam tính toán khóa chứng thực $A^B \pmod M$ với $B \le 10^{18}$.  
+> **Bài toán mẫu 9.2: Xác Thực Chữ Ký Số Hệ Thống Bảo Hiểm Xã Hội (BHXH)** 
+> **Bối cảnh:** Hệ thống cổng dịch vụ công BHXH Việt Nam tính toán khóa chứng thực $A^B \pmod M$ với $B \le 10^{18}$. 
 > **Input:** `2 10 1000000007` $\implies$ **Output:** `1024`.
 
 #### Cài đặt C++
@@ -101,24 +101,24 @@ int main() {
 using namespace std;
 
 long long powerMod(long long a, long long b, long long m) {
-    if (b == 0) return 1 % m;
-    long long half = powerMod(a, b / 2, m);
-    long long res = (half * half) % m;
-    if (b % 2 == 1) {
-        res = (res * (a % m)) % m;
-    }
-    return res;
+if (b == 0) return 1 % m;
+long long half = powerMod(a, b / 2, m);
+long long res = (half * half) % m;
+if (b % 2 == 1) {
+res = (res * (a % m)) % m;
+}
+return res;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b, m;
-    if (!(cin >> a >> b >> m)) return 0;
+long long a, b, m;
+if (!(cin >> a >> b >> m)) return 0;
 
-    cout << powerMod(a, b, m) << "\n";
-    return 0;
+cout << powerMod(a, b, m) << "\n";
+return 0;
 }
 ```
 
@@ -147,8 +147,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 9.3: Sắp Xếp Danh Sách Điểm Thi Bằng Merge Sort**  
-> **Bối cảnh:** Sắp xếp $N$ điểm số theo thứ tự tăng dần bằng thuật toán Merge Sort.  
+> **Bài toán mẫu 9.3: Sắp Xếp Danh Sách Điểm Thi Bằng Merge Sort** 
+> **Bối cảnh:** Sắp xếp $N$ điểm số theo thứ tự tăng dần bằng thuật toán Merge Sort. 
 > **Input:** `5` \ `5 2 4 1 3` $\implies$ **Output:** `1 2 3 4 5`.
 
 #### Cài đặt C++
@@ -157,41 +157,41 @@ int main() {
 using namespace std;
 
 void merge(vector<int> &a, int l, int mid, int r) {
-    vector<int> leftArr(a.begin() + l, a.begin() + mid + 1);
-    vector<int> rightArr(a.begin() + mid + 1, a.begin() + r + 1);
+vector<int> leftArr(a.begin() + l, a.begin() + mid + 1);
+vector<int> rightArr(a.begin() + mid + 1, a.begin() + r + 1);
 
-    int i = 0, j = 0, k = l;
-    while (i < (int)leftArr.size() && j < (int)rightArr.size()) {
-        if (leftArr[i] <= rightArr[j]) a[k++] = leftArr[i++];
-        else a[k++] = rightArr[j++];
-    }
-    while (i < (int)leftArr.size()) a[k++] = leftArr[i++];
-    while (j < (int)rightArr.size()) a[k++] = rightArr[j++];
+int i = 0, j = 0, k = l;
+while (i < (int)leftArr.size() && j < (int)rightArr.size()) {
+if (leftArr[i] <= rightArr[j]) a[k++] = leftArr[i++];
+else a[k++] = rightArr[j++];
+}
+while (i < (int)leftArr.size()) a[k++] = leftArr[i++];
+while (j < (int)rightArr.size()) a[k++] = rightArr[j++];
 }
 
 void mergeSort(vector<int> &a, int l, int r) {
-    if (l >= r) return;
-    int mid = l + (r - l) / 2;
-    mergeSort(a, l, mid);
-    mergeSort(a, mid + 1, r);
-    merge(a, l, mid, r);
+if (l >= r) return;
+int mid = l + (r - l) / 2;
+mergeSort(a, l, mid);
+mergeSort(a, mid + 1, r);
+merge(a, l, mid, r);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    mergeSort(a, 0, n - 1);
-    for (int i = 0; i < n; i++) cout << a[i] << (i + 1 == n ? "" : " ");
-    cout << "\n";
+mergeSort(a, 0, n - 1);
+for (int i = 0; i < n; i++) cout << a[i] << (i + 1 == n "" : " ");
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -218,8 +218,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 9.4: Đánh Giá Mức Độ Xáo Trộn Bảng Xếp Hạng V-League**  
-> **Bối cảnh:** Ban tổ chức giải bóng đá V-League cần đo lường mức độ xáo trộn thứ hạng của các câu lạc bộ so với mùa giải trước thông qua số cặp nghịch thế trong bảng điểm $A_1, A_2, \dots, A_N$.  
+> **Bài toán mẫu 9.4: Đánh Giá Mức Độ Xáo Trộn Bảng Xếp Hạng V-League** 
+> **Bối cảnh:** Ban tổ chức giải bóng đá V-League cần đo lường mức độ xáo trộn thứ hạng của các câu lạc bộ so với mùa giải trước thông qua số cặp nghịch thế trong bảng điểm $A_1, A_2, \dots, A_N$. 
 > **Input:** `5` \ `2 4 1 3 5` $\implies$ **Output:** `3` (các cặp: (2, 1), (4, 1), (4, 3)).
 
 #### Cài đặt C++
@@ -228,48 +228,48 @@ int main() {
 using namespace std;
 
 long long mergeAndCount(vector<int> &a, int l, int mid, int r) {
-    vector<int> leftArr(a.begin() + l, a.begin() + mid + 1);
-    vector<int> rightArr(a.begin() + mid + 1, a.begin() + r + 1);
+vector<int> leftArr(a.begin() + l, a.begin() + mid + 1);
+vector<int> rightArr(a.begin() + mid + 1, a.begin() + r + 1);
 
-    int i = 0, j = 0, k = l;
-    long long invCount = 0;
+int i = 0, j = 0, k = l;
+long long invCount = 0;
 
-    while (i < (int)leftArr.size() && j < (int)rightArr.size()) {
-        if (leftArr[i] <= rightArr[j]) {
-            a[k++] = leftArr[i++];
-        } else {
-            a[k++] = rightArr[j++];
-            invCount += (leftArr.size() - i);
-        }
-    }
-    while (i < (int)leftArr.size()) a[k++] = leftArr[i++];
-    while (j < (int)rightArr.size()) a[k++] = rightArr[j++];
+while (i < (int)leftArr.size() && j < (int)rightArr.size()) {
+if (leftArr[i] <= rightArr[j]) {
+a[k++] = leftArr[i++];
+} else {
+a[k++] = rightArr[j++];
+invCount += (leftArr.size() - i);
+}
+}
+while (i < (int)leftArr.size()) a[k++] = leftArr[i++];
+while (j < (int)rightArr.size()) a[k++] = rightArr[j++];
 
-    return invCount;
+return invCount;
 }
 
 long long mergeSortAndCount(vector<int> &a, int l, int r) {
-    if (l >= r) return 0;
-    int mid = l + (r - l) / 2;
-    long long count = 0;
-    count += mergeSortAndCount(a, l, mid);
-    count += mergeSortAndCount(a, mid + 1, r);
-    count += mergeAndCount(a, l, mid, r);
-    return count;
+if (l >= r) return 0;
+int mid = l + (r - l) / 2;
+long long count = 0;
+count += mergeSortAndCount(a, l, mid);
+count += mergeSortAndCount(a, mid + 1, r);
+count += mergeAndCount(a, l, mid, r);
+return count;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    cout << mergeSortAndCount(a, 0, n - 1) << "\n";
-    return 0;
+cout << mergeSortAndCount(a, 0, n - 1) << "\n";
+return 0;
 }
 ```
 

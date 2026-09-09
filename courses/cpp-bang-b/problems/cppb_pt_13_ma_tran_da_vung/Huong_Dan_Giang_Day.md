@@ -7,13 +7,12 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 - **Bản chất bài toán:** Cho một ma trận N x M. Mỗi truy vấn cung cấp tọa độ của hai hình chữ nhật rời nhau, hãy tính tổng giá trị của tất cả các phần tử thuộc về cả hai hình chữ nhật đó.
 
 - **Phương pháp tiếp cận — Mảng tiền tố & Mảng hiệu:**
-  - Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
-  - Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
+- Dựng mảng cộng dồn `pref[i] = pref[i-1] + a[i]`. Khi đó tổng đoạn $[L, R]$ được tính tức thì bằng `pref[R] - pref[L-1]` trong $\mathcal{O}(1)$.
+- Với các thao tác cộng dồn đoạn, sử dụng mảng hiệu `diff[L] += V, diff[R+1] -= V` rồi cộng dồn để phục hồi mảng.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 3 3 1 1 1 1 1 1 1 1 1 1 1)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Hình chữ nhật 1 là ô (1, 1) có giá trị 1. Hình chữ nhật 2 là vùng từ (2, 2) đến (3, 3) gồm 4 ô giá trị 1 (tổng bằng 4). ... | Tính toán từng bước trạng thái |
@@ -36,31 +35,31 @@ Chuyên đề: **Bài 04: Mảng tiền tố & mảng hiệu**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m, q;
-    if (!(cin >> n >> m >> q)) return 0;
+int n, m, q;
+if (!(cin >> n >> m >> q)) return 0;
 
-    vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 1; j <= m; ++j) {
-            long long val;
-            cin >> val;
-            p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + val;
-        }
-    }
+vector<vector<long long>> p(n + 1, vector<long long>(m + 1, 0));
+for (int i = 1; i <= n; ++i) {
+for (int j = 1; j <= m; ++j) {
+long long val;
+cin >> val;
+p[i][j] = p[i - 1][j] + p[i][j - 1] - p[i - 1][j - 1] + val;
+}
+}
 
-    auto query = [&](int x1, int y1, int x2, int y2) -> long long {
-        return p[x2][y2] - p[x1 - 1][y2] - p[x2][y1 - 1] + p[x1 - 1][y1 - 1];
-    };
+auto query = [&](int x1, int y1, int x2, int y2) -> long long {
+return p[x2][y2] - p[x1 - 1][y2] - p[x2][y1 - 1] + p[x1 - 1][y1 - 1];
+};
 
-    while (q--) {
-        int x1, y1, x2, y2, u1, v1, u2, v2;
-        cin >> x1 >> y1 >> x2 >> y2 >> u1 >> v1 >> u2 >> v2;
-        cout << query(x1, y1, x2, y2) + query(u1, v1, u2, v2) << "\n";
-    }
+while (q--) {
+int x1, y1, x2, y2, u1, v1, u2, v2;
+cin >> x1 >> y1 >> x2 >> y2 >> u1 >> v1 >> u2 >> v2;
+cout << query(x1, y1, x2, y2) + query(u1, v1, u2, v2) << "\n";
+}
 
-    return 0;
+return 0;
 }
 ```

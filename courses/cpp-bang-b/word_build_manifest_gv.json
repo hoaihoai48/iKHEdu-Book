@@ -7,7 +7,196 @@
     {
       "lesson": 1,
       "chapter": 1,
-      "title": "Bài 01: Thuật toán sắp xếp",
+      "title": "Bài 01: Biến, Kiểu Dữ Liệu, Toán Tử & Nhập Xuất An Toàn",
+      "problems": [
+        {
+          "code": "cppb_l0_01_tinh_tong_hai_so",
+          "title": "Tính Tổng Hai Số",
+          "de_bai": "problems/cppb_l0_01_tinh_tong_hai_so/De_Bai.md",
+          "solution": "problems/cppb_l0_01_tinh_tong_hai_so/solution.cpp",
+          "guide": "problems/cppb_l0_01_tinh_tong_hai_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_02_dien_tich_hinh_chu_nhat",
+          "title": "Diện Tích & Chu Vi Hình Chữ Nhật",
+          "de_bai": "problems/cppb_l0_02_dien_tich_hinh_chu_nhat/De_Bai.md",
+          "solution": "problems/cppb_l0_02_dien_tich_hinh_chu_nhat/solution.cpp",
+          "guide": "problems/cppb_l0_02_dien_tich_hinh_chu_nhat/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_03_trung_binh_ba_so",
+          "title": "Điểm Trung Bình Ba Môn",
+          "de_bai": "problems/cppb_l0_03_trung_binh_ba_so/De_Bai.md",
+          "solution": "problems/cppb_l0_03_trung_binh_ba_so/solution.cpp",
+          "guide": "problems/cppb_l0_03_trung_binh_ba_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_04_chu_so_hang_don_vi",
+          "title": "Chữ Số Hàng Đơn Vị & Hàng Chục",
+          "de_bai": "problems/cppb_l0_04_chu_so_hang_don_vi/De_Bai.md",
+          "solution": "problems/cppb_l0_04_chu_so_hang_don_vi/solution.cpp",
+          "guide": "problems/cppb_l0_04_chu_so_hang_don_vi/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_05_tong_chu_so",
+          "title": "Tổng Chữ Số Của Số Có Ba Chữ Số",
+          "de_bai": "problems/cppb_l0_05_tong_chu_so/De_Bai.md",
+          "solution": "problems/cppb_l0_05_tong_chu_so/solution.cpp",
+          "guide": "problems/cppb_l0_05_tong_chu_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_06_chia_keo_trung_thu",
+          "title": "Chia Kẹo Trung Thu",
+          "de_bai": "problems/cppb_l0_06_chia_keo_trung_thu/De_Bai.md",
+          "solution": "problems/cppb_l0_06_chia_keo_trung_thu/solution.cpp",
+          "guide": "problems/cppb_l0_06_chia_keo_trung_thu/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_07_doi_thoi_gian_giay",
+          "title": "Đổi Giây Sang Giờ Phút Giây",
+          "de_bai": "problems/cppb_l0_07_doi_thoi_gian_giay/De_Bai.md",
+          "solution": "problems/cppb_l0_07_doi_thoi_gian_giay/solution.cpp",
+          "guide": "problems/cppb_l0_07_doi_thoi_gian_giay/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_08_mua_vo_khuyen_mai",
+          "title": "Mua Vở Có Khuyến Mãi",
+          "de_bai": "problems/cppb_l0_08_mua_vo_khuyen_mai/De_Bai.md",
+          "solution": "problems/cppb_l0_08_mua_vo_khuyen_mai/solution.cpp",
+          "guide": "problems/cppb_l0_08_mua_vo_khuyen_mai/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "chapter": 1,
+      "title": "Bài 02: Cấu Trúc Rẽ Nhánh & Cấu Trúc Vòng Lặp",
+      "problems": [
+        {
+          "code": "cppb_l0_09_so_lon_hon_trong_hai_so",
+          "title": "Tìm Số Lớn Hơn Trong Hai Số",
+          "de_bai": "problems/cppb_l0_09_so_lon_hon_trong_hai_so/De_Bai.md",
+          "solution": "problems/cppb_l0_09_so_lon_hon_trong_hai_so/solution.cpp",
+          "guide": "problems/cppb_l0_09_so_lon_hon_trong_hai_so/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_10_kiem_tra_so_chan_le",
+          "title": "Kiểm Tra Số Chẵn Lẻ",
+          "de_bai": "problems/cppb_l0_10_kiem_tra_so_chan_le/De_Bai.md",
+          "solution": "problems/cppb_l0_10_kiem_tra_so_chan_le/solution.cpp",
+          "guide": "problems/cppb_l0_10_kiem_tra_so_chan_le/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_11_kiem_tra_ba_canh_tam_giac",
+          "title": "Kiểm Tra Ba Cạnh Tam Giác",
+          "de_bai": "problems/cppb_l0_11_kiem_tra_ba_canh_tam_giac/De_Bai.md",
+          "solution": "problems/cppb_l0_11_kiem_tra_ba_canh_tam_giac/solution.cpp",
+          "guide": "problems/cppb_l0_11_kiem_tra_ba_canh_tam_giac/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_12_xep_loai_hoc_luc",
+          "title": "Xếp Loại Học Sinh & Kiểm Tra Điểm",
+          "de_bai": "problems/cppb_l0_12_xep_loai_hoc_luc/De_Bai.md",
+          "solution": "problems/cppb_l0_12_xep_loai_hoc_luc/solution.cpp",
+          "guide": "problems/cppb_l0_12_xep_loai_hoc_luc/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_13_tong_tu_1_den_n",
+          "title": "Bảng Nhân & Tính Tổng Từ 1 Đến N",
+          "de_bai": "problems/cppb_l0_13_tong_tu_1_den_n/De_Bai.md",
+          "solution": "problems/cppb_l0_13_tong_tu_1_den_n/solution.cpp",
+          "guide": "problems/cppb_l0_13_tong_tu_1_den_n/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_14_dem_uoc_so_nguyen_duong",
+          "title": "Đếm Số Lượng Ước Số Nguyên Dương",
+          "de_bai": "problems/cppb_l0_14_dem_uoc_so_nguyen_duong/De_Bai.md",
+          "solution": "problems/cppb_l0_14_dem_uoc_so_nguyen_duong/solution.cpp",
+          "guide": "problems/cppb_l0_14_dem_uoc_so_nguyen_duong/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_15_kiem_tra_nam_nhuan",
+          "title": "Kiểm Tra Năm Nhuận & Số Ngày Trong Tháng",
+          "de_bai": "problems/cppb_l0_15_kiem_tra_nam_nhuan/De_Bai.md",
+          "solution": "problems/cppb_l0_15_kiem_tra_nam_nhuan/solution.cpp",
+          "guide": "problems/cppb_l0_15_kiem_tra_nam_nhuan/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_16_dem_va_tong_chu_so",
+          "title": "Đếm Chữ Số & Tổng Chữ Số Của Số Nguyên",
+          "de_bai": "problems/cppb_l0_16_dem_va_tong_chu_so/De_Bai.md",
+          "solution": "problems/cppb_l0_16_dem_va_tong_chu_so/solution.cpp",
+          "guide": "problems/cppb_l0_16_dem_va_tong_chu_so/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "chapter": 1,
+      "title": "Bài 03: Mảng 1 Chiều, Vector, Xâu Ký Tự & Tổ Chức Hàm",
+      "problems": [
+        {
+          "code": "cppb_l0_17_doc_va_in_mang_nguoc",
+          "title": "Đọc Và In Mảng Theo Thứ Tự Ngược Lại",
+          "de_bai": "problems/cppb_l0_17_doc_va_in_mang_nguoc/De_Bai.md",
+          "solution": "problems/cppb_l0_17_doc_va_in_mang_nguoc/solution.cpp",
+          "guide": "problems/cppb_l0_17_doc_va_in_mang_nguoc/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_18_dem_so_chan_trong_vector",
+          "title": "Đếm Số Phần Tử Chẵn Trong Vector",
+          "de_bai": "problems/cppb_l0_18_dem_so_chan_trong_vector/De_Bai.md",
+          "solution": "problems/cppb_l0_18_dem_so_chan_trong_vector/solution.cpp",
+          "guide": "problems/cppb_l0_18_dem_so_chan_trong_vector/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_19_tim_max_va_vi_tri",
+          "title": "Tìm Giá Trị Lớn Nhất & Vị Trí Xuất Hiện",
+          "de_bai": "problems/cppb_l0_19_tim_max_va_vi_tri/De_Bai.md",
+          "solution": "problems/cppb_l0_19_tim_max_va_vi_tri/solution.cpp",
+          "guide": "problems/cppb_l0_19_tim_max_va_vi_tri/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_20_viet_ham_kiem_tra_mang_tang",
+          "title": "Viết Hàm Kiểm Tra Mảng Tăng Dần",
+          "de_bai": "problems/cppb_l0_20_viet_ham_kiem_tra_mang_tang/De_Bai.md",
+          "solution": "problems/cppb_l0_20_viet_ham_kiem_tra_mang_tang/solution.cpp",
+          "guide": "problems/cppb_l0_20_viet_ham_kiem_tra_mang_tang/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_21_dem_ky_tu_trong_xau",
+          "title": "Đếm Số Lần Xuất Hiện Của Ký Tự Trong Xâu",
+          "de_bai": "problems/cppb_l0_21_dem_ky_tu_trong_xau/De_Bai.md",
+          "solution": "problems/cppb_l0_21_dem_ky_tu_trong_xau/solution.cpp",
+          "guide": "problems/cppb_l0_21_dem_ky_tu_trong_xau/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_22_bang_dem_tan_suat_ky_tu",
+          "title": "Bảng Đếm Tần Suất Ký Tự Trong Xâu",
+          "de_bai": "problems/cppb_l0_22_bang_dem_tan_suat_ky_tu/De_Bai.md",
+          "solution": "problems/cppb_l0_22_bang_dem_tan_suat_ky_tu/solution.cpp",
+          "guide": "problems/cppb_l0_22_bang_dem_tan_suat_ky_tu/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_23_dao_nguoc_mang_swap",
+          "title": "Đảo Ngược Mảng Bằng Kỹ Thuật Hoán Đổi",
+          "de_bai": "problems/cppb_l0_23_dao_nguoc_mang_swap/De_Bai.md",
+          "solution": "problems/cppb_l0_23_dao_nguoc_mang_swap/solution.cpp",
+          "guide": "problems/cppb_l0_23_dao_nguoc_mang_swap/Huong_Dan_Giang_Day.md"
+        },
+        {
+          "code": "cppb_l0_24_kiem_tra_xau_doi_xung_palindrome",
+          "title": "Kiểm Tra Xâu Đối Xứng Palindrome",
+          "de_bai": "problems/cppb_l0_24_kiem_tra_xau_doi_xung_palindrome/De_Bai.md",
+          "solution": "problems/cppb_l0_24_kiem_tra_xau_doi_xung_palindrome/solution.cpp",
+          "guide": "problems/cppb_l0_24_kiem_tra_xau_doi_xung_palindrome/Huong_Dan_Giang_Day.md"
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "chapter": 2,
+      "title": "Bài 04: Thuật toán sắp xếp",
       "problems": [
         {
           "code": "cppb_sx_01_xep_hang_diem_danh",
@@ -110,9 +299,9 @@
       ]
     },
     {
-      "lesson": 2,
-      "chapter": 1,
-      "title": "Bài 02: Kỹ thuật hai con trỏ",
+      "lesson": 5,
+      "chapter": 2,
+      "title": "Bài 05: Kỹ thuật hai con trỏ",
       "problems": [
         {
           "code": "cppb_hct_01_mo_phong_hai_con_tro",
@@ -215,9 +404,9 @@
       ]
     },
     {
-      "lesson": 3,
-      "chapter": 1,
-      "title": "Bài 03: Kỹ thuật cửa sổ trượt",
+      "lesson": 6,
+      "chapter": 2,
+      "title": "Bài 06: Kỹ thuật cửa sổ trượt",
       "problems": [
         {
           "code": "cppb_cst_01_cua_so_k",
@@ -320,9 +509,9 @@
       ]
     },
     {
-      "lesson": 4,
-      "chapter": 2,
-      "title": "Bài 04: Mảng tiền tố & mảng hiệu",
+      "lesson": 7,
+      "chapter": 3,
+      "title": "Bài 07: Mảng tiền tố & mảng hiệu",
       "problems": [
         {
           "code": "cppb_pt_01_truy_van_tong_doan_con",
@@ -439,9 +628,9 @@
       ]
     },
     {
-      "lesson": 5,
-      "chapter": 2,
-      "title": "Bài 05: Thuật toán tìm kiếm nhị phân",
+      "lesson": 8,
+      "chapter": 3,
+      "title": "Bài 08: Thuật toán tìm kiếm nhị phân",
       "problems": [
         {
           "code": "cppb_bs_01_tim_kiem_tren_mang_sap_xep",
@@ -572,9 +761,9 @@
       ]
     },
     {
-      "lesson": 6,
-      "chapter": 2,
-      "title": "Bài 06: Phép toán BIT & biểu diễn trạng thái",
+      "lesson": 9,
+      "chapter": 3,
+      "title": "Bài 09: Phép toán BIT & biểu diễn trạng thái",
       "problems": [
         {
           "code": "cppb_bit_01_bat_tat_kiem_tra_bit",
@@ -691,9 +880,9 @@
       ]
     },
     {
-      "lesson": 7,
-      "chapter": 3,
-      "title": "Bài 07: Lý thuyết số & số nguyên tố",
+      "lesson": 10,
+      "chapter": 4,
+      "title": "Bài 10: Lý thuyết số & số nguyên tố",
       "problems": [
         {
           "code": "cppb_nt_01_uoc_chung_boi_chung",
@@ -810,9 +999,9 @@
       ]
     },
     {
-      "lesson": 8,
-      "chapter": 3,
-      "title": "Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch đảo modulo",
+      "lesson": 11,
+      "chapter": 4,
+      "title": "Bài 11: Đồng dư thức, lũy thừa nhị phân & nghịch đảo modulo",
       "problems": [
         {
           "code": "cppb_mod_01_phep_tinh_dong_du_co_ban",
@@ -929,9 +1118,9 @@
       ]
     },
     {
-      "lesson": 9,
-      "chapter": 3,
-      "title": "Bài 09: Xử lý số nguyên lớn (BigInt)",
+      "lesson": 12,
+      "chapter": 4,
+      "title": "Bài 12: Xử lý số nguyên lớn (BigInt)",
       "problems": [
         {
           "code": "cppb_big_01_so_sanh_hai_so_lon",
@@ -1048,9 +1237,9 @@
       ]
     },
     {
-      "lesson": 10,
-      "chapter": 4,
-      "title": "Bài 10: Thuật toán đệ quy & cây gọi hàm",
+      "lesson": 13,
+      "chapter": 5,
+      "title": "Bài 13: Thuật toán đệ quy & cây gọi hàm",
       "problems": [
         {
           "code": "cppb_rec_01_in_day_so_de_quy",
@@ -1167,9 +1356,9 @@
       ]
     },
     {
-      "lesson": 11,
-      "chapter": 4,
-      "title": "Bài 11: Kỹ thuật chia để trị",
+      "lesson": 14,
+      "chapter": 5,
+      "title": "Bài 14: Kỹ thuật chia để trị",
       "problems": [
         {
           "code": "cppb_dac_01_tim_kiem_nhi_phan_chia_de_tri",
@@ -1286,9 +1475,9 @@
       ]
     },
     {
-      "lesson": 12,
-      "chapter": 4,
-      "title": "Bài 12: Thuật toán quay lui & nhánh cận",
+      "lesson": 15,
+      "chapter": 5,
+      "title": "Bài 15: Thuật toán quay lui & nhánh cận",
       "problems": [
         {
           "code": "cppb_bkt_01_sinh_xau_nhi_phan",
@@ -1405,9 +1594,9 @@
       ]
     },
     {
-      "lesson": 13,
-      "chapter": 5,
-      "title": "Bài 13: Quy hoạch động 1D & dãy con tăng dài nhất",
+      "lesson": 16,
+      "chapter": 6,
+      "title": "Bài 16: Quy hoạch động 1D & dãy con tăng dài nhất",
       "problems": [
         {
           "code": "cppb_dp1_01_bac_thang_co_ban",
@@ -1517,9 +1706,9 @@
       ]
     },
     {
-      "lesson": 14,
-      "chapter": 5,
-      "title": "Bài 14: Quy hoạch động 2D & bài toán cái túi (Knapsack)",
+      "lesson": 17,
+      "chapter": 6,
+      "title": "Bài 17: Quy hoạch động 2D & bài toán cái túi (Knapsack)",
       "problems": [
         {
           "code": "cppb_dp2_01_duong_di_tren_luoi_so_cach",
@@ -1629,9 +1818,9 @@
       ]
     },
     {
-      "lesson": 15,
-      "chapter": 5,
-      "title": "Bài 15: Quy hoạch động chuỗi: LCS & Edit Distance",
+      "lesson": 18,
+      "chapter": 6,
+      "title": "Bài 18: Quy hoạch động chuỗi: LCS & Edit Distance",
       "problems": [
         {
           "code": "cppb_dps_01_xau_con_chung_dai_nhat_lcs_co_ban",
@@ -1741,9 +1930,9 @@
       ]
     },
     {
-      "lesson": 16,
-      "chapter": 6,
-      "title": "Bài 16: Cấu trúc dữ liệu STL: Set, map & heap",
+      "lesson": 19,
+      "chapter": 7,
+      "title": "Bài 19: Cấu trúc dữ liệu STL: Set, map & heap",
       "problems": [
         {
           "code": "cppb_stl_01_dem_so_phan_tu_phan_biet",
@@ -1853,9 +2042,9 @@
       ]
     },
     {
-      "lesson": 17,
-      "chapter": 6,
-      "title": "Bài 17: Cấu trúc dữ liệu ngăn xếp (stack) & Monotonic Stack",
+      "lesson": 20,
+      "chapter": 7,
+      "title": "Bài 20: Cấu trúc dữ liệu ngăn xếp (stack) & Monotonic Stack",
       "problems": [
         {
           "code": "cppb_stk_01_kiem_tra_day_ngoac_dung_co_ban",
@@ -1965,9 +2154,9 @@
       ]
     },
     {
-      "lesson": 18,
-      "chapter": 6,
-      "title": "Bài 18: Cấu trúc dữ liệu hàng đợi (queue, deque) & Monotonic Deque",
+      "lesson": 21,
+      "chapter": 7,
+      "title": "Bài 21: Cấu trúc dữ liệu hàng đợi (queue, deque) & Monotonic Deque",
       "problems": [
         {
           "code": "cppb_que_01_cai_dat_hang_doi_co_ban",
@@ -2077,9 +2266,9 @@
       ]
     },
     {
-      "lesson": 19,
-      "chapter": 7,
-      "title": "Bài 19: Lý thuyết đồ thị cơ bản: Duyệt BFS & DFS",
+      "lesson": 22,
+      "chapter": 8,
+      "title": "Bài 22: Lý thuyết đồ thị cơ bản: Duyệt BFS & DFS",
       "problems": [
         {
           "code": "cppb_gra_01_chuyen_doi_danh_sach_canh_sang_danh_sach_ke",
@@ -2189,9 +2378,9 @@
       ]
     },
     {
-      "lesson": 20,
-      "chapter": 7,
-      "title": "Bài 20: Đồ thị lưới 2D, kỹ thuật Flood Fill & tính chất cây",
+      "lesson": 23,
+      "chapter": 8,
+      "title": "Bài 23: Đồ thị lưới 2D, kỹ thuật Flood Fill & tính chất cây",
       "problems": [
         {
           "code": "cppb_grd_01_duyet_4_huong_tren_ma_tran_co_ban",
@@ -2301,9 +2490,9 @@
       ]
     },
     {
-      "lesson": 21,
-      "chapter": 7,
-      "title": "Bài 21: Cấu trúc cây phân đoạn (Segment Tree) & Fenwick Tree (BIT)",
+      "lesson": 24,
+      "chapter": 8,
+      "title": "Bài 24: Cấu trúc cây phân đoạn (Segment Tree) & Fenwick Tree (BIT)",
       "problems": [
         {
           "code": "cppb_rng_01_cai_dat_fenwick_tree_tinh_tong_doan",

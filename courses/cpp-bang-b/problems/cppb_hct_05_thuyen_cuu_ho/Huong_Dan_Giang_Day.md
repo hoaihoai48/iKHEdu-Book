@@ -15,8 +15,7 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 50 30 20 40 50)
-| Bước | Thao tác thực hiện | Dữ liệu biến đổi | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Thao tác thực hiện | Dữ liệu biến đổi | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu vào | Input: `4 50 30 20 40 50` | Nạp dữ liệu vào các biến/mảng |
 | 2 | Thực thi thuật toán theo từng bước | Phân tích biến: Sắp xếp cân nặng 4 người tăng dần: [20, 30, 40, 50] với tải trọng C = 50. Người nặng 50 kg bắt buộc phải đi một mình 1 thuyền (tốn 1 thuyền). Người nặng 40 kg không thể ghép với ai (vì 40 + 20 = 60 > 50) nên cũng đi một mình 1 thuyền (tốn thêm 1 thuyền). Hai người còn lại có cân nặng 20 kg và 30 kg ghép chung 1 thuyền vì 20 + 30 = 50 <= 50 (tốn 1 thuyền). Tổng số thuyền ít nhất cần dùng là 1 + 1 + 1 = 3 thuyền. | Cập nhật trạng thái tối ưu |
@@ -39,36 +38,36 @@ Chuyên đề: **Kỹ Thuật Hai Con Trỏ (Two Pointers)**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long c;
-    if (!(cin >> n >> c)) return 0;
+int n;
+long long c;
+if (!(cin >> n >> c)) return 0;
 
-    vector<long long> w(n);
-    for (int i = 0; i < n; ++i) cin >> w[i];
+vector<long long> w(n);
+for (int i = 0; i < n; ++i) cin >> w[i];
 
-    sort(w.begin(), w.end());
+sort(w.begin(), w.end());
 
-    int l = 0, r = n - 1;
-    int boats = 0;
+int l = 0, r = n - 1;
+int boats = 0;
 
-    while (l <= r) {
-        if (l == r) {
-            ++boats;
-            break;
-        }
-        if (w[l] + w[r] <= c) {
-            ++l;
-            --r;
-        } else {
-            --r;
-        }
-        ++boats;
-    }
+while (l <= r) {
+if (l == r) {
+++boats;
+break;
+}
+if (w[l] + w[r] <= c) {
+++l;
+--r;
+} else {
+--r;
+}
+++boats;
+}
 
-    cout << boats << "\n";
-    return 0;
+cout << boats << "\n";
+return 0;
 }
 ```

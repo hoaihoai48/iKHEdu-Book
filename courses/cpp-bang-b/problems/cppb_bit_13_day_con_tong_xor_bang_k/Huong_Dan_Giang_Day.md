@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho tập hợp gồm N số nguyên dương và số nguyên K. Hãy kiểm tra xem có tồn tại một dãy con khác rỗng có tổng XOR bằng K hay không. In YES nếu có, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 7 1 2 4 8)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 7 1 2 4 8` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Chọn tập con gồm 3 phần tử {1, 2, 4} có tổng XOR là 1 ^ 2 ^ 4 = 7 đúng bằng K. Kết quả in ra: YES.... | Tính toán từng bước trạng thái |
@@ -36,34 +35,34 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long k;
-    if (!(cin >> n >> k)) return 0;
+int n;
+long long k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
 
-    int count_k = 0;
-    int total_masks = (1 << n);
+int count_k = 0;
+int total_masks = (1 << n);
 
-    for (int mask = 1; mask < total_masks; ++mask) {
-        long long current_xor = 0;
-        for (int i = 0; i < n; ++i) {
-            if ((mask >> i) & 1) {
-                current_xor ^= a[i];
-            }
-        }
-        if (current_xor == k) {
-            count_k++;
-        }
-    }
+for (int mask = 1; mask < total_masks; ++mask) {
+long long current_xor = 0;
+for (int i = 0; i < n; ++i) {
+if ((mask >> i) & 1) {
+current_xor ^= a[i];
+}
+}
+if (current_xor == k) {
+count_k++;
+}
+}
 
-    cout << count_k << "\n";
-    return 0;
+cout << count_k << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 - **Bản chất bài toán:** Cho 3 số nguyên A, B, M. Hãy tính A^B mod M bằng thuật toán Lũy thừa nhị phân.
 
 - **Phương pháp tiếp cận — Đại số Modular & Lũy thừa nhị phân:**
-  - Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
-  - Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
+- Áp dụng các tính chất $(A + B) \pmod M$, $(A \times B) \pmod M$ ở mọi bước tính.
+- Lũy thừa nhị phân tính $A^B \pmod M$ trong $\mathcal{O}(\log B)$ và nghịch đảo modulo qua định lý Fermat nhỏ.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 10 1000)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `2 10 1000` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 2^10 = 1024. Khi chia lấy dư cho 1000 ta được: 1024 mod 1000 = 24. Kết quả in ra: 24.... | Tính toán từng bước trạng thái |
@@ -36,25 +35,25 @@ Chuyên đề: **Bài 08: Đồng dư thức, lũy thừa nhị phân & nghịch
 using namespace std;
 
 long long powerMod(long long a, long long b, long long m) {
-    if (m == 1) return 0;
-    long long ans = 1 % m;
-    a %= m;
-    while (b > 0) {
-        if (b & 1) ans = (ans * a) % m;
-        a = (a * a) % m;
-        b >>= 1;
-    }
-    return ans;
+if (m == 1) return 0;
+long long ans = 1 % m;
+a %= m;
+while (b > 0) {
+if (b & 1) ans = (ans * a) % m;
+a = (a * a) % m;
+b >>= 1;
+}
+return ans;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    long long a, b, m;
-    if (!(cin >> a >> b >> m)) return 0;
+long long a, b, m;
+if (!(cin >> a >> b >> m)) return 0;
 
-    cout << powerMod(a, b, m) << "\n";
-    return 0;
+cout << powerMod(a, b, m) << "\n";
+return 0;
 }
 ```

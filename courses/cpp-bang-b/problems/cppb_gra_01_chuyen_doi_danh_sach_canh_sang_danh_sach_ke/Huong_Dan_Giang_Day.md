@@ -11,14 +11,13 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản (Graph: BFS, DFS & Thành Ph
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Biểu diễn đồ thị:** Sử dụng danh sách kề `vector<vector<int>> adj(N + 1)` để tối ưu bộ nhớ $\mathcal{O}(N + M)$ và duyệt cạnh nhanh chóng.
 - **Thuật toán duyệt đồ thị:**
-  * *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
-  * *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
+* *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
+* *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
 - **Mảng đánh dấu:** Sử dụng mảng `visited[]` để đảm bảo mỗi đỉnh và cạnh chỉ được xét một số lần hằng số, độ phức tạp đạt $\mathcal{O}(N + M)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 2 1 2 1 3` $\implies$ Đầu ra kỳ vọng: `2 2 3 1 1 1 1`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 2 1 2 1 3` $\implies$ Đầu ra kỳ vọng: `2 2 3 1 1 1 1`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -48,29 +47,29 @@ Mẫu thử (Sample 1): Đầu vào: `3 2 1 2 1 3` $\implies$ Đầu ra kỳ v�
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    if (n <= 0) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
+if (n <= 0) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    for (int i = 1; i <= n; ++i) {
-        sort(adj[i].begin(), adj[i].end());
-        cout << adj[i].size();
-        for (int v : adj[i]) {
-            cout << " " << v;
-        }
-        cout << "\n";
-    }
-    return 0;
+for (int i = 1; i <= n; ++i) {
+sort(adj[i].begin(), adj[i].end());
+cout << adj[i].size();
+for (int v : adj[i]) {
+cout << " " << v;
+}
+cout << "\n";
+}
+return 0;
 }
 ```

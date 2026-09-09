@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để tìm phần tử lớn hơn gần nhất cho TẤT CẢ $N$ phần tử trong mảng chỉ trong $1$ lần duyệt duy nhất?**
+> **Làm thế nào để tìm phần tử lớn hơn gần nhất cho TẤT CẢ $N$ phần tử trong mảng chỉ trong $1$ lần duyệt duy nhất**
 
 ---
 
@@ -33,9 +33,9 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 15.1: Kiểm Tra Cú Pháp Trình Biên Dịch iKHEDU IDE**  
-> **Bối cảnh:** Trình biên dịch mã nguồn C++ cần kiểm tra tính đóng mở hợp lệ của các cặp dấu ngoặc `()`, `[]`, `{}` trong tệp mã nguồn $S$.  
-> **Input:** `{[()()]}` $\implies$ **Output:** `YES`.  
+> **Bài toán mẫu 15.1: Kiểm Tra Cú Pháp Trình Biên Dịch iKHEDU IDE** 
+> **Bối cảnh:** Trình biên dịch mã nguồn C++ cần kiểm tra tính đóng mở hợp lệ của các cặp dấu ngoặc `()`, `[]`, `{}` trong tệp mã nguồn $S$. 
+> **Input:** `{[()()]}` $\implies$ **Output:** `YES`. 
 > **Input:** `{[(])}` $\implies$ **Output:** `NO`.
 
 #### Cài đặt C++
@@ -44,33 +44,33 @@ Sau chương này, em có thể:
 using namespace std;
 
 bool isValid(const string &s) {
-    stack<char> st;
-    for (char c : s) {
-        if (c == '(' || c == '[' || c == '{') {
-            st.push(c);
-        } else {
-            if (st.empty()) return false;
-            char topChar = st.top();
-            if ((c == ')' && topChar != '(') ||
-                (c == ']' && topChar != '[') ||
-                (c == '}' && topChar != '{')) {
-                return false;
-            }
-            st.pop();
-        }
-    }
-    return st.empty();
+stack<char> st;
+for (char c : s) {
+if (c == '(' || c == '[' || c == '{') {
+st.push(c);
+} else {
+if (st.empty()) return false;
+char topChar = st.top();
+if ((c == ')' && topChar != '(') ||
+(c == ']' && topChar != '[') ||
+(c == '}' && topChar != '{')) {
+return false;
+}
+st.pop();
+}
+}
+return st.empty();
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    string s;
-    if (!(cin >> s)) return 0;
+string s;
+if (!(cin >> s)) return 0;
 
-    cout << (isValid(s) ? "YES\n" : "NO\n");
-    return 0;
+cout << (isValid(s) "YES\n" : "NO\n");
+return 0;
 }
 ```
 
@@ -97,8 +97,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 15.2: Mô Phỏng Vận Hành Hàng Đợi In Tài Liệu**  
-> **Bối cảnh:** Máy in văn phòng nhận $Q$ lệnh in. Mỗi lệnh gồm ID tài liệu hoặc lệnh in tài liệu đến trước nhất (FIFO).  
+> **Bài toán mẫu 15.2: Mô Phỏng Vận Hành Hàng Đợi In Tài Liệu** 
+> **Bối cảnh:** Máy in văn phòng nhận $Q$ lệnh in. Mỗi lệnh gồm ID tài liệu hoặc lệnh in tài liệu đến trước nhất (FIFO). 
 > **Input:** `4` \ `1 101` \ `1 102` \ `2` (in) \ `2` (in) $\implies$ **Output:** `101` \ `102`.
 
 #### Cài đặt C++
@@ -107,31 +107,31 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int q;
-    if (!(cin >> q)) return 0;
+int q;
+if (!(cin >> q)) return 0;
 
-    queue<int> taskQueue;
-    while (q--) {
-        int type;
-        cin >> type;
-        if (type == 1) {
-            int id;
-            cin >> id;
-            taskQueue.push(id);
-        } else {
-            if (!taskQueue.empty()) {
-                cout << taskQueue.front() << "\n";
-                taskQueue.pop();
-            } else {
-                cout << "EMPTY\n";
-            }
-        }
-    }
+queue<int> taskQueue;
+while (q--) {
+int type;
+cin >> type;
+if (type == 1) {
+int id;
+cin >> id;
+taskQueue.push(id);
+} else {
+if (!taskQueue.empty()) {
+cout << taskQueue.front() << "\n";
+taskQueue.pop();
+} else {
+cout << "EMPTY\n";
+}
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -158,8 +158,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 15.3: Giám Sát Cột Tín Hiệu Cao Hơn Gần Nhất**  
-> **Bối cảnh:** $N$ trạm phát sóng có độ cao $A_1, A_2, \dots, A_N$. Tìm trạm đầu tiên bên phải có độ cao lớn hơn để chuyển tiếp chùm sóng vi ba.  
+> **Bài toán mẫu 15.3: Giám Sát Cột Tín Hiệu Cao Hơn Gần Nhất** 
+> **Bối cảnh:** $N$ trạm phát sóng có độ cao $A_1, A_2, \dots, A_N$. Tìm trạm đầu tiên bên phải có độ cao lớn hơn để chuyển tiếp chùm sóng vi ba. 
 > **Input:** `4` \ `4 5 2 25` $\implies$ **Output:** `5 25 25 -1`.
 
 #### Cài đặt C++
@@ -168,28 +168,28 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    vector<int> nge(n, -1);
-    stack<int> st;
+vector<int> nge(n, -1);
+stack<int> st;
 
-    for (int i = n - 1; i >= 0; i--) {
-        while (!st.empty() && st.top() <= a[i]) st.pop();
-        if (!st.empty()) nge[i] = st.top();
-        st.push(a[i]);
-    }
+for (int i = n - 1; i >= 0; i--) {
+while (!st.empty() && st.top() <= a[i]) st.pop();
+if (!st.empty()) nge[i] = st.top();
+st.push(a[i]);
+}
 
-    for (int i = 0; i < n; i++) cout << nge[i] << (i + 1 == n ? "" : " ");
-    cout << "\n";
+for (int i = 0; i < n; i++) cout << nge[i] << (i + 1 == n "" : " ");
+cout << "\n";
 
-    return 0;
+return 0;
 }
 ```
 
@@ -216,8 +216,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 15.4: Thiết Kế Tấm Pin Năng Lượng Mặt Trời Diện Tích Lớn Nhất**  
-> **Bối cảnh:** Mái nhà gồm $N$ khối kiến trúc liền kề có chiều cao $H_1, H_2, \dots, H_N$. Tìm diện tích hình chữ nhật lớn nhất có thể lắp đặt tấm pin mặt trời.  
+> **Bài toán mẫu 15.4: Thiết Kế Tấm Pin Năng Lượng Mặt Trời Diện Tích Lớn Nhất** 
+> **Bối cảnh:** Mái nhà gồm $N$ khối kiến trúc liền kề có chiều cao $H_1, H_2, \dots, H_N$. Tìm diện tích hình chữ nhật lớn nhất có thể lắp đặt tấm pin mặt trời. 
 > **Input:** `6` \ `2 1 5 6 2 3` $\implies$ **Output:** `10` ($5 \times 2 = 10$).
 
 #### Cài đặt C++
@@ -226,40 +226,40 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> h(n);
-    for (int i = 0; i < n; i++) cin >> h[i];
+vector<long long> h(n);
+for (int i = 0; i < n; i++) cin >> h[i];
 
-    vector<int> leftLess(n), rightLess(n);
-    stack<int> st;
+vector<int> leftLess(n), rightLess(n);
+stack<int> st;
 
-    for (int i = 0; i < n; i++) {
-        while (!st.empty() && h[st.top()] >= h[i]) st.pop();
-        leftLess[i] = st.empty() ? -1 : st.top();
-        st.push(i);
-    }
+for (int i = 0; i < n; i++) {
+while (!st.empty() && h[st.top()] >= h[i]) st.pop();
+leftLess[i] = st.empty() -1 : st.top();
+st.push(i);
+}
 
-    while (!st.empty()) st.pop();
+while (!st.empty()) st.pop();
 
-    for (int i = n - 1; i >= 0; i--) {
-        while (!st.empty() && h[st.top()] >= h[i]) st.pop();
-        rightLess[i] = st.empty() ? n : st.top();
-        st.push(i);
-    }
+for (int i = n - 1; i >= 0; i--) {
+while (!st.empty() && h[st.top()] >= h[i]) st.pop();
+rightLess[i] = st.empty() n : st.top();
+st.push(i);
+}
 
-    long long maxArea = 0;
-    for (int i = 0; i < n; i++) {
-        long long width = rightLess[i] - leftLess[i] - 1;
-        maxArea = max(maxArea, h[i] * width);
-    }
+long long maxArea = 0;
+for (int i = 0; i < n; i++) {
+long long width = rightLess[i] - leftLess[i] - 1;
+maxArea = max(maxArea, h[i] * width);
+}
 
-    cout << maxArea << "\n";
-    return 0;
+cout << maxArea << "\n";
+return 0;
 }
 ```
 

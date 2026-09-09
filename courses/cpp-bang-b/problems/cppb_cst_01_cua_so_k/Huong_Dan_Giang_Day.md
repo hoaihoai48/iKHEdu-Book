@@ -8,8 +8,7 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 7 3 2 1 5 1 3 2 4)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `7 3 2 1 5 1 3 2 4` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Các cửa sổ độ dài K = 3 gồm: [2, 1, 5] (tổng 8), [1, 5, 1] (tổng 7), [5, 1, 3] (tổng 9 tại vị trí 3), [1, 3, 2] (tổng 6)... | Tính toán từng bước trạng thái |
@@ -32,25 +31,25 @@ Chuyên đề: **Bài 03: Kỹ thuật cửa sổ trượt**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, k;
-    if (!(cin >> n >> k)) return 0;
+int n, k;
+if (!(cin >> n >> k)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
 
-    long long cur_sum = 0;
-    for (int i = 0; i < k; ++i) cur_sum += a[i];
+long long cur_sum = 0;
+for (int i = 0; i < k; ++i) cur_sum += a[i];
 
-    long long max_sum = cur_sum;
-    for (int i = k; i < n; ++i) {
-        cur_sum += a[i] - a[i - k];
-        max_sum = max(max_sum, cur_sum);
-    }
+long long max_sum = cur_sum;
+for (int i = k; i < n; ++i) {
+cur_sum += a[i] - a[i - k];
+max_sum = max(max_sum, cur_sum);
+}
 
-    cout << max_sum << "\n";
-    return 0;
+cout << max_sum << "\n";
+return 0;
 }
 ```

@@ -20,14 +20,14 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để không bao giờ phải tính lại một kết quả mà mình đã từng tính trước đó?**
+> **Làm thế nào để không bao giờ phải tính lại một kết quả mà mình đã từng tính trước đó**
 
 ---
 
 ### Bài 13.1 — Bản chất của DP: Từ Đệ quy có nhớ đến Bảng phương án
 
 #### 1. Khái niệm & 3 bước bắt buộc
-- **State (Trạng thái):** `dp[i]` đại diện cho cái gì?
+- **State (Trạng thái):** `dp[i]` đại diện cho cái gì
 - **Transition (Công thức chuyển):** Tính `dp[i]` từ các trạng thái nhỏ hơn.
 - **Base Case (Điều kiện cơ sở):** `dp[0], dp[1]`.
 
@@ -35,9 +35,9 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 13.1: Leo Cầu Thang Tòa Tháp Landmark 81**  
-> **Bối cảnh:** Vận động viên tham gia cuộc thi chạy bộ leo cầu thang tòa tháp Landmark 81 gồm $N$ bậc thang. Mỗi bước, vận động viên có thể bước lên $1$ bậc hoặc nhảy lên $2$ bậc.  
-> **Nhiệm vụ:** Tính số cách khác nhau để vận động viên leo lên đến đúng bậc thứ $N$ Modulo $10^9+7$.  
+> **Bài toán mẫu 13.1: Leo Cầu Thang Tòa Tháp Landmark 81** 
+> **Bối cảnh:** Vận động viên tham gia cuộc thi chạy bộ leo cầu thang tòa tháp Landmark 81 gồm $N$ bậc thang. Mỗi bước, vận động viên có thể bước lên $1$ bậc hoặc nhảy lên $2$ bậc. 
+> **Nhiệm vụ:** Tính số cách khác nhau để vận động viên leo lên đến đúng bậc thứ $N$ Modulo $10^9+7$. 
 > **Input:** `4` $\implies$ **Output:** `5` (các cách: 1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2).
 
 #### Cài đặt C++
@@ -48,22 +48,22 @@ using namespace std;
 const int MOD = 1000000007;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> dp(n + 1);
-    dp[0] = 1;
-    dp[1] = 1;
+vector<int> dp(n + 1);
+dp[0] = 1;
+dp[1] = 1;
 
-    for (int i = 2; i <= n; i++) {
-        dp[i] = (dp[i - 1] + dp[i - 2]) % MOD;
-    }
+for (int i = 2; i <= n; i++) {
+dp[i] = (dp[i - 1] + dp[i - 2]) % MOD;
+}
 
-    cout << dp[n] << "\n";
-    return 0;
+cout << dp[n] << "\n";
+return 0;
 }
 ```
 
@@ -90,8 +90,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 13.2: Tăng Trưởng Khách Du Lịch Quốc Tế Đến Đà Nẵng**  
-> **Bối cảnh:** Thống kê lượng khách du lịch quốc tế $N$ tháng liên tiếp $A_1, A_2, \dots, A_N$. Tìm độ dài chuỗi tháng tăng trưởng liên tục dài nhất (không nhất thiết kề nhau).  
+> **Bài toán mẫu 13.2: Tăng Trưởng Khách Du Lịch Quốc Tế Đến Đà Nẵng** 
+> **Bối cảnh:** Thống kê lượng khách du lịch quốc tế $N$ tháng liên tiếp $A_1, A_2, \dots, A_N$. Tìm độ dài chuỗi tháng tăng trưởng liên tục dài nhất (không nhất thiết kề nhau). 
 > **Input:** `6` \ `1 4 2 5 3 6` $\implies$ **Output:** `4` (dãy tăng: $[1, 2, 3, 6]$).
 
 #### Cài đặt C++
@@ -100,29 +100,29 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<int> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    vector<int> dp(n, 1);
-    int ans = 0;
+vector<int> dp(n, 1);
+int ans = 0;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < i; j++) {
-            if (a[j] < a[i]) {
-                dp[i] = max(dp[i], dp[j] + 1);
-            }
-        }
-        ans = max(ans, dp[i]);
-    }
+for (int i = 0; i < n; i++) {
+for (int j = 0; j < i; j++) {
+if (a[j] < a[i]) {
+dp[i] = max(dp[i], dp[j] + 1);
+}
+}
+ans = max(ans, dp[i]);
+}
 
-    cout << ans << "\n";
-    return 0;
+cout << ans << "\n";
+return 0;
 }
 ```
 
@@ -149,9 +149,9 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 13.3: Lựa Chọn Thiết Bị Lắp Đặt Trạm Phát 5G Viettel**  
-> **Bối cảnh:** Xe kỹ thuật có tải trọng tối đa $S$ kg. Có $N$ thiết bị viễn thông, thiết bị thứ $i$ có trọng lượng $W_i$ và giá trị phủ sóng $V_i$.  
-> **Nhiệm vụ:** Tìm giá trị phủ sóng lớn nhất có thể mang lên trạm phát.  
+> **Bài toán mẫu 13.3: Lựa Chọn Thiết Bị Lắp Đặt Trạm Phát 5G Viettel** 
+> **Bối cảnh:** Xe kỹ thuật có tải trọng tối đa $S$ kg. Có $N$ thiết bị viễn thông, thiết bị thứ $i$ có trọng lượng $W_i$ và giá trị phủ sóng $V_i$. 
+> **Nhiệm vụ:** Tìm giá trị phủ sóng lớn nhất có thể mang lên trạm phát. 
 > **Input:** `3 4` \ `1 1500` \ `3 2000` \ `4 3000` $\implies$ **Output:** `3500`.
 
 #### Cài đặt C++
@@ -160,24 +160,24 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, s;
-    if (!(cin >> n >> s)) return 0;
+int n, s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<int> weight(n), val(n);
-    for (int i = 0; i < n; i++) cin >> weight[i] >> val[i];
+vector<int> weight(n), val(n);
+for (int i = 0; i < n; i++) cin >> weight[i] >> val[i];
 
-    vector<long long> dp(s + 1, 0);
-    for (int i = 0; i < n; i++) {
-        for (int w = s; w >= weight[i]; w--) {
-            dp[w] = max(dp[w], dp[w - weight[i]] + val[i]);
-        }
-    }
+vector<long long> dp(s + 1, 0);
+for (int i = 0; i < n; i++) {
+for (int w = s; w >= weight[i]; w--) {
+dp[w] = max(dp[w], dp[w - weight[i]] + val[i]);
+}
+}
 
-    cout << dp[s] << "\n";
-    return 0;
+cout << dp[s] << "\n";
+return 0;
 }
 ```
 
@@ -204,8 +204,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 13.4: Thu Thập Mẫu Vật Khoáng Sản Trên Lưới**  
-> **Bối cảnh:** Xe tự hành trên bản đồ $N \times M$ ô, xuất phát từ $(1, 1)$ đến $(N, M)$, mỗi bước chỉ đi sang phải hoặc xuống dưới. Ô $(i, j)$ có $A[i][j]$ gam khoáng sản. Tìm lượng khoáng sản lớn nhất thu được.  
+> **Bài toán mẫu 13.4: Thu Thập Mẫu Vật Khoáng Sản Trên Lưới** 
+> **Bối cảnh:** Xe tự hành trên bản đồ $N \times M$ ô, xuất phát từ $(1, 1)$ đến $(N, M)$, mỗi bước chỉ đi sang phải hoặc xuống dưới. Ô $(i, j)$ có $A[i][j]$ gam khoáng sản. Tìm lượng khoáng sản lớn nhất thu được. 
 > **Input:** `3 3` \ `1 3 1` \ `1 5 1` \ `4 2 1` $\implies$ **Output:** `12`.
 
 #### Cài đặt C++
@@ -214,27 +214,27 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
-    vector<vector<long long>> dp(n + 1, vector<long long>(m + 1, 0));
+vector<vector<long long>> a(n + 1, vector<long long>(m + 1));
+vector<vector<long long>> dp(n + 1, vector<long long>(m + 1, 0));
 
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) cin >> a[i][j];
-    }
+for (int i = 1; i <= n; i++) {
+for (int j = 1; j <= m; j++) cin >> a[i][j];
+}
 
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            dp[i][j] = a[i][j] + max(dp[i - 1][j], dp[i][j - 1]);
-        }
-    }
+for (int i = 1; i <= n; i++) {
+for (int j = 1; j <= m; j++) {
+dp[i][j] = a[i][j] + max(dp[i - 1][j], dp[i][j - 1]);
+}
+}
 
-    cout << dp[n][m] << "\n";
-    return 0;
+cout << dp[n][m] << "\n";
+return 0;
 }
 ```
 

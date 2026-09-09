@@ -1,7 +1,7 @@
 # Cây Fenwick 2D Tính Tổng Hình Chữ Nhật (2D BIT)
 
 ## Bối cảnh
-Một bức ảnh kỹ thuật số dạng lưới $N  × M$ điểm ảnh, điểm ảnh tại ô $(r, c)$ có giá trị độ sáng $A_{r,c}$. Hệ thống camera cần hỗ trợ hai thao tác: tăng độ sáng tại một điểm ảnh cụ thể thêm $val$, và tính tổng độ sáng của toàn bộ các điểm ảnh nằm trong một vùng hình chữ nhật từ $(r_1, c_1)$ đến $(r_2, c_2)$.
+Một bức ảnh kỹ thuật số dạng lưới $N × M$ điểm ảnh, điểm ảnh tại ô $(r, c)$ có giá trị độ sáng $A_{r,c}$. Hệ thống camera cần hỗ trợ hai thao tác: tăng độ sáng tại một điểm ảnh cụ thể thêm $val$, và tính tổng độ sáng của toàn bộ các điểm ảnh nằm trong một vùng hình chữ nhật từ $(r_1, c_1)$ đến $(r_2, c_2)$.
 
 ## Nhiệm vụ
 Cho ma trận độ sáng ban đầu và $Q$ thao tác thuộc hai dạng: cập nhật điểm ảnh hoặc truy vấn tổng vùng hình chữ nhật. Hãy in ra kết quả của các thao tác truy vấn.

@@ -16,8 +16,7 @@ Chuyên đề: **Đồ Thị Lưới 2 Chiều & Thuật Toán Loang (2D Grid & 
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 3 W.. .## ..E` $\implies$ Đầu ra kỳ vọng: `4`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 3 W.. .## ..E` $\implies$ Đầu ra kỳ vọng: `4`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -46,43 +45,43 @@ const int dr[] = {-1, 1, 0, 0};
 const int dc[] = {0, 0, -1, 1};
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
 
-    vector<string> grid(n);
-    int er = -1, ec = -1;
-    vector<vector<int>> dist(n, vector<int>(m, -1));
-    queue<pair<int, int>> q;
+vector<string> grid(n);
+int er = -1, ec = -1;
+vector<vector<int>> dist(n, vector<int>(m, -1));
+queue<pair<int, int>> q;
 
-    for (int r = 0; r < n; ++r) {
-        cin >> grid[r];
-        for (int c = 0; c < m; ++c) {
-            if (grid[r][c] == 'W') {
-                dist[r][c] = 0;
-                q.push({r, c});
-            }
-            if (grid[r][c] == 'E') { er = r; ec = c; }
-        }
-    }
+for (int r = 0; r < n; ++r) {
+cin >> grid[r];
+for (int c = 0; c < m; ++c) {
+if (grid[r][c] == 'W') {
+dist[r][c] = 0;
+q.push({r, c});
+}
+if (grid[r][c] == 'E') { er = r; ec = c; }
+}
+}
 
-    while (!q.empty()) {
-        auto [r, c] = q.front();
-        q.pop();
+while (!q.empty()) {
+auto [r, c] = q.front();
+q.pop();
 
-        for (int d = 0; d < 4; ++d) {
-            int nr = r + dr[d];
-            int nc = c + dc[d];
-            if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] != '#' && dist[nr][nc] == -1) {
-                dist[nr][nc] = dist[r][c] + 1;
-                q.push({nr, nc});
-            }
-        }
-    }
+for (int d = 0; d < 4; ++d) {
+int nr = r + dr[d];
+int nc = c + dc[d];
+if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] != '#' && dist[nr][nc] == -1) {
+dist[nr][nc] = dist[r][c] + 1;
+q.push({nr, nc});
+}
+}
+}
 
-    cout << dist[er][ec] << "\n";
-    return 0;
+cout << dist[er][ec] << "\n";
+return 0;
 }
 ```

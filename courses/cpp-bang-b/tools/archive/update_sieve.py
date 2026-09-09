@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 def update_sieve():
-    svg_path = Path("courses/cpp-bang-b/lessons/lesson-07-uoc-boi-so-nguyen-to/assets/sieve_eratosthenes_simulation_vi.svg")
+    svg_path = Path("courses/cpp-bang-b/lessons/lesson-10-uoc-boi-so-nguyen-to/assets/sieve_eratosthenes_simulation_vi.svg")
     with open(svg_path, "r", encoding="utf-8") as f:
         text = f.read()
 

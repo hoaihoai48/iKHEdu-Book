@@ -6,14 +6,13 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho mảng Unimodal gồm N phần tử. Hãy tìm chỉ số (0-indexed) của phần tử cực đại.
 
-- **Phương pháp tiếp cận — Chia để trị (Divide and Conquer):**
-  - Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
-  - Giải quyết bài toán con và gộp kết quả tối ưu.
+- **Phương pháp tiếp cận — Chia để trị:**
+- Chia bài toán kích thước $N$ thành các bài toán con độc lập kích thước $N / 2$.
+- Giải quyết bài toán con và gộp kết quả tối ưu.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 0 2 1 0)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 0 2 1 0` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Điểm cực đại là 2 tại chỉ số 1 (0-indexed).... | Tính toán từng bước trạng thái |
@@ -36,23 +35,23 @@ Chuyên đề: **Bài 11: Kỹ thuật chia để trị**
 using namespace std;
 
 long long findPeak(const vector<long long> &a, int l, int r) {
-    if (l == r) return a[l];
-    int mid = l + (r - l) / 2;
-    if (a[mid] < a[mid + 1]) {
-        return findPeak(a, mid + 1, r);
-    } else {
-        return findPeak(a, l, mid);
-    }
+if (l == r) return a[l];
+int mid = l + (r - l) / 2;
+if (a[mid] < a[mid + 1]) {
+return findPeak(a, mid + 1, r);
+} else {
+return findPeak(a, l, mid);
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    if (!(cin >> n)) return 0;
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) cin >> a[i];
-    cout << findPeak(a, 0, n - 1) << "\n";
-    return 0;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+int n;
+if (!(cin >> n)) return 0;
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) cin >> a[i];
+cout << findPeak(a, 0, n - 1) << "\n";
+return 0;
 }
 ```

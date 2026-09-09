@@ -6,14 +6,13 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất bài toán:** Cho số thực C dương (1 <= C <= 10^9). Hãy tìm nghiệm thực dương x của phương trình x^3 + 2x^2 + 10x - C = 0 với độ chính xác 6 chữ số thập phân.
 
-- **Phương pháp tiếp cận — Tìm kiếm nhị phân (Binary Search):**
-  - Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
-  - Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
+- **Phương pháp tiếp cận — Tìm kiếm nhị phân:**
+- Nhận diện tính đơn điệu của hàm mục tiêu hoặc không gian tìm kiếm.
+- Thu hẹp không gian nghiệm $[L, R]$ qua điểm giữa $mid = L + (R - L) / 2$. Độ phức tạp thời gian đạt $\mathcal{O}(\log N)$ hoặc $\mathcal{O}(N \log(\text{range}))$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 20.0)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `20.0` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Thay x = 1.233519 vào f(x): 1.233519^3 + 2*1.233519^2 + 10*1.233519 - 20 = 0.000000. Nghiệm chính xác đến 6 chữ số thập ... | Tính toán từng bước trạng thái |
@@ -36,27 +35,27 @@ Chuyên đề: **Bài 05: Thuật toán tìm kiếm nhị phân**
 using namespace std;
 
 double f(double x) {
-    return x * x * x + 2.0 * x * x + 10.0 * x;
+return x * x * x + 2.0 * x * x + 10.0 * x;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    double c;
-    if (!(cin >> c)) return 0;
+double c;
+if (!(cin >> c)) return 0;
 
-    double low = 0.0, high = 1000.0;
-    for (int iter = 0; iter < 100; ++iter) {
-        double mid = low + (high - low) / 2.0;
-        if (f(mid) >= c) {
-            high = mid;
-        } else {
-            low = mid;
-        }
-    }
+double low = 0.0, high = 1000.0;
+for (int iter = 0; iter < 100; ++iter) {
+double mid = low + (high - low) / 2.0;
+if (f(mid) >= c) {
+high = mid;
+} else {
+low = mid;
+}
+}
 
-    cout << fixed << setprecision(6) << low << "\n";
-    return 0;
+cout << fixed << setprecision(6) << low << "\n";
+return 0;
 }
 ```

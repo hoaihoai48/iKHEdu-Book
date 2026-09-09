@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho số nguyên dương N (1 <= N <= 10^18). Kiểm tra N có phải là lũy thừa của 2 không. In YES nếu đúng, ngược lại in NO.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 16)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `16` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | 16 = 2^4 là một lũy thừa của 2. Phép toán bit: (16 & 15) = 0. Do đó in YES.... | Tính toán từng bước trạng thái |
@@ -36,24 +35,24 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 void solve() {
-    unsigned long long n;
-    cin >> n;
-    if (n > 0 && (n & (n - 1)) == 0) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
-    }
+unsigned long long n;
+cin >> n;
+if (n > 0 && (n & (n - 1)) == 0) {
+cout << "YES\n";
+} else {
+cout << "NO\n";
+}
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int t;
-    if (!(cin >> t)) return 0;
-    while (t--) {
-        solve();
-    }
-    return 0;
+int t;
+if (!(cin >> t)) return 0;
+while (t--) {
+solve();
+}
+return 0;
 }
 ```

@@ -11,23 +11,22 @@ Chuyên đề: **Lý Thuyết Đồ Thị Cơ Bản (Graph: BFS, DFS & Thành Ph
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Biểu diễn đồ thị:** Sử dụng danh sách kề `vector<vector<int>> adj(N + 1)` để tối ưu bộ nhớ $\mathcal{O}(N + M)$ và duyệt cạnh nhanh chóng.
 - **Thuật toán duyệt đồ thị:**
-  * *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
-  * *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
+* *Tìm kiếm theo chiều rộng (BFS):* Sử dụng hàng đợi `queue`, đảm bảo tìm đường đi ngắn nhất trên đồ thị không trọng số.
+* *Tìm kiếm theo chiều sâu (DFS):* Duyệt nhánh sâu nhất bằng đệ quy hoặc stack, thích hợp tìm thành phần liên thông, chu trình và sắp xếp tô-pô.
 - **Mảng đánh dấu:** Sử dụng mảng `visited[]` để đảm bảo mỗi đỉnh và cạnh chỉ được xét một số lần hằng số, độ phức tạp đạt $\mathcal{O}(N + M)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `4 4 1 2 2 3 3 4 1 3` $\implies$ Đầu ra kỳ vọng: `2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `4 4 1 2 2 3 3 4 1 3` $\implies$ Đầu ra kỳ vọng: `2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Khởi tạo & Đọc dữ liệu | Nạp Input: `4 4 1 2 2 3 3 4 1 3` | Khởi tạo cấu trúc dữ liệu ban đầu |
-| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với mạng đường ray có các chặng (1, 2), (2, 3), (1, 4), (4, 3) từ ga 1 tới ga 3: Có hai lộ trình cùng đạt 2 chặng là $1  × o 2  × o 3$ ... | Cập nhật các biến / mảng trạng thái |
+| 2 | Chạy thuật toán từng bước | Phân tích mẫu: Với mạng đường ray có các chặng (1, 2), (2, 3), (1, 4), (4, 3) từ ga 1 tới ga 3: Có hai lộ trình cùng đạt 2 chặng là $1 × o 2 × o 3$ ... | Cập nhật các biến / mảng trạng thái |
 | 3 | Xuất kết quả chuẩn | Đối chiếu trạng thái cuối cùng | Output chuẩn: `2` |
 
 *Giải thích chi tiết:* Với mạng đường ray có các chặng (1, 2), (2, 3), (1, 4), (4, 3) từ ga 1 tới ga 3:
-Có hai lộ trình cùng đạt 2 chặng là $1  × o 2  × o 3$ hoặc $1  × o 4  × o 3$. Thời gian ít nhất là 2 chặng.
+Có hai lộ trình cùng đạt 2 chặng là $1 × o 2 × o 3$ hoặc $1 × o 4 × o 3$. Thời gian ít nhất là 2 chặng.
 
 ---
 
@@ -44,40 +43,40 @@ Có hai lộ trình cùng đạt 2 chặng là $1  × o 2  × o 3$ hoặc $1  ×
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, m;
-    if (!(cin >> n >> m)) return 0;
-    if (n <= 0) return 0;
+int n, m;
+if (!(cin >> n >> m)) return 0;
+if (n <= 0) return 0;
 
-    vector<vector<int>> adj(n + 1);
-    for (int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+vector<vector<int>> adj(n + 1);
+for (int i = 0; i < m; ++i) {
+int u, v;
+cin >> u >> v;
+adj[u].push_back(v);
+adj[v].push_back(u);
+}
 
-    vector<int> dist(n + 1, -1);
-    queue<int> q;
+vector<int> dist(n + 1, -1);
+queue<int> q;
 
-    dist[1] = 0;
-    q.push(1);
+dist[1] = 0;
+q.push(1);
 
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
+while (!q.empty()) {
+int u = q.front();
+q.pop();
 
-        for (int v : adj[u]) {
-            if (dist[v] == -1) {
-                dist[v] = dist[u] + 1;
-                q.push(v);
-            }
-        }
-    }
+for (int v : adj[u]) {
+if (dist[v] == -1) {
+dist[v] = dist[u] + 1;
+q.push(v);
+}
+}
+}
 
-    cout << dist[n] << "\n";
-    return 0;
+cout << dist[n] << "\n";
+return 0;
 }
 ```

@@ -7,13 +7,12 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 - **Bản chất bài toán:** Cho mảng N số nguyên không âm. Hãy tìm giá trị lớn nhất của biểu thức A[i] ^ A[j] với 1 <= i < j <= N.
 
 - **Phương pháp tiếp cận — Phép toán BIT & Bitmask:**
-  - Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
-  - Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
+- Biểu diễn tập hợp hoặc trạng thái bật/tắt bằng các bit của số nguyên 64-bit.
+- Sử dụng các toán tử bitwise `&, |, ^, ~, <<, >>` để thao tác đồng thời trong $\mathcal{O}(1)$ chu kỳ máy.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 4 3 10 5 25)
-| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
+## 2. Bảng chạy tay trên số liệu mẫu| Bước | Lệnh chạy / Thao tác | Phân tích biến đổi số liệu | Kết quả ghi nhận |
 |---|---|---|---|
 | 1 | Nạp dữ liệu vào mảng/biến | Input: `4 3 10 5 25` | Khởi tạo cấu trúc dữ liệu ban đầu |
 | 2 | Thực thi thuật toán tối ưu | Cặp (5, 25) có 5 ^ 25 = 00101_2 ^ 11001_2 = 11100_2 = 28. Đây là giá trị XOR lớn nhất giữa 2 phần tử bất kỳ trong mảng.... | Tính toán từng bước trạng thái |
@@ -36,47 +35,47 @@ Chuyên đề: **Bài 06: Phép toán BIT & biểu diễn trạng thái**
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
+vector<long long> a(n);
+for (int i = 0; i < n; ++i) {
+cin >> a[i];
+}
 
-    long long max_xor = 0;
-    long long mask = 0;
+long long max_xor = 0;
+long long mask = 0;
 
-    for (int bit = 30; bit >= 0; --bit) {
-        mask |= (1LL << bit);
-        vector<long long> prefixes;
-        prefixes.reserve(n);
-        for (long long x : a) {
-            prefixes.push_back(x & mask);
-        }
-        sort(prefixes.begin(), prefixes.end());
-        prefixes.erase(unique(prefixes.begin(), prefixes.end()), prefixes.end());
+for (int bit = 30; bit >= 0; --bit) {
+mask |= (1LL << bit);
+vector<long long> prefixes;
+prefixes.reserve(n);
+for (long long x : a) {
+prefixes.push_back(x & mask);
+}
+sort(prefixes.begin(), prefixes.end());
+prefixes.erase(unique(prefixes.begin(), prefixes.end()), prefixes.end());
 
-        long long candidate = max_xor | (1LL << bit);
-        bool found = false;
+long long candidate = max_xor | (1LL << bit);
+bool found = false;
 
-        for (long long p : prefixes) {
-            long long target = p ^ candidate;
-            if (binary_search(prefixes.begin(), prefixes.end(), target)) {
-                found = true;
-                break;
-            }
-        }
+for (long long p : prefixes) {
+long long target = p ^ candidate;
+if (binary_search(prefixes.begin(), prefixes.end(), target)) {
+found = true;
+break;
+}
+}
 
-        if (found) {
-            max_xor = candidate;
-        }
-    }
+if (found) {
+max_xor = candidate;
+}
+}
 
-    cout << max_xor << "\n";
-    return 0;
+cout << max_xor << "\n";
+return 0;
 }
 ```

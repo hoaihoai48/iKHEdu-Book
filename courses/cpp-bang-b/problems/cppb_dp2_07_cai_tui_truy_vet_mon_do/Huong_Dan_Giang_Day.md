@@ -11,15 +11,14 @@ Chuyên đề: **Quy Hoạch Động 2 Chiều & Bài Toán Cái Túi (DP 2D / K
 - **Phương pháp tiếp cận & Chiến lược tối ưu:**
 - **Mô hình trạng thái:** Định nghĩa $dp[i][j]$ biểu diễn kết quả tối ưu khi xét tiền tố $i$ đồ vật và sức chứa/trọng lượng còn lại là $j$, hoặc toạ độ ô $(i, j)$ trên lưới.
 - **Chuyển trạng thái bài toán Cái Túi (0/1 Knapsack):**
-  $$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
+$$dp[i][w] = \max(dp[i-1][w],\, dp[i-1][w - w_i] + v_i) \quad (w \ge w_i)$$
 
 - **Kỹ thuật tối ưu bộ nhớ (Nén mảng 1D):** Với bài toán 0/1 Knapsack, duyệt lùi $w$ từ $W$ về $w_i$ để đảm bảo mỗi vật chỉ được chọn tối đa một lần; với Unbounded Knapsack, duyệt xuôi từ $w_i$ đến $W$.
 - **Độ phức tạp:** Thời gian $\mathcal{O}(N \times W)$ hoặc $\mathcal{O}(N \times M)$, không gian tối ưu $\mathcal{O}(W)$.
 
 ---
 
-## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table)
-Mẫu thử (Sample 1): Đầu vào: `3 4 1 15 3 20 4 30` $\implies$ Đầu ra kỳ vọng: `35 2 1 2`.
+## 2. Bảng chạy tay trên số liệu mẫuMẫu thử (Sample 1): Đầu vào: `3 4 1 15 3 20 4 30` $\implies$ Đầu ra kỳ vọng: `35 2 1 2`.
 
 | Bước | Thao tác thực hiện | Dữ liệu biến đổi & Trạng thái | Kết quả ghi nhận |
 |---|---|---|---|
@@ -45,46 +44,46 @@ Chọn món đồ 1 (nặng 2, giá trị 3) và món đồ 2 (nặng 1, giá tr
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n, w;
-    if (!(cin >> n >> w)) return 0;
-    if (n <= 0 || w <= 0) return 0;
+int n, w;
+if (!(cin >> n >> w)) return 0;
+if (n <= 0 || w <= 0) return 0;
 
-    vector<long long> weight(n + 1), val(n + 1);
-    for (int i = 1; i <= n; ++i) {
-        cin >> weight[i] >> val[i];
-    }
+vector<long long> weight(n + 1), val(n + 1);
+for (int i = 1; i <= n; ++i) {
+cin >> weight[i] >> val[i];
+}
 
-    vector<vector<long long>> dp(n + 1, vector<long long>(w + 1, 0));
+vector<vector<long long>> dp(n + 1, vector<long long>(w + 1, 0));
 
-    for (int i = 1; i <= n; ++i) {
-        for (int j = 0; j <= w; ++j) {
-            dp[i][j] = dp[i - 1][j];
-            if (j >= weight[i]) {
-                dp[i][j] = max(dp[i][j], dp[i - 1][j - weight[i]] + val[i]);
-            }
-        }
-    }
+for (int i = 1; i <= n; ++i) {
+for (int j = 0; j <= w; ++j) {
+dp[i][j] = dp[i - 1][j];
+if (j >= weight[i]) {
+dp[i][j] = max(dp[i][j], dp[i - 1][j - weight[i]] + val[i]);
+}
+}
+}
 
-    // Truy vết các món đồ được chọn
-    vector<int> chosen;
-    int curr_w = w;
-    for (int i = n; i >= 1; --i) {
-        if (curr_w >= weight[i] && dp[i][curr_w] == dp[i - 1][curr_w - weight[i]] + val[i]) {
-            chosen.push_back(i);
-            curr_w -= weight[i];
-        }
-    }
-    reverse(chosen.begin(), chosen.end());
+// Truy vết các món đồ được chọn
+vector<int> chosen;
+int curr_w = w;
+for (int i = n; i >= 1; --i) {
+if (curr_w >= weight[i] && dp[i][curr_w] == dp[i - 1][curr_w - weight[i]] + val[i]) {
+chosen.push_back(i);
+curr_w -= weight[i];
+}
+}
+reverse(chosen.begin(), chosen.end());
 
-    cout << dp[n][w] << "\n";
-    cout << chosen.size() << "\n";
-    for (int i = 0; i < (int)chosen.size(); ++i) {
-        cout << chosen[i] << (i + 1 == (int)chosen.size() ? "" : " ");
-    }
-    cout << "\n";
-    return 0;
+cout << dp[n][w] << "\n";
+cout << chosen.size() << "\n";
+for (int i = 0; i < (int)chosen.size(); ++i) {
+cout << chosen[i] << (i + 1 == (int)chosen.size() "" : " ");
+}
+cout << "\n";
+return 0;
 }
 ```

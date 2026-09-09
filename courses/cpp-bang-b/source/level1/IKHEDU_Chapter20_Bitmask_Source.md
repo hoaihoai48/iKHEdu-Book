@@ -20,7 +20,7 @@ Sau chương này, em có thể:
 
 ### Câu hỏi trung tâm của chương
 
-> **Làm thế nào để lưu trữ trạng thái của $20$ đối tượng chỉ trong một biến số nguyên duy nhất?**
+> **Làm thế nào để lưu trữ trạng thái của $20$ đối tượng chỉ trong một biến số nguyên duy nhất**
 
 ---
 
@@ -33,8 +33,8 @@ Sau chương này, em có thể:
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 20.1: Bật Tắt Cảm Biến Giám Sát Nhà Thông Minh Smart Home**  
-> **Bối cảnh:** Bộ điều khiển nhà thông minh quản lý trạng thái của 30 cảm biến bằng một số nguyên $X$ (mỗi bit $1$ đại diện cho cảm biến đang BẬT). Thực hiện $Q$ lệnh kiểm tra hoặc bật/tắt cảm biến thứ $K$.  
+> **Bài toán mẫu 20.1: Bật Tắt Cảm Biến Giám Sát Nhà Thông Minh Smart Home** 
+> **Bối cảnh:** Bộ điều khiển nhà thông minh quản lý trạng thái của 30 cảm biến bằng một số nguyên $X$ (mỗi bit $1$ đại diện cho cảm biến đang BẬT). Thực hiện $Q$ lệnh kiểm tra hoặc bật/tắt cảm biến thứ $K$. 
 > **Input:** `0` \ `3` \ `1 2` (Bật cảm biến 2) \ `3 2` (Kiểm tra cảm biến 2) \ `2 2` (Tắt cảm biến 2) $\implies$ **Output:** `ON`.
 
 #### Cài đặt C++
@@ -43,26 +43,26 @@ Sau chương này, em có thể:
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int mask, q;
-    if (!(cin >> mask >> q)) return 0;
+int mask, q;
+if (!(cin >> mask >> q)) return 0;
 
-    while (q--) {
-        int type, k;
-        cin >> type >> k;
-        if (type == 1) {
-            mask |= (1 << k);
-        } else if (type == 2) {
-            mask &= ~(1 << k);
-        } else {
-            if ((mask >> k) & 1) cout << "ON\n";
-            else cout << "OFF\n";
-        }
-    }
+while (q--) {
+int type, k;
+cin >> type >> k;
+if (type == 1) {
+mask |= (1 << k);
+} else if (type == 2) {
+mask &= ~(1 << k);
+} else {
+if ((mask >> k) & 1) cout << "ON\n";
+else cout << "OFF\n";
+}
+}
 
-    return 0;
+return 0;
 }
 ```
 
@@ -92,7 +92,7 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 20.2: Đảo Trạng Thái Đèn Giao Thông**  
+> **Bài toán mẫu 20.2: Đảo Trạng Thái Đèn Giao Thông** 
 > **Bối cảnh:** Đảo trạng thái (ON $\to$ OFF, OFF $\to$ ON) của bit thứ $K$ trên thanh ghi điều khiển.
 
 #### Cài đặt C++
@@ -101,15 +101,15 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int mask, k;
-    if (!(cin >> mask >> k)) return 0;
+int mask, k;
+if (!(cin >> mask >> k)) return 0;
 
-    mask ^= (1 << k);
-    cout << mask << "\n";
-    return 0;
+mask ^= (1 << k);
+cout << mask << "\n";
+return 0;
 }
 ```
 
@@ -136,8 +136,8 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 20.3: Phân Bổ Ngân Sách Dự Án Khởi Nghiệp iKHEDU**  
-> **Bối cảnh:** Có $N$ dự án khởi nghiệp ($N \le 20$), dự án thứ $i$ cần vốn $A_i$ triệu đồng. Tìm tổng số cách chọn một tập hợp các dự án sao cho tổng vốn đầu tư đúng bằng số tiền ngân sách $S$.  
+> **Bài toán mẫu 20.3: Phân Bổ Ngân Sách Dự Án Khởi Nghiệp iKHEDU** 
+> **Bối cảnh:** Có $N$ dự án khởi nghiệp ($N \le 20$), dự án thứ $i$ cần vốn $A_i$ triệu đồng. Tìm tổng số cách chọn một tập hợp các dự án sao cho tổng vốn đầu tư đúng bằng số tiền ngân sách $S$. 
 > **Input:** `4 10` \ `2 3 5 7` $\implies$ **Output:** `2` (tập {3, 7} và {2, 3, 5}).
 
 #### Cài đặt C++
@@ -146,31 +146,31 @@ int main() {
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    long long s;
-    if (!(cin >> n >> s)) return 0;
+int n;
+long long s;
+if (!(cin >> n >> s)) return 0;
 
-    vector<long long> a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+vector<long long> a(n);
+for (int i = 0; i < n; i++) cin >> a[i];
 
-    int validSubsets = 0;
-    int totalMasks = 1 << n;
+int validSubsets = 0;
+int totalMasks = 1 << n;
 
-    for (int mask = 0; mask < totalMasks; mask++) {
-        long long currentSum = 0;
-        for (int i = 0; i < n; i++) {
-            if ((mask >> i) & 1) {
-                currentSum += a[i];
-            }
-        }
-        if (currentSum == s) validSubsets++;
-    }
+for (int mask = 0; mask < totalMasks; mask++) {
+long long currentSum = 0;
+for (int i = 0; i < n; i++) {
+if ((mask >> i) & 1) {
+currentSum += a[i];
+}
+}
+if (currentSum == s) validSubsets++;
+}
 
-    cout << validSubsets << "\n";
-    return 0;
+cout << validSubsets << "\n";
+return 0;
 }
 ```
 
@@ -197,13 +197,13 @@ int main() {
 
 #### 2. Bài toán mẫu có hướng dẫn
 
-> **Bài toán mẫu 20.4: Lộ Trình Giao Hàng Tiết Kiệm Tối Ưu (TSP)**  
-> **Bối cảnh:** Shipper cần đi qua $N$ địa điểm giao hàng ($N \le 16$). Ma trận $C[i][j]$ cho biết chi phí di chuyển giữa 2 điểm. Tìm tổng chi phí nhỏ nhất để đi qua tất cả $N$ địa điểm và quay về điểm xuất phát.  
-> **Input:**  
-> `3`  
-> `0 10 20`  
-> `10 0 15`  
-> `20 15 0`  
+> **Bài toán mẫu 20.4: Lộ Trình Giao Hàng Tiết Kiệm Tối Ưu (TSP)** 
+> **Bối cảnh:** Shipper cần đi qua $N$ địa điểm giao hàng ($N \le 16$). Ma trận $C[i][j]$ cho biết chi phí di chuyển giữa 2 điểm. Tìm tổng chi phí nhỏ nhất để đi qua tất cả $N$ địa điểm và quay về điểm xuất phát. 
+> **Input:** 
+> `3` 
+> `0 10 20` 
+> `10 0 15` 
+> `20 15 0` 
 > **Output:** `45` ($0 \to 1 \to 2 \to 0$: $10 + 15 + 20 = 45$).
 
 #### Cài đặt C++
@@ -214,42 +214,42 @@ using namespace std;
 const long long INF = 1e18;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
 
-    int n;
-    if (!(cin >> n)) return 0;
+int n;
+if (!(cin >> n)) return 0;
 
-    vector<vector<long long>> cost(n, vector<long long>(n));
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) cin >> cost[i][j];
-    }
+vector<vector<long long>> cost(n, vector<long long>(n));
+for (int i = 0; i < n; i++) {
+for (int j = 0; j < n; j++) cin >> cost[i][j];
+}
 
-    int totalMasks = 1 << n;
-    vector<vector<long long>> dp(totalMasks, vector<long long>(n, INF));
-    dp[1][0] = 0;
+int totalMasks = 1 << n;
+vector<vector<long long>> dp(totalMasks, vector<long long>(n, INF));
+dp[1][0] = 0;
 
-    for (int mask = 1; mask < totalMasks; mask++) {
-        for (int u = 0; u < n; u++) {
-            if (!(mask & (1 << u)) || dp[mask][u] == INF) continue;
+for (int mask = 1; mask < totalMasks; mask++) {
+for (int u = 0; u < n; u++) {
+if (!(mask & (1 << u)) || dp[mask][u] == INF) continue;
 
-            for (int v = 0; v < n; v++) {
-                if (!(mask & (1 << v))) {
-                    int nextMask = mask | (1 << v);
-                    dp[nextMask][v] = min(dp[nextMask][v], dp[mask][u] + cost[u][v]);
-                }
-            }
-        }
-    }
+for (int v = 0; v < n; v++) {
+if (!(mask & (1 << v))) {
+int nextMask = mask | (1 << v);
+dp[nextMask][v] = min(dp[nextMask][v], dp[mask][u] + cost[u][v]);
+}
+}
+}
+}
 
-    long long minTour = INF;
-    int finalMask = totalMasks - 1;
-    for (int u = 0; u < n; u++) {
-        minTour = min(minTour, dp[finalMask][u] + cost[u][0]);
-    }
+long long minTour = INF;
+int finalMask = totalMasks - 1;
+for (int u = 0; u < n; u++) {
+minTour = min(minTour, dp[finalMask][u] + cost[u][0]);
+}
 
-    cout << minTour << "\n";
-    return 0;
+cout << minTour << "\n";
+return 0;
 }
 ```
 

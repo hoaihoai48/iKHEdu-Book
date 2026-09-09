@@ -9,8 +9,8 @@ Cho danh sách $Q$ thao tác của hệ thống. Bạn hãy lập trình mô ph�
 ## Input
 - Dòng 1: Chứa số nguyên dương $Q$ ($1 \le Q \le 20000$) là số lượng thao tác.
 - $Q$ dòng tiếp theo biểu diễn các thao tác thuộc một trong hai dạng:
-  - `1 Name Score`: Cộng thêm $Score$ điểm cho thí sinh có tên $Name$.
-  - `2 Name`: Yêu cầu in ra tổng điểm tích lũy hiện tại của thí sinh $Name$.
+- `1 Name Score`: Cộng thêm $Score$ điểm cho thí sinh có tên $Name$.
+- `2 Name`: Yêu cầu in ra tổng điểm tích lũy hiện tại của thí sinh $Name$.
 
 ## Output
 - Với mỗi thao tác loại `2`, in ra trên một dòng một số nguyên duy nhất là tổng điểm của thí sinh đó (nếu thí sinh chưa có điểm, in ra `0`).

@@ -19,7 +19,7 @@ trigger: always_on
 ## Dữ liệu & Markdown/KaTeX
 - Ưu tiên kiểu nguyên bản + `vector<vector<long long>>` để dùng `sort` mặc định. `pair`/`struct` chỉ khi bất đắc dĩ (đa trường khác kiểu, comparator `a+b>b+a`).
 - Module 01/02: TUYỆT ĐỐI CHƯA DÙNG `set`, `map`, `deque`, `priority_queue`, Segment Tree, Fenwick, DP.
-- Không vẽ ASCII (`│┌└`). Minh họa bằng Markdown Table + KaTeX. Callout tiếng Việt đơn giản (`> ⚠️ **Lưu ý:**`, `> 💡 **Mẹo nhớ:**`), cấm `> [!CAUTION]`.
+- Không vẽ ASCII (`│┌└`). Minh họa bằng Markdown Table + KaTeX. Callout tiếng Việt đơn giản (`> **Lưu ý:**`, `> **Mẹo nhớ:**`, `> **Quy tắc vàng:**`), cấm dùng emoji (`❌`, `✅`, `⚠️`, `💡`), cấm `> [!CAUTION]`.
 
 ## Learning loop mỗi Lesson
 Hook/Vấn đề -> Mô phỏng tay -> Lý thuyết & Invariant -> Code & Bẫy lỗi -> Micro P0 -> Quiz -> P1-P3 -> Mastery P4/P5. 1 Lesson = 1 đơn vị kiến thức lớn, >=10 Quiz và >=14 bài tập là ngưỡng tối thiểu.
