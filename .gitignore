@@ -26,9 +26,25 @@ dist/
 build/
 scratch/
 
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor & Office Temp / Lock Files
+~$*
+*.tmp
+*.temp
+*.bak*
+
+# Build Intermediates
+_build_intermediate_*
+_test_*
+
 # Testcase data folders & files (Ignore heavy testcase input/output data)
 courses/**/problems/**/test/
 **/problems/**/test/
 **/test/
 *.in
 *.out
+
