@@ -1,0 +1,30 @@
+# Tách chữ số tận cùng
+
+
+## Bối cảnh
+
+Na có một mã số may mắn là một số tự nhiên $N$ viết trên chiếc vòng tay. Hôm nay Na chơi trò thám tử cùng bạn thân, muốn tìm ra chữ số hàng đơn vị và chữ số hàng chục của số này để mở chiếc hộp bí mật. Hai bạn xoay chiếc vòng mãi mà chưa tách được. Hãy giúp Na tách hai chữ số đó ra.
+## Nhiệm vụ
+
+Cho số tự nhiên $N$, hãy tách và in ra chữ số hàng đơn vị và chữ số hàng chục của $N$.
+## Input
+
+Một số tự nhiên $N$ ($10 \le N \le 10^9$).
+## Output
+
+ * Dòng 1: Chữ số hàng đơn vị của $N$.
+ * Dòng 2: Chữ số hàng chục của $N$.
+## Sample 1
+
+### Input
+```text
+857
+```
+### Output
+```text
+7
+5
+```
+### Giải thích
+
+Chữ số hàng đơn vị là 7, hàng chục là 5.

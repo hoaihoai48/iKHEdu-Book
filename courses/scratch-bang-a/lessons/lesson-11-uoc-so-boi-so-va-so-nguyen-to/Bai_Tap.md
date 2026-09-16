@@ -1,0 +1,360 @@
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 11 — ƯỚC SỐ, BỘI SỐ VÀ SỐ NGUYÊN TỐ
+
+**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Chuyên đề:** Chương 4: Số Học & Thuật Toán Tách Số  
+> **Tổng số bài tập thực hành:** `14 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
+
+---
+
+## 1. Ma Trận Phân Tầng Bài Tập Toàn Diện
+
+| STT | Mã bài toán | Tên bài tập | Phân tầng | Mức nhận thức | Thao tác trọng tâm |
+|:---:|---|---|:---:|:---:|---|
+| 1 | `sca_l11_p01_liet_ke_tat_ca_uoc_so` | Liệt kê tất cả ước số | **P0** | Khởi động & Quan sát | Nhập một số tự nhiên $N$. Hãy in ra tất cả các ước số nguyên... |
+| 2 | `sca_l11_p02_dem_so_luong_uoc_so` | Đếm số lượng ước số | **P0** | Khởi động & Quan sát | Cho số tự nhiên $N$. Hãy cho biết số $N$ có tất cả bao nhiêu... |
+| 3 | `sca_l11_p03_tinh_tong_cac_uoc_so` | Tính tổng các ước số | **P0** | Khởi động & Quan sát | Cho số nguyên dương $N$. Hãy tính tổng tất cả các ước số của... |
+| 4 | `sca_l11_p04_kiem_tra_so_nguyen_to` | Kiểm tra số nguyên tố | **P1** | Cơ bản & Hoàn thành | Nhập vào số nguyên $N$. Hãy kiểm tra xem $N$ có phải là số n... |
+| 5 | `sca_l11_p05_kiem_tra_so_chinh_phuong` | Kiểm tra số chính phương | **P1** | Cơ bản & Hoàn thành | Nhập số nguyên dương $N$. Kiểm tra $N$ có phải số chính phươ... |
+| 6 | `sca_l11_p06_uoc_chung_lon_nhat_bcnn` | Ước chung lớn nhất & BCNN | **P1** | Cơ bản & Hoàn thành | Cho 2 số nguyên dương $A$ và $B$. Hãy tìm Ước chung lớn nhất... |
+| 7 | `sca_l11_p07_dem_uoc_chan_cua_n` | Đếm ước chẵn của N | **P1** | Cơ bản & Hoàn thành | Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu ước số của... |
+| 8 | `sca_l11_p08_tim_uoc_so_lon_thu_hai` | Tìm ước số lớn thứ hai | **P2** | Luyện tập & Vận dụng | Cho số nguyên dương $N$ ($N \ge 2$). Ước số lớn nhất của $N$... |
+| 9 | `sca_l11_p09_dem_so_nguyen_to_trong_doan` | Đếm số nguyên tố trong đoạn | **P2** | Luyện tập & Vận dụng | Cho hai số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^4$... |
+| 10 | `sca_l11_p10_hai_so_nguyen_to_cung_nhau` | Hai số nguyên tố cùng nhau | **P2** | Luyện tập & Vận dụng | Cho 2 số nguyên dương $A$ và $B$. In ra `YES` nếu chúng nguy... |
+| 11 | `sca_l11_p11_cap_so_nguyen_to_sinh_doi` | Cặp số nguyên tố sinh đôi | **P3** | Vận dụng cao & Sáng tạo | Cho số tự nhiên $N$ ($1 \le N \le 10^4$). Hãy in ra tất cả c... |
+| 12 | `sca_l11_p12_so_sieu_nguyen_to_super_prime` | Số siêu nguyên tố (super prime) | **P3** | Vận dụng cao & Sáng tạo | Cho số tự nhiên $N$. Hãy kiểm tra xem $N$ có phải là Siêu ng... |
+| 13 | `sca_l11_p13_phan_tich_ra_thua_so_nguyen_to` | Phân tích ra thừa số nguyên tố | **P3** | Vận dụng cao & Sáng tạo | Mọi số tự nhiên $N \ge 2$ đều có thể phân tích thành tích củ... |
+| 14 | `sca_l11_p14_tim_so_co_dung_3_uoc_so` | Tìm số có đúng 3 ước số | **P3** | Vận dụng cao & Sáng tạo | Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu số nhỏ hơn... |
+
+---
+
+## 2. Chi Tiết Từng Bài Tập Thực Hành
+
+### Bài 1 (P0): Liệt kê tất cả ước số
+* **Mã bài toán:** `sca_l11_p01_liet_ke_tat_ca_uoc_so`
+* **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
+* **Bối cảnh:** Xác định toàn bộ các ước số nguyên dương của một số nguyên là phép phân tích cơ bản trong số học, giúp giải quyết các bài toán chia đều tài nguyên và phân nhóm phần tử.
+* **Nhiệm vụ:** Nhập một số tự nhiên $N$. Hãy in ra tất cả các ước số nguyên dương của $N$ theo thứ tự tăng dần trên một dòng, cách nhau bởi khoảng trắng.
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 1000$).
+* **Kết quả ra (Output):** Dãy các ước số của $N$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+12
+```
+### Output
+```text
+1 2 3 4 6 12
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `12`, kết quả thu được tương ứng là `1 2 3 4 6 12`.
+
+---
+
+### Bài 2 (P0): Đếm số lượng ước số
+* **Mã bài toán:** `sca_l11_p02_dem_so_luong_uoc_so`
+* **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
+* **Bối cảnh:** Số lượng ước số là chỉ số quan trọng phản ánh tính chia hết của một số nguyên, đồng thời là cơ sở nhận biết số nguyên tố và số chính phương.
+* **Nhiệm vụ:** Cho số tự nhiên $N$. Hãy cho biết số $N$ có tất cả bao nhiêu ước số nguyên dương.
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 10^5$).
+* **Kết quả ra (Output):** Một số nguyên duy nhất là số lượng ước số của $N$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+10
+```
+### Output
+```text
+4
+```
+### Giải thích
+
+Số 10 có 4 ước: 1, 2, 5, 10.
+
+---
+
+### Bài 3 (P0): Tính tổng các ước số
+* **Mã bài toán:** `sca_l11_p03_tinh_tong_cac_uoc_so`
+* **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
+* **Bối cảnh:** Trong bài kiểm tra, người dùng cần tính nhanh tổng một dãy số. Hãy viết chương trình hỗ trợ tính toán.
+* **Nhiệm vụ:** Cho số nguyên dương $N$. Hãy tính tổng tất cả các ước số của $N$.
+* **Dữ liệu vào (Input):** Một số nguyên $N$ ($1 \le N \le 10^5$).
+* **Kết quả ra (Output):** Tổng các ước số của $N$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+6
+```
+### Output
+```text
+12
+```
+### Giải thích
+
+Các ước là 1, 2, 3, 6 $\implies 1 + 2 + 3 + 6 = 12$.
+
+---
+
+### Bài 4 (P1): Kiểm tra số nguyên tố
+* **Mã bài toán:** `sca_l11_p04_kiem_tra_so_nguyen_to`
+* **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
+* **Bối cảnh:** Trong giờ lập trình, thầy giáo đưa ra một bài toán kiểm tra tính chất của số. Hãy viết chương trình kiểm tra tự động.
+* **Nhiệm vụ:** Nhập vào số nguyên $N$. Hãy kiểm tra xem $N$ có phải là số nguyên tố hay không. Nếu có in `YES`, nếu không in `NO`.
+* **Dữ liệu vào (Input):** Một số nguyên $N$ ($0 \le N \le 10^7$).
+* **Kết quả ra (Output):** `YES` hoặc `NO`.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+7
+```
+### Output
+```text
+YES
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `7`, kết quả thu được tương ứng là `YES`.
+
+---
+
+### Bài 5 (P1): Kiểm tra số chính phương
+* **Mã bài toán:** `sca_l11_p05_kiem_tra_so_chinh_phuong`
+* **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
+* **Bối cảnh:** Giờ xếp hình, Bo xếp các viên gạch thành một ô vuông thật ngay ngắn. Cô giáo cười và bảo những số gạch xếp được thành hình vuông như vậy gọi là số chính phương: số bằng bình phương của một số tự nhiên (ví dụ: $0, 1, 4, 9, 16, 25, \dots$). Bo có một đống gạch mà chưa biết có xếp vuông được không, hãy bạn ấy kiểm tra.
+* **Nhiệm vụ:** Nhập số nguyên dương $N$. Kiểm tra $N$ có phải số chính phương không. Nếu đúng in `YES`, ngược lại in `NO`.
+* **Dữ liệu vào (Input):** Một số nguyên $N$ ($1 \le N \le 10^9$).
+* **Kết quả ra (Output):** `YES` hoặc `NO`.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+25
+```
+### Output
+```text
+YES
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `25`, kết quả thu được tương ứng là `YES`.
+
+---
+
+### Bài 6 (P1): Ước chung lớn nhất & BCNN
+* **Mã bài toán:** `sca_l11_p06_uoc_chung_lon_nhat_bcnn`
+* **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
+* **Bối cảnh:** Thí sinh cần tìm giá trị lớn nhất hoặc nhỏ nhất trong một tập dữ liệu. Hãy viết chương trình tìm kiếm.
+* **Nhiệm vụ:** Cho 2 số nguyên dương $A$ và $B$. Hãy tìm Ước chung lớn nhất ($\text{GCD}$) và Bội chung nhỏ nhất ($\text{LCM}$) của 2 số này.
+* **Dữ liệu vào (Input):** Hai số nguyên $A, B$ cách nhau bởi khoảng trắng ($1 \le A, B \le 10^9$).
+* **Kết quả ra (Output):** Hai số nguyên: $\text{GCD}$ trước, $\text{LCM}$ sau, cách nhau một khoảng trắng.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+12 18
+```
+### Output
+```text
+6 36
+```
+### Giải thích
+
+$\text{GCD}(12, 18) = 6$, $\text{LCM}(12, 18) = (12 \times 18) // 6 = 36$.
+
+---
+
+### Bài 7 (P1): Đếm ước chẵn của N
+* **Mã bài toán:** `sca_l11_p07_dem_uoc_chan_cua_n`
+* **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
+* **Bối cảnh:** Trong phân tích chia nhóm chẵn lẻ, việc xác định các ước số chẵn giúp tối ưu hóa việc phân chia tài nguyên thành các phần có kích thước chia hết cho 2.
+* **Nhiệm vụ:** Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu ước số của $N$ là số chẵn.
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 10^6$).
+* **Kết quả ra (Output):** Số lượng ước chẵn của $N$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+12
+```
+### Output
+```text
+4
+```
+### Giải thích
+
+Các ước của 12 là: 1, 2, 3, 4, 6, 12. Trong đó các ước chẵn là: 2, 4, 6, 12 (có 4 số).
+
+---
+
+### Bài 8 (P2): Tìm ước số lớn thứ hai
+* **Mã bài toán:** `sca_l11_p08_tim_uoc_so_lon_thu_hai`
+* **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
+* **Bối cảnh:** Thí sinh đang tìm kiếm một giá trị đặc biệt trong tập dữ liệu. Hãy viết chương trình tìm kiếm hiệu quả.
+* **Nhiệm vụ:** Cho số nguyên dương $N$ ($N \ge 2$). Ước số lớn nhất của $N$ luôn là chính nó ($N$). Hãy tìm ước số lớn thứ hai của $N$ (tức là ước số lớn nhất nhưng nhỏ hơn $N$).
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($2 \le N \le 10^9$).
+* **Kết quả ra (Output):** Ước số lớn thứ hai của $N$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+24
+```
+### Output
+```text
+12
+```
+### Giải thích
+
+Ước lớn nhất là 24, lớn thứ hai là 12.
+
+---
+
+### Bài 9 (P2): Đếm số nguyên tố trong đoạn
+* **Mã bài toán:** `sca_l11_p09_dem_so_nguyen_to_trong_doan`
+* **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
+* **Bối cảnh:** Đếm số lượng số nguyên tố trong một khoảng giá trị cho trước là dạng toán kinh điển đánh giá hiệu quả của các thuật toán sàng lọc và kiểm tra số nguyên tố.
+* **Nhiệm vụ:** Cho hai số nguyên dương $A$ và $B$ ($1 \le A \le B \le 10^4$). Hãy đếm xem có bao nhiêu số nguyên tố nằm trong đoạn từ $A$ đến $B$ (tính cả $A$ và $B$).
+* **Dữ liệu vào (Input):** Hai số $A, B$ trên cùng một dòng.
+* **Kết quả ra (Output):** Số lượng số nguyên tố trong đoạn $[A, B]$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+10 20
+```
+### Output
+```text
+4
+```
+### Giải thích
+
+Có 4 số nguyên tố: 11, 13, 17, 19.
+
+---
+
+### Bài 10 (P2): Hai số nguyên tố cùng nhau
+* **Mã bài toán:** `sca_l11_p10_hai_so_nguyen_to_cung_nhau`
+* **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
+* **Bối cảnh:** An và Bình mỗi bạn có một rổ bi. Hai bạn muốn biết hai rổ bi của mình có "hợp nhau" không. Cô giáo bảo hai số $A$ và $B$ được gọi là nguyên tố cùng nhau nếu Ước chung lớn nhất của chúng bằng 1 ($\text{GCD}(A, B) = 1$). Hai bạn đếm mãi chưa xong, hãy hai bạn kiểm tra.
+* **Nhiệm vụ:** Cho 2 số nguyên dương $A$ và $B$. In ra `YES` nếu chúng nguyên tố cùng nhau, ngược lại in `NO`.
+* **Dữ liệu vào (Input):** Hai số $A, B$ ($1 \le A, B \le 10^9$).
+* **Kết quả ra (Output):** `YES` hoặc `NO`.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+8 9
+```
+### Output
+```text
+YES
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `8 9`, kết quả thu được tương ứng là `YES`.
+
+---
+
+### Bài 11 (P3): Cặp số nguyên tố sinh đôi
+* **Mã bài toán:** `sca_l11_p11_cap_so_nguyen_to_sinh_doi`
+* **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
+* **Bối cảnh:** Hai chị em Song sinh nhà bạn Tí lúc nào cũng ngồi cạnh nhau thật thân thiết. Nghe chuyện đó, cô giáo đố cả lớp tìm những cặp số nguyên tố cũng "sinh đôi" như vậy. Hai số nguyên tố được gọi là "Sinh đôi" (Twin Primes) nếu chúng hơn kém nhau đúng 2 đơn vị (ví dụ: $(3, 5), (5, 7), (11, 13), (17, 19)$). Cả lớp tìm mãi chưa đủ, hãy các bạn liệt kê.
+* **Nhiệm vụ:** Cho số tự nhiên $N$ ($1 \le N \le 10^4$). Hãy in ra tất cả các cặp số nguyên tố sinh đôi $(P, P+2)$ sao cho $P+2 \le N$.
+* **Dữ liệu vào (Input):** Một số nguyên $N$.
+* **Kết quả ra (Output):** Mỗi dòng in một cặp số nguyên tố sinh đôi cách nhau bởi khoảng trắng, theo thứ tự tăng dần.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+15
+```
+### Output
+```text
+3 5
+5 7
+11 13
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `15`, kết quả thu được tương ứng là `3 5
+5 7
+11 13`.
+
+---
+
+### Bài 12 (P3): Số siêu nguyên tố (super prime)
+* **Mã bài toán:** `sca_l11_p12_so_sieu_nguyen_to_super_prime`
+* **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
+* **Bối cảnh:** Bi có một chiếc tàu lượn bằng các chữ số rất lạ. Mỗi lần tàu chạy qua, chữ số ở cuối toa lại rơi xuống một cái. Bạn ấy reo lên khi phát hiện có những con số gọi là "Siêu nguyên tố": bản thân nó là số nguyên tố, và khi ta lần lượt xóa bớt chữ số tận cùng bên phải thì các số thu được vẫn luôn là số nguyên tố!
+ * Ví dụ: Số $239$ là số nguyên tố.
+ * Cắt đuôi 9 còn $23$ (vẫn là số nguyên tố).
+ * Cắt đuôi 3 còn $2$ (vẫn là số nguyên tố).
+ $\implies 239$ là một Siêu nguyên tố! Bi đố em tìm thêm thật nhiều số đặc biệt như vậy, hãy bạn ấy.
+* **Nhiệm vụ:** Cho số tự nhiên $N$. Hãy kiểm tra xem $N$ có phải là Siêu nguyên tố hay không. In `YES` hoặc `NO`.
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 10^7$).
+* **Kết quả ra (Output):** `YES` hoặc `NO`.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+239
+```
+### Output
+```text
+YES
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `239`, kết quả thu được tương ứng là `YES`.
+
+---
+
+### Bài 13 (P3): Phân tích ra thừa số nguyên tố
+* **Mã bài toán:** `sca_l11_p13_phan_tich_ra_thua_so_nguyen_to`
+* **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
+* **Bối cảnh:** Định lý cơ bản của số học khẳng định mọi số tự nhiên lớn hơn 1 đều phân tích được duy nhất thành tích các thừa số nguyên tố. Phép phân tích này đóng vai trò cốt lõi trong mật mã học.
+* **Nhiệm vụ:** Mọi số tự nhiên $N \ge 2$ đều có thể phân tích thành tích của các thừa số nguyên tố. Cho số tự nhiên $N$. Hãy in ra dạng phân tích của $N$.
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($2 \le N \le 10^6$).
+* **Kết quả ra (Output):** Dãy các thừa số nguyên tố tăng dần theo định dạng `p1 * p2 * ...`.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+60
+```
+### Output
+```text
+2 * 2 * 3 * 5
+```
+### Giải thích
+
+Với dữ liệu đầu vào là `60`, kết quả thu được tương ứng là `2 * 2 * 3 * 5`.
+
+---
+
+### Bài 14 (P3): Tìm số có đúng 3 ước số
+* **Mã bài toán:** `sca_l11_p14_tim_so_co_dung_3_uoc_so`
+* **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
+* **Bối cảnh:** Bạn Xoài mở một câu lạc bộ sưu tầm những viên đá rất kén chọn. Bạn ấy chỉ giữ lại những viên đá mang số $X$ đặc biệt: một số tự nhiên $X$ có đúng 3 ước số nguyên dương khi và chỉ khi $X$ là bình phương của một số nguyên tố ($X = P^2$, ví dụ: $4 = 2^2, 9 = 3^2, 25 = 5^2, 49 = 7^2$). Xoài có cả một hộp đá mà đếm mãi chưa xong, hãy bạn ấy đếm.
+* **Nhiệm vụ:** Cho số nguyên dương $N$. Hãy đếm xem có bao nhiêu số nhỏ hơn hoặc bằng $N$ mà có **đúng 3 ước số**.
+* **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 10^9$).
+* **Kết quả ra (Output):** Số lượng các số có đúng 3 ước số $\le N$.
+* **Dữ liệu mẫu (Sample):**
+
+### Input
+```text
+30
+```
+### Output
+```text
+3
+```
+### Giải thích
+
+Có 3 số là: 4 ($2^2$), 9 ($3^2$), 25 ($5^2$).
+
+---

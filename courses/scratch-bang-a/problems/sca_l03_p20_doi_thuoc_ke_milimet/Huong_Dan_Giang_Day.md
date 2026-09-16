@@ -1,0 +1,42 @@
+# Hướng Dẫn Giảng Dạy: Đổi thước kẻ milimet
+Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
+
+---
+
+## 1. Ý tưởng & Phân tích thuật toán
+- Bản chất của bài này là đổi đơn vị độ dài: `1 cm = 10 mm` nên `a = 2` cm chính là `20` mm, cộng thêm `b = 5` mm được `25` mm. Thầy cô cho các con đổi thước kẻ thật trên bàn để hình dung.
+- Quy trình gồm ba bước với hai biến `a` và `b` trong lời giải: đọc `2` vào `a` và `5` vào `b` bằng `int(hỏi và đợi.strip())`, rồi tính `a * 10 + b` tức `2 * 10 + 5 = 25` và in ra.
+- Xử lý biên: ràng buộc cho `a, b` từ 1 tới 1000. Thầy cô cho các con thử cặp biên `1` và `1` cho ra `11`, cặp `1000` và `1000` cho ra `11000`.
+
+---
+
+## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 và 5)
+| Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
+|------|-----------|--------------|------------------|
+| 1 | `a = int(hỏi và đợi.strip())` với dòng 1 gõ `2` | `a = 2` | (chưa in gì) |
+| 2 | `b = int(hỏi và đợi.strip())` với dòng 2 gõ `5` | `b = 5` | (chưa in gì) |
+| 3 | `nói (a * 10 + b)` tức `nói (2 * 10 + 5)` | `a = 2`, `b = 5` | `25` |
+| 4 | Kết thúc chương trình | — | Kết quả cuối cùng: `25`. |
+
+---
+
+## 3. Lưu ý & Bẫy lỗi thường gặp
+- Bẫy 1: quên đổi cm sang mm, viết `nói (a + b)` thì với mẫu `2` và `5` màn hình hiện `7` thay vì `25`. Cách sửa: nhân phần cm với 10 trước, viết `a * 10 + b`.
+- Bẫy 2: nhân sai số đổi, viết `nói (a * 100 + b)` thì với mẫu `2` và `5` màn hình hiện `205` thay vì `25`. Cách sửa: nhớ `1 cm = 10 mm` nên chỉ nhân với 10.
+- Bẫy 3: in hai kết quả trên hai dòng như `nói (a * 10)` rồi `nói (b)` thì màn hình hiện `20` rồi `5` thay vì `25` trên một dòng. Cách sửa: cộng gộp rồi in một lần bằng `nói (a * 10 + b)`.
+
+---
+
+## 4. Lời giải tham khảo & Kịch bản Khối lệnh Scratch 3.0
+
+### 4.1. Khối lệnh đồ họa trực quan (Visual Scratch Blocks)
+
+![Khối lệnh Scratch 3.0 giải mẫu](solution_blocks_vi.png)
+
+> 💡 **Kịch bản thực hiện từng bước:**
+> - khi bấm vào cờ xanh
+> - hỏi [Nhập a:] và đợi
+> - đặt [a] thành (câu trả lời)
+> - hỏi [Nhập b:] và đợi
+> - đặt [b] thành (câu trả lời)
+> - nói (a * 10 + b)

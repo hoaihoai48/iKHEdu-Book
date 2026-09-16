@@ -1,0 +1,24 @@
+{
+  "problem_code": "sca_pen_p05",
+  "title": "Ba Hình Vuông Đồng Tâm & Bậc Thang Chữ Nhật",
+  "category": "pen_graphics",
+  "input_type": "event_key_pressed",
+  "interactions": [
+    {
+      "trigger": "when_1_key_pressed",
+      "expected_states": {
+        "concentric_squares": 3,
+        "side_lengths": [60, 100, 140],
+        "common_center": { "x": 0, "y": 0 },
+        "clean_transitions": true,
+        "pen_size": 3
+      },
+      "validation_criteria": [
+        "Vẽ đúng 3 hình vuông khép kín",
+        "Tâm của cả 3 hình vuông trùng nhau tại gốc tọa độ (0, 0)",
+        "Giữa các hình vuông có lệnh pen up ngắt nét mực hoàn toàn",
+        "Không có nét nối rác kéo ngang giữa các hình"
+      ]
+    }
+  ]
+}

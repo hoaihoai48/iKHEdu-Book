@@ -1,0 +1,24 @@
+{
+  "problem_code": "sca_pen_p01",
+  "title": "Bộ 4 Đa Giác Đều Cơ Bản",
+  "category": "pen_graphics",
+  "input_type": "event_green_flag",
+  "interactions": [
+    {
+      "trigger": "when_green_flag_clicked",
+      "expected_states": {
+        "polygon_type": "regular_polygon",
+        "sides_tested": [3, 4, 5, 6],
+        "rotation_formula": "360 / N",
+        "is_closed_shape": true,
+        "pen_size": 3
+      },
+      "validation_criteria": [
+        "Sử dụng vòng lặp repeat N lần",
+        "Góc xoay mỗi đỉnh bằng chính xác 360 / N độ",
+        "Độ dài mỗi cạnh đúng bằng 100 bước",
+        "Đa giác khép kín hoàn hảo không bị hở cạnh"
+      ]
+    }
+  ]
+}

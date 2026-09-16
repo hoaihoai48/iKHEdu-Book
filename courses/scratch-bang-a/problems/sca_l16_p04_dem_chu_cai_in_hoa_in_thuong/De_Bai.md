@@ -1,0 +1,29 @@
+# Đếm chữ cái in hoa & in thường
+
+
+## Bối cảnh
+
+Đo lường tỉ lệ giữa chữ cái in hoa và in thường giúp hệ thống tự động đánh giá độ phức tạp và độ an toàn của mật khẩu.
+
+## Nhiệm vụ
+
+Cho một chuỗi $S$. Hãy đếm xem có bao nhiêu chữ cái in hoa và bao nhiêu chữ cái in thường trong chuỗi đó.
+## Input
+
+Chuỗi ký tự $S$.
+## Output
+
+Hai số nguyên cách nhau một khoảng trắng: số lượng chữ in hoa trước, số lượng chữ in thường sau.
+## Sample 1
+
+### Input
+```text
+Lap Trinh Python
+```
+### Output
+```text
+3 11
+```
+### Giải thích
+
+Chữ in hoa: 'L', 'T', 'P' (3 chữ).

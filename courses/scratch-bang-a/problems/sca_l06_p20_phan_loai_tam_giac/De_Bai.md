@@ -1,0 +1,31 @@
+# Phân loại tam giác
+
+
+## Bối cảnh
+
+Trong giờ thủ công, Na cắt được một miếng bìa hình tam giác có 3 cạnh dài $a, b, c$ và cô giáo bảo đó là một tam giác hợp lệ. Cả lớp tò mò không biết miếng bìa của Na thuộc loại tam giác nào. Na muốn khoe với mẹ mà chưa gọi đúng tên hình. Hãy giúp bạn Na gọi đúng tên loại tam giác.
+## Nhiệm vụ
+
+Hãy phân loại tam giác đó:
+ * Nếu 3 cạnh bằng nhau ($a == b == c$): in `TAM GIAC DEU`.
+ * Nếu có 2 cạnh bằng nhau ($a == b$ hoặc $b == c$ hoặc $c == a$): in `TAM GIAC CAN`.
+ * Các trường hợp còn lại: in `TAM GIAC THUONG`.
+## Input
+
+Ba số tự nhiên $a, b, c$ trên 3 dòng ($1 \le a, b, c \le 1000$).
+## Output
+
+Tên phân loại tam giác.
+
+## Sample 1
+
+### Input
+```text
+3 3 3
+```
+### Output
+```text
+DEU
+```
+### Giải thích
+Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
