@@ -1,27 +1,6 @@
-# BÀI 04: TOÁN TỬ VÀ BIỂU THỨC SỐ HỌC
+# Bài 04: TOÁN TỬ VÀ BIỂU THỨC SỐ HỌC
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L04` | **Chương 2:** Lập Trình Tính Toán Cơ Bản & Biến Số  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 02 của Python Bảng A (`courses/python-bang-a/lessons/lesson-02`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (4 Toán tử số học cơ bản):** Nắm vững cách sử dụng các khối toán tử tròn màu xanh lá cây: **Cộng `+`**, **Trừ `-`**, **Nhân `*`**, **Chia `/`** trong nhóm Các phép toán.
-- **`LO-02` (Kỹ thuật lồng khối thay cho dấu ngoặc đơn):** Hiểu sâu sắc cơ chế tính toán trong Scratch: Scratch **không có phím gõ dấu ngoặc đơn `()`** trong biểu thức, mà dùng cơ chế **khối lồng khối (Nested blocks)**: khối nào nằm sâu nhất ở bên trong sẽ được tính toán trước.
-- **`LO-03` (Quy tắc thứ tự ưu tiên PEMDAS):** Vận dụng đúng thứ tự ưu tiên các phép tính: Nhân chia trước, Cộng trừ sau. Biết cách lồng khối cộng vào trong khối nhân để biểu diễn phép tính có dấu ngoặc: $(A + B) \times 2$.
-- **`LO-04` (Công thức chu vi & diện tích hình học):** Tự tin lập trình các bài toán hình học kinh điển trong đề thi Tin học trẻ:
-  - Chu vi hình chữ nhật: `(dai + rong) * 2`
-  - Diện tích hình chữ nhật: `dai * rong`
-  - Diện tích hình tam giác: `(day * chieu_cao) / 2`
-- **`LO-05` (Bẫy tràn số và số thập phân):** Nắm được cơ chế xử lý số học tự động của Scratch khi chia ra số lẻ thập phân.
-
----
-
-## 2. Bốn Phép Toán Số Học Cơ Bản Trong Scratch
+## 1. Bốn Phép Toán Số Học Cơ Bản Trong Scratch
 
 Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung cấp 4 khối toán tử hình bầu dục:
 
@@ -39,7 +18,7 @@ Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung c�
 
 ---
 
-## 3. Kỹ Thuật Lồng Khối Thay Thế Cho Dấu Ngoặc Đơn `()`
+## 2. Kỹ Thuật Lồng Khối Thay Thế Cho Dấu Ngoặc Đơn `()`
 
 Trong toán học và Python, khi muốn tính tổng trước rồi mới nhân sau, ta dùng cặp dấu ngoặc đơn:
 $$\text{Chu vi} = (\text{Dài} + \text{Rộng}) \times 2$$
@@ -57,7 +36,7 @@ Máy tính Scratch sẽ tự động thực hiện phép cộng `dai + rong` tr�
 
 ---
 
-## 4. Bảng Tra Cứu Các Biểu Thức Hình Học Kinh Điển
+## 3. Bảng Tra Cứu Các Biểu Thức Hình Học Kinh Điển
 
 | Bài toán | Công thức toán học | Cách ghép khối Scratch DSL | Minh họa khối lệnh |
 |---|:---:|---|---|
@@ -70,7 +49,7 @@ Máy tính Scratch sẽ tự động thực hiện phép cộng `dai + rong` tr�
 
 ---
 
-## 5. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 4. Bảng Mô Phỏng Từng Bước (Dry Run Table)
 
 Bài toán: Nhập chiều dài $A = 12$ và chiều rộng $B = 8$. Tính chu vi và diện tích hình chữ nhật:
 
@@ -85,7 +64,7 @@ Bài toán: Nhập chiều dài $A = 12$ và chiều rộng $B = 8$. Tính chu v
 
 ---
 
-## 6. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
 
 > **Bẫy 1: Ghép nhầm thứ tự ưu tiên (Lỗi quên ngoặc)**
 > - *Hiện tượng:* Cần tính `(A + B) * 2`, nhưng học sinh kéo khối `+` ra trước, rồi nhét `B * 2` vào sau thành: `(A) + ((B) * (2))`.
@@ -102,7 +81,7 @@ Bài toán: Nhập chiều dài $A = 12$ và chiều rộng $B = 8$. Tính chu v
 
 ---
 
-## 7. Concept Quiz (10 Câu Trắc Nghiệm Nhận Thức)
+## 6. Concept Quiz (10 Câu Trắc Nghiệm Nhận Thức)
 
 #### Câu 1 (Phép toán nhân chia)
 Trong Scratch, phép nhân và phép chia được ký hiệu bằng các ký tự nào?
@@ -196,7 +175,7 @@ Các khối toán tử `+`, `-`, `*`, `/` nằm trong nhóm lệnh nào và có 
 
 ---
 
-## 8. Tóm Tắt & Hướng Dẫn Thực Hành
+## 7. Tóm Tắt & Hướng Dẫn Thực Hành
 
 > **GHI NHỚ CỐT LÕI:**
 > 1. Nhân chia trước, cộng trừ sau; muốn tính trước thì **lồng khối vào bên trong**.

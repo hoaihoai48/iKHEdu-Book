@@ -1,29 +1,6 @@
-# BÀI 09: QUY LUẬT DÃY SỐ VÀ TAM GIÁC SỐ
+# Bài 09: QUY LUẬT DÃY SỐ VÀ TAM GIÁC SỐ
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L09` | **Chương 4:** Số Học & Thuật Toán Tách Số  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 09 của Python Bảng A (`courses/python-bang-a/lessons/lesson-09`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Quy luật Dãy số cách đều):** Tìm số hạng thứ $N$ của cấp số cộng theo công thức trực tiếp:
-  $$u_n = u_1 + (n - 1) \times d$$
-  (với $u_1$ là số đầu tiên, $d$ là khoảng cách).
-- **`LO-02` (Dãy Fibonacci và Dãy cộng dồn):** Hiểu kỹ thuật tráo đổi 3 biến số để sinh dãy số mà số sau bằng tổng 2 số liền trước:
-  $$F_{moi} = F_1 + F_2, \quad F_1 = F_2, \quad F_2 = F_{moi}$$
-- **`LO-03` (Hai vòng lặp lồng nhau - Nested Loops):**
-  - Vòng lặp ngoài quản lý số hàng ($r$ từ $1$ đến $H$).
-  - Vòng lặp trong quản lý số cột ($c$ từ $1$ đến số lượng ký tự trên hàng).
-- **`LO-04` (In hình tam giác số & Tam giác ký tự):** Vận dụng khối `kết hợp () ()` để ghép một dòng ký tự hoàn chỉnh trước khi cho nhân vật nói.
-- **`LO-05` (Bài toán kinh điển):** Tam giác sao vuông, tam giác số Pascal, tìm số còn thiếu trong dãy quy luật.
-
----
-
-## 2. Công Thức Quy Luật Dãy Số Cách Đều
+## 1. Công Thức Quy Luật Dãy Số Cách Đều
 
 Xét dãy số cách đều: $3, 7, 11, 15, 19, \dots$
 - Số đầu tiên: $u_1 = 3$
@@ -36,7 +13,7 @@ Xét dãy số cách đều: $3, 7, 11, 15, 19, \dots$
 
 ---
 
-## 3. Thuật Toán Sinh Dãy Fibonacci
+## 2. Thuật Toán Sinh Dãy Fibonacci
 
 Dãy số: $1, 1, 2, 3, 5, 8, 13, 21, \dots$
 
@@ -52,7 +29,7 @@ nói (f2)
 
 ---
 
-## 4. Kỹ Thuật Hai Vòng Lặp Lồng Nhau In Tam Giác Sao
+## 3. Kỹ Thuật Hai Vòng Lặp Lồng Nhau In Tam Giác Sao
 
 In tam giác có $H$ hàng, hàng thứ $r$ có $r$ ngôi sao `*`:
 - Hàng 1: `*`
@@ -74,7 +51,7 @@ lặp lại (H) lần
 
 ---
 
-## 5. Bẫy Lỗi Thường Gặp Khi Lập Trình Dãy Số (Bug Traps)
+## 4. Bẫy Lỗi Thường Gặp Khi Lập Trình Dãy Số (Bug Traps)
 
 > **Bẫy 1: Quên khởi tạo lại dòng trước khi vào vòng lặp trong**
 > - *Hiện tượng:* Đặt khối `đặt [dong] thành []` ở ngoài vòng lặp hàng.
@@ -88,7 +65,7 @@ lặp lại (H) lần
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Số hạng thứ 10 của dãy số $2, 5, 8, 11\dots$ là bao nhiêu?**
    - A. 29 *(Đáp án đúng: 2 + (10 - 1)*3 = 29)*

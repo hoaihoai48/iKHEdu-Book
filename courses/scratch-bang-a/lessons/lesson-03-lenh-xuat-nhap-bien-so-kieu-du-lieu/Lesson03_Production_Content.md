@@ -1,24 +1,6 @@
-# BÀI 03: LỆNH XUẤT NHẬP, BIẾN SỐ VÀ KIỂU DỮ LIỆU
+# Bài 03: LỆNH XUẤT NHẬP, BIẾN SỐ VÀ KIỂU DỮ LIỆU
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L03` | **Chương 2:** Lập Trình Tính Toán Cơ Bản & Biến Số  
-**Thời lượng khuyến nghị:** 2 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 01 của Python Bảng A (`courses/python-bang-a/lessons/lesson-01`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Luồng dữ liệu I/O):** Hiểu rõ luồng xử lý thông tin $3$ bước của mọi bài toán tin học: **Đầu vào (`hỏi và đợi`) $\longrightarrow$ Xử lý (`đặt biến thành`) $\longrightarrow$ Đầu ra (`nói`)**.
-- **`LO-02` (Biến số & Bản chất bộ nhớ):** Hiểu biến số như một "chiếc hộp dán nhãn" trong bộ nhớ RAM dùng để cất giữ một giá trị (số hoặc chữ), giá trị trong hộp có thể thay đổi trong suốt quá trình chạy.
-- **`LO-03` (Bẫy tử huyệt `câu trả lời`):** Nhận thức sâu sắc rằng biến `câu trả lời` (`answer`) là biến tạm của hệ thống; mỗi khi hỏi câu mới thì câu trả lời cũ sẽ **bị xóa sạch ngay lập tức**, do đó bắt buộc phải sao lưu vào biến riêng ngay sau khi hỏi.
-- **`LO-04` (Kỹ thuật ghép nối chuỗi `kết hợp`):** Thành thạo khối `kết hợp` (`join`) trong nhóm Các phép toán để in nhãn kèm kết quả, tránh bẫy dính chữ (`join [Tong la: ] (tong)`).
-- **`LO-05` (Thuật toán hoán đổi 2 biến):** Vận dụng thuật toán "chiếc cốc phụ" (biến trung gian `tam`) để đổi chỗ giá trị của $2$ biến số $A$ và $B$.
-
----
-
-## 2. Bản Chất Chương Trình Máy Tính & Luồng Dữ Liệu I/O
+## 1. Bản Chất Chương Trình Máy Tính & Luồng Dữ Liệu I/O
 
 Mọi chương trình máy tính phục vụ thi đấu Tin học trẻ Bảng A đều vận hành nghiêm ngặt theo **luồng dữ liệu 3 bước khép kín**:
 
@@ -36,9 +18,9 @@ Mọi chương trình máy tính phục vụ thi đấu Tin học trẻ Bảng A
 
 ---
 
-## 3. Lệnh Nhập Dữ Liệu: Khối `hỏi () và đợi` & Tử Huyệt `câu trả lời`
+## 2. Lệnh Nhập Dữ Liệu: Khối `hỏi () và đợi` & Tử Huyệt `câu trả lời`
 
-### 3.1. Cú pháp nhập dữ liệu
+### 2.1. Cú pháp nhập dữ liệu
 Trong nhóm **Cảm biến (Sensing)** màu xanh lơ:
 
 ![Khối lệnh hỏi và đợi](../../assets/rendered_blocks/l03_block_ask_vi.png)
@@ -50,7 +32,7 @@ Khi khối lệnh này chạy:
 
 ---
 
-### 3.2. Cất giữ dữ liệu vào Biến số (Variables)
+### 2.2. Cất giữ dữ liệu vào Biến số (Variables)
 Để dữ liệu không bị thất lạc, ta tạo biến số trong nhóm **Các biến số** màu cam đậm:
 
 ![Khối đặt biến thành câu trả lời](../../assets/rendered_blocks/l03_block_set_vi.png)
@@ -67,18 +49,18 @@ Khi khối lệnh này chạy:
 
 ---
 
-## 4. Lệnh Xuất Dữ Liệu: Khối `nói ()` & Bẫy Ghép Chuỗi `kết hợp`
+## 3. Lệnh Xuất Dữ Liệu: Khối `nói ()` & Bẫy Ghép Chuỗi `kết hợp`
 
 Trong nhóm **Hiển thị (Looks)** màu tím:
 - 🟣 **`nói (nội dung)`**: Hiện bong bóng lời thoại liên tục trên đầu nhân vật.
 - 🟣 **`nói (nội dung) trong (2) giây`**: Hiện lời thoại trong đúng 2 giây rồi tự động biến mất.
 
-### 4.1. Xuất một kết quả đơn giản
+### 3.1. Xuất một kết quả đơn giản
 - Để in một dòng chữ chào mừng: 🟣 `nói [Xin chao cac ban! Toi la Scratch.]`
 - Để in trực tiếp một con số: 🟣 `nói (2026)`
 - Để in kết quả của biến: 🟣 `nói (A)`
 
-### 4.2. In nhãn kèm kết quả: Khối `kết hợp` (`join`)
+### 3.2. In nhãn kèm kết quả: Khối `kết hợp` (`join`)
 Khi cần in cả chữ và số (ví dụ: `Tổng là: 40`), trong Scratch ta không dùng dấu phẩy `,` như Python mà phải dùng khối **`kết hợp () ()`** trong nhóm Các phép toán màu xanh lá:
 
 ![Khối nói kết hợp chuỗi](../../assets/rendered_blocks/l03_block_say_join_vi.png)
@@ -89,19 +71,19 @@ Khi cần in cả chữ và số (ví dụ: `Tổng là: 40`), trong Scratch ta 
 
 ---
 
-## 5. Thuật Toán Hoán Đổi Vị Trí Hai Biến Số ($A \longleftrightarrow B$)
+## 4. Thuật Toán Hoán Đổi Vị Trí Hai Biến Số ($A \longleftrightarrow B$)
 
-### 5.1. Vấn đề thực tế
+### 4.1. Vấn đề thực tế
 Giả sử trên tay trái bạn cầm chiếc cốc đựng nước màu xanh ($A$), tay phải cầm chiếc cốc đựng nước màu đỏ ($B$). Bạn muốn đổi nước giữa hai chiếc cốc cho nhau. Bạn có thể đổ trực tiếp từ cốc $A$ sang cốc $B$ không?  
 $\implies$ Không thể, vì nước sẽ bị hòa lẫn vào nhau làm mất màu ban đầu!
 
-### 5.2. Giải pháp: Sử dụng chiếc cốc phụ (Biến tạm `tam`)
+### 4.2. Giải pháp: Sử dụng chiếc cốc phụ (Biến tạm `tam`)
 Để hoán đổi, ta cần mượn một chiếc cốc thứ ba rỗng mang tên **`tam`**:
 1. Đổ nước từ cốc $A$ sang cốc `tam` $\implies$ Cốc $A$ rỗng, cốc `tam` giữ nước màu xanh.
 2. Đổ nước từ cốc $B$ sang cốc $A$ $\implies$ Cốc $A$ nhận nước màu đỏ.
 3. Đổ nước từ cốc `tam` sang cốc $B$ $\implies$ Cốc $B$ nhận nước màu xanh.
 
-### 5.3. Cụm khối lệnh hoán đổi chuẩn trong Scratch:
+### 4.3. Cụm khối lệnh hoán đổi chuẩn trong Scratch:
 
 ![Khối lệnh hoán đổi 2 biến](../../assets/rendered_blocks/l03_block_swap_vi.png)
 
@@ -112,7 +94,7 @@ $\implies$ Không thể, vì nước sẽ bị hòa lẫn vào nhau làm mất m
 
 ---
 
-## 6. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 5. Bảng Mô Phỏng Từng Bước (Dry Run Table)
 
 Giả sử người dùng nhập $A = 10$ và $B = 99$. Bảng trace biến số khi thực hiện thuật toán hoán đổi:
 
@@ -126,7 +108,7 @@ Giả sử người dùng nhập $A = 10$ và $B = 99$. Bảng trace biến số
 
 ---
 
-## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 6. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
 
 > **Bẫy 1: Hỏi liên tiếp mà không lưu `câu trả lời`**
 > - *Hiện tượng:* Học sinh kéo 2 khối `hỏi [Nhập A:] và đợi` rồi `hỏi [Nhập B:] và đợi` liền nhau, sau đó mới `đặt [A] thành (câu trả lời)` và `đặt [B] thành (câu trả lời)`.
@@ -145,7 +127,7 @@ Giả sử người dùng nhập $A = 10$ và $B = 99$. Bảng trace biến số
 
 ---
 
-## 8. Concept Quiz (10 Câu Trắc Nghiệm Nhận Thức)
+## 7. Concept Quiz (10 Câu Trắc Nghiệm Nhận Thức)
 
 #### Câu 1 (Chức năng nhập liệu)
 Trong Scratch, khối lệnh nào được dùng để nhận dữ liệu gõ vào từ bàn phím của người dùng?
@@ -249,7 +231,7 @@ Trong các bài thi Tin học trẻ Bảng A, khi đề bài cho: *"Nhập vào 
 
 ---
 
-## 9. Tóm Tắt & Hướng Dẫn Thực Hành
+## 8. Tóm Tắt & Hướng Dẫn Thực Hành
 
 > **GHI NHỚ CỐT LÕI:**
 > 1. Nhập liệu chuẩn: 🔵 **hỏi [] và đợi** $\longrightarrow$ 🟠 **đặt [biến] thành (câu trả lời)**.

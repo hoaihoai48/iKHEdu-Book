@@ -1,28 +1,6 @@
-# BÀI 11: ƯỚC SỐ, BỘI SỐ VÀ SỐ NGUYÊN TỐ
+# Bài 11: ƯỚC SỐ, BỘI SỐ VÀ SỐ NGUYÊN TỐ
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L11` | **Chương 4:** Số Học & Thuật Toán Tách Số  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 11 của Python Bảng A (`courses/python-bang-a/lessons/lesson-11`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Khái niệm Ước số & Phép chia hết):** $d$ là ước số của $N$ khi và chỉ khi `((N) mod (d)) = 0`.
-- **`LO-02` (Thuật toán liệt kê & đếm ước cơ bản):** Cho biến $i$ chạy từ $1$ đến $N$, kiểm tra nếu chia hết thì đếm hoặc tính tổng.
-- **`LO-03` (Định nghĩa Số nguyên tố):** Số nguyên tố là số nguyên lớn hơn 1 và **chỉ có đúng 2 ước số** là 1 và chính nó.
-- **`LO-04` (Thuật toán kiểm tra số nguyên tố bằng biến đếm ước):**
-  - Đếm số ước từ 1 đến $N$: Nếu `dem_uoc = 2` $\implies$ Số nguyên tố.
-- **`LO-05` (Thuật toán tối ưu dừng sớm bằng Biến Cờ):**
-  - Chỉ cần duyệt $i$ từ $2$ đến căn bậc hai của $N$ (dùng khối `([căn bậc hai v] of (N))`).
-  - Nếu gặp bất kỳ số nào chia hết thì lập tức bật cờ `la_nguyen_to = 0` và dừng lại.
-- **`LO-06` (Số hoàn hảo / Số chính phương):** Số hoàn hảo có tổng các ước thực sự bằng chính nó (ví dụ $6 = 1 + 2 + 3$).
-
----
-
-## 2. Thuật Toán Kiểm Tra Số Nguyên Tố Bằng Biến Đếm Ước
+## 1. Thuật Toán Kiểm Tra Số Nguyên Tố Bằng Biến Đếm Ước
 
 ```text
 đặt [dem_uoc v] thành (0)
@@ -40,7 +18,7 @@ nếu không thì
 
 ---
 
-## 3. Thuật Toán Tối Ưu Bằng Biến Cờ Dừng Sớm
+## 2. Thuật Toán Tối Ưu Bằng Biến Cờ Dừng Sớm
 
 Khi $N$ lớn (ví dụ $N = 10007$), duyệt đến $N$ sẽ rất chậm. Ta tối ưu:
 1. Nếu $N < 2 \implies$ Không phải số nguyên tố.
@@ -66,7 +44,7 @@ nếu không thì
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Quên xét số 0 và số 1**
 > - *Hiện tượng:* Số 0 và 1 không phải là số nguyên tố!
@@ -79,7 +57,7 @@ nếu không thì
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Số nguyên tố nhỏ nhất là số nào?**
    - A. 0

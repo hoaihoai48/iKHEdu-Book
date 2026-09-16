@@ -1,31 +1,6 @@
-# BÀI 13: DANH SÁCH (LIST) VÀ CÁC THAO TÁC CƠ BẢN
+# Bài 13: DANH SÁCH (LIST) VÀ CÁC THAO TÁC CƠ BẢN
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L13` | **Chương 5:** Danh Sách & Thống Kê Dữ Liệu  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 16 của Python Bảng A (`courses/python-bang-a/problems/pya_l16_*`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Khái niệm Danh sách - List):** Hiểu danh sách như một dãy các ngăn kéo đánh số thứ tự để lưu trữ nhiều giá trị cùng lúc dưới một cái tên chung.
-- **`LO-02` (Bẫy lệch 1 đơn vị - Chỉ số 1-based trong Scratch):**
-  - Trong Python/C++: Chỉ số mảng bắt đầu từ **`0`** (`a[0]`).
-  - Trong Scratch: Chỉ số danh sách bắt đầu từ **`1`** (`phần tử (1) của [danh_sách]`). Phần tử đầu tiên là 1, phần tử cuối cùng là `kích thước của [danh_sách]`.
-- **`LO-03` (4 Thao tác cốt lõi trên Danh sách):**
-  1. Thêm phần tử: `thêm () vào [danh_sách v]`
-  2. Xóa phần tử: `xóa (1) của [danh_sách v]` hoặc `xóa tất cả của [danh_sách v]`
-  3. Lấy giá trị: `phần tử (i) của [danh_sách v]`
-  4. Lấy độ dài: `kích thước của [danh_sách v]`
-- **`LO-04` (Nhập dãy số vào danh sách):** Sử dụng vòng lặp kết hợp `hỏi và đợi` để nạp $N$ số từ bàn phím vào danh sách.
-- **`LO-05` (Duyệt tuần tự danh sách):** Cho biến đếm $i$ chạy từ $1$ đến `kích thước của [danh_sách]` để đọc từng phần tử ra xử lý.
-- **`LO-06` (Bài toán kinh điển):** In dãy số đảo ngược, tính tổng các phần tử trong danh sách, đếm số dương/âm.
-
----
-
-## 2. Các Khối Lệnh Danh Sách Trong Scratch 3.0
+## 1. Các Khối Lệnh Danh Sách Trong Scratch 3.0
 
 Trong nhóm **Các biến số (Variables)**, khi bấm tạo **Danh sách (List)** màu cam đậm:
 
@@ -42,7 +17,7 @@ Trong nhóm **Các biến số (Variables)**, khi bấm tạo **Danh sách (List
 
 ---
 
-## 3. Khung Mẫu Nhập & Duyệt Danh Sách Chuẩn
+## 2. Khung Mẫu Nhập & Duyệt Danh Sách Chuẩn
 
 ### Bước 1: Nhập $N$ số vào danh sách
 ```text
@@ -67,7 +42,7 @@ nói (tong)
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Quên khối `xóa tất cả của danh sách` khi bấm cờ xanh**
 > - *Hiện tượng:* Không xóa danh sách cũ khi bắt đầu chạy lại chương trình.
@@ -81,7 +56,7 @@ nói (tong)
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Phần tử đầu tiên trong danh sách Scratch có chỉ số là:**
    - A. 0

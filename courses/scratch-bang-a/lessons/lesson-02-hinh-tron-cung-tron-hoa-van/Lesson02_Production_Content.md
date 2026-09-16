@@ -1,25 +1,6 @@
-# BÀI 02: HÌNH TRÒN, CUNG TRÒN & NGHỆ THUẬT HOA VĂN
+# Bài 02: HÌNH TRÒN, CUNG TRÒN & NGHỆ THUẬT HOA VĂN
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L02` | **Chương 1:** Bút vẽ Pen & Đồ họa Hình học Cơ bản  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Tài liệu tham chiếu:** `CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx` (Bài 3, Bài 4) & `DeTHT.docx`  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Bản chất hình tròn):** Hiểu sâu sắc rằng máy tính và Scratch không có câu lệnh "vẽ hình tròn" trực tiếp, mà hình tròn được tạo bởi **đa giác đều $360$ cạnh tí hon** quay vòng quanh tâm.
-- **`LO-02` (Công thức chu vi & bước đi):** Nắm vững công thức tính bước đi vi phân theo bán kính:
-  $$\text{Bước đi} = \frac{2 \times 3.14 \times R}{360} \approx \frac{6.28 \times R}{360}$$
-- **`LO-03` (Kỹ thuật Cung tròn - Arc):** Biết cách vẽ một cung tròn bất kỳ với góc mở $\alpha^\circ$ bằng cách lặp lại đúng $\alpha$ lần bước đi vi phân.
-- **`LO-04` (Tạo Khối Cánh hoa - Petal):** Thành thạo kỹ thuật đóng gói **Khối của tôi (My Blocks)** để ghép $2$ cung tròn đối xứng tạo thành một chiếc cánh hoa mềm mại.
-- **`LO-05` (Nghệ thuật đối xứng tâm - Rotational Symmetry):** Tự tin kết hợp vòng lặp xoay quanh tâm để vẽ các tuyệt phẩm đồ họa: Logo 5 vòng tròn Olympic, Cầu vồng 7 sắc, Bông hoa 8 cánh, 12 cánh và Hoa tuyết chong chóng.
-
----
-
-## 2. Khởi Động: Từ Đa Giác Đều Đến Đường Cong Mềm Mại
+## 1. Khởi Động: Từ Đa Giác Đều Đến Đường Cong Mềm Mại
 
 Ở Bài 01, chúng ta đã khám phá công thức vẽ các hình đa giác đều:
 - Tam giác đều ($3$ cạnh): Xoay ngoài $360^\circ / 3 = 120^\circ$.
@@ -34,9 +15,9 @@ Nếu ta tăng số cạnh lên đúng **$360$ cạnh**, mỗi bước nhân v�
 
 ---
 
-## 3. Công Thức Vẽ Hình Tròn 360 Cạnh
+## 2. Công Thức Vẽ Hình Tròn 360 Cạnh
 
-### 3.1. Kịch bản cơ bản 360 lần lặp
+### 2.1. Kịch bản cơ bản 360 lần lặp
 Khối lệnh căn bản nhất để vẽ một đường tròn khép kín trong Scratch:
 
 ![Khối lặp vẽ hình tròn](../../assets/rendered_blocks/l02_circle_360_vi.png)
@@ -50,7 +31,7 @@ Tổng góc xoay sau 360 lần lặp là $360 \times 1^\circ = 360^\circ$ (tròn
 
 ---
 
-### 3.2. Công thức toán học: Mối quan hệ giữa Bán kính $R$ và Bước đi
+### 2.2. Công thức toán học: Mối quan hệ giữa Bán kính $R$ và Bước đi
 Trong hình học:
 - Chu vi hình tròn: $C = 2 \times \pi \times R \approx 2 \times 3.14 \times R = 6.28 \times R$.
 - Vì hình tròn gồm $360$ bước nhỏ ghép lại, độ dài mỗi bước đi của nhân vật tương ứng với $1^\circ$ là:
@@ -66,7 +47,7 @@ Trong hình học:
 
 ---
 
-## 4. Kỹ Thuật Vẽ Cung Tròn (Arc) Bất Kỳ
+## 3. Kỹ Thuật Vẽ Cung Tròn (Arc) Bất Kỳ
 
 Một **cung tròn** là một phần của đường tròn. Số độ của cung tròn chính là góc mở ở tâm:
 - Cung $90^\circ$: Bằng $\frac{1}{4}$ đường tròn (góc vuông).
@@ -88,7 +69,7 @@ Một **cung tròn** là một phần của đường tròn. Số độ của cu
 
 ---
 
-## 5. Kỹ Thuật Ghép Cánh Hoa Mắt Ngọc (Petal)
+## 4. Kỹ Thuật Ghép Cánh Hoa Mắt Ngọc (Petal)
 
 Làm sao để vẽ được một chiếc cánh hoa uốn cong duyên dáng?  
 Bí quyết nằm ở chỗ: **Một chiếc cánh hoa được tạo bởi $2$ cung tròn uốn ngược nhau khép kín tại 2 đầu đỉnh nhọn**.
@@ -114,7 +95,7 @@ Vì hai bước này lặp lại y hệt nhau, ta gom gọn bằng một vòng l
 
 ---
 
-## 6. Nghệ Thuật Đối Xứng Tâm: Vẽ Bông Hoa & Hoa Văn
+## 5. Nghệ Thuật Đối Xứng Tâm: Vẽ Bông Hoa & Hoa Văn
 
 Khi đã sở hữu khối lệnh `ve_canh_hoa`, ta có thể tạo ra vô số kiệt tác hoa văn lung linh chỉ bằng cách **xoay quanh một tâm cố định**.
 
@@ -135,7 +116,7 @@ $$\text{Góc xoay tâm} = \frac{360^\circ}{K}$$
 
 ---
 
-## 7. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 6. Bảng Mô Phỏng Từng Bước (Dry Run Table)
 
 Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hiện khối lệnh `ve_canh_hoa` (gồm 2 cung $90^\circ$, mỗi bước $1$ pixel), xuất phát từ $(0, 0)$ hướng $0^\circ$ (hướng lên trên):
 
@@ -151,7 +132,7 @@ Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hi
 
 ---
 
-## 8. Tử Huyệt & Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Tử Huyệt & Bẫy Lỗi Kinh Điển (Bug Traps)
 
 > **Bẫy 1: Bán kính quá lớn làm vỡ góc tại mép sân khấu**
 > - *Hiện tượng:* Chọn bán kính $R = 150$, khi nhân vật chạy đến mép sân khấu thì bị khựng lại, đường tròn bị bẹp một bên hoặc góc quay bị méo mó.
@@ -169,7 +150,7 @@ Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hi
 
 ---
 
-## 9. Concept Quiz (10 Câu Trắc Nghiệm Trực Quan)
+## 8. Concept Quiz (10 Câu Trắc Nghiệm Trực Quan)
 
 #### Câu 1 (Bản chất hình tròn Scratch)
 Trong Scratch, một đường tròn khép kín được tạo ra bằng cách nào?
@@ -266,7 +247,7 @@ Logo Olympic gồm 5 vòng tròn lồng nhau: 3 vòng hàng trên (Xanh dương,
 
 ---
 
-## 10. Tóm Tắt & Hướng Dẫn Thực Hành
+## 9. Tóm Tắt & Hướng Dẫn Thực Hành
 
 > **GHI NHỚ CỐT LÕI:**
 > 1. **Hình tròn:** Lặp 360 lần [Đi $C / 360$ bước, Xoay phải $1^\circ$].

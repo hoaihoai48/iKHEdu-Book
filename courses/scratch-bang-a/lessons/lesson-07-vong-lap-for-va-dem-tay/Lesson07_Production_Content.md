@@ -1,35 +1,12 @@
-# BÀI 07: VÒNG LẶP ĐẾM LẦN VÀ BIẾN ĐẾM THỦ CÔNG
+# Bài 07: VÒNG LẶP ĐẾM LẦN VÀ BIẾN ĐẾM THỦ CÔNG
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L07` | **Chương 3:** Cấu Trúc Rẽ Nhánh & Vòng Lặp  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 07 của Python Bảng A (`courses/python-bang-a/lessons/lesson-07`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Khối lặp đếm lần `lặp lại () lần`):** Hiểu rõ cơ chế thực hiện lặp một đoạn kịch bản đúng số lần quy định sẵn.
-- **`LO-02` (Kỹ thuật biến đếm thủ công `i`):** Nắm vững cách tái hiện vòng lặp `for i in range(1, n+1)` của Python trong Scratch:
-  1. Khởi tạo `đặt [i v] thành (1)` trước vòng lặp.
-  2. Dùng khối `lặp lại (n) lần`.
-  3. Tăng biến đếm `thay đổi [i v] một lượng (1)` ở **dòng cuối cùng** bên trong vòng lặp.
-- **`LO-03` (Kỹ thuật tính tổng tích lũy / Tích dồn):**
-  - Tính tổng $S = 1 + 2 + \dots + n$: khởi tạo `tong = 0`, trong vòng lặp `tong = tong + i`.
-  - Tính giai thừa $P = 1 \times 2 \times \dots \times n$: khởi tạo `tich = 1`, trong vòng lặp `tich = tich * i`.
-- **`LO-04` (Bước nhảy tùy biến `step`):** Thay đổi giá trị tăng trong khối `thay đổi [i v] một lượng ()` (ví dụ tăng 2 để duyệt dãy số chẵn $2, 4, 6\dots$ hoặc số lẻ $1, 3, 5\dots$).
-- **`LO-05` (Bài toán kinh điển):** Đếm số ngôi sao, tính tổng dãy số cách đều, in bảng cửu chương.
-
----
-
-## 2. Kỹ Thuật Lập Trình Vòng Lặp Đếm Lần Trong Scratch
+## 1. Kỹ Thuật Lập Trình Vòng Lặp Đếm Lần Trong Scratch
 
 Trong Scratch không có lệnh `for` tự động tăng biến như Python/C++. Ta xây dựng mô hình đếm tay chuẩn:
 
 ![Minh họa vòng lặp đếm lần có biến đếm](../../assets/rendered_blocks/l07_repeat_counter_vi.png)
 
-### 2.1. Cấu trúc 3 bước vàng của vòng lặp có biến đếm
+### 1.1. Cấu trúc 3 bước vàng của vòng lặp có biến đếm
 ```text
 đặt [i v] thành (1)            <-- BƯỚC 1: Khởi tạo giá trị bắt đầu
 lặp lại (N) lần                 <-- BƯỚC 2: Số lần lặp
@@ -40,7 +17,7 @@ lặp lại (N) lần                 <-- BƯỚC 2: Số lần lặp
 
 ---
 
-## 3. Mô Phỏng Từng Bước Tính Tổng $S = 1 + 2 + 3 + 4$ (Dry Run Table)
+## 2. Mô Phỏng Từng Bước Tính Tổng $S = 1 + 2 + 3 + 4$ (Dry Run Table)
 
 Với $N = 4$, vòng lặp `lặp lại 4 lần`:
 
@@ -55,7 +32,7 @@ Với $N = 4$, vòng lặp `lặp lại 4 lần`:
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Quên khối `thay đổi [i v] một lượng (1)`**
 > - *Hiện tượng:* Không cho biến `i` tăng sau mỗi vòng lặp.
@@ -74,7 +51,7 @@ Với $N = 4$, vòng lặp `lặp lại 4 lần`:
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Khối lệnh nào trong Scratch tương đương với `range(n)`?**
    - A. `lặp lại (n) lần` *(Đáp án đúng)*

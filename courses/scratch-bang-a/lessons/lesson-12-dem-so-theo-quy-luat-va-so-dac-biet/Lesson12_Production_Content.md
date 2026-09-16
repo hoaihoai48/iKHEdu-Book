@@ -1,27 +1,6 @@
-# BÀI 12: ĐẾM SỐ THEO QUY LUẬT VÀ SỐ ĐẶC BIỆT
+# Bài 12: ĐẾM SỐ THEO QUY LUẬT VÀ SỐ ĐẶC BIỆT
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L12` | **Chương 4:** Số Học & Thuật Toán Tách Số  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 12 của Python Bảng A (`courses/python-bang-a/lessons/lesson-12`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Kỹ thuật Duyệt & Đếm theo điều kiện):** Sử dụng vòng lặp kết hợp khối `nếu <điều_kiện> thì thay đổi [dem] một lượng (1)`.
-- **`LO-02` (Đếm số chia hết trong khoảng $[A, B]$):**
-  - Cách 1 (Duyệt trâu): Duyệt từng số từ $A$ đến $B$, kiểm tra chia hết cho $K$.
-  - Cách 2 (Toán học $\mathcal{O}(1)$): Công thức `floor(B / K) - floor((A - 1) / K)`.
-- **`LO-03` (Số chính phương):** Số có căn bậc hai là một số nguyên:
-  `([làm tròn] ([căn bậc hai] of (N))) * ([làm tròn] ([căn bậc hai] of (N))) = N`.
-- **`LO-04` (Số may mắn / Số lộc phát):** Số chỉ chứa các chữ số $6$ và $8$.
-- **`LO-05` (Bài toán đếm tổ hợp đơn giản):** Đếm số cách chọn, đếm số cặp thỏa mãn điều kiện tổng/tích.
-
----
-
-## 2. Kỹ Thuật Đếm Trong Đoạn Bằng Vòng Lặp
+## 1. Kỹ Thuật Đếm Trong Đoạn Bằng Vòng Lặp
 
 ```text
 đặt [dem v] thành (0)
@@ -35,7 +14,7 @@ nói (dem)
 
 ---
 
-## 3. Công Thức Đếm Toán Học Siêu Tốc $\mathcal{O}(1)$
+## 2. Công Thức Đếm Toán Học Siêu Tốc $\mathcal{O}(1)$
 
 Khi khoảng cách giữa $A$ và $B$ lên tới hàng triệu, máy tính chạy vòng lặp sẽ bị lag. Ta dùng công thức toán học:
 $$\text{Số lượng bội của } K \text{ trong } [1, N] = \lfloor N / K \rfloor$$
@@ -46,7 +25,7 @@ Khối Scratch:
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Quên trừ 1 ở đầu mút $A$**
 > - *Hiện tượng:* Tính `floor(B / K) - floor(A / K)`.
@@ -60,7 +39,7 @@ Khối Scratch:
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Từ số 1 đến số 10 có bao nhiêu số?**
    - A. 9

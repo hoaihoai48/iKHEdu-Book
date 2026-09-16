@@ -1,39 +1,17 @@
-# BÀI 06: CẤU TRÚC RẼ NHÁNH VÀ ĐIỀU KIỆN LOGIC
+# Bài 06: CẤU TRÚC RẼ NHÁNH VÀ ĐIỀU KIỆN LOGIC
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L06` | **Chương 3:** Cấu Trúc Rẽ Nhánh & Vòng Lặp  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 04, 05, 06 của Python Bảng A (`pya_l04`, `pya_l05`, `pya_l06`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Khối rẽ nhánh khuyết `nếu < > thì`):** Hiểu rõ cơ chế thực thi khi điều kiện ĐÚNG (thực hiện câu lệnh bên trong) và khi điều kiện SAI (bỏ qua, đi tiếp xuống dưới).
-- **`LO-02` (Khối rẽ nhánh đủ `nếu < > thì ... nếu không thì`):** Nắm vững cấu trúc 2 nhánh đối lập: luôn chọn đúng 1 trong 2 nhánh để thực hiện, không bao giờ bỏ sót hoặc chạy cả hai.
-- **`LO-03` (Toán tử so sánh lục giác):** Thành thạo 3 khối điều kiện lục giác màu xanh lá cây: `< (A) < (B) >`, `< (A) = (B) >`, `< (A) > (B) >`.
-- **`LO-04` (Toán tử logic kết hợp):**
-  - Khối `< < > và < > >`: Cả hai điều kiện đều phải ĐÚNG (AND).
-  - Khối `< < > hoặc < > >`: Chỉ cần ít nhất một điều kiện ĐÚNG (OR).
-  - Khối `< không phải < > >`: Đảo ngược tính đúng/sai (NOT).
-- **`LO-05` (Kỹ thuật lồng khối rẽ nhánh nhiều tầng):** Xử lý bài toán phân loại nhiều mức (ví dụ: Điểm $\ge 8$ Giỏi, $\ge 6.5$ Khá, $\ge 5$ Trung bình, còn lại Yếu) bằng cách lồng khối `nếu... nếu không thì` vào nhánh `nếu không thì`.
-- **`LO-06` (Bài toán kinh điển):** Tìm số lớn nhất/nhỏ nhất trong 2 hoặc 3 số, kiểm tra tam giác hợp lệ, tính tiền cước taxi/tiền điện bậc thang.
-
----
-
-## 2. Các Khối Lệnh Rẽ Nhánh Trong Scratch 3.0
+## 1. Các Khối Lệnh Rẽ Nhánh Trong Scratch 3.0
 
 Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp 2 khối bao quanh hình chữ C:
 
 ![Minh họa khối lệnh rẽ nhánh Tiếng Việt](../../assets/rendered_blocks/l06_branching_vi.png)
 
-### 2.1. Cấu trúc rẽ nhánh khuyết: `nếu < > thì`
+### 1.1. Cấu trúc rẽ nhánh khuyết: `nếu < > thì`
 - Dùng khi chỉ cần can thiệp nếu gặp trường hợp đặc biệt.
 - Nếu điều kiện lục giác trả về `Đúng` (True), máy tính sẽ chạy các khối lệnh kẹp giữa hai càng chữ C.
 - Nếu điều kiện trả về `Sai` (False), máy tính bỏ qua và chạy tiếp các khối phía dưới.
 
-### 2.2. Cấu trúc rẽ nhánh đủ: `nếu < > thì ... nếu không thì`
+### 1.2. Cấu trúc rẽ nhánh đủ: `nếu < > thì ... nếu không thì`
 - Dùng khi bài toán có 2 con đường bắt buộc chọn 1:
   - Nếu điều kiện ĐÚNG: Chạy nhánh trên (`thì`).
   - Nếu điều kiện SAI: Chạy nhánh dưới (`nếu không thì`).
@@ -43,7 +21,7 @@ Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp 2 k
 
 ---
 
-## 3. Các Toán Tử So Sánh & Ghép Điều Kiện Logic
+## 2. Các Toán Tử So Sánh & Ghép Điều Kiện Logic
 
 Trong nhóm **Các phép toán (Operators)**:
 
@@ -58,7 +36,7 @@ Trong nhóm **Các phép toán (Operators)**:
 
 ---
 
-## 4. Kỹ Thuật Lồng Nhánh Tìm Số Lớn Nhất Trong 3 Số ($A, B, C$)
+## 3. Kỹ Thuật Lồng Nhánh Tìm Số Lớn Nhất Trong 3 Số ($A, B, C$)
 
 Để tìm giá trị lớn nhất `max` của 3 số, ta dùng kỹ thuật **"Đặt vương miện giả định"**:
 1. Giả sử số đầu tiên lớn nhất: `đặt [max v] thành (A)`.
@@ -68,7 +46,7 @@ Trong nhóm **Các phép toán (Operators)**:
 
 ---
 
-## 5. Bẫy Lỗi Thường Gặp Khi Lập Trình Rẽ Nhánh (Bug Traps)
+## 4. Bẫy Lỗi Thường Gặp Khi Lập Trình Rẽ Nhánh (Bug Traps)
 
 > **Bẫy 1: Dùng chuỗi khối `nếu...thì` độc lập thay vì `nếu...nếu không thì`**
 > - *Hiện tượng:* Xếp 2 khối `nếu` cạnh nhau:
@@ -88,7 +66,7 @@ Trong nhóm **Các phép toán (Operators)**:
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Khối lệnh nào được thực hiện khi điều kiện trong `nếu < > thì` có giá trị SAI?**
    - A. Khối lệnh bên trong càng chữ C

@@ -1,24 +1,6 @@
-# BÀI 14: THỐNG KÊ DANH SÁCH VÀ THUẬT TOÁN SẮP XẾP
+# Bài 14: THỐNG KÊ DANH SÁCH VÀ THUẬT TOÁN SẮP XẾP
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L14` | **Chương 5:** Danh Sách & Thống Kê Dữ Liệu  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 17 của Python Bảng A (`courses/python-bang-a/problems/pya_l17_*`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Thuật toán Tìm giá trị lớn nhất / nhỏ nhất - Max/Min):** Nắm vững kỹ thuật giả định phần tử đầu tiên là lớn nhất (`max = item 1`), sau đó duyệt từ phần tử 2 đến cuối để cập nhật.
-- **`LO-02` (Tính giá trị Trung bình cộng):** Tính tổng tất cả các phần tử rồi chia cho `kích thước của [danh_sách]`.
-- **`LO-03` (Thuật toán Tìm kiếm tuyến tính - Linear Search):** Tìm xem một giá trị $X$ có xuất hiện trong danh sách hay không và xuất hiện ở vị trí nào.
-- **`LO-04` (Thuật toán Sắp xếp nổi bọt - Bubble Sort cơ bản):** Hiểu cơ chế so sánh hai phần tử đứng cạnh nhau và hoán đổi vị trí để đưa các số lớn dần về phía cuối danh sách.
-- **`LO-05` (Bài toán kinh điển):** Tìm điểm số cao nhất của lớp, sắp xếp điểm thi tăng dần, bài toán tham lam (Greedy) đơn giản.
-
----
-
-## 2. Thuật Toán Tìm Giá Trị Lớn Nhất (Max) Trong Danh Sách
+## 1. Thuật Toán Tìm Giá Trị Lớn Nhất (Max) Trong Danh Sách
 
 ```text
 đặt [max v] thành (phần tử (1) của [Dãy số v])
@@ -36,7 +18,7 @@ nói (kết hợp [Gia tri lon nhat la: ] (max))
 
 ---
 
-## 3. Thuật Toán Sắp Xếp Nổi Bọt (Bubble Sort) Trong Scratch
+## 2. Thuật Toán Sắp Xếp Nổi Bọt (Bubble Sort) Trong Scratch
 
 Để sắp xếp danh sách gồm $N$ số tăng dần:
 - Dùng 2 vòng lặp lồng nhau.
@@ -50,7 +32,7 @@ thay thế phần tử ((j) + (1)) của [Dãy số v] bằng (tam)
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Khởi tạo biến `max` bằng số 0**
 > - *Hiện tượng:* Đặt `max = 0` khi bắt đầu tìm số lớn nhất.
@@ -64,7 +46,7 @@ thay thế phần tử ((j) + (1)) của [Dãy số v] bằng (tam)
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Giá trị khởi tạo an toàn nhất cho biến `max` khi tìm số lớn nhất trong danh sách là:**
    - A. Phần tử thứ nhất của danh sách *(Đáp án đúng)*

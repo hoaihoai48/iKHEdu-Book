@@ -1,24 +1,6 @@
-# BÀI 15: CHUỖI KÝ TỰ, CHỈ SỐ VÀ TRÍCH XUẤT
+# Bài 15: CHUỖI KÝ TỰ, CHỈ SỐ VÀ TRÍCH XUẤT
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L15` | **Chương 6:** Xử Lý Chuỗi Ký Tự  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 13 của Python Bảng A (`courses/python-bang-a/problems/pya_l13_*`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Khối `ký tự (i) của (chuỗi)`):** Trích xuất một ký tự tại vị trí thứ $i$ trong chuỗi (chỉ số 1-based, bắt đầu từ 1).
-- **`LO-02` (Khối `độ dài của (chuỗi)`):** Đếm chính xác tổng số lượng ký tự có trong chuỗi (kể cả dấu cách và ký tự đặc biệt).
-- **`LO-03` (Khối `kết hợp () và ()`):** Nối các chuỗi hoặc ký tự lại với nhau thành một từ/câu mới.
-- **`LO-04` (Kỹ thuật Cắt chuỗi con - Substring thủ công):** Vì Scratch không có cú pháp cắt lát `s[start:end]` như Python, học sinh sử dụng vòng lặp từ `start` đến `end` kết hợp khối `kết hợp` để trích xuất đoạn chuỗi con.
-- **`LO-05` (Bài toán kinh điển):** Lấy ký tự đầu/cuối của tên, đảo ngược chuỗi ký tự, kiểm tra từ đối xứng (Palindrome chuỗi).
-
----
-
-## 2. Các Khối Lệnh Xử Lý Chuỗi Trong Scratch 3.0
+## 1. Các Khối Lệnh Xử Lý Chuỗi Trong Scratch 3.0
 
 Trong nhóm **Các phép toán (Operators)** màu xanh lá cây:
 
@@ -34,7 +16,7 @@ Trong nhóm **Các phép toán (Operators)** màu xanh lá cây:
 
 ---
 
-## 3. Thuật Toán Trích Xuất Chuỗi Con Từ Vị Trí $L$ Đến $R$
+## 2. Thuật Toán Trích Xuất Chuỗi Con Từ Vị Trí $L$ Đến $R$
 
 Để cắt chuỗi con từ ký tự thứ $L$ đến thứ $R$ của chuỗi $S$:
 ```text
@@ -50,7 +32,7 @@ Ví dụ với $S = \text{"VIETNAM"}$, cắt từ $L = 1$ đến $R = 4 \implies
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Chỉ số 0 trong chuỗi (Off-by-one trap)**
 > - *Hiện tượng:* Gọi `ký tự (0) của (chuỗi)`.
@@ -62,7 +44,7 @@ Ví dụ với $S = \text{"VIETNAM"}$, cắt từ $L = 1$ đến $R = 4 \implies
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Với chuỗi `"ROBOT"`, khối `độ dài của (chuỗi)` trả về:**
    - A. 5 *(Đáp án đúng)*

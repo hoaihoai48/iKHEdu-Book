@@ -1,33 +1,6 @@
-# BÀI 10: KỸ THUẬT TÁCH CHỮ SỐ CỦA SỐ NGUYÊN
+# Bài 10: KỸ THUẬT TÁCH CHỮ SỐ CỦA SỐ NGUYÊN
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L10` | **Chương 4:** Số Học & Thuật Toán Tách Số  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 10 của Python Bảng A (`courses/python-bang-a/lessons/lesson-10`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Bí thuật Tách chữ số tận cùng):** Sử dụng phép chia dư cho 10:
-  $$\text{chu\_so} = N \pmod{10} \implies \text{khối: } ((N) \text{ mod } (10))$$
-- **`LO-02` (Bí thuật Cắt bỏ chữ số cuối):** Sử dụng phép chia nguyên cho 10:
-  $$N = \lfloor N / 10 \rfloor \implies \text{khối: } \text{[làm tròn xuống] của } ((N) / (10))$$
-- **`LO-03` (Vòng lặp bóc tách toàn bộ chữ số):** Xây dựng vòng lặp chuẩn:
-  $$\text{lặp lại cho đến khi } < (N) = (0) >$$
-  để bóc từng chữ số từ phải sang trái cho đến khi số $N$ biến mất hoàn toàn.
-- **`LO-04` (Tính tổng & Đếm chữ số):**
-  - Tính tổng các chữ số: `tong = tong + (N mod 10)`
-  - Đếm số lượng chữ số: `dem = dem + 1`
-- **`LO-05` (Số đảo ngược & Số đối xứng - Palindrome):**
-  - Công thức xây dựng số đảo: $\text{dao} = \text{dao} \times 10 + \text{chu\_so}$.
-  - Nếu $\text{dao} = N_{ban\_dau} \implies$ Số đối xứng (Ví dụ: $121, 1331, 2002$).
-- **`LO-06` (Số Armstrong / Số tự mãn):** Kiểm tra tổng lập phương các chữ số bằng chính nó (Ví dụ: $153 = 1^3 + 5^3 + 3^3$).
-
----
-
-## 2. Bí Thuật Hai Bước Tách Chữ Số Bằng Phép Toán
+## 1. Bí Thuật Hai Bước Tách Chữ Số Bằng Phép Toán
 
 ![Minh họa bóc tách chữ số Scratch Tiếng Việt](../../assets/rendered_blocks/l10_digit_extraction_vi.png)
 
@@ -39,7 +12,7 @@ Mỗi lần thực hiện hai khối lệnh này, ta bóc được một chữ s
 
 ---
 
-## 3. Khung Mẫu Chuẩn (Template) Vòng Lặp Tách Chữ Số
+## 2. Khung Mẫu Chuẩn (Template) Vòng Lặp Tách Chữ Số
 
 ```text
 đặt [tong v] thành (0)
@@ -61,7 +34,7 @@ Kết quả: Tổng các chữ số của $358$ là $16$!
 
 ---
 
-## 4. Thuật Toán Tạo Số Đảo Ngược
+## 3. Thuật Toán Tạo Số Đảo Ngược
 
 Để đảo ngược số $N = 123 \to 321$:
 - Khởi tạo `dao = 0`.
@@ -75,7 +48,7 @@ Ví dụ với số $123$:
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Quên lưu bản sao biến gốc ban đầu**
 > - *Hiện tượng:* Sau vòng lặp tách số, biến $N$ đã bị biến đổi thành $0$. Nếu ở cuối muốn so sánh `nếu < dao = N >` để kiểm tra đối xứng thì $N$ đã mất tiêu rồi!
@@ -88,7 +61,7 @@ Ví dụ với số $123$:
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Khối `(345) mod (10)` lấy ra chữ số nào?**
    - A. 3

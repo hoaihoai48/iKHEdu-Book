@@ -1,32 +1,10 @@
-# BÀI 08: VÒNG LẶP CHO ĐẾN KHI VÀ BIẾN CỜ DỪNG
+# Bài 08: VÒNG LẶP CHO ĐẾN KHI VÀ BIẾN CỜ DỪNG
 
-**Khóa học:** Scratch — Tư duy Khối lệnh, Đồ họa & Thuật toán Thi đấu (Bảng A)  
-**Mã bài học:** `SCA-L08` | **Chương 3:** Cấu Trúc Rẽ Nhánh & Vòng Lặp  
-**Thời lượng khuyến nghị:** 2 – 3 buổi học (90 phút/buổi)  
-**Ánh xạ chuẩn:** Tương đương Bài 08 của Python Bảng A (`courses/python-bang-a/lessons/lesson-08`)  
-
----
-
-## 1. Mục Tiêu Học Tập & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chuẩn năng lực:
-- **`LO-01` (Khối `lặp lại cho đến khi <điều_kiện>`):** Hiểu cơ chế hoạt động của vòng lặp không xác định số lần trước; vòng lặp sẽ tiếp tục chạy khi điều kiện **SAI** và sẽ dừng ngay lập tức khi điều kiện trở thành **ĐÚNG**.
-- **`LO-02` (Bẫy tư duy ngược giữa Python `while` và Scratch `repeat until`):**
-  - Trong Python: `while dieu_kien:` $\to$ Lặp khi điều kiện **ĐÚNG**.
-  - Trong Scratch: `lặp lại cho đến khi <dieu_kien>` $\to$ Dừng khi điều kiện **ĐÚNG** (tức là lặp khi điều kiện **SAI**).
-  - Quy tắc chuyển đổi: Muốn mô phỏng `while C:` trong Scratch, ta viết:
-    $$\text{lặp lại cho đến khi } < \text{không phải } < C > >$$
-- **`LO-03` (Bẫy lặp vô tận - Infinite Loop):** Nhận diện nguyên nhân khiến chương trình bị đơ/treo do điều kiện dừng không bao giờ đạt được; luôn đảm bảo bên trong vòng lặp có khối lệnh làm thay đổi biến điều kiện.
-- **`LO-04` (Kỹ thuật Biến Cờ Dừng - Flag Variable):** Sử dụng một biến (ví dụ `da_tim_thay = 0` hoặc `1`) để báo hiệu khi thỏa mãn yêu cầu và dừng vòng lặp sớm.
-- **`LO-05` (Bài toán kinh điển):** Dãy số Collatz ($3n+1$), tìm ước chung lớn nhất (Euclid trừ dần), nhập số cho đến khi gặp số 0.
-
----
-
-## 2. Bản Chất Vòng Lặp Cho Đến Khi Trong Scratch
+## 1. Bản Chất Vòng Lặp Cho Đến Khi Trong Scratch
 
 ![Minh họa vòng lặp cho đến khi](../../assets/rendered_blocks/l08_repeat_until_vi.png)
 
-### 2.1. So sánh tư duy Python vs Scratch
+### 1.1. So sánh tư duy Python vs Scratch
 | Đặc điểm | Python `while` | Scratch `lặp lại cho đến khi` |
 |---|---|---|
 | **Điều kiện gắn kèm** | Điều kiện **ĐỂ CHẠY TIẾP** | Điều kiện **ĐỂ DỪNG LẠI** |
@@ -35,7 +13,7 @@ Sau khi hoàn thành bài học này, học sinh sẽ đạt được các chu�
 
 ---
 
-## 3. Thuật Toán Dãy Số Collatz ($3n + 1$)
+## 2. Thuật Toán Dãy Số Collatz ($3n + 1$)
 
 Một bài toán nổi tiếng trong toán học:
 - Bắt đầu từ số nguyên dương $N$.
@@ -56,7 +34,7 @@ nói (so_buoc)
 
 ---
 
-## 4. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 3. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
 > **Bẫy 1: Nhầm lẫn giữa điều kiện CHẠY và điều kiện DỪNG**
 > - *Hiện tượng:* Trong Python viết `while n > 0:`, sang Scratch kéo thẳng `< n > 0 >` vào khối `lặp lại cho đến khi`.
@@ -69,7 +47,7 @@ nói (so_buoc)
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
 1. **Khối lệnh `lặp lại cho đến khi <điều_kiện>` sẽ DỪNG lặp khi nào?**
    - A. Khi điều kiện có giá trị ĐÚNG (True) *(Đáp án đúng)*

@@ -1,24 +1,6 @@
-# BÀI 01: VẼ HÌNH VỚI PEN VÀ REPEAT
+# Bài 01: VẼ HÌNH VỚI PEN VÀ REPEAT
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
-**Chương 1:** Bút vẽ Pen & Đồ họa (Native Scratch Foundation)  
-**Mã bài học:** `SCA-L01` | **Thời lượng khuyến nghị:** 90 phút  
-**Tài liệu tham chiếu:** [`docs/LO_TRINH_SCRATCH.md`](file:///Users/vu/Developer/ikhEdu_lessons/docs/LO_TRINH_SCRATCH.md)  
-
----
-
-## 1. Mục Tiêu Bài Học & Chuẩn Đầu Ra (Learning Objectives)
-
-Sau khi hoàn thành bài học này, học sinh sẽ đạt được:
-* **`LO-01 (Stage Coordinates)`**: Hiểu và làm chủ hệ tọa độ sân khấu Scratch: Tọa độ gốc tâm sân khấu $(0, 0)$, phạm vi trục ngang $X$ từ $-240$ đến $240$, phạm vi trục dọc $Y$ từ $-180$ đến $180$.
-* **`LO-02 (Compass Directions)`**: Ghi nhớ và điều khiển chính xác 4 hướng di chuyển cơ bản của nhân vật: $0^\circ$ (Lên trên / Hướng Bắc), $90^\circ$ (Sang phải / Hướng Đông - mặc định), $180^\circ$ (Xuống dưới / Hướng Nam), và $-90^\circ$ hoặc $270^\circ$ (Sang trái / Hướng Tây).
-* **`LO-03 (Pen Operations)`**: Sử dụng thành thạo nhóm lệnh mở rộng Bút vẽ (Pen): Đặt bút (`pen down`), Nhấc bút (`pen up`), Xóa tất cả (`erase all`), Thiết lập màu sắc và độ dày nét vẽ (`set pen size`).
-* **`LO-04 (Polygon Rotation Formula)`**: Nắm vững nguyên lý góc quay ngoài của đa giác đều: $\text{Góc xoay} = \dfrac{360^\circ}{\text{Số cạnh}}$. Ứng dụng vòng lặp `repeat` để vẽ tam giác đều, hình vuông, ngũ giác đều, lục giác đều chỉ với $1$ dòng lệnh lặp.
-* **`LO-05 (Drawing Management & Bug Avoidance)`**: Tránh triệt để 2 bẫy lỗi kinh điển của người mới học vẽ Scratch: Quên xóa nét vẽ cũ (`erase all`) khi bắt đầu và quên nhấc bút (`pen up`) trước khi di chuyển nhân vật đến vị trí mới.
-
----
-
-## 2. Khám Phá Sân Khấu & Hệ Tọa Độ Oxy
+## 1. Khám Phá Sân Khấu & Hệ Tọa Độ Oxy
 
 Sân khấu Scratch là một mặt phẳng hình chữ nhật được chia thành các điểm ảnh thông qua hệ trục tọa độ hai chiều $Oxy$:
 
@@ -44,7 +26,7 @@ Nhân vật chú Mèo di chuyển theo hướng mũi tên kim la bàn. Góc quay
 
 ---
 
-## 3. Bộ Công Cụ Bút Vẽ Pen (Pen Extension)
+## 2. Bộ Công Cụ Bút Vẽ Pen (Pen Extension)
 
 Để bật công cụ vẽ trong Scratch 3.0, học sinh bấm vào biểu tượng **Thêm phần mở rộng (Add Extension)** ở góc dưới cùng bên trái màn hình và chọn **Bút vẽ (Pen)**.
 
@@ -75,7 +57,7 @@ Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị g
 
 ---
 
-## 4. Vòng Lặp Lặp Lại & Quy Tắc Vàng Vẽ Đa Giác Đều
+## 3. Vòng Lặp Lặp Lại & Quy Tắc Vàng Vẽ Đa Giác Đều
 
 ### Vấn đề: Vẽ tay từng nét lặp lại
 Để vẽ một hình vuông cạnh $100$ bước:
@@ -112,7 +94,7 @@ $$\text{Góc xoay} = \frac{360^\circ}{N}$$
 
 ---
 
-## 5. Kỹ Thuật Đổi Điểm Vẽ & Hình Vuông Đồng Tâm
+## 4. Kỹ Thuật Đổi Điểm Vẽ & Hình Vuông Đồng Tâm
 
 Khi cần vẽ nhiều hình tách rời nhau hoặc vẽ các hình lồng nhau (như hình vuông đồng tâm):
 1. Vẽ xong hình thứ nhất.
@@ -131,7 +113,7 @@ Mỗi lần chuyển hình, nhân vật **nhấc bút $\to$ chuyển tọa độ
 
 ---
 
-## 6. Khối Lệnh Tự Tạo (Khối Của Tôi - My Blocks) Cơ Bản
+## 5. Khối Lệnh Tự Tạo (Khối Của Tôi - My Blocks) Cơ Bản
 
 Khi một đoạn lệnh vẽ hình (ví dụ vẽ hình vuông) phải dùng đi dùng lại nhiều lần, ta gom các khối lệnh đó thành một khối riêng có tên gọi là **Khối của tôi (My Blocks)**:
 
@@ -145,7 +127,7 @@ Sau khi định nghĩa, bất cứ khi nào cần vẽ hình vuông, ta chỉ c�
 
 ---
 
-## 7. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 6. Bảng Mô Phỏng Từng Bước (Dry Run Table)
 
 Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hiện kịch bản vẽ hình vuông cạnh $100$ bước, bắt đầu từ $(0, 0)$ hướng $90^\circ$:
 
@@ -163,7 +145,7 @@ Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hi
 
 ---
 
-## 8. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
 
 > **Bẫy 1: Quên câu lệnh `xóa tất cả` lúc bấm cờ xanh**
 > - *Hiện tượng:* Khi bấm Cờ Xanh lần thứ hai, hình vẽ mới đè lên hình vẽ cũ làm màn hình rối tung.
@@ -179,7 +161,7 @@ Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hi
 
 ---
 
-## 9. Concept Quiz (10 Câu Trắc Nghiệm Kiểm Tra Nhận Thức)
+## 8. Concept Quiz (10 Câu Trắc Nghiệm Kiểm Tra Nhận Thức)
 
 #### Câu 1 (Nhận biết tọa độ)
 Tâm chính giữa của sân khấu Scratch có tọa độ là bao nhiêu?
@@ -276,7 +258,7 @@ Tại sao ta nên tạo khối lệnh riêng (**Khối của tôi - My Blocks**)
 
 ---
 
-## 10. Tóm Tắt & Hướng Dẫn Thực Hành
+## 9. Tóm Tắt & Hướng Dẫn Thực Hành
 
 > **GHI NHỚ CỐT LÕI:**
 > 1. Sân khấu có kích thước $480 \times 360$, tâm là $(0, 0)$. Hướng $90^\circ$ là sang phải.
