@@ -17,22 +17,34 @@ if [ "$current_branch" != "main" ]; then
     exit 1
 fi
 
-echo "🚀 Bắt đầu đồng bộ code từ main sang repo công ty (DKTECHVN)..."
+echo "🚀 Bắt đầu đồng bộ snapshot mới nhất sang repo công ty (DKTECHVN)..."
 
-# 2. Chuyển sang nhánh publish-dktech
-git checkout publish-dktech
+# 2. Tạo nhánh mồ côi tạm thời không có lịch sử cũ
+git checkout --orphan dktech-sync-temp
 
-# 3. Merge code mới từ main sang (bỏ qua commit nếu không có thay đổi)
-git merge main --no-edit -m "chore: sync latest content from main"
-
-# 4. Đảm bảo triệt để các file agent không bị merge vào
+# 3. Loại bỏ triệt để các file agent khỏi staging
 git rm -rf --cached .agent .agents AGENTS.md GEMINI.md 2>/dev/null || true
-git commit --amend --no-edit 2>/dev/null || true
 
-# 5. Push lên nhánh main của DKTECHVN
-git push dktech publish-dktech:main
+# 4. Thêm rule ignore vào .gitignore trên snapshot này
+cat << 'GITIGNORE_EOF' >> .gitignore
 
-# 6. Quay lại nhánh main để tiếp tục làm việc
+# AI Agent configs & prompt guidelines
+.agent/
+.agents/
+AGENTS.md
+GEMINI.md
+GITIGNORE_EOF
+git add .gitignore
+
+# 5. Tạo duy nhất 1 commit snapshot mới nhất
+DATE_STR=$(date +"%Y-%m-%d %H:%M:%S")
+git commit -m "feat: release curriculum update ($DATE_STR)"
+
+# 6. Đẩy đè thẳng lên nhánh main của DKTECHVN (giữ lịch sử 1 commit sạch)
+git push dktech dktech-sync-temp:main --force
+
+# 7. Quay lại main và dọn dẹp nhánh tạm
 git checkout main
+git branch -D dktech-sync-temp
 
-echo "🎉 ĐỒNG BỘ THÀNH CÔNG lên https://github.com/DKTECHVN/giao-trinh-ikh (nhánh main)!"
+echo "🎉 ĐỒNG BỘ THÀNH CÔNG lên https://github.com/DKTECHVN/giao-trinh-ikh!"
