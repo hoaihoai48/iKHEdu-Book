@@ -1,0 +1,5 @@
+# Lời nói đầu (Sách giáo viên — Quyển 2)
+
+Cuốn **Giáo trình Python — Sách giáo viên — Quyển 2** được biên soạn tiếp nối Quyển 1 trong bộ giáo trình lập trình Python cơ bản iKHEDU, dành riêng cho quý thầy cô giáo và các huấn luyện viên chuyên trách đội tuyển tin học trẻ. Tài liệu này cung cấp trọn bộ lời giải chi tiết, mã nguồn Python chuẩn mực và hệ thống **hướng dẫn sư phạm thực chiến chuyên sâu** (ý tưởng và phân tích thuật toán, bảng mô phỏng chạy tay từng bước trên số liệu mẫu thực tế, lưu ý và các bẫy lỗi kinh điển thường gặp) cho toàn bộ **130 bài toán thực hành** thuộc Chương 03, Chương 04 và Chương 05.
+
+Nội dung Quyển 2 tập trung phát triển tư duy thuật toán và cấu trúc dữ liệu căn bản: Bài toán số học, quy luật dãy số, tam giác số, kỹ thuật tách chữ số và xử lý số nguyên; Ước số, bội số và số nguyên tố; Cấu trúc danh sách (List) và các kỹ thuật thống kê, sắp xếp dữ liệu; cùng Nghệ thuật xử lý chuỗi ký tự (String manipulation), chỉ số, cắt lát và biến đổi từ. Mỗi bài toán đều được cấu trúc đồng bộ và chỉn chu, là công cụ đắc lực hỗ trợ thầy cô tổ chức các buổi dạy chuyên sâu và bồi dưỡng học sinh hiệu quả.

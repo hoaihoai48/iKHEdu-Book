@@ -43,7 +43,7 @@ return 0;
 
 ### Ý nghĩa từng dòng lệnh:
 
-1. `#include <bits/stdc++.h>`: Thư viện tổng hợp chứa toàn bộ các thư viện chuẩn của C++ (như nhập xuất `iostream`, mảng động `vector`, chuỗi `string`, thuật toán `algorithm`). Học sinh không cần nhớ từng thư viện riêng lẻ.
+1. `#include <bits/stdc++.h>`: Thư viện tổng hợp chứa toàn bộ các cấu trúc dữ liệu và hàm tiện ích chuẩn của C++ (nhập xuất `cin`/`cout`, mảng động `vector`, chuỗi `string`, các thuật toán sắp xếp và tìm kiếm). Học sinh không cần khai báo từng thư viện riêng lẻ.
 2. `using namespace std;`: Khai báo sử dụng không gian tên chuẩn, giúp ta có thể gọi trực tiếp `cin`, `cout`, `vector`, `string`, `min`, `max`, `sort` mà không cần viết tiền tố rườm rà.
 3. `int main()`: Hàm chính của chương trình, nơi hệ điều hành bắt đầu thực thi các dòng lệnh.
 4. `ios::sync_with_stdio(false); cin.tie(nullptr);`: Bộ đôi lệnh tối ưu nhập xuất (Fast I/O). Trong các bài thi có tới $10^5$ hoặc $10^6$ dòng dữ liệu, bộ đôi này giúp chương trình chạy nhanh hơn gấp 5 đến 10 lần, tránh bị lỗi chạy quá thời gian (Time Limit Exceeded - TLE).
@@ -168,3 +168,123 @@ KIỂU DỮ LIỆU: Số nguyên nhỏ dùng int, số lớn hoặc tổng dùng
 TOÁN TỬ: / lấy phần nguyên, % lấy phần dư, 1.0 * a / b để giữ phần thập phân
 XUẤT DỮ LIỆU: cout << fixed << setprecision(k) để in đúng k chữ số thập phân
 ```
+
+---
+
+## 7. Câu hỏi trắc nghiệm củng cố khái niệm (Concept Quiz)
+
+#### Câu 1 (Nhận diện — Recognize):
+Đoạn mã cấu trúc (boilerplate) chuẩn thi đấu C++ nào sau đây khai báo đầy đủ Fast I/O và thư viện tổng hợp chuẩn iKHEDU?
+
+- **A.** Thiếu `using namespace std;` và không có cấu hình Fast I/O.
+- **B.** **[Đáp án đúng]** `#include <bits/stdc++.h>` đi cùng `using namespace std;` và bộ đôi Fast I/O `ios::sync_with_stdio(false); cin.tie(nullptr);` ở đầu hàm `main()`.
+- **C.** Chỉ khai báo hàm `main()` mà không dùng thư viện tổng hợp `#include <bits/stdc++.h>`.
+- **D.** Khai báo `using namespace std;` nhưng đặt ngoài cùng sau hàm `main()`.
+
+> *Giải thích:* Trong C++ thi đấu iKHEDU, ta dùng `#include <bits/stdc++.h>` để bao quát toàn bộ thư viện chuẩn của C++, kết hợp `using namespace std;` để gọi trực tiếp các hàm/lệnh, và bộ đôi Fast I/O giúp tăng tốc độ đọc/ghi dữ liệu lên gấp 5–10 lần.
+
+#### Câu 2 (Kiểu dữ liệu & Tràn số — Data Types):
+Khi tính tích của hai số nguyên $a$ và $b$ với giới hạn $a, b \le 10^9$, kiểu dữ liệu nào bắt buộc phải sử dụng để lưu kết quả tích $a \times b$?
+
+- **A.** `int` (32-bit có dấu).
+- **B.** `float` (số thực độ chính xác đơn).
+- **C.** **[Đáp án đúng]** `long long` (64-bit có dấu, lưu được tới $\approx 9 \times 10^{18}$).
+- **D.** `short` (16-bit).
+
+> *Giải thích:* Giá trị cực đại của tích là $10^9 \times 10^9 = 10^{18}$, vượt xa ngưỡng cực đại $2 \times 10^9$ của kiểu `int`. Nếu dùng `int` sẽ bị hiện tượng tràn số nguyên (Integer Overflow) ra kết quả sai hoặc số âm.
+
+#### Câu 3 (Toán tử số học — Arithmetic Operators):
+Trong C++, kết quả của biểu thức `19 / 4` và `19 % 4` lần lượt là bao nhiêu?
+
+- **A.** `4.75` và `3`.
+- **B.** **[Đáp án đúng]** `4` và `3`.
+- **C.** `4` và `4`.
+- **D.** `5` và `3`.
+
+> *Giải thích:* Khi cả hai toán hạng là số nguyên, toán tử `/` là phép chia lấy phần nguyên ($19 / 4 = 4$), còn toán tử `%` lấy phần dư ($19 = 4 \times 4 + 3 \implies 19 \% 4 = 3$).
+
+#### Câu 4 (Bẫy ép kiểu — Type Casting):
+Cho hai biến nguyên `int a = 7, b = 2;`. Câu lệnh nào sau đây tính đúng giá trị trung bình cộng dạng số thực $3.5$?
+
+- **A.** `double ans = a / b;`
+- **B.** `double ans = (int)(a / b);`
+- **C.** **[Đáp án đúng]** `double ans = 1.0 * a / b;` hoặc `double ans = (double)a / b;`
+- **D.** `double ans = a % b;`
+
+> *Giải thích:* Nếu viết `a / b`, máy tính thực hiện phép chia nguyên trước được $3$, sau đó mới gán vào biến `ans` thành $3.0$ (mất phần thập phân). Nhân với `1.0` sẽ ép biểu thức về kiểu `double` trước khi chia.
+
+#### Câu 5 (Rút trích chữ số — Digit Extraction):
+Để lấy chữ số hàng chục của một số nguyên dương $N \ge 10$ (ví dụ $N = 358 \implies$ lấy được số $5$), biểu thức nào sau đây là chính xác?
+
+- **A.** `N % 10`
+- **B.** `N / 100`
+- **C.** **[Đáp án đúng]** `(N / 10) % 10`
+- **D.** `N % 100`
+
+> *Giải thích:* Lệnh `N / 10` giúp gạt bỏ chữ số hàng đơn vị ($358 / 10 = 35$), sau đó `% 10` sẽ trích lấy chữ số tận cùng của số mới ($35 \% 10 = 5$).
+
+#### Câu 6 (Định dạng xuất dữ liệu — Output Formatting):
+Để in số thực `x` với đúng 2 chữ số sau dấu phẩy thập phân, cú pháp C++ chuẩn là gì?
+
+- **A.** `cout << x << 2;`
+- **B.** `cout << round(x);`
+- **C.** **[Đáp án đúng]** `cout << fixed << setprecision(2) << x << "\n";`
+- **D.** `cout << setprecision(2) << x;`
+
+> *Giải thích:* Cần dùng kết hợp cờ `fixed` và bộ điều khiển `setprecision(2)` để cố định số chữ số phần thập phân xuất ra màn hình.
+
+#### Câu 7 (Đọc dữ liệu an toàn — Safe Input):
+Mẫu code nào sau đây giúp đọc dữ liệu an toàn, chống bị crash khi gặp file rỗng hoặc kết thúc tệp (EOF)?
+
+- **A.** `cin >> n;`
+- **B.** **[Đáp án đúng]** `if (!(cin >> n)) return 0;`
+- **C.** `while (true) cin >> n;`
+- **D.** `cin.get();`
+
+> *Giải thích:* Cú pháp `if (!(cin >> n)) return 0;` kiểm tra trạng thái của luồng nhập; nếu đọc thất bại (không có dữ liệu hoặc hết file), chương trình sẽ thoát êm đẹp với mã 0.
+
+#### Câu 8 (Bẫy tràn số trong biểu thức — Intermediate Overflow):
+Cho `int a = 1000000; int b = 1000000; long long c;`. Câu lệnh nào sau đây tính đúng giá trị $c = a \times b = 10^{12}$?
+
+- **A.** `c = a * b;`
+- **B.** **[Đáp án đúng]** `c = 1LL * a * b;` hoặc `c = (long long)a * b;`
+- **C.** `c = (long long)(a * b);`
+- **D.** `c = (int)a * b;`
+
+> *Giải thích:* Với `c = a * b;` hoặc `c = (long long)(a * b);`, tích `a * b` được thực hiện trên kiểu `int` 32-bit trước gây tràn số rác rồi mới gán vào `c`. Thêm `1LL *` (số 1 kiểu `long long`) ép phép nhân diễn ra trên miền 64-bit.
+
+#### Câu 9 (Phạm vi biến — Variable Scope):
+Khẳng định nào sau đây là **ĐÚNG** về biến trong C++?
+
+- **A.** Có thể đặt tên biến bắt đầu bằng một chữ số (ví dụ: `int 1a = 5;`).
+- **B.** Tên biến trong C++ không phân biệt chữ hoa và chữ thường.
+- **C.** **[Đáp án đúng]** Tên biến phân biệt chữ hoa, chữ thường (`Sum` khác `sum`) và không được trùng với từ khóa của ngôn ngữ (`int`, `double`, `return`...).
+- **D.** Một biến có thể được khai báo lại nhiều lần trong cùng một khối lệnh `{}`.
+
+> *Giải thích:* C++ là ngôn ngữ Case-sensitive (phân biệt hoa thường), biến phải bắt đầu bằng chữ cái hoặc dấu gạch dưới `_`, và không được trùng từ khóa.
+
+#### Câu 10 (Mô hình I-P-O — Computational Thinking):
+Thứ tự chuẩn xác nhất của một lập trình viên khi giải quyết một bài toán lập trình là gì?
+
+- **A.** Mở máy gõ code ngay $\longrightarrow$ Chạy thử $\longrightarrow$ Đọc đề bài.
+- **B.** Đọc đề $\longrightarrow$ Viết code nộp ngay $\longrightarrow$ Đọc giải thích test khi bị sai.
+- **C.** **[Đáp án đúng]** Phân tích Input (xác định kiểu dữ liệu & giới hạn) $\longrightarrow$ Thiết kế Process (công thức toán, bẫy tràn số) $\longrightarrow$ Định dạng Output $\longrightarrow$ Viết code & Test thử các trường hợp biên.
+- **D.** Tìm code mẫu trên mạng $\longrightarrow$ Dán vào trình chấm.
+
+> *Giải thích:* Tư duy I-P-O (Input - Process - Output) kết hợp kiểm soát cận dữ liệu và test biên là nền tảng cốt lõi giúp viết code chuẩn xác ngay từ lần nộp đầu tiên.
+
+---
+
+## 8. Ma trận bài tập thực hành (P0 → P2)
+
+| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
+|:---:|:---:|---|:---:|---|---|
+| 01 | `CPPB-L0-01` | **Tính Tổng Hai Số** | `P0` | $-10^9 \le a, b \le 10^9$ | Cú pháp `cin`/`cout`, boilerplate chuẩn Fast I/O |
+| 02 | `CPPB-L0-02` | **Tính Chu Vi & Diện Tích Hình Chữ Nhật** | `P0` | $1 \le a, b \le 10^9$ | Biểu thức số học, tránh tràn số với tích `long long` |
+| 03 | `CPPB-L0-03` | **Tính Giá Trị Trung Bình Cộng Ba Số** | `P1` | $0 \le a, b, c \le 10$ | Ép kiểu số thực `1.0 * sum / 3`, định dạng `fixed` `setprecision` |
+| 04 | `CPPB-L0-04` | **Tìm Chữ Số Hàng Đơn Vị** | `P1` | $10 \le N \le 10^9$ | Ứng dụng phép chia dư `% 10` rút trích chữ số |
+| 05 | `CPPB-L0-05` | **Chia Kẹo Công Bằng & Tính Kẹo Dư** | `P1` | $100 \le N \le 999$ | Tách các chữ số hàng trăm, chục, đơn vị bằng `/` và `%` |
+| 06 | `CPPB-L0-06` | **Đổi Đơn Vị Độ Dài Từ Mét Sang Centimet** | `P1` | $1 \le N, K \le 10^9$ | Phép nhân quy đổi đơn vị số lớn với `long long` |
+| 07 | `CPPB-L0-07` | **Đổi Thời Gian Từ Giờ Phút Sang Giây** | `P2` | $0 \le T \le 10^9$ | Phép chia nguyên `/` và chia dư `%` liên hoàn |
+| 08 | `CPPB-L0-08` | **Tính Tiền Mua Vở Có Khuyến Mãi** | `P2` | $1 \le N \le 10^9, 1 \le P \le 10^6$ | Xử lý phép toán thực tế, kiểm soát tràn số trung gian `1LL` |
+

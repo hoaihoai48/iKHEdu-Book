@@ -178,3 +178,123 @@ XÂU STRING: Duyệt xâu bằng for (char c : s), ánh xạ chỉ số c - 'a' 
 HÀM FUNCTION: Chia nhỏ bài toán, truyền const vector<int>& để tránh sao chép tốn RAM
 ĐỘ PHỨC TẠP: 1.0s chứa được ~10^8 phép tính. N = 10^5 chỉ dùng thuật toán O(N) hoặc O(N log N)
 ```
+
+---
+
+## 7. Câu hỏi trắc nghiệm củng cố khái niệm (Concept Quiz)
+
+#### Câu 1 (Chỉ số 0-based trong mảng — 0-Based Indexing):
+Khai báo `vector<int> a(N);` tạo ra một mảng gồm $N$ phần tử. Các phần tử hợp lệ của mảng này có chỉ số nằm trong phạm vi nào?
+
+- **A.** Từ `1` đến `N`.
+- **B.** **[Đáp án đúng]** Từ `0` đến `N - 1`.
+- **C.** Từ `1` đến `N + 1`.
+- **D.** Từ `0` đến `N`.
+
+> *Giải thích:* Trong C++, mảng và `vector` luôn được đánh chỉ số bắt đầu từ `0`. Phần tử đầu tiên là `a[0]` và phần tử cuối cùng là `a[N - 1]`. Truy cập `a[N]` là lỗi ngoài biên mảng (Out of Bounds).
+
+#### Câu 2 (Bẫy tràn biên mảng — Out-of-Bounds Error):
+Khi một chương trình cố gắng truy cập phần tử `a[n]` của một vector `vector<int> a(n)`, hiện tượng gì có thể xảy ra trong kỳ thi?
+
+- **A.** Trình biên dịch tự động mở rộng mảng thêm một ô nhớ.
+- **B.** Giá trị trả về luôn luôn là 0.
+- **C.** **[Đáp án đúng]** Lỗi Runtime Error (SIGSEGV) làm chương trình bị dừng đột ngột hoặc đọc phải dữ liệu rác ngoài bộ nhớ.
+- **D.** Chương trình tự động chạy chậm lại.
+
+> *Giải thích:* Truy cập chỉ số không hợp lệ xâm phạm vào vùng nhớ chưa được cấp phát, hệ điều hành sẽ gửi tín hiệu kết thúc chương trình ngay lập tức.
+
+#### Câu 3 (Vòng lặp For-Each duyệt mảng — Range-Based For):
+Cú pháp nào sau đây duyệt qua từng phần tử của mảng `vector<int> a` một cách ngắn gọn và an toàn nhất?
+
+- **A.** `for (int i = 1; i <= a.size(); ++i)`
+- **B.** **[Đáp án đúng]** `for (int x : a)` (hoặc `for (const int &x : a)`)
+- **C.** `for (int x in a)`
+- **D.** `while (a.pop_back())`
+
+> *Giải thích:* Range-based for loop `for (int x : a)` duyệt lần lượt mọi phần tử $x$ trong vector mà không cần quản lý biến đếm chỉ số, loại bỏ 100% rủi ro sai chỉ số biên.
+
+#### Câu 4 (Mảng đếm tần suất chữ cái — Frequency Array):
+Cho một ký tự `c` là chữ cái tiếng Anh in thường (`'a'` đến `'z'`). Biểu thức số học nào sau đây ánh xạ chính xác ký tự `c` thành chỉ số nguyên từ `0` đến `25` để lưu vào mảng tần suất `int cnt[26]`?
+
+- **A.** `c - 0`
+- **B.** `(int)c`
+- **C.** **[Đáp án đúng]** `c - 'a'`
+- **D.** `c + 'a'`
+
+> *Giải thích:* Theo bảng mã ASCII, các chữ cái thường `'a'` đến `'z'` có mã số liên tiếp nhau. Khi trừ đi `'a'`, ký tự `'a'` trở thành $0$, `'b'` thành $1$, ..., `'z'` thành $25$.
+
+#### Câu 5 (Đọc xâu ký tự trong C++ — String Input):
+Để đọc một từ hoặc chuỗi ký tự không chứa khoảng trắng từ bàn phím vào biến `string s`, câu lệnh chuẩn là gì?
+
+- **A.** `cin >> s;` (với Fast I/O)
+- **B.** `getline(cin, s);`
+- **C.** **[Đáp án đúng]** Cả A và B đều đọc được, nhưng `cin >> s;` đọc một từ (dừng ở dấu cách), còn `getline(cin, s);` đọc trọn vẹn cả một dòng gồm cả dấu cách.
+- **D.** `cin.read(s);`
+
+> *Giải thích:* Trong các bài toán cạnh tranh cơ bản, các chuỗi không chứa dấu cách được đọc trực tiếp và nhanh nhất bằng `cin >> s;`. Khi đề bài yêu cầu đọc cả dòng văn bản chứa khoảng trắng, ta dùng `getline(cin, s);`.
+
+#### Câu 6 (Độ dài xâu ký tự — String Length):
+Cho biến `string s = "ikhedu";`. Giá trị của `s.size()` hoặc `s.length()` và ký tự `s[0]` lần lượt là gì?
+
+- **A.** `7` và `'i'`.
+- **B.** **[Đáp án đúng]** `6` và `'i'`.
+- **C.** `6` và `'k'`.
+- **D.** `5` và `'i'`.
+
+> *Giải thích:* Xâu `"ikhedu"` gồm đúng 6 ký tự. Chỉ số bắt đầu từ 0 nên `s[0]` là chữ cái đầu tiên `'i'`, còn `s[5]` là chữ cái cuối cùng `'u'`.
+
+#### Câu 7 (Truyền tham chiếu trong Hàm — Pass by Reference):
+Tại sao khi truyền một `vector<int>` có $10^5$ phần tử vào một hàm xử lý chỉ đọc, ta nên viết `void solve(const vector<int>& a)` thay vì `void solve(vector<int> a)`?
+
+- **A.** Vì C++ bắt buộc mọi mảng phải có dấu `&`.
+- **B.** **[Đáp án đúng]** Vì `const &` truyền trực tiếp địa chỉ mảng gốc, tránh việc sao chép tốn $10^5$ phần tử vào bộ nhớ mới (tránh bị lỗi TLE/MLE và tiết kiệm thời gian).
+- **C.** Vì `const &` giúp mảng tự động sắp xếp tăng dần.
+- **D.** Vì truyền tham trị `vector<int> a` sẽ làm hỏng dữ liệu của mảng gốc.
+
+> *Giải thích:* Truyền theo giá trị (tham trị) sẽ tạo ra một bản copy đầy đủ của toàn bộ mảng $10^5$ phần tử mỗi lần gọi hàm. Truyền tham chiếu hằng (`const &`) chỉ truyền con trỏ ô nhớ nên tốc độ là $\mathcal{O}(1)$ tức thời.
+
+#### Câu 8 (Kỹ thuật Hai con trỏ đảo mảng — Two Pointers):
+Thuật toán đảo ngược mảng tại chỗ bằng cách hoán đổi `swap(a[l], a[r])` dừng lại khi nào?
+
+- **A.** Khi `l == 0`.
+- **B.** Khi `r == a.size()`.
+- **C.** **[Đáp án đúng]** Khi hai con trỏ gặp nhau hoặc vượt qua nhau (`l >= r`).
+- **D.** Khi `a[l] == a[r]`.
+
+> *Giải thích:* Ta khởi tạo $l = 0$ (đầu mảng) và $r = N - 1$ (cuối mảng). Ở mỗi bước hoán đổi `swap(a[l], a[r])`, ta tăng `l++` và giảm `r--`. Khi $l \ge r$, toàn bộ mảng đã được đảo ngược hoàn tất.
+
+#### Câu 9 (Thuật toán Euclid tính GCD — Number Theory):
+Hàm đệ quy hoặc vòng lặp tính ước chung lớn nhất (GCD) của 2 số nguyên không âm $a, b$ dựa trên hệ thức nào sau đây?
+
+- **A.** `gcd(a, b) = gcd(a - 1, b - 1)`
+- **B.** **[Đáp án đúng]** `gcd(a, b) = (b == 0 ? a : gcd(b, a % b))`
+- **C.** `gcd(a, b) = a * b`
+- **D.** `gcd(a, b) = a / b`
+
+> *Giải thích:* Đây là thuật toán Euclid kinh điển: $\gcd(a, b) = \gcd(b, a \pmod b)$ với trường hợp cơ sở $\gcd(a, 0) = a$. Độ phức tạp chỉ $\mathcal{O}(\log(\min(a, b)))$.
+
+#### Câu 10 (Ước lượng độ phức tạp thời gian — Time Limit Estimation):
+Với giới hạn thời gian $1.0\text{s}$ trên máy chấm (tương đương khoảng $10^8$ phép tính) và $N = 10^5$, thuật toán nào sau đây sẽ bị **Time Limit Exceeded (TLE)**?
+
+- **A.** Thuật toán một vòng lặp $\mathcal{O}(N)$ ($10^5$ phép tính).
+- **B.** Thuật toán $\mathcal{O}(N \log N)$ ($2 \times 10^6$ phép tính).
+- **C.** **[Đáp án đúng]** Thuật toán hai vòng lặp lồng nhau $\mathcal{O}(N^2)$ ($(10^5)^2 = 10^{10}$ phép tính, chạy mất $\approx 100$ giây).
+- **D.** Thuật toán $\mathcal{O}(\log N)$ ($17$ phép tính).
+
+> *Giải thích:* Khi $N = 10^5$, độ phức tạp $\mathcal{O}(N^2)$ đòi hỏi $10^{10}$ thao tác, vượt gấp 100 lần ngưỡng $10^8$ phép tính của 1 giây chấm thi.
+
+---
+
+## 8. Ma trận bài tập thực hành (P0 → P2)
+
+| STT | Mã Bài | Tên Bài Toán | Cấp Độ | Ràng Buộc Dữ Liệu | Mục Tiêu Rèn Luyện |
+|:---:|:---:|---|:---:|---|---|
+| 01 | `CPPB-L0-17` | **Đọc & In Mảng Số Nguyên Theo Thứ Tự Ngược** | `P0` | $1 \le N \le 10^5, -10^9 \le a_i \le 10^9$ | Khai báo `vector<int>`, truy cập chỉ số ngược từ $N-1$ về $0$ |
+| 02 | `CPPB-L0-18` | **Đếm Số Lượng Số Chẵn Trong Vector** | `P0` | $1 \le N \le 10^5, -10^9 \le a_i \le 10^9$ | Duyệt vector bằng range-based for, điều kiện lọc chẵn |
+| 03 | `CPPB-L0-19` | **Tìm Giá Trị Lớn Nhất & Vị Trí Xuất Hiện** | `P1` | $1 \le N \le 10^5, -10^9 \le a_i \le 10^9$ | Tìm max kết hợp lưu vết chỉ số $1$-based đầu tiên |
+| 04 | `CPPB-L0-20` | **Viết Hàm Kiểm Tra Mảng Tăng Dần Nghiêm Ngặt** | `P1` | $1 \le N \le 10^5, -10^9 \le a_i \le 10^9$ | Tổ chức hàm nhận `const vector<int>&`, kiểm tra cặp kề $a[i] \le a[i-1]$ |
+| 05 | `CPPB-L0-21` | **Đếm Số Lần Xuất Hiện Của Ký Tự Trong Xâu** | `P1` | $1 \le \|S\| \le 10^5$ | Đọc xâu `string`, duyệt từng ký tự `for (char c : s)` |
+| 06 | `CPPB-L0-22` | **Lập Bảng Đếm Tần Suất Các Chữ Cái Thường** | `P2` | $1 \le \|S\| \le 10^5$ | Mảng đếm phân phối 26 chữ cái `c - 'a'`, tìm max tần suất |
+| 07 | `CPPB-L0-23` | **Đảo Ngược Mảng Bằng Kỹ Thuật Swap Hai Đầu** | `P2` | $1 \le N \le 10^5, -10^9 \le a_i \le 10^9$ | Tổ chức hàm truyền tham chiếu sửa đổi `vector<int>&`, kỹ thuật Hai con trỏ |
+| 08 | `CPPB-L0-24` | **Kiểm Tra Xâu Đối Xứng (Palindrome)** | `P2` | $1 \le \|S\| \le 10^5$ | Viết hàm `bool isPalindrome(const string& s)` duyệt đối xứng |
+
