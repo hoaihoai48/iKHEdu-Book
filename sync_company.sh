@@ -30,32 +30,34 @@ git checkout publish-dktech
 # 4. Lấy commit message mới nhất từ main để đặt làm message đồng bộ
 LATEST_MSG=$(git log -1 --pretty=%B main)
 
-# 5. Merge các thay đổi mới từ main vào nhánh publish (nối tiếp commit history)
-# Dùng --no-commit để luôn kiểm tra và lọc sạch file agent trước khi tạo commit
-git merge main --no-commit --no-ff -m "$LATEST_MSG" || true
+# 5. Lấy toàn bộ diff mới nhất từ main đắp trực tiếp lên cây thư mục (Linear changes, KHÔNG DÙNG git merge)
+git checkout main -- .
 
-# 6. Loại bỏ triệt để các file agent khỏi staging trước khi commit
-git rm -rf --cached .agent .agents AGENTS.md GEMINI.md 2>/dev/null || true
+# 6. Loại bỏ triệt để file agent & script đồng bộ khỏi staging
+git rm -rf --cached .agent .agents AGENTS.md GEMINI.md sync_company.sh 2>/dev/null || true
+rm -f sync_company.sh 2>/dev/null || true
 
-# Đảm bảo .gitignore trên nhánh publish luôn ignore các file agent
-if ! grep -q "^\.agent/" .gitignore 2>/dev/null; then
+# Đảm bảo .gitignore trên nhánh publish luôn ignore các file agent và script nội bộ
+if ! grep -q "sync_company.sh" .gitignore 2>/dev/null; then
     cat << 'GITIGNORE_EOF' >> .gitignore
 
-# AI Agent configs & prompt guidelines
+# AI Agent configs & deployment tools
 .agent/
 .agents/
 AGENTS.md
 GEMINI.md
+sync_company.sh
 GITIGNORE_EOF
     git add .gitignore
 fi
 
-# 7. Tạo commit mới nối tiếp vào lịch sử (nếu có thay đổi)
+# 7. Tạo DUY NHẤT 1 commit mới nối tiếp vào lịch sử thẳng (Linear History)
 if [ -n "$(git status --porcelain)" ]; then
+    git add -A
     git commit -m "$LATEST_MSG"
     echo "✅ Đã tạo commit mới nối tiếp: $LATEST_MSG"
     
-    # 8. Push nối tiếp bình thường lên nhánh main của DKTECHVN (KHÔNG DÙNG --force)
+    # 8. Push thẳng lên nhánh main của DKTECHVN
     git push dktech publish-dktech:main
 else
     echo "ℹ️ Không có thay đổi mới nào để commit sang repo công ty."
@@ -64,4 +66,4 @@ fi
 # 9. Tự động quay về lại nhánh main cho bạn làm việc tiếp
 git checkout main
 
-echo "🎉 ĐỒNG BỘ THÀNH CÔNG! Lịch sử commit đã được ghi nhận trên https://github.com/DKTECHVN/giao-trinh-ikh"
+echo "🎉 ĐỒNG BỘ THÀNH CÔNG! Lịch sử commit tuyến tính đã được ghi nhận trên https://github.com/DKTECHVN/giao-trinh-ikh"
