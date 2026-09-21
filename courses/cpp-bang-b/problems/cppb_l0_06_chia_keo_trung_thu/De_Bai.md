@@ -1,4 +1,4 @@
-# Đổi đơn vị độ dài từ mét sang centimet
+# Chia kẹo Trung Thu
 
 ## Bối cảnh
 Nhân dịp Tết Trung Thu, cô giáo chủ nhiệm mang đến lớp một gói kẹo gồm $N$ chiếc kẹo để chia đều cho $K$ bạn học sinh trong lớp. Mỗi bạn học sinh đều nhận được số lượng kẹo bằng nhau. Số kẹo còn dư lại (nếu có) sẽ được cho vào hòm quà chung của lớp.

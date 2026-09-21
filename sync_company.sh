@@ -5,9 +5,9 @@ set -e
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_DIR"
 
-# 1. Kiểm tra trạng thái git
-if [ -n "$(git status --porcelain)" ]; then
-    echo "⚠️ Working tree chưa commit hết. Vui lòng commit các thay đổi trên nhánh main trước khi đồng bộ!"
+# 1. Kiểm tra trạng thái git trên main
+if [ -n "$(git status --porcelain | grep -v '^\?\?')" ]; then
+    echo "⚠️ Working tree còn thay đổi chưa commit. Vui lòng commit trên nhánh main trước khi đồng bộ!"
     exit 1
 fi
 
@@ -17,16 +17,29 @@ if [ "$current_branch" != "main" ]; then
     exit 1
 fi
 
-echo "🚀 Bắt đầu đồng bộ snapshot mới nhất sang repo công ty (DKTECHVN)..."
+echo "🚀 Bắt đầu đồng bộ commit mới từ main sang repo công ty (DKTECHVN)..."
 
-# 2. Tạo nhánh mồ côi tạm thời không có lịch sử cũ
-git checkout --orphan dktech-sync-temp
+# 2. Đảm bảo nhánh publish-dktech tồn tại và theo dõi dktech/main
+if ! git show-ref --verify --quiet refs/heads/publish-dktech; then
+    git branch publish-dktech dktech/main
+fi
 
-# 3. Loại bỏ triệt để các file agent khỏi staging
+# 3. Chuyển sang nhánh publish-dktech
+git checkout publish-dktech
+
+# 4. Lấy commit message mới nhất từ main để đặt làm message đồng bộ
+LATEST_MSG=$(git log -1 --pretty=%B main)
+
+# 5. Merge các thay đổi mới từ main vào nhánh publish (nối tiếp commit history)
+# Dùng --no-commit để luôn kiểm tra và lọc sạch file agent trước khi tạo commit
+git merge main --no-commit --no-ff -m "$LATEST_MSG" || true
+
+# 6. Loại bỏ triệt để các file agent khỏi staging trước khi commit
 git rm -rf --cached .agent .agents AGENTS.md GEMINI.md 2>/dev/null || true
 
-# 4. Thêm rule ignore vào .gitignore trên snapshot này
-cat << 'GITIGNORE_EOF' >> .gitignore
+# Đảm bảo .gitignore trên nhánh publish luôn ignore các file agent
+if ! grep -q "^\.agent/" .gitignore 2>/dev/null; then
+    cat << 'GITIGNORE_EOF' >> .gitignore
 
 # AI Agent configs & prompt guidelines
 .agent/
@@ -34,17 +47,21 @@ cat << 'GITIGNORE_EOF' >> .gitignore
 AGENTS.md
 GEMINI.md
 GITIGNORE_EOF
-git add .gitignore
+    git add .gitignore
+fi
 
-# 5. Tạo duy nhất 1 commit snapshot mới nhất
-DATE_STR=$(date +"%Y-%m-%d %H:%M:%S")
-git commit -m "feat: release curriculum update ($DATE_STR)"
+# 7. Tạo commit mới nối tiếp vào lịch sử (nếu có thay đổi)
+if [ -n "$(git status --porcelain)" ]; then
+    git commit -m "$LATEST_MSG"
+    echo "✅ Đã tạo commit mới nối tiếp: $LATEST_MSG"
+    
+    # 8. Push nối tiếp bình thường lên nhánh main của DKTECHVN (KHÔNG DÙNG --force)
+    git push dktech publish-dktech:main
+else
+    echo "ℹ️ Không có thay đổi mới nào để commit sang repo công ty."
+fi
 
-# 6. Đẩy đè thẳng lên nhánh main của DKTECHVN (giữ lịch sử 1 commit sạch)
-git push dktech dktech-sync-temp:main --force
-
-# 7. Quay lại main và dọn dẹp nhánh tạm
+# 9. Tự động quay về lại nhánh main cho bạn làm việc tiếp
 git checkout main
-git branch -D dktech-sync-temp
 
-echo "🎉 ĐỒNG BỘ THÀNH CÔNG lên https://github.com/DKTECHVN/giao-trinh-ikh!"
+echo "🎉 ĐỒNG BỘ THÀNH CÔNG! Lịch sử commit đã được ghi nhận trên https://github.com/DKTECHVN/giao-trinh-ikh"

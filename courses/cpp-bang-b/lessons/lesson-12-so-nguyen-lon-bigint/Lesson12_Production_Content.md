@@ -349,7 +349,7 @@ Khi cần tính $A^B$ với `A = 2` và `B = 10000` (kết quả chính xác kh�
 
 - **B.** **[Đáp án đúng]** Kết hợp thuật toán Lũy thừa nhị phân $\mathcal{O}(\log B)$ với phép nhân 2 số nguyên lớn.
 
-- **C.** Dùng hàm `pow(2, 10000)` trong thư viện `<cmath>`.
+- **C.** Dùng hàm `pow(2, 10000)` kiểu số thực thông thường.
 
 - **D.** Chuyển sang hệ nhị phân rồi in ra.
 

@@ -101,7 +101,13 @@ Mọi tài liệu giáo trình Word (`.docx`) xuất bản bắt buộc tuân th
    * **Định dạng Xuống dòng Sample IO (Multiline Testcase)**: Tuyệt đối không dồn dữ liệu testcase nhiều dòng thành một dòng ngang cách nhau bằng dấu cách hay dấu ba chấm. Mọi testcase ma trận, mảng hay danh sách nhiều dòng **bắt buộc tách thành từng đoạn riêng biệt (`<w:p>`) trong ô bảng**, mỗi dòng kế thừa cùng mức `left_indent` để các số/ký tự thẳng hàng dọc chằn chặn như Quyển 1.
    * **Chuẩn hóa Mô tả Đầu vào (Input)**: Phải đầy đủ số dòng, kích thước ma trận và định dạng ký tự rõ ràng, tuân thủ đúng cú pháp:
      - Dòng 1: Ghi rõ số dòng và số cột (ví dụ: `Hai số nguyên $N$ và $M$ ($1 \le N, M \le 1000$)...`).
-     - Các dòng tiếp theo: `N dòng tiếp theo: Mỗi dòng gồm một chuỗi...` hoặc `Mỗi dòng gồm M số nguyên...`, tuyệt đối không dùng câu cụt lủn thiếu kích thước.
+   * **Mục lục (TOC) & Đánh số trang**:
+     - Tiêu đề "Mục lục" 18pt Bold Đen tuyền `#000000`, `pageBreakBefore=True`.
+     - Chương/Lời nói đầu/Phụ lục 14pt Bold, Bài học 13pt Regular (thụt lề `320dxa`), màu `#000000`.
+     - Tab leader dấu chấm `pos="9899"`.
+     - Trường số trang động dùng mẫu phân rã OpenXML `PAGEREF <bookmark> \h` kèm `<w:noProof/>`.
+     - **TUYỆT ĐỐI CẤM** gắn `<w:updateFields w:val="true"/>` trong `word/settings.xml` (tránh bật popup cảnh báo bảo mật khi mở Word).
 
 Trước khi bàn giao, chạy `@../skills/ikhedu-authoring/references/qa-checklist.md`, cập nhật evidence ledger/decision log khi cần.
+
 

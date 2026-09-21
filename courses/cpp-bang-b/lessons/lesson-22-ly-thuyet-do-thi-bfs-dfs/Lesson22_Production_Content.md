@@ -61,7 +61,7 @@
 
 ### Mẫu 1: DFS đếm số thành phần liên thông và tìm kích thước từng thành phần
 
-> **Lưu ý về Stack Overflow:** Hàm DFS đệ quy dưới đây có thể gây tràn ngăn xếp hệ thống (Segmentation Fault) khi đồ thị có dạng đường thẳng $N = 2 \times 10^5$ đỉnh (độ sâu đệ quy lên tới $N$ tầng). Trong thi đấu thực tế, nên dùng **DFS bằng `std::stack` tường minh** hoặc thiết lập `ulimit -s unlimited` (Linux) trước khi chạy. Mẫu đệ quy được giữ lại ở đây vì tính trực quan sư phạm.
+> **Lưu ý về Stack Overflow:** Hàm DFS đệ quy dưới đây có thể gây tràn ngăn xếp hệ thống (Segmentation Fault) khi đồ thị có dạng đường thẳng $N = 2 \times 10^5$ đỉnh (độ sâu đệ quy lên tới $N$ tầng). Trong thi đấu thực tế, nên dùng **DFS bằng `stack` tường minh** hoặc thiết lập `ulimit -s unlimited` (Linux) trước khi chạy. Mẫu đệ quy được giữ lại ở đây vì tính trực quan sư phạm.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -401,7 +401,7 @@ Một đồ thị có hướng được gọi là Liên thông mạnh (Strongly 
 |---|---|:---:|---|
 | `CPPB-GRA-01` | Chuyển Đổi Danh Sách Cạnh Sang Danh Sách Kề | **P0** | Xây dựng `adj[u]` và tính bậc của từng đỉnh trong $\mathcal{O}(V+E)$. |
 | `CPPB-GRA-02` | Duyệt Đồ Thị Theo Chiều Sâu (DFS Traversal) | **P1** | In thứ tự các đỉnh được thăm bằng hàm đệ quy `DFS`. |
-| `CPPB-GRA-03` | Duyệt Đồ Thị Theo Chiều Rộng (BFS Traversal) | **P1** | In thứ tự các đỉnh được thăm bằng hàng đợi `std::queue`. |
+| `CPPB-GRA-03` | Duyệt Đồ Thị Theo Chiều Rộng (BFS Traversal) | **P1** | In thứ tự các đỉnh được thăm bằng hàng đợi `queue`. |
 | `CPPB-GRA-04` | Đếm Số Thành Phần Liên Thông | **P2** | Đếm số lần gọi `DFS` trên các đỉnh chưa thăm. |
 | `CPPB-GRA-05` | Tìm Kích Thước Thành Phần Liên Thông Lớn Nhất | **P2** | DFS tích lũy số lượng đỉnh trong từng vùng liên thông. |
 | `CPPB-GRA-06` | Kiểm Tra Đường Đi Giữa Hai Đỉnh (Path Finding) | **P2** | DFS / BFS kiểm tra xem $T$ có đến được từ $S$. |

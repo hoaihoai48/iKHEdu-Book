@@ -4,9 +4,9 @@
 
 Trong lập trình thi đấu hiện đại, việc tự cài đặt lại cây nhị phân cân bằng hay bảng băm từ đầu cho mọi bài toán là không khả thi. C++ Standard Template Library (STL) cung cấp các cấu trúc dữ liệu tối ưu hóa cực mạnh:
 
-* **`std::set` / `std::map`:** Cây đỏ-đen (Red-Black Tree) tự cân bằng, luôn duy trì các phần tử theo thứ tự tăng dần. Các thao tác tìm kiếm, chèn, xóa đều có độ phức tạp đảm bảo $\mathcal{O}(\log N)$.
-* **`std::unordered_map` / `std::unordered_set`:** Bảng băm trực tiếp (Hash Table), đạt thời gian trung bình $\mathcal{O}(1)$ cho các truy vấn.
-* **`std::priority_queue`:** Cấu trúc Heap nhị phân hoàn chỉnh, cho phép truy xuất phần tử lớn nhất (hoặc nhỏ nhất) trong $\mathcal{O}(1)$ và thêm/bớt trong $\mathcal{O}(\log N)$.
+* **`set` / `map`:** Cây đỏ-đen (Red-Black Tree) tự cân bằng, luôn duy trì các phần tử theo thứ tự tăng dần. Các thao tác tìm kiếm, chèn, xóa đều có độ phức tạp đảm bảo $\mathcal{O}(\log N)$.
+* **`unordered_map` / `unordered_set`:** Bảng băm trực tiếp (Hash Table), đạt thời gian trung bình $\mathcal{O}(1)$ cho các truy vấn.
+* **`priority_queue`:** Cấu trúc Heap nhị phân hoàn chỉnh, cho phép truy xuất phần tử lớn nhất (hoặc nhỏ nhất) trong $\mathcal{O}(1)$ và thêm/bớt trong $\mathcal{O}(\log N)$.
 
 ![So sánh Set Map vs Unordered Map](assets/stl_set_map_rb_tree_vi.svg)
 
@@ -21,7 +21,7 @@ Trong lập trình thi đấu hiện đại, việc tự cài đặt lại cây 
 | `st.upper_bound(x)` | Giá trị mốc | Iterator đầu tiên $>$ `x` |
 | `st.erase(x)` / `st.erase(it)` | Giá trị hoặc iterator | Số phần tử đã xóa (`set`) / iterator sau vị trí xóa |
 
-> **Bẫy dùng sai hàm toàn cục:** `std::lower_bound(st.begin(), st.end(), x)` (hàm `<algorithm>`) trên `set` phải duyệt từng bước iterator nên mất $\mathcal{O}(N)$. Trên cây phải luôn dùng hàm thành viên `st.lower_bound(x)` để được $\mathcal{O}(\log N)$.
+> **Bẫy dùng sai hàm toàn cục:** Hàm tìm kiếm toàn cục `lower_bound(st.begin(), st.end(), x)` trên `set` phải duyệt từng bước iterator nên mất $\mathcal{O}(N)$. Trên cây phải luôn dùng hàm thành viên `st.lower_bound(x)` để được $\mathcal{O}(\log N)$.
 
 ### Ví dụ tối giản + dry-run: nén `[100, 20, 100]` thành `[1, 0, 1]`
 
@@ -98,9 +98,9 @@ vals.erase(it, vals.end()); // cắt bỏ từ it đến hết -> [20, 100]
 ## 4. Các bẫy lỗi lập trình kinh điển
 
 1. **Bẫy Worst-case $\mathcal{O}(N)$ của `unordered_map` do Anti-Hash Test:**
-* Trong các kỳ thi competitive, hàm băm mặc định `std::hash` của `unordered_map` rất dễ bị các test đối kháng (Anti-hash tests) làm tràn bucket $\implies$ Độ phức tạp tụt xuống $\mathcal{O}(N^2)$ và bị TLE.
-* **Quy tắc an toàn:** Dùng `std::map` khi $N \le 2 \cdot 10^5$ (đảm bảo $\mathcal{O}(N \log N)$), hoặc dùng Custom Hash an toàn với hằng số thời gian ngẫu nhiên `chrono`.
-2. **Bẫy xóa phần tử trong `std::multiset`:**
+* Trong các kỳ thi competitive, hàm băm mặc định `hash` của `unordered_map` rất dễ bị các test đối kháng (Anti-hash tests) làm tràn bucket $\implies$ Độ phức tạp tụt xuống $\mathcal{O}(N^2)$ và bị TLE.
+* **Quy tắc an toàn:** Dùng `map` khi $N \le 2 \cdot 10^5$ (đảm bảo $\mathcal{O}(N \log N)$), hoặc dùng Custom Hash an toàn với hằng số thời gian ngẫu nhiên `chrono`.
+2. **Bẫy xóa phần tử trong `multiset`:**
 * Lệnh `ms.erase(x)` sẽ **xóa TOÀN BỘ** các phần tử có giá trị bằng $x$ trong multiset!
 * **Cú pháp chuẩn khi chỉ muốn xóa 1 bản sao:** `ms.erase(ms.find(x));`.
 3. **Bẫy truy cập `map[key]` tự động chèn phần tử mới:**
@@ -205,9 +205,9 @@ return 0;
 
 ## Câu hỏi trắc nghiệm củng cố khái niệm
 
-#### Câu 1 (Bản chất std::set):
+#### Câu 1 (Bản chất set):
 
-Cấu trúc dữ liệu `std::set` trong C++ được cài đặt dựa trên cấu trúc cây nào
+Cấu trúc dữ liệu `set` trong C++ được cài đặt dựa trên cấu trúc cây nào
 
 - **A.** Cây nhị phân tìm kiếm thông thường (BST).
 
@@ -219,9 +219,9 @@ Cấu trúc dữ liệu `std::set` trong C++ được cài đặt dựa trên c�
 
 > *Giải thích:* Red-Black Tree đảm bảo độ cao của cây luôn là $\mathcal{O}(\log N)$, giữ cho mọi thao tác tìm kiếm, chèn, xóa đạt $\mathcal{O}(\log N)$ trong mọi trường hợp.
 
-#### Câu 2 (Xóa 1 phần tử trong std::multiset):
+#### Câu 2 (Xóa 1 phần tử trong multiset):
 
-Để xóa đúng một phần tử có giá trị $x$ trong `std::multiset<int> ms`, cú pháp nào sau đây là chính xác
+Để xóa đúng một phần tử có giá trị $x$ trong `multiset<int> ms`, cú pháp nào sau đây là chính xác
 
 - **A.** `ms.erase(x);`
 
@@ -277,7 +277,7 @@ Khai báo nào sau đây tạo ra một Hàng đợi ưu tiên Min-Heap trong C+
 
 #### Câu 6 (Độ phức tạp các thao tác priority_queue):
 
-Trong `std::priority_queue`, độ phức tạp thời gian của các hàm `top()`, `push()`, `pop()` lần lượt là:
+Trong `priority_queue`, độ phức tạp thời gian của các hàm `top()`, `push()`, `pop()` lần lượt là:
 
 - **A.** $\mathcal{O}(1), \mathcal{O}(1), \mathcal{O}(1)$
 
@@ -289,7 +289,7 @@ Trong `std::priority_queue`, độ phức tạp thời gian của các hàm `top
 
 > *Giải thích:* `top()` chỉ đọc đỉnh heap trong $\mathcal{O}(1)$. `push()` và `pop()` thực hiện vun đống (heapify up/down) theo chiều cao cây $\mathcal{O}(\log N)$.
 
-#### Câu 7 (Bẫy truy cập std::map):
+#### Câu 7 (Bẫy truy cập map):
 
 Khi thực hiện kiểm tra $if (mp[key] = 5)$ mà $key$ chưa từng xuất hiện trong $map$, điều gì sẽ xảy ra
 
@@ -301,11 +301,11 @@ Khi thực hiện kiểm tra $if (mp[key] = 5)$ mà $key$ chưa từng xuất hi
 
 - **D.** Chương trình bị Runtime Error.
 
-> *Giải thích:* Toán tử `[]` của `std::map` có side-effect tự động khởi tạo phần tử mới nếu chưa tồn tại. Cần dùng `mp.find(key)` để kiểm tra an toàn.
+> *Giải thích:* Toán tử `[]` của `map` có side-effect tự động khởi tạo phần tử mới nếu chưa tồn tại. Cần dùng `mp.find(key)` để kiểm tra an toàn.
 
 #### Câu 8 (Khác biệt giữa set và unordered_set):
 
-Ưu điểm lớn nhất của `std::set` so với `std::unordered_set` là gì
+Ưu điểm lớn nhất của `set` so với `unordered_set` là gì
 
 - **A.** Chạy nhanh hơn trong mọi trường hợp.
 
@@ -315,11 +315,11 @@ Khi thực hiện kiểm tra $if (mp[key] = 5)$ mà $key$ chưa từng xuất hi
 
 - **D.** Cho phép chứa các phần tử trùng lặp.
 
-> *Giải thích:* `std::unordered_set` không có thứ tự và không hỗ trợ tìm kiếm cận trên/dưới.
+> *Giải thích:* `unordered_set` không có thứ tự và không hỗ trợ tìm kiếm cận trên/dưới.
 
-#### Câu 9 (Tìm kiếm lower_bound trên std::set):
+#### Câu 9 (Tìm kiếm lower_bound trên set):
 
-Để tìm phần tử nhỏ nhất $\ge x$ trong `std::set<int> st`, cú pháp nào có hiệu năng tối ưu $\mathcal{O}(\log N)$
+Để tìm phần tử nhỏ nhất $\ge x$ trong `set<int> st`, cú pháp nào có hiệu năng tối ưu $\mathcal{O}(\log N)$
 
 - **A.** `lower_bound(st.begin(), st.end(), x);`
 
@@ -329,7 +329,7 @@ Khi thực hiện kiểm tra $if (mp[key] = 5)$ mà $key$ chưa từng xuất hi
 
 - **D.** `binary_search(st.begin(), st.end(), x);`
 
-> *Giải thích:* Phải dùng hàm thành viên `st.lower_bound(x)` chạy trên cây trong $\mathcal{O}(\log N)$. Hàm toàn cục `std::lower_bound` duyệt trên iterator của set sẽ mất $\mathcal{O}(N)$.
+> *Giải thích:* Phải dùng hàm thành viên `st.lower_bound(x)` chạy trên cây trong $\mathcal{O}(\log N)$. Hàm toàn cục `lower_bound` duyệt trên iterator của set sẽ mất $\mathcal{O}(N)$.
 
 #### Câu 10 (Duy trì Trung vị động):
 
@@ -339,13 +339,13 @@ Trong bài toán tìm trung vị động của luồng dữ liệu, ta sử dụ
 
 - **B.** **[Đáp án đúng]** Một Max-Heap chứa nửa phần tử nhỏ và một Min-Heap chứa nửa phần tử lớn.
 
-- **C.** Một `std::queue` và một `std::stack`.
+- **C.** Một `queue` và một `stack`.
 
 - **D.** Hai cây phân đoạn.
 
 > *Giải thích:* Hai Heap giữ cân bằng kích thước cho phép truy xuất phần tử trung vị ở đỉnh heap trong $\mathcal{O}(1)$ và thêm phần tử mới trong $\mathcal{O}(\log N)$.
 
-#### Câu 11 (Cấu trúc std::map lồng nhau):
+#### Câu 11 (Cấu trúc map lồng nhau):
 
 Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, kiểu dữ liệu nào sau đây là chuẩn mực
 
@@ -357,7 +357,7 @@ Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, ki
 
 - **D.** `unordered_map<pair<int, int>, int> mp;` (không có custom hash).
 
-> *Giải thích:* `std::pair` hoặc `vector` có sẵn toán tử so sánh `<` nên dùng trực tiếp làm key trong `std::map` cực kỳ an toàn.
+> *Giải thích:* `pair` hoặc `vector` có sẵn toán tử so sánh `<` nên dùng trực tiếp làm key trong `map` cực kỳ an toàn.
 
 #### Câu 12 (Đếm số phần tử phân biệt trong cửa sổ):
 
@@ -373,9 +373,9 @@ Muốn lưu tần suất xuất hiện của các cặp tọa độ $(x, y)$, ki
 
 > *Giải thích:* Khi cửa sổ trượt, chỉ có 1 phần tử thêm vào và 1 phần tử bị loại ra, cập nhật biến đếm trong $\mathcal{O}(1)$.
 
-#### Câu 13 (Hàm std::unique trong C++):
+#### Câu 13 (Hàm unique trong C++):
 
-Hàm `std::unique(v.begin(), v.end())` chỉ hoạt động chính xác khi nào
+Hàm `unique(v.begin(), v.end())` chỉ hoạt động chính xác khi nào
 
 - **A.** Khi vector có kích thước chẵn.
 
@@ -385,7 +385,7 @@ Hàm `std::unique(v.begin(), v.end())` chỉ hoạt động chính xác khi nào
 
 - **D.** Luôn hoạt động chính xác với mọi mảng chưa sắp xếp.
 
-> *Giải thích:* `std::unique` chỉ loại bỏ các phần tử trùng lặp đứng LIỀN KỀ nhau. Do đó mảng bắt buộc phải được `sort` trước.
+> *Giải thích:* `unique` chỉ loại bỏ các phần tử trùng lặp đứng LIỀN KỀ nhau. Do đó mảng bắt buộc phải được `sort` trước.
 
 #### Câu 14 (Hàng đợi ưu tiên lưu Struct / Comparator):
 
@@ -401,9 +401,9 @@ Muốn `priority_queue` ưu tiên phần tử có giá trị nhỏ nhất, nếu
 
 > *Giải thích:* `priority_queue` mặc định đưa phần tử lớn nhất theo quan hệ `<` lên đỉnh. Để phần tử nhỏ nhất lên đỉnh, ta đảo ngược định nghĩa thành `val > other.val`.
 
-#### Câu 15 (Duyệt toàn bộ phần tử trong std::map):
+#### Câu 15 (Duyệt toàn bộ phần tử trong map):
 
-Cách duyệt in toàn bộ các cặp `(key, value)` trong `std::map<string, int> mp` theo thứ tự từ điển chuẩn C++11 là:
+Cách duyệt in toàn bộ các cặp `(key, value)` trong `map<string, int> mp` theo thứ tự từ điển chuẩn C++11 là:
 
 - **A.** `for (int i = 0; i < mp.size(); ++i) cout << mp[i];`
 
@@ -419,10 +419,10 @@ Cách duyệt in toàn bộ các cặp `(key, value)` trong `std::map<string, in
 
 | Mã Bài Tập | Tên Bài Toán | Mức Độ | Trọng Tâm Kiến Thức & Kỹ Năng STL |
 |---|---|:---:|---|
-| `CPPB-STL-01` | Đếm Số Phần Tử Phân Biệt | **P0** | Dùng `std::set` hoặc sort + unique cơ bản $\mathcal{O}(N \log N)$. |
-| `CPPB-STL-02` | Bảng Tra Cứu Tần Suất Từ Khóa | **P1** | Sử dụng `std::map<string, int>` đếm số lần xuất hiện. |
+| `CPPB-STL-01` | Đếm Số Phần Tử Phân Biệt | **P0** | Dùng `set` hoặc sort + unique cơ bản $\mathcal{O}(N \log N)$. |
+| `CPPB-STL-02` | Bảng Tra Cứu Tần Suất Từ Khóa | **P1** | Sử dụng `map<string, int>` đếm số lần xuất hiện. |
 | `CPPB-STL-03` | Nén Tọa Độ Mảng Số Lớn | **P1** | Áp dụng quy trình 4 bước nén giá trị về $[0, K-1]$. |
-| `CPPB-STL-04` | Tìm Phần Tử Nhỏ Nhất Lớn Hơn X | **P2** | Sử dụng `st.lower_bound(x)` trên `std::set`. |
+| `CPPB-STL-04` | Tìm Phần Tử Nhỏ Nhất Lớn Hơn X | **P2** | Sử dụng `st.lower_bound(x)` trên `set`. |
 | `CPPB-STL-05` | Hàng đợi ưu tiên K Phần Tử Lớn Nhất | **P2** | Dùng Min-Heap kích thước $K$ duy trì top $K$ phần tử. |
 | `CPPB-STL-06` | Quản Lý Tập Hợp Đa Trùng Lặp (Multiset) | **P2** | Thao tác chèn, tìm kiếm và xóa đúng 1 bản sao với `ms.find()`. |
 | `CPPB-STL-07` | Hợp Nhất Các Đoạn Số (Merge Intervals) | **P2** | Sắp xếp các đoạn theo đầu mút kết hợp cấu trúc dữ liệu. |
@@ -432,5 +432,5 @@ Cách duyệt in toàn bộ các cặp `(key, value)` trong `std::map<string, in
 | `CPPB-STL-11` | Lập Lịch Công Việc Tối Ưu Máy Chủ | **P3** | `priority_queue` quản lý thời điểm máy chủ rảnh rỗi. |
 | `CPPB-STL-12` | Đếm Cặp Số Có Hiệu Bằng K Số Lớn | **P4** | Nén tọa độ kết hợp mảng đếm tần suất hoặc tìm kiếm nhị phân. |
 | `CPPB-STL-13` | Truy Vấn Phần Tử Xuất Hiện Nhiều Nhất | **P4** | Cấu trúc dữ liệu kết hợp duy trì tần suất cực đại online. |
-| `CPPB-STL-14` | Tìm Cặp Điểm Gần Nhất (Closest Pair) | **P4** | Đường quét (Sweep-line) kết hợp `std::set` $\mathcal{O}(N \log N)$. |
+| `CPPB-STL-14` | Tìm Cặp Điểm Gần Nhất (Closest Pair) | **P4** | Đường quét (Sweep-line) kết hợp `set` $\mathcal{O}(N \log N)$. |
 | `CPPB-STL-15` | Hệ Thống Xếp Hạng Thi Đấu Dynamic (Mastery) | **P5** | Cấu trúc dữ liệu STL đa tiêu chí hỗ trợ cập nhật điểm và xếp hạng. |

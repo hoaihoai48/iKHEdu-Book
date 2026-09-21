@@ -283,8 +283,8 @@ Thứ tự chuẩn xác nhất của một lập trình viên khi giải quyết
 | 02 | `CPPB-L0-02` | **Tính Chu Vi & Diện Tích Hình Chữ Nhật** | `P0` | $1 \le a, b \le 10^9$ | Biểu thức số học, tránh tràn số với tích `long long` |
 | 03 | `CPPB-L0-03` | **Tính Giá Trị Trung Bình Cộng Ba Số** | `P1` | $0 \le a, b, c \le 10$ | Ép kiểu số thực `1.0 * sum / 3`, định dạng `fixed` `setprecision` |
 | 04 | `CPPB-L0-04` | **Tìm Chữ Số Hàng Đơn Vị** | `P1` | $10 \le N \le 10^9$ | Ứng dụng phép chia dư `% 10` rút trích chữ số |
-| 05 | `CPPB-L0-05` | **Chia Kẹo Công Bằng & Tính Kẹo Dư** | `P1` | $100 \le N \le 999$ | Tách các chữ số hàng trăm, chục, đơn vị bằng `/` và `%` |
-| 06 | `CPPB-L0-06` | **Đổi Đơn Vị Độ Dài Từ Mét Sang Centimet** | `P1` | $1 \le N, K \le 10^9$ | Phép nhân quy đổi đơn vị số lớn với `long long` |
+| 05 | `CPPB-L0-05` | **Tổng Chữ Số Của Số Có Ba Chữ Số** | `P1` | $100 \le N \le 999$ | Tách các chữ số hàng trăm, chục, đơn vị bằng `/` và `%` |
+| 06 | `CPPB-L0-06` | **Chia Kẹo Trung Thu** | `P1` | $1 \le N, K \le 10^9$ | Phép chia nguyên `/` (thương) và chia dư `%` (dư) số lớn `long long` |
 | 07 | `CPPB-L0-07` | **Đổi Thời Gian Từ Giờ Phút Sang Giây** | `P2` | $0 \le T \le 10^9$ | Phép chia nguyên `/` và chia dư `%` liên hoàn |
 | 08 | `CPPB-L0-08` | **Tính Tiền Mua Vở Có Khuyến Mãi** | `P2` | $1 \le N \le 10^9, 1 \le P \le 10^6$ | Xử lý phép toán thực tế, kiểm soát tràn số trung gian `1LL` |
 

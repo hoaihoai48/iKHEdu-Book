@@ -172,7 +172,7 @@ return 0;
 
 #### Câu 1 (Bản chất FIFO của Queue):
 
-Điểm khác biệt cốt lõi giữa `std::queue` và `std::stack` là gì
+Điểm khác biệt cốt lõi giữa `queue` và `stack` là gì
 
 - **A.** Queue cho phép truy cập ngẫu nhiên theo chỉ số.
 
@@ -186,7 +186,7 @@ return 0;
 
 #### Câu 2 (Độ phức tạp Monotonic Deque):
 
-Thuật toán tìm Min trên cửa sổ trượt độ dài $K$ bằng `std::deque` có độ phức tạp thời gian là bao nhiêu
+Thuật toán tìm Min trên cửa sổ trượt độ dài $K$ bằng `deque` có độ phức tạp thời gian là bao nhiêu
 
 - **A.** $\mathcal{O}(N \log K)$
 
@@ -200,7 +200,7 @@ Thuật toán tìm Min trên cửa sổ trượt độ dài $K$ bằng `std::deq
 
 #### Câu 3 (Khi nào cần Deque thay vì Queue):
 
-Cấu trúc `std::deque` vượt trội hơn `std::queue` ở điểm nào
+Cấu trúc `deque` vượt trội hơn `queue` ở điểm nào
 
 - **A.** Chiếm ít bộ nhớ hơn.
 
@@ -210,7 +210,7 @@ Cấu trúc `std::deque` vượt trội hơn `std::queue` ở điểm nào
 
 - **D.** Tự động loại bỏ phần tử trùng nhau.
 
-> *Giải thích:* `std::deque` là double-ended queue cực kỳ linh hoạt cho các kỹ thuật nâng cao.
+> *Giải thích:* `deque` là double-ended queue cực kỳ linh hoạt cho các kỹ thuật nâng cao.
 
 #### Câu 4 (Bẫy đánh dấu visited trong BFS):
 
@@ -246,9 +246,9 @@ Trên đồ thị mà trọng số các cạnh chỉ có thể là $0$ hoặc $1
 
 - **A.** Dùng Dijkstra với `priority_queue` $\mathcal{O}(E \log V)$.
 
-- **B.** **[Đáp án đúng]** Dùng `std::deque`: Đi qua cạnh 0 thì `push_front()`, đi qua cạnh 1 thì `push_back()`.
+- **B.** **[Đáp án đúng]** Dùng `deque`: Đi qua cạnh 0 thì `push_front()`, đi qua cạnh 1 thì `push_back()`.
 
-- **C.** Dùng `std::stack`.
+- **C.** Dùng `stack`.
 
 - **D.** Dùng đệ quy DFS.
 
@@ -284,7 +284,7 @@ Bài toán đổi số tiền $S$ với ít đồng xu nhất có thể giải b
 
 #### Câu 9 (Trạng thái rỗng của Deque):
 
-Lệnh nào sau đây xóa sạch toàn bộ các phần tử trong `std::deque<int> dq`
+Lệnh nào sau đây xóa sạch toàn bộ các phần tử trong `deque<int> dq`
 
 - **A.** `dq.erase();`
 
@@ -354,7 +354,7 @@ Thuật toán BFS kiểm tra đồ thị hai phía (2-coloring) bằng cách tô
 
 #### Câu 14 (Hàng đợi hai đầu trong Sliding Window Median):
 
-Tại sao `std::deque` không thể dùng trực tiếp để tìm Trung vị (Median) trong cửa sổ trượt
+Tại sao `deque` không thể dùng trực tiếp để tìm Trung vị (Median) trong cửa sổ trượt
 
 - **A.** Vì Deque chạy chậm.
 
@@ -384,7 +384,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 
 | Mã Bài Tập | Tên Bài Toán | Mức Độ | Trọng Tâm Kiến Thức & Kỹ Năng Queue/Deque |
 |---|---|:---:|---|
-| `CPPB-QUE-01` | Cài Đặt Hàng Đợi Cơ Bản | **P0** | Thao tác `push`, `pop`, `front` và kiểm tra rỗng với `std::queue`. |
+| `CPPB-QUE-01` | Cài Đặt Hàng Đợi Cơ Bản | **P0** | Thao tác `push`, `pop`, `front` và kiểm tra rỗng với `queue`. |
 | `CPPB-QUE-02` | Sinh Chuỗi Số Nhị Phân Bằng Queue | **P1** | Hàng đợi sinh tuần tự $N$ chuỗi nhị phân tăng dần. |
 | `CPPB-QUE-03` | BFS Tìm Đường Đi Ngắn Nhất Đồ Thị | **P1** | Cài đặt BFS chuẩn mực trên danh sách kề không trọng số. |
 | `CPPB-QUE-04` | Truy Vết Lộ Trình Ngắn Nhất BFS | **P2** | Sử dụng mảng `parent` khôi phục chính xác các đỉnh đi qua. |
@@ -392,7 +392,7 @@ Cho số nguyên $A$, mỗi bước có thể nhân 2 ($A \times 2$) hoặc tr�
 | `CPPB-QUE-06` | Max Mọi Cửa Sổ Trượt Độ Dài K | **P2** | Monotonic Deque duy trì giá trị lớn nhất trên cửa sổ trượt. |
 | `CPPB-QUE-07` | Kiểm Tra Đồ Thị Hai Phía (2-Coloring) | **P2** | BFS tô màu luân phiên $1$ và $2$ phát hiện chu trình lẻ. |
 | `CPPB-QUE-08` | Biến Đổi Số Bước Nhỏ Nhất (A sang B) | **P3** | BFS trên không gian số nguyên với mảng đánh dấu `visited`. |
-| `CPPB-QUE-09` | 0-1 BFS Tìm Đường Ngắn Nhất Trọng Số 0/1 | **P3** | Dùng `std::deque` tối ưu hóa đường đi trong $\mathcal{O}(V + E)$. |
+| `CPPB-QUE-09` | 0-1 BFS Tìm Đường Ngắn Nhất Trọng Số 0/1 | **P3** | Dùng `deque` tối ưu hóa đường đi trong $\mathcal{O}(V + E)$. |
 | `CPPB-QUE-10` | Đoạn Con Tổng Lớn Nhất Độ Dài Tối Đa K | **P3** | Kết hợp Prefix Sum và Monotonic Deque cực tiểu hóa $pref[j]$. |
 | `CPPB-QUE-11` | Trò Chơi Vòng Tròn Josephus Bằng Queue | **P3** | Mô phỏng loại trừ vòng tròn bằng Queue quay vòng $\mathcal{O}(N \cdot K)$. |
 | `CPPB-QUE-12` | Khoảng Cách Đến Trạm Cứu Hỏa Gần Nhất | **P4** | Multi-source BFS (BFS đa nguồn) đẩy toàn bộ trạm vào Queue ban đầu. |

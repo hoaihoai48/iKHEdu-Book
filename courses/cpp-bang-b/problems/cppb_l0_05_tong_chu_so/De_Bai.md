@@ -1,4 +1,4 @@
-# Chia kẹo công bằng và tính kẹo dư
+# Tổng chữ số của số có ba chữ số
 
 ## Bối cảnh
 Trong môn Toán tư duy, các bạn nhỏ được làm quen với khái niệm "Tổng các chữ số". Cô giáo đố bạn Nam tính thật nhanh tổng các chữ số của một số nguyên dương có đúng 3 chữ số mà không cần dùng đến vòng lặp.

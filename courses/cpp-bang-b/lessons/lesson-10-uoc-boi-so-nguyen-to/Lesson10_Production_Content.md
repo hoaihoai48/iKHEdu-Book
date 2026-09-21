@@ -39,14 +39,14 @@ Bảng chạy tay `isPrime(29)` ($\lfloor \sqrt{29} \rfloor = 5$, chỉ xét $i 
 | $5$ | $25 \le 29$ | $4$ | Chưa tìm được ước, xét tiếp |
 | $6$ | $36 > 29$ | Dừng vòng lặp | **$29$ là số nguyên tố** |
 
-### Bảng cú pháp `std::gcd` / `std::lcm` (thư viện `<numeric>`)
+### Bảng cú pháp hàm `gcd` / `lcm` chuẩn C++
 
 | Hàm | Tham số | Trả về | Ví dụ |
 |:---|:---|:---|---|
-| `std::gcd(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Ước chung lớn nhất của `a` và `b` | `std::gcd(252, 105)` $\implies$ `21` |
-| `std::lcm(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Bội chung nhỏ nhất của `a` và `b` | `std::lcm(4, 6)` $\implies$ `12` |
+| `gcd(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Ước chung lớn nhất của `a` và `b` | `gcd(252, 105)` $\implies$ `21` |
+| `lcm(a, b)` | Hai số nguyên (kiểu nguyên bất kỳ) | Bội chung nhỏ nhất của `a` và `b` | `lcm(4, 6)` $\implies$ `12` |
 
-> **Lưu ý quan trọng:** `std::lcm` tính theo công thức $a / \gcd(a,b) \times b$ (chia trước nhân sau để tránh tràn số). Khi tự viết hàm `getGcd` bằng Euclid thì kết quả phải khớp `std::gcd` trên cùng bộ test.
+> **Lưu ý quan trọng:** `lcm` tính theo công thức $a / \gcd(a,b) \times b$ (chia trước nhân sau để tránh tràn số). Khi tự viết hàm `getGcd` bằng Euclid thì kết quả phải khớp `gcd` trên cùng bộ test.
 
 ## 2. Mô phỏng từng bước
 

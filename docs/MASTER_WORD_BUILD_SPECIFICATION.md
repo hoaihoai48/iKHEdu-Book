@@ -155,6 +155,28 @@ Bảng Sample IO trong Quyển 1 chuẩn vận hành theo thuật toán căn l�
       * $\text{max\_len} \ge 24$ ký tự: $\text{left\_indent} = \mathbf{10.0\text{ pt}}$ (giữ cách mép trái an toàn).
     * *Giải quyết triệt để lỗi Hình 2*: Khi output ngắn (như số `4`), `left_indent` sẽ tự động nhảy lên `72.0pt` để số `4` nằm cân xứng ở chính giữa cột Output, không bị dính sát mép trái như hiện tại!
 
+### 5.4. Quy chuẩn Mục lục (Table of Contents), Đánh số trang & Cơ chế Update Field (PAGEREF)
+* **Vị trí & Ngắt trang**: Mục lục đặt ở cuối tài liệu, tiêu đề mang thuộc tính **`pageBreakBefore = True`** để nằm trên trang mới riêng biệt.
+* **Typography chuẩn in ấn**:
+  * **Tiêu đề `Mục lục`**: Font `Times New Roman 18.0pt Bold`, màu đen tuyền `#000000`, căn trái `Left`, khoảng cách dưới `after = 140 dxa` (7pt).
+  * **Đầu mục Lời nói đầu, Chương, Phụ lục**: Font `Times New Roman 14.0pt Bold`, màu đen `#000000`, khoảng cách trên `before = 140 - 160 dxa`, dưới `after = 30 - 40 dxa`.
+  * **Đầu mục Bài học**: Font `Times New Roman 13.0pt Regular`, màu đen `#000000`, thụt lề trái `left = 280 - 320 dxa`, khoảng cách `before = 20 - 24 dxa`, `after = 20 - 24 dxa`.
+* **Căn chỉnh dòng & Tab Leader**:
+  * Bắt buộc có thẻ `<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="9899"/></w:tabs>` trên mỗi đoạn văn mục lục để các dấu chấm `....` kéo dài đều tăm tắp sát lề phải.
+* **Cấu trúc trường số trang động `PAGEREF` chuẩn xác**:
+  * Bắt buộc dùng cấu trúc thẻ phân rã OpenXML độc lập, chuẩn hoá thẻ `<w:noProof/>` cho số trang ban đầu:
+    ```xml
+    <w:r><w:tab/></w:r>
+    <w:r><w:fldChar w:fldCharType="begin"/></w:r>
+    <w:r><w:instrText>PAGEREF <bookmark_name> \h</w:instrText></w:r>
+    <w:r><w:fldChar w:fldCharType="separate"/></w:r>
+    <w:r><w:rPr><w:noProof/></w:rPr><w:t><page_init></w:t></w:r>
+    <w:r><w:fldChar w:fldCharType="end"/></w:r>
+    ```
+* **QUY TẮC BẢO VỆ TỆP (CẤM GÂY POPUP CẢNH BÁO TRÊN WORD)**:
+  * **Tuyệt đối CẤM chèn thẻ `<w:updateFields w:val="true"/>` vào `word/settings.xml`**.
+  * **Lý do**: Thẻ `updateFields` sẽ kích hoạt cảnh báo bảo mật của Microsoft Word (*"This document contains fields that may refer to other files. Do you want to update..."*) mỗi khi người dùng mở tệp, gây gián đoạn và lo ngại lỗi file. Trường `PAGEREF` cục bộ tự nó đã hỗ trợ bấm `F9` (Update Field) khi người dùng cần mà không cần bật cờ hệ thống này.
+
 ---
 
 ## 6. Quy Chuẩn Đề Bài Lập Trình & Tính Toàn Vẹn Hệ Thống (Server Integrity)

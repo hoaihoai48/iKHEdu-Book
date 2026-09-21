@@ -498,7 +498,7 @@ Khi cần thực hiện **Cập nhật cả đoạn (Range Update)** và **Truy 
 | `CPPB-RNG-03` | Cập Nhật Đoạn & Truy Vấn Điểm Bằng BIT | **P1** | Fenwick Tree trên Mảng hiệu $D[i]$ hỗ trợ Range Add. |
 | `CPPB-RNG-04` | Tìm Giá Trị Lớn Nhất & Đếm Số Lần Xuất Hiện | **P2** | Segment Tree lưu cặp `(max_val, count)` kết hợp tại nút cha. |
 | `CPPB-RNG-05` | Đếm Số Cặp Nghịch Thế (Inversion Count) | **P2** | Nén tọa độ kết hợp Fenwick Tree đếm số phần tử nhỏ hơn phía sau. |
-| `CPPB-RNG-06` | Truy Vấn Ước Chung Lớn Nhất Đoạn (Range GCD) | **P2** | Segment Tree với hàm kết hợp `std::gcd` $\mathcal{O}(\log N)$. |
+| `CPPB-RNG-06` | Truy Vấn Ước Chung Lớn Nhất Đoạn (Range GCD) | **P2** | Segment Tree với hàm kết hợp `gcd` $\mathcal{O}(\log N)$. |
 | `CPPB-RNG-07` | Tìm Phần Tử Thứ K Nhỏ Nhất (K-th Element) | **P2** | Nhảy nhị phân trên Fenwick Tree (Binary Lifting on BIT). |
 | `CPPB-RNG-08` | Tìm Vị Trí Đầu Tiên Có Giá Trị >= X | **P3** | Tìm kiếm nhị phân trực tiếp trên Segment Tree trong $\mathcal{O}(\log N)$. |
 | `CPPB-RNG-09` | Dãy Con Tăng Dài Nhất LIS O(N log N) Bằng BIT | **P3** | Nén tọa độ, dùng BIT lưu $\max(dp)$ theo tiền tố giá trị. |

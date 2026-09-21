@@ -5,7 +5,7 @@
 Ngăn xếp (Stack) là cấu trúc dữ liệu hoạt động theo nguyên lý **LIFO (Last In, First Out — Vào sau, Ra trước)**:
 
 * Phần tử được thêm vào cuối cùng sẽ là phần tử đầu tiên được lấy ra.
-* Các thao tác cơ bản trong C++ `std::stack`: `push(x)` (thêm vào đỉnh), `pop()` (xóa đỉnh), `top()` (truy cập đỉnh), `empty()`, `size()`. Toàn bộ thao tác đều đạt thời gian tối ưu tuyệt đối $\mathcal{O}(1)$.
+* Các thao tác cơ bản trong C++ `stack`: `push(x)` (thêm vào đỉnh), `pop()` (xóa đỉnh), `top()` (truy cập đỉnh), `empty()`, `size()`. Toàn bộ thao tác đều đạt thời gian tối ưu tuyệt đối $\mathcal{O}(1)$.
 
 ![Cơ chế LIFO của Stack và Khớp Dấu Ngoặc](assets/stack_lifo_operation_vi.svg)
 
@@ -339,9 +339,9 @@ Bài toán tính lượng nước mưa đọng lại giữa các cột có thể
 
 > *Giải thích:* Duy trì stack giảm dần, khi gặp cột cao hơn sẽ hình thành "vũng trũng" giữa cột hiện tại, đáy trũng (đỉnh stack vừa pop) và biên trái (đỉnh stack mới).
 
-#### Câu 15 (Stack dùng mảng tự tạo vs std::stack):
+#### Câu 15 (Stack dùng mảng tự tạo vs stack):
 
-Trong C++, việc tự tạo stack bằng một mảng `int st[N]` và biến con trỏ `top_idx = 0` so với dùng `std::stack` có ưu điểm gì
+Trong C++, việc tự tạo stack bằng một mảng `int st[N]` và biến con trỏ `top_idx = 0` so với dùng `stack` có ưu điểm gì
 
 - **A.** Giúp code chạy chính xác hơn.
 
@@ -357,7 +357,7 @@ Trong C++, việc tự tạo stack bằng một mảng `int st[N]` và biến co
 
 | Mã Bài Tập | Tên Bài Toán | Mức Độ | Trọng Tâm Kiến Thức & Kỹ Năng Stack |
 |---|---|:---:|---|
-| `CPPB-STK-01` | Kiểm Tra Dãy Ngoặc Đúng Cơ Bản | **P0** | Cài đặt `std::stack` kiểm tra chuỗi ngoặc đơn loại `()`. |
+| `CPPB-STK-01` | Kiểm Tra Dãy Ngoặc Đúng Cơ Bản | **P0** | Cài đặt `stack` kiểm tra chuỗi ngoặc đơn loại `()`. |
 | `CPPB-STK-02` | Dãy Ngoặc Hỗn Hợp Nhiều Loại | **P1** | Xử lý ghép cặp đồng thời `()`, `[]`, `{}` và bẫy stack rỗng. |
 | `CPPB-STK-03` | Đánh Giá Biểu Thức Hậu Tố (RPN) | **P1** | Đọc chuỗi token, thực hiện phép toán số học trên Stack. |
 | `CPPB-STK-04` | Xóa Các Ký Tự Trùng Lặp Liền Kề | **P2** | Duyệt chuỗi kết hợp Stack khử các cặp ký tự giống nhau. |
