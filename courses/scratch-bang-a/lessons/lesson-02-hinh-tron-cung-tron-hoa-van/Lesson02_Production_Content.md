@@ -3,6 +3,7 @@
 ## 1. Khởi Động: Từ Đa Giác Đều Đến Đường Cong Mềm Mại
 
 Ở Bài 01, chúng ta đã khám phá công thức vẽ các hình đa giác đều:
+
 - Tam giác đều ($3$ cạnh): Xoay ngoài $360^\circ / 3 = 120^\circ$.
 - Hình vuông ($4$ cạnh): Xoay ngoài $360^\circ / 4 = 90^\circ$.
 - Lục giác đều ($6$ cạnh): Xoay ngoài $360^\circ / 6 = 60^\circ$.
@@ -23,7 +24,9 @@ Khối lệnh căn bản nhất để vẽ một đường tròn khép kín tron
 ![Khối lặp vẽ hình tròn](../../assets/rendered_blocks/l02_circle_360_vi.png)
 
 *Quy trình thực hiện:*
+
 - 🟠 **Lặp lại (360) lần**:
+
   - 🔵 `di chuyển (1) bước`
   - 🔵 `xoay phải ↻ (1) độ`
 
@@ -33,6 +36,7 @@ Tổng góc xoay sau 360 lần lặp là $360 \times 1^\circ = 360^\circ$ (tròn
 
 ### 2.2. Công thức toán học: Mối quan hệ giữa Bán kính $R$ và Bước đi
 Trong hình học:
+
 - Chu vi hình tròn: $C = 2 \times \pi \times R \approx 2 \times 3.14 \times R = 6.28 \times R$.
 - Vì hình tròn gồm $360$ bước nhỏ ghép lại, độ dài mỗi bước đi của nhân vật tương ứng với $1^\circ$ là:
   $$\text{Bước đi} = \frac{C}{360} = \frac{2 \times 3.14 \times R}{360}$$
@@ -50,6 +54,7 @@ Trong hình học:
 ## 3. Kỹ Thuật Vẽ Cung Tròn (Arc) Bất Kỳ
 
 Một **cung tròn** là một phần của đường tròn. Số độ của cung tròn chính là góc mở ở tâm:
+
 - Cung $90^\circ$: Bằng $\frac{1}{4}$ đường tròn (góc vuông).
 - Cung $180^\circ$: Bằng $\frac{1}{2}$ đường tròn (nửa hình tròn / cầu vồng).
 - Cung $60^\circ$: Bằng $\frac{1}{6}$ đường tròn.
@@ -63,7 +68,9 @@ Một **cung tròn** là một phần của đường tròn. Số độ của cu
 
 *Cấu trúc khối lệnh:*
 - 🔴 **định nghĩa ve_cung_tron (goc) (buoc)**:
+
   - 🟠 `lặp lại (goc) lần`:
+
     - 🔵 `di chuyển (buoc) bước`
     - 🔵 `xoay phải ↻ (1) độ`
 
@@ -77,10 +84,14 @@ Bí quyết nằm ở chỗ: **Một chiếc cánh hoa được tạo bởi $2$ 
 ![Sơ đồ cấu tạo cánh hoa](../../assets/pen_drawings/pen_img_006.png)
 
 ### Các bước tạo cánh hoa góc $90^\circ$:
+
 1. Vẽ cung tròn thứ nhất $90^\circ$: Gọi `ve_cung_tron (90) (buoc)`.
+
 2. Tại đỉnh nhọn trên cùng, nhân vật cần quay một góc bù để quay mặt hướng về điểm xuất phát:
    $$\text{Góc xoay đỉnh} = 180^\circ - 90^\circ = 90^\circ$$
+
 3. Vẽ tiếp cung tròn thứ hai $90^\circ$: Gọi `ve_cung_tron (90) (buoc)`.
+
 4. Tại đỉnh nhọn dưới cùng, nhân vật lại xoay phải $90^\circ$ để trở lại hướng ban đầu.
 
 Vì hai bước này lặp lại y hệt nhau, ta gom gọn bằng một vòng lặp `lặp lại 2 lần`:
@@ -89,7 +100,9 @@ Vì hai bước này lặp lại y hệt nhau, ta gom gọn bằng một vòng l
 
 *Cấu trúc khối lệnh:*
 - 🔴 **định nghĩa ve_canh_hoa (buoc)**:
+
   - 🟠 `lặp lại (2) lần`:
+
     - 🔴 `ve_cung_tron (90) (buoc)`
     - 🔵 `xoay phải ↻ (90) độ`
 
@@ -190,6 +203,7 @@ Nếu muốn vẽ một nửa đường tròn (cung $180^\circ$ hình cầu vồ
 
 #### Câu 5 (Cấu tạo cánh hoa)
 Một cánh hoa mắt ngọc được tạo thành bởi:
+
 - A. 4 đoạn thẳng khép kín.
 - B. 2 cung tròn uốn cong đối xứng nhau khép kín tại 2 đầu đỉnh.
 - C. 1 hình tròn và 1 hình tam giác.
@@ -246,14 +260,3 @@ Logo Olympic gồm 5 vòng tròn lồng nhau: 3 vòng hàng trên (Xanh dương,
 > **Giải thích:** Tham số hóa My Blocks mang lại khả năng tái sử dụng mã nguồn đỉnh cao, giúp kịch bản lập trình cực kỳ chuyên nghiệp và trong sáng.
 
 ---
-
-## 9. Tóm Tắt & Hướng Dẫn Thực Hành
-
-> **GHI NHỚ CỐT LÕI:**
-> 1. **Hình tròn:** Lặp 360 lần [Đi $C / 360$ bước, Xoay phải $1^\circ$].
-> 2. **Cung tròn $\alpha^\circ$:** Lặp $\alpha$ lần [Đi $C / 360$ bước, Xoay phải $1^\circ$].
-> 3. **Cánh hoa:** Lặp 2 lần [Vẽ cung $\alpha^\circ$, Xoay phải $(180^\circ - \alpha)$ độ].
-> 4. **Bông hoa $K$ cánh:** Lặp $K$ lần [Vẽ cánh hoa, Xoay phải $360^\circ / K$ độ].
-> 5. **Chuyển hình:** Nhớ câu thần chú **"Nhấc bút $\to$ Chuyển chỗ $\to$ Đặt bút"**.
-
-👉 **Tiếp theo:** Mở file [`Bai_Tap.md`](file:///Users/vu/Developer/ikhEdu_lessons/courses/scratch-bang-a/lessons/lesson-02-hinh-tron-cung-tron-hoa-van/Bai_Tap.md) để bắt đầu thực hành các bài tập vẽ hình tròn, cánh hoa, logo Olympic và họa tiết hoa văn thực tế từ `sca_pen_p10` đến `sca_pen_p15`!

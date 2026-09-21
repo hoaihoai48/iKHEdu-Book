@@ -1,6 +1,6 @@
 # DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 11 — ƯỚC SỐ, BỘI SỐ VÀ SỐ NGUYÊN TỐ
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 4: Số Học & Thuật Toán Tách Số  
 > **Tổng số bài tập thực hành:** `14 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 

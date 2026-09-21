@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 10 — KỸ THUẬT TÁCH CHỮ SỐ CỦA SỐ NGUYÊN
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 10 — Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 4: Số Học & Thuật Toán Tách Số  
 > **Tổng số bài tập thực hành:** `14 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -333,6 +333,7 @@ Với dữ liệu đầu vào là `9875`, kết quả thu được tương ứng
 * **Mã bài toán:** `sca_l10_p14_so_tang_giam_dep`
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Bạn Cún thích xếp những bậc thang bằng các chữ số. Có hôm bạn ấy xếp được cầu thang đi lên thật đẹp, có hôm lại xếp được cầu thang đi xuống thật gọn. Cô giáo gọi đó là:
+
  * **Số Tăng Dần:** Nếu mỗi chữ số đứng sau luôn lớn hơn chữ số đứng trước nó (ví dụ: $1379, 258$).
  * **Số Giảm Dần:** Nếu mỗi chữ số đứng sau luôn nhỏ hơn chữ số đứng trước nó (ví dụ: $9641, 852$). Cún nhờ em nhìn giúp xem mỗi con số là cầu thang lên, cầu thang xuống hay không phải cầu thang.
 * **Nhiệm vụ:** Cho số $N$. In ra `TANG` nếu $N$ là số tăng dần, in `GIAM` nếu $N$ là số giảm dần, và in `KHONG` nếu không thỏa mãn cả 2 tính chất trên.

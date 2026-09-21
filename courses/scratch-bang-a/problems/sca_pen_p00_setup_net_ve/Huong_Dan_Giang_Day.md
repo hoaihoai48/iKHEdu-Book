@@ -16,8 +16,11 @@
   - Quên thiết lập tọa độ ban đầu khiến dấu cộng bị lệch khỏi tâm sân khấu.
 
 ## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+
 1. *"Trước khi cầm bút vẽ trên trang giấy trắng, ta cần chuẩn bị gì?"* $\to$ Xóa sạch trang giấy cũ (`erase all`), chọn màu mực và gọt bút chì (`set pen size`).
+
 2. *"Sau khi chú Mèo vẽ xong 1 nhánh dài 50 bước, chú Mèo đang ở đâu?"* $\to$ Đang ở đầu mút của nhánh cây.
+
 3. *"Làm thế nào để chú Mèo quay về điểm xuất phát để vẽ nhánh thứ 2?"* $\to$ Cho chú Mèo đi lùi $-50$ bước (`move -50 steps`).
 
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
@@ -47,14 +50,23 @@
 ![Khối lệnh giải bài sca_pen_p00](../../assets/rendered_blocks/sca_pen_p00_solution_vi.png)
 
 *Quy trình thực hiện bằng Tiếng Việt:*
+
 1. 🟡 **Khi bấm vào cờ xanh**
+
 2. 🟢 **Xóa tất cả**
+
 3. 🟢 **Nhấc bút**
+
 4. 🔵 **Đi tới điểm x: (0) y: (0)**
+
 5. 🔵 **Đặt hướng bằng (90)**
+
 6. 🟢 **Chọn màu vẽ [Đỏ]**
+
 7. 🟢 **Đặt kích thước bút vẽ bằng (3)**
+
 8. 🟢 **Đặt bút**
+
 9. 🟠 **Lặp lại (4) lần:**
    - 🔵 `di chuyển (50) bước` (vẽ 1 nhánh)
    - 🔵 `di chuyển (-50) bước` (lùi về tâm)

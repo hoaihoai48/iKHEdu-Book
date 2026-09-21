@@ -88,9 +88,21 @@ Khóa học Scratch có đặc thù là sử dụng **rất nhiều hình ảnh 
    - Giữ nguyên tỉ lệ khung hình (Aspect Ratio), căn giữa trang in (`WD_ALIGN_PARAGRAPH.CENTER`), khoảng cách trên dưới `4.0 pt`.
 2. **Hình ảnh trong phần Lý thuyết (`LessonXX_Production_Content.md`)**:
    - Tự động map các đường dẫn tương đối `../../assets/rendered_blocks/` và `../../assets/pen_drawings/` về thư mục ảnh tuyệt đối.
-3. **Hình ảnh Lời giải trong Phụ lục B**:
-   - Toàn bộ 324 bài tập đều đã có ảnh kết xuất khối lệnh Scratch 3.0 Tiếng Việt độ phân giải cao `solution_blocks_vi.png`.
-   - Trong Phụ lục B, dưới mỗi tiêu đề bài toán sẽ chèn trực tiếp ảnh `solution_blocks_vi.png` (kèm kịch bản chữ tóm tắt), giúp học sinh và phụ huynh nhìn trực quan cấu trúc khối lệnh mà không cần mở máy tính.
+3. **Hình ảnh Lời giải trong Phụ lục B (Chuẩn hóa theo khuôn Python)**:
+   - **Đồng bộ 100% với sách Python đã duyệt**: Phụ lục B của mỗi bài học **chỉ in 3 bài tập tiêu biểu đầu tiên** (P01, P02, P03) kèm ảnh khối lệnh giải mẫu hoàn chỉnh.
+   - Ngay sau bài thứ 3, bắt buộc chèn câu chốt chuẩn sư phạm:
+     > *"Các bài tập còn lại có phương pháp và cấu trúc tương tự, học sinh tự suy luận và cài đặt."*
+   - Tuyệt đối không show 100% toàn bộ lời giải để tránh sách quá dày và tránh việc học sinh xem trước đáp án.
+
+4. **Định dạng Chú thích ảnh (`Image Caption`) & Khử vỡ hạt ảnh**:
+   - Chú thích ảnh dưới hình bắt buộc: Căn giữa (`Center`), font Times New Roman `10.5pt Italic`, màu đen tuyền `#000000`, cách trên `2pt`, cách dưới `6pt`.
+   - Khử vỡ hạt: Chạy render lại ảnh khối lệnh với zoom 2.5x–3x từ SVG; trong Word không cưỡng ép phóng to các ảnh nhỏ lên 15cm mà giữ nguyên kích thước hiển thị sắc nét tự nhiên (chỉ thu nhỏ nếu vượt quá 15cm).
+
+5. **Làm sạch trang in & Căn lề Bảng biểu**:
+   - Xóa bỏ hoàn toàn các đường kẻ ngang rác `<hr/>` sinh ra từ `---` trong markdown.
+   - Chuyển toàn bộ màu chữ Callout (`Block Text`) sang màu đen `#000000`.
+   - Bảng lý thuyết: Căn trái các ô chữ dài $\ge 4$ ký tự (tránh vỡ chữ như "Tam giác đều"), chỉ căn giữa các ô số ngắn $\le 3$ ký tự.
+   - Tự động chuẩn hóa markdown: Chèn dòng trống trước mọi danh sách gạch đầu dòng sau dấu hai chấm `:` để xuống dòng thẳng hàng tuyệt đối.
 
 ---
 
@@ -132,11 +144,19 @@ Khóa học Scratch có đặc thù là sử dụng **rất nhiều hình ảnh 
        - Ký tự đầu dòng: `• ` (bullet tròn).
        - Khoảng cách: Cách dòng **`24 dxa`** ($1.2\text{ pt}$), dãn dòng đơn.
        - *Hiệu quả*: Cỡ chữ to rõ, rất vừa mắt các em học sinh Tiểu học, số trang thẳng hàng bằng tab chấm `....` nối sang mép phải.
-     - **Số trang hiển thị**: Căn thẳng hàng dọc sát mép phải nhờ tab stop `9899 dxa`, màu đen tuyền **`#000000`**, cùng font Times New Roman và cỡ chữ tương ứng với từng cấp đề mục (`14pt Bold` cho Chương, `13pt Regular` cho Bài học).
+   - **Trường số trang động trong TOC**: Sử dụng mẫu phân rã OpenXML `PAGEREF <bookmark> \h` kèm `<w:noProof/>`.
+   - **TUYỆT ĐỐI CẤM** gắn `<w:updateFields w:val="true"/>` trong `word/settings.xml` (ngăn chặn triệt để việc bật popup cảnh báo bảo mật khi người dùng mở Word).
 
 ---
 
-## 6. Phương Án Phân Chia Tập Sách (2 Quyển Cân Đối)
+## 6. Quy Chuẩn Đề Bài & Mô Tả Dữ Liệu Đầu Vào (Input Standards)
+
+- **Cấu trúc 7 phần đề bài**: Tuân thủ chuẩn mực không spoil thuật toán trong `De_Bai.md` (`# Tiêu đề`, `## Bối cảnh`, `## Nhiệm vụ`, `## Input`, `## Output`, `## Sample 1` kèm trace tay, `## Ràng buộc`).
+- **Chuẩn hóa Mô tả Đầu vào (Input)**: Phải đầy đủ số dòng, kích thước ma trận/danh sách và định dạng ký tự rõ ràng, không viết cụt lủn thiếu kích thước (theo đúng quy chuẩn `03-print-publish.md` và `academic-authoring-always-on.md`).
+
+---
+
+## 7. Phương Án Phân Chia Tập Sách (2 Quyển Cân Đối)
 
 | Quyển | Tên giáo trình đề xuất | Phạm vi Chương / Bài | Số bài tập thực hành | Số trang dự kiến | Trọng tâm học thuật & Sư phạm |
 |---|---|---|:---:|:---:|---|
@@ -144,12 +164,12 @@ Khóa học Scratch có đặc thù là sử dụng **rất nhiều hình ảnh 
 | **Quyển 2** | **Giáo trình Scratch Bảng A — Quyển 2: Thuật Toán Số Học, Danh Sách & Chuỗi Ký Tự** | **Chương 4 – 6** (Bài 09 đến Bài 16) | **130 bài** | ~185 trang | Thuật toán Tin học trẻ: Tách chữ số, ước/nguyên tố, số đặc biệt, danh sách 1-based, sắp xếp và xử lý chuỗi ký tự. |
 
 *Tên file Word đầu ra:*
-- `courses/scratch-bang-a/scratch-level-1-quyen-1.docx`
-- `courses/scratch-bang-a/scratch-level-1-quyen-2.docx`
+- `courses/scratch-bang-a/scratch-quyen-1.docx`
+- `courses/scratch-bang-a/scratch-quyen-2.docx`
 
 ---
 
-## 7. Các Bước Triển Khai Tiếp Theo (Sau Khi Phê Duyệt Plan)
+## 8. Các Bước Triển Khai Tiếp Theo (Sau Khi Phê Duyệt Plan)
 
 1. **Bước 1 — Soạn thảo tư liệu chuẩn**:
    - Viết `reference/Loi_Noi_Dau_Scratch_Quyen1.md` và `Loi_Noi_Dau_Scratch_Quyen2.md` (giọng điệu truyền cảm hứng cho học sinh Tiểu học theo đúng chuẩn mục P0–P10).
@@ -158,6 +178,13 @@ Khóa học Scratch có đặc thù là sử dụng **rất nhiều hình ảnh 
 2. **Bước 2 — Xây dựng công cụ chuyển đổi & xử lý hậu kỳ**:
    - Viết script `courses/scratch-bang-a/tools/build_word_scratch.py` kế thừa engine xử lý XML/OXML từ `build_word_python.py` và template gốc `c++-level-1-quyen-1.docx`.
    - Tích hợp bộ lọc Markdown loại bỏ Quiz khỏi bản in (chỉ in phần lý thuyết tinh gọn + bài tập thực hành).
-3. **Bước 3 — Build DOCX & Kiểm định (QA Audit)**:
-   - Chạy build cả 2 quyển.
-   - Chạy script audit kiểm tra Watermark 100% trang, 0 lỗi `tblHeader`, cỡ chữ Math 12pt, bảng Sample căn giữa và Dynamic Left Indent.
+   - Đảm bảo 100% các điều kiện kỹ thuật OpenXML (0 `tblHeader`, `cantSplit`, Math 12pt, Dynamic Left Indent, 3 Headers chứa Watermark, không có `updateFields`).
+3. **Bước 3 — Build DOCX & Kiểm định Chất Lượng (QA Audit Gate)**:
+   - Chạy build cả 2 quyển DOCX.
+   - Chạy script audit tự động kiểm tra nghiêm ngặt theo `.agents/skills/ikhedu-authoring/references/qa-checklist.md`:
+     - [x] Watermark Logo mờ hiện diện trên 100% trang (cả trang đầu, chẵn và lẻ).
+     - [x] 0 bảng nào còn thuộc tính lỗi `tblHeader`.
+     - [x] 100% công thức toán học và bảng tra cứu có cỡ chữ chuẩn 12.0pt.
+     - [x] 100% bảng Sample IO căn giữa và thụt lề động `Dynamic Left Indent`.
+     - [x] Mục lục hiển thị đầy đủ, thụt lề 320 dxa, cỡ chữ chuẩn 18pt / 14pt / 13pt, tab leader chấm kết nối chính xác.
+     - [x] Không tồn tại thẻ cảnh báo bảo mật `updateFields`.

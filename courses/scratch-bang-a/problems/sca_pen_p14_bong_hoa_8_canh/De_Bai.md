@@ -7,12 +7,16 @@ Trong khu vườn mùa xuân của xứ sở Scratch, muôn hoa đua nhau khoe s
 ## Nhiệm vụ
 
 Em hãy lập trình điều khiển chú Mèo Scratch hoàn thành bức tranh đóa hoa 8 cánh với các yêu cầu kỹ thuật sau:
+
 1. Đặt nét bút vẽ có độ dày bằng $3$.
+
 2. Tạo thủ tục con vẽ một chiếc cánh hoa đơn lẻ gồm hai cung tròn $90^\circ$ (mỗi bước vi phân dài $1.2$ bước) khép kín đối xứng nhau tại 2 đỉnh.
+
 3. Sử dụng vòng lặp xoay quanh gốc tâm $(0, 0)$ đúng $8$ lần:
    - Vẽ một chiếc cánh hoa.
    - Thay đổi màu bút vẽ một lượng thích hợp (ví dụ $15$ hoặc $20$) để cánh tiếp theo có màu mới.
    - Xoay phải quanh tâm đúng góc: $\text{Góc xoay} = \dfrac{360^\circ}{8} = 45^\circ$.
+
 4. Khi hoàn thành, đóa hoa 8 cánh xòe đều cân xứng quanh tâm, tạo thành một họa tiết hoa văn rực rỡ và hài hòa.
 
 ## Kịch bản tương tác (Input Scenario)

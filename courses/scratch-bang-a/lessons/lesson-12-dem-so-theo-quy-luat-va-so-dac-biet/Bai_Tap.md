@@ -1,6 +1,6 @@
 # DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 12 — ĐẾM SỐ THEO QUY LUẬT VÀ SỐ ĐẶC BIỆT
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 4: Số Học & Thuật Toán Tách Số  
 > **Tổng số bài tập thực hành:** `12 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -285,6 +285,7 @@ Có 3 số chính phương là 9, 16, 25.
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Bạn Kiến rất tự hào vì mỗi bạn kiến trong đàn đều góp sức làm nên tổ lớn. Bạn ấy nghe cô kể về những con số cũng "tự hào" như vậy. Một số tự nhiên $N$ có $K$ chữ số được gọi là "Số tự mãn" (Narcissistic number) nếu tổng lũy thừa bậc $K$ của các chữ số của nó đúng bằng chính số $N$.
  Ví dụ:
+
  * $N = 153$ có 3 chữ số: $1^3 + 5^3 + 3^3 = 153$ $\implies$ Thỏa mãn.
  * $N = 1634$ có 4 chữ số: $1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634$ $\implies$ Thỏa mãn. Kiến đố em tìm thêm những con số đặc biệt này, hãy bạn ấy.
 * **Nhiệm vụ:** Cho số nguyên dương $N$ ($1 \le N \le 10^9$). Hãy kiểm tra xem $N$ có phải là số tự mãn không. In `YES` nếu đúng, ngược lại in `NO`.

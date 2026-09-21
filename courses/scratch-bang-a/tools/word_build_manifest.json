@@ -1,0 +1,1466 @@
+{
+  "course": "scratch-bang-a",
+  "total_problems": 324,
+  "volumes": [
+    {
+      "volume": 1,
+      "title": "Giáo trình Scratch cơ bản — Quyển 1: Bút Vẽ Đồ Họa & Nền Tảng Khối Lệnh",
+      "header_book": "Giáo trình Scratch cơ bản - quyển 1",
+      "preface": "reference/Loi_Noi_Dau_Scratch_Quyen1.md",
+      "appendix_a": "reference/Phu_Luc_A_Scratch.md",
+      "output": "scratch-quyen-1.docx",
+      "lessons": [
+        {
+          "lesson": 1,
+          "chapter": 1,
+          "folder": "lesson-01-ve-hinh-pen-repeat",
+          "title": "Bài 01: Vẽ hình với Pen và Repeat",
+          "content_file": "lessons/lesson-01-ve-hinh-pen-repeat/Lesson01_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_pen_p00_setup_net_ve",
+              "title": "Khởi động nét vẽ & Dấu cộng trung tâm"
+            },
+            {
+              "code": "sca_pen_p01_da_giac_deu",
+              "title": "Bộ 4 Đa Giác Đều Cơ Bản"
+            },
+            {
+              "code": "sca_pen_p02_ban_phim_da_giac",
+              "title": "Bàn Phím Đa Giác Tương Tác"
+            },
+            {
+              "code": "sca_pen_p03_doi_mau_net_dam",
+              "title": "Đổi Màu Và Tăng Nét Đậm"
+            },
+            {
+              "code": "sca_pen_p04_cap_tam_giac_doi_xung",
+              "title": "Cặp Tam Giác Đối Xứng Qua Tâm"
+            },
+            {
+              "code": "sca_pen_p05_vuong_dong_tam",
+              "title": "Hình Vuông Đồng Tâm Mở Rộng"
+            },
+            {
+              "code": "sca_pen_p06_la_co_xoay_vong",
+              "title": "Lá Cờ Xoay Vòng Quanh Tâm"
+            },
+            {
+              "code": "sca_pen_p07_ngoi_sao_5_canh",
+              "title": "Ngôi Sao 5 Cánh Khép Kín"
+            },
+            {
+              "code": "sca_pen_p08_tam_giac_xoay_chong",
+              "title": "Hoa Văn Tam Giác Xoay Chồng"
+            },
+            {
+              "code": "sca_pen_p09_hoa_tiet_hinh_thoi",
+              "title": "Hoa Hình Thoi Xoay Vòng"
+            },
+            {
+              "code": "sca_pen_p10_kim_tu_thap_bac_thang",
+              "title": "Kim Tự Tháp Bậc Thang"
+            },
+            {
+              "code": "sca_pen_p11_luoi_o_vuong_ban_co",
+              "title": "Bàn Cờ Lưới Ô Vuông M x N"
+            },
+            {
+              "code": "sca_pen_p12_tam_giac_nhieu_tang",
+              "title": "Tam Giác Nhiều Tầng Xếp Chồng"
+            },
+            {
+              "code": "sca_pen_p13_luc_giac_long_nhau",
+              "title": "Lục Giác Tổ Ong Đồng Tâm"
+            },
+            {
+              "code": "sca_pen_p14_ngoi_sao_8_canh_nghe_thuat",
+              "title": "Ngôi Sao 8 Cánh Nghệ Thuật"
+            },
+            {
+              "code": "sca_pen_p15_cay_thong_noel",
+              "title": "Cây Thông Noel Đa Tầng"
+            }
+          ]
+        },
+        {
+          "lesson": 2,
+          "chapter": 1,
+          "folder": "lesson-02-hinh-tron-cung-tron-hoa-van",
+          "title": "Bài 02: Hình tròn, cung tròn và hoa văn",
+          "content_file": "lessons/lesson-02-hinh-tron-cung-tron-hoa-van/Lesson02_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_pen_p10_hinh_tron_dong_tam",
+              "title": "3 Hình tròn đồng tâm"
+            },
+            {
+              "code": "sca_pen_p11_cung_tron_cau_vong",
+              "title": "Cung tròn cầu vồng 180 độ"
+            },
+            {
+              "code": "sca_pen_p12_logo_olympic",
+              "title": "Biểu tượng 5 vòng tròn Olympic thế giới"
+            },
+            {
+              "code": "sca_pen_p13_canh_hoa_co_ban",
+              "title": "Cánh hoa mắt ngọc 2 cung 90 độ"
+            },
+            {
+              "code": "sca_pen_p14_bong_hoa_8_canh",
+              "title": "Đóa hoa 8 cánh sắc màu diệu kỳ"
+            },
+            {
+              "code": "sca_pen_p15_hoa_chong_chong",
+              "title": "Hoa văn chong chóng tự động"
+            },
+            {
+              "code": "sca_pen_p21_hinh_tron_co_ban",
+              "title": "Hình Tròn Chuẩn Bằng 360 Bước Cong"
+            },
+            {
+              "code": "sca_pen_p22_hinh_tron_dong_tam_da_sac",
+              "title": "Hình Tròn Đồng Tâm Đa Sắc"
+            },
+            {
+              "code": "sca_pen_p23_logo_olympic_5_mau",
+              "title": "Biểu Tượng 5 Vòng Tròn Olympic"
+            },
+            {
+              "code": "sca_pen_p24_cung_tron_cau_vong_7_mau",
+              "title": "Cầu Vồng 7 Sắc Rực Rỡ"
+            },
+            {
+              "code": "sca_pen_p25_canh_hoa_cung_tron_90",
+              "title": "Cánh Hoa Mảnh Ghép Cung Tròn 90 Độ"
+            },
+            {
+              "code": "sca_pen_p26_bong_hoa_da_canh",
+              "title": "Bông Hoa K Cánh Nở Rộ"
+            },
+            {
+              "code": "sca_pen_p27_chong_chong_gio",
+              "title": "Chong Chóng Gió Xoay Tít"
+            },
+            {
+              "code": "sca_pen_p28_bong_hoa_tuyet_pha_le",
+              "title": "Bông Hoa Tuyết Pha Lê 6 Nhánh"
+            },
+            {
+              "code": "sca_pen_p29_hinh_tron_khuyet",
+              "title": "Vầng Trăng Khuyết Nghệ Thuật"
+            },
+            {
+              "code": "sca_pen_p30_chia_banh_pizza_n_phan",
+              "title": "Chia Bánh Pizza N Miếng Đa Sắc"
+            },
+            {
+              "code": "sca_pen_p31_hoa_van_xoan_oc",
+              "title": "Vỏ Ốc Xoắn Archimedes"
+            },
+            {
+              "code": "sca_pen_p32_chuoi_vong_ngoc_trai",
+              "title": "Chuỗi Vòng Ngọc Trai Lấp Lánh"
+            },
+            {
+              "code": "sca_pen_p33_hoa_tiet_trang_tri_vien",
+              "title": "Họa Tiết Đường Viền Sóng Biển"
+            },
+            {
+              "code": "sca_pen_p34_hoa_van_gach_hoa_co_dien",
+              "title": "Gạch Hoa Cổ Điển Đông Dương"
+            },
+            {
+              "code": "sca_pen_p35_dai_ngan_ha_van_hoa",
+              "title": "Kính Vạn Hoa Đa Chiều (Kaleidoscope)"
+            }
+          ]
+        },
+        {
+          "lesson": 3,
+          "chapter": 2,
+          "folder": "lesson-03-lenh-xuat-nhap-bien-so-kieu-du-lieu",
+          "title": "Bài 03: Lệnh xuất nhập, biến số và kiểu dữ liệu",
+          "content_file": "lessons/lesson-03-lenh-xuat-nhap-bien-so-kieu-du-lieu/Lesson03_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l03_p01_loi_chao_robot",
+              "title": "Lời chào robot"
+            },
+            {
+              "code": "sca_l03_p02_cau_doi_tet",
+              "title": "Câu đối ngày tết"
+            },
+            {
+              "code": "sca_l03_p03_in_so_sep",
+              "title": "In số trên một hàng với sep"
+            },
+            {
+              "code": "sca_l03_p04_cap_so_nhan_doi",
+              "title": "Cặp số nhân đôi"
+            },
+            {
+              "code": "sca_l03_p05_doc_in_so_nguyen",
+              "title": "Đọc và in số nguyên"
+            },
+            {
+              "code": "sca_l03_p06_cua_hang_banh_ran",
+              "title": "Cửa hàng bánh rán"
+            },
+            {
+              "code": "sca_l03_p07_chiec_hop_hoan_doi_bi_mat",
+              "title": "Chiếc hộp hoán đổi bí mật"
+            },
+            {
+              "code": "sca_l03_p08_doan_tau_toa_xe_ghep_so",
+              "title": "Đoàn tàu toa xe ghép số"
+            },
+            {
+              "code": "sca_l03_p09_tong_hai_so_cung_dong",
+              "title": "Tổng hai số trên cùng 1 dòng"
+            },
+            {
+              "code": "sca_l03_p10_co_may_thoi_gian_3_the_he",
+              "title": "Cỗ máy thời gian 3 thế hệ"
+            },
+            {
+              "code": "sca_l03_p11_hoan_doi_hai_bien",
+              "title": "Hoán đổi vị trí hai biến"
+            },
+            {
+              "code": "sca_l03_p12_chuc_sinh_nhat",
+              "title": "Lời chúc sinh nhật cá nhân hóa"
+            },
+            {
+              "code": "sca_l03_p13_bon_phep_tinh",
+              "title": "Bốn phép tính đồng thời"
+            },
+            {
+              "code": "sca_l03_p14_ghep_ngay_thang_nam",
+              "title": "Ghép ngày tháng năm định dạng chuẩn"
+            },
+            {
+              "code": "sca_l03_p15_phep_nhan_bang",
+              "title": "In bảng phép nhân cơ bản"
+            },
+            {
+              "code": "sca_l03_p16_chenh_lech_tuoi",
+              "title": "Chênh lệch tuổi của hai anh em"
+            },
+            {
+              "code": "sca_l03_p17_tam_danh_thiep_thong_minh",
+              "title": "Tấm danh thiếp thông minh"
+            },
+            {
+              "code": "sca_l03_p18_tuoi_cua_be_sau_5_nam",
+              "title": "Tuổi của bé sau 5 năm"
+            },
+            {
+              "code": "sca_l03_p19_in_end_cung_dong",
+              "title": "In không xuống dòng với end"
+            },
+            {
+              "code": "sca_l03_p20_doi_thuoc_ke_milimet",
+              "title": "Đổi thước kẻ milimet"
+            },
+            {
+              "code": "sca_l03_p21_tong_hai_so_2_dong",
+              "title": "Tổng hai số nguyên 2 dòng"
+            },
+            {
+              "code": "sca_l03_p22_hieu_hai_so",
+              "title": "Hiệu hai số nguyên"
+            },
+            {
+              "code": "sca_l03_p23_tich_hai_so",
+              "title": "Tích hai số nguyên"
+            },
+            {
+              "code": "sca_l03_p24_ve_tham_quan_chua_huong",
+              "title": "Vé tham quan chùa hương"
+            },
+            {
+              "code": "sca_l03_p25_nhan_doi_gia_tri",
+              "title": "Nhân đôi giá trị"
+            }
+          ]
+        },
+        {
+          "lesson": 4,
+          "chapter": 2,
+          "folder": "lesson-04-toan-tu-va-bieu-thuc",
+          "title": "Bài 04: Toán tử và biểu thức",
+          "content_file": "lessons/lesson-04-toan-tu-va-bieu-thuc/Lesson04_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l04_p01_chia_deu_banh_quy",
+              "title": "Chia đều bánh quy"
+            },
+            {
+              "code": "sca_l04_p02_luy_thua_bac_hai",
+              "title": "Lũy thừa bậc hai"
+            },
+            {
+              "code": "sca_l04_p03_lap_phuong",
+              "title": "Lập phương của một số"
+            },
+            {
+              "code": "sca_l04_p04_chu_so_tan_cung",
+              "title": "Lấy chữ số tận cùng"
+            },
+            {
+              "code": "sca_l04_p05_bong_den_vien_bien_hieu",
+              "title": "Bóng đèn viền biển hiệu"
+            },
+            {
+              "code": "sca_l04_p06_chia_keo_hoc_sinh",
+              "title": "Chia kẹo cho các bạn"
+            },
+            {
+              "code": "sca_l04_p07_dong_hop_banh",
+              "title": "Đóng hộp bánh ngọt"
+            },
+            {
+              "code": "sca_l04_p08_kim_dong_ho_12_gio",
+              "title": "Kim đồng hồ 12 giờ"
+            },
+            {
+              "code": "sca_l04_p09_hai_chu_so_cuoi",
+              "title": "Lấy hai chữ số tận cùng"
+            },
+            {
+              "code": "sca_l04_p10_chu_so_hang_chuc",
+              "title": "Chữ số hàng chục"
+            },
+            {
+              "code": "sca_l04_p11_bieu_thuc_bac_nhat",
+              "title": "Giá trị biểu thức bậc nhất"
+            },
+            {
+              "code": "sca_l04_p12_ban_co_caro_vo_tan",
+              "title": "Bàn cờ Ca-rô vô tận"
+            },
+            {
+              "code": "sca_l04_p13_luy_thua_cau_thang",
+              "title": "Lũy thừa cầu thang"
+            },
+            {
+              "code": "sca_l04_p14_doi_phut_ra_gio_phut",
+              "title": "Đổi phút ra giờ phút"
+            },
+            {
+              "code": "sca_l04_p15_gia_tri_bieu_thuc_pemdas",
+              "title": "Giá trị biểu thức PEMDAS"
+            },
+            {
+              "code": "sca_l04_p16_du_quay_vong_tron",
+              "title": "Đu quay vòng tròn"
+            },
+            {
+              "code": "sca_l04_p17_tong_ba_chu_so",
+              "title": "Tổng các chữ số của số có 3 chữ số"
+            },
+            {
+              "code": "sca_l04_p18_so_dao_nguoc_3_chu_so",
+              "title": "Số đảo ngược 3 chữ số"
+            },
+            {
+              "code": "sca_l04_p19_chuyen_xe_hoc_sinh",
+              "title": "Tính số chuyến xe cần thiết"
+            },
+            {
+              "code": "sca_l04_p20_phuc_hoi_so_bi_chia",
+              "title": "Bất biến chia kẹo và phục hồi số bị chia"
+            },
+            {
+              "code": "sca_l04_p21_chia_nguyen_chia_du",
+              "title": "Phép chia nguyên và chia dư cơ bản"
+            },
+            {
+              "code": "sca_l04_p22_nhan_doi_luy_thua",
+              "title": "Nhân đôi lũy thừa"
+            },
+            {
+              "code": "sca_l04_p23_so_keo_con_thua",
+              "title": "Số kẹo còn thừa"
+            },
+            {
+              "code": "sca_l04_p24_doi_gio_ra_phut_giay",
+              "title": "Đổi giờ ra phút giây"
+            },
+            {
+              "code": "sca_l04_p25_xoa_chu_so_cuoi",
+              "title": "Xóa chữ số tận cùng"
+            },
+            {
+              "code": "sca_l04_p26_trong_cay_dai_lo",
+              "title": "Trồng cây đại lộ"
+            },
+            {
+              "code": "sca_l04_p27_vong_chay_dien_kinh",
+              "title": "Vòng chạy điền kinh"
+            },
+            {
+              "code": "sca_l04_p28_xep_ban_hoc",
+              "title": "Xếp hàng vào bàn học"
+            },
+            {
+              "code": "sca_l04_p29_tach_chu_so_tan_cung",
+              "title": "Tách chữ số tận cùng"
+            },
+            {
+              "code": "sca_l04_p30_dao_nguoc_so_2_chu_so",
+              "title": "Đảo ngược số 2 chữ số"
+            },
+            {
+              "code": "sca_l04_p31_xe_buyt_cho_hoc_sinh",
+              "title": "Xe buýt chở học sinh"
+            },
+            {
+              "code": "sca_l04_p32_da_thuc_bac_hai",
+              "title": "Đa thức bậc hai"
+            },
+            {
+              "code": "sca_l04_p33_tich_hai_tong",
+              "title": "Biểu thức có dấu ngoặc"
+            },
+            {
+              "code": "sca_l04_p34_dong_ho_24h",
+              "title": "Đồng hồ 24 giờ"
+            },
+            {
+              "code": "sca_l04_p35_ngay_trong_tuan",
+              "title": "Ngày trong tuần"
+            },
+            {
+              "code": "sca_l04_p36_phan_so_dai_so",
+              "title": "Tính phân số đại số"
+            }
+          ]
+        },
+        {
+          "lesson": 5,
+          "chapter": 2,
+          "folder": "lesson-05-phep-chia-nguyen-chia-du-luy-thua",
+          "title": "Bài 05: Phép chia nguyên, chia dư và lũy thừa",
+          "content_file": "lessons/lesson-05-phep-chia-nguyen-chia-du-luy-thua/Lesson05_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l05_p01_hinh_vuong",
+              "title": "Chu vi và diện tích hình vuông"
+            },
+            {
+              "code": "sca_l05_p02_hinh_chu_nhat",
+              "title": "Chu vi và diện tích hình chữ nhật"
+            },
+            {
+              "code": "sca_l05_p03_chu_vi_tam_giac",
+              "title": "Chu vi hình tam giác"
+            },
+            {
+              "code": "sca_l05_p04_canh_con_lai_cua_hinh_chu_nhat",
+              "title": "Cạnh còn lại của hình chữ nhật"
+            },
+            {
+              "code": "sca_l05_p05_dien_tich_hinh_thang",
+              "title": "Diện tích hình thang"
+            },
+            {
+              "code": "sca_l05_p06_doi_don_vi_dai",
+              "title": "Đổi mét sang centimet và milimet"
+            },
+            {
+              "code": "sca_l05_p07_doi_khoi_luong",
+              "title": "Đổi tạ và yến sang kilogram"
+            },
+            {
+              "code": "sca_l05_p08_thuan_di_gap_anh",
+              "title": "Thuận đi gặp ánh"
+            },
+            {
+              "code": "sca_l05_p09_phut_sang_gio_phut",
+              "title": "Đổi phút sang giờ và phút"
+            },
+            {
+              "code": "sca_l05_p10_dien_tich_bon_hoa_chu_thap",
+              "title": "Diện tích bồn hoa chữ thập"
+            },
+            {
+              "code": "sca_l05_p11_dien_tich_tam_giac_vuong",
+              "title": "Diện tích tam giác vuông"
+            },
+            {
+              "code": "sca_l05_p12_khoang_cach_thoi_gian",
+              "title": "Khoảng thời gian giữa hai thời điểm trong ngày"
+            },
+            {
+              "code": "sca_l05_p13_diem_trung_binh",
+              "title": "Điểm trung bình môn học"
+            },
+            {
+              "code": "sca_l05_p14_doi_do_c_sang_do_f",
+              "title": "Đổi độ C sang độ F"
+            },
+            {
+              "code": "sca_l05_p15_lat_gach_nen_nha",
+              "title": "Lát nền phòng học"
+            },
+            {
+              "code": "sca_l05_p16_loi_di_quanh_ho",
+              "title": "Diện tích lối đi quanh hồ nước"
+            },
+            {
+              "code": "sca_l05_p17_son_tuong_phong",
+              "title": "Tính tiền mua sơn quét tường"
+            },
+            {
+              "code": "sca_l05_p18_chay_bo_gap_nhau",
+              "title": "Bài toán chạy bộ hai người ngược chiều"
+            },
+            {
+              "code": "sca_l05_p19_manh_vuon_chu_nhat",
+              "title": "Mảnh vườn chữ nhật"
+            },
+            {
+              "code": "sca_l05_p20_khung_tranh_hinh_vuong",
+              "title": "Khung tranh hình vuông"
+            },
+            {
+              "code": "sca_l05_p21_chu_vi_tam_giac_abc",
+              "title": "Chu vi tam giác ABC"
+            },
+            {
+              "code": "sca_l05_p22_dien_tich_tam_giac_vuong",
+              "title": "Diện tích tam giác vuông"
+            },
+            {
+              "code": "sca_l05_p23_ho_ca_sau_va_dao_nho",
+              "title": "Hồ cá sấu và đảo nhỏ"
+            },
+            {
+              "code": "sca_l05_p24_doi_giay_sang_gio_phut_giay",
+              "title": "Đổi giây sang giờ phút giây"
+            },
+            {
+              "code": "sca_l05_p25_lat_gach_san_truong",
+              "title": "Lát gạch sân trường"
+            },
+            {
+              "code": "sca_l05_p26_van_toc_trung_binh",
+              "title": "Tính vận tốc trung bình"
+            },
+            {
+              "code": "sca_l05_p27_rao_quanh_vuon_hoa_co_cua",
+              "title": "Rào quanh vườn hoa có cửa"
+            },
+            {
+              "code": "sca_l05_p28_doi_giay_sang_gio_phut_giay",
+              "title": "Đổi tổng số giây sang giờ, phút, giây"
+            },
+            {
+              "code": "sca_l05_p29_doi_sang_tong_giay",
+              "title": "Đổi giờ - phút - giây sang tổng số giây"
+            },
+            {
+              "code": "sca_l05_p30_the_tich_hop_chu_nhat",
+              "title": "Thể tích hộp chữ nhật"
+            },
+            {
+              "code": "sca_l05_p31_doi_do_la_sang_tien_viet",
+              "title": "Đổi đô la sang tiền việt"
+            },
+            {
+              "code": "sca_l05_p32_hang_rao_manh_dat",
+              "title": "Hàng rào quanh mảnh đất"
+            },
+            {
+              "code": "sca_l05_p33_tinh_van_toc_lam_tron",
+              "title": "Tính vận tốc làm tròn"
+            }
+          ]
+        },
+        {
+          "lesson": 6,
+          "chapter": 3,
+          "folder": "lesson-06-cau-truc-re-nhanh-va-dieu-kien-logic",
+          "title": "Bài 06: Cấu trúc rẽ nhánh",
+          "content_file": "lessons/lesson-06-cau-truc-re-nhanh-va-dieu-kien-logic/Lesson06_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l06_p01_kiem_tra_so_chan_le",
+              "title": "Kiểm tra số chẵn lẻ"
+            },
+            {
+              "code": "sca_l06_p02_ve_vao_cong_vien",
+              "title": "Vé vào công viên"
+            },
+            {
+              "code": "sca_l06_p03_ai_cao_hon",
+              "title": "Ai cao hơn?"
+            },
+            {
+              "code": "sca_l06_p04_so_lon_nhat_trong_hai_so",
+              "title": "Số lớn nhất trong hai số"
+            },
+            {
+              "code": "sca_l06_p05_chia_keo_cong_bang",
+              "title": "Chia kẹo công bằng"
+            },
+            {
+              "code": "sca_l06_p06_dien_phep_tinh_lon_nhat",
+              "title": "Điền phép tính lớn nhất"
+            },
+            {
+              "code": "sca_l06_p07_giam_gia_sieu_thi",
+              "title": "Giảm giá siêu thị"
+            },
+            {
+              "code": "sca_l06_p08_cap_so_bang_nhau_hay_khac",
+              "title": "Cặp số bằng nhau hay khác?"
+            },
+            {
+              "code": "sca_l06_p09_tri_tuyet_doi_cua_mot_so",
+              "title": "Trị tuyệt đối của một số"
+            },
+            {
+              "code": "sca_l06_p10_bac_tho_moc_cat_go",
+              "title": "Bác thợ mộc cắt gỗ"
+            },
+            {
+              "code": "sca_l06_p11_canh_thu_tu_hinh_chu_nhat",
+              "title": "Cạnh thứ tư hình chữ nhật"
+            },
+            {
+              "code": "sca_l06_p12_tro_choi_oan_tu_ti",
+              "title": "Trò chơi oẳn tù tì"
+            },
+            {
+              "code": "sca_l06_p13_den_giao_thong_nga_tu",
+              "title": "Đèn giao thông ngã tư"
+            },
+            {
+              "code": "sca_l06_p14_dau_cua_so_nguyen",
+              "title": "Dấu của số nguyên"
+            },
+            {
+              "code": "sca_l06_p15_so_lon_nhat_trong_ba_so",
+              "title": "Số lớn nhất trong ba số"
+            },
+            {
+              "code": "sca_l06_p16_xep_loai_hoc_luc",
+              "title": "Xếp loại học lực"
+            },
+            {
+              "code": "sca_l06_p17_ve_gui_xe_ben_bai",
+              "title": "Vé gửi xe bến bãi"
+            },
+            {
+              "code": "sca_l06_p18_mario_cuu_cong_chua",
+              "title": "Mario cứu công chúa"
+            },
+            {
+              "code": "sca_l06_p19_tinh_cuoc_taxi_bac_thang",
+              "title": "Tính cước taxi bậc thang"
+            },
+            {
+              "code": "sca_l06_p20_phan_loai_tam_giac",
+              "title": "Phân loại tam giác"
+            },
+            {
+              "code": "sca_l06_p21_thuan_di_tim_anh_da_van_toc",
+              "title": "Thuận đi tìm ánh đa vận tốc"
+            },
+            {
+              "code": "sca_l06_p22_thu_may_trong_tuan",
+              "title": "Thứ mấy trong tuần?"
+            },
+            {
+              "code": "sca_l06_p23_cua_hang_banh_bot_loc_khuyen_mai",
+              "title": "Cửa hàng bánh bột lọc khuyến mãi"
+            },
+            {
+              "code": "sca_l06_p24_bon_mua_trong_nam",
+              "title": "Bốn mùa trong năm"
+            },
+            {
+              "code": "sca_l06_p25_so_chan_co_hai_chu_so",
+              "title": "Số chẵn có hai chữ số"
+            },
+            {
+              "code": "sca_l06_p26_boi_chung_cua_3_va_5",
+              "title": "Bội chung của 3 và 5"
+            },
+            {
+              "code": "sca_l06_p27_ngay_nghi_cuoi_tuan",
+              "title": "Ngày nghỉ cuối tuần"
+            },
+            {
+              "code": "sca_l06_p28_diem_nam_trong_hinh_chu_nhat",
+              "title": "Điểm nằm trong hình chữ nhật"
+            },
+            {
+              "code": "sca_l06_p29_ba_canh_tam_giac_hop_le",
+              "title": "Ba cạnh tam giác hợp lệ"
+            },
+            {
+              "code": "sca_l06_p30_kiem_tra_nam_nhuan",
+              "title": "Kiểm tra năm nhuận"
+            },
+            {
+              "code": "sca_l06_p31_so_ngay_trong_thang",
+              "title": "Số ngày trong tháng"
+            },
+            {
+              "code": "sca_l06_p32_tam_giac_vuong_hay_khong",
+              "title": "Tam giác vuông hay không?"
+            },
+            {
+              "code": "sca_l06_p33_rut_the_may_man",
+              "title": "Rút thẻ may mắn"
+            },
+            {
+              "code": "sca_l06_p34_ngay_ke_tiep_trong_nam",
+              "title": "Ngày kế tiếp trong năm"
+            },
+            {
+              "code": "sca_l06_p35_cap_doi_cung_dau_hay_trai_dau",
+              "title": "Cặp đôi cùng dấu hay trái dấu"
+            },
+            {
+              "code": "sca_l06_p36_giao_nhau_cua_hai_doan_thang",
+              "title": "Giao nhau của hai đoạn thẳng"
+            },
+            {
+              "code": "sca_l06_p37_tien_dien_bac_thang",
+              "title": "Tiền điện bậc thang"
+            }
+          ]
+        },
+        {
+          "lesson": 7,
+          "chapter": 3,
+          "folder": "lesson-07-vong-lap-for-va-dem-tay",
+          "title": "Bài 07: Vòng lặp for và hàm range",
+          "content_file": "lessons/lesson-07-vong-lap-for-va-dem-tay/Lesson07_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l07_p01_dem_sao_len_troi",
+              "title": "Đếm sao lên trời"
+            },
+            {
+              "code": "sca_l07_p02_dem_nguoc_phong_ten_lua",
+              "title": "Đếm ngược phóng tên lửa"
+            },
+            {
+              "code": "sca_l07_p03_tong_cac_so_tu_nhien",
+              "title": "Tổng các số tự nhiên"
+            },
+            {
+              "code": "sca_l07_p04_bang_cuu_chuong",
+              "title": "Bảng cửu chương"
+            },
+            {
+              "code": "sca_l07_p05_tong_so_chan_trong_doan",
+              "title": "Tổng số chẵn trong đoạn"
+            },
+            {
+              "code": "sca_l07_p06_dem_boi_so_cua_k",
+              "title": "Đếm bội số của K"
+            },
+            {
+              "code": "sca_l07_p07_tinh_giai_thua_n",
+              "title": "Tính giai thừa $N!$"
+            },
+            {
+              "code": "sca_l07_p08_day_so_cach_deu",
+              "title": "Dãy số cách đều"
+            },
+            {
+              "code": "sca_l07_p09_tim_uoc_so_cua_n",
+              "title": "Tìm ước số của N"
+            },
+            {
+              "code": "sca_l07_p10_tong_binh_phuong",
+              "title": "Tổng bình phương"
+            },
+            {
+              "code": "sca_l07_p11_doc_sach_moi_ngay",
+              "title": "Đọc sách mỗi ngày"
+            },
+            {
+              "code": "sca_l07_p12_hang_cot_dau_sao",
+              "title": "Hàng cột dấu sao"
+            },
+            {
+              "code": "sca_l07_p13_tam_giac_vuong_dau_sao",
+              "title": "Tam giác vuông dấu sao"
+            },
+            {
+              "code": "sca_l07_p14_tong_day_sieu_lon_khong_lap",
+              "title": "Tổng dãy siêu lớn không lặp"
+            }
+          ]
+        },
+        {
+          "lesson": 8,
+          "chapter": 3,
+          "folder": "lesson-08-vong-lap-until-va-bien-co",
+          "title": "Bài 08: Vòng lặp while và biến cờ",
+          "content_file": "lessons/lesson-08-vong-lap-until-va-bien-co/Lesson08_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l08_p01_dem_xuoi_bang_while",
+              "title": "Đếm xuôi bằng while"
+            },
+            {
+              "code": "sca_l08_p02_rut_tham_den_khi_trung",
+              "title": "Rút thăm đến khi trúng"
+            },
+            {
+              "code": "sca_l08_p03_nhap_so_den_khi_gap_so_0",
+              "title": "Nhập số đến khi gặp số 0"
+            },
+            {
+              "code": "sca_l08_p04_tong_day_so_ket_thuc_bang_0",
+              "title": "Tổng dãy số kết thúc bằng 0"
+            },
+            {
+              "code": "sca_l08_p05_dem_so_chan_den_khi_gap_0",
+              "title": "Đếm số chẵn đến khi gặp 0"
+            },
+            {
+              "code": "sca_l08_p06_gap_doi_to_giay_len_mat_trang",
+              "title": "Gấp đôi tờ giấy lên mặt trăng"
+            },
+            {
+              "code": "sca_l08_p07_ong_heo_mua_xe_may",
+              "title": "Ống heo mua xe máy"
+            },
+            {
+              "code": "sca_l08_p08_tim_luy_thua_cua_2_lon_hon_n",
+              "title": "Tìm lũy thừa của 2 lớn hơn N"
+            },
+            {
+              "code": "sca_l08_p09_chu_oc_sen_leo_cot_co",
+              "title": "Chú ốc sên leo cột cờ"
+            },
+            {
+              "code": "sca_l08_p10_dem_so_luong_chu_so_cua_n",
+              "title": "Đếm số lượng chữ số của N"
+            },
+            {
+              "code": "sca_l08_p11_tro_choi_doan_so_nhi_phan",
+              "title": "Trò chơi đoán số nhị phân"
+            },
+            {
+              "code": "sca_l08_p12_day_so_collatz_3n_1",
+              "title": "Dãy số Collatz (3n + 1)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "volume": 2,
+      "title": "Giáo trình Scratch cơ bản — Quyển 2: Thuật Toán Số Học, Danh Sách & Chuỗi Ký Tự",
+      "header_book": "Giáo trình Scratch cơ bản - quyển 2",
+      "preface": "reference/Loi_Noi_Dau_Scratch_Quyen2.md",
+      "appendix_a": "reference/Phu_Luc_A_Scratch.md",
+      "output": "scratch-quyen-2.docx",
+      "lessons": [
+        {
+          "lesson": 9,
+          "chapter": 4,
+          "folder": "lesson-09-quy-luat-day-so-va-tam-giac-so",
+          "title": "Bài 09: Quy luật dãy số và tam giác số",
+          "content_file": "lessons/lesson-09-quy-luat-day-so-va-tam-giac-so/Lesson09_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l09_p01_trao_doi_hai_chiec_coc",
+              "title": "Tráo đổi hai chiếc cốc"
+            },
+            {
+              "code": "sca_l09_p02_day_so_nhan_doi",
+              "title": "Dãy số nhân đôi"
+            },
+            {
+              "code": "sca_l09_p03_so_hang_day_cap_so_cong",
+              "title": "Số hạng dãy cấp số cộng"
+            },
+            {
+              "code": "sca_l09_p04_so_fibonacci_thu_n",
+              "title": "Số Fibonacci thứ N"
+            },
+            {
+              "code": "sca_l09_p05_day_so_dan_dau",
+              "title": "Dãy số đan dấu"
+            },
+            {
+              "code": "sca_l09_p06_tong_tich_hai_so_lien_nhau",
+              "title": "Tổng tích hai số liền nhau"
+            },
+            {
+              "code": "sca_l09_p07_day_so_boi_ba_boi_nam",
+              "title": "Dãy số bội ba bội năm"
+            },
+            {
+              "code": "sca_l09_p08_tam_giac_so_don_gian",
+              "title": "Tam giác số đơn giản"
+            },
+            {
+              "code": "sca_l09_p09_tam_giac_sao_can",
+              "title": "Tam giác sao cân"
+            },
+            {
+              "code": "sca_l09_p10_day_so_tam_giac_triangular_numbers",
+              "title": "Dãy số tam giác (triangular numbers)"
+            },
+            {
+              "code": "sca_l09_p11_day_so_tribonacci",
+              "title": "Dãy số Tribonacci"
+            },
+            {
+              "code": "sca_l09_p12_ma_tran_so_ban_co_dan_xen",
+              "title": "Ma trận số bàn cờ đan xen"
+            },
+            {
+              "code": "sca_l09_p13_tam_giac_floyd",
+              "title": "Tam giác Floyd"
+            },
+            {
+              "code": "sca_l09_p14_tim_vi_tri_trong_day_tu_nhien_dai",
+              "title": "Tìm vị trí trong dãy tự nhiên dài"
+            }
+          ]
+        },
+        {
+          "lesson": 10,
+          "chapter": 4,
+          "folder": "lesson-10-ky-thuat-tach-chu-so-so-nguyen",
+          "title": "Bài 10: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while",
+          "content_file": "lessons/lesson-10-ky-thuat-tach-chu-so-so-nguyen/Lesson10_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l10_p01_lay_chu_so_don_vi_chuc",
+              "title": "Lấy chữ số đơn vị & chục"
+            },
+            {
+              "code": "sca_l10_p02_tong_chu_so_cua_so_3_chu_so",
+              "title": "Tổng chữ số của số 3 chữ số"
+            },
+            {
+              "code": "sca_l10_p03_tong_cac_chu_so_cua_n",
+              "title": "Tổng các chữ số của N"
+            },
+            {
+              "code": "sca_l10_p04_dem_so_luong_chu_so",
+              "title": "Đếm số lượng chữ số"
+            },
+            {
+              "code": "sca_l10_p05_tich_cac_chu_so_khac_khong",
+              "title": "Tích các chữ số khác không"
+            },
+            {
+              "code": "sca_l10_p06_dem_chu_so_chan_va_le",
+              "title": "Đếm chữ số chẵn và lẻ"
+            },
+            {
+              "code": "sca_l10_p07_chu_so_lon_nhat_nho_nhat",
+              "title": "Chữ số lớn nhất & nhỏ nhất"
+            },
+            {
+              "code": "sca_l10_p08_so_dao_nguoc",
+              "title": "Số đảo ngược"
+            },
+            {
+              "code": "sca_l10_p09_kiem_tra_so_doi_xung_palindrome",
+              "title": "Kiểm tra số đối xứng (palindrome)"
+            },
+            {
+              "code": "sca_l10_p10_so_toan_chan_hoac_toan_le",
+              "title": "Số toàn chẵn hoặc toàn lẻ"
+            },
+            {
+              "code": "sca_l10_p11_so_may_man_chua_so_7",
+              "title": "Số may mắn chứa số 7"
+            },
+            {
+              "code": "sca_l10_p12_dem_so_luong_so_doi_xung_trong_doan",
+              "title": "Đếm số lượng số đối xứng trong đoạn"
+            },
+            {
+              "code": "sca_l10_p13_can_bac_so_hoc_digital_root",
+              "title": "Căn bậc số học (digital root)"
+            },
+            {
+              "code": "sca_l10_p14_so_tang_giam_dep",
+              "title": "Số tăng giảm đẹp"
+            }
+          ]
+        },
+        {
+          "lesson": 11,
+          "chapter": 4,
+          "folder": "lesson-11-uoc-so-boi-so-va-so-nguyen-to",
+          "title": "Bài 11: Ước số, bội số và số nguyên tố",
+          "content_file": "lessons/lesson-11-uoc-so-boi-so-va-so-nguyen-to/Lesson11_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l11_p01_liet_ke_tat_ca_uoc_so",
+              "title": "Liệt kê tất cả ước số"
+            },
+            {
+              "code": "sca_l11_p02_dem_so_luong_uoc_so",
+              "title": "Đếm số lượng ước số"
+            },
+            {
+              "code": "sca_l11_p03_tinh_tong_cac_uoc_so",
+              "title": "Tính tổng các ước số"
+            },
+            {
+              "code": "sca_l11_p04_kiem_tra_so_nguyen_to",
+              "title": "Kiểm tra số nguyên tố"
+            },
+            {
+              "code": "sca_l11_p05_kiem_tra_so_chinh_phuong",
+              "title": "Kiểm tra số chính phương"
+            },
+            {
+              "code": "sca_l11_p06_uoc_chung_lon_nhat_bcnn",
+              "title": "Ước chung lớn nhất & BCNN"
+            },
+            {
+              "code": "sca_l11_p07_dem_uoc_chan_cua_n",
+              "title": "Đếm ước chẵn của N"
+            },
+            {
+              "code": "sca_l11_p08_tim_uoc_so_lon_thu_hai",
+              "title": "Tìm ước số lớn thứ hai"
+            },
+            {
+              "code": "sca_l11_p09_dem_so_nguyen_to_trong_doan",
+              "title": "Đếm số nguyên tố trong đoạn"
+            },
+            {
+              "code": "sca_l11_p10_hai_so_nguyen_to_cung_nhau",
+              "title": "Hai số nguyên tố cùng nhau"
+            },
+            {
+              "code": "sca_l11_p11_cap_so_nguyen_to_sinh_doi",
+              "title": "Cặp số nguyên tố sinh đôi"
+            },
+            {
+              "code": "sca_l11_p12_so_sieu_nguyen_to_super_prime",
+              "title": "Số siêu nguyên tố (super prime)"
+            },
+            {
+              "code": "sca_l11_p13_phan_tich_ra_thua_so_nguyen_to",
+              "title": "Phân tích ra thừa số nguyên tố"
+            },
+            {
+              "code": "sca_l11_p14_tim_so_co_dung_3_uoc_so",
+              "title": "Tìm số có đúng 3 ước số"
+            }
+          ]
+        },
+        {
+          "lesson": 12,
+          "chapter": 4,
+          "folder": "lesson-12-dem-so-theo-quy-luat-va-so-dac-biet",
+          "title": "Bài 12: Đếm số theo quy luật và số đặc biệt",
+          "content_file": "lessons/lesson-12-dem-so-theo-quy-luat-va-so-dac-biet/Lesson12_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l12_p01_dem_so_chia_het_cho_k",
+              "title": "Đếm số chia hết cho K"
+            },
+            {
+              "code": "sca_l12_p02_dem_so_le_trong_doan",
+              "title": "Đếm số lẻ trong đoạn"
+            },
+            {
+              "code": "sca_l12_p03_kiem_tra_so_hoan_hao",
+              "title": "Kiểm tra số hoàn hảo"
+            },
+            {
+              "code": "sca_l12_p04_so_armstrong_ba_chu_so",
+              "title": "Số Armstrong ba chữ số"
+            },
+            {
+              "code": "sca_l12_p05_tim_tat_ca_so_hoan_hao_nho_hon_n",
+              "title": "Tìm tất cả số hoàn hảo nhỏ hơn N"
+            },
+            {
+              "code": "sca_l12_p06_dem_boi_cua_3_nhung_khong_chia_het_cho_5",
+              "title": "Đếm bội của 3 nhưng không chia hết cho 5"
+            },
+            {
+              "code": "sca_l12_p07_dem_so_chia_het_cho_2_hoac_3",
+              "title": "Đếm số chia hết cho 2 hoặc 3"
+            },
+            {
+              "code": "sca_l12_p08_cap_so_than_thiet",
+              "title": "Cặp số thân thiết"
+            },
+            {
+              "code": "sca_l12_p09_so_phong_phu_abundant_number",
+              "title": "Số phong phú (abundant number)"
+            },
+            {
+              "code": "sca_l12_p10_dem_so_khong_chua_chu_so_0",
+              "title": "Đếm số không chứa chữ số 0"
+            },
+            {
+              "code": "sca_l12_p11_dem_so_chinh_phuong_trong_doan",
+              "title": "Đếm số chính phương trong đoạn"
+            },
+            {
+              "code": "sca_l12_p12_so_tu_man_narcissistic_number_k_chu_so",
+              "title": "Số tự mãn (Narcissistic number K chữ số)"
+            }
+          ]
+        },
+        {
+          "lesson": 13,
+          "chapter": 5,
+          "folder": "lesson-13-danh-sach-list-va-thao-tac-co-ban",
+          "title": "Bài 13: Danh sách và thao tác cơ bản",
+          "content_file": "lessons/lesson-13-danh-sach-list-va-thao-tac-co-ban/Lesson13_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l13_p01_nhap_day_so_in_phan_tu_dau_cuoi",
+              "title": "Nhập dãy số & in phần tử đầu - cuối"
+            },
+            {
+              "code": "sca_l13_p02_them_diem_vao_danh_sach",
+              "title": "Thêm điểm vào danh sách"
+            },
+            {
+              "code": "sca_l13_p03_tinh_tong_cac_phan_tu_trong_day",
+              "title": "Tính tổng các phần tử trong dãy"
+            },
+            {
+              "code": "sca_l13_p04_dem_so_luong_so_chan_trong_mang",
+              "title": "Đếm số lượng số chẵn trong mảng"
+            },
+            {
+              "code": "sca_l13_p05_tim_so_lon_nhat_nho_nhat",
+              "title": "Tìm số lớn nhất & nhỏ nhất"
+            },
+            {
+              "code": "sca_l13_p06_in_day_so_theo_thu_tu_dao_nguoc",
+              "title": "In dãy số theo thứ tự đảo ngược"
+            },
+            {
+              "code": "sca_l13_p07_dem_so_lan_xuat_hien_cua_x",
+              "title": "Đếm số lần xuất hiện của X"
+            },
+            {
+              "code": "sca_l13_p08_tim_vi_tri_dau_tien_cua_x",
+              "title": "Tìm vị trí đầu tiên của X"
+            },
+            {
+              "code": "sca_l13_p09_tach_mang_chan_va_mang_le",
+              "title": "Tách mảng chẵn và mảng lẻ"
+            },
+            {
+              "code": "sca_l13_p10_xoa_phan_tu_dau_tien_bang_x",
+              "title": "Xóa phần tử đầu tiên bằng X"
+            },
+            {
+              "code": "sca_l13_p11_thay_the_tat_ca_so_am_bang_so_0",
+              "title": "Thay thế tất cả số âm bằng số 0"
+            },
+            {
+              "code": "sca_l13_p12_chen_so_vao_vi_tri_k",
+              "title": "Chèn số vào vị trí K"
+            },
+            {
+              "code": "sca_l13_p13_xoay_vong_danh_sach_sang_phai",
+              "title": "Xoay vòng danh sách sang phải"
+            },
+            {
+              "code": "sca_l13_p14_cap_so_co_tong_bang_s",
+              "title": "Cặp số có tổng bằng S"
+            },
+            {
+              "code": "sca_l13_p15_heo_dat_tiet_kiem",
+              "title": "Heo đất tiết kiệm"
+            },
+            {
+              "code": "sca_l13_p16_ve_so_may_man",
+              "title": "Vé số may mắn"
+            },
+            {
+              "code": "sca_l13_p17_bang_diem_lop_hoc",
+              "title": "Bảng điểm lớp học"
+            },
+            {
+              "code": "sca_l13_p18_mat_khau_bi_an",
+              "title": "Mật khẩu bị ẩn"
+            },
+            {
+              "code": "sca_l13_p19_dem_keo_chan_le",
+              "title": "Đếm kẹo chẵn lẻ"
+            },
+            {
+              "code": "sca_l13_p20_tong_chu_so_lon_nhat",
+              "title": "Tổng chữ số lớn nhất"
+            },
+            {
+              "code": "sca_l13_p21_so_ghe_doi_xung",
+              "title": "Số ghế đối xứng"
+            },
+            {
+              "code": "sca_l13_p22_xep_hang_chieu_cao",
+              "title": "Xếp hàng chiều cao"
+            },
+            {
+              "code": "sca_l13_p23_thuong_doc_sach",
+              "title": "Thưởng đọc sách"
+            },
+            {
+              "code": "sca_l13_p24_dem_tu_dai",
+              "title": "Đếm từ dài"
+            },
+            {
+              "code": "sca_l13_p25_dem_sao_nguyen_to",
+              "title": "Đếm sao nguyên tố"
+            },
+            {
+              "code": "sca_l13_p26_chuyen_tau_vuot_deo",
+              "title": "Chuyến tàu vượt đèo"
+            }
+          ]
+        },
+        {
+          "lesson": 14,
+          "chapter": 5,
+          "folder": "lesson-14-thong-ke-danh-sach-va-sap-xep",
+          "title": "Bài 14: Thống kê danh sách và sắp xếp",
+          "content_file": "lessons/lesson-14-thong-ke-danh-sach-va-sap-xep/Lesson14_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l14_p01_diem_so_cao_nhat_thap_nhat",
+              "title": "Điểm số cao nhất & thấp nhất"
+            },
+            {
+              "code": "sca_l14_p02_sap_xep_tang_dan_don_gian",
+              "title": "Sắp xếp tăng dần đơn giản"
+            },
+            {
+              "code": "sca_l14_p03_diem_trung_binh_mon_hoc",
+              "title": "Điểm trung bình môn học"
+            },
+            {
+              "code": "sca_l14_p04_sap_xep_giam_dan_bang_xep_hang",
+              "title": "Sắp xếp giảm dần bảng xếp hạng"
+            },
+            {
+              "code": "sca_l14_p05_tim_so_lon_thu_nhi_trong_mang",
+              "title": "Tìm số lớn thứ nhì trong mảng"
+            },
+            {
+              "code": "sca_l14_p06_dem_so_luong_hoc_sinh_tren_diem_trung_binh",
+              "title": "Đếm số lượng học sinh trên điểm trung bình"
+            },
+            {
+              "code": "sca_l14_p07_loc_bo_cac_so_trung_lap",
+              "title": "Lọc bỏ các số trùng lặp"
+            },
+            {
+              "code": "sca_l14_p08_diem_olympic_bo_max_bo_min",
+              "title": "Điểm olympic bỏ max bỏ min"
+            },
+            {
+              "code": "sca_l14_p09_sap_xep_ten_theo_thu_tu_bang_chu_cai",
+              "title": "Sắp xếp tên theo thứ tự bảng chữ cái"
+            },
+            {
+              "code": "sca_l14_p10_chenh_lech_nho_nhat_giua_hai_so",
+              "title": "Chênh lệch nhỏ nhất giữa hai số"
+            },
+            {
+              "code": "sca_l14_p11_trung_vi_cua_day_so_median",
+              "title": "Trung vị của dãy số (Median)"
+            },
+            {
+              "code": "sca_l14_p12_so_xuat_hien_nhieu_lan_nhat_mode",
+              "title": "Số xuất hiện nhiều lần nhất (Mode)"
+            },
+            {
+              "code": "sca_l14_p13_ghep_hai_day_da_sap_xep",
+              "title": "Ghép hai dãy đã sắp xếp"
+            },
+            {
+              "code": "sca_l14_p14_xep_hang_mua_tra_sua_greedy",
+              "title": "Xếp hàng mua trà sữa (Greedy)"
+            }
+          ]
+        },
+        {
+          "lesson": 15,
+          "chapter": 6,
+          "folder": "lesson-15-chuoi-ky-tu-chi-so-cat-lat",
+          "title": "Bài 15: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự",
+          "content_file": "lessons/lesson-15-chuoi-ky-tu-chi-so-cat-lat/Lesson15_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l15_p01_ky_tu_dau_ky_tu_cuoi",
+              "title": "Ký tự đầu & ký tự cuối"
+            },
+            {
+              "code": "sca_l15_p02_do_dai_cua_chuoi",
+              "title": "Độ dài của chuỗi"
+            },
+            {
+              "code": "sca_l15_p03_cat_ba_ky_tu_dau_tien",
+              "title": "Cắt ba ký tự đầu tiên"
+            },
+            {
+              "code": "sca_l15_p04_dao_nguoc_ten_rieng",
+              "title": "Đảo ngược tên riêng"
+            },
+            {
+              "code": "sca_l15_p05_kiem_tra_tu_doi_xung_palindrome",
+              "title": "Kiểm tra từ đối xứng (palindrome)"
+            },
+            {
+              "code": "sca_l15_p06_cat_doi_chuoi_ky_tu",
+              "title": "Cắt đôi chuỗi ký tự"
+            },
+            {
+              "code": "sca_l15_p07_rut_trich_ten_mien_email",
+              "title": "Rút trích tên miền email"
+            },
+            {
+              "code": "sca_l15_p08_ky_tu_o_vi_tri_chan",
+              "title": "Ký tự Ở vị trí chẵn"
+            },
+            {
+              "code": "sca_l15_p09_hoan_doi_nua_dau_nua_sau",
+              "title": "Hoán đổi nửa đầu nửa sau"
+            },
+            {
+              "code": "sca_l15_p10_xoa_ky_tu_o_vi_tri_k",
+              "title": "Xóa ký tự ở vị trí K"
+            },
+            {
+              "code": "sca_l15_p11_dich_chuyen_vong_quanh_left_rotation",
+              "title": "Dịch chuyển vòng quanh (left rotation)"
+            },
+            {
+              "code": "sca_l15_p12_chuoi_con_doi_xung_dai_nhat",
+              "title": "Chuỗi con đối xứng dài nhất"
+            }
+          ]
+        },
+        {
+          "lesson": 16,
+          "chapter": 6,
+          "folder": "lesson-16-duyet-chuoi-bien-doi-ky-tu-tach-tu",
+          "title": "Bài 16: Duyệt chuỗi, biến đổi ký tự và tách từ",
+          "content_file": "lessons/lesson-16-duyet-chuoi-bien-doi-ky-tu-tach-tu/Lesson16_Production_Content.md",
+          "problems": [
+            {
+              "code": "sca_l16_p01_in_tung_chu_cai_xuong_dong",
+              "title": "In từng chữ cái xuống dòng"
+            },
+            {
+              "code": "sca_l16_p02_chuyen_toan_bo_thanh_chu_hoa",
+              "title": "Chuyển toàn bộ thành chữ hoa"
+            },
+            {
+              "code": "sca_l16_p03_dem_ky_tu_a_ca_hoa_lan_thuong",
+              "title": "Đếm ký tự 'A' (cả hoa lẫn thường)"
+            },
+            {
+              "code": "sca_l16_p04_dem_chu_cai_in_hoa_in_thuong",
+              "title": "Đếm chữ cái in hoa & in thường"
+            },
+            {
+              "code": "sca_l16_p05_tach_rieng_chu_so_ra_khoi_van_ban",
+              "title": "Tách riêng chữ số ra khỏi văn bản"
+            },
+            {
+              "code": "sca_l16_p06_tinh_tong_cac_chu_so_trong_chuoi",
+              "title": "Tính tổng các chữ số trong chuỗi"
+            },
+            {
+              "code": "sca_l16_p07_doi_chu_hoa_thanh_thuong_nguoc_lai",
+              "title": "Đổi chữ hoa thành thường & ngược lại"
+            },
+            {
+              "code": "sca_l16_p08_thay_the_ky_tu_bi_mat",
+              "title": "Thay thế ký tự bí mật"
+            },
+            {
+              "code": "sca_l16_p09_xoa_bo_toan_bo_dau_cach",
+              "title": "Xóa bỏ toàn bộ dấu cách"
+            },
+            {
+              "code": "sca_l16_p10_dem_so_luong_nguyen_am",
+              "title": "Đếm số lượng nguyên âm"
+            },
+            {
+              "code": "sca_l16_p11_nen_chuoi_ky_tu_runlength_encoding",
+              "title": "Nén chuỗi ký tự (Run-Length encoding)"
+            },
+            {
+              "code": "sca_l16_p12_trich_xuat_so_lon_nhat_trong_van_ban",
+              "title": "Trích xuất số lớn nhất trong văn bản"
+            },
+            {
+              "code": "sca_l16_p13_dem_so_tu_trong_cau",
+              "title": "Đếm số từ trong câu"
+            },
+            {
+              "code": "sca_l16_p14_tu_dau_tien_tu_cuoi_cung",
+              "title": "Từ đầu tiên & từ cuối cùng"
+            },
+            {
+              "code": "sca_l16_p15_ma_ascii_cua_ky_tu",
+              "title": "Mã ASCII của ký tự"
+            },
+            {
+              "code": "sca_l16_p16_ky_tu_ke_tiep_trong_bang_chu_cai",
+              "title": "Ký tự kế tiếp trong bảng chữ cái"
+            },
+            {
+              "code": "sca_l16_p17_tim_tu_dai_nhat_trong_cau",
+              "title": "Tìm từ dài nhất trong câu"
+            },
+            {
+              "code": "sca_l16_p18_chuan_hoa_khoang_trang",
+              "title": "Chuẩn hóa khoảng trắng"
+            },
+            {
+              "code": "sca_l16_p19_viet_hoa_chu_cai_dau_moi_tu_title_case",
+              "title": "Viết hoa chữ cái đầu mỗi từ (title case)"
+            },
+            {
+              "code": "sca_l16_p20_dao_nguoc_tung_tu_trong_cau",
+              "title": "Đảo ngược từng từ trong câu"
+            },
+            {
+              "code": "sca_l16_p21_mat_ma_caesar_dich_chuyen_k",
+              "title": "Mật mã Caesar dịch chuyển K"
+            },
+            {
+              "code": "sca_l16_p22_giai_ma_mat_thu_caesar",
+              "title": "Giải mã mật thư Caesar"
+            },
+            {
+              "code": "sca_l16_p23_tu_xuat_hien_nhieu_nhat_trong_doan",
+              "title": "Từ xuất hiện nhiều nhất trong đoạn"
+            },
+            {
+              "code": "sca_l16_p24_mat_ma_thay_the_hoan_vi_anagram",
+              "title": "Mật mã thay thế hoán vị (anagram)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

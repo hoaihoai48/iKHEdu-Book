@@ -1,6 +1,6 @@
 # DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 05 — PHÉP CHIA NGUYÊN, CHIA DƯ VÀ LUỸ THỪA
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 2: Lập Trình Tính Toán Cơ Bản & Biến Số  
 > **Tổng số bài tập thực hành:** `33 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -258,6 +258,7 @@ $135 // 60 = 2$ giờ và $135 \% 60 = 15$ phút.
 * **Mã bài toán:** `sca_l05_p10_dien_tich_bon_hoa_chu_thap`
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Trong công viên xanh mát có một bồn hoa hình chữ thập (dấu cộng) rất đẹp được tạo thành bởi hai luống hoa hình chữ nhật đặt chồng lên nhau:
+
  * Một luống hoa nằm ngang có kích thước $a \times b$ ($a$ là chiều dài, $b$ là chiều rộng).
  * Một luống hoa nằm dọc có kích thước $b \times a$ ($b$ là chiều rộng, $a$ là chiều dài).
  * Hai luống hoa giao nhau ở chính giữa tạo thành một hình vuông kích thước $b \times b$.

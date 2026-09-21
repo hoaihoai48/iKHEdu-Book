@@ -1,6 +1,6 @@
 # DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 16 — DUYỆT CHUỖI, BIẾN ĐỔI KÝ TỰ VÀ TÁCH TỪ
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 6: Xử Lý Chuỗi Ký Tự  
 > **Tổng số bài tập thực hành:** `24 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -123,7 +123,7 @@ Gồm chữ 'A' (1 lần) và 'a' (3 lần trong 'va', 'Ba', 'bai').
 
 ### Input
 ```text
-Lap Trinh Python
+Lap Trinh Scratch
 ```
 ### Output
 ```text
@@ -238,15 +238,15 @@ Với dữ liệu đầu vào là `hoc lap trinh de vui`, kết quả thu đư�
 
 ### Input
 ```text
-Lap Trinh Python Bang A
+Lap Trinh Scratch Bang A
 ```
 ### Output
 ```text
-LapTrinhPythonBangA
+LapTrinhScratchBangA
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `Lap Trinh Python Bang A`, kết quả thu được tương ứng là `LapTrinhPythonBangA`.
+Với dữ liệu đầu vào là `Lap Trinh Scratch Bang A`, kết quả thu được tương ứng là `LapTrinhScratchBangA`.
 
 ---
 
@@ -355,7 +355,7 @@ Có 4 từ: 'Chuc', 'mung', 'nam', 'moi'.
 
 ### Input
 ```text
-Hoc Python cuc vui
+Hoc Scratch cuc vui
 ```
 ### Output
 ```text
@@ -364,7 +364,7 @@ vui
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `Hoc Python cuc vui`, kết quả thu được tương ứng là `Hoc
+Với dữ liệu đầu vào là `Hoc Scratch cuc vui`, kết quả thu được tương ứng là `Hoc
 vui`.
 
 ---
@@ -449,15 +449,15 @@ Từ 'trinh' có 5 chữ cái (dài nhất).
 
 ### Input
 ```text
- Python rat la tuyet 
+ Scratch rat la tuyet 
 ```
 ### Output
 ```text
-Python rat la tuyet
+Scratch rat la tuyet
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `Python rat la tuyet`, kết quả thu được tương ứng là `Python rat la tuyet`.
+Với dữ liệu đầu vào là `Scratch rat la tuyet`, kết quả thu được tương ứng là `Scratch rat la tuyet`.
 
 ---
 

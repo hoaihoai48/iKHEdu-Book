@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 06 — CẤU TRÚC RẼ NHÁNH VÀ ĐIỀU KIỆN LOGIC
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 06 — Cấu trúc rẽ nhánh
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 3: Cấu Trúc Rẽ Nhánh & Vòng Lặp  
 > **Tổng số bài tập thực hành:** `37 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -24,6 +24,7 @@
 | 12 | `sca_l06_p12_tro_choi_oan_tu_ti` | Trò chơi oẳn tù tì | **P1** | Cơ bản & Hoàn thành | Nhập vào lựa chọn của Tí và Tèo. Hãy in ra kết quả: `TI THAN... |
 | 13 | `sca_l06_p13_den_giao_thong_nga_tu` | Đèn giao thông ngã tư | **P1** | Cơ bản & Hoàn thành | Nhập vào một chữ cái in hoa đại diện cho màu đèn: `D` (Đỏ), ... |
 | 14 | `sca_l06_p14_dau_cua_so_nguyen` | Dấu của số nguyên | **P1** | Cơ bản & Hoàn thành | Nhập vào số nguyên $N$. Hãy in ra:
+
  * `DUONG` nếu $N > 0$.
  ... |
 | 15 | `sca_l06_p15_so_lon_nhat_trong_ba_so` | Số lớn nhất trong ba số | **P1** | Cơ bản & Hoàn thành | Nhập vào 3 số nguyên $a, b, c$ mỗi số trên một dòng. Hãy tìm... |
@@ -32,8 +33,10 @@
 | 18 | `sca_l06_p18_mario_cuu_cong_chua` | Mario cứu công chúa | **P1** | Cơ bản & Hoàn thành | Hỏi với mức năng lượng hiện có, Mario và Công chúa có thể gặ... |
 | 19 | `sca_l06_p19_tinh_cuoc_taxi_bac_thang` | Tính cước taxi bậc thang | **P2** | Luyện tập & Vận dụng | Nhập vào số kilomet $N$ mà khách đã đi (số nguyên $N \ge 1$)... |
 | 20 | `sca_l06_p20_phan_loai_tam_giac` | Phân loại tam giác | **P2** | Luyện tập & Vận dụng | Hãy phân loại tam giác đó:
+
  * Nếu 3 cạnh bằng nhau ($a == b ... |
 | 21 | `sca_l06_p21_thuan_di_tim_anh_da_van_toc` | Thuận đi tìm ánh đa vận tốc | **P2** | Luyện tập & Vận dụng | Hãy phân tích các tình huống:
+
  * Nếu $x == y$: in `DA GAP NH... |
 | 22 | `sca_l06_p22_thu_may_trong_tuan` | Thứ mấy trong tuần? | **P2** | Luyện tập & Vận dụng | Cho biết ngày thứ $K$ trong năm đó là thứ mấy?
  * Biết rằng:... |
@@ -227,6 +230,7 @@ $3 + 3 = 6$, $3 - 3 = 0$, $3 \times 3 = 9$. Số lớn nhất là 9.
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Trong trò chơi ghép đôi, hai lá bài được lật lên. Nếu hai lá bài có cùng giá trị thì người chơi được cộng điểm. Hãy kiểm tra xem hai số có bằng nhau không.
 * **Nhiệm vụ:** Nhập vào 2 số nguyên $a$ và $b$. Hãy so sánh và nhân vật nói ra màn hình một trong ba thông báo:
+
  * `a LON HON b` (nếu $a > b$)
  * `a NHO HON b` (nếu $a < b$)
  * `HAI SO BANG NHAU` (nếu $a == b$)
@@ -373,6 +377,7 @@ Màu đèn là "do" nên in ra thông báo DUNG LAI.
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Trong bài kiểm tra toán, thầy giáo yêu cầu phân loại các số nguyên thành ba nhóm: số dương, số âm và số không. Hãy viết chương trình phân loại tự động.
 * **Nhiệm vụ:** Nhập vào số nguyên $N$. Hãy in ra:
+
  * `DUONG` nếu $N > 0$.
  * `AM` nếu $N < 0$.
  * `KHONG` nếu $N == 0$.
@@ -522,6 +527,7 @@ Cầu thang $2N = 4$ bậc. Mario đi được $\min(3, 4) = 3$ bậc. Công ch�
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Trong giờ thủ công, Na cắt được một miếng bìa hình tam giác có 3 cạnh dài $a, b, c$ và cô giáo bảo đó là một tam giác hợp lệ. Cả lớp tò mò không biết miếng bìa của Na thuộc loại tam giác nào. Na muốn khoe với mẹ mà chưa gọi đúng tên hình. Hãy giúp bạn Na gọi đúng tên loại tam giác.
 * **Nhiệm vụ:** Hãy phân loại tam giác đó:
+
  * Nếu 3 cạnh bằng nhau ($a == b == c$): in `TAM GIAC DEU`.
  * Nếu có 2 cạnh bằng nhau ($a == b$ hoặc $b == c$ hoặc $c == a$): in `TAM GIAC CAN`.
  * Các trường hợp còn lại: in `TAM GIAC THUONG`.
@@ -547,9 +553,11 @@ Ba cạnh có độ dài bằng nhau nên tam giác là tam giác đều.
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Một buổi chiều đẹp trời, bạn Thuận đứng ở vị trí $x$ còn bạn Ánh đứng ở vị trí $y$ trong sân trường rộng. Thuận rất nhớ bạn nên đi bộ về phía Ánh với vận tốc $v\text{ km/h}$. Cả hai hồi hộp không biết bao giờ thì gặp được nhau. Hãy giúp hai bạn xem khi nào thì gặp nhau.
 * **Nhiệm vụ:** Hãy phân tích các tình huống:
+
  * Nếu $x == y$: in `DA GAP NHAU` (vì đang đứng cùng một chỗ).
  * Nếu $x \ne y$ nhưng $v == 0$: in `KHONG THE GAP` (vì Thuận đứng yên).
  * Nếu $x \ne y$ và $v > 0$:
+
  * Nếu khoảng cách $|y - x|$ chia hết cho $v$: in ra số giờ để gặp nhau.
  * Nếu không chia hết: in `GAP NHAU LE GIO`.
 * **Dữ liệu vào (Input):** Ba số nguyên $x, y, v$ ($-10^9 \le x, y \le 10^9, 0 \le v \le 10^9$).

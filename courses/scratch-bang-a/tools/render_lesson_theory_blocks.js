@@ -25,7 +25,7 @@ function renderToSvgAndPng(sbScript, outSvgPath, outPngPath) {
   defs.appendChild(svgStyle);
 
   fs.writeFileSync(outSvgPath, svg.outerHTML, 'utf8');
-  execSync(`rsvg-convert -f png "${outSvgPath}" -o "${outPngPath}"`);
+  execSync(`rsvg-convert -z 2.5 -f png "${outSvgPath}" -o "${outPngPath}"`);
 }
 
 // 2. Danh mục 24 sơ đồ lý thuyết cho toàn bộ 16 bài học (Lesson 01 - 16)

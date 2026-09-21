@@ -7,9 +7,13 @@ Trước khi bắt đầu hành trình vẽ các kỳ quan và hoa văn hình h�
 ## Nhiệm vụ
 
 Em hãy lập trình điều khiển chú Mèo Scratch thực hiện các bước sau:
+
 1. Xóa sạch toàn bộ nét vẽ cũ trên sân khấu.
+
 2. Di chuyển về tâm sân khấu tại tọa độ $(0, 0)$ và quay mặt về hướng $90^\circ$ (hướng sang phải).
+
 3. Thiết lập màu bút vẽ là màu đỏ và độ dày nét vẽ là $3$.
+
 4. Đặt bút xuống và vẽ một dấu cộng gồm $4$ nhánh cân đối tỏa ra $4$ hướng chính (Đông, Tây, Nam, Bắc), mỗi nhánh có độ dài $50$ bước. Sau khi vẽ mỗi nhánh, nhân vật lùi về đúng tâm $(0, 0)$ rồi mới xoay hướng vẽ nhánh tiếp theo.
 
 ## Kịch bản tương tác (Input Scenario)

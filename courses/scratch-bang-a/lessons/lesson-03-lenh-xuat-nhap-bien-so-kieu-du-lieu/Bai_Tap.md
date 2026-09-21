@@ -1,6 +1,6 @@
 # DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 03 — LỆNH XUẤT NHẬP, BIẾN SỐ VÀ KIỂU DỮ LIỆU
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 2: Lập Trình Tính Toán Cơ Bản & Biến Số  
 > **Tổng số bài tập thực hành:** `25 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -12,6 +12,7 @@
 |:---:|---|---|:---:|:---:|---|
 | 1 | `sca_l03_p01_loi_chao_robot` | Lời chào robot | **P0** | Khởi động & Quan sát | Viết chương trình in ra chính xác dòng thông điệp: `Xin chao... |
 | 2 | `sca_l03_p02_cau_doi_tet` | Câu đối ngày tết | **P0** | Khởi động & Quan sát | In ra đúng hai dòng chữ, mỗi dòng là một vế câu đối:
+
   - Dòn... |
 | 3 | `sca_l03_p03_in_so_sep` | In số trên một hàng với sep | **P0** | Khởi động & Quan sát | Viết chương trình in ra dòng chữ: `1-2-3-4-5`. |
 | 4 | `sca_l03_p04_cap_so_nhan_doi` | Cặp số nhân đôi | **P0** | Khởi động & Quan sát | Nhập vào số nguyên $A$. Hãy tính và in ra giá trị của tín hi... |
@@ -68,6 +69,7 @@ In chính xác câu chào ra màn hình theo đúng quy định.
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Trong ứng dụng hiển thị bảng điện tử chào mừng năm mới, hệ thống cần in hai vế câu đối truyền thống trên hai dòng riêng biệt.
 * **Nhiệm vụ:** In ra đúng hai dòng chữ, mỗi dòng là một vế câu đối:
+
   - Dòng 1: `Chuc mung nam moi`
   - Dòng 2: `Van su nhu y`
 * **Dữ liệu vào (Input):** Không có dữ liệu vào.
@@ -337,6 +339,7 @@ Ghép tên và tuổi vào đúng vị trí của câu chúc.
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Máy tính cầm tay cần hiển thị bảng kết quả 3 phép tính cơ bản giữa hai số nguyên.
 * **Nhiệm vụ:** Nhập hai số nguyên $A$ và $B$ trên cùng 1 dòng. In ra 3 dòng:
+
 * **Dữ liệu vào (Input):** Một dòng chứa hai số nguyên $A$ và $B$ cách nhau dấu cách ($-10^4 \le A, B \le 10^4$).
 * **Kết quả ra (Output):** 3 dòng lần lượt chứa tổng, hiệu và tích.
 * **Dữ liệu mẫu (Sample):**
@@ -590,6 +593,7 @@ Tổng số kẹo là $12 \times 8 = 96$ chiếc.
 * **Mã bài toán:** `sca_l03_p24_ve_tham_quan_chua_huong`
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Cuối tuần này, một đoàn khách nhỏ chuẩn bị đi tham quan Chùa Hương Tích. Để lên chùa, đoàn phải đi thuyền rồi đi cáp treo ngắm cảnh núi rừng:
+
  * Vé thuyền: người lớn $a$ nghìn đồng/người, trẻ em $b$ nghìn đồng/người.
  * Vé cáp treo: người lớn $x$ nghìn đồng/người, trẻ em $y$ nghìn đồng/người.
  * Đoàn khách có tổng cộng $n$ người, trong đó có $m$ trẻ em.

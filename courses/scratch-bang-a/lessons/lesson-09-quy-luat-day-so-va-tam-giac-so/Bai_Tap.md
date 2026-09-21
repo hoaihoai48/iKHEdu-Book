@@ -1,6 +1,6 @@
 # DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 09 — QUY LUẬT DÃY SỐ VÀ TAM GIÁC SỐ
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 4: Số Học & Thuật Toán Tách Số  
 > **Tổng số bài tập thực hành:** `14 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -257,6 +257,7 @@ Với dữ liệu đầu vào là `3`, kết quả thu được tương ứng l�
 * **Mã bài toán:** `sca_l09_p10_day_so_tam_giac_triangular_numbers`
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Trong giờ kể chuyện lịch sử, cô giáo kể rằng người Hy Lạp cổ đại ngày xưa rất thích xếp các viên sỏi nhỏ thành hình tam giác đều để chơi:
+
  * Tầng 1: 1 viên
  * Tầng 2: 1 + 2 = 3 viên
  * Tầng 3: 1 + 2 + 3 = 6 viên

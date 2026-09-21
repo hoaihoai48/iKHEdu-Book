@@ -124,9 +124,11 @@ end
 
 1. **Khối chữ C bắt buộc có `end`**: Mọi khối lặp (`repeat`, `repeat until`) và rẽ nhánh (`if`, `if...else`) bắt buộc phải đóng bằng từ khóa `end` thẳng hàng để bảo đảm tính phân cấp cây cú pháp.
 2. **Dấu ngoặc tròn `()` cho giá trị, ngoặc nhọn `<>` cho điều kiện**:
+
    - Đúng: `<(a) > (b)>`, `((a) + (b))`
    - Sai: `((a) > (b))` (sai loại khối điều kiện lục giác)
 3. **Menu thả xuống dùng ký hiệu `v`**:
+
    - Đúng: `set [bien v] to (10)`, `point in direction (90)`
    - Đúng: `[floor v] of (x)`
 4. **Không viết chữ có dấu trong tên biến DSL**: Để tránh lỗi font khi render tự động, tên biến trong DSL dùng tiếng Việt không dấu cách nhau bằng gạch dưới: `[tong]`, `[bien_dem]`, `[so_canh]`, `[danh_sach]`.

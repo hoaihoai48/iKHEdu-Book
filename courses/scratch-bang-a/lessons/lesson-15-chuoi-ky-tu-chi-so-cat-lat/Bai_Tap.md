@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 15 — CHUỖI KÝ TỰ, CHỈ SỐ VÀ TRÍCH XUẤT
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 15 — Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 6: Xử Lý Chuỗi Ký Tự  
 > **Tổng số bài tập thực hành:** `12 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -38,7 +38,7 @@
 
 ### Input
 ```text
-PYTHON
+SCRATCH
 ```
 ### Output
 ```text
@@ -46,7 +46,7 @@ P N
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `P N`.
+Với dữ liệu đầu vào là `SCRATCH`, kết quả thu được tương ứng là `P N`.
 
 ---
 
@@ -61,7 +61,7 @@ Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứ
 
 ### Input
 ```text
-Python
+Scratch
 ```
 ### Output
 ```text
@@ -69,7 +69,7 @@ Python
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `Python`, kết quả thu được tương ứng là `6`.
+Với dữ liệu đầu vào là `Scratch`, kết quả thu được tương ứng là `6`.
 
 ---
 
@@ -153,7 +153,7 @@ Với dữ liệu đầu vào là `RADAR`, kết quả thu được tương ứn
 
 ### Input
 ```text
-PYTHON
+SCRATCH
 ```
 ### Output
 ```text
@@ -162,7 +162,7 @@ HON
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `PYT
+Với dữ liệu đầu vào là `SCRATCH`, kết quả thu được tương ứng là `PYT
 HON`.
 
 ---
@@ -239,7 +239,7 @@ Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứ
 ### Bài 10 (P3): Xóa ký tự ở vị trí K
 * **Mã bài toán:** `sca_l15_p10_xoa_ky_tu_o_vi_tri_k`
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
-* **Bối cảnh:** Bạn Tí viết tên mình lên bảng rồi lỡ viết thừa một chữ cái ở giữa. Tí nhớ rằng chuỗi trong Python là bất biến (không thể dùng lệnh xóa trực tiếp `del s[k]`). Vì vậy Tí phải dùng kỹ thuật cắt lát ghép chuỗi để bỏ chữ thừa đi. Hãy giúp Tí viết chương trình xóa chữ thừa thật gọn.
+* **Bối cảnh:** Bạn Tí viết tên mình lên bảng rồi lỡ viết thừa một chữ cái ở giữa. Tí muốn xóa một chữ cái thừa ở vị trí chỉ định để có được từ ngữ chính xác. Hãy giúp Tí lập trình Scratch để ghép các phần còn lại và loại bỏ chữ thừa.
 * **Nhiệm vụ:** Cho chuỗi $S$ và chỉ số nguyên $K$ ($0 \le K < |S|$). Hãy xóa ký tự tại vị trí $K$ và in ra chuỗi còn lại.
 * **Dữ liệu vào (Input):** Dòng 1 chứa chuỗi $S$. Dòng 2 chứa số nguyên $K$.
 * **Kết quả ra (Output):** Chuỗi sau khi xóa ký tự thứ $K$.
@@ -247,7 +247,7 @@ Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứ
 
 ### Input
 ```text
-PYTHON
+SCRATCH
 2
 ```
 ### Output

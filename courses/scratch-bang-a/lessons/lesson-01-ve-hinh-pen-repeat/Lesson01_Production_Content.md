@@ -19,6 +19,7 @@ Sân khấu Scratch là một mặt phẳng hình chữ nhật được chia th�
 
 ### Bốn Hướng Di Chuyển Trên La Bàn Scratch
 Nhân vật chú Mèo di chuyển theo hướng mũi tên kim la bàn. Góc quay được tính theo chiều kim đồng hồ:
+
 - **Hướng $90^\circ$ (Mặc định)**: Mũi nhân vật nhìn sang phải.
 - **Hướng $0^\circ$**: Mũi nhân vật nhìn thẳng lên đỉnh sân khấu.
 - **Hướng $180^\circ$**: Mũi nhân vật nhìn thẳng xuống đáy sân khấu.
@@ -46,13 +47,21 @@ Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị g
 ![Cụm lệnh khởi động bút vẽ Scratch Tiếng Việt](../../assets/rendered_blocks/l01_setup_pen_vi.png)
 
 *Quy trình 8 bước chuẩn:*
+
 1. 🟡 **Khi bấm vào cờ xanh** (Sự kiện bắt đầu chương trình).
+
 2. 🟢 **Xóa tất cả** (Lau sạch màn hình vẽ cũ).
+
 3. 🟢 **Nhấc bút** (Tránh làm lem mực khi di chuyển).
+
 4. 🔵 **Đi tới điểm x: (0) y: (0)** (Đưa nhân vật về tâm sân khấu).
+
 5. 🔵 **Đặt hướng bằng (90)** (Đặt mũi nhìn sang phải).
+
 6. 🟢 **Chọn màu vẽ [Xanh dương]** (Chọn màu mực yêu thích).
+
 7. 🟢 **Đặt kích thước bút vẽ bằng (3)** (Chỉnh nét bút rõ nét).
+
 8. 🟢 **Đặt bút** (Hạ đầu bút chạm mặt giấy sẵn sàng vẽ).
 
 ---
@@ -61,6 +70,7 @@ Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị g
 
 ### Vấn đề: Vẽ tay từng nét lặp lại
 Để vẽ một hình vuông cạnh $100$ bước:
+
 - Chú Mèo đi $100$ bước $\to$ Xoay phải $90^\circ$.
 - Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
 - Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
@@ -97,14 +107,20 @@ $$\text{Góc xoay} = \frac{360^\circ}{N}$$
 ## 4. Kỹ Thuật Đổi Điểm Vẽ & Hình Vuông Đồng Tâm
 
 Khi cần vẽ nhiều hình tách rời nhau hoặc vẽ các hình lồng nhau (như hình vuông đồng tâm):
+
 1. Vẽ xong hình thứ nhất.
+
 2. **Nhấc bút (`nhấc bút`) ngay lập tức**.
+
 3. Di chuyển nhân vật đến vị trí mới (dùng `đi tới điểm x: () y: ()` hoặc `di chuyển () bước`).
+
 4. **Đặt bút xuống (`đặt bút`)**.
+
 5. Bắt đầu vẽ hình tiếp theo.
 
 ### Ví Dụ: Vẽ 3 Hình Vuông Đồng Tâm
 Để các hình vuông đồng tâm có chung tâm tại gốc $(0, 0)$:
+
 - Hình 1 (cạnh $60$): Bắt đầu từ $x: -30, y: 30$.
 - Hình 2 (cạnh $100$): Bắt đầu từ $x: -50, y: 50$.
 - Hình 3 (cạnh $140$): Bắt đầu từ $x: -70, y: 70$.
@@ -231,6 +247,7 @@ Muốn nét vẽ của nhân vật trở nên đậm hơn và nhìn rõ hơn, ta
 
 #### Câu 8 (Góc quay ngũ giác đều)
 Một bạn học sinh muốn lập trình vẽ hình ngũ giác đều (5 cạnh bằng nhau). Bạn ấy dùng khối lệnh `lặp lại (5) lần` nhưng chưa biết phải điền góc xoay bao nhiêu độ. Em hãy giúp bạn tính góc xoay:
+
 - A. $72^\circ$
 - B. $108^\circ$
 - C. $70^\circ$
@@ -257,14 +274,3 @@ Tại sao ta nên tạo khối lệnh riêng (**Khối của tôi - My Blocks**)
 > **Giải thích:** Khối của tôi đóng vai trò như một chương trình con giúp đóng gói và tái sử dụng mã nguồn, nâng cao tính cấu trúc của chương trình.
 
 ---
-
-## 9. Tóm Tắt & Hướng Dẫn Thực Hành
-
-> **GHI NHỚ CỐT LÕI:**
-> 1. Sân khấu có kích thước $480 \times 360$, tâm là $(0, 0)$. Hướng $90^\circ$ là sang phải.
-> 2. Luôn bắt đầu chương trình bằng: 🟡 **khi bấm vào cờ xanh** $\to$ 🟢 **xóa tất cả** $\to$ 🟢 **nhấc bút** $\to$ 🔵 **đi tới điểm x: (0) y: (0)** $\to$ 🔵 **đặt hướng bằng (90)** $\to$ 🟢 **đặt bút**.
-> 3. Công thức vẽ mọi đa giác đều $N$ cạnh:
->    $$\text{Lặp } N \text{ lần } \Big[\text{Đi } C \text{ bước, Xoay phải } \frac{360^\circ}{N} \text{ độ}\Big]$$
-> 4. Chuyển vị trí vẽ mới: Nhớ câu thần chú **"Nhấc bút (`nhấc bút`) $\to$ Đi tới nơi $\to$ Đặt bút (`đặt bút`)"**.
-
-👉 **Tiếp theo:** Mở file [`Bai_Tap.md`](file:///Users/vu/Developer/ikhEdu_lessons/courses/scratch-bang-a/lessons/lesson-01-ve-hinh-pen-repeat/Bai_Tap.md) để bắt đầu thực hành các bài tập vẽ hình thực tế từ `sca_pen_p00` đến `sca_pen_p05`!

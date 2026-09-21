@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 07 — VÒNG LẶP ĐẾM LẦN VÀ BIẾN ĐẾM THỦ CÔNG
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 07 — Vòng lặp for và hàm range
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 3: Cấu Trúc Rẽ Nhánh & Vòng Lặp  
 > **Tổng số bài tập thực hành:** `14 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -355,6 +355,7 @@ Với dữ liệu đầu vào là `3
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Thí sinh muốn vẽ một tam giác vuông bằng dấu sao, mỗi hàng tăng thêm một ngôi sao. Hãy giúp bạn ấy.
 * **Nhiệm vụ:** Nhập vào chiều cao $N$ của tam giác vuông. Hãy in ra tam giác vuông cân gồm các dấu sao theo mẫu:
+
  * Dòng 1 có 1 dấu `*`
  * Dòng 2 có 2 dấu `*`
  * ...

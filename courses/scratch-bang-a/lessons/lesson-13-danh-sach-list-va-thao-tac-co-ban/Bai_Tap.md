@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 13 — DANH SÁCH (LIST) VÀ CÁC THAO TÁC CƠ BẢN
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 13 — Danh sách và thao tác cơ bản
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 5: Danh Sách & Thống Kê Dữ Liệu  
 > **Tổng số bài tập thực hành:** `26 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 

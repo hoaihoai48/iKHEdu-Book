@@ -1,128 +1,132 @@
 # Bài 09: QUY LUẬT DÃY SỐ VÀ TAM GIÁC SỐ
 
-## 1. Công Thức Quy Luật Dãy Số Cách Đều
+## 1. Bản Chất Các Bài Toán Quy Luật Dãy Số Trong Lập Trình
 
-Xét dãy số cách đều: $3, 7, 11, 15, 19, \dots$
-- Số đầu tiên: $u_1 = 3$
-- Khoảng cách giữa 2 số liên tiếp: $d = 4$
-- Số hạng thứ $n$:
-  $$u_n = 3 + (n - 1) \times 4$$
-- Biểu thức Scratch:
-  `((3) + (((n) - (1)) * (4)))`
-> Không cần dùng vòng lặp, tính thẳng bằng 1 phép toán siêu nhanh!
+Khi lập trình, bài toán về dãy số xuất hiện với tần suất rất cao:
 
----
+- **Dãy số cách đều (Cấp số cộng):** $1, 4, 7, 10, 13, \dots$ (mỗi số cách nhau khoảng cách $d$).
+- **Dãy số Fibonacci:** $1, 1, 2, 3, 5, 8, 13, 21, \dots$ (số sau bằng tổng hai số liền trước).
+- **Quy luật lũy tiến:** $1, 3, 6, 10, 15, \dots$ (khoảng cách tăng dần: $+2, +3, +4, +5$).
 
-## 2. Thuật Toán Sinh Dãy Fibonacci
-
-Dãy số: $1, 1, 2, 3, 5, 8, 13, 21, \dots$
-
-```text
-đặt [f1 v] thành (1)
-đặt [f2 v] thành (1)
-lặp lại ((N) - (2)) lần
-    đặt [f_moi v] thành ((f1) + (f2))
-    đặt [f1 v] thành (f2)
-    đặt [f2 v] thành (f_moi)
-nói (f2)
-```
+Thay vì học vẹt công thức, học sinh cần rèn luyện tư duy: **Xác định giá trị khởi đầu $\to$ Tìm quy luật chuyển đổi giữa 2 bước liên tiếp $\to$ Đưa vào vòng lặp**.
 
 ---
 
-## 3. Kỹ Thuật Hai Vòng Lặp Lồng Nhau In Tam Giác Sao
+## 2. Kỹ Thuật Biến Lăn (Rolling Variables) — Thuật Toán Fibonacci
 
-In tam giác có $H$ hàng, hàng thứ $r$ có $r$ ngôi sao `*`:
-- Hàng 1: `*`
-- Hàng 2: `**`
-- Hàng 3: `***`
+Để tính số Fibonacci thứ $N$, ta không cần lưu toàn bộ dãy số vào bộ nhớ mà chỉ cần duy trì đúng **hai biến nhớ liền kề (`a` và `b`)**:
 
-Quy trình ghép dòng:
-```text
-đặt [r v] thành (1)
-lặp lại (H) lần
-    đặt [dong v] thành []
-    đặt [c v] thành (1)
-    lặp lại (r) lần
-        đặt [dong v] thành (kết hợp (dong) [*])
-        thay đổi [c v] một lượng (1)
-    nói (dong) trong (1) giây
-    thay đổi [r v] một lượng (1)
-```
+- Ban đầu: `a = 1, b = 1`.
+- Ở mỗi bước lặp:
+  1. Tính số tiếp theo: `c = a + b`.
+  2. Dịch chuyển ô nhớ: gán `a = b` và gán `b = c`.
+
+![Thuật toán Fibonacci bằng biến lăn](assets/rendered_blocks/l09_fibonacci_vi.png)
 
 ---
 
-## 4. Bẫy Lỗi Thường Gặp Khi Lập Trình Dãy Số (Bug Traps)
+## 3. Kỹ Thuật Hai Vòng Lặp Lồng Nhau — In Tam Giác Sao
 
-> **Bẫy 1: Quên khởi tạo lại dòng trước khi vào vòng lặp trong**
-> - *Hiện tượng:* Đặt khối `đặt [dong] thành []` ở ngoài vòng lặp hàng.
-> - *Hậu quả:* Các ngôi sao của hàng trước không bị xóa, hàng sau sẽ cộng dồn cả hàng trước tạo thành hình chữ nhật khổng lồ!
-> - *Khắc phục:* Bắt buộc reset `dong = rỗng` ở đầu mỗi hàng mới.
+Khi bài toán yêu cầu in hình dạng 2 chiều (ví dụ: tam giác sao, bảng cửu chương, ma trận ô số):
 
-> **Bẫy 2: Lệch 1 đơn vị công thức số hạng thứ N (Off-by-one)**
-> - *Hiện tượng:* Viết công thức $u_n = u_1 + n \times d$.
-> - *Hậu quả:* Với $n = 1$ sẽ ra $u_1 + d$ (thành số thứ 2 mất rồi!).
-> - *Khắc phục:* Luôn là $(n - 1) \times d$.
+- **Vòng lặp ngoài (Outer Loop):** Điều khiển **Dòng** chạy từ $1$ đến $N$.
+- **Vòng lặp trong (Inner Loop):** Điều khiển **Cột** (số lượng dấu sao trên dòng đó) chạy từ $1$ đến `dong`.
+
+![Hai vòng lặp lồng nhau in tam giác sao](assets/rendered_blocks/l09_nested_triangle_vi.png)
+
+### Cơ chế ghép chuỗi dòng:
+
+- Đầu mỗi dòng: khởi tạo `dong_chu = ""` (chuỗi rỗng).
+- Vòng lặp trong: cứ mỗi cột, nối thêm ký tự `*` vào dòng: `đặt [dong_chu v] thành (kết hợp (dong_chu) [*])`.
+- Hết vòng lặp trong: nạp cả dòng hoàn chỉnh vào Danh sách hiển thị.
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 4. Bảng Mô Phỏng Từng Bước Dãy Fibonacci Đến $N = 6$ (Dry Run Table)
 
-1. **Số hạng thứ 10 của dãy số $2, 5, 8, 11\dots$ là bao nhiêu?**
-   - A. 29 *(Đáp án đúng: 2 + (10 - 1)*3 = 29)*
-   - B. 32
-   - C. 26
-   - D. 30
+| Vòng lặp | Biến `a` (Số trước) | Biến `b` (Số hiện tại) | Tính `c = a + b` | Dịch `a = b` | Dịch `b = c` | Giá trị phần tử sinh ra |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| *Khởi tạo* | **$1$** | **$1$** | — | — | — | Số thứ 1: $1$, Số thứ 2: $1$ |
+| **Vòng 1** | $1$ | $1$ | $1 + 1 = \mathbf{2}$ | $a \leftarrow 1$ | $b \leftarrow \mathbf{2}$ | **Số thứ 3: $2$** |
+| **Vòng 2** | $1$ | $2$ | $1 + 2 = \mathbf{3}$ | $a \leftarrow 2$ | $b \leftarrow \mathbf{3}$ | **Số thứ 4: $3$** |
+| **Vòng 3** | $2$ | $3$ | $2 + 3 = \mathbf{5}$ | $a \leftarrow 3$ | $b \leftarrow \mathbf{5}$ | **Số thứ 5: $5$** |
+| **Vòng 4** | $3$ | $5$ | $3 + 5 = \mathbf{8}$ | $a \leftarrow 5$ | $b \leftarrow \mathbf{8}$ | **Số thứ 6: $8$** |
 
-2. **Dãy Fibonacci bắt đầu bằng hai số $1, 1$. Số tiếp theo là:**
-   - A. 2 *(Đáp án đúng)*
-   - B. 3
-   - C. 4
-   - D. 0
+$\implies$ Sau 4 lượt lặp (ứng với $N - 2$), biến `b` chứa chính xác số Fibonacci thứ 6 là **$8$**.
 
-3. **Khi in hình chữ nhật kích thước $M$ hàng và $N$ cột, vòng lặp ngoài chạy bao nhiêu lần?**
-   - A. $M$ lần *(Đáp án đúng: quản lý số hàng)*
-   - B. $N$ lần
-   - C. $M \times N$ lần
-   - D. 1 lần
+---
 
-4. **Biến `dong` tích lũy chuỗi ký tự ban đầu phải được gán:**
-   - A. Chuỗi rỗng `[]` *(Đáp án đúng)*
-   - B. Số 0
-   - C. Dấu cách
-   - D. `*`
+## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
 
-5. **Để ghép thêm một ngôi sao vào biến `dong`, ta dùng:**
-   - A. `đặt [dong] thành (kết hợp (dong) [*])` *(Đáp án đúng)*
-   - B. `thay đổi [dong] một lượng (1)`
-   - C. `đặt [dong] thành [*]`
-   - D. `dong + *`
+> **Bẫy 1: Sai thứ tự dịch chuyển biến làm mất giá trị**
+> - *Sai lầm:* `đặt [a v] thành (b)` trước rồi mới tính `c = a + b`.
+> - *Hậu quả:* Lúc này `a` đã bị đè thành `b`, nên `c = b + b = 2b`, toàn bộ dãy số bị sai lệch!
+> - *Khắc phục:* Phải tính số mới `c` trước, hoặc dùng biến tạm.
 
-6. **Trong dãy số $1, 4, 9, 16, 25\dots$, số hạng thứ $N$ có công thức là:**
-   - A. $N \times N$ *(Đáp án đúng: các số chính phương)*
-   - B. $2N$
-   - C. $N + 3$
-   - D. $N \times 3$
+> **Bẫy 2: Quên làm sạch dòng chữ ở đầu mỗi dòng mới**
+> - *Hiện tượng:* Không đặt `dong_chu = ""` trước vòng lặp trong.
+> - *Hậu quả:* Dòng sau sẽ nối dài tiếp từ dòng trước, tam giác biến thành một dải dài vô tận!
 
-7. **Khoảng cách giữa hai số liên tiếp trong dãy $10, 15, 20, 25$ là:**
-   - A. 5 *(Đáp án đúng)*
-   - B. 10
-   - C. 15
-   - D. 20
+---
 
-8. **Khi lồng 2 vòng lặp, vòng ngoài lặp 5 lần, vòng trong lặp 5 lần. Có tất cả bao nhiêu lần chạy vòng trong?**
-   - A. 25 lần *(Đáp án đúng)*
-   - B. 10 lần
-   - C. 5 lần
-   - D. 20 lần
+## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
-9. **Tam giác số có hàng 1 là `1`, hàng 2 là `1 2`, hàng 3 là `1 2 3`. Số lượng số trên hàng $k$ là:**
-   - A. $k$ số *(Đáp án đúng)*
-   - B. $k - 1$ số
-   - C. $2k$ số
-   - D. Hằng số 3
+1. **Số tiếp theo trong dãy số Fibonacci $1, 1, 2, 3, 5, 8, \dots$ là:**
+   - A. 11
+   - B. 12
+   - C. 13 *(Đáp án đúng: 5 + 8 = 13)*
+   - D. 15
 
-10. **Tổng các số từ 1 đến 10 là:**
-    - A. 55 *(Đáp án đúng)*
-    - B. 50
-    - C. 45
-    - D. 100
+2. **Để tính số Fibonacci thứ $N$ ($N \ge 3$), vòng lặp cần chạy bao nhiêu lần nếu đã khởi tạo 2 số đầu?**
+   - A. $N$ lần
+   - B. $N - 1$ lần
+   - C. $N - 2$ lần *(Đáp án đúng)*
+   - D. 2 lần
+
+3. **Trong kỹ thuật in tam giác sao bằng hai vòng lặp lồng nhau, vòng lặp ngoài điều khiển:**
+   - A. Số cột
+   - B. Số dòng *(Đáp án đúng)*
+   - C. Kích thước dấu sao
+   - D. Màu sắc
+
+4. **Khi in dòng thứ $i$ của tam giác vuông cân sao, vòng lặp bên trong cần lặp bao nhiêu lần?**
+   - A. 1 lần
+   - B. $i$ lần *(Đáp án đúng)*
+   - C. $N$ lần
+   - D. $i + 1$ lần
+
+5. **Dãy số cách đều $3, 7, 11, 15, \dots$ có khoảng cách bước nhảy là:**
+   - A. 3
+   - B. 4 *(Đáp án đúng: 7 - 3 = 4)*
+   - C. 5
+   - D. 7
+
+6. **Công thức toán học tính số hạng thứ $N$ của dãy cách đều có số đầu $u_1$ và khoảng cách $d$ là:**
+   - A. $u_n = u_1 + N \times d$
+   - B. $u_n = u_1 + (N - 1) \times d$ *(Đáp án đúng)*
+   - C. $u_n = N \times d$
+   - D. $u_n = u_1 \times d$
+
+7. **Trước khi bắt đầu ghép các dấu sao cho một dòng mới, biến `dong_chu` cần được đặt thành:**
+   - A. Dấu cách
+   - B. Chuỗi rỗng `""` *(Đáp án đúng)*
+   - C. Dấu sao `*`
+   - D. Số 0
+
+8. **Tổng của dãy số tự nhiên $S = 1 + 2 + 3 + \dots + N$ có công thức tính nhanh là:**
+   - A. $N \times (N + 1) / 2$ *(Đáp án đúng)*
+   - B. $N \times N / 2$
+   - C. $(N + 1) / 2$
+   - D. $N \times (N - 1) / 2$
+
+9. **Nếu một tam giác sao có 5 dòng, tổng số dấu sao được in ra là:**
+   - A. 10
+   - B. 15 *(Đáp án đúng: 1 + 2 + 3 + 4 + 5 = 15)*
+   - C. 20
+   - D. 25
+
+10. **Đặc điểm của biến lăn (Rolling Variables) là:**
+    - A. Cần dùng rất nhiều biến
+    - B. Chỉ cần số lượng biến cố định để tính trạng thái tiếp theo *(Đáp án đúng: tiết kiệm bộ nhớ)*
+    - C. Không thể dùng trong Scratch
+    - D. Luôn chạy chậm hơn

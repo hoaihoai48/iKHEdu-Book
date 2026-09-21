@@ -11,8 +11,11 @@ Nhân dịp Thế vận hội sắp khai mạc, chú Mèo Scratch được giao 
 ## Nhiệm vụ
 
 Em hãy lập trình điều khiển chú Mèo Scratch vẽ lại biểu tượng 5 vòng tròn Olympic với các yêu cầu kỹ thuật sau:
+
 1. Độ dày nét vẽ của các vòng tròn là $6$.
+
 2. Mỗi vòng tròn có bán kính $R = 40$ bước (được tạo bằng cách lặp lại $360$ lần: mỗi lần đi khoảng $0.7$ bước rồi xoay phải $1^\circ$).
+
 3. Vị trí và màu sắc của 5 vòng tròn được bố trí như sau:
    - **Hàng trên** (cùng độ cao $y = 40$):
      - Vòng 1: Màu xanh da trời, bắt đầu từ $x = -110, y = 40$.
@@ -21,6 +24,7 @@ Em hãy lập trình điều khiển chú Mèo Scratch vẽ lại biểu tượn
    - **Hàng dưới** (cùng độ cao $y = 0$, so le lồng vào giữa các vòng hàng trên):
      - Vòng 4: Màu vàng, bắt đầu từ $x = -70, y = 0$.
      - Vòng 5: Màu xanh lá cây, bắt đầu từ $x = 10, y = 0$.
+
 4. Giữa mỗi lần vẽ xong một vòng tròn, nhân vật bắt buộc phải nhấc bút trước khi di chuyển sang vị trí mới để không để lại vệt mực thừa.
 
 ## Kịch bản tương tác (Input Scenario)

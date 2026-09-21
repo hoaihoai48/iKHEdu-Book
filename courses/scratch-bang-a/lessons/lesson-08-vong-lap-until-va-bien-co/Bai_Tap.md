@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 08 — VÒNG LẶP CHO ĐẾN KHI VÀ BIẾN CỜ DỪNG
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 08 — Vòng lặp while và biến cờ
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 3: Cấu Trúc Rẽ Nhánh & Vòng Lặp  
 > **Tổng số bài tập thực hành:** `12 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -34,7 +34,7 @@
 * **Nhiệm vụ:** Nhập vào số tự nhiên $N$. Dùng vòng lặp `while`, hãy in ra các số từ $1$ đến $N$ trên một dòng.
 * **Dữ liệu vào (Input):** Một số tự nhiên $N$ ($1 \le N \le 100$).
 * **Kết quả ra (Output):** Dãy số từ 1 đến $N$.
- ```python
+ ```text
  N = int(câu trả lời)
  i = 1
  while i <= N:
@@ -312,6 +312,7 @@ Các bước: $8 \to 4 \to 2 \to 1$ (cần 4 bước).
 * **Mã bài toán:** `sca_l08_p12_day_so_collatz_3n_1`
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Bạn Tí vừa đọc được một câu đố toán học kỳ bí tên là giả thuyết Collatz trong quyển truyện tranh khoa học ở thư viện. Trò biến hình số bắt đầu từ số tự nhiên $N > 0$ như sau:
+
  * Nếu $N$ là số chẵn: chia đôi $N = N // 2$.
  * Nếu $N$ là số lẻ: nhân ba cộng một $N = 3 \times N + 1$.
  * Lặp lại quy trình trên cho đến khi số $N$ biến thành số $1$ thì dừng lại!

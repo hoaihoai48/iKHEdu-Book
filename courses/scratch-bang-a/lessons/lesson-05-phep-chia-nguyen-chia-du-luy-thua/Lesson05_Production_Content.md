@@ -2,129 +2,150 @@
 
 ## 1. Bản Chất Phép Chia Nguyên Và Chia Dư Trong Scratch
 
-Khác với Python có sẵn toán tử `//` (chia nguyên) và `%` (chia dư), trong Scratch 3.0:
+Khi lập trình, lập trình Bảng A, hai phép toán quan trọng bậc nhất để xử lý số học chính là **Phép chia lấy phần dư (`mod`)** và **Phép chia lấy phần nguyên (`làm tròn xuống của phép chia`)**.
 
-![Minh họa khối lệnh chia nguyên và chia dư](../../assets/rendered_blocks/l05_div_mod_vi.png)
+![Minh họa khối lệnh chia nguyên và chia dư](assets/rendered_blocks/l05_div_mod_vi.png)
 
-### 1.1. Phép chia lấy phần dư: Khối `mod`
-- Trong nhóm **Các phép toán (Operators)**, Scratch có khối tròn: `((A) mod (B))`.
-- Ví dụ:
-  - `(17) mod (5)` trả về **`2`** (vì $17 = 5 \times 3 + 2$).
-  - `(20) mod (4)` trả về **`0`** (vì $20$ chia hết cho $4$).
-  - `(7) mod (2)` trả về **`1`** (số lẻ chia cho 2 luôn dư 1).
-  - `(5) mod (10)` trả về **`5`** (số bị chia nhỏ hơn số chia).
+### 1.1. Phép chia lấy phần dư: Khối `() mod ()`
+- Ký hiệu `mod` (viết tắt của Modulo) trả về **số dư còn lại** sau khi thực hiện phép chia giữa hai số nguyên.
+- **Tính chất cốt lõi:**
+  - `(17) mod (5)` $= 2$ (vì $17 = 5 \times 3 + 2$).
+  - `(20) mod (4)` $= 0$ (chia hết thì số dư luôn bằng $0$).
+  - Số dư của $A \pmod B$ luôn nằm trong phạm vi từ $0$ đến $B - 1$.
+- **Ứng dụng thực chiến:**
+  - Kiểm tra số chẵn/lẻ: `((n) mod (2)) = (0)` là số chẵn, `((n) mod (2)) = (1)` là số lẻ.
+  - Kiểm tra tính chia hết: `((a) mod (b)) = (0)` nghĩa là $a$ chia hết cho $b$.
 
-### 1.2. Phép chia lấy phần nguyên: Khối `làm tròn xuống của ((A) / (B))`
-- Scratch cung cấp khối toán học nâng cao: `([làm tròn xuống v] của ())`.
-- Để tính phần nguyên của $A : B$, ta đặt khối chia `(A) / (B)` vào bên trong:
-  $$\text{thuong\_nguyen} = \text{[làm tròn xuống]} \text{ của } ((A) / (B))$$
-- Ví dụ:
-  - $17 / 5 = 3.4 \implies$ làm tròn xuống được **`3`**.
-  - $29 / 10 = 2.9 \implies$ làm tròn xuống được **`2`**.
+### 1.2. Phép chia lấy phần nguyên trong Scratch
+Trong Scratch, không có sẵn một khối đơn lẻ mang tên chia nguyên.
+Ta phối hợp hai khối lệnh màu xanh lá:
 
----
+1. Thực hiện phép chia thực: `(A) / (B)`
 
-## 2. Bảng Tra Cứu Các Biểu Thức Tính Toán Thời Gian & Đơn Vị
+2. Thả vào khối hàm toán học: chọn tùy chọn **`làm tròn xuống ▼ của ()`** (tương đương hàm `floor` trong toán học).
 
-| Tình huống thực tế | Dữ liệu đầu vào | Giá trị phần nguyên | Giá trị phần dư | Khối lệnh Scratch tương ứng |
-|---|:---:|:---:|:---:|---|
-| **Đổi giây $\to$ phút và giây** | $T$ giây | `phut = floor(T / 60)` | `giay = T mod 60` | `([làm tròn xuống] (T / 60))`<br>`(T mod 60)` |
-| **Đổi phút $\to$ giờ và phút** | $M$ phút | `gio = floor(M / 60)` | `phut = M mod 60` | `([làm tròn xuống] (M / 60))`<br>`(M mod 60)` |
-| **Đổi giờ $\to$ ngày và giờ** | $H$ giờ | `ngay = floor(H / 24)` | `gio = H mod 24` | `([làm tròn xuống] (H / 24))`<br>`(H mod 24)` |
-| **Chia đều bánh kẹo** | $N$ kẹo, $K$ bạn | Số kẹo mỗi bạn | Số kẹo còn thừa | `floor(N / K)` kẹo mỗi bạn<br>`N mod K` kẹo thừa |
-| **Xếp học sinh lên xe buýt** | $N$ bạn, xe chở $S$ | Số chuyến xe chở đầy | Số bạn chuyến cuối | `floor(N / S)` chuyến đầy<br>`N mod S` bạn lẻ |
+$$\text{Chia nguyên } A \text{ cho } B = \text{làm tròn xuống của } ((A) / (B))$$
+
+- Ví dụ: `(17) / (5) = 3.4` $\implies$ `làm tròn xuống của (3.4) = 3`.
 
 ---
 
-## 3. Mô Phỏng Chạy Tay Từng Bước (Dry Run Table)
+## 2. Bài Toán Quy Đổi Thời Gian & Đơn Vị Đo Lường Thực Tế
 
-**Bài toán:** Bạn An có $T = 145$ giây. Hãy đổi sang số phút và số giây lẻ.
+Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng số giây $T$, hãy đổi ra Giờ, Phút, Giây.*
 
-| Bước | Khối lệnh Scratch Tiếng Việt | Biến `T` | Biến `phut` | Biến `giay` | Lời thoại Mèo hiển thị |
-|:---:|---|:---:|:---:|:---:|---|
-| 1 | `đặt [T v] thành (145)` | $145$ | - | - | - |
-| 2 | `đặt [phut v] thành ([làm tròn xuống] của ((T) / (60)))` | $145$ | **`2`** | - | *(145 / 60 = 2.416 $\to$ lấy 2)* |
-| 3 | `đặt [giay v] thành ((T) mod (60))` | $145$ | $2$ | **`25`** | *(145 - 2*60 = 25)* |
-| 4 | `nói (kết hợp (phut) (kết hợp [ phut ] (kết hợp (giay) [ giay])))` | $145$ | $2$ | $25$ | **`2 phut 25 giay`** |
+![Đổi thời gian bằng chia nguyên và chia dư](assets/rendered_blocks/l05_time_convert_vi.png)
 
----
+### Thuật toán quy đổi thời gian 4 bước:
 
-## 4. Bẫy Lỗi Kinh Điển Khi Lập Trình (Bug Traps)
+1. **Tính số Giờ:** Lấy tổng số giây chia nguyên cho $3600$ (vì 1 giờ = 3600 giây):
+   `đặt [gio v] thành ([làm tròn xuống v] của ((tong_giay) / (3600)))`
 
-> **Bẫy 1: Dùng nhầm khối `làm tròn` (Round) thay vì `làm tròn xuống` (Floor)**
-> - *Hiện tượng:* Chọn khối `làm tròn của ((A) / (B))` mặc định.
-> - *Hậu quả:* Nếu $A = 18, B = 5 \implies 18 / 5 = 3.6$. Khối `làm tròn` sẽ làm tròn lên thành `4`! Thực tế 18 cái kẹo chia cho 5 bạn thì mỗi bạn chỉ được trọn vẹn `3` cái kẹo.
-> - *Cách sửa:* Bắt buộc chọn đúng menu tam giác: **`làm tròn xuống` (floor)**.
+2. **Tính số giây còn dư lại sau khi đã đổi ra giờ:**
+   `đặt [giay_du v] thành ((tong_giay) mod (3600))`
 
-> **Bẫy 2: Quên kiểm tra chia cho 0**
-> - *Hiện tượng:* Nhập mẫu số $B = 0$ vào khối `mod`.
-> - *Hậu quả:* Trong Scratch, `(A) mod (0)` sẽ trả về giá trị `NaN` (Not a Number - Không phải số), khiến nhân vật nói linh tinh hoặc đứng im.
-> - *Cách sửa:* Đảm bảo số chia luôn lớn hơn 0.
+3. **Tính số Phút:** Lấy số giây dư chia nguyên cho $60$ (vì 1 phút = 60 giây):
+   `đặt [phut v] thành ([làm tròn xuống v] của ((giay_du) / (60)))`
 
-> **Bẫy 3: Ghép chuỗi dính liền số và chữ**
-> - *Hiện tượng:* Dùng khối `kết hợp (phut) [phut]` mà không có dấu cách.
-> - *Hậu quả:* Màn hình hiện `2phut` thay vì `2 phut`.
+4. **Tính số Giây cuối cùng:**
+   `đặt [giay v] thành ((giay_du) mod (60))`
 
 ---
 
-## 5. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 3. Phép Tính Lũy Thừa Bằng Vòng Lặp
 
-1. **Khối `(19) mod (4)` trả về giá trị nào?**
-   - A. `4`
-   - B. `3` *(Đáp án đúng: vì 19 = 4 * 4 + 3)*
-   - C. `2`
-   - D. `1`
+Để tính $A^B$ ($A$ mũ $B$, tích của $B$ số $A$ nhân với nhau):
 
-2. **Muốn kiểm tra số $X$ có phải là số chẵn hay không, ta so sánh:**
-   - A. `((X) mod (2)) = 0` *(Đáp án đúng)*
-   - B. `((X) mod (2)) = 1`
-   - C. `((X) / (2)) = 0`
-   - D. `([làm tròn] (X)) = 2`
+- Khởi tạo biến kết quả bằng 1: `đặt [kq v] thành (1)`.
+- Lặp lại $B$ lần: nhân dồn $A$ vào kết quả:
+  `lặp lại (B) lần { đặt [kq v] thành ((kq) * (A)) }`.
 
-3. **Để tính số xe 4 chỗ ít nhất chở hết $N$ người (kể cả người lẻ), công thức chuẩn là:**
-   - A. `[làm tròn xuống] (N / 4)`
-   - B. `[làm tròn lên] (N / 4)` *(Đáp án đúng: khối ceiling hoặc cộng thêm 3 trước khi chia)*
-   - C. `N mod 4`
-   - D. `(N + 4) / 4`
+---
 
-4. **Biểu thức `(25) mod (5)` có giá trị là:**
-   - A. `5`
-   - B. `1`
-   - C. `0` *(Đáp án đúng: phép chia hết số dư bằng 0)*
-   - D. `25`
+## 4. Bảng Mô Phỏng Từng Bước Đổi $T = 3725$ Giây (Dry Run Table)
 
-5. **Khi tính `(8) mod (12)` kết quả là bao nhiêu?**
-   - A. `0`
-   - B. `8` *(Đáp án đúng: vì 8 chia 12 được 0 dư 8)*
-   - C. `4`
-   - D. `12`
+| Bước thực hiện | Khối lệnh Scratch | Phép tính toán học | Giá trị biến lưu trong RAM |
+|:---:|---|---|:---:|
+| 1 | `đặt [gio v] thành ([floor] của (3725 / 3600))` | $3725 / 3600 = 1.034 \to \mathbf{1}$ | `gio = 1` |
+| 2 | `đặt [giay_du v] thành (3725 mod 3600)` | $3725 - 3600 \times 1 = \mathbf{125}$ | `giay_du = 125` |
+| 3 | `đặt [phut v] thành ([floor] của (125 / 60))` | $125 / 60 = 2.083 \to \mathbf{2}$ | `phut = 2` |
+| 4 | `đặt [giay v] thành (125 mod 60)` | $125 - 60 \times 2 = \mathbf{5}$ | `giay = 5` |
 
-6. **Trong Scratch, khối nào tương đương với phép chia `//` của Python?**
-   - A. `[làm tròn] của ((A) / (B))`
-   - B. `[làm tròn xuống] của ((A) / (B))` *(Đáp án đúng)*
-   - C. `((A) mod (B))`
-   - D. `((A) / (B))`
+$\implies$ Kết quả: $3725$ giây = **$1$ giờ $2$ phút $5$ giây**.
 
-7. **Số $A$ chia hết cho $5$ khi:**
-   - A. `(A mod 5) = 1`
-   - B. `(A mod 5) = 0` *(Đáp án đúng)*
-   - C. `(A / 5) = 0`
-   - D. `(A * 5) = 0`
+---
 
-8. **Biểu thức tính $A^2$ trong Scratch là:**
-   - A. `(A) ^ (2)`
-   - B. `(A) ** (2)`
-   - C. `(A) * (A)` *(Đáp án đúng)*
-   - D. `(A) + (A)`
+## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
 
-9. **Nếu một sự kiện lặp lại sau mỗi 7 ngày, để tìm thứ trong tuần ta dùng toán tử:**
-   - A. `+`
-   - B. `/`
-   - C. `mod 7` *(Đáp án đúng)*
-   - D. `* 7`
+> **Bẫy 1: Dùng nhầm khối `làm tròn của ()` thay vì `làm tròn xuống của ()`**
+> - *Khối `làm tròn` (Round):* Sẽ làm tròn lên số nguyên gần nhất nếu phần thập phân $\ge 0.5$.
+> - *Ví dụ:* $7 / 4 = 1.75$. Nếu dùng `làm tròn`, kết quả ra $2$ (SAI, vì chia nguyên $7$ cho $4$ chỉ được thương là $1$!).
+> - *Khắc phục:* Bắt buộc chọn chính xác **`làm tròn xuống ▼`** trong danh sách thả xuống.
 
-10. **Khi chia $N = 37$ học sinh thành các tổ 5 bạn, số bạn bị dư ra là:**
-    - A. `7`
-    - B. `2` *(Đáp án đúng: 37 mod 5 = 2)*
-    - C. `5`
-    - D. `3`
+> **Bẫy 2: Chia dư cho số 0**
+> - *Hiện tượng:* `(x) mod (0)`.
+> - *Hậu quả:* Scratch sẽ trả về giá trị `NaN` (Not a Number), làm tê liệt toàn bộ chương trình!
+
+---
+
+## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+
+1. **Khối lệnh `(23) mod (5)` trả về kết quả là bao nhiêu?**
+   - A. 4
+   - B. 3 *(Đáp án đúng: vì 23 = 5 * 4 + 3)*
+   - C. 2
+   - D. 5
+
+2. **Muốn kiểm tra một số nguyên $N$ có phải là số chẵn hay không, điều kiện nào sau đây là ĐÚNG?**
+   - A. `< ((N) mod (2)) = (0) >` *(Đáp án đúng)*
+   - B. `< ((N) mod (2)) = (1) >`
+   - C. `< ((N) / (2)) = (0) >`
+   - D. `< (N) > (2) >`
+
+3. **Để thực hiện phép chia lấy phần nguyên của $A$ cho $B$ trong Scratch, ta dùng khối nào?**
+   - A. `làm tròn của ((A) / (B))`
+   - B. `làm tròn xuống của ((A) / (B))` *(Đáp án đúng)*
+   - C. `căn bậc hai của ((A) / (B))`
+   - D. `(A) mod (B)`
+
+4. **Giá trị của biểu thức `[làm tròn xuống v] của ((19) / (4))` là:**
+   - A. 4.75
+   - B. 5
+   - C. 4 *(Đáp án đúng: 19 chia 4 được 4 dư 3)*
+   - D. 3
+
+5. **Nếu $A$ chia hết cho $B$, thì biểu thức `(A) mod (B)` luôn luôn bằng:**
+   - A. 1
+   - B. B
+   - C. 0 *(Đáp án đúng)*
+   - D. A
+
+6. **Một năm nhuận có 366 ngày. Một tuần có 7 ngày. Phép tính nào cho biết số ngày lẻ còn dư ra của năm nhuận?**
+   - A. `(366) / (7)`
+   - B. `(366) mod (7)` *(Đáp án đúng: 366 mod 7 = 2 ngày dư)*
+   - C. `(366) - (7)`
+   - D. `(366) * (7)`
+
+7. **Biểu thức `(10) mod (10)` trả về:**
+   - A. 0 *(Đáp án đúng)*
+   - B. 1
+   - C. 10
+   - D. 100
+
+8. **Để lấy chữ số tận cùng của một số tự nhiên $N$ (ví dụ số 358 lấy ra số 8), ta dùng biểu thức:**
+   - A. `(N) / (10)`
+   - B. `(N) mod (10)` *(Đáp án đúng)*
+   - C. `(N) - (10)`
+   - D. `làm tròn xuống của (N)`
+
+9. **Kết quả của `(4) mod (7)` là:**
+   - A. 0
+   - B. 3
+   - C. 4 *(Đáp án đúng: Số bị chia nhỏ hơn số chia thì số dư chính là số bị chia)*
+   - D. 7
+
+10. **Khởi tạo biến `kq = 1`, lặp lại 3 lần nhân với 2, kết quả cuối cùng là:**
+    - A. 6
+    - B. 8 *(Đáp án đúng: 2 mũ 3 = 8)*
+    - C. 9
+    - D. 16

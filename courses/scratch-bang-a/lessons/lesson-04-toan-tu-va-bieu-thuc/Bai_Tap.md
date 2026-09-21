@@ -1,6 +1,6 @@
-# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 04 — TOÁN TỬ VÀ BIỂU THỨC SỐ HỌC
+# DANH SÁCH BÀI TẬP THỰC HÀNH: BÀI 04 — Toán tử và biểu thức
 
-**Khóa học:** iKHEDU Scratch — Bảng A (Level 1)  
+**Khóa học:** iKHEDU Scratch  
 **Chuyên đề:** Chương 2: Lập Trình Tính Toán Cơ Bản & Biến Số  
 > **Tổng số bài tập thực hành:** `36 bài` chuẩn hóa 100% (Từ kho bài tập `courses/scratch-bang-a/problems/`).  
 
@@ -173,6 +173,7 @@ Khoảng cách giữa các đèn là $5\text{ cm}$. Số đèn mắc là: $40 : 
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Nhân dịp tổng kết cuối năm, cô giáo chủ nhiệm lớp 6A mua $N$ chiếc kẹo sô-cô-la để thưởng cho $K$ bạn học sinh xuất sắc. Cô muốn chia đều kẹo cho các bạn sao cho mỗi bạn nhận được số kẹo bằng nhau, phần kẹo dư ra (nếu có) cô sẽ giữ lại để lần sau. Em hãy tính xem mỗi bạn được bao nhiêu chiếc kẹo và còn dư lại bao nhiêu chiếc.
 * **Nhiệm vụ:** Nhập hai số nguyên dương $N$ và $K$ trên 1 dòng. In ra 2 dòng:
+
 * **Dữ liệu vào (Input):** Một dòng chứa hai số nguyên dương $N, K$ ($1 \le N, K \le 10^9$).
 * **Kết quả ra (Output):** Hai dòng lần lượt là thương nguyên và số kẹo dư.
 * **Dữ liệu mẫu (Sample):**
@@ -307,6 +308,7 @@ $3 \times 4 + 5 = 17$.
 * **Mã bài toán:** `sca_l04_p12_ban_co_caro_vo_tan`
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Giờ giải lao, hai bạn Bi và Bo rủ nhau chơi trên một bàn cờ ô vuông vô tận được chia thành các hàng, mỗi hàng có đúng $W$ ô vuông. Các ô vuông được đánh số liên tiếp bắt đầu từ $1$:
+
  * Hàng 1 gồm các ô: $1, 2, \dots, W$.
  * Hàng 2 gồm các ô: $W+1, W+2, \dots, 2W$.
  * Cứ như vậy tiếp tục cho các hàng tiếp theo.

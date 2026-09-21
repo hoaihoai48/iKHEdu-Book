@@ -2,240 +2,201 @@
 
 ## 1. Bản Chất Chương Trình Máy Tính & Luồng Dữ Liệu I/O
 
-Mọi chương trình máy tính phục vụ thi đấu Tin học trẻ Bảng A đều vận hành nghiêm ngặt theo **luồng dữ liệu 3 bước khép kín**:
+Trong khoa học máy tính và lập trình, một chương trình thực chất là một chuỗi chỉ thị có trật tự điều khiển máy tính biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
 
-```text
-  [ BÀN PHÍM ] ──(hỏi và đợi)──► [ CÂU TRẢ LỜI ] ──(đặt biến)──► [ BIẾN SỐ A, B ]
-                                                                        │
-                                                                   (Tính toán)
-                                                                        ▼
-  [ MÀN HÌNH ] ◄──────(nói)────── [ KẾT HỢP ] ◄────────────── [ BIẾN KẾT QUẢ ]
-```
+Mọi bài toán trong các kỳ thi lập trình lập trình Bảng A đều vận hành nghiêm ngặt theo **luồng dữ liệu 3 bước khép kín (Input $\to$ Process $\to$ Output)**:
 
-1. **Đầu vào (Input):** Chú Mèo Scratch đặt câu hỏi cho người dùng nhập từ bàn phím thông qua khối màu xanh lơ: **`hỏi () và đợi`**.
-2. **Lưu trữ & Xử lý (Process):** Dữ liệu người dùng gõ vào được nạp vào biến tạm **`câu trả lời`**. Ta dùng khối màu cam đậm **`đặt [biến] thành (câu trả lời)`** để cất giữ an toàn vào chiếc hộp biến số.
-3. **Đầu ra (Output):** Sau khi tính toán, chú Mèo hiển thị kết quả bằng bong bóng lời thoại thông qua khối màu tím: **`nói ()`**.
+| Giai đoạn luồng dữ liệu | Thiết bị & Khối lệnh Scratch 3.0 | Vai trò trong chương trình |
+|---|---|---|
+| **1. Đầu vào (Input)** | Bàn phím $\longrightarrow$ `hỏi [Nhập dữ liệu] và đợi` | Đọc dữ liệu người dùng gõ vào biến hệ thống `câu trả lời` |
+| **2. Lưu trữ & Xử lý** | Bộ nhớ RAM $\longrightarrow$ `đặt [biến v] thành (câu trả lời)` | Cất dữ liệu vào biến số riêng biệt và thực hiện tính toán |
+| **3. Đầu ra (Output)** | Màn hình $\longrightarrow$ `nói (kết quả)` | Xuất kết quả cuối cùng ra sân khấu cho người dùng quan sát |
+
+1. **Đầu vào (Input):** Chú Mèo Scratch nhận dữ liệu từ bàn phím thông qua khối màu xanh lơ: `hỏi () và đợi`.
+
+2. **Xử lý (Process):** Dữ liệu được lưu trữ trong bộ nhớ RAM dưới dạng các **Biến số** (Variables). Các khối toán tử màu xanh lá thực hiện tính toán.
+
+3. **Đầu ra (Output):** Xuất kết quả cuối cùng lên sân khấu thông qua khối màu tím: `nói ()`.
 
 ---
 
-## 2. Lệnh Nhập Dữ Liệu: Khối `hỏi () và đợi` & Tử Huyệt `câu trả lời`
+## 2. Lệnh Nhập Dữ Liệu: Khối `hỏi () và đợi` & Bẫy Biến `câu trả lời`
 
-### 2.1. Cú pháp nhập dữ liệu
-Trong nhóm **Cảm biến (Sensing)** màu xanh lơ:
+### 2.1. Cú pháp và cơ chế của khối `hỏi () và đợi`
+Trong nhóm **Cảm biến (Sensing)** màu xanh lơ, Scratch cung cấp khối lệnh nhập dữ liệu chính thức:
 
-![Khối lệnh hỏi và đợi](../../assets/rendered_blocks/l03_block_ask_vi.png)
+![Khối lệnh hỏi và đợi](assets/rendered_blocks/l03_block_ask_vi.png)
 
 Khi khối lệnh này chạy:
-- Chú Mèo Scratch sẽ hiện một khung nhập chữ nhật ở dưới đáy sân khấu.
-- Chương trình tạm dừng (đợi) cho đến khi người dùng gõ xong dữ liệu và bấm phím **Enter** (hoặc bấm dấu tick xanh ✔).
-- Nội dung người dùng vừa nhập được tự động lưu vào khối tròn màu xanh lơ mang tên: **`câu trả lời`**.
+
+- Chú Mèo Scratch sẽ xuất hiện bong bóng câu hỏi kèm một thanh nhập văn bản ở cạnh đáy sân khấu.
+- Toàn bộ chương trình **tạm dừng hoàn toàn** để đợi người dùng gõ phím.
+- Khi người dùng bấm phím **Enter** hoặc nhấp chuột vào dấu tick xanh ✔, nội dung vừa gõ được tự động nạp vào khối tròn màu xanh lơ: `câu trả lời`.
+
+### 2.2. Tử huyệt bẫy ghi đè biến `câu trả lời`
+> **LỖI TỬ HUYỆT:**
+> Biến `câu trả lời` là một biến tạm thời của hệ thống. Mỗi khi một khối `hỏi () và đợi` mới được kích hoạt, giá trị cũ trong `câu trả lời` **sẽ bị xóa sạch và ghi đè ngay lập tức**!
+>
+> Nếu viết:
+> - Hỏi "Nhập số A:" và đợi
+> - Hỏi "Nhập số B:" và đợi
+> - Đặt tong thành `câu trả lời` + `câu trả lời`
+>
+> $\implies$ Kết quả hoàn toàn SAI vì lúc này cả hai `câu trả lời` đều mang giá trị của số B!
+
+**Quy tắc bất biến:** Phải cất ngay `câu trả lời` vào một biến số riêng biệt trước khi gọi lệnh `hỏi` tiếp theo.
 
 ---
 
-### 2.2. Cất giữ dữ liệu vào Biến số (Variables)
-Để dữ liệu không bị thất lạc, ta tạo biến số trong nhóm **Các biến số** màu cam đậm:
+## 3. Khái Niệm Biến Số & Chiếc Hộp Dán Nhãn
 
-![Khối đặt biến thành câu trả lời](../../assets/rendered_blocks/l03_block_set_vi.png)
+Biến số giống như một chiếc hộp được dán nhãn tên ngoài vỏ dùng để cất giữ một giá trị trong bộ nhớ:
 
-*Quy trình chuẩn khi nhập 2 số $A$ và $B$:*
-1. 🔵 **Hỏi [Nhập số thứ nhất A:] và đợi**
-2. 🟠 **Đặt [A] thành (câu trả lời)** *(Cất ngay vào hộp A)*
-3. 🔵 **Hỏi [Nhập số thứ hai B:] và đợi**
-4. 🟠 **Đặt [B] thành (câu trả lời)** *(Cất ngay vào hộp B)*
+- **Tạo biến số:** Trong nhóm **Các biến số (Variables)** màu cam đậm, bấm vào *Tạo một biến* và đặt tên gợi nhớ (ví dụ: `a`, `b`, `tong`, `chu_vi`).
+- **Khối `đặt [biến v] thành ()`:** Dùng để gán giá trị ban đầu vào chiếc hộp.
+- **Khối `thay đổi [biến v] một lượng ()`:** Dùng để tăng hoặc giảm giá trị hiện tại của chiếc hộp.
 
-> ⚠️ **TỬ HUYỆT BẬC NHẤT CỦA HỌC SINH MỚI HỌC SCRATCH:**
-> Biến `câu trả lời` chỉ giữ được kết quả của **câu hỏi gần nhất**.  
-> Nếu bạn hỏi câu 1, rồi hỏi tiếp câu 2 mà **quên đặt vào biến $A$**, thì khi hỏi câu 2 xong, giá trị của câu 1 sẽ **BỊ XÓA VĨNH VIỄN** và bị đè bởi giá trị của câu 2!
+![Khối đặt biến thành câu trả lời](assets/rendered_blocks/l03_block_set_vi.png)
+
+### Chương trình chuẩn mực nhập 2 số và in tổng:
+![Luồng nhập xuất chuẩn mực](assets/rendered_blocks/l03_pipeline_io_vi.png)
+
+Quy trình chuẩn 6 bước:
+
+1. `hỏi [Nhập số a: ] và đợi`
+
+2. `đặt [a v] thành (câu trả lời)`
+
+3. `hỏi [Nhập số b: ] và đợi`
+
+4. `đặt [b v] thành (câu trả lời)`
+
+5. `đặt [tong v] thành ((a) + (b))`
+
+6. `nói (kết hợp [Tổng là: ] (tong))`
 
 ---
 
-## 3. Lệnh Xuất Dữ Liệu: Khối `nói ()` & Bẫy Ghép Chuỗi `kết hợp`
+## 4. Lệnh Xuất Dữ Liệu: Khối `nói ()` & Ghép Chuỗi
 
 Trong nhóm **Hiển thị (Looks)** màu tím:
-- 🟣 **`nói (nội dung)`**: Hiện bong bóng lời thoại liên tục trên đầu nhân vật.
-- 🟣 **`nói (nội dung) trong (2) giây`**: Hiện lời thoại trong đúng 2 giây rồi tự động biến mất.
 
-### 3.1. Xuất một kết quả đơn giản
-- Để in một dòng chữ chào mừng: 🟣 `nói [Xin chao cac ban! Toi la Scratch.]`
-- Để in trực tiếp một con số: 🟣 `nói (2026)`
-- Để in kết quả của biến: 🟣 `nói (A)`
+- **Khối `nói () trong () giây`:** Hiển thị bong bóng thoại trong khoảng thời gian định trước rồi biến mất.
+- **Khối `nói ()` (không có thời gian):** Hiển thị kết quả vĩnh viễn trên màn hình cho đến khi có lệnh nói khác thay thế. Khi lập trình, lập trình, **luôn ưu tiên dùng khối `nói ()` này** để ban giám khảo và hệ thống chấm nhìn thấy rõ kết quả.
 
-### 3.2. In nhãn kèm kết quả: Khối `kết hợp` (`join`)
-Khi cần in cả chữ và số (ví dụ: `Tổng là: 40`), trong Scratch ta không dùng dấu phẩy `,` như Python mà phải dùng khối **`kết hợp () ()`** trong nhóm Các phép toán màu xanh lá:
+### Kỹ thuật ghép chuỗi hiển thị:
+Để hiển thị kết quả kèm lời dẫn hoặc in nhiều biến cùng lúc, ta dùng khối tròn màu xanh lá `kết hợp () và ()`:
 
-![Khối nói kết hợp chuỗi](../../assets/rendered_blocks/l03_block_say_join_vi.png)
-
-> 💡 **Bẫy dính chữ (Spacing Trap):**
-> Khối `kết hợp [Tong la:][(40)]` sẽ dính liền thành `Tong la:40`.  
-> Muốn đẹp mắt và chuẩn chỉnh, học sinh **bắt buộc phải gõ thêm một dấu cách sau dấu hai chấm**: `[Tổng là: ]`.
+![Khối nói kết hợp chuỗi](assets/rendered_blocks/l03_block_say_join_vi.png)
 
 ---
 
-## 4. Thuật Toán Hoán Đổi Vị Trí Hai Biến Số ($A \longleftrightarrow B$)
+## 5. Thuật Toán Hoán Đổi Hai Biến Số ($A \longleftrightarrow B$)
 
-### 4.1. Vấn đề thực tế
-Giả sử trên tay trái bạn cầm chiếc cốc đựng nước màu xanh ($A$), tay phải cầm chiếc cốc đựng nước màu đỏ ($B$). Bạn muốn đổi nước giữa hai chiếc cốc cho nhau. Bạn có thể đổ trực tiếp từ cốc $A$ sang cốc $B$ không?  
-$\implies$ Không thể, vì nước sẽ bị hòa lẫn vào nhau làm mất màu ban đầu!
+Giả sử có 2 chiếc cốc: Cốc $A$ đựng nước cam, Cốc $B$ đựng nước dâu. Làm thế nào để đổi nước dâu sang cốc $A$ và nước cam sang cốc $B$ mà không bị lẫn lộn?
+$\implies$ Ta bắt buộc phải dùng thêm một **chiếc cốc phụ trung gian (biến `tam`)**!
 
-### 4.2. Giải pháp: Sử dụng chiếc cốc phụ (Biến tạm `tam`)
-Để hoán đổi, ta cần mượn một chiếc cốc thứ ba rỗng mang tên **`tam`**:
-1. Đổ nước từ cốc $A$ sang cốc `tam` $\implies$ Cốc $A$ rỗng, cốc `tam` giữ nước màu xanh.
-2. Đổ nước từ cốc $B$ sang cốc $A$ $\implies$ Cốc $A$ nhận nước màu đỏ.
-3. Đổ nước từ cốc `tam` sang cốc $B$ $\implies$ Cốc $B$ nhận nước màu xanh.
+![Khối lệnh hoán đổi 2 biến](assets/rendered_blocks/l03_block_swap_vi.png)
 
-### 4.3. Cụm khối lệnh hoán đổi chuẩn trong Scratch:
+Quy trình 3 bước vàng:
 
-![Khối lệnh hoán đổi 2 biến](../../assets/rendered_blocks/l03_block_swap_vi.png)
+1. `đặt [tam v] thành (a)` *(Rót cam sang cốc tạm)*
 
-*Cấu trúc 3 bước vàng:*
-1. 🟠 **Đặt [tam] thành (A)**
-2. 🟠 **Đặt [A] thành (B)**
-3. 🟠 **Đặt [B] thành (tam)**
+2. `đặt [a v] thành (b)` *(Rót dâu sang cốc a)*
+
+3. `đặt [b v] thành (tam)` *(Rót cam từ cốc tạm sang cốc b)*
 
 ---
 
-## 5. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 6. Bảng Mô Phỏng Biến Thiên Ô Nhớ Từng Bước (Dry Run Table)
 
-Giả sử người dùng nhập $A = 10$ và $B = 99$. Bảng trace biến số khi thực hiện thuật toán hoán đổi:
+Xét kịch bản nhập $A = 15$ và $B = 7$:
 
-| Bước thực thi | Lệnh khối Scratch | Giá trị biến $A$ | Giá trị biến $B$ | Giá trị biến `tam` | Trạng thái ghi nhận |
+| Bước | Khối lệnh thực thi | Biến `a` | Biến `b` | Biến `tam` | Màn hình hiển thị |
 |:---:|---|:---:|:---:|:---:|---|
-| **Khởi tạo** | Người dùng nhập | $10$ | $99$ | *(chưa có)* | Ban đầu $A=10, B=99$ |
-| **Bước 1** | `đặt [tam] thành (A)` | $10$ | $99$ | **$10$** | Biến `tam` cất giữ giá trị ban đầu của $A$ |
-| **Bước 2** | `đặt [A] thành (B)` | **$99$** | $99$ | $10$ | Gán giá trị của $B$ sang $A$ ($A$ đổi thành $99$) |
-| **Bước 3** | `đặt [B] thành (tam)` | $99$ | **$10$** | $10$ | Lấy giá trị từ `tam` gán sang $B$ ($B$ đổi thành $10$) |
-| **Kết quả** | `nói (kết hợp (A) (B))` | **$99$** | **$10$** | $10$ | Hai biến đã tráo đổi thành công! |
+| 1 | `đặt [a v] thành (15)` | **15** | Chưa có | Chưa có | |
+| 2 | `đặt [b v] thành (7)` | 15 | **7** | Chưa có | |
+| 3 | `đặt [tam v] thành (a)` | 15 | 7 | **15** | |
+| 4 | `đặt [a v] thành (b)` | **7** | 7 | 15 | |
+| 5 | `đặt [b v] thành (tam)` | 7 | **15** | 15 | |
+| 6 | `nói (kết hợp (a) (kết hợp [ ] (b)))` | 7 | 15 | 15 | Mèo nói: `7 15` |
 
 ---
 
-## 6. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
 
-> **Bẫy 1: Hỏi liên tiếp mà không lưu `câu trả lời`**
-> - *Hiện tượng:* Học sinh kéo 2 khối `hỏi [Nhập A:] và đợi` rồi `hỏi [Nhập B:] và đợi` liền nhau, sau đó mới `đặt [A] thành (câu trả lời)` và `đặt [B] thành (câu trả lời)`.
-> - *Hậu quả:* Cả hai biến $A$ và $B$ đều mang giá trị của số thứ hai! Số thứ nhất đã bị ghi đè mất tích.
-> - *Khắc phục:* Quy tắc bất di bất dịch: **1 câu hỏi $\longrightarrow$ 1 lệnh cất vào biến ngay lập tức**.
+> **Bẫy 1: Không đặt biến trước khi hỏi lần tiếp theo**
+> - *Hậu quả:* Mất sạch dữ liệu của lần nhập trước do `câu trả lời` bị ghi đè.
+> - *Khắc phục:* Cứ sau mỗi lệnh `hỏi`, dòng tiếp theo bắt buộc phải là `đặt [tên_biến v] thành (câu trả lời)`.
 
-> **Bẫy 2: Hoán đổi sai không dùng biến phụ**
-> - *Hiện tượng:* Học sinh viết: `đặt [A] thành (B)` rồi viết tiếp `đặt [B] thành (A)`.
-> - *Hậu quả:* Sau lệnh thứ nhất, $A$ đã thành $B$. Đến lệnh thứ hai, $B$ lại gán bằng $A$ (vốn đã là $B$) $\implies$ Cả hai biến cùng mang giá trị của $B$!
-> - *Khắc phục:* Bắt buộc dùng biến thứ ba `tam`.
+> **Bẫy 2: Hoán đổi trực tiếp không dùng biến tạm**
+> - *Sai lầm:* `đặt [a v] thành (b)` rồi ngay sau đó `đặt [b v] thành (a)`.
+> - *Hậu quả:* Biến `a` bị mất giá trị ban đầu và cả hai chiếc hộp đều chứa giá trị của `b`!
 
-> **Bẫy 3: Dùng 2 lệnh `nói ()` liên tiếp để in 2 số**
-> - *Hiện tượng:* Muốn in $A$ và $B$, học sinh kéo: `nói (A)` rồi ngay dưới là `nói (B)`.
-> - *Hậu quả:* Màn hình chớp qua số $A$ trong $0.01$ giây rồi chỉ hiện mỗi số $B$. Người xem không kịp nhìn thấy số $A$.
-> - *Khắc phục:* Dùng khối `kết hợp (A) (kết hợp [ ] (B))` để in cả hai số cùng lúc trên 1 bong bóng, hoặc dùng `nói (A) trong (2) giây` rồi mới `nói (B) trong (2) giây`.
+> **Bẫy 3: Đặt tên biến không có nghĩa**
+> - *Sai lầm:* Đặt tên biến là `x1`, `x2`, `abc`, `bien1`.
+> - *Khắc phục:* Luôn đặt tên biến theo đúng ý nghĩa thực tế: `chieu_dai`, `chieu_rong`, `chu_vi`, `dien_tich`.
 
 ---
 
-## 7. Concept Quiz (10 Câu Trắc Nghiệm Nhận Thức)
+## 8. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
-#### Câu 1 (Chức năng nhập liệu)
-Trong Scratch, khối lệnh nào được dùng để nhận dữ liệu gõ vào từ bàn phím của người dùng?
-- A. `nói [] và đợi`
-- B. `hỏi [] và đợi`
-- C. `đi tới điểm x: y:`
-- D. `thay đổi x một lượng`
-> **Đáp án:** B  
-> **Giải thích:** Khối `hỏi [] và đợi` trong nhóm Cảm biến mở khung nhập liệu từ bàn phím.
+1. **Khối lệnh nào trong Scratch dùng để nhận dữ liệu gõ từ bàn phím?**
+   - A. `nói [] và đợi`
+   - B. `hỏi [] và đợi` *(Đáp án đúng)*
+   - C. `đặt [] thành ()`
+   - D. `thay đổi [] một lượng ()`
 
-#### Câu 2 (Vị trí lưu trữ dữ liệu vừa nhập)
-Sau khi người dùng gõ số $100$ và bấm Enter, số $100$ đó ngay lập tức được cất giữ ở đâu?
-- A. Trong khối `kích thước`.
-- B. Trong biến `câu trả lời`.
-- C. Trong khối `tọa độ x`.
-- D. Bị biến mất khỏi chương trình.
-> **Đáp án:** B  
-> **Giải thích:** Khối `câu trả lời` tự động lưu giữ giá trị của lần nhập gần nhất.
+2. **Dữ liệu người dùng vừa nhập xong sẽ được tự động cất vào khối tròn nào?**
+   - A. `biến của tôi`
+   - B. `kết hợp`
+   - C. `câu trả lời` *(Đáp án đúng)*
+   - D. `vị trí x`
 
-#### Câu 3 (Bản chất biến số)
-Một biến số trong lập trình Scratch có thể được hiểu tương đương với hình ảnh nào trong thực tế?
-- A. Một bức tranh treo tường không bao giờ đổi.
-- B. Một chiếc hộp có dán nhãn tên, bên trong chứa một giá trị có thể lấy ra hoặc thay thế.
-- C. Một chiếc bút chì màu.
-- D. Một phím bấm trên bàn phím.
-> **Đáp án:** B  
-> **Giải thích:** Biến số là ô nhớ được đặt tên dùng để lưu trữ dữ liệu có thể thay đổi.
+3. **Khi thực thi hai lệnh `hỏi` liên tiếp mà không gán vào biến, giá trị của lần hỏi đầu tiên sẽ:**
+   - A. Được lưu vào danh sách
+   - B. Bị xóa và ghi đè bởi giá trị lần hỏi thứ hai *(Đáp án đúng)*
+   - C. Tự động cộng dồn với lần thứ hai
+   - D. Báo lỗi chương trình
 
-#### Câu 4 (Tử huyệt ghi đè dữ liệu)
-Đoạn lệnh sau đây sẽ cho kết quả biến $A$ bằng bao nhiêu nếu người dùng gõ lần 1 là $5$ và lần 2 là $20$?
-```text
-hỏi [Nhập số thứ nhất:] và đợi
-hỏi [Nhập số thứ hai:] và đợi
-đặt [A] thành (câu trả lời)
-```
-- A. $5$
-- B. $20$
-- C. $25$
-- D. $0$
-> **Đáp án:** B  
-> **Giải thích:** Khi câu hỏi thứ hai được thực hiện, `câu trả lời` đã bị đổi thành $20$. Giá trị $5$ bị xóa mất vì chưa kịp cất vào biến $A$.
+4. **Để hoán đổi giá trị giữa 2 biến số $X$ và $Y$, ta cần ít nhất bao nhiêu biến phụ trung gian?**
+   - A. 0 biến
+   - B. 1 biến *(Đáp án đúng)*
+   - C. 2 biến
+   - D. 3 biến
 
-#### Câu 5 (Bẫy khoảng trắng trong ghép chuỗi)
-Khối lệnh `kết hợp [Diem so:][10]` sẽ hiển thị trên màn hình dòng chữ nào?
-- A. `Diem so: 10`
-- B. `Diem so:10`
-- C. `Diem so`
-- D. `10`
-> **Đáp án:** B  
-> **Giải thích:** Khối `kết hợp` nối dính chặt 2 chuỗi ký tự lại với nhau. Nếu không có dấu cách trong ô thứ nhất, chữ sẽ bị dính liền: `Diem so:10`.
+5. **Muốn chú Mèo hiển thị dòng chữ kết quả cố định không biến mất, ta nên dùng khối nào?**
+   - A. `nói [] trong (2) giây`
+   - B. `nói []` *(Đáp án đúng)*
+   - C. `nghĩ [] trong (2) giây`
+   - D. `ẩn`
 
-#### Câu 6 (Thuật toán hoán đổi biến)
-Để tráo đổi giá trị của 2 biến $A$ và $B$, ta bắt buộc phải sử dụng thêm điều gì?
-- A. Phải vẽ thêm một nhân vật mới.
-- B. Phải sử dụng thêm một biến tạm trung gian (ví dụ `tam`).
-- C. Phải dùng khối lệnh bút vẽ màu đỏ.
-- D. Phải xóa toàn bộ sân khấu.
-> **Đáp án:** B  
-> **Giải thích:** Cần một biến trung gian để lưu giữ giá trị của biến thứ nhất trước khi bị biến thứ hai ghi đè.
+6. **Đoạn lệnh: `đặt [x v] thành 5`, `đặt [y v] thành 10`, `đặt [x v] thành (y)` sẽ cho giá trị cuối cùng của x là:**
+   - A. 5
+   - B. 10 *(Đáp án đúng)*
+   - C. 15
+   - D. 0
 
-#### Câu 7 (Đổi chỗ hai biến)
-Cho $A = 15, B = 40$. Sau khi thực hiện 3 lệnh sau, giá trị của $A$ và $B$ lần lượt là:
-```text
-đặt [tam] thành (A)
-đặt [A] thành (B)
-đặt [B] thành (tam)
-```
-- A. $A = 15, B = 40$
-- B. $A = 40, B = 40$
-- C. $A = 40, B = 15$
-- D. $A = 15, B = 15$
-> **Đáp án:** C  
-> **Giải thích:** Thuật toán hoán đổi đã tráo đổi vị trí của $A$ và $B$.
+7. **Khối `kết hợp [Xin ] [chao]` sẽ tạo ra kết quả văn bản nào?**
+   - A. `Xinchao` *(Đáp án đúng: vì không có dấu cách giữa 2 từ)*
+   - B. `Xin chao`
+   - C. `Xin`
+   - D. `chao`
 
-#### Câu 8 (Hiển thị nhiều thông điệp)
-Nếu muốn chú Mèo đọc lần lượt câu chào 1, rồi đến câu chào 2 cho người xem kịp đọc, ta nên dùng khối lệnh nào?
-- A. Dùng 2 khối `nói []` liên tiếp không có thời gian.
-- B. Dùng 2 khối `nói [] trong (2) giây` liên tiếp.
-- C. Dùng khối `ẩn`.
-- D. Dùng khối `dừng lại tất cả`.
-> **Đáp án:** B  
-> **Giải thích:** Lệnh `nói trong (2) giây` tạm dừng đủ lâu để người dùng đọc kịp trước khi chuyển sang câu tiếp theo.
+8. **Khi lập trình, lập trình, khi in kết quả bài toán tính tổng 2 số, chú Mèo nên nói gì?**
+   - A. `nói [Tổng hai số là:]`
+   - B. `nói (tong)` *(Đáp án đúng: in chính xác đáp số)*
+   - C. `nói [Đáp số của bài toán =]`
+   - D. `nói [Mời bạn xem kết quả]`
 
-#### Câu 9 (Nhận biết khối lệnh)
-Khối lệnh nào dưới đây thuộc nhóm Các biến số (màu cam đậm)?
-- A. `đặt [x] thành (0)`
-- B. `di chuyển (10) bước`
-- C. `chọn màu vẽ`
-- D. `hỏi và đợi`
-> **Đáp án:** A  
-> **Giải thích:** Khối `đặt biến thành` là lệnh thao tác biến số cơ bản của Scratch.
+9. **Nếu người dùng nhập vào số âm `-25`, biến `câu trả lời` có nhận được số âm không?**
+   - A. Không, Scratch chỉ nhận số dương
+   - B. Có, nhận chính xác giá trị số âm `-25` *(Đáp án đúng)*
+   - C. Báo lỗi cú pháp
+   - D. Biến tự động đổi thành số 0
 
-#### Câu 10 (Ứng dụng thực tế)
-Trong các bài thi Tin học trẻ Bảng A, khi đề bài cho: *"Nhập vào hai số nguyên A và B trên 2 dòng..."*, bước lập trình đầu tiên của em là gì?
-- A. Bật công cụ bút vẽ và tô màu sân khấu.
-- B. Tạo 2 biến số mang tên $A$ và $B$, sau đó viết 2 cặp lệnh `hỏi và đợi` kèm `đặt biến thành câu trả lời`.
-- C. Đổi trang phục cho chú Mèo.
-- D. Bấm phím cách liên tục.
-> **Đáp án:** B  
-> **Giải thích:** Tạo biến và nạp dữ liệu đầu vào là bước khởi đầu tiên quyết của mọi bài toán thuật toán.
-
----
-
-## 8. Tóm Tắt & Hướng Dẫn Thực Hành
-
-> **GHI NHỚ CỐT LÕI:**
-> 1. Nhập liệu chuẩn: 🔵 **hỏi [] và đợi** $\longrightarrow$ 🟠 **đặt [biến] thành (câu trả lời)**.
-> 2. Xuất dữ liệu kèm nhãn: 🟣 **nói (kết hợp [Nhãn: ] (biến))**.
-> 3. Hoán đổi $2$ biến: Mượn biến phụ `tam`: `tam = A` $\to$ `A = B` $\to$ `B = tam`.
-
-👉 **Tiếp theo:** Mở file [`Bai_Tap.md`](file:///Users/vu/Developer/ikhEdu_lessons/courses/scratch-bang-a/lessons/lesson-03-lenh-xuat-nhap-bien-so-kieu-du-lieu/Bai_Tap.md) để thực hành $8$ bài tập lập trình tính toán và nhập xuất dữ liệu từ `sca_l03_p01` đến `sca_l03_p08` (tương ứng trực tiếp với kho bài `pya_l01_*` của Python Bảng A)!
+10. **Lệnh nào dùng để tăng giá trị của biến `diem` lên 5 đơn vị?**
+    - A. `đặt [diem v] thành (5)`
+    - B. `thay đổi [diem v] một lượng (5)` *(Đáp án đúng)*
+    - C. `thay đổi [diem v] một lượng (-5)`
+    - D. `đặt [diem v] thành (diem)`

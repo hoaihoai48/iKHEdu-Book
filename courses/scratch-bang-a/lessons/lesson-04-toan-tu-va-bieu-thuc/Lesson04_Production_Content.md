@@ -1,186 +1,146 @@
-# Bài 04: TOÁN TỬ VÀ BIỂU THỨC SỐ HỌC
+# Bài 04: Toán tử và biểu thức
 
 ## 1. Bốn Phép Toán Số Học Cơ Bản Trong Scratch
 
-Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung cấp 4 khối toán tử hình bầu dục:
+Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung cấp các khối tròn cơ bản để tính toán:
 
-![Bốn phép toán cơ bản](../../assets/rendered_blocks/l04_operators_vi.png)
+| Khối toán tử Scratch | Tên gọi | Ví dụ minh họa | Kết quả | Ghi chú quan trọng |
+|:---:|---|---|:---:|---|
+| `() + ()` | Phép cộng | `(15) + (25)` | `40` | Cộng hai giá trị số |
+| `() - ()` | Phép trừ | `(50) - (18)` | `32` | Trừ hai giá trị số |
+| `() * ()` | Phép nhân | `(6) * (7)` | `42` | Dấu sao `*` là phép nhân |
+| `() / ()` | Phép chia | `(9) / (2)` | `4.5` | Dấu gạch chéo `/` là phép chia |
 
-| Toán tử Scratch | Ký hiệu toán học | Ý nghĩa | Ví dụ biểu thức | Kết quả |
-|:---:|:---:|---|---|:---:|
-| `(A) + (B)` | $+$ | Phép cộng | `(15) + (25)` | $40$ |
-| `(A) - (B)` | $-$ | Phép trừ | `(100) - (35)` | $65$ |
-| `(A) * (B)` | $\times$ | Phép nhân *(dùng dấu sao `*`)* | `(8) * (7)` | $56$ |
-| `(A) / (B)` | $:$ hoặc $/$ | Phép chia *(dùng dấu gạch chéo `/`)* | `(30) / (4)` | $7.5$ |
-
-> 💡 **Khối Ô Tròn (Reporter Block):**
-> Các khối toán tử hình bầu dục này không đứng độc lập mà được **nhét lọt vào các ô tròn khác**, ví dụ nhét vào khối `đặt [tong] thành ((A) + (B))` hoặc `nói ((A) * (B))`.
+![Bốn phép toán cơ bản](assets/rendered_blocks/l04_operators_vi.png)
 
 ---
 
 ## 2. Kỹ Thuật Lồng Khối Thay Thế Cho Dấu Ngoặc Đơn `()`
 
-Trong toán học và Python, khi muốn tính tổng trước rồi mới nhân sau, ta dùng cặp dấu ngoặc đơn:
-$$\text{Chu vi} = (\text{Dài} + \text{Rộng}) \times 2$$
+Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ định thứ tự ưu tiên tính toán (Ví dụ: $(Dài + Rộng) 	imes 2$).
 
-Trong Scratch, bàn phím không thể gõ dấu ngoặc đơn vào biểu thức. Thay vào đó, Scratch sử dụng quy tắc hình học trực quan:
-> **KHỐI NÀO NẰM LỌT BÊN TRONG SẼ ĐƯỢC TÍNH TOÁN TRƯỚC!**
+**Trong Scratch không có phím ngoặc đơn!** Thay vào đó, Scratch sử dụng quy tắc **"Khối Lồng Khối"**:
 
-### Các bước lồng khối tính Chu vi hình chữ nhật:
-1. Lấy khối nhân: `( ) * ( )`. Gõ số `2` vào ô bên phải.
-2. Lấy khối cộng: `( ) + ( )`. Nhét biến `dai` vào ô trái, biến `rong` vào ô phải $\implies$ ta được khối con `((dai) + (rong))`.
-3. Kéo cả khối cộng này thả vào ô trống bên trái của khối nhân $\implies$ ta được biểu thức lồng hoàn chỉnh:
-   $$((dai) + (rong)) * (2)$$
+- Khối nào được thả **vào bên trong** sẽ được máy tính tính toán trước.
+- Kết quả của khối con bên trong sẽ trở thành giá trị đầu vào cho khối cha bên ngoài.
 
-Máy tính Scratch sẽ tự động thực hiện phép cộng `dai + rong` trước, sau đó lấy kết quả đó nhân tiếp với $2$.
+![Biểu thức chu vi diện tích lồng nhau](assets/rendered_blocks/l04_nested_expression_vi.png)
+
+### Các bước lắp ráp công thức $(a + b) 	imes 2$:
+
+1. Lấy khối `() * ()` đặt ra ngoài.
+
+2. Ô thứ nhất của phép nhân: Thả khối `() + ()` vào trong.
+
+3. Trong khối cộng: Thả biến `chieu_dai` và `chieu_rong`.
+
+4. Ô thứ hai của phép nhân: Gõ con số `2`.
 
 ---
 
 ## 3. Bảng Tra Cứu Các Biểu Thức Hình Học Kinh Điển
 
-| Bài toán | Công thức toán học | Cách ghép khối Scratch DSL | Minh họa khối lệnh |
-|---|:---:|---|---|
-| **Chu vi hình vuông** | $C = 4 \times a$ | `(4) * (a)` | `(4) * (canh)` |
-| **Diện tích hình vuông** | $S = a^2 = a \times a$ | `(a) * (a)` | `(canh) * (canh)` |
-| **Chu vi hình chữ nhật** | $C = (a + b) \times 2$ | `((a) + (b)) * (2)` | Lồng khối `+` vào khối `*` |
-| **Diện tích hình chữ nhật** | $S = a \times b$ | `(a) * (b)` | `(dai) * (rong)` |
-| **Diện tích tam giác** | $S = \dfrac{a \times h}{2}$ | `((a) * (h)) / (2)` | Lồng khối `*` vào khối `/` |
-| **Tổng bình phương** | $a^2 + b^2$ | `((a) * (a)) + ((b) * (b))` | Khối `+` ôm 2 khối `*` |
+| Bài toán hình học | Công thức toán học | Biểu thức khối lệnh Scratch chuẩn |
+|---|---|---|
+| **Chu vi hình chữ nhật** | $C = (a + b) 	imes 2$ | `((a) + (b)) * (2)` |
+| **Diện tích hình chữ nhật** | $S = a 	imes b$ | `(a) * (b)` |
+| **Chu vi hình vuông** | $C = a 	imes 4$ | `(a) * (4)` |
+| **Diện tích hình vuông** | $S = a 	imes a$ | `(a) * (a)` |
+| **Diện tích tam giác vuông** | $S = \dfrac{a 	imes b}{2}$ | `((a) * (b)) / (2)` |
+| **Diện tích hình thang** | $S = \dfrac{(a + b) 	imes h}{2}$ | `(((a) + (b)) * (h)) / (2)` |
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 4. Bảng Mô Phỏng Từng Bước Tính Biểu Thức Phức Tạp (Dry Run Table)
 
-Bài toán: Nhập chiều dài $A = 12$ và chiều rộng $B = 8$. Tính chu vi và diện tích hình chữ nhật:
+Xét bài toán tính diện tích hình thang với đáy lớn $a = 8$, đáy nhỏ $b = 4$, chiều cao $h = 5$:
+Công thức: $S = \dfrac{(a + b) 	imes h}{2}$.
 
-| Bước thực thi | Khối lệnh Scratch Tiếng Việt | Biến `dai` | Biến `rong` | Biến `chu_vi` | Biến `dien_tich` | Bong bóng lời thoại |
-|:---:|---|:---:|:---:|:---:|:---:|---|
-| 1 | `đặt [dai] thành (12)` | $12$ | - | - | - | - |
-| 2 | `đặt [rong] thành (8)` | $12$ | $8$ | - | - | - |
-| 3 | `đặt [chu_vi] thành (((dai) + (rong)) * (2))` | $12$ | $8$ | **$40$** | - | - |
-| 4 | `đặt [dien_tich] thành ((dai) * (rong))` | $12$ | $8$ | $40$ | **$96$** | - |
-| 5 | `nói (kết hợp [Chu vi la: ] (chu_vi)) trong (2) giây` | $12$ | $8$ | $40$ | $96$ | `Chu vi la: 40` |
-| 6 | `nói (kết hợp [Dien tich la: ] (dien_tich)) trong (2) giây` | $12$ | $8$ | $40$ | $96$ | `Dien tich la: 96` |
+| Bước tính | Biểu thức con được giải quyết | Phép tính cụ thể | Giá trị tạm thời |
+|:---:|---|---|:---:|
+| **Bước 1** | Khối cộng trong cùng: `(a) + (b)` | $8 + 4$ | **$12$** |
+| **Bước 2** | Khối nhân ở giữa: `(kết_quả_1) * (h)` | $12 	imes 5$ | **$60$** |
+| **Bước 3** | Khối chia ngoài cùng: `(kết_quả_2) / (2)` | $60 / 2$ | **$30$** |
+
+$\implies$ Kết quả cuối cùng được gán vào biến `dien_tich` là **$30$**.
 
 ---
 
 ## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
 
-> **Bẫy 1: Ghép nhầm thứ tự ưu tiên (Lỗi quên ngoặc)**
-> - *Hiện tượng:* Cần tính `(A + B) * 2`, nhưng học sinh kéo khối `+` ra trước, rồi nhét `B * 2` vào sau thành: `(A) + ((B) * (2))`.
-> - *Hậu quả:* Với $A = 10, B = 5$: Đúng ra $(10 + 5) \times 2 = 30$, nhưng máy tính tính $10 + (5 \times 2) = 20$!
-> - *Khắc phục:* Xác định phép tính nào cần làm trước thì nhét khối đó vào ô trong cùng.
+> **Bẫy 1: Thả nhầm vị trí khối con làm sai thứ tự ưu tiên**
+> - *Sai lầm:* Thả `chieu_dai` vào trước, rồi thả `(chieu_rong) * (2)` phía sau.
+> - *Biểu thức tạo ra:* $a + b 	imes 2$. Lúc này máy tính nhân trước cộng sau, kết quả sai hoàn toàn!
+> - *Khắc phục:* Luôn kiểm tra kỹ hình dáng khối lồng bao quanh.
 
-> **Bẫy 2: Chia cho số 0 (Division by Zero)**
-> - *Hiện tượng:* Người dùng nhập mẫu số $B = 0$.
-> - *Hậu quả:* Trong Scratch, phép chia `(A) / (0)` sẽ trả về giá trị đặc biệt là `Infinity` (Vô cực) chứ không báo lỗi đỏ như Python, làm hỏng các phép tính so sánh sau đó.
-> - *Khắc phục:* Luôn kiểm tra mẫu số khác 0 trước khi chia.
+> **Bẫy 2: Nhầm lẫn giữa dấu gạch chia `/` và phép trừ `-`**
+> - *Hiện tượng:* Nhìn nhầm khối trừ thành khối chia trong danh mục màu xanh lá.
+> - *Khắc phục:* Quan sát ký hiệu phép toán ở giữa hai ô tròn.
 
-> **Bẫy 3: Nhầm lẫn dấu nhân `*` và chữ x**
-> - *Khắc phục:* Trong máy tính, dấu nhân luôn luôn là ký hiệu ngôi sao `*`, dấu chia là dấu gạch chéo `/`.
-
----
-
-## 6. Concept Quiz (10 Câu Trắc Nghiệm Nhận Thức)
-
-#### Câu 1 (Phép toán nhân chia)
-Trong Scratch, phép nhân và phép chia được ký hiệu bằng các ký tự nào?
-- A. `x` và `:`
-- B. `*` và `/`
-- C. `.` và `%`
-- D. `^` và `div`
-> **Đáp án:** B  
-> **Giải thích:** Chuẩn máy tính quy định `*` là phép nhân và `/` là phép chia.
-
-#### Câu 2 (Quy tắc lồng khối)
-Trong một khối lệnh phức tạp có nhiều phép toán lồng nhau, khối nào sẽ được tính toán trước?
-- A. Khối nằm ở ngoài cùng.
-- B. Khối nằm lọt sâu nhất ở bên trong.
-- C. Khối nào to hơn thì tính trước.
-- D. Tính từ phải sang trái.
-> **Đáp án:** B  
-> **Giải thích:** Khối lồng bên trong đóng vai trò như dấu ngoặc đơn `()`, luôn được ưu tiên giải quyết trước.
-
-#### Câu 3 (Tính chu vi hình chữ nhật)
-Biểu thức Scratch nào sau đây tính ĐÚNG chu vi hình chữ nhật có chiều dài `dai` và chiều rộng `rong`?
-- A. `(dai) + ((rong) * (2))`
-- B. `((dai) + (rong)) * (2)`
-- C. `(dai) * (rong)`
-- D. `((dai) * (2)) + (rong)`
-> **Đáp án:** B  
-> **Giải thích:** Cần cộng dài với rộng trước rồi mới nhân 2.
-
-#### Câu 4 (Giá trị biểu thức)
-Khối lệnh `((10) + (5)) * ((8) - (2))` sẽ cho kết quả là bao nhiêu?
-- A. $40$
-- B. $90$
-- C. $70$
-- D. $50$
-> **Đáp án:** B  
-> **Giải thích:** $(10 + 5) \times (8 - 2) = 15 \times 6 = 90$.
-
-#### Câu 5 (Tính diện tích tam giác)
-Cho đáy tam giác là $10$ và chiều cao là $6$. Biểu thức `((10) * (6)) / (2)` cho kết quả là:
-- A. $60$
-- B. $30$
-- C. $15$
-- D. $20$
-> **Đáp án:** B  
-> **Giải thích:** $(10 \times 6) / 2 = 60 / 2 = 30$.
-
-#### Câu 6 (Kết quả số thập phân)
-Trong Scratch, phép tính `(7) / (2)` sẽ trả về kết quả là:
-- A. $3$
-- B. $3.5$
-- C. $4$
-- D. Báo lỗi không chia hết
-> **Đáp án:** B  
-> **Giải thích:** Toán tử `/` trong Scratch tự động tính toán ra số thập phân chính xác ($3.5$).
-
-#### Câu 7 (Lũy thừa bậc hai)
-Để tính bình phương của biến $X$ ($X^2$), trong Scratch ta dùng khối lệnh nào?
-- A. `(X) + (X)`
-- B. `(X) * (X)`
-- C. `(X) ^ (2)`
-- D. `(2) * (X)`
-> **Đáp án:** B  
-> **Giải thích:** Bình phương là nhân một số với chính nó: `X * X`.
-
-#### Câu 8 (Bẫy quên ngoặc)
-Nếu viết nhầm thành `(10) + ((5) * (2))` thay vì `((10) + (5)) * (2)`, kết quả sẽ bị sai lệch bao nhiêu đơn vị?
-- A. Bị giảm đi 10 đơn vị (từ 30 xuống 20).
-- B. Bị tăng thêm 10 đơn vị.
-- C. Không thay đổi kết quả.
-- D. Bị giảm đi 5 đơn vị.
-> **Đáp án:** A  
-> **Giải thích:** $10 + (5 \times 2) = 20$, trong khi $(10 + 5) \times 2 = 30$. Sai lệch đúng 10 đơn vị.
-
-#### Câu 9 (Màu sắc nhóm lệnh)
-Các khối toán tử `+`, `-`, `*`, `/` nằm trong nhóm lệnh nào và có màu gì?
-- A. Nhóm Chuyển động (Màu xanh dương)
-- B. Nhóm Các phép toán (Màu xanh lá cây)
-- C. Nhóm Các biến số (Màu cam đậm)
-- D. Nhóm Cảm biến (Màu xanh lơ)
-> **Đáp án:** B  
-> **Giải thích:** Nhóm Các phép toán (Operators) mang màu xanh lá cây đặc trưng.
-
-#### Câu 10 (Ghép nhãn và kết quả)
-Để in dòng chữ `Dien tich: 48`, khối lệnh chuẩn xác là:
-- A. `nói [Dien tich: 48]`
-- B. `nói (kết hợp [Dien tich: ] (dien_tich))`
-- C. `nói (dien_tich)`
-- D. `nói [Dien tich:]`
-> **Đáp án:** B  
-> **Giải thích:** Dùng `kết hợp` lồng biến `dien_tich` vào sau nhãn văn bản có chứa khoảng trắng.
+> **Bẫy 3: Chia cho số 0 (Zero Division)**
+> - *Hiện tượng:* Biến mẫu số nhận giá trị $0$.
+> - *Hậu quả trong Scratch:* Khối chia cho 0 sẽ trả về `Infinity` (Vô cực), làm các phép toán tiếp theo bị hỏng toàn bộ!
 
 ---
 
-## 7. Tóm Tắt & Hướng Dẫn Thực Hành
+## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
 
-> **GHI NHỚ CỐT LÕI:**
-> 1. Nhân chia trước, cộng trừ sau; muốn tính trước thì **lồng khối vào bên trong**.
-> 2. Ký hiệu: Nhân là `*`, Chia là `/`.
-> 3. Chu vi hình chữ nhật: `((dai) + (rong)) * (2)`.
-> 4. Diện tích hình chữ nhật: `(dai) * (rong)`.
+1. **Khối lệnh nào sau đây thực hiện phép tính $15 	imes 4$?**
+   - A. `(15) + (4)`
+   - B. `(15) * (4)` *(Đáp án đúng)*
+   - C. `(15) / (4)`
+   - D. `(15) - (4)`
 
-👉 **Tiếp theo:** Mở file [`Bai_Tap.md`](file:///Users/vu/Developer/ikhEdu_lessons/courses/scratch-bang-a/lessons/lesson-04-toan-tu-va-bieu-thuc/Bai_Tap.md) để luyện tập trọn bộ $36$ bài toán thực hành từ `sca_l04_p01` đến `sca_l04_p36`!
+2. **Muốn tính $A + B 	imes C$ đúng thứ tự ưu tiên toán học (nhân trước cộng sau), ta lồng khối như thế nào?**
+   - A. Đặt khối cộng ra ngoài, khối nhân nằm ở ô thứ hai bên trong *(Đáp án đúng)*
+   - B. Đặt khối nhân ra ngoài, khối cộng nằm ở ô thứ nhất bên trong
+   - C. Đặt khối cộng và khối nhân ngang hàng
+   - D. Scratch tự động thêm dấu ngoặc mà không cần lồng
+
+3. **Biểu thức `((10) - (2)) * (3)` cho kết quả là:**
+   - A. 4
+   - B. 16
+   - C. 24 *(Đáp án đúng: (10 - 2) = 8, 8 * 3 = 24)*
+   - D. 28
+
+4. **Để tính chu vi hình chữ nhật có hai cạnh là `dai` và `rong`, biểu thức nào sau đây ĐÚNG?**
+   - A. `((dai) + (rong)) * (2)` *(Đáp án đúng)*
+   - B. `(dai) + ((rong) * (2))`
+   - C. `(dai) * (rong)`
+   - D. `((dai) * (2)) + (rong)`
+
+5. **Trong Scratch, kết quả của phép chia `(7) / (2)` là:**
+   - A. 3
+   - B. 3.5 *(Đáp án đúng)*
+   - C. 4
+   - D. 1
+
+6. **Khối lệnh nào biểu diễn diện tích tam giác vuông có hai cạnh góc vuông `a` và `b`?**
+   - A. `((a) * (b)) / (2)` *(Đáp án đúng)*
+   - B. `((a) + (b)) / (2)`
+   - C. `(a) * (b)`
+   - D. `((a) * (b)) * (2)`
+
+7. **Khi chia một số dương cho 0 trong Scratch, kết quả nhận được sẽ là chữ gì?**
+   - A. Error
+   - B. 0
+   - C. Infinity *(Đáp án đúng: Vô cực)*
+   - D. NaN
+
+8. **Biểu thức `((20) / (4)) + ((3) * (2))` có giá trị là:**
+   - A. 11 *(Đáp án đúng: 5 + 6 = 11)*
+   - B. 16
+   - C. 10
+   - D. 8
+
+9. **Nếu biến `canh = 5`, biểu thức `(canh) * (canh)` tính ra diện tích hình vuông là:**
+   - A. 10
+   - B. 20
+   - C. 25 *(Đáp án đúng)*
+   - D. 30
+
+10. **Làm thế nào để lấy số đối của một biến `x` (tức là $-x$)?**
+    - A. `(0) - (x)` *(Đáp án đúng)*
+    - B. `(x) - (0)`
+    - C. `(x) / (-1)`
+    - D. Cả A và C đều đúng

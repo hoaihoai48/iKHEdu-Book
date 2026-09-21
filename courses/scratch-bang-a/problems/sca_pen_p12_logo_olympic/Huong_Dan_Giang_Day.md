@@ -27,8 +27,10 @@
 
 1. *"Nếu ta phải vẽ 5 hình tròn giống hệt nhau, việc kéo 5 cụm lệnh 'lặp lại 360 lần' có làm kịch bản bị dài dòng và rối mắt không? Ta nên dùng công cụ gì để chỉ cần viết 1 lần mà dùng được 5 lần?"*  
    $\to$ Định hướng học sinh tạo **Khối của tôi (My Blocks)** mang tên `ve_hinh_tron`.
+
 2. *"Tại sao khi Mèo vẽ xong vòng tròn màu xanh và chạy sang vẽ vòng tròn màu đen, trên màn hình lại xuất hiện một vệt mực nối giữa hai vòng?"*  
    $\to$ Nhắc học sinh quy tắc: **Muốn đi mà không vẽ, phải nhấc bút trước khi đi!**
+
 3. *"Làm thế nào để hai vòng tròn hàng dưới nằm lọt vào giữa các vòng tròn hàng trên?"*  
    $\to$ Giúp học sinh phân tích tọa độ $x$ của hàng dưới: $x_4 = \dfrac{x_1 + x_2}{2} = \dfrac{-110 + (-30)}{2} = -70$.
 

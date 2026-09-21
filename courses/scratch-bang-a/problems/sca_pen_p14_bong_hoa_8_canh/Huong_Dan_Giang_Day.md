@@ -29,8 +29,10 @@
 
 1. *"Để vẽ 1 cánh hoa uốn cong, ta ghép 2 đường cong lại với nhau. Nếu cung thứ nhất là $90^\circ$, tại đỉnh nhọn Mèo cần quay bao nhiêu độ để mũi quay ngược trở lại vẽ cung thứ hai?"*  
    $\to$ Giúp học sinh nhận ra góc bù: $180^\circ - 90^\circ = 90^\circ$.
+
 2. *"Sau khi vẽ xong 1 cánh hoa, chú Mèo đang đứng ở đâu và nhìn về hướng nào?"*  
    $\to$ Cho học sinh chạy thử chậm từng khối lệnh để thấy: Mèo đã trở về đúng $(0, 0)$ và nhìn đúng hướng ban đầu!
+
 3. *"Vậy muốn vẽ bông hoa 8 cánh tỏa đều như chiếc bánh pizza 8 miếng, giữa các cánh hoa Mèo cần xoay thêm bao nhiêu độ?"*  
    $\to$ Học sinh tự tính ra: $360 / 8 = 45^\circ$.
 

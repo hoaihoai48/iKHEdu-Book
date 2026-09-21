@@ -15,7 +15,9 @@
 - Cần nhấc bút  khi di chuyển vị trí xuất phát để không làm lem nét vẽ thừa.
 
 ## 3. Câu Hỏi Gợi Mở Dẫn Dắt (Socratic Method)
+
 1. *Muốn vẽ hình mà không để lại vệt mực thừa trên đường đi ta làm thế nào?* -> Nhấc bút trước khi đi tới tọa độ mới.
+
 2. *Làm sao để nét vẽ nổi bật và rõ ràng?* -> Đặt kích thước nét vẽ từ 2 đến 3.
 
 ## 4. Chiến Lược Tối Ưu & Bất Biến Thuật Toán (Invariant)
