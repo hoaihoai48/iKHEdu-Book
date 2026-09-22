@@ -1,6 +1,9 @@
-# Bài 08: Vòng lặp while và biến cờ
+# Bài 08: Vòng lặp until, biến cờ và điều khiển vòng lặp
+
+> 💡 **Góc liên hệ ngôn ngữ lập trình:** Trong các ngôn ngữ như Python hay C++, chúng ta thường dùng `while <điều_kiện_chạy>:` (lặp trong khi điều kiện còn ĐÚNG). Trong Scratch, khối lệnh chính thức là **`lặp lại cho đến khi <điều_kiện_dừng>`** (`repeat until`). Nghĩa là vòng lặp sẽ chạy liên tục cho tới khi điều kiện trở thành **ĐÚNG** thì mới dừng!
 
 ## 1. Vòng lặp khi chưa biết trước số lần lặp
+
 
 Trong nhiều bài toán thực tế, ta **không thể biết trước được công việc cần lặp lại chính xác bao nhiêu lần**:
 

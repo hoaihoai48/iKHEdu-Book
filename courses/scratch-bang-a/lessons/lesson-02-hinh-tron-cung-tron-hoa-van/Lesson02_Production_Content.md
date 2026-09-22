@@ -40,8 +40,8 @@ Trong tài liệu đồ họa Scratch chuẩn, có **hai phương pháp vẽ hì
      - `xoay trái 1 độ`
   4. Trở về tâm:
      - `ngừng vẽ` (nhấc bút).
-     - **Cách 1 (Chuẩn góc):** `xoay trái 90 độ` để quay đầu thẳng hướng về lại tâm, sau đó `di chuyển (R) bước` tiến về đúng vị trí xuất phát ban đầu.
-     - **Cách 2 (Đi lùi từ hướng tiếp tuyến):** Giữ nguyên hướng tiếp tuyến và dùng khối `đi tới điểm x: (x0) y: (y0)` để trở về tâm tuyệt đối chính xác mà không sợ lệch góc.
+     - **Thao tác chuẩn hướng:** Sau khi vẽ trọn vẹn $360^\circ$ theo chiều xoay trái, hướng nhân vật đang là tiếp tuyến. Ta `xoay trái 90 độ` để đầu bút hướng thẳng về lại tâm, sau đó `di chuyển (R) bước` để trở về đúng vị trí tâm ban đầu. (Hoặc nếu nhân vật chỉ vẽ một tia nan hoa thẳng từ tâm ra mép mà chưa đổi hướng tiếp tuyến, nhân vật có thể đi lùi `di chuyển (-1 * R) bước` dọc theo đúng tia đó để về lại tâm).
+     - **Thao tác bằng tọa độ:** Dùng khối `đi tới điểm x: (x0) y: (y0)` để đưa nhân vật về thẳng tọa độ tâm ban đầu một cách an toàn tuyệt đối.
      - `bắt đầu vẽ` (đặt bút) để sẵn sàng thực hiện lệnh kế tiếp.
 
 - **Ứng dụng vẽ hoa văn hình tròn xoay quanh tâm (Ví dụ 4 trong giáo trình gốc):**

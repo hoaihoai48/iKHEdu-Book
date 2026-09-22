@@ -61,24 +61,25 @@ PROGRAM: Scratch Bảng A (Level 1)
 
 | Chương | Bài | Mã | Tên bài học | Khối lệnh tiêu điểm | Nguồn bài thật | Quiz | Bài tập |
 |:---:|:---:|:---:|---|---|---|:---:|:---:|
-| **1** | 01 | `SCA-L01` | Vẽ hình với Pen và Repeat | Pen, Motion, `repeat (n)`, công thức $360^\circ/n$ | `CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx` | 12 | 16 |
+| **1** | 01 | `SCA-L01` | Vẽ hình với Pen và Repeat | Pen, Motion, `repeat (n)`, công thức $360^\circ/n$ | `CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx` | 10 | 16 |
 | | 02 | `SCA-L02` | Hình tròn, cung tròn và hoa văn | Bước đi cong $(2\pi R)/360$, My Blocks tham số $R$ | `CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx` | 10 | 21 |
-| **2** | 03 | `SCA-L03` | Lệnh xuất nhập, biến số và kiểu dữ liệu | `ask/answer`, `set to`, `say join`, biến tạm | `pya_l01_*` (25 bài) | 12 | 25 |
-| | 04 | `SCA-L04` | Toán tử và biểu thức | Khối toán `+ - * /`, lồng khối thay dấu ngoặc | `pya_l02_*` (36 bài) | 12 | 36 |
-| | 05 | `SCA-L05` | Phép chia nguyên, chia dư và lũy thừa | `floor (A / B)`, `(A) mod (B)`, thời gian $H:M:S$ | `pya_l03_*` (33 bài) | 12 | 33 |
-| **3** | 06 | `SCA-L06` | Cấu trúc rẽ nhánh và điều kiện logic | `if <> then`, `if <> then else`, `and / or / not` | `pya_l04/l05/l06_*` (37 bài) | 12 | 37 |
-| | 07 | `SCA-L07` | Vòng lặp biết trước số lần và biến đếm | `repeat (n)` + biến đếm tay `i`, tích dồn, cửu chương | `pya_l07_*` (14 bài) | 12 | 14 |
-| | 08 | `SCA-L08` | Vòng lặp until, biến cờ và điều khiển vòng lặp | `repeat until <phủ định>`, cờ flag $0/1$, bẫy vô tận | `pya_l08_*` (12 bài) | 12 | 12 |
-| **4** | 09 | `SCA-L09` | Quy luật dãy số và tam giác số | Cấp số cộng, Fibonacci cuộn chiếu, tam giác Floyd | `pya_l09_*` (14 bài) | 12 | 14 |
-| | 10 | `SCA-L10` | Kỹ thuật tách chữ số và xử lý số nguyên | Khung `until N=0`, bóc `mod 10`, cắt `floor(/10)` | `pya_l10_*` (14 bài) | 12 | 14 |
+| **2** | 03 | `SCA-L03` | Lệnh xuất nhập, biến số và kiểu dữ liệu | `ask/answer`, `set to`, `say join`, biến tạm | `pya_l01_*` (25 bài) | 13 | 25 |
+| | 04 | `SCA-L04` | Toán tử và biểu thức | Khối toán `+ - * /`, lồng khối thay dấu ngoặc | `pya_l02_*` (36 bài) | 10 | 36 |
+| | 05 | `SCA-L05` | Phép chia nguyên, chia dư và lũy thừa | `floor (A / B)`, `(A) mod (B)`, thời gian $H:M:S$ | `pya_l03_*` (33 bài) | 14 | 33 |
+| **3** | 06 | `SCA-L06` | Cấu trúc rẽ nhánh và điều kiện logic | `if <> then`, `if <> then else`, `and / or / not` | `pya_l04/l05/l06_*` (37 bài) | 10 | 37 |
+| | 07 | `SCA-L07` | Vòng lặp biết trước số lần và biến đếm | `repeat (n)` + biến đếm tay `i`, tích dồn, cửu chương | `pya_l07_*` (14 bài) | 13 | 14 |
+| | 08 | `SCA-L08` | Vòng lặp until, biến cờ và điều khiển vòng lặp | `repeat until <phủ định>`, cờ flag $0/1$, bẫy vô tận | `pya_l08_*` (12 bài) | 10 | 12 |
+| **4** | 09 | `SCA-L09` | Quy luật dãy số và tam giác số | Cấp số cộng, Fibonacci cuộn chiếu, tam giác Floyd | `pya_l09_*` (14 bài) | 10 | 14 |
+| | 10 | `SCA-L10` | Kỹ thuật tách chữ số và xử lý số nguyên | Khung `until N=0`, bóc `mod 10`, cắt `floor(/10)` | `pya_l10_*` (14 bài) | 10 | 14 |
 | | 11 | `SCA-L11` | Ước số, bội số và số nguyên tố | Tối ưu $i \times i \le n$, cờ prime, Euclid UCLN | `pya_l11_*` (14 bài) | 12 | 14 |
-| | 12 | `SCA-L12` | Đếm số theo quy luật và số đặc biệt | Đếm $O(1)$ đoạn $[A, B]$, số hoàn hảo, Armstrong | `pya_l12_*` (12 bài) | 12 | 12 |
-| **5** | 13 | `SCA-L13` | Danh sách và thao tác cơ bản | List 1-based, `add`, `delete`, `insert`, `item of` | `pya_l16_*` (26 bài) | 12 | 26 |
-| | 14 | `SCA-L14` | Thống kê danh sách và sắp xếp | Max/Min/Unique, cài đặt Bubble Sort khối lệnh | `pya_l17_*` (14 bài) | 12 | 14 |
-| **6** | 15 | `SCA-L15` | Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự | `letter (i) of ()`, `length of ()`, soi Palindrome | `pya_l13_*` (12 bài) | 12 | 12 |
-| | 16 | `SCA-L16` | Duyệt chuỗi, biến đổi ký tự và tách từ | Đếm ký tự, tách từ qua dấu cách vào List, Caesar | `pya_l14/l15_*` (24 bài) | 12 | 24 |
+| | 12 | `SCA-L12` | Đếm số theo quy luật và số đặc biệt | Đếm $O(1)$ đoạn $[A, B]$, số hoàn hảo, Armstrong | `pya_l12_*` (12 bài) | 10 | 12 |
+| **5** | 13 | `SCA-L13` | Danh sách và thao tác cơ bản | List 1-based, `add`, `delete`, `insert`, `item of` | `pya_l16_*` (26 bài) | 13 | 26 |
+| | 14 | `SCA-L14` | Thống kê danh sách và sắp xếp | Max/Min/Unique, cài đặt Bubble Sort khối lệnh | `pya_l17_*` (14 bài) | 13 | 14 |
+| **6** | 15 | `SCA-L15` | Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự | `letter (i) of ()`, `length of ()`, soi Palindrome | `pya_l13_*` (12 bài) | 14 | 12 |
+| | 16 | `SCA-L16` | Duyệt chuỗi, biến đổi ký tự và tách từ | Đếm ký tự, tách từ qua dấu cách vào List, Caesar | `pya_l14/l15_*` (24 bài) | 10 | 24 |
 
-*Tổng cộng toàn khóa:* **16 Bài học**, **324 Bài tập thực hành thật 100%** (37 bài Pen + 287 bài Thuật toán) và **184 câu Concept Quiz**.
+*Tổng cộng toàn khóa:* **16 Bài học**, **324 Bài tập thực hành thật 100%** (37 bài Pen + 287 bài Thuật toán) và **182 câu Concept Quiz**.
+
 
 ---
 

@@ -1,4 +1,4 @@
-# Bài 03: LỆNH XUẤT NHẬP VÀ BIẾN SỐ TRONG SCRATCH
+# Bài 03: LỆNH XUẤT NHẬP, BIẾN SỐ VÀ KIỂU DỮ LIỆU
 
 ## 1. Bản chất chương trình máy tính và luồng dữ liệu vào - ra
 
