@@ -40,8 +40,8 @@ Trong tài liệu đồ họa Scratch chuẩn, có **hai phương pháp vẽ hì
      - `xoay trái 1 độ`
   4. Trở về tâm:
      - `ngừng vẽ` (nhấc bút).
-     - `xoay trái 90 độ` để quay đầu hướng về lại tâm.
-     - `di chuyển (-1 * R) bước` (hoặc đi lùi $R$ bước) để trở về đúng vị trí xuất phát ban đầu.
+     - **Cách 1 (Chuẩn góc):** `xoay trái 90 độ` để quay đầu thẳng hướng về lại tâm, sau đó `di chuyển (R) bước` tiến về đúng vị trí xuất phát ban đầu.
+     - **Cách 2 (Đi lùi từ hướng tiếp tuyến):** Giữ nguyên hướng tiếp tuyến và dùng khối `đi tới điểm x: (x0) y: (y0)` để trở về tâm tuyệt đối chính xác mà không sợ lệch góc.
      - `bắt đầu vẽ` (đặt bút) để sẵn sàng thực hiện lệnh kế tiếp.
 
 - **Ứng dụng vẽ hoa văn hình tròn xoay quanh tâm (Ví dụ 4 trong giáo trình gốc):**
@@ -356,12 +356,13 @@ Tại đỉnh của cánh hoa tạo bởi hai cung $90^\circ$, góc quay đổi 
 - D. $180^\circ$
 
 #### Câu 10
-Khi vẽ hình tròn từ tâm tỏa ra, sau khi di chuyển $R$ bước để vạch một tia mực ra mép, nhân vật cần làm gì tiếp theo?
+Khi vẽ một tia nan hoa từ tâm tỏa ra mép (đi tới $R$ bước), để đưa đầu bút trở về lại đúng tâm mà không đổi hướng nhìn của nhân vật, thao tác chuẩn xác nhất là:
 
-- A. Xoay 90 độ
+- A. Xoay 180 độ rồi nhấc bút
 
-- B. Đi lùi lại $-R$ bước để trở về đúng tâm trước khi đổi hướng *(Đáp án đúng)*
+- B. Đi lùi lại $-R$ bước (hoặc `di chuyển (-1 * R) bước`) dọc theo đúng đường thẳng vừa đi ra *(Đáp án đúng)*
 
-- C. Nhấc bút lên và ẩn đi
+- C. Dùng lệnh xóa tất cả
 
-- D. Xóa tất cả
+- D. Đi tới vị trí ngẫu nhiên
+

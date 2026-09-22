@@ -46,7 +46,7 @@ Trong Scratch, không có sẵn một khối đơn lẻ để tách từ tự đ
 
 - **Bước chốt hạ quan trọng:** Sau khi duyệt hết câu, từ cuối cùng thường không có dấu cách phía sau để kích hoạt, do đó ta phải kiểm tra và đưa `tu_tam` cuối cùng vào danh sách!
 
-![Thuật toán tách từ nạp vào danh sách](assets/rendered_blocks/l16_split_words_vi.png)
+![Thuật toán tách từ nạp vào danh sách](../../assets/rendered_blocks/l16_split_words_vi.png)
 
 ---
 

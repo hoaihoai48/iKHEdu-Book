@@ -6,7 +6,7 @@ Trong các bài toán lập trình, xử lý các con số (tính tổng các ch
 
 Để "bóc tách" từng chữ số của một số nguyên $N$ từ phải qua trái mà không cần chuyển sang chuỗi văn bản, ta sử dụng **Bí thuật 2 bước số học**:
 
-![Minh họa bóc tách chữ số Scratch Tiếng Việt](assets/rendered_blocks/l10_digit_extraction_vi.png)
+![Minh họa bóc tách chữ số Scratch Tiếng Việt](../../assets/rendered_blocks/l10_digit_extraction_vi.png)
 
 ### Bước 1 — Lấy chữ số tận cùng bên phải:
 $$\text{chữ\_số} = N \pmod{10}$$
@@ -43,7 +43,7 @@ Kết hợp bí thuật 2 bước với vòng lặp `lặp lại cho đến khi 
 
 Bài toán: Cho số nguyên dương $N = 1234$, hãy tạo ra số đảo ngược $4321$.
 
-![Thuật toán tạo số đảo ngược](assets/rendered_blocks/l10_digit_reverse_vi.png)
+![Thuật toán tạo số đảo ngược](../../assets/rendered_blocks/l10_digit_reverse_vi.png)
 
 ### Cơ chế dồn hàng đơn vị thành hàng chục:
 Mỗi khi bóc tách được một chữ số mới, ta nhân số đảo ngược hiện tại với $10$ rồi cộng thêm chữ số mới vào:

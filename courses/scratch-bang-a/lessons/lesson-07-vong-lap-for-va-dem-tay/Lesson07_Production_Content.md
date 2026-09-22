@@ -1,4 +1,6 @@
-# Bài 07: Vòng lặp for và hàm range
+# Bài 07: Vòng lặp biết trước số lần và biến đếm
+
+> 💡 **Góc liên hệ ngôn ngữ lập trình:** Trong các ngôn ngữ dạng văn bản như Python hay C++, chúng ta thường dùng cú pháp `for i in range(1, N + 1)`. Trong Scratch, môi trường không có sẵn khối lệnh `for` hay hàm `range()`, mà sử dụng khối **`lặp lại () lần`** kết hợp với một **biến đếm tự tạo** để kiểm soát số thứ tự vòng lặp.
 
 ## 1. Bản chất của vòng lặp trong lập trình
 
@@ -8,7 +10,8 @@ Nếu không có vòng lặp, con người sẽ phải ghép hàng nghìn khối
 
 Khi đã **biết trước chính xác số lần lặp**, khối lệnh chuẩn mực nhất trong Scratch là **`lặp lại () lần`** kết hợp với **biến đếm thủ công (Manual Counter)**.
 
-![Minh họa vòng lặp đếm lần có biến đếm](assets/rendered_blocks/l07_repeat_counter_vi.png)
+![Minh họa vòng lặp đếm lần có biến đếm](../../assets/rendered_blocks/l07_repeat_counter_vi.png)
+
 
 ---
 
@@ -35,7 +38,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 - Trong mỗi vòng lặp, cộng dồn giá trị của `i` vào `tong`:
   `thay đổi [tong v] một lượng (i)`.
 
-![Thuật toán tính tổng tích lũy](assets/rendered_blocks/l07_accumulator_vi.png)
+![Thuật toán tính tổng tích lũy](../../assets/rendered_blocks/l07_accumulator_vi.png)
 
 ### 3.2. Mẫu 2: Thuật toán tính tích giai thừa ($N! = 1 \times 2 \times \dots \times N$)
 
@@ -44,7 +47,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 - Trong mỗi vòng lặp, nhân dồn `i` vào biến `giai_thua`:
   `đặt [giai_thua v] thành ((giai_thua) * (i))`.
 
-![Thuật toán tính tích giai thừa](assets/rendered_blocks/l07_factorial_vi.png)
+![Thuật toán tính tích giai thừa](../../assets/rendered_blocks/l07_factorial_vi.png)
 
 ---
 

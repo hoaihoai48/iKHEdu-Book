@@ -6,7 +6,7 @@ Trong các chương trình tuần tự, các khối lệnh được thực thi l
 
 Cấu trúc cho phép máy tính thay đổi luồng thực thi dựa trên kết quả kiểm tra điều kiện được gọi là **Cấu trúc rẽ nhánh**.
 
-![Minh họa khối lệnh rẽ nhánh Tiếng Việt](assets/rendered_blocks/l06_branching_vi.png)
+![Minh họa khối lệnh rẽ nhánh Tiếng Việt](../../assets/rendered_blocks/l06_branching_vi.png)
 
 ---
 
@@ -62,12 +62,12 @@ Ta áp dụng kỹ thuật **"Đặt vương miện giả định"**:
 
 3. Lấy $C$ so sánh tiếp: nếu $C > \text{max}$ thì trao vương miện cho $C$.
 
-![Thuật toán tìm số lớn nhất của 3 số](assets/rendered_blocks/l06_max3_vi.png)
+![Thuật toán tìm số lớn nhất của 3 số](../../assets/rendered_blocks/l06_max3_vi.png)
 
 ### 4.2. Mẫu 2: Cấu trúc đa nhánh lồng nhau (Tương đương `if - elif - else`)
 Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$, Trung bình $\ge 5.0$, Yếu $< 5.0$), ta lồng các khối `nếu...nếu không thì` vào nhánh `nếu không thì` của khối trước:
 
-![Cấu trúc đa nhánh if elif else lồng nhau](assets/rendered_blocks/l06_nested_if_elif_vi.png)
+![Cấu trúc đa nhánh if elif else lồng nhau](../../assets/rendered_blocks/l06_nested_if_elif_vi.png)
 
 ---
 

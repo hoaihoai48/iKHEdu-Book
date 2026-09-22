@@ -28,7 +28,7 @@ $$\text{Số lần lặp} = B - A + 1$$
 
 ### 2.2. Khối lệnh Scratch đếm số chia hết cho $K$ trong $[A, B]$
 
-![Thuật toán đếm số trong khoảng A đến B](assets/rendered_blocks/l12_count_range_vi.png)
+![Thuật toán đếm số trong khoảng A đến B](../../assets/rendered_blocks/l12_count_range_vi.png)
 
 **Các bước thuật toán:**
 

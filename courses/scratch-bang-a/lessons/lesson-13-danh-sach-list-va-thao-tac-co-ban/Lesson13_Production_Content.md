@@ -18,7 +18,7 @@ Cho đến bài học trước, mỗi biến số trong Scratch chỉ lưu trữ
 
 Trong nhóm **Các biến số (Variables)**, bấm nút **Tạo một danh sách** để xuất hiện nhóm khối lệnh màu cam đậm:
 
-![Bảng khối lệnh danh sách Scratch Tiếng Việt](assets/rendered_blocks/l13_list_operations_vi.png)
+![Bảng khối lệnh danh sách Scratch Tiếng Việt](../../assets/rendered_blocks/l13_list_operations_vi.png)
 
 | Khối lệnh trực quan Scratch 3.0 | Thao tác | Ý nghĩa sư phạm & Chức năng |
 |:---:|---|---|
@@ -40,7 +40,7 @@ Trong nhóm **Các biến số (Variables)**, bấm nút **Tạo một danh sác
 
 Trong các bài toán lập trình, bài toán thường yêu cầu: *"Cho số nguyên $N$, sau đó nhập lần lượt $N$ số nguyên vào danh sách rồi tính tổng..."*.
 
-![Mẫu nhập N số và tính tổng danh sách](assets/rendered_blocks/l13_list_input_loop_vi.png)
+![Mẫu nhập N số và tính tổng danh sách](../../assets/rendered_blocks/l13_list_input_loop_vi.png)
 
 ### Các giai đoạn thực thi chuẩn mực:
 

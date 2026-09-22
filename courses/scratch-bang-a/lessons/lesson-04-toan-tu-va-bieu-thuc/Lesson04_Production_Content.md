@@ -11,7 +11,7 @@ Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung c�
 | `() * ()` | Phép nhân | `(6) * (7)` | `42` | Dấu sao `*` là phép nhân |
 | `() / ()` | Phép chia | `(9) / (2)` | `4.5` | Dấu gạch chéo `/` là phép chia |
 
-![Bốn phép toán cơ bản](assets/rendered_blocks/l04_operators_vi.png)
+![Bốn phép toán cơ bản](../../assets/rendered_blocks/l04_operators_vi.png)
 
 ---
 
@@ -25,7 +25,7 @@ Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ đ�
 
 - Kết quả của khối con bên trong sẽ trở thành giá trị đầu vào cho khối cha bên ngoài.
 
-![Biểu thức chu vi diện tích lồng nhau](assets/rendered_blocks/l04_nested_expression_vi.png)
+![Biểu thức chu vi diện tích lồng nhau](../../assets/rendered_blocks/l04_nested_expression_vi.png)
 
 ### Các bước lắp ráp công thức $(a + b) 	imes 2$:
 

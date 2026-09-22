@@ -24,7 +24,7 @@ Thay vì học vẹt công thức, học sinh cần rèn luyện tư duy: **Xác
   1. Tính số tiếp theo: `c = a + b`.
   2. Dịch chuyển ô nhớ: gán `a = b` và gán `b = c`.
 
-![Thuật toán Fibonacci bằng biến lăn](assets/rendered_blocks/l09_fibonacci_vi.png)
+![Thuật toán Fibonacci bằng biến lăn](../../assets/rendered_blocks/l09_fibonacci_vi.png)
 
 ---
 
@@ -36,7 +36,7 @@ Khi bài toán yêu cầu in hình dạng 2 chiều (ví dụ: tam giác sao, b�
 
 - **Vòng lặp trong (Inner Loop):** Điều khiển **Cột** (số lượng dấu sao trên dòng đó) chạy từ $1$ đến `dong`.
 
-![Hai vòng lặp lồng nhau in tam giác sao](assets/rendered_blocks/l09_nested_triangle_vi.png)
+![Hai vòng lặp lồng nhau in tam giác sao](../../assets/rendered_blocks/l09_nested_triangle_vi.png)
 
 ### Cơ chế ghép chuỗi dòng:
 

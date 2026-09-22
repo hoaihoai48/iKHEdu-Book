@@ -12,7 +12,7 @@ Trong nhiều bài toán thực tế, ta **không thể biết trước được
 
 Khi số lần lặp phụ thuộc vào một điều kiện động, khối lệnh chuẩn mực nhất trong Scratch là **`lặp lại cho đến khi <điều_kiện>`** (trong nhóm **Điều khiển** màu cam).
 
-![Minh họa vòng lặp cho đến khi](assets/rendered_blocks/l08_repeat_until_vi.png)
+![Minh họa vòng lặp cho đến khi](../../assets/rendered_blocks/l08_repeat_until_vi.png)
 
 ---
 
@@ -31,10 +31,11 @@ Khi số lần lặp phụ thuộc vào một điều kiện động, khối l�
 
 ## 3. Các mẫu thuật toán vòng lặp điều kiện
 
-### 3.1. Mẫu 1: Thuật toán biến đổi số ($3n + 1$)
-Bài toán: Cho số nguyên dương $N$. Nếu $N$ chẵn thì chia đôi $N = N / 2$; nếu $N$ lẻ thì biến đổi thành $N = 3N + 1$. Lặp lại quá trình này cho đến khi $N$ giảm về $1$.
+### 3.1. Mẫu 1: Mô phỏng quy tắc biến đổi số Collatz ($3n + 1$)
+Bài toán: Cho số nguyên dương $N$. Ta thực hiện mô phỏng quá trình biến đổi quy tắc $3n + 1$: Nếu $N$ chẵn thì chia đôi $N = N / 2$; nếu $N$ lẻ thì biến đổi thành $N = 3N + 1$. Với các giá trị đầu vào được cho, ta dùng vòng lặp `lặp lại cho đến khi < N = 1 >` để quan sát số bước biến đổi cho đến khi $N$ chạm về $1$.
 
-![Thuật toán Collatz](assets/rendered_blocks/l08_collatz_vi.png)
+![Thuật toán Collatz](../../assets/rendered_blocks/l08_collatz_vi.png)
+
 
 ### 3.2. Mẫu 2: Kỹ thuật biến cờ dừng
 Bài toán: Kiểm tra xem số $N$ có phải là số chính phương hay không ($N = i \times i$).
@@ -43,7 +44,7 @@ Bài toán: Kiểm tra xem số $N$ có phải là số chính phương hay khô
 
 - Cho `i` chạy từ 1, lặp lại cho đến khi **đã tìm thấy cờ** HOẶC **$i > N$**:
 
-![Kỹ thuật biến cờ dừng sớm](assets/rendered_blocks/l08_sentinel_flag_vi.png)
+![Kỹ thuật biến cờ dừng sớm](../../assets/rendered_blocks/l08_sentinel_flag_vi.png)
 
 ---
 

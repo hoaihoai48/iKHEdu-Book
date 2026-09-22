@@ -4,7 +4,7 @@
 
 Khi lập trình, lập trình Bảng A, hai phép toán quan trọng bậc nhất để xử lý số học chính là **Phép chia lấy phần dư (`mod`)** và **Phép chia lấy phần nguyên (`làm tròn xuống của phép chia`)**.
 
-![Minh họa khối lệnh chia nguyên và chia dư](assets/rendered_blocks/l05_div_mod_vi.png)
+![Minh họa khối lệnh chia nguyên và chia dư](../../assets/rendered_blocks/l05_div_mod_vi.png)
 
 ### 1.1. Phép chia lấy phần dư: Khối `() mod ()`
 
@@ -37,7 +37,7 @@ $$\text{Chia nguyên } A \text{ cho } B = \text{làm tròn xuống của } ((A) 
 
 Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng số giây $T$, hãy đổi ra Giờ, Phút, Giây.*
 
-![Đổi thời gian bằng chia nguyên và chia dư](assets/rendered_blocks/l05_time_convert_vi.png)
+![Đổi thời gian bằng chia nguyên và chia dư](../../assets/rendered_blocks/l05_time_convert_vi.png)
 
 ### Thuật toán quy đổi thời gian 4 bước:
 

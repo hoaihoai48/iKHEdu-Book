@@ -38,7 +38,7 @@
 
 ### Input
 ```text
-SCRATCH
+PYTHON
 ```
 ### Output
 ```text
@@ -46,7 +46,8 @@ P N
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `SCRATCH`, kết quả thu được tương ứng là `P N`.
+Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `P N`.
+
 
 ---
 
@@ -153,7 +154,7 @@ Với dữ liệu đầu vào là `RADAR`, kết quả thu được tương ứn
 
 ### Input
 ```text
-SCRATCH
+PYTHON
 ```
 ### Output
 ```text
@@ -162,8 +163,9 @@ HON
 ```
 ### Giải thích
 
-Với dữ liệu đầu vào là `SCRATCH`, kết quả thu được tương ứng là `PYT
+Với dữ liệu đầu vào là `PYTHON`, kết quả thu được tương ứng là `PYT
 HON`.
+
 
 ---
 
@@ -247,7 +249,7 @@ Với dữ liệu đầu vào là `ABCDEF`, kết quả thu được tương ứ
 
 ### Input
 ```text
-SCRATCH
+PYTHON
 2
 ```
 ### Output
@@ -257,6 +259,7 @@ PYHON
 ### Giải thích
 
 Xóa ký tự tại index 2 là chữ 'T'.
+
 
 ---
 

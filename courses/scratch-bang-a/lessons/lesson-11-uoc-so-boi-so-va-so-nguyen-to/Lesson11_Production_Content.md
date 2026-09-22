@@ -31,7 +31,7 @@ Khi $N$ lớn (ví dụ $N = 1000000$), việc cho vòng lặp chạy $1$ triệ
 
 2. **Nguyên lý dừng sớm bằng biến cờ:** Ngay khi phát hiện ra một số $d \ge 2$ chia hết cho $N$, ta khẳng định ngay $N$ là hợp số, lập tức đặt cờ `la_nguyen_to = 0` và dừng vòng lặp ngay lập tức!
 
-![Thuật toán kiểm tra số nguyên tố tối ưu căn N](assets/rendered_blocks/l11_prime_check_vi.png)
+![Thuật toán kiểm tra số nguyên tố tối ưu căn N](../../assets/rendered_blocks/l11_prime_check_vi.png)
 
 ---
 

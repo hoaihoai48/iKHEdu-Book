@@ -18,7 +18,7 @@ Sau khi đã lưu trữ được hàng loạt con số vào danh sách, nhiệm 
 
 Trong Scratch, không có sẵn khối tìm Max tự động cho cả danh sách tự động. Do đó, học sinh bắt buộc phải tự cài đặt thuật toán tìm kiếm tuần tự.
 
-![Thuật toán tìm Max trong danh sách](assets/rendered_blocks/l14_find_max_list_vi.png)
+![Thuật toán tìm Max trong danh sách](../../assets/rendered_blocks/l14_find_max_list_vi.png)
 
 ### 2.1. Bản chất tư duy của thuật toán tìm Max:
 
@@ -50,7 +50,7 @@ Giống như các bọt khí nhẹ hơn sẽ nổi dần lên mặt nước:
 
 - Lặp lại quá trình so sánh cặp này nhiều vòng, cho đến khi toàn bộ các số lớn đều dạt dần về cuối danh sách.
 
-![Thuật toán sắp xếp nổi bọt Bubble Sort](assets/rendered_blocks/l14_bubble_sort_vi.png)
+![Thuật toán sắp xếp nổi bọt Bubble Sort](../../assets/rendered_blocks/l14_bubble_sort_vi.png)
 
 ### 3.2. Kỹ thuật hoán đổi 2 phần tử bằng biến trung gian `tam`:
 Để đổi chỗ giá trị ở vị trí `j` và `j + 1` mà không làm mất dữ liệu:

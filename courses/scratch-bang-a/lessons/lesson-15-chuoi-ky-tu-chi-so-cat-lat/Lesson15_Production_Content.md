@@ -14,7 +14,7 @@ Bên cạnh các con số phục vụ tính toán, máy tính còn phải xử l
 
 Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operators)** màu xanh lá cây:
 
-![Bảng khối lệnh xử lý chuỗi Scratch Tiếng Việt](assets/rendered_blocks/l15_string_operations_vi.png)
+![Bảng khối lệnh xử lý chuỗi Scratch Tiếng Việt](../../assets/rendered_blocks/l15_string_operations_vi.png)
 
 | Khối lệnh trực quan Scratch 3.0 | Thao tác | Ví dụ với chuỗi `s = "TIN HOC"` | Kết quả thực tế |
 |:---:|---|---|:---:|
@@ -31,7 +31,7 @@ Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operat
 
 Để cắt ra một đoạn văn bản từ ký tự thứ $L$ đến ký tự thứ $R$ của chuỗi ban đầu, học sinh cần tự xây dựng thuật toán tích lũy chuỗi con:
 
-![Thuật toán trích xuất chuỗi con từ L đến R](assets/rendered_blocks/l15_substring_slice_vi.png)
+![Thuật toán trích xuất chuỗi con từ L đến R](../../assets/rendered_blocks/l15_substring_slice_vi.png)
 
 ### Các bước thuật toán:
 
@@ -49,21 +49,22 @@ Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operat
 
 ---
 
-## 4. Bảng mô phỏng trích xuất chuỗi từ $L = 2$ Đến $R = 4$ của chuỗi `"SCRATCH"` (Dry run)
+## 4. Bảng mô phỏng trích xuất chuỗi từ $L = 2$ đến $R = 4$ của chuỗi `"SCRATCH"` (Dry run)
 
-Chuỗi gốc $S = 	ext{"SCRATCH"}$. Độ dài $= 6$. Cần cắt từ $L = 2$ đến $R = 4$.
+Chuỗi gốc $S = \text{"SCRATCH"}$. Độ dài $= 7$. Cần cắt từ $L = 2$ đến $R = 4$.
 
+- Vị trí các ký tự: `1: 'S'`, `2: 'C'`, `3: 'R'`, `4: 'A'`, `5: 'T'`, `6: 'C'`, `7: 'H'`.
 - Số lần lặp $= 4 - 2 + 1 = 3$ lần (vị trí 2, 3, 4).
 
 | Vòng lặp | Biến chỉ số `i` | Lệnh `ký tự (i) của (S)` | Ghép chuỗi `chuoi_con` | Giá trị mới của `chuoi_con` | Hành động tiếp theo |
 |:---:|:---:|:---:|:---:|:---:|---|
 | *Bắt đầu* | $i = 2$ | — | Khởi tạo rỗng `""` | `""` | Bắt đầu vòng lặp |
-| **Vòng 1** | $i = 2$ | `ký tự (2)` $\to$ **`"Y"`** | `""` kết hợp `"Y"` | `"Y"` | Tăng $i = 3$ |
-| **Vòng 2** | $i = 3$ | `ký tự (3)` $\to$ **`"T"`** | `"Y"` kết hợp `"T"` | `"YT"` | Tăng $i = 4$ |
-| **Vòng 3** | $i = 4$ | `ký tự (4)` $\to$ **`"H"`** | `"YT"` kết hợp `"H"` | **`"YTH"`** | Tăng $i = 5$ |
-| **Dừng** | $i = 5$ | — | Đã lặp đủ 3 lần | **`"YTH"`** | Vòng lặp kết thúc |
+| **Vòng 1** | $i = 2$ | `ký tự (2)` $\to$ **`"C"`** | `""` kết hợp `"C"` | `"C"` | Tăng $i = 3$ |
+| **Vòng 2** | $i = 3$ | `ký tự (3)` $\to$ **`"R"`** | `"C"` kết hợp `"R"` | `"CR"` | Tăng $i = 4$ |
+| **Vòng 3** | $i = 4$ | `ký tự (4)` $\to$ **`"A"`** | `"CR"` kết hợp `"A"` | **`"CRA"`** | Tăng $i = 5$ |
+| **Dừng** | $i = 5$ | — | Đã lặp đủ 3 lần | **`"CRA"`** | Vòng lặp kết thúc |
 
-$\implies$ Nhân vật thông báo kết quả trích xuất: `"YTH"`.
+$\implies$ Nhân vật thông báo kết quả trích xuất: `"CRA"`.
 
 ---
 
