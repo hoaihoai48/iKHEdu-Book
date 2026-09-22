@@ -7,6 +7,7 @@ Bạn Minh có $A$ viên bi, bạn Nam có $B$ viên bi. Cần tính tổng số
 Nhập hai số nguyên $A$ và $B$ lần lượt trên 2 dòng riêng biệt. In ra tổng $A + B$.
 
 ## Input
+
 - Dòng 1: Số nguyên $A$ ($0 \le A \le 10^9$).
  - Dòng 2: Số nguyên $B$ ($0 \le B \le 10^9$).
 

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính tổng các phần tử trong dãy
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -32,28 +29,31 @@ Kết quả cuối cùng khớp với đáp án mẫu: `100`.
 
 - Bẫy 1 — nhầm hàm `max` với `sum`:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(max(a))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (max(a))
+
 ```
 Với mẫu trên in ra `40`, không khớp đáp án mẫu `100`. Cách sửa: dùng `nói (sum(a))`.
 - Bẫy 2 — đặt tổng ban đầu là `1` rồi nhân nhầm:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 tong = 1
 for x in a:
     tong = tong + x
-print(tong)
+nói (tong)
+
 ```
 Với mẫu trên in ra `101` vì cộng dư 1 ban đầu. Cách sửa: đặt `tong = 0` hoặc dùng `sum(a)`.
 - Bẫy 3 — quên đổi sang số nguyên khi đọc:
 ```text
-n = int(câu trả lời.strip())
-a = câu trả lời.split()
-print(sum(a))
+n = câu trả lời
+a = câu trả lời
+nói (sum(a))
+
 ```
-Với mẫu trên, `sum` cộng các chuỗi `"10"`, `"20"` gây lỗi chương trình. Cách sửa: đọc bằng `a = list(map(int, câu trả lời.split()))`.
+Với mẫu trên, `sum` cộng các chuỗi `"10"`, `"20"` gây lỗi chương trình. Cách sửa: đọc bằng `a = list(các khối hỏi và đợi cho từng biến)`.
 
 ---
 
@@ -67,10 +67,10 @@ Với mẫu trên, `sum` cộng các chuỗi `"10"`, `"20"` gây lỗi chương 
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - nói (sum(...))

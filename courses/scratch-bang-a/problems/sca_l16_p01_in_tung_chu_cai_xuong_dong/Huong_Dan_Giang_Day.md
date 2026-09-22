@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: In từng chữ cái xuống dòng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: đi thăm từng chữ cái trong từ `s`, mỗi chữ nằm một dòng riêng.
@@ -26,14 +23,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: in cả từ một lần `nói (s)`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s)
+nói (s)
+
 ```
-Với mẫu `CAT` chỉ in một dòng `CAT`, đáp án đúng là 3 dòng `C`, `A`, `T`. Cách sửa: dùng vòng lặp `for ch in s: print(ch)`.
+Với mẫu `CAT` chỉ in một dòng `CAT`, đáp án đúng là 3 dòng `C`, `A`, `T`. Cách sửa: dùng vòng lặp `for ch in s: nói (ch)`.
 - Bẫy 2: in các chữ trên cùng một dòng bằng `end`. Đoạn sai:
 ```text
 s = câu trả lời
 for ch in s:
-    print(ch, end='')
+    nói (ch, end='')
+
 ```
 Với mẫu `CAT` in ra `CAT` trên một dòng, đáp án đúng là mỗi chữ một dòng. Cách sửa: để `nói (ch)` xuống dòng tự nhiên.
 
@@ -49,9 +48,8 @@ Với mẫu `CAT` in ra `CAT` trên một dòng, đáp án đúng là mỗi ch�
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nói (ch)
+> -   thay đổi [vi_tri] một lượng 1

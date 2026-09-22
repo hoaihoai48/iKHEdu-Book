@@ -29,5 +29,7 @@ Tổng số tiền điện phải trả (số nguyên, tính bằng đồng).
 ### Giải thích
 
 - $100$ số đầu: $100 \times 2000 = 200000$ đồng.
+
 - $20$ số còn lại: $20 \times 3500 = 70000$ đồng.
+
 - Tổng cộng: $200000 + 70000 = 270000$ đồng.

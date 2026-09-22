@@ -22,26 +22,37 @@ Em hãy lập trình điều khiển chú Mèo Scratch hoàn thành bức tranh 
 ## Kịch bản tương tác (Input Scenario)
 
 - Khởi động khi người dùng nhấn vào biểu tượng **Cờ Xanh**.
+
 - Không yêu cầu nhập dữ liệu từ bàn phím.
 
 ## Kết quả mong đợi (Expected Behavior / Output)
 
 - Xuất hiện một đóa hoa gồm đúng $8$ cánh hoa cong mềm mại tỏa đều ra 8 hướng từ tâm $(0, 0)$.
+
 - Các cánh hoa đều nhau chằn chặn, xếp đan khít không bị lệch tâm.
+
 - Màu sắc của các cánh hoa chuyển đổi dần từ đỏ sang cam, vàng, lục, lam, tím.
 
+
+## Hình ảnh minh họa kết quả mẫu
+
+![Đóa hoa 8 cánh ghép từ cung tròn 90 độ](../../assets/pen_drawings/pen_img_215.png)
 ## Sample 1
 
 ### Kịch bản chạy
 ```text
 Sự kiện: Bấm Cờ Xanh
 Hành động:
+
 - Xóa màn hình, đưa Mèo về (0, 0), hướng 0 độ (hướng lên)
+
 - Đặt nét bút bằng 3
+
 - Lặp lại 8 lần:
   + Vẽ 1 cánh hoa (2 cung 90 độ)
   + Đổi màu bút vẽ một lượng 15
   + Xoay phải 45 độ
+
 - Ẩn nhân vật
 ```
 
@@ -54,5 +65,7 @@ Mỗi cánh hoa uốn lượn từ tâm $(0, 0)$ rồi lại khép kín quay v�
 ## Ràng buộc
 
 - Tọa độ tâm hoa: $x = 0, y = 0$.
+
 - Số cánh hoa: Đúng $8$ cánh.
+
 - Góc xoay tâm: Đúng $45^\circ$ ($360 / 8$).

@@ -1,17 +1,14 @@
-# Hướng Dẫn Giảng Dạy: Đếm bội số của K
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
-- Bản chất: đếm các số trong đoạn [A, B] chia hết cho K, tức `i % k == 0`. Khác bài tính tổng, ở đây biến `count` tăng 1 mỗi khi gặp bội số.
+- Bản chất: đếm các số trong đoạn [A, B] chia hết cho K, tức `(i mod k) == 0`. Khác bài tính tổng, ở đây biến `count` tăng 1 mỗi khi gặp bội số.
 - Quy trình trong lời giải: đọc 3 số vào danh sách `data` rồi tách `a, b, k`; đặt `count = 0`; vòng lặp cho `i` chạy từ `a` tới `b` (kể cả `b`), gặp bội của `k` thì `count = count + 1`; cuối cùng in `count`.
 - Xử lý biên: nếu K lớn hơn cả đoạn (ví dụ A = 1, B = 10, K = 100) thì kết quả là 0; B tới 100 000 nên vòng lặp duyệt trực tiếp vẫn kịp.
 
 ---
 
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 1 / 10 / 3)
-| Lượt lặp | Giá trị của `i` | `i % 3 == 0`? | Giá trị mới của `count` |
+| Lượt lặp | Giá trị của `i` | `(i mod 3) == 0`? | Giá trị mới của `count` |
 |---|---|---|---|
 | đầu | — | — | 0 |
 | 1 | 1 | không | 0 |
@@ -32,18 +29,20 @@ In ra `3` (các số 3, 6, 9), khớp với kết quả mẫu.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — đọc sai thứ tự:
 ```text
-a = int(câu trả lời)
-k = int(câu trả lời)
-b = int(câu trả lời)
+a = câu trả lời
+k = câu trả lời
+b = câu trả lời
+
 ```
 Với mẫu `1 / 10 / 3` sẽ hiểu K = 10, B = 3 nên đoạn rỗng và in ra `0`. Cách sửa: giữ đúng thứ tự `a, b, k` như lời giải.
 - Bẫy 2 — cộng `i` thay vì tăng `count`:
 ```text
 count = 0
 for i in range(a, b + 1):
-    if i % k == 0:
+    if (i mod k) == 0:
         count = count + i
-print(count)
+nói (count)
+
 ```
 Với mẫu `1 / 10 / 3` sẽ in ra `18` (tổng) thay vì `3` (số lượng). Cách sửa: tăng `count = count + 1`.
 
@@ -57,11 +56,15 @@ Với mẫu `1 / 10 / 3` sẽ in ra `18` (tổng) thay vì `3` (số lượng). 
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập data:] và đợi
-> - đặt [data] thành (câu trả lời)
-> - đặt [tong] thành (0)
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> - xóa tất cả của [data]
+> - đặt [_] thành (0)
+> - lặp lại (3) lần:
+> -   thêm (int(...)) vào [data]
+> -   thay đổi [_] một lượng 1
+> - đặt [count] thành (0)
+> - đặt [i] thành (a)
+> - lặp lại (b + 1 - a) lần:
+> -   nếu <i mod k = 0> thì:
+> -     đặt [count] thành (count + 1)
+> -   thay đổi [i] một lượng 1
+> - nói (count)

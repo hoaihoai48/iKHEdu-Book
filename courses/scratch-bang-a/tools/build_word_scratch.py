@@ -33,6 +33,18 @@ CHAPTER_NAMES = {
     6: "CHƯƠNG 06: XỬ LÝ CHUỖI KÝ TỰ",
 }
 
+# Nạp bảng ánh xạ mã bài tập Python gốc theo slug
+PY_LOOKUP = {}
+_py_problems_dir = REPO_ROOT / "courses" / "python-bang-a" / "problems"
+if _py_problems_dir.exists():
+    for _p in _py_problems_dir.iterdir():
+        if _p.is_dir() and _p.name.startswith("pya_"):
+            _m = re.match(r"pya_l\d+_p\d+_(.*)", _p.name)
+            if _m:
+                PY_LOOKUP[_m.group(1)] = _p.name
+
+
+
 def parse_de_bai(de_bai_path):
     """Parse De_Bai.md into structured sections (both algo and pen format)."""
     with open(de_bai_path, "r", encoding="utf-8") as f:
@@ -42,14 +54,29 @@ def parse_de_bai(de_bai_path):
     nv_m = re.search(r'## Nhiệm vụ\s*\n(.*?)(?=\n## Input|\n## Kịch bản|\n## Output|\n## Kết quả|\Z)', text, re.DOTALL)
     
     # Input / Kịch bản tương tác
-    inp_m = re.search(r'## (?:Input|Kịch bản tương tác.*?)\s*\n(.*?)(?=\n## Output|\n## Kết quả|\n## Sample|\Z)', text, re.DOTALL)
+    inp_m = re.search(r'## (?:Input|Kịch bản tương tác.*?)\s*\n(.*?)(?=\n## Output|\n## Kết quả|\n## Hình ảnh|\n## Sample|\Z)', text, re.DOTALL)
     # Output / Kết quả mong đợi
-    out_m = re.search(r'## (?:Output|Kết quả mong đợi.*?)\s*\n(.*?)(?=\n## Sample|\n## Ràng buộc|\Z)', text, re.DOTALL)
+    out_m = re.search(r'## (?:Output|Kết quả mong đợi.*?)\s*\n(.*?)(?=\n## Hình ảnh|\n## Sample|\n## Ràng buộc|\Z)', text, re.DOTALL)
+
+    # Hình ảnh minh họa kết quả mẫu (nếu có trong các bài vẽ hình)
+    img_m = re.search(r'## Hình ảnh minh họa.*?\s*\n(.*?)(?=\n## Sample|\n## Ràng buộc|\Z)', text, re.DOTALL)
 
     bcanh = bcanh_m.group(1).strip() if bcanh_m else ""
     nv = nv_m.group(1).strip() if nv_m else ""
     inp = inp_m.group(1).strip() if inp_m else ""
     out = out_m.group(1).strip() if out_m else ""
+    imgs_raw = img_m.group(1).strip() if img_m else ""
+
+    # Parse illustration images and resolve relative path to absolute
+    prob_dir = Path(de_bai_path).parent
+    def _resolve_debai_img(m):
+        alt = m.group(1)
+        src = m.group(2).strip()
+        p = (prob_dir / src).resolve()
+        if p.exists():
+            return f"\n\n![]({p})\n\n"
+        return ""
+    illustration_imgs = re.sub(r'!\[(.*?)\]\((.*?)\)', _resolve_debai_img, imgs_raw).strip() if imgs_raw else ""
 
     # Samples
     samples = []
@@ -78,21 +105,65 @@ def parse_de_bai(de_bai_path):
         "nv": nv,
         "inp": inp,
         "out": out,
+        "illustration_imgs": illustration_imgs,
         "samples": samples
     }
 
-def format_problem_markdown(prob_idx, prob_code, prob_title, parsed_data):
+def format_teacher_sections(prob_code):
+    """Phần giáo viên: các mục từ Huong_Dan_Giang_Day.md (## → ####). Bắt đầu từ ## 1. Ý tưởng."""
+    hp = PROBLEMS_DIR / prob_code / "Huong_Dan_Giang_Day.md"
+    if not hp.exists():
+        print(f"  ⚠️ Thiếu Huong_Dan: {prob_code}")
+        return ""
+    raw_text = hp.read_text(encoding="utf-8")
+    
+    # Chỉ lấy từ '## 1.' trở đi, loại bỏ toàn bộ metadata thừa phía trước
+    idx_start = raw_text.find("## 1.")
+    if idx_start == -1:
+        idx_start = raw_text.find("## ")
+    text_content = raw_text[idx_start:] if idx_start != -1 else raw_text
+
+    lines = []
+    for ln in text_content.splitlines():
+        # Bỏ qua các dòng metadata hoặc divider nếu còn sót
+        if any(ln.strip().startswith(prefix) for prefix in ["Mã bài toán:", "Chuyên đề:", "Phân tầng:", "---"]):
+            continue
+        if ln.startswith("### "):
+            lines.append("##### " + ln[4:])
+        elif ln.startswith("## "):
+            lines.append("#### " + ln[3:])
+        else:
+            lines.append(ln)
+    text = "\n".join(lines)
+    # Ensure ordered and bullet lists have blank line before first item
+    text = re.sub(r'([^\n]+[^\s|])\n(\d+\.[ \t])', lambda m: m.group(1) + '\n\n' + m.group(2), text)
+    text = re.sub(r'([^\n]+[^\s|])\n(-\s+)', lambda m: m.group(1) + '\n\n' + m.group(2), text)
+    text = re.sub(r'(\b\d+\.\s+[^\n]+?)\s+(\b\d+\.\s+)', r'\1\n\n\2', text)
+    # Ảnh tương đối → tuyệt đối (theo thư mục problem), bỏ alt text để tránh figure caption
+    def _img(m):
+        alt, src = m.group(1), m.group(2).strip()
+        p = (PROBLEMS_DIR / prob_code / src).resolve()
+        return f"![]({p})" if p.exists() else m.group(0)
+    text = re.sub(r"!\[(.*?)\]\((.*?)\)", _img, text)
+    return text.strip() + "\n\n"
+
+
+
+def format_problem_markdown(prob_idx, prob_code, prob_title, parsed_data, gv=False):
     """Format a problem statement block into Markdown for Pandoc."""
     md = []
-    md.append(f"### Bài {prob_idx:02d} [{prob_code}]: {prob_title}\n")
+    # Bỏ mã bài kỹ thuật, chỉ giữ số thứ tự và tên bài
+    md.append(f"### Bài {prob_idx:02d}: {prob_title}\n")
 
     if parsed_data["bcanh"]:
         md.append(f"Bối cảnh: {parsed_data['bcanh']}\n\n")
 
     if parsed_data["nv"]:
         nv_text = parsed_data["nv"]
-        # Ensure ordered/bullet lists within nv have blank line before first item
+        # Ensure ordered/bullet lists within nv have blank line before first item and between items
         nv_text = re.sub(r'([^\n]+[^\s|])\n(\d+\.[ \t])', lambda m: m.group(1) + '\n\n' + m.group(2), nv_text)
+        nv_text = re.sub(r'([^\n]+[^\s|])\n(-\s+)', lambda m: m.group(1) + '\n\n' + m.group(2), nv_text)
+        nv_text = re.sub(r'(\b\d+\.\s+[^\n]+?)\s+(\b\d+\.\s+)', r'\1\n\n\2', nv_text)
         md.append(f"Nhiệm vụ: {nv_text}\n\n")
 
     if parsed_data["inp"]:
@@ -101,7 +172,16 @@ def format_problem_markdown(prob_idx, prob_code, prob_title, parsed_data):
     if parsed_data["out"]:
         md.append(f"**Đầu ra (Output):**\n\n{parsed_data['out']}\n\n")
 
+    if parsed_data.get("illustration_imgs"):
+        md.append(f"**Hình ảnh minh họa kết quả:**\n\n{parsed_data['illustration_imgs']}\n\n")
+
     for s_idx, s in enumerate(parsed_data["samples"], 1):
+        if gv:
+            # Sách GV kiểu Python: chỉ tiêu đề sample + giải thích, không bảng I/O
+            md.append(f"**Ví dụ mẫu ({s['title']}):**\n")
+            if s["explain"]:
+                md.append(f"**Giải thích:**\n\n{s['explain']}\n")
+            continue
         s_title_str = f"Ví dụ mẫu ({s['title']}):"
         inp_str = s["input"].replace("\n", " <br> ") if s["input"] else "(Nhấn cờ xanh)"
         out_str = s["output"].replace("\n", " <br> ") if s["output"] else "(Hiển thị kết quả)"
@@ -117,40 +197,60 @@ def format_problem_markdown(prob_idx, prob_code, prob_title, parsed_data):
     return "\n".join(md) + "\n\n"
 
 def resolve_images_in_theory(content_text, lesson_folder):
-    """Map relative image links to absolute filesystem paths."""
-    def replace_img(match):
-        alt = match.group(1)
-        orig_path = match.group(2)
-        # Handle relative paths like ../../assets/...
-        raw_path = orig_path.split("?")[0]
-        # Use empty alt to prevent Pandoc from generating figure captions
-        if raw_path.startswith("../../assets/"):
-            rel_sub = raw_path[len("../../assets/"):]
-            abs_p = SCRATCH_DIR / "assets" / rel_sub
-            if abs_p.exists():
-                return f"\n\n![]({abs_p.resolve()})\n\n"
-        elif raw_path.startswith("assets/"):
-            # relative to SCRATCH_DIR (some lessons use this form)
-            abs_p = SCRATCH_DIR / raw_path
-            if abs_p.exists():
-                return f"\n\n![]({abs_p.resolve()})\n\n"
-        elif not Path(raw_path).is_absolute():
-            abs_p = (lesson_folder / raw_path).resolve()
-            if abs_p.exists():
-                return f"\n\n![]({abs_p})\n\n"
-        return match.group(0)
-
-    # Filter out ALL quiz/concept quiz sections regardless of number prefix (## 6., ## 7., ## 8. etc.)
+    """Map relative image links to absolute filesystem paths, protecting markdown tables."""
+    # Filter out ALL quiz/concept quiz sections regardless of number prefix or letter casing
     clean_text = re.sub(
-        r'\n## \d+\.\s*(?:Bộ Câu Hỏi Trắc Nghiệm|Câu Hỏi Trắc Nghiệm|Concept Quiz).*?(?=\n## |\n# |\Z)',
+        r'\n## \d+\.\s*(?:Bộ [cC]âu [hH]ỏi [tT]rắc [nN]ghiệm|[cC]âu [hH]ỏi [tT]rắc [nN]ghiệm|[cC]oncept [qQ]uiz).*?(?=\n## |\n# |\Z)',
         '',
         content_text,
         flags=re.DOTALL
     )
     # Filter out navigation line at end
     clean_text = re.sub(r'👉\s*\*\*Tiếp theo:\*\*.*', '', clean_text)
+
+    # Process line-by-line so images inside table cells are NOT wrapped in blank lines
+    # (Wrapping with \n\n breaks markdown tables into empty table rows and orphan pipe paragraphs)
+    lines = clean_text.split('\n')
+    new_lines = []
+    for ln in lines:
+        is_table_row = ln.strip().startswith('|') and ln.strip().endswith('|')
+
+        def replace_img(match):
+            alt = match.group(1)
+            orig_path = match.group(2)
+            raw_path = orig_path.split("?")[0]
+            abs_p = None
+            if raw_path.startswith("../../assets/"):
+                rel_sub = raw_path[len("../../assets/"):]
+                p = SCRATCH_DIR / "assets" / rel_sub
+                if p.exists():
+                    abs_p = p.resolve()
+            elif raw_path.startswith("assets/"):
+                p = SCRATCH_DIR / raw_path
+                if p.exists():
+                    abs_p = p.resolve()
+            elif not Path(raw_path).is_absolute():
+                p = (lesson_folder / raw_path).resolve()
+                if p.exists():
+                    abs_p = p
+
+            if abs_p:
+                if is_table_row:
+                    return f"![]({abs_p})"
+                else:
+                    return f"\n\n![]({abs_p})\n\n"
+            return match.group(0)
+
+        ln = re.sub(r'!\[(.*?)\]\((.*?)\)', replace_img, ln)
+        new_lines.append(ln)
+
+    res = '\n'.join(new_lines)
+    # Đảm bảo trước và sau các danh sách có dòng trống để Pandoc không gộp dòng
+    res = re.sub(r'([^\n])\n(\d+\.\s+)', r'\1\n\n\2', res)
+    res = re.sub(r'([^\n])\n(-\s+)', r'\1\n\n\2', res)
+    res = re.sub(r'(\b\d+\.\s+[^\n]+?)\s+(\b\d+\.\s+)', r'\1\n\n\2', res)
     
-    return re.sub(r'!\[(.*?)\]\((.*?)\)', replace_img, clean_text)
+    return res
 
 def build_volume_markdown(volume_info):
     """Assemble complete Markdown for a volume."""
@@ -183,31 +283,54 @@ def build_volume_markdown(volume_info):
             chap_title = CHAPTER_NAMES.get(chap_num, f"CHƯƠNG {chap_num:02d}")
             md_parts.append(f"# {chap_title}\n\n")
 
-        # Read Theory file
-        theory_file = SCRATCH_DIR / lesson_info["content_file"]
-        if theory_file.exists():
-            with open(theory_file, "r", encoding="utf-8") as f:
-                theory_text = f.read()
-            theory_text = resolve_images_in_theory(theory_text, les_folder)
-            md_parts.append(theory_text.strip() + "\n\n")
+        is_gv = bool(volume_info.get("giaovien"))
+        if is_gv:
+            # Sách GV: tiêu đề bài học lấy từ manifest (không đọc theory)
+            md_parts.append(f"# {les_title}\n\n")
 
-        # Add "Bài tập thực hành" section (Heading 2)
-        md_parts.append("## Bài tập thực hành\n\n")
+        # Read Theory file (sách GV không có lý thuyết)
+        if not is_gv:
+            theory_file = SCRATCH_DIR / lesson_info["content_file"]
+            if theory_file.exists():
+                with open(theory_file, "r", encoding="utf-8") as f:
+                    theory_text = f.read()
+                theory_text = resolve_images_in_theory(theory_text, les_folder)
+                md_parts.append(theory_text.strip() + "\n\n")
+
+            # Add "Bài tập thực hành" section (Heading 2)
+            md_parts.append("## Bài tập thực hành\n\n")
 
         # Add problems
         for p_idx, prob in enumerate(lesson_info["problems"], 1):
             prob_code = prob["code"]
             prob_title = prob["title"]
+
+            # Map code bài tập: nếu là bài thuật toán (les_num > 2) thì dùng mã python pya_...
+            disp_code = prob_code
+            if is_gv and les_num > 2:
+                m_slug = re.match(r"sca_l\d+_p\d+_(.*)", prob_code)
+                if m_slug:
+                    slug = m_slug.group(1)
+                    disp_code = PY_LOOKUP.get(slug, prob_code)
+
             de_bai_file = PROBLEMS_DIR / prob_code / "De_Bai.md"
             if de_bai_file.exists():
                 parsed = parse_de_bai(de_bai_file)
-                p_md = format_problem_markdown(p_idx, prob_code, prob_title, parsed)
+                p_md = format_problem_markdown(p_idx, disp_code, prob_title, parsed, gv=is_gv)
                 md_parts.append(p_md)
+                if is_gv:
+                    md_parts.append(format_teacher_sections(prob_code))
                 prob_global_count += 1
             else:
                 print(f"  ⚠️ Thiếu De_Bai.md: {prob_code}")
 
     print(f"  → Tổng số bài tập đã nạp cho Quyển {vol_num}: {prob_global_count}")
+
+    if is_gv:
+        # Sách GV: không Phụ lục A/B (lời giải đã nằm trong từng bài)
+        md_parts.append("# Mục lục\n\n")
+        full_md = "\n".join(md_parts)
+        return full_md
 
     # 3. Phụ lục A
     appendix_a_path = SCRATCH_DIR / volume_info["appendix_a"]
@@ -238,17 +361,17 @@ def build_volume_markdown(volume_info):
         # Chỉ lấy 3 bài đầu tiên của mỗi bài học
         sample_problems = lesson_info["problems"][:3]
 
-        for prob in sample_problems:
+        for p_sol_idx, prob in enumerate(sample_problems, 1):
             prob_code = prob["code"]
             prob_title = prob["title"]
             img_file = PROBLEMS_DIR / prob_code / "solution_blocks_vi.png"
             
-            md_parts.append(f"### {prob_code} — {prob_title}\n\n")
+            md_parts.append(f"### Bài {p_sol_idx:02d} — {prob_title}\n\n")
             if img_file.exists():
                 md_parts.append(f"![]({img_file.resolve()})\n\n")
                 sol_count += 1
             else:
-                md_parts.append(f"*(Khối lệnh giải mẫu của bài {prob_code})*\n\n")
+                md_parts.append(f"*(Khối lệnh giải mẫu của bài {prob_title})*\n\n")
 
         md_parts.append("Các bài tập còn lại có phương pháp và cấu trúc tương tự, học sinh tự suy luận và cài đặt.\n\n")
 
@@ -334,6 +457,15 @@ def postprocess_docx(docx_path, volume_info):
     for idx, para in enumerate(doc.paragraphs):
         style_name = para.style.name if para.style else ""
         text = para.text.strip()
+
+        # A0. Xóa triệt để nếu còn sót dòng meta Chuyên đề / Mã bài toán
+        if style_name in ("Body Text", "Normal", "First Paragraph") and (
+            text.startswith("Chuyên đề:") or text.startswith("Mã bài toán:")
+        ):
+            para.text = ""
+            para.paragraph_format.space_before = Pt(0)
+            para.paragraph_format.space_after = Pt(0)
+            continue
 
         # A. Heading 1
         if style_name == "Heading 1":
@@ -460,6 +592,48 @@ def postprocess_docx(docx_path, volume_info):
             for r in para.runs:
                 r.font.name = "Times New Roman"
                 r.font.size = Pt(13)
+                r.font.bold = True
+                r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
+            # Sách GV: track từng bài tập để đưa vào mục lục chi tiết
+            if volume_info.get("giaovien") and re.match(r"Bài \d+:", text):
+                bm_name = f"bm_sec_{bm_counter}"
+                bm_counter += 1
+                bm_start = parse_xml(f'<w:bookmarkStart {nsdecls("w")} w:id="{bm_counter}" w:name="{bm_name}"/>')
+                bm_end = parse_xml(f'<w:bookmarkEnd {nsdecls("w")} w:id="{bm_counter}"/>')
+                para._p.insert(0, bm_start)
+                para._p.append(bm_end)
+                toc_headings.append({
+                    "text": text,
+                    "bm_name": bm_name,
+                    "is_chapter": False,
+                    "is_lesson": False,
+                    "is_exercise": True,
+                    "is_appendix": False,
+                    "is_preface": False,
+                })
+
+        # C1. Heading 4 (Các mục trong sách GV: 1. Ý tưởng, 2. Dry run, 3. Lưu ý & bẫy lỗi...)
+        elif style_name == "Heading 4":
+            para.paragraph_format.keep_with_next = True
+            para.paragraph_format.line_spacing = 1.15
+            para.paragraph_format.space_before = Pt(9)
+            para.paragraph_format.space_after = Pt(3)
+            for r in para.runs:
+                r.font.name = "Times New Roman"
+                r.font.size = Pt(12)
+                r.font.bold = True
+                r.font.italic = True
+                r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
+
+        # C2. Heading 5 (Các tiểu mục con trong sách GV)
+        elif style_name == "Heading 5":
+            para.paragraph_format.keep_with_next = True
+            para.paragraph_format.line_spacing = 1.15
+            para.paragraph_format.space_before = Pt(6)
+            para.paragraph_format.space_after = Pt(2)
+            for r in para.runs:
+                r.font.name = "Times New Roman"
+                r.font.size = Pt(11.5)
                 r.font.bold = True
                 r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
@@ -819,6 +993,59 @@ def postprocess_docx(docx_path, volume_info):
                                 r.font.size = Pt(12)
                                 r.font.color.rgb = RGBColor(0x00, 0x00, 0x00)
 
+                    # Scale images inside table cells to fit column width and prevent table breaking/overflowing
+                    num_cols = max(len(row.cells), 1)
+                    # Available page width is ~15.2 cm. Calculate max allowed width per column
+                    max_cell_cx_cm = min(15.2 / num_cols * 0.92, 7.0)
+                    max_cell_cx = int(max_cell_cx_cm * 360000)  # 1 cm = 360000 EMU
+                    max_cell_cy = 1800000  # max 5.0 cm height per cell to prevent tall blocks breaking page
+
+                    for p in cell.paragraphs:
+                        for drawing in p._p.findall(".//" + qn("w:drawing")):
+                            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                            wp_extent = drawing.find(".//" + qn("wp:extent"))
+                            a_ext = drawing.find(".//" + qn("a:ext"))
+                            if wp_extent is not None:
+                                try:
+                                    old_cx = int(wp_extent.get("cx", 0))
+                                    old_cy = int(wp_extent.get("cy", 0))
+                                    if old_cx > 0 and old_cy > 0:
+                                        target_cx = old_cx
+                                        target_cy = old_cy
+                                        if target_cx > max_cell_cx:
+                                            target_cy = int(round(target_cy * max_cell_cx / target_cx))
+                                            target_cx = max_cell_cx
+                                        if target_cy > max_cell_cy:
+                                            target_cx = int(round(target_cx * max_cell_cy / target_cy))
+                                            target_cy = max_cell_cy
+                                        wp_extent.set("cx", str(target_cx))
+                                        wp_extent.set("cy", str(target_cy))
+                                        if a_ext is not None:
+                                            a_ext.set("cx", str(target_cx))
+                                            a_ext.set("cy", str(target_cy))
+                                except Exception:
+                                    pass
+
+        # End of table loop
+
+    # 4.1. Table Spacing Guard: Đảm bảo đoạn văn bản (<w:p>) ngay sau bất kỳ bảng (<w:tbl>) nào
+    # luôn có khoảng cách phía trên (space_before >= 10.0pt = 200 dxa) để không bao giờ bị dính sát viền bảng.
+    body_elem = doc._body._body
+    for i_elem, child in enumerate(body_elem):
+        if child.tag.split("}")[-1] == "tbl":
+            for j_elem in range(i_elem + 1, min(i_elem + 10, len(body_elem))):
+                next_c = body_elem[j_elem]
+                if next_c.tag.split("}")[-1] == "p":
+                    pPr = next_c.get_or_add_pPr()
+                    sp = pPr.find(qn("w:spacing"))
+                    if sp is not None:
+                        cur_bef = int(sp.get(qn("w:before"), "0"))
+                        if cur_bef < 200:  # Nâng lên tối thiểu 10pt (200 dxa)
+                            sp.set(qn("w:before"), "200")
+                    else:
+                        pPr.append(parse_xml(f'<w:spacing {nsdecls("w")} w:before="200"/>'))
+                    break
+
     # 5. Build Table of Contents with Exact Font & Spacing
     if p_toc_heading and not volume_info.get("merged"):
         print(f"  → Đang xây dựng Mục lục tương tác chuẩn (18pt/14pt/13pt, tab 9899) gồm {len(toc_headings)} mục...")
@@ -941,6 +1168,46 @@ def postprocess_docx(docx_path, volume_info):
                                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
                                     <w:b/>
                                     <w:sz w:val="28"/>
+                                    <w:color w:val="000000"/>
+                                    <w:noProof/>
+                                </w:rPr>
+                                <w:t>1</w:t>
+                            </w:r>
+                        </w:fldSimple>
+                    </w:hyperlink>
+                </w:p>'''
+            elif item.get("is_exercise"):
+                # Mục lục chi tiết sách GV (giống Python): –– từng bài tập, 10pt
+                p_xml = f'''<w:p {nsdecls("w")}>
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="right" w:leader="dot" w:pos="9899"/>
+                        </w:tabs>
+                        <w:ind w:left="560"/>
+                        <w:spacing w:before="10" w:after="10"/>
+                    </w:pPr>
+                    <w:hyperlink w:anchor="{bm}">
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                <w:sz w:val="20"/>
+                                <w:color w:val="000000"/>
+                            </w:rPr>
+                            <w:t>––  {title}</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                <w:sz w:val="20"/>
+                                <w:color w:val="000000"/>
+                            </w:rPr>
+                            <w:tab/>
+                        </w:r>
+                        <w:fldSimple w:instr="PAGEREF {bm} \\h">
+                            <w:r>
+                                <w:rPr>
+                                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+                                    <w:sz w:val="20"/>
                                     <w:color w:val="000000"/>
                                     <w:noProof/>
                                 </w:rPr>
@@ -1086,13 +1353,48 @@ def main():
     with open(MANIFEST_FILE, "r", encoding="utf-8") as f:
         manifest_data = json.load(f)
 
-    # Allow building specific volume via CLI argument (1, 2, or "full" = gộp 1 quyển)
+    # Allow building specific volume via CLI argument (1, 2, "full", "giaovien1", "giaovien2", "giaovien3", "giaovien")
     target_vol = sys.argv[1] if len(sys.argv) > 1 else None
-    if target_vol not in (None, "1", "2", "full"):
+    if target_vol not in (None, "1", "2", "full", "giaovien1", "giaovien2", "giaovien3", "giaovien"):
         try:
             target_vol = int(target_vol)
         except ValueError:
             pass
+
+    if target_vol in ("giaovien1", "giaovien2", "giaovien3", "giaovien"):
+        gv_manifest = SCRATCH_DIR / "tools" / "word_build_manifest_giaovien.json"
+        if not gv_manifest.exists():
+            print(f"❌ Không tìm thấy manifest GV: {gv_manifest}")
+            sys.exit(1)
+        with open(gv_manifest, "r", encoding="utf-8") as f:
+            gv_data = json.load(f)
+        
+        target_vols = []
+        if target_vol == "giaovien":
+            target_vols = [1, 2, 3]
+        elif target_vol == "giaovien1":
+            target_vols = [1]
+        elif target_vol == "giaovien2":
+            target_vols = [2]
+        elif target_vol == "giaovien3":
+            target_vols = [3]
+
+        for vol in gv_data["volumes"]:
+            w = vol["volume"]
+            if w not in target_vols:
+                continue
+            vol["giaovien"] = True
+            intermediate_docx = SCRATCH_DIR / f"_temp_raw_gv_{w}.docx"
+            full_md = build_volume_markdown(vol)
+            convert_markdown_to_docx(full_md, intermediate_docx)
+            postprocess_docx(intermediate_docx, vol)
+            if intermediate_docx.exists():
+                intermediate_docx.unlink()
+            temp_md = SCRATCH_DIR / f"_build_intermediate_{intermediate_docx.stem}.md"
+            if temp_md.exists():
+                temp_md.unlink()
+            print(f"\n🎉 HOÀN THÀNH SÁCH GIÁO VIÊN QUYỂN {w}!")
+        return
 
     if target_vol == "full":
         vols = {v["volume"]: v for v in manifest_data["volumes"]}

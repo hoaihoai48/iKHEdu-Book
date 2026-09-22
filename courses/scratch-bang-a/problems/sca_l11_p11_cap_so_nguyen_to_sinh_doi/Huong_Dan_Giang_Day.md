@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Cặp số nguyên tố sinh đôi
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: cặp sinh đôi là hai số nguyên tố hơn kém nhau đúng `2` đơn vị, tức `(p, p + 2)` với `p + 2 <= 15`.
@@ -14,14 +11,14 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 15)
 | `p` | `q = p + 2` | Kiểm tra | In? |
 | --- | --- | --- | --- |
-| 2 | 4 | `4 % 2 == 0`, hợp số | không |
+| 2 | 4 | `(4 mod 2) == 0`, hợp số | không |
 | 3 | 5 | cả hai nguyên tố | in `3 5` |
-| 4 | 6 | `4 % 2 == 0`, hợp số | không |
+| 4 | 6 | `(4 mod 2) == 0`, hợp số | không |
 | 5 | 7 | cả hai nguyên tố | in `5 7` |
 | 6–10 | 8–12 | `p` hoặc `q` chẵn, hợp số | không |
 | 11 | 13 | cả hai nguyên tố | in `11 13` |
 | 12 | 14 | hợp số | không |
-| 13 | 15 | `15 % 3 == 0`, hợp số | không |
+| 13 | 15 | `(15 mod 3) == 0`, hợp số | không |
 
 Kết quả in ra ba dòng `3 5`, `5 7`, `11 13`, khớp với kết quả mẫu.
 
@@ -44,4 +41,26 @@ Kết quả in ra ba dòng `3 5`, `5 7`, `11 13`, khớp với kết quả mẫu
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (kết hợp p và " " và q)
+> - đặt [p] thành (2)
+> - lặp lại (n - 1 - 2) lần:
+> -   đặt [la_snt_p] thành (True)
+> -   nếu <p < 2> thì:
+> -     đặt [la_snt_p] thành (False)
+> -   nếu không thì:
+> -     đặt [i] thành (2)
+> -     lặp lại (int(...) + 1 - 2) lần:
+> -       nếu <p mod i = 0> thì:
+> -         đặt [la_snt_p] thành (False)
+> -         dừng kịch bản này
+> -       thay đổi [i] một lượng 1
+> -   đặt [q] thành (p + 2)
+> -   đặt [la_snt_q] thành (True)
+> -   đặt [i] thành (2)
+> -   lặp lại (int(...) + 1 - 2) lần:
+> -     nếu <q mod i = 0> thì:
+> -       đặt [la_snt_q] thành (False)
+> -       dừng kịch bản này
+> -     thay đổi [i] một lượng 1
+> -   nếu <điều kiện> thì:
+> -     nói (kết hợp p và ' ' và q)
+> -   thay đổi [p] một lượng 1

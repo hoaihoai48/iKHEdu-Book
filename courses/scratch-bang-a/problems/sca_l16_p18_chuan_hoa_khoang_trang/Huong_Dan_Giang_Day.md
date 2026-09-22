@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chuẩn hóa khoảng trắng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: dọn thiệp của bạn Na sao cho đầu cuối sạch cách thừa, giữa các từ đúng một dấu cách.
@@ -25,13 +22,15 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: chỉ gọt hai đầu bằng `strip()`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.strip())
+nói (s.strip())
+
 ```
 Với mẫu trên giữa `rat` và `la` vẫn còn 2 dấu cách, đáp án đúng là `Python rat la tuyet` đều một cách. Cách sửa: dùng `" ".join(s.split())`.
 - Bẫy 2: nối không có dấu cách `"".join(s.split())`. Đoạn sai:
 ```text
 s = câu trả lời
-print("".join(s.split()))
+nói ("".join(s.split()))
+
 ```
 Với mẫu trên in ra `Pythonratlatuyet` dính liền, đáp án đúng là `Python rat la tuyet`. Cách sửa: nối bằng `" ".join(...)`.
 
@@ -47,9 +46,4 @@ Với mẫu trên in ra `Pythonratlatuyet` dính liền, đáp án đúng là `P
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (giá trị)

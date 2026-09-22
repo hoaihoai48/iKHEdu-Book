@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính vận tốc làm tròn
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất vận tốc trung bình: quãng đường `d` chia thời gian `t`, rồi làm tròn đúng 2 chữ số sau dấu chấm.
@@ -22,9 +19,9 @@ Với số mẫu dòng 1 là `100` và dòng 2 là `6`, chương trình phải i
 ---
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
-- Bẫy 1 — dùng chia nguyên: viết `nói (d // t)` thì với mẫu ra `16` thay vì `16.67`; cách sửa là chia thực `d / t` rồi làm tròn 2 chữ số.
+- Bẫy 1 — dùng chia nguyên: viết `nói (làm tròn xuống của (d / t))` thì với mẫu ra `16` thay vì `16.67`; cách sửa là chia thực `d / t` rồi làm tròn 2 chữ số.
 - Bẫy 2 — in thô không làm tròn: viết `nói (d / t)` thì với mẫu ra `16.666666666666668` thay vì `16.67`; cách sửa là ghi định dạng 2 chữ số thập phân.
-- Bẫy 3 — đọc hai số một dòng: viết `d, t = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
+- Bẫy 3 — đọc hai số một dòng: viết `d, t = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
 
 ---
 
@@ -40,4 +37,4 @@ Với số mẫu dòng 1 là `100` và dòng 2 là `6`, chương trình phải i
 > - đặt [d] thành (câu trả lời)
 > - hỏi [Nhập t:] và đợi
 > - đặt [t] thành (câu trả lời)
-> - nói (d // t)
+> - nói (giá trị)

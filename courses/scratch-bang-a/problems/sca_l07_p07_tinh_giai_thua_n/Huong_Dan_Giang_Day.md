@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính giai thừa $N!$
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giai thừa `N! = 1 x 2 x ... x N`. Khác với cộng dồn, ở đây biến `gt` khởi đầu bằng 1 và mỗi bước nhân thêm `i`.
@@ -27,20 +24,22 @@ In ra `120`, khớp với kết quả mẫu (`1 x 2 x 3 x 4 x 5 = 120`).
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — khởi tạo `gt = 0`:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 gt = 0
 for i in range(1, n + 1):
     gt = gt * i
-print(gt)
+nói (gt)
+
 ```
 Với mẫu `5` sẽ in ra `0` vì nhân với 0 luôn bằng 0. Cách sửa: khởi tạo `gt = 1`.
 - Bẫy 2 — dùng cộng thay vì nhân:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 gt = 1
 for i in range(1, n + 1):
     gt = gt + i
-print(gt)
+nói (gt)
+
 ```
 Với mẫu `5` sẽ in ra `16` thay vì `120`. Cách sửa: dùng `gt = gt * i`.
 
@@ -56,9 +55,9 @@ Với mẫu `5` sẽ in ra `16` thay vì `120`. Cách sửa: dùng `gt = gt * i`
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - đặt [tong] thành (0)
+> - đặt [gt] thành (1)
 > - đặt [i] thành (1)
 > - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> -   đặt [gt] thành (gt * i)
+> -   thay đổi [i] một lượng 1
+> - nói (gt)

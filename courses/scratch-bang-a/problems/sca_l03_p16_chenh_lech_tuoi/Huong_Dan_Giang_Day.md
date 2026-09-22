@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Chênh lệch tuổi của hai anh em
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là tính anh hơn em bao nhiêu tuổi: tuổi anh `A = 12` trừ tuổi em `E = 7` được `5`, rồi đặt số `5` vào khung câu `Anh hon em 5 tuoi.`. Thầy cô cho các con đếm từ 7 lên 12 xem chênh mấy tuổi.
-- Quy trình gồm hai bước với hai biến `a` và `e` trong lời giải: dùng `map(int, hỏi và đợi.split())` để cắt dòng `12 7` thành `12` và `7` rồi cất vào `a` và `e`, sau đó dùng chuỗi `f"Anh hon em {a - e} tuoi."` để tính `12 - 7 = 5` và ghép vào câu.
+- Quy trình gồm hai bước với hai biến `a` và `e` trong lời giải: dùng `các khối hỏi và đợi cho từng biến` để cắt dòng `12 7` thành `12` và `7` rồi cất vào `a` và `e`, sau đó dùng chuỗi `f"Anh hon em {a - e} tuoi."` để tính `12 - 7 = 5` và ghép vào câu.
 - Xử lý biên: ràng buộc cho `1 <= E <= A <= 100` nên anh luôn lớn tuổi hơn hoặc bằng em. Thầy cô cho các con thử biên bằng nhau `100 100` cho ra `Anh hon em 0 tuoi.`, và biên `100 1` cho ra `Anh hon em 99 tuoi.`.
 
 ---
@@ -13,7 +10,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 12 7)
 | Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
 |------|-----------|--------------|------------------|
-| 1 | `a, e = map(int, hỏi và đợi.split())` với bàn phím gõ `12 7` | `a = 12`, `e = 7` | (chưa in gì) |
+| 1 | `a, e = các khối hỏi và đợi cho từng biến` với bàn phím gõ `12 7` | `a = 12`, `e = 7` | (chưa in gì) |
 | 2 | `nói (f"Anh hon em {a - e} tuoi.")` tức tính `12 - 7 = 5` rồi ghép vào câu | `a = 12`, `e = 7` | `Anh hon em 5 tuoi.` |
 | 3 | Kết thúc chương trình | — | Kết quả cuối cùng: `Anh hon em 5 tuoi.`. |
 
@@ -38,4 +35,4 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập e:] và đợi
 > - đặt [e] thành (câu trả lời)
-> - nói (f"Anh hon em {a - e} tuoi.")
+> - nói (giá trị)

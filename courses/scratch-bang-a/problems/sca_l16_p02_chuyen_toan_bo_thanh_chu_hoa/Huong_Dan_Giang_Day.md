@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chuyển toàn bộ thành chữ hoa
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: biến mọi chữ cái trong chuỗi `s` thành chữ in hoa.
@@ -26,12 +23,14 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 s.upper()
+
 ```
 Với mẫu `ikhedu vietnam`, màn hình không in gì cả, đáp án đúng là `IKHEDU VIETNAM`. Cách sửa: bọc lệnh in `nói (s.upper())`.
 - Bẫy 2: dùng `s.lower()` ngược yêu cầu. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.lower())
+nói (s.lower())
+
 ```
 Với mẫu trên vẫn in ra `ikhedu vietnam` chữ thường, đáp án đúng là `IKHEDU VIETNAM`. Cách sửa: dùng `s.upper()`.
 
@@ -47,9 +46,4 @@ Với mẫu trên vẫn in ra `ikhedu vietnam` chữ thường, đáp án đúng
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (giá trị)

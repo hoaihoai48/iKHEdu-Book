@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Rào quanh vườn hoa có cửa
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất tiền rào: chu vi vườn `(a + b) * 2` trừ cửa `c` rồi nhân đơn giá 15 nghìn một mét.
@@ -24,7 +21,7 @@ Với số mẫu ba dòng `12`, `8`, `2`, chương trình phải in ra `570`.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — quên trừ cửa: viết `nói ((a + b) * 2 * 15)` thì với mẫu ra `600` thay vì `570`; cách sửa là trừ `c` trước khi nhân 15.
 - Bẫy 2 — quên nhân đơn giá: viết `nói ((a + b) * 2 - c)` thì với mẫu ra `38` thay vì `570`; cách sửa là nhân thêm 15.
-- Bẫy 3 — đọc ba số một dòng: viết `a, b, c = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
+- Bẫy 3 — đọc ba số một dòng: viết `a, b, c = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
 
 ---
 
@@ -42,4 +39,4 @@ Với số mẫu ba dòng `12`, `8`, `2`, chương trình phải in ra `570`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nói ((a + b)
+> - nói (a + b * 2 - c * 15)

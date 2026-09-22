@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm số lượng học sinh trên điểm trung bình
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,26 +30,29 @@ Kết quả cuối cùng khớp với đáp án mẫu: `2`.
 
 - Bẫy 1 — dùng lớn hơn hẳn thay vì lớn hơn hoặc bằng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(float, câu trả lời.split()))
+n = câu trả lời
+a = list(map(float, câu trả lời))
 tb = sum(a) / n
-print(sum(1 for x in a if x > tb))
+nói (sum(1 for x in a if x > tb))
+
 ```
 Với mẫu trên vẫn ra `2`, nhưng lớp như `7 7 7 7` (trung bình `7.0`) thì đáp án đúng là `4` mà cách này in `0`. Cách sửa: điều kiện đúng là `x >= tb`.
 - Bẫy 2 — đọc điểm bằng số nguyên nên lỗi khi gặp điểm lẻ:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 tb = sum(a) / n
-print(sum(1 for x in a if x >= tb))
+nói (sum(1 for x in a if x >= tb))
+
 ```
-Với mẫu toàn điểm nguyên vẫn ra `2`, nhưng điểm `7.5` trong đề là số thực nên `int("7.5")` gây lỗi chương trình. Cách sửa: đọc bằng `map(float, câu trả lời.split())`.
+Với mẫu toàn điểm nguyên vẫn ra `2`, nhưng điểm `7.5` trong đề là số thực nên `int("7.5")` gây lỗi chương trình. Cách sửa: đọc bằng `map(float, câu trả lời)`.
 - Bẫy 3 — đếm trước khi tính trung bình:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(float, câu trả lời.split()))
+n = câu trả lời
+a = list(map(float, câu trả lời))
 dem = sum(1 for x in a if x >= sum(a) / len(a) - 1)
-print(dem)
+nói (dem)
+
 ```
 Với mẫu trên, ngưỡng bị trừ 1 thành `6.0` nên đếm cả bạn điểm `6`, in ra `3` sai. Cách sửa: tính `tb = sum(a) / n` rồi đếm `x >= tb`.
 
@@ -68,10 +68,11 @@ Với mẫu trên, ngưỡng bị trừ 1 thành `6.0` nên đếm cả bạn đ
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [tb] thành (sum(...) / n)
+> - nói (sum(...))

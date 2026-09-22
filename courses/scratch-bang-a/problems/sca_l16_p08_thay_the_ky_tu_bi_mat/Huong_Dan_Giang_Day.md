@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Thay thế ký tự bí mật
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: thay mọi dấu cách trong chuỗi `s` thành dấu gạch dưới `_`.
@@ -25,13 +22,15 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: đổi ngược chiều `s.replace('_', ' ')`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.replace('_', ' '))
+nói (s.replace('_', ' '))
+
 ```
 Với mẫu `hoc lap trinh de vui` (không có `_`) in ra nguyên văn không đổi, đáp án đúng là `hoc_lap_trinh_de_vui`. Cách sửa: đặt dấu cách trước `s.replace(' ', '_')`.
 - Bẫy 2: quên `print`, chỉ gọi thay thế. Đoạn sai:
 ```text
 s = câu trả lời
 s.replace(' ', '_')
+
 ```
 Với mẫu trên màn hình không in gì cả, đáp án đúng là `hoc_lap_trinh_de_vui`. Cách sửa: bọc lệnh in `nói (s.replace(' ', '_'))`.
 
@@ -47,9 +46,4 @@ Với mẫu trên màn hình không in gì cả, đáp án đúng là `hoc_lap_t
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (giá trị)

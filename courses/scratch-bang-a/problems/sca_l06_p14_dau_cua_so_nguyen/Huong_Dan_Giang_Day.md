@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Dấu của số nguyên
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là phân ba nhóm trên trục số: `n > 0` là `DUONG`, `n < 0` là `AM`, còn lại `n == 0` là `KHONG`.
@@ -23,7 +20,7 @@ Sample 1 với input mẫu: `-15`.
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — quên nhánh số 0: bạn nhỏ chỉ viết `if/else` cho dương và âm. Với `n = 0` sẽ in `AM`, sai. Cách sửa: giữ đủ ba nhánh như lời giải mẫu, nhánh cuối in `KHONG`.
-- Bẫy 2 — đảo dấu: bạn nhỏ viết `if n > 0: print("AM")`. Với mẫu `-15` sẽ rơi sang `else` rồi in sai. Cách sửa: `n > 0` đi với `DUONG`, `n < 0` đi với `AM`.
+- Bẫy 2 — đảo dấu: bạn nhỏ viết `if n > 0: nói ("AM")`. Với mẫu `-15` sẽ rơi sang `else` rồi in sai. Cách sửa: `n > 0` đi với `DUONG`, `n < 0` đi với `AM`.
 - Bẫy 3 — in `0` thay vì `KHONG`: bạn nhỏ viết `nói (n)` ở nhánh cuối. Với `n = 0` sẽ in `0`, sai. Cách sửa: in đúng chuỗi `KHONG`.
 
 ---
@@ -39,6 +36,9 @@ Sample 1 với input mẫu: `-15`.
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
 > - nếu <n > 0> thì:
-> -   nói [YES]
+> -   nói (DUONG)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <n < 0> thì:
+> -     nói (AM)
+> -   nếu không thì:
+> -     nói (KHONG)

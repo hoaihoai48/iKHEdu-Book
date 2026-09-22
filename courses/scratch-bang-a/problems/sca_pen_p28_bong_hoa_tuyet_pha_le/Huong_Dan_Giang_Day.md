@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: BÔNG HOA TUYẾT PHA LÊ 6 NHÁNH
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p28_bong_hoa_tuyet_pha_le` | Nguồn tham chiếu: `Câu 9, 11`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

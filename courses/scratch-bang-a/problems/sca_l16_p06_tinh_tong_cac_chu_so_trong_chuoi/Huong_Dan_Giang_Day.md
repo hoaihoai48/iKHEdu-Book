@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính tổng các chữ số trong chuỗi
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: nhặt từng ký tự là số trong chuỗi `s` rồi cộng dồn vào `tong`.
@@ -30,7 +27,8 @@ tong = 0
 for ch in s:
     if ch.isdigit():
         tong = tong + ch
-print(tong)
+nói (tong)
+
 ```
 Với mẫu trên chương trình báo lỗi vì không cộng số với chữ được, đáp án đúng là `10`. Cách sửa: đổi sang số `tong = tong + int(ch)`.
 - Bẫy 2: đếm số lượng chữ số thay vì cộng giá trị. Đoạn sai:
@@ -40,7 +38,8 @@ tong = 0
 for ch in s:
     if ch.isdigit():
         tong = tong + 1
-print(tong)
+nói (tong)
+
 ```
 Với mẫu trên in ra `4` (có 4 chữ số), đáp án đúng là `10`. Cách sửa: cộng giá trị `int(ch)`.
 
@@ -56,9 +55,11 @@ Với mẫu trên in ra `4` (có 4 chữ số), đáp án đúng là `10`. Cách
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [tong] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <điều kiện> thì:
+> -     đặt [tong] thành (tong + int(...))
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (tong)

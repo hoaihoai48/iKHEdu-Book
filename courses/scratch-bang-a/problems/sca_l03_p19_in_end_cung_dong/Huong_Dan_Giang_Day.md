@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: In không xuống dòng với end
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là ghép khẩu hiệu `Lap trinh rat vui!` từ hai mảnh bằng hai lệnh `khối nói` nhưng vẫn nằm trên cùng một dòng. Thầy cô giải thích `end=" "` nghĩa là sau khi in xong thì dừng lại bằng một dấu cách thay vì xuống dòng.
@@ -34,5 +31,5 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - nói [Lap trinh", end=" ]
-> - nói [rat vui!]
+> - nói (Lap trinh)
+> - nói (rat vui!)

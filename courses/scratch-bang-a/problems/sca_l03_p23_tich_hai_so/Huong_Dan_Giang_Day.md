@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tích hai số nguyên
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là đếm kẹo trong một thùng: mỗi thùng có `A = 12` hộp, mỗi hộp có `B = 8` chiếc kẹo, vậy tổng là `12 * 8 = 96` chiếc. Thầy cô cho các con xếp 12 hàng, mỗi hàng 8 chiếc rồi đếm gộp.

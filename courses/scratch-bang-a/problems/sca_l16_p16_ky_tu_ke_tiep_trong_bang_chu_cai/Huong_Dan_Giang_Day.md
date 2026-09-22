@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ký tự kế tiếp trong bảng chữ cái
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: chữ cái liền sau hơn chữ hiện tại đúng 1 đơn vị mã số.
@@ -15,7 +12,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: C)
 | Bước | Lệnh chạy | Giá trị trong máy | Ghi chú |
 |---|---|---|---|
-| 1 | `ch = câu trả lời.strip()` | `ch = "C"` | mã 67 |
+| 1 | `ch = câu trả lời` | `ch = "C"` | mã 67 |
 | 2 | `ord(ch) + 1` | `68` | bước sang mã kế tiếp |
 | 3 | `nói (chr(68))` | màn hình hiện `D` | khớp Output mẫu |
 
@@ -24,14 +21,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1: quên cộng 1 nên in lại chữ cũ. Đoạn sai:
 ```text
-ch = câu trả lời.strip()
-print(chr(ord(ch)))
+ch = câu trả lời
+nói (chr(ord(ch)))
+
 ```
 Với mẫu `C` in ra `C`, đáp án đúng là `D`. Cách sửa: cộng 1 `chr(ord(ch) + 1)`.
 - Bẫy 2: in mã số thay vì chữ `nói (ord(ch) + 1)`. Đoạn sai:
 ```text
-ch = câu trả lời.strip()
-print(ord(ch) + 1)
+ch = câu trả lời
+nói (ord(ch) + 1)
+
 ```
 Với mẫu `C` in ra `68`, đáp án đúng là `D`. Cách sửa: bọc ngoài bằng `chr(...)`.
 
@@ -45,11 +44,5 @@ Với mẫu `C` in ra `68`, đáp án đúng là `D`. Cách sửa: bọc ngoài 
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập ch:] và đợi
-> - đặt [ch] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [ch] thành (giá trị)
+> - nói (chr(...))

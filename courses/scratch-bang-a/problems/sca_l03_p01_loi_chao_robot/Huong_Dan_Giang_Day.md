@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Lời chào robot
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là in ra một câu chữ cố định: `Xin chao cac ban! Toi la Robot Scratch.` Thầy cô giải thích cho các con rằng chương trình không cần đọc gì từ bàn phím, chỉ cần hiện đúng câu chào ra màn hình.
@@ -33,4 +30,4 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - nói [Xin chao cac ban! Toi la Robot Scratch.]
+> - nói (Xin chao cac ban! Toi la Robot Python.)

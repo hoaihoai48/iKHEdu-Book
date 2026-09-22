@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Vé vào công viên
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là một mốc cắt duy nhất `130`: chiều cao `h` từ `130` trở lên là vé người lớn, dưới `130` là vé trẻ em.
@@ -38,6 +35,6 @@ Sample 1 với input mẫu: `135`.
 > - hỏi [Nhập h:] và đợi
 > - đặt [h] thành (câu trả lời)
 > - nếu <h >= 130> thì:
-> -   nói [YES]
+> -   nói (VE NGUOI LON)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (VE TRE EM)

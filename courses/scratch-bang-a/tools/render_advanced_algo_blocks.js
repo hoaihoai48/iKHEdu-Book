@@ -30,6 +30,33 @@ function renderToSvgAndPng(sbScript, outSvgPath, outPngPath) {
 
 // 2. Định nghĩa tất cả các hình ảnh khối lệnh thuật toán chuyên sâu cho Bài 03 đến Bài 16
 const BLOCKS_TO_RENDER = {
+
+  // Khối lệnh đơn Bút vẽ (Bài 01)
+  "pen_block_clear": "xóa tất cả :: pen",
+  "pen_block_down": "đặt bút :: pen",
+  "pen_block_up": "nhấc bút :: pen",
+  "pen_block_set_color": "chọn màu vẽ [#0055ff] :: pen",
+  "pen_block_change_color": "đổi màu bút một lượng (10) :: pen",
+  "pen_block_set_size": "đặt kích thước bút vẽ bằng (3) :: pen",
+  "pen_block_change_size": "thay đổi kích thước bút vẽ một lượng (1) :: pen",
+
+  // Khối lệnh đơn Danh sách List (Bài 13)
+  "list_block_add": "thêm (X) vào [Dãy số v] :: list",
+  "list_block_delete": "xóa (1) của [Dãy số v] :: list",
+  "list_block_clear": "xóa tất cả của [Dãy số v] :: list",
+  "list_block_insert": "chèn (X) vào (1) của [Dãy số v] :: list",
+  "list_block_replace": "thay thế phần tử (1) của [Dãy số v] bằng (X) :: list",
+  "list_block_item": "(phần tử (1) của [Dãy số v] :: list)",
+  "list_block_find": "(vị trí của (X) trong [Dãy số v] :: list)",
+  "list_block_length": "(kích thước của [Dãy số v] :: list)",
+  "list_block_contains": "<[Dãy số v] chứa (X) ? :: list>",
+
+  // Khối lệnh đơn Chuỗi Ký tự (Bài 15)
+  "str_block_letter": "(ký tự (1) của (chuỗi) :: operators)",
+  "str_block_length": "(độ dài của (chuỗi) :: operators)",
+  "str_block_join": "(kết hợp (A) (B) :: operators)",
+  "str_block_contains": "<(chuỗi) chứa (a) ? :: operators>",
+
   // Bài 03
   "l03_pipeline_io_vi": `
 hỏi [Nhập số a: ] và đợi :: sensing

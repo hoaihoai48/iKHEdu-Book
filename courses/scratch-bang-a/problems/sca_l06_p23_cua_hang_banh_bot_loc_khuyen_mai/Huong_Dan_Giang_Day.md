@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Cửa hàng bánh bột lọc khuyến mãi
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Thầy cô lưu ý: đề bài kể ba mức giá `5, 4, 3` nghìn, nhưng lời giải mẫu của lớp mình dùng hai mốc `20` và `10`: `n >= 20` giá `4000`, `n >= 10` giá `4500`, còn lại giá `5000`, rồi in `n * gia`. Khi dạy cần bám đúng lời giải mẫu này.
@@ -38,7 +35,10 @@ Sample 1 với input mẫu: `25`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
+> - đặt [gia] thành (5000)
 > - nếu <n >= 20> thì:
-> -   nói [YES]
+> -   đặt [gia] thành (4000)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <n >= 10> thì:
+> -     đặt [gia] thành (4500)
+> - nói (n * gia)

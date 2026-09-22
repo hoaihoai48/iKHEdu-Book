@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Điền phép tính lớn nhất
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là thử cả ba cách rồi chọn số to nhất: với số `a`, ba ứng viên là `a + a`, `a - a` (luôn bằng `0`) và `a * a`.
@@ -38,7 +35,9 @@ Sample 1 với input mẫu: `3`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập a:] và đợi
 > - đặt [a] thành (câu trả lời)
+> - đặt [cong] thành (a + a)
+> - đặt [nhan] thành (a * a)
 > - nếu <nhan >= cong> thì:
-> -   nói [YES]
+> -   nói (nhan)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (cong)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm số lớn thứ nhì trong mảng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,31 +30,34 @@ Kết quả cuối cùng khớp với đáp án mẫu: `15`.
 
 - Bẫy 1 — xếp rồi lấy phần tử kế cuối mà không gộp trùng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 a.sort()
-print(a[-2])
+nói (a[-2])
+
 ```
 Với mẫu trên, dãy xếp là `[5, 10, 15, 20, 20]` nên `a[-2]` là `20`, không khớp đáp án mẫu `15`. Cách sửa: lọc bỏ hết số bằng giá trị lớn nhất rồi mới lấy lớn nhất.
 - Bẫy 2 — quên trường hợp mọi số bằng nhau:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 mx = max(a)
 candidates = [x for x in a if x < mx]
-print(max(candidates))
+nói (max(candidates))
+
 ```
 Với mẫu trên vẫn ra `15`, nhưng mẫu phụ `5 5 5` thì danh sách lọc rỗng và `max` rỗng gây lỗi thay vì in `KHONG CO`. Cách sửa: kiểm tra `if candidates` rồi mới in, ngược lại in `KHONG CO`.
 - Bẫy 3 — lấy số bé nhất thay vì lớn thứ nhì:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 mx = max(a)
 candidates = [x for x in a if x < mx]
 if candidates:
-    print(min(candidates))
+    nói (min(candidates))
 else:
-    print("KHONG CO")
+    nói ("KHONG CO")
+
 ```
 Với mẫu trên in ra `5` sai. Cách sửa: in `max(candidates)`.
 
@@ -73,10 +73,15 @@ Với mẫu trên in ra `5` sai. Cách sửa: in `max(candidates)`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [mx] thành (max(...))
+> - đặt [candidates] thành (giá trị)
+> - nếu <điều kiện> thì:
+> -   nói (max(...))
+> - nếu không thì:
+> -   nói (KHONG CO)

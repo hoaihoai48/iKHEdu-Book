@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Thuận đi tìm ánh đa vận tốc
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Thầy cô lưu ý: đề bài kể chuyện gặp nhau theo vị trí `x, y, v`, nhưng lời giải mẫu của lớp mình phân loại vận tốc `v` đọc dạng số thực: `v < 10` in `DI BO`, `v <= 30` in `XE DAP`, còn lại in `XE MAY`. Khi dạy cần bám đúng lời giải mẫu này.
-- Cách làm của lời giải mẫu: đọc `v = float(câu trả lời.strip())` rồi rẽ ba nhánh. Với mẫu `v = 15`: `15 < 10` sai, `15 <= 30` đúng nên in `XE DAP`.
+- Cách làm của lời giải mẫu: đọc `v = float(câu trả lời)` rồi rẽ ba nhánh. Với mẫu `v = 15`: `15 < 10` sai, `15 <= 30` đúng nên in `XE DAP`.
 - Xử lý biên: hai mốc cần thử là `v = 10` (vừa chạm mốc giữa, in `XE DAP`) và `v = 30` (vừa chạm mốc trên, vẫn in `XE DAP`), còn `v = 31` thì in `XE MAY`.
 
 ---
@@ -39,6 +36,9 @@ Sample 1 với input mẫu: `15`.
 > - hỏi [Nhập v:] và đợi
 > - đặt [v] thành (câu trả lời)
 > - nếu <v < 10> thì:
-> -   nói [YES]
+> -   nói (DI BO)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <v <= 30> thì:
+> -     nói (XE DAP)
+> -   nếu không thì:
+> -     nói (XE MAY)

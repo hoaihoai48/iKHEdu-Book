@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm chữ cái in hoa & in thường
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: đo độ an toàn mật khẩu bằng cách đếm riêng chữ hoa và chữ thường, bỏ qua dấu cách.
@@ -35,7 +32,8 @@ for ch in s:
         thuong = thuong + 1
     else:
         thuong = thuong + 1
-print(str(hoa) + ' ' + str(thuong))
+nói (str(hoa) + ' ' + str(thuong))
+
 ```
 Với mẫu trên dấu cách và chữ hoa cũng bị cộng vào `thuong`, in ra số lớn hơn `11`, đáp án đúng là `3 11`. Cách sửa: dùng `if ... elif ...` như lời giải.
 - Bẫy 2: in hai số trên hai dòng. Đoạn sai:
@@ -48,8 +46,9 @@ for ch in s:
         hoa = hoa + 1
     elif ch.islower():
         thuong = thuong + 1
-print(hoa)
-print(thuong)
+nói (hoa)
+nói (thuong)
+
 ```
 Với mẫu trên in `3` rồi `11` xuống hai dòng, đáp án đúng là một dòng `3 11`. Cách sửa: in chung `nói (str(hoa) + ' ' + str(thuong))`.
 
@@ -65,9 +64,15 @@ Với mẫu trên in `3` rồi `11` xuống hai dòng, đáp án đúng là mộ
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [hoa] thành (0)
+> - đặt [thuong] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <điều kiện> thì:
+> -     đặt [hoa] thành (hoa + 1)
+> -   nếu không thì:
+> -     nếu <điều kiện> thì:
+> -       đặt [thuong] thành (thuong + 1)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (str(...) +   + str(...))

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Trị tuyệt đối của một số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là khoảng cách từ điểm `n` tới mốc số 0: số âm thì lật dấu thành dương, số dương và số 0 giữ nguyên.
@@ -14,7 +11,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 Sample 1 với input mẫu: `-25`.
 | Bước | Việc làm | Giá trị của `n` | In ra |
 |---|---|---|---|
-| 1 | Đọc input, `n = int(câu trả lời.strip())` | `n = -25` | — |
+| 1 | Đọc input, `n = int(câu trả lời)` | `n = -25` | — |
 | 2 | Gọi `abs(-25)` | `25` | — |
 | 3 | In kết quả | — | `25` |
 
@@ -37,7 +34,4 @@ Sample 1 với input mẫu: `-25`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nếu <a > b> thì:
-> -   nói [YES]
-> - nếu không thì:
-> -   nói [NO]
+> - nói (abs(...))

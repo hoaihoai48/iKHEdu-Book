@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm tất cả số hoàn hảo nhỏ hơn N
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: xét từng `num` từ `2` tới `30`, tính tổng các ước nhỏ hơn `num`, tổng bằng `num` thì ghi vào danh sách `ket_qua`.
@@ -40,4 +37,21 @@ Kết quả in ra: `6 28`, khớp với kết quả mẫu.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (ket_qua)
+> - xóa tất cả của [ket_qua]
+> - đặt [num] thành (2)
+> - lặp lại (n + 1 - 2) lần:
+> -   đặt [tong] thành (0)
+> -   đặt [i] thành (1)
+> -   lặp lại (int(...)) lần:
+> -     nếu <num mod i = 0> thì:
+> -       đặt [j] thành (num chia nguyên i)
+> -       nếu <i < num> thì:
+> -         đặt [tong] thành (tong + i)
+> -       nếu <điều kiện> thì:
+> -         đặt [tong] thành (tong + j)
+> -     thay đổi [i] một lượng 1
+> -   nếu <tong = num> thì:
+> -     thêm (str(...)) vào [ket_qua]
+> -   thay đổi [num] một lượng 1
+> - nếu <điều kiện> thì:
+> -   nói (ket_qua)

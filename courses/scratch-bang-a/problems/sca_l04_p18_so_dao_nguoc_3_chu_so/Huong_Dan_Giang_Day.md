@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Số Đảo Ngược Ba Chữ Số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -16,7 +13,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 | Bước | Diễn giải | Giá trị |
 |------|-----------|---------|
 | 1 | Đọc một dòng, biến `n` nhận giá trị | `n = 472` |
-| 2 | Tách `tram = 472 // 100` | `tram = 4` |
+| 2 | Tách `tram = làm tròn xuống của (472 / 100)` | `tram = 4` |
 | 3 | Tách `chuc = 7`, `don_vi = 2` | `chuc = 7`, `don_vi = 2` |
 | 4 | Ghép `2 * 100 + 7 * 10 + 4` | `274` |
 | 5 | In kết quả | `274` |
@@ -28,7 +25,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Ghép sai thứ tự `tram * 100 + ...` (in lại số cũ).**
 
 ```text
-print(tram * 100 + chuc * 10 + don_vi)
+nói (tram * 100 + chuc * 10 + don_vi)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `472` in ra `472` thay vì `274`.
@@ -38,7 +36,8 @@ Cách sửa: đặt `don_vi` lên hàng trăm.
 **Bẫy 2: Quên nhân `100`, viết `don_vi + chuc * 10 + tram`.**
 
 ```text
-print(don_vi + chuc * 10 + tram)
+nói (don_vi + chuc * 10 + tram)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `472` cho `76` thay vì `274`.
@@ -57,4 +56,7 @@ Cách sửa: `don_vi * 100`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
+> - đặt [tram] thành (n chia nguyên 100)
+> - đặt [chuc] thành (n chia nguyên 10 mod 10)
+> - đặt [don_vi] thành (n mod 10)
 > - nói (don_vi * 100 + chuc * 10 + tram)

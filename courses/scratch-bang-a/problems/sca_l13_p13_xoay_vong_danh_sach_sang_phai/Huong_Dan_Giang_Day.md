@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Xoay vòng danh sách sang phải
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -35,29 +32,32 @@ Kết quả cuối cùng khớp với đáp án mẫu: `4 5 1 2 3`.
 
 - Bẫy 1 — xoay sang trái thay vì sang phải:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, k = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 k %= n
-print(*(a[k:] + a[:k]))
+nói (*(a[k:] + a[:k]))
+
 ```
 Với mẫu trên in ra `3 4 5 1 2` (đem 2 số đầu xuống cuối) sai. Cách sửa: đem `K` số cuối lên đầu bằng `a[-k:] + a[:-k]`.
 - Bẫy 2 — quên rút gọn `K` khi `K` bằng `N`:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, k = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
-print(*(a[-k:] + a[:-k]))
+a = list(các khối hỏi và đợi cho từng biến)
+nói (*(a[-k:] + a[:-k]))
+
 ```
 Với mẫu trên vẫn ra `4 5 1 2 3`, nhưng khi `K = N = 5` thì `a[:-5]` thành rỗng và kết quả sai. Cách sửa: rút gọn `k %= n` và giữ nguyên dãy khi `k == 0`.
 - Bẫy 3 — lặp `K` lần mỗi lần nhấc 1 số:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, k = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 for _ in range(k):
     a = [a[-1]] + a[:-1]
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên vẫn ra `4 5 1 2 3`, nhưng mỗi lần nhấc chép lại cả dãy nên với `N` tới `10^5` sẽ rất chậm. Cách sửa: cắt một nhát bằng `a[-k:] + a[:-k]`.
 
@@ -71,12 +71,26 @@ Với mẫu trên vẫn ra `4 5 1 2 3`, nhưng mỗi lần nhấc chép lại c�
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập line:] và đợi
-> - đặt [line] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - đặt [n] thành (int(...))
+> - đặt [k] thành (int(...))
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [k] thành (k mod n)
+> - nếu <k = 0> thì:
+> -   đặt [ket_qua] thành rỗng
+> -   đặt [i] thành 1
+> -   lặp lại (kích thước của [a]) lần:
+> -     đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -     thay đổi [i] một lượng 1
+> -   nói (ket_qua)
+> - nếu không thì:
+> -   đặt [ket_qua] thành rỗng
+> -   đặt [i] thành 1
+> -   lặp lại (kích thước của [danh_sach]) lần:
+> -     đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -     thay đổi [i] một lượng 1
+> -   nói (ket_qua)

@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: TAM GIÁC NHIỀU TẦNG XẾP CHỒNG
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p12_tam_giac_nhieu_tang` | Nguồn tham chiếu: `Câu 44`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

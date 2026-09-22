@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Lát gạch sân trường
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất lát gạch: số gạch bằng diện tích sân `d * r` chia diện tích một viên `k * k`, đề đảm bảo chia hết.
-- Quy trình trong lời giải: đọc `d`, `r`, `k` mỗi biến một dòng, rồi in `d * r // (k * k)`; với mẫu `d = 20`, `r = 10`, `k = 2` thì sân `20 * 10 = 200`, gạch `2 * 2 = 4`, số viên `200 // 4 = 50`.
+- Quy trình trong lời giải: đọc `d`, `r`, `k` mỗi biến một dòng, rồi in `d * r // (k * k)`; với mẫu `d = 20`, `r = 10`, `k = 2` thì sân `20 * 10 = 200`, gạch `2 * 2 = 4`, số viên `làm tròn xuống của (200 / 4) = 50`.
 - Xử lý biên: `K` không vượt quá `R` và `R` không vượt quá `D` tới 1000, số gạch ít nhất là 1.
 
 ---
@@ -18,13 +15,13 @@ Với số mẫu ba dòng `20`, `10`, `2`, chương trình phải in ra `50`.
 | 1 | Đọc `d`, `r`, `k` | `d = 20`, `r = 10`, `k = 2` | đủ ba số |
 | 2 | Tính `d * r` | `20 * 10 = 200` | diện tích sân 200 |
 | 3 | Tính `k * k` | `2 * 2 = 4` | diện tích viên 4 |
-| 4 | Tính `200 // 4` | `50` | khớp kết quả mẫu `50` |
+| 4 | Tính `làm tròn xuống của (200 / 4)` | `50` | khớp kết quả mẫu `50` |
 
 ---
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
-- Bẫy 1 — thiếu ngoặc: viết `d * r // k * k` thì với mẫu tính thành `(200 // 2) * 2 = 200` thay vì `50`; cách sửa là `d * r // (k * k)`.
-- Bẫy 2 — đọc ba số một dòng: viết `d, r, k = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
+- Bẫy 1 — thiếu ngoặc: viết `d * làm tròn xuống của (r / k) * k` thì với mẫu tính thành `(làm tròn xuống của (200 / 2)) * 2 = 200` thay vì `50`; cách sửa là `d * r // (k * k)`.
+- Bẫy 2 — đọc ba số một dòng: viết `d, r, k = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
 - Bẫy 3 — dùng chia thực: viết `nói (d * r / (k * k))` thì với mẫu in ra `50.0` thay vì `50`; cách sửa là dùng chia nguyên `//`.
 
 ---
@@ -43,4 +40,4 @@ Với số mẫu ba dòng `20`, `10`, `2`, chương trình phải in ra `50`.
 > - đặt [r] thành (câu trả lời)
 > - hỏi [Nhập k:] và đợi
 > - đặt [k] thành (câu trả lời)
-> - nói (d * r / (k * k)
+> - nói (d * r chia nguyên k * k)

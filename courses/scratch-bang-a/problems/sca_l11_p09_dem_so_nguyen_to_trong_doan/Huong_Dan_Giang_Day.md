@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm số nguyên tố trong đoạn
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: xét từng `num` từ `10` tới `20`, số nào là số nguyên tố thì `dem = dem + 1`.
@@ -14,17 +11,17 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10 20)
 | `num` | Kiểm tra | Kết luận | `dem` |
 | --- | --- | --- | --- |
-| 10 | `10 % 2 == 0` | hợp số | 0 |
+| 10 | `(10 mod 2) == 0` | hợp số | 0 |
 | 11 | không chia hết cho 2, 3 | nguyên tố | 1 |
-| 12 | `12 % 2 == 0` | hợp số | 1 |
+| 12 | `(12 mod 2) == 0` | hợp số | 1 |
 | 13 | không chia hết cho 2, 3 | nguyên tố | 2 |
-| 14 | `14 % 2 == 0` | hợp số | 2 |
-| 15 | `15 % 3 == 0` | hợp số | 2 |
-| 16 | `16 % 2 == 0` | hợp số | 2 |
+| 14 | `(14 mod 2) == 0` | hợp số | 2 |
+| 15 | `(15 mod 3) == 0` | hợp số | 2 |
+| 16 | `(16 mod 2) == 0` | hợp số | 2 |
 | 17 | không chia hết cho 2, 3, 4 | nguyên tố | 3 |
-| 18 | `18 % 2 == 0` | hợp số | 3 |
+| 18 | `(18 mod 2) == 0` | hợp số | 3 |
 | 19 | không chia hết cho 2, 3, 4 | nguyên tố | 4 |
-| 20 | `20 % 2 == 0` | hợp số | 4 |
+| 20 | `(20 mod 2) == 0` | hợp số | 4 |
 
 Kết quả in ra: `4`, khớp với kết quả mẫu.
 
@@ -49,4 +46,18 @@ Kết quả in ra: `4`, khớp với kết quả mẫu.
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
+> - đặt [dem] thành (0)
+> - đặt [num] thành (a)
+> - lặp lại (b + 1 - a) lần:
+> -   nếu <num < 2> thì:
+> -   đặt [la_snt] thành (True)
+> -   đặt [i] thành (2)
+> -   lặp lại (int(...) + 1 - 2) lần:
+> -     nếu <num mod i = 0> thì:
+> -       đặt [la_snt] thành (False)
+> -       dừng kịch bản này
+> -     thay đổi [i] một lượng 1
+> -   nếu <điều kiện> thì:
+> -     đặt [dem] thành (dem + 1)
+> -   thay đổi [num] một lượng 1
 > - nói (dem)

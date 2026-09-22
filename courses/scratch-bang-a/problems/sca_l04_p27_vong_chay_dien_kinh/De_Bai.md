@@ -8,7 +8,8 @@ Hội khỏe trường em tổ chức chạy điền kinh thật vui. Sân vận
 
 Hãy cho biết:
  1. An đã chạy được bao nhiêu vòng sân trọn vẹn?
- 2. Hiện tại An đang dừng lại ở vị trí cách vạch xuất phát bao nhiêu mét?
+
+2. Hiện tại An đang dừng lại ở vị trí cách vạch xuất phát bao nhiêu mét?
 ## Input
 
 Một số nguyên $N$ ($1 \le N \le 10^9$).

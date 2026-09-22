@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Trò chơi oẳn tù tì
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là luật thắng vòng tròn: `1` (Búa) thắng `2` (Kéo), `2` (Kéo) thắng `3` (Bao), `3` (Bao) thắng `1` (Búa); ra cùng số thì `HOA`.
@@ -38,14 +35,13 @@ Sample 1 với input mẫu: `1` rồi `2`.
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập ti:] và đợi
-> - đặt [dong1] thành (câu trả lời)
-> - hỏi [Nhập teo:] và đợi
 > - đặt [ti] thành (câu trả lời)
-> - hỏi [Nhập ti:] và đợi
+> - hỏi [Nhập teo:] và đợi
 > - đặt [teo] thành (câu trả lời)
-> - hỏi [Nhập teo:] và đợi
-> - đặt [ti] thành (câu trả lời)
-> - nếu <len(dong1) >= 2> thì:
-> -   nói [YES]
+> - nếu <ti = teo> thì:
+> -   nói (HOA)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <điều kiện> thì:
+> -     nói (TI THANG)
+> -   nếu không thì:
+> -     nói (TEO THANG)

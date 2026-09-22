@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Bài toán chạy bộ hai người ngược chiều
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất hai người chạy ngược chiều: mỗi giây khoảng cách rút ngắn `v1 + v2`, thời gian gặp nhau là `s / (v1 + v2)`.
@@ -42,4 +39,4 @@ Với số mẫu một dòng `150 2 3`, chương trình phải in ra `30.0`.
 > - đặt [v1] thành (câu trả lời)
 > - hỏi [Nhập v2:] và đợi
 > - đặt [v2] thành (câu trả lời)
-> - nói (f"{s / (v1 + v2)
+> - nói (giá trị)

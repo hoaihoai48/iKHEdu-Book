@@ -7,6 +7,7 @@ Bạn muốn viết một chương trình in ra thiệp chúc mừng sinh nhật
 Nhập dòng 1 là tên bạn (chuỗi ký tự), dòng 2 là số tuổi $T$ (số nguyên). In ra dòng chữ: `Chuc mung sinh nhat <Ten>, ban tron <Tuoi> tuoi!`
 
 ## Input
+
 - Dòng 1: Chuỗi ký tự không dấu $Ten$.
  - Dòng 2: Số nguyên $Tuoi$ ($1 \le Tuoi \le 100$).
 

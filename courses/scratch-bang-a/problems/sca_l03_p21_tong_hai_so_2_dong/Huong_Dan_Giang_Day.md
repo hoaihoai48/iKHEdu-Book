@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tổng hai số nguyên 2 dòng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là cộng số bi của Minh và Nam: `A = 15` cộng `B = 25` được `40`. Thầy cô cho các con đếm gộp 15 viên rồi thêm 25 viên nữa.
@@ -23,7 +20,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1: quên `int()`, viết `a = hỏi và đợi` và `b = hỏi và đợi` rồi `nói (a + b)` thì với mẫu `15` và `25` máy nối chữ thành `1525` thay vì `40`. Cách sửa: viết `a = int(hỏi và đợi)` và `b = int(hỏi và đợi)`.
 - Bẫy 2: trừ thay vì cộng, viết `nói (a - b)` thì với mẫu `15` và `25` màn hình hiện `-10` thay vì `40`. Cách sửa: nhớ bài hỏi tổng nên viết dấu `+`.
-- Bẫy 3: đọc hai số trên một dòng bằng `map(int, hỏi và đợi.split())` trong khi đề cho hai dòng riêng thì với mẫu nhập từng số một dòng chương trình sẽ chờ thiếu số. Cách sửa: đọc hai lần `int(hỏi và đợi)` cho đúng hai dòng.
+- Bẫy 3: đọc hai số trên một dòng bằng `các khối hỏi và đợi cho từng biến` trong khi đề cho hai dòng riêng thì với mẫu nhập từng số một dòng chương trình sẽ chờ thiếu số. Cách sửa: đọc hai lần `int(hỏi và đợi)` cho đúng hai dòng.
 
 ---
 

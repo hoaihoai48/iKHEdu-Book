@@ -1,6 +1,6 @@
 # Bài 11: ƯỚC SỐ, BỘI SỐ VÀ SỐ NGUYÊN TỐ
 
-## 1. Bản Chất Toán Học Của Ước Số & Bội Số Trong Lập Trình
+## 1. Bản chất toán học của ước số và bội số
 
 Trong số học, số nguyên dương $d$ được gọi là **ước số** của số nguyên dương $N$ (và $N$ là **bội số** của $d$) nếu $N$ chia hết cho $d$ mà không còn dư:
 $$\text{Điều kiện trong Scratch: } < ((N) \text{ mod } (d)) = (0) >$$
@@ -9,10 +9,12 @@ $$\text{Điều kiện trong Scratch: } < ((N) \text{ mod } (d)) = (0) >$$
 
 ---
 
-## 2. Định Nghĩa Số Nguyên Tố & Thuật Toán Cơ Bản
+## 2. Định nghĩa số nguyên tố và thuật toán cơ bản
 
 **Số nguyên tố** là số tự nhiên lớn hơn 1 và **chỉ có đúng 2 ước số** là 1 và chính nó ($2, 3, 5, 7, 11, 13, 17, \dots$).
+
 - Số $0$ và số $1$ **KHÔNG PHẢI** là số nguyên tố.
+
 - Số $2$ là số nguyên tố chẵn duy nhất (và cũng là số nguyên tố nhỏ nhất).
 
 ### Cách 1: Thuật toán đếm ước (Duyệt trâu)
@@ -21,7 +23,7 @@ Sau vòng lặp: nếu `dem_uoc = 2` $\implies N$ là số nguyên tố!
 
 ---
 
-## 3. Thuật Toán Tối Ưu Với Biến Cờ Dừng Sớm & Căn Bậc Hai $\sqrt{N}$
+## 3. Thuật toán tối ưu với biến cờ dừng sớm và căn bậc hai $\sqrt{N}$
 
 Khi $N$ lớn (ví dụ $N = 1000000$), việc cho vòng lặp chạy $1$ triệu lần sẽ làm chương trình Scratch chạy rất chậm. Ta áp dụng 2 nguyên lý toán học tối ưu đỉnh cao:
 
@@ -33,7 +35,7 @@ Khi $N$ lớn (ví dụ $N = 1000000$), việc cho vòng lặp chạy $1$ triệ
 
 ---
 
-## 4. Bảng Mô Phỏng Kiểm Tra Số $N = 37$ (Dry Run Table)
+## 4. Bảng mô phỏng kiểm tra số $N = 37$ (Dry run)
 
 | Vòng lặp | Biến `d` | Kiểm tra điều kiện lặp `< d * d <= N >` | Kiểm tra chia hết `< N mod d = 0 >` | Biến cờ `la_nguyen_to` | Kết luận bước |
 |:---:|:---:|:---:|:---:|:---:|---|
@@ -48,10 +50,10 @@ $\implies$ Sau khi dừng, cờ `la_nguyen_to` vẫn giữ nguyên giá trị **
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên xử lý trường hợp đặc biệt $N < 2$**
-> - *Hiện tượng:* Với $N = 1$ hoặc $N = 0$, nếu không chặn trước, chương trình sẽ kết luận nhầm $1$ là số nguyên tố!
+> - *Hiện tượng:* với $N = 1$ hoặc $N = 0$, nếu không chặn trước, chương trình sẽ kết luận nhầm $1$ là số nguyên tố!
 > - *Khắc phục:* Luôn có khối kiểm tra đầu tiên: `nếu < N < 2 > thì đặt [la_nguyen_to v] thành 0`.
 
 > **Bẫy 2: Chạy kiểm tra ước bắt đầu từ $d = 1$**
@@ -60,7 +62,7 @@ $\implies$ Sau khi dừng, cờ `la_nguyen_to` vẫn giữ nguyên giá trị **
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Điều kiện nào trong Scratch chứng tỏ số nguyên $d$ là một ước số của số nguyên $N$?**
    - A. `< ((N) mod (d)) = (0) >` *(Đáp án đúng)*

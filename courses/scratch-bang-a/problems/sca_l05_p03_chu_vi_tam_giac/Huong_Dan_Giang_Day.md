@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chu vi hình tam giác
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất chu vi tam giác: cộng ba cạnh `a + b + c`, bài này cả ba số nằm trên cùng một dòng.
@@ -22,9 +19,9 @@ Với số mẫu một dòng `5 7 8`, chương trình phải in ra `20`.
 ---
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
-- Bẫy 1 — đọc ba dòng riêng: dùng ba lần `câu trả lời` thì với mẫu chỉ có một dòng `5 7 8` sẽ phải chờ thêm; cách sửa là `map(int, câu trả lời.split())` một dòng.
+- Bẫy 1 — đọc ba dòng riêng: dùng ba lần `câu trả lời` thì với mẫu chỉ có một dòng `5 7 8` sẽ phải chờ thêm; cách sửa là `các khối hỏi và đợi cho từng biến` một dòng.
 - Bẫy 2 — nhân thay vì cộng: viết `nói (a * b * c)` thì với mẫu ra `280` thay vì `20`; cách sửa là cộng ba cạnh.
-- Bẫy 3 — quên tách chữ: viết `a = int(câu trả lời)` thì với mẫu `5 7 8` bị lỗi đổi chữ; cách sửa là tách dòng bằng `split()`.
+- Bẫy 3 — quên tách chữ: viết `a = câu trả lời` thì với mẫu `5 7 8` bị lỗi đổi chữ; cách sửa là tách dòng bằng `split()`.
 
 ---
 
@@ -42,4 +39,4 @@ Với số mẫu một dòng `5 7 8`, chương trình phải in ra `20`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nói (a * b * c)
+> - nói (a + b + c)

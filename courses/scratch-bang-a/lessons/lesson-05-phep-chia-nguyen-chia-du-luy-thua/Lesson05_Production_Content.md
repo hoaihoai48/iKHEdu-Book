@@ -1,17 +1,20 @@
 # Bài 05: PHÉP CHIA NGUYÊN, CHIA DƯ VÀ LUỸ THỪA
 
-## 1. Bản Chất Phép Chia Nguyên Và Chia Dư Trong Scratch
+## 1. Phép chia nguyên và chia dư trong Scratch
 
 Khi lập trình, lập trình Bảng A, hai phép toán quan trọng bậc nhất để xử lý số học chính là **Phép chia lấy phần dư (`mod`)** và **Phép chia lấy phần nguyên (`làm tròn xuống của phép chia`)**.
 
 ![Minh họa khối lệnh chia nguyên và chia dư](assets/rendered_blocks/l05_div_mod_vi.png)
 
 ### 1.1. Phép chia lấy phần dư: Khối `() mod ()`
+
 - Ký hiệu `mod` (viết tắt của Modulo) trả về **số dư còn lại** sau khi thực hiện phép chia giữa hai số nguyên.
+
 - **Tính chất cốt lõi:**
   - `(17) mod (5)` $= 2$ (vì $17 = 5 \times 3 + 2$).
   - `(20) mod (4)` $= 0$ (chia hết thì số dư luôn bằng $0$).
   - Số dư của $A \pmod B$ luôn nằm trong phạm vi từ $0$ đến $B - 1$.
+
 - **Ứng dụng thực chiến:**
   - Kiểm tra số chẵn/lẻ: `((n) mod (2)) = (0)` là số chẵn, `((n) mod (2)) = (1)` là số lẻ.
   - Kiểm tra tính chia hết: `((a) mod (b)) = (0)` nghĩa là $a$ chia hết cho $b$.
@@ -30,7 +33,7 @@ $$\text{Chia nguyên } A \text{ cho } B = \text{làm tròn xuống của } ((A) 
 
 ---
 
-## 2. Bài Toán Quy Đổi Thời Gian & Đơn Vị Đo Lường Thực Tế
+## 2. Bài toán quy đổi thời gian và đơn vị đo lường
 
 Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng số giây $T$, hãy đổi ra Giờ, Phút, Giây.*
 
@@ -52,17 +55,18 @@ Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng
 
 ---
 
-## 3. Phép Tính Lũy Thừa Bằng Vòng Lặp
+## 3. Phép tính lũy thừa bằng vòng lặp
 
 Để tính $A^B$ ($A$ mũ $B$, tích của $B$ số $A$ nhân với nhau):
 
 - Khởi tạo biến kết quả bằng 1: `đặt [kq v] thành (1)`.
+
 - Lặp lại $B$ lần: nhân dồn $A$ vào kết quả:
   `lặp lại (B) lần { đặt [kq v] thành ((kq) * (A)) }`.
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Đổi $T = 3725$ Giây (Dry Run Table)
+## 4. Bảng mô phỏng đổi thời gian (Dry run)
 
 | Bước thực hiện | Khối lệnh Scratch | Phép tính toán học | Giá trị biến lưu trong RAM |
 |:---:|---|---|:---:|
@@ -75,7 +79,7 @@ $\implies$ Kết quả: $3725$ giây = **$1$ giờ $2$ phút $5$ giây**.
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Dùng nhầm khối `làm tròn của ()` thay vì `làm tròn xuống của ()`**
 > - *Khối `làm tròn` (Round):* Sẽ làm tròn lên số nguyên gần nhất nếu phần thập phân $\ge 0.5$.
@@ -88,7 +92,7 @@ $\implies$ Kết quả: $3725$ giây = **$1$ giờ $2$ phút $5$ giây**.
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh `(23) mod (5)` trả về kết quả là bao nhiêu?**
    - A. 4

@@ -280,8 +280,11 @@ Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần g
 ### Giải thích
 
 - Luống ngang: $10 \times 3 = 30$.
+
 - Luống dọc: $3 \times 10 = 30$.
+
 - Phần giao nhau ở giữa: $3 \times 3 = 9$.
+
 - Diện tích bồn hoa: $30 + 30 - 9 = 51$.
 
 ---
@@ -307,6 +310,7 @@ Cô công nhân muốn biết diện tích thật để gieo hạt, vì phần g
 ### Giải thích
 
 - Tích hai cạnh góc vuông: $6 \times 4 = 24$.
+
 - Diện tích tam giác: $24 : 2 = 12$.
 
 ---
@@ -775,6 +779,7 @@ $2 \times 3600 + 15 \times 60 + 30 = 7200 + 900 + 30 = 8130$.
 ### Giải thích
 
 - Mỗi đô la đổi được $25000$ đồng.
+
 - $4$ đô la đổi được: $4 \times 25000 = 100000$ đồng.
 
 ---
@@ -822,6 +827,7 @@ Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{
 ### Giải thích
 
 - Vận tốc: $100 : 6 = 16.666\ldots$.
+
 - Làm tròn đến $2$ chữ số thập phân được $16.67$ km/h.
 
 ---

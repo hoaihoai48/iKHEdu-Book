@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ngày kế tiếp trong năm
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là lật sang ngày mai: biết tháng `m` có bao nhiêu ngày (`ngay_trong_thang`) rồi xét ba cửa: còn trong tháng thì `d + 1`, hết tháng nhưng còn trong năm thì sang `1` tháng sau, hết năm thì sang `1 1` năm sau.
@@ -24,7 +21,7 @@ Sample 1 với input mẫu: `31` rồi `12` rồi `2024`.
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — tháng `2` luôn `28` ngày: bạn nhỏ viết `ngay_trong_thang = 28` cho mọi năm. Với `28, 2, 2024` sẽ in `1 3 2024` thay vì `29 2 2024`. Cách sửa: kiểm tra `nhuan` như lời giải mẫu.
-- Bẫy 2 — quên cửa hết năm: bạn nhỏ chỉ viết `if d < ngay_trong_thang ... else print(1, m + 1, y)`. Với mẫu `31, 12, 2024` sẽ in `1 13 2024`, sai. Cách sửa: giữ nhánh `elif m < 12` rồi mới `else` sang năm mới.
+- Bẫy 2 — quên cửa hết năm: bạn nhỏ chỉ viết `if d < ngay_trong_thang ... else nói (1, m + 1, y)`. Với mẫu `31, 12, 2024` sẽ in `1 13 2024`, sai. Cách sửa: giữ nhánh `elif m < 12` rồi mới `else` sang năm mới.
 - Bẫy 3 — nhớ sai nhóm tháng: bạn nhỏ cho tháng `8` vào nhóm `30` ngày. Với `31, 8, 2024` sẽ tính sai mốc. Cách sửa: giữ đúng nhóm `31` ngày là `1, 3, 5, 7, 8, 10, 12`.
 
 ---
@@ -37,13 +34,27 @@ Sample 1 với input mẫu: `31` rồi `12` rồi `2024`.
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập d:] và đợi
-> - đặt [d] thành (câu trả lời)
-> - hỏi [Nhập m:] và đợi
-> - đặt [m] thành (câu trả lời)
-> - hỏi [Nhập y:] và đợi
-> - đặt [y] thành (câu trả lời)
-> - nếu <y  chia lấy dư  400 = 0 or (y  chia lấy dư  4 = 0 and y  chia lấy dư  100 != 0)> thì:
-> -   nói [YES]
+> - đặt [d] thành (int(...))
+> - đặt [m] thành (int(...))
+> - đặt [y] thành (int(...))
+> - nếu <điều kiện> thì:
+> -   đặt [nhuan] thành (True)
 > - nếu không thì:
-> -   nói [NO]
+> -   đặt [nhuan] thành (False)
+> - nếu <điều kiện> thì:
+> -   đặt [ngay_trong_thang] thành (31)
+> - nếu không thì:
+> -   nếu <điều kiện> thì:
+> -     đặt [ngay_trong_thang] thành (30)
+> -   nếu không thì:
+> -     nếu <điều kiện> thì:
+> -       đặt [ngay_trong_thang] thành (29)
+> -     nếu không thì:
+> -       đặt [ngay_trong_thang] thành (28)
+> - nếu <d < ngay_trong_thang> thì:
+> -   nói (kết hợp d + 1 và ' ' và m và ' ' và y)
+> - nếu không thì:
+> -   nếu <m < 12> thì:
+> -     nói (kết hợp 1 và ' ' và m + 1 và ' ' và y)
+> -   nếu không thì:
+> -     nói (kết hợp 1 và ' ' và 1 và ' ' và y + 1)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Biểu Thức Bậc Nhất
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Viết `3 * (x + 5)` thêm ngoặc sai.**
 
 ```text
-print(3 * (x + 5))
+nói (3 * (x + 5))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `x = 4` cho `27` thay vì `17`.
@@ -37,7 +35,8 @@ Cách sửa: viết `3 * x + 5`.
 **Bẫy 2: Viết `3 * x + 5` thiếu dấu nhân kiểu toán học `3x + 5`.**
 
 ```text
-print(3x + 5)
+nói (3x + 5)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho Chương trình báo lỗi cú pháp, không chạy được với `4`.

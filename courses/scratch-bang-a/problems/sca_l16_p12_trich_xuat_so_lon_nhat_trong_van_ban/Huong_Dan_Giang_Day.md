@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Trích xuất số lớn nhất trong văn bản
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giúp lớp trưởng gom từng cụm chữ số liên tiếp thành con số rồi giữ lại số to nhất.
@@ -37,7 +34,8 @@ for ch in s + ' ':
             if so_hien_tai > lon_nhat:
                 lon_nhat = so_hien_tai
             so_hien_tai = ''
-print(lon_nhat)
+nói (lon_nhat)
+
 ```
 Với mẫu trên so theo vần chữ nên `38` lớn hơn `105`, in ra `38`, đáp án đúng là `105`. Cách sửa: đổi sang số `int(so_hien_tai) > lon_nhat`.
 - Bẫy 2: quên dấu cách giả cuối `for ch in s:` nên số cuối mất tích. Đoạn sai khiến với câu kết thúc bằng số (như mẫu kết thúc bằng `sach` thì không sao, nhưng câu `co 105` sẽ chốt thiếu) dễ cho kết quả sai. Cách sửa: duyệt `for ch in s + ' ':` như lời giải.
@@ -52,11 +50,19 @@ Với mẫu trên so theo vần chữ nên `38` lớn hơn `105`, in ra `38`, đ
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập lon_nhat:] và đợi
+> - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [lon_nhat] thành (-1)
+> - đặt [so_hien_tai] thành ()
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s +  ) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <điều kiện> thì:
+> -     đặt [so_hien_tai] thành (so_hien_tai + ch)
+> -   nếu không thì:
+> -     nếu <so_hien_tai != > thì:
+> -       nếu <int(...) > lon_nhat> thì:
+> -         đặt [lon_nhat] thành (int(...))
+> -       đặt [so_hien_tai] thành ()
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (lon_nhat)

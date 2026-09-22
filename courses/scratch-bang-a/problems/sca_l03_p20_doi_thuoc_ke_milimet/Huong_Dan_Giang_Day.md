@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Đổi thước kẻ milimet
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là đổi đơn vị độ dài: `1 cm = 10 mm` nên `a = 2` cm chính là `20` mm, cộng thêm `b = 5` mm được `25` mm. Thầy cô cho các con đổi thước kẻ thật trên bàn để hình dung.
-- Quy trình gồm ba bước với hai biến `a` và `b` trong lời giải: đọc `2` vào `a` và `5` vào `b` bằng `int(hỏi và đợi.strip())`, rồi tính `a * 10 + b` tức `2 * 10 + 5 = 25` và in ra.
+- Quy trình gồm ba bước với hai biến `a` và `b` trong lời giải: đọc `2` vào `a` và `5` vào `b` bằng `câu trả lời`, rồi tính `a * 10 + b` tức `2 * 10 + 5 = 25` và in ra.
 - Xử lý biên: ràng buộc cho `a, b` từ 1 tới 1000. Thầy cô cho các con thử cặp biên `1` và `1` cho ra `11`, cặp `1000` và `1000` cho ra `11000`.
 
 ---
@@ -13,8 +10,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 2 và 5)
 | Bước | Lệnh chạy | Giá trị biến | Màn hình hiện ra |
 |------|-----------|--------------|------------------|
-| 1 | `a = int(hỏi và đợi.strip())` với dòng 1 gõ `2` | `a = 2` | (chưa in gì) |
-| 2 | `b = int(hỏi và đợi.strip())` với dòng 2 gõ `5` | `b = 5` | (chưa in gì) |
+| 1 | `a = câu trả lời` với dòng 1 gõ `2` | `a = 2` | (chưa in gì) |
+| 2 | `b = câu trả lời` với dòng 2 gõ `5` | `b = 5` | (chưa in gì) |
 | 3 | `nói (a * 10 + b)` tức `nói (2 * 10 + 5)` | `a = 2`, `b = 5` | `25` |
 | 4 | Kết thúc chương trình | — | Kết quả cuối cùng: `25`. |
 

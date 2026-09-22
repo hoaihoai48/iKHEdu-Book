@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Điểm trung bình môn học
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất điểm trung bình: cộng ba điểm `d1 + d2 + d3` rồi chia 3, in làm tròn 2 chữ số thập phân.
@@ -42,4 +39,4 @@ Với số mẫu một dòng `8.5 9.0 7.5`, chương trình phải in ra `8.33`.
 > - đặt [d2] thành (câu trả lời)
 > - hỏi [Nhập d3:] và đợi
 > - đặt [d3] thành (câu trả lời)
-> - nói ((d1 + d2 + d3)
+> - nói (giá trị)

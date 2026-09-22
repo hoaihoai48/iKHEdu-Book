@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Mật khẩu bị ẩn
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -37,9 +34,10 @@ Kết quả cuối cùng khớp với đáp án mẫu: `3`.
 ```text
 s = câu trả lời
 if s.isdigit():
-    print(len(s))
+    nói (len(s))
 else:
-    print(0)
+    nói (0)
+
 ```
 Với mẫu `Abc123x`, cả chuỗi không phải toàn chữ số nên in ra `0`, không khớp đáp án mẫu `3`. Cách sửa: duyệt từng ký tự và đếm riêng.
 - Bẫy 2 — đếm nhầm chữ cái thành chữ số:
@@ -49,17 +47,19 @@ d = 0
 for c in s:
     if c.isalpha():
         d += 1
-print(d)
+nói (d)
+
 ```
 Với mẫu trên in ra `4` (đếm `A`, `b`, `c`, `x`) sai. Cách sửa: điều kiện đúng là `"0" <= c <= "9"`.
 - Bẫy 3 — chỉ đọc một từ bằng `split`:
 ```text
-s = câu trả lời.split()
+s = câu trả lời
 d = 0
 for c in s[0]:
     if "0" <= c <= "9":
         d += 1
-print(d)
+nói (d)
+
 ```
 Với mẫu một từ `Abc123x` vẫn ra `3`, nhưng mật khẩu có khoảng trắng thì phần sau dấu cách bị bỏ mất. Cách sửa: đọc nguyên dòng bằng `s = câu trả lời`.
 
@@ -75,10 +75,11 @@ Với mẫu một từ `Abc123x` vẫn ra `3`, nhưng mật khẩu có khoảng 
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - đặt [d] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [c] thành phần tử thứ (vi_tri)
+> -   nếu <0 <= c> thì:
+> -     thay đổi [d] một lượng (1)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (d)

@@ -1,6 +1,6 @@
 # Bài 10: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while
 
-## 1. Bí Thuật Hai Bước Tách Chữ Số Bằng Phép Toán
+## 1. Hai bước tách chữ số bằng phép toán
 
 Trong các bài toán lập trình, xử lý các con số (tính tổng các chữ số, đếm số lượng chữ số chẵn/lẻ, kiểm tra số đối xứng, tạo số đảo ngược) là một trong những dạng đề bài kinh điển nhất.
 
@@ -12,30 +12,34 @@ Trong các bài toán lập trình, xử lý các con số (tính tổng các ch
 $$\text{chữ\_số} = N \pmod{10}$$
 Khối lệnh Scratch:
 `đặt [chu_so v] thành ((N) mod (10))`
+
 - Ví dụ: $358 \pmod{10} = 8$.
 
 ### Bước 2 — Cắt bỏ chữ số cuối cùng để thu nhỏ số $N$:
 $$N = \lfloor N / 10 \rfloor$$
 Khối lệnh Scratch:
 `đặt [N v] thành ([làm tròn xuống v] của ((N) / (10)))`
+
 - Ví dụ: $\lfloor 358 / 10 \rfloor = 35$. Số $N$ từ 3 chữ số đã được thu gọn thành 2 chữ số!
 
 ---
 
-## 2. Khung Mẫu Chuẩn (Template) Vòng Lặp Xử Lý Chữ Số
+## 2. Khung mẫu vòng lặp xử lý chữ số
 
 Kết hợp bí thuật 2 bước với vòng lặp `lặp lại cho đến khi < (N) = (0) >`:
 
 - Trước vòng lặp: chuẩn bị biến tích lũy (ví dụ: `tong_chu_so = 0`).
+
 - Trong thân lặp:
   1. Tách chữ số cuối: `chu_so = N mod 10`.
   2. Xử lý bài toán với `chu_so` (cộng vào tổng, kiểm tra chẵn/lẻ...).
   3. Cắt bỏ chữ số cuối: `N = floor(N / 10)`.
+
 - Khi $N = 0$: toàn bộ các chữ số đã được bóc tách xong, vòng lặp dừng tự động.
 
 ---
 
-## 3. Thuật Toán Tạo Số Đảo Ngược
+## 3. Thuật toán tạo số đảo ngược
 
 Bài toán: Cho số nguyên dương $N = 1234$, hãy tạo ra số đảo ngược $4321$.
 
@@ -46,14 +50,18 @@ Mỗi khi bóc tách được một chữ số mới, ta nhân số đảo ngư�
 $$\text{dao\_nguoc} = \text{dao\_nguoc} \times 10 + \text{chu\_so}$$
 
 - Ban đầu: `dao_nguoc = 0`.
+
 - Lần 1: bóc số 4 $\implies 0 \times 10 + 4 = 4$.
+
 - Lần 2: bóc số 3 $\implies 4 \times 10 + 3 = 43$.
+
 - Lần 3: bóc số 2 $\implies 43 \times 10 + 2 = 432$.
+
 - Lần 4: bóc số 1 $\implies 432 \times 10 + 1 = 4321$.
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Bóc Tách Số $N = 358$ (Dry Run Table)
+## 4. Bảng mô phỏng tách chữ số $N = 358$ (Dry run)
 
 | Vòng lặp | $N$ trước bóc | Tách `chu_so = N mod 10` | Thu nhỏ `N = floor(N / 10)` | Cộng `tong = tong + chu_so` | Biến `dao_nguoc` | Kiểm tra dừng `< N = 0 >` |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -66,7 +74,7 @@ $\implies$ Sau 3 vòng lặp: Tổng các chữ số là **$16$**, số đảo n
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Làm mất giá trị gốc của số $N$ ban đầu**
 > - *Hậu quả:* Quá trình bóc tách sẽ làm số $N$ giảm dần về $0$. Nếu đề bài yêu cầu so sánh số đảo ngược với số ban đầu (để kiểm tra số đối xứng / Palindrome), ta không còn giá trị gốc của $N$ nữa!
@@ -77,7 +85,7 @@ $\implies$ Sau 3 vòng lặp: Tổng các chữ số là **$16$**, số đảo n
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào dùng để lấy ra chữ số hàng đơn vị của số nguyên dương $N$?**
    - A. `(N) / (10)`

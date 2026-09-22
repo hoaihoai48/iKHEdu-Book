@@ -1,17 +1,14 @@
-# Hướng Dẫn Giảng Dạy: Tam giác Floyd
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
 - Bản chất của bài này là tháp số có `N` dòng, dòng thứ `i` chứa đúng `i` số, các số tăng dần liên tiếp từ 1.
 - Quy trình từng bước với đúng tên biến trong lời giải:
-  - Bước 1: `n = int(câu trả lời.strip())` đọc số dòng. Với mẫu, `n = 4`.
+  - Bước 1: `n = int(câu trả lời)` đọc số dòng. Với mẫu, `n = 4`.
   - Bước 2: đặt `cur = 1` là số sắp điền vào tháp.
   - Bước 3: vòng ngoài `for i in range(1, n + 1)` cho `i` là 1, 2, 3, 4; mỗi dòng tạo giỏ `row = []` rồi lặp `i` lần, mỗi lần bỏ `str(cur)` vào `row` và tăng `cur` thêm 1.
   - Bước 4: in `" ".join(row)` cho từng dòng.
-- Giá trị biên cụ thể: khi `n = 1` tháp chỉ có một dòng là `1`; đề bài giới hạn `1 <= N <= 20` nên số cuối lớn nhất là `20*21//2 = 210`.
+- Giá trị biên cụ thể: khi `n = 1` tháp chỉ có một dòng là `1`; đề bài giới hạn `1 <= N <= 20` nên số cuối lớn nhất là `20*làm tròn xuống của (21 / 2) = 210`.
 
 ---
 
@@ -32,35 +29,38 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 - Bẫy 1: đặt lại `cur = 1` ở đầu mỗi dòng, các dòng in trùng nhau. Với mẫu `n = 4` dòng 2 sẽ thành `1 2` thay vì `2 3`, là kết quả sai. Cách sửa: đặt `cur = 1` một lần trước vòng ngoài.
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 for i in range(1, n + 1):
     cur = 1
     row = []
     for _ in range(i):
         row.append(str(cur))
         cur += 1
-    print(" ".join(row))
+    nói (" ".join(row))
+
 ```
 - Bẫy 2: quên tăng `cur`, mọi ô đều là 1. Với mẫu dòng 3 sẽ thành `1 1 1`, là kết quả sai. Cách sửa: sau mỗi lần thêm phải `cur += 1`.
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 cur = 1
 for i in range(1, n + 1):
     row = []
     for _ in range(i):
         row.append(str(cur))
-    print(" ".join(row))
+    nói (" ".join(row))
+
 ```
 - Bẫy 3: in số mà quên đổi thành chuỗi khi ghép, `row.append(cur)` rồi `" ".join(row)` sẽ báo lỗi vì `join` cần chuỗi. Cách sửa: thêm `str(cur)` như lời giải.
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 cur = 1
 for i in range(1, n + 1):
     row = []
     for _ in range(i):
         row.append(cur)
         cur += 1
-    print(" ".join(row))
+    nói (" ".join(row))
+
 ```
 
 ---
@@ -75,4 +75,14 @@ for i in range(1, n + 1):
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (" ".join(row)
+> - đặt [cur] thành (1)
+> - đặt [i] thành (1)
+> - lặp lại (n) lần:
+> -   xóa tất cả của [row]
+> -   đặt [_] thành (0)
+> -   lặp lại (i) lần:
+> -     thêm (str(...)) vào [row]
+> -     thay đổi [cur] một lượng (1)
+> -     thay đổi [_] một lượng 1
+> -   nói (row)
+> -   thay đổi [i] một lượng 1

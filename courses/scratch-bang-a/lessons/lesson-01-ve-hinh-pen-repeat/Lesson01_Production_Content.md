@@ -1,15 +1,15 @@
 # Bài 01: VẼ HÌNH VỚI PEN VÀ REPEAT
 
-## 1. Khám Phá Sân Khấu & Hệ Tọa Độ Oxy
+## 1. Khám phá sân khấu và hệ tọa độ Oxy
 
-Sân khấu Scratch là một mặt phẳng hình chữ nhật được chia thành các điểm ảnh thông qua hệ trục tọa độ hai chiều $Oxy$:
+Sân khấu Scratch là một mặt phẳng hình chữ nhật gồm các điểm ảnh (pixel), được quản lý chính xác thông qua hệ trục tọa độ hai chiều $Oxy$:
 
 | Trục tọa độ | Hướng không gian | Điểm cực tiểu | Điểm trung tâm | Điểm cực đại | Tổng độ dài |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | **Trục $X$ (Ngang)** | Trái $\longleftrightarrow$ Phải | $x = -240$ (Mép trái) | $x = 0$ (Tâm) | $x = 240$ (Mép phải) | $480$ bước |
 | **Trục $Y$ (Dọc)** | Dưới $\longleftrightarrow$ Trên | $y = -180$ (Mép dưới) | $y = 0$ (Tâm) | $y = 180$ (Mép trên) | $360$ bước |
 
-> **Quy tắc vàng về Tọa độ khởi tạo:**
+> **Quy tắc vàng về tọa độ khởi tạo:**
 > Mọi chương trình vẽ hình trên Scratch bắt buộc phải có câu lệnh đưa nhân vật về vị trí ban đầu rõ ràng:
 > - 🔵 Lệnh di chuyển: **`đi tới điểm x: (0) y: (0)`** (đưa về gốc tọa độ tâm sân khấu)
 > - 🔵 Lệnh hướng nhìn: **`đặt hướng bằng (90)`** (hướng nhìn sang phải)
@@ -17,32 +17,37 @@ Sân khấu Scratch là một mặt phẳng hình chữ nhật được chia th�
 > ![Khối khởi tạo tọa độ](../../assets/rendered_blocks/l01_block_goto_vi.png)  
 > ![Khối khởi tạo hướng nhìn](../../assets/rendered_blocks/l01_block_point_vi.png)
 
-### Bốn Hướng Di Chuyển Trên La Bàn Scratch
+### Bốn hướng di chuyển trên la bàn Scratch
 Nhân vật chú Mèo di chuyển theo hướng mũi tên kim la bàn. Góc quay được tính theo chiều kim đồng hồ:
 
 - **Hướng $90^\circ$ (Mặc định)**: Mũi nhân vật nhìn sang phải.
+
 - **Hướng $0^\circ$**: Mũi nhân vật nhìn thẳng lên đỉnh sân khấu.
+
 - **Hướng $180^\circ$**: Mũi nhân vật nhìn thẳng xuống đáy sân khấu.
+
 - **Hướng $-90^\circ$ (hoặc $270^\circ$)**: Mũi nhân vật nhìn sang trái.
 
 ---
 
-## 2. Bộ Công Cụ Bút Vẽ Pen (Pen Extension)
+## 2. Bộ công cụ bút vẽ Pen (Pen Extension)
 
-Để bật công cụ vẽ trong Scratch 3.0, học sinh bấm vào biểu tượng **Thêm phần mở rộng (Add Extension)** ở góc dưới cùng bên trái màn hình và chọn **Bút vẽ (Pen)**.
+Để bật công cụ vẽ trong Scratch 3.0, chúng ta bấm vào biểu tượng **Thêm phần mở rộng (Add Extension)** ở góc dưới cùng bên trái màn hình và chọn **Bút vẽ (Pen)**.
 
-Nhóm Bút vẽ cung cấp các khối lệnh thao tác như một chiếc bút viết thật:
+Nhóm Bút vẽ cung cấp các khối lệnh thao tác như một chiếc bút viết thật trên giấy:
 
-| Khối lệnh Tiếng Việt (.vi) | Ý nghĩa thực tế | Lưu ý sư phạm |
-|---|---|---|
-| 🟢 `xóa tất cả` | Tẩy sạch toàn bộ màn hình | **Bắt buộc đặt ngay sau cờ xanh** để xóa hình vẽ của lần chạy trước. |
-| 🟢 `đặt bút` | Đặt đầu bút chạm xuống giấy | Sau khi đặt bút, mỗi bước nhân vật di chuyển sẽ để lại một vệt mực. |
-| 🟢 `nhấc bút` | Nhấc đầu bút lên khỏi giấy | Dùng khi muốn chú Mèo đi sang chỗ khác mà **không để lại vết mực bẩn**. |
-| 🟢 `chọn màu vẽ [ ]` | Chọn màu mực vẽ | Có thể chấm chọn màu sắc yêu thích trực tiếp trên bảng màu. |
-| 🟢 `đặt kích thước bút vẽ bằng (3)` | Chỉnh độ đậm của nét bút | Mặc định là $1$ (rất mảnh). Khuyên dùng $2$ hoặc $3$ để nét vẽ rõ đẹp. |
+| Khối lệnh trực quan Scratch 3.0 | Ý nghĩa thực tế | Lưu ý sư phạm khi lập trình |
+|:---:|---|---|
+| ![Khối xóa tất cả](../../assets/rendered_blocks/pen_block_clear.png) | Tẩy sạch toàn bộ nét vẽ cũ | **Bắt buộc đặt ngay sau cờ xanh** để làm sạch màn hình trước khi vẽ hình mới. |
+| ![Khối đặt bút](../../assets/rendered_blocks/pen_block_down.png) | Hạ đầu bút chạm xuống giấy | Sau khi đặt bút, mỗi bước nhân vật di chuyển sẽ để lại một vệt mực tương ứng. |
+| ![Khối nhấc bút](../../assets/rendered_blocks/pen_block_up.png) | Nhấc đầu bút lên khỏi giấy | Dùng khi muốn di chuyển nhân vật sang vị trí khác mà **không để lại vệt mực lem**. |
+| ![Khối chọn màu vẽ](../../assets/rendered_blocks/pen_block_set_color.png) | Chọn màu mực cố định | Nhấp chuột vào ô màu để chọn màu sắc yêu thích trực tiếp trên bảng màu. |
+| ![Khối đổi màu bút](../../assets/rendered_blocks/pen_block_change_color.png) | Thay đổi màu sắc liên tục | Tăng chỉ số màu để tạo hiệu ứng cầu vồng rực rỡ khi vẽ nhiều hình xoay quanh tâm. |
+| ![Khối đặt kích thước bút](../../assets/rendered_blocks/pen_block_set_size.png) | Chỉnh độ đậm nhạt của nét vẽ | Mặc định là $1$ (rất mảnh). Khuyên dùng $2$ hoặc $3$ để nét vẽ rõ nét trên màn hình. |
+| ![Khối đổi kích thước bút](../../assets/rendered_blocks/pen_block_change_size.png) | Tăng dần nét vẽ theo thời gian | Giúp tạo hiệu ứng nét vẽ đậm dần từ trong ra ngoài. |
 
-### Cụm Lệnh Khởi Động Chuẩn (Chuẩn bị Giấy & Bút)
-Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị giấy bút" gồm 8 bước ghép theo đúng giao diện Tiếng Việt của Scratch 3.0:
+### Cụm lệnh khởi động chuẩn (Chuẩn bị giấy và bút)
+Trước khi vẽ bất kỳ hình nào, chúng ta luôn thiết lập cụm lệnh "chuẩn bị giấy bút" gồm 8 bước theo đúng chuẩn giao diện Tiếng Việt của Scratch 3.0:
 
 ![Cụm lệnh khởi động bút vẽ Scratch Tiếng Việt](../../assets/rendered_blocks/l01_setup_pen_vi.png)
 
@@ -52,7 +57,7 @@ Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị g
 
 2. 🟢 **Xóa tất cả** (Lau sạch màn hình vẽ cũ).
 
-3. 🟢 **Nhấc bút** (Tránh làm lem mực khi di chuyển).
+3. 🟢 **Nhấc bút** (Tránh làm lem mực khi di chuyển về vị trí xuất phát).
 
 4. 🔵 **Đi tới điểm x: (0) y: (0)** (Đưa nhân vật về tâm sân khấu).
 
@@ -66,45 +71,48 @@ Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị g
 
 ---
 
-## 3. Vòng Lặp Lặp Lại & Quy Tắc Vàng Vẽ Đa Giác Đều
+## 3. Vòng lặp và quy tắc vẽ đa giác đều
 
-### Vấn đề: Vẽ tay từng nét lặp lại
+### Vấn đề: Vẽ thủ công từng nét lặp lại
 Để vẽ một hình vuông cạnh $100$ bước:
 
 - Chú Mèo đi $100$ bước $\to$ Xoay phải $90^\circ$.
-- Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
-- Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
+
 - Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
 
-Nếu viết tay, ta phải ghép tới $8$ khối lệnh liên tiếp! Nhưng nếu vẽ hình $20$ cạnh hay $100$ cạnh thì sao?
+- Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
+
+- Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
+
+Nếu viết thủ công, chúng ta phải ghép tới $8$ khối lệnh liên tiếp! Nếu vẽ hình $20$ cạnh hay $100$ cạnh thì kịch bản sẽ quá dài.
 
 ### Giải pháp: Khối lệnh `lặp lại () lần`
 Khối lệnh **`lặp lại () lần`** (trong nhóm Điều khiển màu cam) cho phép lặp lại một cụm câu lệnh bên trong một số lần định trước:
 
 ![Khối lặp vẽ hình vuông Scratch Tiếng Việt](../../assets/rendered_blocks/l01_hinh_vuong_vi.png)
 
-### Công Thức Góc Quay Thần Thánh
-Khi nhân vật vẽ một hình đa giác khép kín và quay trở lại hướng xuất phát, tổng số góc mà nhân vật đã xoay tròn trọn vẹn đúng $1$ vòng tròn là $360^\circ$.
+### Công thức tính góc quay
+Khi nhân vật vẽ một hình đa giác khép kín và quay trở lại hướng xuất phát ban đầu, tổng số góc mà nhân vật đã xoay tròn trọn vẹn đúng $1$ vòng là $360^\circ$.
 
-Do đó, với bất kỳ đa giác đều gồm $N$ cạnh nào, góc quay ngoài tại mỗi đỉnh luôn luôn là:
+Do đó, với bất kỳ đa giác đều gồm $N$ cạnh nào, góc quay ngoài tại mỗi đỉnh luôn là:
 $$\text{Góc xoay} = \frac{360^\circ}{N}$$
 
-### Bảng Tra Cứu Đa Giác Đều Chuẩn
-| Tên đa giác | Số cạnh ($N$) | Số lần lặp | Góc xoay phải | Khối lệnh Scratch Tiếng Việt |
-|---|:---:|:---:|:---:|---|
-| **Tam giác đều** | $3$ | `lặp lại (3) lần` | $\dfrac{360^\circ}{3} = 120^\circ$ | 🟠 `lặp lại (3) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (100) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (120) độ` |
-| **Hình vuông** | $4$ | `lặp lại (4) lần` | $\dfrac{360^\circ}{4} = 90^\circ$ | 🟠 `lặp lại (4) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (100) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (90) độ` |
-| **Ngũ giác đều** | $5$ | `lặp lại (5) lần` | $\dfrac{360^\circ}{5} = 72^\circ$ | 🟠 `lặp lại (5) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (100) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (72) độ` |
-| **Lục giác đều** | $6$ | `lặp lại (6) lần` | $\dfrac{360^\circ}{6} = 60^\circ$ | 🟠 `lặp lại (6) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (80) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (60) độ` |
-| **Bát giác đều** | $8$ | `lặp lại (8) lần` | $\dfrac{360^\circ}{8} = 45^\circ$ | 🟠 `lặp lại (8) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (60) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (45) độ` |
+### Bảng tra cứu các đa giác đều chuẩn với khối lệnh Scratch trực quan
 
-> **Bẫy lỗi kinh điển về Góc quay:**
-> Rất nhiều học sinh nhầm lẫn giữa **góc trong của hình** và **góc xoay ngoài của nhân vật**.
-> Ví dụ: Góc trong của tam giác đều là $60^\circ$. Nếu cho nhân vật xoay $60^\circ$, chú Mèo sẽ vẽ ra hình lục giác ($360 / 60 = 6$) chứ không phải tam giác! Muốn vẽ tam giác đều, góc xoay bắt buộc phải là $360 / 3 = 120^\circ$.
+| Tên đa giác | Hình minh họa mẫu | Số cạnh ($N$) | Góc xoay ngoài ($360^\circ / N$) | Khối lệnh Scratch 3.0 trực quan |
+|---|:---:|:---:|:---:|:---:|
+| **Tam giác đều** | ![Tam giác](../../assets/pen_drawings/pen_img_046.png) | $3$ | $\dfrac{360^\circ}{3} = 120^\circ$ | ![Khối lệnh vẽ Tam giác](../../assets/rendered_blocks/l01_tam_giac_deu_vi.png) |
+| **Hình vuông** | ![Hình vuông](../../assets/pen_drawings/pen_img_057.png) | $4$ | $\dfrac{360^\circ}{4} = 90^\circ$ | ![Khối lệnh vẽ Hình vuông](../../assets/rendered_blocks/l01_hinh_vuong_vi.png) |
+| **Ngũ giác đều** | ![Ngũ giác](../../assets/pen_drawings/pen_img_068.png) | $5$ | $\dfrac{360^\circ}{5} = 72^\circ$ | ![Khối lệnh vẽ Ngũ giác](../../assets/rendered_blocks/l01_ngu_giac_deu_vi.png) |
+| **Lục giác đều** | ![Lục giác](../../assets/pen_drawings/pen_img_079.png) | $6$ | $\dfrac{360^\circ}{6} = 60^\circ$ | ![Khối lệnh vẽ Lục giác](../../assets/rendered_blocks/l01_luc_giac_deu_vi.png) |
+
+> **Bẫy lỗi kinh điển về góc quay:**
+> Rất nhiều học sinh nhầm lẫn giữa **góc trong của hình học** và **góc xoay ngoài của nhân vật**.
+> - *Ví dụ:* Góc trong của tam giác đều là $60^\circ$. Nếu cho nhân vật xoay $60^\circ$, chú Mèo sẽ vẽ ra hình lục giác ($360 / 60 = 6$) chứ không phải tam giác! Muốn vẽ tam giác đều, góc xoay bắt buộc phải là $360 / 3 = 120^\circ$.
 
 ---
 
-## 4. Kỹ Thuật Đổi Điểm Vẽ & Hình Vuông Đồng Tâm
+## 4. Kỹ thuật đổi điểm vẽ và hình vuông đồng tâm
 
 Khi cần vẽ nhiều hình tách rời nhau hoặc vẽ các hình lồng nhau (như hình vuông đồng tâm):
 
@@ -118,159 +126,213 @@ Khi cần vẽ nhiều hình tách rời nhau hoặc vẽ các hình lồng nhau
 
 5. Bắt đầu vẽ hình tiếp theo.
 
-### Ví Dụ: Vẽ 3 Hình Vuông Đồng Tâm
-Để các hình vuông đồng tâm có chung tâm tại gốc $(0, 0)$:
+### Ví dụ: Vẽ 3 hình vuông đồng tâm bằng phương pháp tuần tự
+Khi chưa học khối lệnh tự tạo, ta thực hiện vẽ tuần tự từng hình một bằng các khối lệnh cơ bản:
 
-- Hình 1 (cạnh $60$): Bắt đầu từ $x: -30, y: 30$.
-- Hình 2 (cạnh $100$): Bắt đầu từ $x: -50, y: 50$.
-- Hình 3 (cạnh $140$): Bắt đầu từ $x: -70, y: 70$.
+- Hình vuông 1: Cạnh 60 bước, bắt đầu từ $(-30, -30)$, vẽ lặp 4 lần (di chuyển 60, xoay phải 90).
 
-Mỗi lần chuyển hình, nhân vật **nhấc bút $\to$ chuyển tọa độ $\to$ đặt bút**, tạo ra bức tranh $3$ hình vuông lồng nhau hoàn hảo mà không bị dính nét mực nối.
+- Nhấc bút $\to$ Di chuyển đến $(-50, -50)$ $\to$ Đặt bút.
+
+- Hình vuông 2: Cạnh 100 bước, vẽ lặp 4 lần (di chuyển 100, xoay phải 90).
+
+- Nhấc bút $\to$ Di chuyển đến $(-70, -70)$ $\to$ Đặt bút.
+
+- Hình vuông 3: Cạnh 140 bước, vẽ lặp 4 lần (di chuyển 140, xoay phải 90).
+
+| Khối lệnh Scratch tuần tự vẽ 3 hình vuông đồng tâm | Kết quả trên sân khấu |
+|:---:|:---:|
+| ![Khối lệnh vẽ 3 hình vuông đồng tâm](../../assets/rendered_blocks/l01_3_hinh_vuong_dong_tam_result_vi.png) | ![Hình mẫu đồng tâm](../../assets/pen_drawings/pen_img_3_hinh_vuong_dong_tam.png) |
+| *Quy trình tuần tự: vẽ hình - nhấc bút - đổi tọa độ - hạ bút* | *3 hình vuông lồng nhau đối xứng qua gốc (0, 0)* |
+
+> **Nhận xét quan trọng:**
+> Để ý rằng cụm 4 lệnh `lặp lại (4) lần [di chuyển... xoay phải 90]` bị lặp đi lặp lại tới 3 lần khiến chương trình rất dài dòng.  
+> Để khắc phục điều này và làm cho mã nguồn ngắn gọn, chuyên nghiệp hơn, chúng ta sẽ làm quen với **Khối của tôi (My Blocks)** ở phần tiếp theo ngay dưới đây!
 
 ---
 
-## 5. Khối Lệnh Tự Tạo (Khối Của Tôi - My Blocks) Cơ Bản
+## 5. Khối lệnh tự tạo (Khối của tôi) và kỹ thuật tạo mảnh ghép
 
-Khi một đoạn lệnh vẽ hình (ví dụ vẽ hình vuông) phải dùng đi dùng lại nhiều lần, ta gom các khối lệnh đó thành một khối riêng có tên gọi là **Khối của tôi (My Blocks)**:
+### 5.1. Khái niệm Khối của tôi (My Blocks / Thủ tục)
+Khi một hình vẽ xuất hiện nhiều lần trong bài (ví dụ vẽ một bông hoa gồm 12 chiếc lá cờ), nếu viết lặp đi lặp lại cụm lệnh vẽ lá cờ thì chương trình sẽ rất dài dòng và khó sửa lỗi.
 
-![Định nghĩa Khối của tôi](../../assets/rendered_blocks/l01_myblock_dinh_nghia_vi.png)
+Scratch cung cấp tính năng **Khối của tôi (My Blocks)** màu hồng đậm:
 
-Sau khi định nghĩa, bất cứ khi nào cần vẽ hình vuông, ta chỉ cần gọi một khối lệnh duy nhất:
+- Giúp đóng gói một đoạn lệnh thành một "chiếc khuôn" mang tên riêng.
 
-![Gọi Khối của tôi](../../assets/rendered_blocks/l01_myblock_goi_vi.png)
+- Khi cần dùng, chỉ việc gọi tên chiếc khuôn đó ra.
 
-Điều này giúp kịch bản lập trình gọn gàng, trong sáng và không bị rối mắt.
+| Định nghĩa Khối của tôi | Lệnh gọi Khối của tôi |
+|:---:|:---:|
+| ![Định nghĩa Khối của tôi](../../assets/rendered_blocks/l01_myblock_dinh_nghia_vi.png) | ![Gọi Khối của tôi](../../assets/rendered_blocks/l01_myblock_goi_vi.png) |
+| *Tạo chiếc khuôn thủ tục mang tên riêng* | *Gọi chiếc khuôn ra sử dụng mọi lúc* |
+
+### 5.2. Ứng dụng thực tế: Mảnh ghép lá cờ và nghệ thuật hoa văn xoay quanh tâm
+
+Trong tài liệu học tập, kỹ thuật tạo mảnh ghép lá cờ rồi xoay quanh tâm là một trong những bài học nền tảng:
+
+- **Cấu tạo một lá cờ đơn lẻ:**
+  - Cán cờ: Đi thẳng $100$ bước (`di chuyển (100) bước`).
+  - Lá cờ hình vuông: Lặp lại $4$ lần cụm lệnh cạnh $40$ bước, xoay phải $90^\circ$ (`lặp lại (4) lần: di chuyển (40) bước, xoay phải 90 độ`).
+  - Lùi về tâm: Lùi ngược lại đúng $100$ bước (`di chuyển (-100) bước`) để bảo toàn vị trí đứng của nhân vật tại tâm sân khấu.
+
+| Mảnh ghép đơn lẻ | Kết quả xoay quanh tâm nhiều lần |
+|:---:|:---:|
+| ![Mảnh ghép lá cờ](../../assets/pen_drawings/pen_img_158.png) | ![Hoa văn lá cờ xoay tròn](../../assets/pen_drawings/pen_img_159.png) |
+| *Hình 1: Một lá cờ đơn lẻ (cán 100, cờ vuông 40x40)* | *Hình 2: Hoa văn 8 lá cờ xoay quanh tâm (mỗi bước xoay 45 độ)* |
+
+**Khối lệnh Scratch chi tiết:**
+
+| Định nghĩa thủ tục Lá_Cờ | Chương trình chính vẽ hoa văn 8 lá cờ |
+|:---:|:---:|
+| ![Khối định nghĩa Lá Cờ](../../assets/rendered_blocks/l01_la_co_vi.png) | ![Khối chính xoay 8 lá cờ](../../assets/rendered_blocks/l01_hoa_van_8_la_co_vi.png) |
+| *Tạo thủ tục: Đi tới 100 vẽ cờ vuông rồi lùi về tâm* | *Lặp 8 lần: Gọi Lá_Cờ, xoay 45 độ và đổi màu bút* |
 
 ---
 
-## 6. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 6. Bảng mô phỏng từng bước vẽ hình vuông (Dry run)
 
-Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hiện kịch bản vẽ hình vuông cạnh $100$ bước, bắt đầu từ $(0, 0)$ hướng $90^\circ$:
+Mô phỏng hành trình vẽ hình vuông cạnh $100$ bước xuất phát tại $(0, 0)$, hướng $90^\circ$:
 
-| Vòng lặp | Lệnh thực thi | Tọa độ sau lệnh ($x, y$) | Hướng sau lệnh | Trạng thái nét vẽ |
+| Bước | Lệnh thực hiện | Tọa độ $(x, y)$ sau lệnh | Hướng nhìn | Vệt mực để lại trên sân khấu |
 |:---:|---|:---:|:---:|---|
-| **Khởi động** | `đi tới điểm x: (0) y: (0)`, `đặt hướng bằng (90)`, `đặt bút` | $(0, 0)$ | $90^\circ$ (Phải) | Đã hạ bút chạm giấy tại $(0, 0)$ |
-| **Lần 1** | `di chuyển (100) bước` | $(100, 0)$ | $90^\circ$ (Phải) | Vẽ cạnh đáy nằm ngang dài $100$ |
-| | `xoay phải ↻ (90) độ` | $(100, 0)$ | $180^\circ$ (Xuống) | Đổi hướng nhìn cắm thẳng xuống dưới |
-| **Lần 2** | `di chuyển (100) bước` | $(100, -100)$ | $180^\circ$ (Xuống) | Vẽ cạnh thẳng đứng bên phải dài $100$ |
-| | `xoay phải ↻ (90) độ` | $(100, -100)$ | $-90^\circ$ (Trái) | Đổi hướng nhìn sang trái |
-| **Lần 3** | `di chuyển (100) bước` | $(0, -100)$ | $-90^\circ$ (Trái) | Vẽ cạnh đáy dưới nằm ngang dài $100$ |
-| | `xoay phải ↻ (90) độ` | $(0, -100)$ | $0^\circ$ (Lên) | Đổi hướng nhìn thẳng lên trên |
-| **Lần 4** | `di chuyển (100) bước` | $(0, 0)$ | $0^\circ$ (Lên) | Vẽ cạnh bên trái khép kín về $(0, 0)$ |
-| | `xoay phải ↻ (90) độ` | $(0, 0)$ | $90^\circ$ (Phải) | Trở lại đúng hướng xuất phát ban đầu |
+| **0** | `đi tới x: 0 y: 0`, `đặt hướng 90`, `đặt bút` | $(0, 0)$ | $90^\circ$ (Phải) | Chưa có (mới đặt bút tại gốc) |
+| **1** | `di chuyển 100 bước` | $(100, 0)$ | $90^\circ$ | Nét ngang dưới từ $(0, 0) \to (100, 0)$ |
+| **2** | `xoay phải ↻ 90 độ` | $(100, 0)$ | $180^\circ$ (Xuống) | Đổi hướng nhìn xuống đáy sân khấu |
+| **3** | `di chuyển 100 bước` | $(100, -100)$ | $180^\circ$ | Nét dọc phải từ $(100, 0) \to (100, -100)$ |
+| **4** | `xoay phải ↻ 90 độ` | $(100, -100)$ | $-90^\circ$ (Trái) | Đổi hướng nhìn sang trái |
+| **5** | `di chuyển 100 bước` | $(0, -100)$ | $-90^\circ$ | Nét ngang trên từ $(100, -100) \to (0, -100)$ |
+| **6** | `xoay phải ↻ 90 độ` | $(0, -100)$ | $0^\circ$ (Lên) | Đổi hướng nhìn lên trên |
+| **7** | `di chuyển 100 bước` | $(0, 0)$ | $0^\circ$ | Nét dọc trái từ $(0, -100) \to (0, 0)$ |
+| **8** | `xoay phải ↻ 90 độ` | $(0, 0)$ | $90^\circ$ (Phải) | Trở về đúng hướng ban đầu, khép kín hình |
 
 ---
 
-## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Các bẫy lỗi thường gặp (Bug Traps)
 
-> **Bẫy 1: Quên câu lệnh `xóa tất cả` lúc bấm cờ xanh**
-> - *Hiện tượng:* Khi bấm Cờ Xanh lần thứ hai, hình vẽ mới đè lên hình vẽ cũ làm màn hình rối tung.
-> - *Khắc phục:* Luôn luôn đặt khối `xóa tất cả` ngay dưới khối `khi bấm vào cờ xanh`.
+> **Bẫy 1: Quên nhấc bút khi di chuyển nhân vật sang vị trí mới**
+> - *Hiện tượng:* Trên màn hình xuất hiện một vệt mực chéo nối từ hình này sang hình kia.
+> - *Khắc phục:* Luôn ghi nhớ quy tắc: Trước khi đổi tọa độ, phải `nhấc bút`. Đến nơi mới thì `đặt bút`.
 
-> **Bẫy 2: Quên nhấc bút (`nhấc bút`) trước khi đổi chỗ**
-> - *Hiện tượng:* Khi nhân vật di chuyển sang vị trí mới để vẽ hình tiếp theo, một nét mực gạch chéo xấu xí xuất hiện trên sân khấu.
-> - *Khắc phục:* Nhớ câu thần chú: **"Muốn đi đâu, nhấc bút lên (`nhấc bút`) rồi mới đi; tới nơi rồi mới đặt bút xuống (`đặt bút`)"**.
+> **Bẫy 2: Nhầm lẫn góc quay trong và góc quay ngoài**
+> - *Hậu quả:* Hình vẽ bị méo mó hoặc vẽ ra số cạnh sai hoàn toàn.
+> - *Khắc phục:* Luôn lấy $360$ chia cho số cạnh ($360 / N$).
 
-> **Bẫy 3: Nhân vật bị kẹt ở mép sân khấu**
-> - *Hiện tượng:* Nếu cho số bước quá lớn (ví dụ $500$ bước), nhân vật chạm mép sân khấu sẽ bị khựng lại và góc quay bị méo mó.
-> - *Khắc phục:* Kích thước các hình đa giác nên chọn chiều dài cạnh từ $50$ đến $120$ bước để vừa vặn trong màn hình $480 \times 360$.
+> **Bẫy 3: Quên lệnh xóa tất cả ở đầu chương trình**
+> - *Hiện tượng:* Bấm cờ xanh chạy lại nhưng hình cũ vẫn còn nguyên, hình mới đè lên lem nhem.
+> - *Khắc phục:* Luôn đặt `xóa tất cả` ngay dưới cờ xanh.
 
 ---
 
-## 8. Concept Quiz (10 Câu Trắc Nghiệm Kiểm Tra Nhận Thức)
+## 8. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
-#### Câu 1 (Nhận biết tọa độ)
-Tâm chính giữa của sân khấu Scratch có tọa độ là bao nhiêu?
-- A. $x = 100, y = 100$
-- B. $x = 0, y = 0$
-- C. $x = 240, y = 180$
-- D. $x = -240, y = -180$
-> **Đáp án:** B  
-> **Giải thích:** Gốc tọa độ $(0, 0)$ là điểm chính giữa của sân khấu Scratch.
+#### Câu 1
+Tọa độ chính giữa tâm sân khấu Scratch là:
 
-#### Câu 2 (Hướng di chuyển)
-Khối lệnh **`đặt hướng bằng (90)`** sẽ hướng mũi của nhân vật nhìn về phía nào?
-- A. Thẳng lên trên
-- B. Thẳng xuống dưới
-- C. Sang bên phải
-- D. Sang bên trái
-> **Đáp án:** C  
-> **Giải thích:** Hướng $90^\circ$ là hướng Đông (sang phải), $0^\circ$ là hướng Bắc (lên trên), $180^\circ$ là hướng Nam (xuống dưới), $-90^\circ$ là hướng Tây (sang trái).
+- A. $(x: 240, y: 180)$
 
-#### Câu 3 (Lệnh bắt buộc đầu chương trình)
-Khối lệnh nào sau đây giúp xóa sạch toàn bộ các nét vẽ cũ trên sân khấu khi bắt đầu chạy chương trình?
-- A. `nhấc bút`
-- B. `xóa tất cả`
-- C. `ẩn`
-- D. `dừng lại tất cả`
-> **Đáp án:** B  
-> **Giải thích:** Khối `xóa tất cả` (trong nhóm Bút vẽ) sẽ xóa sạch mọi nét mực do bút vẽ để lại trên màn hình.
+- B. $(x: -240, y: -180)$
 
-#### Câu 4 (Công thức góc quay đa giác)
-Để vẽ một hình tam giác đều có 3 cạnh bằng nhau, tại mỗi đỉnh nhân vật cần quay một góc bao nhiêu độ?
-- A. $60^\circ$
+- C. $(x: 0, y: 0)$ *(Đáp án đúng)*
+
+- D. $(x: 100, y: 100)$
+
+#### Câu 2
+Để nhân vật nhìn thẳng lên phía trên màn hình, ta dùng khối lệnh:
+
+- A. `đặt hướng bằng (90)`
+
+- B. `đặt hướng bằng (0)` *(Đáp án đúng)*
+
+- C. `đặt hướng bằng (180)`
+
+- D. `đặt hướng bằng (-90)`
+
+#### Câu 3
+Muốn vẽ một hình lục giác đều (6 cạnh), góc xoay tại mỗi đỉnh là:
+
+- A. $60^\circ$ *(Đáp án đúng: $360 / 6 = 60$)*
+
 - B. $90^\circ$
+
 - C. $120^\circ$
-- D. $180^\circ$
-> **Đáp án:** C  
-> **Giải thích:** Công thức góc quay là $360^\circ / N$. Với tam giác đều ($N = 3$), góc quay ngoài là $360 / 3 = 120^\circ$. (Góc $60^\circ$ là góc trong của hình tam giác, không phải góc quay của nhân vật).
 
-#### Câu 5 (Dự đoán hình vẽ)
-Khối lệnh sau đây sẽ vẽ ra hình gì trên sân khấu?
+- D. $72^\circ$
 
-![Khối lệnh câu 5](../../assets/rendered_blocks/l01_luc_giac_deu_vi.png)
+#### Câu 4
+Nếu muốn nhân vật di chuyển từ điểm $A$ sang điểm $B$ mà không để lại nét mực, ta cần thực hiện lệnh nào trước khi đi?
 
-- A. Hình ngũ giác đều (5 cạnh)
-- B. Hình lục giác đều (6 cạnh)
-- C. Hình bát giác đều (8 cạnh)
-- D. Hình vuông (4 cạnh)
-> **Đáp án:** B  
-> **Giải thích:** Khối `lặp lại 6 lần` và góc xoay $60^\circ$ ($360 / 6 = 60$) sẽ tạo ra hình lục giác đều 6 cạnh.
-
-#### Câu 6 (Thao tác nhấc bút)
-Nếu muốn nhân vật di chuyển từ điểm $A$ sang điểm $B$ mà KHÔNG để lại nét mực trên màn hình, ta phải dùng khối lệnh nào trước khi di chuyển?
 - A. `đặt bút`
-- B. `nhấc bút`
-- C. `đặt kích thước bút vẽ bằng (0)`
-- D. `xóa tất cả`
-> **Đáp án:** B  
-> **Giải thích:** Khối `nhấc bút` làm ngắt tiếp xúc giữa đầu bút và trang giấy, giúp nhân vật di chuyển tự do mà không vẽ ra đường nét.
 
-#### Câu 7 (Độ dày nét bút)
-Muốn nét vẽ của nhân vật trở nên đậm hơn và nhìn rõ hơn, ta sử dụng khối lệnh nào?
-- A. `thay đổi màu bút vẽ một lượng (10)`
-- B. `đặt kích thước bút vẽ bằng (3)`
-- C. `di chuyển (10) bước`
-- D. `đặt hướng bằng (0)`
-> **Đáp án:** B  
-> **Giải thích:** Khối `đặt kích thước bút vẽ bằng (3)` đặt độ dày nét bút là 3 đơn vị pixel, giúp nét vẽ đậm và sắc nét.
+- B. `nhấc bút` *(Đáp án đúng)*
 
-#### Câu 8 (Góc quay ngũ giác đều)
-Một bạn học sinh muốn lập trình vẽ hình ngũ giác đều (5 cạnh bằng nhau). Bạn ấy dùng khối lệnh `lặp lại (5) lần` nhưng chưa biết phải điền góc xoay bao nhiêu độ. Em hãy giúp bạn tính góc xoay:
+- C. `xóa tất cả`
 
-- A. $72^\circ$
-- B. $108^\circ$
-- C. $70^\circ$
-- D. $60^\circ$
-> **Đáp án:** A  
-> **Giải thích:** Áp dụng công thức $360^\circ / 5 = 72^\circ$.
+- D. `chọn màu vẽ`
 
-#### Câu 9 (Bắt lỗi kịch bản)
-Một bạn viết kịch bản vẽ hình vuông: Chú Mèo đi $100$ bước rồi xoay phải $90^\circ$, lặp lại 4 lần. Nhưng khi bấm Cờ Xanh, chú Mèo di chuyển đủ 4 cạnh mà trên màn hình không xuất hiện bất kỳ nét vẽ nào. Nguyên nhân chính là gì?
-- A. Bạn quên đặt khối `đặt bút` trước khi lặp.
-- B. Bạn chọn sai màu vẽ.
-- C. Bạn chưa bấm phím Space.
-- D. Sân khấu bị phóng to quá mức.
-> **Đáp án:** A  
-> **Giải thích:** Nếu không có lệnh `đặt bút`, nhân vật vẫn di chuyển theo hình vuông nhưng bút vẽ đang ở trạng thái nhấc lên nên không có mực trên màn hình.
+#### Câu 5
+Khối lệnh sau đây vẽ ra hình gì?
 
-#### Câu 10 (Lợi ích của Khối Của Tôi)
-Tại sao ta nên tạo khối lệnh riêng (**Khối của tôi - My Blocks**) như `ve_hinh_vuong` khi viết các chương trình vẽ hình phức tạp?
-- A. Để chương trình chạy nhanh gấp đôi.
-- B. Để tái sử dụng cụm lệnh nhiều lần mà không cần kéo lại từng khối, giúp chương trình gọn gàng dễ đọc.
-- C. Để đổi màu bút vẽ tự động.
-- D. Bắt buộc phải có Khối của tôi thì Scratch mới cho phép vẽ.
-> **Đáp án:** B  
-> **Giải thích:** Khối của tôi đóng vai trò như một chương trình con giúp đóng gói và tái sử dụng mã nguồn, nâng cao tính cấu trúc của chương trình.
+![Khối lệnh trắc nghiệm Ngũ giác](../../assets/rendered_blocks/l01_ngu_giac_deu_vi.png)
 
----
+- A. Hình tam giác đều
+
+- B. Hình vuông
+
+- C. Ngũ giác đều *(Đáp án đúng: 5 cạnh, góc quay 360 / 5 = 72 độ)*
+
+- D. Lục giác đều
+
+#### Câu 6
+Khối lệnh tự tạo (Khối của tôi) có tác dụng gì quan trọng nhất?
+
+- A. Giúp nhân vật chạy nhanh hơn
+
+- B. Đóng gói đoạn lệnh để tái sử dụng nhiều lần, giúp chương trình gọn gàng *(Đáp án đúng)*
+
+- C. Đổi màu sân khấu tự động
+
+- D. Tự động vẽ hình mà không cần bút vẽ
+
+#### Câu 7
+Khi muốn vẽ hoa văn gồm 10 hình tam giác đều xoay quanh tâm, sau mỗi lần vẽ xong 1 hình tam giác và lùi về tâm, nhân vật cần xoay một góc bằng bao nhiêu độ?
+
+- A. $120^\circ$
+
+- B. $60^\circ$
+
+- C. $36^\circ$ *(Đáp án đúng: $360 / 10 = 36$ độ)*
+
+- D. $90^\circ$
+
+#### Câu 8
+Muốn tăng độ dày nét vẽ cho rõ nét hơn, ta dùng khối lệnh nào?
+
+- A. `đặt kích thước bút vẽ bằng (3)` *(Đáp án đúng)*
+
+- B. `chọn màu vẽ`
+
+- C. `di chuyển (3) bước`
+
+- D. `thay đổi x một lượng (3)`
+
+#### Câu 9
+Khối lệnh `xóa tất cả` nằm trong nhóm lệnh nào?
+
+- A. Chuyển động
+
+- B. Hiển thị
+
+- C. Bút vẽ (Pen) *(Đáp án đúng)*
+
+- D. Sự kiện
+
+#### Câu 10
+Để tạo hiệu ứng nét vẽ đổi màu liên tục khi vẽ hoa văn, ta nên đặt khối lệnh nào vào trong vòng lặp?
+
+- A. `thay đổi màu bút vẽ một lượng (10)` *(Đáp án đúng)*
+
+- B. `đặt bút`
+
+- C. `nhấc bút`
+
+- D. `đặt hướng bằng (90)`

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Khoảng thời gian giữa hai thời điểm trong ngày
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất khoảng cách thời gian: đổi mỗi thời điểm về phút rồi trừ nhau, tức `(h2 * 60 + m2) - (h1 * 60 + m1)`.
@@ -45,4 +42,6 @@ Với số mẫu một dòng `8 30 10 15`, chương trình phải in ra `105`.
 > - đặt [h2] thành (câu trả lời)
 > - hỏi [Nhập m2:] và đợi
 > - đặt [m2] thành (câu trả lời)
-> - nói (h2 - h1)
+> - đặt [t1] thành (h1 * 60 + m1)
+> - đặt [t2] thành (h2 * 60 + m2)
+> - nói (t2 - t1)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm vị trí trong dãy tự nhiên dài
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -30,9 +27,9 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- Bẫy 1: quên trừ 1 khi tính `num`, viết `num = start + k // length`. Với mẫu `k = 7` sẽ ra `num = 8`, in ra `8`, là kết quả sai. Cách sửa: dùng `(k - 1) // length`.
+- Bẫy 1: quên trừ 1 khi tính `num`, viết `num = start + làm tròn xuống của (k / length)`. Với mẫu `k = 7` sẽ ra `num = 8`, in ra `8`, là kết quả sai. Cách sửa: dùng `(k - 1) // length`.
 ```text
-k = int(câu trả lời.strip())
+k = câu trả lời
 length = 1
 count = 9
 start = 1
@@ -41,13 +38,14 @@ while k > length * count:
     length += 1
     count *= 10
     start *= 10
-num = start + k // length
+num = start + làm tròn xuống của (k / length)
 idx = (k - 1) % length
-print(str(num)[idx])
+nói (str(num)[idx])
+
 ```
 - Bẫy 2: nhầm điều kiện lặp thành `>=`, khối bị trừ lố. Với `k = 9` (đúng chữ số cuối khối 1 chữ số) vòng lặp trừ mất cả khối và nhảy sang khối 2 chữ số, cho kết quả sai. Cách sửa: lặp khi `k > length * count`.
 ```text
-k = int(câu trả lời.strip())
+k = câu trả lời
 length = 1
 count = 9
 start = 1
@@ -58,17 +56,19 @@ while k >= length * count:
     start *= 10
 num = start + (k - 1) // length
 idx = (k - 1) % length
-print(str(num)[idx])
+nói (str(num)[idx])
+
 ```
 - Bẫy 3: nối cả dải số thành chuỗi rồi lấy vị trí thứ `k`. Với `K = 100000` chuỗi dài hàng trăm nghìn ký tự, vừa tốn trí nhớ vừa chậm. Cách sửa: trừ dần từng khối như lời giải để tìm thẳng khối chứa `k`.
 ```text
-k = int(câu trả lời.strip())
+k = câu trả lời
 s = ""
 i = 1
 while len(s) < k:
     s = s + str(i)
     i += 1
-print(s[k - 1])
+nói (s[k - 1])
+
 ```
 
 ---
@@ -83,4 +83,14 @@ print(s[k - 1])
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập k:] và đợi
 > - đặt [k] thành (câu trả lời)
-> - nói (str(num)
+> - đặt [length] thành (1)
+> - đặt [count] thành (9)
+> - đặt [start] thành (1)
+> - lặp lại cho đến khi <k = length * count>:
+> -   thay đổi [k] một lượng (-length * count)
+> -   thay đổi [length] một lượng (1)
+> -   đặt [count] thành (count * 10)
+> -   đặt [start] thành (start * 10)
+> - đặt [num] thành (start + k - 1 chia nguyên length)
+> - đặt [idx] thành (k - 1 mod length)
+> - nói (giá trị)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm số lớn nhất & nhỏ nhất
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,28 +30,31 @@ Kết quả cuối cùng khớp với đáp án mẫu: `89 3`.
 
 - Bẫy 1 — in ngược thứ tự nhỏ trước lớn sau:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(min(a), max(a))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (min(a), max(a))
+
 ```
 Với mẫu trên in ra `3 89`, không khớp đáp án mẫu `89 3`. Cách sửa: in `nói (max(a), min(a))`.
 - Bẫy 2 — tự đặt số lớn nhất ban đầu là 0:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 lon = 0
 for x in a:
     if x > lon:
         lon = x
-print(lon, min(a))
+nói (lon, min(a))
+
 ```
 Với mẫu trên vẫn ra `89 3`, nhưng nếu dãy toàn số âm thì `lon` kẹt ở `0` sai. Cách sửa: dùng `max(a)` có sẵn.
 - Bẫy 3 — in mỗi số một dòng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(max(a))
-print(min(a))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (max(a))
+nói (min(a))
+
 ```
 Với mẫu trên in ra hai dòng `89` rồi `3`, không khớp đáp án mẫu `89 3` trên một dòng. Cách sửa: in chung một lệnh `nói (max(a), min(a))`.
 
@@ -70,10 +70,10 @@ Với mẫu trên in ra hai dòng `89` rồi `3`, không khớp đáp án mẫu 
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - nói (kết hợp max(...) và ' ' và min(...))

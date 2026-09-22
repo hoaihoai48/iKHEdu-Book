@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Dãy số cách đều
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: dãy cộng với số hạng đầu `a`, công sai `d`. Số hạng thứ `i` (đếm từ 0) là `a + i * d`.
@@ -26,20 +23,22 @@ Một dòng duy nhất `2 5 8 11 14`, khớp với kết quả mẫu.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — công thức thiếu `a`:
 ```text
-a = int(câu trả lời)
-d = int(câu trả lời)
-n = int(câu trả lời)
+a = câu trả lời
+d = câu trả lời
+n = câu trả lời
 for i in range(n):
-    print(a + d, end='')
+    nói (a + d, end='')
+
 ```
 Với mẫu `2 / 3 / 5` sẽ in toàn số `5` lặp lại. Cách sửa: công thức đúng là `a + i * d`.
 - Bẫy 2 — mỗi số một dòng:
 ```text
-a = int(câu trả lời)
-d = int(câu trả lời)
-n = int(câu trả lời)
+a = câu trả lời
+d = câu trả lời
+n = câu trả lời
 for i in range(n):
-    print(a + i * d)
+    nói (a + i * d)
+
 ```
 Với mẫu `2 / 3 / 5` sẽ in 5 dòng thay vì một dòng `2 5 8 11 14`. Cách sửa: in với `end=''` và chèn dấu cách giữa các số như lời giải.
 
@@ -59,9 +58,10 @@ Với mẫu `2 / 3 / 5` sẽ in 5 dòng thay vì một dòng `2 5 8 11 14`. Các
 > - đặt [d] thành (câu trả lời)
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - đặt [tong] thành (0)
-> - đặt [i] thành (1)
+> - đặt [i] thành (0)
 > - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> -   nói (a + i * d)
+> -   nếu <i < n - 1> thì:
+> -     nói ( )
+> -   thay đổi [i] một lượng 1
+> - nói []

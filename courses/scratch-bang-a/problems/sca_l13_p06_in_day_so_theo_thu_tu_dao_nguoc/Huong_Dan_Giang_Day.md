@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: In dãy số theo thứ tự đảo ngược
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -32,23 +29,26 @@ Kết quả cuối cùng khớp với đáp án mẫu: `4 3 2 1`.
 
 - Bẫy 1 — in ra cả dãy gốc vì quên đảo:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(*a)
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (*a)
+
 ```
 Với mẫu trên in ra `1 2 3 4`, không khớp đáp án mẫu `4 3 2 1`. Cách sửa: in `nói (*(a[::-1]))`.
 - Bẫy 2 — dùng `reversed` mà không tách sao:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(reversed(a))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (reversed(a))
+
 ```
 Với mẫu trên in ra dòng mô tả vật đảo thay vì dãy số. Cách sửa: in `nói (*reversed(a))` hoặc `nói (*(a[::-1]))`.
 - Bẫy 3 — in cả ngoặc của danh sách:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(a[::-1])
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (a[::-1])
+
 ```
 Với mẫu trên in ra `[4, 3, 2, 1]` có ngoặc và dấu phẩy, không khớp đáp án mẫu `4 3 2 1`. Cách sửa: thêm dấu sao `nói (*(a[::-1]))`.
 
@@ -64,10 +64,15 @@ Với mẫu trên in ra `[4, 3, 2, 1]` có ngoặc và dấu phẩy, không kh�
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [danh_sach]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

@@ -1,16 +1,18 @@
 # Bài 16: DUYỆT CHUỖI, BIẾN ĐỔI KÝ TỰ VÀ TÁCH TỪ
 
-## 1. Nâng Tầm Xử Lý Chuỗi — Từ Đọc Hiểu Đến Biến Đổi Văn Bản
+## 1. Kỹ thuật xử lý chuỗi và biến đổi văn bản
 
 Trong bài 15, chúng ta đã nắm vững các khối lệnh cơ bản và kỹ thuật trích xuất chuỗi con. Trong bài học này, chúng ta sẽ bước vào những kỹ thuật xử lý văn bản đỉnh cao thường xuyên xuất hiện trong các đề thi lập trình:
 
 - **Duyệt qua từng ký tự của chuỗi:** Đếm tần số xuất hiện của một chữ cái, đếm số lượng chữ số, nguyên âm, phụ âm.
+
 - **Biến đổi chuỗi (String Transformation):** Thay thế một ký tự này bằng ký tự khác, loại bỏ ký tự rác, chuẩn hóa khoảng trắng.
+
 - **Tách từ (Split Words):** Phân rã một câu văn hoàn chỉnh thành từng từ độc lập nạp vào Danh sách (List).
 
 ---
 
-## 2. Kỹ Thuật Duyệt Chuỗi & Đếm Ký Tự
+## 2. Kỹ thuật duyệt chuỗi và đếm ký tự
 
 Để kiểm tra xem một chữ cái (ví dụ chữ `'a'`) xuất hiện bao nhiêu lần trong câu văn $S$:
 
@@ -27,33 +29,41 @@ Trong bài 15, chúng ta đã nắm vững các khối lệnh cơ bản và kỹ
 
 ---
 
-## 3. Thuật Toán Tách Từ (Split) Nạp Vào Danh Sách
+## 3. Thuật toán tách từ (Split) nạp vào danh sách
 
 Trong Scratch, không có sẵn một khối đơn lẻ để tách từ tự động. Đây là bài toán kiểm tra năng lực tư duy thuật toán tuyệt vời của học sinh.
 
 ### 3.1. Bản chất tư duy của thuật toán tách từ:
 
 - Một câu văn gồm các từ được ngăn cách nhau bởi **dấu cách (khoảng trắng `[ ]`)**.
+
 - Ta dùng một chiếc hộp tạm thời mang tên **`tu_tam`** (chuỗi ký tự rỗng ban đầu).
+
 - Duyệt qua từng ký tự từ đầu đến cuối câu:
 
   - Nếu ký tự đang xét **không phải là dấu cách**: Ta ghép ký tự đó vào đuôi của `tu_tam` (`kết hợp (tu_tam) (ký tự hiện tại)`).
   - Nếu gặp **dấu cách**: Điều đó báo hiệu một từ vừa hoàn thành! Nếu `tu_tam` không rỗng, ta lập tức **đưa `tu_tam` vào Danh sách từ**, sau đó **làm rỗng `tu_tam`** để sẵn sàng đón nhận từ tiếp theo!
+
 - **Bước chốt hạ quan trọng:** Sau khi duyệt hết câu, từ cuối cùng thường không có dấu cách phía sau để kích hoạt, do đó ta phải kiểm tra và đưa `tu_tam` cuối cùng vào danh sách!
 
 ![Thuật toán tách từ nạp vào danh sách](assets/rendered_blocks/l16_split_words_vi.png)
 
 ---
 
-## 4. Bảng Mô Phỏng Tách Câu `"DI HOC"` Vào Danh Sách (Dry Run Table)
+## 4. Bảng mô phỏng tách câu `"DI HOC"` vào danh sách (Dry run)
 
 Câu ban đầu: $S = \text{"DI HOC"}$. Độ dài $= 6$. Ký tự tại các vị trí:
 
 - Vị trí 1: `'D'`
+
 - Vị trí 2: `'I'`
+
 - Vị trí 3: `' '` *(dấu cách)*
+
 - Vị trí 4: `'H'`
+
 - Vị trí 5: `'O'`
+
 - Vị trí 6: `'C'`
 
 | Vòng lặp | Chỉ số `i` | Ký tự `S[i]` | Có phải dấu cách không? | Biến `tu_tam` sau bước | Danh sách `[Danh sách Từ]` |
@@ -71,7 +81,7 @@ $\implies$ Kết quả: `[Danh sách Từ]` có đúng 2 phần tử là `"DI"` 
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Bỏ quên từ cuối cùng của câu văn (The Last Word Bug)**
 > - *Hiện tượng:* Người dùng nhập câu văn bình thường mà không gõ phím cách ở cuối câu (ví dụ: `"EM YEU SCRATCH"`).
@@ -91,7 +101,7 @@ $\implies$ Kết quả: `[Danh sách Từ]` có đúng 2 phần tử là `"DI"` 
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Vòng lặp duyệt qua toàn bộ một chuỗi ký tự $S$ cần chạy đúng bao nhiêu lần?**
    - A. `(độ dài của (S)) - 1` lần

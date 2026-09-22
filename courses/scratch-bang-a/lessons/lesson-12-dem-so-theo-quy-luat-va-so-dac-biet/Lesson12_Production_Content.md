@@ -1,18 +1,20 @@
 # Bài 12: ĐẾM SỐ THEO QUY LUẬT VÀ SỐ ĐẶC BIỆT
 
-## 1. Bản Chất Bài Toán Đếm Số Theo Quy Luật
+## 1. Bản chất bài toán đếm số theo quy luật
 
 Khi lập trình giải các bài toán, dạng toán **đếm số lượng số thỏa mãn một tính chất nào đó trong một khoảng $[A, B]$** là một trong những dạng toán kinh điển và xuất hiện nhiều nhất:
 
 - Đếm số lượng số chia hết cho $K$ trong đoạn từ $A$ đến $B$.
+
 - Đếm số lượng số lẻ, số chẵn, hoặc số có chữ số tận cùng là 5.
+
 - Đếm các số đặc biệt: số chính phương, số hoàn hảo, số tự mãn (Armstrong / Narcissistic).
 
 Tùy thuộc vào giới hạn của bài toán ($B - A \le 10^5$ hay $B \le 10^{12}$), chúng ta có 2 phương pháp tiếp cận hoàn toàn khác nhau.
 
 ---
 
-## 2. Kỹ Thuật Đếm Trong Đoạn Bằng Vòng Lặp Duyệt Từng Số
+## 2. Kỹ thuật đếm trong đoạn bằng vòng lặp
 
 Khi khoảng cách giữa $A$ và $B$ nhỏ (dưới vài chục nghìn số), máy tính có thể duyệt qua từng số một cách nhanh chóng.
 
@@ -43,7 +45,7 @@ $$\text{Số lần lặp} = B - A + 1$$
 
 ---
 
-## 3. Công Thức Đếm Toán Học Siêu Tốc $\mathcal{O}(1)$
+## 3. Công thức đếm toán học nhanh $\mathcal{O}(1)$
 
 Khi $A$ và $B$ là các con số khổng lồ (ví dụ đếm số chia hết cho 7 từ $1$ đến $1\,000\,000\,000$), việc chạy vòng lặp $1$ tỷ lần sẽ làm máy tính bị treo (Time Limit Exceeded). Ta dùng công thức toán học tính ngay lập tức trong **1 phép tính**:
 
@@ -65,26 +67,31 @@ Khối phép toán trong Scratch:
 
 ---
 
-## 4. Các Dạng Số Đặc Biệt Thường Gặp Trong Lập Trình
+## 4. Các dạng số đặc biệt thường gặp
 
-### 4.1. Số Chính Phương (Perfect Square)
+### 4.1. Số chính phương
 Số chính phương là số tự nhiên có căn bậc hai là một số nguyên (nghĩa là bằng bình phương của một số tự nhiên: $0, 1, 4, 9, 16, 25, 36, 49, \dots$).
+
 - **Cách kiểm tra trong Scratch:** Lấy căn bậc hai của $N$, làm tròn xuống rồi bình phương lại xem có bằng chính $N$ không:
   $$< (([làm tròn xuống v] của ([căn bậc hai v] của (N))) \times ([làm tròn xuống v] của ([căn bậc hai v] của (N)))) = (N) >$$
 
-### 4.2. Số Hoàn Hảo (Perfect Number)
+### 4.2. Số hoàn hảo
 Số hoàn hảo là số nguyên dương có **tổng tất cả các ước số thực sự của nó (ngoại trừ chính nó) bằng chính nó**.
+
 - Số hoàn hảo nhỏ nhất là $6$: các ước nhỏ hơn 6 là $1, 2, 3$, và $1 + 2 + 3 = 6$.
+
 - Số hoàn hảo tiếp theo là $28$: các ước nhỏ hơn 28 là $1, 2, 4, 7, 14$, và $1 + 2 + 4 + 7 + 14 = 28$.
 
-### 4.3. Số Tự Mãn (Số Armstrong / Narcissistic)
+### 4.3. Số tự mãn (Armstrong)
 Là số có $k$ chữ số, và tổng lũy thừa bậc $k$ của từng chữ số bằng chính nó.
+
 - Ví dụ số 3 chữ số: $153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153$.
+
 - Ta kết hợp thuật toán tách chữ số (Bài 10) và tích lũy thừa (Bài 05) để kiểm tra.
 
 ---
 
-## 5. Bảng Mô Phỏng Đếm Số Chia Hết Cho 3 Trong Đoạn $[4, 12]$ (Dry Run Table)
+## 5. Bảng mô phỏng đếm số chia hết cho 3 trong đoạn $[4, 12]$ (Dry run)
 
 Giả sử $A = 4, B = 12, K = 3$. Số lần lặp $= 12 - 4 + 1 = 9$ lần.
 
@@ -102,11 +109,12 @@ Giả sử $A = 4, B = 12, K = 3$. Số lần lặp $= 12 - 4 + 1 = 9$ lần.
 | **9** | $i = 12$ | $12 \bmod 3 = 0$ $\to$ **ĐÚNG** | **$3$** | Đếm số 12! Tăng $i = 13$ |
 
 $\implies$ Kết quả: `dem = 3` (các số $6, 9, 12$).
+
 - Kiểm tra lại bằng công thức toán: $\lfloor 12 / 3 \rfloor - \lfloor (4 - 1) / 3 \rfloor = 4 - 1 = 3$ số (hoàn toàn chuẩn xác!).
 
 ---
 
-## 6. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 6. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên trừ 1 ở đầu mút $A$ trong công thức toán $\mathcal{O}(1)$**
 > - *Hiện tượng:* Tính `floor(B / K) - floor(A / K)`.
@@ -124,7 +132,7 @@ $\implies$ Kết quả: `dem = 3` (các số $6, 9, 12$).
 
 ---
 
-## 7. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 7. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Từ số 1 đến số 10 có bao nhiêu số nguyên?**
    - A. 9

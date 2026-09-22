@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Bốn mùa trong năm
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là tra tháng `t` vào bốn nhóm: `1, 2, 3` là `XUAN`; `4, 5, 6` là `HA`; `7, 8, 9` là `THU`; `10, 11, 12` là `DONG`.
@@ -38,7 +35,14 @@ Sample 1 với input mẫu: `4`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập t:] và đợi
 > - đặt [t] thành (câu trả lời)
-> - nếu <t in [1, 2, 3]> thì:
-> -   nói [YES]
+> - nếu <t = giá trị> thì:
+> -   nói (XUAN)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <t = giá trị> thì:
+> -     nói (HA)
+> -   nếu không thì:
+> -     nếu <t = giá trị> thì:
+> -       nói (THU)
+> -     nếu không thì:
+> -       nếu <t = giá trị> thì:
+> -         nói (DONG)

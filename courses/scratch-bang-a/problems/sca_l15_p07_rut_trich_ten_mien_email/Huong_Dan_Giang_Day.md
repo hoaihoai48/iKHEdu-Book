@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Rút trích tên miền email
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: phần tên miền là đoạn đứng sau ký tự `@` trong chuỗi `s`.
@@ -25,13 +22,15 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: quên cộng 1 nên lấy dính cả `@`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s[s.index('@'):])
+nói (s[s.index('@'):])
+
 ```
 Với mẫu `hocsinh@ikhedu.vn` in ra `@ikhedu.vn`, đáp án đúng là `ikhedu.vn`. Cách sửa: cộng 1 `s[s.index('@') + 1:]`.
 - Bẫy 2: tách rồi lấy nhầm nửa đầu `s.split('@')[0]`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.split('@')[0])
+nói (s.split('@')[0])
+
 ```
 Với mẫu `hocsinh@ikhedu.vn` in ra `hocsinh`, đáp án đúng là `ikhedu.vn`. Cách sửa: lấy nửa sau `s.split('@')[1]`.
 
@@ -47,9 +46,4 @@ Với mẫu `hocsinh@ikhedu.vn` in ra `hocsinh`, đáp án đúng là `ikhedu.vn
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (giá trị)

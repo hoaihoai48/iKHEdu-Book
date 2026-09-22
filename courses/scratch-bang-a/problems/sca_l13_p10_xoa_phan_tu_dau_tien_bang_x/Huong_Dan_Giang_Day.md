@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Xóa phần tử đầu tiên bằng X
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -34,32 +31,35 @@ Kết quả cuối cùng khớp với đáp án mẫu: `1 5 3 7`.
 
 - Bẫy 1 — xóa hết mọi số bằng `X`:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, x = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 a = [v for v in a if v != x]
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên in ra `1 5 7` (mất cả hai số 3), không khớp đáp án mẫu `1 5 3 7`. Cách sửa: chỉ xóa một phần tử đầu bằng `a.remove(x)`.
 - Bẫy 2 — dùng `pop(x)` nhầm giá trị với vị trí:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, x = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 if x in a:
     a.pop(x)
-    print(*a)
+    nói (*a)
 else:
-    print("KHONG CO")
+    nói ("KHONG CO")
+
 ```
 Với mẫu trên, `a.pop(3)` xóa phần tử ở vị trí 3 (số `3` thứ hai) nên in ra `1 3 5 7` sai. Cách sửa: xóa theo giá trị bằng `a.remove(x)`.
 - Bẫy 3 — xóa mà không kiểm tra trước:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, x = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 a.remove(x)
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên vẫn ra `1 5 3 7`, nhưng khi `X` vắng mặt thì `remove` gây lỗi và không in được `KHONG CO`. Cách sửa: kiểm tra `if x in a` trước khi xóa.
 
@@ -73,12 +73,20 @@ Với mẫu trên vẫn ra `1 5 3 7`, nhưng khi `X` vắng mặt thì `remove` 
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập line:] và đợi
-> - đặt [line] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - đặt [n] thành (int(...))
+> - đặt [x] thành (int(...))
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - nếu <x = a> thì:
+> -   đặt [ket_qua] thành rỗng
+> -   đặt [i] thành 1
+> -   lặp lại (kích thước của [a]) lần:
+> -     đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -     thay đổi [i] một lượng 1
+> -   nói (ket_qua)
+> - nếu không thì:
+> -   nói (KHONG CO)

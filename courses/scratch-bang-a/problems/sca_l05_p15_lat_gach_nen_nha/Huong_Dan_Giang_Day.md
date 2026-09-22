@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Lát nền phòng học
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất lát nền khác đơn vị: đổi dài rộng từ mét sang xen-ti-mét (`l * 100`, `w * 100`), diện tích sàn chia diện tích viên `d * d`.
-- Quy trình trong lời giải: đọc một dòng rồi tách thành `l, w, d`, đặt `s_san = (l * 100) * (w * 100)` và `s_gach = d * d` rồi in `s_san // s_gach`; với mẫu `6 4 50` thì sàn `600 * 400 = 240000`, viên `50 * 50 = 2500`, số gạch `240000 // 2500 = 96`.
+- Quy trình trong lời giải: đọc một dòng rồi tách thành `l, w, d`, đặt `s_san = (l * 100) * (w * 100)` và `s_gach = d * d` rồi in `làm tròn xuống của (s_san / s_gach)`; với mẫu `6 4 50` thì sàn `600 * 400 = 240000`, viên `50 * 50 = 2500`, số gạch `làm tròn xuống của (240000 / 2500) = 96`.
 - Xử lý biên: đề cho phòng vừa khít gạch nên chia hết; `L` và `W` tới 100, `D` từ 10 đến 100.
 
 ---
@@ -18,7 +15,7 @@ Với số mẫu một dòng `6 4 50`, chương trình phải in ra `96`.
 | 1 | Đọc `l, w, d` | `l = 6`, `w = 4`, `d = 50` | đủ ba số |
 | 2 | Tính `s_san` | `600 * 400 = 240000` | diện tích sàn 240000 |
 | 3 | Tính `s_gach` | `50 * 50 = 2500` | diện tích viên 2500 |
-| 4 | Tính `240000 // 2500` | `96` | khớp kết quả mẫu `96` |
+| 4 | Tính `làm tròn xuống của (240000 / 2500)` | `96` | khớp kết quả mẫu `96` |
 
 ---
 
@@ -43,4 +40,6 @@ Với số mẫu một dòng `6 4 50`, chương trình phải in ra `96`.
 > - đặt [w] thành (câu trả lời)
 > - hỏi [Nhập d:] và đợi
 > - đặt [d] thành (câu trả lời)
-> - nói (s_san / s_gach)
+> - đặt [s_san] thành (l * 100 * w * 100)
+> - đặt [s_gach] thành (d * d)
+> - nói (s_san chia nguyên s_gach)

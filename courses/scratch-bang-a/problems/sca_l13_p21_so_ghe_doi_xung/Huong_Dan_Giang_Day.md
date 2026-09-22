@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Số ghế đối xứng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -19,7 +16,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 | Bước | Thao tác | Giá trị |
 |------|----------|---------|
-| 1 | Đọc `s = câu trả lời.strip()` | `s = "121"` |
+| 1 | Đọc `s = câu trả lời` | `s = "121"` |
 | 2 | Lấy `s[::-1]` | `"121"` |
 | 3 | So sánh `s == s[::-1]` | `"121" == "121"` đúng |
 | 4 | In kết quả | màn hình hiện `YES` |
@@ -32,34 +29,37 @@ Kết quả cuối cùng khớp với đáp án mẫu: `YES`.
 
 - Bẫy 1 — đổi số đảo bằng phép tính số học rồi so sánh, dễ sai với số có chữ số 0 ở cuối:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 tam = n
 dao = 0
 while tam > 0:
-    dao = dao * 10 + tam % 10
-    tam = tam // 10
+    dao = dao * 10 + (tam mod 10)
+    tam = làm tròn xuống của (tam / 10)
 if dao == n:
-    print("YES")
+    nói ("YES")
 else:
-    print("NO")
+    nói ("NO")
+
 ```
 Với mẫu `121` vẫn ra `YES`, nhưng cách làm chuỗi `s == s[::-1]` ngắn gọn và ít nhầm hơn. Cách sửa: giữ nguyên số dưới dạng chuỗi rồi so sánh với chuỗi đảo.
 - Bẫy 2 — quên cắt khoảng trắng khi đọc:
 ```text
 s = câu trả lời
 if s == s[::-1]:
-    print("YES")
+    nói ("YES")
 else:
-    print("NO")
+    nói ("NO")
+
 ```
-Nếu dòng nhập mẫu `121` kèm dấu xuống dòng hoặc khoảng trắng thừa thì so sánh lệch và in `NO` sai. Cách sửa: đọc bằng `s = câu trả lời.strip()`.
+Nếu dòng nhập mẫu `121` kèm dấu xuống dòng hoặc khoảng trắng thừa thì so sánh lệch và in `NO` sai. Cách sửa: đọc bằng `s = câu trả lời`.
 - Bẫy 3 — viết hoa thường sai chữ đáp án:
 ```text
-s = câu trả lời.strip()
+s = câu trả lời
 if s == s[::-1]:
-    print("Yes")
+    nói ("Yes")
 else:
-    print("No")
+    nói ("No")
+
 ```
 Với mẫu `121` in ra `Yes`, không khớp đáp án mẫu `YES`. Cách sửa: in đúng chữ in hoa `YES` và `NO`.
 
@@ -73,12 +73,8 @@ Với mẫu `121` in ra `Yes`, không khớp đáp án mẫu `YES`. Cách sửa:
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập s:] và đợi
-> - đặt [s] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - đặt [s] thành (giá trị)
+> - nếu <s = giá trị> thì:
+> -   nói (YES)
+> - nếu không thì:
+> -   nói (NO)

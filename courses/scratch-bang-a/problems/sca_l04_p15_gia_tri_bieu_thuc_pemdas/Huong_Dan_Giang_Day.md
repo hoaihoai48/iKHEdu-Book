@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Giá Trị Biểu Thức PEMDAS
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Thêm ngoặc sai `(a + b) * c ** 2`.**
 
 ```text
-print((a + b) * c ** 2)
+nói ((a + b) * c ** 2)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `2, 3, 4` cho `80` thay vì `50`.
@@ -37,7 +35,8 @@ Cách sửa: viết `a + b * c ** 2`.
 **Bẫy 2: Viết `(a + b * c) ** 2`.**
 
 ```text
-print((a + b * c) ** 2)
+nói ((a + b * c) ** 2)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `2, 3, 4` cho `196` thay vì `50`.
@@ -60,4 +59,4 @@ Cách sửa: chỉ mũ áp vào `c`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nói (a + b * c ** 2)
+> - nói (a + b * c + 2)

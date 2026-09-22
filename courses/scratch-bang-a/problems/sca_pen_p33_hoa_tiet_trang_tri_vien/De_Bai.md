@@ -8,25 +8,26 @@ Trang trí mép thảm trải sàn hoặc khung ảnh bằng chuỗi cung tròn 
 
 Lặp lại N lần cung tròn 180 độ uốn lượn liên tiếp theo chiều ngang.
 
-## Input
+## Kịch bản tương tác (Input Scenario)
 
-Nhập chiều dài đường viền.
+- Nhập chiều dài đường viền.
 
-## Output
+## Kết quả mong đợi (Expected Behavior / Output)
 
-Dải hoa văn viền sóng biển uốn lượn liên tục.
+- Dải hoa văn viền sóng biển uốn lượn liên tục.
 
+## Hình ảnh minh họa kết quả mẫu
+
+![Hình mẫu 1](../../assets/pen_drawings/gen_vien_song_1.png)
+
+![Hình mẫu 2](../../assets/pen_drawings/gen_vien_song_2.png)
 ## Sample 1
 
-### Input
-```text
-Sự kiện: Nhập chiều dài đường viền.
-```
+### Kịch bản chạy trên sân khấu
 
-### Output
-```text
-Kết quả: Dải hoa văn viền sóng biển uốn lượn liên tục.
-```
+- **Thao tác khởi động:** Nhập chiều dài đường viền.
+
+- **Kết quả hình ảnh:** Dải hoa văn viền sóng biển uốn lượn liên tục.
 
 ### Giải thích
 
@@ -35,5 +36,7 @@ Cung uốn lên rồi cung uốn xuống xen kẽ.
 ## Ràng buộc
 
 - Môi trường: Scratch 3.0 với phần mở rộng Bút vẽ (Pen).
+
 - Tọa độ khởi tạo an toàn trong khung hình sân khấu (x: -240 đến 240, y: -180 đến 180).
+
 - Nguồn bài thi: Trích xuất từ tài liệu chuẩn `Câu 27 - CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx`.

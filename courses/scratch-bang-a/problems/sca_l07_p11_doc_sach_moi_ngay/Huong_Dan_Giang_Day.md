@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đọc sách mỗi ngày
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: ngày thứ `ngay` đọc được đúng `ngay` trang, tổng sau k ngày là `1 + 2 + ... + k`. Tìm k nhỏ nhất sao cho tổng đạt hoặc vượt N.
@@ -26,23 +23,25 @@ In ra `4`, khớp với kết quả mẫu.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — quên `break` sau khi in:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 tong = 0
 for ngay in range(1, n + 2):
     tong = tong + ngay
     if tong >= n:
-        print(ngay)
+        nói (ngay)
+
 ```
 Với mẫu `10` sẽ in thêm các ngày 5, 6, ... vì vòng lặp không dừng. Cách sửa: thêm `break` ngay sau `nói (ngay)`.
 - Bẫy 2 — so sánh bằng thay vì lớn hơn hoặc bằng:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 tong = 0
 for ngay in range(1, n + 2):
     tong = tong + ngay
     if tong == n:
-        print(ngay)
+        nói (ngay)
         break
+
 ```
 Với những N không phải tổng của dãy liên tiếp (ví dụ N = 11: tổng nhảy từ 10 lên 15) thì không bao giờ bằng nên chẳng in gì. Cách sửa: điều kiện đúng là `tong >= n`.
 
@@ -59,8 +58,10 @@ Với những N không phải tổng của dãy liên tiếp (ví dụ N = 11: t
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
 > - đặt [tong] thành (0)
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> - đặt [ngay] thành (1)
+> - lặp lại (n + 2 - 1) lần:
+> -   đặt [tong] thành (tong + ngay)
+> -   nếu <tong >= n> thì:
+> -     nói (ngay)
+> -     dừng kịch bản này
+> -   thay đổi [ngay] một lượng 1

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chèn số vào vị trí K
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,32 +30,35 @@ Kết quả cuối cùng khớp với đáp án mẫu: `10 99 20 30 40`.
 
 - Bẫy 1 — ghi đè thay vì chèn:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-line = câu trả lời.split()
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+line = câu trả lời
 x, k = int(line[0]), int(line[1])
 a[k] = x
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên in ra `10 99 30 40` (số `20` bị mất, dãy còn 4 số), không khớp đáp án mẫu 5 số `10 99 20 30 40`. Cách sửa: dùng `a.insert(k, x)`.
 - Bẫy 2 — đọc ngược `X` và `K`:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-line = câu trả lời.split()
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+line = câu trả lời
 k, x = int(line[0]), int(line[1])
 a.insert(k, x)
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên, `k` nhận nhầm `99` nên chèn số `1` xuống cuối, in ra `10 20 30 40 1` sai. Cách sửa: giữ đúng thứ tự `x, k = int(line[0]), int(line[1])`.
 - Bẫy 3 — chèn `X` vào cuối mà không dùng vị trí `K`:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-line = câu trả lời.split()
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+line = câu trả lời
 x, k = int(line[0]), int(line[1])
 a.append(x)
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên in ra `10 20 30 40 99` sai. Cách sửa: chèn đúng chỗ bằng `a.insert(k, x)`.
 
@@ -74,10 +74,17 @@ Với mẫu trên in ra `10 20 30 40 99` sai. Cách sửa: chèn đúng chỗ b�
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [x] thành (int(...))
+> - đặt [k] thành (int(...))
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [a]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ba cạnh tam giác hợp lệ
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là quy tắc tam giác: tổng hai cạnh bất kỳ phải lớn hơn cạnh còn lại, cả ba cặp đều phải đúng.
@@ -43,7 +40,7 @@ Sample 1 với input mẫu: `3` rồi `4` rồi `5`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nếu <a + b > c and a + c > b and b + c > a> thì:
-> -   nói [YES]
+> - nếu <điều kiện> thì:
+> -   nói (HOP LE)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (KHONG HOP LE)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Nhập số đến khi gặp số 0
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: không biết trước có bao nhiêu số, cứ đọc tới khi gặp số 0 thì dừng. Số 0 chỉ là lính gác báo dừng, không được đếm.
@@ -28,22 +25,24 @@ In ra `3` vì có 3 số 5, 12, 8 trước số 0, khớp với kết quả mẫ
 ```text
 count = 0
 while True:
-    x = int(câu trả lời)
+    x = câu trả lời
     count = count + 1
     if x == 0:
         break
-print(count)
+nói (count)
+
 ```
 Với mẫu `5 / 12 / 8 / 0` sẽ in ra `4` thay vì `3`. Cách sửa: kiểm tra `if x == 0: break` trước rồi mới tăng `count`.
 - Bẫy 2 — dừng khi gặp số âm:
 ```text
 count = 0
 while True:
-    x = int(câu trả lời)
+    x = câu trả lời
     if x <= 0:
         break
     count = count + 1
-print(count)
+nói (count)
+
 ```
 Với dãy có số âm hợp lệ thì chương trình dừng sớm và đếm thiếu. Cách sửa: chỉ dừng khi `x == 0`.
 
@@ -57,10 +56,11 @@ Với dãy có số âm hợp lệ thì chương trình dừng sớm và đếm 
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập x:] và đợi
-> - đặt [x] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [count] thành (0)
+> - lặp lại cho đến khi không còn <điều kiện>:
+> -   hỏi [Nhập x:] và đợi
+> -   đặt [x] thành (câu trả lời)
+> -   nếu <x = 0> thì:
+> -     dừng kịch bản này
+> -   đặt [count] thành (count + 1)
+> - nói (count)

@@ -15,13 +15,14 @@ Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung c�
 
 ---
 
-## 2. Kỹ Thuật Lồng Khối Thay Thế Cho Dấu Ngoặc Đơn `()`
+## 2. Kỹ thuật lồng khối thay thế cho dấu ngoặc đơn `()`
 
 Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ định thứ tự ưu tiên tính toán (Ví dụ: $(Dài + Rộng) 	imes 2$).
 
 **Trong Scratch không có phím ngoặc đơn!** Thay vào đó, Scratch sử dụng quy tắc **"Khối Lồng Khối"**:
 
 - Khối nào được thả **vào bên trong** sẽ được máy tính tính toán trước.
+
 - Kết quả của khối con bên trong sẽ trở thành giá trị đầu vào cho khối cha bên ngoài.
 
 ![Biểu thức chu vi diện tích lồng nhau](assets/rendered_blocks/l04_nested_expression_vi.png)
@@ -38,7 +39,7 @@ Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ đ�
 
 ---
 
-## 3. Bảng Tra Cứu Các Biểu Thức Hình Học Kinh Điển
+## 3. Bảng tra cứu các biểu thức hình học cơ bản
 
 | Bài toán hình học | Công thức toán học | Biểu thức khối lệnh Scratch chuẩn |
 |---|---|---|
@@ -51,7 +52,7 @@ Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ đ�
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Tính Biểu Thức Phức Tạp (Dry Run Table)
+## 4. Bảng mô phỏng tính biểu thức (Dry run)
 
 Xét bài toán tính diện tích hình thang với đáy lớn $a = 8$, đáy nhỏ $b = 4$, chiều cao $h = 5$:
 Công thức: $S = \dfrac{(a + b) 	imes h}{2}$.
@@ -66,7 +67,7 @@ $\implies$ Kết quả cuối cùng được gán vào biến `dien_tich` là **
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Thả nhầm vị trí khối con làm sai thứ tự ưu tiên**
 > - *Sai lầm:* Thả `chieu_dai` vào trước, rồi thả `(chieu_rong) * (2)` phía sau.
@@ -83,7 +84,7 @@ $\implies$ Kết quả cuối cùng được gán vào biến `dien_tich` là **
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào sau đây thực hiện phép tính $15 	imes 4$?**
    - A. `(15) + (4)`

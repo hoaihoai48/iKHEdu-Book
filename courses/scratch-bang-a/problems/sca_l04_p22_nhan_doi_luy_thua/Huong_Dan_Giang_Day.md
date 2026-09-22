@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Nhân Đôi Lũy Thừa
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -26,7 +23,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Viết `n ** 2` đảo cơ số và số mũ.**
 
 ```text
-print(n ** 2)
+nói (n ** 2)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `n = 4` cho `16` trùng đáp số nhưng với `n = 5` cho `25` thay vì `32`.
@@ -36,7 +34,8 @@ Cách sửa: viết `2 ** n`.
 **Bẫy 2: Viết `2 ^ n`.**
 
 ```text
-print(2 ^ n)
+nói (2 ^ n)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `n = 4` cho `6` thay vì `16`.
@@ -55,4 +54,4 @@ Cách sửa: toán tử mũ là `**`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (2 ** n)
+> - nói (2 + n)

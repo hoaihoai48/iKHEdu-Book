@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Diện tích hình thang
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất diện tích hình thang: trung bình hai đáy nhân chiều cao, tức `((a + b) * h) / 2`, in đúng 1 chữ số thập phân.
@@ -42,4 +39,4 @@ Với số mẫu một dòng `12 8 5`, chương trình phải in ra `50.0`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập h:] và đợi
 > - đặt [h] thành (câu trả lời)
-> - nói (f"{((a + b)
+> - nói (giá trị)

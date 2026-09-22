@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Số tự mãn (Narcissistic number K chữ số)
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: đếm số chữ số `K` của `N = 1634` rồi kiểm tra tổng lũy thừa bậc `K` các chữ số có bằng `N` không.
@@ -43,4 +40,18 @@ Kết quả in ra: `YES`, khớp với kết quả mẫu.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói ("YES")
+> - đặt [temp] thành (n)
+> - đặt [k] thành (0)
+> - lặp lại cho đến khi <temp = 0>:
+> -   đặt [k] thành (k + 1)
+> -   đặt [temp] thành (temp chia nguyên 10)
+> - đặt [tong] thành (0)
+> - đặt [temp] thành (n)
+> - lặp lại cho đến khi <temp = 0>:
+> -   đặt [d] thành (temp mod 10)
+> -   đặt [tong] thành (tong + d + k)
+> -   đặt [temp] thành (temp chia nguyên 10)
+> - nếu <tong = n> thì:
+> -   nói (YES)
+> - nếu không thì:
+> -   nói (NO)

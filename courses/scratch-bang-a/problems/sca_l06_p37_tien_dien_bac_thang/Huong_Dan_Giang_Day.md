@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tiền điện bậc thang
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là giá hai bậc: `100` số đầu mỗi số `2000` đồng, từ số thứ `101` trở đi mỗi số `3500` đồng.
@@ -40,6 +37,6 @@ Sample 1 với input mẫu: `120`.
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
 > - nếu <n <= 100> thì:
-> -   nói [YES]
+> -   nói (n * 2000)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (100 * 2000 + n - 100 * 3500)

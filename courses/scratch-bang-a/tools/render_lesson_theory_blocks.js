@@ -76,7 +76,52 @@ lặp lại (4) lần {
 ve_hinh_vuong :: custom
 `,
 
+  // === Bài 01: Mảnh ghép lá cờ & Hoa văn ===
+  "l01_la_co_vi": `
+định nghĩa ve_la_co :: custom hat
+di chuyển (100) bước :: motion
+lặp lại (4) lần {
+  di chuyển (40) bước :: motion
+  xoay phải @turnRight (90) độ :: motion
+} :: control
+di chuyển (-100) bước :: motion
+`,
+  "l01_hoa_van_8_la_co_vi": `
+khi bấm vào @greenFlag :: events hat
+xóa tất cả :: pen
+đi tới điểm x: (0) y: (0) :: motion
+đặt hướng bằng (90) :: motion
+đặt bút :: pen
+lặp lại (8) lần {
+  ve_la_co :: custom
+  xoay phải @turnRight (45) độ :: motion
+  thay đổi màu bút vẽ một lượng (15) :: pen
+} :: control
+`,
+
   // === Bài 02: Hình tròn & Cung tròn ===
+  "l02_circle_tam_vi": `
+định nghĩa duong_tron_1 (R :: custom-arg) :: custom hat
+ngừng vẽ :: pen
+di chuyển (R :: custom-arg) bước :: motion
+xoay trái @turnLeft (90) độ :: motion
+bắt đầu vẽ :: pen
+lặp lại (360) lần {
+  di chuyển (((2 * (R :: custom-arg) :: operators) * (3.14) :: operators) / (360) :: operators) bước :: motion
+  xoay trái @turnLeft (1) độ :: motion
+} :: control
+ngừng vẽ :: pen
+xoay trái @turnLeft (90) độ :: motion
+di chuyển ((-1) * (R :: custom-arg) :: operators) bước :: motion
+bắt đầu vẽ :: pen
+`,
+  "l02_circle_mep_vi": `
+định nghĩa duong_tron_2 (R :: custom-arg) :: custom hat
+lặp lại (360) lần {
+  di chuyển (((2 * (R :: custom-arg) :: operators) * (3.14) :: operators) / (360) :: operators) bước :: motion
+  xoay phải @turnRight (1) độ :: motion
+} :: control
+`,
   "l02_circle_360_vi": `
 lặp lại (360) lần {
   di chuyển (1) bước :: motion
@@ -84,22 +129,23 @@ lặp lại (360) lần {
 } :: control
 `,
   "l02_cung_tron_vi": `
-định nghĩa ve_cung_tron (goc) (buoc) :: custom hat
-lặp lại (goc) lần {
-  di chuyển (buoc) bước :: motion
+định nghĩa ve_cung_tron (goc :: custom-arg) (buoc :: custom-arg) :: custom hat
+lặp lại (goc :: custom-arg) lần {
+  di chuyển (buoc :: custom-arg) bước :: motion
   xoay phải @turnRight (1) độ :: motion
 } :: control
 `,
   "l02_canh_hoa_vi": `
-định nghĩa ve_canh_hoa (buoc) :: custom hat
+định nghĩa ve_canh_hoa (buoc :: custom-arg) :: custom hat
 lặp lại (2) lần {
-  ve_cung_tron (90) (buoc) :: custom
+  ve_cung_tron (90) (buoc :: custom-arg) :: custom
   xoay phải @turnRight (90) độ :: motion
 } :: control
 `,
   "l02_bong_hoa_8_canh_vi": `
 lặp lại (8) lần {
   ve_canh_hoa (1) :: custom
+  thay đổi màu bút vẽ một lượng (12.5) :: pen
   xoay phải @turnRight (45) độ :: motion
 } :: control
 `,

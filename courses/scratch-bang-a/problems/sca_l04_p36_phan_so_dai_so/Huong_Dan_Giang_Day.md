@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Phân Số Đại Số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -28,7 +25,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Dùng chia nguyên `//`.**
 
 ```text
-print(f"{(a + b) // (c + d):.2f}")
+nói (f"{(a + b) // (c + d):.2f}")
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `7 8 2 3` cho `3` rồi định dạng thành `3` (lỗi kiểu) hoặc mất phần lẻ với số liệu khác như `1 1 1 3` cho `0.00` thay vì `0.50`.
@@ -38,7 +36,8 @@ Cách sửa: dùng `/` chia thực.
 **Bẫy 2: Quên làm tròn, chỉ `nói ((a + b) / (c + d))`.**
 
 ```text
-print((a + b) / (c + d))
+nói ((a + b) / (c + d))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `7 8 2 3` in ra `3.0` thay vì `3.00`, thiếu một chữ số `0`.
@@ -48,7 +47,8 @@ Cách sửa: dùng `f"{...:.2f}"`.
 **Bẫy 3: Bỏ ngoặc: `a + b / c + d`.**
 
 ```text
-print(f"{a + b / c + d:.2f}")
+nói (f"{a + b / c + d:.2f}")
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `7 8 2 3` cho `12.00` thay vì `3.00`.
@@ -73,4 +73,4 @@ Cách sửa: giữ ngoặc `(a + b) / (c + d)`.
 > - đặt [c] thành (câu trả lời)
 > - hỏi [Nhập d:] và đợi
 > - đặt [d] thành (câu trả lời)
-> - nói ((a + b)
+> - nói (giá trị)

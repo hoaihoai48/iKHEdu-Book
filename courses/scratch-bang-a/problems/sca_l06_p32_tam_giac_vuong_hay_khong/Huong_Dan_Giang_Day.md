@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tam giác vuông hay không?
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là kiểm tra đẳng thức bình phương ba cạnh: `a * a + b * b == c * c` hoặc `a * a + c * c == b * b` hoặc `b * b + c * c == a * a`, đúng một vế là vuông.
@@ -41,13 +38,7 @@ Sample 1 với input mẫu: `3` rồi `4` rồi `5`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - hỏi [Nhập a:] và đợi
-> - đặt [a] thành (câu trả lời)
-> - hỏi [Nhập b:] và đợi
-> - đặt [b] thành (câu trả lời)
-> - hỏi [Nhập c:] và đợi
-> - đặt [c] thành (câu trả lời)
-> - nếu <len(dong1) >= 3> thì:
-> -   nói [YES]
+> - nếu <điều kiện> thì:
+> -   nói (VUONG)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (KHONG VUONG)

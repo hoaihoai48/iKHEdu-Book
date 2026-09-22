@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Đồng Hồ 24 Giờ
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- Bản chất là đồng hồ quay vòng `24` giờ: với `h = 20`, `k = 10` thì `(20 + 10) % 24 = 30 % 24 = 6` giờ sáng.
+- Bản chất là đồng hồ quay vòng `24` giờ: với `h = 20`, `k = 10` thì `(20 + 10) % 24 = (30 mod 24) = 6` giờ sáng.
 - Quy trình trong lời giải: đọc một dòng `h, k` rồi in `(h + k) % 24`.
 - Xử lý biên: `h = 0, k = 0` cho `0`; `h = 23, k = 1` cho `0`; `k = 10^9` vẫn đúng nhờ phép dư.
 
@@ -17,7 +14,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 |------|-----------|---------|
 | 1 | Đọc một dòng, tách `h` và `k` | `h = 20`, `k = 10` |
 | 2 | Tính `h + k` | `30` |
-| 3 | Tính `30 % 24` | `6` |
+| 3 | Tính `(30 mod 24)` | `6` |
 | 4 | In kết quả | `6` |
 
 ---
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Quên `% 24`, chỉ `h + k`.**
 
 ```text
-print(h + k)
+nói (h + k)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `20 10` in ra `30` thay vì `6`, vượt khung `0` đến `23`.
@@ -37,7 +35,8 @@ Cách sửa: lấy `(h + k) % 24`.
 **Bẫy 2: Nhầm vòng `12` giờ (`% 12`).**
 
 ```text
-print((h + k) % 12)
+nói ((h + k) % 12)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `20 10` cho `6` trùng đáp số nhưng với `12 12` cho `0` thay vì `0` — ví dụ `5 5` cho `10` đúng nhưng `13 0` cho `1` thay vì `13`.
@@ -58,4 +57,4 @@ Cách sửa: đồng hồ này vòng `24`.
 > - đặt [h] thành (câu trả lời)
 > - hỏi [Nhập k:] và đợi
 > - đặt [k] thành (câu trả lời)
-> - nói ((h + k)
+> - nói (h + k mod 24)

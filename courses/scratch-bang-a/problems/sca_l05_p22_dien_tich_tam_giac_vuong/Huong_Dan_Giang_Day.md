@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Diện tích tam giác vuông
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất diện tích tam giác vuông: nửa tích hai cạnh góc vuông `(a * b) / 2`, bài này in đúng 1 chữ số thập phân.
@@ -40,4 +37,4 @@ Với số mẫu một dòng `5 7`, chương trình phải in ra `17.5`.
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói ((a * b)
+> - nói (giá trị)

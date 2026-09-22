@@ -1,15 +1,12 @@
-# Hướng Dẫn Giảng Dạy: Số may mắn chứa số 7
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
 - Bản chất của bài này là lướt từng chữ số của `N` từ phải sang trái, chỉ cần thấy một chữ số 7 thì kết luận may mắn.
 - Quy trình từng bước với đúng tên biến trong lời giải:
-  - Bước 1: `n = int(câu trả lời)` đọc số. Với mẫu, `n = 372`.
+  - Bước 1: `n = câu trả lời` đọc số. Với mẫu, `n = 372`.
   - Bước 2: cắm cờ `tim_thay = False` (chưa thấy số 7).
-  - Bước 3: lặp `while n > 0`, mỗi lần kiểm tra `if n % 10 == 7` thì dựng cờ `tim_thay = True`; rồi gọt `n = n // 10`.
+  - Bước 3: lặp `while n > 0`, mỗi lần kiểm tra `if (n mod 10) == 7` thì dựng cờ `tim_thay = True`; rồi gọt `n = làm tròn xuống của (n / 10)`.
   - Bước 4: nếu `tim_thay` thì in `YES`, ngược lại in `NO`.
 - Giá trị biên cụ thể: với mẫu `372` có chữ số 7 ở giữa nên in `YES`; số như 2024 không có chữ số 7 nên in `NO`.
 
@@ -17,7 +14,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 372)
 
-| Lần lặp | `n` trước | `n % 10` | Có bằng 7 không | `tim_thay` sau | `n` sau |
+| Lần lặp | `n` trước | `(n mod 10)` | Có bằng 7 không | `tim_thay` sau | `n` sau |
 |---|---|---|---|---|---|
 | Khởi đầu | 372 | — | — | False | 372 |
 | 1 | 372 | 2 | không | False | 37 |
@@ -30,38 +27,41 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 
-- Bẫy 1: so sánh cả số `n == 7` thay vì từng chữ số. Với mẫu `372 != 7` nên in `NO`, là kết quả sai. Cách sửa: kiểm tra `n % 10 == 7` trong vòng lặp.
+- Bẫy 1: so sánh cả số `n == 7` thay vì từng chữ số. Với mẫu `372 != 7` nên in `NO`, là kết quả sai. Cách sửa: kiểm tra `(n mod 10) == 7` trong vòng lặp.
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 if n == 7:
-    print("YES")
+    nói ("YES")
 else:
-    print("NO")
+    nói ("NO")
+
 ```
-- Bẫy 2: quên gọt `n` trong vòng lặp, `n` mãi bằng 372 nên lặp vô tận. Cách sửa: cuối mỗi lần lặp phải `n = n // 10`.
+- Bẫy 2: quên gọt `n` trong vòng lặp, `n` mãi bằng 372 nên lặp vô tận. Cách sửa: cuối mỗi lần lặp phải `n = làm tròn xuống của (n / 10)`.
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 tim_thay = False
 while n > 0:
-    if n % 10 == 7:
+    if (n mod 10) == 7:
         tim_thay = True
 if tim_thay:
-    print("YES")
+    nói ("YES")
 else:
-    print("NO")
+    nói ("NO")
+
 ```
 - Bẫy 3: in chữ thường `yes`/`no`. Với mẫu sẽ in `yes`, là kết quả sai vì đề bài yêu cầu in hoa `YES`. Cách sửa: in đúng `YES` và `NO`.
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 tim_thay = False
 while n > 0:
-    if n % 10 == 7:
+    if (n mod 10) == 7:
         tim_thay = True
-    n = n // 10
+    n = làm tròn xuống của (n / 10)
 if tim_thay:
-    print("yes")
+    nói ("yes")
 else:
-    print("no")
+    nói ("no")
+
 ```
 
 ---
@@ -76,4 +76,12 @@ else:
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói ("YES")
+> - đặt [tim_thay] thành (False)
+> - lặp lại cho đến khi <n = 0>:
+> -   nếu <n mod 10 = 7> thì:
+> -     đặt [tim_thay] thành (True)
+> -   đặt [n] thành (n chia nguyên 10)
+> - nếu <điều kiện> thì:
+> -   nói (YES)
+> - nếu không thì:
+> -   nói (NO)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Cỗ máy thời gian 3 thế hệ
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là tính tuổi ba thế hệ dây chuyền: con `a = 10`, bố hơn con `b = 30` nên bố `10 + 30 = 40`, ông hơn bố `c = 25` nên ông `40 + 25 = 65`, tổng cả ba là `10 + 40 + 65 = 115`. Thầy cô vẽ cây gia đình ba tầng để các con dễ thấy.
@@ -45,4 +42,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
+> - đặt [tuoi_bo] thành (a + b)
+> - đặt [tuoi_ong] thành (tuoi_bo + c)
 > - nói (tuoi_bo)
+> - nói (tuoi_ong)
+> - nói (a + tuoi_bo + tuoi_ong)

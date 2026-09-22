@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Lọc bỏ các số trùng lặp
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,26 +30,29 @@ Kết quả cuối cùng khớp với đáp án mẫu: `1 2 3 4 5 9`.
 
 - Bẫy 1 — gom trùng mà quên xếp lại:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 unique = list(set(a))
-print(*unique)
+nói (*unique)
+
 ```
 Với mẫu trên thứ tự các số còn lại lộn xộn (ví dụ `1 2 3 4 5 9` theo thứ tự ngẫu nhiên của tập hợp), không đảm bảo tăng dần như đáp án mẫu. Cách sửa: bọc thêm `sorted`, tức `sorted(list(set(a)))`.
 - Bẫy 2 — giữ nguyên thứ tự xuất hiện thay vì xếp tăng dần:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 unique = list(dict.fromkeys(a))
-print(*unique)
+nói (*unique)
+
 ```
 Với mẫu trên in ra `3 1 4 5 9 2` sai. Cách sửa: xếp tăng dần bằng `sorted`.
 - Bẫy 3 — xếp mà không gom trùng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 unique = sorted(a)
-print(*unique)
+nói (*unique)
+
 ```
 Với mẫu trên in ra `1 1 2 3 4 5 9` (số `1` còn hai lần), không khớp đáp án mẫu. Cách sửa: gom trùng bằng `set` trước khi xếp.
 
@@ -68,10 +68,16 @@ Với mẫu trên in ra `1 1 2 3 4 5 9` (số `1` còn hai lần), không khớp
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [unique] thành (sorted(...))
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [unique]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

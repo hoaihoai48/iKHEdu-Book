@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: CÁNH HOA MẢNH GHÉP CUNG TRÒN 90 ĐỘ
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p25_canh_hoa_cung_tron_90` | Nguồn tham chiếu: `Câu 16`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

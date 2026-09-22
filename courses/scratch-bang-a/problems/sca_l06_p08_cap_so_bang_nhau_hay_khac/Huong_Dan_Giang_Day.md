@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Cặp số bằng nhau hay khác?
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là so sánh hai số `a, b`: `a > b` in `a LON HON b`, `a < b` in `a NHO HON b`, bằng nhau in `HAI SO BANG NHAU`.
@@ -36,15 +33,10 @@ Sample 1 với input mẫu: `15 28`.
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập a:] và đợi
-> - đặt [a] thành (câu trả lời)
-> - hỏi [Nhập b:] và đợi
-> - đặt [b] thành (câu trả lời)
-> - hỏi [Nhập a:] và đợi
-> - đặt [a] thành (câu trả lời)
-> - hỏi [Nhập b:] và đợi
-> - đặt [b] thành (câu trả lời)
-> - nếu <len(line) = 2> thì:
-> -   nói [YES]
+> - nếu <a > b> thì:
+> -   nói (a LON HON b)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <a < b> thì:
+> -     nói (a NHO HON b)
+> -   nếu không thì:
+> -     nói (HAI SO BANG NHAU)

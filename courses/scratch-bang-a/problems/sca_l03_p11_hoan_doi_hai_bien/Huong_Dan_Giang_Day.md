@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Hoán đổi vị trí hai biến
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là hai bạn An và Bình đổi thẻ cho nhau: thẻ `A = 10` sang tay bạn kia và thẻ `B = 99` sang tay bạn này. Thầy cô ví lệnh `a, b = b, a` như hai bàn tay bắt chéo nhau đổi thẻ cùng một lúc.
@@ -40,4 +37,6 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói (kết hợp a và " " và b)
+> - đặt [a] thành (b)
+> - đặt [b] thành (a)
+> - nói (kết hợp a và ' ' và b)

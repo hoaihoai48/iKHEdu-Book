@@ -1,12 +1,9 @@
-# Hướng Dẫn Giảng Dạy: Số Kẹo Còn Thừa
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- Bản chất là phần dư không chia hết: với `a = 100`, `b = 8` thì `100 % 8 = 4` vì `100 = 12 * 8 + 4`.
-- Quy trình trong lời giải: đọc `a` dòng 1, đọc `b` dòng 2, rồi in `a % b`.
+- Bản chất là phần dư không chia hết: với `a = 100`, `b = 8` thì `(100 mod 8) = 4` vì `100 = 12 * 8 + 4`.
+- Quy trình trong lời giải: đọc `a` dòng 1, đọc `b` dòng 2, rồi in `(a mod b)`.
 - Xử lý biên: `a = 8, b = 100` cho `8`; `a` chia hết cho `b` (ví dụ `16` và `8`) cho `0`.
 
 ---
@@ -17,28 +14,30 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 |------|-----------|---------|
 | 1 | Đọc dòng 1, biến `a` nhận giá trị | `a = 100` |
 | 2 | Đọc dòng 2, biến `b` nhận giá trị | `b = 8` |
-| 3 | Tính `a % b` | `100 % 8 = 4` |
+| 3 | Tính `(a mod b)` | `(100 mod 8) = 4` |
 | 4 | In kết quả | `4` |
 
 ---
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 
-**Bẫy 1: In thương `a // b` thay vì dư.**
+**Bẫy 1: In thương `làm tròn xuống của (a / b)` thay vì dư.**
 
 ```text
-print(a // b)
+nói (làm tròn xuống của (a / b))
+
 ```
 
 
 Với số liệu mẫu trên, đoạn này cho `100` và `8` cho `12` thay vì `4`.
 
-Cách sửa: dùng `a % b`.
+Cách sửa: dùng `(a mod b)`.
 
 **Bẫy 2: Đọc hai số một dòng bằng `split()`.**
 
 ```text
-a, b = map(int, hỏi và đợi.split())
+a, b = các khối hỏi và đợi cho từng biến
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho số liệu mẫu mỗi số một dòng nên nhận thiếu `b`.
@@ -59,4 +58,4 @@ Cách sửa: đọc hai lần `hỏi và đợi` riêng.
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói (a  chia lấy dư  b)
+> - nói (a mod b)

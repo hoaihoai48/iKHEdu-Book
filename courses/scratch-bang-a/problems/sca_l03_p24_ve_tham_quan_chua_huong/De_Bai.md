@@ -35,6 +35,9 @@ In ra một số nguyên duy nhất là tổng số tiền cần chuẩn bị.
 ### Giải thích
 
 - Số trẻ em: $4$, số người lớn: $10 - 4 = 6$ người.
+
 - Tiền thuyền: $6 \times 20 + 4 \times 10 = 120 + 40 = 160$.
+
 - Tiền cáp treo: $6 \times 50 + 4 \times 30 = 300 + 120 = 420$.
+
 - Tổng tiền: $160 + 420 = 580$ nghìn đồng.

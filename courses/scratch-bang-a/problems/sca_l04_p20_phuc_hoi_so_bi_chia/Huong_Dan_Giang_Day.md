@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Phục Hồi Số Bị Chia
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Viết `b * (q + r)` thêm ngoặc sai.**
 
 ```text
-print(b * (q + r))
+nói (b * (q + r))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `6 8 3` cho `66` thay vì `51`.
@@ -37,7 +35,8 @@ Cách sửa: viết `b * q + r`.
 **Bẫy 2: Viết `b + q * r` nhầm vai trò.**
 
 ```text
-print(b + q * r)
+nói (b + q * r)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `6 8 3` cho `30` thay vì `51`.

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Hồ cá sấu và đảo nhỏ
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất diện tích còn lại: diện tích hồ `a * a` trừ diện tích đảo `b * c`.
@@ -25,7 +22,7 @@ Với số mẫu ba dòng `10`, `3`, `4`, chương trình phải in ra `88`.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — cộng thay vì trừ: viết `nói (a * a + b * c)` thì với mẫu ra `112` thay vì `88`; cách sửa là lấy hồ trừ đảo.
 - Bẫy 2 — nhầm đảo thành hình vuông: viết `nói (a * a - b * b)` thì với mẫu ra `91` thay vì `88`; cách sửa là đảo `b * c`.
-- Bẫy 3 — đọc ba số một dòng: viết `a, b, c = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
+- Bẫy 3 — đọc ba số một dòng: viết `a, b, c = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
 
 ---
 
@@ -43,4 +40,4 @@ Với số mẫu ba dòng `10`, `3`, `4`, chương trình phải in ra `88`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nói (a * a + b * c)
+> - nói (a * a - b * c)

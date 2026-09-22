@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính tiền mua sơn quét tường
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất tiền sơn: diện tích tường `a * h` trừ cửa sổ `x * y`, rồi nhân đơn giá `g` một mét vuông.
@@ -47,4 +44,5 @@ Với số mẫu một dòng `6 3 2 1 50000`, chương trình phải in ra `8000
 > - đặt [y] thành (câu trả lời)
 > - hỏi [Nhập g:] và đợi
 > - đặt [g] thành (câu trả lời)
-> - nói ((a * h)
+> - đặt [s_son] thành (a * h - x * y)
+> - nói (s_son * g)

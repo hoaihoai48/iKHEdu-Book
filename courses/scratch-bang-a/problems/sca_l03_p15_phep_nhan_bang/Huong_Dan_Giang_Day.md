@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: In bảng phép nhân cơ bản
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là trình bày phép nhân theo đúng khung `A x B = C`: với mẫu `A = 7` và `B = 9` thì `C = 63`, in ra `7 x 9 = 63`. Thầy cô nhắc chữ `x` ở đây là chữ cái, không phải dấu nhân.
@@ -39,4 +36,4 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói (f"{a} x {b} = {a * b}")
+> - nói (giá trị)

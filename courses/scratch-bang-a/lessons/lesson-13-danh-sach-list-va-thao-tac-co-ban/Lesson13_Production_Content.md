@@ -1,40 +1,42 @@
 # Bài 13: Danh sách và thao tác cơ bản
 
-## 1. Bản Chất Của Danh Sách (List) — Cấu Trúc Dữ Liệu Nền Tảng
+## 1. Bản chất của danh sách (List) và cấu trúc dữ liệu
 
 Cho đến bài học trước, mỗi biến số trong Scratch chỉ lưu trữ được **đúng 1 giá trị duy nhất** tại một thời điểm (như một chiếc hộp nhỏ chỉ đựng vừa một quả bóng). Nếu muốn lưu điểm kiểm tra của 40 bạn học sinh trong lớp, chẳng lẽ ta phải tạo 40 biến số khác nhau: `diem1`, `diem2`, ..., `diem40`?
 
 Điều đó là bất khả thi và cồng kềnh. Khoa học máy tính giải quyết vấn đề này bằng **Danh sách (List)**:
 
 - **Danh sách** giống như một dãy tủ có nhiều ngăn được đánh số thứ tự từ $1, 2, 3, \dots, N$.
+
 - Mỗi ngăn tủ gọi là một **phần tử (Element)**, chứa một dữ liệu riêng biệt.
+
 - Chỉ số của ngăn tủ gọi là **vị trí / chỉ số (Index)**.
 
 ---
 
-## 2. Bảng Tra Cứu Các Khối Lệnh Danh Sách Trong Scratch 3.0
+## 2. Bảng tra cứu các khối lệnh danh sách trong Scratch 3.0
 
 Trong nhóm **Các biến số (Variables)**, bấm nút **Tạo một danh sách** để xuất hiện nhóm khối lệnh màu cam đậm:
 
 ![Bảng khối lệnh danh sách Scratch Tiếng Việt](assets/rendered_blocks/l13_list_operations_vi.png)
 
-| Khối lệnh Scratch 3.0 Tiếng Việt | Thao tác | Ý nghĩa sư phạm & Chức năng |
-|---|---|---|
-| `thêm (X) vào [Dãy số v]` | Thêm vào cuối | Chèn thêm giá trị $X$ vào cuối cùng của danh sách |
-| `xóa (1) của [Dãy số v]` | Xóa phần tử | Xóa phần tử tại vị trí chỉ định, các phần tử sau dồn lên |
-| `xóa tất cả của [Dãy số v]` | Làm sạch danh sách | Xóa sạch toàn bộ danh sách (về 0 phần tử) |
-| `chèn (X) vào (1) của [Dãy số v]` | Chèn vào vị trí | Nhét $X$ vào vị trí cụ thể, đẩy các phần tử khác lùi lại |
-| `thay thế phần tử (i) của [Dãy số v] bằng (X)` | Thay thế giá trị | Ghi đè giá trị mới vào ô thứ $i$ |
-| `phần tử (i) của [Dãy số v]` | Đọc giá trị ô | Khối tròn: Đọc giá trị tại ngăn thứ $i$ |
-| `vị trí của (X) trong [Dãy số v]` | Tìm vị trí | Tìm xem giá trị $X$ nằm ở ngăn số mấy |
-| `kích thước của [Dãy số v]` | Đếm số phần tử | Khối tròn: Đếm tổng số lượng phần tử hiện có |
-| `[Dãy số v] chứa (X) ?` | Kiểm tra tồn tại | Khối lục giác điều kiện: Kiểm tra xem $X$ có tồn tại trong danh sách không |
+| Khối lệnh trực quan Scratch 3.0 | Thao tác | Ý nghĩa sư phạm & Chức năng |
+|:---:|---|---|
+| ![Khối thêm vào danh sách](../../assets/rendered_blocks/list_block_add.png) | Thêm vào cuối | Chèn thêm giá trị $X$ vào cuối cùng của danh sách |
+| ![Khối xóa phần tử](../../assets/rendered_blocks/list_block_delete.png) | Xóa phần tử | Xóa phần tử tại vị trí chỉ định, các phần tử sau dồn lên |
+| ![Khối xóa tất cả danh sách](../../assets/rendered_blocks/list_block_clear.png) | Làm sạch danh sách | Xóa sạch toàn bộ danh sách (về 0 phần tử) |
+| ![Khối chèn vào danh sách](../../assets/rendered_blocks/list_block_insert.png) | Chèn vào vị trí | Nhét $X$ vào vị trí cụ thể, đẩy các phần tử khác lùi lại |
+| ![Khối thay thế phần tử](../../assets/rendered_blocks/list_block_replace.png) | Thay thế giá trị | Ghi đè giá trị mới vào ô thứ $i$ |
+| ![Khối đọc phần tử](../../assets/rendered_blocks/list_block_item.png) | Đọc giá trị ô | Khối tròn: Đọc giá trị tại ngăn thứ $i$ |
+| ![Khối tìm vị trí](../../assets/rendered_blocks/list_block_find.png) | Tìm vị trí | Tìm xem giá trị $X$ nằm ở ngăn số mấy |
+| ![Khối kích thước danh sách](../../assets/rendered_blocks/list_block_length.png) | Đếm số phần tử | Khối tròn: Đếm tổng số lượng phần tử hiện có |
+| ![Khối danh sách chứa](../../assets/rendered_blocks/list_block_contains.png) | Kiểm tra tồn tại | Khối lục giác điều kiện: Kiểm tra xem $X$ có tồn tại trong danh sách không |
 
 > ⚠️ **Quy tắc vàng:** Trong Scratch, chỉ số danh sách bắt đầu từ **vị trí 1** (1-based index). Phần tử đầu tiên luôn là `phần tử (1)`, phần tử cuối cùng là `phần tử (kích thước của danh sách)`.
 
 ---
 
-## 3. Khung Mẫu Thuật Toán Nhập $N$ Số & Xử Lý Dữ Liệu
+## 3. Khung mẫu thuật toán nhập $N$ số và xử lý dữ liệu
 
 Trong các bài toán lập trình, bài toán thường yêu cầu: *"Cho số nguyên $N$, sau đó nhập lần lượt $N$ số nguyên vào danh sách rồi tính tổng..."*.
 
@@ -55,7 +57,7 @@ Trong các bài toán lập trình, bài toán thường yêu cầu: *"Cho số 
 
 ---
 
-## 4. Bảng Mô Phỏng Duyệt Danh Sách `[5, 8, 3]` (Dry Run Table)
+## 4. Bảng mô phỏng duyệt danh sách `[5, 8, 3]` (Dry run)
 
 Giả sử danh sách `Dãy số` hiện có 3 phần tử: ngăn 1 chứa `5`, ngăn 2 chứa `8`, ngăn 3 chứa `3`. Kích thước $= 3$.
 
@@ -71,7 +73,7 @@ $\implies$ Sau 3 vòng lặp, nhân vật thông báo kết quả: `Tổng = 16`
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên xóa sạch danh sách ở đầu kịch bản**
 > - *Hiện tượng:* Không đặt `xóa tất cả của [Dãy số v]` dưới cờ xanh.
@@ -90,7 +92,7 @@ $\implies$ Sau 3 vòng lặp, nhân vật thông báo kết quả: `Tổng = 16`
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Phần tử đầu tiên trong một danh sách Scratch được đánh số thứ tự là:**
    - A. 0

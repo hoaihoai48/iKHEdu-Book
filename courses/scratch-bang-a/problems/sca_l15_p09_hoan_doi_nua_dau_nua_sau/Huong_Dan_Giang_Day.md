@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Hoán đổi nửa đầu nửa sau
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: đổi chỗ nửa đầu và nửa sau của chuỗi dài chẵn.
@@ -27,14 +24,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 n = len(s) // 2
-print(s[:n] + s[n:])
+nói (s[:n] + s[n:])
+
 ```
 Với mẫu `ABCDEF` in ra nguyên `ABCDEF`, đáp án đúng là `DEFABC`. Cách sửa: đặt `s[n:]` trước.
 - Bẫy 2: tính điểm giữa sai thành `n = len(s) // 2 + 1`. Đoạn sai:
 ```text
 s = câu trả lời
 n = len(s) // 2 + 1
-print(s[n:] + s[:n])
+nói (s[n:] + s[:n])
+
 ```
 Với mẫu `ABCDEF` (n = 4) in ra `EFABCD`, đáp án đúng là `DEFABC`. Cách sửa: giữ `n = len(s) // 2`.
 
@@ -50,9 +49,5 @@ Với mẫu `ABCDEF` (n = 4) in ra `EFABCD`, đáp án đúng là `DEFABC`. Các
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [n] thành (độ dài của s chia nguyên 2)
+> - nói (giá trị + giá trị)

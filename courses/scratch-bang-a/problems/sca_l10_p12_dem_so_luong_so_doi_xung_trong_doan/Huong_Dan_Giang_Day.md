@@ -1,13 +1,10 @@
-# Hướng Dẫn Giảng Dạy: Đếm số lượng số đối xứng trong đoạn
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
 - Bản chất của bài này là đi bộ từ `A` tới `B`, với mỗi số thì đảo ngược rồi so với chính nó; giống nhau thì đếm thêm 1.
 - Quy trình từng bước với đúng tên biến trong lời giải:
-  - Bước 1: `a, b = map(int, câu trả lời.split())` đọc hai đầu đoạn. Với mẫu, `a = 1`, `b = 20`.
+  - Bước 1: `a, b = các khối hỏi và đợi cho từng biến` đọc hai đầu đoạn. Với mẫu, `a = 1`, `b = 20`.
   - Bước 2: đặt `dem = 0` làm giỏ đếm.
   - Bước 3: vòng lặp `for i in range(a, b + 1)` cho `i` chạy từ 1 tới 20; với mỗi `i` giữ `goc = i`, xây `dao` bằng cách gọt biến `temp = i`, nếu `dao == goc` thì `dem` tăng 1.
   - Bước 4: in `dem`.
@@ -41,47 +38,50 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 - Bẫy 1: vòng lặp `range(a, b)` thiếu `+ 1` nên bỏ mất số `B`. Với mẫu `1 20` thì số 20 không đối xứng nên vẫn ra 10 đúng, nhưng với đoạn `9 11` sẽ bỏ mất 11 và đếm ra 1 thay vì 2, là kết quả sai. Cách sửa: dùng `range(a, b + 1)`.
 ```text
-a, b = map(int, câu trả lời.split())
+a, b = các khối hỏi và đợi cho từng biến
 dem = 0
 for i in range(a, b):
     goc = i
     dao = 0
     temp = i
     while temp > 0:
-        dao = dao * 10 + temp % 10
-        temp = temp // 10
+        dao = dao * 10 + (temp mod 10)
+        temp = làm tròn xuống của (temp / 10)
     if dao == goc:
         dem = dem + 1
-print(dem)
+nói (dem)
+
 ```
 - Bẫy 2: dùng chung biến `i` để gọt trong vòng đảo, làm hỏng số đếm của vòng ngoài. Với mẫu sau số đầu tiên `i` thành 0 và vòng lặp loạn hẳn, là kết quả sai. Cách sửa: gọt trên biến riêng `temp = i` như lời giải.
 ```text
-a, b = map(int, câu trả lời.split())
+a, b = các khối hỏi và đợi cho từng biến
 dem = 0
 for i in range(a, b + 1):
     goc = i
     dao = 0
     while i > 0:
-        dao = dao * 10 + i % 10
-        i = i // 10
+        dao = dao * 10 + (i mod 10)
+        i = làm tròn xuống của (i / 10)
     if dao == goc:
         dem = dem + 1
-print(dem)
+nói (dem)
+
 ```
 - Bẫy 3: quên đặt lại `dao = 0` cho mỗi số mới, số đảo của số trước còn dính sang số sau. Với mẫu từ số 2 trở đi `dao` tính sai hết, là kết quả sai. Cách sửa: đầu mỗi lần lặp đặt `dao = 0` và `temp = i`.
 ```text
-a, b = map(int, câu trả lời.split())
+a, b = các khối hỏi và đợi cho từng biến
 dem = 0
 dao = 0
 for i in range(a, b + 1):
     goc = i
     temp = i
     while temp > 0:
-        dao = dao * 10 + temp % 10
-        temp = temp // 10
+        dao = dao * 10 + (temp mod 10)
+        temp = làm tròn xuống của (temp / 10)
     if dao == goc:
         dem = dem + 1
-print(dem)
+nói (dem)
+
 ```
 
 ---
@@ -98,4 +98,16 @@ print(dem)
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
+> - đặt [dem] thành (0)
+> - đặt [i] thành (a)
+> - lặp lại (b + 1 - a) lần:
+> -   đặt [goc] thành (i)
+> -   đặt [dao] thành (0)
+> -   đặt [temp] thành (i)
+> -   lặp lại cho đến khi <temp = 0>:
+> -     đặt [dao] thành (dao * 10 + temp mod 10)
+> -     đặt [temp] thành (temp chia nguyên 10)
+> -   nếu <dao = goc> thì:
+> -     đặt [dem] thành (dem + 1)
+> -   thay đổi [i] một lượng 1
 > - nói (dem)

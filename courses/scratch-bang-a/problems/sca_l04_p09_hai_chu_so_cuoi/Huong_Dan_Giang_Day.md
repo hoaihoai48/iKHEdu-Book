@@ -1,12 +1,9 @@
-# Hướng Dẫn Giảng Dạy: Hai Chữ Số Tận Cùng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- Bản chất là lấy khối 2 chữ số cuối bằng dư cho `100`: với `n = 1945` thì `1945 % 100 = 45`.
-- Quy trình trong lời giải: đọc `n` rồi in `n % 100`; ví dụ `105 % 100 = 5` nên số `105` in ra `5`.
+- Bản chất là lấy khối 2 chữ số cuối bằng dư cho `100`: với `n = 1945` thì `(1945 mod 100) = 45`.
+- Quy trình trong lời giải: đọc `n` rồi in `(n mod 100)`; ví dụ `(105 mod 100) = 5` nên số `105` in ra `5`.
 - Xử lý biên: `n = 100` cho `0`; `n = 10^9 = 1000000000` cho `0`; `n = 2026` cho `26`.
 
 ---
@@ -16,7 +13,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 | Bước | Diễn giải | Giá trị |
 |------|-----------|---------|
 | 1 | Đọc một dòng, biến `n` nhận giá trị | `n = 1945` |
-| 2 | Tính `n % 100` | `1945 % 100 = 45` |
+| 2 | Tính `(n mod 100)` | `(1945 mod 100) = 45` |
 | 3 | In kết quả | `45` |
 
 ---
@@ -26,22 +23,24 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Dùng `% 10` chỉ lấy một chữ số.**
 
 ```text
-print(n % 10)
+nói ((n mod 10))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `1945` in ra `5` thay vì `45`.
 
-Cách sửa: dùng `n % 100`.
+Cách sửa: dùng `(n mod 100)`.
 
-**Bẫy 2: Dùng `n // 100` (lấy phần đầu).**
+**Bẫy 2: Dùng `làm tròn xuống của (n / 100)` (lấy phần đầu).**
 
 ```text
-print(n // 100)
+nói (làm tròn xuống của (n / 100))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `1945` in ra `19` thay vì `45`.
 
-Cách sửa: dùng `n % 100`.
+Cách sửa: dùng `(n mod 100)`.
 
 ---
 
@@ -55,4 +54,4 @@ Cách sửa: dùng `n % 100`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (n  chia lấy dư  100)
+> - nói (n mod 100)

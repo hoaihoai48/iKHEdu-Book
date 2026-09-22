@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Điểm nằm trong hình chữ nhật
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là kiểm tra điểm có nằm trong khung từ `(0, 0)` tới `(w, h)` hay không, tính cả mép biên: `0 <= x <= w` và `0 <= y <= h`.
@@ -36,9 +33,17 @@ Sample 1 với input mẫu: `2 3 5 5`.
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập parts:] và đợi
-> - đặt [parts] thành (câu trả lời)
-> - nếu <0 <= x <= w and 0 <= y <= h> thì:
-> -   nói [YES]
+> - xóa tất cả của danh sách [parts]
+> - đặt [i] thành 1
+> - lặp lại (n) lần:
+> -   hỏi [Nhập phần tử:] và đợi
+> -   thêm (câu trả lời) vào [parts]
+> -   thay đổi [i] một lượng 1
+> - đặt [x] thành (giá trị)
+> - đặt [y] thành (giá trị)
+> - đặt [w] thành (giá trị)
+> - đặt [h] thành (giá trị)
+> - nếu <điều kiện> thì:
+> -   nói (TRONG)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (NGOAI)

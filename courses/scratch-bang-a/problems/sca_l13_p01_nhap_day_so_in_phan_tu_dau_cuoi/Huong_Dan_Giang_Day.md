@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Nhập dãy số & in phần tử đầu - cuối
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,23 +30,26 @@ Kết quả cuối cùng khớp với đáp án mẫu: `10 99`.
 
 - Bẫy 1 — lấy vị trí cuối bằng `a[n]`:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(a[0], a[n])
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (a[0], a[n])
+
 ```
 Với mẫu `n = 5`, `a[5]` vượt khỏi dãy (vị trí cuối là `a[4]`) nên chương trình báo lỗi. Cách sửa: dùng `a[-1]` hoặc `a[n - 1]`.
 - Bẫy 2 — in mỗi số một dòng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(a[0])
-print(a[-1])
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (a[0])
+nói (a[-1])
+
 ```
 Với mẫu trên in ra hai dòng `10` rồi `99`, không khớp đáp án mẫu `10 99` trên một dòng. Cách sửa: in chung một lệnh `nói (a[0], a[-1])`.
 - Bẫy 3 — quên đọc dòng `N` nên đọc nhầm dãy:
 ```text
-a = list(map(int, câu trả lời.split()))
-print(a[0], a[-1])
+a = list(các khối hỏi và đợi cho từng biến)
+nói (a[0], a[-1])
+
 ```
 Với mẫu trên, lệnh đọc đầu tiên lấy nhầm dòng `5` thành dãy `[5]` rồi in ra `5 5` sai. Cách sửa: đọc `n` trước rồi mới đọc dãy `a`.
 
@@ -65,10 +65,10 @@ Với mẫu trên, lệnh đọc đầu tiên lấy nhầm dòng `5` thành dãy
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - nói (kết hợp giá trị và ' ' và giá trị)

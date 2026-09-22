@@ -1,17 +1,20 @@
 # Bài 14: THỐNG KÊ DANH SÁCH VÀ THUẬT TOÁN SẮP XẾP
 
-## 1. Sức Mạnh Của Thống Kê Dữ Liệu Trong Lập Trình
+## 1. Sức mạnh của thống kê dữ liệu trong lập trình
 
 Sau khi đã lưu trữ được hàng loạt con số vào danh sách, nhiệm vụ quan trọng tiếp theo của người lập trình là **trích xuất thông tin có giá trị** từ mớ dữ liệu thô đó:
 
 - Tìm giá trị lớn nhất (**Max**) hoặc nhỏ nhất (**Min**) trong các bài toán đo lường, chấm thi.
+
 - Tính giá trị **Trung bình cộng** của dãy số.
+
 - Đếm số lượng phần tử thỏa mãn tính chất đặc thù (bao nhiêu số nguyên tố, bao nhiêu bạn đạt điểm 10).
+
 - **Sắp xếp thứ tự (Sorting):** Một trong những thuật toán kinh điển và quan trọng nhất của khoa học máy tính.
 
 ---
 
-## 2. Thuật Toán Tìm Giá Trị Lớn Nhất (Max) & Nhỏ Nhất (Min)
+## 2. Thuật toán tìm giá trị lớn nhất (Max) và nhỏ nhất (Min)
 
 Trong Scratch, không có sẵn khối tìm Max tự động cho cả danh sách tự động. Do đó, học sinh bắt buộc phải tự cài đặt thuật toán tìm kiếm tuần tự.
 
@@ -34,7 +37,7 @@ Trong Scratch, không có sẵn khối tìm Max tự động cho cả danh sách
 
 ---
 
-## 3. Thuật Toán Sắp Xếp Nổi Bọt (Bubble Sort)
+## 3. Thuật toán sắp xếp nổi bọt (Bubble Sort)
 
 **Sắp xếp nổi bọt (Bubble Sort)** là thuật toán sắp xếp trực quan và dễ hiểu nhất cho học sinh Tiểu học.
 
@@ -42,7 +45,9 @@ Trong Scratch, không có sẵn khối tìm Max tự động cho cả danh sách
 Giống như các bọt khí nhẹ hơn sẽ nổi dần lên mặt nước:
 
 - Ta duyệt qua danh sách, so sánh từng cặp hai phần tử đứng liền kề nhau: `phần tử (j)` và `phần tử (j + 1)`.
+
 - Nếu phần tử đứng trước lại lớn hơn phần tử đứng sau (sai trật tự tăng dần), ta lập tức **hoán đổi vị trí** của chúng!
+
 - Lặp lại quá trình so sánh cặp này nhiều vòng, cho đến khi toàn bộ các số lớn đều dạt dần về cuối danh sách.
 
 ![Thuật toán sắp xếp nổi bọt Bubble Sort](assets/rendered_blocks/l14_bubble_sort_vi.png)
@@ -58,7 +63,7 @@ Giống như các bọt khí nhẹ hơn sẽ nổi dần lên mặt nước:
 
 ---
 
-## 4. Bảng Mô Phỏng Sắp Xếp Dãy Số `[9, 4, 2]` Bằng Bubble Sort (Dry Run Table)
+## 4. Bảng mô phỏng sắp xếp dãy số `[9, 4, 2]` bằng Bubble Sort (Dry run)
 
 Giả sử danh sách gồm 3 phần tử ban đầu: `[9, 4, 2]`. $N = 3$.
 
@@ -75,7 +80,7 @@ $\implies$ Sau 2 vòng lặp lớn, danh sách đã được sắp xếp tăng d
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Khởi tạo biến `max` bằng số 0**
 > - *Hiện tượng:* Đặt `max = 0` khi chuẩn bị tìm giá trị lớn nhất trong danh sách.
@@ -94,7 +99,7 @@ $\implies$ Sau 2 vòng lặp lớn, danh sách đã được sắp xếp tăng d
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Giá trị khởi tạo an toàn nhất cho biến `max` khi tìm số lớn nhất trong danh sách là:**
    - A. Phần tử thứ nhất của danh sách *(Đáp án đúng: `phần tử (1)`)*

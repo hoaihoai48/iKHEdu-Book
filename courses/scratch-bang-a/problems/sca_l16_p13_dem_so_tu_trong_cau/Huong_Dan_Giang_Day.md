@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm số từ trong câu
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: từ là các cụm chữ cách nhau bởi dấu cách; `split()` tự bỏ hết cách thừa.
@@ -25,14 +22,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: đếm dấu cách cộng 1 nên sai khi dư cách. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.count(' ') + 1)
+nói (s.count(' ') + 1)
+
 ```
 Với mẫu `  Chuc mung nam moi ` có 6 dấu cách nên in ra `7`, đáp án đúng là `4`. Cách sửa: dùng `len(s.split())`.
 - Bẫy 2: tách bằng `s.split(' ')` giữ lại chuỗi rỗng. Đoạn sai:
 ```text
 s = câu trả lời
 words = s.split(' ')
-print(len(words))
+nói (len(words))
+
 ```
 Với mẫu trên danh sách lẫn chuỗi rỗng nên in ra số lớn hơn `4`. Cách sửa: dùng `s.split()` không truyền gì.
 
@@ -48,9 +47,4 @@ Với mẫu trên danh sách lẫn chuỗi rỗng nên in ra số lớn hơn `4`
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (độ dài của words)

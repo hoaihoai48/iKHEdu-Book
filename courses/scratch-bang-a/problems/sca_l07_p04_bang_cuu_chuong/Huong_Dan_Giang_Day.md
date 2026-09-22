@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Bảng cửu chương
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: in 10 dòng bảng nhân của số K, dòng thứ `i` có dạng `K x i = K*i`. Vòng lặp cho `i` chạy từ 1 tới 10.
@@ -31,16 +28,18 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — dùng `range(1, 10)`:
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 for i in range(1, 10):
-    print(f"{n} x {i} = {n * i}")
+    nói (f"{n} x {i} = {n * i}")
+
 ```
 Với mẫu `5` chỉ in 9 dòng, thiếu dòng `5 x 10 = 50`. Cách sửa: dùng `range(1, 11)`.
 - Bẫy 2 — sai định dạng khoảng trắng:
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 for i in range(1, 11):
-    print(f"{n}x{i}={n * i}")
+    nói (f"{n}x{i}={n * i}")
+
 ```
 Với mẫu `5` dòng đầu thành `5x1=5` thay vì `5 x 1 = 5`, chương trình kiểm tra báo kết quả sai. Cách sửa: giữ đúng mẫu `f"{n} x {i} = {n * i}"`.
 
@@ -56,9 +55,7 @@ Với mẫu `5` dòng đầu thành `5x1=5` thay vì `5 x 1 = 5`, chương trìn
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - đặt [tong] thành (0)
 > - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> - lặp lại (11 - 1) lần:
+> -   nói (giá trị)
+> -   thay đổi [i] một lượng 1

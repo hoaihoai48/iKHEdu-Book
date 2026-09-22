@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm sao lên trời
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: in dãy số đếm 1, 2, 3, ..., N trên cùng một dòng, mỗi số cách nhau một dấu cách. Đây là bài làm quen với `range(1, n + 1)` sinh đúng N số.
@@ -22,15 +19,17 @@ Chương trình in ra một dòng duy nhất `1 2 3 4 5`, khớp với kết qu�
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — dùng `range(n)`:
 ```text
-n = int(câu trả lời.strip())
-print(" ".join(str(i) for i in range(n)))
+n = câu trả lời
+nói (" ".join(str(i) for i in range(n)))
+
 ```
 Với mẫu `5` sẽ in ra `0 1 2 3 4`, cho kết quả sai vì dãy bắt đầu từ 0 và thiếu số 5. Cách sửa: dùng `range(1, n + 1)`.
 - Bẫy 2 — mỗi số một dòng:
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 for i in range(1, n + 1):
-    print(i)
+    nói (i)
+
 ```
 Với mẫu `5` sẽ in 5 dòng thay vì một dòng `1 2 3 4 5`. Cách sửa: gom thành một chuỗi bằng `" ".join(...)` rồi in một lần.
 
@@ -46,9 +45,9 @@ Với mẫu `5` sẽ in 5 dòng thay vì một dòng `1 2 3 4 5`. Cách sửa: g
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - đặt [tong] thành (0)
-> - đặt [i] thành (1)
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> -   đặt [ket_qua] thành kết hợp ket_qua và i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

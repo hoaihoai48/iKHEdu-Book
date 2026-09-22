@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Hàng rào quanh mảnh đất
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất hàng rào: chu vi `2 * (a + b)` trừ cổng `c`, cả ba số nằm trên cùng một dòng.
@@ -42,4 +39,4 @@ Với số mẫu một dòng `20 15 3`, chương trình phải in ra `67`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nói (2 * (a + b)
+> - nói (2 * a + b - c)

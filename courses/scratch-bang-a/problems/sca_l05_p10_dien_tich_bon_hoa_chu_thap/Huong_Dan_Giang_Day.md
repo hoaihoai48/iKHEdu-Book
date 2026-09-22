@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Diện tích bồn hoa chữ thập
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất bồn hoa chữ thập: hai luống `a * b` cộng lại rồi trừ phần giao nhau `b * b`, tức `2 * a * b - b * b`.
@@ -25,7 +22,7 @@ Với số mẫu dòng 1 là `10` và dòng 2 là `3`, chương trình phải in
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — quên trừ phần giao: viết `nói (2 * a * b)` thì với mẫu ra `60` thay vì `51`; cách sửa là trừ thêm `b * b`.
 - Bẫy 2 — trừ hai lần phần giao: viết `nói (2 * a * b - 2 * b * b)` thì với mẫu ra `42` thay vì `51`; cách sửa là chỉ trừ một lần `b * b`.
-- Bẫy 3 — đọc hai số một dòng: viết `a, b = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
+- Bẫy 3 — đọc hai số một dòng: viết `a, b = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
 
 ---
 
@@ -41,4 +38,4 @@ Với số mẫu dòng 1 là `10` và dòng 2 là `3`, chương trình phải in
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói (2 * a * b)
+> - nói (2 * a * b - b * b)

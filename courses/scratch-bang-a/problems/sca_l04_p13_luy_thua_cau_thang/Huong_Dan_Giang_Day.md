@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Lũy Thừa Cầu Thang
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Dùng `a ^ n`.**
 
 ```text
-print(a ^ n)
+nói (a ^ n)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `3` và `4` cho `7` thay vì `81`.
@@ -37,7 +35,8 @@ Cách sửa: toán tử mũ là `**`.
 **Bẫy 2: Dùng `a * n`.**
 
 ```text
-print(a * n)
+nói (a * n)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `3` và `4` cho `12` thay vì `81`.
@@ -58,4 +57,4 @@ Cách sửa: dùng `a ** n`.
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (a ** n)
+> - nói (a + n)

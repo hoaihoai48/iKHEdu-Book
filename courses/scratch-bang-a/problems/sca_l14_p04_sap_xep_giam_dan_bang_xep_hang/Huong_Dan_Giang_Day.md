@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Sắp xếp giảm dần bảng xếp hạng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -31,25 +28,28 @@ Kết quả cuối cùng khớp với đáp án mẫu: `100 80 60 40 20`.
 
 - Bẫy 1 — xếp tăng dần thay vì giảm dần:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 a.sort()
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên in ra `20 40 60 80 100` sai. Cách sửa: thêm `reverse=True`.
 - Bẫy 2 — đảo dãy nhập mà không xếp:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(*(a[::-1]))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (*(a[::-1]))
+
 ```
 Với mẫu trên in ra `60 100 40 80 20` sai. Cách sửa: xếp giảm dần bằng `a.sort(reverse=True)`.
 - Bẫy 3 — in cả ngoặc của danh sách:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 a.sort(reverse=True)
-print(a)
+nói (a)
+
 ```
 Với mẫu trên in ra `[100, 80, 60, 40, 20]` có ngoặc và dấu phẩy, không khớp đáp án mẫu. Cách sửa: thêm dấu sao `nói (*a)`.
 
@@ -65,10 +65,15 @@ Với mẫu trên in ra `[100, 80, 60, 40, 20]` có ngoặc và dấu phẩy, kh
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [a]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

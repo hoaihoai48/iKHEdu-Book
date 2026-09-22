@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Vé tham quan chùa hương
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là cộng tiền vé thuyền và vé cáp treo cho cả đoàn: đoàn `n = 10` người gồm `m = 4` trẻ em nên có `6` người lớn. Vé thuyền người lớn `a = 20`, trẻ em `b = 10`; vé cáp treo người lớn `x = 50`, trẻ em `y = 30`. Tiền thuyền là `6 * 20 + 4 * 10 = 160`, tiền cáp treo là `6 * 50 + 4 * 30 = 420`, tổng là `580`.
@@ -48,4 +45,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 > - đặt [n] thành (câu trả lời)
 > - hỏi [Nhập m:] và đợi
 > - đặt [m] thành (câu trả lời)
+> - đặt [so_tre_em] thành (m)
+> - đặt [so_nguoi_lon] thành (n - m)
+> - đặt [tong_tien] thành (so_nguoi_lon * a + x + so_tre_em * b + y)
 > - nói (tong_tien)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Kiểm tra từ đối xứng (palindrome)
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: từ đối xứng là từ đọc xuôi và đọc ngược giống hệt nhau, như soi gương.
@@ -27,18 +24,20 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 if s == s[::-1]:
-    print('Yes')
+    nói ('Yes')
 else:
-    print('No')
+    nói ('No')
+
 ```
 Với mẫu `RADAR` in ra `Yes`, chương trình kiểm tra so khớp từng chữ nên cho kết quả sai, đáp án đúng là `YES`. Cách sửa: in hoa toàn bộ `YES` và `NO`.
 - Bẫy 2: so sánh sai `if s == s[::-1]:` viết nhầm thành gán một dấu bằng. Đoạn sai:
 ```text
 s = câu trả lời
 if s = s[::-1]:
-    print('YES')
+    nói ('YES')
 else:
-    print('NO')
+    nói ('NO')
+
 ```
 Chương trình báo lỗi ngay và không in gì, đáp án đúng là `YES`. Cách sửa: dùng hai dấu bằng `==` để so sánh.
 
@@ -54,9 +53,7 @@ Chương trình báo lỗi ngay và không in gì, đáp án đúng là `YES`. C
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nếu <s = giá trị> thì:
+> -   nói (YES)
+> - nếu không thì:
+> -   nói (NO)

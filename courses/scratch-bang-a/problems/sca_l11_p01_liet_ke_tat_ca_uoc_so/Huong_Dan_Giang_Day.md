@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Liệt kê tất cả ước số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: với `n = 12`, duyệt `i` từ `1` tới `12`, số nào chia hết `12` thì góp vào danh sách `uoc`.
@@ -12,7 +9,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ---
 
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 12)
-| `i` | `12 % i` | Danh sách `uoc` sau bước |
+| `i` | `(12 mod i)` | Danh sách `uoc` sau bước |
 | --- | --- | --- |
 | 1 | 0 | `["1"]` |
 | 2 | 0 | `["1", "2"]` |
@@ -35,7 +32,8 @@ Kết quả in ra: `1 2 3 4 6 12`, khớp với kết quả mẫu.
 - Bẫy 1: thêm số nguyên vào danh sách rồi mới nối chuỗi:
 ```text
 uoc.append(i)
-print(" ".join(uoc))
+nói (" ".join(uoc))
+
 ```
 với mẫu `12` chương trình báo lỗi vì không nối được số với chuỗi. Sửa lại: `uoc.append(str(i))`.
 - Bẫy 2: in danh sách trực tiếp `nói (uoc)`. Với mẫu `12` sẽ in `['1', '2', ...]` kèm ngoặc và dấu phẩy, là kết quả sai. Sửa lại: `nói (" ".join(uoc))`.
@@ -53,4 +51,10 @@ với mẫu `12` chương trình báo lỗi vì không nối được số với
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
+> - xóa tất cả của [uoc]
+> - đặt [i] thành (1)
+> - lặp lại (n) lần:
+> -   nếu <n mod i = 0> thì:
+> -     thêm (str(...)) vào [uoc]
+> -   thay đổi [i] một lượng 1
 > - nói (uoc)

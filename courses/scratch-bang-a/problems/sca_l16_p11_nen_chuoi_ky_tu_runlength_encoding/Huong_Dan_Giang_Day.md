@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Nén chuỗi ký tự (Run-Length encoding)
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giúp bạn Nam ghi hàng ngôi sao thật gọn, mỗi dãy chữ giống nhau liên tiếp thành chữ kèm số lần lặp (ví dụ `AAABBC` thành `A3B2C1`).
@@ -35,7 +32,8 @@ for i in range(1, len(s)):
     else:
         kq = kq + s[i - 1] + str(dem)
         dem = 1
-print(kq)
+nói (kq)
+
 ```
 Với mẫu `AAABBCCCC` chỉ in ra `A3B2`, mất nhóm `C4`, đáp án đúng là `A3B2C4`. Cách sửa: thêm dòng chốt `kq = kq + s[-1] + str(dem)` trước khi in.
 - Bẫy 2: không đặt lại `dem = 1` khi sang nhóm mới. Đoạn sai khiến nhóm `B` bị ghi `B3` và nhóm `C` bị ghi `C7`, với mẫu in ra `A3B3C7`, đáp án đúng là `A3B2C4`. Cách sửa: sau khi chốt nhóm cũ phải cho `dem = 1`.
@@ -52,9 +50,15 @@ Với mẫu `AAABBCCCC` chỉ in ra `A3B2`, mất nhóm `C4`, đáp án đúng l
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
+> - đặt [kq] thành ()
+> - đặt [dem] thành (1)
 > - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - lặp lại (độ dài của s - 1) lần:
+> -   nếu <giá trị = giá trị> thì:
+> -     đặt [dem] thành (dem + 1)
+> -   nếu không thì:
+> -     đặt [kq] thành (kq + giá trị + str(...))
+> -     đặt [dem] thành (1)
+> -   thay đổi [i] một lượng 1
+> - đặt [kq] thành (kq + giá trị + str(...))
+> - nói (kq)

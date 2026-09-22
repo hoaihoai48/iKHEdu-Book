@@ -1,22 +1,25 @@
 # Bài 09: QUY LUẬT DÃY SỐ VÀ TAM GIÁC SỐ
 
-## 1. Bản Chất Các Bài Toán Quy Luật Dãy Số Trong Lập Trình
+## 1. Bản chất các bài toán quy luật dãy số
 
 Khi lập trình, bài toán về dãy số xuất hiện với tần suất rất cao:
 
 - **Dãy số cách đều (Cấp số cộng):** $1, 4, 7, 10, 13, \dots$ (mỗi số cách nhau khoảng cách $d$).
+
 - **Dãy số Fibonacci:** $1, 1, 2, 3, 5, 8, 13, 21, \dots$ (số sau bằng tổng hai số liền trước).
+
 - **Quy luật lũy tiến:** $1, 3, 6, 10, 15, \dots$ (khoảng cách tăng dần: $+2, +3, +4, +5$).
 
 Thay vì học vẹt công thức, học sinh cần rèn luyện tư duy: **Xác định giá trị khởi đầu $\to$ Tìm quy luật chuyển đổi giữa 2 bước liên tiếp $\to$ Đưa vào vòng lặp**.
 
 ---
 
-## 2. Kỹ Thuật Biến Lăn (Rolling Variables) — Thuật Toán Fibonacci
+## 2. Kỹ thuật biến lăn và thuật toán Fibonacci
 
 Để tính số Fibonacci thứ $N$, ta không cần lưu toàn bộ dãy số vào bộ nhớ mà chỉ cần duy trì đúng **hai biến nhớ liền kề (`a` và `b`)**:
 
 - Ban đầu: `a = 1, b = 1`.
+
 - Ở mỗi bước lặp:
   1. Tính số tiếp theo: `c = a + b`.
   2. Dịch chuyển ô nhớ: gán `a = b` và gán `b = c`.
@@ -25,11 +28,12 @@ Thay vì học vẹt công thức, học sinh cần rèn luyện tư duy: **Xác
 
 ---
 
-## 3. Kỹ Thuật Hai Vòng Lặp Lồng Nhau — In Tam Giác Sao
+## 3. Kỹ thuật hai vòng lặp lồng nhau: In tam giác hình
 
 Khi bài toán yêu cầu in hình dạng 2 chiều (ví dụ: tam giác sao, bảng cửu chương, ma trận ô số):
 
 - **Vòng lặp ngoài (Outer Loop):** Điều khiển **Dòng** chạy từ $1$ đến $N$.
+
 - **Vòng lặp trong (Inner Loop):** Điều khiển **Cột** (số lượng dấu sao trên dòng đó) chạy từ $1$ đến `dong`.
 
 ![Hai vòng lặp lồng nhau in tam giác sao](assets/rendered_blocks/l09_nested_triangle_vi.png)
@@ -37,12 +41,14 @@ Khi bài toán yêu cầu in hình dạng 2 chiều (ví dụ: tam giác sao, b�
 ### Cơ chế ghép chuỗi dòng:
 
 - Đầu mỗi dòng: khởi tạo `dong_chu = ""` (chuỗi rỗng).
+
 - Vòng lặp trong: cứ mỗi cột, nối thêm ký tự `*` vào dòng: `đặt [dong_chu v] thành (kết hợp (dong_chu) [*])`.
+
 - Hết vòng lặp trong: nạp cả dòng hoàn chỉnh vào Danh sách hiển thị.
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Dãy Fibonacci Đến $N = 6$ (Dry Run Table)
+## 4. Bảng mô phỏng dãy Fibonacci đến $N = 6$ (Dry run)
 
 | Vòng lặp | Biến `a` (Số trước) | Biến `b` (Số hiện tại) | Tính `c = a + b` | Dịch `a = b` | Dịch `b = c` | Giá trị phần tử sinh ra |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -56,7 +62,7 @@ $\implies$ Sau 4 lượt lặp (ứng với $N - 2$), biến `b` chứa chính x
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Sai thứ tự dịch chuyển biến làm mất giá trị**
 > - *Sai lầm:* `đặt [a v] thành (b)` trước rồi mới tính `c = a + b`.
@@ -69,7 +75,7 @@ $\implies$ Sau 4 lượt lặp (ứng với $N - 2$), biến `b` chứa chính x
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Số tiếp theo trong dãy số Fibonacci $1, 1, 2, 3, 5, 8, \dots$ là:**
    - A. 11

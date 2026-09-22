@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm số có đúng 3 ước số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: số có đúng 3 ước chính là bình phương của một số nguyên tố (ví dụ `4 = 2 * 2`, `9 = 3 * 3`, `25 = 5 * 5`), nên chỉ cần đếm số nguyên tố tới căn bậc hai của `N`.
@@ -26,7 +23,7 @@ Kết quả in ra: `3`, khớp với kết quả mẫu.
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1: đếm trực tiếp từng số từ `1` tới `N` rồi đếm ước. Với `N = 30` vẫn ra `3`, nhưng với `N` tới `10^9` vòng lặp không bao giờ xong. Sửa lại: chỉ sàng số nguyên tố tới căn bậc hai như bài giải.
-- Bẫy 2: quên xử lý `gioi_han < 2` (tức `N = 1, 2, 3`). Khi đó danh sách sàng rỗng và dễ báo lỗi, trong khi đáp án đúng là `0`. Sửa lại: giữ nhánh `if gioi_han < 2: print(0)` như bài giải.
+- Bẫy 2: quên xử lý `gioi_han < 2` (tức `N = 1, 2, 3`). Khi đó danh sách sàng rỗng và dễ báo lỗi, trong khi đáp án đúng là `0`. Sửa lại: giữ nhánh `if gioi_han < 2: nói (0)` như bài giải.
 - Bẫy 3: đếm cả `1` thành số nguyên tố. Với mẫu `30` sẽ ra `4` thay vì `3`. Sửa lại: `la_snt[0] = False` và `la_snt[1] = False`.
 
 ---
@@ -41,6 +38,22 @@ Kết quả in ra: `3`, khớp với kết quả mẫu.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - hỏi [Nhập gioi_han:] và đợi
-> - đặt [n] thành (câu trả lời)
-> - nói (0)
+> - đặt [gioi_han] thành (int(...))
+> - nếu <gioi_han < 2> thì:
+> -   nói (0)
+> - nếu không thì:
+> -   đặt [la_snt] thành (giá trị * gioi_han + 1)
+> -   đặt [i] thành (2)
+> -   lặp lại (int(...) + 1 - 2) lần:
+> -     nếu <điều kiện> thì:
+> -       đặt [j] thành (i * i)
+> -       lặp lại (gioi_han + 1) lần:
+> -         thay đổi [j] một lượng 1
+> -     thay đổi [i] một lượng 1
+> -   đặt [dem] thành (0)
+> -   đặt [i] thành (2)
+> -   lặp lại (gioi_han + 1 - 2) lần:
+> -     nếu <điều kiện> thì:
+> -       đặt [dem] thành (dem + 1)
+> -     thay đổi [i] một lượng 1
+> -   nói (dem)

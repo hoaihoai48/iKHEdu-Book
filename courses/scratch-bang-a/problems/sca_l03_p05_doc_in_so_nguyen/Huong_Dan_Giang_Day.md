@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đọc và in số nguyên
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là đọc lại mã số may mắn `N` rồi hiện lại đúng số đó. Thầy cô ví biến `n` như một chiếc hộp đựng con số mà máy đếm vé vừa nhận được.

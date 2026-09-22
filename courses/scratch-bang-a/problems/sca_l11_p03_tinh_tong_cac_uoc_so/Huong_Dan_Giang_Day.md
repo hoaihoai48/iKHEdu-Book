@@ -1,18 +1,15 @@
-# Hướng Dẫn Giảng Dạy: Tính tổng các ước số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: với `n = 6`, duyệt mọi `i` từ `1` tới `6`, gặp ước nào thì cộng ngay vào biến `tong`.
-- Biến `tong` bắt đầu bằng `0`; mỗi khi `6 % i == 0` thì `tong = tong + i`.
+- Biến `tong` bắt đầu bằng `0`; mỗi khi `(6 mod i) == 0` thì `tong = tong + i`.
 - Với `n = 6` các ước là `1, 2, 3, 6` nên `tong = 1 + 2 + 3 + 6 = 12`.
 - Thầy cô cho các em liệt kê ước của `6` ra giấy trước, rồi so với từng bước cộng của chương trình.
 
 ---
 
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 6)
-| `i` | `6 % i` | `tong` sau bước | Ghi chú |
+| `i` | `(6 mod i)` | `tong` sau bước | Ghi chú |
 | --- | --- | --- | --- |
 | 1 | 0 | 1 | cộng 1 |
 | 2 | 0 | 3 | cộng 2 |
@@ -42,4 +39,10 @@ Kết quả in ra: `12`, khớp với kết quả mẫu.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
+> - đặt [tong] thành (0)
+> - đặt [i] thành (1)
+> - lặp lại (n) lần:
+> -   nếu <n mod i = 0> thì:
+> -     đặt [tong] thành (tong + i)
+> -   thay đổi [i] một lượng 1
 > - nói (tong)

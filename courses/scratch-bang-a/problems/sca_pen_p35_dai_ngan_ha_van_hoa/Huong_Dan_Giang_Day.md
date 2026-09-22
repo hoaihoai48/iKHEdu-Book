@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: KÍNH VẠN HOA ĐA CHIỀU (KALEIDOSCOPE)
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p35_dai_ngan_ha_van_hoa` | Nguồn tham chiếu: `Câu 34, 37`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

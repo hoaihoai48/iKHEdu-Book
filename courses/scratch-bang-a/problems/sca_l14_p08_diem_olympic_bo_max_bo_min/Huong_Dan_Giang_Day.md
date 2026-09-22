@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Điểm olympic bỏ max bỏ min
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -34,30 +31,33 @@ Kết quả cuối cùng khớp với đáp án mẫu: `8.00`.
 
 - Bẫy 1 — chia cho `N` thay vì số điểm còn lại:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(float, câu trả lời.split()))
+n = câu trả lời
+a = list(map(float, câu trả lời))
 a.sort()
 trimmed = a[1:-1]
 tb = sum(trimmed) / n
-print(f"{tb:.2f}")
+nói (f"{tb:.2f}")
+
 ```
 Với mẫu trên in ra `24.0 / 5 = 4.80` sai. Cách sửa: chia cho `len(trimmed)`.
 - Bẫy 2 — quên bỏ hai đầu mà tính trung bình cả dãy:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(float, câu trả lời.split()))
+n = câu trả lời
+a = list(map(float, câu trả lời))
 tb = sum(a) / n
-print(f"{tb:.2f}")
+nói (f"{tb:.2f}")
+
 ```
 Với mẫu trên in ra `40.0 / 5 = 8.00` trùng cờ đáp án, nhưng bản chất sai: chưa bỏ `6.0` và `10.0`. Với dãy mà điểm giữa lệch khỏi trung bình chung, cách này cho kết quả sai. Cách sửa: xếp rồi cắt `a[1:-1]` trước khi tính.
 - Bẫy 3 — in thiếu chữ số thập phân:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(float, câu trả lời.split()))
+n = câu trả lời
+a = list(map(float, câu trả lời))
 a.sort()
 trimmed = a[1:-1]
 tb = sum(trimmed) / len(trimmed)
-print(tb)
+nói (tb)
+
 ```
 Với mẫu trên in ra `8.0`, không khớp đáp án mẫu `8.00`. Cách sửa: in bằng `nói (f"{tb:.2f}")`.
 
@@ -73,10 +73,12 @@ Với mẫu trên in ra `8.0`, không khớp đáp án mẫu `8.00`. Cách sửa
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [trimmed] thành (giá trị)
+> - đặt [tb] thành (sum(...) / độ dài của trimmed)
+> - nói (giá trị)

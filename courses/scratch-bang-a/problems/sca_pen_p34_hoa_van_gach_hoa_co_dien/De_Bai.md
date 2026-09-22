@@ -8,25 +8,28 @@ Nền nhà cổ kính với những viên gạch hoa văn kết hợp tinh tế 
 
 Vẽ hình vuông trung tâm và 4 cánh hoa uốn cong tại 4 cạnh hình vuông.
 
-## Input
+## Kịch bản tương tác (Input Scenario)
 
-Nhấn cờ xanh.
+- Khởi động khi người dùng nhấn vào biểu tượng **Cờ Xanh**.
 
-## Output
+- Không yêu cầu nhập dữ liệu từ bàn phím.
 
-Họa tiết viên gạch hoa Đông Dương sang trọng.
+## Kết quả mong đợi (Expected Behavior / Output)
 
+- Họa tiết viên gạch hoa Đông Dương sang trọng.
+
+## Hình ảnh minh họa kết quả mẫu
+
+![Hình mẫu 1](../../assets/pen_drawings/pen_img_045.png)
+
+![Hình mẫu 2](../../assets/pen_drawings/pen_img_197.png)
 ## Sample 1
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
+### Kịch bản chạy trên sân khấu
 
-### Output
-```text
-Kết quả: Họa tiết viên gạch hoa Đông Dương sang trọng.
-```
+- **Thao tác khởi động:** Nhấn cờ xanh.
+
+- **Kết quả hình ảnh:** Họa tiết viên gạch hoa Đông Dương sang trọng.
 
 ### Giải thích
 
@@ -35,5 +38,7 @@ Kết quả: Họa tiết viên gạch hoa Đông Dương sang trọng.
 ## Ràng buộc
 
 - Môi trường: Scratch 3.0 với phần mở rộng Bút vẽ (Pen).
+
 - Tọa độ khởi tạo an toàn trong khung hình sân khấu (x: -240 đến 240, y: -180 đến 180).
+
 - Nguồn bài thi: Trích xuất từ tài liệu chuẩn `Câu 33 - CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx`.

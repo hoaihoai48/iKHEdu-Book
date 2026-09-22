@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chu vi và diện tích hình chữ nhật
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất sân chữ nhật: chu vi `2 * (a + b)` và diện tích `a * b`, cả hai số `a` và `b` nằm trên cùng một dòng.
@@ -40,4 +37,4 @@ Với số mẫu một dòng `10 6`, chương trình phải in ra `32 60`.
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói (2 * (a + b)
+> - nói (kết hợp 2 * a + b và ' ' và a * b)

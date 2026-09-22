@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Phân loại tam giác
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là đếm cạnh bằng nhau: ba cạnh `a, b, c` bằng nhau hết là tam giác đều, có đúng hai cạnh bằng nhau là tam giác cân, còn lại là tam giác thường.
@@ -23,7 +20,7 @@ Sample 1 với input mẫu: `3 3 3`.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — kiểm tra cân trước đều: bạn nhỏ viết `if a == b or ...` trước. Với mẫu `3 3 3` sẽ rơi ngay nhánh cân, in `CAN`, sai. Cách sửa: kiểm tra đều `a == b == c` trước như lời giải mẫu.
 - Bẫy 2 — in đủ chữ `TAM GIAC DEU` theo đề: đề ghi `TAM GIAC DEU` nhưng lời giải mẫu in gọn `DEU`. Với mẫu `3 3 3`, nếu in dài sẽ không khớp chương trình kiểm tra hiện tại. Cách sửa: bám đúng lời giải mẫu, in `DEU`, `CAN`, `THUONG`.
-- Bẫy 3 — đọc ba dòng mà không tách: nếu chỉ gọi `int(câu trả lời)` ba lần cho input `3 3 3` trên một dòng thì lỗi. Cách sửa: tách một dòng bằng `map(int, câu trả lời.split())` như lời giải mẫu.
+- Bẫy 3 — đọc ba dòng mà không tách: nếu chỉ gọi `câu trả lời` ba lần cho input `3 3 3` trên một dòng thì lỗi. Cách sửa: tách một dòng bằng `các khối hỏi và đợi cho từng biến` như lời giải mẫu.
 
 ---
 
@@ -41,7 +38,10 @@ Sample 1 với input mẫu: `3 3 3`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nếu <a = b = c> thì:
-> -   nói [YES]
+> - nếu <a = b> thì:
+> -   nói (DEU)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <điều kiện> thì:
+> -     nói (CAN)
+> -   nếu không thì:
+> -     nói (THUONG)

@@ -1,12 +1,9 @@
-# Hướng Dẫn Giảng Dạy: Đóng Hộp Bánh
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- Bản chất là đóng hộp 6 chiếc: với `m = 50` thì số hộp đầy `50 // 6 = 8`, bánh lẻ `50 % 6 = 2`.
-- Quy trình trong lời giải: đọc `m` rồi in một dòng `nói (m // 6, m % 6)` cho ra `8 2`.
+- Bản chất là đóng hộp 6 chiếc: với `m = 50` thì số hộp đầy `làm tròn xuống của (50 / 6) = 8`, bánh lẻ `(50 mod 6) = 2`.
+- Quy trình trong lời giải: đọc `m` rồi in một dòng `nói (làm tròn xuống của (m / 6), (m mod 6))` cho ra `8 2`.
 - Xử lý biên: `m = 1` cho `0 1`; `m = 6` cho `1 0`; `m = 10^6` cho `166666 4`.
 
 ---
@@ -16,8 +13,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 | Bước | Diễn giải | Giá trị |
 |------|-----------|---------|
 | 1 | Đọc một dòng, biến `m` nhận giá trị | `m = 50` |
-| 2 | Tính số hộp `m // 6` | `50 // 6 = 8` |
-| 3 | Tính bánh lẻ `m % 6` | `50 % 6 = 2` |
+| 2 | Tính số hộp `làm tròn xuống của (m / 6)` | `làm tròn xuống của (50 / 6) = 8` |
+| 3 | Tính bánh lẻ `(m mod 6)` | `(50 mod 6) = 2` |
 | 4 | In một dòng hai số | `8 2` |
 
 ---
@@ -27,18 +24,20 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: In hai số xuống hai dòng.**
 
 ```text
-print(m // 6)
-print(m % 6)
+nói (làm tròn xuống của (m / 6))
+nói ((m mod 6))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `50` in ra `8` rồi `2` xuống hai dòng thay vì `8 2` một dòng.
 
-Cách sửa: in chung một lệnh `nói (m // 6, m % 6)`.
+Cách sửa: in chung một lệnh `nói (làm tròn xuống của (m / 6), (m mod 6))`.
 
 **Bẫy 2: Nhầm số bánh mỗi hộp thành `5`.**
 
 ```text
-print(m // 5, m % 5)
+nói (làm tròn xuống của (m / 5), (m mod 5))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `50` in ra `10 0` thay vì `8 2`.
@@ -57,4 +56,4 @@ Cách sửa: mỗi hộp đúng `6` chiếc.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập m:] và đợi
 > - đặt [m] thành (câu trả lời)
-> - nói (kết hợp m // 6 và " " và m % 6)
+> - nói (kết hợp m chia nguyên 6 và ' ' và m mod 6)

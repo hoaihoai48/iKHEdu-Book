@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính cước taxi bậc thang
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là giá ba bậc theo km `n`: `1` km đầu giá `10` nghìn, từ km thứ `2` tới km thứ `10` mỗi km `8` nghìn, từ km thứ `11` trở đi mỗi km `6` nghìn.
@@ -38,6 +35,9 @@ Sample 1 với input mẫu: `1`.
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
 > - nếu <n <= 1> thì:
-> -   nói [YES]
+> -   nói (10)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <n <= 10> thì:
+> -     nói (10 + n - 1 * 8)
+> -   nếu không thì:
+> -     nói (10 + 9 * 8 + n - 10 * 6)

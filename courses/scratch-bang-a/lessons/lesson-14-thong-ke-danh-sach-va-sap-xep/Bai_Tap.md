@@ -386,8 +386,11 @@ Với dữ liệu đầu vào là `3 4
 ### Giải thích
 
 Sắp xếp người làm nhanh lên trước: thời gian làm lần lượt là 1, 2, 3.
+
 - Bạn 1 chờ 1 phút.
+
 - Bạn 2 chờ $1 + 2 = 3$ phút.
+
 - Bạn 3 chờ $1 + 2 + 3 = 6$ phút.
 Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
 

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đa Thức Bậc Hai
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Viết `2 * x ** 2` mà tưởng sai — bẫy thật là viết `2 * (x * 2)`.**
 
 ```text
-print(2 * (x * 2) - 4 * x + 9)
+nói (2 * (x * 2) - 4 * x + 9)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `x = 3` cho `9` thay vì `15`.
@@ -37,7 +35,8 @@ Cách sửa: bình phương là `x ** 2`.
 **Bẫy 2: Quên dấu trừ, viết `2 * (x ** 2) + 4 * x + 9`.**
 
 ```text
-print(2 * (x ** 2) + 4 * x + 9)
+nói (2 * (x ** 2) + 4 * x + 9)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `x = 3` cho `39` thay vì `15`.
@@ -56,4 +55,4 @@ Cách sửa: giữa là `- 4 * x`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập x:] và đợi
 > - đặt [x] thành (câu trả lời)
-> - nói (2 * (x ** 2)
+> - nói (2 * x + 2 - 4 * x + 9)

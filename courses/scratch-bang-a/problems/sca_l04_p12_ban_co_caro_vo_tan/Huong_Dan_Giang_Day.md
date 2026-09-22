@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Bàn Cờ Ca-rô Vô Tận
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- Bản chất là đánh số từ `1` nên phải trừ `1` trước: với `k = 11`, `w = 4` thì hàng `(11 - 1) // 4 + 1 = 10 // 4 + 1 = 2 + 1 = 3`, cột `(11 - 1) % 4 + 1 = 10 % 4 + 1 = 2 + 1 = 3`.
+- Bản chất là đánh số từ `1` nên phải trừ `1` trước: với `k = 11`, `w = 4` thì hàng `(11 - 1) // 4 + 1 = làm tròn xuống của (10 / 4) + 1 = 2 + 1 = 3`, cột `(11 - 1) % 4 + 1 = (10 mod 4) + 1 = 2 + 1 = 3`.
 - Quy trình trong lời giải: đọc `k` dòng 1, đọc `w` dòng 2, tính `hang` và `cot` theo hai công thức trên rồi in `hang cot`.
 - Xử lý biên: `k = 1, w = 10^6` cho hàng `1` cột `1`; `k = 4, w = 4` cho hàng `1` cột `4`; `k = 5, w = 4` sang hàng `2` cột `1`.
 
@@ -25,10 +22,11 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 
-**Bẫy 1: Quên trừ 1: `k // w + 1`.**
+**Bẫy 1: Quên trừ 1: `làm tròn xuống của (k / w) + 1`.**
 
 ```text
-print(k // w + 1, k % w + 1)
+nói (làm tròn xuống của (k / w) + 1, (k mod w) + 1)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `11` và `4` cho `3 4` thay vì `3 3`.
@@ -38,7 +36,8 @@ Cách sửa: dùng `(k - 1) // w + 1` và `(k - 1) % w + 1`.
 **Bẫy 2: Đọc hai số một dòng bằng `split()`.**
 
 ```text
-k, w = map(int, hỏi và đợi.split())
+k, w = các khối hỏi và đợi cho từng biến
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho số liệu mẫu mỗi số một dòng nên nhận thiếu `w`.
@@ -59,4 +58,6 @@ Cách sửa: đọc hai lần `hỏi và đợi` riêng.
 > - đặt [k] thành (câu trả lời)
 > - hỏi [Nhập w:] và đợi
 > - đặt [w] thành (câu trả lời)
-> - nói (kết hợp hang và " " và cot)
+> - đặt [hang] thành (k - 1 chia nguyên w + 1)
+> - đặt [cot] thành (k - 1 mod w + 1)
+> - nói (kết hợp hang và ' ' và cot)

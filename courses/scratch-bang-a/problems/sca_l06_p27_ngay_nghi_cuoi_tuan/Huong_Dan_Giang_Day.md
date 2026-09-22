@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ngày nghỉ cuối tuần
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là nhận diện đúng các số ngày nghỉ trong lời giải mẫu: biến `d` bằng `1` hoặc bằng `7` thì in `NGHI`, các số còn lại in `DI HOC`.
@@ -37,7 +34,7 @@ Sample 1 với input mẫu: `7`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập d:] và đợi
 > - đặt [d] thành (câu trả lời)
-> - nếu <d = 1 or d = 7> thì:
-> -   nói [YES]
+> - nếu <điều kiện> thì:
+> -   nói (NGHI)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (DI HOC)

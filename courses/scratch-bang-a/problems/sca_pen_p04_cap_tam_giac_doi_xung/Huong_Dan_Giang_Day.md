@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: CẶP TAM GIÁC ĐỐI XỨNG QUA TÂM
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p04_cap_tam_giac_doi_xung` | Nguồn tham chiếu: `Câu 4`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

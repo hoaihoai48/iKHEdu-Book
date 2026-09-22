@@ -281,8 +281,11 @@ Dòng 2 cộng số: $25 + 30 = 55$.
 ### Giải thích
 
 - Tuổi Nam: $10$.
+
 - Tuổi Bố: $10 + 30 = 40$.
+
 - Tuổi Ông: $40 + 25 = 65$.
+
 - Tổng cả 3 người: $10 + 40 + 65 = 115$.
 
 ---
@@ -619,8 +622,11 @@ Cô hướng dẫn viên cần tính tiền để mua vé cho cả đoàn. Hãy 
 ### Giải thích
 
 - Số trẻ em: $4$, số người lớn: $10 - 4 = 6$ người.
+
 - Tiền thuyền: $6 \times 20 + 4 \times 10 = 120 + 40 = 160$.
+
 - Tiền cáp treo: $6 \times 50 + 4 \times 30 = 300 + 120 = 420$.
+
 - Tổng tiền: $160 + 420 = 580$ nghìn đồng.
 
 ---

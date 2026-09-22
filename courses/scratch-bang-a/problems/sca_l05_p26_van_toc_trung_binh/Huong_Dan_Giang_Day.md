@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tính vận tốc trung bình
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất vận tốc trung bình: quãng đường `s` chia thời gian `t`, in làm tròn 2 chữ số thập phân.
@@ -22,7 +19,7 @@ Với số mẫu một dòng `100 3`, chương trình phải in ra `33.33`.
 ---
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
-- Bẫy 1 — dùng chia nguyên: viết `nói (s // t)` thì với mẫu ra `33` thay vì `33.33`; cách sửa là chia thực `s / t` rồi làm tròn 2 chữ số.
+- Bẫy 1 — dùng chia nguyên: viết `nói (làm tròn xuống của (s / t))` thì với mẫu ra `33` thay vì `33.33`; cách sửa là chia thực `s / t` rồi làm tròn 2 chữ số.
 - Bẫy 2 — in thô không làm tròn: viết `nói (s / t)` thì với mẫu ra `33.333333333333336` thay vì `33.33`; cách sửa là ghi định dạng 2 chữ số thập phân.
 - Bẫy 3 — đọc hai dòng riêng: dùng hai lần `câu trả lời` thì với mẫu một dòng `100 3` sẽ bị treo chờ; cách sửa là tách một dòng bằng `split()`.
 
@@ -40,4 +37,4 @@ Với số mẫu một dòng `100 3`, chương trình phải in ra `33.33`.
 > - đặt [s] thành (câu trả lời)
 > - hỏi [Nhập t:] và đợi
 > - đặt [t] thành (câu trả lời)
-> - nói (s // t)
+> - nói (giá trị)

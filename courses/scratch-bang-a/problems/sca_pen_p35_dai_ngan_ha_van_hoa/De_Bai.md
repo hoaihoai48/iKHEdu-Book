@@ -8,25 +8,28 @@
 
 Xoay một cụm họa tiết gồm đa giác và cung tròn 36 lần quanh tâm (mỗi lần 10 độ) với màu sắc cầu vồng ngẫu nhiên.
 
-## Input
+## Kịch bản tương tác (Input Scenario)
 
-Nhấn cờ xanh.
+- Khởi động khi người dùng nhấn vào biểu tượng **Cờ Xanh**.
 
-## Output
+- Không yêu cầu nhập dữ liệu từ bàn phím.
 
-Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
+## Kết quả mong đợi (Expected Behavior / Output)
 
+- Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
+
+## Hình ảnh minh họa kết quả mẫu
+
+![Hình mẫu 1](../../assets/pen_drawings/pen_img_192.png)
+
+![Hình mẫu 2](../../assets/pen_drawings/pen_img_064.png)
 ## Sample 1
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
+### Kịch bản chạy trên sân khấu
 
-### Output
-```text
-Kết quả: Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
-```
+- **Thao tác khởi động:** Nhấn cờ xanh.
+
+- **Kết quả hình ảnh:** Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
 
 ### Giải thích
 
@@ -35,5 +38,7 @@ Hiệu ứng xoay tròn 36 lần liên tục đổi màu.
 ## Ràng buộc
 
 - Môi trường: Scratch 3.0 với phần mở rộng Bút vẽ (Pen).
+
 - Tọa độ khởi tạo an toàn trong khung hình sân khấu (x: -240 đến 240, y: -180 đến 180).
+
 - Nguồn bài thi: Trích xuất từ tài liệu chuẩn `Câu 34, 37 - CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx`.

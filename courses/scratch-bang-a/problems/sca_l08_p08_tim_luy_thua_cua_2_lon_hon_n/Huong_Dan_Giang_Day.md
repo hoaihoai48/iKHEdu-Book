@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm lũy thừa của 2 lớn hơn N
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: dãy lũy thừa của 2 là 1, 2, 4, 8, 16, ... Mỗi bước nhân đôi `lt = lt * 2` cho tới khi vượt qua N.
@@ -26,20 +23,22 @@ In ra `16` là lũy thừa của 2 nhỏ nhất mà lớn hơn 10, khớp với 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — điều kiện dừng sai thành `lt < n`:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 lt = 1
 while lt < n:
     lt = lt * 2
-print(lt)
+nói (lt)
+
 ```
 Nếu N bản thân là lũy thừa của 2 (ví dụ N = 8) sẽ in ra `8` thay vì `16`. Cách sửa: điều kiện đúng là `while lt <= n`.
 - Bẫy 2 — quên nhân đôi bên trong vòng lặp:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 lt = 1
 while lt <= n:
     lt = lt + 1
-print(lt)
+nói (lt)
+
 ```
 Với mẫu `10` sẽ in ra `11` thay vì `16`. Cách sửa: mỗi bước phải nhân đôi `lt = lt * 2`.
 
@@ -55,8 +54,7 @@ Với mẫu `10` sẽ in ra `11` thay vì `16`. Cách sửa: mỗi bước phả
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [lt] thành (1)
+> - lặp lại cho đến khi không còn <lt <= n>:
+> -   đặt [lt] thành (lt * 2)
+> - nói (lt)

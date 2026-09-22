@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm số lượng nguyên âm
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: nguyên âm gồm 5 chữ `A, E, I, O, U` tính cả hoa lẫn thường; đi đếm từng chữ trong chuỗi `s`.
@@ -30,7 +27,8 @@ dem = 0
 for ch in s:
     if ch in 'aeiou':
         dem = dem + 1
-print(dem)
+nói (dem)
+
 ```
 Với mẫu `EDUCATION` toàn chữ hoa nên `dem` vẫn là `0`, đáp án đúng là `5`. Cách sửa: kiểm tra cả hai dạng `'AEIOUaeiou'`.
 - Bẫy 2: in `dem` bên trong vòng lặp. Đoạn sai:
@@ -40,7 +38,8 @@ dem = 0
 for ch in s:
     if ch in 'AEIOUaeiou':
         dem = dem + 1
-    print(dem)
+    nói (dem)
+
 ```
 Với mẫu trên in ra 9 dòng `1, 1, 2, 2, 3...`, đáp án đúng chỉ là một dòng `5`. Cách sửa: đưa `nói (dem)` ra ngoài vòng lặp.
 
@@ -56,9 +55,11 @@ Với mẫu trên in ra 9 dòng `1, 1, 2, 2, 3...`, đáp án đúng chỉ là m
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [dem] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <ch = AEIOUaeiou> thì:
+> -     đặt [dem] thành (dem + 1)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (dem)

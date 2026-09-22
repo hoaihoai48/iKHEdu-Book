@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chú ốc sên leo cột cờ
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: mỗi ngày leo lên A mét, nếu chưa chạm đỉnh thì đêm tụt B mét. Ngày chạm hoặc vượt đỉnh thì dừng ngay, không tụt nữa.
@@ -24,9 +21,9 @@ In ra `2`, khớp với kết quả mẫu (ngày 1 còn 2m, ngày 2 chạm 5m).
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — trừ B trước khi kiểm tra đỉnh:
 ```text
-h = int(câu trả lời)
-a = int(câu trả lời)
-b = int(câu trả lời)
+h = câu trả lời
+a = câu trả lời
+b = câu trả lời
 cao = 0
 ngay = 0
 while True:
@@ -34,15 +31,17 @@ while True:
     cao = cao + a - b
     if cao >= h:
         break
-print(ngay)
+nói (ngay)
+
 ```
 Với mẫu `5 / 3 / 1` thì ngày 2 tính thành 4 nên phải sang ngày 3, in ra `3` thay vì `2`. Cách sửa: cộng A rồi kiểm tra đỉnh trước, chỉ trừ B khi chưa chạm đỉnh.
 - Bẫy 2 — công thức một dòng bỏ qua đêm cuối:
 ```text
-h = int(câu trả lời)
-a = int(câu trả lời)
-b = int(câu trả lời)
-print((h + (a - b) - 1) // (a - b))
+h = câu trả lời
+a = câu trả lời
+b = câu trả lời
+nói ((h + (a - b) - 1) // (a - b))
+
 ```
 Với mẫu `5 / 3 / 1` cho `(5 + 1) // 2 = 3` thay vì `2` vì đêm cuối không bị tụt. Cách sửa: mô phỏng từng ngày bằng vòng lặp như lời giải.
 
@@ -62,8 +61,12 @@ Với mẫu `5 / 3 / 1` cho `(5 + 1) // 2 = 3` thay vì `2` vì đêm cuối kh�
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [cao] thành (0)
+> - đặt [ngay] thành (0)
+> - lặp lại cho đến khi không còn <điều kiện>:
+> -   đặt [ngay] thành (ngay + 1)
+> -   đặt [cao] thành (cao + a)
+> -   nếu <cao >= h> thì:
+> -     dừng kịch bản này
+> -   đặt [cao] thành (cao - b)
+> - nói (ngay)

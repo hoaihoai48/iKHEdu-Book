@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: In số trên một hàng với sep
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là in năm số `1 2 3 4 5` trên cùng một hàng, nhưng giữa các số là dấu gạch ngang `-` thay vì dấu cách. Thầy cô giải thích tham số `sep="-"` chính là sợi dây nối các số lại với nhau.
@@ -33,4 +30,4 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - nói [1, 2, 3, 4, 5, sep="-]
+> - nói (kết hợp 1 và ' ' và 2 và ' ' và 3 và ' ' và 4 và ' ' và 5)

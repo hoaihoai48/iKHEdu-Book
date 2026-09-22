@@ -1,6 +1,6 @@
 # Bài 06: Cấu trúc rẽ nhánh
 
-## 1. Bản Chất Của Cấu Trúc Rẽ Nhánh Trong Khoa Học Máy Tính
+## 1. Cấu trúc rẽ nhánh trong lập trình
 
 Trong các chương trình tuần tự, các khối lệnh được thực thi lần lượt từ trên xuống dưới. Tuy nhiên, để giải quyết các bài toán thông minh trong thực tế, máy tính cần có khả năng **ra quyết định**: *Nếu điều kiện này đúng thì thực hiện hành động A, nếu sai thì chuyển sang thực hiện hành động B*.
 
@@ -10,21 +10,25 @@ Cấu trúc cho phép máy tính thay đổi luồng thực thi dựa trên kế
 
 ---
 
-## 2. Hai Dạng Khối Lệnh Rẽ Nhánh Trong Scratch 3.0
+## 2. Hai dạng khối lệnh rẽ nhánh trong Scratch 3.0
 
 Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp hai khối bao quanh hình chữ C đặc trưng:
 
 ### 2.1. Cấu trúc rẽ nhánh khuyết: `nếu < > thì`
+
 - Dùng khi chỉ cần can thiệp nếu gặp trường hợp đặc biệt; nếu không đúng điều kiện thì bỏ qua và đi tiếp.
+
 - **Cơ chế hoạt động:**
   - Nếu điều kiện lục giác trả về `Đúng` (True): Máy tính thực thi các khối lệnh nằm kẹp bên trong miệng chữ C.
   - Nếu điều kiện trả về `Sai` (False): Toàn bộ khối bên trong chữ C bị bỏ qua, máy tính nhảy thẳng xuống chạy khối lệnh tiếp theo bên dưới.
 
 ### 2.2. Cấu trúc rẽ nhánh đủ: `nếu < > thì ... nếu không thì`
+
 - Dùng khi bài toán có hai con đường đối lập nhau và bắt buộc phải chọn đúng một con đường:
 
   - Nếu điều kiện **ĐÚNG**: Thực thi nhánh trên (sau chữ `thì`).
   - Nếu điều kiện **SAI**: Thực thi nhánh dưới (sau chữ `nếu không thì`).
+
 - **Ví dụ kinh điển:** Kiểm tra số chẵn lẻ:
 
   - Nếu `((n) mod (2)) = (0)` thì nói `Số chẵn`.
@@ -32,7 +36,7 @@ Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp hai
 
 ---
 
-## 3. Các Toán Tử So Sánh & Ghép Điều Kiện Logic Phức Tạp
+## 3. Các phép toán so sánh và điều kiện logic
 
 Để tạo ra điều kiện cho khối rẽ nhánh, ta sử dụng các khối hình lục giác góc nhọn màu xanh lá trong nhóm **Các phép toán (Operators)**:
 
@@ -47,7 +51,7 @@ Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp hai
 
 ---
 
-## 4. Các Mẫu Thuật Toán Rẽ Nhánh Kinh Điển
+## 4. Các mẫu thuật toán rẽ nhánh cơ bản
 
 ### 4.1. Mẫu 1: Thuật toán tìm giá trị lớn nhất của 3 số ($A, B, C$)
 Ta áp dụng kỹ thuật **"Đặt vương miện giả định"**:
@@ -67,7 +71,7 @@ Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$,
 
 ---
 
-## 5. Bảng Mô Phỏng Tìm Số Lớn Nhất Trong $A = 12, B = 25, C = 18$ (Dry Run Table)
+## 5. Bảng mô phỏng tìm số lớn nhất trong $A = 12, B = 25, C = 18$ (Dry run)
 
 | Bước | Khối lệnh thực thi | Biến `max` | Biểu thức kiểm tra | Kết quả điều kiện | Hành động máy tính |
 |:---:|---|:---:|---|:---:|---|
@@ -79,7 +83,7 @@ Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$,
 
 ---
 
-## 6. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 6. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Xếp các khối `nếu...thì` độc lập thay vì dùng `nếu...nếu không thì`**
 > - *Hiện tượng:* Đặt 2 khối `nếu` tách rời nhau:
@@ -99,7 +103,7 @@ Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$,
 
 ---
 
-## 7. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 7. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khi điều kiện lục giác trong khối `nếu < > thì` trả về kết quả SAI, máy tính sẽ:**
    - A. Dừng chương trình

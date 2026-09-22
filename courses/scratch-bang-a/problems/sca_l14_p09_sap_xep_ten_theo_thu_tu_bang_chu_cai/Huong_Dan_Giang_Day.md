@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Sắp xếp tên theo thứ tự bảng chữ cái
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -32,27 +29,30 @@ Kết quả cuối cùng khớp với đáp án mẫu: `apple banana grape orang
 
 - Bẫy 1 — quên xếp mà in nguyên thứ tự nhập:
 ```text
-n = int(câu trả lời.strip())
-words = câu trả lời.split()
-print(*words)
+n = câu trả lời
+words = câu trả lời
+nói (*words)
+
 ```
 Với mẫu trên in ra `orange apple banana grape` sai. Cách sửa: gọi `words.sort()` trước khi in.
 - Bẫy 2 — xếp ngược từ Z về A:
 ```text
-n = int(câu trả lời.strip())
-words = câu trả lời.split()
+n = câu trả lời
+words = câu trả lời
 words.sort(reverse=True)
-print(*words)
+nói (*words)
+
 ```
 Với mẫu trên in ra `orange grape banana apple` sai. Cách sửa: xếp tăng dần mặc định, không dùng `reverse=True`.
 - Bẫy 3 — chỉ đọc một từ đầu tiên:
 ```text
-n = int(câu trả lời.strip())
-words = [câu trả lời.strip()]
+n = câu trả lời
+words = [câu trả lời]
 words.sort()
-print(*words)
+nói (*words)
+
 ```
-Với mẫu trên các từ nằm chung một dòng nên chỉ lấy được `orange`, in ra `orange` thiếu ba từ còn lại. Cách sửa: đọc cả dòng bằng `words = câu trả lời.split()`.
+Với mẫu trên các từ nằm chung một dòng nên chỉ lấy được `orange`, in ra `orange` thiếu ba từ còn lại. Cách sửa: đọc cả dòng bằng `words = câu trả lời`.
 
 ---
 
@@ -66,10 +66,9 @@ Với mẫu trên các từ nằm chung một dòng nên chỉ lấy được `o
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [words]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

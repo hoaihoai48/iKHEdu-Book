@@ -70,16 +70,16 @@
 
 # Bài 01: VẼ HÌNH VỚI PEN VÀ REPEAT
 
-## 1. Khám Phá Sân Khấu & Hệ Tọa Độ Oxy
+## 1. Khám phá sân khấu và hệ tọa độ Oxy
 
-Sân khấu Scratch là một mặt phẳng hình chữ nhật được chia thành các điểm ảnh thông qua hệ trục tọa độ hai chiều $Oxy$:
+Sân khấu Scratch là một mặt phẳng hình chữ nhật gồm các điểm ảnh (pixel), được quản lý chính xác thông qua hệ trục tọa độ hai chiều $Oxy$:
 
 | Trục tọa độ | Hướng không gian | Điểm cực tiểu | Điểm trung tâm | Điểm cực đại | Tổng độ dài |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | **Trục $X$ (Ngang)** | Trái $\longleftrightarrow$ Phải | $x = -240$ (Mép trái) | $x = 0$ (Tâm) | $x = 240$ (Mép phải) | $480$ bước |
 | **Trục $Y$ (Dọc)** | Dưới $\longleftrightarrow$ Trên | $y = -180$ (Mép dưới) | $y = 0$ (Tâm) | $y = 180$ (Mép trên) | $360$ bước |
 
-> **Quy tắc vàng về Tọa độ khởi tạo:**
+> **Quy tắc vàng về tọa độ khởi tạo:**
 > Mọi chương trình vẽ hình trên Scratch bắt buộc phải có câu lệnh đưa nhân vật về vị trí ban đầu rõ ràng:
 > - 🔵 Lệnh di chuyển: **`đi tới điểm x: (0) y: (0)`** (đưa về gốc tọa độ tâm sân khấu)
 > - 🔵 Lệnh hướng nhìn: **`đặt hướng bằng (90)`** (hướng nhìn sang phải)
@@ -87,9 +87,8 @@ Sân khấu Scratch là một mặt phẳng hình chữ nhật được chia th�
 > ![Khối khởi tạo tọa độ](assets/rendered_blocks/l01_block_goto_vi.png)  
 > ![Khối khởi tạo hướng nhìn](assets/rendered_blocks/l01_block_point_vi.png)
 
-### Bốn Hướng Di Chuyển Trên La Bàn Scratch
+### Bốn hướng di chuyển trên la bàn Scratch
 Nhân vật chú Mèo di chuyển theo hướng mũi tên kim la bàn. Góc quay được tính theo chiều kim đồng hồ:
-
 - **Hướng $90^\circ$ (Mặc định)**: Mũi nhân vật nhìn sang phải.
 - **Hướng $0^\circ$**: Mũi nhân vật nhìn thẳng lên đỉnh sân khấu.
 - **Hướng $180^\circ$**: Mũi nhân vật nhìn thẳng xuống đáy sân khấu.
@@ -97,253 +96,248 @@ Nhân vật chú Mèo di chuyển theo hướng mũi tên kim la bàn. Góc quay
 
 ---
 
-## 2. Bộ Công Cụ Bút Vẽ Pen (Pen Extension)
+## 2. Bộ công cụ bút vẽ Pen (Pen Extension)
 
-Để bật công cụ vẽ trong Scratch 3.0, học sinh bấm vào biểu tượng **Thêm phần mở rộng (Add Extension)** ở góc dưới cùng bên trái màn hình và chọn **Bút vẽ (Pen)**.
+Để bật công cụ vẽ trong Scratch 3.0, chúng ta bấm vào biểu tượng **Thêm phần mở rộng (Add Extension)** ở góc dưới cùng bên trái màn hình và chọn **Bút vẽ (Pen)**.
 
-Nhóm Bút vẽ cung cấp các khối lệnh thao tác như một chiếc bút viết thật:
+Nhóm Bút vẽ cung cấp các khối lệnh thao tác như một chiếc bút viết thật trên giấy:
 
-| Khối lệnh Tiếng Việt (.vi) | Ý nghĩa thực tế | Lưu ý sư phạm |
-|---|---|---|
-| 🟢 `xóa tất cả` | Tẩy sạch toàn bộ màn hình | **Bắt buộc đặt ngay sau cờ xanh** để xóa hình vẽ của lần chạy trước. |
-| 🟢 `đặt bút` | Đặt đầu bút chạm xuống giấy | Sau khi đặt bút, mỗi bước nhân vật di chuyển sẽ để lại một vệt mực. |
-| 🟢 `nhấc bút` | Nhấc đầu bút lên khỏi giấy | Dùng khi muốn chú Mèo đi sang chỗ khác mà **không để lại vết mực bẩn**. |
-| 🟢 `chọn màu vẽ [ ]` | Chọn màu mực vẽ | Có thể chấm chọn màu sắc yêu thích trực tiếp trên bảng màu. |
-| 🟢 `đặt kích thước bút vẽ bằng (3)` | Chỉnh độ đậm của nét bút | Mặc định là $1$ (rất mảnh). Khuyên dùng $2$ hoặc $3$ để nét vẽ rõ đẹp. |
+| Khối lệnh trực quan Scratch 3.0 | Ý nghĩa thực tế | Lưu ý sư phạm khi lập trình |
+|:---:|---|---|
+| ![Khối xóa tất cả](assets/rendered_blocks/pen_block_clear.png) | Tẩy sạch toàn bộ nét vẽ cũ | **Bắt buộc đặt ngay sau cờ xanh** để làm sạch màn hình trước khi vẽ hình mới. |
+| ![Khối đặt bút](assets/rendered_blocks/pen_block_down.png) | Hạ đầu bút chạm xuống giấy | Sau khi đặt bút, mỗi bước nhân vật di chuyển sẽ để lại một vệt mực tương ứng. |
+| ![Khối nhấc bút](assets/rendered_blocks/pen_block_up.png) | Nhấc đầu bút lên khỏi giấy | Dùng khi muốn di chuyển nhân vật sang vị trí khác mà **không để lại vệt mực lem**. |
+| ![Khối chọn màu vẽ](assets/rendered_blocks/pen_block_set_color.png) | Chọn màu mực cố định | Nhấp chuột vào ô màu để chọn màu sắc yêu thích trực tiếp trên bảng màu. |
+| ![Khối đổi màu bút](assets/rendered_blocks/pen_block_change_color.png) | Thay đổi màu sắc liên tục | Tăng chỉ số màu để tạo hiệu ứng cầu vồng rực rỡ khi vẽ nhiều hình xoay quanh tâm. |
+| ![Khối đặt kích thước bút](assets/rendered_blocks/pen_block_set_size.png) | Chỉnh độ đậm nhạt của nét vẽ | Mặc định là $1$ (rất mảnh). Khuyên dùng $2$ hoặc $3$ để nét vẽ rõ nét trên màn hình. |
+| ![Khối đổi kích thước bút](assets/rendered_blocks/pen_block_change_size.png) | Tăng dần nét vẽ theo thời gian | Giúp tạo hiệu ứng nét vẽ đậm dần từ trong ra ngoài. |
 
-### Cụm Lệnh Khởi Động Chuẩn (Chuẩn bị Giấy & Bút)
-Trước khi vẽ bất kỳ hình gì, luôn tạo cụm lệnh "chuẩn bị giấy bút" gồm 8 bước ghép theo đúng giao diện Tiếng Việt của Scratch 3.0:
+### Cụm lệnh khởi động chuẩn (Chuẩn bị giấy và bút)
+Trước khi vẽ bất kỳ hình nào, chúng ta luôn thiết lập cụm lệnh "chuẩn bị giấy bút" gồm 8 bước theo đúng chuẩn giao diện Tiếng Việt của Scratch 3.0:
 
 ![Cụm lệnh khởi động bút vẽ Scratch Tiếng Việt](assets/rendered_blocks/l01_setup_pen_vi.png)
 
 *Quy trình 8 bước chuẩn:*
-
 1. 🟡 **Khi bấm vào cờ xanh** (Sự kiện bắt đầu chương trình).
-
 2. 🟢 **Xóa tất cả** (Lau sạch màn hình vẽ cũ).
-
-3. 🟢 **Nhấc bút** (Tránh làm lem mực khi di chuyển).
-
+3. 🟢 **Nhấc bút** (Tránh làm lem mực khi di chuyển về vị trí xuất phát).
 4. 🔵 **Đi tới điểm x: (0) y: (0)** (Đưa nhân vật về tâm sân khấu).
-
 5. 🔵 **Đặt hướng bằng (90)** (Đặt mũi nhìn sang phải).
-
 6. 🟢 **Chọn màu vẽ [Xanh dương]** (Chọn màu mực yêu thích).
-
 7. 🟢 **Đặt kích thước bút vẽ bằng (3)** (Chỉnh nét bút rõ nét).
-
 8. 🟢 **Đặt bút** (Hạ đầu bút chạm mặt giấy sẵn sàng vẽ).
 
 ---
 
-## 3. Vòng Lặp Lặp Lại & Quy Tắc Vàng Vẽ Đa Giác Đều
+## 3. Vòng lặp và quy tắc vẽ đa giác đều
 
-### Vấn đề: Vẽ tay từng nét lặp lại
+### Vấn đề: Vẽ thủ công từng nét lặp lại
 Để vẽ một hình vuông cạnh $100$ bước:
-
 - Chú Mèo đi $100$ bước $\to$ Xoay phải $90^\circ$.
 - Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
 - Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
 - Lại đi $100$ bước $\to$ Xoay phải $90^\circ$.
 
-Nếu viết tay, ta phải ghép tới $8$ khối lệnh liên tiếp! Nhưng nếu vẽ hình $20$ cạnh hay $100$ cạnh thì sao?
+Nếu viết thủ công, chúng ta phải ghép tới $8$ khối lệnh liên tiếp! Nếu vẽ hình $20$ cạnh hay $100$ cạnh thì kịch bản sẽ quá dài.
 
 ### Giải pháp: Khối lệnh `lặp lại () lần`
 Khối lệnh **`lặp lại () lần`** (trong nhóm Điều khiển màu cam) cho phép lặp lại một cụm câu lệnh bên trong một số lần định trước:
 
 ![Khối lặp vẽ hình vuông Scratch Tiếng Việt](assets/rendered_blocks/l01_hinh_vuong_vi.png)
 
-### Công Thức Góc Quay Thần Thánh
-Khi nhân vật vẽ một hình đa giác khép kín và quay trở lại hướng xuất phát, tổng số góc mà nhân vật đã xoay tròn trọn vẹn đúng $1$ vòng tròn là $360^\circ$.
+### Công thức tính góc quay
+Khi nhân vật vẽ một hình đa giác khép kín và quay trở lại hướng xuất phát ban đầu, tổng số góc mà nhân vật đã xoay tròn trọn vẹn đúng $1$ vòng là $360^\circ$.
 
-Do đó, với bất kỳ đa giác đều gồm $N$ cạnh nào, góc quay ngoài tại mỗi đỉnh luôn luôn là:
+Do đó, với bất kỳ đa giác đều gồm $N$ cạnh nào, góc quay ngoài tại mỗi đỉnh luôn là:
 $$\text{Góc xoay} = \frac{360^\circ}{N}$$
 
-### Bảng Tra Cứu Đa Giác Đều Chuẩn
-| Tên đa giác | Số cạnh ($N$) | Số lần lặp | Góc xoay phải | Khối lệnh Scratch Tiếng Việt |
-|---|:---:|:---:|:---:|---|
-| **Tam giác đều** | $3$ | `lặp lại (3) lần` | $\dfrac{360^\circ}{3} = 120^\circ$ | 🟠 `lặp lại (3) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (100) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (120) độ` |
-| **Hình vuông** | $4$ | `lặp lại (4) lần` | $\dfrac{360^\circ}{4} = 90^\circ$ | 🟠 `lặp lại (4) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (100) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (90) độ` |
-| **Ngũ giác đều** | $5$ | `lặp lại (5) lần` | $\dfrac{360^\circ}{5} = 72^\circ$ | 🟠 `lặp lại (5) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (100) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (72) độ` |
-| **Lục giác đều** | $6$ | `lặp lại (6) lần` | $\dfrac{360^\circ}{6} = 60^\circ$ | 🟠 `lặp lại (6) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (80) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (60) độ` |
-| **Bát giác đều** | $8$ | `lặp lại (8) lần` | $\dfrac{360^\circ}{8} = 45^\circ$ | 🟠 `lặp lại (8) lần`<br>&nbsp;&nbsp;🔵 `di chuyển (60) bước`<br>&nbsp;&nbsp;🔵 `xoay phải ↻ (45) độ` |
+### Bảng tra cứu các đa giác đều chuẩn với khối lệnh Scratch trực quan
 
-> **Bẫy lỗi kinh điển về Góc quay:**
-> Rất nhiều học sinh nhầm lẫn giữa **góc trong của hình** và **góc xoay ngoài của nhân vật**.
-> Ví dụ: Góc trong của tam giác đều là $60^\circ$. Nếu cho nhân vật xoay $60^\circ$, chú Mèo sẽ vẽ ra hình lục giác ($360 / 60 = 6$) chứ không phải tam giác! Muốn vẽ tam giác đều, góc xoay bắt buộc phải là $360 / 3 = 120^\circ$.
+| Tên đa giác | Hình minh họa mẫu | Số cạnh ($N$) | Góc xoay ngoài ($360^\circ / N$) | Khối lệnh Scratch 3.0 trực quan |
+|---|:---:|:---:|:---:|:---:|
+| **Tam giác đều** | ![Tam giác](assets/pen_drawings/pen_img_046.png) | $3$ | $\dfrac{360^\circ}{3} = 120^\circ$ | ![Khối lệnh vẽ Tam giác](assets/rendered_blocks/l01_tam_giac_deu_vi.png) |
+| **Hình vuông** | ![Hình vuông](assets/pen_drawings/pen_img_057.png) | $4$ | $\dfrac{360^\circ}{4} = 90^\circ$ | ![Khối lệnh vẽ Hình vuông](assets/rendered_blocks/l01_hinh_vuong_vi.png) |
+| **Ngũ giác đều** | ![Ngũ giác](assets/pen_drawings/pen_img_068.png) | $5$ | $\dfrac{360^\circ}{5} = 72^\circ$ | ![Khối lệnh vẽ Ngũ giác](assets/rendered_blocks/l01_ngu_giac_deu_vi.png) |
+| **Lục giác đều** | ![Lục giác](assets/pen_drawings/pen_img_079.png) | $6$ | $\dfrac{360^\circ}{6} = 60^\circ$ | ![Khối lệnh vẽ Lục giác](assets/rendered_blocks/l01_luc_giac_deu_vi.png) |
+
+> **Bẫy lỗi kinh điển về góc quay:**
+> Rất nhiều học sinh nhầm lẫn giữa **góc trong của hình học** và **góc xoay ngoài của nhân vật**.
+> - *Ví dụ:* Góc trong của tam giác đều là $60^\circ$. Nếu cho nhân vật xoay $60^\circ$, chú Mèo sẽ vẽ ra hình lục giác ($360 / 60 = 6$) chứ không phải tam giác! Muốn vẽ tam giác đều, góc xoay bắt buộc phải là $360 / 3 = 120^\circ$.
 
 ---
 
-## 4. Kỹ Thuật Đổi Điểm Vẽ & Hình Vuông Đồng Tâm
+## 4. Kỹ thuật đổi điểm vẽ và hình vuông đồng tâm
 
 Khi cần vẽ nhiều hình tách rời nhau hoặc vẽ các hình lồng nhau (như hình vuông đồng tâm):
-
 1. Vẽ xong hình thứ nhất.
-
 2. **Nhấc bút (`nhấc bút`) ngay lập tức**.
-
 3. Di chuyển nhân vật đến vị trí mới (dùng `đi tới điểm x: () y: ()` hoặc `di chuyển () bước`).
-
 4. **Đặt bút xuống (`đặt bút`)**.
-
 5. Bắt đầu vẽ hình tiếp theo.
 
-### Ví Dụ: Vẽ 3 Hình Vuông Đồng Tâm
-Để các hình vuông đồng tâm có chung tâm tại gốc $(0, 0)$:
+### Ví dụ: Vẽ 3 hình vuông đồng tâm bằng phương pháp tuần tự
+Khi chưa học khối lệnh tự tạo, ta thực hiện vẽ tuần tự từng hình một bằng các khối lệnh cơ bản:
+- Hình vuông 1: Cạnh 60 bước, bắt đầu từ $(-30, -30)$, vẽ lặp 4 lần (di chuyển 60, xoay phải 90).
+- Nhấc bút $\to$ Di chuyển đến $(-50, -50)$ $\to$ Đặt bút.
+- Hình vuông 2: Cạnh 100 bước, vẽ lặp 4 lần (di chuyển 100, xoay phải 90).
+- Nhấc bút $\to$ Di chuyển đến $(-70, -70)$ $\to$ Đặt bút.
+- Hình vuông 3: Cạnh 140 bước, vẽ lặp 4 lần (di chuyển 140, xoay phải 90).
 
-- Hình 1 (cạnh $60$): Bắt đầu từ $x: -30, y: 30$.
-- Hình 2 (cạnh $100$): Bắt đầu từ $x: -50, y: 50$.
-- Hình 3 (cạnh $140$): Bắt đầu từ $x: -70, y: 70$.
+| Khối lệnh Scratch tuần tự vẽ 3 hình vuông đồng tâm | Kết quả trên sân khấu |
+|:---:|:---:|
+| ![Khối lệnh vẽ 3 hình vuông đồng tâm](assets/rendered_blocks/l01_3_hinh_vuong_dong_tam_result_vi.png) | ![Hình mẫu đồng tâm](assets/pen_drawings/pen_img_3_hinh_vuong_dong_tam.png) |
+| *Quy trình tuần tự: vẽ hình - nhấc bút - đổi tọa độ - hạ bút* | *3 hình vuông lồng nhau đối xứng qua gốc (0, 0)* |
 
-Mỗi lần chuyển hình, nhân vật **nhấc bút $\to$ chuyển tọa độ $\to$ đặt bút**, tạo ra bức tranh $3$ hình vuông lồng nhau hoàn hảo mà không bị dính nét mực nối.
-
----
-
-## 5. Khối Lệnh Tự Tạo (Khối Của Tôi - My Blocks) Cơ Bản
-
-Khi một đoạn lệnh vẽ hình (ví dụ vẽ hình vuông) phải dùng đi dùng lại nhiều lần, ta gom các khối lệnh đó thành một khối riêng có tên gọi là **Khối của tôi (My Blocks)**:
-
-![Định nghĩa Khối của tôi](assets/rendered_blocks/l01_myblock_dinh_nghia_vi.png)
-
-Sau khi định nghĩa, bất cứ khi nào cần vẽ hình vuông, ta chỉ cần gọi một khối lệnh duy nhất:
-
-![Gọi Khối của tôi](assets/rendered_blocks/l01_myblock_goi_vi.png)
-
-Điều này giúp kịch bản lập trình gọn gàng, trong sáng và không bị rối mắt.
+> **Nhận xét quan trọng:**
+> Để ý rằng cụm 4 lệnh `lặp lại (4) lần [di chuyển... xoay phải 90]` bị lặp đi lặp lại tới 3 lần khiến chương trình rất dài dòng.  
+> Để khắc phục điều này và làm cho mã nguồn ngắn gọn, chuyên nghiệp hơn, chúng ta sẽ làm quen với **Khối của tôi (My Blocks)** ở phần tiếp theo ngay dưới đây!
 
 ---
 
-## 6. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 5. Khối lệnh tự tạo (Khối của tôi) và kỹ thuật tạo mảnh ghép
 
-Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hiện kịch bản vẽ hình vuông cạnh $100$ bước, bắt đầu từ $(0, 0)$ hướng $90^\circ$:
+### 5.1. Khái niệm Khối của tôi (My Blocks / Thủ tục)
+Khi một hình vẽ xuất hiện nhiều lần trong bài (ví dụ vẽ một bông hoa gồm 12 chiếc lá cờ), nếu viết lặp đi lặp lại cụm lệnh vẽ lá cờ thì chương trình sẽ rất dài dòng và khó sửa lỗi.
 
-| Vòng lặp | Lệnh thực thi | Tọa độ sau lệnh ($x, y$) | Hướng sau lệnh | Trạng thái nét vẽ |
+Scratch cung cấp tính năng **Khối của tôi (My Blocks)** màu hồng đậm:
+- Giúp đóng gói một đoạn lệnh thành một "chiếc khuôn" mang tên riêng.
+- Khi cần dùng, chỉ việc gọi tên chiếc khuôn đó ra.
+
+| Định nghĩa Khối của tôi | Lệnh gọi Khối của tôi |
+|:---:|:---:|
+| ![Định nghĩa Khối của tôi](assets/rendered_blocks/l01_myblock_dinh_nghia_vi.png) | ![Gọi Khối của tôi](assets/rendered_blocks/l01_myblock_goi_vi.png) |
+| *Tạo chiếc khuôn thủ tục mang tên riêng* | *Gọi chiếc khuôn ra sử dụng mọi lúc* |
+
+### 5.2. Ứng dụng thực tế: Mảnh ghép lá cờ và nghệ thuật hoa văn xoay quanh tâm
+
+Trong tài liệu học tập, kỹ thuật tạo mảnh ghép lá cờ rồi xoay quanh tâm là một trong những bài học nền tảng:
+- **Cấu tạo một lá cờ đơn lẻ:**
+  - Cán cờ: Đi thẳng $100$ bước (`di chuyển (100) bước`).
+  - Lá cờ hình vuông: Lặp lại $4$ lần cụm lệnh cạnh $40$ bước, xoay phải $90^\circ$ (`lặp lại (4) lần: di chuyển (40) bước, xoay phải 90 độ`).
+  - Lùi về tâm: Lùi ngược lại đúng $100$ bước (`di chuyển (-100) bước`) để bảo toàn vị trí đứng của nhân vật tại tâm sân khấu.
+
+| Mảnh ghép đơn lẻ | Kết quả xoay quanh tâm nhiều lần |
+|:---:|:---:|
+| ![Mảnh ghép lá cờ](assets/pen_drawings/pen_img_158.png) | ![Hoa văn lá cờ xoay tròn](assets/pen_drawings/pen_img_159.png) |
+| *Hình 1: Một lá cờ đơn lẻ (cán 100, cờ vuông 40x40)* | *Hình 2: Hoa văn 8 lá cờ xoay quanh tâm (mỗi bước xoay 45 độ)* |
+
+**Khối lệnh Scratch chi tiết:**
+
+| Định nghĩa thủ tục Lá_Cờ | Chương trình chính vẽ hoa văn 8 lá cờ |
+|:---:|:---:|
+| ![Khối định nghĩa Lá Cờ](assets/rendered_blocks/l01_la_co_vi.png) | ![Khối chính xoay 8 lá cờ](assets/rendered_blocks/l01_hoa_van_8_la_co_vi.png) |
+| *Tạo thủ tục: Đi tới 100 vẽ cờ vuông rồi lùi về tâm* | *Lặp 8 lần: Gọi Lá_Cờ, xoay 45 độ và đổi màu bút* |
+
+---
+
+## 6. Bảng mô phỏng từng bước vẽ hình vuông (Dry run)
+
+Mô phỏng hành trình vẽ hình vuông cạnh $100$ bước xuất phát tại $(0, 0)$, hướng $90^\circ$:
+
+| Bước | Lệnh thực hiện | Tọa độ $(x, y)$ sau lệnh | Hướng nhìn | Vệt mực để lại trên sân khấu |
 |:---:|---|:---:|:---:|---|
-| **Khởi động** | `đi tới điểm x: (0) y: (0)`, `đặt hướng bằng (90)`, `đặt bút` | $(0, 0)$ | $90^\circ$ (Phải) | Đã hạ bút chạm giấy tại $(0, 0)$ |
-| **Lần 1** | `di chuyển (100) bước` | $(100, 0)$ | $90^\circ$ (Phải) | Vẽ cạnh đáy nằm ngang dài $100$ |
-| | `xoay phải ↻ (90) độ` | $(100, 0)$ | $180^\circ$ (Xuống) | Đổi hướng nhìn cắm thẳng xuống dưới |
-| **Lần 2** | `di chuyển (100) bước` | $(100, -100)$ | $180^\circ$ (Xuống) | Vẽ cạnh thẳng đứng bên phải dài $100$ |
-| | `xoay phải ↻ (90) độ` | $(100, -100)$ | $-90^\circ$ (Trái) | Đổi hướng nhìn sang trái |
-| **Lần 3** | `di chuyển (100) bước` | $(0, -100)$ | $-90^\circ$ (Trái) | Vẽ cạnh đáy dưới nằm ngang dài $100$ |
-| | `xoay phải ↻ (90) độ` | $(0, -100)$ | $0^\circ$ (Lên) | Đổi hướng nhìn thẳng lên trên |
-| **Lần 4** | `di chuyển (100) bước` | $(0, 0)$ | $0^\circ$ (Lên) | Vẽ cạnh bên trái khép kín về $(0, 0)$ |
-| | `xoay phải ↻ (90) độ` | $(0, 0)$ | $90^\circ$ (Phải) | Trở lại đúng hướng xuất phát ban đầu |
+| **0** | `đi tới x: 0 y: 0`, `đặt hướng 90`, `đặt bút` | $(0, 0)$ | $90^\circ$ (Phải) | Chưa có (mới đặt bút tại gốc) |
+| **1** | `di chuyển 100 bước` | $(100, 0)$ | $90^\circ$ | Nét ngang dưới từ $(0, 0) \to (100, 0)$ |
+| **2** | `xoay phải ↻ 90 độ` | $(100, 0)$ | $180^\circ$ (Xuống) | Đổi hướng nhìn xuống đáy sân khấu |
+| **3** | `di chuyển 100 bước` | $(100, -100)$ | $180^\circ$ | Nét dọc phải từ $(100, 0) \to (100, -100)$ |
+| **4** | `xoay phải ↻ 90 độ` | $(100, -100)$ | $-90^\circ$ (Trái) | Đổi hướng nhìn sang trái |
+| **5** | `di chuyển 100 bước` | $(0, -100)$ | $-90^\circ$ | Nét ngang trên từ $(100, -100) \to (0, -100)$ |
+| **6** | `xoay phải ↻ 90 độ` | $(0, -100)$ | $0^\circ$ (Lên) | Đổi hướng nhìn lên trên |
+| **7** | `di chuyển 100 bước` | $(0, 0)$ | $0^\circ$ | Nét dọc trái từ $(0, -100) \to (0, 0)$ |
+| **8** | `xoay phải ↻ 90 độ` | $(0, 0)$ | $90^\circ$ (Phải) | Trở về đúng hướng ban đầu, khép kín hình |
 
 ---
 
-## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Các bẫy lỗi thường gặp (Bug Traps)
 
-> **Bẫy 1: Quên câu lệnh `xóa tất cả` lúc bấm cờ xanh**
-> - *Hiện tượng:* Khi bấm Cờ Xanh lần thứ hai, hình vẽ mới đè lên hình vẽ cũ làm màn hình rối tung.
-> - *Khắc phục:* Luôn luôn đặt khối `xóa tất cả` ngay dưới khối `khi bấm vào cờ xanh`.
+> **Bẫy 1: Quên nhấc bút khi di chuyển nhân vật sang vị trí mới**
+> - *Hiện tượng:* Trên màn hình xuất hiện một vệt mực chéo nối từ hình này sang hình kia.
+> - *Khắc phục:* Luôn ghi nhớ quy tắc: Trước khi đổi tọa độ, phải `nhấc bút`. Đến nơi mới thì `đặt bút`.
 
-> **Bẫy 2: Quên nhấc bút (`nhấc bút`) trước khi đổi chỗ**
-> - *Hiện tượng:* Khi nhân vật di chuyển sang vị trí mới để vẽ hình tiếp theo, một nét mực gạch chéo xấu xí xuất hiện trên sân khấu.
-> - *Khắc phục:* Nhớ câu thần chú: **"Muốn đi đâu, nhấc bút lên (`nhấc bút`) rồi mới đi; tới nơi rồi mới đặt bút xuống (`đặt bút`)"**.
+> **Bẫy 2: Nhầm lẫn góc quay trong và góc quay ngoài**
+> - *Hậu quả:* Hình vẽ bị méo mó hoặc vẽ ra số cạnh sai hoàn toàn.
+> - *Khắc phục:* Luôn lấy $360$ chia cho số cạnh ($360 / N$).
 
-> **Bẫy 3: Nhân vật bị kẹt ở mép sân khấu**
-> - *Hiện tượng:* Nếu cho số bước quá lớn (ví dụ $500$ bước), nhân vật chạm mép sân khấu sẽ bị khựng lại và góc quay bị méo mó.
-> - *Khắc phục:* Kích thước các hình đa giác nên chọn chiều dài cạnh từ $50$ đến $120$ bước để vừa vặn trong màn hình $480 \times 360$.
+> **Bẫy 3: Quên lệnh xóa tất cả ở đầu chương trình**
+> - *Hiện tượng:* Bấm cờ xanh chạy lại nhưng hình cũ vẫn còn nguyên, hình mới đè lên lem nhem.
+> - *Khắc phục:* Luôn đặt `xóa tất cả` ngay dưới cờ xanh.
 
 ---
 
-## 8. Concept Quiz (10 Câu Trắc Nghiệm Kiểm Tra Nhận Thức)
+## 8. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
-#### Câu 1 (Nhận biết tọa độ)
-Tâm chính giữa của sân khấu Scratch có tọa độ là bao nhiêu?
-- A. $x = 100, y = 100$
-- B. $x = 0, y = 0$
-- C. $x = 240, y = 180$
-- D. $x = -240, y = -180$
-> **Đáp án:** B  
-> **Giải thích:** Gốc tọa độ $(0, 0)$ là điểm chính giữa của sân khấu Scratch.
+#### Câu 1
+Tọa độ chính giữa tâm sân khấu Scratch là:
+- A. $(x: 240, y: 180)$
+- B. $(x: -240, y: -180)$
+- C. $(x: 0, y: 0)$ *(Đáp án đúng)*
+- D. $(x: 100, y: 100)$
 
-#### Câu 2 (Hướng di chuyển)
-Khối lệnh **`đặt hướng bằng (90)`** sẽ hướng mũi của nhân vật nhìn về phía nào?
-- A. Thẳng lên trên
-- B. Thẳng xuống dưới
-- C. Sang bên phải
-- D. Sang bên trái
-> **Đáp án:** C  
-> **Giải thích:** Hướng $90^\circ$ là hướng Đông (sang phải), $0^\circ$ là hướng Bắc (lên trên), $180^\circ$ là hướng Nam (xuống dưới), $-90^\circ$ là hướng Tây (sang trái).
+#### Câu 2
+Để nhân vật nhìn thẳng lên phía trên màn hình, ta dùng khối lệnh:
+- A. `đặt hướng bằng (90)`
+- B. `đặt hướng bằng (0)` *(Đáp án đúng)*
+- C. `đặt hướng bằng (180)`
+- D. `đặt hướng bằng (-90)`
 
-#### Câu 3 (Lệnh bắt buộc đầu chương trình)
-Khối lệnh nào sau đây giúp xóa sạch toàn bộ các nét vẽ cũ trên sân khấu khi bắt đầu chạy chương trình?
-- A. `nhấc bút`
-- B. `xóa tất cả`
-- C. `ẩn`
-- D. `dừng lại tất cả`
-> **Đáp án:** B  
-> **Giải thích:** Khối `xóa tất cả` (trong nhóm Bút vẽ) sẽ xóa sạch mọi nét mực do bút vẽ để lại trên màn hình.
-
-#### Câu 4 (Công thức góc quay đa giác)
-Để vẽ một hình tam giác đều có 3 cạnh bằng nhau, tại mỗi đỉnh nhân vật cần quay một góc bao nhiêu độ?
-- A. $60^\circ$
+#### Câu 3
+Muốn vẽ một hình lục giác đều (6 cạnh), góc xoay tại mỗi đỉnh là:
+- A. $60^\circ$ *(Đáp án đúng: $360 / 6 = 60$)*
 - B. $90^\circ$
 - C. $120^\circ$
-- D. $180^\circ$
-> **Đáp án:** C  
-> **Giải thích:** Công thức góc quay là $360^\circ / N$. Với tam giác đều ($N = 3$), góc quay ngoài là $360 / 3 = 120^\circ$. (Góc $60^\circ$ là góc trong của hình tam giác, không phải góc quay của nhân vật).
+- D. $72^\circ$
 
-#### Câu 5 (Dự đoán hình vẽ)
-Khối lệnh sau đây sẽ vẽ ra hình gì trên sân khấu?
-
-![Khối lệnh câu 5](assets/rendered_blocks/l01_luc_giac_deu_vi.png)
-
-- A. Hình ngũ giác đều (5 cạnh)
-- B. Hình lục giác đều (6 cạnh)
-- C. Hình bát giác đều (8 cạnh)
-- D. Hình vuông (4 cạnh)
-> **Đáp án:** B  
-> **Giải thích:** Khối `lặp lại 6 lần` và góc xoay $60^\circ$ ($360 / 6 = 60$) sẽ tạo ra hình lục giác đều 6 cạnh.
-
-#### Câu 6 (Thao tác nhấc bút)
-Nếu muốn nhân vật di chuyển từ điểm $A$ sang điểm $B$ mà KHÔNG để lại nét mực trên màn hình, ta phải dùng khối lệnh nào trước khi di chuyển?
+#### Câu 4
+Nếu muốn nhân vật di chuyển từ điểm $A$ sang điểm $B$ mà không để lại nét mực, ta cần thực hiện lệnh nào trước khi đi?
 - A. `đặt bút`
-- B. `nhấc bút`
-- C. `đặt kích thước bút vẽ bằng (0)`
-- D. `xóa tất cả`
-> **Đáp án:** B  
-> **Giải thích:** Khối `nhấc bút` làm ngắt tiếp xúc giữa đầu bút và trang giấy, giúp nhân vật di chuyển tự do mà không vẽ ra đường nét.
+- B. `nhấc bút` *(Đáp án đúng)*
+- C. `xóa tất cả`
+- D. `chọn màu vẽ`
 
-#### Câu 7 (Độ dày nét bút)
-Muốn nét vẽ của nhân vật trở nên đậm hơn và nhìn rõ hơn, ta sử dụng khối lệnh nào?
-- A. `thay đổi màu bút vẽ một lượng (10)`
-- B. `đặt kích thước bút vẽ bằng (3)`
-- C. `di chuyển (10) bước`
-- D. `đặt hướng bằng (0)`
-> **Đáp án:** B  
-> **Giải thích:** Khối `đặt kích thước bút vẽ bằng (3)` đặt độ dày nét bút là 3 đơn vị pixel, giúp nét vẽ đậm và sắc nét.
+#### Câu 5
+Khối lệnh sau đây vẽ ra hình gì?
 
-#### Câu 8 (Góc quay ngũ giác đều)
-Một bạn học sinh muốn lập trình vẽ hình ngũ giác đều (5 cạnh bằng nhau). Bạn ấy dùng khối lệnh `lặp lại (5) lần` nhưng chưa biết phải điền góc xoay bao nhiêu độ. Em hãy giúp bạn tính góc xoay:
+![Khối lệnh trắc nghiệm Ngũ giác](assets/rendered_blocks/l01_ngu_giac_deu_vi.png)
 
-- A. $72^\circ$
-- B. $108^\circ$
-- C. $70^\circ$
-- D. $60^\circ$
-> **Đáp án:** A  
-> **Giải thích:** Áp dụng công thức $360^\circ / 5 = 72^\circ$.
+- A. Hình tam giác đều
+- B. Hình vuông
+- C. Ngũ giác đều *(Đáp án đúng: 5 cạnh, góc quay 360 / 5 = 72 độ)*
+- D. Lục giác đều
 
-#### Câu 9 (Bắt lỗi kịch bản)
-Một bạn viết kịch bản vẽ hình vuông: Chú Mèo đi $100$ bước rồi xoay phải $90^\circ$, lặp lại 4 lần. Nhưng khi bấm Cờ Xanh, chú Mèo di chuyển đủ 4 cạnh mà trên màn hình không xuất hiện bất kỳ nét vẽ nào. Nguyên nhân chính là gì?
-- A. Bạn quên đặt khối `đặt bút` trước khi lặp.
-- B. Bạn chọn sai màu vẽ.
-- C. Bạn chưa bấm phím Space.
-- D. Sân khấu bị phóng to quá mức.
-> **Đáp án:** A  
-> **Giải thích:** Nếu không có lệnh `đặt bút`, nhân vật vẫn di chuyển theo hình vuông nhưng bút vẽ đang ở trạng thái nhấc lên nên không có mực trên màn hình.
+#### Câu 6
+Khối lệnh tự tạo (Khối của tôi) có tác dụng gì quan trọng nhất?
+- A. Giúp nhân vật chạy nhanh hơn
+- B. Đóng gói đoạn lệnh để tái sử dụng nhiều lần, giúp chương trình gọn gàng *(Đáp án đúng)*
+- C. Đổi màu sân khấu tự động
+- D. Tự động vẽ hình mà không cần bút vẽ
 
-#### Câu 10 (Lợi ích của Khối Của Tôi)
-Tại sao ta nên tạo khối lệnh riêng (**Khối của tôi - My Blocks**) như `ve_hinh_vuong` khi viết các chương trình vẽ hình phức tạp?
-- A. Để chương trình chạy nhanh gấp đôi.
-- B. Để tái sử dụng cụm lệnh nhiều lần mà không cần kéo lại từng khối, giúp chương trình gọn gàng dễ đọc.
-- C. Để đổi màu bút vẽ tự động.
-- D. Bắt buộc phải có Khối của tôi thì Scratch mới cho phép vẽ.
-> **Đáp án:** B  
-> **Giải thích:** Khối của tôi đóng vai trò như một chương trình con giúp đóng gói và tái sử dụng mã nguồn, nâng cao tính cấu trúc của chương trình.
+#### Câu 7
+Khi muốn vẽ hoa văn gồm 10 hình tam giác đều xoay quanh tâm, sau mỗi lần vẽ xong 1 hình tam giác và lùi về tâm, nhân vật cần xoay một góc bằng bao nhiêu độ?
+- A. $120^\circ$
+- B. $60^\circ$
+- C. $36^\circ$ *(Đáp án đúng: $360 / 10 = 36$ độ)*
+- D. $90^\circ$
 
----
+#### Câu 8
+Muốn tăng độ dày nét vẽ cho rõ nét hơn, ta dùng khối lệnh nào?
+- A. `đặt kích thước bút vẽ bằng (3)` *(Đáp án đúng)*
+- B. `chọn màu vẽ`
+- C. `di chuyển (3) bước`
+- D. `thay đổi x một lượng (3)`
+
+#### Câu 9
+Khối lệnh `xóa tất cả` nằm trong nhóm lệnh nào?
+- A. Chuyển động
+- B. Hiển thị
+- C. Bút vẽ (Pen) *(Đáp án đúng)*
+- D. Sự kiện
+
+#### Câu 10
+Để tạo hiệu ứng nét vẽ đổi màu liên tục khi vẽ hoa văn, ta nên đặt khối lệnh nào vào trong vòng lặp?
+- A. `thay đổi màu bút vẽ một lượng (10)` *(Đáp án đúng)*
+- B. `đặt bút`
+- C. `nhấc bút`
+- D. `đặt hướng bằng (90)`
 
 ## Bài tập lesson
 
@@ -382,6 +376,11 @@ Tại sao ta nên tạo khối lệnh riêng (**Khối của tôi - My Blocks**)
 
 ### Bài 1 (P0): Khởi động nét vẽ & Dấu cộng trung tâm
 * **Mã bài toán:** `sca_pen_p00_setup_net_ve`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_001.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Trước khi bắt đầu hành trình vẽ các kỳ quan và hoa văn hình học rực rỡ trên sân khấu Scratch, chú Mèo Scratch cần kiểm tra xem chiếc bút vẽ thần kỳ của mình có hoạt động hoàn hảo hay không. Để kiểm tra chiếc bút, chú Mèo quyết định vẽ một ký hiệu dấu cộng màu đỏ tươi rực rỡ ngay chính giữa tâm sân khấu.
 * **Nhiệm vụ:** Em hãy lập trình điều khiển chú Mèo Scratch thực hiện các bước sau:
@@ -416,27 +415,31 @@ Nhân vật lần lượt di chuyển ra ngoài $50$ bước để vẽ nét m�
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p00_setup_net_ve](../../problems/sca_pen_p00_setup_net_ve/solution_blocks_vi.png)
 
 ---
-
 ### Bài 2 (P0): Bộ 4 Đa Giác Đều Cơ Bản
 * **Mã bài toán:** `sca_pen_p01_da_giac_deu`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_046.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_057.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_068.png)
+  ![Hình mẫu 4](assets/pen_drawings/pen_img_079.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Trong công viên hình học Scratch Park, chú Mèo Scratch được giao nhiệm vụ vẽ 4 bồn hoa đa giác đều hoàn hảo: Tam giác đều (3 cạnh), Hình vuông (4 cạnh), Ngũ giác đều (5 cạnh), Lục giác đều (6 cạnh).
 * **Nhiệm vụ:** Lập trình vẽ các hình đa giác đều với độ dài cạnh 100 bước và góc quay ngoài 360 / N độ.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh để bắt đầu.
-* **Kết quả ra (Output):** Hình đa giác đều khép kín trên sân khấu.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Hình đa giác đều khép kín trên sân khấu.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh để bắt đầu.
-```
-
-### Output
-```text
-Kết quả: Hình đa giác đều khép kín trên sân khấu.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh để bắt đầu.
+- **Kết quả hình ảnh:** Hình đa giác đều khép kín trên sân khấu.
 
 ### Giải thích
 
@@ -444,27 +447,31 @@ Tam giác: lặp 3 [đi 100, xoay 120]. Hình vuông: lặp 4 [đi 100, xoay 90]
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p01_da_giac_deu](../../problems/sca_pen_p01_da_giac_deu/solution_blocks_vi.png)
 
 ---
-
 ### Bài 3 (P0): Bàn Phím Đa Giác Tương Tác
 * **Mã bài toán:** `sca_pen_p02_ban_phim_da_giac`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_135.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_136.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_137.png)
+  ![Hình mẫu 4](assets/pen_drawings/pen_img_138.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Nhà thiết kế game muốn người chơi tương tác bằng các phím số 1, 2, 3, 4 trên bàn phím để vẽ nhanh các hình khối tương ứng.
 * **Nhiệm vụ:** Lập trình sự kiện: Phím 1 vẽ Tam giác đều, Phím 2 vẽ Hình vuông, Phím 3 vẽ Ngũ giác đều, Phím 4 vẽ Lục giác đều.
-* **Dữ liệu vào (Input):** Nhấn phím 1, 2, 3 hoặc 4 trên bàn phím.
-* **Kết quả ra (Output):** Mỗi phím vẽ ra hình đa giác tương ứng với màu sắc khác nhau.
+* **Kịch bản tương tác:** Nhấn phím 1, 2, 3 hoặc 4 trên bàn phím.
+* **Kết quả mong đợi:** Mỗi phím vẽ ra hình đa giác tương ứng với màu sắc khác nhau.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn phím 1, 2, 3 hoặc 4 trên bàn phím.
-```
-
-### Output
-```text
-Kết quả: Mỗi phím vẽ ra hình đa giác tương ứng với màu sắc khác nhau.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn phím 1, 2, 3 hoặc 4 trên bàn phím.
+- **Kết quả hình ảnh:** Mỗi phím vẽ ra hình đa giác tương ứng với màu sắc khác nhau.
 
 ### Giải thích
 
@@ -472,27 +479,31 @@ Bấm phím 1 -> Mèo vẽ Tam giác màu đỏ. Bấm phím 2 -> Mèo vẽ Hìn
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p02_ban_phim_da_giac](../../problems/sca_pen_p02_ban_phim_da_giac/solution_blocks_vi.png)
 
 ---
-
 ### Bài 4 (P0): Đổi Màu Và Tăng Nét Đậm
 * **Mã bài toán:** `sca_pen_p03_doi_mau_net_dam`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_139.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_140.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_141.png)
+  ![Hình mẫu 4](assets/pen_drawings/pen_img_142.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Họa sĩ Mèo muốn tạo ra bức tranh ấn tượng với các nét vẽ dày dặn và màu sắc biến đổi linh hoạt.
 * **Nhiệm vụ:** Sử dụng khối 'đặt kích thước bút vẽ' và 'thay đổi màu bút vẽ một lượng 10' sau mỗi cạnh vẽ.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Hình đa giác có mỗi cạnh mang một màu sắc rực rỡ khác nhau.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Hình đa giác có mỗi cạnh mang một màu sắc rực rỡ khác nhau.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Hình đa giác có mỗi cạnh mang một màu sắc rực rỡ khác nhau.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Hình đa giác có mỗi cạnh mang một màu sắc rực rỡ khác nhau.
 
 ### Giải thích
 
@@ -500,27 +511,29 @@ Cạnh 1 màu đỏ, Cạnh 2 màu vàng, Cạnh 3 màu lục, Cạnh 4 màu lam
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p03_doi_mau_net_dam](../../problems/sca_pen_p03_doi_mau_net_dam/solution_blocks_vi.png)
 
 ---
-
 ### Bài 5 (P0): Cặp Tam Giác Đối Xứng Qua Tâm
 * **Mã bài toán:** `sca_pen_p04_cap_tam_giac_doi_xung`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_144.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_145.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Biểu tượng của hội toán học gồm hai hình tam giác đều ghép đối xứng nhau tạo thành hình ngôi sao 6 cánh David.
 * **Nhiệm vụ:** Vẽ 1 tam giác đều hướng lên, sau đó đổi hướng 180 độ và vẽ tam giác đều thứ hai lồng vào nhau.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Hai hình tam giác lồng nhau tạo thành ngôi sao 6 cánh sắc nét.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Hai hình tam giác lồng nhau tạo thành ngôi sao 6 cánh sắc nét.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Hai hình tam giác lồng nhau tạo thành ngôi sao 6 cánh sắc nét.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Hai hình tam giác lồng nhau tạo thành ngôi sao 6 cánh sắc nét.
 
 ### Giải thích
 
@@ -528,27 +541,29 @@ Vẽ tam giác 1, nhấc bút di chuyển đến vị trí đối xứng, đặt
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p04_cap_tam_giac_doi_xung](../../problems/sca_pen_p04_cap_tam_giac_doi_xung/solution_blocks_vi.png)
 
 ---
-
 ### Bài 6 (P1): Hình Vuông Đồng Tâm Mở Rộng
 * **Mã bài toán:** `sca_pen_p05_vuong_dong_tam`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_148.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_149.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Thiết kế bia ngắm bắn mục tiêu gồm nhiều hình vuông lồng nhau từ nhỏ đến lớn.
 * **Nhiệm vụ:** Lập trình vẽ N hình vuông lồng nhau, mỗi hình vuông có độ dài cạnh tăng dần 20 bước.
-* **Dữ liệu vào (Input):** Nhập số lượng hình vuông N từ bàn phím.
-* **Kết quả ra (Output):** N hình vuông đồng tâm nằm ngay ngắn giữa sân khấu.
+* **Kịch bản tương tác:** Nhập số lượng hình vuông N từ bàn phím.
+* **Kết quả mong đợi:** N hình vuông đồng tâm nằm ngay ngắn giữa sân khấu.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số lượng hình vuông N từ bàn phím.
-```
-
-### Output
-```text
-Kết quả: N hình vuông đồng tâm nằm ngay ngắn giữa sân khấu.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số lượng hình vuông N từ bàn phím.
+- **Kết quả hình ảnh:** N hình vuông đồng tâm nằm ngay ngắn giữa sân khấu.
 
 ### Giải thích
 
@@ -556,27 +571,29 @@ Hình 1 cạnh 20, hình 2 cạnh 40, hình 3 cạnh 60.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p05_vuong_dong_tam](../../problems/sca_pen_p05_vuong_dong_tam/solution_blocks_vi.png)
 
 ---
-
 ### Bài 7 (P1): Lá Cờ Xoay Vòng Quanh Tâm
 * **Mã bài toán:** `sca_pen_p06_la_co_xoay_vong`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_158.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_159.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Lễ hội thể thao cần một họa tiết gồm các lá cờ tam giác xoay tròn xung quanh cột cờ trung tâm.
 * **Nhiệm vụ:** Tạo mảnh ghép lá cờ (My Blocks), sau đó dùng vòng lặp quay quanh tâm để vẽ N lá cờ.
-* **Dữ liệu vào (Input):** Nhập số lượng lá cờ N từ bàn phím.
-* **Kết quả ra (Output):** Họa tiết chong chóng lá cờ xoay đều 360 độ quanh tâm.
+* **Kịch bản tương tác:** Nhập số lượng lá cờ N từ bàn phím.
+* **Kết quả mong đợi:** Họa tiết chong chóng lá cờ xoay đều 360 độ quanh tâm.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số lượng lá cờ N từ bàn phím.
-```
-
-### Output
-```text
-Kết quả: Họa tiết chong chóng lá cờ xoay đều 360 độ quanh tâm.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số lượng lá cờ N từ bàn phím.
+- **Kết quả hình ảnh:** Họa tiết chong chóng lá cờ xoay đều 360 độ quanh tâm.
 
 ### Giải thích
 
@@ -584,27 +601,30 @@ Nhập N = 8 -> Xoay mỗi bước 360 / 8 = 45 độ, vẽ 8 lá cờ.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p06_la_co_xoay_vong](../../problems/sca_pen_p06_la_co_xoay_vong/solution_blocks_vi.png)
 
 ---
-
 ### Bài 8 (P1): Ngôi Sao 5 Cánh Khép Kín
 * **Mã bài toán:** `sca_pen_p07_ngoi_sao_5_canh`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_123.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_126.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_127.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Vẽ lá cờ Tổ quốc Việt Nam với ngôi sao vàng 5 cánh rực rỡ ở chính giữa.
 * **Nhiệm vụ:** Vẽ ngôi sao 5 cánh nét liền với góc quay đỉnh sao là 144 độ (hoặc 72 độ).
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Ngôi sao 5 cánh hoàn hảo khép kín.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Ngôi sao 5 cánh hoàn hảo khép kín.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Ngôi sao 5 cánh hoàn hảo khép kín.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Ngôi sao 5 cánh hoàn hảo khép kín.
 
 ### Giải thích
 
@@ -612,27 +632,29 @@ Lặp 5 lần: [Đi 150 bước, Xoay phải 144 độ].
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p07_ngoi_sao_5_canh](../../problems/sca_pen_p07_ngoi_sao_5_canh/solution_blocks_vi.png)
 
 ---
-
 ### Bài 9 (P1): Hoa Văn Tam Giác Xoay Chồng
 * **Mã bài toán:** `sca_pen_p08_tam_giac_xoay_chong`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_160.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_161.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Họa tiết gạch men cổ điển tạo bởi các hình tam giác đều xoay quanh một đỉnh chung.
 * **Nhiệm vụ:** Lập trình vẽ N hình tam giác đều chung một đỉnh, mỗi lần vẽ xoay một góc 360 / N độ.
-* **Dữ liệu vào (Input):** Nhập số hình tam giác N.
-* **Kết quả ra (Output):** Bông hoa hình học đa giác xoay đều sắc sảo.
+* **Kịch bản tương tác:** Nhập số hình tam giác N.
+* **Kết quả mong đợi:** Bông hoa hình học đa giác xoay đều sắc sảo.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số hình tam giác N.
-```
-
-### Output
-```text
-Kết quả: Bông hoa hình học đa giác xoay đều sắc sảo.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số hình tam giác N.
+- **Kết quả hình ảnh:** Bông hoa hình học đa giác xoay đều sắc sảo.
 
 ### Giải thích
 
@@ -640,27 +662,29 @@ N = 12 -> Xoay mỗi lần 30 độ, vẽ 12 tam giác.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p08_tam_giac_xoay_chong](../../problems/sca_pen_p08_tam_giac_xoay_chong/solution_blocks_vi.png)
 
 ---
-
 ### Bài 10 (P1): Hoa Hình Thoi Xoay Vòng
 * **Mã bài toán:** `sca_pen_p09_hoa_tiet_hinh_thoi`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_071.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_072.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Cánh hoa hình thoi có góc nhọn 60 độ và góc tù 120 độ ghép lại thành bông hoa 6 cánh thanh lịch.
 * **Nhiệm vụ:** Viết thủ tục vẽ hình thoi cạnh 80, góc 60 và 120; sau đó lặp lại để tạo bông hoa hoàn chỉnh.
-* **Dữ liệu vào (Input):** Nhập số lượng cánh hoa.
-* **Kết quả ra (Output):** Bông hoa hình thoi nở rộ giữa sân khấu.
+* **Kịch bản tương tác:** Nhập số lượng cánh hoa.
+* **Kết quả mong đợi:** Bông hoa hình thoi nở rộ giữa sân khấu.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số lượng cánh hoa.
-```
-
-### Output
-```text
-Kết quả: Bông hoa hình thoi nở rộ giữa sân khấu.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số lượng cánh hoa.
+- **Kết quả hình ảnh:** Bông hoa hình thoi nở rộ giữa sân khấu.
 
 ### Giải thích
 
@@ -668,27 +692,28 @@ Cánh hình thoi: lặp 2 [đi 80, xoay 60, đi 80, xoay 120].
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p09_hoa_tiet_hinh_thoi](../../problems/sca_pen_p09_hoa_tiet_hinh_thoi/solution_blocks_vi.png)
 
 ---
-
 ### Bài 11 (P2): Kim Tự Tháp Bậc Thang
 * **Mã bài toán:** `sca_pen_p10_kim_tu_thap_bac_thang`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_081.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Kỳ quan Kim tự tháp Ai Cập cổ đại được xây dựng từ các tầng đá xếp chồng lên nhau hình bậc thang.
 * **Nhiệm vụ:** Lập trình vẽ Kim tự tháp có N bậc thang, mỗi bậc có độ dài thu hẹp dần lên đỉnh.
-* **Dữ liệu vào (Input):** Nhập số tầng N (ví dụ N = 5).
-* **Kết quả ra (Output):** Hình vẽ Kim tự tháp bậc thang cân xứng.
+* **Kịch bản tương tác:** Nhập số tầng N (ví dụ N = 5).
+* **Kết quả mong đợi:** Hình vẽ Kim tự tháp bậc thang cân xứng.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số tầng N (ví dụ N = 5).
-```
-
-### Output
-```text
-Kết quả: Hình vẽ Kim tự tháp bậc thang cân xứng.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số tầng N (ví dụ N = 5).
+- **Kết quả hình ảnh:** Hình vẽ Kim tự tháp bậc thang cân xứng.
 
 ### Giải thích
 
@@ -696,27 +721,29 @@ Tầng 1 rộng 150, tầng 2 rộng 120, tầng 3 rộng 90...
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p10_kim_tu_thap_bac_thang](../../problems/sca_pen_p10_kim_tu_thap_bac_thang/solution_blocks_vi.png)
 
 ---
-
 ### Bài 12 (P2): Bàn Cờ Lưới Ô Vuông M x N
 * **Mã bài toán:** `sca_pen_p11_luoi_o_vuong_ban_co`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_105.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_110.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Thiết kế bàn cờ caro hoặc mê cung lưới hình chữ nhật gồm nhiều ô vuông nhỏ liền kề.
 * **Nhiệm vụ:** Sử dụng 2 vòng lặp lồng nhau điều khiển tọa độ để vẽ lưới gồm R hàng và C cột ô vuông.
-* **Dữ liệu vào (Input):** Nhập số hàng R và số cột C.
-* **Kết quả ra (Output):** Lưới ô vuông thẳng tắp, đều đặn.
+* **Kịch bản tương tác:** Nhập số hàng R và số cột C.
+* **Kết quả mong đợi:** Lưới ô vuông thẳng tắp, đều đặn.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số hàng R và số cột C.
-```
-
-### Output
-```text
-Kết quả: Lưới ô vuông thẳng tắp, đều đặn.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số hàng R và số cột C.
+- **Kết quả hình ảnh:** Lưới ô vuông thẳng tắp, đều đặn.
 
 ### Giải thích
 
@@ -724,27 +751,28 @@ R = 4, C = 5 -> Vẽ lưới 4x5 ô vuông.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p11_luoi_o_vuong_ban_co](../../problems/sca_pen_p11_luoi_o_vuong_ban_co/solution_blocks_vi.png)
 
 ---
-
 ### Bài 13 (P2): Tam Giác Nhiều Tầng Xếp Chồng
 * **Mã bài toán:** `sca_pen_p12_tam_giac_nhieu_tang`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_117.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Mô hình tháp tam giác gồm các viên gạch tam giác nhỏ xếp sít nhau thành hình tam giác lớn.
 * **Nhiệm vụ:** Vẽ tháp tam giác có T tầng, tầng đáy có T hình tam giác.
-* **Dữ liệu vào (Input):** Nhập số tầng T từ bàn phím.
-* **Kết quả ra (Output):** Tháp tam giác hùng vĩ trên sân khấu.
+* **Kịch bản tương tác:** Nhập số tầng T từ bàn phím.
+* **Kết quả mong đợi:** Tháp tam giác hùng vĩ trên sân khấu.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số tầng T từ bàn phím.
-```
-
-### Output
-```text
-Kết quả: Tháp tam giác hùng vĩ trên sân khấu.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số tầng T từ bàn phím.
+- **Kết quả hình ảnh:** Tháp tam giác hùng vĩ trên sân khấu.
 
 ### Giải thích
 
@@ -752,27 +780,28 @@ T = 3 tầng.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p12_tam_giac_nhieu_tang](../../problems/sca_pen_p12_tam_giac_nhieu_tang/solution_blocks_vi.png)
 
 ---
-
 ### Bài 14 (P2): Lục Giác Tổ Ong Đồng Tâm
 * **Mã bài toán:** `sca_pen_p13_luc_giac_long_nhau`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_132.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Cấu trúc tổ ong thiên nhiên gồm các hình lục giác đều lồng khít vào nhau cực kỳ vững chắc.
 * **Nhiệm vụ:** Lập trình vẽ N hình lục giác đều lồng nhau từ cạnh lớn đến cạnh nhỏ.
-* **Dữ liệu vào (Input):** Nhập kích thước cạnh ngoài cùng.
-* **Kết quả ra (Output):** Mô hình tổ ong hình học tinh xảo.
+* **Kịch bản tương tác:** Nhập kích thước cạnh ngoài cùng.
+* **Kết quả mong đợi:** Mô hình tổ ong hình học tinh xảo.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập kích thước cạnh ngoài cùng.
-```
-
-### Output
-```text
-Kết quả: Mô hình tổ ong hình học tinh xảo.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập kích thước cạnh ngoài cùng.
+- **Kết quả hình ảnh:** Mô hình tổ ong hình học tinh xảo.
 
 ### Giải thích
 
@@ -780,27 +809,29 @@ Cạnh lục giác giảm dần 15 bước sau mỗi tầng.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p13_luc_giac_long_nhau](../../problems/sca_pen_p13_luc_giac_long_nhau/solution_blocks_vi.png)
 
 ---
-
 ### Bài 15 (P2): Ngôi Sao 8 Cánh Nghệ Thuật
 * **Mã bài toán:** `sca_pen_p14_ngoi_sao_8_canh_nghe_thuat`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_217.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_218.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Họa tiết hoa văn trống đồng và la bàn hàng hải với ngôi sao 8 cánh cân đối.
 * **Nhiệm vụ:** Ghép 2 hình vuông xoay góc 45 độ hoặc ghép 8 hình tam giác nhọn quanh tâm.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Biểu tượng la bàn ngôi sao 8 cánh.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Biểu tượng la bàn ngôi sao 8 cánh.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Biểu tượng la bàn ngôi sao 8 cánh.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Biểu tượng la bàn ngôi sao 8 cánh.
 
 ### Giải thích
 
@@ -808,31 +839,37 @@ Vẽ hình vuông 1, xoay phải 45 độ, vẽ hình vuông 2.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p14_ngoi_sao_8_canh_nghe_thuat](../../problems/sca_pen_p14_ngoi_sao_8_canh_nghe_thuat/solution_blocks_vi.png)
 
 ---
-
 ### Bài 16 (P3): Cây Thông Noel Đa Tầng
 * **Mã bài toán:** `sca_pen_p15_cay_thong_noel`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_029.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_030.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Mùa Giáng Sinh đến, Mèo Scratch muốn vẽ một cây thông Noel xanh mướt từ các tán lá tam giác.
 * **Nhiệm vụ:** Vẽ 3 tán lá tam giác xếp chồng lên nhau và một gốc cây hình chữ nhật màu nâu.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Cây thông Noel xinh xắn.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Cây thông Noel xinh xắn.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Cây thông Noel xinh xắn.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Cây thông Noel xinh xắn.
 
 ### Giải thích
 
 Tam giác nhỏ trên đỉnh, tam giác vừa ở giữa, tam giác lớn ở dưới cùng.
+
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p15_cay_thong_noel](../../problems/sca_pen_p15_cay_thong_noel/solution_blocks_vi.png)
 
 ---
 
@@ -844,266 +881,313 @@ Tam giác nhỏ trên đỉnh, tam giác vừa ở giữa, tam giác lớn ở d
 
 # Bài 02: HÌNH TRÒN, CUNG TRÒN & NGHỆ THUẬT HOA VĂN
 
-## 1. Khởi Động: Từ Đa Giác Đều Đến Đường Cong Mềm Mại
+## 1. Từ đa giác đều đến đường cong mềm mại
 
-Ở Bài 01, chúng ta đã khám phá công thức vẽ các hình đa giác đều:
-
-- Tam giác đều ($3$ cạnh): Xoay ngoài $360^\circ / 3 = 120^\circ$.
-- Hình vuông ($4$ cạnh): Xoay ngoài $360^\circ / 4 = 90^\circ$.
-- Lục giác đều ($6$ cạnh): Xoay ngoài $360^\circ / 6 = 60^\circ$.
-- Bát giác đều ($8$ cạnh): Xoay ngoài $360^\circ / 8 = 45^\circ$.
-
-> 💡 **Quan sát thú vị:**
-> Khi số cạnh $N$ càng lớn (10 cạnh, 20 cạnh, 50 cạnh...), các góc nhọn của đa giác phẳng dần ra và hình dáng tổng thể ngày càng tròn trịa, uốn lượn mềm mại như một quả bóng!
-
-Nếu ta tăng số cạnh lên đúng **$360$ cạnh**, mỗi bước nhân vật chỉ bước một đoạn cực ngắn rồi xoay phải đúng $1^\circ$. Bắt mắt người nhìn, $360$ đoạn thẳng tí hon ghép lại sẽ tạo thành một **đường tròn hoàn hảo tuyệt đối**!
+Trong Bài 01, chúng ta đã khám phá công thức vẽ đa giác đều: muốn vẽ hình $N$ cạnh, ta lặp lại $N$ lần: `di chuyển (bước) bước` rồi `xoay phải ↻ (360 / N) độ`.
+- Khi $N = 3$: Tam giác đều (xoay $120^\circ$).
+- Khi $N = 6$: Lục giác đều (xoay $60^\circ$).
+- Khi $N = 12$: Thập nhị giác đều (xoay $30^\circ$).
+- Khi $N = 36$: Hình 36 cạnh (xoay $10^\circ$).
+- Khi $N = 360$: Mỗi bước đi cực nhỏ và xoay đúng $1^\circ$, các cạnh thẳng li ti nối tiếp nhau mượt mà đến mức mắt thường nhìn thấy một **đường tròn hoàn hảo**!
 
 ---
 
-## 2. Công Thức Vẽ Hình Tròn 360 Cạnh
+## 2. Hai kỹ thuật vẽ hình tròn kinh điển trong Scratch
 
-### 2.1. Kịch bản cơ bản 360 lần lặp
-Khối lệnh căn bản nhất để vẽ một đường tròn khép kín trong Scratch:
+Trong tài liệu đồ họa Scratch chuẩn, có **hai phương pháp vẽ hình tròn** với bản chất hình học, vị trí đứng của nhân vật và ứng dụng hoàn toàn khác biệt:
 
-![Khối lặp vẽ hình tròn](assets/rendered_blocks/l02_circle_360_vi.png)
+### 2.1. Đường tròn 1: Nhân vật ở tâm đường tròn (Kỹ thuật quay nan hoa)
+Ở phương pháp này, nhân vật đứng cố định tại **tâm đường tròn** với tọa độ $(x_0, y_0)$. Mỗi chu kỳ vẽ, nhân vật phóng ra mép vẽ một phần đường viền rồi lùi về tâm, tựa như từng chiếc nan hoa xe đạp tỏa ra xung quanh:
 
-*Quy trình thực hiện:*
+| Sơ đồ vị trí nhân vật tại tâm | Khối lệnh định nghĩa "Đường tròn 1" | Hoa văn 6 đường tròn từ tâm |
+|:---:|:---:|:---:|
+| ![Vị trí nhân vật tại tâm](assets/pen_drawings/pen_img_171.png) | ![Khối lệnh Đường tròn 1](assets/rendered_blocks/l02_circle_tam_vi.png) | ![Hoa văn 6 đường tròn](assets/pen_drawings/pen_img_175.png) |
+| *Nhân vật đứng tại tâm đường tròn* | *Thủ tục Đường tròn 1 với bán kính R* | *Hoa văn xoay quanh tâm 6 lần* |
 
-- 🟠 **Lặp lại (360) lần**:
+- **Bản chất thuật toán chi tiết (từng bước):**
+  1. Tạo khối thủ tục `Đường tròn 1 (R)` với tham số đầu vào là bán kính $R$.
+  2. Bắt đầu vẽ:
+     - `ngừng vẽ` (nhấc bút) để không để lại vệt mực khi di chuyển ra mép.
+     - `di chuyển (R) bước` để đưa đầu bút từ tâm ra đúng chu vi đường tròn.
+     - `xoay trái 90 độ` để hướng đầu bút tiếp xúc theo phương tiếp tuyến của đường tròn.
+     - `bắt đầu vẽ` (đặt bút).
+  3. Vẽ chu vi: Lặp lại $360$ lần cụm lệnh:
+     - `di chuyển ((2 * R * 3.14) / 360) bước`
+     - `xoay trái 1 độ`
+  4. Trở về tâm:
+     - `ngừng vẽ` (nhấc bút).
+     - `xoay trái 90 độ` để quay đầu hướng về lại tâm.
+     - `di chuyển (-1 * R) bước` (hoặc đi lùi $R$ bước) để trở về đúng vị trí xuất phát ban đầu.
+     - `bắt đầu vẽ` (đặt bút) để sẵn sàng thực hiện lệnh kế tiếp.
 
-  - 🔵 `di chuyển (1) bước`
-  - 🔵 `xoay phải ↻ (1) độ`
+- **Ứng dụng vẽ hoa văn hình tròn xoay quanh tâm (Ví dụ 4 trong giáo trình gốc):**
+Sau khi định nghĩa xong thủ tục `Đường tròn 1` hoặc `Đường tròn 2`, ta gọi thủ tục này trong một vòng lặp xoay quanh tâm sân khấu để tạo ra những hoa văn hình học lộng lẫy:
 
-Tổng góc xoay sau 360 lần lặp là $360 \times 1^\circ = 360^\circ$ (tròn vẹn 1 vòng), nhân vật quay trở lại đúng vị trí và hướng xuất phát ban đầu.
+| Khối lệnh gọi xoay hoa văn quanh tâm (Ví dụ 4) | Hoa văn 6 hình tròn giao nhau quanh tâm |
+|:---:|:---:|
+| ![Khối lệnh gọi xoay](assets/pen_drawings/pen_img_177.png) | ![Hoa văn 6 hình tròn](assets/pen_drawings/pen_img_175.png) |
+| *Gọi Đường tròn 1 kết hợp vòng lặp 6 lần và xoay 60°* | *6 đường tròn bán kính 50 giao nhau đối xứng qua tâm* |
 
----
+- **Ứng dụng vẽ đường tròn đồng tâm (Câu 10 trong giáo trình gốc):**
+Vì sau khi vẽ xong mỗi đường tròn từ tâm, nhân vật luôn tự động lùi bút trở về đúng tọa độ $(x_0, y_0)$ ban đầu, ta có thể lặp lại việc gọi `Đường tròn 1` với các bán kính $R$ tăng dần ($20, 40, 60, 80$) để tạo chùm hình tròn đồng tâm:
 
-### 2.2. Công thức toán học: Mối quan hệ giữa Bán kính $R$ và Bước đi
-Trong hình học:
-
-- Chu vi hình tròn: $C = 2 \times \pi \times R \approx 2 \times 3.14 \times R = 6.28 \times R$.
-- Vì hình tròn gồm $360$ bước nhỏ ghép lại, độ dài mỗi bước đi của nhân vật tương ứng với $1^\circ$ là:
-  $$\text{Bước đi} = \frac{C}{360} = \frac{2 \times 3.14 \times R}{360}$$
-
-### Bảng Tra Cứu Bước Đi Cho Các Bán Kính Chuẩn
-| Bán kính ($R$) | Chu vi ước tính ($C$) | Công thức tính bước đi | Chiều dài bước đi (`di chuyển`) | Lưu ý hiển thị |
-|:---:|:---:|:---:|:---:|---|
-| **$R = 30$** (Nhỏ) | $\approx 188.4$ | $188.4 / 360$ | $\approx 0.52$ bước | Vừa vặn vẽ logo hoặc mắt nhân vật |
-| **$R = 50$** (Vừa) | $\approx 314$ | $314 / 360$ | $\approx 0.87$ bước | Rất thích hợp làm cánh hoa, logo Olympic |
-| **$R = 60$** (Chuẩn) | $\approx 376.8$ | $376.8 / 360$ | $\approx 1.05$ bước | Có thể làm tròn thành $1$ bước |
-| **$R = 100$** (Lớn) | $\approx 628$ | $628 / 360$ | $\approx 1.74$ bước | Chiếm gần nửa chiều cao sân khấu |
-
----
-
-## 3. Kỹ Thuật Vẽ Cung Tròn (Arc) Bất Kỳ
-
-Một **cung tròn** là một phần của đường tròn. Số độ của cung tròn chính là góc mở ở tâm:
-
-- Cung $90^\circ$: Bằng $\frac{1}{4}$ đường tròn (góc vuông).
-- Cung $180^\circ$: Bằng $\frac{1}{2}$ đường tròn (nửa hình tròn / cầu vồng).
-- Cung $60^\circ$: Bằng $\frac{1}{6}$ đường tròn.
-
-### Quy tắc vàng vẽ Cung tròn:
-> **Muốn vẽ cung tròn có góc mở bao nhiêu độ, chỉ cần cho nhân vật `lặp lại () lần` đúng bấy nhiêu lần!**
-
-Để tái sử dụng linh hoạt, ta đóng gói cụm lệnh này vào một **Khối của tôi (My Blocks)** mang tên `ve_cung_tron` với 2 tham số: `goc` và `buoc`:
-
-![Định nghĩa Khối Cung Tròn](assets/rendered_blocks/l02_cung_tron_vi.png)
-
-*Cấu trúc khối lệnh:*
-- 🔴 **định nghĩa ve_cung_tron (goc) (buoc)**:
-
-  - 🟠 `lặp lại (goc) lần`:
-
-    - 🔵 `di chuyển (buoc) bước`
-    - 🔵 `xoay phải ↻ (1) độ`
+| Hình ảnh minh họa chùm đường tròn đồng tâm | Kỹ thuật lập trình trong Scratch |
+|:---:|---|
+| ![4 vòng tròn đồng tâm](assets/pen_drawings/pen_img_180.png) | 1. Vẽ dấu chữ thập (+) làm tọa độ mốc tại tâm.<br>2. Khởi tạo bán kính ban đầu $R = 20$.<br>3. Lặp lại 4 lần: Gọi `Đường tròn 1 (R)`, sau đó `thay đổi [R] một lượng (20)`. |
+| *4 vòng tròn đồng tâm xuất phát từ tâm chữ thập (+)* | *Mỗi lần vẽ xong nhân vật tự lui về tâm nên không bị lệch hình* |
 
 ---
 
-## 4. Kỹ Thuật Ghép Cánh Hoa Mắt Ngọc (Petal)
+### 2.2. Đường tròn 2: Nhân vật ở mép đường tròn (Điểm cực trái)
+Ở phương pháp này, nhân vật không đứng ở tâm mà đứng ngay tại **mép ngoài (điểm cực trái)** của đường tròn và men theo chu vi để vẽ trọn vẹn $360^\circ$:
 
-Làm sao để vẽ được một chiếc cánh hoa uốn cong duyên dáng?  
-Bí quyết nằm ở chỗ: **Một chiếc cánh hoa được tạo bởi $2$ cung tròn uốn ngược nhau khép kín tại 2 đầu đỉnh nhọn**.
+| Sơ đồ vị trí nhân vật tại mép | Khối lệnh định nghĩa "Đường tròn 2" | Hoa văn 8 đường tròn giao mép |
+|:---:|:---:|:---:|
+| ![Vị trí nhân vật tại mép](assets/pen_drawings/pen_img_173.png) | ![Khối lệnh Đường tròn 2](assets/rendered_blocks/l02_circle_mep_vi.png) | ![Hoa văn 8 đường tròn](assets/pen_drawings/pen_img_178.png) |
+| *Nhân vật đứng ở mép ngoài đường tròn* | *Thủ tục Đường tròn 2 (lặp 360 lần)* | *8 hình tròn xoay quanh điểm tiếp xúc mép* |
 
-![Sơ đồ cấu tạo cánh hoa](assets/pen_drawings/pen_img_006.png)
-
-### Các bước tạo cánh hoa góc $90^\circ$:
-
-1. Vẽ cung tròn thứ nhất $90^\circ$: Gọi `ve_cung_tron (90) (buoc)`.
-
-2. Tại đỉnh nhọn trên cùng, nhân vật cần quay một góc bù để quay mặt hướng về điểm xuất phát:
-   $$\text{Góc xoay đỉnh} = 180^\circ - 90^\circ = 90^\circ$$
-
-3. Vẽ tiếp cung tròn thứ hai $90^\circ$: Gọi `ve_cung_tron (90) (buoc)`.
-
-4. Tại đỉnh nhọn dưới cùng, nhân vật lại xoay phải $90^\circ$ để trở lại hướng ban đầu.
-
-Vì hai bước này lặp lại y hệt nhau, ta gom gọn bằng một vòng lặp `lặp lại 2 lần`:
-
-![Định nghĩa Khối Cánh Hoa](assets/rendered_blocks/l02_canh_hoa_vi.png)
-
-*Cấu trúc khối lệnh:*
-- 🔴 **định nghĩa ve_canh_hoa (buoc)**:
-
-  - 🟠 `lặp lại (2) lần`:
-
-    - 🔴 `ve_cung_tron (90) (buoc)`
-    - 🔵 `xoay phải ↻ (90) độ`
+- **Bản chất thuật toán chi tiết:**
+  - Định nghĩa thủ tục `Đường tròn 2 (R)`.
+  - Lặp lại đúng $360$ lần:
+    - `di chuyển ((2 * R * 3.14) / 360) bước`
+    - `xoay phải 1 độ`
+  - Sau khi quay đủ $360$ lần $\times 1^\circ = 360^\circ$, nhân vật tự động khép kín vòng tròn và trở về đúng vị trí và hướng ban đầu tại mép ngoài!
 
 ---
 
-## 5. Nghệ Thuật Đối Xứng Tâm: Vẽ Bông Hoa & Hoa Văn
+### 2.3. Bảng tính nhẩm bước đi theo bán kính $R$
+Khi vẽ đường tròn theo chu vi ngoài (vòng lặp $360$ lần), chu vi $C = 2 \times \pi \times R \approx 6.28 \times R$.  
+Mỗi bước đi trong $360$ lần lặp được tính bằng:
+$$\text{Bước đi} = \frac{2 \times \pi \times R}{360} \approx R \times 0.01745$$
 
-Khi đã sở hữu khối lệnh `ve_canh_hoa`, ta có thể tạo ra vô số kiệt tác hoa văn lung linh chỉ bằng cách **xoay quanh một tâm cố định**.
-
-### Công Thức Góc Xoay Tâm
-Nếu muốn vẽ một bông hoa gồm $K$ cánh tỏa đều ra $360^\circ$ quanh tâm, sau mỗi lần vẽ xong một cánh hoa, nhân vật cần xoay tâm một góc:
-$$\text{Góc xoay tâm} = \frac{360^\circ}{K}$$
-
-![Khối lệnh vẽ bông hoa 8 cánh](assets/rendered_blocks/l02_bong_hoa_8_canh_vi.png)
-
-### Bảng Tra Cứu Hoa Văn Đối Xứng
-| Tên hình vẽ | Số cánh ($K$) | Số lần lặp | Góc xoay tâm (`xoay phải ↻`) | Hình mẫu thực tế |
-|---|:---:|:---:|:---:|:---:|
-| **Cỏ 4 lá** | $4$ | `lặp lại (4) lần` | $360 / 4 = 90^\circ$ | Nở vuông vức 4 hướng |
-| **Hoa huệ 6 cánh** | $6$ | `lặp lại (6) lần` | $360 / 6 = 60^\circ$ | Cân đối lục giác |
-| **Bông hoa 8 cánh** | $8$ | `lặp lại (8) lần` | $360 / 8 = 45^\circ$ | Bông cúc họa mi |
-| **Hoa hướng dương 12 cánh** | $12$ | `lặp lại (12) lần` | $360 / 12 = 30^\circ$ | Các cánh xếp đan khít |
-| **Mạn đà la 36 cánh** | $36$ | `lặp lại (36) lần` | $360 / 36 = 10^\circ$ | Vòng xoáy ảo diệu |
+| Bán kính mong muốn ($R$) | Công thức bước đi tính nhẩm | Bước đi cài đặt vào Scratch | Chu vi thực tế ($360 \times \text{bước}$) |
+|:---:|:---:|:---:|:---:|
+| $R = 30$ bước | $30 \times 0.01745$ | **$0.52$ bước** | $\approx 188$ bước |
+| $R = 50$ bước | $50 \times 0.01745$ | **$0.87$ bước** | $\approx 314$ bước |
+| $R = 60$ bước | $60 \times 0.01745$ | **$1.05$ bước** | $\approx 377$ bước |
+| $R = 100$ bước | $100 \times 0.01745$ | **$1.75$ bước** | $\approx 628$ bước |
 
 ---
 
-## 6. Bảng Mô Phỏng Từng Bước (Dry Run Table)
+## 3. Kỹ thuật vẽ cung tròn (Arc) và các ứng dụng nâng cao
 
-Dưới đây là bảng trace vết di chuyển của nhân vật khi thực hiện khối lệnh `ve_canh_hoa` (gồm 2 cung $90^\circ$, mỗi bước $1$ pixel), xuất phát từ $(0, 0)$ hướng $0^\circ$ (hướng lên trên):
+**Cung tròn** là một đoạn uốn cong của đường tròn. Vì toàn bộ đường tròn khép kín tương ứng với $360^\circ$, nên **số lần lặp chính là số độ của cung tròn** cần vẽ!
 
-| Giai đoạn | Thao tác lệnh | Tọa độ sau giai đoạn ($x, y$) | Hướng sau giai đoạn | Nét vẽ xuất hiện |
-|:---:|---|:---:|:---:|---|
-| **Bắt đầu** | Đặt bút tại gốc tọa độ | $(0, 0)$ | $0^\circ$ (Lên) | Đầu nhọn phía dưới của cánh hoa |
-| **Nửa cánh 1** | `ve_cung_tron (90) (1)` | $\approx (57, 57)$ | $90^\circ$ (Phải) | Cung tròn thứ nhất uốn cong sang phải |
-| **Đổi hướng 1** | `xoay phải ↻ (90) độ` | $(57, 57)$ | $180^\circ$ (Xuống) | Chuẩn bị uốn cong quay về tâm |
-| **Nửa cánh 2** | `ve_cung_tron (90) (1)` | $(0, 0)$ | $-90^\circ$ (Trái) | Cung tròn thứ hai uốn cong khép về gốc $(0, 0)$ |
-| **Đổi hướng 2** | `xoay phải ↻ (90) độ` | $(0, 0)$ | $0^\circ$ (Lên) | Trở lại đúng hướng xuất phát ban đầu |
+### 3.1. Định nghĩa thủ tục Cung tròn tổng quát
+Để tái sử dụng linh hoạt trong mọi bài toán, chúng ta tạo một mảnh ghép thủ tục riêng mang tên `ve_cung_tron` với hai tham số đầu vào: `(goc)` và `(buoc)`:
 
-> **Nhận xét then chốt:** Sau khi vẽ xong 1 cánh hoa, nhân vật quay về **chính xác vị trí xuất phát $(0, 0)$** và giữ nguyên hướng nhìn ban đầu. Nhờ tính bất biến này, ta có thể thoải mái lặp vòng xoay tâm mà không bao giờ bị lệch tâm hoa!
+| Khối lệnh định nghĩa Cung tròn | Minh họa cung tròn $360^\circ$ khép kín |
+|:---:|:---:|
+| ![Khối lệnh Cung tròn tổng quát](assets/rendered_blocks/l02_cung_tron_vi.png) | ![Đường tròn chu vi khép kín](assets/pen_drawings/pen_img_201.png) |
+| *Thủ tục Cung tròn biến thiên theo góc và bước đi* | *Vẽ cung đủ 360° tạo thành vòng tròn khép kín* |
+
+### 3.2. Bảng tra cứu các cung tròn cơ bản theo độ góc
+
+| Tên cung tròn | Hình vẽ minh họa | Số độ góc ở tâm | Số lần lặp trong Scratch | Góc xoay mỗi bước | Ứng dụng thực tế |
+|---|:---:|:---:|:---:|:---:|---|
+| **Cung $45^\circ$** | ![Cung 45](assets/pen_drawings/pen_img_197.png) | $45^\circ$ | `lặp lại (45) lần` | $1^\circ$ | Cánh hoa thon nhọn, lá cây mảnh mai |
+| **Cung $90^\circ$** | ![Cung 90](assets/pen_drawings/pen_img_199.png) | $90^\circ$ | `lặp lại (90) lần` | $1^\circ$ | Mảnh ghép cấu tạo cánh hoa mắt ngọc chuẩn |
+| **Cung $180^\circ$** | ![Cung 180](assets/pen_drawings/pen_img_200.png) | $180^\circ$ | `lặp lại (180) lần` | $1^\circ$ | Cầu vồng 7 sắc, cây quạt nan, vòm cổng |
+| **Cung $360^\circ$** | ![Cung 360](assets/pen_drawings/pen_img_201.png) | $360^\circ$ | `lặp lại (360) lần` | $1^\circ$ | Đường tròn khép kín trọn vẹn |
+
+### 3.3. Ứng dụng cung tròn: Hình vuông lượn 4 góc nhọn (Ví dụ 6)
+Một bài toán ứng dụng kinh điển kết hợp giữa đoạn thẳng và cung tròn: Vẽ một hình vuông lớn màu xanh bao bọc, bên trong là 4 cung tròn $90^\circ$ uốn cong màu đỏ tạo hình ngôi sao 4 cánh lõm:
+
+| Khối lệnh giải Ví dụ 6 | Hình vuông lượn góc cung tròn thực tế |
+|:---:|:---:|
+| ![Khối lệnh giải Ví dụ 6](assets/pen_drawings/pen_img_205.png) | ![Hình vuông kết hợp cung tròn](assets/pen_drawings/pen_img_204.png) |
+| *Vòng lặp 4 lần vẽ cạnh vuông xanh và cung cong đỏ* | *Hình vuông 4 cạnh kết hợp 4 cung tròn uốn cong mềm mại* |
+
+### 3.4. Kỹ thuật vẽ Cây quạt nan đổi màu (Ví dụ 7)
+Một bài toán ứng dụng kết hợp cung tròn vô cùng sinh động là **Cây quạt nan**:
+- Phần nan quạt bên trong: Nhân vật đứng tại cán quạt (tâm), đi tới $150$ bước vẽ nan quạt rồi lùi về, liên tục đổi màu sắc tạo nên dải màu rực rỡ.
+- Phần viền quạt bên ngoài: Vẽ một đường cung tròn bán kính $155$ bao bọc lấy toàn bộ các nan quạt.
+
+| Hình ảnh Cây quạt nan | Khối lệnh lập trình Scratch chi tiết |
+|:---:|:---:|
+| ![Cây quạt nan đổi màu](assets/pen_drawings/pen_img_206.png) | ![Khối lệnh vẽ cây quạt](assets/pen_drawings/pen_img_207.png) |
+| *Cây quạt nan bán kính 150 viền tím ngoài* | *Cụm lệnh kết hợp xoay nan quạt và viền cung tròn ngoài* |
+
+### 3.5. Kỹ thuật vẽ Cầu vồng 7 sắc và Cánh cung $180^\circ$ (Câu 15 và Câu 17)
+- **Cầu vồng 7 sắc:** Gồm $7$ cung tròn $180^\circ$ lồng nhau từ ngoài vào trong: Đỏ, Cam, Vàng, Xanh lá, Xanh dương nhạt, Xanh dương đậm, Tím với nét vẽ đậm ($12$).
+- **Cánh cung xoay:** Tạo mảnh ghép cung tròn $180^\circ$ bán kính $50$, sau đó xoay quanh tâm $12$ lần để tạo hoa văn cánh quạt xoay vòng lộng lẫy.
+
+| Cầu vồng 7 sắc lồng nhau | Hoa văn 12 cánh cung 180° |
+|:---:|:---:|
+| ![Cầu vồng 7 sắc](assets/pen_drawings/pen_img_213.png) | ![Hoa văn cánh cung xoay](assets/pen_drawings/pen_img_216.png) |
+| *7 cung tròn 180° lồng nhau* | *12 cánh cung 180° xoay quanh tâm* |
 
 ---
 
-## 7. Tử Huyệt & Bẫy Lỗi Kinh Điển (Bug Traps)
+## 4. Kỹ thuật ghép cánh hoa mắt ngọc (Petal)
 
-> **Bẫy 1: Bán kính quá lớn làm vỡ góc tại mép sân khấu**
-> - *Hiện tượng:* Chọn bán kính $R = 150$, khi nhân vật chạy đến mép sân khấu thì bị khựng lại, đường tròn bị bẹp một bên hoặc góc quay bị méo mó.
-> - *Khắc phục:* Luôn nhớ sân khấu Scratch có chiều cao tối đa $360$ bước (từ $-180$ đến $+180$). Bán kính vẽ đường tròn hoặc cánh hoa nên giới hạn từ $R = 20$ đến $R = 70$.
+**Cánh hoa mắt ngọc** là mảnh ghép nghệ thuật quan trọng bậc nhất trong lập trình vẽ đồ họa Scratch.
 
-> **Bẫy 2: Nhầm lẫn giữa góc cung $\alpha$ và góc xoay đỉnh**
-> - *Hiện tượng:* Vẽ cung tròn $60^\circ$ nhưng ở đỉnh lại xoay $60^\circ$ khiến 2 cung tròn bị tẽ ra hai hướng như chiếc sừng hươu thay vì khép lại thành cánh hoa.
-> - *Khắc phục:* Ghi nhớ công thức góc bù đỉnh:  
->   $$\text{Góc xoay đỉnh} = 180^\circ - \text{Góc cung}$$
->   (Ví dụ: Cung $90^\circ$ thì xoay đỉnh $90^\circ$; Cung $60^\circ$ thì xoay đỉnh $180 - 60 = 120^\circ$).
+### Bản chất hình học của cánh hoa
+Một cánh hoa cong đối xứng được ghép từ **hai cung tròn $90^\circ$ uốn ngược chiều nhau**:
+1. Cung thứ nhất: Vẽ cung $90^\circ$ uốn cong sang một bên (`ve_cung_tron 90 buoc`).
+2. Tại đỉnh cánh hoa: Nhân vật xoay góc bù $180^\circ - 90^\circ = 90^\circ$ (`xoay phải 90 độ`) để quay đầu theo hướng cong ngược lại.
+3. Cung thứ hai: Vẽ tiếp cung $90^\circ$ để uốn cong khép kín trở về gốc ban đầu.
+4. Tại gốc cánh hoa: Xoay tiếp $90^\circ$ để đưa nhân vật về đúng hướng xuất phát ban đầu.
 
-> **Bẫy 3: Quên nhấc bút khi vẽ các hình tách rời (Logo Olympic)**
-> - *Hiện tượng:* Vẽ xong vòng tròn màu xanh, chạy sang vị trí mới để vẽ vòng màu vàng thì để lại một vệt mực nối chéo màn hình.
-> - *Khắc phục:* Thuộc lòng câu khẩu quyết: **"Nhấc bút (`nhấc bút`) $\to$ Đi tới tọa độ mới $\to$ Đặt hướng $\to$ Đặt bút (`đặt bút`)"**.
+| Mảnh ghép 1 cánh hoa đơn lẻ | Khối lệnh tạo mảnh ghép Cánh hoa |
+|:---:|:---:|
+| ![Một cánh hoa](assets/pen_drawings/pen_img_214.png) | ![Khối lệnh tạo cánh hoa](assets/rendered_blocks/l02_canh_hoa_vi.png) |
+| *Cánh hoa đơn lẻ gồm 2 cung 90° uốn cong đối xứng* | *Thủ tục ve_canh_hoa lặp 2 lần [ve_cung_tron 90, xoay 90°]* |
 
 ---
 
-## 8. Concept Quiz (10 Câu Trắc Nghiệm Trực Quan)
+## 5. Nghệ thuật đối xứng tâm: Vẽ đóa hoa và hoa văn trang trí
 
-#### Câu 1 (Bản chất hình tròn Scratch)
-Trong Scratch, một đường tròn khép kín được tạo ra bằng cách nào?
-- A. Dùng một câu lệnh đặc biệt có tên là `draw circle`.
-- B. Lặp lại 360 lần: Mỗi lần đi một đoạn ngắn rồi xoay phải đúng $1^\circ$.
-- C. Đổi kích thước của chú Mèo thành hình tròn.
-- D. Bấm chuột 360 lần liên tiếp vào lá cờ xanh.
-> **Đáp án:** B  
-> **Giải thích:** Scratch không có lệnh vẽ hình tròn sẵn, mà xấp xỉ hình tròn bằng đa giác đều 360 cạnh tí hon.
+Sau khi đã tạo xong chiếc khuôn thủ tục `ve_canh_hoa`, chúng ta có thể vẽ những đóa hoa $K$ cánh lộng lẫy bằng cách xoay quanh tâm sân khấu:
 
-#### Câu 2 (Tổng góc xoay)
-Khi vẽ xong một hình tròn trọn vẹn, nhân vật đã xoay tổng cộng một góc bao nhiêu độ?
+| Bông hoa 8 cánh đa sắc | Khối lệnh điều khiển bông hoa 8 cánh |
+|:---:|:---:|
+| ![Bông hoa nhiều cánh](assets/pen_drawings/pen_img_215.png) | ![Khối lệnh vẽ hoa 8 cánh](assets/rendered_blocks/l02_bong_hoa_8_canh_vi.png) |
+| *Bông hoa 8 cánh xoay quanh tâm* | *Vòng lặp 8 lần kết hợp đổi màu bút vẽ sau mỗi cánh* |
+
+### Bảng tra cứu các hoa văn đối xứng tâm kinh điển
+
+| Mẫu hoa văn | Hình ảnh thực tế | Số cánh / nhánh ($K$) | Góc xoay quanh tâm | Kỹ thuật kết hợp |
+|---|:---:|:---:|:---:|---|
+| **Hoa chong chóng** | ![Chong chóng](assets/pen_drawings/pen_img_168.png) | $8$ cánh | $360^\circ / 8 = 45^\circ$ | Cánh nhọn đa giác kết hợp xoay tâm |
+| **Logo Olympic** | ![Olympic](assets/pen_drawings/pen_img_189.png) | $5$ vòng tròn | — | $5$ hình tròn bán kính $40$, nét vẽ $10$, lồng so le 2 hàng màu sắc |
+| **Hoa nan tròn** | ![Hoa nan tròn](assets/pen_drawings/pen_img_185.png) | $10$ nhánh | $360^\circ / 10 = 36^\circ$ | Nhánh thẳng kết hợp hình tròn ở đầu |
+| **Đóa hoa đa sắc** | ![Bông hoa](assets/pen_drawings/pen_img_215.png) | $8$ hoặc $12$ cánh | $360^\circ / K$ | Cánh hoa $90^\circ$ kết hợp `thay đổi màu bút vẽ một lượng (15)` |
+
+---
+
+## 6. Chuyên đề đặc biệt: Kỹ thuật tô màu hình học (Shape Filling)
+
+Trong các bài tập vẽ hình, bên cạnh vẽ viền ngoài, chúng ta thường gặp yêu cầu: *"Vẽ hình tam giác tô màu đặc"*, *"Vẽ hình chữ nhật tô màu đặc"*, *"Vẽ hình tròn tô màu đặc"*. Do Scratch không có công cụ "đổ thùng sơn" tự động, chúng ta dùng tư duy thuật toán để tô kín hình:
+
+### 6.1. Thuật toán tô màu đa giác bằng biến chạy thu nhỏ dần
+Để tô kín một hình đa giác (tam giác đều, hình vuông, ngũ giác...):
+1. Khởi tạo một biến số mang tên `Cạnh` bằng kích thước ban đầu (ví dụ $100$).
+2. Vòng lặp: Lặp lại liên tục trong khi `Cạnh > 0`:
+   - Vẽ một hình đa giác với độ dài `Cạnh` hiện tại.
+   - Giảm `Cạnh` đi $1$ hoặc $2$ bước (`thay đổi [Cạnh] một lượng (-1)`).
+   - Tiếp tục vẽ lặp lại cho đến khi hình thu nhỏ dần về $0$ $\implies$ Toàn bộ lòng hình được tô kín hoàn toàn!
+
+### 6.2. Thuật toán tô màu hình chữ nhật bằng kỹ thuật quét đường thẳng (Scanline)
+Để tô kín một hình chữ nhật kích thước rộng $\times$ dài:
+- Cho nhân vật đi tới $100$ bước vẽ nét ngang thứ nhất, rồi đi lùi về $-100$ bước.
+- Nhích sang ngang $1$ bước.
+- Lặp lại $200$ lần quét để tô kín toàn bộ bề mặt hình chữ nhật!
+
+| Khối lệnh tô màu quét ngang Chữ nhật | Khối lệnh tô màu Hình tròn quét 360 tia |
+|:---:|:---:|
+| ![Code quét chữ nhật](assets/pen_drawings/pen_img_022.png) | ![Code quét hình tròn](assets/pen_drawings/pen_img_023.png) |
+| *Lặp 200 lần: quét ngang 100 bước rồi nhích 1 bước* | *Lặp 360 lần: quét nan hoa 50 bước từ tâm rồi xoay 1 độ* |
+
+### 6.3. Bảng tổng hợp kết quả các hình được tô màu đặc thực tế
+
+| Tam giác đặc (Cạnh giảm dần) | Hình chữ nhật đặc (Quét ngang) | Hình tròn đặc (Quét nan hoa) | Ngôi sao đặc (Nét quét) |
+|:---:|:---:|:---:|:---:|
+| ![Tô màu tam giác](assets/pen_drawings/pen_img_011.png) | ![Tô màu chữ nhật](assets/pen_drawings/pen_img_018.png) | ![Tô màu hình tròn](assets/pen_drawings/pen_img_019.png) | ![Tô màu ngôi sao](assets/pen_drawings/pen_img_020.png) |
+| *Tam giác xanh đặc ruột* | *Chữ nhật đỏ đặc ruột* | *Hình tròn lam có chấm tâm* | *Ngôi sao vàng đặc ruột* |
+
+---
+
+## 7. Bảng mô phỏng từng bước vẽ 1 cánh hoa 2 cung $90^\circ$ (Dry run)
+
+Mô phỏng quy trình vẽ cánh hoa mắt ngọc bán kính $R = 50$:
+
+| Bước | Hành động | Hướng quay | Kết quả đạt được |
+|:---:|---|:---:|---|
+| **1** | Bắt đầu tại gốc $(0, 0)$, hướng $90^\circ$ | — | Chuẩn bị vẽ cung thứ nhất |
+| **2** | Lặp 90 lần: `di chuyển (0.87) bước`, `xoay phải 1 độ` | Xoay từ $90^\circ \to 180^\circ$ | Vẽ xong nửa cánh hoa thứ nhất, đến đỉnh cánh |
+| **3** | Tại đỉnh: `xoay phải ↻ 90 độ` | Xoay từ $180^\circ \to 270^\circ$ | Quay đầu ngược lại để vẽ cung khép kín |
+| **4** | Lặp 90 lần: `di chuyển (0.87) bước`, `xoay phải 1 độ` | Xoay từ $270^\circ \to 360^\circ$ ($0^\circ$) | Vẽ xong nửa cánh hoa thứ hai, về lại gốc $(0, 0)$ |
+| **5** | Tại gốc: `xoay phải ↻ 90 độ` | Xoay từ $0^\circ \to 90^\circ$ | Trả lại hướng ban đầu, sẵn sàng xoay tâm vẽ cánh tiếp theo |
+
+---
+
+## 8. Các bẫy lỗi thường gặp (Bug Traps)
+
+> **Bẫy 1: Bước đi quá lớn làm hình tròn vỡ góc và tràn khỏi sân khấu**
+> - *Hiện tượng:* Học sinh đặt `di chuyển (10) bước` trong vòng lặp 360 lần.
+> - *Hậu quả:* Chu vi lên tới $3600$ bước (quá lớn so với sân khấu rộng $480$ bước), nhân vật bị kẹt vào mép viền và hình vẽ bị méo mó.
+> - *Khắc phục:* Luôn dùng công thức tính bước đi nhỏ ($< 2$ bước) phù hợp với bán kính $R$.
+
+> **Bẫy 2: Quên góc xoay $90^\circ$ tại đỉnh khi ghép cánh hoa**
+> - *Hiện tượng:* Vẽ xong cung 1 lập tức vẽ cung 2.
+> - *Hậu quả:* Nhân vật tiếp tục uốn cong tạo thành hình tròn chứ không tạo ra chóp nhọn của cánh hoa!
+> - *Khắc phục:* Phải có lệnh `xoay phải ↻ (180 - số_độ_cung) độ` giữa hai cung.
+
+---
+
+## 9. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
+
+#### Câu 1
+Muốn vẽ một hình tròn hoàn chỉnh bằng cách đi men theo đường viền, nhân vật cần lặp lại bao nhiêu lần nếu mỗi lần xoay $1^\circ$?
+- A. 90 lần
+- B. 180 lần
+- C. 360 lần *(Đáp án đúng: đủ 360 độ 1 vòng tròn)*
+- D. 100 lần
+
+#### Câu 2
+Nếu muốn vẽ một cung tròn $180^\circ$ (nửa hình tròn), ta cho vòng lặp chạy bao nhiêu lần (mỗi lần xoay $1^\circ$)?
+- A. 90 lần
+- B. 180 lần *(Đáp án đúng)*
+- C. 270 lần
+- D. 360 lần
+
+#### Câu 3
+Một cánh hoa mắt ngọc chuẩn được ghép từ mấy cung tròn đối xứng nhau?
+- A. 1 cung tròn
+- B. 2 cung tròn *(Đáp án đúng: 2 cung uốn ngược chiều nhau)*
+- C. 3 cung tròn
+- D. 4 cung tròn
+
+#### Câu 4
+Khi vẽ một bông hoa gồm 6 cánh phân bố đều quanh tâm, sau khi vẽ xong một cánh và trở về tâm, nhân vật cần xoay một góc bao nhiêu độ?
 - A. $90^\circ$
-- B. $180^\circ$
-- C. $270^\circ$
-- D. $360^\circ$
-> **Đáp án:** D  
-> **Giải thích:** Một vòng tròn khép kín luôn có tổng số góc xoay là $360^\circ$.
-
-#### Câu 3 (Độ dài cung tròn)
-Nếu muốn vẽ một nửa đường tròn (cung $180^\circ$ hình cầu vồng), trong khối lệnh ta cần thiết lập số lần lặp là bao nhiêu?
-- A. `lặp lại (90) lần`
-- B. `lặp lại (180) lần`
-- C. `lặp lại (360) lần`
-- D. `lặp lại (45) lần`
-> **Đáp án:** B  
-> **Giải thích:** Mỗi lần lặp nhân vật xoay $1^\circ$. Để quay đủ nửa vòng tròn ($180^\circ$), cần lặp lại đúng $180$ lần.
-
-#### Câu 4 (Công thức bước đi)
-Đoạn code nào dưới đây tính toán đúng độ dài bước đi vi phân cho hình tròn có bán kính $R$?
-- A. `(2 * R) / 360`
-- B. `(2 * 3.14 * R) / 360`
-- C. `(3.14 * R) / 180`
-- D. Cả B và C đều đúng
-> **Đáp án:** D  
-> **Giải thích:** Chu vi $C = 2 \times 3.14 \times R$. Bước đi cho $1^\circ$ là $C / 360 = (2 \times 3.14 \times R) / 360 = (3.14 \times R) / 180$. Cả hai cách viết đều cho kết quả chính xác.
-
-#### Câu 5 (Cấu tạo cánh hoa)
-Một cánh hoa mắt ngọc được tạo thành bởi:
-
-- A. 4 đoạn thẳng khép kín.
-- B. 2 cung tròn uốn cong đối xứng nhau khép kín tại 2 đầu đỉnh.
-- C. 1 hình tròn và 1 hình tam giác.
-- D. 2 hình vuông lồng nhau.
-> **Đáp án:** B  
-> **Giải thích:** Cánh hoa cơ bản được tạo bởi 2 cung tròn (thường là $90^\circ$ hoặc $60^\circ$) ghép nối tại 2 đỉnh nhọn.
-
-#### Câu 6 (Góc xoay đỉnh cánh hoa)
-Nếu mỗi cung tròn của cánh hoa có góc mở là $60^\circ$, thì khi vẽ xong cung thứ nhất, nhân vật cần xoay phải một góc bao nhiêu độ tại đỉnh nhọn để quay đầu vẽ cung thứ hai?
-- A. $60^\circ$
-- B. $90^\circ$
-- C. $120^\circ$
-- D. $180^\circ$
-> **Đáp án:** C  
-> **Giải thích:** Áp dụng công thức góc bù đỉnh: $180^\circ - 60^\circ = 120^\circ$.
-
-#### Câu 7 (Bông hoa 8 cánh)
-Muốn vẽ một bông hoa gồm 8 cánh tỏa đều quanh tâm, sau khi vẽ xong mỗi cánh hoa, nhân vật cần xoay tâm một góc bao nhiêu độ?
-- A. $30^\circ$
 - B. $45^\circ$
-- C. $60^\circ$
-- D. $90^\circ$
-> **Đáp án:** B  
-> **Giải thích:** Công thức góc xoay tâm: $360^\circ / 8 = 45^\circ$.
+- C. $60^\circ$ *(Đáp án đúng: $360 / 6 = 60$ độ)*
+- D. $30^\circ$
 
-#### Câu 8 (Phân tích khối lệnh)
-Đoạn khối lệnh sau đây thực hiện chức năng gì?
+#### Câu 5
+Khối lệnh nào sau đây vẽ ra một vòm cầu vồng (cung tròn $180^\circ$)?
+- A. `lặp lại (90) lần { di chuyển 1 bước, xoay phải 1 độ }`
+- B. `lặp lại (180) lần { di chuyển 1 bước, xoay phải 1 độ }` *(Đáp án đúng)*
+- C. `lặp lại (360) lần { di chuyển 1 bước, xoay phải 1 độ }`
+- D. `lặp lại (4) lần { di chuyển 100 bước, xoay phải 90 độ }`
 
-![Khối lệnh câu 8](assets/rendered_blocks/l02_canh_hoa_vi.png)
+#### Câu 6
+Trong biểu tượng 5 vòng tròn Olympic, hàng phía trên gồm bao nhiêu vòng tròn?
+- A. 2 vòng tròn
+- B. 3 vòng tròn *(Đáp án đúng: Xanh da trời, Đen, Đỏ)*
+- C. 4 vòng tròn
+- D. 5 vòng tròn
 
-- A. Vẽ một hình tròn hoàn chỉnh.
-- B. Vẽ một chiếc cánh hoa gồm 2 cung tròn $90^\circ$.
-- C. Vẽ một hình vuông góc tròn.
-- D. Xóa sạch màn hình sân khấu.
-> **Đáp án:** B  
-> **Giải thích:** Đây là khối tự tạo `ve_canh_hoa` với 2 lần lặp: vẽ cung $90^\circ$ và xoay đỉnh $90^\circ$.
+#### Câu 7
+Cách đơn giản nhất để tạo ra một hình tròn đặc ruột có bán kính $R = 50$ trong Scratch là gì?
+- A. Đặt kích thước bút vẽ bằng 100 rồi hạ bút và nhấc bút tại một chỗ *(Đáp án đúng: đường kính 2*R)*
+- B. Lặp 360 lần đi 50 bước
+- C. Vẽ 100 hình vuông lồng nhau
+- D. Dùng lệnh xóa tất cả
 
-#### Câu 9 (Logo 5 vòng tròn Olympic)
-Logo Olympic gồm 5 vòng tròn lồng nhau: 3 vòng hàng trên (Xanh dương, Đen, Đỏ) và 2 vòng hàng dưới (Vàng, Xanh lá). Khi chuyển từ vòng tròn này sang vòng tròn khác, thao tác nào là BẮT BUỘC?
-- A. Bấm phím cách (Space).
-- B. Đổi nhân vật sang chú gấu.
-- C. 🟢 **Nhấc bút** trước khi di chuyển và 🟢 **Đặt bút** khi tới vị trí mới.
-- D. Phải xóa toàn bộ màn hình rồi vẽ lại từ đầu.
-> **Đáp án:** C  
-> **Giải thích:** Nếu không nhấc bút trước khi di chuyển tọa độ, trên sân khấu sẽ bị dính vệt mực nối chéo xấu xí giữa các vòng tròn.
+#### Câu 8
+Muốn tạo ra hiệu ứng bông hoa nở rộ với các cánh có màu sắc khác nhau, ta đặt lệnh nào ngay sau mỗi lần vẽ xong 1 cánh hoa?
+- A. `đổi màu bút một lượng (15)` *(Đáp án đúng)*
+- B. `xóa tất cả`
+- C. `nhấc bút`
+- D. `đặt kích thước bút vẽ bằng (1)`
 
-#### Câu 10 (Ứng dụng My Blocks)
-Ưu điểm vượt trội của việc tạo khối `ve_cung_tron (goc) (buoc)` so với việc viết vòng lặp thủ công là gì?
-- A. Giúp chương trình vẽ nhanh hơn gấp 10 lần.
-- B. Chỉ cần định nghĩa một lần, có thể dùng lại để vẽ bất kỳ cung tròn nào ($60^\circ, 90^\circ, 180^\circ, 360^\circ$) với kích thước tùy ý mà không phải ghép lại từng khối lệnh.
-- C. Tự động đổi màu bút vẽ mà không cần câu lệnh đổi màu.
-- D. Giúp Scratch không bị nóng máy.
-> **Đáp án:** B  
-> **Giải thích:** Tham số hóa My Blocks mang lại khả năng tái sử dụng mã nguồn đỉnh cao, giúp kịch bản lập trình cực kỳ chuyên nghiệp và trong sáng.
+#### Câu 9
+Tại đỉnh của cánh hoa tạo bởi hai cung $90^\circ$, góc quay đổi chiều của nhân vật bằng bao nhiêu độ?
+- A. $45^\circ$
+- B. $60^\circ$
+- C. $90^\circ$ *(Đáp án đúng: $180 - 90 = 90$ độ)*
+- D. $180^\circ$
 
----
+#### Câu 10
+Khi vẽ hình tròn từ tâm tỏa ra, sau khi di chuyển $R$ bước để vạch một tia mực ra mép, nhân vật cần làm gì tiếp theo?
+- A. Xoay 90 độ
+- B. Đi lùi lại $-R$ bước để trở về đúng tâm trước khi đổi hướng *(Đáp án đúng)*
+- C. Nhấc bút lên và ẩn đi
+- D. Xóa tất cả
 
 ## Bài tập lesson
 
@@ -1147,26 +1231,47 @@ Logo Olympic gồm 5 vòng tròn lồng nhau: 3 vòng hàng trên (Xanh dương,
 
 ### Bài 1 (P0): 3 Hình tròn đồng tâm
 * **Mã bài toán:** `sca_pen_p10_hinh_tron_dong_tam`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_180.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_181.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Trích từ chuyên đề Bút vẽ Pen & Đồ họa Scratch (Tài liệu gốc ).
 * **Nhiệm vụ:** Lập trình điều khiển nhân vật Scratch sử dụng công cụ Bút vẽ Pen và các khối lệnh Chuyển động để vẽ hoàn chỉnh hình học theo yêu cầu kỹ thuật.
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p10_hinh_tron_dong_tam](../../problems/sca_pen_p10_hinh_tron_dong_tam/solution_blocks_vi.png)
 
 ---
-
 ### Bài 2 (P0): Cung tròn cầu vồng 180 độ
 * **Mã bài toán:** `sca_pen_p11_cung_tron_cau_vong`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_208.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_210.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Trích từ chuyên đề Bút vẽ Pen & Đồ họa Scratch (Tài liệu gốc ).
 * **Nhiệm vụ:** Lập trình điều khiển nhân vật Scratch sử dụng công cụ Bút vẽ Pen và các khối lệnh Chuyển động để vẽ hoàn chỉnh hình học theo yêu cầu kỹ thuật.
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p11_cung_tron_cau_vong](../../problems/sca_pen_p11_cung_tron_cau_vong/solution_blocks_vi.png)
 
 ---
-
 ### Bài 3 (P0): Biểu tượng 5 vòng tròn Olympic thế giới
 * **Mã bài toán:** `sca_pen_p12_logo_olympic`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_010.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Thế vận hội Olympic là ngày hội thể thao lớn nhất hành tinh, nơi các vận động viên xuất sắc nhất từ khắp các châu lục cùng nhau tranh tài. Biểu tượng chính thức của Olympic gồm 5 vòng tròn lồng vào nhau trên nền trắng, tượng trưng cho tình đoàn kết và hữu nghị của 5 châu lục:
 
@@ -1221,21 +1326,37 @@ Chương trình lần lượt thực hiện quy trình chuẩn: di chuyển tớ
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p12_logo_olympic](../../problems/sca_pen_p12_logo_olympic/solution_blocks_vi.png)
 
 ---
-
 ### Bài 4 (P0): Cánh hoa mắt ngọc 2 cung 90 độ
 * **Mã bài toán:** `sca_pen_p13_canh_hoa_co_ban`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_214.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_215.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Trích từ chuyên đề Bút vẽ Pen & Đồ họa Scratch (Tài liệu gốc ).
 * **Nhiệm vụ:** Lập trình điều khiển nhân vật Scratch sử dụng công cụ Bút vẽ Pen và các khối lệnh Chuyển động để vẽ hoàn chỉnh hình học theo yêu cầu kỹ thuật.
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p13_canh_hoa_co_ban](../../problems/sca_pen_p13_canh_hoa_co_ban/solution_blocks_vi.png)
 
 ---
-
 ### Bài 5 (P0): Đóa hoa 8 cánh sắc màu diệu kỳ
 * **Mã bài toán:** `sca_pen_p14_bong_hoa_8_canh`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_217.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_218.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Trong khu vườn mùa xuân của xứ sở Scratch, muôn hoa đua nhau khoe sắc thắm. Để chào đón ngày hội hoa xuân, chú Mèo Scratch muốn lập trình tạo ra một đóa hoa 8 cánh tuyệt đẹp: mỗi chiếc cánh hoa được uốn lượn cong cong mềm mại từ hai cung tròn đối xứng, và mỗi cánh hoa lại mang một màu sắc biến đổi rực rỡ như cầu vồng.
 * **Nhiệm vụ:** Em hãy lập trình điều khiển chú Mèo Scratch hoàn thành bức tranh đóa hoa 8 cánh với các yêu cầu kỹ thuật sau:
@@ -1276,36 +1397,47 @@ Mỗi cánh hoa uốn lượn từ tâm $(0, 0)$ rồi lại khép kín quay v�
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p14_bong_hoa_8_canh](../../problems/sca_pen_p14_bong_hoa_8_canh/solution_blocks_vi.png)
 
 ---
-
 ### Bài 6 (P1): Hoa văn chong chóng tự động
 * **Mã bài toán:** `sca_pen_p15_hoa_chong_chong`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_167.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_168.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Trích từ chuyên đề Bút vẽ Pen & Đồ họa Scratch (Tài liệu gốc ).
 * **Nhiệm vụ:** Lập trình điều khiển nhân vật Scratch sử dụng công cụ Bút vẽ Pen và các khối lệnh Chuyển động để vẽ hoàn chỉnh hình học theo yêu cầu kỹ thuật.
 ---
 
----
+### Khối lệnh Scratch gợi ý giải bài
 
+![Khối lệnh giải bài sca_pen_p15_hoa_chong_chong](../../problems/sca_pen_p15_hoa_chong_chong/solution_blocks_vi.png)
+
+---
 ### Bài 7 (P1): Hình Tròn Chuẩn Bằng 360 Bước Cong
 * **Mã bài toán:** `sca_pen_p21_hinh_tron_co_ban`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_180.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_181.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Khám phá bí mật đường cong: Hình tròn thực chất là một đa giác 360 cạnh siêu nhỏ.
 * **Nhiệm vụ:** Lập trình vẽ hình tròn bán kính R theo công thức bước đi bước_cong = (2 * 3.14 * R) / 360.
-* **Dữ liệu vào (Input):** Nhập bán kính R từ bàn phím.
-* **Kết quả ra (Output):** Đường tròn tròn xoe, mượt mà không góc cạnh.
+* **Kịch bản tương tác:** Nhập bán kính R từ bàn phím.
+* **Kết quả mong đợi:** Đường tròn tròn xoe, mượt mà không góc cạnh.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập bán kính R từ bàn phím.
-```
-
-### Output
-```text
-Kết quả: Đường tròn tròn xoe, mượt mà không góc cạnh.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập bán kính R từ bàn phím.
+- **Kết quả hình ảnh:** Đường tròn tròn xoe, mượt mà không góc cạnh.
 
 ### Giải thích
 
@@ -1313,27 +1445,28 @@ Lặp 360 [đi bước_cong, xoay phải 1 độ].
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p21_hinh_tron_co_ban](../../problems/sca_pen_p21_hinh_tron_co_ban/solution_blocks_vi.png)
 
 ---
-
 ### Bài 8 (P1): Hình Tròn Đồng Tâm Đa Sắc
 * **Mã bài toán:** `sca_pen_p22_hinh_tron_dong_tam_da_sac`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_128.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Tấm bia bắn cung Thế vận hội gồm 5 vòng tròn đồng tâm với các màu sắc: vàng, đỏ, xanh lam, đen, trắng.
 * **Nhiệm vụ:** Viết thủ tục vẽ hình tròn với tham số bán kính, sau đó vẽ các vòng tròn có bán kính tăng dần cùng tâm (0,0).
-* **Dữ liệu vào (Input):** Nhập số vòng tròn N.
-* **Kết quả ra (Output):** Bia ngắm bắn hình tròn đồng tâm rực rỡ.
+* **Kịch bản tương tác:** Nhập số vòng tròn N.
+* **Kết quả mong đợi:** Bia ngắm bắn hình tròn đồng tâm rực rỡ.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số vòng tròn N.
-```
-
-### Output
-```text
-Kết quả: Bia ngắm bắn hình tròn đồng tâm rực rỡ.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số vòng tròn N.
+- **Kết quả hình ảnh:** Bia ngắm bắn hình tròn đồng tâm rực rỡ.
 
 ### Giải thích
 
@@ -1341,27 +1474,28 @@ R = 30, 60, 90, 120...
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p22_hinh_tron_dong_tam_da_sac](../../problems/sca_pen_p22_hinh_tron_dong_tam_da_sac/solution_blocks_vi.png)
 
 ---
-
 ### Bài 9 (P1): Biểu Tượng 5 Vòng Tròn Olympic
 * **Mã bài toán:** `sca_pen_p23_logo_olympic_5_mau`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_189.png)
+
 * **Độ khó & Phân tầng:** P0 (Khởi động & Quan sát)
 * **Bối cảnh:** Logo Thế vận hội Olympic gồm 5 vòng tròn đan xen nhau đại diện cho 5 châu lục: Xanh lam, Vàng, Đen, Xanh lá, Đỏ.
 * **Nhiệm vụ:** Lập trình vẽ chính xác 5 vòng tròn nét to (size = 10) tại các tọa độ chuẩn xác lồng vào nhau.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
 
 ### Giải thích
 
@@ -1369,27 +1503,28 @@ Kết quả: Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p23_logo_olympic_5_mau](../../problems/sca_pen_p23_logo_olympic_5_mau/solution_blocks_vi.png)
 
 ---
-
 ### Bài 10 (P1): Cầu Vồng 7 Sắc Rực Rỡ
 * **Mã bài toán:** `sca_pen_p24_cung_tron_cau_vong_7_mau`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_213.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Sau cơn mưa rào, một chiếc cầu vồng 7 sắc xuất hiện uốn cong trên bầu trời.
 * **Nhiệm vụ:** Vẽ 7 cung tròn 180 độ lồng nhau với nét vẽ dày 12, theo thứ tự màu: Đỏ, Cam, Vàng, Lục, Lam, Chàm, Tím.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Cầu vồng 7 sắc cong vút tuyệt đẹp.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Cầu vồng 7 sắc cong vút tuyệt đẹp.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Cầu vồng 7 sắc cong vút tuyệt đẹp.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Cầu vồng 7 sắc cong vút tuyệt đẹp.
 
 ### Giải thích
 
@@ -1397,27 +1532,29 @@ Cung tròn 180 độ: lặp 180 [đi bước_cong, xoay 1 độ].
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p24_cung_tron_cau_vong_7_mau](../../problems/sca_pen_p24_cung_tron_cau_vong_7_mau/solution_blocks_vi.png)
 
 ---
-
 ### Bài 11 (P2): Cánh Hoa Mảnh Ghép Cung Tròn 90 Độ
 * **Mã bài toán:** `sca_pen_p25_canh_hoa_cung_tron_90`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_214.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_215.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Một cánh hoa mềm mại được tạo thành bởi 2 cung tròn 90 độ khép cong đối xứng nhau.
 * **Nhiệm vụ:** Tạo thủ tục Canh_Hoa: Lặp 2 lần [Lặp 90 lần (đi, xoay 1 độ), xoay phải 90 độ].
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Một cánh hoa hình thoi cong thanh thoát.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Một cánh hoa hình thoi cong thanh thoát.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Một cánh hoa hình thoi cong thanh thoát.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Một cánh hoa hình thoi cong thanh thoát.
 
 ### Giải thích
 
@@ -1425,27 +1562,30 @@ Hai cung tròn 90 độ cong úp vào nhau.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p25_canh_hoa_cung_tron_90](../../problems/sca_pen_p25_canh_hoa_cung_tron_90/solution_blocks_vi.png)
 
 ---
-
 ### Bài 12 (P2): Bông Hoa K Cánh Nở Rộ
 * **Mã bài toán:** `sca_pen_p26_bong_hoa_da_canh`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_214.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_215.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_216.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Từ cánh hoa cơ bản, ta có thể tạo ra bông hoa 6 cánh, 8 cánh hoặc 12 cánh bằng cách quay quanh tâm.
 * **Nhiệm vụ:** Sử dụng thủ tục Canh_Hoa, xoay quanh tâm 360 / K độ để vẽ bông hoa K cánh đổi màu.
-* **Dữ liệu vào (Input):** Nhập số cánh hoa K từ bàn phím.
-* **Kết quả ra (Output):** Bông hoa đa cánh nở rộ rực rỡ.
+* **Kịch bản tương tác:** Nhập số cánh hoa K từ bàn phím.
+* **Kết quả mong đợi:** Bông hoa đa cánh nở rộ rực rỡ.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số cánh hoa K từ bàn phím.
-```
-
-### Output
-```text
-Kết quả: Bông hoa đa cánh nở rộ rực rỡ.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số cánh hoa K từ bàn phím.
+- **Kết quả hình ảnh:** Bông hoa đa cánh nở rộ rực rỡ.
 
 ### Giải thích
 
@@ -1453,27 +1593,31 @@ K = 8 cánh -> Xoay mỗi lần 45 độ.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p26_bong_hoa_da_canh](../../problems/sca_pen_p26_bong_hoa_da_canh/solution_blocks_vi.png)
 
 ---
-
 ### Bài 13 (P2): Chong Chóng Gió Xoay Tít
 * **Mã bài toán:** `sca_pen_p27_chong_chong_gio`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_119.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_120.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_121.png)
+  ![Hình mẫu 4](assets/pen_drawings/pen_img_122.png)
+
 * **Độ khó & Phân tầng:** P1 (Cơ bản & Hoàn thành)
 * **Bối cảnh:** Chiếc chong chóng gió tuổi thơ quay tít trước hiên nhà trong những ngày hè lộng gió.
 * **Nhiệm vụ:** Vẽ các cánh chong chóng lệch tâm cong vút kết hợp màu sắc tương phản.
-* **Dữ liệu vào (Input):** Nhập số cánh chong chóng (4 hoặc 6).
-* **Kết quả ra (Output):** Chong chóng gió chuyển động xoay đều.
+* **Kịch bản tương tác:** Nhập số cánh chong chóng (4 hoặc 6).
+* **Kết quả mong đợi:** Chong chóng gió chuyển động xoay đều.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số cánh chong chóng (4 hoặc 6).
-```
-
-### Output
-```text
-Kết quả: Chong chóng gió chuyển động xoay đều.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số cánh chong chóng (4 hoặc 6).
+- **Kết quả hình ảnh:** Chong chóng gió chuyển động xoay đều.
 
 ### Giải thích
 
@@ -1481,27 +1625,29 @@ Vẽ 4 cánh chong chóng xoay góc 90 độ.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p27_chong_chong_gio](../../problems/sca_pen_p27_chong_chong_gio/solution_blocks_vi.png)
 
 ---
-
 ### Bài 14 (P2): Bông Hoa Tuyết Pha Lê 6 Nhánh
 * **Mã bài toán:** `sca_pen_p28_bong_hoa_tuyet_pha_le`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_184.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_185.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Những bông hoa tuyết mùa đông rơi xuống mang hình dạng đối xứng 6 nhánh tinh xảo.
 * **Nhiệm vụ:** Tạo thủ tục Nhánh_Tuyết có các nhánh con đối xứng, sau đó lặp lại 6 lần quanh tâm.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Bông hoa tuyết pha lê màu xanh lấp lánh.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Bông hoa tuyết pha lê màu xanh lấp lánh.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Bông hoa tuyết pha lê màu xanh lấp lánh.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Bông hoa tuyết pha lê màu xanh lấp lánh.
 
 ### Giải thích
 
@@ -1509,27 +1655,29 @@ Kết quả: Bông hoa tuyết pha lê màu xanh lấp lánh.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p28_bong_hoa_tuyet_pha_le](../../problems/sca_pen_p28_bong_hoa_tuyet_pha_le/solution_blocks_vi.png)
 
 ---
-
 ### Bài 15 (P2): Vầng Trăng Khuyết Nghệ Thuật
 * **Mã bài toán:** `sca_pen_p29_hinh_tron_khuyet`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_077.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_078.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Bầu trời đêm rằm với vầng trăng khuyết dịu dàng chiếu sáng không gian.
 * **Nhiệm vụ:** Vẽ cung tròn lớn, sau đó quay ngược lại vẽ cung tròn nhỏ để tạo hình trăng khuyết.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Hình vầng trăng khuyết màu vàng óng ả.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Hình vầng trăng khuyết màu vàng óng ả.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Hình vầng trăng khuyết màu vàng óng ả.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Hình vầng trăng khuyết màu vàng óng ả.
 
 ### Giải thích
 
@@ -1537,27 +1685,29 @@ Cung tròn ngoài bán kính lớn, cung trong bán kính nhỏ.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p29_hinh_tron_khuyet](../../problems/sca_pen_p29_hinh_tron_khuyet/solution_blocks_vi.png)
 
 ---
-
 ### Bài 16 (P3): Chia Bánh Pizza N Miếng Đa Sắc
 * **Mã bài toán:** `sca_pen_p30_chia_banh_pizza_n_phan`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_040.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_041.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Bữa tiệc sinh nhật có chiếc bánh pizza tròn cần chia đều cho N bạn nhỏ, mỗi miếng một vị và màu sắc khác nhau.
 * **Nhiệm vụ:** Vẽ đường tròn và các nan quạt từ tâm ra đường viền, chia góc 360 / N độ.
-* **Dữ liệu vào (Input):** Nhập số phần N (ví dụ N = 6 hoặc 8).
-* **Kết quả ra (Output):** Chiếc bánh tròn được chia thành N nan quạt màu sắc rực rỡ.
+* **Kịch bản tương tác:** Nhập số phần N (ví dụ N = 6 hoặc 8).
+* **Kết quả mong đợi:** Chiếc bánh tròn được chia thành N nan quạt màu sắc rực rỡ.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số phần N (ví dụ N = 6 hoặc 8).
-```
-
-### Output
-```text
-Kết quả: Chiếc bánh tròn được chia thành N nan quạt màu sắc rực rỡ.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số phần N (ví dụ N = 6 hoặc 8).
+- **Kết quả hình ảnh:** Chiếc bánh tròn được chia thành N nan quạt màu sắc rực rỡ.
 
 ### Giải thích
 
@@ -1565,27 +1715,30 @@ Mỗi nan quạt đi từ tâm ra bán kính R, xoay góc, đi về tâm.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p30_chia_banh_pizza_n_phan](../../problems/sca_pen_p30_chia_banh_pizza_n_phan/solution_blocks_vi.png)
 
 ---
-
 ### Bài 17 (P3): Vỏ Ốc Xoắn Archimedes
 * **Mã bài toán:** `sca_pen_p31_hoa_van_xoan_oc`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_045.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_047.png)
+  ![Hình mẫu 3](assets/pen_drawings/pen_img_048.png)
+
 * **Độ khó & Phân tầng:** P2 (Luyện tập & Vận dụng)
 * **Bối cảnh:** Quy luật xoắn ốc tuyệt mỹ trong thiên nhiên được tìm thấy trên vỏ ốc biển và dải ngân hà.
 * **Nhiệm vụ:** Vòng lặp vẽ đường cong với bán kính hoặc bước đi tăng dần sau mỗi góc xoay nhỏ.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Đường xoắn ốc Archimedes mượt mà từ tâm lan tỏa ra ngoài.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Đường xoắn ốc Archimedes mượt mà từ tâm lan tỏa ra ngoài.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Đường xoắn ốc Archimedes mượt mà từ tâm lan tỏa ra ngoài.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Đường xoắn ốc Archimedes mượt mà từ tâm lan tỏa ra ngoài.
 
 ### Giải thích
 
@@ -1593,27 +1746,29 @@ Lặp 500 lần: đi (i * 0.05) bước, xoay 5 độ.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p31_hoa_van_xoan_oc](../../problems/sca_pen_p31_hoa_van_xoan_oc/solution_blocks_vi.png)
 
 ---
-
 ### Bài 18 (P3): Chuỗi Vòng Ngọc Trai Lấp Lánh
 * **Mã bài toán:** `sca_pen_p32_chuoi_vong_ngoc_trai`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_053.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_054.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Chuỗi vòng cổ quý phái đính các viên ngọc trai tròn xoe xếp đều trên một đường tròn lớn.
 * **Nhiệm vụ:** Đi theo đường tròn lớn, tại mỗi khoảng cách đều đặn dừng lại vẽ một viên ngọc trai nhỏ.
-* **Dữ liệu vào (Input):** Nhập số lượng hạt ngọc trai K.
-* **Kết quả ra (Output):** Chuỗi vòng ngọc trai lộng lẫy.
+* **Kịch bản tương tác:** Nhập số lượng hạt ngọc trai K.
+* **Kết quả mong đợi:** Chuỗi vòng ngọc trai lộng lẫy.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập số lượng hạt ngọc trai K.
-```
-
-### Output
-```text
-Kết quả: Chuỗi vòng ngọc trai lộng lẫy.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập số lượng hạt ngọc trai K.
+- **Kết quả hình ảnh:** Chuỗi vòng ngọc trai lộng lẫy.
 
 ### Giải thích
 
@@ -1621,27 +1776,29 @@ K = 12 hạt ngọc xếp tròn quanh tâm.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p32_chuoi_vong_ngoc_trai](../../problems/sca_pen_p32_chuoi_vong_ngoc_trai/solution_blocks_vi.png)
 
 ---
-
 ### Bài 19 (P3): Họa Tiết Đường Viền Sóng Biển
 * **Mã bài toán:** `sca_pen_p33_hoa_tiet_trang_tri_vien`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_062.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_063.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Trang trí mép thảm trải sàn hoặc khung ảnh bằng chuỗi cung tròn sóng biển dập dềnh liên tiếp.
 * **Nhiệm vụ:** Lặp lại N lần cung tròn 180 độ uốn lượn liên tiếp theo chiều ngang.
-* **Dữ liệu vào (Input):** Nhập chiều dài đường viền.
-* **Kết quả ra (Output):** Dải hoa văn viền sóng biển uốn lượn liên tục.
+* **Kịch bản tương tác:** Nhập chiều dài đường viền.
+* **Kết quả mong đợi:** Dải hoa văn viền sóng biển uốn lượn liên tục.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhập chiều dài đường viền.
-```
-
-### Output
-```text
-Kết quả: Dải hoa văn viền sóng biển uốn lượn liên tục.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhập chiều dài đường viền.
+- **Kết quả hình ảnh:** Dải hoa văn viền sóng biển uốn lượn liên tục.
 
 ### Giải thích
 
@@ -1649,27 +1806,29 @@ Cung uốn lên rồi cung uốn xuống xen kẽ.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p33_hoa_tiet_trang_tri_vien](../../problems/sca_pen_p33_hoa_tiet_trang_tri_vien/solution_blocks_vi.png)
 
 ---
-
 ### Bài 20 (P3): Gạch Hoa Cổ Điển Đông Dương
 * **Mã bài toán:** `sca_pen_p34_hoa_van_gach_hoa_co_dien`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_082.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_083.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Nền nhà cổ kính với những viên gạch hoa văn kết hợp tinh tế giữa hình vuông và 4 cánh hoa tròn bao quanh.
 * **Nhiệm vụ:** Vẽ hình vuông trung tâm và 4 cánh hoa uốn cong tại 4 cạnh hình vuông.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Họa tiết viên gạch hoa Đông Dương sang trọng.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Họa tiết viên gạch hoa Đông Dương sang trọng.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Họa tiết viên gạch hoa Đông Dương sang trọng.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Họa tiết viên gạch hoa Đông Dương sang trọng.
 
 ### Giải thích
 
@@ -1677,31 +1836,37 @@ Kết quả: Họa tiết viên gạch hoa Đông Dương sang trọng.
 
 ---
 
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p34_hoa_van_gach_hoa_co_dien](../../problems/sca_pen_p34_hoa_van_gach_hoa_co_dien/solution_blocks_vi.png)
 
 ---
-
 ### Bài 21 (P3): Kính Vạn Hoa Đa Chiều (Kaleidoscope)
 * **Mã bài toán:** `sca_pen_p35_dai_ngan_ha_van_hoa`
+
+* **Hình ảnh mẫu minh họa:**
+
+  ![Hình mẫu 1](assets/pen_drawings/pen_img_086.png)
+  ![Hình mẫu 2](assets/pen_drawings/pen_img_087.png)
+
 * **Độ khó & Phân tầng:** P3 (Vận dụng cao & Sáng tạo)
 * **Bối cảnh:** Ống kính vạn hoa đồ chơi tạo nên vô số hoa văn kỳ ảo khi xoay chuyển trước ánh sáng.
 * **Nhiệm vụ:** Xoay một cụm họa tiết gồm đa giác và cung tròn 36 lần quanh tâm (mỗi lần 10 độ) với màu sắc cầu vồng ngẫu nhiên.
-* **Dữ liệu vào (Input):** Nhấn cờ xanh.
-* **Kết quả ra (Output):** Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
+* **Kịch bản tương tác:** Khởi động khi nhấn biểu tượng Cờ Xanh (không cần nhập dữ liệu từ bàn phím).
+* **Kết quả mong đợi:** Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
 * **Dữ liệu mẫu (Sample):**
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
-
-### Output
-```text
-Kết quả: Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
-```
+### Kịch bản chạy trên sân khấu
+- **Thao tác khởi động:** Nhấn cờ xanh.
+- **Kết quả hình ảnh:** Bức tranh kính vạn hoa lộng lẫy, choáng ngợp.
 
 ### Giải thích
 
 Hiệu ứng xoay tròn 36 lần liên tục đổi màu.
+
+### Khối lệnh Scratch gợi ý giải bài
+
+![Khối lệnh giải bài sca_pen_p35_dai_ngan_ha_van_hoa](../../problems/sca_pen_p35_dai_ngan_ha_van_hoa/solution_blocks_vi.png)
 
 ---
 
@@ -1717,7 +1882,7 @@ Hiệu ứng xoay tròn 36 lần liên tục đổi màu.
 
 # Bài 03: LỆNH XUẤT NHẬP, BIẾN SỐ VÀ KIỂU DỮ LIỆU
 
-## 1. Bản Chất Chương Trình Máy Tính & Luồng Dữ Liệu I/O
+## 1. Bản chất chương trình máy tính và luồng dữ liệu I/O
 
 Trong khoa học máy tính và lập trình, một chương trình thực chất là một chuỗi chỉ thị có trật tự điều khiển máy tính biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
 
@@ -1737,7 +1902,7 @@ Mọi bài toán trong các kỳ thi lập trình lập trình Bảng A đều v
 
 ---
 
-## 2. Lệnh Nhập Dữ Liệu: Khối `hỏi () và đợi` & Bẫy Biến `câu trả lời`
+## 2. Lệnh nhập dữ liệu và biến `câu trả lời`
 
 ### 2.1. Cú pháp và cơ chế của khối `hỏi () và đợi`
 Trong nhóm **Cảm biến (Sensing)** màu xanh lơ, Scratch cung cấp khối lệnh nhập dữ liệu chính thức:
@@ -1825,7 +1990,7 @@ Quy trình 3 bước vàng:
 
 ---
 
-## 6. Bảng Mô Phỏng Biến Thiên Ô Nhớ Từng Bước (Dry Run Table)
+## 6. Bảng mô phỏng Biến Thiên Ô Nhớ Từng Bước (Dry run)
 
 Xét kịch bản nhập $A = 15$ và $B = 7$:
 
@@ -1840,7 +2005,7 @@ Xét kịch bản nhập $A = 15$ và $B = 7$:
 
 ---
 
-## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Không đặt biến trước khi hỏi lần tiếp theo**
 > - *Hậu quả:* Mất sạch dữ liệu của lần nhập trước do `câu trả lời` bị ghi đè.
@@ -1856,7 +2021,7 @@ Xét kịch bản nhập $A = 15$ và $B = 7$:
 
 ---
 
-## 8. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 8. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào trong Scratch dùng để nhận dữ liệu gõ từ bàn phím?**
    - A. `nói [] và đợi`
@@ -2592,7 +2757,7 @@ Trong nhóm **Các phép toán (Operators)** màu xanh lá cây, Scratch cung c�
 
 ---
 
-## 2. Kỹ Thuật Lồng Khối Thay Thế Cho Dấu Ngoặc Đơn `()`
+## 2. Kỹ thuật lồng khối thay thế cho dấu ngoặc đơn `()`
 
 Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ định thứ tự ưu tiên tính toán (Ví dụ: $(Dài + Rộng) 	imes 2$).
 
@@ -2615,7 +2780,7 @@ Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ đ�
 
 ---
 
-## 3. Bảng Tra Cứu Các Biểu Thức Hình Học Kinh Điển
+## 3. Bảng tra cứu các biểu thức hình học cơ bản
 
 | Bài toán hình học | Công thức toán học | Biểu thức khối lệnh Scratch chuẩn |
 |---|---|---|
@@ -2628,7 +2793,7 @@ Trong toán học viết tay, ta dùng dấu ngoặc đơn `( )` để chỉ đ�
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Tính Biểu Thức Phức Tạp (Dry Run Table)
+## 4. Bảng mô phỏng tính biểu thức (Dry run)
 
 Xét bài toán tính diện tích hình thang với đáy lớn $a = 8$, đáy nhỏ $b = 4$, chiều cao $h = 5$:
 Công thức: $S = \dfrac{(a + b) 	imes h}{2}$.
@@ -2643,7 +2808,7 @@ $\implies$ Kết quả cuối cùng được gán vào biến `dien_tich` là **
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Thả nhầm vị trí khối con làm sai thứ tự ưu tiên**
 > - *Sai lầm:* Thả `chieu_dai` vào trước, rồi thả `(chieu_rong) * (2)` phía sau.
@@ -2660,7 +2825,7 @@ $\implies$ Kết quả cuối cùng được gán vào biến `dien_tich` là **
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào sau đây thực hiện phép tính $15 	imes 4$?**
    - A. `(15) + (4)`
@@ -3624,7 +3789,7 @@ $(7 + 8) / (2 + 3) = 15 / 5 = 3.00$.
 
 # Bài 05: PHÉP CHIA NGUYÊN, CHIA DƯ VÀ LUỸ THỪA
 
-## 1. Bản Chất Phép Chia Nguyên Và Chia Dư Trong Scratch
+## 1. Phép chia nguyên và chia dư trong Scratch
 
 Khi lập trình, lập trình Bảng A, hai phép toán quan trọng bậc nhất để xử lý số học chính là **Phép chia lấy phần dư (`mod`)** và **Phép chia lấy phần nguyên (`làm tròn xuống của phép chia`)**.
 
@@ -3654,7 +3819,7 @@ $$\text{Chia nguyên } A \text{ cho } B = \text{làm tròn xuống của } ((A) 
 
 ---
 
-## 2. Bài Toán Quy Đổi Thời Gian & Đơn Vị Đo Lường Thực Tế
+## 2. Bài toán quy đổi thời gian và đơn vị đo lường
 
 Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng số giây $T$, hãy đổi ra Giờ, Phút, Giây.*
 
@@ -3676,7 +3841,7 @@ Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng
 
 ---
 
-## 3. Phép Tính Lũy Thừa Bằng Vòng Lặp
+## 3. Phép tính lũy thừa bằng vòng lặp
 
 Để tính $A^B$ ($A$ mũ $B$, tích của $B$ số $A$ nhân với nhau):
 
@@ -3686,7 +3851,7 @@ Một trong những dạng bài kinh điển trong lập trình là: *Cho tổng
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Đổi $T = 3725$ Giây (Dry Run Table)
+## 4. Bảng mô phỏng đổi thời gian (Dry run)
 
 | Bước thực hiện | Khối lệnh Scratch | Phép tính toán học | Giá trị biến lưu trong RAM |
 |:---:|---|---|:---:|
@@ -3699,7 +3864,7 @@ $\implies$ Kết quả: $3725$ giây = **$1$ giờ $2$ phút $5$ giây**.
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Dùng nhầm khối `làm tròn của ()` thay vì `làm tròn xuống của ()`**
 > - *Khối `làm tròn` (Round):* Sẽ làm tròn lên số nguyên gần nhất nếu phần thập phân $\ge 0.5$.
@@ -3712,7 +3877,7 @@ $\implies$ Kết quả: $3725$ giây = **$1$ giờ $2$ phút $5$ giây**.
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh `(23) mod (5)` trả về kết quả là bao nhiêu?**
    - A. 4
@@ -4616,7 +4781,7 @@ Chu vi mảnh vườn $= 2 \times (20 + 15) = 70\text{m}$. Trừ cổng $3\text{
 
 # Bài 06: Cấu trúc rẽ nhánh
 
-## 1. Bản Chất Của Cấu Trúc Rẽ Nhánh Trong Khoa Học Máy Tính
+## 1. Cấu trúc rẽ nhánh trong lập trình
 
 Trong các chương trình tuần tự, các khối lệnh được thực thi lần lượt từ trên xuống dưới. Tuy nhiên, để giải quyết các bài toán thông minh trong thực tế, máy tính cần có khả năng **ra quyết định**: *Nếu điều kiện này đúng thì thực hiện hành động A, nếu sai thì chuyển sang thực hiện hành động B*.
 
@@ -4626,7 +4791,7 @@ Cấu trúc cho phép máy tính thay đổi luồng thực thi dựa trên kế
 
 ---
 
-## 2. Hai Dạng Khối Lệnh Rẽ Nhánh Trong Scratch 3.0
+## 2. Hai dạng khối lệnh rẽ nhánh trong Scratch 3.0
 
 Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp hai khối bao quanh hình chữ C đặc trưng:
 
@@ -4648,7 +4813,7 @@ Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp hai
 
 ---
 
-## 3. Các Toán Tử So Sánh & Ghép Điều Kiện Logic Phức Tạp
+## 3. Các phép toán so sánh và điều kiện logic
 
 Để tạo ra điều kiện cho khối rẽ nhánh, ta sử dụng các khối hình lục giác góc nhọn màu xanh lá trong nhóm **Các phép toán (Operators)**:
 
@@ -4663,7 +4828,7 @@ Trong nhóm **Điều khiển (Control)** màu vàng cam, Scratch cung cấp hai
 
 ---
 
-## 4. Các Mẫu Thuật Toán Rẽ Nhánh Kinh Điển
+## 4. Các mẫu thuật toán rẽ nhánh cơ bản
 
 ### 4.1. Mẫu 1: Thuật toán tìm giá trị lớn nhất của 3 số ($A, B, C$)
 Ta áp dụng kỹ thuật **"Đặt vương miện giả định"**:
@@ -4683,7 +4848,7 @@ Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$,
 
 ---
 
-## 5. Bảng Mô Phỏng Tìm Số Lớn Nhất Trong $A = 12, B = 25, C = 18$ (Dry Run Table)
+## 5. Bảng mô phỏng tìm số lớn nhất trong $A = 12, B = 25, C = 18$ (Dry run)
 
 | Bước | Khối lệnh thực thi | Biến `max` | Biểu thức kiểm tra | Kết quả điều kiện | Hành động máy tính |
 |:---:|---|:---:|---|:---:|---|
@@ -4695,7 +4860,7 @@ Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$,
 
 ---
 
-## 6. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 6. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Xếp các khối `nếu...thì` độc lập thay vì dùng `nếu...nếu không thì`**
 > - *Hiện tượng:* Đặt 2 khối `nếu` tách rời nhau:
@@ -4715,7 +4880,7 @@ Trong các bài toán xếp loại học sinh (Giỏi $\ge 8.0$, Khá $\ge 6.5$,
 
 ---
 
-## 7. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 7. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khi điều kiện lục giác trong khối `nếu < > thì` trả về kết quả SAI, máy tính sẽ:**
    - A. Dừng chương trình
@@ -5752,7 +5917,7 @@ GIAO NHAU 2
 
 # Bài 07: Vòng lặp for và hàm range
 
-## 1. Bản Chất Của Vòng Lặp Trong Khoa Học Máy Tính
+## 1. Bản chất của vòng lặp trong lập trình
 
 Trong lập trình, có những công việc cần thực hiện lặp đi lặp lại hàng chục, hàng trăm, thậm chí hàng triệu lần (ví dụ: tính tổng các số từ 1 đến 1000, in bảng cửu chương, duyệt qua danh sách thí sinh). 
 
@@ -5764,7 +5929,7 @@ Khi đã **biết trước chính xác số lần lặp**, khối lệnh chuẩn
 
 ---
 
-## 2. Kỹ Thuật Thiết Lập Biến Đếm 3 Bước Vàng
+## 2. Kỹ thuật thiết lập biến đếm với 3 bước
 
 Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà không tự động tăng một biến đếm nào cả. Do đó, để quản lý số thứ tự các lần lặp, chúng ta áp dụng **Quy tắc 3 bước vàng**:
 
@@ -5778,16 +5943,16 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 3. Các Mẫu Thuật Toán Tích Lũy Kinh Điển
+## 3. Mẫu thuật toán tích lũy
 
-### 3.1. Mẫu 1: Thuật toán Tính Tổng tích lũy ($S = 1 + 2 + \dots + N$)
+### 3.1. Mẫu 1: Thuật toán tính tổng tích lũy ($S = 1 + 2 + \dots + N$)
 - Khởi tạo biến tổng bằng 0: `đặt [tong v] thành (0)`.
 - Trong mỗi vòng lặp, cộng dồn giá trị của `i` vào `tong`:
   `thay đổi [tong v] một lượng (i)`.
 
 ![Thuật toán tính tổng tích lũy](assets/rendered_blocks/l07_accumulator_vi.png)
 
-### 3.2. Mẫu 2: Thuật toán Tính Tích giai thừa ($N! = 1 \times 2 \times \dots \times N$)
+### 3.2. Mẫu 2: Thuật toán tính tích giai thừa ($N! = 1 \times 2 \times \dots \times N$)
 - **BẮT BUỘC:** Khởi tạo biến tích lũy phép nhân bằng 1 (nếu khởi tạo bằng 0 thì mọi phép nhân đều bằng 0!).
 - Trong mỗi vòng lặp, nhân dồn `i` vào biến `giai_thua`:
   `đặt [giai_thua v] thành ((giai_thua) * (i))`.
@@ -5796,7 +5961,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Tính Tổng $S = 1 + 2 + 3 + 4$ ($N = 4$) (Dry Run Table)
+## 4. Bảng mô phỏng tính tổng $S = 1 + 2 + 3 + 4$ ($N = 4$) (Dry run)
 
 | Vòng lặp số | Khối lệnh thực thi trong thân lặp | Biến `i` trước lặp | Biến `tong` sau cộng | Biến `i` sau khi tăng | Ý nghĩa phép toán |
 |:---:|---|:---:|:---:|:---:|---|
@@ -5809,7 +5974,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên khối `thay đổi [i v] một lượng (1)`**
 > - *Hiện tượng:* Biến `i` mãi mãi nhận giá trị $1$.
@@ -5827,7 +5992,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào trong Scratch tương đương với vòng lặp biết trước số lần lặp?**
    - A. `lặp lại () lần` *(Đáp án đúng)*
@@ -6308,7 +6473,7 @@ Với dữ liệu đầu vào là `1000000000`, kết quả thu được tương
 
 # Bài 08: Vòng lặp while và biến cờ
 
-## 1. Bản Chất Vòng Lặp Khi Chưa Biết Trước Số Lần Lặp
+## 1. Vòng lặp khi chưa biết trước số lần lặp
 
 Trong nhiều bài toán thực tế, ta **không thể biết trước được công việc cần lặp lại chính xác bao nhiêu lần**:
 
@@ -6322,7 +6487,7 @@ Khi số lần lặp phụ thuộc vào một điều kiện động, khối l�
 
 ---
 
-## 2. Bẫy Ngược Logic Của Khối `lặp lại cho đến khi`
+## 2. Bẫy ngược logic của khối `lặp lại cho đến khi`
 
 | Khối lệnh | Cơ chế kiểm tra điều kiện | Ý nghĩa hành động |
 |:---:|---|---|
@@ -6335,14 +6500,14 @@ Khi số lần lặp phụ thuộc vào một điều kiện động, khối l�
 
 ---
 
-## 3. Các Mẫu Thuật Toán Vòng Lặp Điều Kiện Kinh Điển
+## 3. Các mẫu thuật toán vòng lặp điều kiện
 
-### 3.1. Mẫu 1: Thuật toán Dãy số Collatz ($3n + 1$)
+### 3.1. Mẫu 1: Thuật toán biến đổi số ($3n + 1$)
 Bài toán: Cho số nguyên dương $N$. Nếu $N$ chẵn thì chia đôi $N = N / 2$; nếu $N$ lẻ thì biến đổi thành $N = 3N + 1$. Lặp lại quá trình này cho đến khi $N$ giảm về $1$.
 
 ![Thuật toán Collatz](assets/rendered_blocks/l08_collatz_vi.png)
 
-### 3.2. Mẫu 2: Kỹ thuật Biến Cờ Dừng (Sentinel Flag)
+### 3.2. Mẫu 2: Kỹ thuật biến cờ dừng
 Bài toán: Kiểm tra xem số $N$ có phải là số chính phương hay không ($N = i \times i$).
 - Khởi tạo biến cờ: `đặt [tim_thay v] thành 0`.
 - Cho `i` chạy từ 1, lặp lại cho đến khi **đã tìm thấy cờ** HOẶC **$i > N$**:
@@ -6351,7 +6516,7 @@ Bài toán: Kiểm tra xem số $N$ có phải là số chính phương hay khô
 
 ---
 
-## 4. Bảng Mô Phỏng Biến Đổi Collatz Với $N = 6$ (Dry Run Table)
+## 4. Bảng mô phỏng biến đổi số với $N = 6$ (Dry run)
 
 | Vòng lặp | Giá trị $N$ hiện tại | Kiểm tra điều kiện dừng `< N = 1 >` | Kiểm tra chẵn/lẻ | Phép tính thực thi | Giá trị $N$ mới |
 |:---:|:---:|:---:|:---:|---|:---:|
@@ -6369,7 +6534,7 @@ $\implies$ Sau đúng 8 bước lặp, số $N$ chạm về 1 và vòng lặp k�
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Treo đơ chương trình do Vòng lặp vô tận (Infinite Loop)**
 > - *Hiện tượng:* Bên trong vòng lặp không có bất kỳ câu lệnh nào làm thay đổi điều kiện dừng.
@@ -6382,7 +6547,7 @@ $\implies$ Sau đúng 8 bước lặp, số $N$ chạm về 1 và vòng lặp k�
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh `lặp lại cho đến khi <>` sẽ dừng lại khi điều kiện lục giác bên trong trả về:**
    - A. Đúng (True) *(Đáp án đúng: gặp Đúng thì Dừng)*
@@ -6796,7 +6961,7 @@ Dãy biến đổi: $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$ (qua 8
 
 # Bài 09: QUY LUẬT DÃY SỐ VÀ TAM GIÁC SỐ
 
-## 1. Bản Chất Các Bài Toán Quy Luật Dãy Số Trong Lập Trình
+## 1. Bản chất các bài toán quy luật dãy số
 
 Khi lập trình, bài toán về dãy số xuất hiện với tần suất rất cao:
 
@@ -6808,7 +6973,7 @@ Thay vì học vẹt công thức, học sinh cần rèn luyện tư duy: **Xác
 
 ---
 
-## 2. Kỹ Thuật Biến Lăn (Rolling Variables) — Thuật Toán Fibonacci
+## 2. Kỹ thuật biến lăn và thuật toán Fibonacci
 
 Để tính số Fibonacci thứ $N$, ta không cần lưu toàn bộ dãy số vào bộ nhớ mà chỉ cần duy trì đúng **hai biến nhớ liền kề (`a` và `b`)**:
 
@@ -6821,7 +6986,7 @@ Thay vì học vẹt công thức, học sinh cần rèn luyện tư duy: **Xác
 
 ---
 
-## 3. Kỹ Thuật Hai Vòng Lặp Lồng Nhau — In Tam Giác Sao
+## 3. Kỹ thuật hai vòng lặp lồng nhau: In tam giác hình
 
 Khi bài toán yêu cầu in hình dạng 2 chiều (ví dụ: tam giác sao, bảng cửu chương, ma trận ô số):
 
@@ -6838,7 +7003,7 @@ Khi bài toán yêu cầu in hình dạng 2 chiều (ví dụ: tam giác sao, b�
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Dãy Fibonacci Đến $N = 6$ (Dry Run Table)
+## 4. Bảng mô phỏng dãy Fibonacci đến $N = 6$ (Dry run)
 
 | Vòng lặp | Biến `a` (Số trước) | Biến `b` (Số hiện tại) | Tính `c = a + b` | Dịch `a = b` | Dịch `b = c` | Giá trị phần tử sinh ra |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -6852,7 +7017,7 @@ $\implies$ Sau 4 lượt lặp (ứng với $N - 2$), biến `b` chứa chính x
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Sai thứ tự dịch chuyển biến làm mất giá trị**
 > - *Sai lầm:* `đặt [a v] thành (b)` trước rồi mới tính `c = a + b`.
@@ -6865,7 +7030,7 @@ $\implies$ Sau 4 lượt lặp (ứng với $N - 2$), biến `b` chứa chính x
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Số tiếp theo trong dãy số Fibonacci $1, 1, 2, 3, 5, 8, \dots$ là:**
    - A. 11
@@ -7329,7 +7494,7 @@ Ký tự thứ 7 là số 7.
 
 # Bài 10: Kỹ thuật tách chữ số và xử lý số nguyên qua vòng lặp while
 
-## 1. Bí Thuật Hai Bước Tách Chữ Số Bằng Phép Toán
+## 1. Hai bước tách chữ số bằng phép toán
 
 Trong các bài toán lập trình, xử lý các con số (tính tổng các chữ số, đếm số lượng chữ số chẵn/lẻ, kiểm tra số đối xứng, tạo số đảo ngược) là một trong những dạng đề bài kinh điển nhất.
 
@@ -7351,7 +7516,7 @@ Khối lệnh Scratch:
 
 ---
 
-## 2. Khung Mẫu Chuẩn (Template) Vòng Lặp Xử Lý Chữ Số
+## 2. Khung mẫu vòng lặp xử lý chữ số
 
 Kết hợp bí thuật 2 bước với vòng lặp `lặp lại cho đến khi < (N) = (0) >`:
 
@@ -7364,7 +7529,7 @@ Kết hợp bí thuật 2 bước với vòng lặp `lặp lại cho đến khi 
 
 ---
 
-## 3. Thuật Toán Tạo Số Đảo Ngược
+## 3. Thuật toán tạo số đảo ngược
 
 Bài toán: Cho số nguyên dương $N = 1234$, hãy tạo ra số đảo ngược $4321$.
 
@@ -7382,7 +7547,7 @@ $$\text{dao\_nguoc} = \text{dao\_nguoc} \times 10 + \text{chu\_so}$$
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Bóc Tách Số $N = 358$ (Dry Run Table)
+## 4. Bảng mô phỏng tách chữ số $N = 358$ (Dry run)
 
 | Vòng lặp | $N$ trước bóc | Tách `chu_so = N mod 10` | Thu nhỏ `N = floor(N / 10)` | Cộng `tong = tong + chu_so` | Biến `dao_nguoc` | Kiểm tra dừng `< N = 0 >` |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -7395,7 +7560,7 @@ $\implies$ Sau 3 vòng lặp: Tổng các chữ số là **$16$**, số đảo n
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Làm mất giá trị gốc của số $N$ ban đầu**
 > - *Hậu quả:* Quá trình bóc tách sẽ làm số $N$ giảm dần về $0$. Nếu đề bài yêu cầu so sánh số đảo ngược với số ban đầu (để kiểm tra số đối xứng / Palindrome), ta không còn giá trị gốc của $N$ nữa!
@@ -7406,7 +7571,7 @@ $\implies$ Sau 3 vòng lặp: Tổng các chữ số là **$16$**, số đảo n
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào dùng để lấy ra chữ số hàng đơn vị của số nguyên dương $N$?**
    - A. `(N) / (10)`
@@ -7835,7 +8000,7 @@ Với dữ liệu đầu vào là `1379`, kết quả thu được tương ứng
 
 # Bài 11: ƯỚC SỐ, BỘI SỐ VÀ SỐ NGUYÊN TỐ
 
-## 1. Bản Chất Toán Học Của Ước Số & Bội Số Trong Lập Trình
+## 1. Bản chất toán học của ước số và bội số
 
 Trong số học, số nguyên dương $d$ được gọi là **ước số** của số nguyên dương $N$ (và $N$ là **bội số** của $d$) nếu $N$ chia hết cho $d$ mà không còn dư:
 $$\text{Điều kiện trong Scratch: } < ((N) \text{ mod } (d)) = (0) >$$
@@ -7844,7 +8009,7 @@ $$\text{Điều kiện trong Scratch: } < ((N) \text{ mod } (d)) = (0) >$$
 
 ---
 
-## 2. Định Nghĩa Số Nguyên Tố & Thuật Toán Cơ Bản
+## 2. Định nghĩa số nguyên tố và thuật toán cơ bản
 
 **Số nguyên tố** là số tự nhiên lớn hơn 1 và **chỉ có đúng 2 ước số** là 1 và chính nó ($2, 3, 5, 7, 11, 13, 17, \dots$).
 - Số $0$ và số $1$ **KHÔNG PHẢI** là số nguyên tố.
@@ -7856,7 +8021,7 @@ Sau vòng lặp: nếu `dem_uoc = 2` $\implies N$ là số nguyên tố!
 
 ---
 
-## 3. Thuật Toán Tối Ưu Với Biến Cờ Dừng Sớm & Căn Bậc Hai $\sqrt{N}$
+## 3. Thuật toán tối ưu với biến cờ dừng sớm và căn bậc hai $\sqrt{N}$
 
 Khi $N$ lớn (ví dụ $N = 1000000$), việc cho vòng lặp chạy $1$ triệu lần sẽ làm chương trình Scratch chạy rất chậm. Ta áp dụng 2 nguyên lý toán học tối ưu đỉnh cao:
 
@@ -7868,7 +8033,7 @@ Khi $N$ lớn (ví dụ $N = 1000000$), việc cho vòng lặp chạy $1$ triệ
 
 ---
 
-## 4. Bảng Mô Phỏng Kiểm Tra Số $N = 37$ (Dry Run Table)
+## 4. Bảng mô phỏng kiểm tra số $N = 37$ (Dry run)
 
 | Vòng lặp | Biến `d` | Kiểm tra điều kiện lặp `< d * d <= N >` | Kiểm tra chia hết `< N mod d = 0 >` | Biến cờ `la_nguyen_to` | Kết luận bước |
 |:---:|:---:|:---:|:---:|:---:|---|
@@ -7883,10 +8048,10 @@ $\implies$ Sau khi dừng, cờ `la_nguyen_to` vẫn giữ nguyên giá trị **
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên xử lý trường hợp đặc biệt $N < 2$**
-> - *Hiện tượng:* Với $N = 1$ hoặc $N = 0$, nếu không chặn trước, chương trình sẽ kết luận nhầm $1$ là số nguyên tố!
+> - *Hiện tượng:* với $N = 1$ hoặc $N = 0$, nếu không chặn trước, chương trình sẽ kết luận nhầm $1$ là số nguyên tố!
 > - *Khắc phục:* Luôn có khối kiểm tra đầu tiên: `nếu < N < 2 > thì đặt [la_nguyen_to v] thành 0`.
 
 > **Bẫy 2: Chạy kiểm tra ước bắt đầu từ $d = 1$**
@@ -7895,7 +8060,7 @@ $\implies$ Sau khi dừng, cờ `la_nguyen_to` vẫn giữ nguyên giá trị **
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Điều kiện nào trong Scratch chứng tỏ số nguyên $d$ là một ước số của số nguyên $N$?**
    - A. `< ((N) mod (d)) = (0) >` *(Đáp án đúng)*
@@ -8328,7 +8493,7 @@ Có 3 số là: 4 ($2^2$), 9 ($3^2$), 25 ($5^2$).
 
 # Bài 12: ĐẾM SỐ THEO QUY LUẬT VÀ SỐ ĐẶC BIỆT
 
-## 1. Bản Chất Bài Toán Đếm Số Theo Quy Luật
+## 1. Bản chất bài toán đếm số theo quy luật
 
 Khi lập trình giải các bài toán, dạng toán **đếm số lượng số thỏa mãn một tính chất nào đó trong một khoảng $[A, B]$** là một trong những dạng toán kinh điển và xuất hiện nhiều nhất:
 
@@ -8340,7 +8505,7 @@ Tùy thuộc vào giới hạn của bài toán ($B - A \le 10^5$ hay $B \le 10^
 
 ---
 
-## 2. Kỹ Thuật Đếm Trong Đoạn Bằng Vòng Lặp Duyệt Từng Số
+## 2. Kỹ thuật đếm trong đoạn bằng vòng lặp
 
 Khi khoảng cách giữa $A$ và $B$ nhỏ (dưới vài chục nghìn số), máy tính có thể duyệt qua từng số một cách nhanh chóng.
 
@@ -8371,7 +8536,7 @@ $$\text{Số lần lặp} = B - A + 1$$
 
 ---
 
-## 3. Công Thức Đếm Toán Học Siêu Tốc $\mathcal{O}(1)$
+## 3. Công thức đếm toán học nhanh $\mathcal{O}(1)$
 
 Khi $A$ và $B$ là các con số khổng lồ (ví dụ đếm số chia hết cho 7 từ $1$ đến $1\,000\,000\,000$), việc chạy vòng lặp $1$ tỷ lần sẽ làm máy tính bị treo (Time Limit Exceeded). Ta dùng công thức toán học tính ngay lập tức trong **1 phép tính**:
 
@@ -8393,26 +8558,26 @@ Khối phép toán trong Scratch:
 
 ---
 
-## 4. Các Dạng Số Đặc Biệt Thường Gặp Trong Lập Trình
+## 4. Các dạng số đặc biệt thường gặp
 
-### 4.1. Số Chính Phương (Perfect Square)
+### 4.1. Số chính phương
 Số chính phương là số tự nhiên có căn bậc hai là một số nguyên (nghĩa là bằng bình phương của một số tự nhiên: $0, 1, 4, 9, 16, 25, 36, 49, \dots$).
 - **Cách kiểm tra trong Scratch:** Lấy căn bậc hai của $N$, làm tròn xuống rồi bình phương lại xem có bằng chính $N$ không:
   $$< (([làm tròn xuống v] của ([căn bậc hai v] của (N))) \times ([làm tròn xuống v] của ([căn bậc hai v] của (N)))) = (N) >$$
 
-### 4.2. Số Hoàn Hảo (Perfect Number)
+### 4.2. Số hoàn hảo
 Số hoàn hảo là số nguyên dương có **tổng tất cả các ước số thực sự của nó (ngoại trừ chính nó) bằng chính nó**.
 - Số hoàn hảo nhỏ nhất là $6$: các ước nhỏ hơn 6 là $1, 2, 3$, và $1 + 2 + 3 = 6$.
 - Số hoàn hảo tiếp theo là $28$: các ước nhỏ hơn 28 là $1, 2, 4, 7, 14$, và $1 + 2 + 4 + 7 + 14 = 28$.
 
-### 4.3. Số Tự Mãn (Số Armstrong / Narcissistic)
+### 4.3. Số tự mãn (Armstrong)
 Là số có $k$ chữ số, và tổng lũy thừa bậc $k$ của từng chữ số bằng chính nó.
 - Ví dụ số 3 chữ số: $153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153$.
 - Ta kết hợp thuật toán tách chữ số (Bài 10) và tích lũy thừa (Bài 05) để kiểm tra.
 
 ---
 
-## 5. Bảng Mô Phỏng Đếm Số Chia Hết Cho 3 Trong Đoạn $[4, 12]$ (Dry Run Table)
+## 5. Bảng mô phỏng đếm số chia hết cho 3 trong đoạn $[4, 12]$ (Dry run)
 
 Giả sử $A = 4, B = 12, K = 3$. Số lần lặp $= 12 - 4 + 1 = 9$ lần.
 
@@ -8434,7 +8599,7 @@ $\implies$ Kết quả: `dem = 3` (các số $6, 9, 12$).
 
 ---
 
-## 6. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 6. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên trừ 1 ở đầu mút $A$ trong công thức toán $\mathcal{O}(1)$**
 > - *Hiện tượng:* Tính `floor(B / K) - floor(A / K)`.
@@ -8452,7 +8617,7 @@ $\implies$ Kết quả: `dem = 3` (các số $6, 9, 12$).
 
 ---
 
-## 7. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 7. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Từ số 1 đến số 10 có bao nhiêu số nguyên?**
    - A. 9
@@ -8837,7 +9002,7 @@ Với dữ liệu đầu vào là `1634`, kết quả thu được tương ứng
 
 # Bài 13: Danh sách và thao tác cơ bản
 
-## 1. Bản Chất Của Danh Sách (List) — Cấu Trúc Dữ Liệu Nền Tảng
+## 1. Bản chất của danh sách (List) và cấu trúc dữ liệu
 
 Cho đến bài học trước, mỗi biến số trong Scratch chỉ lưu trữ được **đúng 1 giá trị duy nhất** tại một thời điểm (như một chiếc hộp nhỏ chỉ đựng vừa một quả bóng). Nếu muốn lưu điểm kiểm tra của 40 bạn học sinh trong lớp, chẳng lẽ ta phải tạo 40 biến số khác nhau: `diem1`, `diem2`, ..., `diem40`?
 
@@ -8849,29 +9014,29 @@ Cho đến bài học trước, mỗi biến số trong Scratch chỉ lưu trữ
 
 ---
 
-## 2. Bảng Tra Cứu Các Khối Lệnh Danh Sách Trong Scratch 3.0
+## 2. Bảng tra cứu các khối lệnh danh sách trong Scratch 3.0
 
 Trong nhóm **Các biến số (Variables)**, bấm nút **Tạo một danh sách** để xuất hiện nhóm khối lệnh màu cam đậm:
 
 ![Bảng khối lệnh danh sách Scratch Tiếng Việt](assets/rendered_blocks/l13_list_operations_vi.png)
 
-| Khối lệnh Scratch 3.0 Tiếng Việt | Thao tác | Ý nghĩa sư phạm & Chức năng |
-|---|---|---|
-| `thêm (X) vào [Dãy số v]` | Thêm vào cuối | Chèn thêm giá trị $X$ vào cuối cùng của danh sách |
-| `xóa (1) của [Dãy số v]` | Xóa phần tử | Xóa phần tử tại vị trí chỉ định, các phần tử sau dồn lên |
-| `xóa tất cả của [Dãy số v]` | Làm sạch danh sách | Xóa sạch toàn bộ danh sách (về 0 phần tử) |
-| `chèn (X) vào (1) của [Dãy số v]` | Chèn vào vị trí | Nhét $X$ vào vị trí cụ thể, đẩy các phần tử khác lùi lại |
-| `thay thế phần tử (i) của [Dãy số v] bằng (X)` | Thay thế giá trị | Ghi đè giá trị mới vào ô thứ $i$ |
-| `phần tử (i) của [Dãy số v]` | Đọc giá trị ô | Khối tròn: Đọc giá trị tại ngăn thứ $i$ |
-| `vị trí của (X) trong [Dãy số v]` | Tìm vị trí | Tìm xem giá trị $X$ nằm ở ngăn số mấy |
-| `kích thước của [Dãy số v]` | Đếm số phần tử | Khối tròn: Đếm tổng số lượng phần tử hiện có |
-| `[Dãy số v] chứa (X) ?` | Kiểm tra tồn tại | Khối lục giác điều kiện: Kiểm tra xem $X$ có tồn tại trong danh sách không |
+| Khối lệnh trực quan Scratch 3.0 | Thao tác | Ý nghĩa sư phạm & Chức năng |
+|:---:|---|---|
+| ![Khối thêm vào danh sách](assets/rendered_blocks/list_block_add.png) | Thêm vào cuối | Chèn thêm giá trị $X$ vào cuối cùng của danh sách |
+| ![Khối xóa phần tử](assets/rendered_blocks/list_block_delete.png) | Xóa phần tử | Xóa phần tử tại vị trí chỉ định, các phần tử sau dồn lên |
+| ![Khối xóa tất cả danh sách](assets/rendered_blocks/list_block_clear.png) | Làm sạch danh sách | Xóa sạch toàn bộ danh sách (về 0 phần tử) |
+| ![Khối chèn vào danh sách](assets/rendered_blocks/list_block_insert.png) | Chèn vào vị trí | Nhét $X$ vào vị trí cụ thể, đẩy các phần tử khác lùi lại |
+| ![Khối thay thế phần tử](assets/rendered_blocks/list_block_replace.png) | Thay thế giá trị | Ghi đè giá trị mới vào ô thứ $i$ |
+| ![Khối đọc phần tử](assets/rendered_blocks/list_block_item.png) | Đọc giá trị ô | Khối tròn: Đọc giá trị tại ngăn thứ $i$ |
+| ![Khối tìm vị trí](assets/rendered_blocks/list_block_find.png) | Tìm vị trí | Tìm xem giá trị $X$ nằm ở ngăn số mấy |
+| ![Khối kích thước danh sách](assets/rendered_blocks/list_block_length.png) | Đếm số phần tử | Khối tròn: Đếm tổng số lượng phần tử hiện có |
+| ![Khối danh sách chứa](assets/rendered_blocks/list_block_contains.png) | Kiểm tra tồn tại | Khối lục giác điều kiện: Kiểm tra xem $X$ có tồn tại trong danh sách không |
 
 > ⚠️ **Quy tắc vàng:** Trong Scratch, chỉ số danh sách bắt đầu từ **vị trí 1** (1-based index). Phần tử đầu tiên luôn là `phần tử (1)`, phần tử cuối cùng là `phần tử (kích thước của danh sách)`.
 
 ---
 
-## 3. Khung Mẫu Thuật Toán Nhập $N$ Số & Xử Lý Dữ Liệu
+## 3. Khung mẫu thuật toán nhập $N$ số và xử lý dữ liệu
 
 Trong các bài toán lập trình, bài toán thường yêu cầu: *"Cho số nguyên $N$, sau đó nhập lần lượt $N$ số nguyên vào danh sách rồi tính tổng..."*.
 
@@ -8892,7 +9057,7 @@ Trong các bài toán lập trình, bài toán thường yêu cầu: *"Cho số 
 
 ---
 
-## 4. Bảng Mô Phỏng Duyệt Danh Sách `[5, 8, 3]` (Dry Run Table)
+## 4. Bảng mô phỏng duyệt danh sách `[5, 8, 3]` (Dry run)
 
 Giả sử danh sách `Dãy số` hiện có 3 phần tử: ngăn 1 chứa `5`, ngăn 2 chứa `8`, ngăn 3 chứa `3`. Kích thước $= 3$.
 
@@ -8908,7 +9073,7 @@ $\implies$ Sau 3 vòng lặp, nhân vật thông báo kết quả: `Tổng = 16`
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên xóa sạch danh sách ở đầu kịch bản**
 > - *Hiện tượng:* Không đặt `xóa tất cả của [Dãy số v]` dưới cờ xanh.
@@ -8927,7 +9092,7 @@ $\implies$ Sau 3 vòng lặp, nhân vật thông báo kết quả: `Tổng = 16`
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Phần tử đầu tiên trong một danh sách Scratch được đánh số thứ tự là:**
    - A. 0
@@ -9743,7 +9908,7 @@ Các kỷ lục mới là 1, 3, 5 rồi 7, tổng cộng 4 lần reo.
 
 # Bài 14: THỐNG KÊ DANH SÁCH VÀ THUẬT TOÁN SẮP XẾP
 
-## 1. Sức Mạnh Của Thống Kê Dữ Liệu Trong Lập Trình
+## 1. Sức mạnh của thống kê dữ liệu trong lập trình
 
 Sau khi đã lưu trữ được hàng loạt con số vào danh sách, nhiệm vụ quan trọng tiếp theo của người lập trình là **trích xuất thông tin có giá trị** từ mớ dữ liệu thô đó:
 
@@ -9754,7 +9919,7 @@ Sau khi đã lưu trữ được hàng loạt con số vào danh sách, nhiệm 
 
 ---
 
-## 2. Thuật Toán Tìm Giá Trị Lớn Nhất (Max) & Nhỏ Nhất (Min)
+## 2. Thuật toán tìm giá trị lớn nhất (Max) và nhỏ nhất (Min)
 
 Trong Scratch, không có sẵn khối tìm Max tự động cho cả danh sách tự động. Do đó, học sinh bắt buộc phải tự cài đặt thuật toán tìm kiếm tuần tự.
 
@@ -9777,7 +9942,7 @@ Trong Scratch, không có sẵn khối tìm Max tự động cho cả danh sách
 
 ---
 
-## 3. Thuật Toán Sắp Xếp Nổi Bọt (Bubble Sort)
+## 3. Thuật toán sắp xếp nổi bọt (Bubble Sort)
 
 **Sắp xếp nổi bọt (Bubble Sort)** là thuật toán sắp xếp trực quan và dễ hiểu nhất cho học sinh Tiểu học.
 
@@ -9801,7 +9966,7 @@ Giống như các bọt khí nhẹ hơn sẽ nổi dần lên mặt nước:
 
 ---
 
-## 4. Bảng Mô Phỏng Sắp Xếp Dãy Số `[9, 4, 2]` Bằng Bubble Sort (Dry Run Table)
+## 4. Bảng mô phỏng sắp xếp dãy số `[9, 4, 2]` bằng Bubble Sort (Dry run)
 
 Giả sử danh sách gồm 3 phần tử ban đầu: `[9, 4, 2]`. $N = 3$.
 
@@ -9818,7 +9983,7 @@ $\implies$ Sau 2 vòng lặp lớn, danh sách đã được sắp xếp tăng d
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Khởi tạo biến `max` bằng số 0**
 > - *Hiện tượng:* Đặt `max = 0` khi chuẩn bị tìm giá trị lớn nhất trong danh sách.
@@ -9837,7 +10002,7 @@ $\implies$ Sau 2 vòng lặp lớn, danh sách đã được sắp xếp tăng d
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Giá trị khởi tạo an toàn nhất cho biến `max` khi tìm số lớn nhất trong danh sách là:**
    - A. Phần tử thứ nhất của danh sách *(Đáp án đúng: `phần tử (1)`)*
@@ -10308,7 +10473,7 @@ Tổng thời gian chờ: $1 + 3 + 6 = 10$ phút (tối ưu nhất).
 
 # Bài 15: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự
 
-## 1. Chuỗi Ký Tự (String) — Thế Giới Của Văn Bản & Ngôn Ngữ
+## 1. Chuỗi ký tự (String) và xử lý văn bản
 
 Bên cạnh các con số phục vụ tính toán, máy tính còn phải xử lý văn bản: tên người, địa chỉ, mật khẩu, lời thoại nhân vật... Tất cả những dữ liệu này được gọi là **Chuỗi ký tự (String)**.
 - **Chuỗi ký tự** là một dãy các ký tự (chữ cái, chữ số, dấu câu, khoảng trắng) được xếp nối tiếp nhau thành một hàng ngang.
@@ -10316,26 +10481,24 @@ Bên cạnh các con số phục vụ tính toán, máy tính còn phải xử l
 
 ---
 
-## 2. Bảng Tra Cứu Các Khối Lệnh Xử Lý Chuỗi Trong Scratch 3.0
+## 2. Bảng tra cứu các khối lệnh xử lý chuỗi trong Scratch 3.0
 
 Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operators)** màu xanh lá cây:
 
 ![Bảng khối lệnh xử lý chuỗi Scratch Tiếng Việt](assets/rendered_blocks/l15_string_operations_vi.png)
 
-| Khối lệnh Scratch 3.0 Tiếng Việt | Thao tác | Ví dụ với chuỗi `s = "TIN HOC"` | Kết quả thực tế |
-|---|---|---|:---:|
-| `ký tự (1) của (s)` | Ký tự đầu tiên | Ký tự đầu tiên | `"T"` |
-| `ký tự (4) của (s)` | Ký tự giữa | Ký tự tại vị trí số 4 | `" "` *(dấu cách)* |
-| `ký tự (độ dài của (s)) của (s)` | Ký tự cuối | Ký tự cuối cùng của chuỗi | `"C"` |
-| `độ dài của (s)` | Độ dài chuỗi | Đếm tổng số lượng ký tự trong chuỗi | `7` |
-| `kết hợp (A) và (B)` | Ghép chuỗi | Ghép nối 2 chuỗi văn bản lại với nhau | Chuỗi dính liền |
-| `(s) chứa (c) ?` | Kiểm tra ký tự | Kiểm tra chuỗi `s` có chứa ký tự `c` không | Đúng / Sai |
+| Khối lệnh trực quan Scratch 3.0 | Thao tác | Ví dụ với chuỗi `s = "TIN HOC"` | Kết quả thực tế |
+|:---:|---|---|:---:|
+| ![Khối ký tự của chuỗi](assets/rendered_blocks/str_block_letter.png) | Ký tự tại vị trí $i$ | `ký tự (1) của (s)` | `"T"` |
+| ![Khối độ dài của chuỗi](assets/rendered_blocks/str_block_length.png) | Độ dài chuỗi | `độ dài của (s)` | `7` |
+| ![Khối kết hợp chuỗi](assets/rendered_blocks/str_block_join.png) | Ghép 2 chuỗi | `kết hợp [TIN] [HOC]` | `"TINHOC"` |
+| ![Khối chuỗi chứa](assets/rendered_blocks/str_block_contains.png) | Kiểm tra ký tự | `(s) chứa [H] ?` | Đúng (`True`) |
 
 > ⚠️ **Quy tắc vàng 1-Based Indexing:** Giống như danh sách, các ký tự trong chuỗi Scratch được đánh số thứ tự bắt đầu từ **vị trí 1** đến `độ dài của chuỗi`. Trong Scratch **không có ký tự số 0**!
 
 ---
 
-## 3. Thuật Toán Trích Xuất Chuỗi Con (Substring / Slicing)
+## 3. Thuật toán trích xuất chuỗi con
 
 Để cắt ra một đoạn văn bản từ ký tự thứ $L$ đến ký tự thứ $R$ của chuỗi ban đầu, học sinh cần tự xây dựng thuật toán tích lũy chuỗi con:
 
@@ -10357,7 +10520,7 @@ Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operat
 
 ---
 
-## 4. Bảng Mô Phỏng Trích Xuất Chuỗi Từ $L = 2$ Đến $R = 4$ Của Chuỗi `"SCRATCH"` (Dry Run Table)
+## 4. Bảng mô phỏng trích xuất chuỗi từ $L = 2$ Đến $R = 4$ của chuỗi `"SCRATCH"` (Dry run)
 
 Chuỗi gốc $S = 	ext{"SCRATCH"}$. Độ dài $= 6$. Cần cắt từ $L = 2$ đến $R = 4$.
 - Số lần lặp $= 4 - 2 + 1 = 3$ lần (vị trí 2, 3, 4).
@@ -10374,7 +10537,7 @@ $\implies$ Nhân vật thông báo kết quả trích xuất: `"YTH"`.
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Bẫy ký tự số 0 trong chuỗi (Zero-Index Trap)**
 > - *Hiện tượng:* Học sinh gọi `ký tự (0) của (chuỗi)`.
@@ -10393,7 +10556,7 @@ $\implies$ Nhân vật thông báo kết quả trích xuất: `"YTH"`.
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Với chuỗi văn bản `"ROBOT"`, khối `độ dài của (chuỗi)` trả về kết quả là:**
    - A. 4
@@ -10777,7 +10940,7 @@ Chuỗi con đối xứng dài nhất là `ABCBA` có độ dài 5.
 
 # Bài 16: DUYỆT CHUỖI, BIẾN ĐỔI KÝ TỰ VÀ TÁCH TỪ
 
-## 1. Nâng Tầm Xử Lý Chuỗi — Từ Đọc Hiểu Đến Biến Đổi Văn Bản
+## 1. Kỹ thuật xử lý chuỗi và biến đổi văn bản
 
 Trong bài 15, chúng ta đã nắm vững các khối lệnh cơ bản và kỹ thuật trích xuất chuỗi con. Trong bài học này, chúng ta sẽ bước vào những kỹ thuật xử lý văn bản đỉnh cao thường xuyên xuất hiện trong các đề thi lập trình:
 
@@ -10787,7 +10950,7 @@ Trong bài 15, chúng ta đã nắm vững các khối lệnh cơ bản và kỹ
 
 ---
 
-## 2. Kỹ Thuật Duyệt Chuỗi & Đếm Ký Tự
+## 2. Kỹ thuật duyệt chuỗi và đếm ký tự
 
 Để kiểm tra xem một chữ cái (ví dụ chữ `'a'`) xuất hiện bao nhiêu lần trong câu văn $S$:
 
@@ -10804,7 +10967,7 @@ Trong bài 15, chúng ta đã nắm vững các khối lệnh cơ bản và kỹ
 
 ---
 
-## 3. Thuật Toán Tách Từ (Split) Nạp Vào Danh Sách
+## 3. Thuật toán tách từ (Split) nạp vào danh sách
 
 Trong Scratch, không có sẵn một khối đơn lẻ để tách từ tự động. Đây là bài toán kiểm tra năng lực tư duy thuật toán tuyệt vời của học sinh.
 
@@ -10822,7 +10985,7 @@ Trong Scratch, không có sẵn một khối đơn lẻ để tách từ tự đ
 
 ---
 
-## 4. Bảng Mô Phỏng Tách Câu `"DI HOC"` Vào Danh Sách (Dry Run Table)
+## 4. Bảng mô phỏng tách câu `"DI HOC"` vào danh sách (Dry run)
 
 Câu ban đầu: $S = \text{"DI HOC"}$. Độ dài $= 6$. Ký tự tại các vị trí:
 
@@ -10848,7 +11011,7 @@ $\implies$ Kết quả: `[Danh sách Từ]` có đúng 2 phần tử là `"DI"` 
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Bỏ quên từ cuối cùng của câu văn (The Last Word Bug)**
 > - *Hiện tượng:* Người dùng nhập câu văn bình thường mà không gõ phím cách ở cuối câu (ví dụ: `"EM YEU SCRATCH"`).
@@ -10868,7 +11031,7 @@ $\implies$ Kết quả: `[Danh sách Từ]` có đúng 2 phần tử là `"DI"` 
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Vòng lặp duyệt qua toàn bộ một chuỗi ký tự $S$ cần chạy đúng bao nhiêu lần?**
    - A. `(độ dài của (S)) - 1` lần

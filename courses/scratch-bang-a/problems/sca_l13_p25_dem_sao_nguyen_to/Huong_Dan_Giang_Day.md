@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm sao nguyên tố
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -34,9 +31,9 @@ Kết quả cuối cùng khớp với đáp án mẫu: `4`.
 
 - Bẫy 1 — coi số 1 là số nguyên tố:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 if n < 2:
-    print(0)
+    nói (0)
 else:
     is_p = [True] * (n + 1)
     is_p[0] = False
@@ -48,14 +45,15 @@ else:
                 is_p[j] = False
                 j += i
         i += 1
-    print(sum(is_p))
+    nói (sum(is_p))
+
 ```
 Với mẫu `10` thì đếm cả số `1` nên in ra `5`, không khớp đáp án mẫu `4`. Cách sửa: gạch thêm `is_p[1] = False`.
 - Bẫy 2 — gạch bội từ `2 * i` bằng bước 1:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 if n < 2:
-    print(0)
+    nói (0)
 else:
     is_p = [True] * (n + 1)
     is_p[0] = False
@@ -68,21 +66,23 @@ else:
                 is_p[j] = False
                 j += 1
         i += 1
-    print(sum(is_p))
+    nói (sum(is_p))
+
 ```
 Với mẫu `10`, khi `i = 2` thì gạch `4` xong tăng `j` từng 1 nên gạch luôn cả `5`, `7` là các số nguyên tố, in ra `2` sai. Cách sửa: gạch đúng bội bằng bước nhảy `j += i` bắt đầu từ `i * i`.
 - Bẫy 3 — thử chia từng số tới `N`:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 c = 0
 for v in range(2, n + 1):
     ngto = True
     for u in range(2, v):
-        if v % u == 0:
+        if (v mod u) == 0:
             ngto = False
     if ngto:
         c += 1
-print(c)
+nói (c)
+
 ```
 Với mẫu `10` vẫn ra `4`, nhưng với `N = 10^6` thì số phép chia quá lớn, chạy rất lâu. Cách sửa: dùng bảng sàng gạch bội như lời giải.
 
@@ -98,10 +98,15 @@ Với mẫu `10` vẫn ra `4`, nhưng với `N = 10^6` thì số phép chia quá
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - nếu <n < 2> thì:
+> -   nói (0)
+> - nếu không thì:
+> -   đặt [is_p] thành (giá trị * n + 1)
+> -   đặt [i] thành (2)
+> -   lặp lại cho đến khi không còn <i * i <= n>:
+> -     nếu <điều kiện> thì:
+> -       đặt [j] thành (i * i)
+> -       lặp lại cho đến khi không còn <j <= n>:
+> -         thay đổi [j] một lượng (i)
+> -     thay đổi [i] một lượng (1)
+> -   nói (sum(...))

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Lũy Thừa Bậc Hai
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -26,7 +23,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Dùng `n * 2` thay vì `n ** 2`.**
 
 ```text
-print(n * 2)
+nói (n * 2)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `n = 8` in ra `16` thay vì `64`.
@@ -36,7 +34,8 @@ Cách sửa: dùng `n ** 2` hoặc `n * n`.
 **Bẫy 2: Dùng `n ^ 2` (tưởng là mũ).**
 
 ```text
-print(n ^ 2)
+nói (n ^ 2)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `n = 8` thì `8 ^ 2 = 10` vì `^` là phép khác, không phải lũy thừa.
@@ -55,4 +54,4 @@ Cách sửa: toán tử mũ trong Scratch là `**`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - nói (n ** 2)
+> - nói (n + 2)

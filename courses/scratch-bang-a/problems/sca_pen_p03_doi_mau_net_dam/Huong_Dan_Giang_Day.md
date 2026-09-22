@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: ĐỔI MÀU VÀ TĂNG NÉT ĐẬM
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p03_doi_mau_net_dam` | Nguồn tham chiếu: `Câu 3`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

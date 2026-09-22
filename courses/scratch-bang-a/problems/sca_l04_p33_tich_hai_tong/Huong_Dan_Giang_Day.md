@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tích Hai Tổng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Bỏ ngoặc: `a + b * c - d`.**
 
 ```text
-print(a + b * c - d)
+nói (a + b * c - d)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `5 3 10 6` cho `29` thay vì `32` vì nhân làm trước.
@@ -37,7 +35,8 @@ Cách sửa: giữ ngoặc `(a + b) * (c - d)`.
 **Bẫy 2: Nhầm dấu `c + d` thay vì `c - d`.**
 
 ```text
-print((a + b) * (c + d))
+nói ((a + b) * (c + d))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `5 3 10 6` cho `128` thay vì `32`.
@@ -62,4 +61,4 @@ Cách sửa: ngoặc sau là `(c - d)`.
 > - đặt [c] thành (câu trả lời)
 > - hỏi [Nhập d:] và đợi
 > - đặt [d] thành (câu trả lời)
-> - nói ((a + b)
+> - nói (a + b * c - d)

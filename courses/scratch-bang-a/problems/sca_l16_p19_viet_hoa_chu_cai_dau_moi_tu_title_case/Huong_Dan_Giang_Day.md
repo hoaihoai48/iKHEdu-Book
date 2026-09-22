@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Viết hoa chữ cái đầu mỗi từ (title case)
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: chuẩn hóa họ tên sao cho mỗi từ có chữ đầu in hoa, các chữ còn lại in thường.
@@ -25,14 +22,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: dùng `upper()` hóa hoa toàn bộ. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.upper())
+nói (s.upper())
+
 ```
 Với mẫu `nguyen van an` in ra `NGUYEN VAN AN`, đáp án đúng là `Nguyen Van An`. Cách sửa: dùng `w.capitalize()` cho từng từ.
 - Bẫy 2: dùng `title()` trực tiếp mà không tách từ, với họ tên có dấu nháy sẽ lỗi kiểu ít gặp; đoạn minh họa sai thường gặp là quên nối lại:
 ```text
 s = câu trả lời
 words = [w.capitalize() for w in s.split()]
-print(words)
+nói (words)
+
 ```
 Với mẫu trên in ra `['Nguyen', 'Van', 'An']` kèm ngoặc, đáp án đúng là `Nguyen Van An`. Cách sửa: in `" ".join(words)`.
 
@@ -48,9 +47,5 @@ Với mẫu trên in ra `['Nguyen', 'Van', 'An']` kèm ngoặc, đáp án đúng
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [words] thành (giá trị)
+> - nói (words)

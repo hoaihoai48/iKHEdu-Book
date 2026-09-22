@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ai cao hơn?
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là so sánh hai chiều cao: `a` là của Minh, `b` là của Nam, ai cao hơn thì in tên bạn đó.
@@ -24,7 +21,7 @@ Sample 1 với input mẫu: `142` rồi `138`.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — in chiều cao thay vì tên: bạn nhỏ viết `nói (max(a, b))`. Với mẫu này sẽ in `142` thay vì `Minh`. Cách sửa: in chuỗi tên như lời giải mẫu.
 - Bẫy 2 — sai chữ hoa thường: bạn nhỏ in `minh` hoặc `MINH`. Với mẫu `142` và `138`, chương trình kiểm tra sẽ báo kết quả sai. Cách sửa: viết đúng `Minh` và `Nam`, chữ đầu viết hoa.
-- Bẫy 3 — đọc hai số trên một dòng mà không tách: nếu chỉ gọi `int(câu trả lời)` một lần cho input `142 138` thì chương trình lỗi. Cách sửa: đọc hai dòng như lời giải mẫu.
+- Bẫy 3 — đọc hai số trên một dòng mà không tách: nếu chỉ gọi `câu trả lời` một lần cho input `142 138` thì chương trình lỗi. Cách sửa: đọc hai dòng như lời giải mẫu.
 
 ---
 
@@ -41,6 +38,6 @@ Sample 1 với input mẫu: `142` rồi `138`.
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
 > - nếu <a > b> thì:
-> -   nói [YES]
+> -   nói (Minh)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (Nam)

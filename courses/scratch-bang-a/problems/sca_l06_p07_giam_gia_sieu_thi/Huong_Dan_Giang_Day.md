@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Giảm giá siêu thị
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là một mốc giảm giá duy nhất `500`: đơn từ `500` nghìn trở lên được bớt `50` nghìn, dưới `500` thì giữ nguyên.
@@ -36,8 +33,8 @@ Sample 1 với input mẫu: `620`.
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập tien:] và đợi
-> - đặt [n] thành (câu trả lời)
+> - đặt [tien] thành (câu trả lời)
 > - nếu <tien >= 500> thì:
-> -   nói [YES]
+> -   nói (tien - 50)
 > - nếu không thì:
-> -   nói [NO]
+> -   nói (tien)

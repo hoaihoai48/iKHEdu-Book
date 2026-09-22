@@ -19,25 +19,38 @@ Em hãy lập trình điều khiển chú Mèo Scratch thực hiện các bướ
 ## Kịch bản tương tác (Input Scenario)
 
 - Chương trình bắt đầu khi người dùng nhấn vào biểu tượng **Cờ Xanh**.
+
 - Không yêu cầu nhập dữ liệu từ bàn phím.
 
 ## Kết quả mong đợi (Expected Behavior / Output)
 
 - Màn hình được tẩy sạch mọi nét mực cũ.
+
 - Tại chính giữa tâm sân khấu xuất hiện một dấu cộng màu đỏ gồm $4$ nhánh đều nhau, mỗi nhánh dài $50$ bước.
+
 - Nhân vật chú Mèo kết thúc tại vị trí tâm $(0, 0)$ và quay về hướng ban đầu ($90^\circ$).
 
+
+## Hình ảnh minh họa kết quả mẫu
+
+![Hình mẫu 1](../../assets/pen_drawings/gen_dau_cong_do.png)
 ## Sample 1
 
 ### Kịch bản chạy
 ```text
 Sự kiện: Nhấn Cờ Xanh
 Hành động: 
+
 - Xóa màn hình
+
 - Đặt nét vẽ màu đỏ, độ dày 3
+
 - Vẽ nhánh phải: đi 50 bước, lùi 50 bước, xoay phải 90 độ
+
 - Vẽ nhánh dưới: đi 50 bước, lùi 50 bước, xoay phải 90 độ
+
 - Vẽ nhánh trái: đi 50 bước, lùi 50 bước, xoay phải 90 độ
+
 - Vẽ nhánh trên: đi 50 bước, lùi 50 bước, xoay phải 90 độ
 ```
 
@@ -50,5 +63,7 @@ Nhân vật lần lượt di chuyển ra ngoài $50$ bước để vẽ nét m�
 ## Ràng buộc
 
 - Tọa độ tâm: $x = 0, y = 0$.
+
 - Chiều dài mỗi nhánh: $50$ bước.
+
 - Độ dày nét bút: $3$.

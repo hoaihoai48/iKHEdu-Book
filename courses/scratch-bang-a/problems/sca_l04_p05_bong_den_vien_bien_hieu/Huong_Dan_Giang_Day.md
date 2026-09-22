@@ -1,12 +1,9 @@
-# Hướng Dẫn Giảng Dạy: Bóng Đèn Viền Biển Hiệu
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
-- Bản chất là đổi đơn vị rồi chia chu vi: với `a = 1` dm thì `canh_cm = 1 * 10 = 10` cm, chu vi `10 * 4 = 40` cm, số bóng `40 // 5 = 8`.
-- Quy trình trong lời giải: đọc `a`, tính `canh_cm = a * 10`, rồi in `canh_cm * 4 // 5`; thứ tự nhân trước chia sau cho đúng.
+- Bản chất là đổi đơn vị rồi chia chu vi: với `a = 1` dm thì `canh_cm = 1 * 10 = 10` cm, chu vi `10 * 4 = 40` cm, số bóng `làm tròn xuống của (40 / 5) = 8`.
+- Quy trình trong lời giải: đọc `a`, tính `canh_cm = a * 10`, rồi in `canh_cm * làm tròn xuống của (4 / 5)`; thứ tự nhân trước chia sau cho đúng.
 - Xử lý biên: `a = 1` cho `8` bóng; `a = 10^7` cho `80000000` bóng; mọi đáp số đều chia hết vì `a * 40` luôn chia hết cho `5`.
 
 ---
@@ -18,7 +15,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 | 1 | Đọc một dòng, biến `a` nhận giá trị | `a = 1` |
 | 2 | Đổi ra xen-ti-mét `canh_cm = a * 10` | `canh_cm = 10` |
 | 3 | Chu vi `canh_cm * 4` | `10 * 4 = 40` |
-| 4 | Chia khoảng cách `40 // 5` | `8` |
+| 4 | Chia khoảng cách `làm tròn xuống của (40 / 5)` | `8` |
 | 5 | In kết quả | `8` |
 
 ---
@@ -29,7 +26,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 ```text
 a = int(hỏi và đợi)
-print(a * 4 // 5)
+nói (a * làm tròn xuống của (4 / 5))
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `a = 1` in ra `0` thay vì `8` vì thiếu bước nhân `10`.
@@ -39,7 +37,8 @@ Cách sửa: tính `canh_cm = a * 10` trước.
 **Bẫy 2: Dùng chia thực `/`.**
 
 ```text
-print(canh_cm * 4 / 5)
+nói (canh_cm * 4 / 5)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `a = 1` in ra `8.0` thay vì `8`.
@@ -58,4 +57,5 @@ Cách sửa: dùng `//` để ra số nguyên.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập a:] và đợi
 > - đặt [a] thành (câu trả lời)
-> - nói (canh_cm * 4  /  5)
+> - đặt [canh_cm] thành (a * 10)
+> - nói (canh_cm * 4 chia nguyên 5)

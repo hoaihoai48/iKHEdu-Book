@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tách mảng chẵn và mảng lẻ
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -9,7 +6,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Với số mẫu `N = 6`, dãy `1 4 7 8 2 9`: hàng chẵn gồm `4 8 2`, hàng lẻ gồm `1 7 9`.
 - Quy trình trong lời giải với các biến `n`, `a`, `chan`, `le`, `x`:
   - Đọc `n = 6`, dãy `a = [1, 4, 7, 8, 2, 9]`.
-  - Lọc `x % 2 == 0` được `chan = [4, 8, 2]`; lọc `x % 2 != 0` được `le = [1, 7, 9]`.
+  - Lọc `(x mod 2) == 0` được `chan = [4, 8, 2]`; lọc `(x mod 2) != 0` được `le = [1, 7, 9]`.
   - In hàng chẵn trước, hàng lẻ sau.
 - Giá trị biên cụ thể: dãy toàn số chẵn thì hàng lẻ rỗng và vẫn in một dòng trống; dãy toàn số lẻ thì ngược lại.
 
@@ -34,31 +31,34 @@ Kết quả cuối cùng khớp với đáp án mẫu: `4 8 2` rồi `1 7 9`.
 
 - Bẫy 1 — in hàng lẻ trước hàng chẵn:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-chan = [x for x in a if x % 2 == 0]
-le = [x for x in a if x % 2 != 0]
-print(*le)
-print(*chan)
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+chan = [x for x in a if (x mod 2) == 0]
+le = [x for x in a if (x mod 2) != 0]
+nói (*le)
+nói (*chan)
+
 ```
 Với mẫu trên in ra `1 7 9` rồi `4 8 2`, ngược thứ tự đáp án mẫu. Cách sửa: in `chan` trước rồi mới in `le`.
 - Bẫy 2 — sắp xếp lại làm mất thứ tự ban đầu:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-chan = sorted([x for x in a if x % 2 == 0])
-le = sorted([x for x in a if x % 2 != 0])
-print(*chan)
-print(*le)
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+chan = sorted([x for x in a if (x mod 2) == 0])
+le = sorted([x for x in a if (x mod 2) != 0])
+nói (*chan)
+nói (*le)
+
 ```
 Với mẫu trên in ra `2 4 8` thay vì `4 8 2` sai. Cách sửa: lọc trực tiếp, không gọi `sorted`.
 - Bẫy 3 — in cả hai hàng trên một dòng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-chan = [x for x in a if x % 2 == 0]
-le = [x for x in a if x % 2 != 0]
-print(*chan, *le)
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+chan = [x for x in a if (x mod 2) == 0]
+le = [x for x in a if (x mod 2) != 0]
+nói (*chan, *le)
+
 ```
 Với mẫu trên in ra `4 8 2 1 7 9` trên một dòng, không khớp đáp án mẫu hai dòng. Cách sửa: in hai khối lệnh `nói` riêng.
 
@@ -74,10 +74,23 @@ Với mẫu trên in ra `4 8 2 1 7 9` trên một dòng, không khớp đáp án
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [chan] thành (giá trị)
+> - đặt [le] thành (giá trị)
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [chan]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [le]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

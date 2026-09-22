@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Mật mã Caesar dịch chuyển K
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giúp bạn Bin mã hóa thư bằng cách đẩy mỗi chữ cái sang phải `K` nấc, hết `Z` thì vòng lại `A`.
@@ -25,15 +22,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1: cộng trực tiếp `chr(ord(ch) + k)` nên `X, Y, Z` văng khỏi bảng chữ. Đoạn sai:
 ```text
-s = câu trả lời.strip()
-k = int(câu trả lời.strip())
+s = câu trả lời
+k = câu trả lời
 res = []
 for ch in s:
     res.append(chr(ord(ch) + k))
-print("".join(res))
+nói ("".join(res))
+
 ```
 Với mẫu `ABCXYZ` và `3`, ba chữ cuối thành ký tự lạ `[/]` thay vì `ABC`, đáp án đúng là `DEFABC`. Cách sửa: vòng lại bằng `% 26` như lời giải.
-- Bẫy 2: quên đọc `k` mà dùng số cố định. Đoạn sai khiến mọi bước nhảy khác 3 đều cho kết quả sai, ví dụ mẫu cần `DEFABC` nhưng với `k = 1` đúng ra phải là `BCDYZA`. Cách sửa: đọc `k = int(câu trả lời.strip())`.
+- Bẫy 2: quên đọc `k` mà dùng số cố định. Đoạn sai khiến mọi bước nhảy khác 3 đều cho kết quả sai, ví dụ mẫu cần `DEFABC` nhưng với `k = 1` đúng ra phải là `BCDYZA`. Cách sửa: đọc `k = int(câu trả lời)`.
 
 ---
 
@@ -45,11 +43,16 @@ Với mẫu `ABCXYZ` và `3`, ba chữ cuối thành ký tự lạ `[/]` thay v�
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
+> - đặt [s] thành (giá trị)
 > - hỏi [Nhập k:] và đợi
 > - đặt [k] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - xóa tất cả của [res]
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <A <= ch> thì:
+> -     thêm (chr(...)) vào [res]
+> -   nếu không thì:
+> -     thêm (ch) vào [res]
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (res)

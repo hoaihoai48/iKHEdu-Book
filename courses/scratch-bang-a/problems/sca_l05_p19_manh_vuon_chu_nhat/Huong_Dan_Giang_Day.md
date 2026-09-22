@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Mảnh vườn chữ nhật
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất mảnh vườn chữ nhật: chu vi `(a + b) * 2` và diện tích `a * b`, cả hai tính từ dài `a` và rộng `b`.
@@ -24,7 +21,7 @@ Với số mẫu dòng 1 là `10` và dòng 2 là `6`, chương trình phải in
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — thiếu ngoặc: viết `a + b * 2` thì với mẫu ra `10 + 12 = 22` thay vì `32`; cách sửa là `(a + b) * 2`.
-- Bẫy 2 — đọc hai số một dòng: viết `a, b = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
+- Bẫy 2 — đọc hai số một dòng: viết `a, b = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc hai lần riêng.
 - Bẫy 3 — in hai dòng: dùng hai lệnh in thì với mẫu ra hai dòng thay vì một dòng `32 60`; cách sửa là `nói (chu_vi, dien_tich)`.
 
 ---
@@ -41,4 +38,6 @@ Với số mẫu dòng 1 là `10` và dòng 2 là `6`, chương trình phải in
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói (kết hợp chu_vi và " " và dien_tich)
+> - đặt [chu_vi] thành (a + b * 2)
+> - đặt [dien_tich] thành (a * b)
+> - nói (kết hợp chu_vi và ' ' và dien_tich)

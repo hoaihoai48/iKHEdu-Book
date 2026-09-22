@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Xếp hàng mua trà sữa (Greedy)
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -34,11 +31,11 @@ Kết quả cuối cùng khớp với đáp án mẫu: `10`.
 
 - Bẫy 1 — giữ nguyên thứ tự nhập mà không xếp:
 ```text
-n = int(câu trả lời.split()[0])
+n = int(câu trả lời[0])
 cac_so = []
 while len(cac_so) < n:
     try:
-        cac_so.extend(map(int, câu trả lời.split()))
+        cac_so.extend(các khối hỏi và đợi cho từng biến)
     except EOFError:
         break
 tong = 0
@@ -46,29 +43,31 @@ da_cho = 0
 for t in cac_so:
     da_cho = da_cho + t
     tong = tong + da_cho
-print(tong)
+nói (tong)
+
 ```
 Với mẫu `3 1 2`, thời gian chờ từng bạn thành `3`, `4`, `6`, tổng `13` lớn hơn đáp án tối ưu `10`. Cách sửa: xếp `cac_so = sorted(cac_so)` trước vòng lặp.
 - Bẫy 2 — cộng tổng thời gian pha thay vì tổng thời gian chờ:
 ```text
-n = int(câu trả lời.split()[0])
+n = int(câu trả lời[0])
 cac_so = []
 while len(cac_so) < n:
     try:
-        cac_so.extend(map(int, câu trả lời.split()))
+        cac_so.extend(các khối hỏi và đợi cho từng biến)
     except EOFError:
         break
 cac_so = sorted(cac_so)
-print(sum(cac_so))
+nói (sum(cac_so))
+
 ```
 Với mẫu trên in ra `1 + 2 + 3 = 6` sai. Cách sửa: cộng dồn `da_cho` của từng bạn vào `tong`.
 - Bẫy 3 — xếp ngược bạn pha lâu lên trước:
 ```text
-n = int(câu trả lời.split()[0])
+n = int(câu trả lời[0])
 cac_so = []
 while len(cac_so) < n:
     try:
-        cac_so.extend(map(int, câu trả lời.split()))
+        cac_so.extend(các khối hỏi và đợi cho từng biến)
     except EOFError:
         break
 cac_so = sorted(cac_so, reverse=True)
@@ -77,7 +76,8 @@ da_cho = 0
 for t in cac_so:
     da_cho = da_cho + t
     tong = tong + da_cho
-print(tong)
+nói (tong)
+
 ```
 Với mẫu trên, thứ tự `3 2 1` cho thời gian chờ `3`, `5`, `6`, tổng `14` sai. Cách sửa: xếp tăng dần để bạn nhanh lên trước.
 
@@ -91,12 +91,16 @@ Với mẫu trên, thứ tự `3 2 1` cho thời gian chờ `3`, `5`, `6`, tổn
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập n:] và đợi
-> - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - đặt [n] thành (int(...))
+> - xóa tất cả của [cac_so]
+> - lặp lại cho đến khi không còn <độ dài của cac_so < n>:
+> - đặt [cac_so] thành (sorted(...))
+> - đặt [tong] thành (0)
+> - đặt [da_cho] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của cac_so) lần:
+> -   đặt [t] thành phần tử thứ (vi_tri)
+> -   đặt [da_cho] thành (da_cho + t)
+> -   đặt [tong] thành (tong + da_cho)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (tong)

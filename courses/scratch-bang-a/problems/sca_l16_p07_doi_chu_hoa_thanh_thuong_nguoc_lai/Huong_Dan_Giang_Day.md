@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đổi chữ hoa thành thường & ngược lại
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: lật trạng thái từng chữ cái, chữ khác (số, dấu câu, cách) giữ nguyên.
@@ -26,7 +23,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: đổi một chiều thành chữ thường hết bằng `lower()`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.lower())
+nói (s.lower())
+
 ```
 Với mẫu trên in ra `hello world 123`, đáp án đúng là `hELLO wORLD 123`. Cách sửa: lật hai chiều như lời giải.
 - Bẫy 2: quên nhánh giữ nguyên nên số và dấu câu bị đưa qua `upper()`. Đoạn sai:
@@ -38,7 +36,8 @@ for ch in s:
         kq = kq + ch.lower()
     else:
         kq = kq + ch.upper()
-print(kq)
+nói (kq)
+
 ```
 Với mẫu `Hello World 123` thì số và cách trùng cờ không lỗi, nhưng với câu có ký tự đặc biệt dễ phát sinh kết quả sai khó lường. Cách sửa chắc chắn: giữ nhánh `else: kq = kq + ch` như lời giải để số và dấu câu không bao giờ đổi.
 
@@ -54,9 +53,16 @@ Với mẫu `Hello World 123` thì số và cách trùng cờ không lỗi, như
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [kq] thành ()
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <điều kiện> thì:
+> -     đặt [kq] thành (kq + giá trị)
+> -   nếu không thì:
+> -     nếu <điều kiện> thì:
+> -       đặt [kq] thành (kq + giá trị)
+> -     nếu không thì:
+> -       đặt [kq] thành (kq + ch)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (kq)

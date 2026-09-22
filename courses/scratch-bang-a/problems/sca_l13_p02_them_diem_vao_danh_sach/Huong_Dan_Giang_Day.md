@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Thêm điểm vào danh sách
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -32,25 +29,28 @@ Kết quả cuối cùng khớp với đáp án mẫu: `8 9 7 10 9`.
 
 - Bẫy 1 — cộng số nguyên vào danh sách:
 ```text
-a = list(map(int, câu trả lời.split()))
-x = int(câu trả lời.strip())
-print(*(a + x))
+a = list(các khối hỏi và đợi cho từng biến)
+x = câu trả lời
+nói (*(a + x))
+
 ```
 Với mẫu trên, `a + x` cộng danh sách với số nguyên gây lỗi chương trình. Cách sửa: dùng `a.append(x)` rồi in `*a`.
 - Bẫy 2 — chèn lên đầu thay vì cuối:
 ```text
-a = list(map(int, câu trả lời.split()))
-x = int(câu trả lời.strip())
+a = list(các khối hỏi và đợi cho từng biến)
+x = câu trả lời
 a.insert(0, x)
-print(*a)
+nói (*a)
+
 ```
 Với mẫu trên in ra `9 8 9 7 10` sai. Cách sửa: gắn vào cuối bằng `a.append(x)`.
 - Bẫy 3 — in cả ngoặc của danh sách:
 ```text
-a = list(map(int, câu trả lời.split()))
-x = int(câu trả lời.strip())
+a = list(các khối hỏi và đợi cho từng biến)
+x = câu trả lời
 a.append(x)
-print(a)
+nói (a)
+
 ```
 Với mẫu trên in ra `[8, 9, 7, 10, 9]` có ngoặc và dấu phẩy, không khớp đáp án mẫu. Cách sửa: thêm dấu sao `nói (*a)`.
 
@@ -64,12 +64,18 @@ Với mẫu trên in ra `[8, 9, 7, 10, 9]` có ngoặc và dấu phẩy, không 
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập x:] và đợi
-> - đặt [x] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - hỏi [Nhập x:] và đợi
+> - đặt [x] thành (câu trả lời)
+> - thêm (x) vào [a]
+> - đặt [ket_qua] thành rỗng
+> - đặt [i] thành 1
+> - lặp lại (kích thước của [a]) lần:
+> -   đặt [ket_qua] thành kết hợp ket_qua và phần tử i và dấu cách
+> -   thay đổi [i] một lượng 1
+> - nói (ket_qua)

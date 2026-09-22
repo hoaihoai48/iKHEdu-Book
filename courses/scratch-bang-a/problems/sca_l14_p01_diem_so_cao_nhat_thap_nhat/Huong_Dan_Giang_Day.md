@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Điểm số cao nhất & thấp nhất
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -33,28 +30,31 @@ Kết quả cuối cùng khớp với đáp án mẫu: `100 60`.
 
 - Bẫy 1 — in ngược thấp trước cao sau:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(min(a), max(a))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (min(a), max(a))
+
 ```
 Với mẫu trên in ra `60 100`, không khớp đáp án mẫu `100 60`. Cách sửa: in `nói (max(a), min(a))`.
 - Bẫy 2 — tự đặt điểm cao nhất ban đầu là 0:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
 cao = 0
 for x in a:
     if x > cao:
         cao = x
-print(cao, min(a))
+nói (cao, min(a))
+
 ```
 Với mẫu trên vẫn ra `100 60`, nhưng cách dùng `max` có sẵn ngắn gọn và ít nhầm hơn. Cách sửa: dùng `max(a)`.
 - Bẫy 3 — in mỗi số một dòng:
 ```text
-n = int(câu trả lời.strip())
-a = list(map(int, câu trả lời.split()))
-print(max(a))
-print(min(a))
+n = câu trả lời
+a = list(các khối hỏi và đợi cho từng biến)
+nói (max(a))
+nói (min(a))
+
 ```
 Với mẫu trên in ra hai dòng `100` rồi `60`, không khớp đáp án mẫu `100 60` trên một dòng. Cách sửa: in chung một lệnh `nói (max(a), min(a))`.
 
@@ -70,10 +70,10 @@ Với mẫu trên in ra hai dòng `100` rồi `60`, không khớp đáp án mẫ
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - nói (kết hợp max(...) và ' ' và min(...))

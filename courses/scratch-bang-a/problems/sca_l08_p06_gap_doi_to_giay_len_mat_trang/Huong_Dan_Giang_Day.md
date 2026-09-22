@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Gấp đôi tờ giấy lên mặt trăng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: độ dày tờ giấy nhân đôi sau mỗi lần gấp: 1, 2, 4, 8, 16, ... Đếm xem gấp mấy lần thì đạt hoặc vượt chiều cao H.
@@ -26,34 +23,37 @@ In ra `4` (2mm, 4mm, 8mm, 16mm), khớp với kết quả mẫu.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — tăng `count` trước khi gấp:
 ```text
-h = int(câu trả lời)
+h = câu trả lời
 day = 1
 count = 0
 while day < h:
     count = count + 1
     day = day * 2
-print(count)
+nói (count)
+
 ```
 Trông giống nhau nhưng với cách này thứ tự vẫn đúng; bẫy thật sự là khởi đầu `day = 0`:
 ```text
-h = int(câu trả lời)
+h = câu trả lời
 day = 0
 count = 0
 while day < h:
     day = day * 2
     count = count + 1
-print(count)
+nói (count)
+
 ```
 Với mẫu `10` thì `0 * 2` mãi bằng 0 nên vòng lặp không bao giờ dừng. Cách sửa: khởi đầu `day = 1`.
 - Bẫy 2 — điều kiện `day <= h`:
 ```text
-h = int(câu trả lời)
+h = câu trả lời
 day = 1
 count = 0
 while day <= h:
     day = day * 2
     count = count + 1
-print(count)
+nói (count)
+
 ```
 Khi H đúng bằng lũy thừa của 2 (ví dụ H = 8) sẽ đếm thừa một lần. Cách sửa: điều kiện đúng là `while day < h`.
 
@@ -69,8 +69,9 @@ Khi H đúng bằng lũy thừa của 2 (ví dụ H = 8) sẽ đếm thừa mộ
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập h:] và đợi
 > - đặt [h] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [day] thành (1)
+> - đặt [count] thành (0)
+> - lặp lại cho đến khi không còn <day < h>:
+> -   đặt [day] thành (day * 2)
+> -   đặt [count] thành (count + 1)
+> - nói (count)

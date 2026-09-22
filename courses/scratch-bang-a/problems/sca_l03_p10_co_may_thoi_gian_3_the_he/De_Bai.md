@@ -32,6 +32,9 @@ Gồm 3 dòng tương ứng với 3 yêu cầu của bài toán.
 ### Giải thích
 
 - Tuổi Nam: $10$.
+
 - Tuổi Bố: $10 + 30 = 40$.
+
 - Tuổi Ông: $40 + 25 = 65$.
+
 - Tổng cả 3 người: $10 + 40 + 65 = 115$.

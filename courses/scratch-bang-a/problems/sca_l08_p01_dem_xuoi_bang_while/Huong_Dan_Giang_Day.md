@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đếm xuôi bằng while
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giống bài đếm sao nhưng bắt buộc dùng vòng lặp `while` với lính canh `i <= n`. Biến `i` bắt đầu từ 1 và tự tăng 1 sau mỗi lượt.
@@ -27,23 +24,25 @@ In ra một dòng `1 2 3 4 5`, khớp với kết quả mẫu.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — quên tăng `i`:
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 i = 1
 res = []
 while i <= n:
     res.append(str(i))
-print(" ".join(res))
+nói (" ".join(res))
+
 ```
 Với mẫu `5` vòng lặp chạy mãi không dừng vì `i` luôn bằng 1. Cách sửa: thêm `i += 1` trong vòng lặp.
 - Bẫy 2 — khởi đầu `i = 0`:
 ```text
-n = int(câu trả lời.strip())
+n = câu trả lời
 i = 0
 res = []
 while i <= n:
     res.append(str(i))
     i += 1
-print(" ".join(res))
+nói (" ".join(res))
+
 ```
 Với mẫu `5` sẽ in ra `0 1 2 3 4 5` thừa số 0. Cách sửa: khởi đầu `i = 1`.
 
@@ -59,8 +58,9 @@ Với mẫu `5` sẽ in ra `0 1 2 3 4 5` thừa số 0. Cách sửa: khởi đ�
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [i] thành (1)
+> - xóa tất cả của [res]
+> - lặp lại cho đến khi không còn <i <= n>:
+> -   thêm (str(...)) vào [res]
+> -   thay đổi [i] một lượng (1)
+> - nói (res)

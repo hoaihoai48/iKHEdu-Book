@@ -1,33 +1,33 @@
 # Bài 15: Chuỗi ký tự — Chỉ số, cắt lát và duyệt ký tự
 
-## 1. Chuỗi Ký Tự (String) — Thế Giới Của Văn Bản & Ngôn Ngữ
+## 1. Chuỗi ký tự (String) và xử lý văn bản
 
 Bên cạnh các con số phục vụ tính toán, máy tính còn phải xử lý văn bản: tên người, địa chỉ, mật khẩu, lời thoại nhân vật... Tất cả những dữ liệu này được gọi là **Chuỗi ký tự (String)**.
+
 - **Chuỗi ký tự** là một dãy các ký tự (chữ cái, chữ số, dấu câu, khoảng trắng) được xếp nối tiếp nhau thành một hàng ngang.
+
 - Ví dụ: `"SCRATCH"`, `"IKH EDU"`, `"12345"`, `"Hoc Lap Trinh 2026"`.
 
 ---
 
-## 2. Bảng Tra Cứu Các Khối Lệnh Xử Lý Chuỗi Trong Scratch 3.0
+## 2. Bảng tra cứu các khối lệnh xử lý chuỗi trong Scratch 3.0
 
 Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operators)** màu xanh lá cây:
 
 ![Bảng khối lệnh xử lý chuỗi Scratch Tiếng Việt](assets/rendered_blocks/l15_string_operations_vi.png)
 
-| Khối lệnh Scratch 3.0 Tiếng Việt | Thao tác | Ví dụ với chuỗi `s = "TIN HOC"` | Kết quả thực tế |
-|---|---|---|:---:|
-| `ký tự (1) của (s)` | Ký tự đầu tiên | Ký tự đầu tiên | `"T"` |
-| `ký tự (4) của (s)` | Ký tự giữa | Ký tự tại vị trí số 4 | `" "` *(dấu cách)* |
-| `ký tự (độ dài của (s)) của (s)` | Ký tự cuối | Ký tự cuối cùng của chuỗi | `"C"` |
-| `độ dài của (s)` | Độ dài chuỗi | Đếm tổng số lượng ký tự trong chuỗi | `7` |
-| `kết hợp (A) và (B)` | Ghép chuỗi | Ghép nối 2 chuỗi văn bản lại với nhau | Chuỗi dính liền |
-| `(s) chứa (c) ?` | Kiểm tra ký tự | Kiểm tra chuỗi `s` có chứa ký tự `c` không | Đúng / Sai |
+| Khối lệnh trực quan Scratch 3.0 | Thao tác | Ví dụ với chuỗi `s = "TIN HOC"` | Kết quả thực tế |
+|:---:|---|---|:---:|
+| ![Khối ký tự của chuỗi](../../assets/rendered_blocks/str_block_letter.png) | Ký tự tại vị trí $i$ | `ký tự (1) của (s)` | `"T"` |
+| ![Khối độ dài của chuỗi](../../assets/rendered_blocks/str_block_length.png) | Độ dài chuỗi | `độ dài của (s)` | `7` |
+| ![Khối kết hợp chuỗi](../../assets/rendered_blocks/str_block_join.png) | Ghép 2 chuỗi | `kết hợp [TIN] [HOC]` | `"TINHOC"` |
+| ![Khối chuỗi chứa](../../assets/rendered_blocks/str_block_contains.png) | Kiểm tra ký tự | `(s) chứa [H] ?` | Đúng (`True`) |
 
 > ⚠️ **Quy tắc vàng 1-Based Indexing:** Giống như danh sách, các ký tự trong chuỗi Scratch được đánh số thứ tự bắt đầu từ **vị trí 1** đến `độ dài của chuỗi`. Trong Scratch **không có ký tự số 0**!
 
 ---
 
-## 3. Thuật Toán Trích Xuất Chuỗi Con (Substring / Slicing)
+## 3. Thuật toán trích xuất chuỗi con
 
 Để cắt ra một đoạn văn bản từ ký tự thứ $L$ đến ký tự thứ $R$ của chuỗi ban đầu, học sinh cần tự xây dựng thuật toán tích lũy chuỗi con:
 
@@ -49,9 +49,10 @@ Các khối lệnh xử lý chuỗi nằm trong nhóm **Các phép toán (Operat
 
 ---
 
-## 4. Bảng Mô Phỏng Trích Xuất Chuỗi Từ $L = 2$ Đến $R = 4$ Của Chuỗi `"SCRATCH"` (Dry Run Table)
+## 4. Bảng mô phỏng trích xuất chuỗi từ $L = 2$ Đến $R = 4$ của chuỗi `"SCRATCH"` (Dry run)
 
 Chuỗi gốc $S = 	ext{"SCRATCH"}$. Độ dài $= 6$. Cần cắt từ $L = 2$ đến $R = 4$.
+
 - Số lần lặp $= 4 - 2 + 1 = 3$ lần (vị trí 2, 3, 4).
 
 | Vòng lặp | Biến chỉ số `i` | Lệnh `ký tự (i) của (S)` | Ghép chuỗi `chuoi_con` | Giá trị mới của `chuoi_con` | Hành động tiếp theo |
@@ -66,7 +67,7 @@ $\implies$ Nhân vật thông báo kết quả trích xuất: `"YTH"`.
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Thường Gặp (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Bẫy ký tự số 0 trong chuỗi (Zero-Index Trap)**
 > - *Hiện tượng:* Học sinh gọi `ký tự (0) của (chuỗi)`.
@@ -85,7 +86,7 @@ $\implies$ Nhân vật thông báo kết quả trích xuất: `"YTH"`.
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Với chuỗi văn bản `"ROBOT"`, khối `độ dài của (chuỗi)` trả về kết quả là:**
    - A. 4

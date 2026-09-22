@@ -1,11 +1,8 @@
-# Hướng Dẫn Giảng Dạy: Đếm số chẵn đến khi gặp 0
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
-- Bản chất: vừa đọc tới số 0 thì dừng (như bài đếm số lượng), vừa chỉ đếm những số chia hết cho 2 (`x % 2 == 0`). Số 0 dừng vòng lặp không được đếm.
-- Quy trình trong lời giải: đặt `count = 0`; `while True` đọc `x`; nếu `x == 0` thì `break`; nếu `x % 2 == 0` thì tăng `count`; cuối cùng in `count`.
+- Bản chất: vừa đọc tới số 0 thì dừng (như bài đếm số lượng), vừa chỉ đếm những số chia hết cho 2 (`(x mod 2) == 0`). Số 0 dừng vòng lặp không được đếm.
+- Quy trình trong lời giải: đặt `count = 0`; `while True` đọc `x`; nếu `x == 0` thì `break`; nếu `(x mod 2) == 0` thì tăng `count`; cuối cùng in `count`.
 - Xử lý biên: nếu nhập ngay số 0 thì kết quả là 0; dãy mẫu 4, 7, 8, 12 cho 3 số chẵn.
 
 ---
@@ -29,26 +26,28 @@ In ra `3` (các số 4, 8, 12), khớp với kết quả mẫu.
 ```text
 count = 0
 while True:
-    x = int(câu trả lời)
-    if x % 2 == 0:
+    x = câu trả lời
+    if (x mod 2) == 0:
         count = count + 1
     if x == 0:
         break
-print(count)
+nói (count)
+
 ```
 Với mẫu `4 / 7 / 8 / 12 / 0` sẽ đếm luôn số 0 (0 chia hết cho 2) nên in ra `4` thay vì `3`. Cách sửa: kiểm tra `if x == 0: break` trước.
 - Bẫy 2 — đếm số lẻ:
 ```text
 count = 0
 while True:
-    x = int(câu trả lời)
+    x = câu trả lời
     if x == 0:
         break
-    if x % 2 == 1:
+    if (x mod 2) == 1:
         count = count + 1
-print(count)
+nói (count)
+
 ```
-Với mẫu sẽ in ra `1` (chỉ có số 7) thay vì `3`. Cách sửa: điều kiện đúng là `x % 2 == 0`.
+Với mẫu sẽ in ra `1` (chỉ có số 7) thay vì `3`. Cách sửa: điều kiện đúng là `(x mod 2) == 0`.
 
 ---
 
@@ -60,10 +59,12 @@ Với mẫu sẽ in ra `1` (chỉ có số 7) thay vì `3`. Cách sửa: điều
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập x:] và đợi
-> - đặt [x] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [count] thành (0)
+> - lặp lại cho đến khi không còn <điều kiện>:
+> -   hỏi [Nhập x:] và đợi
+> -   đặt [x] thành (câu trả lời)
+> -   nếu <x = 0> thì:
+> -     dừng kịch bản này
+> -   nếu <x mod 2 = 0> thì:
+> -     đặt [count] thành (count + 1)
+> - nói (count)

@@ -8,25 +8,26 @@ Logo Thế vận hội Olympic gồm 5 vòng tròn đan xen nhau đại diện c
 
 Lập trình vẽ chính xác 5 vòng tròn nét to (size = 10) tại các tọa độ chuẩn xác lồng vào nhau.
 
-## Input
+## Kịch bản tương tác (Input Scenario)
 
-Nhấn cờ xanh.
+- Khởi động khi người dùng nhấn vào biểu tượng **Cờ Xanh**.
 
-## Output
+- Không yêu cầu nhập dữ liệu từ bàn phím.
 
-Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
+## Kết quả mong đợi (Expected Behavior / Output)
 
+- Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
+
+## Hình ảnh minh họa kết quả mẫu
+
+![Hình mẫu 1](../../assets/pen_drawings/pen_img_189.png)
 ## Sample 1
 
-### Input
-```text
-Sự kiện: Nhấn cờ xanh.
-```
+### Kịch bản chạy trên sân khấu
 
-### Output
-```text
-Kết quả: Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
-```
+- **Thao tác khởi động:** Nhấn cờ xanh.
+
+- **Kết quả hình ảnh:** Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
 
 ### Giải thích
 
@@ -35,5 +36,7 @@ Kết quả: Logo Olympic hoàn chỉnh đúng chuẩn quốc tế.
 ## Ràng buộc
 
 - Môi trường: Scratch 3.0 với phần mở rộng Bút vẽ (Pen).
+
 - Tọa độ khởi tạo an toàn trong khung hình sân khấu (x: -240 đến 240, y: -180 đến 180).
+
 - Nguồn bài thi: Trích xuất từ tài liệu chuẩn `Câu 12 - CHỦ ĐỀ VẼ HÌNH TRÊN SCRATCH.docx`.

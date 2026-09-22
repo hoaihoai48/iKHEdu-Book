@@ -30,4 +30,5 @@ Diện tích của hình tam giác vuông (số nguyên).
 ### Giải thích
 
 - Tích hai cạnh góc vuông: $6 \times 4 = 24$.
+
 - Diện tích tam giác: $24 : 2 = 12$.

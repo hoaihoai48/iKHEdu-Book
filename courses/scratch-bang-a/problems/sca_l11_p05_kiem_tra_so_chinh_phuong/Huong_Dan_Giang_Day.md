@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Kiểm tra số chính phương
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: số chính phương là số mà căn bậc hai của nó là số tự nhiên; `25 = 5 * 5` nên đáp án là `YES`.
@@ -28,7 +25,8 @@ Kết quả in ra: `YES`, khớp với kết quả mẫu.
 ```text
 import math
 if math.sqrt(25) == int(math.sqrt(25)):
-    print("YES")
+    nói ("YES")
+
 ```
 với số lớn tới `10^9` phép căn có thể lệch một chút ở phần thập phân, cho kết quả sai. Sửa lại: hiệu chỉnh `r` rồi so `r * r == n` như bài giải.
 - Bẫy 2: quên hiệu chỉnh, chỉ lấy `r = int(n ** 0.5)`. Với một số mẫu lớn, `r` có thể lệch 1 đơn vị và kết luận sai. Sửa lại: giữ nguyên hai vòng lặp hiệu chỉnh của bài giải.
@@ -46,6 +44,12 @@ với số lớn tới `10^9` phép căn có thể lệch một chút ở phần
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - hỏi [Nhập r:] và đợi
-> - đặt [r] thành (câu trả lời)
-> - nói ("YES")
+> - đặt [r] thành (int(...))
+> - lặp lại cho đến khi không còn <r + 1 * r + 1 <= n>:
+> -   đặt [r] thành (r + 1)
+> - lặp lại cho đến khi <r * r = n>:
+> -   đặt [r] thành (r - 1)
+> - nếu <r * r = n> thì:
+> -   nói (YES)
+> - nếu không thì:
+> -   nói (NO)

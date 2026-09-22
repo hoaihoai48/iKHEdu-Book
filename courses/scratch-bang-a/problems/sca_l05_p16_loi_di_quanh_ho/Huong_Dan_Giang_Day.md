@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Diện tích lối đi quanh hồ nước
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất lối đi quanh hồ: diện tích ngoài `(a + 2 * d) * (b + 2 * d)` trừ diện tích hồ `a * b`.
@@ -43,4 +40,6 @@ Với số mẫu một dòng `10 8 2`, chương trình phải in ra `88`.
 > - đặt [b] thành (câu trả lời)
 > - hỏi [Nhập d:] và đợi
 > - đặt [d] thành (câu trả lời)
-> - nói ((a + 2 * d)
+> - đặt [s_ngoai] thành (a + 2 * d * b + 2 * d)
+> - đặt [s_ho] thành (a * b)
+> - nói (s_ngoai - s_ho)

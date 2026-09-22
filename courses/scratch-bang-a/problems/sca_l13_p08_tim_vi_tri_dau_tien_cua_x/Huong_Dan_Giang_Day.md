@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm vị trí đầu tiên của X
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -19,7 +16,7 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 | Bước | Thao tác | Giá trị |
 |------|----------|---------|
-| 1 | Tách dòng 1 `line = câu trả lời.split()` | `["5", "7"]` |
+| 1 | Tách dòng 1 `line = câu trả lời` | `["5", "7"]` |
 | 2 | Lấy `n`, `x` | `n = 5`, `x = 7` |
 | 3 | Đọc dãy `a` | `a = [3, 5, 7, 9, 7]` |
 | 4 | Gọi `a.index(7)` | `2` (phần tử 7 đầu tiên ở vị trí 2) |
@@ -33,30 +30,33 @@ Kết quả cuối cùng khớp với đáp án mẫu: `2`.
 
 - Bẫy 1 — đếm vị trí từ 1 thay vì từ 0:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, x = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
-print(a.index(x) + 1)
+a = list(các khối hỏi và đợi cho từng biến)
+nói (a.index(x) + 1)
+
 ```
 Với mẫu trên in ra `3`, không khớp đáp án mẫu `2`. Cách sửa: in nguyên `a.index(x)`, không cộng 1.
 - Bẫy 2 — quên xử lý khi `X` vắng mặt:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, x = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
-print(a.index(x))
+a = list(các khối hỏi và đợi cho từng biến)
+nói (a.index(x))
+
 ```
-Với mẫu phụ `4 10` và dãy `1 2 3 4`, lệnh `index` gây lỗi và chương trình dừng đột ngột thay vì in `-1`. Cách sửa: bọc trong `try ... except ValueError: print(-1)`.
+Với mẫu phụ `4 10` và dãy `1 2 3 4`, lệnh `index` gây lỗi và chương trình dừng đột ngột thay vì in `-1`. Cách sửa: bọc trong `try ... except ValueError: nói (-1)`.
 - Bẫy 3 — quét hết dãy mà không dừng ở lần gặp đầu:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, x = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 vitri = -1
 for i in range(n):
     if a[i] == x:
         vitri = i
-print(vitri)
+nói (vitri)
+
 ```
 Với mẫu trên vòng lặp ghi đè tới số 7 cuối cùng nên in ra `4` sai. Cách sửa: dừng ngay khi gặp lần đầu hoặc dùng `a.index(x)`.
 
@@ -70,12 +70,11 @@ Với mẫu trên vòng lặp ghi đè tới số 7 cuối cùng nên in ra `4` 
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập line:] và đợi
-> - đặt [line] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - đặt [n] thành (int(...))
+> - đặt [x] thành (int(...))
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1

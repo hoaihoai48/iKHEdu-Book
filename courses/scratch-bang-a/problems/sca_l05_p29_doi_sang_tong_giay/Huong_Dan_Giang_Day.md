@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đổi giờ - phút - giây sang tổng số giây
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất đổi về giây: 1 giờ bằng 3600 giây và 1 phút bằng 60 giây, nên tổng là `h * 3600 + m * 60 + s`.

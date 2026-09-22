@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ký tự 'A' (cả hoa lẫn thường)
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: đếm mọi chữ `A` lẫn `a` trong chuỗi `s`, không phân biệt hoa thường.
@@ -30,13 +27,15 @@ dem = 0
 for ch in s:
     if ch == 'a':
         dem = dem + 1
-print(dem)
+nói (dem)
+
 ```
 Với mẫu trên sót chữ `A` hoa nên chỉ in ra `3`, đáp án đúng là `4`. Cách sửa: kiểm tra cả hai `if ch == 'a' or ch == 'A'`.
 - Bẫy 2: đếm nhầm cả từ chứa `a` bằng `split`. Đoạn sai:
 ```text
 s = câu trả lời
-print(len([w for w in s.split() if 'a' in w.lower()]))
+nói (len([w for w in s.split() if 'a' in w.lower()]))
+
 ```
 Với mẫu trên có 4 từ chứa `a` (`An`, `va`, `Ba`, `bai`) nên trùng cờ ra `4`, nhưng câu như `aaa bb` sẽ ra `1` thay vì `3`. Cách sửa: duyệt từng ký tự `for ch in s`.
 
@@ -52,9 +51,11 @@ Với mẫu trên có 4 từ chứa `a` (`An`, `va`, `Ba`, `bai`) nên trùng c�
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [dem] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <điều kiện> thì:
+> -     đặt [dem] thành (dem + 1)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (dem)

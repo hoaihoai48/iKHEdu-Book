@@ -1,11 +1,13 @@
 # Bài 08: Vòng lặp while và biến cờ
 
-## 1. Bản Chất Vòng Lặp Khi Chưa Biết Trước Số Lần Lặp
+## 1. Vòng lặp khi chưa biết trước số lần lặp
 
 Trong nhiều bài toán thực tế, ta **không thể biết trước được công việc cần lặp lại chính xác bao nhiêu lần**:
 
 - *Ví dụ 1:* Bác thợ mộc cưa một khúc gỗ dài $N$ mét cho đến khi độ dài còn lại nhỏ hơn $1$ mét.
+
 - *Ví dụ 2:* Nhập mật khẩu từ bàn phím cho đến khi người dùng nhập đúng thì thôi.
+
 - *Ví dụ 3:* Bóc tách các chữ số của số nguyên $N$ cho đến khi số $N$ giảm về $0$.
 
 Khi số lần lặp phụ thuộc vào một điều kiện động, khối lệnh chuẩn mực nhất trong Scratch là **`lặp lại cho đến khi <điều_kiện>`** (trong nhóm **Điều khiển** màu cam).
@@ -14,7 +16,7 @@ Khi số lần lặp phụ thuộc vào một điều kiện động, khối l�
 
 ---
 
-## 2. Bẫy Ngược Logic Của Khối `lặp lại cho đến khi`
+## 2. Bẫy ngược logic của khối `lặp lại cho đến khi`
 
 | Khối lệnh | Cơ chế kiểm tra điều kiện | Ý nghĩa hành động |
 |:---:|---|---|
@@ -27,23 +29,25 @@ Khi số lần lặp phụ thuộc vào một điều kiện động, khối l�
 
 ---
 
-## 3. Các Mẫu Thuật Toán Vòng Lặp Điều Kiện Kinh Điển
+## 3. Các mẫu thuật toán vòng lặp điều kiện
 
-### 3.1. Mẫu 1: Thuật toán Dãy số Collatz ($3n + 1$)
+### 3.1. Mẫu 1: Thuật toán biến đổi số ($3n + 1$)
 Bài toán: Cho số nguyên dương $N$. Nếu $N$ chẵn thì chia đôi $N = N / 2$; nếu $N$ lẻ thì biến đổi thành $N = 3N + 1$. Lặp lại quá trình này cho đến khi $N$ giảm về $1$.
 
 ![Thuật toán Collatz](assets/rendered_blocks/l08_collatz_vi.png)
 
-### 3.2. Mẫu 2: Kỹ thuật Biến Cờ Dừng (Sentinel Flag)
+### 3.2. Mẫu 2: Kỹ thuật biến cờ dừng
 Bài toán: Kiểm tra xem số $N$ có phải là số chính phương hay không ($N = i \times i$).
+
 - Khởi tạo biến cờ: `đặt [tim_thay v] thành 0`.
+
 - Cho `i` chạy từ 1, lặp lại cho đến khi **đã tìm thấy cờ** HOẶC **$i > N$**:
 
 ![Kỹ thuật biến cờ dừng sớm](assets/rendered_blocks/l08_sentinel_flag_vi.png)
 
 ---
 
-## 4. Bảng Mô Phỏng Biến Đổi Collatz Với $N = 6$ (Dry Run Table)
+## 4. Bảng mô phỏng biến đổi số với $N = 6$ (Dry run)
 
 | Vòng lặp | Giá trị $N$ hiện tại | Kiểm tra điều kiện dừng `< N = 1 >` | Kiểm tra chẵn/lẻ | Phép tính thực thi | Giá trị $N$ mới |
 |:---:|:---:|:---:|:---:|---|:---:|
@@ -61,7 +65,7 @@ $\implies$ Sau đúng 8 bước lặp, số $N$ chạm về 1 và vòng lặp k�
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Treo đơ chương trình do Vòng lặp vô tận (Infinite Loop)**
 > - *Hiện tượng:* Bên trong vòng lặp không có bất kỳ câu lệnh nào làm thay đổi điều kiện dừng.
@@ -74,7 +78,7 @@ $\implies$ Sau đúng 8 bước lặp, số $N$ chạm về 1 và vòng lặp k�
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh `lặp lại cho đến khi <>` sẽ dừng lại khi điều kiện lục giác bên trong trả về:**
    - A. Đúng (True) *(Đáp án đúng: gặp Đúng thì Dừng)*

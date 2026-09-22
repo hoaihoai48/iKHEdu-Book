@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Từ xuất hiện nhiều nhất trong đoạn
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: đếm số lần mỗi từ xuất hiện rồi chọn từ có số lần lớn nhất.
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 words = s.split()
-print(words[0], words.count(words[0]))
+nói (words[0], words.count(words[0]))
+
 ```
 Với mẫu trên may mắn vẫn ra `cam 3` vì `cam` đứng đầu, nhưng đoạn mà từ đầu không phải từ nhiều nhất (ví dụ `dua cam cam`) sẽ in `dua 1` là kết quả sai. Cách sửa: đếm đủ bằng từ điển `counts` rồi chọn `max`.
 - Bẫy 2: quên in số lần, chỉ in từ. Đoạn sai:
@@ -37,7 +35,8 @@ words = s.split()
 counts = {}
 for w in words:
     counts[w] = counts.get(w, 0) + 1
-print(max(counts, key=counts.get))
+nói (max(counts, key=counts.get))
+
 ```
 Với mẫu trên chỉ in `cam`, thiếu số `3`, đáp án đúng là `cam 3`. Cách sửa: in cả hai `nói (best_word, counts[best_word])`.
 
@@ -53,9 +52,10 @@ Với mẫu trên chỉ in `cam`, thiếu số `3`, đáp án đúng là `cam 3`
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [counts] thành (giá trị)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của words) lần:
+> -   đặt [w] thành phần tử thứ (vi_tri)
+> -   thay đổi [vi_tri] một lượng 1
+> - đặt [best_word] thành (max(...))
+> - nói (kết hợp best_word và ' ' và giá trị)

@@ -1,10 +1,7 @@
-# Hướng Dẫn Giảng Dạy: Đếm số lượng ước số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
-- Bản chất của bài này: với `n = 10`, duyệt mọi `i` từ `1` tới `10` và đếm các `i` mà `10 % i == 0`.
+- Bản chất của bài này: với `n = 10`, duyệt mọi `i` từ `1` tới `10` và đếm các `i` mà `(10 mod i) == 0`.
 - Biến `dem` bắt đầu bằng `0`, mỗi khi gặp ước thì `dem = dem + 1`.
 - Với `n = 10` các ước là `1, 2, 5, 10` nên `dem` tăng đúng 4 lần và in ra `4`.
 - Thầy cô cho các em kể tay các ước của `10` trước khi chạy vòng lặp để đối chiếu.
@@ -12,18 +9,18 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ---
 
 ## 2. Bảng chạy tay trên số liệu mẫu (Dry Run Table - Sample 1: 10)
-| `i` | `10 % i` | `dem` sau bước | Ghi chú |
+| `i` | `(10 mod i)` | `dem` sau bước | Ghi chú |
 | --- | --- | --- | --- |
-| 1 | 0 | 1 | `10 % 1 == 0`, đếm |
-| 2 | 0 | 2 | `10 % 2 == 0`, đếm |
+| 1 | 0 | 1 | `(10 mod 1) == 0`, đếm |
+| 2 | 0 | 2 | `(10 mod 2) == 0`, đếm |
 | 3 | 1 | 2 | không đếm |
 | 4 | 2 | 2 | không đếm |
-| 5 | 0 | 3 | `10 % 5 == 0`, đếm |
+| 5 | 0 | 3 | `(10 mod 5) == 0`, đếm |
 | 6 | 4 | 3 | không đếm |
 | 7 | 3 | 3 | không đếm |
 | 8 | 2 | 3 | không đếm |
 | 9 | 1 | 3 | không đếm |
-| 10 | 0 | 4 | `10 % 10 == 0`, đếm |
+| 10 | 0 | 4 | `(10 mod 10) == 0`, đếm |
 
 Kết quả in ra: `4`, khớp với kết quả mẫu.
 
@@ -46,4 +43,10 @@ Kết quả in ra: `4`, khớp với kết quả mẫu.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
+> - đặt [dem] thành (0)
+> - đặt [i] thành (1)
+> - lặp lại (n) lần:
+> -   nếu <n mod i = 0> thì:
+> -     đặt [dem] thành (dem + 1)
+> -   thay đổi [i] một lượng 1
 > - nói (dem)

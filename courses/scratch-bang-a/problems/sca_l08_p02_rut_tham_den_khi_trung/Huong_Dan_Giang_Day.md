@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Rút thăm đến khi trúng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: đọc liên tục không biết trước số lượng, dừng ngay khi bốc trúng lá phiếu số 7. Vòng lặp `while True` đọc từng `x` và `break` khi gặp 7.
@@ -25,19 +22,21 @@ Sau vòng lặp in ra `DA TRUNG THUONG!`, khớp với kết quả mẫu.
 - Bẫy 1 — in thông báo trong vòng lặp:
 ```text
 while True:
-    x = int(câu trả lời.strip())
+    x = câu trả lời
     if x == 7:
-        print("DA TRUNG THUONG!")
-print("DA TRUNG THUONG!")
+        nói ("DA TRUNG THUONG!")
+nói ("DA TRUNG THUONG!")
+
 ```
 Với mẫu `10 / 25 / 7` vòng lặp không dừng nên chương trình treo luôn. Cách sửa: dùng `break` khi gặp 7 và chỉ in một lần sau vòng lặp.
 - Bẫy 2 — sai chữ in (thường hoặc có dấu):
 ```text
 while True:
-    x = int(câu trả lời.strip())
+    x = câu trả lời
     if x == 7:
         break
-print("Da trung thuong!")
+nói ("Da trung thuong!")
+
 ```
 Với mẫu `10 / 25 / 7` sẽ in `Da trung thuong!` khác chữ mẫu nên chương trình kiểm tra báo kết quả sai. Cách sửa: in đúng chữ in hoa `DA TRUNG THUONG!`.
 
@@ -51,10 +50,5 @@ Với mẫu `10 / 25 / 7` sẽ in `Da trung thuong!` khác chữ mẫu nên chư
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập x:] và đợi
-> - đặt [x] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - lặp lại cho đến khi không còn <điều kiện>:
+> - nói (DA TRUNG THUONG!)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Xóa bỏ toàn bộ dấu cách
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: xóa sạch mọi dấu cách để chuỗi viết liền hoàn toàn.
@@ -25,13 +22,15 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: thay bằng một dấu cách nên không xóa gì `s.replace('  ', ' ')`. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.replace('  ', ' '))
+nói (s.replace('  ', ' '))
+
 ```
 Với mẫu `Lap Trinh Python Bang A` (toàn dấu cách đơn) in ra nguyên văn, đáp án đúng là `LapTrinhPythonBangA`. Cách sửa: thay bằng chuỗi rỗng `s.replace(' ', '')`.
 - Bẫy 2: dùng `strip()` chỉ gọt hai đầu. Đoạn sai:
 ```text
 s = câu trả lời
-print(s.strip())
+nói (s.strip())
+
 ```
 Với mẫu trên vẫn còn 3 dấu cách giữa các từ, in ra `Lap Trinh Python Bang A`, đáp án đúng là `LapTrinhPythonBangA`. Cách sửa: dùng `s.replace(' ', '')`.
 
@@ -47,9 +46,4 @@ Với mẫu trên vẫn còn 3 dấu cách giữa các từ, in ra `Lap Trinh Py
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (giá trị)

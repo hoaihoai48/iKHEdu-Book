@@ -1,8 +1,4 @@
-# HƯỚNG DẪN GIẢNG DẠY: VẦNG TRĂNG KHUYẾT NGHỆ THUẬT
-Chuyên đề: **Đồ Họa Bút Vẽ (Pen) & Thuật Toán Hình Học Scratch 3.0**  
-Mã bài toán: `sca_pen_p29_hinh_tron_khuyet` | Nguồn tham chiếu: `Câu 31`
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - **Bản chất hình học:** Bài toán rèn luyện tư duy chia nhỏ hình phức tạp thành các hình con cơ bản (đa giác đều, cung tròn, nhánh hoa văn).

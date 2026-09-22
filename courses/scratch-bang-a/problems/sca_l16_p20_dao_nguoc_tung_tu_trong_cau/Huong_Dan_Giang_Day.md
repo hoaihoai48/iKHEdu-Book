@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đảo ngược từng từ trong câu
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: lật ngược chữ cái bên trong từng từ, nhưng thứ tự các từ trong câu giữ nguyên.
@@ -25,14 +22,16 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 - Bẫy 1: lật cả câu `s[::-1]` nên thứ tự từ cũng đảo. Đoạn sai:
 ```text
 s = câu trả lời
-print(s[::-1])
+nói (s[::-1])
+
 ```
 Với mẫu trên in ra `maN teiV uey ioT`, đáp án đúng là `ioT uey teiV maN`. Cách sửa: lật từng từ rồi mới nối lại.
 - Bẫy 2: tách từ nhưng quên nối, in danh sách. Đoạn sai:
 ```text
 s = câu trả lời
 words = [w[::-1] for w in s.split()]
-print(words)
+nói (words)
+
 ```
 Với mẫu trên in ra `['ioT', 'uey', 'teiV', 'maN']` kèm ngoặc, đáp án đúng là `ioT uey teiV maN`. Cách sửa: in `" ".join(words)`.
 
@@ -48,9 +47,5 @@ Với mẫu trên in ra `['ioT', 'uey', 'teiV', 'maN']` kèm ngoặc, đáp án 
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [words] thành (giá trị)
+> - nói (words)

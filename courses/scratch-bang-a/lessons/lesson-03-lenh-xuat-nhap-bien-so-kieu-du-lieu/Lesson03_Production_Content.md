@@ -1,6 +1,6 @@
 # Bài 03: LỆNH XUẤT NHẬP, BIẾN SỐ VÀ KIỂU DỮ LIỆU
 
-## 1. Bản Chất Chương Trình Máy Tính & Luồng Dữ Liệu I/O
+## 1. Bản chất chương trình máy tính và luồng dữ liệu I/O
 
 Trong khoa học máy tính và lập trình, một chương trình thực chất là một chuỗi chỉ thị có trật tự điều khiển máy tính biến đổi dữ liệu đầu vào thành kết quả đầu ra theo yêu cầu bài toán.
 
@@ -20,7 +20,7 @@ Mọi bài toán trong các kỳ thi lập trình lập trình Bảng A đều v
 
 ---
 
-## 2. Lệnh Nhập Dữ Liệu: Khối `hỏi () và đợi` & Bẫy Biến `câu trả lời`
+## 2. Lệnh nhập dữ liệu và biến `câu trả lời`
 
 ### 2.1. Cú pháp và cơ chế của khối `hỏi () và đợi`
 Trong nhóm **Cảm biến (Sensing)** màu xanh lơ, Scratch cung cấp khối lệnh nhập dữ liệu chính thức:
@@ -30,7 +30,9 @@ Trong nhóm **Cảm biến (Sensing)** màu xanh lơ, Scratch cung cấp khối 
 Khi khối lệnh này chạy:
 
 - Chú Mèo Scratch sẽ xuất hiện bong bóng câu hỏi kèm một thanh nhập văn bản ở cạnh đáy sân khấu.
+
 - Toàn bộ chương trình **tạm dừng hoàn toàn** để đợi người dùng gõ phím.
+
 - Khi người dùng bấm phím **Enter** hoặc nhấp chuột vào dấu tick xanh ✔, nội dung vừa gõ được tự động nạp vào khối tròn màu xanh lơ: `câu trả lời`.
 
 ### 2.2. Tử huyệt bẫy ghi đè biến `câu trả lời`
@@ -53,7 +55,9 @@ Khi khối lệnh này chạy:
 Biến số giống như một chiếc hộp được dán nhãn tên ngoài vỏ dùng để cất giữ một giá trị trong bộ nhớ:
 
 - **Tạo biến số:** Trong nhóm **Các biến số (Variables)** màu cam đậm, bấm vào *Tạo một biến* và đặt tên gợi nhớ (ví dụ: `a`, `b`, `tong`, `chu_vi`).
+
 - **Khối `đặt [biến v] thành ()`:** Dùng để gán giá trị ban đầu vào chiếc hộp.
+
 - **Khối `thay đổi [biến v] một lượng ()`:** Dùng để tăng hoặc giảm giá trị hiện tại của chiếc hộp.
 
 ![Khối đặt biến thành câu trả lời](assets/rendered_blocks/l03_block_set_vi.png)
@@ -82,6 +86,7 @@ Quy trình chuẩn 6 bước:
 Trong nhóm **Hiển thị (Looks)** màu tím:
 
 - **Khối `nói () trong () giây`:** Hiển thị bong bóng thoại trong khoảng thời gian định trước rồi biến mất.
+
 - **Khối `nói ()` (không có thời gian):** Hiển thị kết quả vĩnh viễn trên màn hình cho đến khi có lệnh nói khác thay thế. Khi lập trình, lập trình, **luôn ưu tiên dùng khối `nói ()` này** để ban giám khảo và hệ thống chấm nhìn thấy rõ kết quả.
 
 ### Kỹ thuật ghép chuỗi hiển thị:
@@ -108,7 +113,7 @@ Quy trình 3 bước vàng:
 
 ---
 
-## 6. Bảng Mô Phỏng Biến Thiên Ô Nhớ Từng Bước (Dry Run Table)
+## 6. Bảng mô phỏng Biến Thiên Ô Nhớ Từng Bước (Dry run)
 
 Xét kịch bản nhập $A = 15$ và $B = 7$:
 
@@ -123,7 +128,7 @@ Xét kịch bản nhập $A = 15$ và $B = 7$:
 
 ---
 
-## 7. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 7. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Không đặt biến trước khi hỏi lần tiếp theo**
 > - *Hậu quả:* Mất sạch dữ liệu của lần nhập trước do `câu trả lời` bị ghi đè.
@@ -139,7 +144,7 @@ Xét kịch bản nhập $A = 15$ và $B = 7$:
 
 ---
 
-## 8. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 8. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào trong Scratch dùng để nhận dữ liệu gõ từ bàn phím?**
    - A. `nói [] và đợi`

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Từ đầu tiên & từ cuối cùng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: tách câu thành danh sách từ rồi lấy phần tử đầu và phần tử cuối.
@@ -27,15 +24,17 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 words = s.split()
-print(words[0])
-print(words[1])
+nói (words[0])
+nói (words[1])
+
 ```
 Với mẫu trên dòng 2 in ra `Python`, đáp án đúng là `vui`. Cách sửa: dùng `words[-1]` cho từ cuối.
 - Bẫy 2: in hai từ trên cùng một dòng. Đoạn sai:
 ```text
 s = câu trả lời
 words = s.split()
-print(words[0] + ' ' + words[-1])
+nói (words[0] + ' ' + words[-1])
+
 ```
 Với mẫu trên in ra `Hoc vui` trên một dòng, đáp án đúng là hai dòng `Hoc` và `vui`. Cách sửa: dùng hai khối lệnh `nói` riêng.
 
@@ -51,9 +50,5 @@ Với mẫu trên in ra `Hoc vui` trên một dòng, đáp án đúng là hai d�
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (giá trị)
+> - nói (giá trị)

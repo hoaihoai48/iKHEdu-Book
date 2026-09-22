@@ -1,6 +1,6 @@
 # Bài 07: Vòng lặp for và hàm range
 
-## 1. Bản Chất Của Vòng Lặp Trong Khoa Học Máy Tính
+## 1. Bản chất của vòng lặp trong lập trình
 
 Trong lập trình, có những công việc cần thực hiện lặp đi lặp lại hàng chục, hàng trăm, thậm chí hàng triệu lần (ví dụ: tính tổng các số từ 1 đến 1000, in bảng cửu chương, duyệt qua danh sách thí sinh). 
 
@@ -12,7 +12,7 @@ Khi đã **biết trước chính xác số lần lặp**, khối lệnh chuẩn
 
 ---
 
-## 2. Kỹ Thuật Thiết Lập Biến Đếm 3 Bước Vàng
+## 2. Kỹ thuật thiết lập biến đếm với 3 bước
 
 Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà không tự động tăng một biến đếm nào cả. Do đó, để quản lý số thứ tự các lần lặp, chúng ta áp dụng **Quy tắc 3 bước vàng**:
 
@@ -26,17 +26,21 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 3. Các Mẫu Thuật Toán Tích Lũy Kinh Điển
+## 3. Mẫu thuật toán tích lũy
 
-### 3.1. Mẫu 1: Thuật toán Tính Tổng tích lũy ($S = 1 + 2 + \dots + N$)
+### 3.1. Mẫu 1: Thuật toán tính tổng tích lũy ($S = 1 + 2 + \dots + N$)
+
 - Khởi tạo biến tổng bằng 0: `đặt [tong v] thành (0)`.
+
 - Trong mỗi vòng lặp, cộng dồn giá trị của `i` vào `tong`:
   `thay đổi [tong v] một lượng (i)`.
 
 ![Thuật toán tính tổng tích lũy](assets/rendered_blocks/l07_accumulator_vi.png)
 
-### 3.2. Mẫu 2: Thuật toán Tính Tích giai thừa ($N! = 1 \times 2 \times \dots \times N$)
+### 3.2. Mẫu 2: Thuật toán tính tích giai thừa ($N! = 1 \times 2 \times \dots \times N$)
+
 - **BẮT BUỘC:** Khởi tạo biến tích lũy phép nhân bằng 1 (nếu khởi tạo bằng 0 thì mọi phép nhân đều bằng 0!).
+
 - Trong mỗi vòng lặp, nhân dồn `i` vào biến `giai_thua`:
   `đặt [giai_thua v] thành ((giai_thua) * (i))`.
 
@@ -44,7 +48,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 4. Bảng Mô Phỏng Từng Bước Tính Tổng $S = 1 + 2 + 3 + 4$ ($N = 4$) (Dry Run Table)
+## 4. Bảng mô phỏng tính tổng $S = 1 + 2 + 3 + 4$ ($N = 4$) (Dry run)
 
 | Vòng lặp số | Khối lệnh thực thi trong thân lặp | Biến `i` trước lặp | Biến `tong` sau cộng | Biến `i` sau khi tăng | Ý nghĩa phép toán |
 |:---:|---|:---:|:---:|:---:|---|
@@ -57,7 +61,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 5. Tử Huyệt & Các Bẫy Lỗi Kinh Điển (Bug Traps)
+## 5. Các bẫy lỗi thường gặp (Bug Traps)
 
 > **Bẫy 1: Quên khối `thay đổi [i v] một lượng (1)`**
 > - *Hiện tượng:* Biến `i` mãi mãi nhận giá trị $1$.
@@ -75,7 +79,7 @@ Trong Scratch, khối `lặp lại () lần` chỉ lặp lại hành động mà
 
 ---
 
-## 6. Bộ Câu Hỏi Trắc Nghiệm Củng Cố (Concept Quizzes)
+## 6. Bộ câu hỏi trắc nghiệm củng cố (Concept Quizzes)
 
 1. **Khối lệnh nào trong Scratch tương đương với vòng lặp biết trước số lần lặp?**
    - A. `lặp lại () lần` *(Đáp án đúng)*

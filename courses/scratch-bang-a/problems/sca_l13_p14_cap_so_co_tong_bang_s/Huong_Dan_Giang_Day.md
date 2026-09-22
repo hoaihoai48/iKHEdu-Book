@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Cặp số có tổng bằng S
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -37,41 +34,44 @@ Kết quả cuối cùng khớp với đáp án mẫu: `2`.
 
 - Bẫy 1 — đếm cả cặp một số với chính nó:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, s = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 cnt = 0
 for i in range(n):
     for j in range(n):
         if a[i] + a[j] == s:
             cnt += 1
-print(cnt // 2)
+nói (làm tròn xuống của (cnt / 2))
+
 ```
 Với mẫu trên vẫn ra `2`, nhưng nếu dãy chứa số bằng `s / 2` (ví dụ `5` khi `s = 10`) thì cặp `(5, 5)` bị tính oan. Cách sửa: chỉ xét `j` đứng sau `i`, hoặc ghi nhớ các số đã thấy như lời giải.
 - Bẫy 2 — đếm mỗi cặp hai lần:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, s = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 cnt = 0
 for i in range(n):
     for j in range(n):
         if i != j and a[i] + a[j] == s:
             cnt += 1
-print(cnt)
+nói (cnt)
+
 ```
 Với mẫu trên in ra `4` vì `(2, 8)` và `(8, 2)` bị tính riêng. Cách sửa: mỗi cặp chỉ đếm một lần, ví dụ ghi `seen` rồi mới kiểm tra như lời giải.
 - Bẫy 3 — so hai vòng lặp với `N = 10^4`:
 ```text
-line = câu trả lời.split()
+line = câu trả lời
 n, s = int(line[0]), int(line[1])
-a = list(map(int, câu trả lời.split()))
+a = list(các khối hỏi và đợi cho từng biến)
 cnt = 0
 for i in range(n):
     for j in range(i + 1, n):
         if a[i] + a[j] == s:
             cnt += 1
-print(cnt)
+nói (cnt)
+
 ```
 Với mẫu 5 số vẫn ra `2`, nhưng với `N = 10^4` thì hai vòng lặp chạy tới năm chục triệu lượt, quá chậm. Cách sửa: duyệt một lượt kết hợp ghi nhớ `seen` như lời giải.
 
@@ -85,12 +85,20 @@ Với mẫu 5 số vẫn ra `2`, nhưng với `N = 10^4` thì hai vòng lặp ch
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập line:] và đợi
-> - đặt [line] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
+> - đặt [n] thành (int(...))
+> - đặt [s] thành (int(...))
+> - xóa tất cả của danh sách [a]
+> - đặt [i] thành 1
 > - lặp lại (n) lần:
 > -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> -   thêm (câu trả lời) vào [a]
+> -   thay đổi [i] một lượng 1
+> - đặt [seen] thành (set(...))
+> - đặt [cnt] thành (0)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của a) lần:
+> -   đặt [x] thành phần tử thứ (vi_tri)
+> -   nếu <s - x = seen> thì:
+> -     thay đổi [cnt] một lượng (1)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (cnt)

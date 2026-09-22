@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Thứ mấy trong tuần?
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Thầy cô lưu ý: đề bài kể ngày thứ `K` từ `1` tới `365` ứng với các chuỗi `THU HAI...`, nhưng lời giải mẫu của lớp mình đọc `d` rồi: `d == 1` in `CHU NHAT`, `2 <= d <= 7` in `THU {d}`. Khi dạy cần bám đúng lời giải mẫu này.
@@ -39,6 +36,7 @@ Sample 1 với input mẫu: `2`.
 > - hỏi [Nhập d:] và đợi
 > - đặt [d] thành (câu trả lời)
 > - nếu <d = 1> thì:
-> -   nói [YES]
+> -   nói (CHU NHAT)
 > - nếu không thì:
-> -   nói [NO]
+> -   nếu <2 <= d> thì:
+> -     nói (giá trị)

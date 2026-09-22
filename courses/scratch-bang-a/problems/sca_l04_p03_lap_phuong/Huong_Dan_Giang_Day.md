@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Lập Phương Một Số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -26,7 +23,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Dùng `a * 3` thay vì `a ** 3`.**
 
 ```text
-print(a * 3)
+nói (a * 3)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `a = 5` in ra `15` thay vì `125`.
@@ -36,7 +34,8 @@ Cách sửa: dùng `a ** 3`.
 **Bẫy 2: Dùng `a ^ 3`.**
 
 ```text
-print(a ^ 3)
+nói (a ^ 3)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `a = 5` thì `5 ^ 3 = 6`, hoàn toàn khác `125`.
@@ -55,4 +54,4 @@ Cách sửa: toán tử mũ là `**`.
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập a:] và đợi
 > - đặt [a] thành (câu trả lời)
-> - nói (a ** 3)
+> - nói (a + 3)

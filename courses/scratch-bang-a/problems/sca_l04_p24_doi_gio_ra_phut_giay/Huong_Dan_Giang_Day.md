@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Đổi Giờ Ra Phút Giây
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -27,7 +24,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 **Bẫy 1: Nhầm một giờ là `360` giây.**
 
 ```text
-print(h * 360 + m * 60 + s)
+nói (h * 360 + m * 60 + s)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `1 20 15` cho `1575` thay vì `4815`.
@@ -37,7 +35,8 @@ Cách sửa: một giờ là `3600` giây.
 **Bẫy 2: Nhầm một phút là `100` giây.**
 
 ```text
-print(h * 3600 + m * 100 + s)
+nói (h * 3600 + m * 100 + s)
+
 ```
 
 Với số liệu mẫu trên, đoạn này cho `1 20 15` cho `5615` thay vì `4815`.

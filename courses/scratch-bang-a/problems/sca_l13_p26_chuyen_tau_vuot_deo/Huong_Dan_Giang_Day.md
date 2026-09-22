@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Chuyến tàu vượt đèo
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -35,10 +32,10 @@ Kết quả cuối cùng khớp với đáp án mẫu: `4`.
 
 - Bẫy 1 — dùng `>=` nên đếm cả đèo cao bằng:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = data[:n]
 best = data[0]
 c = 1
@@ -46,15 +43,16 @@ for x in data[1:]:
     if x >= best:
         best = x
         c += 1
-print(c)
+nói (c)
+
 ```
 Đề bài yêu cầu đèo cao hơn hẳn mới reo; dãy như `5 5 5` phải reo 1 lần nhưng cách này đếm 3. Cách sửa: điều kiện đúng là `x > best`.
 - Bẫy 2 — đặt đỉnh cao nhất ban đầu là 0:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = data[:n]
 best = 0
 c = 0
@@ -62,15 +60,16 @@ for x in data:
     if x > best:
         best = x
         c += 1
-print(c)
+nói (c)
+
 ```
 Với mẫu trên vẫn ra `4`, nhưng dãy toàn số âm (ví dụ `-5 -2`) thì `best = 0` chặn hết và in `0` sai. Cách sửa: đặt `best = data[0]`, `c = 1`.
 - Bẫy 3 — quên đếm ngọn đèo đầu tiên:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = data[:n]
 best = data[0]
 c = 0
@@ -78,7 +77,8 @@ for x in data[1:]:
     if x > best:
         best = x
         c += 1
-print(c)
+nói (c)
+
 ```
 Với mẫu trên in ra `3` vì mất lần reo của ngọn `1`. Cách sửa: đặt `c = 1` ngay từ đầu.
 
@@ -94,10 +94,17 @@ Với mẫu trên in ra `3` vì mất lần reo của ngọn `1`. Cách sửa: �
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - xóa tất cả của [data]
+> - lặp lại cho đến khi không còn <độ dài của data < n>:
+> -   thay đổi [data] một lượng (list(...))
+> - đặt [data] thành (giá trị)
+> - đặt [best] thành (giá trị)
+> - đặt [c] thành (1)
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của giá trị) lần:
+> -   đặt [x] thành phần tử thứ (vi_tri)
+> -   nếu <x > best> thì:
+> -     đặt [best] thành (x)
+> -     thay đổi [c] một lượng (1)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (c)

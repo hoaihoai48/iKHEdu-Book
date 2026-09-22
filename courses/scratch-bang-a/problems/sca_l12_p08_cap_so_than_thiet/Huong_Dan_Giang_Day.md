@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Cặp số thân thiết
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này: hai số thân thiết là hai số khác nhau mà tổng ước nhỏ hơn của số này bằng số kia, và ngược lại.
@@ -42,4 +39,27 @@ Kết quả in ra: `YES`, khớp với kết quả mẫu.
 > - đặt [a] thành (câu trả lời)
 > - hỏi [Nhập b:] và đợi
 > - đặt [b] thành (câu trả lời)
-> - nói ("YES")
+> - đặt [tong_a] thành (0)
+> - đặt [i] thành (1)
+> - lặp lại (int(...)) lần:
+> -   nếu <a mod i = 0> thì:
+> -     đặt [j] thành (a chia nguyên i)
+> -     nếu <i < a> thì:
+> -       đặt [tong_a] thành (tong_a + i)
+> -     nếu <điều kiện> thì:
+> -       đặt [tong_a] thành (tong_a + j)
+> -   thay đổi [i] một lượng 1
+> - đặt [tong_b] thành (0)
+> - đặt [i] thành (1)
+> - lặp lại (int(...)) lần:
+> -   nếu <b mod i = 0> thì:
+> -     đặt [j] thành (b chia nguyên i)
+> -     nếu <i < b> thì:
+> -       đặt [tong_b] thành (tong_b + i)
+> -     nếu <điều kiện> thì:
+> -       đặt [tong_b] thành (tong_b + j)
+> -   thay đổi [i] một lượng 1
+> - nếu <điều kiện> thì:
+> -   nói (YES)
+> - nếu không thì:
+> -   nói (NO)

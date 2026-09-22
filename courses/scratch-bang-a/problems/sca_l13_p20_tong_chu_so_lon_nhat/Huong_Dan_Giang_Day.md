@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tổng chữ số lớn nhất
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -35,10 +32,10 @@ Kết quả cuối cùng khớp với đáp án mẫu: `99`.
 
 - Bẫy 1 — quên luật hòa thì số nhỏ thắng:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = data[:n]
 best = data[0]
 bs = sum(map(int, str(best)))
@@ -47,26 +44,29 @@ for x in data[1:]:
     if s > bs:
         best = x
         bs = s
-print(best)
+nói (best)
+
 ```
 Với mẫu trên vẫn ra `99`, nhưng dãy như `12 21` (cùng tổng 3) thì cách thiếu `x < best` giữ số gặp trước hay sau tùy cách viết, dễ sai luật hòa. Cách sửa: điều kiện đủ là `if s > bs or (s == bs and x < best)`.
 - Bẫy 2 — in tổng lớn nhất thay vì số báo danh:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = data[:n]
-print(max(sum(map(int, str(x))) for x in data))
+nói (max(sum(map(int, str(x))) for x in data))
+
 ```
 Với mẫu trên in ra `18`, không khớp đáp án mẫu `99`. Cách sửa: ghi nhớ `best` là số báo danh rồi in `best`.
 - Bẫy 3 — so sánh trực tiếp các số báo danh:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
-print(max(data[:n]))
+    data += list(các khối hỏi và đợi cho từng biến)
+nói (max(data[:n]))
+
 ```
 Với mẫu trên in ra `100`, không khớp đáp án mẫu `99`. Cách sửa: so sánh tổng các chữ số, không so giá trị số.
 
@@ -82,10 +82,18 @@ Với mẫu trên in ra `100`, không khớp đáp án mẫu `99`. Cách sửa: 
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - xóa tất cả của [data]
+> - lặp lại cho đến khi không còn <độ dài của data < n>:
+> -   thay đổi [data] một lượng (list(...))
+> - đặt [data] thành (giá trị)
+> - đặt [best] thành (giá trị)
+> - đặt [bs] thành (sum(...))
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của giá trị) lần:
+> -   đặt [x] thành phần tử thứ (vi_tri)
+> -   đặt [s] thành (sum(...))
+> -   nếu <điều kiện> thì:
+> -     đặt [best] thành (x)
+> -     đặt [bs] thành (s)
+> -   thay đổi [vi_tri] một lượng 1
+> - nói (best)

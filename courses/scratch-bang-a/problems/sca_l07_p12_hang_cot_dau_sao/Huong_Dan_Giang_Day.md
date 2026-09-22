@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Hàng cột dấu sao
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: hình chữ nhật đặc kích thước R hàng, C cột. Mỗi hàng là chuỗi `'*' * c` dài đúng C ký tự, lặp lại R lần.
@@ -24,17 +21,19 @@ Ba hàng giống nhau ghép thành hình chữ nhật 3x5, khớp với kết qu
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — đọc cả hai số trên một dòng:
 ```text
-r, c = map(int, câu trả lời.split())
+r, c = các khối hỏi và đợi cho từng biến
 for i in range(r):
-    print('*' * c)
+    nói ('*' * c)
+
 ```
-Với mẫu nhập `3` rồi xuống dòng `5`, lệnh tách một dòng sẽ thiếu số và lỗi. Cách sửa: đọc riêng `r = int(câu trả lời)` rồi `c = int(câu trả lời)` như lời giải.
+Với mẫu nhập `3` rồi xuống dòng `5`, lệnh tách một dòng sẽ thiếu số và lỗi. Cách sửa: đọc riêng `r = câu trả lời` rồi `c = câu trả lời` như lời giải.
 - Bẫy 2 — nhầm số hàng với số cột:
 ```text
-r = int(câu trả lời)
-c = int(câu trả lời)
+r = câu trả lời
+c = câu trả lời
 for i in range(c):
-    print('*' * r)
+    nói ('*' * r)
+
 ```
 Với mẫu `3 / 5` sẽ in 5 hàng mỗi hàng 3 sao, cho kết quả sai kích thước. Cách sửa: lặp `range(r)` và nhân `'*' * c`.
 
@@ -52,9 +51,7 @@ Với mẫu `3 / 5` sẽ in 5 hàng mỗi hàng 3 sao, cho kết quả sai kích
 > - đặt [r] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - đặt [tong] thành (0)
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   thay đổi [tong] một lượng (i)
-> -   thay đổi [i] một lượng (1)
-> - nói (tong)
+> - đặt [i] thành (0)
+> - lặp lại (r) lần:
+> -   nói (* * c)
+> -   thay đổi [i] một lượng 1

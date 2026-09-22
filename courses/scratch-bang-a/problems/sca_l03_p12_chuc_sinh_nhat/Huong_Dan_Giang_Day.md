@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Lời chúc sinh nhật cá nhân hóa
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là điền tên và tuổi vào khung thiệp mẫu: `Chuc mung sinh nhat <Ten>, ban tron <Tuoi> tuoi!`. Với mẫu thì tên là `Nam` và tuổi là `10`.
@@ -35,6 +32,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập tuoi:] và đợi
+> - hỏi [Nhập ten:] và đợi
 > - đặt [ten] thành (câu trả lời)
-> - nói (kết hợp f"Chuc mung sinh nhat {ten} và " " và ban tron {tuoi} tuoi!")
+> - hỏi [Nhập tuoi:] và đợi
+> - đặt [tuoi] thành (câu trả lời)
+> - nói (giá trị)

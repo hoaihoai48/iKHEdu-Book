@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tách riêng chữ số ra khỏi văn bản
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giúp bạn An nhặt hết các chữ số theo đúng thứ tự, nếu không có số nào thì báo `KHONG CO`.
@@ -30,9 +27,10 @@ kq = ''
 for ch in s:
     if ch.isdigit():
         kq = kq + ch
-print(kq)
+nói (kq)
+
 ```
-Với câu không có số nào sẽ in ra dòng trắng, đáp án đúng phải là `KHONG CO`. Cách sửa: kiểm tra `if kq == '': print('KHONG CO')`.
+Với câu không có số nào sẽ in ra dòng trắng, đáp án đúng phải là `KHONG CO`. Cách sửa: kiểm tra `if kq == '': nói ('KHONG CO')`.
 - Bẫy 2: nối số bằng phép cộng số học. Đoạn sai:
 ```text
 s = câu trả lời
@@ -40,7 +38,8 @@ kq = 0
 for ch in s:
     if ch.isdigit():
         kq = kq * 10 + int(ch)
-print(kq)
+nói (kq)
+
 ```
 Với mẫu trên số 0 ở đầu `08` bị nuốt mất, in ra `20148`, đáp án đúng là `201408`. Cách sửa: nối chuỗi `kq = kq + ch`.
 
@@ -56,9 +55,14 @@ Với mẫu trên số 0 ở đầu `08` bị nuốt mất, in ra `20148`, đáp
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [kq] thành ()
+> - đặt [vi_tri] thành 1
+> - lặp lại (kích thước của s) lần:
+> -   đặt [ch] thành phần tử thứ (vi_tri)
+> -   nếu <điều kiện> thì:
+> -     đặt [kq] thành (kq + ch)
+> -   thay đổi [vi_tri] một lượng 1
+> - nếu <kq = > thì:
+> -   nói (KHONG CO)
+> - nếu không thì:
+> -   nói (kq)

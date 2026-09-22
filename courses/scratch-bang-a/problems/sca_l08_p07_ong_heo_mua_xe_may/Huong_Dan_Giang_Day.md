@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Ống heo mua xe máy
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: ngày thứ `ngay` bỏ vào đúng `ngay` nghìn đồng, tổng sau k ngày là `1 + 2 + ... + k`. Tìm k nhỏ nhất để tổng đạt hoặc vượt P.
@@ -27,24 +24,26 @@ In ra `5`, khớp với kết quả mẫu.
 ## 3. Lưu ý & Bẫy lỗi thường gặp
 - Bẫy 1 — cộng trước khi tăng ngày:
 ```text
-p = int(câu trả lời)
+p = câu trả lời
 tong = 0
 ngay = 0
 while tong < p:
     tong = tong + ngay
     ngay = ngay + 1
-print(ngay)
+nói (ngay)
+
 ```
 Với mẫu `15` thì ngày đầu cộng 0 nên kết quả lệch thành `6`. Cách sửa: tăng `ngay` trước rồi mới cộng `tong = tong + ngay`.
 - Bẫy 2 — mỗi ngày bỏ cố định 1 nghìn:
 ```text
-p = int(câu trả lời)
+p = câu trả lời
 tong = 0
 ngay = 0
 while tong < p:
     ngay = ngay + 1
     tong = tong + 1
-print(ngay)
+nói (ngay)
+
 ```
 Với mẫu `15` sẽ in ra `15` thay vì `5`. Cách sửa: ngày thứ `ngay` phải cộng đúng `ngay` nghìn.
 
@@ -60,8 +59,9 @@ Với mẫu `15` sẽ in ra `15` thay vì `5`. Cách sửa: ngày thứ `ngay` p
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập p:] và đợi
 > - đặt [p] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [tong] thành (0)
+> - đặt [ngay] thành (0)
+> - lặp lại cho đến khi không còn <tong < p>:
+> -   đặt [ngay] thành (ngay + 1)
+> -   đặt [tong] thành (tong + ngay)
+> - nói (ngay)

@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Giao nhau của hai đoạn thẳng
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là tìm phần chồng lấn của hai đoạn `[l1, r1]` và `[l2, r2]`: mép trái của phần chung là `trai = max(l1, l2)`, mép phải là `phai = min(r1, r2)`; nếu `trai <= phai` thì giao nhau với độ dài `phai - trai`.
@@ -38,22 +35,22 @@ Sample 1 với input mẫu: `1` rồi `6` rồi `4` rồi `9`.
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập l1:] và đợi
-> - đặt [dong1] thành (câu trả lời)
-> - hỏi [Nhập r1:] và đợi
 > - đặt [l1] thành (câu trả lời)
-> - hỏi [Nhập l2:] và đợi
+> - hỏi [Nhập r1:] và đợi
 > - đặt [r1] thành (câu trả lời)
-> - hỏi [Nhập r2:] và đợi
+> - hỏi [Nhập l2:] và đợi
 > - đặt [l2] thành (câu trả lời)
-> - hỏi [Nhập l1:] và đợi
+> - hỏi [Nhập r2:] và đợi
 > - đặt [r2] thành (câu trả lời)
-> - hỏi [Nhập r1:] và đợi
-> - đặt [l1] thành (câu trả lời)
-> - hỏi [Nhập l2:] và đợi
-> - đặt [r1] thành (câu trả lời)
-> - hỏi [Nhập r2:] và đợi
-> - đặt [l2] thành (câu trả lời)
-> - nếu <len(dong1) >= 4> thì:
-> -   nói [YES]
+> - nếu <l1 >= l2> thì:
+> -   đặt [trai] thành (l1)
 > - nếu không thì:
-> -   nói [NO]
+> -   đặt [trai] thành (l2)
+> - nếu <r1 <= r2> thì:
+> -   đặt [phai] thành (r1)
+> - nếu không thì:
+> -   đặt [phai] thành (r2)
+> - nếu <trai <= phai> thì:
+> -   nói (kết hợp GIAO NHAU và ' ' và phai - trai)
+> - nếu không thì:
+> -   nói (KHONG GIAO NHAU)

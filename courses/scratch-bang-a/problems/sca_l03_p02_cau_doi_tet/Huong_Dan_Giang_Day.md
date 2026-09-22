@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Câu đối ngày tết
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là in hai dòng chữ cố định: dòng 1 là `Chuc mung nam moi`, dòng 2 là `Van su nhu y`. Thầy cô giải thích mỗi lệnh `khối nói` tự xuống dòng một lần sau khi in xong.
@@ -34,5 +31,5 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - nói [Chuc mung nam moi]
-> - nói [Van su nhu y]
+> - nói (Chuc mung nam moi)
+> - nói (Van su nhu y)

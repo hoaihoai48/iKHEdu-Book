@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Số lớn nhất trong ba số
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất của bài này là tìm số đứng sau cùng trên trục số trong ba số `a, b, c`.
@@ -36,13 +33,9 @@ Sample 1 với input mẫu: `15` rồi `28` rồi `9`.
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập a:] và đợi
-> - đặt [a] thành (câu trả lời)
-> - hỏi [Nhập b:] và đợi
-> - đặt [b] thành (câu trả lời)
-> - hỏi [Nhập c:] và đợi
-> - đặt [c] thành (câu trả lời)
-> - nếu <len(line) = 3> thì:
-> -   nói [YES]
-> - nếu không thì:
-> -   nói [NO]
+> - đặt [max_val] thành (a)
+> - nếu <b > max_val> thì:
+> -   đặt [max_val] thành (b)
+> - nếu <c > max_val> thì:
+> -   đặt [max_val] thành (c)
+> - nói (max_val)

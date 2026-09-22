@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Thể tích hộp chữ nhật
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất thể tích hộp chữ nhật: nhân ba kích thước `d * r * c`, mỗi kích thước nằm một dòng riêng.
@@ -23,7 +20,7 @@ Với số mẫu ba dòng `5`, `3`, `2`, chương trình phải in ra `30`.
 ---
 
 ## 3. Lưu ý & Bẫy lỗi thường gặp
-- Bẫy 1 — đọc ba số một dòng: viết `d, r, c = map(int, câu trả lời.split())` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
+- Bẫy 1 — đọc ba số một dòng: viết `d, r, c = các khối hỏi và đợi cho từng biến` thì với mẫu mỗi số một dòng sẽ bị lỗi; cách sửa là đọc ba lần riêng.
 - Bẫy 2 — cộng thay vì nhân: viết `nói (d + r + c)` thì với mẫu ra `10` thay vì `30`; cách sửa là nhân ba số.
 - Bẫy 3 — nhầm diện tích xung quanh: viết `nói (2 * (d * r + r * c))` thì với mẫu ra số khác `30`; cách sửa là thể tích `d * r * c`.
 
@@ -43,4 +40,4 @@ Với số mẫu ba dòng `5`, `3`, `2`, chương trình phải in ra `30`.
 > - đặt [r] thành (câu trả lời)
 > - hỏi [Nhập c:] và đợi
 > - đặt [c] thành (câu trả lời)
-> - nói (d + r + c)
+> - nói (d * r * c)

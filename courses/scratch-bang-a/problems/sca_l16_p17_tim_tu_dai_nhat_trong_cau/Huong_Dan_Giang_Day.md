@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tìm từ dài nhất trong câu
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: tách câu thành các từ rồi chọn từ có nhiều chữ cái nhất.
@@ -26,7 +23,8 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 words = s.split()
-print(max(words))
+nói (max(words))
+
 ```
 Với mẫu trên in ra `vi` (lớn nhất theo thứ tự chữ), đáp án đúng là `trinh`. Cách sửa: thêm tiêu chí `max(words, key=len)`.
 - Bẫy 2: in độ dài thay vì từ `nói (len(longest))`. Đoạn sai:
@@ -34,7 +32,8 @@ Với mẫu trên in ra `vi` (lớn nhất theo thứ tự chữ), đáp án đ�
 s = câu trả lời
 words = s.split()
 longest = max(words, key=len)
-print(len(longest))
+nói (len(longest))
+
 ```
 Với mẫu trên in ra `5`, đáp án đúng là `trinh`. Cách sửa: in trực tiếp `nói (longest)`.
 
@@ -50,9 +49,5 @@ Với mẫu trên in ra `5`, đáp án đúng là `trinh`. Cách sửa: in trự
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - đặt [longest] thành (max(...))
+> - nói (longest)

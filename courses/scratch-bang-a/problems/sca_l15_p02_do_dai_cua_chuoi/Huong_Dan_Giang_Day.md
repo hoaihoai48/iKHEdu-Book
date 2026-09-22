@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Độ dài của chuỗi
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: cần đếm xem chuỗi `s` có bao nhiêu ký tự, kể cả dấu cách.
@@ -26,12 +23,14 @@ Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
 ```text
 s = câu trả lời
 len(s)
+
 ```
 Với mẫu `Python`, màn hình không in gì cả, trong khi đáp án đúng phải là `6`. Cách sửa: bọc lệnh in `nói (len(s))`.
-- Bẫy 2: tách từ bằng `s = câu trả lời.split()` rồi đo `len(s)`. Đoạn sai:
+- Bẫy 2: tách từ bằng `s = câu trả lời` rồi đo `len(s)`. Đoạn sai:
 ```text
-s = câu trả lời.split()
-print(len(s))
+s = câu trả lời
+nói (len(s))
+
 ```
 Với mẫu `Python` vẫn ra `6` do nhầm thành độ dài danh sách 1 từ, còn câu có dấu cách như `a b` sẽ ra `2` thay vì `3`. Cách sửa: giữ nguyên `s = câu trả lời` rồi dùng `len(s)`.
 
@@ -47,9 +46,4 @@ Với mẫu `Python` vẫn ra `6` do nhầm thành độ dài danh sách 1 từ,
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập s:] và đợi
 > - đặt [s] thành (câu trả lời)
-> - đặt [xau] thành (câu trả lời)
-> - đặt [do_dai] thành (độ dài của xau)
-> - đặt [i] thành (1)
-> - lặp lại (do_dai) lần:
-> -   nói (ký tự thứ i của xau) trong (1) giây
-> -   thay đổi [i] một lượng (1)
+> - nói (độ dài của s)

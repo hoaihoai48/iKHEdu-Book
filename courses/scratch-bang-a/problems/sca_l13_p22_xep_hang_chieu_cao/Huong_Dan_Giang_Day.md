@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Xếp hàng chiều cao
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 
@@ -32,32 +29,35 @@ Kết quả cuối cùng khớp với đáp án mẫu: `150 155 160 165 175`.
 
 - Bẫy 1 — sắp giảm dần thay vì tăng dần:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = sorted(data[:n], reverse=True)
-print(" ".join(map(str, data)))
+nói (" ".join(map(str, data)))
+
 ```
 Với mẫu trên in ra `175 165 160 155 150` sai. Cách sửa: sắp tăng dần mặc định, không dùng `reverse=True`.
 - Bẫy 2 — in cả danh sách kèm ngoặc:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = sorted(data[:n])
-print(data)
+nói (data)
+
 ```
 Với mẫu trên in ra `[150, 155, 160, 165, 175]` có ngoặc và dấu phẩy, không khớp đáp án mẫu. Cách sửa: in bằng `" ".join(map(str, data))`.
 - Bẫy 3 — loại trùng bằng tập hợp:
 ```text
-n = int(câu trả lời)
+n = câu trả lời
 data = []
 while len(data) < n:
-    data += list(map(int, câu trả lời.split()))
+    data += list(các khối hỏi và đợi cho từng biến)
 data = sorted(set(data))
-print(" ".join(map(str, data)))
+nói (" ".join(map(str, data)))
+
 ```
 Nếu hai bạn cao bằng nhau thì một bạn bị mất khỏi hàng. Cách sửa: sắp trực tiếp danh sách, không dùng `set`.
 
@@ -73,10 +73,8 @@ Nếu hai bạn cao bằng nhau thì một bạn bị mất khỏi hàng. Cách 
 > - khi bấm vào cờ xanh
 > - hỏi [Nhập n:] và đợi
 > - đặt [n] thành (câu trả lời)
-> - xóa tất cả của [danh_sach]
-> - đặt [i] thành (1)
-> - lặp lại (n) lần:
-> -   hỏi [Nhập phần tử:] và đợi
-> -   thêm (câu trả lời) vào [danh_sach]
-> -   thay đổi [i] một lượng (1)
-> - nói (phần tử thứ 1 của [danh_sach])
+> - xóa tất cả của [data]
+> - lặp lại cho đến khi không còn <độ dài của data < n>:
+> -   thay đổi [data] một lượng (list(...))
+> - đặt [data] thành (sorted(...))
+> - nói (giá trị)

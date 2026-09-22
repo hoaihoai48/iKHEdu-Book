@@ -1,7 +1,4 @@
-# Hướng Dẫn Giảng Dạy: Tổng dãy số kết thúc bằng 0
-Chuyên đề: **Lập Trình Thuật Toán & Khối Lệnh Scratch 3.0**
-
----
+# Hướng Dẫn Giảng Dạy
 
 ## 1. Ý tưởng & Phân tích thuật toán
 - Bản chất: giống bài đếm tới số 0 nhưng thay vì đếm số lượng, ở đây cộng dồn giá trị vào biến `tong`. Số 0 cũng không được cộng.
@@ -28,22 +25,24 @@ In ra `35` (vì `10 + 20 + 5 = 35`), khớp với kết quả mẫu.
 ```text
 tong = 0
 while True:
-    x = int(câu trả lời)
+    x = câu trả lời
     if x == 0:
         break
     tong = tong + 1
-print(tong)
+nói (tong)
+
 ```
 Với mẫu `10 / 20 / 5 / 0` sẽ in ra `3` (đếm số lượng) thay vì `35` (tổng). Cách sửa: cộng đúng `tong = tong + x`.
 - Bẫy 2 — in tổng trong vòng lặp:
 ```text
 tong = 0
 while True:
-    x = int(câu trả lời)
+    x = câu trả lời
     if x == 0:
         break
     tong = tong + x
-    print(tong)
+    nói (tong)
+
 ```
 Với mẫu sẽ in 3 dòng `10 / 30 / 35` thay vì một dòng `35`. Cách sửa: để `nói (tong)` ngoài vòng lặp.
 
@@ -57,10 +56,11 @@ Với mẫu sẽ in 3 dòng `10 / 30 / 35` thay vì một dòng `35`. Cách sử
 
 > 💡 **Kịch bản thực hiện từng bước:**
 > - khi bấm vào cờ xanh
-> - hỏi [Nhập x:] và đợi
-> - đặt [x] thành (câu trả lời)
-> - đặt [dem] thành (0)
-> - lặp lại cho đến khi <n = 0>:
-> -   thay đổi [dem] một lượng (1)
-> -   đặt [n] thành (làm tròn xuống của n / 10)
-> - nói (dem)
+> - đặt [tong] thành (0)
+> - lặp lại cho đến khi không còn <điều kiện>:
+> -   hỏi [Nhập x:] và đợi
+> -   đặt [x] thành (câu trả lời)
+> -   nếu <x = 0> thì:
+> -     dừng kịch bản này
+> -   đặt [tong] thành (tong + x)
+> - nói (tong)
